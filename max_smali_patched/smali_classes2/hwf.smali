@@ -1,53 +1,50 @@
-.class public final Lhwf;
-.super Lp14;
+.class public final synthetic Lhwf;
+.super Lt8;
 .source "SourceFile"
 
+# interfaces
+.implements Lfr6;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Ltwf;
-
-.field public Z:I
-
-.field public d:Ltwf;
-
-.field public o:Lola;
+# static fields
+.field public static final Z:Lhwf;
 
 
 # direct methods
-.method public constructor <init>(Ltwf;Lp14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lhwf;->Y:Ltwf;
+    new-instance v0, Lhwf;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-class v1, Lsvg;
+
+    const-string v2, "<init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V"
+
+    const/4 v3, 0x4
+
+    invoke-direct {v0, v3, v1, v2, v3}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lhwf;->Z:Lhwf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lhwf;->X:Ljava/lang/Object;
+    check-cast p1, Ljava/util/List;
 
-    iget p1, p0, Lhwf;->Z:I
+    check-cast p2, Livf;
 
-    const/high16 v0, -0x80000000
+    check-cast p3, Ljava/util/List;
 
-    or-int/2addr p1, v0
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    iput p1, p0, Lhwf;->Z:I
+    new-instance p4, Lsvg;
 
-    iget-object p1, p0, Lhwf;->Y:Ltwf;
+    invoke-direct {p4, p1, p2, p3}, Lsvg;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Ltwf;->d(Lola;Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p4
 .end method

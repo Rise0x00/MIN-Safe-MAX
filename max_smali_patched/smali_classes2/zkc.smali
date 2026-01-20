@@ -1,62 +1,87 @@
-.class public abstract Lzkc;
+.class public final synthetic Lzkc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lnq6;
 
 
-# static fields
-.field public static activity_horizontal_margin:I = 0x7f070051
+# instance fields
+.field public final synthetic a:I
 
-.field public static activity_vertical_margin:I = 0x7f070052
+.field public final synthetic b:Lrdi;
 
-.field public static avatar_large:I = 0x7f070057
 
-.field public static avatar_medium:I = 0x7f070058
+# direct methods
+.method public synthetic constructor <init>(Lrdi;I)V
+    .locals 0
 
-.field public static avatar_small:I = 0x7f070059
+    iput p2, p0, Lzkc;->a:I
 
-.field public static folder_filter_item_height:I = 0x7f0700fd
+    iput-object p1, p0, Lzkc;->b:Lrdi;
 
-.field public static font_large:I = 0x7f0700ff
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static font_larger:I = 0x7f070100
+    return-void
+.end method
 
-.field public static font_medium:I = 0x7f070101
 
-.field public static font_normal:I = 0x7f070102
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static font_normal_subtitle:I = 0x7f070103
+    iget v0, p0, Lzkc;->a:I
 
-.field public static font_only_emoji:I = 0x7f070104
+    packed-switch v0, :pswitch_data_0
 
-.field public static font_small:I = 0x7f070105
+    check-cast p1, Ljava/lang/String;
 
-.field public static font_smaller:I = 0x7f070106
+    iget-object v0, p0, Lzkc;->b:Lrdi;
 
-.field public static font_subtitle:I = 0x7f070107
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
 
-.field public static font_toolbar_subtitle:I = 0x7f070108
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-.field public static font_toolbar_title:I = 0x7f070109
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->B0()Lsa2;
 
-.field public static font_very_small:I = 0x7f07010a
+    move-result-object v0
 
-.field public static huge_horizontal_margin:I = 0x7f07011f
+    iget-object v0, v0, Lsa2;->b:Lga2;
 
-.field public static match_parent:I = 0x7f0702aa
+    invoke-virtual {v0, p1}, Lga2;->k(Ljava/lang/String;)V
 
-.field public static progress_bar_medium:I = 0x7f0703ee
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-.field public static progress_bar_small:I = 0x7f0703ef
+    return-object p1
 
-.field public static rounded_button_margin:I = 0x7f0703f6
+    :pswitch_0
+    check-cast p1, Ljava/lang/Integer;
 
-.field public static small_vertical_margin:I = 0x7f070400
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-.field public static spacing_normal:I = 0x7f070401
+    move-result p1
 
-.field public static spacing_small:I = 0x7f07040b
+    iget-object v0, p0, Lzkc;->b:Lrdi;
 
-.field public static spacing_tiny:I = 0x7f07040c
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
 
-.field public static tiny_vertical_margin:I = 0x7f07041c
+    check-cast v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-.field public static wrap_content:I = 0x7f070427
+    invoke-virtual {v0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->B0()Lsa2;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lsa2;->b:Lga2;
+
+    invoke-virtual {v0, p1}, Lga2;->l(I)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

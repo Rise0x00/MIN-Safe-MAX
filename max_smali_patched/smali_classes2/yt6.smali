@@ -1,195 +1,248 @@
 .class public final Lyt6;
-.super Lvnf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final e0:Lyt6;
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:Liyd;
+
+.field public final g:Liyd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 47
+.method public constructor <init>(IIIIILiyd;)V
+    .locals 0
 
-    new-instance v0, Lyt6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide v1, 0xff697cffL
+    iput p1, p0, Lyt6;->a:I
 
-    long-to-int v4, v1
+    iput p2, p0, Lyt6;->b:I
 
-    const-wide v1, 0xffffffffL
+    iput p3, p0, Lyt6;->c:I
 
-    long-to-int v5, v1
+    iput p4, p0, Lyt6;->d:I
 
-    const-wide v1, 0xff262626L
+    iput p5, p0, Lyt6;->e:I
 
-    long-to-int v6, v1
+    iput-object p6, p0, Lyt6;->f:Liyd;
 
-    const-wide v1, 0xff6988e0L
+    if-gtz p5, :cond_0
 
-    long-to-int v8, v1
+    const/4 p1, 0x0
 
-    const-wide v1, 0xff2d2d2dL
+    goto :goto_0
 
-    long-to-int v9, v1
+    :cond_0
+    new-instance p1, Liyd;
 
-    const-wide v1, 0xff626262L
+    invoke-direct {p1, p5, p5}, Liyd;-><init>(II)V
 
-    long-to-int v10, v1
-
-    const-wide v1, 0xff232323L
-
-    long-to-int v12, v1
-
-    const-wide v1, 0xff000000L
-
-    long-to-int v14, v1
-
-    const-wide v1, 0xff848484L
-
-    long-to-int v15, v1
-
-    const-wide v1, 0xff1c1c1cL
-
-    long-to-int v1, v1
-
-    const-wide v2, 0xffff3f3fL
-
-    long-to-int v2, v2
-
-    move-object/from16 v46, v0
-
-    move/from16 v17, v1
-
-    const-wide v0, 0xfffbc03dL
-
-    long-to-int v0, v0
-
-    move/from16 v19, v0
-
-    const-wide v0, 0xffaaaaaaL
-
-    long-to-int v0, v0
-
-    move/from16 v29, v0
-
-    const-wide v0, 0xff333333L
-
-    long-to-int v0, v0
-
-    move/from16 v30, v0
-
-    const-wide v0, 0xffe4e4e4L
-
-    long-to-int v0, v0
-
-    move v3, v0
-
-    const-wide v0, 0xff444444L
-
-    long-to-int v0, v0
-
-    move v7, v0
-
-    const-wide v0, 0xff28972bL
-
-    long-to-int v0, v0
-
-    move v1, v3
-
-    new-instance v3, Lxb3;
-
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v41
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v42
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v43
-
-    invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v44
-
-    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v45
-
-    move v7, v5
-
-    move v11, v5
-
-    move v13, v5
-
-    move/from16 v16, v5
-
-    move/from16 v20, v9
-
-    move/from16 v21, v6
-
-    move/from16 v22, v9
-
-    move/from16 v23, v6
-
-    move/from16 v24, v9
-
-    move/from16 v25, v5
-
-    move/from16 v26, v17
-
-    move/from16 v27, v17
-
-    move/from16 v28, v9
-
-    move/from16 v31, v9
-
-    move/from16 v32, v29
-
-    move/from16 v33, v6
-
-    move/from16 v35, v15
-
-    move/from16 v36, v5
-
-    move/from16 v37, v5
-
-    move/from16 v38, v12
-
-    move/from16 v39, v10
-
-    move/from16 v40, v30
-
-    move/from16 v34, v0
-
-    move/from16 v18, v2
-
-    invoke-direct/range {v3 .. v45}, Lxb3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    sget-object v7, Lbx3;->d:Lot0;
-
-    sget-object v8, Lbx3;->c:Lot0;
-
-    const/4 v4, 0x1
-
-    const-string v5, "GRAPHITE"
-
-    const-string v1, "TamTam Dark Contrast"
-
-    const-string v2, "TamTam Team"
-
-    move-object v6, v3
-
-    const/4 v3, 0x1
-
-    move-object/from16 v0, v46
-
-    invoke-direct/range {v0 .. v8}, Lvnf;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lxb3;Lot0;Lot0;)V
-
-    sput-object v0, Lyt6;->e0:Lyt6;
+    :goto_0
+    iput-object p1, p0, Lyt6;->g:Liyd;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lyt6;
+
+    if-nez v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lyt6;
+
+    iget v1, p0, Lyt6;->a:I
+
+    iget v2, p1, Lyt6;->a:I
+
+    if-eq v1, v2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v1, p0, Lyt6;->b:I
+
+    iget v2, p1, Lyt6;->b:I
+
+    if-eq v1, v2, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v1, p0, Lyt6;->c:I
+
+    iget v2, p1, Lyt6;->c:I
+
+    if-eq v1, v2, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v1, p0, Lyt6;->d:I
+
+    iget v2, p1, Lyt6;->d:I
+
+    if-eq v1, v2, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v1, p0, Lyt6;->e:I
+
+    iget v2, p1, Lyt6;->e:I
+
+    if-eq v1, v2, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v1, p0, Lyt6;->f:Liyd;
+
+    iget-object p1, p1, Lyt6;->f:Liyd;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_7
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lyt6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lyt6;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lyt6;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lyt6;->d:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v2, p0, Lyt6;->e:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lyt6;->f:Liyd;
+
+    invoke-virtual {v2}, Liyd;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", threshold="
+
+    const-string v1, ", spanCount="
+
+    const-string v2, "GalleryUiOptions(cellSize="
+
+    iget v3, p0, Lyt6;->a:I
+
+    iget v4, p0, Lyt6;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", spanSpacing="
+
+    const-string v2, ", thumbnailSize="
+
+    iget v3, p0, Lyt6;->c:I
+
+    iget v4, p0, Lyt6;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    iget v1, p0, Lyt6;->e:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", albumsCoverResizeOptions="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyt6;->f:Liyd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isItemAnimatorEnabled=false)"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

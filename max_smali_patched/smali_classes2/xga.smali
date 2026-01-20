@@ -1,49 +1,29 @@
 .class public final Lxga;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public b:Z
 
-.field public final synthetic o:Laha;
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Laha;Lp14;)V
-    .locals 0
-
-    iput-object p1, p0, Lxga;->o:Laha;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>()V
     .locals 1
 
-    iput-object p1, p0, Lxga;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lxga;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lxga;->X:I
-
-    iget-object p1, p0, Lxga;->o:Laha;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Laha;->h(Ljava/util/List;Lp14;)Ljava/lang/Object;
+    iput v0, p0, Lxga;->a:I
 
-    move-result-object p1
+    iput-boolean v0, p0, Lxga;->b:Z
 
-    return-object p1
+    iput-boolean v0, p0, Lxga;->c:Z
+
+    return-void
 .end method

@@ -1,37 +1,73 @@
-.class public abstract Lkua;
+.class public final Lkua;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Lb2e;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
+.field public final b:Lai;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lb2e;)V
     .locals 1
 
-    sget v0, Losc;->oneme_file_download_warning_confirm_btn:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lkua;->a:I
+    iput-object p1, p0, Lkua;->a:Lb2e;
 
-    sget v0, Losc;->oneme_file_download_warning_deny_btn:I
+    new-instance p1, Lai;
 
-    sput v0, Lkua;->b:I
+    const/16 v0, 0xb
 
-    sget v0, Losc;->oneme_file_download_warning_description:I
+    invoke-direct {p1, v0}, Lai;-><init>(I)V
 
-    sput v0, Lkua;->c:I
-
-    sget v0, Losc;->oneme_file_download_warning_title:I
-
-    sput v0, Lkua;->d:I
+    iput-object p1, p0, Lkua;->b:Lai;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;Lo84;)Ljava/lang/Object;
+    .locals 3
+
+    const-string v0, "SELECT * FROM notifications_read_marks WHERE chat_id IN ("
+
+    invoke-static {v0}, Lhc0;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Leca;->a(Ljava/lang/StringBuilder;I)V
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lfw5;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, v0, p1}, Lfw5;-><init>(ILjava/lang/String;Ljava/util/List;)V
+
+    iget-object p1, p0, Lkua;->a:Lb2e;
+
+    const/4 v0, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, p1, p2, v0, v2}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,117 +1,65 @@
 .class public final Ljmb;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lmmb;
+.implements Lomb;
 
 
-# instance fields
-.field public final synthetic o:Llmb;
+# static fields
+.field public static final a:Ljmb;
 
 
 # direct methods
-.method public constructor <init>(Llmb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ljmb;->o:Llmb;
+    new-instance v0, Ljmb;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Ljmb;->a:Ljmb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljmb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljmb;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ljmb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance p1, Ljmb;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Ljmb;->o:Llmb;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p1, v0, p2}, Ljmb;-><init>(Llmb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ljmb;->o:Llmb;
-
-    iget-object v0, p1, Llmb;->s0:Laf5;
-
-    new-instance v1, Lylb;
-
-    iget-object p1, p1, Llmb;->Y:La1f;
-
-    invoke-virtual {p1}, La1f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ldmb;
-
-    iget-object v2, v2, Ldmb;->c:Ljava/lang/Double;
-
-    const-wide/16 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v5
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move-wide v5, v3
+    instance-of p1, p1, Ljmb;
 
-    :goto_0
-    invoke-virtual {p1}, La1f;->getValue()Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    move-result-object p1
+    const/4 p1, 0x0
 
-    check-cast p1, Ldmb;
-
-    iget-object p1, p1, Ldmb;->d:Ljava/lang/Double;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v3
+    return p1
 
     :cond_1
-    invoke-direct {v1, v5, v6, v3, v4}, Lylb;-><init>(DD)V
+    return v0
+.end method
 
-    invoke-static {v0, v1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+.method public final hashCode()I
+    .locals 1
 
-    sget-object p1, Lybg;->a:Lybg;
+    const v0, -0x1e39b9c2
 
-    return-object p1
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Empty"
+
+    return-object v0
 .end method

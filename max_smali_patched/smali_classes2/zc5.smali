@@ -2,140 +2,85 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:Lad5;
+.field public final a:Lo58;
 
-.field public final synthetic b:I
+.field public final b:Lo58;
 
-.field public final synthetic c:I
+.field public final c:Lo58;
+
+.field public final d:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lad5;II)V
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzc5;->a:Lad5;
+    iput-object p1, p0, Lzc5;->a:Lo58;
 
-    iput p2, p0, Lzc5;->b:I
+    iput-object p2, p0, Lzc5;->b:Lo58;
 
-    iput p3, p0, Lzc5;->c:I
+    iput-object p3, p0, Lzc5;->c:Lo58;
+
+    iput-object p4, p0, Lzc5;->d:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final a(JJLjava/lang/CharSequence;Ljava/util/List;ZLp6g;)Ljava/lang/Object;
+    .locals 11
 
-    iget-object v0, p0, Lzc5;->a:Lad5;
+    iget-object v0, p0, Lzc5;->c:Lo58;
 
-    iget-object v1, v0, Lad5;->a:Lwc5;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    iget-object v2, v0, Lad5;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    move-result-object v0
 
-    iget v3, p0, Lzc5;->b:I
+    check-cast v0, Lmbg;
 
-    if-nez v3, :cond_0
+    check-cast v0, Lj9b;
 
-    iget v3, p0, Lzc5;->c:I
+    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+
+    move-result-object v0
+
+    new-instance v1, Lyc5;
+
+    const/4 v10, 0x0
+
+    move-object v2, p0
+
+    move-wide v3, p1
+
+    move-wide v5, p3
+
+    move-object/from16 v7, p5
+
+    move-object/from16 v9, p6
+
+    move/from16 v8, p7
+
+    invoke-direct/range {v1 .. v10}, Lyc5;-><init>(Lzc5;JJLjava/lang/CharSequence;ZLjava/util/List;Lkotlin/coroutines/Continuation;)V
+
+    move-object/from16 p1, p8
+
+    invoke-static {v0, v1, p1}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_0
+
+    return-object p1
 
     :cond_0
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
-
-    move-result v3
-
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lp6d;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Lp6d;->j()I
-
-    move-result v4
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_0
-    sub-int/2addr v4, v3
-
-    iget v3, v0, Lad5;->b:I
-
-    const/4 v5, 0x1
-
-    if-gt v4, v3, :cond_3
-
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    iget-boolean v3, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->a2:Z
-
-    if-nez v3, :cond_3
-
-    :cond_2
-    invoke-interface {v1}, Lwc5;->q()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
-
-    invoke-interface {v1}, Lwc5;->o()V
-
-    :cond_3
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result v3
-
-    if-ltz v3, :cond_5
-
-    iget v0, v0, Lad5;->b:I
-
-    if-gt v3, v0, :cond_5
-
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-boolean v0, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->b2:Z
-
-    if-nez v0, :cond_5
-
-    :cond_4
-    invoke-interface {v1}, Lwc5;->f()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v2, v5}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingPrev(Z)V
-
-    invoke-interface {v1}, Lwc5;->i()V
-
-    :cond_5
-    return-void
+    return-object p1
 .end method

@@ -1,118 +1,136 @@
 .class public final Lqz9;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loz9;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Lkz9;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lu61;
+
+.field public final synthetic Z:Lsz9;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkz9;)V
+.method public constructor <init>(Lu61;Lkotlin/coroutines/Continuation;Lsz9;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lqz9;->Y:Lu61;
 
-    iput-object p1, p0, Lqz9;->a:Lkz9;
+    iput-object p3, p0, Lqz9;->Z:Lsz9;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLrs8;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lf76;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lqz9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lqz9;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lqz9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b(JLrs8;)V
-    .locals 0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    iget-object p1, p0, Lqz9;->a:Lkz9;
+    new-instance v0, Lqz9;
 
-    invoke-interface {p1}, Lkz9;->q()V
+    iget-object v1, p0, Lqz9;->Y:Lu61;
 
-    return-void
+    iget-object v2, p0, Lqz9;->Z:Lsz9;
+
+    invoke-direct {v0, v1, p2, v2}, Lqz9;-><init>(Lu61;Lkotlin/coroutines/Continuation;Lsz9;)V
+
+    iput-object p1, v0, Lqz9;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final c(JLrs8;JLrs8;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object p1, p0, Lqz9;->a:Lkz9;
+    iget-object v0, p0, Lqz9;->X:Ljava/lang/Object;
 
-    invoke-interface {p1}, Lkz9;->x()V
+    check-cast v0, Lf76;
 
-    return-void
-.end method
+    iget v1, p0, Lqz9;->o:I
 
-.method public final d(JLrs8;)V
-    .locals 0
+    const/4 v2, 0x1
 
-    return-void
-.end method
+    if-eqz v1, :cond_1
 
-.method public final e(JLrs8;J)V
-    .locals 0
+    if-ne v1, v2, :cond_0
 
-    iget-object p1, p0, Lqz9;->a:Lkz9;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-interface {p1}, Lkz9;->c()V
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.method public final f(JLrs8;)V
-    .locals 0
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object p3, p0, Lqz9;->a:Lkz9;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p3, p1, p2}, Lkz9;->t(J)V
+    throw p1
 
-    return-void
-.end method
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.method public final g(JLrs8;)V
-    .locals 0
+    new-instance p1, Lkf2;
 
-    return-void
-.end method
+    iget-object v1, p0, Lqz9;->Z:Lsz9;
 
-.method public final h(JLrs8;)V
-    .locals 0
+    const/4 v3, 0x6
 
-    iget-object p1, p0, Lqz9;->a:Lkz9;
+    invoke-direct {p1, v0, v1, v3}, Lkf2;-><init>(Lf76;Ljava/lang/Object;I)V
 
-    invoke-interface {p1}, Lkz9;->y()V
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    iput-object v0, p0, Lqz9;->X:Ljava/lang/Object;
 
-.method public final i(JLrs8;)V
-    .locals 0
+    iput v2, p0, Lqz9;->o:I
 
-    iget-object p1, p0, Lqz9;->a:Lkz9;
+    iget-object v0, p0, Lqz9;->Y:Lu61;
 
-    invoke-interface {p1}, Lkz9;->j()V
+    invoke-virtual {v0, p1, p0}, Lu61;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public final j(JLrs8;)V
-    .locals 0
+    sget-object v0, Lac4;->a:Lac4;
 
-    return-void
-.end method
+    if-ne p1, v0, :cond_2
 
-.method public final m()V
-    .locals 1
+    return-object v0
 
-    iget-object v0, p0, Lqz9;->a:Lkz9;
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-interface {v0}, Lkz9;->m()V
-
-    return-void
+    return-object p1
 .end method

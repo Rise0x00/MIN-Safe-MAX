@@ -4,30 +4,68 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lhd0;
 
-.field public final b:I
+.field public final b:Lha0;
 
-.field public final c:Z
-
-.field public final d:Z
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(IIZZ)V
+.method public constructor <init>(Lhd0;Lha0;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ltb0;->a:I
+    iput-object p1, p0, Ltb0;->a:Lhd0;
 
-    iput p2, p0, Ltb0;->b:I
+    iput-object p2, p0, Ltb0;->b:Lha0;
 
-    iput-boolean p3, p0, Ltb0;->c:Z
-
-    iput-boolean p4, p0, Ltb0;->d:Z
+    iput p3, p0, Ltb0;->c:I
 
     return-void
+.end method
+
+.method public static a()Latc;
+    .locals 3
+
+    new-instance v0, Latc;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Latc;-><init>(IZ)V
+
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Latc;->d:Ljava/lang/Object;
+
+    invoke-static {}, Lha0;->a()Lbd6;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lbd6;->c()Lha0;
+
+    move-result-object v1
+
+    iput-object v1, v0, Latc;->c:Ljava/lang/Object;
+
+    invoke-static {}, Lhd0;->a()Lgd0;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lgd0;->a()Lhd0;
+
+    move-result-object v1
+
+    iput-object v1, v0, Latc;->b:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 
@@ -50,27 +88,29 @@
 
     check-cast p1, Ltb0;
 
-    iget v1, p0, Ltb0;->a:I
+    iget-object v1, p0, Ltb0;->a:Lhd0;
 
-    iget v3, p1, Ltb0;->a:I
+    iget-object v3, p1, Ltb0;->a:Lhd0;
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {v1, v3}, Lhd0;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p0, Ltb0;->b:I
+    move-result v1
 
-    iget v3, p1, Ltb0;->b:I
+    if-eqz v1, :cond_1
 
-    if-ne v1, v3, :cond_1
+    iget-object v1, p0, Ltb0;->b:Lha0;
 
-    iget-boolean v1, p0, Ltb0;->c:Z
+    iget-object v3, p1, Ltb0;->b:Lha0;
 
-    iget-boolean v3, p1, Ltb0;->c:Z
+    invoke-virtual {v1, v3}, Lha0;->equals(Ljava/lang/Object;)Z
 
-    if-ne v1, v3, :cond_1
+    move-result v1
 
-    iget-boolean v1, p0, Ltb0;->d:Z
+    if-eqz v1, :cond_1
 
-    iget-boolean p1, p1, Ltb0;->d:Z
+    iget v1, p0, Ltb0;->c:I
+
+    iget p1, p1, Ltb0;->c:I
 
     if-ne v1, p1, :cond_1
 
@@ -81,9 +121,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 5
+    .locals 3
 
-    iget v0, p0, Ltb0;->a:I
+    iget-object v0, p0, Ltb0;->a:Lhd0;
+
+    invoke-virtual {v0}, Lhd0;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -91,40 +135,19 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Ltb0;->b:I
+    iget-object v2, p0, Ltb0;->b:Lha0;
+
+    invoke-virtual {v2}, Lha0;->hashCode()I
+
+    move-result v2
 
     xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget-boolean v2, p0, Ltb0;->c:Z
+    iget v1, p0, Ltb0;->c:I
 
-    const/16 v3, 0x4d5
-
-    const/16 v4, 0x4cf
-
-    if-eqz v2, :cond_0
-
-    move v2, v4
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v3
-
-    :goto_0
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v1, p0, Ltb0;->d:Z
-
-    if-eqz v1, :cond_1
-
-    move v3, v4
-
-    :cond_1
-    xor-int/2addr v0, v3
+    xor-int/2addr v0, v1
 
     return v0
 .end method
@@ -134,39 +157,31 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "FeatureSettings{cameraMode="
+    const-string v1, "MediaSpec{videoSpec="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Ltb0;->a:I
+    iget-object v1, p0, Ltb0;->a:Lhd0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", requiredMaxBitDepth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ltb0;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", previewStabilizationOn="
+    const-string v1, ", audioSpec="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Ltb0;->c:Z
+    iget-object v1, p0, Ltb0;->b:Lha0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", ultraHdrOn="
+    const-string v1, ", outputFormat="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Ltb0;->d:Z
+    iget v1, p0, Ltb0;->c:I
 
     const-string v2, "}"
 
-    invoke-static {v0, v1, v2}, Lnx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

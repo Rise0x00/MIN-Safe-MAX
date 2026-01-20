@@ -1,144 +1,103 @@
-.class public final Ls53;
-.super Logf;
+.class public abstract synthetic Ls53;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgj6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public synthetic X:Ljava/lang/Throwable;
-
-.field public final synthetic Y:Ly53;
-
-.field public final synthetic o:I
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly53;Lkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p3, p0, Ls53;->o:I
+    const/4 v0, 0x5
 
-    iput-object p1, p0, Ls53;->Y:Ly53;
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    const/4 p1, 0x3
+    move-result-object v1
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v4, 0x2
+
+    :try_start_1
+    aput v4, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v5, 0x3
+
+    :try_start_2
+    aput v5, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v6, 0x4
+
+    :try_start_3
+    aput v6, v1, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    aput v0, v1, v6
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sput-object v1, Ls53;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Lg63;->values()[Lg63;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_5
+    aput v2, v0, v3
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    aput v4, v0, v4
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    aput v5, v0, v5
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
+    :try_start_8
+    aput v6, v0, v6
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+
+    :catch_8
+    sput-object v0, Ls53;->$EnumSwitchMapping$1:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ls53;->o:I
-
-    check-cast p1, Lgz5;
-
-    check-cast p2, Ljava/lang/Throwable;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p1, Ls53;
-
-    iget-object v0, p0, Ls53;->Y:Ly53;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v0, p3, v1}, Ls53;-><init>(Ly53;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Ls53;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ls53;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-
-    :pswitch_0
-    new-instance p1, Ls53;
-
-    iget-object v0, p0, Ls53;->Y:Ly53;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, p3, v1}, Ls53;-><init>(Ly53;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Ls53;->X:Ljava/lang/Throwable;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ls53;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Ls53;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ls53;->Y:Ly53;
-
-    iget-object v0, v0, Ly53;->Z:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls53;->X:Ljava/lang/Throwable;
-
-    const-string v1, "big_flow: completion"
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ls53;->X:Ljava/lang/Throwable;
-
-    iget-object v0, p0, Ls53;->Y:Ly53;
-
-    iget-object v0, v0, Ly53;->Z:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    const-string v1, "big_flow: fail"
-
-    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

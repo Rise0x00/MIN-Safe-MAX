@@ -1,361 +1,287 @@
 .class public final Ldx0;
-.super Ljava/io/FilterOutputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lxz5;
 
-.field public final b:Ljava/io/OutputStream;
+.field public final b:Lxz0;
 
-.field public c:Ljava/nio/ByteOrder;
+.field public final c:Lyi;
+
+.field public final d:Ljava/util/concurrent/Executor;
+
+.field public final e:Ljava/util/concurrent/Executor;
+
+.field public final f:Llh7;
+
+.field public final g:Limf;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/OutputStream;)V
-    .locals 1
+.method public constructor <init>(Lxz5;Lxz0;Lyi;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Llh7;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Ldx0;->a:I
+    iput-object p1, p0, Ldx0;->a:Lxz5;
 
-    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    iput-object p2, p0, Ldx0;->b:Lxz0;
 
-    .line 1
-    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
+    iput-object p3, p0, Ldx0;->c:Lyi;
 
-    .line 2
-    iput-object p1, p0, Ldx0;->b:Ljava/io/OutputStream;
+    iput-object p4, p0, Ldx0;->d:Ljava/util/concurrent/Executor;
 
-    .line 3
-    iput-object v0, p0, Ldx0;->c:Ljava/nio/ByteOrder;
+    iput-object p5, p0, Ldx0;->e:Ljava/util/concurrent/Executor;
 
-    return-void
-.end method
+    iput-object p6, p0, Ldx0;->f:Llh7;
 
-.method public constructor <init>(Ljava/io/OutputStream;Ljava/nio/ByteOrder;)V
-    .locals 1
+    new-instance p1, Limf;
 
-    const/4 v0, 0x1
+    const/4 p2, 0x0
 
-    iput v0, p0, Ldx0;->a:I
+    const/4 p3, 0x0
 
-    .line 4
-    invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {p1, p2, p3}, Limf;-><init>(IZ)V
 
-    .line 5
-    iput-object p1, p0, Ldx0;->b:Ljava/io/OutputStream;
+    new-instance p2, Ljava/util/HashMap;
 
-    .line 6
-    iput-object p2, p0, Ldx0;->c:Ljava/nio/ByteOrder;
+    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p2, p1, Limf;->b:Ljava/lang/Object;
+
+    iput-object p1, p0, Ldx0;->g:Limf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(I)V
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iget-object v0, p0, Ldx0;->b:Ljava/io/OutputStream;
+    iget-object v0, p0, Ldx0;->g:Limf;
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v0}, Limf;->h()V
+
+    :try_start_0
+    new-instance v0, Lcx0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lcx0;-><init>(ILjava/lang/Object;)V
+
+    iget-object v1, p0, Ldx0;->e:Ljava/util/concurrent/Executor;
+
+    invoke-static {v0, v1}, Lbolts/Task;->call(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lbolts/Task;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const-string v2, "Failed to schedule disk-cache clear"
+
+    invoke-static {v0, v2, v1}, Lmt5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-static {v0}, Lbolts/Task;->forError(Ljava/lang/Exception;)Lbolts/Task;
 
     return-void
 .end method
 
-.method public final d(I)V
-    .locals 3
+.method public final b(Lddf;)Lfj9;
+    .locals 7
 
-    iget v0, p0, Ldx0;->a:I
+    iget-object v0, p1, Lddf;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Ldx0;->f:Llh7;
 
-    iget-object v0, p0, Ldx0;->c:Ljava/nio/ByteOrder;
+    const-class v2, Ldx0;
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    :try_start_0
+    const-string v3, "Disk cache read for %s"
 
-    iget-object v2, p0, Ldx0;->b:Ljava/io/OutputStream;
+    invoke-static {v2, v0, v3}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    if-ne v0, v1, :cond_0
+    iget-object v3, p0, Ldx0;->a:Lxz5;
 
-    and-int/lit16 v0, p1, 0xff
+    check-cast v3, Lu15;
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {v3, p1}, Lu15;->b(Lb01;)Lwz5;
 
-    ushr-int/lit8 v0, p1, 0x8
+    move-result-object p1
 
-    and-int/lit16 v0, v0, 0xff
+    if-nez p1, :cond_0
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    const-string p1, "Disk cache miss for %s"
 
-    ushr-int/lit8 v0, p1, 0x10
+    invoke-static {v2, v0, p1}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    and-int/lit16 v0, v0, 0xff
+    invoke-interface {v1}, Llh7;->l()V
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    const/4 p1, 0x0
 
-    ushr-int/lit8 p1, p1, 0x18
+    return-object p1
 
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    const-string v3, "Found entry in disk cache for %s"
 
-    if-ne v0, v1, :cond_1
+    invoke-static {v2, v0, v3}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    ushr-int/lit8 v0, p1, 0x18
+    invoke-interface {v1}, Llh7;->b()V
 
-    and-int/lit16 v0, v0, 0xff
+    new-instance v3, Ljava/io/FileInputStream;
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    iget-object v4, p1, Lwz5;->a:Ljava/io/File;
 
-    ushr-int/lit8 v0, p1, 0x10
+    invoke-direct {v3, v4}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    and-int/lit16 v0, v0, 0xff
+    :try_start_1
+    iget-object v4, p0, Ldx0;->b:Lxz0;
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    iget-object p1, p1, Lwz5;->a:Ljava/io/File;
 
-    ushr-int/lit8 v0, p1, 0x8
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    and-int/lit16 v0, v0, 0xff
+    move-result-wide v5
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    long-to-int p1, v5
 
-    and-int/lit16 p1, p1, 0xff
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    new-instance v5, Lgj9;
 
-    :cond_1
+    iget-object v6, v4, Lxz0;->c:Ljava/lang/Object;
+
+    check-cast v6, Lej9;
+
+    invoke-direct {v5, v6, p1}, Lgj9;-><init>(Lej9;I)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    iget-object p1, v4, Lxz0;->b:Ljava/lang/Object;
+
+    check-cast p1, Lyi;
+
+    invoke-virtual {p1, v3, v5}, Lyi;->d(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+
+    invoke-virtual {v5}, Lgj9;->E()Lfj9;
+
+    move-result-object p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    invoke-virtual {v5}, Lgj9;->close()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+
+    const-string v3, "Successful read from disk cache for %s"
+
+    invoke-static {v2, v0, v3}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_5
+    invoke-virtual {v5}, Lgj9;->close()V
+
+    throw p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_6
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+
+    throw p1
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
+
     :goto_0
-    return-void
+    const-string v2, "Exception reading from cache for %s"
 
-    :pswitch_0
-    iget-object v0, p0, Ldx0;->c:Ljava/nio/ByteOrder;
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    move-result-object v0
 
-    iget-object v2, p0, Ldx0;->b:Ljava/io/OutputStream;
+    invoke-static {p1, v2, v0}, Lmt5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-ne v0, v1, :cond_2
+    invoke-interface {v1}, Llh7;->j()V
 
-    and-int/lit16 v0, p1, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 p1, p1, 0x18
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_3
-
-    ushr-int/lit8 v0, p1, 0x18
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x10
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method
 
-.method public final i(S)V
-    .locals 3
+.method public final c(Lddf;Lei5;)V
+    .locals 5
 
-    iget v0, p0, Ldx0;->a:I
+    iget-object v0, p1, Lddf;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    const-class v1, Ldx0;
 
-    iget-object v0, p0, Ldx0;->c:Ljava/nio/ByteOrder;
+    const-string v2, "About to write to disk-cache for key %s"
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    invoke-static {v1, v0, v2}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Ldx0;->b:Ljava/io/OutputStream;
+    :try_start_0
+    iget-object v2, p0, Ldx0;->a:Lxz5;
 
-    if-ne v0, v1, :cond_0
+    new-instance v3, Lwq;
 
-    and-int/lit16 v0, p1, 0xff
+    const/4 v4, 0x4
 
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
+    invoke-direct {v3, p2, v4, p0}, Lwq;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    ushr-int/lit8 p1, p1, 0x8
+    check-cast v2, Lu15;
 
-    and-int/lit16 p1, p1, 0xff
+    invoke-virtual {v2, p1, v3}, Lu15;->d(Lddf;Lwq;)Lwz5;
 
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
+    iget-object p1, p0, Ldx0;->f:Llh7;
 
-    goto :goto_0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_0
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+    const-string p1, "Successful disk-cache write for key %s"
 
-    if-ne v0, v1, :cond_1
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldx0;->c:Ljava/nio/ByteOrder;
-
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    iget-object v2, p0, Ldx0;->b:Ljava/io/OutputStream;
-
-    if-ne v0, v1, :cond_2
-
-    and-int/lit16 v0, p1, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    ushr-int/lit8 p1, p1, 0x8
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v1, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
-
-    if-ne v0, v1, :cond_3
-
-    ushr-int/lit8 v0, p1, 0x8
-
-    and-int/lit16 v0, v0, 0xff
-
-    invoke-virtual {v2, v0}, Ljava/io/OutputStream;->write(I)V
-
-    and-int/lit16 p1, p1, 0xff
-
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write(I)V
-
-    :cond_3
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([B)V
-    .locals 1
-
-    iget v0, p0, Ldx0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 1
-    iget-object v0, p0, Ldx0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+    invoke-static {v1, v0, p1}, Lmt5;->d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    .line 2
-    :pswitch_0
-    iget-object v0, p0, Ldx0;->b:Ljava/io/OutputStream;
+    :catch_0
+    move-exception p1
 
-    invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
+    const-string p2, "Failed to write to disk-cache for key %s"
 
-    return-void
+    filled-new-array {v0}, [Ljava/lang/Object;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final write([BII)V
-    .locals 1
-
-    iget v0, p0, Ldx0;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 3
-    iget-object v0, p0, Ldx0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
+    invoke-static {p1, p2, v0}, Lmt5;->l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-void
-
-    .line 4
-    :pswitch_0
-    iget-object v0, p0, Ldx0;->b:Ljava/io/OutputStream;
-
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

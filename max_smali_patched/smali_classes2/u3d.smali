@@ -1,43 +1,98 @@
-.class public abstract synthetic Lu3d;
+.class public final synthetic Lu3d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lz3d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lz3d;I)V
+    .locals 0
 
-    invoke-static {}, Lu2d;->values()[Lu2d;
+    iput p2, p0, Lu3d;->a:I
+
+    iput-object p1, p0, Lu3d;->b:Lz3d;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lu3d;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    sget v0, Lf6e;->o0:I
+
+    iget-object v1, p0, Lu3d;->b:Lz3d;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    new-array v0, v0, [I
+    move-result-object v0
 
-    const/4 v1, 0x1
+    return-object v0
 
-    const/4 v2, 0x0
+    :pswitch_0
+    sget v0, Lf6e;->m0:I
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v1, p0, Lu3d;->b:Lz3d;
 
-    :catch_0
-    const/4 v2, 0x2
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object v1
 
-    :catch_1
-    sput-object v0, Lu3d;->$EnumSwitchMapping$0:[I
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    return-void
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Lf6e;->n0:I
+
+    iget-object v1, p0, Lu3d;->b:Lz3d;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

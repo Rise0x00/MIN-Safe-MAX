@@ -1,53 +1,34 @@
-.class public abstract synthetic Ltig;
+.class public final synthetic Ltig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/ui/internal/VideoRendererInterface$FrameSizeListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Lbr6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lbr6;)V
+    .locals 0
 
-    invoke-static {}, Laq4;->values()[Laq4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Ltig;->a:Lbr6;
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    :try_start_0
-    sget-object v1, Laq4;->o:Laq4;
+# virtual methods
+.method public final onFrame(II)V
+    .locals 1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iget-object v0, p0, Ltig;->a:Lbr6;
 
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Laq4;->X:Laq4;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Ltig;->$EnumSwitchMapping$0:[I
+    invoke-static {v0, p1, p2}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->c(Lbr6;II)V
 
     return-void
 .end method

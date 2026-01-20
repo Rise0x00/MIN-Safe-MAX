@@ -1,277 +1,201 @@
 .class public final Lf89;
-.super Landroid/widget/BaseAdapter;
+.super Lr99;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:I
+.field public final a:Ljava/lang/String;
 
-.field public final a:Li89;
-
-.field public b:I
-
-.field public c:Z
-
-.field public final d:Z
-
-.field public final o:Landroid/view/LayoutInflater;
+.field public final b:Le89;
 
 
 # direct methods
-.method public constructor <init>(Li89;Landroid/view/LayoutInflater;ZI)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Le89;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Lf89;->a:Ljava/lang/String;
 
-    iput v0, p0, Lf89;->b:I
-
-    iput-boolean p3, p0, Lf89;->d:Z
-
-    iput-object p2, p0, Lf89;->o:Landroid/view/LayoutInflater;
-
-    iput-object p1, p0, Lf89;->a:Li89;
-
-    iput p4, p0, Lf89;->X:I
-
-    invoke-virtual {p0}, Lf89;->a()V
+    iput-object p2, p0, Lf89;->b:Le89;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final f(I)V
+    .locals 6
 
-    iget-object v0, p0, Lf89;->a:Li89;
+    iget-object v0, p0, Lf89;->a:Ljava/lang/String;
 
-    iget-object v1, v0, Li89;->F0:Lm89;
+    if-eqz v0, :cond_2
 
-    if-eqz v1, :cond_1
+    iget-object v1, p0, Lf89;->b:Le89;
 
-    invoke-virtual {v0}, Li89;->i()V
-
-    iget-object v0, v0, Li89;->t0:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lm89;
-
-    if-ne v4, v1, :cond_0
-
-    iput v3, p0, Lf89;->b:I
-
-    return-void
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, -0x1
-
-    iput v0, p0, Lf89;->b:I
-
-    return-void
-.end method
-
-.method public final b(I)Lm89;
-    .locals 2
-
-    iget-boolean v0, p0, Lf89;->d:Z
-
-    iget-object v1, p0, Lf89;->a:Li89;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Li89;->i()V
-
-    iget-object v0, v1, Li89;->t0:Ljava/util/ArrayList;
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Li89;->l()Ljava/util/ArrayList;
+    iget-object v2, v1, Le89;->h:Landroid/os/Messenger;
 
-    move-result-object v0
-
-    :goto_0
-    iget v1, p0, Lf89;->b:I
-
-    if-ltz v1, :cond_1
-
-    if-lt p1, v1, :cond_1
-
-    add-int/lit8 p1, p1, 0x1
-
-    :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm89;
-
-    return-object p1
-.end method
-
-.method public final getCount()I
-    .locals 2
-
-    iget-boolean v0, p0, Lf89;->d:Z
-
-    iget-object v1, p0, Lf89;->a:Li89;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Li89;->i()V
-
-    iget-object v0, v1, Li89;->t0:Ljava/util/ArrayList;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Li89;->l()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    :goto_0
-    iget v1, p0, Lf89;->b:I
-
-    if-gez v1, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final bridge synthetic getItem(I)Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lf89;->b(I)Lm89;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final getItemId(I)J
-    .locals 2
-
-    int-to-long v0, p1
-
-    return-wide v0
-.end method
-
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 5
-
-    const/4 v0, 0x0
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lf89;->o:Landroid/view/LayoutInflater;
-
-    iget v1, p0, Lf89;->X:I
-
-    invoke-virtual {p2, v1, p3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lf89;->b(I)Lm89;
-
-    move-result-object p3
-
-    iget p3, p3, Lm89;->b:I
-
-    add-int/lit8 v1, p1, -0x1
-
-    if-ltz v1, :cond_1
-
-    invoke-virtual {p0, v1}, Lf89;->b(I)Lm89;
-
-    move-result-object v1
-
-    iget v1, v1, Lm89;->b:I
-
-    goto :goto_0
-
-    :cond_1
-    move v1, p3
-
-    :goto_0
-    move-object v2, p2
-
-    check-cast v2, Landroidx/appcompat/view/menu/ListMenuItemView;
-
-    iget-object v3, p0, Lf89;->a:Li89;
-
-    invoke-virtual {v3}, Li89;->m()Z
-
-    move-result v3
-
-    const/4 v4, 0x1
+    iget-object v3, v1, Le89;->g:Landroid/media/MediaRouter2$RoutingController;
 
     if-eqz v3, :cond_2
 
-    if-eq p3, v1, :cond_2
+    invoke-static {v3}, Lc89;->v(Landroid/media/MediaRouter2$RoutingController;)Z
 
-    move v0, v4
+    move-result v3
 
+    if-nez v3, :cond_2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v3, v1, Le89;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v3
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v4
+
+    const/4 v5, 0x7
+
+    iput v5, v4, Landroid/os/Message;->what:I
+
+    iput v3, v4, Landroid/os/Message;->arg1:I
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    const-string v5, "volume"
+
+    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p1, "routeId"
+
+    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iget-object p1, v1, Le89;->i:Landroid/os/Messenger;
+
+    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    :try_start_0
+    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "MR2Provider"
+
+    const-string v1, "Could not send control request to service."
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :catch_1
     :cond_2
-    invoke-virtual {v2, v0}, Landroidx/appcompat/view/menu/ListMenuItemView;->setGroupDividerEnabled(Z)V
-
-    move-object p3, p2
-
-    check-cast p3, La99;
-
-    iget-boolean v0, p0, Lf89;->c:Z
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v2, v4}, Landroidx/appcompat/view/menu/ListMenuItemView;->setForceShowIcon(Z)V
-
-    :cond_3
-    invoke-virtual {p0, p1}, Lf89;->b(I)Lm89;
-
-    move-result-object p1
-
-    invoke-interface {p3, p1}, La99;->c(Lm89;)V
-
-    return-object p2
+    :goto_0
+    return-void
 .end method
 
-.method public final notifyDataSetChanged()V
-    .locals 0
+.method public final i(I)V
+    .locals 6
 
-    invoke-virtual {p0}, Lf89;->a()V
+    iget-object v0, p0, Lf89;->a:Ljava/lang/String;
 
-    invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
+    if-eqz v0, :cond_2
 
+    iget-object v1, p0, Lf89;->b:Le89;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, v1, Le89;->h:Landroid/os/Messenger;
+
+    iget-object v3, v1, Le89;->g:Landroid/media/MediaRouter2$RoutingController;
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v3}, Lc89;->v(Landroid/media/MediaRouter2$RoutingController;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v3, v1, Le89;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v3
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v4
+
+    const/16 v5, 0x8
+
+    iput v5, v4, Landroid/os/Message;->what:I
+
+    iput v3, v4, Landroid/os/Message;->arg1:I
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    const-string v5, "volume"
+
+    invoke-virtual {v3, v5, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string p1, "routeId"
+
+    invoke-virtual {v3, p1, v0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iget-object p1, v1, Le89;->i:Landroid/os/Messenger;
+
+    iput-object p1, v4, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    :try_start_0
+    invoke-virtual {v2, v4}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    const-string v0, "MR2Provider"
+
+    const-string v1, "Could not send control request to service."
+
+    invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :catch_1
+    :cond_2
+    :goto_0
     return-void
 .end method

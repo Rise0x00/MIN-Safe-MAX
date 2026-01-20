@@ -3,77 +3,96 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt97;
+.implements Llzc;
 
 
 # static fields
-.field public static final a:Lp58;
+.field public static final c:Ljava/lang/Object;
 
-.field public static final b:[B
+
+# instance fields
+.field public volatile a:Ljava/lang/Object;
+
+.field public volatile b:Llzc;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lp58;
+    new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lp58;->a:Lp58;
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [B
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lp58;->b:[B
+    sput-object v0, Lp58;->c:Ljava/lang/Object;
 
     return-void
+.end method
 
-    :array_0
-    .array-data 1
-        0x3t
-        0x0t
-        0x8t
-        0x0t
-    .end array-data
+.method public constructor <init>(Llzc;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Lp58;->c:Ljava/lang/Object;
+
+    iput-object v0, p0, Lp58;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lp58;->b:Llzc;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(I[B)Lu97;
-    .locals 1
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x4
+    iget-object v0, p0, Lp58;->a:Ljava/lang/Object;
 
-    if-lt p1, v0, :cond_0
+    sget-object v1, Lp58;->c:Ljava/lang/Object;
 
-    sget-object p1, Lp58;->b:[B
+    if-ne v0, v1, :cond_1
 
-    const/4 v0, 0x0
+    monitor-enter p0
 
-    invoke-static {p2, p1, v0}, Lrje;->d([B[BI)Z
+    :try_start_0
+    iget-object v0, p0, Lp58;->a:Ljava/lang/Object;
 
-    move-result p1
+    if-ne v0, v1, :cond_0
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lp58;->b:Llzc;
 
-    sget-object p1, Lmyh;->a:Lu97;
+    invoke-interface {v0}, Llzc;->get()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    iput-object v0, p0, Lp58;->a:Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lp58;->b:Llzc;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_0
-    sget-object p1, Lu97;->c:Lu97;
+    :goto_0
+    monitor-exit p0
 
-    return-object p1
-.end method
+    return-object v0
 
-.method public final b()I
-    .locals 1
+    :goto_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v0, 0x4
+    throw v0
 
-    return v0
+    :cond_1
+    return-object v0
 .end method

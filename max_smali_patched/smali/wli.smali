@@ -1,27 +1,96 @@
-.class public abstract Lwli;
+.class public final synthetic Lwli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/my/tracker/core/EngineCore$EventPacker;
+
+
+# instance fields
+.field public final synthetic X:Ljava/lang/String;
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/my/tracker/userlifecycle/o/a;
+
+.field public final synthetic c:Ljava/util/Map;
+
+.field public final synthetic d:Z
+
+.field public final synthetic o:Ljava/lang/String;
+
 
 # direct methods
-.method public static final a(Ltoe;)Lrj1;
-    .locals 9
+.method public synthetic constructor <init>(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Lrj1;
+    iput p6, p0, Lwli;->a:I
 
-    iget-wide v1, p0, Ltoe;->a:J
+    iput-object p1, p0, Lwli;->b:Lcom/my/tracker/userlifecycle/o/a;
 
-    iget-object v3, p0, Ltoe;->b:Lp5d;
+    iput-object p2, p0, Lwli;->c:Ljava/util/Map;
 
-    iget-object v4, p0, Ltoe;->c:Lsh1;
+    iput-boolean p3, p0, Lwli;->d:Z
 
-    iget-wide v5, p0, Ltoe;->d:J
+    iput-object p4, p0, Lwli;->o:Ljava/lang/String;
 
-    iget-object v7, p0, Ltoe;->e:Ljava/lang/String;
+    iput-object p5, p0, Lwli;->X:Ljava/lang/String;
 
-    iget-object v8, p0, Ltoe;->f:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct/range {v0 .. v8}, Lrj1;-><init>(JLp5d;Lsh1;JLjava/lang/String;Ljava/lang/String;)V
+    return-void
+.end method
 
-    return-object v0
+
+# virtual methods
+.method public final invoke(Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    .locals 7
+
+    iget v0, p0, Lwli;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v4, p0, Lwli;->o:Ljava/lang/String;
+
+    iget-object v5, p0, Lwli;->X:Ljava/lang/String;
+
+    iget-object v1, p0, Lwli;->b:Lcom/my/tracker/userlifecycle/o/a;
+
+    iget-object v2, p0, Lwli;->c:Ljava/util/Map;
+
+    iget-boolean v3, p0, Lwli;->d:Z
+
+    move-object v6, p1
+
+    invoke-static/range {v1 .. v6}, Lcom/my/tracker/userlifecycle/o/a;->b(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    move-object v5, p1
+
+    iget-object v3, p0, Lwli;->o:Ljava/lang/String;
+
+    iget-object v4, p0, Lwli;->X:Ljava/lang/String;
+
+    iget-object v0, p0, Lwli;->b:Lcom/my/tracker/userlifecycle/o/a;
+
+    iget-object v1, p0, Lwli;->c:Ljava/util/Map;
+
+    iget-boolean v2, p0, Lwli;->d:Z
+
+    invoke-static/range {v0 .. v5}, Lcom/my/tracker/userlifecycle/o/a;->a(Lcom/my/tracker/userlifecycle/o/a;Ljava/util/Map;ZLjava/lang/String;Ljava/lang/String;Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

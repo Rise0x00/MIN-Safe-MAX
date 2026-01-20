@@ -1,85 +1,77 @@
-.class public abstract Ls2b;
-.super Ljava/lang/Object;
+.class public final enum Ls2b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Ls2b;
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
+.field public static final synthetic b:[Ls2b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    sget v0, Lttc;->oneme_settings_ringtone_custom_section_add:I
+    new-instance v0, Ls2b;
 
-    sput v0, Ls2b;->a:I
+    const-string v1, "DISABLED"
 
-    sget v0, Lttc;->oneme_settings_ringtone_custom_section_bottom:I
+    const/4 v2, 0x0
 
-    sput v0, Ls2b;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lttc;->oneme_settings_ringtone_custom_section_bottom_full:I
+    sput-object v0, Ls2b;->a:Ls2b;
 
-    sput v0, Ls2b;->c:I
+    new-instance v1, Ls2b;
 
-    sget v0, Lttc;->oneme_settings_ringtone_custom_section_header:I
+    const-string v2, "SOFT"
 
-    sput v0, Ls2b;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lttc;->oneme_settings_ringtone_custom_section_wrong_duration:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Ls2b;->e:I
+    new-instance v2, Ls2b;
 
-    sget v0, Lttc;->oneme_settings_ringtone_custom_section_wrong_format:I
+    const-string v3, "HARD"
 
-    sput v0, Ls2b;->f:I
+    const/4 v4, 0x2
 
-    sget v0, Lttc;->oneme_settings_ringtone_custom_section_wrong_size:I
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Ls2b;->g:I
+    filled-new-array {v0, v1, v2}, [Ls2b;
 
-    sget v0, Lttc;->oneme_settings_ringtone_default_section:I
+    move-result-object v0
 
-    sput v0, Ls2b;->h:I
-
-    sget v0, Lttc;->oneme_settings_ringtone_low_volume_level:I
-
-    sput v0, Ls2b;->i:I
-
-    sget v0, Lttc;->oneme_settings_ringtone_system_section:I
-
-    sput v0, Ls2b;->j:I
-
-    sget v0, Lttc;->oneme_settings_ringtone_system_title:I
-
-    sput v0, Ls2b;->k:I
-
-    sget v0, Lttc;->oneme_settings_ringtone_title:I
-
-    sput v0, Ls2b;->l:I
+    sput-object v0, Ls2b;->b:[Ls2b;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ls2b;
+    .locals 1
+
+    const-class v0, Ls2b;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ls2b;
+
+    return-object p0
+.end method
+
+.method public static values()[Ls2b;
+    .locals 1
+
+    sget-object v0, Ls2b;->b:[Ls2b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ls2b;
+
+    return-object v0
 .end method

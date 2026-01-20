@@ -1,100 +1,186 @@
-.class public final Lx3b;
+.class public final synthetic Lx3b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La4b;
+.implements Llq6;
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lx3b;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public final synthetic a:I
 
-.field public static final a:Lx3b;
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Lj4b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Landroid/content/Context;Lj4b;I)V
+    .locals 0
 
-    new-instance v0, Lx3b;
+    iput p3, p0, Lx3b;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lx3b;->b:Landroid/content/Context;
 
-    sput-object v0, Lx3b;->a:Lx3b;
+    iput-object p2, p0, Lx3b;->c:Lj4b;
 
-    new-instance v0, Lw3b;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lw3b;-><init>(I)V
-
-    sput-object v0, Lx3b;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x0
+    iget v0, p0, Lx3b;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    const/4 v0, 0x1
+    sget v1, Lt6d;->ic_delete_filled_apart_24:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v2, p0, Lx3b;->b:Landroid/content/Context;
 
-    return v0
+    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
 
-    :cond_0
-    instance-of p1, p1, Lx3b;
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    if-nez p1, :cond_1
+    invoke-virtual {v1, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
-    const/4 p1, 0x0
+    move-result-object v3
 
-    return p1
+    invoke-virtual {v3}, Lpc3;->j()Lzlb;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object v3
 
-.method public final hashCode()I
-    .locals 1
+    invoke-interface {v3}, Lzlb;->getIcon()Lwe7;
 
-    const v0, 0x61724f48
+    const/4 v3, -0x1
 
-    return v0
-.end method
+    const-string v4, "cross"
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-static {v0, v4, v3}, Lroj;->b(Ladh;Ljava/lang/String;I)V
 
-    const-string v0, "Chevron"
+    invoke-static {v1, v2}, Liwd;->g(Lkme;Landroid/content/Context;)Lwe7;
+
+    move-result-object v1
+
+    iget v1, v1, Lwe7;->j:I
+
+    const-string v2, "circle_background"
+
+    invoke-static {v0, v2, v1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    iget-object v1, p0, Lx3b;->c:Lj4b;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     return-object v0
-.end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    :pswitch_0
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    const/4 p2, 0x1
+    sget v1, Lt6d;->ic_online_24:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v2, p0, Lx3b;->b:Landroid/content/Context;
 
-    return-void
+    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    sget-object v1, Lpc3;->t0:Lkme;
+
+    invoke-static {v1, v2}, Liwd;->g(Lkme;Landroid/content/Context;)Lwe7;
+
+    move-result-object v3
+
+    iget v3, v3, Lwe7;->e:I
+
+    const-string v4, "online"
+
+    invoke-static {v0, v4, v3}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    invoke-virtual {v1, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lpc3;->j()Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
+
+    move-result-object v1
+
+    iget v1, v1, Lxf0;->l:I
+
+    invoke-static {v0, v4, v1}, Lroj;->c(Ladh;Ljava/lang/String;I)V
+
+    iget-object v1, p0, Lx3b;->c:Lj4b;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    sget v1, Lb7d;->ic_add_photo_28:I
+
+    iget-object v2, p0, Lx3b;->b:Landroid/content/Context;
+
+    invoke-direct {v0, v2, v1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    sget-object v1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v1, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lpc3;->j()Lzlb;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lzlb;->b()Lxf0;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lxf0;->a:Lwf0;
+
+    iget v3, v3, Lwf0;->g:I
+
+    const-string v4, "background"
+
+    invoke-static {v0, v4, v3}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    invoke-virtual {v1, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lpc3;->j()Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
+
+    move-result-object v1
+
+    iget v1, v1, Lwe7;->b:I
+
+    const-string v2, "photo"
+
+    invoke-static {v0, v2, v1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
+
+    iget-object v1, p0, Lx3b;->c:Lj4b;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,189 +1,134 @@
 .class public final Lsve;
-.super Ljava/lang/Object;
+.super Lol6;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/text/TextWatcher;
-.implements Landroid/text/SpanWatcher;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final X:I
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final Y:I
+
+.field public final d:Ljava/lang/Object;
+
+.field public final o:Lbi7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 2
+.method public constructor <init>(Lui7;Landroid/util/Size;Lbi7;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lol6;-><init>(Lui7;)V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance p1, Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    iput-object p1, p0, Lsve;->d:Ljava/lang/Object;
 
-    iput-object v0, p0, Lsve;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    if-nez p2, :cond_0
 
-    iput-object p1, p0, Lsve;->a:Ljava/lang/Object;
+    iget-object p1, p0, Lol6;->b:Lui7;
+
+    invoke-interface {p1}, Lui7;->getWidth()I
+
+    move-result p1
+
+    iput p1, p0, Lsve;->X:I
+
+    iget-object p1, p0, Lol6;->b:Lui7;
+
+    invoke-interface {p1}, Lui7;->getHeight()I
+
+    move-result p1
+
+    iput p1, p0, Lsve;->Y:I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/util/Size;->getWidth()I
+
+    move-result p1
+
+    iput p1, p0, Lsve;->X:I
+
+    invoke-virtual {p2}, Landroid/util/Size;->getHeight()I
+
+    move-result p1
+
+    iput p1, p0, Lsve;->Y:I
+
+    :goto_0
+    iput-object p3, p0, Lsve;->o:Lbi7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method public final getHeight()I
     .locals 1
 
-    iget-object v0, p0, Lsve;->a:Ljava/lang/Object;
+    iget v0, p0, Lsve;->Y:I
 
-    check-cast v0, Landroid/text/TextWatcher;
-
-    invoke-interface {v0, p1}, Landroid/text/TextWatcher;->afterTextChanged(Landroid/text/Editable;)V
-
-    return-void
+    return v0
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+.method public final getImageInfo()Lbi7;
     .locals 1
 
-    iget-object v0, p0, Lsve;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lsve;->o:Lbi7;
 
-    check-cast v0, Landroid/text/TextWatcher;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->beforeTextChanged(Ljava/lang/CharSequence;III)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final onSpanAdded(Landroid/text/Spannable;Ljava/lang/Object;II)V
+.method public final getWidth()I
     .locals 1
 
-    iget-object v0, p0, Lsve;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget v0, p0, Lsve;->X:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    return v0
+.end method
 
-    move-result v0
+.method public final l(Landroid/graphics/Rect;)V
+    .locals 3
 
-    if-lez v0, :cond_0
+    if-eqz p1, :cond_0
 
-    instance-of v0, p2, Lyag;
+    new-instance v0, Landroid/graphics/Rect;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, p1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    return-void
+    iget p1, p0, Lsve;->X:I
+
+    iget v1, p0, Lsve;->Y:I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2, v2, p1, v1}, Landroid/graphics/Rect;->intersect(IIII)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
     :cond_0
-    iget-object v0, p0, Lsve;->a:Ljava/lang/Object;
+    iget-object p1, p0, Lsve;->d:Ljava/lang/Object;
 
-    check-cast v0, Landroid/text/SpanWatcher;
+    monitor-enter p1
 
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/SpanWatcher;->onSpanAdded(Landroid/text/Spannable;Ljava/lang/Object;II)V
-
-    return-void
-.end method
-
-.method public final onSpanChanged(Landroid/text/Spannable;Ljava/lang/Object;IIII)V
-    .locals 8
-
-    iget-object v0, p0, Lsve;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    instance-of v0, p2, Lyag;
-
-    if-eqz v0, :cond_0
+    :try_start_0
+    monitor-exit p1
 
     return-void
 
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    :catchall_0
+    move-exception v0
 
-    const/16 v1, 0x1c
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-ge v0, v1, :cond_2
-
-    const/4 v0, 0x0
-
-    if-le p3, p4, :cond_1
-
-    move p3, v0
-
-    :cond_1
-    if-le p5, p6, :cond_2
-
-    move v4, p3
-
-    move v6, v0
-
-    goto :goto_0
-
-    :cond_2
-    move v4, p3
-
-    move v6, p5
-
-    :goto_0
-    iget-object p3, p0, Lsve;->a:Ljava/lang/Object;
-
-    move-object v1, p3
-
-    check-cast v1, Landroid/text/SpanWatcher;
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v5, p4
-
-    move v7, p6
-
-    invoke-interface/range {v1 .. v7}, Landroid/text/SpanWatcher;->onSpanChanged(Landroid/text/Spannable;Ljava/lang/Object;IIII)V
-
-    return-void
-.end method
-
-.method public final onSpanRemoved(Landroid/text/Spannable;Ljava/lang/Object;II)V
-    .locals 1
-
-    iget-object v0, p0, Lsve;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    instance-of v0, p2, Lyag;
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lsve;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/text/SpanWatcher;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/SpanWatcher;->onSpanRemoved(Landroid/text/Spannable;Ljava/lang/Object;II)V
-
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 1
-
-    iget-object v0, p0, Lsve;->a:Ljava/lang/Object;
-
-    check-cast v0, Landroid/text/TextWatcher;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->onTextChanged(Ljava/lang/CharSequence;III)V
-
-    return-void
+    throw v0
 .end method

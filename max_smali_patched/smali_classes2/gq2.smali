@@ -1,129 +1,88 @@
-.class public final enum Lgq2;
-.super Ljava/lang/Enum;
+.class public final Lgq2;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lgq2;
-
-.field public static final enum b:Lgq2;
-
-.field public static final enum c:Lgq2;
-
-.field public static final enum d:Lgq2;
-
-.field public static final o:I
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Ljq2;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lgq2;
-
-    const-string v1, "SOUND"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, v1}, Lgq2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lgq2;->b:Lgq2;
-
-    new-instance v1, Lgq2;
-
-    const/4 v2, 0x1
-
-    const-string v3, "VIBR"
-
-    const-string v4, "VIBRATION"
-
-    invoke-direct {v1, v4, v2, v3}, Lgq2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lgq2;->c:Lgq2;
-
-    new-instance v2, Lgq2;
-
-    const-string v3, "LED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Lgq2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lgq2;->d:Lgq2;
-
-    filled-new-array {v0, v1, v2}, [Lgq2;
-
-    move-result-object v0
-
-    sput-object v0, Lgq2;->X:[Lgq2;
-
-    invoke-static {}, Lgq2;->values()[Lgq2;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    sput v0, Lgq2;->o:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public constructor <init>(Ljq2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lgq2;->X:Ljq2;
 
-    iput-object p3, p0, Lgq2;->a:Ljava/lang/String;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lgq2;
-    .locals 1
-
-    const-class v0, Lgq2;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lgq2;
-
-    return-object p0
-.end method
-
-.method public static values()[Lgq2;
-    .locals 1
-
-    sget-object v0, Lgq2;->X:[Lgq2;
-
-    invoke-virtual {v0}, [Lgq2;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lgq2;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "{value=\'"
+    check-cast p1, Lg59;
 
-    const-string v1, "\'}"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lgq2;->a:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lgq2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Lgq2;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lgq2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lgq2;
+
+    iget-object v1, p0, Lgq2;->X:Ljq2;
+
+    invoke-direct {v0, v1, p2}, Lgq2;-><init>(Ljq2;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lgq2;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lgq2;->o:Ljava/lang/Object;
+
+    check-cast v0, Lg59;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgq2;->X:Ljq2;
+
+    iget-object p1, p1, Ljq2;->I0:Ljava/util/concurrent/atomic/AtomicReference;
+
+    new-instance v1, Ls21;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, v2, v0}, Ls21;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

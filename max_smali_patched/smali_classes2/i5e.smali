@@ -1,80 +1,54 @@
 .class public final Li5e;
-.super Ld6e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic g:I
+.field public final a:Ljava/lang/String;
 
-.field public final h:Ljava/lang/Object;
+.field public final b:Lahd;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public final d:Ljava/util/concurrent/ConcurrentHashMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/Object;I)V
-    .locals 0
+.method public constructor <init>(Lahd;)V
+    .locals 3
 
-    .line 1
-    iput p4, p0, Li5e;->g:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Ld6e;-><init>(J)V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    iput-object p3, p0, Li5e;->h:Ljava/lang/Object;
+    const-wide/16 v1, 0x1
+
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
+
+    iput-object v0, p0, Li5e;->c:Ljava/util/concurrent/atomic/AtomicLong;
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Li5e;->d:Ljava/util/concurrent/ConcurrentHashMap;
+
+    if-eqz p1, :cond_0
+
+    const-string v0, "RtcCommands"
+
+    iput-object v0, p0, Li5e;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Li5e;->b:Lahd;
 
     return-void
-.end method
 
-.method public constructor <init>(Lr99;)V
-    .locals 2
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
+    const-string v0, "Illegal \'logger\' value: null"
 
-    iput v0, p0, Li5e;->g:I
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    const-wide/16 v0, 0x0
-
-    .line 2
-    invoke-direct {p0, v0, v1}, Ld6e;-><init>(J)V
-
-    .line 3
-    iput-object p1, p0, Li5e;->h:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Le6e;
-    .locals 2
-
-    iget v0, p0, Li5e;->g:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lf6e;
-
-    invoke-direct {v0, p0}, Lf6e;-><init>(Li5e;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lj5e;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lj5e;-><init>(Li5e;B)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lj5e;
-
-    invoke-direct {v0, p0}, Lj5e;-><init>(Li5e;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

@@ -1,55 +1,46 @@
-.class public abstract synthetic Ltth;
+.class public Ltth;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsth;
+
 
 # static fields
-.field public static final synthetic a:[I
+.field public static a:Ltth;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+# virtual methods
+.method public a(Ljava/lang/Class;)Loth;
+    .locals 0
 
-    invoke-static {}, Lfxg;->values()[Lfxg;
+    invoke-static {p1}, Lc3j;->c(Ljava/lang/Class;)Loth;
 
-    move-result-object v0
+    move-result-object p1
 
-    array-length v0, v0
+    return-object p1
+.end method
 
-    new-array v0, v0, [I
+.method public b(Ljava/lang/Class;Llea;)Loth;
+    .locals 0
 
-    sput-object v0, Ltth;->a:[I
+    invoke-virtual {p0, p1}, Ltth;->a(Ljava/lang/Class;)Loth;
 
-    const/4 v1, 0x1
+    move-result-object p1
 
-    const/4 v2, 0x0
+    return-object p1
+.end method
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+.method public final c(Lrd3;Llea;)Loth;
+    .locals 0
 
-    :catch_0
-    const/4 v0, 0x2
+    invoke-interface {p1}, Lpd3;->a()Ljava/lang/Class;
 
-    :try_start_1
-    sget-object v2, Ltth;->a:[I
+    move-result-object p1
 
-    aput v0, v2, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-virtual {p0, p1, p2}, Ltth;->b(Ljava/lang/Class;Llea;)Loth;
 
-    :catch_1
-    :try_start_2
-    sget-object v1, Ltth;->a:[I
+    move-result-object p1
 
-    const/4 v2, 0x3
-
-    aput v2, v1, v0
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    return-void
+    return-object p1
 .end method

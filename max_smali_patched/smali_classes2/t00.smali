@@ -1,830 +1,349 @@
-.class public final synthetic Lt00;
-.super Ljava/lang/Object;
+.class public final Lt00;
+.super Lqh8;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+# static fields
+.field public static final synthetic y0:I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public u0:Li20;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final v0:J
+
+.field public final w0:J
+
+.field public x0:Ljava/io/File;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method static constructor <clinit>()V
     .locals 0
 
-    iput p1, p0, Lt00;->a:I
+    return-void
+.end method
 
-    iput-object p2, p0, Lt00;->b:Ljava/lang/Object;
+.method public constructor <init>(Li20;Lh20;IJJ)V
+    .locals 16
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v13, p1
+
+    move-object/from16 v0, p2
+
+    const/4 v1, 0x2
+
+    move/from16 v2, p3
+
+    if-ne v2, v1, :cond_0
+
+    const/16 v1, 0xb
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x3
+
+    .line 18
+    :goto_0
+    iget-object v2, v13, Li20;->r:Ljava/lang/String;
+
+    iget-object v3, v13, Li20;->s:Ljava/lang/String;
+
+    .line 19
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    int-to-long v4, v2
+
+    if-eqz v3, :cond_2
+
+    .line 20
+    invoke-virtual {v3}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_2
+
+    .line 21
+    :cond_1
+    new-instance v2, Ljava/io/File;
+
+    invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :goto_1
+    move-wide v3, v4
+
+    goto :goto_3
+
+    .line 22
+    :cond_2
+    :goto_2
+    iget-object v2, v0, Lh20;->h:Ljava/lang/String;
+
+    goto :goto_1
+
+    .line 23
+    :goto_3
+    iget-object v5, v0, Lh20;->d:Ljava/lang/String;
+
+    .line 24
+    iget-wide v7, v0, Lh20;->c:J
+
+    const-wide/16 v10, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v6, 0x0
+
+    .line 25
+    const-string v9, "video/mp4"
+
+    move-wide v14, v3
+
+    move-object v4, v2
+
+    move-wide v2, v14
+
+    move-object/from16 v0, p0
+
+    invoke-direct/range {v0 .. v12}, Lqh8;-><init>(IJLjava/lang/String;Ljava/lang/String;IJLjava/lang/String;JLandroid/net/Uri;)V
+
+    .line 26
+    iput-object v13, v0, Lt00;->u0:Li20;
+
+    move-wide/from16 v1, p4
+
+    .line 27
+    iput-wide v1, v0, Lt00;->v0:J
+
+    move-wide/from16 v1, p6
+
+    .line 28
+    iput-wide v1, v0, Lt00;->w0:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Li20;Lw10;JJ)V
+    .locals 13
+
+    move-object v0, p2
+
+    .line 1
+    iget-object v1, p1, Li20;->r:Ljava/lang/String;
+
+    .line 2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    int-to-long v2, v1
+
+    .line 3
+    iget-object v1, p1, Li20;->s:Ljava/lang/String;
+
+    .line 4
+    sget-object v4, Lgm0;->o:Lgm0;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    goto :goto_0
+
+    .line 5
+    :cond_0
+    invoke-static {v1}, Lxti;->k(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    goto :goto_1
+
+    .line 6
+    :cond_1
+    :goto_0
+    invoke-virtual {p2, v4}, Lw10;->b(Lgm0;)Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 7
+    :goto_1
+    iget-boolean v6, v0, Lw10;->o:Z
+
+    iget-object v7, v0, Lw10;->v0:Ljava/lang/String;
+
+    if-eqz v6, :cond_2
+
+    if-nez v7, :cond_5
+
+    .line 8
+    invoke-virtual {p2, v4}, Lw10;->b(Lgm0;)Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_3
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    .line 9
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v6
+
+    if-nez v6, :cond_3
+
+    goto :goto_2
+
+    .line 10
+    :cond_3
+    invoke-static {v1}, Lxti;->k(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_3
+
+    :cond_4
+    :goto_2
+    if-nez v7, :cond_5
+
+    .line 11
+    invoke-virtual {p2, v4}, Lw10;->b(Lgm0;)Ljava/lang/String;
+
+    move-result-object v7
+
+    .line 12
+    :cond_5
+    :goto_3
+    iget-boolean v0, v0, Lw10;->o:Z
+
+    if-eqz v0, :cond_6
+
+    .line 13
+    const-string v0, "image/gif"
+
+    :goto_4
+    move-object v9, v0
+
+    goto :goto_5
+
+    :cond_6
+    const-string v0, "image/jpeg"
+
+    goto :goto_4
+
+    :goto_5
+    const/4 v1, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v4, v5
+
+    move-object v5, v7
+
+    const-wide/16 v7, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const/4 v12, 0x0
+
+    move-object v0, p0
+
+    .line 14
+    invoke-direct/range {v0 .. v12}, Lqh8;-><init>(IJLjava/lang/String;Ljava/lang/String;IJLjava/lang/String;JLandroid/net/Uri;)V
+
+    .line 15
+    iput-object p1, p0, Lt00;->u0:Li20;
+
+    move-wide/from16 v1, p3
+
+    .line 16
+    iput-wide v1, p0, Lt00;->v0:J
+
+    move-wide/from16 v1, p5
+
+    .line 17
+    iput-wide v1, p0, Lt00;->w0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 7
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Lt00;->a:I
+    iget-object v0, p0, Lt00;->x0:Ljava/io/File;
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    if-nez v0, :cond_0
 
-    const/4 v2, 0x0
+    invoke-super {p0}, Lqh8;->a()Ljava/lang/String;
 
-    const/4 v3, 0x0
+    move-result-object v0
 
-    const/4 v4, 0x1
+    return-object v0
 
-    const/4 v5, 0x0
+    :cond_0
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    iget-object v6, p0, Lt00;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    packed-switch v0, :pswitch_data_0
+    if-nez v0, :cond_2
 
-    check-cast v6, Lktg;
+    invoke-virtual {p0}, Lt00;->c()Landroid/net/Uri;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    check-cast p1, Ljava/lang/Float;
+    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    move-result-object v0
 
-    move-result p1
+    return-object v0
 
-    iput p1, v6, Lktg;->s0:F
+    :cond_1
+    const/4 v0, 0x0
 
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    :cond_2
+    return-object v0
+.end method
 
-    return-void
+.method public final c()Landroid/net/Uri;
+    .locals 1
 
-    :pswitch_0
-    check-cast v6, Lvsg;
+    iget-object v0, p0, Lt00;->u0:Li20;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-object v0, v0, Li20;->s:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-static {v0}, Lxti;->j(Ljava/lang/String;)Landroid/net/Uri;
 
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v6, Lvsg;->F:F
-
-    iget-object v0, v6, Lvsg;->p:Lrw7;
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lrw7;->c:La22;
-
-    iget-object v3, v0, La22;->A0:Ludd;
+    return-object v0
 
     :cond_0
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3, p1}, Ludd;->d(F)Lv28;
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    check-cast v6, Lopg;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-super {p0}, Lqh8;->c()Landroid/net/Uri;
 
     move-result-object v0
 
-    iput p1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    iput p1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v6, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :pswitch_2
-    check-cast v6, Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v6, p1}, Landroid/widget/TextView;->setWidth(I)V
-
-    return-void
-
-    :pswitch_3
-    check-cast v6, Lru/ok/messages/views/widgets/SlideOutLayout;
-
-    sget p1, Lru/ok/messages/views/widgets/SlideOutLayout;->B0:I
-
-    invoke-virtual {v6}, Lru/ok/messages/views/widgets/SlideOutLayout;->e()V
-
-    return-void
-
-    :pswitch_4
-    check-cast v6, Lvke;
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_5
-    check-cast v6, Lmqd;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "animateToFullOpacity: value = "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Float;
-
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ScreenFlashView"
-
-    invoke-static {v1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    invoke-virtual {v6, p1}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_6
-    check-cast v6, Lofd;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x41800000    # 16.0f
-
-    mul-float/2addr v0, v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v3, 0x43a00000    # 320.0f
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v0, v2, p1}, Lohi;->b(FFF)F
-
-    move-result v0
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v0, v2
-
-    iput v0, v6, Lofd;->a:F
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v3, 0x43c80000    # 400.0f
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v0, v1, p1}, Lohi;->b(FFF)F
-
-    move-result v0
-
-    div-float/2addr v0, v2
-
-    iput v0, v6, Lofd;->b:F
-
-    const v0, 0x3f333333    # 0.7f
-
-    invoke-static {v0, v5, p1}, Lohi;->b(FFF)F
-
-    move-result p1
-
-    iput p1, v6, Lofd;->c:F
-
-    invoke-virtual {v6}, Lofd;->a()V
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_7
-    check-cast v6, Leyc;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v6, Leyc;->d:F
-
-    invoke-virtual {v6}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_8
-    check-cast v6, Lyta;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v6, Lyta;->o:F
-
-    invoke-virtual {v6}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_9
-    check-cast v6, La7a;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v6, La7a;->Y:F
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_a
-    check-cast v6, Loa9;
-
-    iget-object v0, v6, Loa9;->I0:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/View;->getForeground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    return-void
-
-    :pswitch_b
-    check-cast v6, Lb58;
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_c
-    check-cast v6, Lew7;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
-
-    move-result p1
-
-    const v0, 0x3dcccccd    # 0.1f
-
-    cmpg-float v1, p1, v0
-
-    if-gtz v1, :cond_2
-
-    iget-boolean v1, v6, Lew7;->a:Z
-
-    if-eqz v1, :cond_2
-
-    iput-boolean v2, v6, Lew7;->a:Z
-
-    iget-object p1, v6, Lew7;->b:Lhr6;
-
-    invoke-virtual {p1}, Lhr6;->a()V
-
-    goto :goto_0
-
-    :cond_2
-    cmpl-float p1, p1, v0
-
-    if-lez p1, :cond_3
-
-    iput-boolean v4, v6, Lew7;->a:Z
-
-    :cond_3
-    :goto_0
-    return-void
-
-    :pswitch_d
-    check-cast v6, Lhr6;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v6, Lhr6;->o:F
-
-    invoke-virtual {v6}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_e
-    check-cast v6, Lak5;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    iput-object v0, v6, Lak5;->z0:Ljava/lang/Integer;
-
-    invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v6, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :cond_4
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string v0, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
-
-    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_f
-    check-cast v6, Lh35;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v6, Lqc5;->d:Lcom/google/android/material/internal/CheckableImageButton;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_10
-    check-cast v6, Lg74;
-
-    iget-object v0, v6, Lip4;->g:Landroid/graphics/RectF;
-
-    iget-object v3, v6, Lip4;->k:Landroid/graphics/Matrix;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    cmpl-float v4, p1, v5
-
-    if-nez v4, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    invoke-static {v3, v2}, Ljzh;->b(Landroid/graphics/Matrix;I)F
-
-    move-result v2
-
-    div-float/2addr p1, v2
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v0
-
-    invoke-virtual {v3, p1, v1, v2, v0}, Landroid/graphics/Matrix;->postScale(FFFF)Z
-
-    iget-object p1, v6, Lip4;->j:Landroid/graphics/Matrix;
-
-    invoke-virtual {p1, v3}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    iget-object p1, v6, Lip4;->b:Ljrh;
-
-    if-eqz p1, :cond_6
-
-    invoke-interface {p1, v3}, Lfrh;->a(Landroid/graphics/Matrix;)V
-
-    :cond_6
-    :goto_1
-    return-void
-
-    :pswitch_11
-    check-cast v6, Lu54;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    const/16 v0, 0x64
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, p1
-
-    const/high16 v1, 0x43b40000    # 360.0f
-
-    div-float/2addr v0, v1
-
-    iget-wide v1, v6, Lu54;->u0:J
-
-    long-to-float v1, v1
-
-    mul-float/2addr v1, v0
-
-    const/high16 v0, 0x42c80000    # 100.0f
-
-    div-float/2addr v1, v0
-
-    float-to-int v0, v1
-
-    iget-object v1, v6, Lu54;->w0:Lv63;
-
-    iput p1, v1, Lv63;->b:F
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    div-int/lit16 v0, v0, 0x3e8
-
-    add-int/2addr v0, v4
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v6, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :pswitch_12
-    check-cast v6, Lg42;
-
-    iget-object v0, v6, Lg42;->o:[Ljava/lang/Float;
-
-    aget-object v1, v0, v4
-
-    if-eqz v1, :cond_7
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    aput-object p1, v0, v4
-
-    iget-object p1, v6, Lg42;->a:Le4b;
-
-    invoke-virtual {p1}, Le4b;->invoke()Ljava/lang/Object;
-
-    :cond_7
-    return-void
-
-    :pswitch_13
-    check-cast v6, Leb1;
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_14
-    check-cast v6, Lya1;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of v0, p1, Ljava/lang/Float;
-
-    if-eqz v0, :cond_8
-
-    move-object v3, p1
-
-    check-cast v3, Ljava/lang/Float;
-
-    :cond_8
-    if-eqz v3, :cond_9
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v1
-
-    :cond_9
-    invoke-virtual {v6}, Lya1;->getBackground()Leb1;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_a
-
-    const/16 v0, 0xff
-
-    int-to-float v0, v0
-
-    mul-float/2addr v0, v1
-
-    float-to-int v0, v0
-
-    invoke-virtual {p1, v0}, Leb1;->setAlpha(I)V
-
-    :cond_a
-    iget-object p1, v6, Lya1;->F0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-object p1, v6, Lya1;->G0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setAlpha(F)V
-
-    return-void
-
-    :pswitch_15
-    check-cast v6, Lru/ok/messages/settings/view/BrightnessSeekBar;
-
-    sget v0, Lru/ok/messages/settings/view/BrightnessSeekBar;->t0:I
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v6, Lru/ok/messages/settings/view/BrightnessSeekBar;->o:F
-
-    cmpg-float p1, p1, v5
-
-    if-gez p1, :cond_b
-
-    iput v5, v6, Lru/ok/messages/settings/view/BrightnessSeekBar;->o:F
-
-    :cond_b
-    invoke-virtual {v6}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_16
-    check-cast v6, Le3a;
-
-    iget-object v0, v6, Le3a;->z0:Landroidx/appcompat/widget/AppCompatImageView;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
-
-    return-void
-
-    :pswitch_17
-    check-cast v6, Lo60;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iput p1, v6, Lo60;->u0:F
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_18
-    check-cast v6, Lf20;
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v6, Lf20;->b:I
-
-    invoke-virtual {v6}, Lf20;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_19
-    check-cast v6, Lu00;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v6, Lu00;->f:I
-
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

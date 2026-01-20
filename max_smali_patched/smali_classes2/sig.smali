@@ -1,89 +1,64 @@
-.class public final Lsig;
+.class public final synthetic Lsig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwq9;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lsig;->a:I
 
-    iput-object p1, p0, Lsig;->a:Ljava/lang/String;
+    iput-object p1, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lsig;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsig;
-
-    iget-object v1, p0, Lsig;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lsig;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lsig;->a:Ljava/lang/String;
+    iget v0, p0, Lsig;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    return v0
-.end method
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->b(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    return-void
 
-    const-string v0, "VKServerQuality(value="
+    :pswitch_0
+    iget-object v0, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    const-string v1, ")"
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->d(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-    iget-object v2, p0, Lsig;->a:Ljava/lang/String;
+    return-void
 
-    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :pswitch_1
+    iget-object v0, p0, Lsig;->b:Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;
 
-    move-result-object v0
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;->e(Lru/ok/android/externcalls/sdk/ui/TextureViewRenderer;)V
 
-    return-object v0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

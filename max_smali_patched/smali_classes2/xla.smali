@@ -1,129 +1,104 @@
-.class public final Lxla;
+.class public final synthetic Lxla;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llla;
+.implements Lnr6;
+
 
 # instance fields
-.field public final a:Lfm;
-
-.field public final b:Lam;
+.field public final synthetic a:Lqma;
 
 
 # direct methods
-.method public constructor <init>(Lfm;Lam;)V
+.method public constructor <init>(Lqma;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxla;->a:Lfm;
-
-    iput-object p2, p0, Lxla;->b:Lam;
+    iput-object p1, p0, Lxla;->a:Lqma;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a(Ldla;)V
+    .locals 1
+
+    iget-object v0, p0, Lxla;->a:Lqma;
+
+    invoke-virtual {v0, p1}, Lqma;->x(Ldla;)V
+
+    return-void
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 1
 
-    const/4 v0, 0x1
+    instance-of v0, p1, Llla;
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    instance-of v0, p1, Lnr6;
 
-    :cond_0
-    instance-of v1, p1, Lxla;
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Lxla;->getFunctionDelegate()Lgr6;
 
-    if-nez v1, :cond_1
+    move-result-object v0
 
-    return v2
+    check-cast p1, Lnr6;
 
-    :cond_1
-    check-cast p1, Lxla;
+    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
 
-    iget-object v1, p0, Lxla;->a:Lfm;
+    move-result-object p1
 
-    iget-object v3, p1, Lxla;->a:Lfm;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lxla;->b:Lam;
-
-    iget-object p1, p1, Lxla;->b:Lam;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    return p1
 
-    return v2
+    :cond_0
+    const/4 p1, 0x0
 
-    :cond_3
-    return v0
+    return p1
+.end method
+
+.method public final getFunctionDelegate()Lgr6;
+    .locals 7
+
+    new-instance v0, Lqr6;
+
+    const-string v6, "selectAvatar(Lone/me/login/common/avatars/NeuroAvatarModel;)V"
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v3, Lqma;
+
+    iget-object v4, p0, Lxla;->a:Lqma;
+
+    const-string v5, "selectAvatar"
+
+    invoke-direct/range {v0 .. v6}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lxla;->a:Lfm;
+    invoke-virtual {p0}, Lxla;->getFunctionDelegate()Lgr6;
+
+    move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lxla;->b:Lam;
-
-    invoke-virtual {v1}, Lam;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OkApiRequest(request="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lxla;->a:Lfm;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", config="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lxla;->b:Lam;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

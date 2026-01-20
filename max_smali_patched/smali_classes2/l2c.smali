@@ -1,164 +1,82 @@
 .class public final Ll2c;
-.super Lp2c;
+.super Ljz;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lirf;
+.field public final X:Ljava/lang/Integer;
 
-.field public final c:Lirf;
+.field public final Y:Ljava/lang/Integer;
 
-.field public final d:Ljava/util/List;
+.field public final Z:Z
+
+.field public final d:Ljava/lang/String;
+
+.field public o:Ljava/lang/String;
+
+.field public final t0:[B
+
+.field public final u0:Ljava/lang/String;
+
+.field public final v0:Ljava/lang/String;
+
+.field public final w0:Ljava/lang/Long;
+
+.field public final x0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lirf;Lirf;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Z[BLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Lp2c;-><init>()V
+    sget-object v0, Le10;->d:Le10;
 
-    iput-object p1, p0, Ll2c;->b:Lirf;
+    invoke-direct {p0, v0, p10, p11}, Ljz;-><init>(Le10;ZZ)V
 
-    iput-object p2, p0, Ll2c;->c:Lirf;
+    iput-object p1, p0, Ll2c;->d:Ljava/lang/String;
 
-    iput-object p3, p0, Ll2c;->d:Ljava/util/List;
+    iput-object p2, p0, Ll2c;->o:Ljava/lang/String;
+
+    iput-object p3, p0, Ll2c;->X:Ljava/lang/Integer;
+
+    iput-object p4, p0, Ll2c;->Y:Ljava/lang/Integer;
+
+    iput-boolean p5, p0, Ll2c;->Z:Z
+
+    iput-object p6, p0, Ll2c;->t0:[B
+
+    iput-object p7, p0, Ll2c;->w0:Ljava/lang/Long;
+
+    iput-object p8, p0, Ll2c;->v0:Ljava/lang/String;
+
+    iput-object p9, p0, Ll2c;->u0:Ljava/lang/String;
+
+    iput-object p12, p0, Ll2c;->x0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Ll2c;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ll2c;
-
-    iget-object v0, p0, Ll2c;->b:Lirf;
-
-    iget-object v1, p1, Ll2c;->b:Lirf;
-
-    invoke-virtual {v0, v1}, Lirf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Ll2c;->c:Lirf;
-
-    iget-object v1, p1, Ll2c;->c:Lirf;
-
-    invoke-virtual {v0, v1}, Lirf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ll2c;->d:Ljava/util/List;
-
-    iget-object p1, p1, Ll2c;->d:Ljava/util/List;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final a()Ljava/util/HashMap;
     .locals 3
 
-    iget-object v0, p0, Ll2c;->b:Lirf;
-
-    iget v0, v0, Lirf;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ll2c;->c:Lirf;
-
-    iget v2, v2, Lirf;->c:I
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Ll2c;->d:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowConfirmation(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ll2c;->b:Lirf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ll2c;->c:Lirf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", buttons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Ll2c;->d:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lnx1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-super {p0}, Ljz;->a()Ljava/util/HashMap;
 
     move-result-object v0
 
+    iget-object v1, p0, Ll2c;->u0:Ljava/lang/String;
+
+    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "photoToken"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
     return-object v0
 .end method

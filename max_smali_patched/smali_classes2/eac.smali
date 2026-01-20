@@ -1,21 +1,22 @@
 .class public final Leac;
-.super Lmd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfac;
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
-
-    iput-object p1, p0, Leac;->b:Landroid/content/Intent;
+    iput-object p1, p0, Leac;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -43,11 +44,11 @@
     :cond_1
     check-cast p1, Leac;
 
-    iget-object v1, p0, Leac;->b:Landroid/content/Intent;
+    iget-object v1, p0, Leac;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Leac;->b:Landroid/content/Intent;
+    iget-object p1, p1, Leac;->a:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -62,9 +63,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Leac;->b:Landroid/content/Intent;
+    iget-object v0, p0, Leac;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
@@ -72,23 +73,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CropAvatarOld(intent="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Leac;->b:Landroid/content/Intent;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "UserPhoto(url="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Leac;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,314 +1,162 @@
 .class public final Lw9b;
-.super Laaf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final p:[B
-
-.field public static final q:[B
-
-
 # instance fields
-.field public o:Z
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lbt;
+
+.field public final c:Lbt;
+
+.field public final d:Lbt;
+
+.field public final e:Ln8g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Llo4;)V
+    .locals 1
 
-    const/16 v0, 0x8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [B
+    iput-object p1, p0, Lw9b;->a:Landroid/content/Context;
 
-    fill-array-data v1, :array_0
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput-object v1, Lw9b;->p:[B
+    const-string p1, "ru.oneme.app.chats"
 
-    new-array v0, v0, [B
+    const-string p2, "ru.oneme.app.inapp.2"
 
-    fill-array-data v0, :array_1
+    const-string v0, "ru.oneme.app.dialogs"
 
-    sput-object v0, Lw9b;->q:[B
+    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ls5j;->c([Ljava/lang/Object;)Lbt;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lw9b;->b:Lbt;
+
+    const-string p1, "ru.oneme.app.new.incomingCalls."
+
+    const-string p2, "ru.oneme.app.new.activeCalls"
+
+    filled-new-array {p1, p2}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ls5j;->c([Ljava/lang/Object;)Lbt;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lw9b;->c:Lbt;
+
+    const-string p1, "ru.oneme.app.fileUpload"
+
+    const-string p2, "ru.oneme.app.media"
+
+    const-string v0, "ru.oneme.app.misc"
+
+    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ls5j;->c([Ljava/lang/Object;)Lbt;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lw9b;->d:Lbt;
+
+    new-instance p1, Ll7b;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p1, p2, p0}, Ll7b;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lw9b;->e:Ln8g;
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 1
-        0x4ft
-        0x70t
-        0x75t
-        0x73t
-        0x48t
-        0x65t
-        0x61t
-        0x64t
-    .end array-data
-
-    :array_1
-    .array-data 1
-        0x4ft
-        0x70t
-        0x75t
-        0x73t
-        0x54t
-        0x61t
-        0x67t
-        0x73t
-    .end array-data
-.end method
-
-.method public static g(Lhdb;[B)Z
-    .locals 4
-
-    invoke-virtual {p0}, Lhdb;->a()I
-
-    move-result v0
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    if-ge v0, v1, :cond_0
-
-    return v2
-
-    :cond_0
-    iget v0, p0, Lhdb;->b:I
-
-    array-length v1, p1
-
-    new-array v1, v1, [B
-
-    array-length v3, p1
-
-    invoke-virtual {p0, v2, v1, v3}, Lhdb;->h(I[BI)V
-
-    invoke-virtual {p0, v0}, Lhdb;->J(I)V
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p0
-
-    return p0
 .end method
 
 
 # virtual methods
-.method public final b(Lhdb;)J
-    .locals 4
-
-    iget-object p1, p1, Lhdb;->a:[B
-
-    const/4 v0, 0x0
-
-    aget-byte v1, p1, v0
-
-    array-length v2, p1
-
-    const/4 v3, 0x1
-
-    if-le v2, v3, :cond_0
-
-    aget-byte v0, p1, v3
-
-    :cond_0
-    invoke-static {v1, v0}, Lxoi;->c(BB)J
-
-    move-result-wide v0
-
-    iget p1, p0, Laaf;->f:I
-
-    int-to-long v2, p1
-
-    mul-long/2addr v2, v0
-
-    const-wide/32 v0, 0xf4240
-
-    div-long/2addr v2, v0
-
-    return-wide v2
-.end method
-
-.method public final d(Lhdb;JLifc;)Z
+.method public final a(ILjava/lang/String;)V
     .locals 2
 
-    sget-object p2, Lw9b;->p:[B
+    new-instance v0, Landroid/app/NotificationChannelGroup;
 
-    invoke-static {p1, p2}, Lw9b;->g(Lhdb;[B)Z
+    iget-object v1, p0, Lw9b;->a:Landroid/content/Context;
 
-    move-result p2
-
-    const/4 p3, 0x1
-
-    if-eqz p2, :cond_1
-
-    iget-object p2, p1, Lhdb;->a:[B
-
-    iget p1, p1, Lhdb;->c:I
-
-    invoke-static {p2, p1}, Ljava/util/Arrays;->copyOf([BI)[B
+    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object p1
 
-    const/16 p2, 0x9
+    invoke-direct {v0, p2, p1}, Landroid/app/NotificationChannelGroup;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    aget-byte p2, p1, p2
+    iget-object p1, p0, Lw9b;->e:Ln8g;
 
-    and-int/lit16 p2, p2, 0xff
-
-    invoke-static {p1}, Lxoi;->a([B)Ljava/util/ArrayList;
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p4, Lifc;->b:Ljava/lang/Object;
+    check-cast p1, Landroid/app/NotificationManager;
 
-    check-cast v0, Lub6;
+    invoke-virtual {p1, v0}, Landroid/app/NotificationManager;->createNotificationChannelGroup(Landroid/app/NotificationChannelGroup;)V
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lw9b;->b:Lbt;
+
+    invoke-virtual {v0, p1}, Lbt;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
+    const-string p1, "ru.oneme.app.notifications.group.chats"
+
+    return-object p1
 
     :cond_0
-    new-instance v0, Lrb6;
+    iget-object v0, p0, Lw9b;->d:Lbt;
 
-    invoke-direct {v0}, Lrb6;-><init>()V
+    invoke-virtual {v0, p1}, Lbt;->contains(Ljava/lang/Object;)Z
 
-    const-string v1, "audio/ogg"
+    move-result v0
 
-    invoke-static {v1}, Lcs9;->n(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    const-string p1, "ru.oneme.app.notifications.group.other"
 
-    iput-object v1, v0, Lrb6;->l:Ljava/lang/String;
-
-    const-string v1, "audio/opus"
-
-    invoke-static {v1}, Lcs9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lrb6;->m:Ljava/lang/String;
-
-    iput p2, v0, Lrb6;->E:I
-
-    const p2, 0xbb80
-
-    iput p2, v0, Lrb6;->F:I
-
-    iput-object p1, v0, Lrb6;->p:Ljava/util/List;
-
-    new-instance p1, Lub6;
-
-    invoke-direct {p1, v0}, Lub6;-><init>(Lrb6;)V
-
-    iput-object p1, p4, Lifc;->b:Ljava/lang/Object;
-
-    return p3
+    return-object p1
 
     :cond_1
-    sget-object p2, Lw9b;->q:[B
+    iget-object v0, p0, Lw9b;->c:Lbt;
 
-    invoke-static {p1, p2}, Lw9b;->g(Lhdb;[B)Z
+    invoke-virtual {v0, p1}, Lbt;->contains(Ljava/lang/Object;)Z
 
-    move-result p2
+    move-result p1
 
-    const/4 v0, 0x0
+    if-eqz p1, :cond_2
 
-    if-eqz p2, :cond_4
+    const-string p1, "ru.oneme.app.notifications.group.calls"
 
-    iget-object p2, p4, Lifc;->b:Ljava/lang/Object;
-
-    check-cast p2, Lub6;
-
-    invoke-static {p2}, Ligi;->i(Ljava/lang/Object;)V
-
-    iget-boolean p2, p0, Lw9b;->o:Z
-
-    if-eqz p2, :cond_2
-
-    goto :goto_0
+    return-object p1
 
     :cond_2
-    iput-boolean p3, p0, Lw9b;->o:Z
-
-    const/16 p2, 0x8
-
-    invoke-virtual {p1, p2}, Lhdb;->K(I)V
-
-    invoke-static {p1, v0, v0}, Lkei;->b(Lhdb;ZZ)Loje;
-
-    move-result-object p1
-
-    iget-object p1, p1, Loje;->a:Ljava/lang/Object;
-
-    check-cast p1, [Ljava/lang/String;
-
-    invoke-static {p1}, Lec7;->l([Ljava/lang/Object;)Lz8d;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lkei;->a(Ljava/util/List;)Lyq9;
-
-    move-result-object p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    return p3
-
-    :cond_3
-    iget-object p2, p4, Lifc;->b:Ljava/lang/Object;
-
-    check-cast p2, Lub6;
-
-    invoke-virtual {p2}, Lub6;->a()Lrb6;
-
-    move-result-object p2
-
-    iget-object v0, p4, Lifc;->b:Ljava/lang/Object;
-
-    check-cast v0, Lub6;
-
-    iget-object v0, v0, Lub6;->l:Lyq9;
-
-    invoke-virtual {p1, v0}, Lyq9;->b(Lyq9;)Lyq9;
-
-    move-result-object p1
-
-    iput-object p1, p2, Lrb6;->k:Lyq9;
-
-    new-instance p1, Lub6;
-
-    invoke-direct {p1, p2}, Lub6;-><init>(Lrb6;)V
-
-    iput-object p1, p4, Lifc;->b:Ljava/lang/Object;
-
-    return p3
-
-    :cond_4
-    iget-object p1, p4, Lifc;->b:Ljava/lang/Object;
-
-    check-cast p1, Lub6;
-
-    invoke-static {p1}, Ligi;->i(Ljava/lang/Object;)V
-
-    return v0
-.end method
-
-.method public final f(Z)V
-    .locals 0
-
-    invoke-super {p0, p1}, Laaf;->f(Z)V
-
-    if-eqz p1, :cond_0
-
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lw9b;->o:Z
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

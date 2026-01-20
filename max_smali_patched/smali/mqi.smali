@@ -1,175 +1,200 @@
 .class public final Lmqi;
-.super Ladi;
+.super Lcpi;
 .source "SourceFile"
+
+# interfaces
+.implements Lwpi;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic d:I
+
+.field public final synthetic e:Lieg;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lieg;I)V
     .locals 0
 
-    iput p1, p0, Lmqi;->c:I
+    iput p2, p0, Lmqi;->d:I
 
-    const/16 p1, 0x8
+    iput-object p1, p0, Lmqi;->e:Lieg;
 
-    invoke-direct {p0, p1}, Ladi;-><init>(I)V
+    const-string p1, "com.google.android.gms.common.moduleinstall.internal.IModuleInstallCallbacks"
+
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Lcpi;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d0(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final U(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 1
 
-    iget v0, p0, Lmqi;->c:I
+    const/4 p3, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-eq p1, p3, :cond_3
 
-    check-cast p1, Lm1j;
+    const/4 v0, 0x2
 
-    new-instance v0, Lq1j;
+    if-eq p1, v0, :cond_2
 
-    invoke-static {}, Ltt9;->c()Ltt9;
+    const/4 p3, 0x3
 
-    move-result-object v1
+    if-eq p1, p3, :cond_1
 
-    new-instance v2, Lo1j;
+    const/4 p3, 0x4
 
-    invoke-static {}, Ltt9;->c()Ltt9;
+    if-eq p1, p3, :cond_0
 
-    move-result-object v3
+    const/4 p1, 0x0
 
-    invoke-virtual {v3}, Ltt9;->b()Landroid/content/Context;
+    return p1
 
-    move-result-object v3
+    :cond_0
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-direct {v2, v3, p1}, Lo1j;-><init>(Landroid/content/Context;Lm1j;)V
-
-    iget-object p1, p1, Lm1j;->a:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ltt9;->b()Landroid/content/Context;
-
-    move-result-object v3
-
-    const-class v4, Lkke;
-
-    invoke-virtual {v1, v4}, Ltt9;->a(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lkke;
-
-    invoke-direct {v0, v3, v1, v2, p1}, Lq1j;-><init>(Landroid/content/Context;Lkke;Lo1j;Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_0
-    check-cast p1, Lqwi;
-
-    new-instance p1, Lhxi;
-
-    invoke-static {}, Ltt9;->c()Ltt9;
-
-    move-result-object v0
-
-    invoke-static {}, Ltt9;->c()Ltt9;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ltt9;->b()Landroid/content/Context;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v3, Ls72;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    sget-object v4, Lpx0;->e:Lpx0;
-
-    invoke-static {v1}, Lj4g;->b(Landroid/content/Context;)V
-
-    invoke-static {}, Lj4g;->a()Lj4g;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Lj4g;->c(Lhb5;)Lf4g;
-
-    sget-object v1, Lpx0;->d:Ljava/util/Set;
-
-    new-instance v4, Lkc5;
-
-    const-string v5, "json"
-
-    invoke-direct {v4, v5}, Lkc5;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v1, v4}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Ltt9;->b()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-class v2, Lkke;
-
-    invoke-virtual {v0, v2}, Ltt9;->a(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkke;
-
-    invoke-direct {p1, v1, v0}, Lhxi;-><init>(Landroid/content/Context;Lkke;)V
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Lopi;
-
-    new-instance v0, Lbqi;
-
-    invoke-static {}, Ltt9;->c()Ltt9;
-
-    move-result-object v1
-
-    new-instance v2, Lvpi;
-
-    invoke-static {}, Ltt9;->c()Ltt9;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ltt9;->b()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3, p1}, Lvpi;-><init>(Landroid/content/Context;Lopi;)V
-
-    invoke-virtual {v1}, Ltt9;->b()Landroid/content/Context;
+    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
     move-result-object p1
 
-    const-class v3, Lkke;
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
 
-    invoke-virtual {v1, v3}, Ltt9;->a(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
 
-    move-result-object v1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    check-cast v1, Lkke;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    invoke-direct {v0, p1, v1, v2}, Lbqi;-><init>(Landroid/content/Context;Lkke;Lvpi;)V
+    throw p1
 
-    return-object v0
+    :cond_1
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    sget-object p1, Lb8a;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lb8a;
+
+    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :cond_2
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    sget-object v0, Lc8a;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, v0}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, Lc8a;
+
+    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1, v0}, Lwpi;->r(Lcom/google/android/gms/common/api/Status;Lc8a;)V
+
+    return p3
+
+    :cond_3
+    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, p1}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/google/android/gms/common/api/Status;
+
+    sget-object v0, La8a;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-static {p2, v0}, Lkpi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    check-cast v0, La8a;
+
+    invoke-static {p2}, Lkpi;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1, v0}, Lwpi;->p(Lcom/google/android/gms/common/api/Status;La8a;)V
+
+    return p3
+.end method
+
+.method public p(Lcom/google/android/gms/common/api/Status;La8a;)V
+    .locals 1
+
+    iget v0, p0, Lmqi;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lmqi;->e:Lieg;
+
+    invoke-static {p1, p2, v0}, Lksi;->c(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lieg;)V
+
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public r(Lcom/google/android/gms/common/api/Status;Lc8a;)V
+    .locals 1
+
+    iget v0, p0, Lmqi;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lmqi;->e:Lieg;
+
+    invoke-static {p1, p2, v0}, Lksi;->c(Lcom/google/android/gms/common/api/Status;Ljava/lang/Object;Lieg;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

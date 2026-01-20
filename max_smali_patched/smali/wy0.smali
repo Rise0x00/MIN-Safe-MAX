@@ -1,65 +1,61 @@
 .class public final Lwy0;
-.super Ljava/lang/Object;
+.super Lshc;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic b:I
-
-
 # instance fields
-.field public a:Ljava/lang/Long;
+.field public a:[B
+
+.field public b:I
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    const/16 v0, 0x76c
+    iget-object v0, p0, Lwy0;->a:[B
 
-    const/4 v1, 0x0
+    iget v1, p0, Lwy0;->b:I
 
-    invoke-static {v0, v1}, Llu9;->a(II)Llu9;
-
-    move-result-object v0
-
-    iget-wide v0, v0, Llu9;->X:J
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Lhig;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
-
-    invoke-static {v3}, Lhig;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
+    return-object v0
+.end method
 
-    const/16 v0, 0x834
+.method public final b(I)V
+    .locals 2
 
-    const/16 v1, 0xb
+    iget-object v0, p0, Lwy0;->a:[B
 
-    invoke-static {v0, v1}, Llu9;->a(II)Llu9;
+    array-length v1, v0
 
-    move-result-object v0
+    if-ge v1, p1, :cond_1
 
-    iget-wide v0, v0, Llu9;->X:J
+    array-length v1, v0
 
-    invoke-static {v2}, Lhig;->c(Ljava/util/Calendar;)Ljava/util/Calendar;
+    mul-int/lit8 v1, v1, 0x2
 
-    move-result-object v2
+    if-ge p1, v1, :cond_0
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    move p1, v1
 
-    invoke-static {v2}, Lhig;->a(Ljava/util/Calendar;)Ljava/util/Calendar;
+    :cond_0
+    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    move-result-object v0
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
+    iput-object p1, p0, Lwy0;->a:[B
 
+    :cond_1
     return-void
+.end method
+
+.method public final d()I
+    .locals 1
+
+    iget v0, p0, Lwy0;->b:I
+
+    return v0
 .end method

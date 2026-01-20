@@ -1,305 +1,81 @@
 .class public final Lglb;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lglb;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final X:Z
+.field public X:Ljava/lang/Object;
 
-.field public final Y:Z
+.field public Y:Ljava/util/Iterator;
 
-.field public final a:Z
+.field public Z:J
 
-.field public final b:Z
+.field public d:Ljava/io/File;
 
-.field public final c:Z
+.field public o:Ljava/lang/String;
 
-.field public final d:Z
+.field public t0:Z
 
-.field public final o:Z
+.field public u0:Z
+
+.field public v0:Z
+
+.field public synthetic w0:Ljava/lang/Object;
+
+.field public final synthetic x0:Lklb;
+
+.field public y0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lw3b;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lw3b;-><init>(I)V
-
-    sput-object v0, Lglb;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZZ)V
+.method public constructor <init>(Lklb;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lglb;->x0:Lklb;
 
-    iput-boolean p1, p0, Lglb;->a:Z
-
-    iput-boolean p2, p0, Lglb;->b:Z
-
-    iput-boolean p3, p0, Lglb;->c:Z
-
-    iput-boolean p4, p0, Lglb;->d:Z
-
-    iput-boolean p5, p0, Lglb;->o:Z
-
-    iput-boolean p6, p0, Lglb;->X:Z
-
-    iput-boolean p7, p0, Lglb;->Y:Z
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lglb;->w0:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, Lglb;->y0:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const/high16 v0, -0x80000000
 
-    const/4 v0, 0x1
+    or-int/2addr p1, v0
 
-    if-ne p0, p1, :cond_0
+    iput p1, p0, Lglb;->y0:I
 
-    return v0
+    const/4 v8, 0x0
 
-    :cond_0
-    instance-of v1, p1, Lglb;
+    const/4 v9, 0x0
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lglb;->x0:Lklb;
 
-    if-nez v1, :cond_1
+    const/4 v1, 0x0
 
-    return v2
+    const-wide/16 v2, 0x0
 
-    :cond_1
-    check-cast p1, Lglb;
+    const/4 v4, 0x0
 
-    iget-boolean v1, p0, Lglb;->a:Z
+    const/4 v5, 0x0
 
-    iget-boolean v3, p1, Lglb;->a:Z
+    const/4 v6, 0x0
 
-    if-eq v1, v3, :cond_2
+    const/4 v7, 0x0
 
-    return v2
+    move-object v10, p0
 
-    :cond_2
-    iget-boolean v1, p0, Lglb;->b:Z
+    invoke-virtual/range {v0 .. v10}, Lklb;->g(Lazd;JLjava/io/File;Lyyd;Ldlb;Ljava/io/File;ZLjava/lang/String;Lo84;)Ljava/lang/Object;
 
-    iget-boolean v3, p1, Lglb;->b:Z
+    move-result-object p1
 
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lglb;->c:Z
-
-    iget-boolean v3, p1, Lglb;->c:Z
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lglb;->d:Z
-
-    iget-boolean v3, p1, Lglb;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lglb;->o:Z
-
-    iget-boolean v3, p1, Lglb;->o:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lglb;->X:Z
-
-    iget-boolean v3, p1, Lglb;->X:Z
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Lglb;->Y:Z
-
-    iget-boolean p1, p1, Lglb;->Y:Z
-
-    if-eq v1, p1, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-boolean v0, p0, Lglb;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lglb;->b:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lglb;->c:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lglb;->d:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lglb;->o:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lglb;->X:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lglb;->Y:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", undoVisible="
-
-    const-string v1, ", clearVisible="
-
-    const-string v2, "PhotoEditorViewState(redoVisible="
-
-    iget-boolean v3, p0, Lglb;->a:Z
-
-    iget-boolean v4, p0, Lglb;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lok7;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", drawStickerVisible="
-
-    const-string v2, ", drawStickerEnabled="
-
-    iget-boolean v3, p0, Lglb;->c:Z
-
-    iget-boolean v4, p0, Lglb;->d:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lnx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ", doneEnabled="
-
-    const-string v2, ", isRegularSending="
-
-    iget-boolean v3, p0, Lglb;->o:Z
-
-    iget-boolean v4, p0, Lglb;->X:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lnx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lglb;->Y:Z
-
-    invoke-static {v0, v2, v1}, Lnx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-boolean p2, p0, Lglb;->a:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lglb;->b:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lglb;->c:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lglb;->d:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lglb;->o:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lglb;->X:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-boolean p2, p0, Lglb;->Y:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p1
 .end method

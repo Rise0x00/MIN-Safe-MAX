@@ -1,114 +1,157 @@
-.class public final synthetic Lok;
-.super Ljava/lang/Object;
+.class public final Lok;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/Supplier;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lqk;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lqk;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lok;->a:I
+    iput-object p1, p0, Lok;->X:Lqk;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lok;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Ltech/kwik/agent15/alert/MissingExtensionAlert;
+    invoke-virtual {p0, p1, p2}, Lok;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0}, Ltech/kwik/agent15/alert/MissingExtensionAlert;-><init>()V
+    move-result-object p1
+
+    check-cast p1, Lok;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lok;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lok;
+
+    iget-object v0, p0, Lok;->X:Lqk;
+
+    invoke-direct {p1, v0, p2}, Lok;-><init>(Lqk;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lok;->o:I
+
+    const/4 v1, 0x1
+
+    sget-object v2, Lb3h;->a:Lb3h;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lok;->X:Lqk;
+
+    iget-object v0, p1, Lqk;->E0:Lpld;
+
+    new-instance v3, Lnk;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, p1, v4}, Lnk;-><init>(Lqk;Lkotlin/coroutines/Continuation;)V
+
+    iput v1, p0, Lok;->o:I
+
+    new-instance p1, Ll96;
+
+    const/4 v1, 0x1
+
+    sget-object v4, Lpoa;->a:Lpoa;
+
+    invoke-direct {p1, v4, v3, v1}, Ll96;-><init>(Lf76;Lbr6;I)V
+
+    new-instance v1, Ld83;
+
+    const/16 v3, 0x15
+
+    invoke-direct {v1, p1, v3}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, v0, Lpld;->a:Llpf;
+
+    invoke-interface {p1, v1, p0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v2
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move-object p1, v2
+
+    :goto_1
+    if-ne p1, v0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move-object p1, v2
+
+    :goto_2
+    if-ne p1, v0, :cond_5
 
     return-object v0
 
-    :pswitch_0
-    new-instance v0, Ltech/kwik/agent15/alert/HandshakeFailureAlert;
-
-    const-string v1, "failed to negotiate signature scheme"
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/HandshakeFailureAlert;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Ltech/kwik/agent15/alert/IllegalParameterAlert;
-
-    const-string v1, ""
-
-    invoke-direct {v0, v1}, Ltech/kwik/agent15/alert/IllegalParameterAlert;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_2
-    new-instance v0, Landroid/util/ArraySet;
-
-    invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
-
-    return-object v0
-
-    :pswitch_3
-    new-instance v0, Lba9;
-
-    invoke-direct {v0}, Lba9;-><init>()V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Landroid/text/BoringLayout$Metrics;
-
-    invoke-direct {v0}, Landroid/text/BoringLayout$Metrics;-><init>()V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Can\'t find connection id that is not retired"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Landroid/graphics/Picture;
-
-    invoke-direct {v0}, Landroid/graphics/Picture;-><init>()V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_5
+    return-object v2
 .end method

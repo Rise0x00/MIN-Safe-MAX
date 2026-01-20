@@ -2,141 +2,58 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbt1;
+
 
 # instance fields
-.field public final a:Z
-
-.field public final b:Ljava/util/Map;
+.field public final synthetic a:Lfjc;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    .line 4
-    sget-object v1, Loa5;->a:Loa5;
-
-    .line 5
-    invoke-direct {p0, v0, v1}, Lw91;-><init>(ZLjava/util/Map;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(ZLjava/util/Map;)V
+.method public constructor <init>(Lfjc;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-boolean p1, p0, Lw91;->a:Z
-
-    .line 3
-    iput-object p2, p0, Lw91;->b:Ljava/util/Map;
+    iput-object p1, p0, Lw91;->a:Lfjc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lw91;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lw91;
-
-    iget-boolean v1, p0, Lw91;->a:Z
-
-    iget-boolean v3, p1, Lw91;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lw91;->b:Ljava/util/Map;
-
-    iget-object p1, p1, Lw91;->b:Ljava/util/Map;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;->isFirstConnection()Z
 
     move-result p1
 
-    if-nez p1, :cond_3
+    if-nez p1, :cond_0
 
-    return v2
+    sget-object p1, Lc91;->c:Lc91;
 
-    :cond_3
-    return v0
+    iget-object v0, p0, Lw91;->a:Lfjc;
+
+    check-cast v0, Lcjc;
+
+    invoke-virtual {v0, p1}, Lcjc;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
+    .locals 1
 
-    iget-boolean v0, p0, Lw91;->a:Z
+    sget-object p1, Ld91;->c:Ld91;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget-object v0, p0, Lw91;->a:Lfjc;
 
-    move-result v0
+    check-cast v0, Lcjc;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0, p1}, Lcjc;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lw91;->b:Ljava/util/Map;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SelectedMode(isEnabled="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lw91;->a:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", selectedIds="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lw91;->b:Ljava/util/Map;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

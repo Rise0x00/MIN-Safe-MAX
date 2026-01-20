@@ -1,77 +1,60 @@
-.class public final Lkd1;
+.class public final synthetic Lkd1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcs1;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lrd1;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+.method public synthetic constructor <init>(Lrd1;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lkd1;->a:I
 
-    iput-object p1, p0, Lkd1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    iput-object p1, p0, Lkd1;->b:Lrd1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A()V
-    .locals 11
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Les7;
+    iget v0, p0, Lkd1;->a:I
 
-    iget-object v0, p0, Lkd1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->B0()Lgd1;
+    new-instance v0, Lmd1;
 
-    move-result-object v0
+    iget-object v1, p0, Lkd1;->b:Lrd1;
 
-    iget-object v0, v0, Lgd1;->v0:La1f;
+    invoke-direct {v0, v1}, Lmd1;-><init>(Lrd1;)V
 
-    :cond_0
-    invoke-virtual {v0}, La1f;->getValue()Ljava/lang/Object;
+    return-object v0
 
-    move-result-object v1
+    :pswitch_0
+    new-instance v0, Lld1;
 
-    move-object v2, v1
+    iget-object v1, p0, Lkd1;->b:Lrd1;
 
-    check-cast v2, Lzc1;
+    invoke-direct {v0, v1}, Lld1;-><init>(Lrd1;)V
 
-    iget-boolean v3, v2, Lzc1;->d:Z
+    return-object v0
 
-    xor-int/lit8 v6, v3, 0x1
+    nop
 
-    const/4 v9, 0x0
-
-    const/16 v10, 0x77
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-static/range {v2 .. v10}, Lzc1;->a(Lzc1;Lzd0;Lrk8;Lrk8;ZLnrf;Ljava/util/ArrayList;Lnrf;I)Lzc1;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

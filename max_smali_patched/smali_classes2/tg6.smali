@@ -1,166 +1,343 @@
 .class public final Ltg6;
-.super Lkh;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvg6;
+
+.field public o:Ljava/lang/Object;
+
+.field public final synthetic t0:Ljava/lang/String;
+
+.field public final synthetic u0:I
+
+
+# direct methods
+.method public constructor <init>(Lvg6;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ltg6;->Z:Lvg6;
+
+    iput-object p2, p0, Ltg6;->t0:Ljava/lang/String;
+
+    iput p3, p0, Ltg6;->u0:I
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final f(Lfic;Lgj;)V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    instance-of v0, p1, Lsed;
+    check-cast p1, Lzb4;
 
-    const/16 v1, 0xb
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_2
+    invoke-virtual {p0, p1, p2}, Ltg6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    instance-of v0, p1, Lkkg;
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    check-cast p1, Ltg6;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Ltg6;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
+
+    new-instance v0, Ltg6;
+
+    iget-object v1, p0, Ltg6;->t0:Ljava/lang/String;
+
+    iget v2, p0, Ltg6;->u0:I
+
+    iget-object v3, p0, Ltg6;->Z:Lvg6;
+
+    invoke-direct {v0, v3, v1, v2, p2}, Ltg6;-><init>(Lvg6;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ltg6;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    iget-object v0, p0, Ltg6;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lzb4;
+
+    iget v0, p0, Ltg6;->X:I
+
+    iget-object v1, p0, Ltg6;->Z:Lvg6;
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Lb3h;->a:Lb3h;
+
+    const/4 v5, 0x0
+
+    sget-object v6, Lac4;->a:Lac4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto/16 :goto_7
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget-object v0, p0, Ltg6;->o:Ljava/lang/Object;
+
+    check-cast v0, Lzb4;
+
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ltg6;->t0:Ljava/lang/String;
+
+    iget v0, p0, Ltg6;->u0:I
+
+    :try_start_1
+    iget-object v7, v1, Lvg6;->X:Lkf6;
+
+    iput-object v5, p0, Ltg6;->Y:Ljava/lang/Object;
+
+    iput-object v5, p0, Ltg6;->o:Ljava/lang/Object;
+
+    iput v3, p0, Ltg6;->X:I
+
+    iget-object v3, v7, Lkf6;->a:Ljava/lang/Object;
+
+    check-cast v3, Lmbg;
+
+    check-cast v3, Lj9b;
+
+    invoke-virtual {v3}, Lj9b;->b()Lsb4;
+
+    move-result-object v3
+
+    new-instance v8, Ljf6;
+
+    invoke-direct {v8, v7, p1, v0, v5}, Ljf6;-><init>(Lkf6;Ljava/lang/String;ILkotlin/coroutines/Continuation;)V
+
+    invoke-static {v3, v8, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-ne p1, v6, :cond_3
 
     goto :goto_0
 
-    :cond_0
-    iget-object v0, p1, Lfic;->c:Ljava/util/ArrayList;
+    :cond_3
+    move-object p1, v4
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    :goto_0
+    if-ne p1, v6, :cond_4
+
+    goto/16 :goto_6
+
+    :cond_4
+    :goto_1
+    move-object v0, v4
+
+    goto :goto_3
+
+    :goto_2
+    new-instance v0, Lszd;
+
+    invoke-direct {v0, p1}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    :goto_3
+    invoke-static {v0}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_b
+
+    iput-object v5, p0, Ltg6;->Y:Ljava/lang/Object;
+
+    iput-object v0, p0, Ltg6;->o:Ljava/lang/Object;
+
+    iput v2, p0, Ltg6;->X:I
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_a
+
+    check-cast p1, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p1, p1, Lru/ok/tamtam/errors/TamErrorException;->a:Lnbg;
+
+    invoke-static {p1}, Loqf;->c(Lnbg;)Lsbg;
+
+    move-result-object p1
+
+    sget-object v0, Lobg;->a:Lobg;
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_5
 
-    goto :goto_0
+    sget p1, Lj6e;->G:I
 
-    :cond_1
-    const-string p2, "packet must contain at least one frame"
+    new-instance v0, Llhg;
 
-    invoke-virtual {p0, p1, p2}, Lkh;->F(Lfic;Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Llhg;-><init>(I)V
 
-    new-instance p1, Ltech/kwik/core/impl/TransportError;
+    goto :goto_4
 
-    invoke-direct {p1, v1, p2}, Ltech/kwik/core/impl/TransportError;-><init>(ILjava/lang/String;)V
+    :cond_5
+    sget-object v0, Lpbg;->a:Lpbg;
 
-    throw p1
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    :cond_2
-    :goto_0
-    instance-of v0, p1, Lyf7;
-
-    const-string v2, "packet contains frame type that is not permitted"
-
-    if-eqz v0, :cond_4
-
-    move-object v0, p1
-
-    check-cast v0, Lyf7;
-
-    iget-object v3, v0, Lfic;->c:Ljava/util/ArrayList;
-
-    invoke-interface {v3}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v3
-
-    new-instance v4, Lc83;
-
-    const/16 v5, 0xc
-
-    invoke-direct {v4, v5}, Lc83;-><init>(I)V
-
-    invoke-interface {v3, v4}, Ljava/util/stream/Stream;->allMatch(Ljava/util/function/Predicate;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p0, v0, v2}, Lkh;->F(Lfic;Ljava/lang/String;)V
-
-    new-instance p1, Ltech/kwik/core/impl/TransportError;
-
-    invoke-direct {p1, v1, v2}, Ltech/kwik/core/impl/TransportError;-><init>(ILjava/lang/String;)V
-
-    throw p1
-
-    :cond_4
-    instance-of v0, p1, Lnw6;
+    move-result v0
 
     if-eqz v0, :cond_6
 
-    move-object v0, p1
+    sget p1, Lj6e;->H:I
 
-    check-cast v0, Lnw6;
+    new-instance v0, Llhg;
 
-    iget-object v3, v0, Lfic;->c:Ljava/util/ArrayList;
+    invoke-direct {v0, p1}, Llhg;-><init>(I)V
 
-    invoke-interface {v3}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object v3
-
-    new-instance v4, Lc83;
-
-    const/16 v5, 0xe
-
-    invoke-direct {v4, v5}, Lc83;-><init>(I)V
-
-    invoke-interface {v3, v4}, Ljava/util/stream/Stream;->allMatch(Ljava/util/function/Predicate;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    invoke-virtual {p0, v0, v2}, Lkh;->F(Lfic;Ljava/lang/String;)V
-
-    new-instance p1, Ltech/kwik/core/impl/TransportError;
-
-    invoke-direct {p1, v1, v2}, Ltech/kwik/core/impl/TransportError;-><init>(ILjava/lang/String;)V
-
-    throw p1
+    goto :goto_4
 
     :cond_6
-    instance-of v0, p1, Lvqh;
+    sget-object v0, Lqbg;->a:Lqbg;
 
-    if-eqz v0, :cond_8
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-object v0, p1
+    move-result v0
 
-    check-cast v0, Lvqh;
+    if-eqz v0, :cond_7
 
-    iget-object v3, v0, Lfic;->c:Ljava/util/ArrayList;
+    sget p1, Lj6e;->J:I
 
-    invoke-interface {v3}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    new-instance v0, Llhg;
 
-    move-result-object v3
+    invoke-direct {v0, p1}, Llhg;-><init>(I)V
 
-    new-instance v4, Lc83;
-
-    const/16 v5, 0xd
-
-    invoke-direct {v4, v5}, Lc83;-><init>(I)V
-
-    invoke-interface {v3, v4}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_7
-
-    goto :goto_1
+    goto :goto_4
 
     :cond_7
-    invoke-virtual {p0, v0, v2}, Lkh;->F(Lfic;Ljava/lang/String;)V
+    instance-of v0, p1, Lrbg;
 
-    new-instance p1, Ltech/kwik/core/impl/TransportError;
+    if-eqz v0, :cond_9
 
-    invoke-direct {p1, v1, v2}, Ltech/kwik/core/impl/TransportError;-><init>(ILjava/lang/String;)V
+    check-cast p1, Lrbg;
+
+    iget-object p1, p1, Lrbg;->a:Ljava/lang/String;
+
+    new-instance v0, Lphg;
+
+    invoke-direct {v0, p1}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    :goto_4
+    iget-object p1, v1, Lvg6;->Z:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldjb;
+
+    invoke-virtual {p1, v0}, Ldjb;->g(Lqhg;)V
+
+    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+
+    :cond_8
+    move-object p1, v4
+
+    goto :goto_5
+
+    :cond_9
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p1
 
-    :cond_8
-    :goto_1
-    invoke-virtual {p0, p1, p2}, Lkh;->Z(Lfic;Lgj;)V
+    :cond_a
+    iget-object p1, v1, Lvg6;->c:Lmbg;
 
-    return-void
+    check-cast p1, Lj9b;
+
+    invoke-virtual {p1}, Lj9b;->c()Lzp8;
+
+    move-result-object p1
+
+    new-instance v0, Lug6;
+
+    invoke-direct {v0, v1, v5}, Lug6;-><init>(Lvg6;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v0, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v6, :cond_8
+
+    :goto_5
+    if-ne p1, v6, :cond_b
+
+    :goto_6
+    return-object v6
+
+    :cond_b
+    :goto_7
+    return-object v4
 .end method

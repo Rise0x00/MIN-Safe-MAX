@@ -1,22 +1,8 @@
-.class public abstract Li85;
+.class public interface abstract Li85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a()Ljava/util/Set;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Set<",
-            "[I>;"
-        }
-    .end annotation
-
-    invoke-static {}, Llzi;->b()Ljava/util/Set;
-
-    move-result-object v0
-
-    return-object v0
+# virtual methods
+.method public abstract a()V
 .end method

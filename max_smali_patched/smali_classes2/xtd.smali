@@ -1,24 +1,24 @@
-.class public final Lxtd;
+.class public final synthetic Lxtd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lt5;
+.field public final synthetic b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt5;I)V
+.method public synthetic constructor <init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
     .locals 0
 
     iput p2, p0, Lxtd;->a:I
 
-    iput-object p1, p0, Lxtd;->b:Lt5;
+    iput-object p1, p0, Lxtd;->b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,340 +27,298 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 14
 
-    iget v0, p0, Lxtd;->a:I
+    iget p1, p0, Lxtd;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lxtd;->b:Lt5;
+    const-string v1, "BottomSheetWidget"
 
-    const-class v1, Lfva;
+    const/4 v2, 0x6
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    const/4 v4, 0x1
 
-    check-cast v0, Lfva;
+    iget-object v5, p0, Lxtd;->b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
-    invoke-virtual {v0}, Lfva;->c()Ljava/util/concurrent/ExecutorService;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object v0
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    return-object v0
+    invoke-virtual {v5}, La94;->getView()Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    new-instance v6, Landroid/graphics/Rect;
+
+    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+
+    iget-object v7, v5, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->w0:Ljld;
+
+    sget-object v8, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+
+    aget-object v2, v8, v2
+
+    invoke-interface {v7, v5, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    invoke-virtual {v2, v6}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
+
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0:[Lz28;
+
+    new-instance v8, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+
+    iget-object v2, v5, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->d:Ljava/lang/String;
+
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p1
+
+    iget v6, v6, Landroid/graphics/Rect;->bottom:I
+
+    sub-int/2addr p1, v6
+
+    const/16 v6, 0x10
+
+    int-to-float v6, v6
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v6, v7, p1}, Lxi4;->r(FFI)I
+
+    move-result p1
+
+    invoke-direct {v8, v2, p1, v3}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;-><init>(Ljava/lang/String;ILso4;)V
+
+    invoke-virtual {v8, v5}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
+
+    :goto_0
+    invoke-virtual {v5}, La94;->getParentController()La94;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v5}, La94;->getParentController()La94;
+
+    move-result-object v5
+
+    goto :goto_0
+
+    :cond_0
+    instance-of p1, v5, Lc5e;
+
+    if-eqz p1, :cond_1
+
+    check-cast v5, Lc5e;
+
+    goto :goto_1
+
+    :cond_1
+    move-object v5, v3
+
+    :goto_1
+    if-eqz v5, :cond_2
+
+    check-cast v5, Lone/me/android/root/RootController;
+
+    invoke-virtual {v5}, Lone/me/android/root/RootController;->F0()Lw4e;
+
+    move-result-object v3
+
+    :cond_2
+    if-eqz v3, :cond_3
+
+    new-instance v7, Lz4e;
+
+    const/4 v12, 0x0
+
+    const/4 v13, -0x1
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    invoke-direct/range {v7 .. v13}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+
+    invoke-static {v0, v7, v4, v1}, Lt02;->s(ZLz4e;ZLjava/lang/String;)V
+
+    invoke-virtual {v3, v7}, Lw4e;->H(Lz4e;)V
+
+    :cond_3
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Lxtd;->b:Lt5;
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    const-class v1, Ljxe;
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0()Lutd;
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    if-nez p1, :cond_4
 
-    check-cast v0, Ljxe;
+    goto :goto_5
 
-    check-cast v0, Lkxe;
+    :cond_4
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
 
-    iget-object v0, v0, Lkxe;->e:Ltif;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lqma;->t()Ljava/util/List;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Ljavax/net/ssl/SSLContext;
+    sget v6, Ludd;->oneme_login_neuro_avatars_bottomsheet_title:I
 
-    return-object v0
+    invoke-static {v6, v3, v3, v2}, Lt02;->f(ILandroid/os/Bundle;Llce;I)Lbu3;
+
+    move-result-object v2
+
+    check-cast p1, Lqd8;
+
+    invoke-virtual {p1, v0}, Lqd8;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p1
+
+    :goto_2
+    move-object v6, p1
+
+    check-cast v6, Lod8;
+
+    invoke-virtual {v6}, Lod8;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_5
+
+    invoke-virtual {v6}, Lod8;->next()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcu3;
+
+    filled-new-array {v6}, [Lcu3;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Lbu3;->a([Lcu3;)V
+
+    goto :goto_2
+
+    :cond_5
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0:[Lz28;
+
+    invoke-virtual {v2}, Lbu3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
+
+    :goto_3
+    invoke-virtual {v5}, La94;->getParentController()La94;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_6
+
+    invoke-virtual {v5}, La94;->getParentController()La94;
+
+    move-result-object v5
+
+    goto :goto_3
+
+    :cond_6
+    instance-of p1, v5, Lc5e;
+
+    if-eqz p1, :cond_7
+
+    check-cast v5, Lc5e;
+
+    goto :goto_4
+
+    :cond_7
+    move-object v5, v3
+
+    :goto_4
+    if-eqz v5, :cond_8
+
+    check-cast v5, Lone/me/android/root/RootController;
+
+    invoke-virtual {v5}, Lone/me/android/root/RootController;->F0()Lw4e;
+
+    move-result-object v3
+
+    :cond_8
+    if-eqz v3, :cond_9
+
+    new-instance v6, Lz4e;
+
+    const/4 v11, 0x0
+
+    const/4 v12, -0x1
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v6 .. v12}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+
+    invoke-static {v0, v6, v4, v1}, Lt02;->s(ZLz4e;ZLjava/lang/String;)V
+
+    invoke-virtual {v3, v6}, Lw4e;->H(Lz4e;)V
+
+    :cond_9
+    :goto_5
+    return-void
 
     :pswitch_1
-    iget-object v0, p0, Lxtd;->b:Lt5;
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    const-class v1, Ljxe;
+    invoke-virtual {v5, v4}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->C0(Z)V
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Ljxe;
+    invoke-virtual {p1}, Lqma;->v()V
 
-    check-cast v0, Lkxe;
-
-    iget-object v0, v0, Lkxe;->e:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljavax/net/ssl/SSLContext;
-
-    return-object v0
+    return-void
 
     :pswitch_2
-    iget-object v0, p0, Lxtd;->b:Lt5;
+    sget-object p1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    const-class v1, Ll83;
+    invoke-virtual {v5, v4}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->C0(Z)V
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v5}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    invoke-virtual {p1}, Lqma;->v()V
 
-    :pswitch_3
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, La3f;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lao5;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lap5;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lx4e;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_7
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lsf9;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Ls05;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lml;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_a
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lfu5;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lhc4;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_c
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Ll2d;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_d
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lhnf;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_e
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lhc4;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_f
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lml;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lvf5;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lhc4;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_12
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lsfa;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_13
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lzzf;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_14
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lvf2;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_15
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Laf2;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Llph;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_17
-    iget-object v0, p0, Lxtd;->b:Lt5;
-
-    const-class v1, Lsab;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

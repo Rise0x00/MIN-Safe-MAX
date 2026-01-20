@@ -1,138 +1,87 @@
 .class public final Lf4c;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgj6;
+.implements Lh4c;
 
 
 # instance fields
-.field public synthetic X:Lv6b;
-
-.field public synthetic Y:Lw5b;
-
-.field public final synthetic o:I
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput p3, p0, Lf4c;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lf4c;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lf4c;->o:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lv6b;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lw5b;
+    return v0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lf4c;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lf4c;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lf4c;->X:Lv6b;
-
-    iput-object p2, v0, Lf4c;->Y:Lw5b;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {v0, p1}, Lf4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lf4c;
-
-    const/4 v1, 0x3
+    :cond_0
+    instance-of v1, p1, Lf4c;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, p3, v2}, Lf4c;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-nez v1, :cond_1
 
-    iput-object p1, v0, Lf4c;->X:Lv6b;
+    return v2
 
-    iput-object p2, v0, Lf4c;->Y:Lw5b;
+    :cond_1
+    check-cast p1, Lf4c;
 
-    sget-object p1, Lybg;->a:Lybg;
+    iget-wide v3, p0, Lf4c;->a:J
 
-    invoke-virtual {v0, p1}, Lf4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v5, p1, Lf4c;->a:J
 
-    return-object p1
+    cmp-long p1, v3, v5
 
-    nop
+    if-eqz p1, :cond_2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lf4c;->o:I
+    iget-wide v0, p0, Lf4c;->a:J
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    move-result v0
 
-    iget-object p1, p0, Lf4c;->X:Lv6b;
+    return v0
+.end method
 
-    iget-object v0, p0, Lf4c;->Y:Lw5b;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
+    const-string v0, "Fail(requestId="
 
-    move-result-object v0
+    const-string v1, ")"
 
-    iget v0, v0, Lcf0;->l:I
+    iget-wide v2, p0, Lf4c;->a:J
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lf4c;->X:Lv6b;
-
-    iget-object v0, p0, Lf4c;->Y:Lw5b;
-
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget v0, v0, Lcf0;->k:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

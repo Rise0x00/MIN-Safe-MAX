@@ -1,96 +1,121 @@
-.class public final synthetic Lxo4;
-.super Ljava/lang/Object;
+.class public final Lxo4;
+.super Luk0;
 .source "SourceFile"
-
-# interfaces
-.implements Ldog;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
+    .locals 6
 
-    iput p1, p0, Lxo4;->a:I
+    iput p1, p0, Lxo4;->o:I
 
-    iput-object p2, p0, Lxo4;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object v0, p0
+
+    move-wide v2, p2
+
+    move-wide v4, p4
+
+    invoke-direct/range {v0 .. v5}, Luk0;-><init>(IJJ)V
+
+    iput-object p6, v0, Lxo4;->X:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final a()J
+    .locals 3
 
-    iget v0, p0, Lxo4;->a:I
+    iget v0, p0, Lxo4;->o:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lxo4;->b:Ljava/lang/Object;
+    invoke-virtual {p0}, Luk0;->c()V
 
-    check-cast v0, Lf3;
+    iget-object v0, p0, Lxo4;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lf3;->f()V
+    check-cast v0, Lvo4;
 
-    return-void
+    iget-wide v1, p0, Luk0;->d:J
+
+    invoke-virtual {v0, v1, v2}, Lvo4;->i(J)J
+
+    move-result-wide v0
+
+    return-wide v0
 
     :pswitch_0
-    iget-object v0, p0, Lxo4;->b:Ljava/lang/Object;
+    invoke-virtual {p0}, Luk0;->c()V
 
-    check-cast v0, Lb2g;
+    iget-object v0, p0, Lxo4;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lb2g;->l()V
+    check-cast v0, Lvo4;
 
-    return-void
+    iget-wide v1, p0, Luk0;->d:J
 
-    :pswitch_1
-    iget-object v0, p0, Lxo4;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lvo4;->i(J)J
 
-    check-cast v0, Lupf;
+    move-result-wide v0
 
-    iget-object v0, v0, Lupf;->d:Lb2g;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lb2g;->X()V
-
-    invoke-static {}, Lme4;->a()V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lxo4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcw5;
-
-    invoke-virtual {v0}, Lcw5;->flush()V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lxo4;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
+    return-wide v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()J
+    .locals 3
+
+    iget v0, p0, Lxo4;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Luk0;->c()V
+
+    iget-object v0, p0, Lxo4;->X:Ljava/lang/Object;
+
+    check-cast v0, Lvo4;
+
+    iget-wide v1, p0, Luk0;->d:J
+
+    invoke-virtual {v0, v1, v2}, Lvo4;->g(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Luk0;->c()V
+
+    iget-object v0, p0, Lxo4;->X:Ljava/lang/Object;
+
+    check-cast v0, Lvo4;
+
+    iget-wide v1, p0, Luk0;->d:J
+
+    invoke-virtual {v0, v1, v2}, Lvo4;->g(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method

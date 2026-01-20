@@ -1,73 +1,58 @@
-.class public final enum Lwd5;
-.super Ljava/lang/Enum;
+.class public final synthetic Lwd5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum a:Lwd5;
 
-.field public static final enum b:Lwd5;
+# instance fields
+.field public final synthetic a:Lorg/webrtc/EglRenderer;
 
-.field public static final synthetic c:[Lwd5;
+.field public final synthetic b:F
+
+.field public final synthetic c:F
+
+.field public final synthetic d:F
+
+.field public final synthetic o:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;FFFF)V
+    .locals 0
 
-    new-instance v0, Lwd5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SUCCESS"
+    iput-object p1, p0, Lwd5;->a:Lorg/webrtc/EglRenderer;
 
-    const/4 v2, 0x0
+    iput p2, p0, Lwd5;->b:F
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p3, p0, Lwd5;->c:F
 
-    sput-object v0, Lwd5;->a:Lwd5;
+    iput p4, p0, Lwd5;->d:F
 
-    new-instance v1, Lwd5;
-
-    const-string v2, "FAILURE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lwd5;->b:Lwd5;
-
-    filled-new-array {v0, v1}, [Lwd5;
-
-    move-result-object v0
-
-    sput-object v0, Lwd5;->c:[Lwd5;
+    iput p5, p0, Lwd5;->o:F
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwd5;
-    .locals 1
 
-    const-class v0, Lwd5;
+# virtual methods
+.method public final run()V
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lwd5;->d:F
 
-    move-result-object p0
+    iget v1, p0, Lwd5;->o:F
 
-    check-cast p0, Lwd5;
+    iget-object v2, p0, Lwd5;->a:Lorg/webrtc/EglRenderer;
 
-    return-object p0
-.end method
+    iget v3, p0, Lwd5;->b:F
 
-.method public static values()[Lwd5;
-    .locals 1
+    iget v4, p0, Lwd5;->c:F
 
-    sget-object v0, Lwd5;->c:[Lwd5;
+    invoke-static {v2, v3, v4, v0, v1}, Lorg/webrtc/EglRenderer;->c(Lorg/webrtc/EglRenderer;FFFF)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lwd5;
-
-    return-object v0
+    return-void
 .end method

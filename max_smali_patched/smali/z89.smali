@@ -1,29 +1,21 @@
-.class public interface abstract Lz89;
+.class public final Lz89;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Lsbf;)Z
-.end method
+# static fields
+.field public static final a:Lz89;
 
-.method public abstract c()Z
-.end method
 
-.method public abstract d(Lm89;)Z
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract e(Ly89;)V
-.end method
+    new-instance v0, Lz89;
 
-.method public abstract f(Lm89;)Z
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract h()V
-.end method
+    sput-object v0, Lz89;->a:Lz89;
 
-.method public abstract i(Li89;Z)V
-.end method
-
-.method public abstract k(Landroid/content/Context;Li89;)V
+    return-void
 .end method

@@ -2,148 +2,97 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final a:Ljava/lang/String;
 
-.field public final b:Lla0;
+# static fields
+.field public static final a:Ls90;
+
+.field public static final b:Lfz5;
+
+.field public static final c:Lfz5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lla0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ls90;
 
-    if-eqz p1, :cond_1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls90;->a:Ljava/lang/String;
+    sput-object v0, Ls90;->a:Ls90;
 
-    if-eqz p2, :cond_0
+    new-instance v0, Lxy;
 
-    iput-object p2, p0, Ls90;->b:Lla0;
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lxy;-><init>(I)V
+
+    const-class v1, Lvyc;
+
+    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "eventsDroppedCount"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Ls90;->b:Lfz5;
+
+    new-instance v0, Lxy;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lxy;-><init>(I)V
+
+    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "reason"
+
+    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Ls90;->c:Lfz5;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null cameraConfigId"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null cameraIdString"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    check-cast p1, Ljk8;
 
-    if-ne p1, p0, :cond_0
+    check-cast p2, Lwwa;
 
-    return v0
+    sget-object v0, Ls90;->b:Lfz5;
 
-    :cond_0
-    instance-of v1, p1, Ls90;
+    iget-wide v1, p1, Ljk8;->a:J
 
-    const/4 v2, 0x0
+    invoke-interface {p2, v0, v1, v2}, Lwwa;->e(Lfz5;J)Lwwa;
 
-    if-eqz v1, :cond_1
+    sget-object v0, Ls90;->c:Lfz5;
 
-    check-cast p1, Ls90;
+    iget-object p1, p1, Ljk8;->b:Lik8;
 
-    iget-object v1, p0, Ls90;->a:Ljava/lang/String;
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    iget-object v3, p1, Ls90;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Ls90;->b:Lla0;
-
-    iget-object p1, p1, Ls90;->b:Lla0;
-
-    invoke-virtual {v1, p1}, Lla0;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Ls90;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Ls90;->b:Lla0;
-
-    invoke-virtual {v1}, Lla0;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CameraId{cameraIdString="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ls90;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cameraConfigId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ls90;->b:Lla0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

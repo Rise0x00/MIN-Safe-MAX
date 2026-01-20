@@ -1,61 +1,90 @@
 .class public final Ll2j;
-.super Lqti;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final transient c:[Ljava/lang/Object;
 
-.field public final transient d:I
-
-.field public final transient o:I
+# static fields
+.field public static final a:Ll2j;
 
 
 # direct methods
-.method public constructor <init>(I[Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    new-instance v0, Ll2j;
 
-    iput-object p2, p0, Ll2j;->c:[Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Ll2j;->d:I
+    sput-object v0, Ll2j;->a:Ll2j;
 
-    const/4 p1, 0x1
+    new-instance v0, Lbri;
 
-    iput p1, p0, Ll2j;->o:I
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+
+    const-class v1, Lpri;
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget v0, p0, Ll2j;->o:I
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-static {p1, v0}, Loji;->c(II)V
+    move-result-object p1
 
-    add-int/2addr p1, p1
-
-    iget v0, p0, Ll2j;->d:I
-
-    add-int/2addr p1, v0
-
-    iget-object v0, p0, Ll2j;->c:[Ljava/lang/Object;
-
-    aget-object p1, v0, p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-object p1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    iget v0, p0, Ll2j;->o:I
-
-    return v0
+    throw p1
 .end method

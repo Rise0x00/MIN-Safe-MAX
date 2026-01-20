@@ -1,12 +1,43 @@
-.class public abstract Lzqc;
+.class public abstract synthetic Lzqc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields
-.field public static oneme_settings_twofa_creation_password_error_symbols_count:I = 0x7f11002a
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static oneme_settings_twofa_creation_password_symbols_count:I = 0x7f11002b
 
-.field public static oneme_settings_twofa_delete_user_days_left_description:I = 0x7f11002c
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.field public static oneme_settings_twofa_delete_user_days_notif:I = 0x7f11002d
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Lt02;->w(I)[I
+
+    move-result-object v1
+
+    array-length v1, v1
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v1, Lzqc;->$EnumSwitchMapping$0:[I
+
+    return-void
+.end method

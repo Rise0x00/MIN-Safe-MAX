@@ -1,232 +1,71 @@
 .class public final Lvb;
-.super Logf;
+.super Ljef;
 .source "SourceFile"
 
-# interfaces
-.implements Lgj6;
 
+# virtual methods
+.method public final D(Lda;)V
+    .locals 4
 
-# instance fields
-.field public synthetic X:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-.field public final synthetic Y:Lw8f;
+    check-cast v0, Lk7b;
 
-.field public final synthetic o:I
+    iget-wide v1, p1, Lda;->Y:J
 
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-# direct methods
-.method public synthetic constructor <init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
-    .locals 0
+    move-result v1
 
-    iput p3, p0, Lvb;->o:I
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    iput-object p1, p0, Lvb;->Y:Lw8f;
+    iget-object v1, p1, Lda;->b:Ljava/lang/String;
 
-    const/4 p1, 0x3
+    invoke-virtual {v0, v1}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v1, p1, Lda;->c:Lqhg;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lk7b;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v0}, Lk7b;->f()V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lk7b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-boolean v1, p1, Lda;->X:Z
+
+    invoke-virtual {v0, v1}, Lk7b;->setVerified(Z)V
+
+    iget-wide v1, p1, Lda;->a:J
+
+    iget-object v3, p1, Lda;->o:Ljava/lang/CharSequence;
+
+    iget-object p1, p1, Lda;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2, v3, p1}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Lk7b;->setSelectionEnabled(Z)V
 
     return-void
 .end method
 
+.method public final bridge synthetic y(Lud8;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    check-cast p1, Lda;
 
-    iget v0, p0, Lvb;->o:I
+    invoke-virtual {p0, p1}, Lvb;->D(Lda;)V
 
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
-
-    check-cast p2, Lw5b;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p2, Lvb;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    const/4 v1, 0x4
-
-    invoke-direct {p2, v0, p3, v1}, Lvb;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p2, Lvb;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p2, v0, p3, v1}, Lvb;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance p2, Lvb;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, v0, p3, v1}, Lvb;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_2
-    new-instance p2, Lvb;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Lvb;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_3
-    new-instance p2, Lvb;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Lvb;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lvb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lvb;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    invoke-virtual {v0}, Lw8f;->j()V
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    invoke-virtual {v0}, Lw8f;->j()V
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    invoke-virtual {v0}, Lw8f;->j()V
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_2
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    invoke-virtual {v0}, Lw8f;->j()V
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_3
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvb;->X:Landroidx/recyclerview/widget/RecyclerView;
-
-    iget-object v0, p0, Lvb;->Y:Lw8f;
-
-    invoke-virtual {v0}, Lw8f;->j()V
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

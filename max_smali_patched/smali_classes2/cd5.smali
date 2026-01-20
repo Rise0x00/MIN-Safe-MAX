@@ -1,570 +1,258 @@
-.class public Lcd5;
-.super Lone/me/sdk/lists/widgets/EmptyRecyclerView;
+.class public abstract Lcd5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final Y1:Ljava/util/LinkedHashSet;
+.field public final a:Lzb4;
 
-.field public final Z1:Ljava/util/LinkedHashSet;
+.field public final b:Lspf;
 
-.field public a2:Luc5;
+.field public final c:Lspf;
 
-.field public b2:Lsc5;
+.field public final d:Li7f;
 
-.field public c2:Z
+.field public final e:Li7f;
 
-.field public d2:Z
+.field public final f:Ld76;
 
-.field public e2:I
+.field public final g:Ljava/lang/Object;
 
-.field public f2:Ljava/lang/Integer;
+.field public final h:Ljava/lang/Object;
 
-.field public g2:Z
+.field public final i:Lspf;
+
+.field public final j:Lspf;
+
+.field public k:Lfd5;
+
+.field public final l:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public final m:Ljava/util/concurrent/atomic/AtomicLong;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 1
+.method public constructor <init>(Lzb4;)V
+    .locals 8
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2, v0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-object p1, p0, Lcd5;->a:Lzb4;
 
-    new-instance p1, Ljava/util/LinkedHashSet;
+    sget-object v0, Lnnc;->a:Lnnc;
 
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-virtual {v0}, Lnnc;->c()Lo58;
 
-    iput-object p1, p0, Lcd5;->Y1:Ljava/util/LinkedHashSet;
+    move-result-object v0
 
-    new-instance p1, Ljava/util/LinkedHashSet;
+    const/4 v1, 0x0
 
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-static {v1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    iput-object p1, p0, Lcd5;->Z1:Ljava/util/LinkedHashSet;
+    move-result-object v2
 
-    const/4 p1, 0x1
+    iput-object v2, p0, Lcd5;->b:Lspf;
 
-    iput p1, p0, Lcd5;->e2:I
+    sget-object v3, Ldh5;->a:Ldh5;
 
-    new-instance p1, Lvc5;
+    invoke-static {v3}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    const/4 p2, 0x0
+    move-result-object v3
 
-    invoke-direct {p1, p2, p0}, Lvc5;-><init>(ILjava/lang/Object;)V
+    iput-object v3, p0, Lcd5;->c:Lspf;
 
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setOnScrollListener(Lb7d;)V
+    const/4 v4, 0x0
 
-    return-void
-.end method
+    const/4 v5, 0x7
 
-.method public static synthetic M0(Lcd5;)V
-    .locals 0
+    invoke-static {v4, v4, v5}, Lj7f;->b(III)Li7f;
 
-    invoke-static {p0}, Lcd5;->setRefreshingNext$lambda$3(Lcd5;)V
+    move-result-object v6
 
-    return-void
-.end method
+    iput-object v6, p0, Lcd5;->d:Li7f;
 
-.method private static final setRefreshingNext$lambda$3(Lcd5;)V
-    .locals 2
+    invoke-static {v4, v4, v5}, Lj7f;->b(III)Li7f;
 
-    iget-object v0, p0, Lcd5;->b2:Lsc5;
+    move-result-object v4
 
-    if-nez v0, :cond_0
+    iput-object v4, p0, Lcd5;->e:Li7f;
 
-    return-void
+    new-instance v4, Lr83;
 
-    :cond_0
-    iget-boolean p0, p0, Lcd5;->c2:Z
+    const/16 v5, 0xc
 
-    if-eqz p0, :cond_1
+    invoke-direct {v4, v2, v5}, Lr83;-><init>(Ld76;I)V
 
-    invoke-virtual {v0}, Lsc5;->j()I
+    new-instance v2, Lmx;
 
-    move-result p0
+    const/16 v5, 0xf
 
-    const/4 v1, 0x1
+    const/4 v6, 0x3
 
-    sub-int/2addr p0, v1
+    invoke-direct {v2, v6, v1, v5}, Lmx;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    iget-object v0, v0, Lp6d;->a:Lq6d;
+    new-instance v5, Lu61;
 
-    invoke-virtual {v0, p0, v1}, Lq6d;->e(II)V
+    const/4 v7, 0x3
 
-    return-void
+    invoke-direct {v5, v4, v3, v2, v7}, Lu61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    :cond_1
-    invoke-virtual {v0}, Lp6d;->m()V
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lmbg;
+
+    check-cast v2, Lj9b;
+
+    invoke-virtual {v2}, Lj9b;->a()Lsb4;
+
+    move-result-object v2
+
+    invoke-static {v5, v2}, Lgu0;->v(Ld76;Lqb4;)Ld76;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcd5;->f:Ld76;
+
+    new-instance v2, Lrs3;
+
+    const/16 v3, 0x19
+
+    invoke-direct {v2, v3}, Lrs3;-><init>(I)V
+
+    invoke-static {v6, v2}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcd5;->g:Ljava/lang/Object;
+
+    new-instance v2, Lrs3;
+
+    const/16 v3, 0x1a
+
+    invoke-direct {v2, v3}, Lrs3;-><init>(I)V
+
+    invoke-static {v6, v2}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcd5;->h:Ljava/lang/Object;
+
+    invoke-static {v1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcd5;->i:Lspf;
+
+    invoke-static {v1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcd5;->j:Lspf;
+
+    new-instance v3, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object v3, p0, Lcd5;->l:Ljava/util/concurrent/atomic/AtomicLong;
+
+    new-instance v3, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object v3, p0, Lcd5;->m:Ljava/util/concurrent/atomic/AtomicLong;
+
+    new-instance v3, Lad5;
+
+    invoke-direct {v3, p0, v1}, Lad5;-><init>(Lcd5;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Lm96;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v2, v3, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmbg;
+
+    check-cast v0, Lj9b;
+
+    invoke-virtual {v0}, Lj9b;->a()Lsb4;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lgu0;->v(Ld76;Lqb4;)Ld76;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G0(Lp6d;)V
+.method public abstract a(I)V
+.end method
+
+.method public abstract b()V
+.end method
+
+.method public final c()Led5;
     .locals 1
 
-    instance-of v0, p1, Lsc5;
+    iget-object v0, p0, Lcd5;->h:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lsc5;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-object p1, p0, Lcd5;->b2:Lsc5;
-
-    invoke-virtual {p0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->F0()V
-
-    return-void
-.end method
-
-.method public final L0(Lp6d;)Lp6d;
-    .locals 1
-
-    instance-of v0, p1, Lsc5;
-
-    if-eqz v0, :cond_0
-
-    return-object p1
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    new-instance v0, Lsc5;
-
-    invoke-direct {v0, p0, p1}, Lsc5;-><init>(Lcd5;Lp6d;)V
-
-    return-object v0
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final N0(I)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x5
-
-    if-le p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lo30;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, p0, p1, v1}, Lo30;-><init>(Ljava/lang/Object;II)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :cond_1
-    iget-boolean p1, p0, Lcd5;->d2:Z
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lcd5;->b2:Lsc5;
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, p1, Lp6d;->a:Lq6d;
-
-    invoke-virtual {p1, v1, v0}, Lq6d;->e(II)V
-
-    return-void
-
-    :cond_2
-    iget-object p1, p0, Lcd5;->b2:Lsc5;
-
-    if-eqz p1, :cond_3
-
-    iget-object p1, p1, Lp6d;->a:Lq6d;
-
-    invoke-virtual {p1, v1, v0}, Lq6d;->f(II)V
-
-    :cond_3
-    :goto_0
-    return-void
-.end method
-
-.method public getAdapter()Lp6d;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lp6d;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcd5;->b2:Lsc5;
-
-    return-object v0
-.end method
-
-.method public final getIgnoreRefreshingFlagsForScrollEvent()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcd5;->g2:Z
-
-    return v0
-.end method
-
-.method public final getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
-    .locals 2
-
-    invoke-super {p0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    instance-of v1, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
+    check-cast v0, Led5;
 
     return-object v0
 .end method
 
-.method public final getRefreshingNextDelegate()Lx7d;
+.method public abstract d()Z
+.end method
+
+.method public abstract e()J
+.end method
+
+.method public final f()Lvc5;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcd5;->g:Ljava/lang/Object;
 
-    return-object v0
-.end method
-
-.method public final h0()V
-    .locals 2
-
-    iget-object v0, p0, Lcd5;->Z1:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lvc5;
 
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-static {v0}, Lm65;->g(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object v0
-
-    throw v0
+    return-object v0
 .end method
 
-.method public final m(Lb7d;)V
-    .locals 1
-
-    iget-object v0, p0, Lcd5;->Y1:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    return-void
+.method public abstract g(I)V
 .end method
 
-.method public onLayout(ZIIII)V
-    .locals 1
-
-    :try_start_0
-    invoke-super/range {p0 .. p5}, Landroidx/recyclerview/widget/RecyclerView;->onLayout(ZIIII)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-object p1, p0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, p0
-
-    move-object p2, v0
-
-    const-string p3, "EndlessRecyclerView"
-
-    const-string p4, "onLayout"
-
-    invoke-static {p3, p4, p2}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    iget-object p2, p1, Lcd5;->a2:Luc5;
-
-    if-eqz p2, :cond_0
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p2, p0, p3, p3}, Luc5;->b(Landroidx/recyclerview/widget/RecyclerView;II)V
-
-    :cond_0
-    return-void
+.method public abstract h(Ljava/lang/String;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 .end method
 
-.method public final s0(Lb7d;)V
-    .locals 1
-
-    iget-object v0, p0, Lcd5;->Y1:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    return-void
+.method public abstract i()Lb3h;
 .end method
 
-.method public final setIgnoreRefreshingFlagsForScrollEvent(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcd5;->g2:Z
-
-    return-void
+.method public abstract j()V
 .end method
 
-.method public setLayoutManager(Landroidx/recyclerview/widget/a;)V
-    .locals 1
-
-    instance-of v0, p1, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    if-nez v0, :cond_1
-
-    instance-of v0, p1, Landroidx/recyclerview/widget/StaggeredGridLayoutManager;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "layout manager must be an instance of LinearLayoutManager or StaggeredGridLayoutManager"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    return-void
+.method public abstract k()V
 .end method
 
-.method public setOnScrollListener(Lb7d;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "use addOnScrollListener(OnScrollListener) and removeOnScrollListener(OnScrollListener) instead"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+.method public abstract l(Lo84;)Ljava/lang/Object;
 .end method
 
-.method public final setPager(Lwc5;)V
-    .locals 1
-
-    if-eqz p1, :cond_1
-
-    new-instance v0, Luc5;
-
-    invoke-direct {v0, p0, p1}, Luc5;-><init>(Lcd5;Lwc5;)V
-
-    iget p1, p0, Lcd5;->e2:I
-
-    if-lez p1, :cond_0
-
-    iput p1, v0, Luc5;->b:I
-
-    invoke-virtual {p0, v0}, Lcd5;->m(Lb7d;)V
-
-    iput-object v0, p0, Lcd5;->a2:Luc5;
-
-    return-void
-
-    :cond_0
-    const-string v0, "illegal threshold: "
-
-    invoke-static {p1, v0}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    iget-object p1, p0, Lcd5;->a2:Luc5;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0, p1}, Lcd5;->s0(Lb7d;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lcd5;->a2:Luc5;
-
-    :cond_2
-    return-void
-.end method
-
-.method public final setProgressView(I)V
-    .locals 0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcd5;->f2:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public final setRefreshingNext(Z)V
-    .locals 2
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "NotifyDataSetChanged"
-        }
-    .end annotation
-
-    iget-boolean v0, p0, Lcd5;->c2:Z
-
-    if-ne v0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lcd5;->f2:Ljava/lang/Integer;
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x0
-
-    :cond_1
-    iput-boolean p1, p0, Lcd5;->c2:Z
-
-    new-instance p1, Lcj4;
-
-    const/16 v0, 0x15
-
-    invoke-direct {p1, v0, p0}, Lcj4;-><init>(ILjava/lang/Object;)V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x5
-
-    invoke-static {v1, p0, p1, v0}, Lzwi;->c(ILandroidx/recyclerview/widget/RecyclerView;Ljava/lang/Runnable;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final setRefreshingNextDelegate(Lx7d;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final setRefreshingPrev(Z)V
-    .locals 2
-
-    iget-boolean v0, p0, Lcd5;->d2:Z
-
-    if-ne v0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_1
-
-    iget-object v1, p0, Lcd5;->f2:Ljava/lang/Integer;
-
-    if-nez v1, :cond_1
-
-    iput-boolean v0, p0, Lcd5;->d2:Z
-
-    goto :goto_0
-
-    :cond_1
-    iput-boolean p1, p0, Lcd5;->d2:Z
-
-    :goto_0
-    invoke-virtual {p0, v0}, Lcd5;->N0(I)V
-
-    return-void
-.end method
-
-.method public final setThreshold(I)V
-    .locals 1
-
-    iput p1, p0, Lcd5;->e2:I
-
-    iget-object v0, p0, Lcd5;->a2:Luc5;
-
-    if-eqz v0, :cond_1
-
-    if-lez p1, :cond_0
-
-    iput p1, v0, Luc5;->b:I
-
-    return-void
-
-    :cond_0
-    const-string v0, "illegal threshold: "
-
-    invoke-static {p1, v0}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    return-void
+.method public abstract m(ILjava/lang/String;)V
 .end method

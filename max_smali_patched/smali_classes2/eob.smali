@@ -1,120 +1,77 @@
-.class public final synthetic Leob;
-.super Ltj6;
+.class public interface abstract Leob;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqi6;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-
-# direct methods
-.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
-    .locals 12
-
-    iput p2, p0, Leob;->a:I
-
-    packed-switch p2, :pswitch_data_0
-
-    iput-object p1, p0, Leob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    const-string v4, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Lfk7;
-
-    const-string v3, "isChatItem"
-
-    move-object v0, p0
-
-    invoke-direct/range {v0 .. v5}, Ltj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-void
-
-    :pswitch_0
-    move-object v0, p0
-
-    iput-object p1, v0, Leob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    const-string v10, "checkBoxItemDecoration_delegate$lambda$6$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
-
-    const/4 v11, 0x0
-
-    const/4 v7, 0x1
-
-    const-class v8, Lfk7;
-
-    const-string v9, "isChatItem"
-
-    move-object v6, v0
-
-    invoke-direct/range {v6 .. v11}, Ltj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a(Lgob;)V
+.end method
 
-    iget v0, p0, Leob;->a:I
+.method public abstract b(Lgob;)V
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract c(Lgob;)V
+.end method
 
-    check-cast p1, Ljava/lang/Number;
+.method public abstract d(Lwnb;Lshg;Z)V
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+.method public abstract e(Lone/video/exo/error/OneVideoExoPlaybackException;Lkqh;Lgob;)V
+.end method
 
-    move-result p1
+.method public abstract f(Lgob;)V
+.end method
 
-    iget-object v0, p0, Leob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.method public abstract g(Lgob;F)V
+.end method
 
-    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->x0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+.method public abstract h(Lwnb;Lqqh;)V
+.end method
 
-    move-result p1
+.method public abstract i(Lgob;)V
+.end method
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.method public abstract j(Lgob;)V
+.end method
 
-    move-result-object p1
+.method public abstract k(Lwnb;Lqqh;)V
+.end method
 
-    return-object p1
+.method public abstract l(Lgob;)V
+.end method
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Number;
+.method public abstract m(Lgob;I)V
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+.method public abstract n(Lgob;Z)V
+.end method
 
-    move-result p1
+.method public abstract o(Lwnb;Lz60;)V
+.end method
 
-    iget-object v0, p0, Leob;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.method public abstract p(Lgob;)V
+.end method
 
-    invoke-static {v0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->x0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+.method public abstract q(Lgob;Ldob;Lv42;Lv42;)V
+.end method
 
-    move-result p1
+.method public abstract r(Lgob;)V
+.end method
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.method public abstract s(Lpm0;II)V
+.end method
 
-    move-result-object p1
+.method public abstract t(Lgob;J)V
+.end method
 
-    return-object p1
+.method public abstract u(Lgob;)V
+.end method
 
-    nop
+.method public abstract v(Lgob;)V
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract w(Lgob;Z)V
+.end method
+
+.method public abstract x(Lgob;I)V
 .end method

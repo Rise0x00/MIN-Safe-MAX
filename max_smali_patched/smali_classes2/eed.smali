@@ -1,19 +1,20 @@
-.class public final Leed;
-.super Lied;
-.source "SourceFile"
+.class public abstract Leed;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:Ljava/lang/Throwable;
+# static fields
+.field public static oneme_qrscanner_camera_request_description:I = 0x7f130962
 
+.field public static oneme_qrscanner_context_menu_title:I = 0x7f130963
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Throwable;)V
-    .locals 0
+.field public static oneme_qrscanner_error_snackbar_title:I = 0x7f130964
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_qrscanner_hint_login:I = 0x7f130965
 
-    iput-object p1, p0, Leed;->a:Ljava/lang/Throwable;
+.field public static oneme_qrscanner_hint_with_gallery:I = 0x7f130966
 
-    return-void
-.end method
+.field public static oneme_qrscanner_hint_without_gallery:I = 0x7f130967
+
+.field public static oneme_qrscanner_storage_request_description:I = 0x7f130968
+
+.field public static oneme_qrscanner_toolbar_title:I = 0x7f130969

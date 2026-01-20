@@ -1,6 +1,9 @@
 .class public final Ld91;
-.super Ladi;
+.super Llwh;
 .source "SourceFile"
+
+# interfaces
+.implements Le91;
 
 
 # static fields
@@ -9,13 +12,15 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     new-instance v0, Ld91;
 
-    const/16 v1, 0xb
+    sget v1, Ledd;->call_screen_connection_restoring:I
 
-    invoke-direct {v0, v1}, Ladi;-><init>(I)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Llwh;-><init>(Ljava/lang/Long;I)V
 
     sput-object v0, Ld91;->c:Ld91;
 
@@ -24,107 +29,40 @@
 
 
 # virtual methods
-.method public final R0(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/CharSequence;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, ":call-history-info?is_link_call=true"
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Ld91;->c:Ld91;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v2, "&call_link="
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return v0
 
     :cond_0
-    if-eqz p3, :cond_1
+    instance-of p1, p1, Ld91;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez p1, :cond_1
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const/4 p1, 0x0
 
-    const-string v2, "&call_title="
-
-    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return p1
 
     :cond_1
-    if-eqz p1, :cond_2
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string p3, "&call_chat_id="
-
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Ladi;->p0()Ltf4;
-
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p2, p1, p3}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
+    return v0
 .end method
 
-.method public final S0(JJ)V
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    const-string v0, ":chats?id="
+    const v0, 0x9c8d45e
 
-    const-string v1, "&type=local&message_id="
+    return v0
+.end method
 
-    invoke-static {p1, p2, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    move-result-object p1
+    const-string v0, "Restoring"
 
-    const-string p2, "&highlight_message=true"
-
-    invoke-static {p1, p3, p4, p2}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Ladi;->p0()Ltf4;
-
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p2, p1, p3}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
+    return-object v0
 .end method

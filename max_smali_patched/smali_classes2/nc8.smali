@@ -1,92 +1,61 @@
-.class public final synthetic Lnc8;
+.class public final Lnc8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/Consumer;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpc8;
+# static fields
+.field public static final a:Lnc8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpc8;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lnc8;->a:I
+    new-instance v0, Lnc8;
 
-    iput-object p1, p0, Lnc8;->b:Lpc8;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lnc8;->a:Lnc8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lnc8;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lgcb;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    iget-object v0, p0, Lnc8;->b:Lpc8;
+    :cond_0
+    instance-of p1, p1, Lnc8;
 
-    iget-object v0, v0, Lpc8;->g:Ljava/util/concurrent/ConcurrentHashMap;
+    if-nez p1, :cond_1
 
-    iget-object p1, p1, Lgcb;->b:Lfic;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Lfic;->m()Ljava/lang/Long;
+    return p1
 
-    move-result-object p1
+    :cond_1
+    return v0
+.end method
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, 0x31462cf7
 
-    :pswitch_0
-    iget-object v0, p0, Lnc8;->b:Lpc8;
+    return v0
+.end method
 
-    iget-object v0, v0, Lpc8;->g:Ljava/util/concurrent/ConcurrentHashMap;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget-object p1, p1, Lgcb;->b:Lfic;
+    const-string v0, "Valid"
 
-    invoke-virtual {p1}, Lfic;->m()Ljava/lang/Long;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p1, Lgcb;->c:Ljava/util/function/Consumer;
-
-    iget-object p1, p1, Lgcb;->b:Lfic;
-
-    invoke-interface {v0, p1}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lnc8;->b:Lpc8;
-
-    iget-object p1, p1, Lpc8;->f:Lcgc;
-
-    invoke-static {}, Ljava/time/Instant;->now()Ljava/time/Instant;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

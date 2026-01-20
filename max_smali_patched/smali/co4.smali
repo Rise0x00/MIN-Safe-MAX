@@ -1,48 +1,23 @@
-.class public final Lco4;
+.class public final synthetic Lco4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/media/Spatializer$OnSpatializerStateChangedListener;
-
 
 # instance fields
-.field public final synthetic a:Lmo4;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lmo4;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    iput p1, p0, Lco4;->a:I
+
+    iput-object p2, p0, Lco4;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lco4;->a:Lmo4;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onSpatializerAvailableChanged(Landroid/media/Spatializer;Z)V
-    .locals 0
-
-    sget-object p1, Lmo4;->k:Lx9b;
-
-    iget-object p1, p0, Lco4;->a:Lmo4;
-
-    invoke-virtual {p1}, Lmo4;->f()V
-
-    return-void
-.end method
-
-.method public final onSpatializerEnabledChanged(Landroid/media/Spatializer;Z)V
-    .locals 0
-
-    sget-object p1, Lmo4;->k:Lx9b;
-
-    iget-object p1, p0, Lco4;->a:Lmo4;
-
-    invoke-virtual {p1}, Lmo4;->f()V
 
     return-void
 .end method

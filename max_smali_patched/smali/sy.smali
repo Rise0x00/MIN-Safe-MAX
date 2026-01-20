@@ -1,14 +1,31 @@
-.class public interface abstract Lsy;
+.class public final Lsy;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()I
-.end method
+# instance fields
+.field public a:I
 
-.method public abstract b()I
-.end method
+.field public b:I
 
-.method public abstract c()I
+.field public final c:Landroid/media/MediaCodec$CryptoInfo;
+
+.field public d:J
+
+.field public e:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Landroid/media/MediaCodec$CryptoInfo;
+
+    invoke-direct {v0}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
+
+    iput-object v0, p0, Lsy;->c:Landroid/media/MediaCodec$CryptoInfo;
+
+    return-void
 .end method

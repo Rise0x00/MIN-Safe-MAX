@@ -16,7 +16,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000j\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0018\u0002\n\u0002\u0008\r\u0008!\u0018\u0000 C2\u00020\u0001:\u0002CDB5\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u000c\u001a\u00020\u000b\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u001f\u0010\u0013\u001a\u00020\u00122\u0006\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0011\u001a\u00020\u0003H\u0002\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\'\u0010\u0019\u001a\u00020\u00182\u0006\u0010\u0015\u001a\u00020\u000f2\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u0017\u001a\u00020\u0016H\u0002\u00a2\u0006\u0004\u0008\u0019\u0010\u001aJ\u0017\u0010\u001d\u001a\u00020\u00182\u0006\u0010\u001c\u001a\u00020\u001bH\u0002\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u000f\u0010\u001f\u001a\u00020\u0018H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 J\u0019\u0010#\u001a\u00020\u00182\u0008\u0010\"\u001a\u0004\u0018\u00010!H\u0016\u00a2\u0006\u0004\u0008#\u0010$J\u0017\u0010&\u001a\u00020\u00032\u0006\u0010%\u001a\u00020\tH\u0004\u00a2\u0006\u0004\u0008&\u0010\'J\u0017\u0010(\u001a\u00020\u00122\u0006\u0010\u0011\u001a\u00020\u0003H\u0004\u00a2\u0006\u0004\u0008(\u0010)J#\u0010-\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010*2\u000c\u0010,\u001a\u0008\u0012\u0004\u0012\u00028\u00000+H\u0004\u00a2\u0006\u0004\u0008-\u0010.R \u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u00028\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0004\u0010/\u001a\u0004\u00080\u00101R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u00102R\u001a\u0010\u0008\u001a\u00020\u00078\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0008\u00103\u001a\u0004\u00084\u00105R\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u00106R\u0014\u0010\u000c\u001a\u00020\u000b8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000c\u00107R\u001a\u00109\u001a\u0002088\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u00089\u0010:\u001a\u0004\u0008;\u0010<R$\u0010=\u001a\u0004\u0018\u00010!8\u0004@\u0004X\u0084\u000e\u00a2\u0006\u0012\n\u0004\u0008=\u0010>\u001a\u0004\u0008?\u0010@\"\u0004\u0008A\u0010$R\u0018\u0010B\u001a\u0004\u0018\u00010\u000b8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008B\u00107\u00a8\u0006E"
+        "\u0000l\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\t\n\u0002\u0018\u0002\n\u0002\u0008\u000c\n\u0002\u0018\u0002\n\u0002\u0008\r\u0008!\u0018\u0000 D2\u00020\u0001:\u0002DEB=\u0012\u000c\u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u0002\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u0012\u0006\u0010\u0008\u001a\u00020\u0007\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0006\u0010\u000b\u001a\u00020\t\u0012\u0006\u0010\r\u001a\u00020\u000c\u00a2\u0006\u0004\u0008\u000e\u0010\u000fJ\u001f\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0011\u001a\u00020\u00102\u0006\u0010\u0012\u001a\u00020\u0003H\u0002\u00a2\u0006\u0004\u0008\u0014\u0010\u0015J\'\u0010\u001a\u001a\u00020\u00192\u0006\u0010\u0016\u001a\u00020\u00102\u0006\u0010\u0008\u001a\u00020\u00072\u0006\u0010\u0018\u001a\u00020\u0017H\u0002\u00a2\u0006\u0004\u0008\u001a\u0010\u001bJ\u0017\u0010\u001e\u001a\u00020\u00192\u0006\u0010\u001d\u001a\u00020\u001cH\u0002\u00a2\u0006\u0004\u0008\u001e\u0010\u001fJ\u000f\u0010 \u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008 \u0010!J\u0019\u0010$\u001a\u00020\u00192\u0008\u0010#\u001a\u0004\u0018\u00010\"H\u0016\u00a2\u0006\u0004\u0008$\u0010%J\u0017\u0010\'\u001a\u00020\u00032\u0006\u0010&\u001a\u00020\tH\u0004\u00a2\u0006\u0004\u0008\'\u0010(J\u0017\u0010)\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0003H\u0004\u00a2\u0006\u0004\u0008)\u0010*J#\u0010.\u001a\u00028\u0000\"\u0004\u0008\u0000\u0010+2\u000c\u0010-\u001a\u0008\u0012\u0004\u0012\u00028\u00000,H\u0004\u00a2\u0006\u0004\u0008.\u0010/R \u0010\u0004\u001a\u0008\u0012\u0004\u0012\u00020\u00030\u00028\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0004\u00100\u001a\u0004\u00081\u00102R\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u00103R\u001a\u0010\u0008\u001a\u00020\u00078\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008\u0008\u00104\u001a\u0004\u00085\u00106R\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u00107R\u0014\u0010\u000b\u001a\u00020\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u000b\u00107R\u0014\u0010\r\u001a\u00020\u000c8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\r\u00108R\u001a\u0010:\u001a\u0002098\u0004X\u0084\u0004\u00a2\u0006\u000c\n\u0004\u0008:\u0010;\u001a\u0004\u0008<\u0010=R$\u0010>\u001a\u0004\u0018\u00010\"8\u0004@\u0004X\u0084\u000e\u00a2\u0006\u0012\n\u0004\u0008>\u0010?\u001a\u0004\u0008@\u0010A\"\u0004\u0008B\u0010%R\u0018\u0010C\u001a\u0004\u0018\u00010\u000c8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008C\u00108\u00a8\u0006F"
     }
     d2 = {
         "Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;",
@@ -30,22 +30,23 @@
         "channel",
         "",
         "isContentCompressed",
+        "autoDetectContentCompression",
         "",
         "logTag",
         "<init>",
-        "(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZLjava/lang/String;)V",
-        "Ltl;",
+        "(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZLjava/lang/String;)V",
+        "Lol;",
         "client",
         "file",
         "Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;",
         "uploadFileWithContent",
-        "(Ltl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;",
+        "(Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;",
         "apiClient",
-        "Lat0;",
+        "Lqu0;",
         "items",
-        "Lybg;",
+        "Lb3h;",
         "executeApiMethod",
-        "(Ltl;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lat0;)V",
+        "(Lol;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lqu0;)V",
         "Lru/ok/android/externcalls/analytics/internal/upload/UploadException;",
         "ex",
         "reportApiInvocationError",
@@ -65,7 +66,7 @@
         "Lkotlin/Function0;",
         "block",
         "withLock",
-        "(Loi6;)Ljava/lang/Object;",
+        "(Llq6;)Ljava/lang/Object;",
         "Ljavax/inject/Provider;",
         "getStorage",
         "()Ljavax/inject/Provider;",
@@ -108,7 +109,7 @@
     .end annotation
 .end field
 
-.field public static final SDK_VERSION_STRING:Ljava/lang/String; = "125.1.0.71.1"
+.field public static final SDK_VERSION_STRING:Ljava/lang/String; = "0.1.1"
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 .end field
@@ -122,6 +123,8 @@
 
 
 # instance fields
+.field private final autoDetectContentCompression:Z
+
 .field private final channel:Lru/ok/android/externcalls/analytics/internal/event/EventChannel;
 
 .field private volatile idleState:Lru/ok/android/externcalls/analytics/internal/upload/Uploader$IdleStateProvider;
@@ -155,14 +158,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;-><init>(Lfi4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->Companion:Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZLjava/lang/String;)V
+.method public constructor <init>(Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;ZZLjava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -172,7 +175,7 @@
             ">;",
             "Ljava/util/concurrent/locks/Lock;",
             "Lru/ok/android/externcalls/analytics/internal/event/EventChannel;",
-            "Z",
+            "ZZ",
             "Ljava/lang/String;",
             ")V"
         }
@@ -188,7 +191,9 @@
 
     iput-boolean p4, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->isContentCompressed:Z
 
-    iput-object p5, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->logTag:Ljava/lang/String;
+    iput-boolean p5, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->autoDetectContentCompression:Z
+
+    iput-object p6, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->logTag:Ljava/lang/String;
 
     sget-object p1, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
 
@@ -233,17 +238,17 @@
     return-void
 .end method
 
-.method public static final synthetic access$uploadFileWithContent(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;Ltl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
+.method public static final synthetic access$uploadFileWithContent(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->uploadFileWithContent(Ltl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->uploadFileWithContent(Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final executeApiMethod(Ltl;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lat0;)V
+.method private final executeApiMethod(Lol;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lqu0;)V
     .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -284,7 +289,7 @@
 
     move-object v6, p3
 
-    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallExternalAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lat0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+    invoke-direct/range {v1 .. v7}, Lru/ok/android/externcalls/analytics/internal/api/CallExternalAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
 
     goto :goto_0
 
@@ -317,23 +322,24 @@
 
     const-string v6, "ANDROID"
 
-    const-string v7, "125.1.0.71.1"
+    const-string v7, "0.1.1"
 
     const/4 v8, 0x1
 
-    invoke-direct/range {v2 .. v10}, Lru/ok/android/externcalls/analytics/internal/api/CallNativeAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILat0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+    invoke-direct/range {v2 .. v10}, Lru/ok/android/externcalls/analytics/internal/api/CallNativeAnalyticsApiRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
 
     move-object v1, v2
 
     :goto_0
     :try_start_0
-    invoke-interface {p1, v1}, Ltl;->a(Lfm;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lol;->a(Lam;)Ljava/lang/Object;
 
     const/4 p1, 0x0
 
     iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->lastReportedError:Ljava/lang/String;
     :try_end_0
-    .catch Lru/ok/android/api/core/ApiInvocationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lru/ok/android/api/core/ApiInvocationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
@@ -352,6 +358,13 @@
 
     goto :goto_2
 
+    :catch_1
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_3
+
     :goto_1
     new-instance p3, Lru/ok/android/externcalls/analytics/internal/upload/UploadException;
 
@@ -366,6 +379,9 @@
     throw p1
 
     :goto_2
+    throw p1
+
+    :goto_3
     new-instance p3, Lru/ok/android/externcalls/analytics/internal/upload/UploadException;
 
     invoke-virtual {p2}, Lru/ok/android/externcalls/analytics/internal/event/EventChannel;->getApiMethod()Ljava/lang/String;
@@ -411,7 +427,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->lastReportedError:Ljava/lang/String;
 
-    invoke-static {v2, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -445,7 +461,7 @@
     return-void
 .end method
 
-.method private final uploadFileWithContent(Ltl;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
+.method private final uploadFileWithContent(Lol;Ljava/io/File;)Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$UploadResult;
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -469,11 +485,38 @@
 
     new-instance v6, Lru/ok/android/externcalls/analytics/internal/api/StreamingItemsApiValue;
 
+    iget-boolean v7, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->autoDetectContentCompression:Z
+
+    if-eqz v7, :cond_0
+
+    invoke-static {p2}, Ll36;->d(Ljava/io/File;)Z
+
+    move-result v7
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_2
+    move-exception p1
+
+    goto/16 :goto_3
+
+    :cond_0
     iget-boolean v7, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->isContentCompressed:Z
 
+    :goto_0
     invoke-direct {v6, p2, v7}, Lru/ok/android/externcalls/analytics/internal/api/StreamingItemsApiValue;-><init>(Ljava/io/File;Z)V
 
-    invoke-direct {p0, p1, v5, v6}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->executeApiMethod(Ltl;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lat0;)V
+    invoke-direct {p0, p1, v5, v6}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->executeApiMethod(Lol;Lru/ok/android/externcalls/analytics/internal/event/EventChannel;Lqu0;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -497,29 +540,11 @@
 
     move-result-object v6
 
-    if-nez v6, :cond_0
+    if-nez v6, :cond_1
 
     const-string v6, "-"
 
-    goto :goto_0
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_1
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_2
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_0
-    :goto_0
+    :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -607,33 +632,37 @@
     goto :goto_4
 
     :goto_3
-    const/4 p2, 0x2
+    invoke-virtual {p1}, Lru/ok/android/api/core/ApiInvocationException;->getErrorCode()I
 
-    iget v0, p1, Lru/ok/android/api/core/ApiInvocationException;->a:I
+    move-result p2
 
-    if-eq v0, p2, :cond_1
+    const/4 v0, 0x2
 
-    const/16 p2, 0x1c5
+    if-eq p2, v0, :cond_2
 
-    if-eq v0, p2, :cond_1
+    const/16 v0, 0x1c5
 
-    const/16 p2, 0x66
+    if-eq p2, v0, :cond_2
 
-    if-eq v0, p2, :cond_1
+    const/16 v0, 0x66
 
-    const/16 p2, 0x67
+    if-eq p2, v0, :cond_2
 
-    if-eq v0, p2, :cond_1
+    const/16 v0, 0x67
+
+    if-eq p2, v0, :cond_2
 
     iget-object p2, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->logTag:Ljava/lang/String;
 
+    invoke-virtual {p1}, Lru/ok/android/api/core/ApiInvocationException;->getErrorMessage()Ljava/lang/String;
+
+    move-result-object p1
+
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p1, p1, Lru/ok/android/api/core/ApiInvocationException;->b:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -652,7 +681,7 @@
     :goto_4
     return-object p1
 
-    :cond_1
+    :cond_2
     iget-object p2, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->logTag:Ljava/lang/String;
@@ -673,7 +702,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$drop$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Loi6;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -702,7 +731,7 @@
     if-eq v1, p1, :cond_0
 
     :try_start_0
-    invoke-static {v0}, Ltv5;->b(Ljava/io/File;)V
+    invoke-static {v0}, Ll36;->b(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -808,7 +837,7 @@
 
     invoke-direct {v0, p0, p1}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader$uploadFile$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;Ljava/io/File;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Loi6;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Llq6;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -817,14 +846,14 @@
     return-object p1
 .end method
 
-.method public final withLock(Loi6;)Ljava/lang/Object;
+.method public final withLock(Llq6;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Loi6;",
+            "Llq6;",
             ")TT;"
         }
     .end annotation
@@ -834,7 +863,7 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
     :try_end_0

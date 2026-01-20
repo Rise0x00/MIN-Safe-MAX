@@ -1,8 +1,10 @@
-.class public interface abstract Ls5;
-.super Ljava/lang/Object;
+.class public abstract Ls5;
+.super Lcpi;
 .source "SourceFile"
 
+# interfaces
+.implements Lae7;
 
-# virtual methods
-.method public abstract e(Landroid/view/View;)Z
-.end method
+
+# static fields
+.field public static final synthetic d:I

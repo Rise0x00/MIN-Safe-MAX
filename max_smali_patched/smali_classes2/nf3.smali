@@ -1,96 +1,117 @@
-.class public final Lnf3;
+.class public abstract Lnf3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lpgd;
-
-.field public final b:Lfi;
-
-.field public final c:Lgi;
+# static fields
+.field public static final a:Legc;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Legc;
 
-    iput-object p1, p0, Lnf3;->a:Lpgd;
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    new-instance v0, Lfi;
+    move-result-object v1
 
-    const/4 v1, 0x2
+    invoke-direct {v0, v1}, Legc;-><init>(Landroid/os/Looper;)V
 
-    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lpgd;I)V
-
-    iput-object v0, p0, Lnf3;->b:Lfi;
-
-    new-instance v0, Lgi;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, p1, v1}, Lgi;-><init>(Lpgd;I)V
-
-    iput-object v0, p0, Lnf3;->c:Lgi;
+    sput-object v0, Lnf3;->a:Legc;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 3
 
-# virtual methods
-.method public final a()V
-    .locals 4
+    new-instance v0, Lzi;
 
-    iget-object v0, p0, Lnf3;->a:Lpgd;
+    const/16 v1, 0xf
 
-    invoke-virtual {v0}, Lpgd;->b()V
+    const-string v2, "Copied Text"
 
-    iget-object v1, p0, Lnf3;->c:Lgi;
+    invoke-direct {v0, p0, v2, p1, v1}, Lzi;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {v1}, Lf3;->a()Lhh6;
+    sget-object p0, Lnf3;->a:Legc;
 
-    move-result-object v2
-
-    :try_start_0
-    invoke-virtual {v0}, Lpgd;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-virtual {v2}, Lhh6;->w()I
-
-    invoke-virtual {v0}, Lpgd;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lpgd;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1, v2}, Lf3;->s(Lhh6;)V
+    invoke-virtual {p0, v0}, Legc;->s(Ljava/lang/Runnable;)V
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public static final b()Z
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x20
+
+    if-le v0, v1, :cond_1
+
+    sget-object v0, Lidh;->a:Ln8g;
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v3
+    :cond_0
+    const/4 v0, 0x0
 
-    :try_start_3
-    invoke-virtual {v0}, Lpgd;->k()V
+    return v0
 
-    throw v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
+    :cond_1
     :goto_0
-    invoke-virtual {v1, v2}, Lf3;->s(Lhh6;)V
+    const/4 v0, 0x1
 
-    throw v0
+    return v0
+.end method
+
+.method public static final c(Landroid/content/Context;)Ljava/lang/CharSequence;
+    .locals 1
+
+    const-string v0, "clipboard"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/content/ClipboardManager;
+
+    invoke-virtual {p0}, Landroid/content/ClipboardManager;->getPrimaryClip()Landroid/content/ClipData;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Landroid/content/ClipData$Item;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

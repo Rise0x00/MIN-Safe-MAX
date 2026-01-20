@@ -3,115 +3,58 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln67;
-.implements Landroid/os/IInterface;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
-.field public final c:Landroid/os/IBinder;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/IBinder;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Ll67;->a:I
 
-    iput-object p1, p0, Ll67;->c:Landroid/os/IBinder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final asBinder()Landroid/os/IBinder;
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 1
 
-    iget-object v0, p0, Ll67;->c:Landroid/os/IBinder;
+    iget v0, p0, Ll67;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final i(Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 4
+    new-instance v0, Lnxd;
 
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object v0
-
-    const-string v1, "com.google.android.finsky.externalreferrer.IGetInstallReferrerService"
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
-
-    sget v1, Lmsh;->a:I
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
-
-    move-result-object p1
-
-    :try_start_0
-    iget-object v3, p0, Ll67;->c:Landroid/os/IBinder;
-
-    invoke-interface {v3, v1, v0, p1, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readException()V
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
-
-    sget-object v0, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v0, p1}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Parcelable;
-
-    :goto_0
-    check-cast v0, Landroid/os/Bundle;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    invoke-direct {v0, p1}, Lnxd;-><init>(Ljava/lang/Runnable;)V
 
     return-object v0
 
-    :catchall_0
-    move-exception p1
+    :pswitch_0
+    new-instance v0, Ljava/lang/Thread;
 
-    goto :goto_1
+    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    :catch_0
-    move-exception v1
+    const/16 p1, 0xa
 
-    :try_start_1
-    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setPriority(I)V
 
-    throw v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    const-string p1, "CameraX-camerax_high_priority"
 
-    :goto_1
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-virtual {v0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    throw p1
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

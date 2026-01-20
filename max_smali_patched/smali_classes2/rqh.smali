@@ -1,19 +1,21 @@
 .class public final Lrqh;
-.super Ljava/lang/Object;
+.super Lqqh;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lpq3;
+.field public final d:Ldgc;
 
 
 # direct methods
-.method public constructor <init>(Lpq3;)V
-    .locals 0
+.method public constructor <init>(Ldgc;Ljava/lang/String;Lihh;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    iput-object p1, p0, Lrqh;->a:Lpq3;
+    invoke-direct {p0, p2, v0, p3}, Lj2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lrqh;->d:Ldgc;
 
     return-void
 .end method

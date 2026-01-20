@@ -1,402 +1,665 @@
 .class public final Lg8;
-.super Lyid;
+.super Ly48;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
+
+
+# static fields
+.field public static final X:Lg8;
+
+.field public static final Y:Lg8;
+
+.field public static final Z:Lg8;
+
+.field public static final b:Lg8;
+
+.field public static final c:Lg8;
+
+.field public static final d:Lg8;
+
+.field public static final o:Lg8;
+
+.field public static final t0:Lg8;
+
+.field public static final u0:Lg8;
+
+.field public static final v0:Lg8;
+
+.field public static final w0:Lg8;
+
+.field public static final x0:Lg8;
 
 
 # instance fields
-.field public j:Ljava/lang/Object;
-
-.field public final k:Lvx5;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static synthetic constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Lyid;-><init>()V
+    new-instance v0, Lg8;
 
-    new-instance v0, Lvx5;
+    const/4 v1, 0x0
 
-    const/16 v1, 0xd
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1}, Lvx5;-><init>(I)V
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
 
-    iput-object v0, p0, Lg8;->k:Lvx5;
+    sput-object v0, Lg8;->b:Lg8;
 
-    const/4 v0, 0x1
+    new-instance v0, Lg8;
 
-    iput v0, p0, Lyid;->e:I
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->c:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->d:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->o:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->X:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->Y:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->Z:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->t0:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->u0:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/16 v2, 0x9
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->v0:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->w0:Lg8;
+
+    new-instance v0, Lg8;
+
+    const/16 v2, 0xb
+
+    invoke-direct {v0, v1, v2}, Lg8;-><init>(II)V
+
+    sput-object v0, Lg8;->x0:Lg8;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(II)V
+    .locals 0
+
+    iput p2, p0, Lg8;->a:I
+
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final K(ILjava/lang/String;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
+    iget v0, p0, Lg8;->a:I
 
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    const/4 v1, 0x4
 
-    invoke-virtual {v0, p1, p2}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->t0(ILjava/lang/String;)V
+    const/16 v2, 0xe
 
-    return-void
-.end method
+    sget-object v3, Leca;->a:Lsf5;
 
-.method public final N(Ljava/lang/String;[Ljava/lang/String;I)V
-    .locals 1
+    const/4 v4, 0x0
 
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-static {v0, p1, p2, p3}, Ln8;->e(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Ljava/lang/String;[Ljava/lang/String;I)V
+    const/16 v2, 0x1d
 
-    return-void
-.end method
+    if-ge v0, v2, :cond_0
 
-.method public final O(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lyid;->O(Landroid/os/Bundle;)V
-
-    iget-object v0, p0, Lg8;->k:Lvx5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v1, "TransactionIndexer.currentIndex"
-
-    invoke-virtual {p1, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    iput p1, v0, Lvx5;->b:I
-
-    return-void
-.end method
-
-.method public final P(Landroid/os/Bundle;)V
-    .locals 2
-
-    invoke-super {p0, p1}, Lyid;->P(Landroid/os/Bundle;)V
-
-    const-string v0, "TransactionIndexer.currentIndex"
-
-    iget-object v1, p0, Lg8;->k:Lvx5;
-
-    iget v1, v1, Lvx5;->b:I
-
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public final U(Landroid/content/Intent;)V
-    .locals 3
-
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/fragment/app/a;
-
-    iget-object v1, v0, Landroidx/fragment/app/a;->E0:Lqe6;
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v1, Lqe6;->H0:Landroidx/fragment/app/b;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Landroid/media/MediaCodecList;
 
-    const-string v1, "Fragment "
+    invoke-direct {v0, v4}, Landroid/media/MediaCodecList;-><init>(I)V
 
-    const-string v2, " not attached to Activity"
-
-    invoke-static {v1, v0, v2}, Lm65;->i(Ljava/lang/String;Landroidx/fragment/app/a;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    new-instance v2, Ljava/util/ArrayList;
 
-    throw p1
-.end method
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-.method public final V(Ljava/lang/String;Landroid/content/Intent;I)V
-    .locals 2
+    array-length v3, v0
 
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
+    move v5, v4
 
-    const/4 v1, 0x0
+    :goto_0
+    const-string v6, "video/avc"
 
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    if-ge v5, v3, :cond_2
 
-    invoke-virtual {v0, p1, p2, p3, v1}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->v0(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    aget-object v7, v0, v5
 
-    return-void
-.end method
+    invoke-virtual {v7}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
-.method public final W(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
-    .locals 1
+    move-result-object v8
 
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
+    invoke-static {v8, v6}, Lct;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    move-result v6
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->v0(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    if-eqz v6, :cond_1
 
-    return-void
-.end method
+    invoke-virtual {v7}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
-.method public final X(Ljava/lang/String;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
-    .locals 10
+    move-result v6
 
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
+    if-nez v6, :cond_1
 
-    move-object v2, v0
+    invoke-static {v7}, La85;->A(Landroid/media/MediaCodecInfo;)Z
 
-    check-cast v2, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    move-result v6
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v6, :cond_1
 
-    new-instance v1, Lpe;
+    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-object v3, p2
+    :cond_1
+    add-int/lit8 v5, v5, 0x1
 
-    move v4, p3
+    goto :goto_0
 
-    move-object v5, p4
+    :cond_2
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move v6, p5
+    move-result v0
 
-    move/from16 v7, p6
+    move v3, v4
 
-    move/from16 v8, p7
+    :cond_3
+    if-ge v3, v0, :cond_4
 
-    move-object/from16 v9, p8
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-direct/range {v1 .. v9}, Lpe;-><init>(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Landroid/content/IntentSender;ILandroid/content/Intent;IIILandroid/os/Bundle;)V
+    move-result-object v5
 
-    invoke-virtual {v2, p3, p1}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->t0(ILjava/lang/String;)V
+    add-int/lit8 v3, v3, 0x1
 
-    invoke-virtual {v1}, Lpe;->invoke()Ljava/lang/Object;
+    check-cast v5, Landroid/media/MediaCodecInfo;
 
-    return-void
-.end method
+    invoke-virtual {v5, v6}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
-.method public final Z(Ljava/lang/String;)V
-    .locals 4
+    move-result-object v5
 
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
+    invoke-virtual {v5}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getMaxSupportedInstances()I
 
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    move-result v7
 
-    invoke-virtual {v0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->s0()Lhx7;
+    if-lez v7, :cond_3
+
+    invoke-virtual {v5}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getMaxSupportedInstances()I
+
+    move-result v4
+
+    :cond_4
+    :goto_1
+    add-int/lit8 v4, v4, -0x5
+
+    const/16 v0, 0xa
+
+    invoke-static {v4, v1, v0}, Lamj;->d(III)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    sget v0, Landroid/system/OsConstants;->_SC_NPROCESSORS_CONF:I
+
+    invoke-static {v0}, Landroid/system/Os;->sysconf(I)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Landroid/system/OsConstants;->_SC_PAGESIZE:I
+
+    invoke-static {v0}, Landroid/system/Os;->sysconf(I)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x400
+
+    div-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_3
+    sget v0, Landroid/system/OsConstants;->_SC_CLK_TCK:I
+
+    invoke-static {v0}, Landroid/system/Os;->sysconf(I)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_4
+    new-instance v0, Lsg3;
+
+    invoke-direct {v0}, Lsg3;-><init>()V
+
+    return-object v0
+
+    :pswitch_5
+    sget-object v0, Ldqg;->a:Ldqg;
+
+    invoke-static {}, Ldqg;->c()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v3, v0, Llb4;
+
+    if-eqz v3, :cond_5
+
+    move-object v5, v0
+
+    check-cast v5, Llb4;
+
+    :cond_5
+    if-nez v5, :cond_6
+
+    new-instance v0, Ltx4;
+
+    invoke-direct {v0, v2}, Ltx4;-><init>(I)V
+
+    invoke-virtual {v0}, Ltx4;->h()Llb4;
+
+    :cond_6
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v4}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    new-instance v2, Lfr3;
+
+    invoke-direct {v2, v1, v0}, Lfr3;-><init>(ILjava/io/Serializable;)V
+
+    invoke-static {v2}, Ljava/util/concurrent/Executors;->newCachedThreadPool(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_6
+    sget-object v0, Ldqg;->a:Ldqg;
+
+    invoke-static {}, Ldqg;->c()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v1, v0, Llb4;
+
+    if-eqz v1, :cond_7
+
+    move-object v5, v0
+
+    check-cast v5, Llb4;
+
+    :cond_7
+    if-nez v5, :cond_8
+
+    new-instance v0, Ltx4;
+
+    invoke-direct {v0, v2}, Ltx4;-><init>(I)V
+
+    invoke-virtual {v0}, Ltx4;->h()Llb4;
+
+    :cond_8
+    new-instance v0, Lng;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lng;-><init>(I)V
+
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_7
+    sget-object v0, Ldqg;->d:Landroid/content/Context;
+
+    if-eqz v0, :cond_9
+
+    goto :goto_2
+
+    :cond_9
+    move-object v0, v5
+
+    :goto_2
+    sget-object v1, Ldqg;->a:Ldqg;
+
+    invoke-static {}, Ldqg;->c()Ljava/util/Map;
 
     move-result-object v1
 
-    iget-object v1, v1, Lhx7;->h:Landroid/util/SparseArray;
+    invoke-interface {v1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
+    move-result-object v1
 
-    move-result v1
+    instance-of v3, v1, Llb4;
 
-    add-int/lit8 v1, v1, -0x1
+    if-eqz v3, :cond_a
 
-    :goto_0
-    const/4 v2, -0x1
+    move-object v5, v1
 
-    if-ge v2, v1, :cond_1
+    check-cast v5, Llb4;
 
-    invoke-virtual {v0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->s0()Lhx7;
+    :cond_a
+    if-nez v5, :cond_b
 
-    move-result-object v2
+    new-instance v1, Ltx4;
 
-    iget-object v2, v2, Lhx7;->h:Landroid/util/SparseArray;
+    invoke-direct {v1, v2}, Ltx4;-><init>(I)V
 
-    invoke-virtual {v0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->s0()Lhx7;
+    new-instance v5, Llb4;
+
+    invoke-direct {v5, v1}, Llb4;-><init>(Ltx4;)V
+
+    :cond_b
+    iget v1, v5, Llb4;->b:I
+
+    new-instance v2, Lpd7;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v3, v3, Lhx7;->h:Landroid/util/SparseArray;
+    const-string v4, "TracerSDK/1.1.7 App/"
 
-    invoke-virtual {v3, v1}, Landroid/util/SparseArray;->keyAt(I)I
+    const-string v5, " "
 
-    move-result v3
+    invoke-static {v4, v3, v5}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    move-result-object v3
+
+    const-string v4, "http.agent"
+
+    invoke-static {v4}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_c
+
+    goto :goto_3
+
+    :cond_c
+    const-string v4, "Dalvik/Unknown (Linux; U; Android Unknown; Device Unknown Build/Unknown)"
+
+    :goto_3
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v1, v0, v3}, Lpd7;-><init>(ILandroid/content/Context;Ljava/lang/String;)V
+
+    return-object v2
+
+    :pswitch_8
+    new-instance v0, Lx95;
+
+    sget-object v1, Ldqg;->d:Landroid/content/Context;
+
+    if-eqz v1, :cond_d
+
+    move-object v5, v1
+
+    :cond_d
+    invoke-static {}, Lokj;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_e
 
-    invoke-virtual {v0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->s0()Lhx7;
+    const-string v1, "tracer"
 
-    move-result-object v2
+    goto :goto_4
 
-    iget-object v2, v2, Lhx7;->h:Landroid/util/SparseArray;
+    :cond_e
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v1}, Landroid/util/SparseArray;->removeAt(I)V
+    const-string v3, "tracer-"
 
-    :cond_0
-    add-int/lit8 v1, v1, -0x1
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    const/16 v3, 0x3a
 
-    :cond_1
-    return-void
-.end method
+    const/16 v6, 0x2d
 
-.method public final a0(Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;Lm62;)V
-    .locals 2
+    invoke-static {v1, v3, v6, v4}, Lzzf;->r(Ljava/lang/String;CCZ)Ljava/lang/String;
 
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
+    move-result-object v1
 
-    if-ne v0, p1, :cond_1
+    invoke-static {v1}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v0, p0, Lyid;->i:Landroid/view/ViewGroup;
+    move-result-object v1
 
-    if-eq v0, p2, :cond_0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_0
-    return-void
+    move-result-object v1
 
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lyid;->i:Landroid/view/ViewGroup;
+    :goto_4
+    new-instance v2, Ljava/io/File;
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v5}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
-    instance-of v1, v0, Lg24;
+    move-result-object v3
 
-    if-eqz v1, :cond_2
+    invoke-direct {v2, v3, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    check-cast v0, Lg24;
+    const-string v1, "drops.json"
 
-    invoke-virtual {p0, v0}, Lyid;->L(Lg24;)V
+    invoke-static {v2, v1}, Ln36;->h(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
 
-    :cond_2
-    invoke-virtual {p0, p2}, Lyid;->a(Lg24;)V
+    move-result-object v1
 
-    iput-object p1, p0, Lg8;->j:Ljava/lang/Object;
-
-    iput-object p2, p0, Lyid;->i:Landroid/view/ViewGroup;
-
-    new-instance p1, Lmt7;
-
-    const/16 v0, 0x15
-
-    invoke-direct {p1, v0, p0}, Lmt7;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public final d()Landroid/app/Activity;
-    .locals 1
-
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
-
-    iget-object v0, v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->i1:Lhx7;
-
-    iget-object v0, v0, Lhx7;->b:Landroid/app/Activity;
+    invoke-direct {v0, v1}, Lx95;-><init>(Ljava/io/File;)V
 
     return-object v0
 
-    :cond_0
-    const/4 v0, 0x0
+    :pswitch_9
+    sget-object v0, Ldqg;->a:Ldqg;
+
+    invoke-static {}, Ldqg;->c()Ljava/util/Map;
+
+    move-result-object v0
+
+    sget-object v1, Lwma;->a:Lsf5;
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v1, v0, Lv15;
+
+    if-eqz v1, :cond_f
+
+    move-object v5, v0
+
+    check-cast v5, Lv15;
+
+    :cond_f
+    if-nez v5, :cond_10
+
+    new-instance v0, Lakj;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v5, Lv15;
+
+    invoke-direct {v5, v0}, Lv15;-><init>(Lakj;)V
+
+    :cond_10
+    return-object v5
+
+    :pswitch_a
+    sget-object v0, Lcoj;->a:Lvna;
+
+    if-eqz v0, :cond_11
+
+    new-instance v5, Lvm3;
+
+    invoke-direct {v5, v0}, Lvm3;-><init>(Lvna;)V
+
+    :cond_11
+    return-object v5
+
+    :pswitch_b
+    const/high16 v0, 0x7fff0000
+
+    sget-object v1, Lmhd;->b:Lo3;
+
+    invoke-virtual {v1, v0}, Lo3;->c(I)I
+
+    move-result v0
+
+    const/high16 v1, 0x10000
+
+    add-int/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final i()Lyid;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final j()Ljava/util/List;
-    .locals 1
-
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
-
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
-
-    iget-object v0, v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->i1:Lhx7;
-
-    iget-object v0, v0, Lhx7;->j:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lab3;->X(Ljava/lang/Iterable;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final k()Lvx5;
-    .locals 1
-
-    iget-object v0, p0, Lg8;->k:Lvx5;
-
-    return-object v0
-.end method
-
-.method public final o()V
-    .locals 1
-
-    iget-object v0, p0, Lg8;->j:Ljava/lang/Object;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lg8;->d()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lg8;->d()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->invalidateOptionsMenu()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final p(Landroid/app/Activity;Z)V
-    .locals 0
-
-    invoke-super {p0, p1, p2}, Lyid;->p(Landroid/app/Activity;Z)V
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lg8;->j:Ljava/lang/Object;
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

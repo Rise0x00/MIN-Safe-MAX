@@ -1,61 +1,41 @@
-.class public abstract synthetic Lxk2;
-.super Ljava/lang/Object;
+.class public final Lxk2;
+.super Lkk0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(J)V
+    .locals 0
 
-    invoke-static {}, Lv10;->values()[Lv10;
+    invoke-direct {p0}, Lkk0;-><init>()V
+
+    iput-wide p1, p0, Lxk2;->b:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    invoke-super {p0}, Lkk0;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    const-string v1, "ChatLastReactionUpdatedEvent{chatId="
 
-    new-array v0, v0, [I
+    const-string v2, "\'lastReactionMessageId=0\', lastReaction=null}"
 
-    const/4 v1, 0x1
+    iget-wide v3, p0, Lxk2;->b:J
 
-    const/4 v2, 0x2
+    invoke-static {v1, v3, v4, v2, v0}, Lcbh;->l(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
-    :catch_0
-    const/4 v1, 0x3
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v2, 0x6
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/16 v1, 0x9
-
-    const/4 v2, 0x4
-
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Lxk2;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

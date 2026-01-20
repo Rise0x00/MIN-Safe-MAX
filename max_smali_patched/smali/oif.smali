@@ -1,3 +1,3 @@
-.class public interface abstract Loif;
-.super Ljava/lang/Object;
+.class public final Loif;
+.super Lqif;
 .source "SourceFile"

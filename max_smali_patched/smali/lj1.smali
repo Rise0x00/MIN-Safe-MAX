@@ -1,85 +1,42 @@
-.class public final Llj1;
+.class public final synthetic Llj1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmj1;
+.implements Ljava/util/function/ToLongFunction;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:Lbh1;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public synthetic constructor <init>(Lbh1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Llj1;->a:Z
+    iput-object p1, p0, Llj1;->a:Lbh1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final applyAsLong(Ljava/lang/Object;)J
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Llj1;->a:Lbh1;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0, p1}, Lbh1;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Llj1;
+    check-cast p1, Ljava/lang/Number;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    if-nez v1, :cond_1
+    move-result-wide v0
 
-    return v2
-
-    :cond_1
-    check-cast p1, Llj1;
-
-    iget-boolean v1, p0, Llj1;->a:Z
-
-    iget-boolean p1, p1, Llj1;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Llj1;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Close(showSnackbar="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Llj1;->a:Z
-
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-wide v0
 .end method

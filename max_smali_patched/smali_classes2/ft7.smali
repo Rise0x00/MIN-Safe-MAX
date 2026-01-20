@@ -1,90 +1,124 @@
 .class public final Lft7;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+.field public final X:F
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final Y:F
+
+.field public final a:Ljava/lang/ref/WeakReference;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:F
+
+.field public final o:F
 
 
 # direct methods
-.method public constructor <init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lgt7;FFFF)V
+    .locals 2
 
-    iput-object p1, p0, Lft7;->X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lft7;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lft7;->c:J
+
+    const-wide/16 v0, 0xc8
+
+    iput-wide v0, p0, Lft7;->b:J
+
+    iput p2, p0, Lft7;->d:F
+
+    iput p3, p0, Lft7;->o:F
+
+    iput p4, p0, Lft7;->X:F
+
+    iput p5, p0, Lft7;->Y:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    check-cast p1, La8f;
+    iget-object v0, p0, Lft7;->a:Ljava/lang/ref/WeakReference;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Lft7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Lgt7;
 
-    check-cast p1, Lft7;
+    if-nez v0, :cond_0
 
-    sget-object p2, Lybg;->a:Lybg;
+    return-void
 
-    invoke-virtual {p1, p2}, Lft7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-object p2
-.end method
+    move-result-wide v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-wide v3, p0, Lft7;->c:J
 
-    new-instance v0, Lft7;
+    sub-long/2addr v1, v3
 
-    iget-object v1, p0, Lft7;->X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+    iget-wide v3, p0, Lft7;->b:J
 
-    invoke-direct {v0, v1, p2}, Lft7;-><init>(Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-static {v3, v4, v1, v2}, Ljava/lang/Math;->min(JJ)J
 
-    iput-object p1, v0, Lft7;->o:Ljava/lang/Object;
+    move-result-wide v1
 
-    return-object v0
-.end method
+    long-to-float v1, v1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    long-to-float v2, v3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget v3, p0, Lft7;->o:F
 
-    iget-object p1, p0, Lft7;->o:Ljava/lang/Object;
+    invoke-static {v1, v3, v2}, Lllj;->b(FFF)F
 
-    check-cast p1, La8f;
+    move-result v3
 
-    iget-object v0, p0, Lft7;->X:Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;
+    cmpg-float v1, v1, v2
 
-    iget-object v1, v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->X:Lsx2;
+    if-gez v1, :cond_1
 
-    iget-object v2, p1, La8f;->a:Ljava/util/List;
+    iget v1, p0, Lft7;->d:F
 
-    invoke-virtual {v1, v2}, Lb28;->E(Ljava/util/List;)V
+    add-float/2addr v1, v3
 
-    iget-object v0, v0, Lone/me/keyboardmedia/stickers/KeyboardStickersWidget;->Y:Lz4f;
+    iget v2, p0, Lft7;->X:F
 
-    iget-object p1, p1, La8f;->b:Ljava/util/List;
+    iget v3, p0, Lft7;->Y:F
 
-    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
+    invoke-virtual {v0, v1, v2, v3}, Lgt7;->j(FFF)V
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    return-object p1
+    return-void
+
+    :cond_1
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lgt7;->setImageToWrapCropBounds(Z)V
+
+    return-void
 .end method

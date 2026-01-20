@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lejd;
+.implements Lc5e;
 
 
 # annotations
@@ -14,15 +14,15 @@
     d2 = {
         "Lone/me/android/root/RootController;",
         "Lone/me/sdk/arch/Widget;",
-        "Lejd;",
+        "Lc5e;",
         "<init>",
         "()V",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -30,32 +30,32 @@
 
 
 # static fields
-.field public static final synthetic s0:[Les7;
+.field public static final synthetic t0:[Lz28;
 
 
 # instance fields
-.field public final X:Lgj4;
+.field public final X:Ld8;
 
 .field public Y:Z
 
-.field public final Z:Lj93;
+.field public final Z:Leg3;
 
 .field public a:Landroid/animation/AnimatorSet;
 
-.field public final b:Lrn0;
+.field public final b:Lro0;
 
-.field public final c:Lrn0;
+.field public final c:Lro0;
 
-.field public final d:Lgj4;
+.field public final d:Ld8;
 
-.field public final o:Lgj4;
+.field public final o:Ld8;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 9
 
-    new-instance v0, Lbec;
+    new-instance v0, Liyc;
 
     const-class v1, Lone/me/android/root/RootController;
 
@@ -65,45 +65,45 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lv7d;->a:Lw7d;
+    sget-object v2, Lctd;->a:Ldtd;
 
     const-string v3, "topIndicatorView"
 
     const-string v5, "getTopIndicatorView()Lcom/bluelinelabs/conductor/ChangeHandlerFrameLayout;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lok7;->d(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lbec;
+    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
 
     move-result-object v2
 
-    new-instance v3, La1a;
+    new-instance v3, Lhfa;
 
     const-string v5, "fullScreenRouter"
 
     const-string v6, "getFullScreenRouter()Lcom/bluelinelabs/conductor/Router;"
 
-    invoke-direct {v3, v1, v5, v6}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v1, v5, v6}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v5, La1a;
+    new-instance v5, Lhfa;
 
     const-string v6, "dialogsRouter"
 
     const-string v7, "getDialogsRouter()Lcom/bluelinelabs/conductor/Router;"
 
-    invoke-direct {v5, v1, v6, v7}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v5, v1, v6, v7}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v6, La1a;
+    new-instance v6, Lhfa;
 
     const-string v7, "topIndicatorRouter"
 
     const-string v8, "getTopIndicatorRouter()Lcom/bluelinelabs/conductor/Router;"
 
-    invoke-direct {v6, v1, v7, v8}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v6, v1, v7, v8}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x5
 
-    new-array v1, v1, [Les7;
+    new-array v1, v1, [Lz28;
 
     aput-object v0, v1, v4
 
@@ -123,7 +123,7 @@
 
     aput-object v6, v1, v0
 
-    sput-object v1, Lone/me/android/root/RootController;->s0:[Les7;
+    sput-object v1, Lone/me/android/root/RootController;->t0:[Lz28;
 
     return-void
 .end method
@@ -137,65 +137,156 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfi4;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
 
-    new-instance v0, Lohd;
+    new-instance v0, Lj3e;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lohd;-><init>(Lone/me/android/root/RootController;I)V
+    invoke-direct {v0, p0, v1}, Lj3e;-><init>(Lone/me/android/root/RootController;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Loi6;)Lrn0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/android/root/RootController;->b:Lrn0;
+    iput-object v0, p0, Lone/me/android/root/RootController;->b:Lro0;
 
-    new-instance v0, Lohd;
+    new-instance v0, Lj3e;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lohd;-><init>(Lone/me/android/root/RootController;I)V
+    invoke-direct {v0, p0, v1}, Lj3e;-><init>(Lone/me/android/root/RootController;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Loi6;)Lrn0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Llq6;)Lro0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/android/root/RootController;->c:Lrn0;
+    iput-object v0, p0, Lone/me/android/root/RootController;->c:Lro0;
 
-    new-instance v0, Lgj4;
+    new-instance v0, Ld8;
 
-    invoke-direct {v0, v1}, Lgj4;-><init>(I)V
+    invoke-direct {v0}, Ld8;-><init>()V
 
-    iput-object v0, p0, Lone/me/android/root/RootController;->d:Lgj4;
+    iput-object v0, p0, Lone/me/android/root/RootController;->d:Ld8;
 
-    new-instance v0, Lgj4;
+    new-instance v0, Ld8;
 
-    invoke-direct {v0, v1}, Lgj4;-><init>(I)V
+    invoke-direct {v0}, Ld8;-><init>()V
 
-    iput-object v0, p0, Lone/me/android/root/RootController;->o:Lgj4;
+    iput-object v0, p0, Lone/me/android/root/RootController;->o:Ld8;
 
-    new-instance v0, Lgj4;
+    new-instance v0, Ld8;
 
-    invoke-direct {v0, v1}, Lgj4;-><init>(I)V
+    invoke-direct {v0}, Ld8;-><init>()V
 
-    iput-object v0, p0, Lone/me/android/root/RootController;->X:Lgj4;
+    iput-object v0, p0, Lone/me/android/root/RootController;->X:Ld8;
 
-    new-instance v0, Lj93;
+    new-instance v0, Leg3;
 
-    const/4 v1, 0x3
+    const/4 v1, 0x4
 
-    invoke-direct {v0, v1, p0}, Lj93;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Leg3;-><init>(ILjava/lang/Object;)V
 
-    iput-object v0, p0, Lone/me/android/root/RootController;->Z:Lj93;
+    iput-object v0, p0, Lone/me/android/root/RootController;->Z:Leg3;
 
     return-void
 .end method
 
-.method public static final x0(Lone/me/android/root/RootController;Lm62;)Z
+.method public static final A0(Lone/me/android/root/RootController;Z)V
+    .locals 3
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
+
+    move-result v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/4 v2, 0x0
+
+    mul-float/2addr v1, v2
+
+    cmpg-float v0, v0, v1
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
+
+    move-result v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x42c80000    # 100.0f
+
+    mul-float/2addr v1, v2
+
+    neg-float v1, v1
+
+    cmpg-float v0, v0, v1
+
+    if-nez v0, :cond_1
+
+    :goto_0
+    return-void
+
+    :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "validateStateIsNeeded for isVisible="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "RootController"
+
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->E0(Z)V
+
+    return-void
+.end method
+
+.method public static final z0(Lone/me/android/root/RootController;Lda2;)Z
     .locals 2
 
-    sget p0, Lmra;->n:I
+    sget p0, Ly6b;->n:I
 
     invoke-virtual {p1, p0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -203,13 +294,13 @@
 
     const-string v0, "SHOW_ANIMATION_TAG"
 
-    invoke-static {p0, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     const-string v1, "HIDE_ANIMATION_TAG"
 
-    invoke-static {p0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -252,100 +343,68 @@
     return p0
 .end method
 
-.method public static final y0(Lone/me/android/root/RootController;Z)V
-    .locals 3
+
+# virtual methods
+.method public final B0(ZLa94;)V
+    .locals 2
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
-
-    move-result v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v2, 0x0
-
-    mul-float/2addr v1, v2
-
-    cmpg-float v0, v0, v1
-
-    if-nez v0, :cond_1
+    const-string v0, "SHOW_ANIMATION_TAG"
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
-
-    move-result v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x42c80000    # 100.0f
-
-    mul-float/2addr v1, v2
-
-    neg-float v1, v1
-
-    cmpg-float v0, v0, v1
-
-    if-nez v0, :cond_1
+    const-string v0, "HIDE_ANIMATION_TAG"
 
     :goto_0
-    return-void
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->I0()Lw4e;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lw4e;->n()Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->I0()Lw4e;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-static {p2, v1, v1}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Lw4e;->S(Lz4e;)V
 
     :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
-    const-string v1, "validateStateIsNeeded for isVisible="
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sget p2, Ly6b;->n:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p2, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    const-string v1, "."
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 p2, 0x0
 
-    move-result-object v0
-
-    const-string v1, "RootController"
-
-    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->C0(Z)V
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final A0(ZZLone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+.method public final C0(ZZLone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
     .locals 11
 
     iget-object v0, p0, Lone/me/android/root/RootController;->a:Landroid/animation/AnimatorSet;
@@ -371,7 +430,7 @@
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-virtual {p0, p1, p3}, Lone/me/android/root/RootController;->z0(ZLc24;)V
+    invoke-virtual {p0, p1, p3}, Lone/me/android/root/RootController;->B0(ZLa94;)V
 
     if-eqz p2, :cond_1
 
@@ -385,11 +444,11 @@
     :goto_0
     invoke-virtual {v0, p2, p3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object p2
 
-    invoke-static {p2}, Ltci;->m(Landroid/view/View;)Ljava/lang/Integer;
+    invoke-static {p2}, Ls5j;->m(Landroid/view/View;)Ljava/lang/Integer;
 
     move-result-object p2
 
@@ -407,7 +466,7 @@
     move p2, p3
 
     :goto_1
-    invoke-static {}, Lwti;->b()Le28;
+    invoke-static {}, Lqi3;->c()Lqd8;
 
     move-result-object v2
 
@@ -419,13 +478,13 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v6
 
     sget-object v7, Landroid/view/View;->Y:Landroid/util/Property;
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v8
 
@@ -433,7 +492,7 @@
 
     move-result v8
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -457,13 +516,13 @@
 
     move-result-object v6
 
-    invoke-virtual {v2, v6}, Le28;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v6}, Lqd8;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v7
 
@@ -471,7 +530,7 @@
 
     move-result v7
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v8
 
@@ -481,7 +540,7 @@
 
     int-to-float v5, v5
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -493,7 +552,7 @@
 
     mul-float/2addr v5, v9
 
-    invoke-static {v5}, Lkhi;->c(F)I
+    invoke-static {v5}, Lq7j;->c(F)I
 
     move-result v5
 
@@ -523,24 +582,24 @@
 
     move-result-object p2
 
-    new-instance p3, Lphd;
+    new-instance p3, Lk3e;
 
-    invoke-direct {p3, v6, v7}, Lphd;-><init>(Landroid/view/View;F)V
+    invoke-direct {p3, v6, v7}, Lk3e;-><init>(Landroid/view/View;F)V
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-virtual {v2, p2}, Le28;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p2}, Lqd8;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
     :cond_3
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v6
 
     sget-object v7, Landroid/view/View;->Y:Landroid/util/Property;
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v8
 
@@ -550,7 +609,7 @@
 
     int-to-float v5, v5
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -562,7 +621,7 @@
 
     mul-float/2addr v9, v5
 
-    invoke-static {v9}, Lkhi;->c(F)I
+    invoke-static {v9}, Lq7j;->c(F)I
 
     move-result v9
 
@@ -580,13 +639,13 @@
 
     move-result-object v6
 
-    invoke-virtual {v2, v6}, Le28;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v6}, Lqd8;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v7
 
@@ -594,7 +653,7 @@
 
     move-result v7
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v8
 
@@ -602,7 +661,7 @@
 
     move-result v8
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -614,7 +673,7 @@
 
     mul-float/2addr v5, v9
 
-    invoke-static {v5}, Lkhi;->c(F)I
+    invoke-static {v5}, Lq7j;->c(F)I
 
     move-result v5
 
@@ -644,24 +703,24 @@
 
     move-result-object p2
 
-    new-instance p3, Lphd;
+    new-instance p3, Lk3e;
 
-    invoke-direct {p3, v6, v7}, Lphd;-><init>(Landroid/view/View;F)V
+    invoke-direct {p3, v6, v7}, Lk3e;-><init>(Landroid/view/View;F)V
 
     invoke-virtual {p2, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-virtual {v2, p2}, Le28;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p2}, Lqd8;->add(Ljava/lang/Object;)Z
 
     :goto_2
-    invoke-static {v2}, Lwti;->a(Ljava/util/List;)Le28;
+    invoke-static {v2}, Lqi3;->b(Ljava/util/List;)Lqd8;
 
     move-result-object p2
 
     invoke-virtual {v0, p2}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    new-instance p2, Lf42;
+    new-instance p2, Ls72;
 
-    invoke-direct {p2, p0, p1}, Lf42;-><init>(Lone/me/android/root/RootController;Z)V
+    invoke-direct {p2, p0, p1}, Ls72;-><init>(Lone/me/android/root/RootController;Z)V
 
     invoke-virtual {v0, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -672,7 +731,7 @@
     return-void
 .end method
 
-.method public final B0(ZZLone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
+.method public final D0(ZZLone/me/calls/ui/ui/indicator/CallIndicatorWidget;)V
     .locals 3
 
     iget-object v0, p0, Lone/me/android/root/RootController;->a:Landroid/animation/AnimatorSet;
@@ -698,23 +757,23 @@
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    invoke-virtual {p0, p1, p3}, Lone/me/android/root/RootController;->z0(ZLc24;)V
+    invoke-virtual {p0, p1, p3}, Lone/me/android/root/RootController;->B0(ZLa94;)V
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object p3
 
-    sget v1, Lmra;->N:I
+    sget v1, Ly6b;->S:I
 
     invoke-virtual {p3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p3
 
-    instance-of v1, p3, Lgm1;
+    instance-of v1, p3, Lhp1;
 
     if-eqz v1, :cond_1
 
-    check-cast p3, Lgm1;
+    check-cast p3, Lhp1;
 
     goto :goto_0
 
@@ -734,7 +793,7 @@
     :goto_1
     invoke-virtual {v0, v1, v2}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    invoke-static {}, Lwti;->b()Le28;
+    invoke-static {}, Lqi3;->c()Lqd8;
 
     move-result-object p2
 
@@ -744,18 +803,18 @@
 
     move-result-wide v1
 
-    invoke-interface {p3, p2, p1, v1, v2}, Lgm1;->g(Le28;ZJ)V
+    invoke-interface {p3, p2, p1, v1, v2}, Lhp1;->g(Lqd8;ZJ)V
 
     :cond_3
-    invoke-static {p2}, Lwti;->a(Ljava/util/List;)Le28;
+    invoke-static {p2}, Lqi3;->b(Ljava/util/List;)Lqd8;
 
     move-result-object p2
 
     invoke-virtual {v0, p2}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    new-instance p2, Lqhd;
+    new-instance p2, Ll3e;
 
-    invoke-direct {p2, p3, p1, p0}, Lqhd;-><init>(Lgm1;ZLone/me/android/root/RootController;)V
+    invoke-direct {p2, p3, p1, p0}, Ll3e;-><init>(Lhp1;ZLone/me/android/root/RootController;)V
 
     invoke-virtual {v0, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -766,10 +825,10 @@
     return-void
 .end method
 
-.method public final C0(Z)V
+.method public final E0(Z)V
     .locals 3
 
-    invoke-virtual {p0}, Lc24;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, La94;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -790,23 +849,23 @@
     goto :goto_3
 
     :cond_0
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v0
 
-    sget v1, Lmra;->N:I
+    sget v1, Ly6b;->S:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    instance-of v1, v0, Lgm1;
+    instance-of v1, v0, Lhp1;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lgm1;
+    check-cast v0, Lhp1;
 
     goto :goto_0
 
@@ -816,18 +875,18 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1}, Lgm1;->a(Z)V
+    invoke-interface {v0, p1}, Lhp1;->a(Z)V
 
     :cond_2
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v0
 
-    sget v1, Lmra;->n:I
+    sget v1, Ly6b;->n:I
 
     invoke-virtual {v0, v1, v2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v0
 
@@ -843,13 +902,13 @@
     :goto_1
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v0
 
     if-eqz p1, :cond_4
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -866,7 +925,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -885,139 +944,139 @@
     :goto_2
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->J0(Z)V
+    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->L0(Z)V
 
     :cond_5
     :goto_3
     if-nez p1, :cond_6
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lyid;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->I0()Lw4e;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lyid;->n()Z
+    invoke-virtual {p1}, Lw4e;->n()Z
 
     move-result p1
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lyid;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->I0()Lw4e;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lyid;->C()Z
+    invoke-virtual {p1}, Lw4e;->C()Z
 
     const-string p1, "RootController"
 
     const-string v0, "call indicator was destroyed"
 
-    invoke-static {p1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6
     return-void
 .end method
 
-.method public final D0()Lyid;
+.method public final F0()Lw4e;
     .locals 2
 
-    sget-object v0, Lone/me/android/root/RootController;->s0:[Les7;
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
 
     const/4 v1, 0x3
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/android/root/RootController;->o:Lgj4;
+    iget-object v1, p0, Lone/me/android/root/RootController;->o:Ld8;
 
-    invoke-virtual {v1, p0, v0}, Lgj4;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    invoke-virtual {v1, p0, v0}, Ld8;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lyid;
+    check-cast v0, Lw4e;
 
     return-object v0
 .end method
 
-.method public final E0()Lm62;
+.method public final G0()Lda2;
     .locals 2
 
-    sget-object v0, Lone/me/android/root/RootController;->s0:[Les7;
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/android/root/RootController;->b:Lrn0;
+    iget-object v0, p0, Lone/me/android/root/RootController;->b:Lro0;
 
-    invoke-virtual {v0}, Lrn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lm62;
+    check-cast v0, Lda2;
 
     return-object v0
 .end method
 
-.method public final F0()Lyid;
+.method public final H0()Lw4e;
     .locals 2
 
-    sget-object v0, Lone/me/android/root/RootController;->s0:[Les7;
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
 
     const/4 v1, 0x2
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/android/root/RootController;->d:Lgj4;
+    iget-object v1, p0, Lone/me/android/root/RootController;->d:Ld8;
 
-    invoke-virtual {v1, p0, v0}, Lgj4;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    invoke-virtual {v1, p0, v0}, Ld8;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lyid;
+    check-cast v0, Lw4e;
 
     return-object v0
 .end method
 
-.method public final G0()Lyid;
+.method public final I0()Lw4e;
     .locals 2
 
-    sget-object v0, Lone/me/android/root/RootController;->s0:[Les7;
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
 
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/android/root/RootController;->X:Lgj4;
+    iget-object v1, p0, Lone/me/android/root/RootController;->X:Ld8;
 
-    invoke-virtual {v1, p0, v0}, Lgj4;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    invoke-virtual {v1, p0, v0}, Ld8;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lyid;
+    check-cast v0, Lw4e;
 
     return-object v0
 .end method
 
-.method public final H0()Lm62;
+.method public final J0()Lda2;
     .locals 2
 
-    sget-object v0, Lone/me/android/root/RootController;->s0:[Les7;
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v0, p0, Lone/me/android/root/RootController;->c:Lrn0;
+    iget-object v0, p0, Lone/me/android/root/RootController;->c:Lro0;
 
-    invoke-virtual {v0}, Lrn0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lro0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lm62;
+    check-cast v0, Lda2;
 
     return-object v0
 .end method
 
-.method public final I0(Landroid/view/View;)V
+.method public final K0(Landroid/view/View;)V
     .locals 5
 
     iget-boolean v0, p0, Lone/me/android/root/RootController;->Y:Z
@@ -1031,9 +1090,9 @@
 
     const-string v1, "Initializing routers"
 
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget v0, Lzmc;->root_dialogs_container:I
+    sget v0, Lv7d;->root_dialogs_container:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1043,27 +1102,27 @@
 
     const-string v1, "root:dialog"
 
-    invoke-virtual {p0, v0, v1}, Lc24;->getChildRouter(Landroid/view/ViewGroup;Ljava/lang/String;)Lyid;
+    invoke-virtual {p0, v0, v1}, La94;->getChildRouter(Landroid/view/ViewGroup;Ljava/lang/String;)Lw4e;
 
     move-result-object v0
 
     const/4 v1, 0x3
 
-    iput v1, v0, Lyid;->e:I
+    iput v1, v0, Lw4e;->e:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Lyid;->R(Z)V
+    invoke-virtual {v0, v2}, Lw4e;->R(Z)V
 
-    sget-object v3, Lone/me/android/root/RootController;->s0:[Les7;
+    sget-object v3, Lone/me/android/root/RootController;->t0:[Lz28;
 
     aget-object v1, v3, v1
 
-    iget-object v1, p0, Lone/me/android/root/RootController;->o:Lgj4;
+    iget-object v1, p0, Lone/me/android/root/RootController;->o:Ld8;
 
-    iput-object v0, v1, Lgj4;->b:Ljava/lang/Object;
+    iput-object v0, v1, Ld8;->b:Ljava/lang/Object;
 
-    sget v0, Lzmc;->root_top_indicator:I
+    sget v0, Lv7d;->root_top_indicator:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1073,25 +1132,25 @@
 
     const-string v1, "root:topindicator"
 
-    invoke-virtual {p0, v0, v1}, Lc24;->getChildRouter(Landroid/view/ViewGroup;Ljava/lang/String;)Lyid;
+    invoke-virtual {p0, v0, v1}, La94;->getChildRouter(Landroid/view/ViewGroup;Ljava/lang/String;)Lw4e;
 
     move-result-object v0
 
-    iput v2, v0, Lyid;->e:I
+    iput v2, v0, Lw4e;->e:I
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lyid;->R(Z)V
+    invoke-virtual {v0, v1}, Lw4e;->R(Z)V
 
     const/4 v4, 0x4
 
     aget-object v4, v3, v4
 
-    iget-object v4, p0, Lone/me/android/root/RootController;->X:Lgj4;
+    iget-object v4, p0, Lone/me/android/root/RootController;->X:Ld8;
 
-    iput-object v0, v4, Lgj4;->b:Ljava/lang/Object;
+    iput-object v0, v4, Ld8;->b:Ljava/lang/Object;
 
-    sget v0, Lzmc;->root_screen:I
+    sget v0, Lv7d;->root_screen:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1101,45 +1160,45 @@
 
     const-string v0, "root:screen"
 
-    invoke-virtual {p0, p1, v0}, Lc24;->getChildRouter(Landroid/view/ViewGroup;Ljava/lang/String;)Lyid;
+    invoke-virtual {p0, p1, v0}, La94;->getChildRouter(Landroid/view/ViewGroup;Ljava/lang/String;)Lw4e;
 
     move-result-object p1
 
-    iput v2, p1, Lyid;->e:I
+    iput v2, p1, Lw4e;->e:I
 
-    invoke-virtual {p1, v2}, Lyid;->R(Z)V
+    invoke-virtual {p1, v2}, Lw4e;->R(Z)V
 
     const/4 v0, 0x2
 
     aget-object v0, v3, v0
 
-    iget-object v0, p0, Lone/me/android/root/RootController;->d:Lgj4;
+    iget-object v0, p0, Lone/me/android/root/RootController;->d:Ld8;
 
-    iput-object p1, v0, Lgj4;->b:Ljava/lang/Object;
+    iput-object p1, v0, Ld8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->F0()Lyid;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lone/me/android/root/RootController;->Z:Lj93;
-
-    invoke-virtual {p1, v0}, Lyid;->a(Lg24;)V
-
-    sget-object p1, Lusa;->a:Lusa;
-
-    invoke-virtual {p1}, Lusa;->j()Ldua;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lw4e;
 
     move-result-object p1
 
-    iget-object p1, p1, Ldua;->d:Lcua;
+    iget-object v0, p0, Lone/me/android/root/RootController;->Z:Leg3;
 
-    sget-object v0, Ldua;->f:[Les7;
+    invoke-virtual {p1, v0}, Lw4e;->a(Le94;)V
+
+    sget-object p1, Lj8b;->a:Lj8b;
+
+    invoke-virtual {p1}, Lj8b;->l()Lu9b;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lu9b;->c:Lt9b;
+
+    sget-object v0, Lu9b;->e:[Lz28;
 
     aget-object v0, v0, v1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-class v0, Lcua;
+    const-class v0, Lt9b;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1147,23 +1206,23 @@
 
     const-string v1, "set new router"
 
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p0, p1, Lcua;->b:Ljava/lang/Object;
+    iput-object p0, p1, Lt9b;->b:Ljava/lang/Object;
 
     iput-boolean v2, p0, Lone/me/android/root/RootController;->Y:Z
 
     return-void
 .end method
 
-.method public final J0(Z)V
+.method public final L0(Z)V
     .locals 3
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object v0
 
-    invoke-static {v0}, Ltci;->m(Landroid/view/View;)Ljava/lang/Integer;
+    invoke-static {v0}, Ls5j;->m(Landroid/view/View;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -1187,7 +1246,7 @@
 
     int-to-float p1, p1
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -1199,7 +1258,7 @@
 
     mul-float/2addr p1, v2
 
-    invoke-static {p1}, Lkhi;->c(F)I
+    invoke-static {p1}, Lq7j;->c(F)I
 
     move-result p1
 
@@ -1210,7 +1269,7 @@
     :cond_1
     int-to-float p1, v1
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -1222,12 +1281,12 @@
 
     mul-float/2addr p1, v0
 
-    invoke-static {p1}, Lkhi;->c(F)I
+    invoke-static {p1}, Lq7j;->c(F)I
 
     move-result p1
 
     :goto_1
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v0
 
@@ -1257,7 +1316,7 @@
     return-void
 
     :cond_4
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object v0
 
@@ -1292,21 +1351,31 @@
 
     iget-boolean p1, p0, Lone/me/android/root/RootController;->Y:Z
 
-    const-string v0, "RootController::onActivityResumed was called, dialog router initialized: "
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "RootController"
+    const-string v1, "RootController::onActivityResumed was called, dialog router initialized: "
 
-    invoke-static {v0, v1, p1}, Lok7;->q(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Lusa;->a:Lusa;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lusa;->j()Ldua;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object p1, p1, Ldua;->d:Lcua;
+    const-string v0, "RootController"
 
-    sget-object v0, Ldua;->f:[Les7;
+    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object p1, Lj8b;->a:Lj8b;
+
+    invoke-virtual {p1}, Lj8b;->l()Lu9b;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lu9b;->c:Lt9b;
+
+    sget-object v0, Lu9b;->e:[Lz28;
 
     const/4 v1, 0x0
 
@@ -1314,7 +1383,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-class v0, Lcua;
+    const-class v0, Lt9b;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -1322,9 +1391,9 @@
 
     const-string v1, "set new router"
 
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object p0, p1, Lcua;->b:Ljava/lang/Object;
+    iput-object p0, p1, Lt9b;->b:Ljava/lang/Object;
 
     return-void
 .end method
@@ -1336,13 +1405,13 @@
 
     move-result-object p1
 
-    new-instance p2, Lrhd;
+    new-instance p2, Lm3e;
 
     const/4 p3, 0x0
 
     invoke-direct {p2, p1, p3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget p1, Lzmc;->root_view_group:I
+    sget p1, Lv7d;->root_view_group:I
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setId(I)V
 
@@ -1354,13 +1423,13 @@
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->E0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lda2;
 
     move-result-object p1
 
     invoke-virtual {p2, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
+    invoke-virtual {p0}, Lone/me/android/root/RootController;->J0()Lda2;
 
     move-result-object p1
 
@@ -1370,35 +1439,35 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lxni;->a(Landroid/content/Context;)Lm62;
+    invoke-static {p1}, Ls18;->a(Landroid/content/Context;)Lda2;
 
     move-result-object p1
 
-    sget v0, Lzmc;->root_dialogs_container:I
+    sget v0, Lv7d;->root_dialogs_container:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
 
-    new-instance v0, Le44;
+    new-instance v0, Lab4;
 
-    invoke-direct {v0, p3, p3}, Le44;-><init>(II)V
+    invoke-direct {v0, p3, p3}, Lab4;-><init>(II)V
 
     invoke-virtual {p2, p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object p1, Ly53;->s0:Lvh4;
+    sget-object p1, Lpc3;->t0:Lkme;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-virtual {p1, p3}, Lvh4;->h(Landroid/content/Context;)Ly53;
+    invoke-virtual {p1, p3}, Lkme;->n(Landroid/content/Context;)Lpc3;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ly53;->h()Lw5b;
+    invoke-virtual {p1}, Lpc3;->j()Lzlb;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lrhd;->onThemeChanged(Lw5b;)V
+    invoke-virtual {p2, p1}, Lm3e;->onThemeChanged(Lzlb;)V
 
     return-object p2
 .end method
@@ -1406,7 +1475,7 @@
 .method public final onRestoreViewState(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 2
 
-    invoke-super {p0, p1, p2}, Lc24;->onRestoreViewState(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, La94;->onRestoreViewState(Landroid/view/View;Landroid/os/Bundle;)V
 
     iget-boolean p2, p0, Lone/me/android/root/RootController;->Y:Z
 
@@ -1424,9 +1493,9 @@
 
     const-string v0, "RootController"
 
-    invoke-static {v0, p2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->I0(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->K0(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1434,72 +1503,13 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 1
 
-    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->I0(Landroid/view/View;)V
+    invoke-virtual {p0, p1}, Lone/me/android/root/RootController;->K0(Landroid/view/View;)V
 
     const-string p1, "RootController"
 
     const-string v0, "RootController::onViewCreated was called: routers initialized"
 
-    invoke-static {p1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final z0(ZLc24;)V
-    .locals 2
-
-    if-eqz p1, :cond_0
-
-    const-string v0, "SHOW_ANIMATION_TAG"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "HIDE_ANIMATION_TAG"
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lyid;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lyid;->n()Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->G0()Lyid;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-static {p2, v1, v1}, Lmxi;->a(Lc24;Lnh;Lnh;)Lbjd;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lyid;->S(Lbjd;)V
-
-    :cond_1
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
-
-    move-result-object p1
-
-    sget p2, Lmra;->n:I
-
-    invoke-virtual {p1, p2, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    invoke-virtual {p0}, Lone/me/android/root/RootController;->H0()Lm62;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -2,152 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements La15;
-
 
 # instance fields
-.field public final a:Landroid/content/res/Resources;
+.field public a:Landroid/net/Uri;
 
-.field public final b:La15;
+.field public b:J
 
+.field public c:I
 
-# direct methods
-.method public constructor <init>(Landroid/content/res/Resources;La15;)V
-    .locals 0
+.field public d:[B
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public e:Ljava/util/Map;
 
-    iput-object p1, p0, Lyi4;->a:Landroid/content/res/Resources;
+.field public f:J
 
-    iput-object p2, p0, Lyi4;->b:La15;
+.field public g:J
 
-    return-void
-.end method
+.field public h:Ljava/lang/String;
+
+.field public i:I
 
 
 # virtual methods
-.method public final a(Ln93;)Landroid/graphics/drawable/Drawable;
-    .locals 3
+.method public a()Lzi4;
+    .locals 14
 
-    :try_start_0
-    invoke-static {}, Lyh6;->b()Lxh6;
+    iget-object v0, p0, Lyi4;->a:Landroid/net/Uri;
 
-    instance-of v0, p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    if-eqz v0, :cond_0
 
-    if-eqz v0, :cond_2
+    new-instance v1, Lzi4;
 
-    check-cast p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    iget-object v2, p0, Lyi4;->a:Landroid/net/Uri;
 
-    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
+    iget-wide v3, p0, Lyi4;->b:J
 
-    iget-object v1, p0, Lyi4;->a:Landroid/content/res/Resources;
+    iget v5, p0, Lyi4;->c:I
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
+    iget-object v6, p0, Lyi4;->d:[B
 
-    move-result-object v2
+    iget-object v7, p0, Lyi4;->e:Ljava/util/Map;
 
-    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    iget-wide v8, p0, Lyi4;->f:J
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+    iget-wide v10, p0, Lyi4;->g:J
 
-    move-result v1
+    iget-object v12, p0, Lyi4;->h:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    iget v13, p0, Lyi4;->i:I
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_1
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :goto_0
-    new-instance v1, Leab;
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
-
-    move-result v2
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
-
-    move-result p1
-
-    invoke-direct {v1, v0, v2, p1}, Leab;-><init>(Landroid/graphics/drawable/BitmapDrawable;II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lyh6;->b()Lxh6;
+    invoke-direct/range {v1 .. v13}, Lzi4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
 
     return-object v1
 
-    :catchall_0
-    move-exception p1
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    goto :goto_1
+    const-string v1, "The uri must be set."
 
-    :cond_1
-    invoke-static {}, Lyh6;->b()Lxh6;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
-
-    :cond_2
-    iget-object v0, p0, Lyi4;->b:La15;
-
-    if-eqz v0, :cond_3
-
-    :try_start_1
-    invoke-interface {v0, p1}, La15;->b(Ln93;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0, p1}, La15;->a(Ln93;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    return-object p1
-
-    :cond_3
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :goto_1
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    throw p1
+    throw v0
 .end method
 
-.method public final b(Ln93;)Z
-    .locals 0
+.method public b()Laj4;
+    .locals 15
 
-    const/4 p1, 0x1
+    iget-object v0, p0, Lyi4;->a:Landroid/net/Uri;
 
-    return p1
+    const-string v1, "The uri must be set."
+
+    invoke-static {v0, v1}, Lh6j;->i(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance v2, Laj4;
+
+    iget-object v3, p0, Lyi4;->a:Landroid/net/Uri;
+
+    iget-wide v4, p0, Lyi4;->b:J
+
+    iget v6, p0, Lyi4;->c:I
+
+    iget-object v7, p0, Lyi4;->d:[B
+
+    iget-object v8, p0, Lyi4;->e:Ljava/util/Map;
+
+    iget-wide v9, p0, Lyi4;->f:J
+
+    iget-wide v11, p0, Lyi4;->g:J
+
+    iget-object v13, p0, Lyi4;->h:Ljava/lang/String;
+
+    iget v14, p0, Lyi4;->i:I
+
+    invoke-direct/range {v2 .. v14}, Laj4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
+
+    return-object v2
 .end method

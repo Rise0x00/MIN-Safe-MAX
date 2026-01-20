@@ -13,23 +13,23 @@
         "",
         "<init>",
         "()V",
-        "Lnr7;",
+        "Li28;",
         "writer",
         "Lru/ok/android/externcalls/analytics/events/EventItemValue;",
         "value",
-        "Lybg;",
+        "Lb3h;",
         "writeValue",
-        "(Lnr7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V",
+        "(Li28;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V",
         "Lru/ok/android/externcalls/analytics/events/EventItemValue$ArrStringValue;",
         "writeValue-iurDigI",
-        "(Lnr7;Ljava/util/Collection;)V",
+        "(Li28;Ljava/util/Collection;)V",
         "Lru/ok/android/externcalls/analytics/events/EventItemValue$MapStringStringValue;",
         "writeValue-4i0utlQ",
-        "(Lnr7;Ljava/util/Map;)V",
+        "(Li28;Ljava/util/Map;)V",
         "Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;",
         "event",
         "serialize",
-        "(Lnr7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V",
+        "(Li28;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V",
         "calls-sdk-analytics_release"
     }
     k = 0x1
@@ -67,7 +67,7 @@
     return-void
 .end method
 
-.method private final writeValue(Lnr7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+.method private final writeValue(Li28;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
     .locals 2
 
     instance-of v0, p2, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;
@@ -84,7 +84,7 @@
 
     move-result-object p2
 
-    check-cast p1, Le2;
+    check-cast p1, La2;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -92,7 +92,7 @@
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Le2;->i(D)V
+    invoke-virtual {p1, v0, v1}, La2;->E(D)V
 
     return-void
 
@@ -107,9 +107,9 @@
 
     move-result p2
 
-    check-cast p1, Le2;
+    check-cast p1, La2;
 
-    invoke-virtual {p1, p2}, Le2;->l(I)V
+    invoke-virtual {p1, p2}, La2;->H(I)V
 
     return-void
 
@@ -124,7 +124,7 @@
 
     move-result-wide v0
 
-    check-cast p1, Le2;
+    check-cast p1, La2;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -132,7 +132,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Le2;->c(Ljava/lang/String;)V
+    invoke-virtual {p1, p2}, La2;->d(Ljava/lang/String;)V
 
     return-void
 
@@ -147,7 +147,7 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lnr7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, p2}, Li28;->j(Ljava/lang/String;)V
 
     return-void
 
@@ -162,7 +162,7 @@
 
     move-result-object p2
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue-iurDigI(Lnr7;Ljava/util/Collection;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue-iurDigI(Li28;Ljava/util/Collection;)V
 
     return-void
 
@@ -177,18 +177,18 @@
 
     move-result-object p2
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue-4i0utlQ(Lnr7;Ljava/util/Map;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue-4i0utlQ(Li28;Ljava/util/Map;)V
 
     :cond_5
     return-void
 .end method
 
-.method private final writeValue-4i0utlQ(Lnr7;Ljava/util/Map;)V
+.method private final writeValue-4i0utlQ(Li28;Ljava/util/Map;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnr7;",
+            "Li28;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "+",
@@ -198,7 +198,7 @@
     .end annotation
 
     :try_start_0
-    invoke-interface {p1}, Lnr7;->p()V
+    invoke-interface {p1}, Li28;->q()V
 
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -227,7 +227,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-interface {p1, v1}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
+    invoke-interface {p1, v1}, Li28;->r0(Ljava/lang/String;)Li28;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -235,7 +235,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lnr7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Li28;->j(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -247,22 +247,22 @@
     goto :goto_1
 
     :cond_0
-    invoke-interface {p1}, Lnr7;->n()V
+    invoke-interface {p1}, Li28;->n()V
 
     return-void
 
     :goto_1
-    invoke-interface {p1}, Lnr7;->n()V
+    invoke-interface {p1}, Li28;->n()V
 
     throw p2
 .end method
 
-.method private final writeValue-iurDigI(Lnr7;Ljava/util/Collection;)V
+.method private final writeValue-iurDigI(Li28;Ljava/util/Collection;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lnr7;",
+            "Li28;",
             "Ljava/util/Collection<",
             "+",
             "Ljava/lang/String;",
@@ -271,7 +271,7 @@
     .end annotation
 
     :try_start_0
-    invoke-interface {p1}, Lnr7;->r()V
+    invoke-interface {p1}, Li28;->t()V
 
     invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -290,7 +290,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lnr7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Li28;->j(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -302,22 +302,22 @@
     goto :goto_1
 
     :cond_0
-    invoke-interface {p1}, Lnr7;->q()V
+    invoke-interface {p1}, Li28;->r()V
 
     return-void
 
     :goto_1
-    invoke-interface {p1}, Lnr7;->q()V
+    invoke-interface {p1}, Li28;->r()V
 
     throw p2
 .end method
 
 
 # virtual methods
-.method public final serialize(Lnr7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+.method public final serialize(Li28;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
     .locals 2
 
-    invoke-interface {p1}, Lnr7;->p()V
+    invoke-interface {p1}, Li28;->q()V
 
     invoke-virtual {p2}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getItems()Ljava/util/Map;
 
@@ -350,7 +350,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-interface {p1, v1}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
+    invoke-interface {p1, v1}, Li28;->r0(Ljava/lang/String;)Li28;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -358,12 +358,12 @@
 
     check-cast v0, Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
-    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue(Lnr7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue(Li28;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Lnr7;->n()V
+    invoke-interface {p1}, Li28;->n()V
 
     return-void
 .end method

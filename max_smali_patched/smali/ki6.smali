@@ -2,367 +2,289 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final d:[Ljava/lang/String;
+# interfaces
+.implements Lue5;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field public final b:Ljava/util/Set;
+.field public Y:Ljava/util/concurrent/ThreadPoolExecutor;
 
-.field public final c:Ljava/util/Set;
+.field public Z:Lloj;
+
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lxgd;
+
+.field public final c:Lw7a;
+
+.field public final d:Ljava/lang/Object;
+
+.field public o:Landroid/os/Handler;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Landroid/content/Context;Lxgd;)V
+    .locals 1
 
-    const-string v7, "prefix="
-
-    const-string v8, "uncompress="
-
-    const-string v0, "tokenize="
-
-    const-string v1, "compress="
-
-    const-string v2, "content="
-
-    const-string v3, "languageid="
-
-    const-string v4, "matchinfo="
-
-    const-string v5, "notindexed="
-
-    const-string v6, "order="
-
-    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lki6;->d:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
-    .locals 0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lki6;->a:Ljava/lang/String;
+    new-instance v0, Ljava/lang/Object;
 
-    .line 3
-    iput-object p2, p0, Lki6;->b:Ljava/util/Set;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    iput-object p3, p0, Lki6;->c:Ljava/util/Set;
+    iput-object v0, p0, Lki6;->d:Ljava/lang/Object;
+
+    const-string v0, "Context cannot be null"
+
+    invoke-static {p1, v0}, Ljkj;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lki6;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lki6;->b:Lxgd;
+
+    sget-object p1, Lli6;->d:Lw7a;
+
+    iput-object p1, p0, Lki6;->c:Lw7a;
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/util/HashSet;Ljava/lang/String;)V
-    .locals 0
-
-    .line 5
-    invoke-static {p3}, Lhf8;->f(Ljava/lang/String;)Ljava/util/Set;
-
-    move-result-object p3
-
-    invoke-direct {p0, p1, p2, p3}, Lki6;-><init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
-
-    return-void
-.end method
-
-.method public static final a(Lbh6;Ljava/lang/String;)Lki6;
-    .locals 4
-
-    new-instance v0, Lc9e;
-
-    invoke-direct {v0}, Lc9e;-><init>()V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "PRAGMA table_info(`"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "`)"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lbh6;->k0(Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    :try_start_0
-    invoke-interface {v1}, Landroid/database/Cursor;->getColumnCount()I
-
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    const-string v2, "name"
-
-    invoke-interface {v1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v2
-
-    :goto_0
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lc9e;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_3
-
-    :cond_0
-    invoke-interface {v1}, Ljava/io/Closeable;->close()V
-
-    invoke-static {v0}, Lh9e;->b(Lc9e;)Lc9e;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "SELECT * FROM sqlite_master WHERE `name` = \'"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x27
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lbh6;->k0(Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
-
-    :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "sql"
-
-    invoke-interface {p0, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-interface {p0, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_1
-    const-string v1, ""
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :goto_1
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-
-    invoke-static {v1}, Lhf8;->f(Ljava/lang/String;)Ljava/util/Set;
-
-    move-result-object p0
-
-    new-instance v1, Lki6;
-
-    invoke-direct {v1, p1, v0, p0}, Lki6;-><init>(Ljava/lang/String;Ljava/util/AbstractSet;Ljava/util/Set;)V
-
-    return-object v1
-
-    :goto_2
-    :try_start_2
-    throw p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    :catchall_2
-    move-exception v0
-
-    invoke-static {p0, p1}, Ltti;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :goto_3
-    :try_start_3
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_3
-
-    :catchall_3
-    move-exception p1
-
-    invoke-static {v1, p0}, Ltti;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a()V
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lki6;->d:Ljava/lang/Object;
 
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    instance-of v0, p1, Lki6;
+    monitor-enter v0
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_1
+    :try_start_0
+    iput-object v1, p0, Lki6;->Z:Lloj;
 
-    return v1
+    iget-object v2, p0, Lki6;->o:Landroid/os/Handler;
+
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iput-object v1, p0, Lki6;->o:Landroid/os/Handler;
+
+    iget-object v2, p0, Lki6;->Y:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
     :cond_1
-    check-cast p1, Lki6;
+    iput-object v1, p0, Lki6;->X:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    iget-object v0, p1, Lki6;->a:Ljava/lang/String;
+    iput-object v1, p0, Lki6;->Y:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    iget-object v2, p0, Lki6;->a:Ljava/lang/String;
+    monitor-exit v0
 
-    invoke-static {v2, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-void
 
-    move-result v0
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    iget-object v0, p0, Lki6;->b:Ljava/util/Set;
-
-    iget-object v2, p1, Lki6;->b:Ljava/util/Set;
-
-    invoke-static {v0, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    return v1
-
-    :cond_3
-    iget-object v0, p0, Lki6;->c:Ljava/util/Set;
-
-    iget-object p1, p1, Lki6;->c:Ljava/util/Set;
-
-    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
+    throw v1
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final b()Lui6;
+    .locals 4
 
-    iget-object v0, p0, Lki6;->a:Ljava/lang/String;
+    :try_start_0
+    iget-object v0, p0, Lki6;->c:Lw7a;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    iget-object v1, p0, Lki6;->a:Landroid/content/Context;
 
-    move-result v0
+    iget-object v2, p0, Lki6;->b:Lxgd;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v1, p0, Lki6;->b:Ljava/util/Set;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lki6;->c:Ljava/util/Set;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "FtsTableInfo{name=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lki6;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', columns="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lki6;->b:Ljava/util/Set;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", options="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lki6;->c:Ljava/util/Set;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\'}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v2}, Lu0e;->b(Landroid/content/Context;Lxgd;)Lyi;
 
     move-result-object v0
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget v1, v0, Lyi;->b:I
+
+    if-nez v1, :cond_1
+
+    iget-object v0, v0, Lyi;->c:Ljava/lang/Object;
+
+    check-cast v0, [Lui6;
+
+    if-eqz v0, :cond_0
+
+    array-length v1, v0
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
 
     return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v1, "fetchFonts failed (empty result)"
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    const-string v2, "fetchFonts failed ("
+
+    const-string v3, ")"
+
+    invoke-static {v1, v2, v3}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    const-string v2, "provider not found"
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final h(Lloj;)V
+    .locals 9
+
+    iget-object v1, p0, Lki6;->d:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iput-object p1, p0, Lki6;->Z:Lloj;
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    iget-object p1, p0, Lki6;->d:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_1
+    iget-object v0, p0, Lki6;->Z:Lloj;
+
+    if-nez v0, :cond_0
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lki6;->X:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    if-nez v0, :cond_1
+
+    const-string v0, "emojiCompat"
+
+    new-instance v8, Lfr3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v8, v1, v0}, Lfr3;-><init>(ILjava/io/Serializable;)V
+
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingDeque;
+
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingDeque;-><init>()V
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    const-wide/16 v4, 0xf
+
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
+
+    iput-object v1, p0, Lki6;->Y:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    iput-object v1, p0, Lki6;->X:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    :cond_1
+    iget-object v0, p0, Lki6;->X:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    new-instance v1, Ldh6;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, p0}, Ldh6;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
+
+    monitor-exit p1
+
+    return-void
+
+    :goto_0
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    move-object p1, v0
+
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
 .end method

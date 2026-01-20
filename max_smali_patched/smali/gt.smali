@@ -1,198 +1,78 @@
 .class public final Lgt;
-.super Ljava/lang/Object;
+.super Loac;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Ltr7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lmq0;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:La4a;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lmq0;La4a;)V
     .locals 0
 
-    iput p1, p0, Lgt;->a:I
-
-    iput-object p2, p0, Lgt;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgt;->a:Lmq0;
+
+    iput-object p2, p0, Lgt;->b:La4a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Z
+.method public final c(IILandroid/graphics/Bitmap$Config;)Lkg3;
     .locals 5
 
-    iget-object v0, p0, Lgt;->b:Ljava/lang/Object;
+    invoke-static {p1, p2, p3}, Lwq0;->c(IILandroid/graphics/Bitmap$Config;)I
 
-    check-cast v0, [Ll57;
+    move-result v0
 
-    array-length v1, v0
+    iget-object v1, p0, Lgt;->a:Lmq0;
 
-    const/4 v2, 0x0
+    invoke-interface {v1, v0}, Ltdc;->get(I)Ljava/lang/Object;
 
-    move v3, v2
+    move-result-object v0
 
-    :goto_0
-    if-ge v3, v1, :cond_1
+    check-cast v0, Landroid/graphics/Bitmap;
 
-    aget-object v4, v0, v3
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
 
-    iget-object v4, v4, Ll57;->a:Ljava/lang/String;
+    move-result v2
 
-    invoke-virtual {v4, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    mul-int v3, p1, p2
+
+    invoke-static {p3}, Lwq0;->b(Landroid/graphics/Bitmap$Config;)I
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    mul-int/2addr v4, v3
 
-    const/4 p1, 0x1
+    if-lt v2, v4, :cond_0
 
-    return p1
+    invoke-virtual {v0, p1, p2, p3}, Landroid/graphics/Bitmap;->reconfigure(IILandroid/graphics/Bitmap$Config;)V
+
+    iget-object p1, p0, Lgt;->b:La4a;
+
+    iget-object p1, p1, La4a;->b:Ljava/lang/Object;
+
+    check-cast p1, Lkp8;
+
+    invoke-static {v0, v1, p1}, Lkg3;->C0(Ljava/lang/Object;Lpyd;Ljg3;)Lpo4;
+
+    move-result-object p1
+
+    return-object p1
 
     :cond_0
-    add-int/lit8 v3, v3, 0x1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_0
+    const-string p2, "Check failed."
 
-    :cond_1
-    return v2
-.end method
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
-
-    iget v0, p0, Lgt;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lf2;
-
-    iget-object v1, p0, Lgt;->b:Ljava/lang/Object;
-
-    check-cast v1, Lae5;
-
-    invoke-direct {v0, v1}, Lf2;-><init>(Lae5;)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lgt;->b:Ljava/lang/Object;
-
-    check-cast v0, Ly2e;
-
-    invoke-interface {v0}, Ly2e;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Ld35;
-
-    iget-object v1, p0, Lgt;->b:Ljava/lang/Object;
-
-    check-cast v1, Loe;
-
-    invoke-virtual {v1}, Loe;->invoke()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Iterator;
-
-    invoke-direct {v0, v1}, Ld35;-><init>(Ljava/util/Iterator;)V
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lgt;->b:Ljava/lang/Object;
-
-    check-cast v0, [Ll57;
-
-    new-instance v1, Lf2;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, v0}, Lf2;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_3
-    iget-object v0, p0, Lgt;->b:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    new-instance v1, Lf2;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v2, v0}, Lf2;-><init>(ILjava/lang/Object;)V
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 4
-
-    iget v0, p0, Lgt;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgt;->b:Ljava/lang/Object;
-
-    check-cast v1, [Ll57;
-
-    const-string v2, ", "
-
-    const/16 v3, 0x3e
-
-    invoke-static {v1, v2, v3}, Lft;->y([Ljava/lang/Object;Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x5d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

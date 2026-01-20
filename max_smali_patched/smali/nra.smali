@@ -3,141 +3,23 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
-
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
-
-.field public static final g:J
-
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
-
-.field public static final m:J
-
-.field public static final n:J
-
-.field public static final o:J
-
-.field public static final p:J
-
-.field public static final synthetic q:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/app/Notification$MediaStyle;Ljava/lang/CharSequence;ILandroid/app/PendingIntent;Ljava/lang/Boolean;)Landroid/app/Notification$MediaStyle;
+    .locals 0
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "MissingPermission"
+        }
+    .end annotation
 
-    sget v0, Lhnc;->call_admin_settings_media_bottom_header:I
+    invoke-virtual {p4}, Ljava/lang/Boolean;->booleanValue()Z
 
-    int-to-long v0, v0
+    move-result p4
 
-    sput-wide v0, Lnra;->a:J
+    if-eqz p4, :cond_0
 
-    sget v0, Lhnc;->call_admin_settings_media_header:I
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Notification$MediaStyle;->setRemotePlaybackInfo(Ljava/lang/CharSequence;ILandroid/app/PendingIntent;)Landroid/app/Notification$MediaStyle;
 
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->b:J
-
-    sget v0, Lhnc;->call_context_action_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->c:J
-
-    sget v0, Lhnc;->call_context_action_open_profile:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->d:J
-
-    sget v0, Lhnc;->call_context_action_record_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->e:J
-
-    sget v0, Lhnc;->call_context_action_record_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->f:J
-
-    sget v0, Lhnc;->call_context_action_record_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->g:J
-
-    sget v0, Lhnc;->call_context_action_record_screenin_progress:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->h:J
-
-    sget v0, Lhnc;->call_context_action_settings:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->i:J
-
-    sget v0, Lhnc;->call_context_action_share_screen:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->j:J
-
-    sget v0, Lhnc;->call_context_action_share_screen_disable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->k:J
-
-    sget v0, Lhnc;->call_context_action_share_screen_unavailable:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->l:J
-
-    sget v0, Lhnc;->call_context_action_write_chat:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->m:J
-
-    sget v0, Lhnc;->call_context_dialog_invite_user_to_p2p:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->n:J
-
-    sget v0, Lhnc;->call_screen_menu_grid_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->o:J
-
-    sget v0, Lhnc;->call_screen_menu_speaker_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lnra;->p:J
-
-    return-void
+    :cond_0
+    return-object p0
 .end method

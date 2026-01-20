@@ -1,82 +1,114 @@
-.class public final Loc1;
-.super Ltc1;
+.class public final synthetic Loc1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/calllist/ui/CallHistoryScreen;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public synthetic constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Loc1;->a:I
 
-    iput-boolean p1, p0, Loc1;->a:Z
+    iput-object p1, p0, Loc1;->b:Lone/me/calllist/ui/CallHistoryScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget p1, p0, Loc1;->a:I
 
-    if-ne p0, p1, :cond_0
+    const/4 v0, 0x0
 
-    return v0
+    iget-object v1, p0, Loc1;->b:Lone/me/calllist/ui/CallHistoryScreen;
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, v1, Lone/me/calllist/ui/CallHistoryScreen;->b:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lyzb;
+
+    new-instance v2, Ljgi;
+
+    invoke-direct {v2, v1, v0}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    sget-object v0, Lyzb;->h:[Ljava/lang/String;
+
+    const/16 v1, 0xa0
+
+    invoke-virtual {p1, v2, v0, v1}, Lyzb;->j(Ljgi;[Ljava/lang/String;I)V
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/calllist/ui/CallHistoryScreen;->E0:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/calllist/ui/CallHistoryScreen;->C0()Lwc1;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lwc1;->c:Ljl1;
+
+    new-instance v1, Lg31;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, v2}, Lg31;-><init>(I)V
+
+    invoke-virtual {p1}, Ljl1;->c()V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p1, Ljl1;->j:Z
+
+    invoke-virtual {p1}, Ljl1;->f()Lyzb;
+
+    move-result-object v2
+
+    iget-object v3, p1, Ljl1;->a:Ljgi;
+
+    invoke-virtual {v2, v3, v0}, Lyzb;->a(Ljgi;Z)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v1}, Lg31;->invoke()Ljava/lang/Object;
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Loc1;
+    iput-object v1, p1, Ljl1;->l:Llq6;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    if-nez v1, :cond_1
+    iput-object v1, p1, Ljl1;->h:Lbnf;
 
-    return v2
+    iput-boolean v0, p1, Ljl1;->i:Z
 
-    :cond_1
-    check-cast p1, Loc1;
+    :goto_0
+    return-void
 
-    iget-boolean v1, p0, Loc1;->a:Z
-
-    iget-boolean p1, p1, Loc1;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Loc1;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "LoadingState(isEnabled="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Loc1;->a:Z
-
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

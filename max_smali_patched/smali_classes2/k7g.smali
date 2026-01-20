@@ -1,90 +1,100 @@
 .class public final Lk7g;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+.field public final synthetic a:Landroid/view/ViewGroup;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Z
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:Landroid/view/View;
+
+.field public final synthetic e:Ll7g$a;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
+.method public constructor <init>(Landroid/view/ViewGroup;ZLandroid/view/View;Landroid/view/View;Ll7g$a;)V
     .locals 0
 
-    iput-object p2, p0, Lk7g;->X:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lk7g;->a:Landroid/view/ViewGroup;
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p2, p0, Lk7g;->b:Z
+
+    iput-object p3, p0, Lk7g;->c:Landroid/view/View;
+
+    iput-object p4, p0, Lk7g;->d:Landroid/view/View;
+
+    iput-object p5, p0, Lk7g;->e:Ll7g$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lk7g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lk7g;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lk7g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lk7g;
-
-    iget-object v1, p0, Lk7g;->X:Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    invoke-direct {v0, p2, v1}, Lk7g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
-
-    iput-object p1, v0, Lk7g;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 0
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    iget-object p1, p0, Lk7g;->o:Ljava/lang/Object;
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    check-cast p1, Ls8g;
+    return-void
+.end method
 
-    sget-object p1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->w0:[Les7;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 5
 
-    iget-object p1, p0, Lk7g;->X:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    iget-boolean p1, p0, Lk7g;->b:Z
 
-    iget-object p1, p1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->X:Ljava/lang/Object;
+    if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Lk7g;->c:Landroid/view/View;
 
-    move-result-object p1
+    goto :goto_0
 
-    check-cast p1, Lvj7;
+    :cond_0
+    iget-object p1, p0, Lk7g;->d:Landroid/view/View;
 
-    iget-object p1, p1, Lvj7;->a:Lyid;
+    :goto_0
+    iget-object v0, p0, Lk7g;->a:Landroid/view/ViewGroup;
 
-    invoke-virtual {p1}, Lyid;->D()Z
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->indexOfChild(Landroid/view/View;)I
 
-    sget-object p1, Lybg;->a:Lybg;
+    move-result p1
 
-    return-object p1
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lk7g;->e:Ll7g$a;
+
+    iget-object v2, v2, Ll7g$a;->v0:Ljava/lang/Integer;
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x0
+
+    invoke-static {v1, v4, v2, v3}, Lc7j;->a(Landroid/content/Context;Ljava/lang/Integer;Ljava/lang/Integer;I)Lp6;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+
+    return-void
 .end method

@@ -1,71 +1,140 @@
 .class public final Ltz7;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Luz7;
 
 
 # instance fields
-.field public X:Landroid/net/Uri;
+.field public final a:Llbi;
 
-.field public Y:Lgb9;
-
-.field public Z:Lt92;
-
-.field public d:Lk08;
-
-.field public o:Lgz5;
-
-.field public s0:J
-
-.field public synthetic t0:Ljava/lang/Object;
-
-.field public final synthetic u0:Lk08;
-
-.field public v0:I
+.field public final b:Lvai;
 
 
 # direct methods
-.method public constructor <init>(Lk08;Lp14;)V
+.method public constructor <init>(Llbi;Lvai;)V
     .locals 0
 
-    iput-object p1, p0, Ltz7;->u0:Lk08;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltz7;->a:Llbi;
+
+    iput-object p2, p0, Ltz7;->b:Lvai;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iput-object p1, p0, Ltz7;->t0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Ltz7;->v0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ltz7;->v0:I
-
-    const-wide/16 v5, 0x0
-
-    const-wide/16 v7, 0x0
-
-    iget-object v0, p0, Ltz7;->u0:Lk08;
-
-    const/4 v1, 0x0
+    :cond_0
+    instance-of v1, p1, Ltz7;
 
     const/4 v2, 0x0
 
-    const-wide/16 v3, 0x0
+    if-nez v1, :cond_1
 
-    move-object v9, p0
+    return v2
 
-    invoke-virtual/range {v0 .. v9}, Lk08;->b(Lgz5;Landroid/net/Uri;JJJLp14;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Ltz7;
 
-    move-result-object p1
+    iget-object v1, p0, Ltz7;->a:Llbi;
 
-    return-object p1
+    iget-object v3, p1, Ltz7;->a:Llbi;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ltz7;->b:Lvai;
+
+    iget-object p1, p1, Ltz7;->b:Lvai;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ltz7;->a:Llbi;
+
+    invoke-virtual {v0}, Llbi;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Ltz7;->b:Lvai;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lvai;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RequestShare(data="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ltz7;->a:Llbi;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fileInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ltz7;->b:Lvai;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

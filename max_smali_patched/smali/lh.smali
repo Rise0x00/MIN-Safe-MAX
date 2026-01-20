@@ -1,104 +1,85 @@
 .class public final Llh;
-.super Ljava/lang/Object;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field public X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lnh;
+.field public final synthetic b:Landroid/animation/AnimatorSet;
 
-.field public final a:Landroid/view/ViewGroup;
-
-.field public final b:Landroid/view/View;
-
-.field public final c:Landroid/view/View;
-
-.field public final d:Z
-
-.field public final o:Lf24;
+.field public final synthetic c:Llq6;
 
 
 # direct methods
-.method public constructor <init>(Lnh;Lf24;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;Z)V
+.method public synthetic constructor <init>(Landroid/animation/AnimatorSet;Llq6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Llh;->a:I
 
-    iput-object p1, p0, Llh;->Y:Lnh;
+    iput-object p1, p0, Llh;->b:Landroid/animation/AnimatorSet;
 
-    iput-object p5, p0, Llh;->a:Landroid/view/ViewGroup;
+    iput-object p2, p0, Llh;->c:Llq6;
 
-    iput-object p3, p0, Llh;->b:Landroid/view/View;
-
-    iput-object p4, p0, Llh;->c:Landroid/view/View;
-
-    iput-boolean p6, p0, Llh;->d:Z
-
-    iput-object p2, p0, Llh;->o:Lf24;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 9
-
-    iget-boolean v0, p0, Llh;->X:Z
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Llh;->X:Z
-
-    iget-object v0, p0, Llh;->c:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ViewTreeObserver;->isAlive()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
-
-    :cond_0
-    const/4 v7, 0x1
-
-    iget-object v8, p0, Llh;->o:Lf24;
-
-    iget-object v2, p0, Llh;->Y:Lnh;
-
-    iget-object v3, p0, Llh;->a:Landroid/view/ViewGroup;
-
-    iget-object v4, p0, Llh;->b:Landroid/view/View;
-
-    iget-object v5, p0, Llh;->c:Landroid/view/View;
-
-    iget-boolean v6, p0, Llh;->d:Z
-
-    invoke-virtual/range {v2 .. v8}, Lnh;->m(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZLf24;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onPreDraw()Z
+.method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    invoke-virtual {p0}, Llh;->a()V
+    iget v0, p0, Llh;->a:I
 
-    const/4 v0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Llh;->b:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object p1, p0, Llh;->c:Llq6;
+
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget v0, p0, Llh;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Llh;->b:Landroid/animation/AnimatorSet;
+
+    invoke-virtual {p1, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    iget-object p1, p0, Llh;->c:Llq6;
+
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

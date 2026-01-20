@@ -1,41 +1,76 @@
-.class public abstract Lpif;
-.super Ljava/lang/Object;
+.class public final Lpif;
+.super Lqif;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a(Lsif;)V
-    .locals 0
+# direct methods
+.method public static a(Ljava/lang/String;Landroid/content/Context;[Lrif;)Lpif;
+    .locals 3
 
-    return-void
-.end method
+    const-string v0, "couldn\'t find DSO to load: "
 
-.method public b(Lsif;)V
-    .locals 0
+    const-string v1, "\n\texisting SO sources: "
 
-    return-void
-.end method
+    invoke-static {v0, p0, v1}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public c(Lsif;)V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
-.method public abstract d(Lsif;)V
-.end method
+    :goto_0
+    array-length v2, p2
 
-.method public abstract e(Lsif;)V
-.end method
+    if-ge v1, v2, :cond_0
 
-.method public abstract f(Lsif;)V
-.end method
+    const-string v2, "\n\t\tSoSource "
 
-.method public abstract g(Lsif;)V
-.end method
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public h(Lsif;Landroid/view/Surface;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v2, ": "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v2, p2, v1
+
+    invoke-virtual {v2}, Lrif;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    const-string p2, "\n\tNative lib dir: "
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object p1
+
+    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "\n"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    new-instance p1, Lpif;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p0, p2}, Lqif;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object p1
 .end method

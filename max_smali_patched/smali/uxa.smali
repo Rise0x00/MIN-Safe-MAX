@@ -1,153 +1,179 @@
 .class public final Luxa;
-.super Logf;
+.super Lvm0;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lvxa;
+.field public final X:Ljava/util/Collection;
 
-.field public final synthetic Y:Ljava/io/File;
-
-.field public o:I
+.field public final Y:Lcr6;
 
 
 # direct methods
-.method public constructor <init>(Lvxa;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Le0b;Lcr6;Ljava/util/Collection;)V
     .locals 0
 
-    iput-object p1, p0, Luxa;->X:Lvxa;
+    invoke-direct {p0, p1}, Lvm0;-><init>(Le0b;)V
 
-    iput-object p2, p0, Luxa;->Y:Ljava/io/File;
+    iput-object p2, p0, Luxa;->Y:Lcr6;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Luxa;->X:Ljava/util/Collection;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()V
+    .locals 1
 
-    check-cast p1, Lg54;
+    iget-boolean v0, p0, Lvm0;->d:Z
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Luxa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    move-result-object p1
+    iput-boolean v0, p0, Lvm0;->d:Z
 
-    check-cast p1, Luxa;
+    iget-object v0, p0, Luxa;->X:Ljava/util/Collection;
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
-    invoke-virtual {p1, p2}, Luxa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lvm0;->a:Le0b;
 
-    move-result-object p1
+    invoke-interface {v0}, Le0b;->b()V
 
-    return-object p1
+    :cond_0
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final clear()V
+    .locals 1
 
-    new-instance p1, Luxa;
+    iget-object v0, p0, Luxa;->X:Ljava/util/Collection;
 
-    iget-object v0, p0, Luxa;->X:Lvxa;
+    invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
-    iget-object v1, p0, Luxa;->Y:Ljava/io/File;
+    invoke-super {p0}, Lvm0;->clear()V
 
-    invoke-direct {p1, v0, v1, p2}, Luxa;-><init>(Lvxa;Ljava/io/File;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget v0, p0, Luxa;->o:I
+    iget-boolean v0, p0, Lvm0;->d:Z
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    const/4 v2, 0x1
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lvm0;->d:Z
+
+    iget-object v0, p0, Luxa;->X:Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/util/Collection;->clear()V
+
+    iget-object v0, p0, Lvm0;->a:Le0b;
+
+    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 3
+
+    :cond_0
+    iget-object v0, p0, Lvm0;->c:Lp2d;
+
+    invoke-interface {v0}, Lsdf;->poll()Ljava/lang/Object;
+
+    move-result-object v0
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v2, :cond_0
+    iget-object v1, p0, Luxa;->Y:Lcr6;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, Lcr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const-string v2, "The keySelector returned a null key"
+
+    invoke-static {v1, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    iget-object v2, p0, Luxa;->X:Ljava/util/Collection;
+
+    invoke-interface {v2, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :cond_1
+    return-object v0
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-boolean v0, p0, Lvm0;->d:Z
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget v0, p0, Lvm0;->o:I
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object v1, p0, Lvm0;->a:Le0b;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_2
 
-    throw p1
+    :try_start_0
+    iget-object v0, p0, Luxa;->Y:Lcr6;
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Luxa;->X:Lvxa;
-
-    iget-object p1, p1, Lvxa;->m:Ltif;
-
-    invoke-virtual {p1}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lsmd;
-
-    iput v2, p0, Luxa;->o:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lp9a;->a:Lp9a;
-
-    iget-object v2, p1, Lsmd;->b:La54;
-
-    invoke-virtual {v0, v2}, Lp0;->plus(Ly44;)Ly44;
+    invoke-interface {v0, p1}, Lcr6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v2, Lrmd;
+    const-string v2, "The keySelector returned a null key"
 
-    iget-object v3, p0, Luxa;->Y:Ljava/io/File;
+    invoke-static {v0, v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-direct {v2, v3, p1, v1}, Lrmd;-><init>(Ljava/io/File;Lsmd;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Luxa;->X:Ljava/util/Collection;
 
-    invoke-static {v0, v2, p0}, Lkki;->h(Ly44;Lej6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {v2, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget-object v0, Lh54;->a:Lh54;
+    if-eqz v0, :cond_1
 
-    if-ne p1, v0, :cond_2
+    invoke-interface {v1, p1}, Le0b;->r(Ljava/lang/Object;)V
 
-    return-object v0
+    :cond_1
+    :goto_0
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {p0, p1}, Lvm0;->a(Ljava/lang/Throwable;)V
+
+    return-void
 
     :cond_2
-    :goto_0
-    check-cast p1, Landroid/net/Uri;
+    const/4 p1, 0x0
 
-    if-nez p1, :cond_3
+    invoke-interface {v1, p1}, Le0b;->r(Ljava/lang/Object;)V
 
-    const-string p1, "vxa"
-
-    const-string v0, "Can\'t save video"
-
-    invoke-static {p1, v0, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

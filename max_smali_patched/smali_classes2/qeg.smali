@@ -1,261 +1,183 @@
-.class public final synthetic Lqeg;
+.class public final Lqeg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lir3;
-.implements Lere;
-.implements Lfj6;
+
+# static fields
+.field public static final synthetic b:I
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lseg;
+.field public final a:Lxii;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lseg;I)V
-    .locals 0
-
-    iput p2, p0, Lqeg;->a:I
-
-    iput-object p1, p0, Lqeg;->b:Lseg;
+.method public constructor <init>(Lxii;)V
+    .locals 12
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqeg;->a:Lxii;
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    invoke-static {v0}, Lpi3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
+
+    move-result-object v11
+
+    new-instance v1, Lvx3;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const-wide/16 v7, -0x1
+
+    const-wide/16 v9, -0x1
+
+    invoke-direct/range {v1 .. v11}, Lvx3;-><init>(IZZZZJJLjava/util/Set;)V
+
+    new-instance v0, Ltyb;
+
+    const-wide/16 v2, 0x6
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    const-class v5, Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
+
+    invoke-direct {v0, v5, v2, v3, v4}, Ltyb;-><init>(Ljava/lang/Class;JLjava/util/concurrent/TimeUnit;)V
+
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->setConstraints(Lvx3;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Ltyb;
+
+    const-string v1, "TASK_MONITOR_PERIODIC_TASK"
+
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
+
+    move-result-object v0
+
+    check-cast v0, Ltyb;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
+
+    move-result-object v0
+
+    check-cast v0, Luyb;
+
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "work "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, " try to add TASK_MONITOR_PERIODIC_TASK request"
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "qeg"
+
+    invoke-static {v3, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v2, 0x2
+
+    const/16 v3, 0x18
+
+    invoke-static {p1, v1, v2, v0, v3}, Lxii;->e(Lxii;Ljava/lang/String;ILuyb;I)Ljr3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final a()V
+    .locals 5
 
-    check-cast p1, Ljava/lang/Throwable;
+    new-instance v0, Lnnb;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-class v1, Lone/me/sdk/tasks/TaskMonitor$TaskMonitorWorker;
 
-    const-string v1, "removeUploadFromRepository: failed, data="
+    invoke-direct {v0, v1}, Lnnb;-><init>(Ljava/lang/Class;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-wide/16 v1, 0x2710
 
-    iget-object v1, p0, Lqeg;->b:Lseg;
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object v4, Lah0;->a:Lah0;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v4, v1, v2, v3}, Landroidx/work/WorkRequest$Builder;->setBackoffCriteria(Lah0;JLjava/util/concurrent/TimeUnit;)Landroidx/work/WorkRequest$Builder;
 
     move-result-object v0
 
-    const-string v1, "reg"
+    check-cast v0, Lnnb;
 
-    invoke-static {v1, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v1, "TASK_MONITOR_ONE_TIME_TASK"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Landroidx/work/WorkRequest$Builder;->addTag(Ljava/lang/String;)Landroidx/work/WorkRequest$Builder;
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    move-result-object v0
 
-    iget v0, p0, Lqeg;->a:I
+    check-cast v0, Lnnb;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Landroidx/work/WorkRequest$Builder;->build()Landroidx/work/WorkRequest;
 
-    move-object v2, p1
+    move-result-object v0
 
-    check-cast v2, Lrgg;
+    check-cast v0, Lonb;
 
-    iget-object p1, p0, Lqeg;->b:Lseg;
-
-    iget-object v3, p1, Lseg;->a:Ljava/lang/String;
-
-    iget v4, p1, Lseg;->c:I
-
-    iget-wide v5, p1, Lseg;->b:J
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lqgg;
-
-    invoke-direct/range {v1 .. v6}, Lqgg;-><init>(Lrgg;Ljava/lang/String;IJ)V
-
-    new-instance p1, Lmg3;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0, v1}, Lmg3;-><init>(ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lrgg;
-
-    iget-object v0, p0, Lqeg;->b:Lseg;
-
-    iget-object v1, v0, Lseg;->a:Ljava/lang/String;
-
-    iget v2, v0, Lseg;->c:I
-
-    iget-wide v3, v0, Lseg;->b:J
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x3
-
-    const-string v5, "SELECT * FROM uploads WHERE path=? AND upload_type=? AND last_modified=? LIMIT 1"
-
-    invoke-static {v0, v5}, Lfhd;->c(ILjava/lang/String;)Lfhd;
-
-    move-result-object v5
-
-    const/4 v6, 0x1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v5, v6}, Lfhd;->S(I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v5, v6, v1}, Lfhd;->f(ILjava/lang/String;)V
-
-    :goto_0
-    invoke-static {v2}, Lnx1;->v(I)I
-
-    move-result v1
-
-    int-to-long v1, v1
-
-    const/4 v6, 0x2
-
-    invoke-virtual {v5, v6, v1, v2}, Lfhd;->k(IJ)V
-
-    invoke-virtual {v5, v0, v3, v4}, Lfhd;->k(IJ)V
-
-    new-instance v0, Lpgg;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v5, v1}, Lpgg;-><init>(Lrgg;Lfhd;I)V
-
-    new-instance p1, Ldk8;
-
-    invoke-direct {p1, v0}, Ldk8;-><init>(Ljava/util/concurrent/Callable;)V
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public g(Lnqe;)V
-    .locals 7
-
-    const-string v0, "checkSourceFileChanged: started"
-
-    const-string v1, "reg"
-
-    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lqeg;->b:Lseg;
-
-    iget-object v2, v0, Lseg;->a:Ljava/lang/String;
-
-    :try_start_0
-    new-instance v3, Ljava/io/File;
-
-    invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
 
     move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    :catchall_0
-    move-exception v2
+    const-string v4, "work "
 
-    new-instance v3, Lfed;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v3, v2}, Lfed;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-object v2, v3
+    const-string v2, " try to add TASK_MONITOR_ONE_TIME_TASK request"
 
-    :goto_0
-    const-wide/16 v3, 0x0
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v2
 
-    instance-of v6, v2, Lfed;
+    const-string v3, "qeg"
 
-    if-eqz v6, :cond_0
+    invoke-static {v3, v2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object v2, v5
+    iget-object v2, p0, Lqeg;->a:Lxii;
 
-    :cond_0
-    check-cast v2, Ljava/lang/Number;
+    sget-object v3, Lto5;->b:Lto5;
 
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
+    invoke-virtual {v2, v1, v3, v0}, Lxii;->b(Ljava/lang/String;Lto5;Lonb;)Lq88;
 
-    move-result-wide v5
+    move-result-object v0
 
-    cmp-long v2, v5, v3
+    invoke-virtual {v0}, Lq88;->c()Ljr3;
 
-    if-eqz v2, :cond_1
-
-    iget-wide v2, v0, Lseg;->b:J
-
-    cmp-long v2, v5, v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v2, 0x0
-
-    :goto_1
-    invoke-virtual {p1}, Lnqe;->f()Z
-
-    move-result v3
-
-    if-nez v3, :cond_3
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Lone/me/sdk/transfer/domain/UploadException;
-
-    const-string v1, "failed to upload, file changed"
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lnqe;->onError(Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_2
-    const-string v2, "checkSourceFileChanged: finished"
-
-    invoke-static {v1, v2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Lnqe;->a(Ljava/lang/Object;)V
-
-    :cond_3
-    :goto_2
     return-void
 .end method

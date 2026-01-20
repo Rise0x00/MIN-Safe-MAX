@@ -1,84 +1,68 @@
 .class public final Lmrb;
-.super Logf;
+.super Llrb;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Collection;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmrb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmrb;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lmrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lmrb;
+    iget-object v0, p0, Ljrb;->a:Ljava/lang/Object;
 
-    const/4 v1, 0x2
+    instance-of v1, v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    invoke-direct {v0, v1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lmrb;->o:Ljava/lang/Object;
+    invoke-static {v1}, Ljkj;->b(Z)V
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final d(J)V
+    .locals 1
+
+    invoke-virtual {p0}, Lmrb;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0, p1, p2}, Landroid/hardware/camera2/params/OutputConfiguration;->setDynamicRangeProfile(J)V
+
+    return-void
+.end method
+
+.method public final e(I)V
+    .locals 1
+
+    invoke-virtual {p0}, Lmrb;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0, p1}, Landroid/hardware/camera2/params/OutputConfiguration;->setMirrorMode(I)V
+
+    return-void
+.end method
+
+.method public final g(J)V
     .locals 2
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-wide/16 v0, -0x1
 
-    iget-object p1, p0, Lmrb;->o:Ljava/lang/Object;
+    cmp-long v0, p1, v0
 
-    check-cast p1, Ljava/util/Collection;
+    if-nez v0, :cond_0
 
-    sget-object v0, Ln41;->a:Ln41;
+    return-void
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v0
-
-    const-class v1, Lyv4;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {p0}, Lmrb;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lyv4;
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
 
-    iget-object v0, v0, Lyv4;->d:Ltif;
+    invoke-virtual {v0, p1, p2}, Landroid/hardware/camera2/params/OutputConfiguration;->setStreamUseCase(J)V
 
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Le1a;
-
-    invoke-interface {v0, p1}, Le1a;->h(Ljava/lang/Object;)Z
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

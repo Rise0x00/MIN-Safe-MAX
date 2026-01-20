@@ -1,10 +1,15 @@
 .class public abstract Lqlc;
-.super Ljava/lang/Object;
+.super Lhja;
+.source "SourceFile"
 
 
-# static fields
-.field public static ic_in_app_review_thank_you:I = 0x7f08063b
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static ic_selected_star:I = 0x7f080786
+    sget-object v0, Lb3h;->a:Lb3h;
 
-.field public static ic_unselected_star:I = 0x7f0807d0
+    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
+
+    return-void
+.end method

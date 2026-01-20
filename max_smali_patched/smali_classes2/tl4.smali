@@ -1,338 +1,328 @@
-.class public Ltl4;
+.class public final Ltl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lorg/webrtc/VideoSink;
+.implements Lorg/webrtc/VpxDecoderWrapper$ErrorCallback;
+
 
 # instance fields
-.field public final a:Lru7;
+.field public final X:I
 
-.field public final b:Lru7;
+.field public volatile Y:Z
 
-.field public final c:Lru7;
+.field public volatile Z:Z
 
-.field public final d:Lru7;
+.field public final a:Lorg/webrtc/VpxDecoderWrapper;
+
+.field public final b:Lvz9;
+
+.field public final c:Lahd;
+
+.field public final d:Landroid/os/HandlerThread;
+
+.field public final o:Landroid/os/Handler;
+
+.field public volatile t0:Z
+
+.field public final u0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final v0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final w0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final x0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final y0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final synthetic z0:Lani;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;)V
-    .locals 0
+.method public constructor <init>(Lani;ILvz9;Lahd;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltl4;->a:Lru7;
+    iput-object p1, p0, Ltl4;->z0:Lani;
 
-    iput-object p2, p0, Ltl4;->b:Lru7;
+    const/4 p1, 0x0
 
-    iput-object p4, p0, Ltl4;->c:Lru7;
+    iput-boolean p1, p0, Ltl4;->Y:Z
 
-    iput-object p3, p0, Ltl4;->d:Lru7;
+    iput-boolean p1, p0, Ltl4;->Z:Z
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ltl4;->t0:Z
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Ltl4;->u0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Ltl4;->v0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v0, -0x1
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Ltl4;->w0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Ltl4;->x0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Ltl4;->y0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iput-object p3, p0, Ltl4;->b:Lvz9;
+
+    iput-object p4, p0, Ltl4;->c:Lahd;
+
+    new-instance p1, Lorg/webrtc/VpxDecoderWrapper;
+
+    invoke-direct {p1}, Lorg/webrtc/VpxDecoderWrapper;-><init>()V
+
+    iput-object p1, p0, Ltl4;->a:Lorg/webrtc/VpxDecoderWrapper;
+
+    new-instance p1, Landroid/os/HandlerThread;
+
+    const-string p3, "DecoderWrapperVpxQueue"
+
+    invoke-direct {p1, p3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Ltl4;->d:Landroid/os/HandlerThread;
+
+    invoke-virtual {p1}, Ljava/lang/Thread;->start()V
+
+    new-instance p3, Landroid/os/Handler;
+
+    invoke-virtual {p1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    invoke-direct {p3, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object p3, p0, Ltl4;->o:Landroid/os/Handler;
+
+    iput p2, p0, Ltl4;->X:I
+
+    new-instance p1, Ly30;
+
+    const/4 p4, 0x7
+
+    invoke-direct {p1, p0, p2, p4}, Ly30;-><init>(Ljava/lang/Object;II)V
+
+    invoke-virtual {p3, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lmr3;)Lnrf;
-    .locals 0
+.method public final a()V
+    .locals 6
 
-    const/4 p1, 0x0
+    iget-boolean v0, p0, Ltl4;->Y:Z
 
-    return-object p1
-.end method
+    if-eqz v0, :cond_0
 
-.method public final b()Ll83;
-    .locals 1
+    return-void
 
-    iget-object v0, p0, Ltl4;->b:Lru7;
+    :cond_0
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    iput-boolean v0, p0, Ltl4;->Y:Z
 
-    move-result-object v0
+    iget-object v1, p0, Ltl4;->c:Lahd;
 
-    check-cast v0, Ll83;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    return-object v0
-.end method
+    const-string v3, "releasing decoder "
 
-.method public c(Lmr3;)Lnrf;
-    .locals 4
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lmr3;->p()J
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    move-result-wide v0
+    move-result v3
 
-    invoke-virtual {p0}, Ltl4;->b()Ll83;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Lztd;
+    const-string v3, "DecoderWrapper"
 
-    invoke-virtual {v2}, Lztd;->s()J
+    invoke-interface {v1, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-wide v2
+    iget-object v1, p0, Ltl4;->d:Landroid/os/HandlerThread;
 
-    cmp-long v0, v0, v2
+    iget-object v2, p0, Ltl4;->z0:Lani;
 
-    if-nez v0, :cond_0
+    iget-object v2, v2, Lani;->e:Landroid/os/Handler;
 
-    sget p1, Lfkd;->I:I
+    iget-object v3, p0, Ltl4;->a:Lorg/webrtc/VpxDecoderWrapper;
 
-    new-instance v0, Lirf;
+    invoke-static {v3}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Lirf;-><init>(I)V
+    new-instance v4, Lp02;
 
-    return-object v0
+    const/16 v5, 0x1b
 
-    :cond_0
-    invoke-virtual {p1}, Lmr3;->v()Z
+    invoke-direct {v4, v5, v3}, Lp02;-><init>(ILjava/lang/Object;)V
 
-    move-result v0
+    const/4 v3, 0x0
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v2, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Lmr3;->y()Z
+    invoke-virtual {v2, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    move-result v0
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    if-eqz v0, :cond_1
+    iput-boolean v0, p0, Ltl4;->Z:Z
 
-    sget p1, Lmkd;->K1:I
+    return-void
+.end method
 
-    new-instance v0, Lirf;
+.method public final onDecodeError(I)V
+    .locals 3
 
-    invoke-direct {v0, p1}, Lirf;-><init>(I)V
+    iget-object v0, p0, Ltl4;->c:Lahd;
 
-    return-object v0
+    const-string v1, "onDecodeError vpx_error_code:"
 
-    :cond_1
-    iget-object v0, p0, Ltl4;->c:Lru7;
+    const-string v2, " System.identityHashCode: "
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lkq5;
-
-    invoke-virtual {p1, v0}, Lmr3;->x(Lkq5;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    sget p1, Lmkd;->D:I
-
-    new-instance v0, Lirf;
-
-    invoke-direct {v0, p1}, Lirf;-><init>(I)V
-
-    return-object v0
-
-    :cond_2
-    invoke-virtual {p1}, Lmr3;->v()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    sget p1, Lmkd;->n:I
-
-    new-instance v0, Lirf;
-
-    invoke-direct {v0, p1}, Lirf;-><init>(I)V
-
-    return-object v0
-
-    :cond_3
-    iget-object v0, p0, Ltl4;->d:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Layb;
-
-    iget-object v0, v0, Layb;->a:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzxb;
-
-    invoke-virtual {v0, p1}, Lzxb;->b(Lmr3;)Ljava/lang/CharSequence;
+    invoke-static {p1, v1, v2}, Lj27;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
-    new-instance v0, Lmrf;
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
-    invoke-direct {v0, p1}, Lmrf;-><init>(Ljava/lang/CharSequence;)V
+    move-result v1
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public d(Lmr3;)Z
-    .locals 0
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "DecoderWrapper"
+
+    invoke-interface {v0, v1, p1}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Ltl4;->z0:Lani;
+
+    iget-object v0, p1, Lani;->x:Lglg;
+
+    invoke-virtual {v0}, Lglg;->a()V
+
+    iget-object p1, p1, Lani;->t:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
     const/4 p1, 0x1
 
-    return p1
+    iput-boolean p1, p0, Ltl4;->t0:Z
+
+    iget-object p1, p0, Ltl4;->w0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget-object v0, p0, Ltl4;->v0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    return-void
 .end method
 
-.method public e(Lmr3;)Z
-    .locals 0
+.method public final onFrame(Lorg/webrtc/VideoFrame;)V
+    .locals 4
 
-    const/4 p1, 0x1
+    iget-boolean v0, p0, Ltl4;->Y:Z
 
-    return p1
-.end method
+    if-eqz v0, :cond_0
 
-.method public f(Lmr3;)Lw49;
-    .locals 19
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Ltl4;->a:Lru7;
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxxb;
-
-    invoke-virtual/range {p1 .. p1}, Lmr3;->p()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lxxb;->w(J)Luxb;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ltl4;->b()Ll83;
-
-    move-result-object v2
-
-    check-cast v2, Lztd;
-
-    invoke-virtual {v2}, Lztd;->n()Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v3, Lhl0;->c:Lhl0;
-
-    move-object/from16 v4, p1
-
-    invoke-virtual {v4, v2, v3}, Lmr3;->s(Ljava/lang/String;Lhl0;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v4}, Lmr3;->p()J
-
-    move-result-wide v5
-
-    invoke-virtual {v0}, Ltl4;->b()Ll83;
-
-    move-result-object v3
-
-    check-cast v3, Lztd;
-
-    invoke-virtual {v3}, Lztd;->s()J
-
-    move-result-wide v7
-
-    cmp-long v3, v5, v7
-
-    if-nez v3, :cond_0
-
-    const/4 v3, 0x1
-
-    :goto_0
-    move v13, v3
-
-    goto :goto_1
+    return-void
 
     :cond_0
-    const/4 v3, 0x0
+    iget-object v0, p0, Ltl4;->z0:Lani;
 
-    goto :goto_0
+    iget-object v0, v0, Lani;->s:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    :goto_1
-    invoke-virtual {v4}, Lmr3;->p()J
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    move-result-wide v5
+    iget-object v0, p0, Ltl4;->z0:Lani;
 
-    invoke-virtual {v4}, Lmr3;->e()Ljava/lang/String;
+    iget-object v0, v0, Lani;->w:Lglg;
 
-    move-result-object v7
+    invoke-virtual {v0}, Lglg;->a()V
 
-    if-eqz v7, :cond_2
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
-    invoke-virtual {v4}, Lmr3;->i()Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v3
+    sget-wide v2, Lani;->E:J
 
-    invoke-static {v3}, Lisf;->a(Ljava/lang/String;)Ljava/lang/String;
+    cmp-long v0, v0, v2
 
-    move-result-object v8
+    if-lez v0, :cond_2
 
-    invoke-virtual/range {p0 .. p1}, Ltl4;->c(Lmr3;)Lnrf;
+    iget-object v0, p0, Ltl4;->b:Lvz9;
 
-    move-result-object v9
+    iget-object v1, v0, Lvz9;->b:Ljava/lang/Object;
+
+    check-cast v1, Ltde;
+
+    iget-object v0, v0, Lvz9;->c:Ljava/lang/Object;
+
+    check-cast v0, Lsk1;
+
+    iget-boolean v2, v1, Ltde;->f:Z
 
     if-eqz v2, :cond_1
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    :goto_2
-    move-object v10, v2
-
-    goto :goto_3
+    goto :goto_0
 
     :cond_1
-    const/4 v2, 0x0
+    iget-object v1, v1, Ltde;->e:Lfxb;
 
-    goto :goto_2
-
-    :goto_3
-    invoke-virtual {v4}, Lmr3;->w()Z
-
-    move-result v12
-
-    invoke-virtual/range {p0 .. p1}, Ltl4;->d(Lmr3;)Z
-
-    move-result v15
-
-    invoke-virtual/range {p0 .. p1}, Ltl4;->e(Lmr3;)Z
-
-    move-result v16
-
-    iget v1, v1, Luxb;->b:I
-
-    invoke-virtual {v4}, Lmr3;->o()Ljava/lang/CharSequence;
-
-    move-result-object v11
-
-    invoke-virtual/range {p0 .. p1}, Ltl4;->a(Lmr3;)Lnrf;
-
-    move-result-object v18
-
-    new-instance v4, Lw49;
-
-    const/4 v14, 0x0
-
-    move/from16 v17, v1
-
-    invoke-direct/range {v4 .. v18}, Lw49;-><init>(JLjava/lang/String;Ljava/lang/CharSequence;Lnrf;Landroid/net/Uri;Ljava/lang/CharSequence;ZZZZZILnrf;)V
-
-    return-object v4
+    invoke-virtual {v1, v0, p1}, Lfxb;->a(Lsk1;Lorg/webrtc/VideoFrame;)V
 
     :cond_2
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    :goto_0
+    iget-object v0, p0, Ltl4;->x0:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    const-string v2, "Required value was null."
+    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotatedWidth()I
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    throw v1
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    iget-object v0, p0, Ltl4;->y0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotatedHeight()I
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    return-void
 .end method

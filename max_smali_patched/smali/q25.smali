@@ -1,89 +1,60 @@
-.class public abstract Lq25;
+.class public final Lq25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr25;
 
-# static fields
-.field public static final a:Ljava/lang/reflect/Method;
 
-.field public static final b:Ljava/lang/reflect/Method;
-
-.field public static final c:Ljava/lang/reflect/Method;
-
-.field public static final d:Z
+# instance fields
+.field public final a:Ljava/util/concurrent/ScheduledFuture;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Ljava/util/concurrent/ScheduledFuture;)V
+    .locals 0
 
-    const-class v0, Landroid/widget/AdapterView;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :try_start_0
-    const-class v1, Landroid/widget/AbsListView;
+    iput-object p1, p0, Lq25;->a:Ljava/util/concurrent/ScheduledFuture;
 
-    const-string v2, "positionSelector"
+    return-void
+.end method
 
-    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    const-class v4, Landroid/view/View;
+# virtual methods
+.method public final dispose()V
+    .locals 2
 
-    sget-object v5, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+    iget-object v0, p0, Lq25;->a:Ljava/util/concurrent/ScheduledFuture;
 
-    sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+    const/4 v1, 0x0
 
-    filled-new-array {v3, v4, v5, v6, v6}, [Ljava/lang/Class;
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    move-result-object v4
+    return-void
+.end method
 
-    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-object v1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sput-object v1, Lq25;->a:Ljava/lang/reflect/Method;
+    const-string v1, "DisposableFutureHandle["
 
-    const/4 v2, 0x1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    iget-object v1, p0, Lq25;->a:Ljava/util/concurrent/ScheduledFuture;
 
-    const-string v1, "setSelectedPositionInt"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    filled-new-array {v3}, [Ljava/lang/Class;
+    const/16 v1, 0x5d
 
-    move-result-object v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v1
-
-    sput-object v1, Lq25;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    const-string v1, "setNextSelectedPositionInt"
-
-    filled-new-array {v3}, [Ljava/lang/Class;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lq25;->c:Ljava/lang/reflect/Method;
-
-    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    sput-boolean v2, Lq25;->d:Z
-    :try_end_0
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    return-void
+    return-object v0
 .end method

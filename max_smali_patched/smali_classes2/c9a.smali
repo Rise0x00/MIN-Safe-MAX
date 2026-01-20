@@ -1,3 +1,3 @@
-.class public final Lc9a;
-.super Lfl4;
+.class public abstract Lc9a;
+.super Ljava/lang/Object;
 .source "SourceFile"

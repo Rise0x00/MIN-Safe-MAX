@@ -1,91 +1,58 @@
 .class public final Lrb3;
-.super Landroid/view/View;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Landroid/graphics/Paint;
+.field public final a:Lw4e;
 
-.field public b:Landroid/graphics/Paint;
 
-.field public c:I
+# direct methods
+.method public constructor <init>(Lw4e;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrb3;->a:Lw4e;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public getColor()I
-    .locals 1
+.method public final a()V
+    .locals 3
 
-    iget-object v0, p0, Lrb3;->a:Landroid/graphics/Paint;
+    sget-object v0, Ldh5;->a:Ldh5;
 
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+    const/4 v1, 0x0
 
-    move-result v0
+    iget-object v2, p0, Lrb3;->a:Lw4e;
 
-    return v0
-.end method
-
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 4
-
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    int-to-float v0, v0
-
-    int-to-float v1, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lrb3;->b:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget v3, p0, Lrb3;->c:I
-
-    mul-int/lit8 v3, v3, 0x2
-
-    sub-int/2addr v2, v3
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lrb3;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-virtual {v2, v0, v1}, Lw4e;->Q(Ljava/util/List;Lf94;)V
 
     return-void
 .end method
 
-.method public setColor(I)V
+.method public final b()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lrb3;->a:Landroid/graphics/Paint;
+    iget-object v0, p0, Lrb3;->a:Lw4e;
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+    iget-object v0, v0, Lw4e;->a:Lch0;
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0}, Lch0;->a()Lz4e;
 
-    return-void
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v0, Lz4e;->b:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

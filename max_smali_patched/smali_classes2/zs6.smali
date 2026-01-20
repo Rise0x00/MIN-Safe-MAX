@@ -1,127 +1,75 @@
 .class public final Lzs6;
-.super Landroid/content/BroadcastReceiver;
+.super Lbt6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lat6;
+# static fields
+.field public static final a:Lzs6;
+
+.field public static final b:Ljava/util/List;
+
+.field public static final c:Lrs6;
 
 
 # direct methods
-.method public constructor <init>(Lat6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lzs6;->a:Lat6;
+    new-instance v0, Lzs6;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lzs6;->a:Lzs6;
+
+    sget-object v0, Lts6;->e:Lts6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lzs6;->b:Ljava/util/List;
+
+    new-instance v0, Lrs6;
+
+    sget v1, Lihb;->c:I
+
+    invoke-direct {v0, v1}, Lrs6;-><init>(I)V
+
+    sput-object v0, Lzs6;->c:Lrs6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    const-string p1, "com.google.android.gms.auth.api.phone.SMS_RETRIEVED"
+    const-string v0, "ru.ok.tamtam.ALL_MEDIA"
 
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final c()Lg4;
+    .locals 1
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    sget-object v0, Lzs6;->c:Lrs6;
 
-    move-result p1
+    return-object v0
+.end method
 
-    if-nez p1, :cond_0
+.method public final d()Ljava/util/List;
+    .locals 1
 
-    return-void
+    sget-object v0, Lzs6;->b:Ljava/util/List;
 
-    :cond_0
-    invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
+    return-object v0
+.end method
 
-    move-result-object p1
+.method public final f()Lrs6;
+    .locals 1
 
-    const/4 p2, 0x0
+    sget-object v0, Lzs6;->c:Lrs6;
 
-    if-eqz p1, :cond_1
-
-    const-string v0, "com.google.android.gms.auth.api.phone.EXTRA_STATUS"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/android/gms/common/api/Status;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v0, p2
-
-    :goto_0
-    iget-object v1, p0, Lzs6;->a:Lat6;
-
-    if-eqz v0, :cond_2
-
-    iget v2, v0, Lcom/google/android/gms/common/api/Status;->a:I
-
-    if-nez v2, :cond_2
-
-    iget-object v0, v1, Lat6;->d:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v2, Lys6;
-
-    invoke-direct {v2, v1, p1, p2}, Lys6;-><init>(Lat6;Landroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    invoke-static {v0, p2, p2, v2, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    return-void
-
-    :cond_2
-    iget-object v1, v1, Lat6;->e:Ljava/lang/String;
-
-    new-instance v2, Lm54;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/os/BaseBundle;->keySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    goto :goto_1
-
-    :cond_3
-    move-object p1, p2
-
-    :goto_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "onMessageReceived: error; status = "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v2, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Ljava/lang/Object;
-
-    invoke-static {v1, v2, p2, p1}, Lcuh;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method

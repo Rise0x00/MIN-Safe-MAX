@@ -3,22 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbof;
+.implements Lj88;
+
+
+# instance fields
+.field public a:Ll88;
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
-    .locals 2
+.method public final p()Ll88;
+    .locals 1
 
-    new-instance v0, Ll94;
-
-    const-string v1, "1me-"
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ll94;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Ln94;->a:Ll88;
 
     return-object v0
 .end method

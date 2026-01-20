@@ -4,20 +4,10 @@
 
 
 # direct methods
-.method public static a(Landroid/content/Context;)Z
-    .locals 1
+.method public static a(Landroid/widget/TextView;IF)V
+    .locals 0
 
-    const-class v0, Landroid/os/UserManager;
+    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setLineHeight(IF)V
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/UserManager;
-
-    invoke-virtual {p0}, Landroid/os/UserManager;->isUserUnlocked()Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

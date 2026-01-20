@@ -1,130 +1,184 @@
-.class public final Lega;
-.super Logf;
+.class public final synthetic Lega;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lmr6;
 
 
 # instance fields
-.field public final synthetic o:Ljga;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljga;
 
 
 # direct methods
-.method public constructor <init>(Ljga;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljga;I)V
     .locals 0
 
-    iput-object p1, p0, Lega;->o:Ljga;
+    iput p2, p0, Lega;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lega;->b:Ljga;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lega;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lmi8;
 
-    invoke-virtual {p0, p1, p2}, Lega;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object v0, p0, Lega;->b:Ljga;
 
-    check-cast p1, Lega;
+    iget-object v0, v0, Ljga;->u0:Lq2c;
 
-    sget-object p2, Lybg;->a:Lybg;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, p2}, Lega;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, Lq2c;->b:Landroid/net/Uri;
 
-    return-object p2
-.end method
+    if-eqz v0, :cond_0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    const/4 v0, 0x1
 
-    new-instance p1, Lega;
+    goto :goto_0
 
-    iget-object v0, p0, Lega;->o:Ljga;
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-direct {p1, v0, p2}, Lega;-><init>(Ljga;Lkotlin/coroutines/Continuation;)V
+    :goto_0
+    iput-boolean v0, p1, Lmi8;->l:Z
 
     return-object p1
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    :pswitch_0
+    iget-object v0, p0, Lega;->b:Ljga;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v1, v0, Ljga;->w0:Lgne;
 
-    sget-object p1, Ljga;->F0:[Les7;
+    iget-object v0, v0, Ljga;->o:Lqh8;
 
-    iget-object p1, p0, Lega;->o:Ljga;
-
-    invoke-virtual {p1}, Ljga;->u()Ltq;
-
-    move-result-object v0
-
-    check-cast v0, Leig;
-
-    iget-object v0, v0, Ly3;->h:Luu7;
-
-    const-string v1, "app.notification.show.text"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Luu7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v0}, Lgne;->g(Lqh8;)I
 
     move-result v0
 
-    xor-int/2addr v0, v2
+    if-gtz v0, :cond_2
 
-    invoke-virtual {p1}, Ljga;->u()Ltq;
+    invoke-virtual {v1}, Lgne;->c()Ljava/util/List;
 
-    move-result-object v3
+    move-result-object v1
 
-    check-cast v3, Leig;
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    invoke-virtual {v3, v1, v0}, Ly3;->f(Ljava/lang/String;Z)V
+    move-result v1
 
-    iget-object v0, p1, Ljga;->Y:Lru7;
+    const/16 v2, 0x64
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    if-ge v1, v2, :cond_1
 
-    move-result-object v0
+    goto :goto_1
 
-    check-cast v0, Lyya;
+    :cond_1
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lyya;->c()V
+    goto :goto_2
 
-    iget-object p1, p1, Ljga;->y0:La1f;
+    :cond_2
+    :goto_1
+    const/4 v1, 0x1
 
-    invoke-virtual {p1}, La1f;->getValue()Ljava/lang/Object;
+    :goto_2
+    iput-boolean v1, p1, Lmi8;->j:Z
 
-    move-result-object v0
+    iput v0, p1, Lmi8;->k:I
 
-    check-cast v0, Ljava/lang/Number;
+    return-object p1
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    :pswitch_1
+    iget-object v0, p0, Lega;->b:Ljga;
 
-    move-result v0
+    iget-boolean v0, v0, Ljga;->B0:Z
 
-    add-int/2addr v0, v2
+    iput-boolean v0, p1, Lmi8;->g:Z
 
-    new-instance v1, Ljava/lang/Integer;
-
-    invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
+    iput-boolean v0, p1, Lmi8;->h:Z
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    sget-object p1, Lybg;->a:Lybg;
+    iput-boolean v0, p1, Lmi8;->e:Z
 
     return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lega;->b:Ljga;
+
+    iget-boolean v1, v0, Ljga;->B0:Z
+
+    iput-boolean v1, p1, Lmi8;->e:Z
+
+    const/4 v2, 0x0
+
+    iput-boolean v2, p1, Lmi8;->g:Z
+
+    iput-boolean v2, p1, Lmi8;->h:Z
+
+    iput-boolean v1, p1, Lmi8;->a:Z
+
+    iget-object v0, v0, Ljga;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->P()Lru/ok/messages/media/mediabar/FrgLocalMedia;
+
+    move-result-object v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    instance-of v2, v0, Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    :goto_3
+    iput-boolean v2, p1, Lmi8;->f:Z
+
+    return-object p1
+
+    :pswitch_3
+    iget-object v0, p0, Lega;->b:Ljga;
+
+    iget-object v0, v0, Ljga;->u0:Lq2c;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, v0, Lq2c;->d:Lmd5;
+
+    if-eqz v0, :cond_4
+
+    const/4 v0, 0x1
+
+    goto :goto_4
+
+    :cond_4
+    const/4 v0, 0x0
+
+    :goto_4
+    iput-boolean v0, p1, Lmi8;->m:Z
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

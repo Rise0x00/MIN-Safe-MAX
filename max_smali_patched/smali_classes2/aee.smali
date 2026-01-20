@@ -1,82 +1,70 @@
-.class public final Laee;
-.super Logf;
+.class public final synthetic Laee;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/SettingsListScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljee;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+.method public synthetic constructor <init>(Ljee;I)V
     .locals 0
 
-    iput-object p2, p0, Laee;->X:Lone/me/settings/SettingsListScreen;
+    iput p2, p0, Laee;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Laee;->b:Ljee;
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onClick(Landroid/view/View;)V
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    iget p1, p0, Laee;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Laee;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Laee;->b:Ljee;
 
-    move-result-object p1
+    iget-object p1, p1, Ljee;->a:Llq6;
 
-    check-cast p1, Laee;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    sget-object p2, Lybg;->a:Lybg;
+    return-void
 
-    invoke-virtual {p1, p2}, Laee;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object p1, p0, Laee;->b:Ljee;
 
-    return-object p2
-.end method
+    iget-object p1, p1, Ljee;->c:Llq6;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    new-instance v0, Laee;
+    return-void
 
-    iget-object v1, p0, Laee;->X:Lone/me/settings/SettingsListScreen;
+    :pswitch_1
+    iget-object p1, p0, Laee;->b:Ljee;
 
-    invoke-direct {v0, p2, v1}, Laee;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+    iget-object p1, p1, Ljee;->o:Llq6;
 
-    iput-object p1, v0, Laee;->o:Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    return-void
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    nop
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Laee;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Laee;->X:Lone/me/settings/SettingsListScreen;
-
-    iget-object v0, v0, Lone/me/settings/SettingsListScreen;->y0:Lfde;
-
-    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

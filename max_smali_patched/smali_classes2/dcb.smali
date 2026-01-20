@@ -1,41 +1,79 @@
-.class public final Ldcb;
+.class public abstract Ldcb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lllf;
+# static fields
+.field public static final a:I
 
-.field public final b:Lfcb;
+.field public static final b:I
 
-.field public final c:J
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(Lllf;Lfcb;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_rate_view:I
 
-    iput-object p1, p0, Ldcb;->a:Lllf;
+    sput v0, Ldcb;->a:I
 
-    iput-object p2, p0, Ldcb;->b:Lfcb;
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_rate_view_icon:I
 
-    sget p1, Lgs7;->a:I
+    sput v0, Ldcb;->b:I
 
-    sget p1, Lw35;->d:I
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    sput v0, Ldcb;->c:I
 
-    move-result-wide p1
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_rate_view_rating_bar:I
 
-    sget-object v0, Lb45;->c:Lb45;
+    sput v0, Ldcb;->d:I
 
-    invoke-static {p1, p2, v0}, Lzyi;->e(JLb45;)J
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_rate_view_send_btn:I
 
-    move-result-wide p1
+    sput v0, Ldcb;->e:I
 
-    iput-wide p1, p0, Ldcb;->c:J
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_rate_view_subtitle:I
+
+    sput v0, Ldcb;->f:I
+
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_rate_view_title:I
+
+    sput v0, Ldcb;->g:I
+
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_thank_view:I
+
+    sput v0, Ldcb;->h:I
+
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_thank_view_close_btn:I
+
+    sput v0, Ldcb;->i:I
+
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_thank_view_icon:I
+
+    sput v0, Ldcb;->j:I
+
+    sget v0, Lr8d;->fake_in_app_review_bottom_sheet_thank_view_title:I
+
+    sput v0, Ldcb;->k:I
 
     return-void
 .end method

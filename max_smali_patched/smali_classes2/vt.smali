@@ -1,120 +1,129 @@
-.class public final synthetic Lvt;
+.class public final Lvt;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyne;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lnue;
 
-.field public final synthetic b:Lqi6;
+.field public final b:Lu31;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILqi6;)V
+.method public constructor <init>(Lnue;Lu31;)V
     .locals 0
 
-    iput p1, p0, Lvt;->a:I
-
-    iput-object p2, p0, Lvt;->b:Lqi6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvt;->a:Lnue;
+
+    iput-object p2, p0, Lvt;->b:Lu31;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onResponse(Lorg/json/JSONObject;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lvt;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    return v0
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->c(Lqi6;Lorg/json/JSONObject;)V
+    :cond_0
+    instance-of v1, p1, Lvt;
 
-    return-void
+    const/4 v2, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    if-nez v1, :cond_1
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/urlsharing/external/internal/commands/UrlSharingCommandsExecutorImpl;->a(Lqi6;Lorg/json/JSONObject;)V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lvt;
 
-    :pswitch_1
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    iget-object v1, p0, Lvt;->a:Lnue;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/participant/state/internal/ParticipantStatesManagerImpl;->c(Lqi6;Lorg/json/JSONObject;)V
+    iget-object v3, p1, Lvt;->a:Lnue;
 
-    return-void
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_2
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    move-result v1
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->d(Lqi6;Lorg/json/JSONObject;)V
+    if-nez v1, :cond_2
 
-    return-void
+    return v2
 
-    :pswitch_3
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    :cond_2
+    iget-object v1, p0, Lvt;->b:Lu31;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/media/mute/internal/command/MediaMuteCommandExecutorImpl;->b(Lqi6;Lorg/json/JSONObject;)V
+    iget-object p1, p1, Lvt;->b:Lu31;
 
-    return-void
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_4
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    move-result p1
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutorImpl;->a(Lqi6;Lorg/json/JSONObject;)V
+    if-nez p1, :cond_3
 
-    return-void
+    return v2
 
-    :pswitch_5
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    :cond_3
+    return v0
+.end method
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/commands/ConversationFeatureCommandExecutorImpl;->b(Lqi6;Lorg/json/JSONObject;)V
+.method public final hashCode()I
+    .locals 2
 
-    return-void
+    iget-object v0, p0, Lvt;->a:Lnue;
 
-    :pswitch_6
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/chat/internal/command/ChatCommandExecutorImpl;->b(Lqi6;Lorg/json/JSONObject;)V
+    move-result v0
 
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
 
-    :pswitch_7
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    iget-object v1, p0, Lvt;->b:Lu31;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->c(Lqi6;Lorg/json/JSONObject;)V
+    invoke-virtual {v1}, Lu31;->hashCode()I
 
-    return-void
+    move-result v1
 
-    :pswitch_8
-    iget-object v0, p0, Lvt;->b:Lqi6;
+    add-int/2addr v1, v0
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/asr/internal/commands/AsrCommandsExecutorImpl;->a(Lqi6;Lorg/json/JSONObject;)V
+    return v1
+.end method
 
-    return-void
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    nop
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const-string v1, "StartAsrRecord(sessionRoomId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvt;->a:Lnue;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callAsrInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvt;->b:Lu31;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

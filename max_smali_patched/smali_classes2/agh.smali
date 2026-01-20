@@ -1,117 +1,131 @@
-.class public final Lagh;
+.class public final synthetic Lagh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lzfh;
+# interfaces
+.implements Lay3;
+.implements Lcr6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Lvfh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lvfh;I)V
+    .locals 0
 
-    new-instance v0, Lzfh;
+    iput p2, p0, Lagh;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lagh;->Companion:Lzfh;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IZ)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x1
-
-    const/4 v1, 0x1
-
-    if-ne v1, v0, :cond_0
+    iput-object p1, p0, Lagh;->b:Lvfh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lagh;->a:Z
-
     return-void
-
-    :cond_0
-    sget-object p2, Lyfh;->a:Lyfh;
-
-    invoke-virtual {p2}, Lyfh;->d()Lo3e;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lbi3;->b(IILo3e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Throwable;
 
-    if-ne p0, p1, :cond_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    return v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :cond_0
-    instance-of v1, p1, Lagh;
+    const-string v1, "removeFromRepository: failed conversionData = "
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-nez v1, :cond_1
+    iget-object v1, p0, Lagh;->b:Lvfh;
 
-    return v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    check-cast p1, Lagh;
-
-    iget-boolean v1, p0, Lagh;->a:Z
-
-    iget-boolean p1, p1, Lagh;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lagh;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "WebAppSetupBackButtonRequest(isVisible="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lagh;->a:Z
-
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    const-string v1, "dgh"
+
+    invoke-static {v1, v0, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lagh;->a:I
+
+    check-cast p1, Lyfh;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lagh;->b:Lvfh;
+
+    iget-object v2, v0, Lvfh;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lvfh;->b:Lzfh;
+
+    iget-object v3, v0, Lzfh;->a:Lh2d;
+
+    iget v4, v0, Lzfh;->b:F
+
+    iget v5, v0, Lzfh;->c:F
+
+    iget-boolean v6, v0, Lzfh;->d:Z
+
+    iget-object p1, p1, Lyfh;->a:Lb2e;
+
+    new-instance v1, Lq6g;
+
+    const/4 v7, 0x3
+
+    invoke-direct/range {v1 .. v7}, Lq6g;-><init>(Ljava/lang/String;Lh2d;FFZI)V
+
+    invoke-static {p1, v1}, Lmnj;->a(Lb2e;Lnq6;)Leo3;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lagh;->b:Lvfh;
+
+    iget-object v2, v0, Lvfh;->a:Ljava/lang/String;
+
+    iget-object v0, v0, Lvfh;->b:Lzfh;
+
+    iget-object v3, v0, Lzfh;->a:Lh2d;
+
+    iget v4, v0, Lzfh;->b:F
+
+    iget v5, v0, Lzfh;->c:F
+
+    iget-boolean v6, v0, Lzfh;->d:Z
+
+    iget-object p1, p1, Lyfh;->a:Lb2e;
+
+    new-instance v1, Lq6g;
+
+    const/4 v7, 0x2
+
+    invoke-direct/range {v1 .. v7}, Lq6g;-><init>(Ljava/lang/String;Lh2d;FFZI)V
+
+    invoke-static {p1, v1}, Lmnj;->b(Lb2e;Lnq6;)Liv8;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

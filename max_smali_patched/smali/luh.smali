@@ -1,106 +1,158 @@
 .class public final Lluh;
-.super Ljava/lang/Object;
+.super Landroidx/recyclerview/widget/LinearLayoutManager;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Ljava/util/Set;
-
-
 # instance fields
-.field public final a:Lds6;
+.field public final synthetic E:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/util/WeakHashMap;
-
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
-
-    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
-
-    move-result-object v0
-
-    sput-object v0, Lluh;->b:Ljava/util/Set;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lds6;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lluh;->E:Landroidx/viewpager2/widget/ViewPager2;
 
-    iput-object p1, p0, Lluh;->a:Lds6;
+    invoke-direct {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Llii;)Llii;
-    .locals 5
+.method public final N0(Lpsd;[I)V
+    .locals 3
 
-    iget-boolean v0, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
+    iget-object v0, p0, Lluh;->E:Landroidx/viewpager2/widget/ViewPager2;
+
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getOffscreenPageLimit()I
+
+    move-result v1
+
+    const/4 v2, -0x1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/LinearLayoutManager;->N0(Lpsd;[I)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getPageSize()I
+
+    move-result p1
+
+    mul-int/2addr p1, v1
+
+    const/4 v0, 0x0
+
+    aput p1, p2, v0
+
+    const/4 v0, 0x1
+
+    aput p1, p2, v0
+
+    return-void
+.end method
+
+.method public final c0(Lksd;Lpsd;Lg5;)V
+    .locals 0
+
+    invoke-super {p0, p1, p2, p3}, Landroidx/recyclerview/widget/a;->c0(Lksd;Lpsd;Lg5;)V
+
+    iget-object p1, p0, Lluh;->E:Landroidx/viewpager2/widget/ViewPager2;
+
+    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->H0:Lloe;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public final d0(Lksd;Lpsd;Landroid/view/View;Lg5;)V
+    .locals 3
+
+    iget-object p1, p0, Lluh;->E:Landroidx/viewpager2/widget/ViewPager2;
+
+    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->H0:Lloe;
+
+    iget-object p1, p1, Lloe;->d:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/viewpager2/widget/ViewPager2;
+
+    invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
+
+    move-result p2
+
+    const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    if-nez v0, :cond_1
+    if-ne p2, v1, :cond_0
 
-    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Lgw0;
+    iget-object p2, p1, Landroidx/viewpager2/widget/ViewPager2;->u0:Lluh;
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    invoke-static {p3}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
 
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    move-result p2
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    move p2, v0
+
+    :goto_0
+    invoke-virtual {p1}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    iget-object p1, p1, Landroidx/viewpager2/widget/ViewPager2;->u0:Lluh;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p3}, Landroidx/recyclerview/widget/a;->N(Landroid/view/View;)I
+
+    move-result p1
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    iput-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
+    move p1, v0
 
-    iget-object v0, p0, Lluh;->a:Lds6;
+    :goto_1
+    invoke-static {v0, p2, v1, p1, v1}, Lf5;->a(ZIIII)Lf5;
 
-    iget-object v1, v0, Lds6;->j:Lis6;
+    move-result-object p1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p4, p1}, Lg5;->i(Lf5;)V
 
-    new-instance v2, Lavh;
+    return-void
+.end method
 
-    invoke-direct {v2, p1}, Lavh;-><init>(Llii;)V
+.method public final r0(Lksd;Lpsd;ILandroid/os/Bundle;)Z
+    .locals 1
 
-    iget-object v3, v1, Lis6;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, p0, Lluh;->E:Landroidx/viewpager2/widget/ViewPager2;
 
-    new-instance v4, Lsuh;
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->H0:Lloe;
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v3
+    invoke-super {p0, p1, p2, p3, p4}, Landroidx/recyclerview/widget/a;->r0(Lksd;Lpsd;ILandroid/os/Bundle;)Z
 
-    invoke-direct {v4, v2, v3, v0}, Lsuh;-><init>(Lmvh;ILds6;)V
+    move-result p1
 
-    iget-object v0, v1, Lis6;->w0:Ldu9;
+    return p1
+.end method
 
-    const/4 v1, 0x4
+.method public final x0(Landroidx/recyclerview/widget/RecyclerView;Landroid/view/View;Landroid/graphics/Rect;ZZ)Z
+    .locals 0
 
-    invoke-virtual {v0, v1, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    const/4 p1, 0x0
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    return-object p1
+    return p1
 .end method

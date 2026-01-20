@@ -1,297 +1,231 @@
 .class public final Lzie;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sharedata/ShareDataPickerScreen;
+.field public final a:Lyna;
 
-.field public final synthetic Y:Landroid/view/View;
+.field public final b:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/util/List;
+
+.field public final e:Ljava/util/List;
+
+.field public final f:Ljava/util/List;
+
+.field public final g:J
+
+.field public final h:I
+
+.field public final i:Z
+
+.field public final j:J
+
+.field public final k:Ljava/util/List;
+
+.field public final l:Ljava/util/List;
+
+.field public final m:Ljava/lang/String;
+
+.field public final n:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sharedata/ShareDataPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lyie;)V
+    .locals 2
 
-    iput-object p1, p0, Lzie;->X:Lone/me/sharedata/ShareDataPickerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzie;->Y:Landroid/view/View;
+    iget-object v0, p1, Lyie;->a:Lyna;
 
-    const/4 p1, 0x2
+    iput-object v0, p0, Lzie;->a:Lyna;
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v0, p1, Lyie;->b:Ljava/lang/String;
+
+    iput-object v0, p0, Lzie;->b:Ljava/lang/String;
+
+    iget-object v0, p1, Lyie;->c:Ljava/lang/String;
+
+    iput-object v0, p0, Lzie;->c:Ljava/lang/String;
+
+    iget-object v0, p1, Lyie;->d:Ljava/util/List;
+
+    iput-object v0, p0, Lzie;->d:Ljava/util/List;
+
+    iget-object v0, p1, Lyie;->e:Ljava/util/List;
+
+    iput-object v0, p0, Lzie;->e:Ljava/util/List;
+
+    iget-object v0, p1, Lyie;->f:Ljava/util/List;
+
+    iput-object v0, p0, Lzie;->f:Ljava/util/List;
+
+    iget-wide v0, p1, Lyie;->g:J
+
+    iput-wide v0, p0, Lzie;->g:J
+
+    iget-boolean v0, p1, Lyie;->i:Z
+
+    iput-boolean v0, p0, Lzie;->i:Z
+
+    iget v0, p1, Lyie;->h:I
+
+    iput v0, p0, Lzie;->h:I
+
+    iget-wide v0, p1, Lyie;->j:J
+
+    iput-wide v0, p0, Lzie;->j:J
+
+    iget-object v0, p1, Lyie;->k:Ljava/util/List;
+
+    iput-object v0, p0, Lzie;->k:Ljava/util/List;
+
+    iget-object v0, p1, Lyie;->l:Ljava/util/List;
+
+    iput-object v0, p0, Lzie;->l:Ljava/util/List;
+
+    iget-object v0, p1, Lyie;->m:Ljava/lang/String;
+
+    iput-object v0, p0, Lzie;->m:Ljava/lang/String;
+
+    iget-object p1, p1, Lyie;->n:Ljava/util/List;
+
+    iput-object p1, p0, Lzie;->n:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 8
 
-    check-cast p1, Ljava/util/Set;
+    iget-object v0, p0, Lzie;->d:Ljava/util/List;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Lcth;->d(Ljava/util/Collection;)I
 
-    invoke-virtual {p0, p1, p2}, Lzie;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    iget-object v1, p0, Lzie;->e:Ljava/util/List;
 
-    check-cast p1, Lzie;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lzie;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lzie;
-
-    iget-object v1, p0, Lzie;->X:Lone/me/sharedata/ShareDataPickerScreen;
-
-    iget-object v2, p0, Lzie;->Y:Landroid/view/View;
-
-    invoke-direct {v0, v1, v2, p2}, Lzie;-><init>(Lone/me/sharedata/ShareDataPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lzie;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzie;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p1
-
-    iget-object v0, p0, Lzie;->X:Lone/me/sharedata/ShareDataPickerScreen;
-
-    iget-object v1, v0, Lone/me/sharedata/ShareDataPickerScreen;->x0:Landroid/transition/AutoTransition;
-
-    iget-object v2, v0, Lone/me/sharedata/ShareDataPickerScreen;->A0:Ld0d;
-
-    iget-object v3, v0, Lone/me/sharedata/ShareDataPickerScreen;->z0:Ld0d;
-
-    iget-boolean v4, v0, Lone/me/sharedata/ShareDataPickerScreen;->v0:Z
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x1
-
-    const/16 v7, 0x8
-
-    const/4 v8, 0x0
-
-    if-eqz v4, :cond_0
-
-    if-nez p1, :cond_0
-
-    sget-object v4, Lone/me/sharedata/ShareDataPickerScreen;->I0:[Les7;
-
-    aget-object v9, v4, v6
-
-    invoke-interface {v3, v0, v9}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v3, v8}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object v3, v4, v5
-
-    invoke-interface {v2, v0, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqjc;
-
-    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/sharedata/ShareDataPickerScreen;->J0()Lxc9;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_0
-    sget-object v4, Lone/me/sharedata/ShareDataPickerScreen;->I0:[Les7;
-
-    aget-object v9, v4, v6
-
-    invoke-interface {v3, v0, v9}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v3, v7}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object v3, v4, v5
-
-    invoke-interface {v2, v0, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lqjc;
-
-    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lonb;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lonb;->c:Lnpb;
-
-    check-cast v3, Lkie;
-
-    iget-object v3, v3, Lkie;->j:Lj0d;
-
-    iget-object v3, v3, Lj0d;->a:Lt0f;
-
-    invoke-interface {v3}, Lt0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    move v3, v8
-
-    goto :goto_0
-
-    :cond_1
-    move v3, v7
-
-    :goto_0
-    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/sharedata/ShareDataPickerScreen;->J0()Lxc9;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v8}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_1
-    invoke-virtual {v0}, Lone/me/sharedata/ShareDataPickerScreen;->J0()Lxc9;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    move v2, v6
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v8
-
-    :goto_2
-    iget-object v3, p0, Lzie;->Y:Landroid/view/View;
-
-    if-nez v2, :cond_3
-
-    if-lez p1, :cond_3
-
-    check-cast v3, Landroid/view/ViewGroup;
-
-    invoke-static {v3, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    invoke-virtual {v0}, Lone/me/sharedata/ShareDataPickerScreen;->J0()Lxc9;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_3
-
-    :cond_3
-    if-eqz v2, :cond_6
-
-    if-nez p1, :cond_6
-
-    check-cast v3, Landroid/view/ViewGroup;
-
-    invoke-static {v3, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    iget-object p1, v0, Lone/me/sharedata/ShareDataPickerScreen;->y0:Lrn0;
-
-    invoke-virtual {p1}, Lrn0;->e()Z
+    invoke-static {v1}, Lcth;->d(Ljava/util/Collection;)I
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    iget-object v2, p0, Lzie;->k:Ljava/util/List;
 
-    invoke-virtual {p1}, Lrn0;->getValue()Ljava/lang/Object;
+    invoke-static {v2}, Lcth;->d(Ljava/util/Collection;)I
 
-    move-result-object p1
+    move-result v2
 
-    check-cast p1, Lxc9;
+    iget-object v3, p0, Lzie;->l:Ljava/util/List;
 
-    invoke-virtual {p1, v7}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v3}, Lcth;->d(Ljava/util/Collection;)I
 
-    :cond_4
-    iget-object p1, v0, Lone/me/sharedata/ShareDataPickerScreen;->D0:Lyid;
+    move-result v3
 
-    if-eqz p1, :cond_5
+    iget-object v4, p0, Lzie;->n:Ljava/util/List;
 
-    invoke-virtual {p1}, Lyid;->n()Z
+    invoke-static {v4}, Lcth;->d(Ljava/util/Collection;)I
 
-    move-result p1
+    move-result v4
 
-    if-ne p1, v6, :cond_5
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lonb;
+    const-string v6, "Section{type="
 
-    move-result-object p1
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p1, Lonb;->c:Lnpb;
+    iget-object v6, p0, Lzie;->a:Lyna;
 
-    check-cast p1, Lkie;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p1, Lkie;->m:Lch8;
+    const-string v6, ", id=\'"
 
-    invoke-virtual {p1, v6}, Lch8;->x(I)V
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_3
+    iget-object v6, p0, Lzie;->b:Ljava/lang/String;
 
-    :cond_5
-    sget p1, Lct7;->a:I
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget p1, Lct7;->c:I
+    const-string v6, "\', title=\'"
 
-    invoke-static {p1}, Lct7;->b(I)Z
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    iget-object v6, p0, Lzie;->c:Ljava/lang/String;
 
-    if-eqz p1, :cond_6
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, v0, Lone/me/sharedata/ShareDataPickerScreen;->E0:Lad6;
+    const-string v6, "\', stickers="
 
-    invoke-virtual {p1}, Lad6;->i()V
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_6
-    :goto_3
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v0, ", stickerSets="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", marker="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v0, p0, Lzie;->g:J
+
+    invoke-virtual {v5, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", totalCount="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lzie;->h:I
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", collapsed="
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v0, p0, Lzie;->i:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", updateTime="
+
+    const-string v1, ", recentEmojiList="
+
+    iget-wide v6, p0, Lzie;->j:J
+
+    invoke-static {v6, v7, v0, v1, v5}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v0, ", recentsList="
+
+    const-string v1, ", animojiSets="
+
+    invoke-static {v5, v2, v0, v3, v1}, Lxi4;->q(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", mode=\'"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lzie;->m:Ljava/lang/String;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\'}"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

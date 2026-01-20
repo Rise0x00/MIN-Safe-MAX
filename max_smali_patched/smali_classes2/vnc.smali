@@ -1,26 +1,204 @@
-.class public abstract Lvnc;
+.class public final Lvnc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lync;
 
 
-# static fields
-.field public static fake_in_app_review_bottom_sheet_rate_view:I = 0x7f0a036b
+# instance fields
+.field public final a:Ljava/lang/Long;
 
-.field public static fake_in_app_review_bottom_sheet_rate_view_icon:I = 0x7f0a036c
+.field public final b:Ljava/lang/String;
 
-.field public static fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I = 0x7f0a036d
+.field public final c:Ljava/lang/String;
 
-.field public static fake_in_app_review_bottom_sheet_rate_view_rating_bar:I = 0x7f0a036e
+.field public final d:Ljava/lang/String;
 
-.field public static fake_in_app_review_bottom_sheet_rate_view_send_btn:I = 0x7f0a036f
 
-.field public static fake_in_app_review_bottom_sheet_rate_view_subtitle:I = 0x7f0a0370
+# direct methods
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-.field public static fake_in_app_review_bottom_sheet_rate_view_title:I = 0x7f0a0371
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static fake_in_app_review_bottom_sheet_thank_view:I = 0x7f0a0372
+    iput-object p1, p0, Lvnc;->a:Ljava/lang/Long;
 
-.field public static fake_in_app_review_bottom_sheet_thank_view_close_btn:I = 0x7f0a0373
+    iput-object p2, p0, Lvnc;->b:Ljava/lang/String;
 
-.field public static fake_in_app_review_bottom_sheet_thank_view_icon:I = 0x7f0a0374
+    iput-object p3, p0, Lvnc;->c:Ljava/lang/String;
 
-.field public static fake_in_app_review_bottom_sheet_thank_view_title:I = 0x7f0a0375
+    iput-object p4, p0, Lvnc;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvnc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvnc;
+
+    iget-object v1, p0, Lvnc;->a:Ljava/lang/Long;
+
+    iget-object v3, p1, Lvnc;->a:Ljava/lang/Long;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lvnc;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lvnc;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lvnc;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lvnc;->c:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lvnc;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lvnc;->d:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lvnc;->a:Ljava/lang/Long;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-object v3, p0, Lvnc;->b:Ljava/lang/String;
+
+    invoke-static {v1, v2, v3}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v1
+
+    iget-object v3, p0, Lvnc;->c:Ljava/lang/String;
+
+    invoke-static {v1, v2, v3}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v1
+
+    iget-object v2, p0, Lvnc;->d:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_1
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactUpdate(requestId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lvnc;->a:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fullName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lvnc;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", nickName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avatarUrl="
+
+    const-string v2, ")"
+
+    iget-object v3, p0, Lvnc;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Lvnc;->d:Ljava/lang/String;
+
+    invoke-static {v0, v3, v1, v4, v2}, Lpqb;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

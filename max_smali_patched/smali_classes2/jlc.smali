@@ -1,34 +1,96 @@
-.class public abstract Ljlc;
-.super Ljava/lang/Object;
+.class public final Ljlc;
+.super Lqlc;
+.source "SourceFile"
 
 
-# static fields
-.field public static attach_bar_thumbnail_size:I = 0x7f070054
+# instance fields
+.field public final b:Lnhg;
 
-.field public static flash_close_button_height:I = 0x7f0700f8
 
-.field public static flash_close_button_width:I = 0x7f0700f9
+# direct methods
+.method public constructor <init>(Lnhg;)V
+    .locals 0
 
-.field public static flash_close_wrapper_height:I = 0x7f0700fa
+    invoke-direct {p0}, Lqlc;-><init>()V
 
-.field public static flash_close_wrapper_width:I = 0x7f0700fb
+    iput-object p1, p0, Ljlc;->b:Lnhg;
 
-.field public static full_screen_mode_button_height:I = 0x7f070114
+    return-void
+.end method
 
-.field public static full_screen_mode_button_width:I = 0x7f070115
 
-.field public static gallery_album_cover_size:I = 0x7f070116
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static progress_bar_medium:I = 0x7f0703ee
+    if-ne p0, p1, :cond_0
 
-.field public static quick_camera_button_margin:I = 0x7f0703f0
+    goto :goto_1
 
-.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
+    :cond_0
+    instance-of v0, p1, Ljlc;
 
-.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
+    if-nez v0, :cond_1
 
-.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
+    goto :goto_0
 
-.field public static quick_camera_wrapper_height:I = 0x7f0703f4
+    :cond_1
+    check-cast p1, Ljlc;
 
-.field public static quick_camera_wrapper_width:I = 0x7f0703f5
+    iget-object v0, p0, Ljlc;->b:Lnhg;
+
+    iget-object p1, p1, Ljlc;->b:Lnhg;
+
+    invoke-virtual {v0, p1}, Lnhg;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ljlc;->b:Lnhg;
+
+    invoke-virtual {v0}, Lnhg;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ExternalShareLink(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljlc;->b:Lnhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,49 +1,39 @@
 .class public final Ld2f;
-.super Ljava/lang/Object;
+.super Laq;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lpgd;
-
-.field public final b:Lfi;
-
-.field public final c:Lhgd;
-
-.field public final d:Lhgd;
+# static fields
+.field public static final a:Ld2f;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ld2f;
 
-    iput-object p1, p0, Ld2f;->a:Lpgd;
+    invoke-direct {v0}, Laq;-><init>()V
 
-    new-instance v0, Lfi;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, p1, v1}, Lfi;-><init>(Lpgd;I)V
-
-    iput-object v0, p0, Ld2f;->b:Lfi;
-
-    new-instance v0, Lhgd;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, p1, v1}, Lhgd;-><init>(Lpgd;I)V
-
-    iput-object v0, p0, Ld2f;->c:Lhgd;
-
-    new-instance v0, Lhgd;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, p1, v1}, Lhgd;-><init>(Lpgd;I)V
-
-    iput-object v0, p0, Ld2f;->d:Lhgd;
+    sput-object v0, Ld2f;->a:Ld2f;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()Lo58;
+    .locals 2
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    return-object v0
 .end method

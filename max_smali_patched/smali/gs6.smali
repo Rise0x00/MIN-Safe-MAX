@@ -1,11 +1,14 @@
-.class public interface abstract Lgs6;
+.class public final Lgs6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmr6;
+
 
 # virtual methods
-.method public abstract onConnected()V
-.end method
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.method public abstract z(I)V
+    return-object p1
 .end method

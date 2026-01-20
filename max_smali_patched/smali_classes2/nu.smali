@@ -1,387 +1,182 @@
 .class public final Lnu;
-.super Lmmf;
+.super Lnj0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public X:J
+.field public final X:J
 
-.field public c:Ljava/util/List;
-
-.field public d:Ljava/util/List;
-
-.field public o:Ljava/util/List;
+.field public final o:[J
 
 
 # direct methods
-.method public constructor <init>(Ljf9;)V
+.method public constructor <init>(JI[JJ)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
+    invoke-direct {p0, p1, p2, p3}, Lnj0;-><init>(JI)V
 
-    iget-object p1, p0, Lnu;->c:Ljava/util/List;
+    iput-object p4, p0, Lnu;->o:[J
 
-    if-nez p1, :cond_0
+    iput-wide p5, p0, Lnu;->X:J
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lnu;->c:Ljava/util/List;
-
-    :cond_0
-    iget-object p1, p0, Lnu;->d:Ljava/util/List;
-
-    if-nez p1, :cond_1
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lnu;->d:Ljava/util/List;
-
-    :cond_1
-    iget-object p1, p0, Lnu;->o:Ljava/util/List;
-
-    if-nez p1, :cond_2
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lnu;->o:Ljava/util/List;
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
-    .locals 16
+.method public final e()[B
+    .locals 3
 
-    move-object/from16 v0, p0
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;
 
-    move-object/from16 v1, p1
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsListModify;-><init>()V
 
-    move-object/from16 v2, p2
+    iget v1, p0, Lnj0;->d:I
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    const/4 v5, -0x1
-
-    sparse-switch v3, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v3, "backgrounds"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v5, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v3, "stickerSets"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v5, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v3, "stickers"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v5, 0x1
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v3, "marker"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v5, 0x0
-
-    :goto_0
-    packed-switch v5, :pswitch_data_0
-
-    invoke-virtual {v1}, Ljf9;->v()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {v1}, Le0i;->j(Ljf9;)I
-
-    move-result v2
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v3, v0, Lnu;->o:Ljava/util/List;
-
-    const/4 v3, 0x0
-
-    :goto_1
-    if-ge v3, v2, :cond_c
-
-    iget-object v5, v0, Lnu;->o:Ljava/util/List;
-
-    invoke-static {v1}, Le0i;->r(Ljf9;)I
-
-    move-result v6
-
-    const-string v9, ""
-
-    move-object v13, v9
-
-    move-object v14, v13
-
-    const/4 v10, 0x0
-
-    const-wide/16 v11, 0x0
-
-    :goto_2
-    if-ge v10, v6, :cond_b
-
-    invoke-virtual {v1}, Ljf9;->u0()Ljava/lang/String;
-
-    move-result-object v15
-
-    if-eqz v15, :cond_4
-
-    invoke-virtual {v15}, Ljava/lang/String;->hashCode()I
-
-    move-result v4
-
-    const/16 v7, 0xd1b
-
-    if-eq v4, v7, :cond_9
-
-    const v7, 0x1c56f
-
-    if-eq v4, v7, :cond_7
-
-    const v7, 0x5a72f63
-
-    if-eq v4, v7, :cond_5
-
-    :cond_4
-    :goto_3
-    const-wide/16 v7, 0x0
-
-    goto :goto_5
-
-    :cond_5
-    const-string v4, "color"
-
-    invoke-virtual {v15, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    invoke-static {v1, v9}, Le0i;->u(Ljf9;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v14
-
-    :goto_4
-    const-wide/16 v7, 0x0
-
-    goto :goto_6
-
-    :cond_7
-    const-string v4, "url"
-
-    invoke-virtual {v15, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_8
-
-    goto :goto_3
-
-    :cond_8
-    invoke-static {v1, v9}, Le0i;->u(Ljf9;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v13
-
-    goto :goto_4
-
-    :cond_9
-    const-string v4, "id"
-
-    invoke-virtual {v15, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_a
-
-    goto :goto_3
-
-    :cond_a
-    const-wide/16 v7, 0x0
-
-    invoke-static {v1, v7, v8}, Le0i;->q(Ljf9;J)J
-
-    move-result-wide v11
-
-    goto :goto_6
-
-    :goto_5
-    invoke-virtual {v1}, Ljf9;->v()V
-
-    :goto_6
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_2
-
-    :cond_b
-    new-instance v4, Lze0;
-
-    invoke-direct {v4, v11, v12, v13, v14}, Lze0;-><init>(JLjava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_1
-
-    :cond_c
-    return-void
-
-    :pswitch_1
-    invoke-static {v1}, Luz;->e(Ljf9;)Luz;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lnu;->d:Ljava/util/List;
-
-    return-void
-
-    :pswitch_2
-    invoke-static {v1}, Luz;->e(Ljf9;)Luz;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lnu;->c:Ljava/util/List;
-
-    return-void
-
-    :pswitch_3
-    invoke-virtual {v1}, Ljf9;->r0()J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Lnu;->X:J
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x40736bc6 -> :sswitch_3
-        0x5b4c1ed6 -> :sswitch_2
-        0x5f2b672e -> :sswitch_1
-        0x62725105 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 8
-
-    iget-object v0, p0, Lnu;->c:Ljava/util/List;
-
-    invoke-static {v0}, Lqyh;->a(Ljava/util/Collection;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lnu;->d:Ljava/util/List;
-
-    invoke-static {v1}, Lqyh;->a(Ljava/util/Collection;)I
+    invoke-static {v1}, Lru/ok/tamtam/nano/a;->p(I)I
 
     move-result v1
 
-    iget-object v2, p0, Lnu;->o:Ljava/util/List;
+    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->assetType:I
 
-    invoke-static {v2}, Lqyh;->a(Ljava/util/Collection;)I
+    iget-wide v1, p0, Lvm;->a:J
 
-    move-result v2
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->requestId:J
 
-    iget-wide v3, p0, Lnu;->X:J
+    iget-object v1, p0, Lnu;->o:[J
 
-    const-string v5, "stickerSets="
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->ids:[J
 
-    const-string v6, "backgrounds="
+    iget-wide v1, p0, Lnu;->X:J
 
-    const-string v7, "{stickers="
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsListModify;->modifyTime:J
 
-    invoke-static {v7, v0, v5, v1, v6}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", marker="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lbp9;->toByteArray(Lbp9;)[B
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final getType()Lc0c;
+    .locals 1
+
+    sget-object v0, Lc0c;->R0:Lc0c;
+
+    return-object v0
+.end method
+
+.method public final h()Lj2;
+    .locals 5
+
+    new-instance v0, Li1b;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v1, v2}, Li1b;-><init>(Lwob;I)V
+
+    iget v1, p0, Lnj0;->d:I
+
+    if-eqz v1, :cond_2
+
+    iget-object v2, p0, Lnu;->o:[J
+
+    if-eqz v2, :cond_1
+
+    const-string v3, "type"
+
+    invoke-static {v1}, Lt02;->e(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v3, v1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "ids"
+
+    invoke-virtual {v0, v1, v2}, Lj2;->x(Ljava/lang/String;[J)V
+
+    const-wide/16 v1, 0x0
+
+    iget-wide v3, p0, Lnu;->X:J
+
+    cmp-long v1, v3, v1
+
+    if-ltz v1, :cond_0
+
+    const-string v1, "updateTime"
+
+    invoke-virtual {v0, v3, v4, v1}, Lj2;->y(JLjava/lang/String;)V
+
+    :cond_0
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "ids must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "type must not be null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final s(Licg;)V
+    .locals 4
+
+    check-cast p1, Lou;
+
+    iget-boolean v0, p1, Lou;->c:Z
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p1, Lou;->d:J
+
+    invoke-virtual {p0, v2, v3}, Lnj0;->t(J)V
+
+    iget-object p1, p0, Lvm;->c:Lwm;
+
+    if-eqz p1, :cond_0
+
+    move-object v1, p1
+
+    :cond_0
+    invoke-virtual {v1}, Lwm;->b()Lcy0;
+
+    move-result-object p1
+
+    new-instance v0, Lpu;
+
+    iget-wide v1, p0, Lvm;->a:J
+
+    invoke-direct {v0, v1, v2}, Lkk0;-><init>(J)V
+
+    invoke-virtual {p1, v0}, Lcy0;->c(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    new-instance p1, Lnbg;
+
+    const-string v0, "asset.task.failed"
+
+    const-string v2, "failed to modify asset list"
+
+    invoke-direct {p1, v0, v2, v1}, Lnbg;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Lnj0;->k(Lnbg;)V
+
+    return-void
 .end method

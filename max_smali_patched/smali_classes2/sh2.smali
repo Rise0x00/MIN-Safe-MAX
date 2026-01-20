@@ -1,113 +1,97 @@
-.class public final Lsh2;
-.super Ljava/lang/Object;
+.class public final enum Lsh2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ltif;
+# static fields
+.field public static final enum a:Lsh2;
 
-.field public final b:Ltif;
+.field public static final enum b:Lsh2;
+
+.field public static final enum c:Lsh2;
+
+.field public static final enum d:Lsh2;
+
+.field public static final synthetic o:[Lsh2;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lsh2;
 
-    new-instance v0, Lwa2;
+    const-string v1, "DIALOG"
 
-    const/4 v1, 0x7
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1}, Lwa2;-><init>(I)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Ltif;
+    sput-object v0, Lsh2;->a:Lsh2;
 
-    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+    new-instance v1, Lsh2;
 
-    iput-object v1, p0, Lsh2;->a:Ltif;
+    const-string v2, "CHAT"
 
-    new-instance v0, Lwa2;
+    const/4 v3, 0x1
 
-    const/16 v1, 0x8
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1}, Lwa2;-><init>(I)V
+    sput-object v1, Lsh2;->b:Lsh2;
 
-    new-instance v1, Ltif;
+    new-instance v2, Lsh2;
 
-    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+    const-string v3, "CHANNEL"
 
-    iput-object v1, p0, Lsh2;->b:Ltif;
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lsh2;->c:Lsh2;
+
+    new-instance v3, Lsh2;
+
+    const-string v4, "GROUP_CHAT"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lsh2;->d:Lsh2;
+
+    filled-new-array {v0, v1, v2, v3}, [Lsh2;
+
+    move-result-object v0
+
+    sput-object v0, Lsh2;->o:[Lsh2;
 
     return-void
 .end method
 
-.method public static a(I)La14;
-    .locals 6
+.method public static valueOf(Ljava/lang/String;)Lsh2;
+    .locals 1
 
-    new-instance v0, La14;
+    const-class v0, Lsh2;
 
-    sget v1, Lvza;->a0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    new-instance v2, Lirf;
+    move-result-object p0
 
-    invoke-direct {v2, p0}, Lirf;-><init>(I)V
+    check-cast p0, Lsh2;
 
-    sget p0, Ly0b;->j:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0x14
-
-    invoke-direct/range {v0 .. v5}, La14;-><init>(ILnrf;Ljava/lang/Integer;Ljava/lang/Integer;I)V
-
-    return-object v0
+    return-object p0
 .end method
 
+.method public static values()[Lsh2;
+    .locals 1
 
-# virtual methods
-.method public final b()Le28;
-    .locals 2
+    sget-object v0, Lsh2;->o:[Lsh2;
 
-    invoke-static {}, Lwti;->b()Le28;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsh2;->b:Ltif;
-
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, La14;
-
-    invoke-virtual {v0, v1}, Le28;->add(Ljava/lang/Object;)Z
-
-    sget v1, Lxza;->r1:I
-
-    invoke-static {v1}, Lsh2;->a(I)La14;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Le28;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, p0, Lsh2;->a:Ltif;
-
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, La14;
-
-    invoke-virtual {v0, v1}, Le28;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v0}, Lwti;->a(Ljava/util/List;)Le28;
+    invoke-virtual {v0}, [Lsh2;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lsh2;
 
     return-object v0
 .end method

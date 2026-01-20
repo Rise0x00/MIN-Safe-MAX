@@ -1,181 +1,117 @@
 .class public final Lo27;
-.super Lnh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lrqj;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lrqj;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-direct {p0, v0}, Lnh;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    const-wide/16 v0, 0xc8
-
-    const/4 p1, 0x2
-
-    .line 2
-    invoke-direct {p0, v0, v1, p1}, Lnh;-><init>(JI)V
+    iput-object p1, p0, Lo27;->a:Lrqj;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lh24;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance v0, Lo27;
+    instance-of v0, p1, Lo27;
 
-    iget-wide v1, p0, Lnh;->d:J
+    const/4 v1, 0x0
 
-    iget-boolean v3, p0, Lnh;->t0:Z
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1, v2, v3}, Lnh;-><init>(JZ)V
+    return v1
 
-    return-object v0
-.end method
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lo27;->a:Lrqj;
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 5
+    check-cast p1, Lo27;
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    iget-object p1, p1, Lo27;->a:Lrqj;
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+    check-cast v0, Lgpj;
 
-    const/4 p5, 0x2
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
 
-    const/4 v0, 0x0
+    move-result-object v2
+
+    invoke-static {v2, p1}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 p1, 0x13
+
+    invoke-virtual {v0, v2, p1}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
-
-    if-eqz p4, :cond_1
-
-    if-eqz p2, :cond_0
-
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    neg-float v3, v3
-
-    new-array v4, v1, [F
-
-    aput v3, v4, v0
-
-    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_0
-    if-eqz p3, :cond_4
-
-    sget-object p2, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result p4
-
-    int-to-float p4, p4
-
-    new-array p5, p5, [F
-
-    aput p4, p5, v0
-
-    aput v2, p5, v1
-
-    invoke-static {p3, p2, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    return-object p1
-
     :cond_1
-    if-eqz p2, :cond_2
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
+    return v1
 
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+    :catch_0
+    move-exception p1
 
-    move-result v3
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
 
-    int-to-float v3, v3
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    new-array v4, v1, [F
-
-    aput v3, v4, v0
-
-    invoke-static {p2, p4, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p4
-
-    invoke-virtual {p1, p4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_2
-    if-eqz p3, :cond_4
-
-    if-eqz p2, :cond_3
-
-    invoke-virtual {p2}, Landroid/view/View;->getTranslationX()F
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_3
-    move p2, v2
-
-    :goto_0
-    sget-object p4, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
-
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    sub-float/2addr p2, v3
-
-    new-array p5, p5, [F
-
-    aput p2, p5, v0
-
-    aput v2, p5, v1
-
-    invoke-static {p3, p4, p5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    :cond_4
-    return-object p1
+    throw v0
 .end method
 
-.method public final n(Landroid/view/View;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    const/4 v0, 0x0
+    :try_start_0
+    iget-object v0, p0, Lo27;->a:Lrqj;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setTranslationX(F)V
+    check-cast v0, Lgpj;
 
-    return-void
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object v1
+
+    const/16 v2, 0x14
+
+    invoke-virtual {v0, v1, v2}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

@@ -1,86 +1,59 @@
-.class public final synthetic Le25;
+.class public final Le25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lh25;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final a:Lsb4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh25;Lj25;I)V
+.method public constructor <init>(Lsb4;)V
     .locals 0
 
-    iput p3, p0, Le25;->a:I
-
-    iput-object p1, p0, Le25;->b:Lh25;
-
-    iput-object p2, p0, Le25;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Le25;->a:Lsb4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final execute(Ljava/lang/Runnable;)V
     .locals 3
 
-    iget v0, p0, Le25;->a:I
+    iget-object v0, p0, Le25;->a:Lsb4;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, Lxg5;->a:Lxg5;
 
-    iget-object v0, p0, Le25;->b:Lh25;
+    invoke-static {v0, v1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->safeIsDispatchNeeded(Lsb4;Lqb4;)Z
 
-    iget v1, v0, Lh25;->a:I
+    move-result v2
 
-    iget-object v0, v0, Lh25;->b:Lo19;
+    if-eqz v2, :cond_0
 
-    iget-object v2, p0, Le25;->c:Ljava/lang/Object;
-
-    invoke-interface {v2, v1, v0}, Lj25;->z(ILo19;)V
+    invoke-static {v0, v1, p1}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->safeDispatch(Lsb4;Lqb4;Ljava/lang/Runnable;)V
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Le25;->b:Lh25;
-
-    iget v1, v0, Lh25;->a:I
-
-    iget-object v0, v0, Lh25;->b:Lo19;
-
-    iget-object v2, p0, Le25;->c:Ljava/lang/Object;
-
-    invoke-interface {v2, v1, v0}, Lj25;->w(ILo19;)V
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Le25;->b:Lh25;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iget v1, v0, Lh25;->a:I
+    iget-object v0, p0, Le25;->a:Lsb4;
 
-    iget-object v0, v0, Lh25;->b:Lo19;
+    invoke-virtual {v0}, Lsb4;->toString()Ljava/lang/String;
 
-    iget-object v2, p0, Le25;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-interface {v2, v1, v0}, Lj25;->B(ILo19;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -2,13 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhyd;
-
 
 # virtual methods
-.method public abstract a()J
-.end method
-
-.method public abstract b(J)J
+.method public abstract d(Ljava/lang/Object;)V
 .end method

@@ -1,98 +1,37 @@
 .class public final Lvlg;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljhg;
-.implements Lja7;
-.implements Ljtf;
-
-
-# static fields
-.field public static final b:Lv90;
-
-.field public static final c:Lv90;
-
-.field public static final d:Lv90;
 
 
 # instance fields
-.field public final a:Lu9b;
+.field public X:I
 
+.field public d:Lbtd;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lv90;
-
-    const-string v1, "camerax.video.VideoCapture.videoOutput"
-
-    const-class v2, Lyug;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lv90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lvlg;->b:Lv90;
-
-    new-instance v0, Lv90;
-
-    const-string v1, "camerax.video.VideoCapture.videoEncoderInfoFinder"
-
-    const-class v2, Lpj6;
-
-    invoke-direct {v0, v1, v2, v3}, Lv90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lvlg;->c:Lv90;
-
-    new-instance v0, Lv90;
-
-    const-string v1, "camerax.video.VideoCapture.forceEnableSurfaceProcessing"
-
-    const-class v2, Ljava/lang/Boolean;
-
-    invoke-direct {v0, v1, v2, v3}, Lv90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lvlg;->d:Lv90;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lu9b;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lvlg;->b:Lv90;
-
-    iget-object v1, p1, Lu9b;->a:Ljava/util/TreeMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/TreeMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    invoke-static {v0}, Loui;->b(Z)V
-
-    iput-object p1, p0, Lvlg;->a:Lu9b;
-
-    return-void
-.end method
+.field public synthetic o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final getConfig()Lck3;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Lvlg;->a:Lu9b;
+    iput-object p1, p0, Lvlg;->o:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    iget p1, p0, Lvlg;->X:I
 
-.method public final getInputFormat()I
-    .locals 1
+    const/high16 v0, -0x80000000
 
-    const/16 v0, 0x22
+    or-int/2addr p1, v0
 
-    return v0
+    iput p1, p0, Lvlg;->X:I
+
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    invoke-static {v0, v1, p1, p0}, Ldui;->g(JLbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

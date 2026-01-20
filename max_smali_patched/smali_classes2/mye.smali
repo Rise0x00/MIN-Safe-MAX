@@ -1,85 +1,36 @@
-.class public abstract synthetic Lmye;
-.super Ljava/lang/Object;
+.class public final Lmye;
+.super Ljef;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
-
-.field public static final synthetic $EnumSwitchMapping$1:[I
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final y(Lud8;)V
     .locals 4
 
-    const/4 v0, 0x2
+    instance-of v0, p1, Ldr0;
 
-    invoke-static {v0}, Lnx1;->y(I)[I
+    if-nez v0, :cond_0
 
-    move-result-object v1
+    return-void
 
-    array-length v1, v1
+    :cond_0
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    new-array v1, v1, [I
+    check-cast v0, Lk7b;
 
-    const/4 v2, 0x1
+    check-cast p1, Ldr0;
 
-    const/4 v3, 0x0
+    iget-object v1, p1, Ldr0;->c:Ljava/lang/String;
 
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
 
-    :catch_0
-    :try_start_1
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iget-wide v1, p1, Ldr0;->a:J
 
-    :catch_1
-    sput-object v1, Lmye;->$EnumSwitchMapping$0:[I
+    iget-object v3, p1, Ldr0;->d:Ljava/lang/CharSequence;
 
-    invoke-static {}, Lv10;->values()[Lv10;
+    iget-object p1, p1, Ldr0;->b:Ljava/lang/String;
 
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    :try_start_2
-    aput v2, v1, v0
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x3
-
-    :try_start_3
-    aput v0, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v0, 0x4
-
-    :try_start_4
-    aput v2, v1, v0
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    const/16 v2, 0x9
-
-    :try_start_5
-    aput v0, v1, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    sput-object v1, Lmye;->$EnumSwitchMapping$1:[I
+    invoke-virtual {v0, v1, v2, v3, p1}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
     return-void
 .end method

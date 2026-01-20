@@ -1,36 +1,46 @@
-.class public final synthetic Lb84;
+.class public final Lb84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/BiFunction;
+.implements Lud8;
 
 
 # instance fields
-.field public final synthetic a:Li74;
+.field public final a:Ljava/util/List;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Li74;)V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb84;->a:Li74;
+    iput-object p1, p0, Lb84;->a:Ljava/util/List;
+
+    sget p1, Lceb;->E:I
+
+    iput p1, p0, Lb84;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic apply(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final getItemId()J
+    .locals 2
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 1
 
-    iget-object v0, p0, Lb84;->a:Li74;
+    iget v0, p0, Lb84;->b:I
 
-    invoke-virtual {v0, p1, p2}, Li74;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

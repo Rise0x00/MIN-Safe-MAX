@@ -3,270 +3,178 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqp1;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lyk1;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final c:Lyk1;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/call/CallScreen;
+.field public final a:J
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lz7;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Lyk1;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    new-instance v0, Lyk1;
+
+    const-wide/16 v1, 0x0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v2, v3}, Lyk1;-><init>(JI)V
+
+    sput-object v0, Lyk1;->c:Lyk1;
+
+    return-void
+.end method
+
+.method public constructor <init>(JI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    iput-wide p1, p0, Lyk1;->a:J
+
+    iput p3, p0, Lyk1;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
-    .locals 5
+.method public final describeContents()I
+    .locals 1
 
-    iget-object v0, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ltn1;->x()Lvb1;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lvb1;->k:Ljava/lang/String;
-
-    invoke-static {v0}, Lpdi;->l(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v2, Lp66;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v2, v1, v3}, Lp66;-><init>(Landroid/content/Context;I)V
-
-    sget v3, Lgsc;->call_link_share_dialog_share_link_description:I
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v3, v0}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v3, v2, Lp66;->d:Ljava/lang/Object;
-
-    check-cast v3, Landroid/content/Intent;
-
-    const-string v4, "android.intent.extra.TEXT"
-
-    invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    sget v0, Lgsc;->call_link_share_dialog_share_link_dialog_intent_title:I
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, v2, Lp66;->b:Ljava/lang/Object;
-
-    const-string v0, "text/plain"
-
-    invoke-virtual {v3, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-virtual {v2}, Lp66;->M()V
-
-    return-void
+    return v0
 .end method
 
-.method public final g()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
+    return v0
 
-    move-result-object v1
+    :cond_0
+    instance-of v1, p1, Lyk1;
 
-    invoke-virtual {v1}, Ltn1;->x()Lvb1;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    if-nez v1, :cond_1
 
-    iget-object v1, v1, Lvb1;->k:Ljava/lang/String;
+    return v2
 
-    invoke-static {v1}, Lpdi;->l(Ljava/lang/String;)Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lyk1;
 
-    move-result-object v1
+    iget-wide v3, p0, Lyk1;->a:J
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-wide v5, p1, Lyk1;->a:J
 
-    move-result-object v2
+    cmp-long v1, v3, v5
 
-    invoke-static {v2, v1}, Lt83;->a(Landroid/content/Context;Ljava/lang/String;)V
+    if-eqz v1, :cond_2
 
-    invoke-static {}, Lt83;->b()Z
+    return v2
+
+    :cond_2
+    iget v1, p0, Lyk1;->b:I
+
+    iget p1, p1, Lyk1;->b:I
+
+    if-eq v1, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lyk1;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lyk1;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    add-int/2addr v1, v0
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lgsc;->call_link_share_dialog_share_link_copy:I
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Lc3b;
-
-    invoke-direct {v2, v0}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    invoke-virtual {v2, v1}, Lc3b;->h(Ljava/lang/CharSequence;)V
-
-    new-instance v0, Lkr1;
-
-    const/4 v1, 0x4
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v3}, Lkr1;-><init>(ILoi6;)V
-
-    invoke-virtual {v2, v0}, Lc3b;->d(Ld3b;)V
-
-    new-instance v0, Lk3b;
-
-    const/4 v1, 0x3
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v3, v3, v3, v1}, Lk3b;-><init>(IIII)V
-
-    invoke-virtual {v2, v0}, Lc3b;->c(Lk3b;)V
-
-    invoke-virtual {v2}, Lc3b;->i()Lb3b;
-
-    :cond_0
-    return-void
+    return v1
 .end method
 
-.method public final h()V
-    .locals 1
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
-
-    iget-object v0, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ltn1;->v()V
-
-    return-void
-.end method
-
-.method public final l()V
+.method public final toString()Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
+    iget-wide v1, p0, Lyk1;->a:J
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Ltn1;->K0:Laf5;
+    const-string v1, ":"
 
-    new-instance v2, Lvl1;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ltn1;->x()Lvb1;
+    iget v1, p0, Lyk1;->b:I
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Lvb1;->k:Ljava/lang/String;
-
-    invoke-static {v0}, Lpdi;->l(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Lvl1;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v2}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final n(Lxh1;)V
-    .locals 1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
+    iget-wide v0, p0, Lyk1;->a:J
 
-    iget-object v0, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
+    iget p2, p0, Lyk1;->b:I
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p1}, Ltn1;->B(Lxh1;)V
-
-    return-void
-.end method
-
-.method public final p(Lxh1;Landroid/graphics/Point;)V
-    .locals 1
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
-
-    iget-object v0, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Ltn1;->D(Lxh1;Landroid/graphics/Point;)V
-
-    return-void
-.end method
-
-.method public final q()V
-    .locals 3
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
-
-    iget-object v0, p0, Lyk1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lf34;
-
-    move-result-object v2
-
-    iget-boolean v2, v2, Lf34;->g:Z
-
-    invoke-virtual {v1, v2}, Ltn1;->u(Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v0}, Lone/me/calls/ui/ui/call/CallScreen;->y0(Lone/me/calls/ui/ui/call/CallScreen;)V
-
-    :cond_0
     return-void
 .end method

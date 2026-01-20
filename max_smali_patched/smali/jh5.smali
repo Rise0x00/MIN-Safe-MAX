@@ -1,90 +1,42 @@
 .class public final Ljh5;
-.super Lfh5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# direct methods
-.method public constructor <init>(Ljava/io/InputStream;)V
-    .locals 1
-
-    .line 3
-    invoke-direct {p0, p1}, Lfh5;-><init>(Ljava/io/InputStream;)V
-
-    .line 4
-    invoke-virtual {p1}, Ljava/io/InputStream;->markSupported()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    .line 5
-    iget-object p1, p0, Lfh5;->a:Ljava/io/DataInputStream;
-
-    const v0, 0x7fffffff
-
-    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
-
-    return-void
-
-    .line 6
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Cannot create SeekableByteOrderedDataInputStream with stream that does not support mark/reset"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public constructor <init>([B)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0, p1}, Lfh5;-><init>([B)V
-
-    .line 2
-    iget-object p1, p0, Lfh5;->a:Ljava/io/DataInputStream;
-
-    const v0, 0x7fffffff
-
-    invoke-virtual {p1, v0}, Ljava/io/InputStream;->mark(I)V
-
-    return-void
-.end method
+# interfaces
+.implements Ln8e;
 
 
 # virtual methods
-.method public final d(J)V
-    .locals 3
-
-    iget v0, p0, Lfh5;->c:I
-
-    int-to-long v1, v0
-
-    cmp-long v1, v1, p1
-
-    if-lez v1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lfh5;->c:I
-
-    iget-object v0, p0, Lfh5;->a:Ljava/io/DataInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
-
-    goto :goto_0
-
-    :cond_0
-    int-to-long v0, v0
-
-    sub-long/2addr p1, v0
-
-    :goto_0
-    long-to-int p1, p1
-
-    invoke-virtual {p0, p1}, Lfh5;->c(I)V
+.method public final b()V
+    .locals 0
 
     return-void
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final g(J)I
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final p(Ltx4;Lol4;I)I
+    .locals 0
+
+    const/4 p1, 0x4
+
+    iput p1, p2, Laz;->b:I
+
+    const/4 p1, -0x4
+
+    return p1
 .end method

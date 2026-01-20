@@ -1,161 +1,88 @@
-.class public final Lkpi;
-.super Lh4;
+.class public abstract Lkpi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkpi;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:Ljava/lang/String;
-
-.field public Z:Ljava/lang/String;
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public o:Ljava/lang/String;
-
-.field public s0:Ljava/lang/String;
-
-.field public t0:Ljava/lang/String;
-
-.field public u0:Ljava/lang/String;
-
-.field public v0:Ljava/lang/String;
-
-.field public w0:Ljava/lang/String;
-
-.field public x0:Ljava/lang/String;
+.field public static final synthetic a:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lk2j;
+    const-class v0, Lkpi;
 
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Lk2j;-><init>(I)V
-
-    sput-object v0, Lkpi;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     return-void
 .end method
 
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Parcelable;
+
+    return-object p0
+.end method
+
+.method public static b(Landroid/os/Parcel;)V
     .locals 2
 
-    const/16 p2, 0x4f45
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
 
-    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
+    move-result p0
 
-    move-result p2
+    if-gtz p0, :cond_0
 
-    const/4 v0, 0x2
+    return-void
 
-    iget-object v1, p0, Lkpi;->a:Ljava/lang/String;
+    :cond_0
+    new-instance v0, Landroid/os/BadParcelableException;
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const-string v1, "Parcel data not fully consumed, unread size: "
 
-    const/4 v0, 0x3
+    invoke-static {p0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, p0, Lkpi;->b:Ljava/lang/String;
+    move-result-object p0
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
 
-    const/4 v0, 0x4
+    throw v0
+.end method
 
-    iget-object v1, p0, Lkpi;->c:Ljava/lang/String;
+.method public static c(Landroid/os/Parcel;Landroid/os/Parcelable;)V
+    .locals 2
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/4 v0, 0x0
 
-    const/4 v0, 0x5
+    if-nez p1, :cond_0
 
-    iget-object v1, p0, Lkpi;->d:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    return-void
 
-    const/4 v0, 0x6
+    :cond_0
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lkpi;->o:Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v0, 0x7
-
-    iget-object v1, p0, Lkpi;->X:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0x8
-
-    iget-object v1, p0, Lkpi;->Y:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0x9
-
-    iget-object v1, p0, Lkpi;->Z:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0xa
-
-    iget-object v1, p0, Lkpi;->s0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0xb
-
-    iget-object v1, p0, Lkpi;->t0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0xc
-
-    iget-object v1, p0, Lkpi;->u0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0xd
-
-    iget-object v1, p0, Lkpi;->v0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0xe
-
-    iget-object v1, p0, Lkpi;->w0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/16 v0, 0xf
-
-    iget-object v1, p0, Lkpi;->x0:Ljava/lang/String;
-
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
+    invoke-interface {p1, p0, v0}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
 
     return-void
 .end method

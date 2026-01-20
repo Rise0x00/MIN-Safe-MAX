@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqm0;
+.implements Lpn0;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->downloadModel(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Ljqe;
+    value = Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate;->downloadModel(Lru/ok/android/externcalls/sdk/ml/config/MLFeatureConfig;)Lkef;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lqm0;"
+        "Lpn0;"
     }
 .end annotation
 
@@ -88,7 +88,7 @@
 
     invoke-direct {v1, v2}, Lru/ok/android/externcalls/sdk/ml/delegate/MLFeatureDelegate$downloadModel$1$1;-><init>(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Lt0j;->a(Ljava/io/File;Lqi6;)V
+    invoke-static {v0, v1}, Lupj;->c(Ljava/io/File;Lnq6;)V
 
     :cond_0
     const/4 v0, 0x1

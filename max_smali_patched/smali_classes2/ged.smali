@@ -1,19 +1,10 @@
-.class public final Lged;
-.super Lied;
-.source "SourceFile"
+.class public abstract Lged;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:Ljava/lang/Integer;
+# static fields
+.field public static oneme_too_many_requests_bottomsheet_positive_button:I = 0x7f130a97
 
+.field public static oneme_too_many_requests_bottomsheet_subtitle:I = 0x7f130a98
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Integer;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lged;->a:Ljava/lang/Integer;
-
-    return-void
-.end method
+.field public static oneme_too_many_requests_bottomsheet_title:I = 0x7f130a99

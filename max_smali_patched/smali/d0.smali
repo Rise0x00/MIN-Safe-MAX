@@ -1,206 +1,139 @@
-.class public final Ld0;
+.class public abstract Ld0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lp0h;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ld0;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final b:Lb0;
 
 
 # instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Ljava/lang/Object;
+.field public final a:Landroid/os/Parcelable;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lb0;
+
+    invoke-direct {v0}, Ld0;-><init>()V
+
+    sput-object v0, Ld0;->b:Lb0;
+
+    new-instance v0, Lc0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lc0;-><init>(I)V
+
+    sput-object v0, Ld0;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Ljava/lang/Object;
-
-    iput-object v0, p0, Ld0;->c:Ljava/lang/Object;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Ld0;->a:I
+    .line 2
+    iput-object v0, p0, Ld0;->a:Landroid/os/Parcelable;
 
     return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .locals 0
+
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 7
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    .line 8
+    :cond_0
+    sget-object p1, Ld0;->b:Lb0;
+
+    :goto_0
+    iput-object p1, p0, Ld0;->a:Landroid/os/Parcelable;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcelable;)V
+    .locals 1
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p1, :cond_1
+
+    .line 4
+    sget-object v0, Ld0;->b:Lb0;
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-object p1, p0, Ld0;->a:Landroid/os/Parcelable;
+
+    return-void
+
+    .line 5
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "superState must not be null"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public a()V
+.method public final describeContents()I
     .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ld0;->b:Z
-
-    return-void
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-object v0, p0, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/appcompat/widget/ActionBarContextView;
-
-    invoke-static {v0}, Landroidx/appcompat/widget/ActionBarContextView;->a(Landroidx/appcompat/widget/ActionBarContextView;)V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Ld0;->b:Z
-
-    return-void
+    return v0
 .end method
 
-.method public c()V
-    .locals 2
+.method public writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    iget-boolean v0, p0, Ld0;->b:Z
+    iget-object v0, p0, Ld0;->a:Landroid/os/Parcelable;
 
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroidx/appcompat/widget/ActionBarContextView;
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Landroidx/appcompat/widget/ActionBarContextView;->s0:Lo0h;
-
-    iget v1, p0, Ld0;->a:I
-
-    invoke-static {v0, v1}, Landroidx/appcompat/widget/ActionBarContextView;->b(Landroidx/appcompat/widget/ActionBarContextView;I)V
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     return-void
-.end method
-
-.method public d(Ljava/lang/Object;)V
-    .locals 3
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget v0, p0, Ld0;->a:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p0, v0}, Ld0;->e(I)V
-
-    iget-object v0, p0, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    iget v1, p0, Ld0;->a:I
-
-    add-int/lit8 v2, v1, 0x1
-
-    iput v2, p0, Ld0;->a:I
-
-    aput-object p1, v0, v1
-
-    return-void
-.end method
-
-.method public e(I)V
-    .locals 4
-
-    iget-object v0, p0, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    if-ge v1, p1, :cond_2
-
-    shr-int/lit8 v3, v1, 0x1
-
-    add-int/2addr v1, v3
-
-    add-int/lit8 v1, v1, 0x1
-
-    if-ge v1, p1, :cond_0
-
-    add-int/lit8 p1, p1, -0x1
-
-    invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result p1
-
-    add-int v1, p1, p1
-
-    :cond_0
-    if-gez v1, :cond_1
-
-    const v1, 0x7fffffff
-
-    :cond_1
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ld0;->c:Ljava/lang/Object;
-
-    iput-boolean v2, p0, Ld0;->b:Z
-
-    return-void
-
-    :cond_2
-    iget-boolean p1, p0, Ld0;->b:Z
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ljava/lang/Object;
-
-    iput-object p1, p0, Ld0;->c:Ljava/lang/Object;
-
-    iput-boolean v2, p0, Ld0;->b:Z
-
-    :cond_3
-    return-void
-.end method
-
-.method public f()Lu4i;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ld0;->b:Z
-
-    iget-object v0, p0, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    iget v1, p0, Ld0;->a:I
-
-    sget-object v2, Ll3i;->b:Lg3i;
-
-    if-nez v1, :cond_0
-
-    sget-object v0, Lu4i;->o:Lu4i;
-
-    return-object v0
-
-    :cond_0
-    new-instance v2, Lu4i;
-
-    invoke-direct {v2, v1, v0}, Lu4i;-><init>(I[Ljava/lang/Object;)V
-
-    return-object v2
 .end method

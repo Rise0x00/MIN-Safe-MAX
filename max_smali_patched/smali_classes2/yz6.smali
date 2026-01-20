@@ -1,79 +1,47 @@
-.class public final synthetic Lyz6;
+.class public final Lyz6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqi6;
+
+# static fields
+.field public static final c:Lnec;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
-.field public final synthetic b:Ljava/util/List;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Lyz6;->a:I
+    new-instance v0, Lnec;
 
-    iput-object p2, p0, Lyz6;->b:Ljava/util/List;
+    const/16 v1, 0x1e
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lnec;-><init>(I)V
+
+    sput-object v0, Lyz6;->c:Lnec;
 
     return-void
 .end method
 
+.method public constructor <init>(Lkotlinx/coroutines/internal/ContextScope;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lyz6;->a:I
+    iput-object p1, p0, Lyz6;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    packed-switch v0, :pswitch_data_0
+    const-class p1, Lyz6;
 
-    check-cast p1, Lw49;
-
-    iget-wide v0, p1, Lw49;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object p1
 
-    iget-object v0, p0, Lyz6;->b:Ljava/util/List;
+    iput-object p1, p0, Lyz6;->b:Ljava/lang/String;
 
-    invoke-interface {v0, p1}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Ljz6;
-
-    invoke-interface {p1}, Ljz6;->getTime()J
-
-    move-result-wide v0
-
-    iget-object p1, p0, Lyz6;->b:Ljava/util/List;
-
-    invoke-static {v0, v1, p1}, Lkti;->a(JLjava/util/List;)Z
-
-    move-result p1
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

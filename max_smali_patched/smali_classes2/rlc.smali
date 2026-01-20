@@ -1,24 +1,58 @@
-.class public abstract Lrlc;
-.super Ljava/lang/Object;
+.class public final Lrlc;
+.super Licg;
+.source "SourceFile"
 
 
-# static fields
-.field public static add_8:I = 0x7f0802d6
+# instance fields
+.field public c:Ljjc;
 
-.field public static apple_outline_24:I = 0x7f0802df
 
-.field public static ball_outline_24:I = 0x7f0802ec
+# virtual methods
+.method public final d(Lpq9;Ljava/lang/String;)V
+    .locals 1
 
-.field public static car_outline_24:I = 0x7f08030f
+    const-string v0, "profile"
 
-.field public static fire_24:I = 0x7f0803e7
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.field public static flags_outline_24:I = 0x7f0804df
+    move-result p2
 
-.field public static lamp_outline_24:I = 0x7f080823
+    if-eqz p2, :cond_0
 
-.field public static paw_outline_24:I = 0x7f08090c
+    invoke-static {p1}, Lqkj;->c(Lpq9;)Ljjc;
 
-.field public static remove_outline_24:I = 0x7f080936
+    move-result-object p1
 
-.field public static symbols_outline_24:I = 0x7f080974
+    iput-object p1, p0, Lrlc;->c:Ljjc;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lpq9;->B()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lrlc;->c:Ljjc;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{profile="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

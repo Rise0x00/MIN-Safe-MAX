@@ -1,125 +1,128 @@
 .class public final Lmt9;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ld76;
 
 
 # instance fields
-.field public final synthetic X:Lpt9;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Ld76;
 
-.field public o:I
+.field public final synthetic c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(Lpt9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lpld;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lmt9;->X:Lpt9;
+    iput p3, p0, Lmt9;->a:I
 
-    iput-object p2, p0, Lmt9;->Y:Ljava/lang/Object;
+    iput-object p1, p0, Lmt9;->b:Ld76;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lmt9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lmt9;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lmt9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Llt9;
+
+    iget-object v1, p0, Lmt9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, p1, v1, v2}, Llt9;-><init>(Lf76;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+
+    iget-object p1, p0, Lmt9;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lmt9;
+    sget-object p2, Lac4;->a:Lac4;
 
-    sget-object p2, Lybg;->a:Lybg;
+    if-ne p1, p2, :cond_0
 
-    invoke-virtual {p1, p2}, Lmt9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lmt9;
-
-    iget-object v0, p0, Lmt9;->X:Lpt9;
-
-    iget-object v1, p0, Lmt9;->Y:Ljava/lang/Object;
-
-    invoke-direct {p1, v0, v1, p2}, Lmt9;-><init>(Lpt9;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lmt9;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    return-object p1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    new-instance v0, Llt9;
 
-    throw p1
+    iget-object v1, p0, Lmt9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 v2, 0x1
 
-    sget p1, Lw35;->d:I
+    invoke-direct {v0, p1, v1, v2}, Llt9;-><init>(Lf76;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
 
-    const-wide/16 v2, 0x3e8
+    iget-object p1, p0, Lmt9;->b:Ld76;
 
-    sget-object p1, Lb45;->d:Lb45;
-
-    invoke-static {v2, v3, p1}, Lzyi;->e(JLb45;)J
-
-    move-result-wide v2
-
-    iput v1, p0, Lmt9;->o:I
-
-    iget-object p1, p0, Lmt9;->X:Lpt9;
-
-    iget-object v0, p0, Lmt9;->Y:Ljava/lang/Object;
-
-    invoke-virtual {p1, v2, v3, p0, v0}, Lpt9;->M(JLp14;Ljava/util/List;)Ljava/lang/Object;
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lh54;->a:Lh54;
+    sget-object p2, Lac4;->a:Lac4;
 
-    if-ne p1, v0, :cond_2
+    if-ne p1, p2, :cond_1
 
-    return-object v0
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Llt9;
+
+    iget-object v1, p0, Lmt9;->c:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v1, v2}, Llt9;-><init>(Lf76;Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
+
+    iget-object p1, p0, Lmt9;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_2
+
+    goto :goto_2
 
     :cond_2
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_2
     return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

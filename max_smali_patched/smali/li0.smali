@@ -1,104 +1,76 @@
 .class public final Lli0;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/util/concurrent/ExecutorService;
+.field public final synthetic o:Lmi0;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/concurrent/ExecutorService;)V
+.method public constructor <init>(Lmi0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lli0;->o:Lmi0;
 
-    iput p1, p0, Lli0;->a:I
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lli0;->b:Ljava/util/concurrent/ExecutorService;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p1, p0, :cond_0
+    check-cast p1, Lf76;
 
-    goto :goto_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lli0;
+    invoke-virtual {p0, p1, p2}, Lli0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_1
-
-    :cond_1
     check-cast p1, Lli0;
 
-    iget v0, p0, Lli0;->a:I
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget v1, p1, Lli0;->a:I
+    invoke-virtual {p1, p2}, Lli0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lli0;->b:Ljava/util/concurrent/ExecutorService;
-
-    iget-object p1, p1, Lli0;->b:Ljava/util/concurrent/ExecutorService;
-
-    invoke-static {v0, p1}, Lvmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x0
-
-    invoke-static {p1, p1}, Lvmi;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget v0, p0, Lli0;->a:I
+    new-instance p1, Lli0;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lli0;->o:Lmi0;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Lli0;-><init>(Lmi0;Lkotlin/coroutines/Continuation;)V
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    return-object p1
+.end method
 
-    iget-object v2, p0, Lli0;->b:Ljava/util/concurrent/ExecutorService;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v3, 0x0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
+    iget-object p1, p0, Lli0;->o:Lmi0;
 
-    move-result-object v0
+    iget-object v0, p1, Lmi0;->a:Landroid/app/Application;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+    iget-object p1, p1, Lmi0;->f:Ldi0;
 
-    move-result v0
+    invoke-virtual {v0, p1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    return v0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

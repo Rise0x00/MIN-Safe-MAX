@@ -1,51 +1,58 @@
-.class public final Lxih;
-.super Lp14;
+.class public final synthetic Lxih;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lyih;
+.field public final synthetic a:I
 
-.field public Y:I
-
-.field public d:Lyih;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lzih;
 
 
 # direct methods
-.method public constructor <init>(Lyih;Lp14;)V
+.method public synthetic constructor <init>(Lzih;I)V
     .locals 0
 
-    iput-object p1, p0, Lxih;->X:Lyih;
+    iput p2, p0, Lxih;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxih;->b:Lzih;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Lxih;->o:Ljava/lang/Object;
+    iget v0, p0, Lxih;->a:I
 
-    iget p1, p0, Lxih;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lxih;->b:Lzih;
 
-    or-int/2addr p1, v0
+    invoke-static {v0}, Lzih;->a(Lzih;)V
 
-    iput p1, p0, Lxih;->Y:I
+    return-void
 
-    iget-object p1, p0, Lxih;->X:Lyih;
+    :pswitch_0
+    iget-object v0, p0, Lxih;->b:Lzih;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lzih;->o:Lohc;
 
-    invoke-virtual {p1, v0, v0, p0}, Lyih;->a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    return-object p1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

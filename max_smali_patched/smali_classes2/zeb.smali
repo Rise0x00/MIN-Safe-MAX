@@ -1,37 +1,95 @@
-.class public abstract synthetic Lzeb;
-.super Ljava/lang/Object;
+.class public final Lzeb;
+.super Ld3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final synthetic c:I
+
+.field public final synthetic d:Lafb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lafb;I)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput p2, p0, Lzeb;->c:I
 
-    invoke-static {v0}, Lnx1;->y(I)[I
+    iput-object p1, p0, Lzeb;->d:Lafb;
 
-    move-result-object v0
+    const/16 p1, 0xd
 
-    array-length v0, v0
+    packed-switch p2, :pswitch_data_0
 
-    new-array v0, v0, [I
+    sget-object p2, Lyeb;->a:Lyeb;
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lzeb;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    sget-object p2, Lxeb;->a:Lxeb;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lzeb;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    check-cast p2, Lxeb;
+
+    check-cast p1, Lxeb;
+
+    iget-object p1, p0, Lzeb;->d:Lafb;
+
+    invoke-virtual {p1}, Lafb;->c()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    check-cast p2, Lyeb;
+
+    check-cast p1, Lyeb;
+
+    iget-object p1, p0, Lzeb;->d:Lafb;
+
+    invoke-virtual {p1}, Lafb;->d()V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,40 +1,43 @@
 .class public final Lmge;
-.super Liqe;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Luig;
 
 
 # virtual methods
-.method public final z(Li28;)V
+.method public final onThemeChanged(Lzlb;)V
     .locals 2
 
-    instance-of v0, p1, Lvxd;
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    return-void
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/widget/ProgressBar;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+    const/4 v0, 0x0
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    check-cast p1, Lvxd;
-
-    iget-object v1, p1, Lvxd;->a:Lirf;
-
-    invoke-virtual {v1, p0}, Lnrf;->a(Liqe;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lvxd;->c:Lmrf;
-
-    invoke-virtual {p1, p0}, Lnrf;->a(Liqe;)Ljava/lang/CharSequence;
+    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setTextBadge(Ljava/lang/CharSequence;)V
+    iget p1, p1, Lwe7;->i:I
 
+    invoke-static {v0, p1}, Lpti;->g(Landroid/widget/ProgressBar;I)V
+
+    :cond_1
     return-void
 .end method

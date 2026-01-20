@@ -1,129 +1,225 @@
 .class public final Lo97;
-.super Lyx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lo97;
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/io/BufferedReader;
+
+.field public final c:Ljava/util/ArrayDeque;
+
+.field public d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/util/ArrayDeque;Ljava/io/BufferedReader;I)V
+    .locals 0
 
-    new-instance v0, Lo97;
+    iput p3, p0, Lo97;->a:I
 
-    new-instance v1, Lqtd;
+    iput-object p1, p0, Lo97;->c:Ljava/util/ArrayDeque;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lo97;->b:Ljava/io/BufferedReader;
 
-    sput-object v0, Lo97;->b:Lo97;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljhg;Lz30;)V
+.method public final a()Z
     .locals 3
 
-    invoke-super {p0, p1, p2}, Lyx1;->a(Ljhg;Lz30;)V
+    iget v0, p0, Lo97;->a:I
 
-    instance-of v0, p1, Ln97;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_4
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
 
-    check-cast p1, Ln97;
+    const/4 v1, 0x1
 
-    invoke-static {}, Ly0a;->b()Ly0a;
-
-    move-result-object v0
-
-    sget-object v1, Ln97;->b:Lv90;
-
-    invoke-interface {p1, v1}, Lg0d;->p(Lv90;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {p1, v1}, Lg0d;->l(Lv90;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    const-class v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
-
-    sget-object v2, Lbt4;->a:Lnx6;
-
-    invoke-virtual {v2, v1}, Lnx6;->f(Ljava/lang/Class;)Lgjc;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/camera2/internal/compat/quirk/ImageCapturePixelHDRPlusQuirk;
-
-    if-nez v1, :cond_0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    if-eqz p1, :cond_2
+    iget-object v0, p0, Lo97;->c:Ljava/util/ArrayDeque;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    if-eq p1, v1, :cond_1
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
 
     goto :goto_0
 
     :cond_1
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
+    iget-object v0, p0, Lo97;->b:Ljava/io/BufferedReader;
 
-    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    invoke-static {p1}, Lsy1;->Y(Landroid/hardware/camera2/CaptureRequest$Key;)Lv90;
+    move-result-object v0
 
-    move-result-object p1
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, p1, v1}, Ly0a;->g(Lv90;Ljava/lang/Object;)V
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_2
-    sget-object p1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_ENABLE_ZSL:Landroid/hardware/camera2/CaptureRequest$Key;
+    const/4 v1, 0x0
 
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    :goto_0
+    return v1
 
-    invoke-static {p1}, Lsy1;->Y(Landroid/hardware/camera2/CaptureRequest$Key;)Lv90;
+    :pswitch_0
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, Ly0a;->g(Lv90;Ljava/lang/Object;)V
+    if-eqz v0, :cond_3
+
+    goto :goto_1
 
     :cond_3
-    :goto_0
-    new-instance p1, Lsy1;
+    iget-object v0, p0, Lo97;->c:Ljava/util/ArrayDeque;
 
-    invoke-static {v0}, Lu9b;->a(Lck3;)Lu9b;
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lhf;-><init>(Ljava/lang/Object;)V
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {p2, p1}, Lz30;->c(Lck3;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    goto :goto_1
 
     :cond_4
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Lo97;->b:Ljava/io/BufferedReader;
 
-    const-string p2, "config is not ImageCaptureConfig"
+    invoke-virtual {v0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p1
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :cond_5
+    const/4 v1, 0x0
+
+    :goto_1
+    return v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 2
+
+    iget v0, p0, Lo97;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lo97;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lo97;->d:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lo97;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lo97;->d:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lo97;->d:Ljava/lang/String;
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

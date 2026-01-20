@@ -1,100 +1,111 @@
 .class public final Lfh2;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
+
+# static fields
+.field public static final f:Lfh2;
+
+.field public static final g:Lfh2;
 
 
 # instance fields
-.field public final synthetic X:Lgh2;
+.field public final a:Lmh2;
 
-.field public synthetic o:F
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lgh2;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 9
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v0, Lfh2;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    invoke-direct/range {v0 .. v7}, Lfh2;-><init>(Lmh2;IJJLjava/util/List;)V
+
+    sput-object v0, Lfh2;->f:Lfh2;
+
+    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v1, Lfh2;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lfh2;-><init>(Lmh2;IJJLjava/util/List;)V
+
+    sput-object v1, Lfh2;->g:Lfh2;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lmh2;IJJLjava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lfh2;->X:Lgh2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lfh2;->a:Lmh2;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lfh2;->b:I
+
+    iput-wide p3, p0, Lfh2;->c:J
+
+    iput-wide p5, p0, Lfh2;->d:J
+
+    iput-object p7, p0, Lfh2;->e:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Leh2;
+    .locals 3
 
-    check-cast p1, Ljava/lang/Number;
+    new-instance v0, Leh2;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result p1
+    iget-object v1, p0, Lfh2;->a:Lmh2;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput-object v1, v0, Leh2;->d:Ljava/lang/Object;
 
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    iget v1, p0, Lfh2;->b:I
 
-    move-result-object p1
+    iput v1, v0, Leh2;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lfh2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v1, p0, Lfh2;->c:J
 
-    move-result-object p1
+    iput-wide v1, v0, Leh2;->b:J
 
-    check-cast p1, Lfh2;
+    iget-wide v1, p0, Lfh2;->d:J
 
-    sget-object p2, Lybg;->a:Lybg;
+    iput-wide v1, v0, Leh2;->c:J
 
-    invoke-virtual {p1, p2}, Lfh2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lfh2;->e:Ljava/util/List;
 
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lfh2;
-
-    iget-object v1, p0, Lfh2;->X:Lgh2;
-
-    invoke-direct {v0, v1, p2}, Lfh2;-><init>(Lgh2;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->floatValue()F
-
-    move-result p1
-
-    iput p1, v0, Lfh2;->o:F
+    iput-object v1, v0, Leh2;->o:Ljava/lang/Object;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget p1, p0, Lfh2;->o:F
-
-    iget-object v0, p0, Lfh2;->X:Lgh2;
-
-    iget-object v0, v0, Lgh2;->H0:Loza;
-
-    const/16 v1, 0x64
-
-    int-to-float v1, v1
-
-    mul-float/2addr p1, v1
-
-    invoke-virtual {v0, p1}, Loza;->setProgress(F)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

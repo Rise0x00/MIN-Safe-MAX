@@ -1,11 +1,25 @@
-.class public interface abstract Lzgb;
+.class public abstract Lzgb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract b()Ljava/util/Map;
+.field public static final b:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Lrfd;->Typography_Footnote:I
+
+    sput v0, Lzgb;->a:I
+
+    sget v0, Lrfd;->Typography_Title3:I
+
+    sput v0, Lzgb;->b:I
+
+    return-void
 .end method

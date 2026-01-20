@@ -1,100 +1,48 @@
-.class public abstract Lwdb;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lwdb;
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Lih8;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public static final a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lxh1;
-    .locals 4
-
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/id/ParticipantId;->id:Ljava/lang/String;
-
-    const-string v0, ":"
-
-    filled-new-array {v0}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x6
-
-    invoke-static {p0, v0, v1}, Lxaf;->W(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-le v0, v2, :cond_0
-
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0}, Lebf;->k(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    :cond_0
-    new-instance v0, Lxh1;
-
-    invoke-static {p0}, Lab3;->A(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/String;
-
-    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v2
-
-    invoke-direct {v0, v2, v3, v1}, Lxh1;-><init>(JI)V
-
-    return-object v0
-.end method
-
-.method public static final b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+.method public constructor <init>(Lih8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    iput-object p1, p0, Lwdb;->X:Lih8;
 
-    move-result-object p0
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->authorized(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final c(Lxh1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-    .locals 3
 
-    new-instance v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v1, p0, Lxh1;->a:J
+    iput-object p1, p0, Lwdb;->d:Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    iget p1, p0, Lwdb;->o:I
 
-    move-result-object v1
+    const/high16 v0, -0x80000000
 
-    const/4 v2, 0x0
+    or-int/2addr p1, v0
 
-    iget p0, p0, Lxh1;->b:I
+    iput p1, p0, Lwdb;->o:I
 
-    invoke-direct {v0, v1, v2, p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;-><init>(Ljava/lang/String;ZI)V
+    iget-object p1, p0, Lwdb;->X:Lih8;
 
-    return-object v0
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lih8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

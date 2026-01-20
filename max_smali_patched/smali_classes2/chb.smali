@@ -1,48 +1,19 @@
-.class public final Lchb;
-.super Lp14;
+.class public abstract Lchb;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lzv8;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(Lzv8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lchb;->X:Lzv8;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lchb;->d:Ljava/lang/Object;
+    sget v0, Lncd;->emoji:I
 
-    iget p1, p0, Lchb;->o:I
+    sput v0, Lchb;->a:I
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lchb;->o:I
-
-    iget-object p1, p0, Lchb;->X:Lzv8;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lzv8;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

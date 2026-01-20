@@ -1,77 +1,145 @@
 .class public final Leze;
-.super Ladi;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final c:Leze;
+
+# instance fields
+.field public final synthetic X:Lone/me/settings/devices/SettingsDevicesScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/devices/SettingsDevicesScreen;)V
+    .locals 0
 
-    new-instance v0, Leze;
+    iput-object p2, p0, Leze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
 
-    const/16 v1, 0xb
+    const/4 p2, 0x2
 
-    invoke-direct {v0, v1}, Ladi;-><init>(I)V
-
-    sput-object v0, Leze;->c:Leze;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R0(J)Lpf4;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, ":chats?id="
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v1, "&type=local"
-
-    invoke-static {p1, p2, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Leze;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    new-instance p2, Lpf4;
+    check-cast p1, Leze;
 
-    invoke-direct {p2, p1}, Lpf4;-><init>(Ljava/lang/String;)V
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Leze;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p2
 .end method
 
-.method public final S0()V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {p0}, Ladi;->p0()Ltf4;
+    new-instance v0, Leze;
+
+    iget-object v1, p0, Leze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
+
+    invoke-direct {v0, p2, v1}, Leze;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/devices/SettingsDevicesScreen;)V
+
+    iput-object p1, v0, Leze;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    iget-object v0, p0, Leze;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lmxd;
+
+    sget-object p1, Lmxd;->a:Lmxd;
+
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Leze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
+
+    iget-object v0, p1, Lone/me/settings/devices/SettingsDevicesScreen;->o:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ":chat-list"
+    check-cast v0, Lp80;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x6
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    const/4 v3, 0x2
 
-    return-void
-.end method
+    const/4 v4, 0x0
 
-.method public final T0(Lqi6;)V
-    .locals 3
+    invoke-static {v0, v3, v2, v4, v1}, Lp80;->a(Lp80;IILjava/lang/Boolean;I)V
 
-    invoke-virtual {p0}, Ladi;->p0()Ltf4;
+    new-instance v6, Ljgi;
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    new-instance v1, Lwrd;
+    invoke-direct {v6, p1, v0}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    const/4 v2, 0x3
+    iget-object p1, p1, Lone/me/settings/devices/SettingsDevicesScreen;->d:Lo58;
 
-    invoke-direct {v1, v2, p1}, Lwrd;-><init>(ILqi6;)V
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ltf4;->e(Loi6;)V
+    move-result-object p1
 
-    return-void
+    move-object v5, p1
+
+    check-cast v5, Lyzb;
+
+    sget-object v7, Lyzb;->m:[Ljava/lang/String;
+
+    sget v9, Lfib;->i:I
+
+    new-instance v11, Lezb;
+
+    sget p1, Lf6e;->I:I
+
+    invoke-direct {v11, p1}, Lezb;-><init>(I)V
+
+    const/16 v12, 0x10
+
+    const/16 v8, 0x9e
+
+    const/4 v10, 0x0
+
+    invoke-static/range {v5 .. v12}, Lyzb;->n(Lyzb;Ljgi;[Ljava/lang/String;IIILezb;I)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

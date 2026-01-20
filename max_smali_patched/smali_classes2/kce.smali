@@ -1,22 +1,29 @@
-.class public final Lkce;
+.class public interface abstract Lkce;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmce;
 
+# virtual methods
+.method public abstract a()Lt5a;
+.end method
 
-# instance fields
-.field public final a:Ljava/util/List;
+.method public abstract c(Landroid/content/ContentResolver;Landroid/net/Uri;)V
+.end method
 
+.method public abstract getHeight()Ljava/lang/Integer;
+.end method
 
-# direct methods
-.method public constructor <init>(Le28;)V
-    .locals 0
+.method public abstract getWidth()Ljava/lang/Integer;
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract h()Landroid/net/Uri;
+.end method
 
-    iput-object p1, p0, Lkce;->a:Ljava/util/List;
+.method public abstract i()Ljava/lang/String;
+.end method
 
-    return-void
+.method public abstract k()Ljava/lang/Integer;
+.end method
+
+.method public abstract m(Ljava/io/File;)V
 .end method

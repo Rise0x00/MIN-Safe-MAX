@@ -1,99 +1,107 @@
-.class public final Loh1;
+.class public abstract synthetic Loh1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-    const/4 v0, 0x1
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-    if-ne p0, p1, :cond_0
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
-    return v0
 
-    :cond_0
-    instance-of v1, p1, Loh1;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-    if-nez v1, :cond_1
+    invoke-static {}, Lz59;->values()[Lz59;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    array-length v0, v0
 
-    :cond_1
-    check-cast p1, Loh1;
+    new-array v0, v0, [I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v1, 0x1
 
-    return v0
-.end method
+    const/4 v2, 0x2
 
-.method public final hashCode()I
-    .locals 2
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const v0, 0x32000
+    :catch_0
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    :catch_1
+    sput-object v0, Loh1;->$EnumSwitchMapping$0:[I
 
-    move-result v0
+    const/4 v0, 0x3
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    const v1, 0x7d000
+    move-result-object v3
 
-    invoke-static {v1, v0}, Ligi;->a(II)I
+    array-length v3, v3
 
-    move-result v0
+    new-array v3, v3, [I
 
-    const v1, 0x1f4000
+    :try_start_2
+    aput v1, v3, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-static {v1, v0}, Ligi;->a(II)I
+    :catch_2
+    const/4 v4, 0x0
 
-    move-result v0
+    :try_start_3
+    aput v2, v3, v4
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    invoke-static {v1, v0}, Ligi;->a(II)I
+    :catch_3
+    sput-object v3, Loh1;->$EnumSwitchMapping$1:[I
 
-    move-result v0
+    invoke-static {}, Ly59;->values()[Ly59;
 
-    const/16 v1, 0x2000
+    move-result-object v3
 
-    invoke-static {v1, v0}, Ligi;->a(II)I
+    array-length v3, v3
 
-    move-result v0
+    new-array v3, v3, [I
 
-    const/16 v1, 0x4000
+    :try_start_4
+    aput v1, v3, v4
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-    invoke-static {v1, v0}, Ligi;->a(II)I
+    :catch_4
+    :try_start_5
+    aput v2, v3, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    move-result v0
+    :catch_5
+    :try_start_6
+    aput v0, v3, v2
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    const v1, 0x8000
+    :catch_6
+    const/4 v1, 0x4
 
-    invoke-static {v1, v0}, Ligi;->a(II)I
+    :try_start_7
+    aput v1, v3, v0
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    move-result v0
+    :catch_7
+    sput-object v3, Loh1;->$EnumSwitchMapping$2:[I
 
-    const/high16 v1, 0x10000
-
-    invoke-static {v1, v0}, Ligi;->a(II)I
-
-    move-result v0
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Bitrates(bitrateVideo2g=204800, bitrateVideo3g=512000, bitrateVideoLte=2048000, bitrateVideoWifi=2048000, bitrateAudioMin=8192, bitrateAudio2g=16384, bitrateAudio3g=32768, bitrateAudioLte=65536, bitrateAudioWifi=65536)"
-
-    return-object v0
+    return-void
 .end method

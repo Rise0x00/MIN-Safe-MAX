@@ -1,20 +1,51 @@
-.class public interface abstract Lkxg;
-.super Ljava/lang/Object;
+.class public final Lkxg;
+.super Lo84;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Llxg;
+
+.field public Y:I
+
+.field public d:Ljava/lang/CharSequence;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Llxg;Lo84;)V
+    .locals 0
+
+    iput-object p1, p0, Lkxg;->X:Llxg;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract B()I
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b()I
-.end method
+    iput-object p1, p0, Lkxg;->o:Ljava/lang/Object;
 
-.method public abstract i(Landroid/view/Surface;Lcng;)V
-.end method
+    iget p1, p0, Lkxg;->Y:I
 
-.method public abstract onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract z()I
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lkxg;->Y:I
+
+    iget-object p1, p0, Lkxg;->X:Llxg;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Llxg;->u(Llxg;Ljava/lang/CharSequence;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,172 +1,131 @@
-.class public final synthetic Lek3;
+.class public final Lek3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loi6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:[I
 
-.field public final synthetic b:Lfl3;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfl3;I)V
+.method public constructor <init>(I[I)V
     .locals 0
 
-    iput p2, p0, Lek3;->a:I
-
-    iput-object p1, p0, Lek3;->b:Lfl3;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lek3;->a:[I
+
+    iput p1, p0, Lek3;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lek3;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    goto :goto_1
 
-    new-instance v1, Ltfd;
+    :cond_0
+    instance-of v0, p1, Lek3;
 
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    if-nez v0, :cond_1
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lek3;
 
-    move-result-object v2
+    iget-object v0, p0, Lek3;->a:[I
 
-    iget-object v0, p0, Lek3;->b:Lfl3;
+    iget-object v1, p1, Lek3;->a:[I
 
-    iget-object v0, v0, Lfl3;->c:Lru7;
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v3
+    if-nez v0, :cond_2
 
-    check-cast v3, Ldwa;
+    goto :goto_0
 
-    iget-object v3, v3, Ldwa;->a:Landroid/content/Context;
+    :cond_2
+    iget v0, p0, Lek3;->b:I
 
-    sget v4, Lmkd;->c0:I
+    iget p1, p1, Lek3;->b:I
 
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    if-eq v0, p1, :cond_3
 
-    move-result-object v3
+    :goto_0
+    const/4 p1, 0x0
 
-    sget-object v4, Ln66;->X:Ln66;
+    return p1
 
-    invoke-static {v4}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result-object v6
+    return p1
+.end method
 
-    const/16 v7, 0x3bc8
+.method public final hashCode()I
+    .locals 2
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lek3;->a:[I
 
-    const/4 v5, 0x0
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
 
-    invoke-direct/range {v1 .. v7}, Ltfd;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;I)V
+    move-result v0
 
-    new-instance v2, Ltfd;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    iget v1, p0, Lek3;->b:I
 
-    move-result-object v3
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-virtual {v3}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    move-result v1
 
-    move-result-object v3
+    add-int/2addr v1, v0
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    return v1
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast v0, Ldwa;
+    iget-object v0, p0, Lek3;->a:[I
 
-    iget-object v0, v0, Ldwa;->a:Landroid/content/Context;
-
-    sget v4, Lmkd;->d0:I
-
-    invoke-virtual {v0, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    sget-object v0, Ln66;->w0:Ln66;
-
-    sget-object v5, Ln66;->x0:Ln66;
-
-    filled-new-array {v0, v5}, [Ln66;
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lh9e;->g([Ljava/lang/Object;)Ljava/util/Set;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    const-string v2, "CommonBackgroundSkeletonBubbleGradientSecondaryColors(gradient="
 
-    const/16 v8, 0x3bc8
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v5, 0x1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v6, 0x0
+    const-string v0, ", staticBackground="
 
-    invoke-direct/range {v2 .. v8}, Ltfd;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;I)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    filled-new-array {v1, v2}, [Ltfd;
+    iget v0, p0, Lek3;->b:I
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lbb3;->f([Ljava/lang/Object;)Ljava/util/ArrayList;
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lek3;->b:Lfl3;
-
-    iget-object v0, v0, Lfl3;->c:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ldwa;
-
-    iget-object v0, v0, Ldwa;->a:Landroid/content/Context;
-
-    sget v1, Lmkd;->Z:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v2, Ltfd;
-
-    sget-object v7, Lxa5;->a:Lxa5;
-
-    const/16 v8, 0x3bc8
-
-    const-string v3, "all.chat.folder"
-
-    const/4 v5, -0x1
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v2 .. v8}, Ltfd;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;I)V
-
-    return-object v2
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

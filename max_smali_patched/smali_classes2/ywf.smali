@@ -1,59 +1,80 @@
 .class public final Lywf;
-.super Lp14;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lhr6;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public synthetic X:Ljava/util/List;
 
-.field public Y:Ljavax/net/ssl/SSLEngine;
+.field public synthetic Y:Ljava/util/List;
 
-.field public Z:Lzwf;
+.field public synthetic Z:Ldbf;
 
-.field public d:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Object;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lzwf;
-
-.field public u0:I
-
-
-# direct methods
-.method public constructor <init>(Lzwf;Lp14;)V
-    .locals 0
-
-    iput-object p1, p0, Lywf;->t0:Lzwf;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public synthetic o:Ljava/util/List;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lha6;)Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lywf;->s0:Ljava/lang/Object;
+    check-cast p1, Ljava/util/List;
 
-    iget p1, p0, Lywf;->u0:I
+    check-cast p2, Ljava/util/List;
 
-    const/high16 v0, -0x80000000
+    check-cast p3, Ljava/util/List;
 
-    or-int/2addr p1, v0
+    check-cast p4, Ldbf;
 
-    iput p1, p0, Lywf;->u0:I
+    new-instance v0, Lywf;
 
-    iget-object p1, p0, Lywf;->t0:Lzwf;
+    const/4 v1, 0x5
 
-    const/4 v0, 0x0
+    invoke-direct {v0, v1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p1, v0, p0}, Lzwf;->b(Ljava/lang/String;Lp14;)Ljava/lang/Object;
+    iput-object p1, v0, Lywf;->o:Ljava/util/List;
+
+    iput-object p2, v0, Lywf;->X:Ljava/util/List;
+
+    iput-object p3, v0, Lywf;->Y:Ljava/util/List;
+
+    iput-object p4, v0, Lywf;->Z:Ldbf;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Lywf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lywf;->o:Ljava/util/List;
+
+    iget-object v1, p0, Lywf;->X:Ljava/util/List;
+
+    iget-object v2, p0, Lywf;->Y:Ljava/util/List;
+
+    iget-object v3, p0, Lywf;->Z:Ldbf;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    new-instance p1, Lmwf;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p1, Lmwf;->a:Ljava/util/List;
+
+    iput-object v1, p1, Lmwf;->b:Ljava/util/List;
+
+    iput-object v2, p1, Lmwf;->c:Ljava/util/List;
+
+    iput-object v3, p1, Lmwf;->d:Ldbf;
 
     return-object p1
 .end method

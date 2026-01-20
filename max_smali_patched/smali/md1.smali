@@ -1,240 +1,245 @@
 .class public final Lmd1;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Le94;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lrd1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+.method public constructor <init>(Lrd1;)V
     .locals 0
 
-    iput-object p2, p0, Lmd1;->X:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmd1;->a:Lrd1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(La94;La94;Z)V
+    .locals 11
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lmd1;->a:Lrd1;
 
-    invoke-virtual {p0, p1, p2}, Lmd1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lrd1;->u0:Lo58;
 
-    move-result-object p1
+    iget-object v2, v0, Lrd1;->a:Lqx1;
 
-    check-cast p1, Lmd1;
+    const/4 v3, 0x0
 
-    sget-object p2, Lybg;->a:Lybg;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1, p2}, Lmd1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmd1;
-
-    iget-object v1, p0, Lmd1;->X:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    invoke-direct {v0, p2, v1}, Lmd1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
-
-    iput-object p1, v0, Lmd1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lmd1;->o:Ljava/lang/Object;
-
-    check-cast v1, Lzc1;
-
-    iget-object v2, v0, Lmd1;->X:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->u0:Ld0d;
-
-    sget-object v4, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Les7;
-
-    const/4 v5, 0x6
-
-    aget-object v4, v4, v5
-
-    invoke-interface {v3, v2, v4}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lfs1;
-
-    iget-object v4, v1, Lzc1;->a:Lzd0;
-
-    invoke-virtual {v3, v4}, Lfs1;->setAvatar(Lzd0;)V
-
-    iget-object v4, v1, Lzc1;->c:Lrk8;
-
-    sget-object v5, Lrk8;->b:Lrk8;
-
-    if-ne v4, v5, :cond_0
-
-    sget-object v6, Lgig;->b:Lgig;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v6, Lgig;->d:Lgig;
-
-    :goto_0
-    invoke-virtual {v3, v6}, Lfs1;->setButtonAction(Lgig;)V
-
-    if-ne v4, v5, :cond_1
-
-    const/4 v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_1
-    iget-boolean v5, v1, Lzc1;->d:Z
-
-    invoke-virtual {v3, v4, v5}, Lfs1;->G(ZZ)V
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4, v4}, Lfs1;->H(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->z0()Landroid/widget/TextView;
-
-    move-result-object v3
-
-    iget-object v4, v1, Lzc1;->e:Lnrf;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Lnrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    invoke-virtual {v0}, Lrd1;->a()Ldp1;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    instance-of v5, p1, Lpna;
 
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->x0()Ljid;
+    invoke-virtual {v4, v5, v3}, Ldp1;->c(ZZ)V
 
-    move-result-object v5
+    :cond_0
+    const/4 v4, 0x1
 
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->v0:Ljava/lang/Object;
+    if-nez p3, :cond_1
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    instance-of p3, p2, Lpna;
 
-    move-result-object v3
+    if-eqz p3, :cond_1
 
-    move-object v7, v3
+    instance-of p3, p2, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    check-cast v7, Landroid/graphics/drawable/Drawable;
+    if-nez p3, :cond_1
 
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->w0:Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lrd1;->a()Ldp1;
 
-    move-result-object v3
+    move-result-object p3
 
-    move-object v6, v3
+    instance-of v5, p1, Lpna;
 
-    check-cast v6, Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p3, v5, v4}, Ldp1;->c(ZZ)V
 
-    iget-object v8, v1, Lzc1;->b:Lrk8;
+    :cond_1
+    instance-of p3, p1, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    sget v3, Lgsc;->call_microphone_enabled_accessibility:I
+    const/4 v5, 0x0
 
-    new-instance v9, Lirf;
+    sget-object v6, Lzqf;->b:Lzqf;
 
-    invoke-direct {v9, v3}, Lirf;-><init>(I)V
+    if-eqz p3, :cond_3
 
-    sget v3, Lgsc;->call_microphone_disabled_accessibility:I
+    instance-of v7, p2, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    new-instance v10, Lirf;
+    if-nez v7, :cond_3
 
-    invoke-direct {v10, v3}, Lirf;-><init>(I)V
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-static/range {v5 .. v10}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->D0(Ljid;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lrk8;Lirf;Lirf;)V
+    move-result-object v7
 
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0()Ljid;
+    check-cast v7, Larf;
 
-    move-result-object v11
+    move-object v8, v2
 
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->x0:Ljava/lang/Object;
+    check-cast v8, Ldy1;
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v8}, Ldy1;->l()Lye4;
 
-    move-result-object v3
+    move-result-object v8
 
-    move-object v13, v3
+    iget-object v8, v8, Lye4;->c:Ljava/lang/String;
 
-    check-cast v13, Landroid/graphics/drawable/Drawable;
+    iget-object v9, v7, Larf;->a:Lspf;
 
-    iget-object v3, v2, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->y0:Ljava/lang/Object;
+    invoke-virtual {v9}, Lspf;->getValue()Ljava/lang/Object;
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    move-result-object v10
 
-    move-result-object v3
+    if-eq v10, v6, :cond_2
 
-    move-object v12, v3
+    invoke-virtual {v7, v8, v4}, Larf;->a(Ljava/lang/String;Z)V
 
-    check-cast v12, Landroid/graphics/drawable/Drawable;
+    :cond_2
+    invoke-virtual {v9, v5, v6}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v14, v1, Lzc1;->c:Lrk8;
+    :cond_3
+    instance-of v7, p2, Lone/me/calls/ui/ui/pip/PipScreen;
 
-    sget v3, Lgsc;->call_video_enabled_accessibility:I
+    if-eqz v7, :cond_5
 
-    new-instance v15, Lirf;
+    if-nez p3, :cond_5
 
-    invoke-direct {v15, v3}, Lirf;-><init>(I)V
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
-    sget v3, Lgsc;->call_video_disabled_accessibility:I
+    move-result-object p3
 
-    new-instance v4, Lirf;
+    check-cast p3, Larf;
 
-    invoke-direct {v4, v3}, Lirf;-><init>(I)V
+    move-object v1, v2
 
-    move-object/from16 v16, v4
+    check-cast v1, Ldy1;
 
-    invoke-static/range {v11 .. v16}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->D0(Ljid;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lrk8;Lirf;Lirf;)V
+    invoke-virtual {v1}, Ldy1;->l()Lye4;
 
-    invoke-virtual {v2}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->y0()Lh4b;
+    move-result-object v1
 
-    move-result-object v2
+    iget-object v1, v1, Lye4;->c:Ljava/lang/String;
 
-    iget-object v3, v1, Lzc1;->f:Ljava/util/List;
+    iget-object v8, p3, Larf;->a:Lspf;
 
-    invoke-virtual {v2, v3}, Lh4b;->setAvatars(Ljava/util/List;)V
+    invoke-virtual {v8}, Lspf;->getValue()Ljava/lang/Object;
 
-    iget-object v1, v1, Lzc1;->g:Lnrf;
+    move-result-object v9
 
-    invoke-virtual {v2, v1}, Lh4b;->setTitle(Lnrf;)V
+    if-ne v9, v6, :cond_4
 
-    sget-object v1, Lybg;->a:Lybg;
+    invoke-virtual {p3, v1, v3}, Larf;->a(Ljava/lang/String;Z)V
 
-    return-object v1
+    :cond_4
+    sget-object p3, Lzqf;->a:Lzqf;
+
+    invoke-virtual {v8, v5, p3}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_5
+    if-eqz v7, :cond_6
+
+    if-nez p1, :cond_6
+
+    const-string p1, "PipAppController"
+
+    const-string p2, "pip screen was hidden quietly, skip hide fake pip."
+
+    invoke-static {p1, p2}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_6
+    instance-of p1, p2, Lpna;
+
+    if-nez p1, :cond_8
+
+    if-nez p2, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    return-void
+
+    :cond_8
+    :goto_0
+    check-cast v2, Ldy1;
+
+    invoke-virtual {v2}, Ldy1;->u()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    invoke-virtual {v0}, Lrd1;->a()Ldp1;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ldp1;->a()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_9
+
+    move v3, v4
+
+    :cond_9
+    iput-boolean v3, v0, Lrd1;->z0:Z
+
+    return-void
+.end method
+
+.method public final b(La94;La94;Z)V
+    .locals 4
+
+    iget-object v0, p0, Lmd1;->a:Lrd1;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lrd1;->a()Ldp1;
+
+    move-result-object v1
+
+    instance-of v2, p1, Lpna;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Ldp1;->b(ZZ)V
+
+    :cond_0
+    if-nez p3, :cond_1
+
+    instance-of p3, p2, Lpna;
+
+    if-eqz p3, :cond_1
+
+    instance-of p2, p2, Lone/me/calls/ui/ui/pip/PipScreen;
+
+    if-nez p2, :cond_1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {v0}, Lrd1;->a()Ldp1;
+
+    move-result-object p2
+
+    instance-of p1, p1, Lpna;
+
+    const/4 p3, 0x1
+
+    invoke-virtual {p2, p1, p3}, Ldp1;->b(ZZ)V
+
+    :cond_1
+    return-void
 .end method

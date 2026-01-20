@@ -4,19 +4,27 @@
 
 
 # static fields
-.field public static final f:Li10;
+.field public static final j:Li10;
 
 
 # instance fields
 .field public final a:J
 
-.field public final b:J
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ljava/lang/String;
+.field public final c:J
 
-.field public final d:Lz10;
+.field public final d:[B
 
 .field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:J
+
+.field public final h:J
+
+.field public final i:I
 
 
 # direct methods
@@ -31,7 +39,7 @@
 
     invoke-direct {v1, v0}, Li10;-><init>(Lh10;)V
 
-    sput-object v1, Li10;->f:Li10;
+    sput-object v1, Li10;->j:Li10;
 
     return-void
 .end method
@@ -45,27 +53,37 @@
 
     iput-wide v0, p0, Li10;->a:J
 
-    iget-wide v0, p1, Lh10;->b:J
+    iget-object v0, p1, Lh10;->b:Ljava/lang/String;
 
-    iput-wide v0, p0, Li10;->b:J
+    iput-object v0, p0, Li10;->b:Ljava/lang/String;
 
-    iget-object v0, p1, Lh10;->c:Ljava/lang/Object;
+    iget-wide v0, p1, Lh10;->c:J
 
-    check-cast v0, Ljava/lang/String;
+    iput-wide v0, p0, Li10;->c:J
 
-    iput-object v0, p0, Li10;->c:Ljava/lang/String;
+    iget-object v0, p1, Lh10;->d:[B
 
-    iget-object v0, p1, Lh10;->e:Ljava/lang/Object;
+    iput-object v0, p0, Li10;->d:[B
 
-    check-cast v0, Lz10;
+    iget-object v0, p1, Lh10;->e:Ljava/lang/String;
 
-    iput-object v0, p0, Li10;->d:Lz10;
+    iput-object v0, p0, Li10;->e:Ljava/lang/String;
 
-    iget-object p1, p1, Lh10;->d:Ljava/lang/Object;
+    iget-object v0, p1, Lh10;->f:Ljava/lang/String;
 
-    check-cast p1, Ljava/lang/String;
+    iput-object v0, p0, Li10;->f:Ljava/lang/String;
 
-    iput-object p1, p0, Li10;->e:Ljava/lang/String;
+    iget-wide v0, p1, Lh10;->g:J
+
+    iput-wide v0, p0, Li10;->g:J
+
+    iget-wide v0, p1, Lh10;->h:J
+
+    iput-wide v0, p0, Li10;->h:J
+
+    iget p1, p1, Lh10;->i:I
+
+    iput p1, p0, Li10;->i:I
 
     return-void
 .end method
@@ -83,21 +101,37 @@
 
     iput-wide v1, v0, Lh10;->a:J
 
-    iget-wide v1, p0, Li10;->b:J
+    iget-object v1, p0, Li10;->b:Ljava/lang/String;
 
-    iput-wide v1, v0, Lh10;->b:J
+    iput-object v1, v0, Lh10;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Li10;->c:Ljava/lang/String;
+    iget-wide v1, p0, Li10;->c:J
 
-    iput-object v1, v0, Lh10;->c:Ljava/lang/Object;
+    iput-wide v1, v0, Lh10;->c:J
 
-    iget-object v1, p0, Li10;->d:Lz10;
+    iget-object v1, p0, Li10;->d:[B
 
-    iput-object v1, v0, Lh10;->e:Ljava/lang/Object;
+    iput-object v1, v0, Lh10;->d:[B
+
+    iget-object v1, p0, Li10;->f:Ljava/lang/String;
+
+    iput-object v1, v0, Lh10;->f:Ljava/lang/String;
 
     iget-object v1, p0, Li10;->e:Ljava/lang/String;
 
-    iput-object v1, v0, Lh10;->d:Ljava/lang/Object;
+    iput-object v1, v0, Lh10;->e:Ljava/lang/String;
+
+    iget-wide v1, p0, Li10;->g:J
+
+    iput-wide v1, v0, Lh10;->g:J
+
+    iget-wide v1, p0, Li10;->h:J
+
+    iput-wide v1, v0, Lh10;->h:J
+
+    iget v1, p0, Li10;->i:I
+
+    iput v1, v0, Lh10;->i:I
 
     return-object v0
 .end method

@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Ls43;)Lfff;
+.method public abstract i(Loef;)V
 .end method

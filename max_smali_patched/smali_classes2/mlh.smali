@@ -1,133 +1,121 @@
 .class public final Lmlh;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ldy3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lr5g;
 
-.field public final synthetic b:Lone/me/login/welcome/WelcomeScreen;
+.field public final synthetic b:Lplh;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/welcome/WelcomeScreen;I)V
+.method public constructor <init>(Lplh;Lr5g;)V
     .locals 0
 
-    iput p2, p0, Lmlh;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmlh;->b:Lone/me/login/welcome/WelcomeScreen;
+    iput-object p1, p0, Lmlh;->b:Lplh;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    iput-object p2, p0, Lmlh;->a:Lr5g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    iget p1, p0, Lmlh;->a:I
+    check-cast p1, Luc0;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v0, p0, Lmlh;->b:Lplh;
 
-    iget-object p1, p0, Lmlh;->b:Lone/me/login/welcome/WelcomeScreen;
+    iget-object v0, v0, Lplh;->a:Ljava/lang/String;
 
-    iget-object v0, p1, Lone/me/login/welcome/WelcomeScreen;->c:Lru7;
+    sget-object v1, Lc5j;->a:Ledb;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    if-nez v1, :cond_0
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, Lhd;
+    :cond_0
+    sget-object v2, Lkk8;->d:Lkk8;
 
-    const-string v1, "MESSAGE_LINK_OPEN"
+    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
 
-    const-string v2, "text"
+    move-result v3
 
-    invoke-virtual {v0, v1, v2}, Lhd;->g(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v3, :cond_1
 
-    sget v0, Lmkd;->O0:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const-string p1, "onOutputSurface close event=0"
 
-    move-result-object v1
+    const/4 v3, 0x0
 
-    invoke-static {v1, v0}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-virtual {v1, v2, v0, p1, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result-object v0
+    :cond_1
+    :goto_0
+    iget-object p1, p0, Lmlh;->b:Lplh;
 
-    invoke-static {p1, v0}, Lone/me/login/welcome/WelcomeScreen;->x0(Lone/me/login/welcome/WelcomeScreen;Ljava/lang/String;)V
+    invoke-virtual {p1}, Lplh;->b()V
 
-    return-void
+    iget-object p1, p0, Lmlh;->a:Lr5g;
 
-    :pswitch_0
-    iget-object p1, p0, Lmlh;->b:Lone/me/login/welcome/WelcomeScreen;
+    invoke-virtual {p1}, Lr5g;->close()V
 
-    iget-object v0, p1, Lone/me/login/welcome/WelcomeScreen;->c:Lru7;
+    iget-object p1, p0, Lmlh;->b:Lplh;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    iget-object p1, p1, Lplh;->Y:Ljava/util/LinkedHashMap;
 
-    move-result-object v0
+    iget-object v0, p0, Lmlh;->a:Lr5g;
 
-    check-cast v0, Lhd;
+    invoke-virtual {p1, v0}, Ljava/util/AbstractMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "MESSAGE_LINK_OPEN"
+    move-result-object p1
 
-    const-string v2, "text"
+    check-cast p1, Landroid/view/Surface;
 
-    invoke-virtual {v0, v1, v2}, Lhd;->g(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz p1, :cond_3
 
-    sget v0, Lmkd;->N0:I
+    iget-object v0, p0, Lmlh;->b:Lplh;
 
-    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object v0, v0, Lplh;->u0:Lgmh;
 
-    move-result-object v1
+    if-eqz v0, :cond_2
 
-    invoke-static {v1, v0}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
+    iget-object v1, v0, Ls35;->c:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-static {p1, v0}, Lone/me/login/welcome/WelcomeScreen;->x0(Lone/me/login/welcome/WelcomeScreen;Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    return-void
+    invoke-static {v1, v2}, Lps6;->d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
 
-    nop
+    iget-object v1, v0, Ls35;->e:Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    check-cast v1, Ljava/lang/Thread;
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    invoke-static {v1}, Lps6;->c(Ljava/lang/Thread;)V
 
-    iget v0, p0, Lmlh;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    invoke-virtual {v0, p1, v2}, Ls35;->s(Landroid/view/Surface;Z)V
 
     return-void
 
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const/4 v0, 0x0
+    const-string v0, "Required value was null."
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
+    throw p1
+
+    :cond_3
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

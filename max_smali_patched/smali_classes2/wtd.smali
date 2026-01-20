@@ -1,24 +1,24 @@
-.class public final Lwtd;
+.class public final synthetic Lwtd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lt5;
+.field public final synthetic b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lt5;I)V
+.method public synthetic constructor <init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
     .locals 0
 
     iput p2, p0, Lwtd;->a:I
 
-    iput-object p1, p0, Lwtd;->b:Lt5;
+    iput-object p1, p0, Lwtd;->b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,368 +28,228 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 2
+    .locals 11
 
     iget v0, p0, Lwtd;->a:I
 
+    sget-object v1, Lb3h;->a:Lb3h;
+
+    iget-object v2, p0, Lwtd;->b:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    sget-object v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    const-class v1, Lfpf;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0}, Lqma;->s()V
+
+    return-object v1
 
     :pswitch_0
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    sget-object v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    const-class v1, Leb9;
+    new-instance v0, Lila;
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lila;-><init>(Landroid/content/Context;)V
 
     return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    move-object v0, v2
 
-    const-class v1, Lqs3;
+    new-instance v2, Lqma;
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v1, v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0:Lls;
+
+    sget-object v3, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+
+    const/16 v4, 0x8
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v1, v0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v3, v1
+
+    check-cast v3, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0()Lutd;
+
+    move-result-object v4
+
+    new-instance v1, Lwtd;
+
+    const/4 v5, 0x2
+
+    invoke-direct {v1, v0, v5}, Lwtd;-><init>(Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;I)V
+
+    new-instance v5, Ln8g;
+
+    invoke-direct {v5, v1}, Ln8g;-><init>(Llq6;)V
+
+    sget-object v0, Lil8;->a:Lil8;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lw08;
+
+    const/16 v6, 0xd
+
+    invoke-direct {v1, v6}, Lw08;-><init>(I)V
+
+    new-instance v6, Ln8g;
+
+    invoke-direct {v6, v1}, Ln8g;-><init>(Llq6;)V
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    return-object v0
+    const/16 v1, 0x1e8
+
+    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+
+    move-result-object v7
+
+    const/4 v9, 0x0
+
+    const v10, 0xffe0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v2 .. v10}, Lqma;-><init>(Ljava/lang/Long;Lutd;Ln8g;Ln8g;Lo58;Lo58;Lo58;I)V
+
+    return-object v2
 
     :pswitch_2
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    move-object v0, v2
 
-    const-class v1, Lptd;
+    sget-object v1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0()Lutd;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lstb;
+
+    const-wide/16 v2, 0x1
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    const/16 v8, 0x2f
+
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lstb;-><init>(Lv9c;ILojf;Ljava/lang/Long;Ljava/lang/Long;Lys;I)V
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lstb;->g:Lstb;
+
+    :goto_0
+    return-object v1
 
     :pswitch_3
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    move-object v0, v2
 
-    const-class v1, Ldc9;
+    new-instance v1, Lnla;
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v2, v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0:Lls;
+
+    sget-object v3, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+
+    const/16 v4, 0x9
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v2, v0}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lahc;
+
+    invoke-direct {v1, v0}, Lnla;-><init>(Lahc;)V
+
+    return-object v1
 
     :pswitch_4
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    move-object v0, v2
 
-    const-class v1, Lml;
+    sget-object v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v2, v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->X:Ljld;
+
+    sget-object v3, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
+
+    const/4 v4, 0x0
+
+    aget-object v3, v3, v4
+
+    invoke-interface {v2, v0, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lj4b;
+
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->B0()Lqma;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {v0}, Lqma;->u()Z
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Lj4b;->setCloseBadgeVisibility(Z)V
+
+    return-object v1
 
     :pswitch_5
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    move-object v0, v2
 
-    const-class v1, Lxxb;
+    sget-object v1, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->E0:[Lz28;
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_6
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lgya;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->A0()Lutd;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_1
 
-    :pswitch_7
-    iget-object v0, p0, Lwtd;->b:Lt5;
+    sget-object v0, Llce;->Y:Llce;
 
-    const-class v1, Lno3;
+    goto :goto_1
 
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_1
+    sget-object v0, Llce;->w1:Llce;
 
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_8
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lkq5;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_9
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lotd;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_a
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lne9;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_b
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lx4e;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_c
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lzxb;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_d
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lqxb;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_e
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lqxb;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_f
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lvf5;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_10
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lml;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_11
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lhc4;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_12
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Ly96;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_13
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lrlf;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_14
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lzxb;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_15
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lgya;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_16
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lwx4;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_17
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lsu4;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_18
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Ll83;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_19
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lml;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1a
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lnmf;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1b
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lfva;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1c
-    iget-object v0, p0, Lwtd;->b:Lt5;
-
-    const-class v1, Lga7;
-
-    invoke-virtual {v0, v1}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
+    :goto_1
     return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
         :pswitch_5
         :pswitch_4
         :pswitch_3

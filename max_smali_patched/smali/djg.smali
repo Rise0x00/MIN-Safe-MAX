@@ -1,161 +1,257 @@
-.class public final Ldjg;
+.class public abstract Ldjg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqyd;
 
+# static fields
+.field public static final a:[I
 
-# instance fields
-.field public final X:I
-
-.field public final a:[J
-
-.field public final b:[J
-
-.field public final c:J
-
-.field public final d:J
-
-.field public final o:J
+.field public static final b:[I
 
 
 # direct methods
-.method public constructor <init>([J[JJJJI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lf5d;->colorPrimary:I
 
-    iput-object p1, p0, Ldjg;->a:[J
+    filled-new-array {v0}, [I
 
-    iput-object p2, p0, Ldjg;->b:[J
+    move-result-object v0
 
-    iput-wide p3, p0, Ldjg;->c:J
+    sput-object v0, Ldjg;->a:[I
 
-    iput-wide p5, p0, Ldjg;->d:J
+    sget v0, Lf5d;->colorPrimaryVariant:I
 
-    iput-wide p7, p0, Ldjg;->o:J
+    filled-new-array {v0}, [I
 
-    iput p9, p0, Ldjg;->X:I
+    move-result-object v0
+
+    sput-object v0, Ldjg;->b:[I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Ldjg;->o:J
-
-    return-wide v0
-.end method
-
-.method public final b(J)J
-    .locals 2
-
-    iget-object v0, p0, Ldjg;->b:[J
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, p1, p2, v1}, Llig;->e([JJZ)I
-
-    move-result p1
-
-    iget-object p2, p0, Ldjg;->a:[J
-
-    aget-wide p1, p2, p1
-
-    return-wide p1
-.end method
-
-.method public final c()Z
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 1
+
+    sget-object v0, Lcgd;->ThemeEnforcement:[I
+
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget p2, Lcgd;->ThemeEnforcement_enforceMaterialTheme:I
+
+    const/4 p3, 0x0
+
+    invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-eqz p2, :cond_1
+
+    new-instance p1, Landroid/util/TypedValue;
+
+    invoke-direct {p1}, Landroid/util/TypedValue;-><init>()V
+
+    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p2
+
+    sget p3, Lf5d;->isMaterialTheme:I
 
     const/4 v0, 0x1
 
-    return v0
+    invoke-virtual {p2, p3, p1, v0}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    iget p2, p1, Landroid/util/TypedValue;->type:I
+
+    const/16 p3, 0x12
+
+    if-ne p2, p3, :cond_1
+
+    iget p1, p1, Landroid/util/TypedValue;->data:I
+
+    if-nez p1, :cond_1
+
+    :cond_0
+    sget-object p1, Ldjg;->b:[I
+
+    const-string p2, "Theme.MaterialComponents"
+
+    invoke-static {p0, p1, p2}, Ldjg;->c(Landroid/content/Context;[ILjava/lang/String;)V
+
+    :cond_1
+    sget-object p1, Ldjg;->a:[I
+
+    const-string p2, "Theme.AppCompat"
+
+    invoke-static {p0, p1, p2}, Ldjg;->c(Landroid/content/Context;[ILjava/lang/String;)V
+
+    return-void
 .end method
 
-.method public final e(J)Lgyd;
-    .locals 9
+.method public static varargs b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+    .locals 5
 
-    iget-object v0, p0, Ldjg;->a:[J
+    sget-object v0, Lcgd;->ThemeEnforcement:[I
 
-    const/4 v1, 0x1
+    invoke-virtual {p0, p1, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    invoke-static {v0, p1, p2, v1}, Llig;->e([JJZ)I
+    move-result-object v0
 
-    move-result v2
+    sget v1, Lcgd;->ThemeEnforcement_enforceTextAppearance:I
 
-    new-instance v3, Lmyd;
+    const/4 v2, 0x0
 
-    aget-wide v4, v0, v2
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
-    iget-object v6, p0, Ldjg;->b:[J
+    move-result v1
 
-    aget-wide v7, v6, v2
+    if-nez v1, :cond_0
 
-    invoke-direct {v3, v4, v5, v7, v8}, Lmyd;-><init>(JJ)V
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    cmp-long p1, v4, p1
+    return-void
 
-    if-gez p1, :cond_1
+    :cond_0
+    array-length v1, p5
 
-    array-length p1, v0
+    const/4 v3, 0x1
 
-    sub-int/2addr p1, v1
+    const/4 v4, -0x1
 
-    if-ne v2, p1, :cond_0
+    if-nez v1, :cond_1
+
+    sget p0, Lcgd;->ThemeEnforcement_android_textAppearance:I
+
+    invoke-virtual {v0, p0, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p0
+
+    if-eq p0, v4, :cond_4
+
+    :goto_0
+    move v2, v3
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p0
+
+    array-length p1, p5
+
+    move p2, v2
+
+    :goto_1
+    if-ge p2, p1, :cond_3
+
+    aget p3, p5, p2
+
+    invoke-virtual {p0, p3, v4}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    if-ne p3, v4, :cond_2
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    goto :goto_0
+
+    :cond_4
+    :goto_2
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-eqz v2, :cond_5
+
+    return-void
+
+    :cond_5
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "This component requires that you specify a valid TextAppearance attribute. Update your app theme to inherit from Theme.MaterialComponents (or a descendant)."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static c(Landroid/content/Context;[ILjava/lang/String;)V
+    .locals 2
+
+    invoke-virtual {p0, p1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    array-length v1, p1
+
+    if-ge v0, v1, :cond_1
+
+    invoke-virtual {p0, v0}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lmyd;
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    add-int/2addr v2, v1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    aget-wide v4, v0, v2
+    const-string p1, "The style on this component requires your app theme to be "
 
-    aget-wide v0, v6, v2
+    const-string v0, " (or a descendant)."
 
-    invoke-direct {p1, v4, v5, v0, v1}, Lmyd;-><init>(JJ)V
+    invoke-static {p1, p2, v0}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    new-instance p2, Lgyd;
+    move-result-object p1
 
-    invoke-direct {p2, v3, p1}, Lgyd;-><init>(Lmyd;Lmyd;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return-object p2
+    throw p0
 
     :cond_1
-    :goto_0
-    new-instance p1, Lgyd;
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-direct {p1, v3, v3}, Lgyd;-><init>(Lmyd;Lmyd;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public final f()J
-    .locals 2
+.method public static varargs d(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)Landroid/content/res/TypedArray;
+    .locals 0
 
-    iget-wide v0, p0, Ldjg;->c:J
+    invoke-static {p0, p1, p3, p4}, Ldjg;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    return-wide v0
-.end method
+    invoke-static/range {p0 .. p5}, Ldjg;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
 
-.method public final g()J
-    .locals 2
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    iget-wide v0, p0, Ldjg;->d:J
+    move-result-object p0
 
-    return-wide v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    iget v0, p0, Ldjg;->X:I
-
-    return v0
+    return-object p0
 .end method

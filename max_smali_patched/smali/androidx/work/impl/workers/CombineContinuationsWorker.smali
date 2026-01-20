@@ -40,16 +40,16 @@
 
 
 # virtual methods
-.method public final a()Lz28;
+.method public final g()Lme8;
     .locals 2
 
-    invoke-virtual {p0}, La38;->getInputData()Lfb4;
+    iget-object v0, p0, Lne8;->b:Landroidx/work/WorkerParameters;
 
-    move-result-object v0
+    iget-object v0, v0, Landroidx/work/WorkerParameters;->b:Lyh4;
 
-    new-instance v1, Ly28;
+    new-instance v1, Lle8;
 
-    invoke-direct {v1, v0}, Ly28;-><init>(Lfb4;)V
+    invoke-direct {v1, v0}, Lle8;-><init>(Lyh4;)V
 
     return-object v1
 .end method

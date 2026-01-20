@@ -1,494 +1,366 @@
 .class public final Lua4;
-.super Lmvf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final j:Ljava/util/regex/Pattern;
+
+.field public static final k:Ljava/util/regex/Pattern;
+
+.field public static final l:Ljava/util/regex/Pattern;
+
+.field public static final m:Ljava/util/regex/Pattern;
+
+
 # instance fields
-.field public final e:J
+.field public final a:Ljava/lang/String;
 
-.field public final f:J
+.field public final b:Ljava/lang/String;
 
-.field public final g:J
+.field public final c:J
 
-.field public final h:I
+.field public final d:Ljava/lang/String;
 
-.field public final i:J
+.field public final e:Ljava/lang/String;
 
-.field public final j:J
+.field public final f:Z
 
-.field public final k:J
+.field public final g:Z
 
-.field public final l:Lha4;
+.field public final h:Z
 
-.field public final m:Lqs8;
-
-.field public final n:Lfs8;
+.field public final i:Z
 
 
 # direct methods
-.method public constructor <init>(JJJIJJJLha4;Lqs8;Lfs8;)V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 1
 
-    move-object/from16 v0, p14
+    const-string v0, "(\\d{2,4})[^\\d]*"
 
-    move-object/from16 v1, p16
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lua4;->j:Ljava/util/regex/Pattern;
+
+    const-string v0, "(?i)(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec).*"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lua4;->k:Ljava/util/regex/Pattern;
+
+    const-string v0, "(\\d{1,2})[^\\d]*"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lua4;->l:Ljava/util/regex/Pattern;
+
+    const-string v0, "(\\d{1,2}):(\\d{1,2}):(\\d{1,2})[^\\d]*"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lua4;->m:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;ZZZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v2, v0, Lha4;->d:Z
+    iput-object p1, p0, Lua4;->a:Ljava/lang/String;
 
-    const/4 v3, 0x0
+    iput-object p2, p0, Lua4;->b:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    iput-wide p3, p0, Lua4;->c:J
 
-    if-eqz v1, :cond_0
+    iput-object p5, p0, Lua4;->d:Ljava/lang/String;
 
-    move v5, v4
+    iput-object p6, p0, Lua4;->e:Ljava/lang/String;
 
-    goto :goto_0
+    iput-boolean p7, p0, Lua4;->f:Z
 
-    :cond_0
-    move v5, v3
+    iput-boolean p8, p0, Lua4;->g:Z
 
-    :goto_0
-    if-ne v2, v5, :cond_1
+    iput-boolean p9, p0, Lua4;->h:Z
 
-    move v3, v4
-
-    :cond_1
-    invoke-static {v3}, Ligi;->h(Z)V
-
-    iput-wide p1, p0, Lua4;->e:J
-
-    iput-wide p3, p0, Lua4;->f:J
-
-    iput-wide p5, p0, Lua4;->g:J
-
-    iput p7, p0, Lua4;->h:I
-
-    iput-wide p8, p0, Lua4;->i:J
-
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lua4;->j:J
-
-    move-wide/from16 p1, p12
-
-    iput-wide p1, p0, Lua4;->k:J
-
-    iput-object v0, p0, Lua4;->l:Lha4;
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Lua4;->m:Lqs8;
-
-    iput-object v1, p0, Lua4;->n:Lfs8;
+    iput-boolean p10, p0, Lua4;->i:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)I
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    instance-of v0, p1, Ljava/lang/Integer;
+    instance-of v0, p1, Lua4;
 
-    const/4 v1, -0x1
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lua4;
+
+    iget-object v0, p1, Lua4;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Lua4;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lua4;->b:Ljava/lang/String;
+
+    iget-object v1, p0, Lua4;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-wide v0, p1, Lua4;->c:J
+
+    iget-wide v2, p0, Lua4;->c:J
+
+    cmp-long v0, v0, v2
 
     if-nez v0, :cond_0
 
-    return v1
+    iget-object v0, p1, Lua4;->d:Ljava/lang/String;
 
-    :cond_0
-    check-cast p1, Ljava/lang/Integer;
+    iget-object v1, p0, Lua4;->d:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget v0, p0, Lua4;->h:I
-
-    sub-int/2addr p1, v0
-
-    if-ltz p1, :cond_2
-
-    invoke-virtual {p0}, Lua4;->h()I
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-lt p1, v0, :cond_1
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    iget-object v0, p1, Lua4;->e:Ljava/lang/String;
 
-    :cond_1
+    iget-object v1, p0, Lua4;->e:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p1, Lua4;->f:Z
+
+    iget-boolean v1, p0, Lua4;->f:Z
+
+    if-ne v0, v1, :cond_0
+
+    iget-boolean v0, p1, Lua4;->g:Z
+
+    iget-boolean v1, p0, Lua4;->g:Z
+
+    if-ne v0, v1, :cond_0
+
+    iget-boolean v0, p1, Lua4;->h:Z
+
+    iget-boolean v1, p0, Lua4;->h:Z
+
+    if-ne v0, v1, :cond_0
+
+    iget-boolean p1, p1, Lua4;->i:Z
+
+    iget-boolean v0, p0, Lua4;->i:Z
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
     return p1
 
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final f(ILhvf;Z)Lhvf;
-    .locals 13
-
-    invoke-virtual {p0}, Lua4;->h()I
-
-    move-result v0
-
-    invoke-static {p1, v0}, Ligi;->d(II)V
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lua4;->l:Lha4;
-
-    if-eqz p3, :cond_0
-
-    invoke-virtual {v1, p1}, Lha4;->b(I)Lshb;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lshb;->a:Ljava/lang/String;
-
-    move-object v4, v2
-
-    goto :goto_0
-
     :cond_0
-    move-object v4, v0
-
-    :goto_0
-    if-eqz p3, :cond_1
-
-    iget v0, p0, Lua4;->h:I
-
-    add-int/2addr v0, p1
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    :cond_1
-    move-object v5, v0
-
-    invoke-virtual {v1, p1}, Lha4;->d(I)J
-
-    move-result-wide v7
-
-    invoke-virtual {v1, p1}, Lha4;->b(I)Lshb;
-
-    move-result-object p1
-
-    iget-wide v2, p1, Lshb;->b:J
-
     const/4 p1, 0x0
 
-    invoke-virtual {v1, p1}, Lha4;->b(I)Lshb;
-
-    move-result-object p1
-
-    iget-wide v0, p1, Lshb;->b:J
-
-    sub-long/2addr v2, v0
-
-    invoke-static {v2, v3}, Llig;->U(J)J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lua4;->i:J
-
-    sub-long v9, v0, v2
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v11, Lz8;->f:Lz8;
-
-    const/4 v12, 0x0
-
-    const/4 v6, 0x0
-
-    move-object v3, p2
-
-    invoke-virtual/range {v3 .. v12}, Lhvf;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLz8;Z)V
-
-    return-object p2
+    return p1
 .end method
 
-.method public final h()I
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    iget-object v0, p0, Lua4;->l:Lha4;
+    const/16 v0, 0x20f
 
-    iget-object v0, v0, Lha4;->m:Ljava/util/List;
+    const/16 v1, 0x1f
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    iget-object v2, p0, Lua4;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
     move-result v0
 
-    return v0
-.end method
+    iget-object v2, p0, Lua4;->b:Ljava/lang/String;
 
-.method public final l(I)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lua4;->h()I
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Ligi;->d(II)V
+    iget-wide v2, p0, Lua4;->c:J
 
-    iget v0, p0, Lua4;->h:I
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
-    add-int/2addr v0, p1
+    move-result v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v2, p0, Lua4;->d:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
-    return-object p1
-.end method
+    move-result v0
 
-.method public final m(ILkvf;J)Lkvf;
-    .locals 23
+    iget-object v2, p0, Lua4;->e:Ljava/lang/String;
 
-    move-object/from16 v0, p0
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
-    const/4 v1, 0x1
+    move-result v0
 
-    move/from16 v2, p1
+    iget-boolean v2, p0, Lua4;->f:Z
 
-    invoke-static {v2, v1}, Ligi;->d(II)V
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    iget-object v5, v0, Lua4;->l:Lha4;
+    move-result v0
 
-    iget-boolean v2, v5, Lha4;->d:Z
+    iget-boolean v2, p0, Lua4;->g:Z
 
-    const/4 v3, 0x0
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    iget-wide v6, v0, Lua4;->k:J
+    move-result v0
 
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+    iget-boolean v2, p0, Lua4;->h:Z
 
-    if-eqz v2, :cond_5
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    iget-wide v10, v5, Lha4;->e:J
+    move-result v0
 
-    cmp-long v2, v10, v8
+    iget-boolean v1, p0, Lua4;->i:Z
 
-    if-eqz v2, :cond_5
-
-    iget-wide v10, v5, Lha4;->b:J
-
-    cmp-long v2, v10, v8
-
-    if-nez v2, :cond_5
-
-    const-wide/16 v10, 0x0
-
-    cmp-long v2, p3, v10
-
-    if-lez v2, :cond_0
-
-    add-long v6, v6, p3
-
-    iget-wide v12, v0, Lua4;->j:J
-
-    cmp-long v2, v6, v12
-
-    if-lez v2, :cond_0
-
-    move/from16 v16, v1
-
-    move v1, v3
-
-    move-wide v6, v8
-
-    goto :goto_2
-
-    :cond_0
-    iget-wide v12, v0, Lua4;->i:J
-
-    add-long/2addr v12, v6
-
-    invoke-virtual {v5, v3}, Lha4;->d(I)J
-
-    move-result-wide v14
-
-    move v2, v3
-
-    :goto_0
-    iget-object v4, v5, Lha4;->m:Ljava/util/List;
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    sub-int/2addr v4, v1
-
-    if-ge v2, v4, :cond_1
-
-    cmp-long v4, v12, v14
-
-    if-ltz v4, :cond_1
-
-    sub-long/2addr v12, v14
-
-    add-int/lit8 v2, v2, 0x1
-
-    invoke-virtual {v5, v2}, Lha4;->d(I)J
-
-    move-result-wide v14
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v5, v2}, Lha4;->b(I)Lshb;
-
-    move-result-object v2
-
-    const/4 v4, 0x2
-
-    invoke-virtual {v2, v4}, Lshb;->a(I)I
-
-    move-result v4
-
-    move/from16 v16, v1
-
-    const/4 v1, -0x1
-
-    if-ne v4, v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v1, v2, Lshb;->c:Ljava/util/List;
-
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lb9;
-
-    iget-object v1, v1, Lb9;->c:Ljava/util/List;
-
-    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwbd;
-
-    invoke-virtual {v1}, Lwbd;->c()Lbb4;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1, v14, v15}, Lbb4;->D(J)J
-
-    move-result-wide v17
-
-    cmp-long v2, v17, v10
-
-    if-nez v2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v1, v12, v13, v14, v15}, Lbb4;->u(JJ)J
-
-    move-result-wide v10
-
-    invoke-interface {v1, v10, v11}, Lbb4;->b(J)J
-
-    move-result-wide v1
-
-    add-long/2addr v1, v6
-
-    sub-long v6, v1, v12
-
-    :cond_4
-    :goto_1
-    move v1, v3
-
-    goto :goto_2
-
-    :cond_5
-    move/from16 v16, v1
-
-    goto :goto_1
-
-    :goto_2
-    sget-object v3, Lkvf;->q:Ljava/lang/Object;
-
-    iget-boolean v2, v5, Lha4;->d:Z
-
-    if-eqz v2, :cond_6
-
-    iget-wide v10, v5, Lha4;->e:J
-
-    cmp-long v2, v10, v8
-
-    if-eqz v2, :cond_6
-
-    iget-wide v10, v5, Lha4;->b:J
-
-    cmp-long v2, v10, v8
-
-    if-nez v2, :cond_6
-
-    move/from16 v13, v16
-
-    goto :goto_3
-
-    :cond_6
-    move v13, v1
-
-    :goto_3
-    invoke-virtual {v0}, Lua4;->h()I
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
-    add-int/lit8 v20, v1, -0x1
+    add-int/2addr v1, v0
 
-    iget-wide v1, v0, Lua4;->i:J
-
-    iget-object v4, v0, Lua4;->m:Lqs8;
-
-    move-wide v15, v6
-
-    iget-wide v6, v0, Lua4;->e:J
-
-    iget-wide v8, v0, Lua4;->f:J
-
-    iget-wide v10, v0, Lua4;->g:J
-
-    iget-object v14, v0, Lua4;->n:Lfs8;
-
-    move/from16 p1, v13
-
-    iget-wide v12, v0, Lua4;->j:J
-
-    const/16 v19, 0x0
-
-    move-wide/from16 v21, v1
-
-    move-wide/from16 v17, v12
-
-    const/4 v12, 0x1
-
-    move/from16 v13, p1
-
-    move-object/from16 v2, p2
-
-    invoke-virtual/range {v2 .. v22}, Lkvf;->b(Ljava/lang/Object;Lqs8;Ljava/lang/Object;JJJZZLfs8;JJIIJ)V
-
-    return-object p2
+    return v1
 .end method
 
-.method public final o()I
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const/4 v0, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lua4;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x3d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lua4;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lua4;->h:Z
+
+    if-eqz v1, :cond_1
+
+    const-wide/high16 v1, -0x8000000000000000L
+
+    iget-wide v3, p0, Lua4;->c:J
+
+    cmp-long v1, v3, v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "; max-age=0"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "; expires="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/util/Date;
+
+    invoke-direct {v1, v3, v4}, Ljava/util/Date;-><init>(J)V
+
+    sget-object v2, Lwj4;->a:Lay0;
+
+    invoke-virtual {v2}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/text/DateFormat;
+
+    invoke-virtual {v2, v1}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_1
+    :goto_0
+    iget-boolean v1, p0, Lua4;->i:Z
+
+    if-nez v1, :cond_2
+
+    const-string v1, "; domain="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lua4;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    const-string v1, "; path="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lua4;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lua4;->f:Z
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "; secure"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_3
+    iget-boolean v1, p0, Lua4;->g:Z
+
+    if-eqz v1, :cond_4
+
+    const-string v1, "; httponly"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_4
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

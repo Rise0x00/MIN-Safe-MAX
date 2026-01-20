@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpb;
+.implements Llb;
 
 
 # instance fields
@@ -100,13 +100,13 @@
 
     const-string v1, ")"
 
-    const-string v2, "DisableAllMicInCall(isSuccess="
+    const-string v2, "DisableAllScreenSharingInCall(isSuccess="
 
     iget-boolean v3, p0, Lfb;->a:Z
 
     iget-boolean v4, p0, Lfb;->b:Z
 
-    invoke-static {v2, v3, v0, v4, v1}, Lcd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v4, v1}, Lhc0;->h(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

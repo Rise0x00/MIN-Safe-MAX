@@ -1,222 +1,126 @@
 .class public final Laa0;
-.super Ljava/lang/Object;
+.super Lll6;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:I
+.field public X:Z
 
-.field public final b:Ljava/lang/String;
+.field public Y:F
 
-.field public final c:I
+.field public Z:Z
 
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-
-# direct methods
-.method public constructor <init>(IIIIILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Laa0;->a:I
-
-    if-eqz p6, :cond_0
-
-    iput-object p6, p0, Laa0;->b:Ljava/lang/String;
-
-    iput p2, p0, Laa0;->c:I
-
-    iput p3, p0, Laa0;->d:I
-
-    iput p4, p0, Laa0;->e:I
-
-    iput p5, p0, Laa0;->f:I
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "Null mediaType"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 7
 
-    const/4 v0, 0x1
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    if-ne p1, p0, :cond_0
+    move-result v0
 
-    return v0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    iget v2, v1, Landroid/graphics/Rect;->right:I
+
+    iget v3, v1, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v2, v3
+
+    iget v4, v1, Landroid/graphics/Rect;->bottom:I
+
+    iget v1, v1, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v4, v1
+
+    iget v5, p0, Laa0;->Y:F
+
+    iget-boolean v6, p0, Laa0;->X:Z
+
+    if-nez v6, :cond_0
+
+    const/high16 v6, 0x43b40000    # 360.0f
+
+    sub-float v5, v6, v5
 
     :cond_0
-    instance-of v1, p1, Laa0;
+    div-int/lit8 v2, v2, 0x2
 
-    const/4 v2, 0x0
+    add-int/2addr v2, v3
 
-    if-eqz v1, :cond_1
+    int-to-float v2, v2
 
-    check-cast p1, Laa0;
+    div-int/lit8 v4, v4, 0x2
 
-    iget v1, p0, Laa0;->a:I
+    add-int/2addr v4, v1
 
-    iget v3, p1, Laa0;->a:I
+    int-to-float v1, v4
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    iget-object v1, p0, Laa0;->b:Ljava/lang/String;
+    invoke-super {p0, p1}, Lll6;->draw(Landroid/graphics/Canvas;)V
 
-    iget-object v3, p1, Laa0;->b:Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-boolean p1, p0, Laa0;->Z:Z
 
-    move-result v1
+    if-nez p1, :cond_1
 
-    if-eqz v1, :cond_1
+    const/4 p1, 0x1
 
-    iget v1, p0, Laa0;->c:I
+    iput-boolean p1, p0, Laa0;->Z:Z
 
-    iget v3, p1, Laa0;->c:I
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    if-ne v1, v3, :cond_1
+    move-result-wide v0
 
-    iget v1, p0, Laa0;->d:I
+    const-wide/16 v2, 0x14
 
-    iget v3, p1, Laa0;->d:I
+    add-long/2addr v0, v2
 
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Laa0;->e:I
-
-    iget v3, p1, Laa0;->e:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Laa0;->f:I
-
-    iget p1, p1, Laa0;->f:I
-
-    if-ne v1, p1, :cond_1
-
-    return v0
+    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
 
     :cond_1
-    return v2
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final run()V
     .locals 3
 
-    iget v0, p0, Laa0;->a:I
+    const/4 v0, 0x0
 
-    const v1, 0xf4243
+    iput-boolean v0, p0, Laa0;->Z:Z
 
-    xor-int/2addr v0, v1
+    iget v0, p0, Laa0;->Y:F
 
-    mul-int/2addr v0, v1
+    iget v1, p0, Laa0;->o:I
 
-    iget-object v2, p0, Laa0;->b:Ljava/lang/String;
+    int-to-float v1, v1
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    const/high16 v2, 0x41a00000    # 20.0f
 
-    move-result v2
+    div-float/2addr v2, v1
 
-    xor-int/2addr v0, v2
+    const/high16 v1, 0x43b40000    # 360.0f
 
-    mul-int/2addr v0, v1
+    mul-float/2addr v2, v1
 
-    iget v2, p0, Laa0;->c:I
+    float-to-int v1, v2
 
-    xor-int/2addr v0, v2
+    int-to-float v1, v1
 
-    mul-int/2addr v0, v1
+    add-float/2addr v0, v1
 
-    iget v2, p0, Laa0;->d:I
+    iput v0, p0, Laa0;->Y:F
 
-    xor-int/2addr v0, v2
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Laa0;->e:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Laa0;->f:I
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AudioProfileProxy{codec="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Laa0;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mediaType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Laa0;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bitrate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Laa0;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sampleRate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Laa0;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", channels="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Laa0;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", profile="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Laa0;->f:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

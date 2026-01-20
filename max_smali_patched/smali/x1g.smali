@@ -1,359 +1,452 @@
-.class public Lx1g;
+.class public final Lx1g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrrg;
+
 
 # instance fields
-.field public A:Z
+.field public final a:Lrrg;
 
-.field public B:Z
+.field public final b:Lq1g;
 
-.field public C:Z
-
-.field public D:Ljava/util/HashMap;
-
-.field public E:Ljava/util/HashSet;
-
-.field public a:I
-
-.field public b:I
-
-.field public c:I
+.field public final c:Lwtb;
 
 .field public d:I
 
 .field public e:I
 
-.field public f:I
+.field public f:[B
 
-.field public g:I
+.field public g:Ls1g;
 
-.field public h:I
+.field public h:Lpj6;
 
-.field public i:I
-
-.field public j:I
-
-.field public k:Z
-
-.field public l:Z
-
-.field public m:Lec7;
-
-.field public n:Lec7;
-
-.field public o:I
-
-.field public p:Lec7;
-
-.field public q:I
-
-.field public r:I
-
-.field public s:I
-
-.field public t:Lec7;
-
-.field public u:Lv1g;
-
-.field public v:Lec7;
-
-.field public w:I
-
-.field public x:Z
-
-.field public y:I
-
-.field public z:Z
+.field public i:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Lrrg;Lq1g;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const v0, 0x7fffffff
+    iput-object p1, p0, Lx1g;->a:Lrrg;
 
-    iput v0, p0, Lx1g;->a:I
+    iput-object p2, p0, Lx1g;->b:Lq1g;
 
-    iput v0, p0, Lx1g;->b:I
+    const/4 p1, 0x0
 
-    iput v0, p0, Lx1g;->c:I
+    iput p1, p0, Lx1g;->d:I
 
-    iput v0, p0, Lx1g;->d:I
+    iput p1, p0, Lx1g;->e:I
 
-    iput v0, p0, Lx1g;->i:I
+    sget-object p1, Lmbh;->b:[B
 
-    iput v0, p0, Lx1g;->j:I
+    iput-object p1, p0, Lx1g;->f:[B
 
-    const/4 v1, 0x1
+    new-instance p1, Lwtb;
 
-    iput-boolean v1, p0, Lx1g;->k:Z
+    invoke-direct {p1}, Lwtb;-><init>()V
 
-    iput-boolean v1, p0, Lx1g;->l:Z
-
-    sget-object v2, Lec7;->b:Lc46;
-
-    sget-object v2, Lz8d;->o:Lz8d;
-
-    iput-object v2, p0, Lx1g;->m:Lec7;
-
-    iput-object v2, p0, Lx1g;->n:Lec7;
-
-    const/4 v3, 0x0
-
-    iput v3, p0, Lx1g;->o:I
-
-    iput-object v2, p0, Lx1g;->p:Lec7;
-
-    iput v3, p0, Lx1g;->q:I
-
-    iput v0, p0, Lx1g;->r:I
-
-    iput v0, p0, Lx1g;->s:I
-
-    iput-object v2, p0, Lx1g;->t:Lec7;
-
-    sget-object v0, Lv1g;->d:Lv1g;
-
-    iput-object v0, p0, Lx1g;->u:Lv1g;
-
-    iput-object v2, p0, Lx1g;->v:Lec7;
-
-    iput v3, p0, Lx1g;->w:I
-
-    iput-boolean v1, p0, Lx1g;->x:Z
-
-    iput v3, p0, Lx1g;->y:I
-
-    iput-boolean v3, p0, Lx1g;->z:Z
-
-    iput-boolean v3, p0, Lx1g;->A:Z
-
-    iput-boolean v3, p0, Lx1g;->B:Z
-
-    iput-boolean v3, p0, Lx1g;->C:Z
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lx1g;->D:Ljava/util/HashMap;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lx1g;->E:Ljava/util/HashSet;
+    iput-object p1, p0, Lx1g;->c:Lwtb;
 
     return-void
-.end method
-
-.method public static e([Ljava/lang/String;)Lz8d;
-    .locals 4
-
-    invoke-static {}, Lec7;->j()Lbc7;
-
-    move-result-object v0
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p0, v2
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v3}, Llig;->V(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Lub7;->a(Ljava/lang/Object;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lbc7;->i()Lz8d;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Ls1g;)V
-    .locals 2
+.method public final a(JIIILprg;)V
+    .locals 8
 
-    iget-object v0, p0, Lx1g;->D:Ljava/util/HashMap;
+    iget-object v0, p0, Lx1g;->g:Ls1g;
 
-    iget-object v1, p1, Ls1g;->a:Lg1g;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lx1g;->a:Lrrg;
+
+    move-wide v2, p1
+
+    move v4, p3
+
+    move v5, p4
+
+    move v6, p5
+
+    move-object v7, p6
+
+    invoke-interface/range {v1 .. v7}, Lrrg;->a(JIIILprg;)V
+
+    return-void
+
+    :cond_0
+    move v5, p4
+
+    move v6, p5
+
+    move-object v7, p6
+
+    move p5, p3
+
+    move-wide p3, p1
+
+    const/4 v1, 0x0
+
+    if-nez v7, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move p1, v1
+
+    :goto_0
+    const-string p2, "DRM on subtitles is not supported"
+
+    invoke-static {p2, p1}, Lh6j;->a(Ljava/lang/Object;Z)V
+
+    iget p1, p0, Lx1g;->e:I
+
+    sub-int/2addr p1, v6
+
+    sub-int v2, p1, v5
+
+    :try_start_0
+    iget-object v0, p0, Lx1g;->g:Ls1g;
+
+    iget-object v3, p0, Lx1g;->f:[B
+
+    sget-object v4, Lr1g;->c:Lr1g;
+
+    new-instance p1, Liv5;
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_2
+
+    const/4 p6, 0x4
+
+    move-object p2, p0
+
+    :try_start_1
+    invoke-direct/range {p1 .. p6}, Liv5;-><init>(Ljava/lang/Object;JII)V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-object v6, p2
+
+    move-object p6, p1
+
+    move-object p1, v0
+
+    move p3, v2
+
+    move-object p2, v3
+
+    move-object p5, v4
+
+    move p4, v5
+
+    :try_start_2
+    invoke-interface/range {p1 .. p6}, Ls1g;->F([BIILr1g;Lzx3;)V
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
+
+    move v5, p4
+
+    goto :goto_4
+
+    :catch_0
+    move-exception v0
+
+    move v5, p4
+
+    :goto_1
+    move-object p1, v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    move-object v6, p2
+
+    :goto_2
+    move p3, v2
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    move-object v6, p0
+
+    goto :goto_2
+
+    :goto_3
+    iget-boolean p2, v6, Lx1g;->i:Z
+
+    if-eqz p2, :cond_3
+
+    const-string p2, "SubtitleTranscodingTO"
+
+    const-string p4, "Parsing subtitles failed, ignoring sample."
+
+    invoke-static {p2, p4, p1}, Li1h;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_4
+    add-int v2, p3, v5
+
+    iput v2, v6, Lx1g;->d:I
+
+    iget p1, v6, Lx1g;->e:I
+
+    if-ne v2, p1, :cond_2
+
+    iput v1, v6, Lx1g;->d:I
+
+    iput v1, v6, Lx1g;->e:I
+
+    :cond_2
+    return-void
+
+    :cond_3
+    throw p1
+.end method
+
+.method public final b(Lwtb;II)V
+    .locals 1
+
+    iget-object v0, p0, Lx1g;->g:Ls1g;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lx1g;->a:Lrrg;
+
+    invoke-interface {v0, p1, p2, p3}, Lrrg;->b(Lwtb;II)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p2}, Lx1g;->e(I)V
+
+    iget-object p3, p0, Lx1g;->f:[B
+
+    iget v0, p0, Lx1g;->e:I
+
+    invoke-virtual {p1, v0, p3, p2}, Lwtb;->h(I[BI)V
+
+    iget p1, p0, Lx1g;->e:I
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lx1g;->e:I
 
     return-void
 .end method
 
-.method public b()Lz1g;
-    .locals 1
-
-    new-instance v0, Lz1g;
-
-    invoke-direct {v0, p0}, Lz1g;-><init>(Lx1g;)V
-
-    return-object v0
-.end method
-
-.method public c()Lx1g;
-    .locals 1
-
-    iget-object v0, p0, Lx1g;->D:Ljava/util/HashMap;
-
-    invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
-
-    return-object p0
-.end method
-
-.method public final d(Lz1g;)V
+.method public final c(Lki4;IZ)I
     .locals 2
 
-    iget v0, p1, Lz1g;->a:I
+    iget-object v0, p0, Lx1g;->g:Ls1g;
 
-    iput v0, p0, Lx1g;->a:I
+    if-nez v0, :cond_0
 
-    iget v0, p1, Lz1g;->b:I
+    iget-object v0, p0, Lx1g;->a:Lrrg;
 
-    iput v0, p0, Lx1g;->b:I
+    invoke-interface {v0, p1, p2, p3}, Lrrg;->c(Lki4;IZ)I
 
-    iget v0, p1, Lz1g;->c:I
+    move-result p1
 
-    iput v0, p0, Lx1g;->c:I
+    return p1
 
-    iget v0, p1, Lz1g;->d:I
+    :cond_0
+    invoke-virtual {p0, p2}, Lx1g;->e(I)V
 
-    iput v0, p0, Lx1g;->d:I
+    iget-object v0, p0, Lx1g;->f:[B
 
-    iget v0, p1, Lz1g;->e:I
+    iget v1, p0, Lx1g;->e:I
 
-    iput v0, p0, Lx1g;->e:I
+    invoke-interface {p1, v0, v1, p2}, Lki4;->read([BII)I
 
-    iget v0, p1, Lz1g;->f:I
+    move-result p1
 
-    iput v0, p0, Lx1g;->f:I
+    const/4 p2, -0x1
 
-    iget v0, p1, Lz1g;->g:I
+    if-ne p1, p2, :cond_2
 
-    iput v0, p0, Lx1g;->g:I
+    if-eqz p3, :cond_1
 
-    iget v0, p1, Lz1g;->h:I
+    return p2
 
-    iput v0, p0, Lx1g;->h:I
+    :cond_1
+    new-instance p1, Ljava/io/EOFException;
 
-    iget v0, p1, Lz1g;->i:I
+    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
 
-    iput v0, p0, Lx1g;->i:I
+    throw p1
 
-    iget v0, p1, Lz1g;->j:I
+    :cond_2
+    iget p2, p0, Lx1g;->e:I
 
-    iput v0, p0, Lx1g;->j:I
+    add-int/2addr p2, p1
 
-    iget-boolean v0, p1, Lz1g;->k:Z
+    iput p2, p0, Lx1g;->e:I
 
-    iput-boolean v0, p0, Lx1g;->k:Z
+    return p1
+.end method
 
-    iget-boolean v0, p1, Lz1g;->l:Z
+.method public final d(Lpj6;)V
+    .locals 6
 
-    iput-boolean v0, p0, Lx1g;->l:Z
+    iget-object v0, p1, Lpj6;->n:Ljava/lang/String;
 
-    iget-object v0, p1, Lz1g;->m:Lec7;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v0, p0, Lx1g;->m:Lec7;
+    iget-object v0, p1, Lpj6;->n:Ljava/lang/String;
 
-    iget-object v0, p1, Lz1g;->n:Lec7;
+    invoke-static {v0}, Lw5a;->h(Ljava/lang/String;)I
 
-    iput-object v0, p0, Lx1g;->n:Lec7;
+    move-result v1
 
-    iget v0, p1, Lz1g;->o:I
+    const/4 v2, 0x3
 
-    iput v0, p0, Lx1g;->o:I
+    if-ne v1, v2, :cond_0
 
-    iget-object v0, p1, Lz1g;->p:Lec7;
+    const/4 v1, 0x1
 
-    iput-object v0, p0, Lx1g;->p:Lec7;
+    goto :goto_0
 
-    iget v0, p1, Lz1g;->q:I
+    :cond_0
+    const/4 v1, 0x0
 
-    iput v0, p0, Lx1g;->q:I
+    :goto_0
+    invoke-static {v1}, Lh6j;->b(Z)V
 
-    iget v0, p1, Lz1g;->r:I
+    iget-object v1, p0, Lx1g;->h:Lpj6;
 
-    iput v0, p0, Lx1g;->r:I
+    invoke-virtual {p1, v1}, Lpj6;->equals(Ljava/lang/Object;)Z
 
-    iget v0, p1, Lz1g;->s:I
+    move-result v1
 
-    iput v0, p0, Lx1g;->s:I
+    iget-object v2, p0, Lx1g;->b:Lq1g;
 
-    iget-object v0, p1, Lz1g;->t:Lec7;
+    if-nez v1, :cond_2
 
-    iput-object v0, p0, Lx1g;->t:Lec7;
+    iput-object p1, p0, Lx1g;->h:Lpj6;
 
-    iget-object v0, p1, Lz1g;->u:Lv1g;
+    invoke-interface {v2, p1}, Lq1g;->e(Lpj6;)Z
 
-    iput-object v0, p0, Lx1g;->u:Lv1g;
+    move-result v1
 
-    iget-object v0, p1, Lz1g;->v:Lec7;
+    if-eqz v1, :cond_1
 
-    iput-object v0, p0, Lx1g;->v:Lec7;
+    invoke-interface {v2, p1}, Lq1g;->s(Lpj6;)Ls1g;
 
-    iget v0, p1, Lz1g;->w:I
+    move-result-object v1
 
-    iput v0, p0, Lx1g;->w:I
+    goto :goto_1
 
-    iget-boolean v0, p1, Lz1g;->x:Z
+    :cond_1
+    const/4 v1, 0x0
 
-    iput-boolean v0, p0, Lx1g;->x:Z
+    :goto_1
+    iput-object v1, p0, Lx1g;->g:Ls1g;
 
-    iget v0, p1, Lz1g;->y:I
+    :cond_2
+    iget-object v1, p0, Lx1g;->g:Ls1g;
 
-    iput v0, p0, Lx1g;->y:I
+    iget-object v3, p0, Lx1g;->a:Lrrg;
 
-    iget-boolean v0, p1, Lz1g;->z:Z
+    if-nez v1, :cond_3
 
-    iput-boolean v0, p0, Lx1g;->z:Z
+    invoke-interface {v3, p1}, Lrrg;->d(Lpj6;)V
 
-    iget-boolean v0, p1, Lz1g;->A:Z
+    return-void
 
-    iput-boolean v0, p0, Lx1g;->A:Z
+    :cond_3
+    invoke-virtual {p1}, Lpj6;->a()Lnj6;
 
-    iget-boolean v0, p1, Lz1g;->B:Z
+    move-result-object v1
 
-    iput-boolean v0, p0, Lx1g;->B:Z
+    const-string v4, "application/x-media3-cues"
 
-    iget-boolean v0, p1, Lz1g;->C:Z
+    invoke-static {v4}, Lw5a;->n(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-boolean v0, p0, Lx1g;->C:Z
+    move-result-object v4
 
-    new-instance v0, Ljava/util/HashSet;
+    iput-object v4, v1, Lnj6;->m:Ljava/lang/String;
 
-    iget-object v1, p1, Lz1g;->E:Lpc7;
+    iput-object v0, v1, Lnj6;->j:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    const-wide v4, 0x7fffffffffffffffL
 
-    iput-object v0, p0, Lx1g;->E:Ljava/util/HashSet;
+    iput-wide v4, v1, Lnj6;->r:J
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-interface {v2, p1}, Lq1g;->B(Lpj6;)I
 
-    iget-object p1, p1, Lz1g;->D:Lic7;
+    move-result p1
 
-    invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    iput p1, v1, Lnj6;->K:I
 
-    iput-object v0, p0, Lx1g;->D:Ljava/util/HashMap;
+    invoke-static {v1, v3}, Lcbh;->s(Lnj6;Lrrg;)V
+
+    return-void
+.end method
+
+.method public final e(I)V
+    .locals 4
+
+    iget-object v0, p0, Lx1g;->f:[B
+
+    array-length v0, v0
+
+    iget v1, p0, Lx1g;->e:I
+
+    sub-int/2addr v0, v1
+
+    if-lt v0, p1, :cond_0
+
+    return-void
+
+    :cond_0
+    iget v0, p0, Lx1g;->d:I
+
+    sub-int/2addr v1, v0
+
+    mul-int/lit8 v0, v1, 0x2
+
+    add-int/2addr p1, v1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    iget-object v0, p0, Lx1g;->f:[B
+
+    array-length v2, v0
+
+    if-gt p1, v2, :cond_1
+
+    move-object p1, v0
+
+    goto :goto_0
+
+    :cond_1
+    new-array p1, p1, [B
+
+    :goto_0
+    iget v2, p0, Lx1g;->d:I
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v2, p1, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput v3, p0, Lx1g;->d:I
+
+    iput v1, p0, Lx1g;->e:I
+
+    iput-object p1, p0, Lx1g;->f:[B
 
     return-void
 .end method

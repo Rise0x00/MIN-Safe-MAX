@@ -1,11 +1,29 @@
 .class public final Lm9;
-.super Ljava/lang/Object;
+.super Lq14;
 .source "SourceFile"
+
+
+# static fields
+.field public static final a:Lm9;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lm9;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lm9;->a:Lm9;
+
+    return-void
+.end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -14,80 +32,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lm9;
+    instance-of p1, p1, Lm9;
 
-    if-nez v1, :cond_1
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
     return p1
 
     :cond_1
-    check-cast p1, Lm9;
-
-    sget v1, Lvza;->a:I
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget p1, Lxza;->a:I
-
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    sget v0, Lvza;->c:I
+    const v0, -0x5c189f88
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    sget v2, Lxza;->R:I
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Lnx1;->v(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 1
 
-    sget v0, Lvza;->c:I
-
-    sget v1, Lxza;->R:I
-
-    const-string v2, ", title="
-
-    const-string v3, ", type="
-
-    const-string v4, "AddAdminsTabState(id="
-
-    invoke-static {v4, v0, v2, v1, v3}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "CHAT_MEMBERS"
-
-    const-string v2, ")"
-
-    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "AddContactButtonClicked"
 
     return-object v0
 .end method

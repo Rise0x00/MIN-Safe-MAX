@@ -1,72 +1,138 @@
-.class public final Lmp6;
+.class public final synthetic Lmp6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf1f;
+.implements Llq6;
 
 
 # instance fields
-.field public final a:Lsof;
+.field public final synthetic a:I
+
+.field public final synthetic b:Le9g;
 
 
 # direct methods
-.method public constructor <init>(Lsof;)V
+.method public synthetic constructor <init>(Le9g;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lmp6;->a:I
 
-    iput-object p1, p0, Lmp6;->a:Lsof;
+    iput-object p1, p0, Lmp6;->b:Le9g;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Exception;)Z
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
-    const/4 p1, 0x0
+    iget v0, p0, Lmp6;->a:I
 
-    return p1
-.end method
+    iget-object v1, p0, Lmp6;->b:Le9g;
 
-.method public final b(Leb0;)Z
-    .locals 2
+    packed-switch v0, :pswitch_data_0
 
-    iget v0, p1, Leb0;->b:I
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    const/4 v1, 0x3
+    move-result-object v0
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
 
-    goto :goto_0
+    move-result v3
 
-    :cond_0
-    const/4 v1, 0x4
+    iget-object v0, v1, Le9g;->b:Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_1
+    check-cast v0, Lo58;
 
-    goto :goto_0
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    const/4 v1, 0x5
+    move-result-object v0
 
-    if-ne v0, v1, :cond_2
+    move-object v2, v0
 
-    :goto_0
-    iget-object v0, p0, Lmp6;->a:Lsof;
+    check-cast v2, Lyab;
 
-    iget-object p1, p1, Leb0;->a:Ljava/lang/String;
+    sget-object v0, Lyab;->q:[Lz28;
 
-    invoke-virtual {v0, p1}, Lsof;->d(Ljava/lang/Object;)V
+    const/4 v7, 0x0
 
-    const/4 p1, 0x1
+    const/4 v6, 0x5
 
-    return p1
+    const-string v4, "frsc-sch"
 
-    :cond_2
-    const/4 p1, 0x0
+    move v5, v3
 
-    return p1
+    invoke-virtual/range {v2 .. v7}, Lyab;->f(ILjava/lang/String;IIZ)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0, v4}, Lyab;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, v1, Le9g;->b:Ljava/lang/Object;
+
+    check-cast v0, Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lyab;
+
+    invoke-virtual {v0}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, v1, Le9g;->b:Ljava/lang/Object;
+
+    check-cast v0, Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lyab;
+
+    invoke-virtual {v0}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, v1, Le9g;->b:Ljava/lang/Object;
+
+    check-cast v0, Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lyab;
+
+    invoke-virtual {v0}, Lyab;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

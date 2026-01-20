@@ -1,68 +1,67 @@
 .class public final Lt2e;
-.super Landroid/view/View;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Landroid/text/Layout;
+.field public X:Ljava/util/Iterator;
 
-.field public b:I
+.field public Y:Ljava/util/Collection;
+
+.field public Z:I
+
+.field public d:J
+
+.field public o:Ljava/util/Collection;
+
+.field public t0:I
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Lu2e;
+
+.field public w0:I
 
 
-# virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lu2e;Lo84;)V
+    .locals 0
 
-    iget-object v0, p0, Lt2e;->a:Landroid/text/Layout;
+    iput-object p1, p0, Lt2e;->v0:Lu2e;
 
-    if-eqz v0, :cond_0
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, p1}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public final onMeasure(II)V
-    .locals 1
 
-    iget-object p1, p0, Lt2e;->a:Landroid/text/Layout;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 p2, 0x0
+    iput-object p1, p0, Lt2e;->u0:Ljava/lang/Object;
 
-    if-eqz p1, :cond_1
+    iget p1, p0, Lt2e;->w0:I
 
-    invoke-virtual {p1}, Landroid/text/Layout;->getLineCount()I
+    const/high16 v0, -0x80000000
 
-    move-result v0
+    or-int/2addr p1, v0
 
-    if-lez v0, :cond_0
+    iput p1, p0, Lt2e;->w0:I
 
-    invoke-virtual {p1, p2}, Landroid/text/Layout;->getLineMax(I)F
+    const/4 v3, 0x0
 
-    move-result p2
+    const/4 v4, 0x0
 
-    float-to-int p2, p2
+    iget-object v0, p0, Lt2e;->v0:Lu2e;
 
-    goto :goto_0
+    const-wide/16 v1, 0x0
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/text/Layout;->getWidth()I
+    move-object v5, p0
 
-    move-result p2
+    invoke-virtual/range {v0 .. v5}, Lu2e;->s(JLjava/util/Collection;Ljava/util/Set;Lo84;)Ljava/lang/Object;
 
-    :goto_0
-    invoke-virtual {p1}, Landroid/text/Layout;->getHeight()I
+    move-result-object p1
 
-    move-result p1
-
-    goto :goto_1
-
-    :cond_1
-    move p1, p2
-
-    :goto_1
-    invoke-virtual {p0, p2, p1}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
+    return-object p1
 .end method

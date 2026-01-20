@@ -1,96 +1,41 @@
-.class public abstract Ldn;
-.super Ljava/lang/Object;
+.class public final Ldn;
+.super Ljz;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/net/Uri;
+# instance fields
+.field public final X:Ljava/lang/String;
+
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:I
+
+.field public final d:J
+
+.field public final o:Ljava/lang/String;
+
+.field public final t0:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;IJZZ)V
     .locals 1
 
-    const-string v0, "https://api.ok.ru"
+    sget-object v0, Le10;->t0:Le10;
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-direct {p0, v0, p9, p10}, Ljz;-><init>(Le10;ZZ)V
 
-    move-result-object v0
+    iput-wide p1, p0, Ldn;->d:J
 
-    sput-object v0, Ldn;->a:Landroid/net/Uri;
+    iput-object p3, p0, Ldn;->o:Ljava/lang/String;
+
+    iput-object p4, p0, Ldn;->X:Ljava/lang/String;
+
+    iput-object p5, p0, Ldn;->Y:Ljava/lang/String;
+
+    iput p6, p0, Ldn;->Z:I
+
+    iput-wide p7, p0, Ldn;->t0:J
 
     return-void
-.end method
-
-.method public static final a(Ljava/lang/String;)Landroid/net/Uri;
-    .locals 3
-
-    const/16 v0, 0x2f
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x2e
-
-    invoke-static {p0, v2, v0, v1}, Lfbf;->s(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "ok://api/api/"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final b(Landroid/net/Uri;)Ljava/lang/String;
-    .locals 3
-
-    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ok://api/api/"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lfbf;->u(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/16 p0, 0xd
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const/16 v0, 0x2f
-
-    const/16 v1, 0x2e
-
-    invoke-static {p0, v0, v1, v2}, Lfbf;->s(Ljava/lang/String;CCZ)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Unknown uri "
-
-    invoke-static {p0, v1}, Lsfd;->h(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

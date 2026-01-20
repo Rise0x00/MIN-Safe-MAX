@@ -1,38 +1,37 @@
-.class public final synthetic Lmi5;
+.class public interface abstract Lmi5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc38;
 
-
-# instance fields
-.field public final synthetic a:Lyi5;
+# static fields
+.field public static final q:Lvna;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyi5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lmi5;->a:Lyi5;
+    new-instance v0, Lvna;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x14
+
+    invoke-direct {v0, v1}, Lvna;-><init>(I)V
+
+    sput-object v0, Lmi5;->q:Lvna;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public abstract c(Landroidx/camera/video/internal/encoder/EncodeException;)V
+.end method
 
-    check-cast p1, Lntb;
+.method public abstract j()V
+.end method
 
-    iget-object v0, p0, Lmi5;->a:Lyi5;
+.method public abstract l(Lbi5;)V
+.end method
 
-    iget-object v0, v0, Lyi5;->T0:Lktb;
-
-    invoke-interface {p1, v0}, Lntb;->H(Lktb;)V
-
-    return-void
+.method public abstract n(Lts4;)V
 .end method

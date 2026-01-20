@@ -1,170 +1,81 @@
 .class public final Lhye;
-.super Landroid/database/sqlite/SQLiteOpenHelper;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljc4;
+
+# instance fields
+.field public a:I
+
+.field public final b:[I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0xa
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Lhye;->b:[I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 0
+.method public final a()I
+    .locals 2
 
-    return-void
-.end method
+    iget v0, p0, Lhye;->a:I
 
-.method public final onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
-    .locals 9
+    and-int/lit16 v0, v0, 0x80
 
-    const-string p2, "type"
+    if-eqz v0, :cond_0
 
-    const-string p3, "name"
+    iget-object v0, p0, Lhye;->b:[I
 
-    filled-new-array {p2, p3}, [Ljava/lang/String;
+    const/4 v1, 0x7
 
-    move-result-object v3
+    aget v0, v0, v1
 
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    const-string v2, "sqlite_master"
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    move-object v1, p1
-
-    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p1
+    return v0
 
     :cond_0
-    :goto_0
-    :try_start_0
-    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
+    const v0, 0xffff
 
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    const/4 p2, 0x0
-
-    invoke-interface {p1, p2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    const/4 p3, 0x1
-
-    invoke-interface {p1, p3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object p3
-
-    const-string v0, "sqlite_sequence"
-
-    invoke-virtual {v0, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "DROP "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " IF EXISTS "
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-virtual {v1, p2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-    :try_end_1
-    .catch Landroid/database/SQLException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object p2, v0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    move-object p3, v0
-
-    :try_start_2
-    const-string v0, "SADatabaseProvider"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Error executing "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v0, p2, p3}, Lpyh;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
-
-    return-void
-
-    :goto_1
-    if-eqz p1, :cond_2
-
-    :try_start_3
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v0
-
-    move-object p1, v0
-
-    invoke-virtual {p2, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_2
-    throw p2
+    return v0
 .end method
 
-.method public final onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
-    .locals 0
+.method public final b(II)V
+    .locals 3
 
+    if-ltz p1, :cond_1
+
+    iget-object v0, p0, Lhye;->b:[I
+
+    array-length v1, v0
+
+    if-lt p1, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x1
+
+    shl-int/2addr v1, p1
+
+    iget v2, p0, Lhye;->a:I
+
+    or-int/2addr v1, v2
+
+    iput v1, p0, Lhye;->a:I
+
+    aput p2, v0, p1
+
+    :cond_1
+    :goto_0
     return-void
 .end method

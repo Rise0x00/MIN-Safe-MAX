@@ -1,109 +1,199 @@
-.class public final enum Lgg0;
-.super Ljava/lang/Enum;
+.class public final Lgg0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Lgg0;
+# instance fields
+.field public final a:Lfg0;
 
-.field public static final enum a:Lgg0;
+.field public final b:Lhg0;
 
-.field public static final enum b:Lgg0;
+.field public final c:Lig0;
 
-.field public static final enum c:Lgg0;
-
-.field public static final enum d:Lgg0;
-
-.field public static final enum o:Lgg0;
+.field public final d:Ljg0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lfg0;Lhg0;Lig0;Ljg0;)V
+    .locals 0
 
-    new-instance v0, Lgg0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "REMOTE"
+    iput-object p1, p0, Lgg0;->a:Lfg0;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lgg0;->b:Lhg0;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lgg0;->c:Lig0;
 
-    sput-object v0, Lgg0;->a:Lgg0;
-
-    new-instance v1, Lgg0;
-
-    const-string v2, "LOCAL_RTT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lgg0;->b:Lgg0;
-
-    new-instance v2, Lgg0;
-
-    const-string v3, "LOCAL_LOSS"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lgg0;->c:Lgg0;
-
-    new-instance v3, Lgg0;
-
-    const-string v4, "REMOTE_RTT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lgg0;->d:Lgg0;
-
-    new-instance v4, Lgg0;
-
-    const-string v5, "REMOTE_LOSS"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lgg0;->o:Lgg0;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lgg0;
-
-    move-result-object v0
-
-    sput-object v0, Lgg0;->X:[Lgg0;
+    iput-object p4, p0, Lgg0;->d:Ljg0;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgg0;
-    .locals 1
 
-    const-class v0, Lgg0;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lgg0;
+    return v0
 
-    return-object p0
+    :cond_0
+    instance-of v1, p1, Lgg0;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lgg0;
+
+    iget-object v1, p0, Lgg0;->a:Lfg0;
+
+    iget-object v3, p1, Lgg0;->a:Lfg0;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lgg0;->b:Lhg0;
+
+    iget-object v3, p1, Lgg0;->b:Lhg0;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lgg0;->c:Lig0;
+
+    iget-object v3, p1, Lgg0;->c:Lig0;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lgg0;->d:Ljg0;
+
+    iget-object p1, p1, Lgg0;->d:Ljg0;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
 .end method
 
-.method public static values()[Lgg0;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    sget-object v0, Lgg0;->X:[Lgg0;
+    iget-object v0, p0, Lgg0;->a:Lfg0;
 
-    invoke-virtual {v0}, [Lgg0;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, Lfg0;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lgg0;->b:Lhg0;
+
+    invoke-virtual {v2}, Lhg0;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lgg0;->c:Lig0;
+
+    iget v0, v0, Lig0;->a:I
+
+    invoke-static {v0, v2, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lgg0;->d:Ljg0;
+
+    invoke-virtual {v1}, Ljg0;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BackgroundLocalColors(chips="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lgg0;->a:Lfg0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fileType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgg0;->b:Lhg0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", tabBar="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgg0;->c:Lig0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", topBar="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgg0;->d:Ljg0;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, [Lgg0;
 
     return-object v0
 .end method

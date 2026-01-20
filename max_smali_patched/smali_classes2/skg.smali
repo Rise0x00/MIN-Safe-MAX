@@ -2,30 +2,87 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lskg;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Ltkg;
+.field public final a:I
 
-.field public final b:Lukg;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ltkg;Lukg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lhne;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, v1}, Lhne;-><init>(I)V
+
+    sput-object v0, Lskg;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lskg;->a:Ltkg;
+    iput p1, p0, Lskg;->a:I
 
-    iput-object p2, p0, Lskg;->b:Lukg;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "%02d"
+
+    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lskg;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -45,85 +102,44 @@
     :cond_1
     check-cast p1, Lskg;
 
-    iget-object v1, p0, Lskg;->a:Ltkg;
+    iget v1, p0, Lskg;->a:I
 
-    iget-object v3, p1, Lskg;->a:Ltkg;
+    iget p1, p1, Lskg;->a:I
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eq v1, p1, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lskg;->b:Lukg;
-
-    iget-object p1, p1, Lskg;->b:Lukg;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    const/high16 v0, 0x1f000000
+    iget v0, p0, Lskg;->a:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    const/high16 v1, 0x29000000
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "VfxButtonIconOverlayPlainColors(elevation1="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lskg;->a:Ltkg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", elevation2="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lskg;->b:Lukg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lskg;->b:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Lskg;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

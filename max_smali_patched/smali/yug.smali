@@ -1,58 +1,85 @@
-.class public interface abstract Lyug;
-.super Ljava/lang/Object;
+.class public final Lyug;
+.super Lxug;
 .source "SourceFile"
 
 
-# virtual methods
-.method public a()Lfia;
-    .locals 1
+# instance fields
+.field public final synthetic d:I
 
-    sget-object v0, Ldq3;->b:Ldq3;
 
-    return-object v0
-.end method
-
-.method public abstract b(Lcgf;)V
-.end method
-
-.method public c(I)V
+# direct methods
+.method public synthetic constructor <init>(I)V
     .locals 0
+
+    iput p1, p0, Lyug;->d:I
+
+    invoke-direct {p0}, Lxug;-><init>()V
 
     return-void
 .end method
 
-.method public d()Lfia;
-    .locals 1
 
-    sget-object v0, Lrb0;->f:Ldq3;
+# virtual methods
+.method public final next()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lyug;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lxug;->c:I
+
+    add-int/lit8 v1, v0, 0x2
+
+    iput v1, p0, Lxug;->c:I
+
+    iget-object v1, p0, Lxug;->a:[Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
+
+    aget-object v0, v1, v0
 
     return-object v0
-.end method
 
-.method public e()Lfia;
-    .locals 2
+    :pswitch_0
+    iget v0, p0, Lxug;->c:I
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    add-int/lit8 v1, v0, 0x2
 
-    new-instance v1, Ldq3;
+    iput v1, p0, Lxug;->c:I
 
-    invoke-direct {v1, v0}, Ldq3;-><init>(Ljava/lang/Object;)V
+    iget-object v1, p0, Lxug;->a:[Ljava/lang/Object;
+
+    aget-object v0, v1, v0
+
+    return-object v0
+
+    :pswitch_1
+    iget v0, p0, Lxug;->c:I
+
+    add-int/lit8 v1, v0, 0x2
+
+    iput v1, p0, Lxug;->c:I
+
+    new-instance v1, Lqr8;
+
+    iget-object v2, p0, Lxug;->a:[Ljava/lang/Object;
+
+    aget-object v3, v2, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    aget-object v0, v2, v0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v3, v2, v0}, Lqr8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-object v1
-.end method
 
-.method public f(Lcgf;Lavf;)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Lyug;->b(Lcgf;)V
-
-    return-void
-.end method
-
-.method public g(Lz02;)Lnlg;
-    .locals 0
-
-    sget-object p1, Lnlg;->a:Lmlg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

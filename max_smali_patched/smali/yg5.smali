@@ -1,211 +1,175 @@
-.class public final Lyg5;
-.super Ljava/lang/Object;
+.class public final enum Lyg5;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lp2d;
 
 
 # static fields
-.field public static final d:Ljava/nio/charset/Charset;
+.field public static final enum a:Lyg5;
 
-.field public static final e:[Ljava/lang/String;
-
-.field public static final f:[I
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:[B
+.field public static final synthetic b:[Lyg5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 15
+    .locals 4
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
+    new-instance v0, Lyg5;
 
-    sput-object v0, Lyg5;->d:Ljava/nio/charset/Charset;
+    const-string v1, "INSTANCE"
 
-    const-string v13, "DOUBLE"
+    const/4 v2, 0x0
 
-    const-string v14, "IFD"
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v1, ""
+    sput-object v0, Lyg5;->a:Lyg5;
 
-    const-string v2, "BYTE"
+    new-instance v1, Lyg5;
 
-    const-string v3, "STRING"
+    const-string v2, "NEVER"
 
-    const-string v4, "USHORT"
+    const/4 v3, 0x1
 
-    const-string v5, "ULONG"
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-string v6, "URATIONAL"
-
-    const-string v7, "SBYTE"
-
-    const-string v8, "UNDEFINED"
-
-    const-string v9, "SSHORT"
-
-    const-string v10, "SLONG"
-
-    const-string v11, "SRATIONAL"
-
-    const-string v12, "SINGLE"
-
-    filled-new-array/range {v1 .. v14}, [Ljava/lang/String;
+    filled-new-array {v0, v1}, [Lyg5;
 
     move-result-object v0
 
-    sput-object v0, Lyg5;->e:[Ljava/lang/String;
-
-    const/16 v0, 0xe
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    sput-object v0, Lyg5;->f:[I
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x1
-        0x1
-        0x2
-        0x4
-        0x8
-        0x1
-        0x1
-        0x2
-        0x4
-        0x8
-        0x4
-        0x8
-        0x1
-    .end array-data
-.end method
-
-.method public constructor <init>(I[BI)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lyg5;->a:I
-
-    iput p3, p0, Lyg5;->b:I
-
-    iput-object p2, p0, Lyg5;->c:[B
+    sput-object v0, Lyg5;->b:[Lyg5;
 
     return-void
 .end method
 
-.method public static a(JLjava/nio/ByteOrder;)Lyg5;
-    .locals 2
+.method public static a(Le0b;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lyg5;->a:Lyg5;
 
-    new-array v0, v0, [J
+    invoke-interface {p0, v0}, Le0b;->c(Lo25;)V
 
-    const/4 v1, 0x0
+    invoke-interface {p0}, Le0b;->b()V
 
-    aput-wide p0, v0, v1
+    return-void
+.end method
 
-    invoke-static {v0, p2}, Lyg5;->b([JLjava/nio/ByteOrder;)Lyg5;
+.method public static b(Ljava/lang/Throwable;Le0b;)V
+    .locals 1
+
+    sget-object v0, Lyg5;->a:Lyg5;
+
+    invoke-interface {p1, v0}, Le0b;->c(Lo25;)V
+
+    invoke-interface {p1, p0}, Le0b;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static d(Ljava/lang/Throwable;Ldff;)V
+    .locals 1
+
+    sget-object v0, Lyg5;->a:Lyg5;
+
+    invoke-interface {p1, v0}, Ldff;->c(Lo25;)V
+
+    invoke-interface {p1, p0}, Ldff;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lyg5;
+    .locals 1
+
+    const-class v0, Lyg5;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
+
+    check-cast p0, Lyg5;
 
     return-object p0
 .end method
 
-.method public static b([JLjava/nio/ByteOrder;)Lyg5;
-    .locals 5
+.method public static values()[Lyg5;
+    .locals 1
 
-    sget-object v0, Lyg5;->f:[I
+    sget-object v0, Lyg5;->b:[Lyg5;
 
-    const/4 v1, 0x4
-
-    aget v0, v0, v1
-
-    array-length v2, p0
-
-    mul-int/2addr v0, v2
-
-    new-array v0, v0, [B
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0}, [Lyg5;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    check-cast v0, [Lyg5;
 
-    array-length p1, p0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, p1, :cond_0
-
-    aget-wide v3, p0, v2
-
-    long-to-int v3, v3
-
-    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lyg5;
-
-    array-length p0, p0
-
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v0
-
-    invoke-direct {p1, v1, v0, p0}, Lyg5;-><init>(I[BI)V
-
-    return-object p1
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final clear()V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "("
+.method public final dispose()V
+    .locals 0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    sget-object v1, Lyg5;->e:[Ljava/lang/String;
+.method public final e()Z
+    .locals 1
 
-    iget v2, p0, Lyg5;->a:I
+    sget-object v0, Lyg5;->a:Lyg5;
 
-    aget-object v1, v1, v2
+    if-ne p0, v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, ", data length:"
+    return v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lyg5;->c:[B
+    return v0
+.end method
 
-    array-length v1, v1
+.method public final g(I)I
+    .locals 0
 
-    const-string v2, ")"
+    const/4 p1, 0x2
 
-    invoke-static {v0, v1, v2}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    return p1
+.end method
 
-    move-result-object v0
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Should not be called!"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 1
+
+    const/4 v0, 0x0
 
     return-object v0
 .end method

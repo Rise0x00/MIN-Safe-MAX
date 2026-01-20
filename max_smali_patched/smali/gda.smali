@@ -1,21 +1,19 @@
-.class public abstract Lgda;
+.class public final Lgda;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Z
+
+
 # direct methods
-.method public static a(Landroid/app/Person;)Landroid/os/Parcelable;
+.method public constructor <init>(Z)V
     .locals 0
 
-    return-object p0
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public static b(Ljava/lang/CharSequence;JLandroid/app/Person;)Landroid/app/Notification$MessagingStyle$Message;
-    .locals 1
+    iput-boolean p1, p0, Lgda;->a:Z
 
-    new-instance v0, Landroid/app/Notification$MessagingStyle$Message;
-
-    invoke-direct {v0, p0, p1, p2, p3}, Landroid/app/Notification$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLandroid/app/Person;)V
-
-    return-object v0
+    return-void
 .end method

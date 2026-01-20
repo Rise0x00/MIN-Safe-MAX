@@ -1,225 +1,238 @@
 .class public final Le8f;
-.super Logf;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/graphics/Paint;
 
-.field public final synthetic Y:Lp8f;
+.field public final b:Ld8f;
 
-.field public final synthetic Z:J
-
-.field public o:I
+.field public c:Z
 
 
 # direct methods
-.method public constructor <init>(Lp8f;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput-object p1, p0, Le8f;->Y:Lp8f;
+    const/4 v0, 0x0
 
-    iput-wide p2, p0, Le8f;->Z:J
+    const/4 v1, 0x0
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    new-instance p1, Landroid/graphics/Paint;
+
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object p1, p0, Le8f;->a:Landroid/graphics/Paint;
+
+    new-instance p1, Ld8f;
+
+    invoke-direct {p1}, Ld8f;-><init>()V
+
+    iput-object p1, p0, Le8f;->b:Ld8f;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Le8f;->c:Z
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setWillNotDraw(Z)V
+
+    invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    new-instance p1, Lnpd;
+
+    const/4 v0, 0x3
+
+    invoke-direct {p1, v0}, Lnpd;-><init>(I)V
+
+    iget-object v0, p1, Lnpd;->b:Ljava/lang/Object;
+
+    check-cast v0, La8f;
+
+    iput-boolean v1, v0, La8f;->j:Z
+
+    sget-object v1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lzlb;->getText()Lrfg;
+
+    move-result-object v2
+
+    iget v2, v2, Lrfg;->e:I
+
+    invoke-virtual {p1, v2}, Lnpd;->m(I)V
+
+    invoke-virtual {v1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->e()Lr4;
+
+    move-result-object v1
+
+    iget v1, v1, Lr4;->a:I
+
+    iput v1, v0, La8f;->d:I
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, v0}, Lnpd;->l(F)V
+
+    const/16 v0, 0x168
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lnpd;->o(I)V
+
+    invoke-virtual {p1}, Lnpd;->i()La8f;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Le8f;->a(La8f;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(La8f;)V
+    .locals 1
+
+    iget-object v0, p0, Le8f;->b:Ld8f;
+
+    invoke-virtual {v0, p1}, Ld8f;->b(La8f;)V
+
+    iget-boolean p1, p1, La8f;->i:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x2
+
+    iget-object v0, p0, Le8f;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final dispatchDraw(Landroid/graphics/Canvas;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/view/View;->dispatchDraw(Landroid/graphics/Canvas;)V
+
+    iget-boolean v0, p0, Le8f;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Le8f;->b:Ld8f;
+
+    invoke-virtual {v0, p1}, Ld8f;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onAttachedToWindow()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
+
+    iget-object v0, p0, Le8f;->b:Ld8f;
+
+    invoke-virtual {v0}, Ld8f;->a()V
+
+    return-void
+.end method
+
+.method public final onDetachedFromWindow()V
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+
+    iget-object v0, p0, Le8f;->b:Ld8f;
+
+    invoke-virtual {v0}, Ld8f;->d()V
+
+    return-void
+.end method
+
+.method public final onLayout(ZIIII)V
     .locals 0
 
-    check-cast p1, Lg54;
+    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-object p1, p0
 
-    invoke-virtual {p0, p1, p2}, Le8f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    move-result-object p1
+    move-result p2
 
-    check-cast p1, Le8f;
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result p3
 
-    invoke-virtual {p1, p2}, Le8f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p4, p1, Le8f;->b:Ld8f;
 
-    move-result-object p1
+    const/4 p5, 0x0
 
-    return-object p1
+    invoke-virtual {p4, p5, p5, p2, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
 
-    new-instance v0, Le8f;
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
-    iget-object v1, p0, Le8f;->Y:Lp8f;
+    move-result v0
 
-    iget-wide v2, p0, Le8f;->Z:J
+    if-nez v0, :cond_1
 
-    invoke-direct {v0, v1, v2, v3, p2}, Le8f;-><init>(Lp8f;JLkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Le8f;->b:Ld8f;
 
-    iput-object p1, v0, Le8f;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Le8f;->o:I
-
-    sget-object v1, Lybg;->a:Lybg;
-
-    iget-object v2, p0, Le8f;->Y:Lp8f;
-
-    const/4 v3, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v3, :cond_0
-
-    iget-object v0, p0, Le8f;->X:Ljava/lang/Object;
-
-    check-cast v0, Lg54;
-
-    :try_start_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ne p1, v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Le8f;->X:Ljava/lang/Object;
-
-    move-object v0, p1
-
-    check-cast v0, Lg54;
-
-    iget-wide v4, p0, Le8f;->Z:J
-
-    :try_start_1
-    sget-object p1, Lp8f;->A0:[Les7;
-
-    iget-object p1, v2, Lp8f;->Z:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Llo5;
-
-    const/4 v6, 0x0
-
-    invoke-virtual {p1, v4, v5, v6}, Llo5;->C(JZ)Lwg3;
-
-    move-result-object p1
-
-    iput-object v0, p0, Le8f;->X:Ljava/lang/Object;
-
-    iput v3, p0, Le8f;->o:I
-
-    invoke-static {p1, p0}, Loxi;->a(Ljg3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object v3, Lh54;->a:Lh54;
-
-    if-ne p1, v3, :cond_2
-
-    return-object v3
-
-    :cond_2
     :goto_0
-    move-object v3, v1
+    const/4 p1, 0x1
 
-    goto :goto_2
-
-    :goto_1
-    new-instance v3, Lfed;
-
-    invoke-direct {v3, p1}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    :goto_2
-    instance-of p1, v3, Lfed;
-
-    if-nez p1, :cond_3
-
-    move-object p1, v3
-
-    check-cast p1, Lybg;
-
-    iget-object p1, v2, Lp8f;->y0:Laf5;
-
-    new-instance v2, Llce;
-
-    sget v4, Lyjd;->x:I
-
-    sget v5, Ls4b;->l:I
-
-    new-instance v6, Lirf;
-
-    invoke-direct {v6, v5}, Lirf;-><init>(I)V
-
-    invoke-direct {v2, v4, v6}, Llce;-><init>(ILnrf;)V
-
-    invoke-static {p1, v2}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    :cond_3
-    invoke-static {v3}, Lhed;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_5
-
-    instance-of v2, p1, Ljava/util/concurrent/CancellationException;
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "Can\'t delete sticker set"
-
-    invoke-static {v0, v2, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_3
-
-    :cond_4
-    throw p1
-
-    :cond_5
-    :goto_3
-    return-object v1
+    return p1
 .end method

@@ -1,334 +1,189 @@
-.class public final Lq12;
+.class public final synthetic Lq12;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcv;
+.implements Lrw1;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public b:I
-
-.field public c:J
-
-.field public d:Ljava/lang/Object;
+.field public final synthetic b:Lr12;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lr12;I)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Lq12;->a:I
+    iput p2, p0, Lq12;->a:I
+
+    iput-object p1, p0, Lq12;->b:Lr12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method public constructor <init>(IJ)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Lq12;->a:I
-
-    .line 25
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 26
-    iput p1, p0, Lq12;->b:I
-
-    .line 27
-    iput-wide p2, p0, Lq12;->c:J
-
-    return-void
-.end method
-
-.method public constructor <init>(IJLjava/lang/Long;)V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    iput v0, p0, Lq12;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput p1, p0, Lq12;->b:I
-
-    .line 4
-    iput-wide p2, p0, Lq12;->c:J
-
-    .line 5
-    iput-object p4, p0, Lq12;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/net/URL;J)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lq12;->a:I
-
-    .line 21
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 22
-    iput p1, p0, Lq12;->b:I
-
-    .line 23
-    iput-object p2, p0, Lq12;->d:Ljava/lang/Object;
-
-    .line 24
-    iput-wide p3, p0, Lq12;->c:J
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/Exception;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lq12;->a:I
-
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    sub-long/2addr v0, p1
-
-    iput-wide v0, p0, Lq12;->c:J
-
-    .line 8
-    instance-of p1, p3, Landroidx/camera/core/impl/CameraValidator$CameraIdListIncorrectException;
-
-    const/4 p2, 0x2
-
-    if-eqz p1, :cond_0
-
-    .line 9
-    iput p2, p0, Lq12;->b:I
-
-    .line 10
-    iput-object p3, p0, Lq12;->d:Ljava/lang/Object;
-
-    goto :goto_0
-
-    .line 11
-    :cond_0
-    instance-of p1, p3, Landroidx/camera/core/InitializationException;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_4
-
-    .line 12
-    invoke-virtual {p3}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    move-object p3, p1
-
-    .line 13
-    :cond_1
-    iput-object p3, p0, Lq12;->d:Ljava/lang/Object;
-
-    .line 14
-    instance-of p1, p3, Landroidx/camera/core/CameraUnavailableException;
-
-    if-eqz p1, :cond_2
-
-    .line 15
-    iput p2, p0, Lq12;->b:I
-
-    goto :goto_0
-
-    .line 16
-    :cond_2
-    instance-of p1, p3, Ljava/lang/IllegalArgumentException;
-
-    if-eqz p1, :cond_3
-
-    const/4 p1, 0x1
-
-    .line 17
-    iput p1, p0, Lq12;->b:I
-
-    goto :goto_0
-
-    .line 18
-    :cond_3
-    iput v0, p0, Lq12;->b:I
-
-    goto :goto_0
-
-    .line 19
-    :cond_4
-    iput v0, p0, Lq12;->b:I
-
-    .line 20
-    iput-object p3, p0, Lq12;->d:Ljava/lang/Object;
-
-    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 4
-
-    iget-object v0, p0, Lq12;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/Date;
-
-    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v0
-
-    iget v2, p0, Lq12;->b:I
-
-    mul-int/lit16 v2, v2, 0x3e8
-
-    int-to-long v2, v2
-
-    add-long/2addr v0, v2
-
-    new-instance v2, Ljava/util/Date;
-
-    invoke-direct {v2}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v2
-
-    sub-long/2addr v0, v2
-
-    long-to-int v0, v0
-
-    div-int/lit16 v0, v0, 0x3e8
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->max(II)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 6
+.method public apply(Ljava/lang/Object;)Lie8;
+    .locals 8
 
     iget v0, p0, Lq12;->a:I
 
+    check-cast p1, Ljava/lang/Void;
+
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    sget-wide v0, Lr12;->f:J
 
-    move-result-object v0
+    iget-object p1, p0, Lq12;->b:Lr12;
 
-    return-object v0
+    iget-object v4, p1, Lr12;->c:Ljava/util/concurrent/ScheduledExecutorService;
+
+    iget-object p1, p1, Lr12;->a:Ll02;
+
+    new-instance v2, Lc01;
+
+    const/16 v3, 0x18
+
+    invoke-direct {v2, v3}, Lc01;-><init>(I)V
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v3, v0, v1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v5
+
+    new-instance v0, Lo12;
+
+    invoke-direct {v0, v2}, Lo12;-><init>(Ln12;)V
+
+    invoke-virtual {p1, v0}, Ll02;->p(Lk02;)V
+
+    new-instance v1, Li02;
+
+    const/4 v2, 0x5
+
+    invoke-direct {v1, p1, v2, v0}, Li02;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p1, Ll02;->c:Lwpe;
+
+    iget-object v3, v0, Lo12;->b:Ltw1;
+
+    iget-object v0, v3, Ltw1;->b:Lsw1;
+
+    invoke-virtual {v0, v1, p1}, Lf4;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    new-instance v2, Llz3;
+
+    const/4 v7, 0x3
+
+    invoke-direct/range {v2 .. v7}, Llz3;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+
+    invoke-static {v2}, Libj;->b(Lrw1;)Ltw1;
+
+    move-result-object p1
+
+    return-object p1
 
     :pswitch_0
-    iget v0, p0, Lq12;->b:I
+    iget-object p1, p0, Lq12;->b:Lr12;
 
-    iget-wide v1, p0, Lq12;->c:J
+    iget-object p1, p1, Lr12;->a:Ll02;
 
-    iget-object v3, p0, Lq12;->d:Ljava/lang/Object;
+    iget-object p1, p1, Ll02;->h:Ljc6;
 
-    check-cast v3, Ljava/lang/Long;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v4, "itemIndex: "
+    new-instance v0, Lts4;
 
-    const-string v5, ", position: "
+    const/16 v1, 0x17
 
-    invoke-static {v0, v1, v2, v4, v5}, Lm65;->k(IJLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, p1}, Lts4;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
+    invoke-static {v0}, Libj;->b(Lrw1;)Ltw1;
 
-    const-string v1, " real: "
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 
     :pswitch_1
-    iget-object v0, p0, Lq12;->d:Ljava/lang/Object;
+    new-instance p1, Lq12;
 
-    check-cast v0, Ljava/util/Date;
+    const/4 v0, 0x4
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iget-object v1, p0, Lq12;->b:Lr12;
 
-    move-result-object v0
+    invoke-direct {p1, v1, v0}, Lq12;-><init>(Lr12;I)V
 
-    iget v1, p0, Lq12;->b:I
+    invoke-static {p1}, Libj;->b(Lrw1;)Ltw1;
 
-    invoke-virtual {p0}, Lq12;->a()I
+    move-result-object p1
 
-    move-result v2
+    return-object p1
 
-    if-lez v2, :cond_0
+    :pswitch_2
+    iget-object p1, p0, Lq12;->b:Lr12;
 
-    invoke-virtual {p0}, Lq12;->a()I
+    iget-object p1, p1, Lr12;->a:Ll02;
 
-    move-result v2
+    iget-object p1, p1, Ll02;->h:Ljc6;
 
-    const-string v3, " (still valid for "
+    const/4 v0, 0x1
 
-    const-string v4, " seconds)"
+    invoke-virtual {p1, v0}, Ljc6;->c(Z)Lie8;
 
-    invoke-static {v2, v3, v4}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v2
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public l(Lqw1;)Ljava/lang/String;
+    .locals 4
+
+    iget-object v0, p0, Lq12;->b:Lr12;
+
+    iget-object v1, v0, Lr12;->e:Lykf;
+
+    invoke-virtual {v1}, Lykf;->i()Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1, v2}, Lqw1;->b(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_0
-    const-string v2, " (not valid anymore)"
+    const-string v1, "Camera2CapturePipeline"
+
+    const-string v3, "ScreenFlashTask#preCapture: enable torch"
+
+    invoke-static {v1, v3}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, v0, Lr12;->a:Ll02;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ll02;->r(Z)V
+
+    invoke-virtual {p1, v2}, Lqw1;->b(Ljava/lang/Object;)Z
 
     :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string p1, "EnableTorchInternal"
 
-    const-string v4, "Ticket, creation date = "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", ticket lifetime = "
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

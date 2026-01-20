@@ -1,40 +1,243 @@
-.class public abstract Llsc;
+.class public final Llsc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static contact_list_call_contact_title:I = 0x7f130416
+# instance fields
+.field public final a:Z
 
-.field public static contact_list_confirm_contact_block_action:I = 0x7f130417
+.field public final b:Z
 
-.field public static contact_list_confirm_contact_block_description:I = 0x7f130418
+.field public final c:Z
 
-.field public static contact_list_confirm_contact_block_title:I = 0x7f130419
+.field public final d:Z
 
-.field public static contact_list_confirm_contact_delete_action:I = 0x7f13041a
+.field public final e:Z
 
-.field public static contact_list_confirm_contact_delete_title:I = 0x7f13041b
 
-.field public static contact_list_contact_block_snackbar_title:I = 0x7f13041c
+# direct methods
+.method public constructor <init>(ZZZZZ)V
+    .locals 0
 
-.field public static contact_list_contact_delete_snackbar_title:I = 0x7f13041d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static contact_list_menu_item_add_contact:I = 0x7f13041e
+    iput-boolean p1, p0, Llsc;->a:Z
 
-.field public static contact_list_search_hint:I = 0x7f13041f
+    iput-boolean p2, p0, Llsc;->b:Z
 
-.field public static contact_list_search_hint_with_nick:I = 0x7f130420
+    iput-boolean p3, p0, Llsc;->c:Z
 
-.field public static empty_contact_list_description:I = 0x7f130490
+    iput-boolean p4, p0, Llsc;->d:Z
 
-.field public static empty_contact_list_title:I = 0x7f130491
+    iput-boolean p5, p0, Llsc;->e:Z
 
-.field public static empty_search_contact_btn_title:I = 0x7f130494
+    return-void
+.end method
 
-.field public static empty_search_contact_disabled_description:I = 0x7f130495
+.method public static a(Llsc;ZZZZZI)Llsc;
+    .locals 6
 
-.field public static empty_search_contact_enabled_description:I = 0x7f130496
+    and-int/lit8 v0, p6, 0x1
 
-.field public static empty_search_contact_title:I = 0x7f130497
+    if-eqz v0, :cond_0
 
-.field public static snackbar_self_title:I = 0x7f130d20
+    iget-boolean p1, p0, Llsc;->a:Z
+
+    :cond_0
+    move v1, p1
+
+    and-int/lit8 p1, p6, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget-boolean p2, p0, Llsc;->b:Z
+
+    :cond_1
+    move v2, p2
+
+    and-int/lit8 p1, p6, 0x4
+
+    if-eqz p1, :cond_2
+
+    iget-boolean p3, p0, Llsc;->c:Z
+
+    :cond_2
+    move v3, p3
+
+    and-int/lit8 p1, p6, 0x8
+
+    if-eqz p1, :cond_3
+
+    iget-boolean p4, p0, Llsc;->d:Z
+
+    :cond_3
+    move v4, p4
+
+    and-int/lit8 p1, p6, 0x10
+
+    if-eqz p1, :cond_4
+
+    iget-boolean p5, p0, Llsc;->e:Z
+
+    :cond_4
+    move v5, p5
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Llsc;
+
+    invoke-direct/range {v0 .. v5}, Llsc;-><init>(ZZZZZ)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Llsc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Llsc;
+
+    iget-boolean v1, p0, Llsc;->a:Z
+
+    iget-boolean v3, p1, Llsc;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Llsc;->b:Z
+
+    iget-boolean v3, p1, Llsc;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Llsc;->c:Z
+
+    iget-boolean v3, p1, Llsc;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Llsc;->d:Z
+
+    iget-boolean v3, p1, Llsc;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Llsc;->e:Z
+
+    iget-boolean p1, p1, Llsc;->e:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-boolean v0, p0, Llsc;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Llsc;->b:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llsc;->c:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llsc;->d:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Llsc;->e:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", canAddMembers="
+
+    const-string v1, ", canPinMessage="
+
+    const-string v2, "ProfileMemberPermissionsModel(changePhoto="
+
+    iget-boolean v3, p0, Llsc;->a:Z
+
+    iget-boolean v4, p0, Llsc;->b:Z
+
+    invoke-static {v2, v3, v0, v4, v1}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", canCallInChat="
+
+    const-string v2, ", canSeePrivateChatLink="
+
+    iget-boolean v3, p0, Llsc;->c:Z
+
+    iget-boolean v4, p0, Llsc;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Llsc;->e:Z
+
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

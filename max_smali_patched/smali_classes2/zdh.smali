@@ -2,25 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmeh;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lwdh;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Laeh;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lwdh;Laeh;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzdh;->a:Ljava/lang/String;
+    iput-object p1, p0, Lzdh;->a:Lwdh;
 
-    iput-object p2, p0, Lzdh;->b:Ljava/lang/String;
+    iput-object p2, p0, Lzdh;->b:Laeh;
 
     return-void
 .end method
@@ -48,11 +45,11 @@
     :cond_1
     check-cast p1, Lzdh;
 
-    iget-object v1, p0, Lzdh;->a:Ljava/lang/String;
+    iget-object v1, p0, Lzdh;->a:Lwdh;
 
-    iget-object v3, p1, Lzdh;->a:Ljava/lang/String;
+    iget-object v3, p1, Lzdh;->a:Lwdh;
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -61,11 +58,11 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lzdh;->b:Ljava/lang/String;
+    iget-object v1, p0, Lzdh;->b:Laeh;
 
-    iget-object p1, p1, Lzdh;->b:Ljava/lang/String;
+    iget-object p1, p1, Lzdh;->b:Laeh;
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -80,17 +77,19 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lzdh;->a:Ljava/lang/String;
+    iget-object v0, p0, Lzdh;->a:Lwdh;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Lwdh;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lzdh;->b:Ljava/lang/String;
+    iget-object v1, p0, Lzdh;->b:Laeh;
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    iget-object v1, v1, Laeh;->a:Lbeh;
+
+    invoke-virtual {v1}, Lbeh;->hashCode()I
 
     move-result v1
 
@@ -100,19 +99,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 2
 
-    const-string v0, ", data="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "VfxColors(buttonIconOverlayPlain="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lzdh;->a:Lwdh;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", emptyBlock="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lzdh;->b:Laeh;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    const-string v2, "SendJsEvent(name="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lzdh;->a:Ljava/lang/String;
-
-    iget-object v4, p0, Lzdh;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3, v0, v4, v1}, Lox1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

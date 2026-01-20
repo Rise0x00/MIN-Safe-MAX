@@ -1,147 +1,224 @@
 .class public final Ltw7;
-.super Ljava/lang/Object;
+.super Lpbe;
 .source "SourceFile"
 
-# interfaces
-.implements Ljx7;
+
+# static fields
+.field public static final d:Lb7e;
+
+.field public static final e:Lb7e;
+
+.field public static final f:J
+
+.field public static final g:Ljava/util/concurrent/TimeUnit;
+
+.field public static final h:Lsw7;
+
+.field public static final i:Z
+
+.field public static final j:Lqw7;
 
 
 # instance fields
-.field public final a:Lh76;
-
-.field public final b:Lnx7;
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public constructor <init>(Lnx7;Lh76;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iput-object p1, p0, Ltw7;->b:Lnx7;
+    sput-object v0, Ltw7;->g:Ljava/util/concurrent/TimeUnit;
 
-    iput-object p2, p0, Ltw7;->a:Lh76;
+    const-string v0, "rx3.io-keep-alive-time"
 
+    const-wide/16 v1, 0x3c
+
+    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    sput-wide v0, Ltw7;->f:J
+
+    new-instance v0, Lsw7;
+
+    new-instance v1, Lb7e;
+
+    const-string v2, "RxCachedThreadSchedulerShutdown"
+
+    invoke-direct {v1, v2}, Lb7e;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {v0, v1}, Lsw7;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Ltw7;->h:Lsw7;
+
+    invoke-virtual {v0}, Lgna;->dispose()V
+
+    const-string v0, "rx3.io-priority"
+
+    const/4 v1, 0x5
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/16 v1, 0xa
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    new-instance v2, Lb7e;
+
+    const-string v3, "RxCachedThreadScheduler"
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, v0, v4}, Lb7e;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v2, Ltw7;->d:Lb7e;
+
+    new-instance v3, Lb7e;
+
+    const-string v5, "RxCachedWorkerPoolEvictor"
+
+    invoke-direct {v3, v5, v0, v4}, Lb7e;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v3, Ltw7;->e:Lb7e;
+
+    const-string v0, "rx3.io-scheduled-release"
+
+    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    sput-boolean v0, Ltw7;->i:Z
+
+    new-instance v0, Lqw7;
+
+    const-wide/16 v3, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct {v0, v3, v4, v5, v2}, Lqw7;-><init>(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/ThreadFactory;)V
+
+    sput-object v0, Ltw7;->j:Lqw7;
+
+    iget-object v2, v0, Lqw7;->c:Lrp3;
+
+    invoke-virtual {v2}, Lrp3;->dispose()V
+
+    iget-object v2, v0, Lqw7;->o:Ljava/util/concurrent/ScheduledFuture;
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_0
+    iget-object v0, v0, Lqw7;->d:Ljava/util/concurrent/ScheduledExecutorService;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
+
+    :cond_1
     return-void
 .end method
 
+.method public constructor <init>()V
+    .locals 7
 
-# virtual methods
-.method public onDestroy(Lnx7;)V
-    .locals 5
-    .annotation runtime Lxma;
-        value = .enum Low7;->ON_DESTROY:Low7;
-    .end annotation
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Ltw7;->a:Lh76;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object v1, v0, Lh76;->a:Ljava/lang/Object;
+    sget-object v1, Ltw7;->j:Lqw7;
 
-    monitor-enter v1
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    :try_start_0
-    invoke-virtual {v0, p1}, Lh76;->k(Lnx7;)Ltw7;
+    iput-object v0, p0, Ltw7;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-result-object v2
+    new-instance v2, Lqw7;
 
-    if-nez v2, :cond_0
+    sget-wide v3, Ltw7;->f:J
 
-    monitor-exit v1
+    sget-object v5, Ltw7;->g:Ljava/util/concurrent/TimeUnit;
 
-    return-void
+    sget-object v6, Ltw7;->d:Lb7e;
 
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    invoke-direct {v2, v3, v4, v5, v6}, Lqw7;-><init>(JLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/ThreadFactory;)V
 
     :cond_0
-    invoke-virtual {v0, p1}, Lh76;->p(Lnx7;)V
-
-    iget-object p1, v0, Lh76;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/HashMap;
-
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lsa0;
-
-    iget-object v4, v0, Lh76;->b:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    invoke-virtual {v4, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
     goto :goto_0
 
     :cond_1
-    iget-object p1, v0, Lh76;->c:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    check-cast p1, Ljava/util/HashMap;
+    move-result-object v3
 
-    invoke-virtual {p1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v3, v1, :cond_0
 
-    iget-object p1, v2, Ltw7;->b:Lnx7;
+    iget-object v0, v2, Lqw7;->c:Lrp3;
 
-    invoke-interface {p1}, Lnx7;->p()Lpx7;
+    invoke-virtual {v0}, Lrp3;->dispose()V
 
-    move-result-object p1
+    iget-object v0, v2, Lqw7;->o:Ljava/util/concurrent/ScheduledFuture;
 
-    invoke-virtual {p1, v2}, Lpx7;->f(Ljx7;)V
+    if-eqz v0, :cond_2
 
-    monitor-exit v1
+    const/4 v1, 0x1
 
-    return-void
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_2
+    iget-object v0, v2, Lqw7;->d:Ljava/util/concurrent/ScheduledExecutorService;
 
-    throw p1
-.end method
+    if-eqz v0, :cond_3
 
-.method public onStart(Lnx7;)V
-    .locals 1
-    .annotation runtime Lxma;
-        value = .enum Low7;->ON_START:Low7;
-    .end annotation
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdownNow()Ljava/util/List;
 
-    iget-object v0, p0, Ltw7;->a:Lh76;
-
-    invoke-virtual {v0, p1}, Lh76;->n(Lnx7;)V
-
+    :cond_3
+    :goto_0
     return-void
 .end method
 
-.method public onStop(Lnx7;)V
-    .locals 1
-    .annotation runtime Lxma;
-        value = .enum Low7;->ON_STOP:Low7;
-    .end annotation
 
-    iget-object v0, p0, Ltw7;->a:Lh76;
+# virtual methods
+.method public final a()Lnbe;
+    .locals 2
 
-    invoke-virtual {v0, p1}, Lh76;->p(Lnx7;)V
+    new-instance v0, Lrw7;
 
-    return-void
+    iget-object v1, p0, Ltw7;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqw7;
+
+    invoke-direct {v0, v1}, Lrw7;-><init>(Lqw7;)V
+
+    return-object v0
 .end method

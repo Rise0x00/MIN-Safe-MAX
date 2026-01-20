@@ -1,50 +1,85 @@
 .class public final Lcjh;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lfjh;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic o:Lhjh;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lhjh;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcjh;->o:Lhjh;
 
-    sget v0, Ld7b;->h:I
+    const/4 p1, 0x2
 
-    iput v0, p0, Lcjh;->a:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()I
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x4
+    check-cast p1, Lzb4;
 
-    return v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcjh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lcjh;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lcjh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Lcjh;->a:I
+    new-instance p1, Lcjh;
 
-    return v0
+    iget-object v0, p0, Lcjh;->o:Lhjh;
+
+    invoke-direct {p1, v0, p2}, Lcjh;-><init>(Lhjh;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcjh;->o:Lhjh;
+
+    iget-object p1, p1, Lhjh;->b:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljlh;
+
+    iget-object p1, p1, Ljlh;->f:Lqoh;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lqoh;->stop()V
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

@@ -1,98 +1,49 @@
 .class public final Lqva;
-.super Logf;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lqi6;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lyva;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public constructor <init>(Lyva;Lo84;)V
     .locals 0
 
-    iput p3, p0, Lqva;->o:I
+    iput-object p1, p0, Lqva;->o:Lyva;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lqva;->o:I
-
-    check-cast p1, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lqva;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p1, v2}, Lqva;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {v0, p1}, Lqva;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lqva;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p1, v2}, Lqva;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {v0, p1}, Lqva;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lqva;->o:I
+    iput-object p1, p0, Lqva;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lqva;->X:I
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    sget-object p1, Lybg;->a:Lybg;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqva;->X:I
+
+    iget-object p1, p0, Lqva;->o:Lyva;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lyva;->a(Lyva;Ljava/util/List;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

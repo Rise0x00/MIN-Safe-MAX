@@ -1,31 +1,521 @@
 .class public final Lu32;
-.super Lyy1;
+.super Landroid/hardware/camera2/CameraDevice$StateCallback;
 .source "SourceFile"
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lu32;->a:I
+
+    .line 2
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
+
+    .line 3
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lu32;->b:Ljava/lang/Object;
+
+    .line 4
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    .line 5
+    instance-of v1, v0, Lv32;
+
+    if-nez v1, :cond_0
+
+    .line 6
+    iget-object v1, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public constructor <init>(Lkf6;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lu32;->a:I
+
+    .line 1
+    iput-object p1, p0, Lu32;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
+
+    return-void
+.end method
+
+.method private final c(Landroid/hardware/camera2/CameraDevice;)V
     .locals 0
-
-    iput p1, p0, Lu32;->a:I
-
-    iput-object p2, p0, Lu32;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(ILfz1;)V
-    .locals 8
+.method public a()V
+    .locals 5
+
+    iget-object v0, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkf6;
+
+    iget-object v0, v0, Lkf6;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v1, Lkf6;
+
+    invoke-virtual {v1}, Lkf6;->f()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v2, Lkf6;
+
+    iget-object v2, v2, Lkf6;->e:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v2}, Ljava/util/Set;->clear()V
+
+    iget-object v2, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v2, Lkf6;
+
+    iget-object v2, v2, Lkf6;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v2}, Ljava/util/Set;->clear()V
+
+    iget-object v2, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v2, Lkf6;
+
+    iget-object v2, v2, Lkf6;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-interface {v2}, Ljava/util/Set;->clear()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lm8g;
+
+    iget-object v2, v1, Lm8g;->a:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_1
+    iget-object v3, v1, Lm8g;->k:Ljava/util/List;
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lwv4;
+
+    invoke-virtual {v4}, Lwv4;->b()V
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v3, 0x0
+
+    iput-object v3, v1, Lm8g;->k:Ljava/util/List;
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_1
+    :goto_2
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    iget-object v1, v1, Lm8g;->u:Lt99;
+
+    invoke-virtual {v1}, Lt99;->d()V
+
+    goto :goto_0
+
+    :goto_3
+    :try_start_2
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
+
+    :cond_2
+    return-void
+
+    :catchall_1
+    move-exception v1
+
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    throw v1
+.end method
+
+.method public b()V
+    .locals 4
+
+    new-instance v0, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iget-object v1, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v1, Lkf6;
+
+    iget-object v1, v1, Lkf6;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v2, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v2, Lkf6;
+
+    iget-object v2, v2, Lkf6;->e:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v2, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v2, Lkf6;
+
+    iget-object v2, v2, Lkf6;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v1, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v1, Lkf6;
+
+    iget-object v1, v1, Lkf6;->a:Ljava/lang/Object;
+
+    check-cast v1, Lwpe;
+
+    new-instance v2, Lp02;
+
+    const/16 v3, 0xb
+
+    invoke-direct {v2, v3, v0}, Lp02;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 2
+
+    iget v0, p0, Lu32;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lu32;->b()V
+
+    invoke-virtual {p0}, Lu32;->a()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    invoke-virtual {v1, p1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 2
+
+    iget v0, p0, Lu32;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lu32;->b()V
+
+    invoke-virtual {p0}, Lu32;->a()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    invoke-virtual {v1, p1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
+    .locals 3
+
+    iget v0, p0, Lu32;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lu32;->b()V
+
+    new-instance p1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iget-object v0, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkf6;
+
+    iget-object v0, v0, Lkf6;->b:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v1, Lkf6;
+
+    iget-object v1, v1, Lkf6;->e:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {p1, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v1, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v1, Lkf6;
+
+    iget-object v1, v1, Lkf6;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/LinkedHashSet;
+
+    invoke-virtual {p1, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v0, Lkf6;
+
+    iget-object v0, v0, Lkf6;->a:Ljava/lang/Object;
+
+    check-cast v0, Lwpe;
+
+    new-instance v1, Ly30;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, p1, p2, v2}, Ly30;-><init>(Ljava/lang/Object;II)V
+
+    invoke-virtual {v0, v1}, Lwpe;->execute(Ljava/lang/Runnable;)V
+
+    invoke-virtual {p0}, Lu32;->a()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lu32;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/CameraDevice$StateCallback;
+
+    invoke-virtual {v1, p1, p2}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onError(Landroid/hardware/camera2/CameraDevice;I)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
+    .locals 2
 
     iget v0, p0, Lu32;->a:I
 
@@ -36,146 +526,30 @@
     :pswitch_0
     iget-object v0, p0, Lu32;->b:Ljava/lang/Object;
 
-    check-cast v0, Lw1h;
+    check-cast v0, Ljava/util/ArrayList;
 
-    iget-object v0, v0, Lw1h;->a:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    :cond_0
+    :goto_0
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lghg;
+    check-cast v1, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    iget-object v1, v1, Lghg;->n:Le7e;
-
-    iget-object v2, v1, Le7e;->g:Lq32;
-
-    iget-object v2, v2, Lq32;->e:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lyy1;
-
-    new-instance v4, Lav2;
-
-    iget-object v5, v1, Le7e;->g:Lq32;
-
-    iget-object v5, v5, Lq32;->g:Lykf;
-
-    const-wide/16 v6, -0x1
-
-    invoke-direct {v4, p2, v5, v6, v7}, Lav2;-><init>(Lfz1;Lykf;J)V
-
-    invoke-virtual {v3, p1, v4}, Lyy1;->b(ILfz1;)V
+    invoke-virtual {v1, p1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
 
     goto :goto_0
 
-    :cond_1
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lu32;->b:Ljava/lang/Object;
-
-    check-cast p1, Lbr9;
-
-    iget-object v0, p1, Lbr9;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p1, Lbr9;->o:Z
-
-    if-eqz v1, :cond_2
-
-    monitor-exit v0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_2
-    iget-object v1, p1, Lbr9;->s0:Landroid/util/LongSparseArray;
-
-    invoke-interface {p2}, Lfz1;->getTimestamp()J
-
-    move-result-wide v2
-
-    new-instance v4, Lgz1;
-
-    invoke-direct {v4, p2}, Lgz1;-><init>(Lfz1;)V
-
-    invoke-virtual {v1, v2, v3, v4}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
-
-    invoke-virtual {p1}, Lbr9;->f()V
-
-    monitor-exit v0
-
-    :goto_1
-    return-void
-
-    :goto_2
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public d(I)V
-    .locals 2
-
-    iget p1, p0, Lu32;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    invoke-static {}, Lcr7;->d()Lfw6;
-
-    move-result-object p1
-
-    new-instance v0, Ljx1;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1, p0}, Ljx1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v0}, Lfw6;->execute(Ljava/lang/Runnable;)V
-
+    :cond_0
     return-void
 
     nop

@@ -1,129 +1,100 @@
-.class public final enum Lsa8;
-.super Ljava/lang/Enum;
+.class public final Lsa8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxa8;
 
 
 # static fields
-.field public static final synthetic X:[Lsa8;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lsa8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum b:Lsa8;
-
-.field public static final enum c:Lsa8;
-
-.field public static final enum d:Lsa8;
-
-.field public static final enum o:Lsa8;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final a:Lsa8;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
     new-instance v0, Lsa8;
 
-    const-string v1, "LOGIN"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Lsa8;->a:Lsa8;
 
-    invoke-direct {v0, v1, v2, v1}, Lsa8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v0, Lj58;
 
-    sput-object v0, Lsa8;->b:Lsa8;
+    const/16 v1, 0x14
 
-    new-instance v1, Lsa8;
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
-    const-string v2, "RECOVERY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v2}, Lsa8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lsa8;->c:Lsa8;
-
-    new-instance v2, Lsa8;
-
-    const-string v3, "PHONE_BINDING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v3}, Lsa8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lsa8;->d:Lsa8;
-
-    new-instance v3, Lsa8;
-
-    const-string v4, "PHONE_CONFIRM"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v4}, Lsa8;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lsa8;->o:Lsa8;
-
-    filled-new-array {v0, v1, v2, v3}, [Lsa8;
-
-    move-result-object v0
-
-    sput-object v0, Lsa8;->X:[Lsa8;
+    sput-object v0, Lsa8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lsa8;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lsa8;
-    .locals 1
-
-    const-class v0, Lsa8;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lsa8;
-
-    return-object p0
-.end method
-
-.method public static values()[Lsa8;
-    .locals 1
-
-    sget-object v0, Lsa8;->X:[Lsa8;
-
-    invoke-virtual {v0}, [Lsa8;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lsa8;
-
-    return-object v0
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lsa8;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x6f539772
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 1
 
-    const-string v0, "{value=\'"
-
-    const-string v1, "\'}"
-
-    iget-object v2, p0, Lsa8;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "ShowContactRemoved"
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

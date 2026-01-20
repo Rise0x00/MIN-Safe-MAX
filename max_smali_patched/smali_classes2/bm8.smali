@@ -1,64 +1,132 @@
-.class public final Lbm8;
+.class public final synthetic Lbm8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgm8;
+.implements Lnq6;
 
 
-# static fields
-.field public static final a:Lbm8;
+# instance fields
+.field public final synthetic X:I
+
+.field public final synthetic Y:I
+
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+    .locals 0
 
-    new-instance v0, Lbm8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbm8;->a:Ljava/lang/String;
 
-    sput-object v0, Lbm8;->a:Lbm8;
+    iput-object p2, p0, Lbm8;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lbm8;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lbm8;->d:Ljava/lang/String;
+
+    iput p5, p0, Lbm8;->o:I
+
+    iput p6, p0, Lbm8;->X:I
+
+    iput p7, p0, Lbm8;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    check-cast p1, Lim4;
 
-    if-ne p0, p1, :cond_0
+    const-string v0, ":twofa/auth/password/check"
 
-    return v0
+    iput-object v0, p1, Lim4;->a:Ljava/lang/String;
 
-    :cond_0
-    instance-of p1, p1, Lbm8;
+    const-string v0, "track_id"
 
-    if-nez p1, :cond_1
+    iget-object v1, p0, Lbm8;->a:Ljava/lang/String;
 
-    const/4 p1, 0x0
+    invoke-virtual {p1, v1, v0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    return p1
+    iget-object v0, p1, Lim4;->b:Ljava/util/ArrayList;
 
-    :cond_1
-    return v0
-.end method
+    iget-object v1, p0, Lbm8;->b:Ljava/lang/String;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-static {v1}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
 
-    const v0, 0x5a175638    # 1.064938E16f
+    move-result-object v1
 
-    return v0
-.end method
+    new-instance v2, Ljava/lang/StringBuilder;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    const-string v3, "hint="
 
-    const-string v0, "OnClosing"
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const-string v0, "email"
+
+    iget-object v1, p0, Lbm8;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, v1, v0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "phone"
+
+    iget-object v1, p0, Lbm8;->d:Ljava/lang/String;
+
+    invoke-virtual {p1, v1, v0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p_mn_l"
+
+    iget v1, p0, Lbm8;->o:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, v0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "p_mx_l"
+
+    iget v1, p0, Lbm8;->X:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, v0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const-string v0, "h_mx_l"
+
+    iget v1, p0, Lbm8;->Y:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1, v0}, Lim4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

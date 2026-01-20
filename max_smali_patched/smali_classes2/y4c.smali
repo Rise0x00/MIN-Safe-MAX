@@ -1,126 +1,93 @@
 .class public final Ly4c;
-.super Logf;
+.super Ljef;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public final synthetic X:Lc5c;
-
-.field public final synthetic Y:Lq0c;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lc5c;Lq0c;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ly4c;->X:Lc5c;
-
-    iput-object p2, p0, Ly4c;->Y:Lq0c;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final D(Lx4c;)V
+    .locals 5
 
-    check-cast p1, Lg54;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast v0, Lk7b;
 
-    invoke-virtual {p0, p1, p2}, Ly4c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v1, p1, Lx4c;->v0:J
 
-    move-result-object p1
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    check-cast p1, Ly4c;
+    move-result v1
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {p1, p2}, Ly4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v1, p1, Lx4c;->u0:Z
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Lk7b;->setActivated(Z)V
 
-    return-object p1
-.end method
+    iget-object v1, p1, Lx4c;->c:Ljava/lang/CharSequence;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {v0, v1}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
 
-    new-instance p1, Ly4c;
+    iget-object v1, p1, Lx4c;->d:Lqhg;
 
-    iget-object v0, p0, Ly4c;->X:Lc5c;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Ly4c;->Y:Lq0c;
+    if-eqz v1, :cond_0
 
-    invoke-direct {p1, v0, v1, p2}, Ly4c;-><init>(Lc5c;Lq0c;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object p1
-.end method
+    move-result-object v3
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {v1, v3}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    iget v0, p0, Ly4c;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    move-result-object v1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object v1, v2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {v0, v1}, Lk7b;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lk7b;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    throw p1
+    iget-wide v1, p1, Lx4c;->b:J
+
+    iget-object v3, p1, Lx4c;->t0:Ljava/lang/CharSequence;
+
+    iget-object v4, p1, Lx4c;->o:Landroid/net/Uri;
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    if-nez v4, :cond_2
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    sget-object v4, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    iget-object p1, p0, Ly4c;->X:Lc5c;
+    invoke-virtual {v4}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    iget-object p1, p1, Lc5c;->a:Lake;
-
-    new-instance v0, Lu4c;
-
-    iget-object v2, p0, Ly4c;->Y:Lq0c;
-
-    iget-wide v2, v2, Lq0c;->c:J
-
-    invoke-direct {v0, v2, v3}, Lu4c;-><init>(J)V
-
-    iput v1, p0, Ly4c;->o:I
-
-    invoke-virtual {p1, v0, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    move-result-object v4
 
     :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v0, v1, v2, v3, v4}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    return-object p1
+    iget-boolean p1, p1, Lx4c;->Y:Z
+
+    invoke-virtual {v0, p1}, Lk7b;->setVerified(Z)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lud8;)V
+    .locals 0
+
+    check-cast p1, Lx4c;
+
+    invoke-virtual {p0, p1}, Ly4c;->D(Lx4c;)V
+
+    return-void
 .end method

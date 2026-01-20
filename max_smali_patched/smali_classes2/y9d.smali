@@ -1,68 +1,40 @@
-.class public final Ly9d;
-.super Lmmf;
-.source "SourceFile"
+.class public abstract Ly9d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public c:Lj0c;
+# static fields
+.field public static oneme_settings_avatar_select_screen:I = 0x7f0a076d
 
+.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a076e
 
-# direct methods
-.method public constructor <init>(Ljf9;)V
-    .locals 0
+.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a076f
 
-    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a0770
 
-    return-void
-.end method
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a0771
 
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a0772
 
-# virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
-    .locals 1
+.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a0773
 
-    const-string v0, "profile"
+.field public static oneme_settings_container:I = 0x7f0a0774
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+.field public static oneme_settings_list_screen_appbar:I = 0x7f0a077c
 
-    move-result p2
+.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a077d
 
-    if-eqz p2, :cond_0
+.field public static oneme_settings_toolbar:I = 0x7f0a0817
 
-    invoke-static {p1}, Lbvi;->a(Ljf9;)Lj0c;
+.field public static oneme_settings_topbar:I = 0x7f0a0818
 
-    move-result-object p1
+.field public static oneme_settings_topbar_avatar:I = 0x7f0a0819
 
-    iput-object p1, p0, Ly9d;->c:Lj0c;
+.field public static oneme_settings_topbar_container:I = 0x7f0a081a
 
-    return-void
+.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a081b
 
-    :cond_0
-    invoke-virtual {p1}, Ljf9;->v()V
+.field public static oneme_settings_topbar_name:I = 0x7f0a081c
 
-    return-void
-.end method
+.field public static oneme_settings_topbar_nick:I = 0x7f0a081d
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Ly9d;->c:Lj0c;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "{profile="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "}"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static oneme_settings_topbar_phone:I = 0x7f0a081e

@@ -1,51 +1,49 @@
 .class public final Leu1;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lfp1;
 
 
 # instance fields
-.field public final synthetic a:Lmu1;
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lgu1;
 
 
 # direct methods
-.method public constructor <init>(Lmu1;)V
+.method public constructor <init>(Lgu1;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Leu1;->o:Lgu1;
 
-    iput-object p1, p0, Leu1;->a:Lmu1;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final l()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p0, Leu1;->a:Lmu1;
+    iput-object p1, p0, Leu1;->d:Ljava/lang/Object;
 
-    iget-object v0, v0, Lmu1;->o:La1f;
+    iget p1, p0, Leu1;->X:I
 
-    :cond_0
-    invoke-virtual {v0}, La1f;->getValue()Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    move-result-object v1
+    or-int/2addr p1, v0
 
-    move-object v2, v1
+    iput p1, p0, Leu1;->X:I
 
-    check-cast v2, Lyr1;
+    iget-object p1, p0, Leu1;->o:Lgu1;
 
-    sget-object v2, Lyr1;->i:Lyr1;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0, v1, v2}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0, v1, p0}, Lgu1;->d(JLo84;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    if-eqz v1, :cond_0
-
-    return-void
+    return-object p1
 .end method

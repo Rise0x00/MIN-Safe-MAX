@@ -1,59 +1,122 @@
 .class public final Lug9;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Z
+.field public final a:Li7f;
 
-.field public Y:I
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Lgb9;
-
-.field public final synthetic s0:Leh9;
-
-.field public t0:I
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Leh9;Lp14;)V
-    .locals 0
+.method public constructor <init>(Lcy0;Lmbg;)V
+    .locals 2
 
-    iput-object p1, p0, Lug9;->s0:Leh9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lug9;->a:Li7f;
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->a()Lsb4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lug9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onChatMembersUpdateEvent(Lnt2;)V
+    .locals 5
+    .annotation runtime Lu0g;
+    .end annotation
 
-    iput-object p1, p0, Lug9;->Z:Ljava/lang/Object;
+    iget-object v0, p1, Lnt2;->b:Ljava/util/List;
 
-    iget p1, p0, Lug9;->t0:I
+    iget-object v1, p1, Lnt2;->c:Lzs2;
 
-    const/high16 v0, -0x80000000
+    iget-wide v2, p1, Lnt2;->d:J
 
-    or-int/2addr p1, v0
+    iget p1, p1, Lnt2;->o:I
 
-    iput p1, p0, Lug9;->t0:I
+    invoke-static {p1}, Lt02;->t(I)I
 
-    const/4 p1, 0x0
+    move-result p1
 
-    const/4 v0, 0x0
+    if-eqz p1, :cond_1
 
-    iget-object v1, p0, Lug9;->s0:Leh9;
+    const/4 v4, 0x1
 
-    invoke-virtual {v1, p1, v0, p0}, Leh9;->B(Ljava/lang/Long;ZLp14;)Ljava/lang/Object;
+    if-ne p1, v4, :cond_0
 
-    move-result-object p1
+    new-instance p1, Log9;
 
-    return-object p1
+    invoke-direct {p1, v2, v3, v1, v0}, Log9;-><init>(JLzs2;Ljava/util/Collection;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Lmg9;
+
+    invoke-direct {p1, v2, v3, v1, v0}, Lmg9;-><init>(JLzs2;Ljava/util/Collection;)V
+
+    :goto_0
+    new-instance v0, Lrg9;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lrg9;-><init>(Lug9;Lpg9;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lug9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lu64;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
+
+    new-instance v0, Lsg9;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lsg9;-><init>(Lug9;Lu64;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lug9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
 .end method

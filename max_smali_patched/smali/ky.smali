@@ -1,514 +1,269 @@
-.class public final Lky;
+.class public abstract synthetic Lky;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luo8;
-
-
-# static fields
-.field public static final g:Ljava/util/ArrayDeque;
-
-.field public static final h:Ljava/lang/Object;
-
-
-# instance fields
-.field public final a:Landroid/media/MediaCodec;
-
-.field public final b:Landroid/os/HandlerThread;
-
-.field public c:Lgy;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final e:Lak3;
-
-.field public f:Z
-
 
 # direct methods
-.method static constructor <clinit>()V
+.method public static bridge synthetic A(Landroid/media/metrics/MediaItemInfo$Builder;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->setVideoDataSpace(I)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic B(Landroid/media/metrics/MediaItemInfo$Builder;J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/MediaItemInfo$Builder;->setDurationMillis(J)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic C(Landroid/media/metrics/MediaItemInfo$Builder;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->addSampleMimeType(Ljava/lang/String;)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic D(Landroid/media/metrics/MediaItemInfo$Builder;J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/MediaItemInfo$Builder;->setVideoSampleCount(J)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static synthetic a(I)Landroid/media/metrics/EditingEndedEvent$Builder;
     .locals 1
 
-    new-instance v0, Ljava/util/ArrayDeque;
+    new-instance v0, Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+    invoke-direct {v0, p0}, Landroid/media/metrics/EditingEndedEvent$Builder;-><init>(I)V
 
-    sput-object v0, Lky;->g:Ljava/util/ArrayDeque;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lky;->h:Ljava/lang/Object;
-
-    return-void
+    return-object v0
 .end method
 
-.method public constructor <init>(Landroid/media/MediaCodec;Landroid/os/HandlerThread;)V
+.method public static bridge synthetic b(Landroid/media/metrics/EditingEndedEvent$Builder;)Landroid/media/metrics/EditingEndedEvent$Builder;
     .locals 1
 
-    new-instance v0, Lak3;
+    const-string v0, "androidx.media3:media3-transformer:1.8.0"
 
-    invoke-direct {v0}, Lak3;-><init>()V
+    invoke-virtual {p0, v0}, Landroid/media/metrics/EditingEndedEvent$Builder;->setExporterName(Ljava/lang/String;)Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object p0
 
-    iput-object p1, p0, Lky;->a:Landroid/media/MediaCodec;
-
-    iput-object p2, p0, Lky;->b:Landroid/os/HandlerThread;
-
-    iput-object v0, p0, Lky;->e:Lak3;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lky;->d:Ljava/util/concurrent/atomic/AtomicReference;
-
-    return-void
+    return-object p0
 .end method
 
-.method public static d()Liy;
-    .locals 2
+.method public static bridge synthetic c(Landroid/media/metrics/EditingEndedEvent$Builder;I)Landroid/media/metrics/EditingEndedEvent$Builder;
+    .locals 0
 
-    sget-object v0, Lky;->g:Ljava/util/ArrayDeque;
+    invoke-virtual {p0, p1}, Landroid/media/metrics/EditingEndedEvent$Builder;->setErrorCode(I)Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    monitor-enter v0
+    move-result-object p0
 
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Liy;
-
-    invoke-direct {v1}, Liy;-><init>()V
-
-    monitor-exit v0
-
-    return-object v1
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liy;
-
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
+    return-object p0
 .end method
 
+.method public static bridge synthetic d(Landroid/media/metrics/EditingEndedEvent$Builder;J)Landroid/media/metrics/EditingEndedEvent$Builder;
+    .locals 0
 
-# virtual methods
-.method public final a()V
-    .locals 2
+    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/EditingEndedEvent$Builder;->setTimeSinceCreatedMillis(J)Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    iget-object v0, p0, Lky;->d:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result-object p0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/RuntimeException;
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    throw v0
+    return-object p0
 .end method
 
-.method public final b(ILj84;JI)V
-    .locals 3
+.method public static bridge synthetic e(Landroid/media/metrics/EditingEndedEvent$Builder;)Landroid/media/metrics/EditingEndedEvent;
+    .locals 0
 
-    invoke-virtual {p0}, Lky;->a()V
+    invoke-virtual {p0}, Landroid/media/metrics/EditingEndedEvent$Builder;->build()Landroid/media/metrics/EditingEndedEvent;
 
-    invoke-static {}, Lky;->d()Liy;
+    move-result-object p0
 
-    move-result-object v0
-
-    iput p1, v0, Liy;->a:I
-
-    const/4 p1, 0x0
-
-    iput p1, v0, Liy;->b:I
-
-    iput-wide p3, v0, Liy;->d:J
-
-    iput p5, v0, Liy;->e:I
-
-    iget-object p3, v0, Liy;->c:Landroid/media/MediaCodec$CryptoInfo;
-
-    iget p4, p2, Lj84;->f:I
-
-    iput p4, p3, Landroid/media/MediaCodec$CryptoInfo;->numSubSamples:I
-
-    iget-object p4, p2, Lj84;->d:Ljava/lang/Object;
-
-    check-cast p4, [I
-
-    iget-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfClearData:[I
-
-    if-nez p4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz p5, :cond_2
-
-    array-length v1, p5
-
-    array-length v2, p4
-
-    if-ge v1, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    array-length v1, p4
-
-    invoke-static {p4, p1, p5, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_1
-
-    :cond_2
-    :goto_0
-    array-length p5, p4
-
-    invoke-static {p4, p5}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object p5
-
-    :goto_1
-    iput-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfClearData:[I
-
-    iget-object p4, p2, Lj84;->e:Ljava/lang/Object;
-
-    check-cast p4, [I
-
-    iget-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfEncryptedData:[I
-
-    if-nez p4, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    if-eqz p5, :cond_5
-
-    array-length v1, p5
-
-    array-length v2, p4
-
-    if-ge v1, v2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    array-length v1, p4
-
-    invoke-static {p4, p1, p5, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_3
-
-    :cond_5
-    :goto_2
-    array-length p5, p4
-
-    invoke-static {p4, p5}, Ljava/util/Arrays;->copyOf([II)[I
-
-    move-result-object p5
-
-    :goto_3
-    iput-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->numBytesOfEncryptedData:[I
-
-    iget-object p4, p2, Lj84;->b:Ljava/lang/Object;
-
-    check-cast p4, [B
-
-    iget-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->key:[B
-
-    if-nez p4, :cond_6
-
-    goto :goto_5
-
-    :cond_6
-    if-eqz p5, :cond_8
-
-    array-length v1, p5
-
-    array-length v2, p4
-
-    if-ge v1, v2, :cond_7
-
-    goto :goto_4
-
-    :cond_7
-    array-length v1, p4
-
-    invoke-static {p4, p1, p5, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_5
-
-    :cond_8
-    :goto_4
-    array-length p5, p4
-
-    invoke-static {p4, p5}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object p5
-
-    :goto_5
-    invoke-virtual {p5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->key:[B
-
-    iget-object p4, p2, Lj84;->a:Ljava/lang/Object;
-
-    check-cast p4, [B
-
-    iget-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->iv:[B
-
-    if-nez p4, :cond_9
-
-    goto :goto_7
-
-    :cond_9
-    if-eqz p5, :cond_b
-
-    array-length v1, p5
-
-    array-length v2, p4
-
-    if-ge v1, v2, :cond_a
-
-    goto :goto_6
-
-    :cond_a
-    array-length v1, p4
-
-    invoke-static {p4, p1, p5, p1, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    goto :goto_7
-
-    :cond_b
-    :goto_6
-    array-length p1, p4
-
-    invoke-static {p4, p1}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object p5
-
-    :goto_7
-    invoke-virtual {p5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p5, p3, Landroid/media/MediaCodec$CryptoInfo;->iv:[B
-
-    iget p1, p2, Lj84;->c:I
-
-    iput p1, p3, Landroid/media/MediaCodec$CryptoInfo;->mode:I
-
-    new-instance p1, Landroid/media/MediaCodec$CryptoInfo$Pattern;
-
-    iget p4, p2, Lj84;->g:I
-
-    iget p2, p2, Lj84;->h:I
-
-    invoke-direct {p1, p4, p2}, Landroid/media/MediaCodec$CryptoInfo$Pattern;-><init>(II)V
-
-    invoke-virtual {p3, p1}, Landroid/media/MediaCodec$CryptoInfo;->setPattern(Landroid/media/MediaCodec$CryptoInfo$Pattern;)V
-
-    iget-object p1, p0, Lky;->c:Lgy;
-
-    sget-object p2, Llig;->a:Ljava/lang/String;
-
-    const/4 p2, 0x2
-
-    invoke-virtual {p1, p2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    return-void
+    return-object p0
 .end method
 
-.method public final c(JIII)V
+.method public static synthetic f()Landroid/media/metrics/MediaItemInfo$Builder;
     .locals 1
 
-    invoke-virtual {p0}, Lky;->a()V
+    new-instance v0, Landroid/media/metrics/MediaItemInfo$Builder;
 
-    invoke-static {}, Lky;->d()Liy;
+    invoke-direct {v0}, Landroid/media/metrics/MediaItemInfo$Builder;-><init>()V
 
-    move-result-object v0
-
-    iput p3, v0, Liy;->a:I
-
-    iput p4, v0, Liy;->b:I
-
-    iput-wide p1, v0, Liy;->d:J
-
-    iput p5, v0, Liy;->e:I
-
-    iget-object p1, p0, Lky;->c:Lgy;
-
-    sget-object p2, Llig;->a:Ljava/lang/String;
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final flush()V
-    .locals 3
+.method public static bridge synthetic g(Landroid/media/metrics/MediaItemInfo$Builder;)Landroid/media/metrics/MediaItemInfo;
+    .locals 0
 
-    iget-boolean v0, p0, Lky;->f:Z
+    invoke-virtual {p0}, Landroid/media/metrics/MediaItemInfo$Builder;->build()Landroid/media/metrics/MediaItemInfo;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
 
-    :try_start_0
-    iget-object v0, p0, Lky;->c:Lgy;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lky;->e:Lak3;
-
-    invoke-virtual {v0}, Lak3;->d()V
-
-    iget-object v1, p0, Lky;->c:Lgy;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v2, 0x3
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
-
-    invoke-virtual {v0}, Lak3;->a()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
-.method public final setParameters(Landroid/os/Bundle;)V
-    .locals 2
+.method public static bridge synthetic h(Ljava/lang/Object;)Landroid/media/metrics/MediaItemInfo;
+    .locals 0
 
-    invoke-virtual {p0}, Lky;->a()V
+    check-cast p0, Landroid/media/metrics/MediaItemInfo;
 
-    iget-object v0, p0, Lky;->c:Lgy;
-
-    sget-object v1, Llig;->a:Ljava/lang/String;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/os/Message;->sendToTarget()V
-
-    return-void
+    return-object p0
 .end method
 
-.method public final shutdown()V
+.method public static synthetic i(I[B)Ljavax/crypto/spec/ChaCha20ParameterSpec;
     .locals 1
 
-    iget-boolean v0, p0, Lky;->f:Z
+    new-instance v0, Ljavax/crypto/spec/ChaCha20ParameterSpec;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0, p1, p0}, Ljavax/crypto/spec/ChaCha20ParameterSpec;-><init>([BI)V
 
-    invoke-virtual {p0}, Lky;->flush()V
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lky;->b:Landroid/os/HandlerThread;
+.method public static synthetic j()V
+    .locals 1
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lky;->f:Z
+    new-instance v0, Ljavax/crypto/spec/ChaCha20ParameterSpec;
 
     return-void
 .end method
 
-.method public final start()V
-    .locals 3
+.method public static bridge synthetic k(Landroid/media/MediaCodec;)V
+    .locals 0
 
-    iget-boolean v0, p0, Lky;->f:Z
+    invoke-virtual {p0}, Landroid/media/MediaCodec;->detachOutputSurface()V
 
-    if-nez v0, :cond_0
+    return-void
+.end method
 
-    iget-object v0, p0, Lky;->b:Landroid/os/HandlerThread;
+.method public static bridge synthetic l(Landroid/media/metrics/EditingEndedEvent$Builder;F)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    invoke-virtual {p0, p1}, Landroid/media/metrics/EditingEndedEvent$Builder;->setFinalProgressPercent(F)Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    new-instance v1, Lgy;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+.method public static bridge synthetic m(Landroid/media/metrics/EditingEndedEvent$Builder;Landroid/media/metrics/MediaItemInfo;)V
+    .locals 0
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Landroid/media/metrics/EditingEndedEvent$Builder;->addInputMediaItemInfo(Landroid/media/metrics/MediaItemInfo;)Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    const/4 v2, 0x1
+    return-void
+.end method
 
-    invoke-direct {v1, p0, v0, v2}, Lgy;-><init>(Ljava/lang/Object;Landroid/os/Looper;I)V
+.method public static bridge synthetic n(Landroid/media/metrics/EditingEndedEvent$Builder;Ljava/lang/String;)V
+    .locals 0
 
-    iput-object v1, p0, Lky;->c:Lgy;
+    invoke-virtual {p0, p1}, Landroid/media/metrics/EditingEndedEvent$Builder;->setMuxerName(Ljava/lang/String;)Landroid/media/metrics/EditingEndedEvent$Builder;
 
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    iput-boolean v0, p0, Lky;->f:Z
+.method public static bridge synthetic o(Landroid/media/metrics/EditingSession;Landroid/media/metrics/EditingEndedEvent;)V
+    .locals 0
 
-    :cond_0
+    invoke-virtual {p0, p1}, Landroid/media/metrics/EditingSession;->reportEditingEndedEvent(Landroid/media/metrics/EditingEndedEvent;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic p(Landroid/media/metrics/MediaItemInfo$Builder;F)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->setVideoFrameRate(F)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic q(Landroid/media/metrics/MediaItemInfo$Builder;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->setAudioChannelCount(I)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic r(Landroid/media/metrics/MediaItemInfo$Builder;J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/MediaItemInfo$Builder;->setClipDurationMillis(J)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic s(Landroid/media/metrics/MediaItemInfo$Builder;Landroid/util/Size;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->setVideoSize(Landroid/util/Size;)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic t(Landroid/media/metrics/MediaItemInfo$Builder;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->addCodecName(Ljava/lang/String;)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic u(Landroid/media/LoudnessCodecController;Landroid/media/MediaCodec;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/LoudnessCodecController;->addMediaCodec(Landroid/media/MediaCodec;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic v(Landroid/media/metrics/EditingEndedEvent$Builder;)Landroid/media/metrics/EditingEndedEvent$Builder;
+    .locals 1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    invoke-virtual {p0, v0}, Landroid/media/metrics/EditingEndedEvent$Builder;->setFinalProgressPercent(F)Landroid/media/metrics/EditingEndedEvent$Builder;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic w(Landroid/media/metrics/EditingEndedEvent$Builder;Landroid/media/metrics/MediaItemInfo;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/EditingEndedEvent$Builder;->setOutputMediaItemInfo(Landroid/media/metrics/MediaItemInfo;)Landroid/media/metrics/EditingEndedEvent$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic x(Landroid/media/metrics/MediaItemInfo$Builder;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->setAudioSampleRateHz(I)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic y(Landroid/media/metrics/MediaItemInfo$Builder;J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/media/metrics/MediaItemInfo$Builder;->addDataType(J)Landroid/media/metrics/MediaItemInfo$Builder;
+
+    return-void
+.end method
+
+.method public static bridge synthetic z(Landroid/media/metrics/MediaItemInfo$Builder;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/metrics/MediaItemInfo$Builder;->setContainerMimeType(Ljava/lang/String;)Landroid/media/metrics/MediaItemInfo$Builder;
+
     return-void
 .end method

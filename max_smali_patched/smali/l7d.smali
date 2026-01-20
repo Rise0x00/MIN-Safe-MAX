@@ -1,791 +1,710 @@
-.class public final Ll7d;
+.class public abstract Ll7d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static abc_ab_share_pack_mtrl_alpha:I = 0x7f080268
 
-# instance fields
-.field public X:Z
+.field public static abc_action_bar_item_background_material:I = 0x7f080269
 
-.field public final synthetic Y:Landroidx/recyclerview/widget/RecyclerView;
+.field public static abc_btn_borderless_material:I = 0x7f08026a
 
-.field public a:I
+.field public static abc_btn_check_material:I = 0x7f08026b
 
-.field public b:I
+.field public static abc_btn_check_material_anim:I = 0x7f08026c
 
-.field public c:Landroid/widget/OverScroller;
+.field public static abc_btn_check_to_on_mtrl_000:I = 0x7f08026d
 
-.field public d:Landroid/view/animation/Interpolator;
+.field public static abc_btn_check_to_on_mtrl_015:I = 0x7f08026e
 
-.field public o:Z
+.field public static abc_btn_colored_material:I = 0x7f08026f
 
+.field public static abc_btn_default_mtrl_shape:I = 0x7f080270
 
-# direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 2
+.field public static abc_btn_radio_material:I = 0x7f080271
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static abc_btn_radio_material_anim:I = 0x7f080272
 
-    iput-object p1, p0, Ll7d;->Y:Landroidx/recyclerview/widget/RecyclerView;
+.field public static abc_btn_radio_to_on_mtrl_000:I = 0x7f080273
 
-    sget-object v0, Landroidx/recyclerview/widget/RecyclerView;->S1:Len7;
+.field public static abc_btn_radio_to_on_mtrl_015:I = 0x7f080274
 
-    iput-object v0, p0, Ll7d;->d:Landroid/view/animation/Interpolator;
+.field public static abc_btn_switch_to_on_mtrl_00001:I = 0x7f080275
 
-    const/4 v1, 0x0
+.field public static abc_btn_switch_to_on_mtrl_00012:I = 0x7f080276
 
-    iput-boolean v1, p0, Ll7d;->o:Z
+.field public static abc_cab_background_internal_bg:I = 0x7f080277
 
-    iput-boolean v1, p0, Ll7d;->X:Z
+.field public static abc_cab_background_top_material:I = 0x7f080278
 
-    new-instance v1, Landroid/widget/OverScroller;
+.field public static abc_cab_background_top_mtrl_alpha:I = 0x7f080279
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+.field public static abc_control_background_material:I = 0x7f08027a
 
-    move-result-object p1
+.field public static abc_dialog_material_background:I = 0x7f08027b
 
-    invoke-direct {v1, p1, v0}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+.field public static abc_edit_text_material:I = 0x7f08027c
 
-    iput-object v1, p0, Ll7d;->c:Landroid/widget/OverScroller;
+.field public static abc_ic_ab_back_material:I = 0x7f08027d
 
-    return-void
-.end method
+.field public static abc_ic_arrow_drop_right_black_24dp:I = 0x7f08027e
 
+.field public static abc_ic_clear_material:I = 0x7f08027f
 
-# virtual methods
-.method public final a(II)V
-    .locals 12
+.field public static abc_ic_commit_search_api_mtrl_alpha:I = 0x7f080280
 
-    const/4 v0, 0x2
+.field public static abc_ic_go_search_api_material:I = 0x7f080281
 
-    iget-object v1, p0, Ll7d;->Y:Landroidx/recyclerview/widget/RecyclerView;
+.field public static abc_ic_menu_copy_mtrl_am_alpha:I = 0x7f080282
 
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setScrollState(I)V
+.field public static abc_ic_menu_cut_mtrl_alpha:I = 0x7f080283
 
-    const/4 v0, 0x0
+.field public static abc_ic_menu_overflow_material:I = 0x7f080284
 
-    iput v0, p0, Ll7d;->b:I
+.field public static abc_ic_menu_paste_mtrl_am_alpha:I = 0x7f080285
 
-    iput v0, p0, Ll7d;->a:I
+.field public static abc_ic_menu_selectall_mtrl_alpha:I = 0x7f080286
 
-    iget-object v0, p0, Ll7d;->d:Landroid/view/animation/Interpolator;
+.field public static abc_ic_menu_share_mtrl_alpha:I = 0x7f080287
 
-    sget-object v2, Landroidx/recyclerview/widget/RecyclerView;->S1:Len7;
+.field public static abc_ic_search_api_material:I = 0x7f080288
 
-    if-eq v0, v2, :cond_0
+.field public static abc_ic_voice_search_api_material:I = 0x7f080289
 
-    iput-object v2, p0, Ll7d;->d:Landroid/view/animation/Interpolator;
+.field public static abc_item_background_holo_dark:I = 0x7f08028a
 
-    new-instance v0, Landroid/widget/OverScroller;
+.field public static abc_item_background_holo_light:I = 0x7f08028b
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+.field public static abc_list_divider_material:I = 0x7f08028c
 
-    move-result-object v1
+.field public static abc_list_divider_mtrl_alpha:I = 0x7f08028d
 
-    invoke-direct {v0, v1, v2}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+.field public static abc_list_focused_holo:I = 0x7f08028e
 
-    iput-object v0, p0, Ll7d;->c:Landroid/widget/OverScroller;
+.field public static abc_list_longpressed_holo:I = 0x7f08028f
 
-    :cond_0
-    iget-object v3, p0, Ll7d;->c:Landroid/widget/OverScroller;
+.field public static abc_list_pressed_holo_dark:I = 0x7f080290
 
-    const/high16 v10, -0x80000000
+.field public static abc_list_pressed_holo_light:I = 0x7f080291
 
-    const v11, 0x7fffffff
+.field public static abc_list_selector_background_transition_holo_dark:I = 0x7f080292
 
-    const/4 v4, 0x0
+.field public static abc_list_selector_background_transition_holo_light:I = 0x7f080293
 
-    const/4 v5, 0x0
+.field public static abc_list_selector_disabled_holo_dark:I = 0x7f080294
 
-    const/high16 v8, -0x80000000
+.field public static abc_list_selector_disabled_holo_light:I = 0x7f080295
 
-    const v9, 0x7fffffff
+.field public static abc_list_selector_holo_dark:I = 0x7f080296
 
-    move v6, p1
+.field public static abc_list_selector_holo_light:I = 0x7f080297
 
-    move v7, p2
+.field public static abc_menu_hardkey_panel_mtrl_mult:I = 0x7f080298
 
-    invoke-virtual/range {v3 .. v11}, Landroid/widget/OverScroller;->fling(IIIIIIII)V
+.field public static abc_popup_background_mtrl_mult:I = 0x7f080299
 
-    invoke-virtual {p0}, Ll7d;->b()V
+.field public static abc_ratingbar_indicator_material:I = 0x7f08029a
 
-    return-void
-.end method
+.field public static abc_ratingbar_material:I = 0x7f08029b
 
-.method public final b()V
-    .locals 2
+.field public static abc_ratingbar_small_material:I = 0x7f08029c
 
-    iget-boolean v0, p0, Ll7d;->o:Z
+.field public static abc_scrubber_control_off_mtrl_alpha:I = 0x7f08029d
 
-    if-eqz v0, :cond_0
+.field public static abc_scrubber_control_to_pressed_mtrl_000:I = 0x7f08029e
 
-    const/4 v0, 0x1
+.field public static abc_scrubber_control_to_pressed_mtrl_005:I = 0x7f08029f
 
-    iput-boolean v0, p0, Ll7d;->X:Z
+.field public static abc_scrubber_primary_mtrl_alpha:I = 0x7f0802a0
 
-    return-void
+.field public static abc_scrubber_track_mtrl_alpha:I = 0x7f0802a1
 
-    :cond_0
-    iget-object v0, p0, Ll7d;->Y:Landroidx/recyclerview/widget/RecyclerView;
+.field public static abc_seekbar_thumb_material:I = 0x7f0802a2
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+.field public static abc_seekbar_tick_mark_material:I = 0x7f0802a3
 
-    sget-object v1, Ltyg;->a:Ljava/util/WeakHashMap;
+.field public static abc_seekbar_track_material:I = 0x7f0802a4
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
+.field public static abc_spinner_mtrl_am_alpha:I = 0x7f0802a5
 
-    return-void
-.end method
+.field public static abc_spinner_textfield_background_material:I = 0x7f0802a6
 
-.method public final c(IIILandroid/view/animation/Interpolator;)V
-    .locals 9
+.field public static abc_star_black_48dp:I = 0x7f0802a7
 
-    const/high16 v0, -0x80000000
+.field public static abc_star_half_black_48dp:I = 0x7f0802a8
 
-    const/4 v1, 0x0
+.field public static abc_switch_thumb_material:I = 0x7f0802a9
 
-    iget-object v2, p0, Ll7d;->Y:Landroidx/recyclerview/widget/RecyclerView;
+.field public static abc_switch_track_mtrl_alpha:I = 0x7f0802aa
 
-    if-ne p3, v0, :cond_3
+.field public static abc_tab_indicator_material:I = 0x7f0802ab
 
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+.field public static abc_tab_indicator_mtrl_alpha:I = 0x7f0802ac
 
-    move-result p3
+.field public static abc_text_cursor_material:I = 0x7f0802ad
 
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+.field public static abc_text_select_handle_left_mtrl:I = 0x7f0802ae
 
-    move-result v0
+.field public static abc_text_select_handle_middle_mtrl:I = 0x7f0802af
 
-    if-le p3, v0, :cond_0
+.field public static abc_text_select_handle_right_mtrl:I = 0x7f0802b0
 
-    const/4 v3, 0x1
+.field public static abc_textfield_activated_mtrl_alpha:I = 0x7f0802b1
 
-    goto :goto_0
+.field public static abc_textfield_default_mtrl_alpha:I = 0x7f0802b2
 
-    :cond_0
-    move v3, v1
+.field public static abc_textfield_search_activated_mtrl_alpha:I = 0x7f0802b3
 
-    :goto_0
-    if-eqz v3, :cond_1
+.field public static abc_textfield_search_default_mtrl_alpha:I = 0x7f0802b4
 
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
+.field public static abc_textfield_search_material:I = 0x7f0802b5
 
-    move-result v4
+.field public static abc_vector_test:I = 0x7f0802b6
 
-    goto :goto_1
+.field public static btn_checkbox_checked_mtrl:I = 0x7f0802d8
 
-    :cond_1
-    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
+.field public static btn_checkbox_checked_to_unchecked_mtrl_animation:I = 0x7f0802d9
 
-    move-result v4
+.field public static btn_checkbox_unchecked_mtrl:I = 0x7f0802da
 
-    :goto_1
-    if-eqz v3, :cond_2
+.field public static btn_checkbox_unchecked_to_checked_mtrl_animation:I = 0x7f0802db
 
-    goto :goto_2
+.field public static btn_radio_off_mtrl:I = 0x7f0802dc
 
-    :cond_2
-    move p3, v0
+.field public static btn_radio_off_to_on_mtrl_animation:I = 0x7f0802dd
 
-    :goto_2
-    int-to-float p3, p3
+.field public static btn_radio_on_mtrl:I = 0x7f0802de
 
-    int-to-float v0, v4
+.field public static btn_radio_on_to_off_mtrl_animation:I = 0x7f0802df
 
-    div-float/2addr p3, v0
+.field public static ccp_ic_arrow_drop_down:I = 0x7f0802f3
 
-    const/high16 v0, 0x3f800000    # 1.0f
+.field public static fastscroll__default_bubble:I = 0x7f0803c1
 
-    add-float/2addr p3, v0
+.field public static fastscroll__default_handle:I = 0x7f0803c2
 
-    const/high16 v0, 0x43960000    # 300.0f
+.field public static flag_afghanistan:I = 0x7f0803cc
 
-    mul-float/2addr p3, v0
+.field public static flag_aland:I = 0x7f0803cd
 
-    float-to-int p3, p3
+.field public static flag_albania:I = 0x7f0803ce
 
-    const/16 v0, 0x7d0
+.field public static flag_algeria:I = 0x7f0803cf
 
-    invoke-static {p3, v0}, Ljava/lang/Math;->min(II)I
+.field public static flag_american_samoa:I = 0x7f0803d0
 
-    move-result p3
+.field public static flag_andorra:I = 0x7f0803d1
 
-    :cond_3
-    move v8, p3
+.field public static flag_angola:I = 0x7f0803d2
 
-    if-nez p4, :cond_4
+.field public static flag_anguilla:I = 0x7f0803d3
 
-    sget-object p4, Landroidx/recyclerview/widget/RecyclerView;->S1:Len7;
+.field public static flag_antarctica:I = 0x7f0803d4
 
-    :cond_4
-    iget-object p3, p0, Ll7d;->d:Landroid/view/animation/Interpolator;
+.field public static flag_antigua_and_barbuda:I = 0x7f0803d5
 
-    if-eq p3, p4, :cond_5
+.field public static flag_argentina:I = 0x7f0803d6
 
-    iput-object p4, p0, Ll7d;->d:Landroid/view/animation/Interpolator;
+.field public static flag_armenia:I = 0x7f0803d7
 
-    new-instance p3, Landroid/widget/OverScroller;
+.field public static flag_aruba:I = 0x7f0803d8
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+.field public static flag_australia:I = 0x7f0803d9
 
-    move-result-object v0
+.field public static flag_austria:I = 0x7f0803da
 
-    invoke-direct {p3, v0, p4}, Landroid/widget/OverScroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+.field public static flag_azerbaijan:I = 0x7f0803db
 
-    iput-object p3, p0, Ll7d;->c:Landroid/widget/OverScroller;
+.field public static flag_bahamas:I = 0x7f0803dc
 
-    :cond_5
-    iput v1, p0, Ll7d;->b:I
+.field public static flag_bahrain:I = 0x7f0803dd
 
-    iput v1, p0, Ll7d;->a:I
+.field public static flag_bangladesh:I = 0x7f0803de
 
-    const/4 p3, 0x2
+.field public static flag_barbados:I = 0x7f0803df
 
-    invoke-virtual {v2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setScrollState(I)V
+.field public static flag_belarus:I = 0x7f0803e0
 
-    iget-object v3, p0, Ll7d;->c:Landroid/widget/OverScroller;
+.field public static flag_belgium:I = 0x7f0803e1
 
-    const/4 v4, 0x0
+.field public static flag_belize:I = 0x7f0803e2
 
-    const/4 v5, 0x0
+.field public static flag_benin:I = 0x7f0803e3
 
-    move v6, p1
+.field public static flag_bermuda:I = 0x7f0803e4
 
-    move v7, p2
+.field public static flag_bhutan:I = 0x7f0803e5
 
-    invoke-virtual/range {v3 .. v8}, Landroid/widget/OverScroller;->startScroll(IIIII)V
+.field public static flag_bolivia:I = 0x7f0803e6
 
-    invoke-virtual {p0}, Ll7d;->b()V
+.field public static flag_bosnia:I = 0x7f0803e7
 
-    return-void
-.end method
+.field public static flag_botswana:I = 0x7f0803e8
 
-.method public final run()V
-    .locals 14
+.field public static flag_brazil:I = 0x7f0803e9
 
-    iget-object v0, p0, Ll7d;->Y:Landroidx/recyclerview/widget/RecyclerView;
+.field public static flag_british_indian_ocean_territory:I = 0x7f0803ea
 
-    iget-object v8, v0, Landroidx/recyclerview/widget/RecyclerView;->D1:[I
+.field public static flag_british_virgin_islands:I = 0x7f0803eb
 
-    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+.field public static flag_brunei:I = 0x7f0803ec
 
-    if-nez v1, :cond_0
+.field public static flag_bulgaria:I = 0x7f0803ed
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+.field public static flag_burkina_faso:I = 0x7f0803ee
 
-    iget-object v0, p0, Ll7d;->c:Landroid/widget/OverScroller;
+.field public static flag_burundi:I = 0x7f0803ef
 
-    invoke-virtual {v0}, Landroid/widget/OverScroller;->abortAnimation()V
+.field public static flag_cambodia:I = 0x7f0803f0
 
-    return-void
+.field public static flag_cameroon:I = 0x7f0803f1
 
-    :cond_0
-    const/4 v9, 0x0
+.field public static flag_canada:I = 0x7f0803f2
 
-    iput-boolean v9, p0, Ll7d;->X:Z
+.field public static flag_cape_verde:I = 0x7f0803f3
 
-    const/4 v10, 0x1
+.field public static flag_cayman_islands:I = 0x7f0803f4
 
-    iput-boolean v10, p0, Ll7d;->o:Z
+.field public static flag_central_african_republic:I = 0x7f0803f5
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->s()V
+.field public static flag_chad:I = 0x7f0803f6
 
-    iget-object v11, p0, Ll7d;->c:Landroid/widget/OverScroller;
+.field public static flag_chile:I = 0x7f0803f7
 
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->computeScrollOffset()Z
+.field public static flag_china:I = 0x7f0803f8
 
-    move-result v1
+.field public static flag_christmas_island:I = 0x7f0803f9
 
-    if-eqz v1, :cond_1d
+.field public static flag_cocos:I = 0x7f0803fa
 
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrX()I
+.field public static flag_colombia:I = 0x7f0803fb
 
-    move-result v1
+.field public static flag_comoros:I = 0x7f0803fc
 
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrY()I
+.field public static flag_cook_islands:I = 0x7f0803fd
 
-    move-result v2
+.field public static flag_costa_rica:I = 0x7f0803fe
 
-    iget v3, p0, Ll7d;->a:I
+.field public static flag_cote_divoire:I = 0x7f0803ff
 
-    sub-int v3, v1, v3
+.field public static flag_croatia:I = 0x7f080400
 
-    iget v4, p0, Ll7d;->b:I
+.field public static flag_cuba:I = 0x7f080401
 
-    sub-int v4, v2, v4
+.field public static flag_curacao:I = 0x7f080402
 
-    iput v1, p0, Ll7d;->a:I
+.field public static flag_cyprus:I = 0x7f080403
 
-    iput v2, p0, Ll7d;->b:I
+.field public static flag_czech_republic:I = 0x7f080404
 
-    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->V0:Landroid/widget/EdgeEffect;
+.field public static flag_democratic_republic_of_the_congo:I = 0x7f080405
 
-    iget-object v2, v0, Landroidx/recyclerview/widget/RecyclerView;->X0:Landroid/widget/EdgeEffect;
+.field public static flag_denmark:I = 0x7f080406
 
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+.field public static flag_djibouti:I = 0x7f080407
 
-    move-result v5
+.field public static flag_dominica:I = 0x7f080408
 
-    invoke-static {v3, v1, v2, v5}, Landroidx/recyclerview/widget/RecyclerView;->r(ILandroid/widget/EdgeEffect;Landroid/widget/EdgeEffect;I)I
+.field public static flag_dominican_republic:I = 0x7f080409
 
-    move-result v1
+.field public static flag_ecuador:I = 0x7f08040a
 
-    iget-object v2, v0, Landroidx/recyclerview/widget/RecyclerView;->W0:Landroid/widget/EdgeEffect;
+.field public static flag_egypt:I = 0x7f08040b
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->Y0:Landroid/widget/EdgeEffect;
+.field public static flag_el_salvador:I = 0x7f08040c
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+.field public static flag_equatorial_guinea:I = 0x7f08040d
 
-    move-result v5
+.field public static flag_eritrea:I = 0x7f08040e
 
-    invoke-static {v4, v2, v3, v5}, Landroidx/recyclerview/widget/RecyclerView;->r(ILandroid/widget/EdgeEffect;Landroid/widget/EdgeEffect;I)I
+.field public static flag_estonia:I = 0x7f08040f
 
-    move-result v2
+.field public static flag_ethiopia:I = 0x7f080410
 
-    iget-object v4, v0, Landroidx/recyclerview/widget/RecyclerView;->D1:[I
+.field public static flag_falkland_islands:I = 0x7f080411
 
-    aput v9, v4, v9
+.field public static flag_faroe_islands:I = 0x7f080412
 
-    aput v9, v4, v10
+.field public static flag_fiji:I = 0x7f080413
 
-    const/4 v5, 0x0
+.field public static flag_finland:I = 0x7f080414
 
-    const/4 v3, 0x1
+.field public static flag_france:I = 0x7f080415
 
-    invoke-virtual/range {v0 .. v5}, Landroidx/recyclerview/widget/RecyclerView;->y(III[I[I)Z
+.field public static flag_french_polynesia:I = 0x7f080416
 
-    move-result v3
+.field public static flag_gabon:I = 0x7f080417
 
-    if-eqz v3, :cond_1
+.field public static flag_gambia:I = 0x7f080418
 
-    aget v3, v8, v9
+.field public static flag_georgia:I = 0x7f080419
 
-    sub-int/2addr v1, v3
+.field public static flag_germany:I = 0x7f08041a
 
-    aget v3, v8, v10
+.field public static flag_ghana:I = 0x7f08041b
 
-    sub-int/2addr v2, v3
+.field public static flag_gibraltar:I = 0x7f08041c
 
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->getOverScrollMode()I
+.field public static flag_greece:I = 0x7f08041d
 
-    move-result v3
+.field public static flag_greenland:I = 0x7f08041e
 
-    const/4 v12, 0x2
+.field public static flag_grenada:I = 0x7f08041f
 
-    if-eq v3, v12, :cond_2
+.field public static flag_guadeloupe:I = 0x7f080420
 
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->q(II)V
+.field public static flag_guam:I = 0x7f080421
 
-    :cond_2
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->z0:Lp6d;
+.field public static flag_guatemala:I = 0x7f080422
 
-    if-eqz v3, :cond_6
+.field public static flag_guernsey:I = 0x7f080423
 
-    aput v9, v8, v9
+.field public static flag_guinea:I = 0x7f080424
 
-    aput v9, v8, v10
+.field public static flag_guinea_bissau:I = 0x7f080425
 
-    invoke-virtual {v0, v1, v2, v8}, Landroidx/recyclerview/widget/RecyclerView;->w0(II[I)V
+.field public static flag_guyana:I = 0x7f080426
 
-    aget v3, v8, v9
+.field public static flag_guyane:I = 0x7f080427
 
-    aget v4, v8, v10
+.field public static flag_haiti:I = 0x7f080428
 
-    sub-int/2addr v1, v3
+.field public static flag_honduras:I = 0x7f080429
 
-    sub-int/2addr v2, v4
+.field public static flag_hong_kong:I = 0x7f08042a
 
-    iget-object v5, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+.field public static flag_hungary:I = 0x7f08042b
 
-    iget-object v5, v5, Landroidx/recyclerview/widget/a;->e:Lgy7;
+.field public static flag_iceland:I = 0x7f08042c
 
-    if-eqz v5, :cond_5
+.field public static flag_india:I = 0x7f08042d
 
-    iget-boolean v6, v5, Lgy7;->d:Z
+.field public static flag_indonesia:I = 0x7f08042e
 
-    if-nez v6, :cond_5
+.field public static flag_iran:I = 0x7f08042f
 
-    iget-boolean v6, v5, Lgy7;->e:Z
+.field public static flag_iraq:I = 0x7f080430
 
-    if-eqz v6, :cond_5
+.field public static flag_iraq_new:I = 0x7f080431
 
-    iget-object v6, v0, Landroidx/recyclerview/widget/RecyclerView;->r1:Li7d;
+.field public static flag_ireland:I = 0x7f080432
 
-    invoke-virtual {v6}, Li7d;->b()I
+.field public static flag_isleof_man:I = 0x7f080433
 
-    move-result v6
+.field public static flag_israel:I = 0x7f080434
 
-    if-nez v6, :cond_3
+.field public static flag_italy:I = 0x7f080435
 
-    invoke-virtual {v5}, Lgy7;->m()V
+.field public static flag_jamaica:I = 0x7f080436
 
-    goto :goto_0
+.field public static flag_japan:I = 0x7f080437
 
-    :cond_3
-    iget v7, v5, Lgy7;->a:I
+.field public static flag_jersey:I = 0x7f080438
 
-    if-lt v7, v6, :cond_4
+.field public static flag_jordan:I = 0x7f080439
 
-    sub-int/2addr v6, v10
+.field public static flag_kazakhstan:I = 0x7f08043a
 
-    iput v6, v5, Lgy7;->a:I
+.field public static flag_kenya:I = 0x7f08043b
 
-    invoke-virtual {v5, v3, v4}, Lgy7;->i(II)V
+.field public static flag_kiribati:I = 0x7f08043c
 
-    goto :goto_0
+.field public static flag_kosovo:I = 0x7f08043d
 
-    :cond_4
-    invoke-virtual {v5, v3, v4}, Lgy7;->i(II)V
+.field public static flag_kuwait:I = 0x7f08043e
 
-    :cond_5
-    :goto_0
-    move v13, v3
+.field public static flag_kyrgyzstan:I = 0x7f08043f
 
-    move v3, v1
+.field public static flag_laos:I = 0x7f080440
 
-    move v1, v13
+.field public static flag_latvia:I = 0x7f080441
 
-    move v13, v4
+.field public static flag_lebanon:I = 0x7f080442
 
-    move v4, v2
+.field public static flag_lesotho:I = 0x7f080443
 
-    move v2, v13
+.field public static flag_liberia:I = 0x7f080444
 
-    goto :goto_1
+.field public static flag_libya:I = 0x7f080445
 
-    :cond_6
-    move v3, v1
+.field public static flag_liechtenstein:I = 0x7f080446
 
-    move v4, v2
+.field public static flag_lithuania:I = 0x7f080447
 
-    move v1, v9
+.field public static flag_luxembourg:I = 0x7f080448
 
-    move v2, v1
+.field public static flag_macao:I = 0x7f080449
 
-    :goto_1
-    iget-object v5, v0, Landroidx/recyclerview/widget/RecyclerView;->C0:Ljava/util/ArrayList;
+.field public static flag_macedonia:I = 0x7f08044a
 
-    invoke-virtual {v5}, Ljava/util/ArrayList;->isEmpty()Z
+.field public static flag_madagascar:I = 0x7f08044b
 
-    move-result v5
+.field public static flag_malawi:I = 0x7f08044c
 
-    if-nez v5, :cond_7
+.field public static flag_malaysia:I = 0x7f08044d
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+.field public static flag_maldives:I = 0x7f08044e
 
-    :cond_7
-    iget-object v7, v0, Landroidx/recyclerview/widget/RecyclerView;->D1:[I
+.field public static flag_mali:I = 0x7f08044f
 
-    aput v9, v7, v9
+.field public static flag_malta:I = 0x7f080450
 
-    aput v9, v7, v10
+.field public static flag_marshall_islands:I = 0x7f080451
 
-    const/4 v5, 0x0
+.field public static flag_martinique:I = 0x7f080452
 
-    const/4 v6, 0x1
+.field public static flag_mauritania:I = 0x7f080453
 
-    invoke-virtual/range {v0 .. v7}, Landroidx/recyclerview/widget/RecyclerView;->z(IIII[II[I)V
+.field public static flag_mauritius:I = 0x7f080454
 
-    aget v5, v8, v9
+.field public static flag_mexico:I = 0x7f080455
 
-    sub-int/2addr v3, v5
+.field public static flag_micronesia:I = 0x7f080456
 
-    aget v5, v8, v10
+.field public static flag_moldova:I = 0x7f080457
 
-    sub-int/2addr v4, v5
+.field public static flag_monaco:I = 0x7f080458
 
-    if-nez v1, :cond_8
+.field public static flag_mongolia:I = 0x7f080459
 
-    if-eqz v2, :cond_9
+.field public static flag_montserrat:I = 0x7f08045a
 
-    :cond_8
-    invoke-virtual {v0, v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->A(II)V
+.field public static flag_morocco:I = 0x7f08045b
 
-    :cond_9
-    invoke-static {v0}, Landroidx/recyclerview/widget/RecyclerView;->e(Landroidx/recyclerview/widget/RecyclerView;)Z
+.field public static flag_mozambique:I = 0x7f08045c
 
-    move-result v5
+.field public static flag_myanmar:I = 0x7f08045d
 
-    if-nez v5, :cond_a
+.field public static flag_namibia:I = 0x7f08045e
 
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+.field public static flag_nauru:I = 0x7f08045f
 
-    :cond_a
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrX()I
+.field public static flag_nepal:I = 0x7f080460
 
-    move-result v5
+.field public static flag_netherlands:I = 0x7f080461
 
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->getFinalX()I
+.field public static flag_netherlands_antilles:I = 0x7f080462
 
-    move-result v6
+.field public static flag_new_caledonia:I = 0x7f080463
 
-    if-ne v5, v6, :cond_b
+.field public static flag_new_zealand:I = 0x7f080464
 
-    move v5, v10
+.field public static flag_nicaragua:I = 0x7f080465
 
-    goto :goto_2
+.field public static flag_niger:I = 0x7f080466
 
-    :cond_b
-    move v5, v9
+.field public static flag_nigeria:I = 0x7f080467
 
-    :goto_2
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrY()I
+.field public static flag_niue:I = 0x7f080468
 
-    move-result v6
+.field public static flag_norfolk_island:I = 0x7f080469
 
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->getFinalY()I
+.field public static flag_north_korea:I = 0x7f08046a
 
-    move-result v7
+.field public static flag_northern_mariana_islands:I = 0x7f08046b
 
-    if-ne v6, v7, :cond_c
+.field public static flag_norway:I = 0x7f08046c
 
-    move v6, v10
+.field public static flag_of_montenegro:I = 0x7f08046d
 
-    goto :goto_3
+.field public static flag_oman:I = 0x7f08046e
 
-    :cond_c
-    move v6, v9
+.field public static flag_pakistan:I = 0x7f08046f
 
-    :goto_3
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->isFinished()Z
+.field public static flag_palau:I = 0x7f080470
 
-    move-result v7
+.field public static flag_palestine:I = 0x7f080471
 
-    if-nez v7, :cond_f
+.field public static flag_panama:I = 0x7f080472
 
-    if-nez v5, :cond_d
+.field public static flag_papua_new_guinea:I = 0x7f080473
 
-    if-eqz v3, :cond_e
+.field public static flag_paraguay:I = 0x7f080474
 
-    :cond_d
-    if-nez v6, :cond_f
+.field public static flag_peru:I = 0x7f080475
 
-    if-eqz v4, :cond_e
+.field public static flag_philippines:I = 0x7f080476
 
-    goto :goto_4
+.field public static flag_pitcairn_islands:I = 0x7f080477
 
-    :cond_e
-    move v5, v9
+.field public static flag_poland:I = 0x7f080478
 
-    goto :goto_5
+.field public static flag_portugal:I = 0x7f080479
 
-    :cond_f
-    :goto_4
-    move v5, v10
+.field public static flag_puerto_rico:I = 0x7f08047a
 
-    :goto_5
-    iget-object v6, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+.field public static flag_qatar:I = 0x7f08047b
 
-    iget-object v6, v6, Landroidx/recyclerview/widget/a;->e:Lgy7;
+.field public static flag_republic_of_the_congo:I = 0x7f08047c
 
-    if-eqz v6, :cond_10
+.field public static flag_romania:I = 0x7f08047d
 
-    iget-boolean v6, v6, Lgy7;->d:Z
+.field public static flag_russian_federation:I = 0x7f08047e
 
-    if-eqz v6, :cond_10
+.field public static flag_rwanda:I = 0x7f08047f
 
-    goto/16 :goto_a
+.field public static flag_saint_barthelemy:I = 0x7f080480
 
-    :cond_10
-    if-eqz v5, :cond_1c
+.field public static flag_saint_helena:I = 0x7f080481
 
-    invoke-virtual {v0}, Landroid/view/View;->getOverScrollMode()I
+.field public static flag_saint_kitts_and_nevis:I = 0x7f080482
 
-    move-result v1
+.field public static flag_saint_lucia:I = 0x7f080483
 
-    if-eq v1, v12, :cond_1a
+.field public static flag_saint_martin:I = 0x7f080484
 
-    invoke-virtual {v11}, Landroid/widget/OverScroller;->getCurrVelocity()F
+.field public static flag_saint_pierre:I = 0x7f080485
 
-    move-result v1
+.field public static flag_saint_vicent_and_the_grenadines:I = 0x7f080486
 
-    float-to-int v1, v1
+.field public static flag_samoa:I = 0x7f080487
 
-    if-gez v3, :cond_11
+.field public static flag_san_marino:I = 0x7f080488
 
-    neg-int v2, v1
+.field public static flag_sao_tome_and_principe:I = 0x7f080489
 
-    goto :goto_6
+.field public static flag_saudi_arabia:I = 0x7f08048a
 
-    :cond_11
-    if-lez v3, :cond_12
+.field public static flag_senegal:I = 0x7f08048b
 
-    move v2, v1
+.field public static flag_serbia:I = 0x7f08048c
 
-    goto :goto_6
+.field public static flag_serbia_and_montenegro:I = 0x7f08048d
 
-    :cond_12
-    move v2, v9
+.field public static flag_seychelles:I = 0x7f08048e
 
-    :goto_6
-    if-gez v4, :cond_13
+.field public static flag_sierra_leone:I = 0x7f08048f
 
-    neg-int v1, v1
+.field public static flag_singapore:I = 0x7f080490
 
-    goto :goto_7
+.field public static flag_sint_maarten:I = 0x7f080491
 
-    :cond_13
-    if-lez v4, :cond_14
+.field public static flag_slovakia:I = 0x7f080492
 
-    goto :goto_7
+.field public static flag_slovenia:I = 0x7f080493
 
-    :cond_14
-    move v1, v9
+.field public static flag_soloman_islands:I = 0x7f080494
 
-    :goto_7
-    if-gez v2, :cond_15
+.field public static flag_somalia:I = 0x7f080495
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->C()V
+.field public static flag_south_africa:I = 0x7f080496
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->V0:Landroid/widget/EdgeEffect;
+.field public static flag_south_georgia:I = 0x7f080497
 
-    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+.field public static flag_south_korea:I = 0x7f080498
 
-    move-result v3
+.field public static flag_south_sudan:I = 0x7f080499
 
-    if-eqz v3, :cond_16
+.field public static flag_soviet_union:I = 0x7f08049a
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->V0:Landroid/widget/EdgeEffect;
+.field public static flag_spain:I = 0x7f08049b
 
-    neg-int v4, v2
+.field public static flag_sri_lanka:I = 0x7f08049c
 
-    invoke-virtual {v3, v4}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+.field public static flag_sudan:I = 0x7f08049d
 
-    goto :goto_8
+.field public static flag_suriname:I = 0x7f08049e
 
-    :cond_15
-    if-lez v2, :cond_16
+.field public static flag_swaziland:I = 0x7f08049f
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->D()V
+.field public static flag_sweden:I = 0x7f0804a0
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->X0:Landroid/widget/EdgeEffect;
+.field public static flag_switzerland:I = 0x7f0804a1
 
-    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+.field public static flag_syria:I = 0x7f0804a2
 
-    move-result v3
+.field public static flag_taiwan:I = 0x7f0804a3
 
-    if-eqz v3, :cond_16
+.field public static flag_tajikistan:I = 0x7f0804a4
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->X0:Landroid/widget/EdgeEffect;
+.field public static flag_tanzania:I = 0x7f0804a5
 
-    invoke-virtual {v3, v2}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+.field public static flag_thailand:I = 0x7f0804a6
 
-    :cond_16
-    :goto_8
-    if-gez v1, :cond_17
+.field public static flag_tibet:I = 0x7f0804a7
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->E()V
+.field public static flag_timor_leste:I = 0x7f0804a8
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->W0:Landroid/widget/EdgeEffect;
+.field public static flag_togo:I = 0x7f0804a9
 
-    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+.field public static flag_tokelau:I = 0x7f0804aa
 
-    move-result v3
+.field public static flag_tonga:I = 0x7f0804ab
 
-    if-eqz v3, :cond_18
+.field public static flag_transparent:I = 0x7f0804ac
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->W0:Landroid/widget/EdgeEffect;
+.field public static flag_trinidad_and_tobago:I = 0x7f0804ad
 
-    neg-int v4, v1
+.field public static flag_tunisia:I = 0x7f0804ae
 
-    invoke-virtual {v3, v4}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+.field public static flag_turkey:I = 0x7f0804af
 
-    goto :goto_9
+.field public static flag_turkmenistan:I = 0x7f0804b0
 
-    :cond_17
-    if-lez v1, :cond_18
+.field public static flag_turks_and_caicos_islands:I = 0x7f0804b1
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->B()V
+.field public static flag_tuvalu:I = 0x7f0804b2
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->Y0:Landroid/widget/EdgeEffect;
+.field public static flag_uae:I = 0x7f0804b3
 
-    invoke-virtual {v3}, Landroid/widget/EdgeEffect;->isFinished()Z
+.field public static flag_uganda:I = 0x7f0804b4
 
-    move-result v3
+.field public static flag_ukraine:I = 0x7f0804b5
 
-    if-eqz v3, :cond_18
+.field public static flag_united_kingdom:I = 0x7f0804b6
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->Y0:Landroid/widget/EdgeEffect;
+.field public static flag_united_states_of_america:I = 0x7f0804b7
 
-    invoke-virtual {v3, v1}, Landroid/widget/EdgeEffect;->onAbsorb(I)V
+.field public static flag_uruguay:I = 0x7f0804b8
 
-    :cond_18
-    :goto_9
-    if-nez v2, :cond_19
+.field public static flag_us_virgin_islands:I = 0x7f0804b9
 
-    if-eqz v1, :cond_1a
+.field public static flag_uzbekistan:I = 0x7f0804ba
 
-    :cond_19
-    sget-object v1, Ltyg;->a:Ljava/util/WeakHashMap;
+.field public static flag_vanuatu:I = 0x7f0804bb
 
-    invoke-virtual {v0}, Landroid/view/View;->postInvalidateOnAnimation()V
+.field public static flag_vatican_city:I = 0x7f0804bc
 
-    :cond_1a
-    sget-boolean v1, Landroidx/recyclerview/widget/RecyclerView;->Q1:Z
+.field public static flag_venezuela:I = 0x7f0804bd
 
-    if-eqz v1, :cond_1d
+.field public static flag_vietnam:I = 0x7f0804be
 
-    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->q1:Lu63;
+.field public static flag_wallis_and_futuna:I = 0x7f0804bf
 
-    iget-object v2, v1, Lu63;->c:[I
+.field public static flag_yemen:I = 0x7f0804c0
 
-    if-eqz v2, :cond_1b
+.field public static flag_zambia:I = 0x7f0804c1
 
-    const/4 v3, -0x1
+.field public static flag_zimbabwe:I = 0x7f0804c2
 
-    invoke-static {v2, v3}, Ljava/util/Arrays;->fill([II)V
+.field public static ic_backspace_black_24dp:I = 0x7f08051e
 
-    :cond_1b
-    iput v9, v1, Lu63;->d:I
+.field public static ic_clear_black_24dp:I = 0x7f08056f
 
-    goto :goto_b
+.field public static notification_action_background:I = 0x7f0808c2
 
-    :cond_1c
-    :goto_a
-    invoke-virtual {p0}, Ll7d;->b()V
+.field public static notification_bg:I = 0x7f0808c3
 
-    iget-object v3, v0, Landroidx/recyclerview/widget/RecyclerView;->p1:Lhn6;
+.field public static notification_bg_low:I = 0x7f0808c4
 
-    if-eqz v3, :cond_1d
+.field public static notification_bg_low_normal:I = 0x7f0808c5
 
-    invoke-virtual {v3, v0, v1, v2}, Lhn6;->a(Landroidx/recyclerview/widget/RecyclerView;II)V
+.field public static notification_bg_low_pressed:I = 0x7f0808c6
 
-    :cond_1d
-    :goto_b
-    iget-object v1, v0, Landroidx/recyclerview/widget/RecyclerView;->A0:Landroidx/recyclerview/widget/a;
+.field public static notification_bg_normal:I = 0x7f0808c7
 
-    iget-object v1, v1, Landroidx/recyclerview/widget/a;->e:Lgy7;
+.field public static notification_bg_normal_pressed:I = 0x7f0808c8
 
-    if-eqz v1, :cond_1e
+.field public static notification_icon_background:I = 0x7f0808c9
 
-    iget-boolean v2, v1, Lgy7;->d:Z
+.field public static notification_template_icon_bg:I = 0x7f0808cd
 
-    if-eqz v2, :cond_1e
+.field public static notification_template_icon_low_bg:I = 0x7f0808ce
 
-    invoke-virtual {v1, v9, v9}, Lgy7;->i(II)V
+.field public static notification_tile_bg:I = 0x7f0808cf
 
-    :cond_1e
-    iput-boolean v9, p0, Ll7d;->o:Z
+.field public static notify_panel_notification_icon_bg:I = 0x7f0808d0
 
-    iget-boolean v1, p0, Ll7d;->X:Z
+.field public static tooltip_frame_dark:I = 0x7f080941
 
-    if-eqz v1, :cond_1f
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    sget-object v1, Ltyg;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->postOnAnimation(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :cond_1f
-    invoke-virtual {v0, v9}, Landroidx/recyclerview/widget/RecyclerView;->setScrollState(I)V
-
-    invoke-virtual {v0, v10}, Landroidx/recyclerview/widget/RecyclerView;->a(I)V
-
-    return-void
-.end method
+.field public static tooltip_frame_light:I = 0x7f080942

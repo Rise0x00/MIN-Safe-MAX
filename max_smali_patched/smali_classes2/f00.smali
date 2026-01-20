@@ -1,186 +1,223 @@
 .class public final Lf00;
-.super Ljava/lang/Object;
+.super Lk00;
 .source "SourceFile"
-
-# interfaces
-.implements Lez5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lez5;
+.field public final b:F
 
-.field public final synthetic c:J
+.field public final c:Lqhg;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lez5;JI)V
+.method public constructor <init>(JFLqhg;Ljava/lang/String;)V
     .locals 0
 
-    iput p4, p0, Lf00;->a:I
-
-    iput-object p1, p0, Lf00;->b:Lez5;
-
-    iput-wide p2, p0, Lf00;->c:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lf00;->a:J
+
+    iput p3, p0, Lf00;->b:F
+
+    iput-object p4, p0, Lf00;->c:Lqhg;
+
+    iput-object p5, p0, Lf00;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 5
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    iget v0, p0, Lf00;->a:I
+    iget-object v0, p0, Lf00;->d:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lf00;->b:Lez5;
+.method public final b()J
+    .locals 2
 
-    check-cast v0, Lr13;
+    iget-wide v0, p0, Lf00;->a:J
 
-    new-instance v1, Ld00;
+    return-wide v0
+.end method
 
-    iget-wide v2, p0, Lf00;->c:J
+.method public final c()Lqhg;
+    .locals 1
 
-    const/4 v4, 0x0
+    iget-object v0, p0, Lf00;->c:Lqhg;
 
-    invoke-direct {v1, p1, v2, v3, v4}, Ld00;-><init>(Lgz5;JI)V
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1, p2}, Lr13;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    move-result-object p1
+    const/4 v0, 0x1
 
-    sget-object p2, Lh54;->a:Lh54;
+    if-ne p0, p1, :cond_0
 
-    if-ne p1, p2, :cond_0
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lf00;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lf00;
+
+    iget-wide v3, p0, Lf00;->a:J
+
+    iget-wide v5, p1, Lf00;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lf00;->b:F
+
+    iget v3, p1, Lf00;->b:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lf00;->c:Lqhg;
+
+    iget-object v3, p1, Lf00;->c:Lqhg;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Lf00;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Lf00;->d:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lf00;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lf00;->b:F
+
+    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
+
+    move-result v0
+
+    iget-object v2, p0, Lf00;->c:Lqhg;
+
+    invoke-static {v0, v1, v2}, Lhc0;->d(IILqhg;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lf00;->d:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    return-object p1
+    add-int/2addr v0, v1
 
-    :pswitch_0
-    new-instance v0, Ld00;
+    return v0
+.end method
 
-    iget-wide v1, p0, Lf00;->c:J
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const/4 v3, 0x4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v1, v2, v3}, Ld00;-><init>(Lgz5;JI)V
+    const-string v1, "Downloading(messageId="
 
-    iget-object p1, p0, Lf00;->b:Lez5;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p1, v0, p2}, Lez5;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-wide v1, p0, Lf00;->a:J
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lh54;->a:Lh54;
+    const-string v1, ", progress="
 
-    if-ne p1, p2, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_1
+    iget v1, p0, Lf00;->b:F
 
-    :cond_1
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    :goto_1
-    return-object p1
+    const-string v1, ", textSize="
 
-    :pswitch_1
-    new-instance v0, Ld00;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lf00;->c:J
+    iget-object v1, p0, Lf00;->c:Lqhg;
 
-    const/4 v3, 0x3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v1, v2, v3}, Ld00;-><init>(Lgz5;JI)V
+    const-string v1, ", attachId="
 
-    iget-object p1, p0, Lf00;->b:Lez5;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {p1, v0, p2}, Lez5;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lf00;->d:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lh54;->a:Lh54;
+    const-string v1, ")"
 
-    if-ne p1, p2, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_2
-    sget-object p1, Lybg;->a:Lybg;
+    move-result-object v0
 
-    :goto_2
-    return-object p1
-
-    :pswitch_2
-    new-instance v0, Ld00;
-
-    iget-wide v1, p0, Lf00;->c:J
-
-    const/4 v3, 0x2
-
-    invoke-direct {v0, p1, v1, v2, v3}, Ld00;-><init>(Lgz5;JI)V
-
-    iget-object p1, p0, Lf00;->b:Lez5;
-
-    invoke-interface {p1, v0, p2}, Lez5;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lh54;->a:Lh54;
-
-    if-ne p1, p2, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    sget-object p1, Lybg;->a:Lybg;
-
-    :goto_3
-    return-object p1
-
-    :pswitch_3
-    new-instance v0, Ld00;
-
-    iget-wide v1, p0, Lf00;->c:J
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, p1, v1, v2, v3}, Ld00;-><init>(Lgz5;JI)V
-
-    iget-object p1, p0, Lf00;->b:Lez5;
-
-    invoke-interface {p1, v0, p2}, Lez5;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lh54;->a:Lh54;
-
-    if-ne p1, p2, :cond_4
-
-    goto :goto_4
-
-    :cond_4
-    sget-object p1, Lybg;->a:Lybg;
-
-    :goto_4
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

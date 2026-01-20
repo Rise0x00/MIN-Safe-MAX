@@ -1,101 +1,61 @@
-.class public final Lti7;
+.class public final synthetic Lti7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lv79;
+.implements Lnl6;
 
 
 # instance fields
-.field public final a:Lv79;
+.field public final synthetic a:I
 
-.field public final b:Lx79;
+.field public final synthetic b:Lui7;
 
 
 # direct methods
-.method public constructor <init>(Lx54;Lx79;)V
+.method public synthetic constructor <init>(Lui7;Lui7;I)V
     .locals 0
 
+    iput p3, p0, Lti7;->a:I
+
+    iput-object p2, p0, Lti7;->b:Lui7;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lti7;->a:Lv79;
-
-    iput-object p2, p0, Lti7;->b:Lx79;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lc89;)V
+.method public final a(Lol6;)V
     .locals 1
 
-    iget-object v0, p0, Lti7;->a:Lv79;
+    iget p1, p0, Lti7;->a:I
 
-    invoke-interface {v0, p1}, Ld89;->a(Lc89;)V
+    iget-object v0, p0, Lti7;->b:Lui7;
+
+    packed-switch p1, :pswitch_data_0
+
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
+
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
     return-void
-.end method
 
-.method public final b(Ley0;Lq93;)Lq93;
-    .locals 1
+    :pswitch_0
+    sget p1, Landroidx/camera/core/ImageProcessingUtil;->a:I
 
-    iget-object v0, p0, Lti7;->b:Lx79;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lx79;->j(Ley0;)V
-
-    iget-object v0, p0, Lti7;->a:Lv79;
-
-    invoke-interface {v0, p1, p2}, Lv79;->b(Ley0;Lq93;)Lq93;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final c(Lixb;)I
-    .locals 1
-
-    iget-object v0, p0, Lti7;->a:Lv79;
-
-    invoke-interface {v0, p1}, Lv79;->c(Lixb;)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final get(Ljava/lang/Object;)Lq93;
-    .locals 2
-
-    iget-object v0, p0, Lti7;->a:Lv79;
-
-    invoke-interface {v0, p1}, Lv79;->get(Ljava/lang/Object;)Lq93;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lti7;->b:Lx79;
-
-    if-nez v0, :cond_0
-
-    invoke-interface {v1, p1}, Lx79;->f(Ljava/lang/Object;)V
-
-    return-object v0
+    invoke-interface {v0}, Ljava/lang/AutoCloseable;->close()V
 
     :cond_0
-    invoke-interface {v1, p1}, Lx79;->e(Ljava/lang/Object;)V
+    return-void
 
-    return-object v0
-.end method
+    nop
 
-.method public final getSizeInBytes()I
-    .locals 1
-
-    iget-object v0, p0, Lti7;->a:Lv79;
-
-    invoke-interface {v0}, Lv79;->getSizeInBytes()I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

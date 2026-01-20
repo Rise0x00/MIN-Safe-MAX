@@ -1,85 +1,140 @@
-.class public abstract synthetic Lzl3;
+.class public final Lzl3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(III)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lzl3;->a:I
+
+    iput p2, p0, Lzl3;->b:I
+
+    iput p3, p0, Lzl3;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lzl3;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lzl3;
+
+    iget v0, p0, Lzl3;->a:I
+
+    iget v1, p1, Lzl3;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lzl3;->b:I
+
+    iget v1, p1, Lzl3;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lzl3;->c:I
+
+    iget p1, p1, Lzl3;->c:I
+
+    if-eq v0, p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    const/16 v0, 0x9
+    iget v0, p0, Lzl3;->a:I
 
-    invoke-static {v0}, Lnx1;->y(I)[I
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lzl3;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Lzl3;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", neutralFadeSecondary="
+
+    const-string v1, ", neutralThemed="
+
+    const-string v2, "CommonStatesBackgroundDisabledColors(accent="
+
+    iget v3, p0, Lzl3;->a:I
+
+    iget v4, p0, Lzl3;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    array-length v0, v0
+    const-string v1, ")"
 
-    new-array v0, v0, [I
+    iget v2, p0, Lzl3;->c:I
 
-    const/4 v1, 0x1
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v1, 0x3
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x4
-
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    const/4 v1, 0x5
-
-    :try_start_4
-    aput v1, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    const/4 v1, 0x6
-
-    :try_start_5
-    aput v1, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    const/4 v1, 0x7
-
-    :try_start_6
-    aput v1, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lzl3;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

@@ -1,58 +1,101 @@
 .class public final Lxb7;
-.super Ly2;
+.super Ltb7;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
+.field public d:Z
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+# virtual methods
+.method public final close()V
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Ltb7;->b:Z
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0, v0, v1}, Ly2;-><init>(ZI)V
+    return-void
 
-    iput-object p1, p0, Lxb7;->b:Ljava/lang/Object;
+    :cond_0
+    iget-boolean v0, p0, Lxb7;->d:Z
 
-    iput-object p2, p0, Lxb7;->c:Ljava/lang/Object;
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Ltb7;->l()V
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ltb7;->b:Z
 
     return-void
 .end method
 
+.method public final g(Lxv0;J)J
+    .locals 3
 
-# virtual methods
-.method public final getKey()Ljava/lang/Object;
-    .locals 1
+    const-wide/16 v0, 0x0
 
-    iget-object v0, p0, Lxb7;->b:Ljava/lang/Object;
+    cmp-long v0, p2, v0
 
-    return-object v0
-.end method
+    if-ltz v0, :cond_3
 
-.method public final getValue()Ljava/lang/Object;
-    .locals 1
+    iget-boolean v0, p0, Ltb7;->b:Z
 
-    iget-object v0, p0, Lxb7;->c:Ljava/lang/Object;
+    if-nez v0, :cond_2
 
-    return-object v0
-.end method
+    iget-boolean v0, p0, Lxb7;->d:Z
 
-.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-wide/16 v1, -0x1
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    if-eqz v0, :cond_0
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    return-wide v1
+
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Ltb7;->g(Lxv0;J)J
+
+    move-result-wide p1
+
+    cmp-long p3, p1, v1
+
+    if-nez p3, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lxb7;->d:Z
+
+    invoke-virtual {p0}, Ltb7;->l()V
+
+    return-wide v1
+
+    :cond_1
+    return-wide p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p1
+
+    :cond_3
+    const-string p1, "byteCount < 0: "
+
+    invoke-static {p2, p3, p1}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method

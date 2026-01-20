@@ -1,3 +1,3 @@
-.class public interface abstract Lbna;
-.super Ljava/lang/Object;
+.class public final Lbna;
+.super Lete;
 .source "SourceFile"

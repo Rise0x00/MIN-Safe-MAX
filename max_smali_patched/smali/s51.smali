@@ -1,119 +1,96 @@
 .class public final Ls51;
-.super Lnh;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final u0:Z
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    .locals 0
 
-    const-wide/16 v0, -0x1
+    iput-object p2, p0, Ls51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    const/4 v2, 0x1
+    const/4 p2, 0x2
 
-    .line 1
-    invoke-direct {p0, v0, v1, v2}, Ls51;-><init>(JZ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JZ)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    .line 2
-    invoke-direct {p0, p1, p2, v0}, Lnh;-><init>(JI)V
-
-    .line 3
-    iput-boolean p3, p0, Ls51;->u0:Z
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Z
-    .locals 1
-
-    iget-boolean v0, p0, Ls51;->u0:Z
-
-    return v0
-.end method
-
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 2
-
-    new-instance p1, Landroid/animation/AnimatorSet;
-
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
-
-    new-instance p5, Ljava/util/ArrayList;
-
-    invoke-direct {p5}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p4, :cond_0
-
-    if-eqz p3, :cond_0
-
-    sget-object p2, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 p4, 0x2
-
-    new-array p4, p4, [F
-
-    fill-array-data p4, :array_0
-
-    invoke-static {p3, p2, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    if-nez p4, :cond_1
-
-    if-eqz p2, :cond_1
-
-    sget-object p3, Landroid/view/View;->ALPHA:Landroid/util/Property;
-
-    const/4 p4, 0x1
-
-    new-array p4, p4, [F
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    aput v0, p4, v1
-
-    invoke-static {p2, p3, p4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    invoke-virtual {p5, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p1, p5}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
-
-    return-object p1
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-.end method
-
-.method public final n(Landroid/view/View;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ls51;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ls51;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Ls51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ls51;
+
+    iget-object v1, p0, Ls51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    invoke-direct {v0, p2, v1}, Ls51;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+
+    iput-object p1, v0, Ls51;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Ls51;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
+
+    iget-object p1, p0, Ls51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    iget-object v0, p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->X:Ly74;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ly74;->dismiss()V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->X:Ly74;
+
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

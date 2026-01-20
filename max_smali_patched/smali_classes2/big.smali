@@ -1,113 +1,167 @@
-.class public final enum Lbig;
-.super Ljava/lang/Enum;
+.class public final Lbig;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lbig;
-
-.field public static final enum c:Lbig;
-
-.field public static final enum d:Lbig;
-
-.field public static final enum o:Lbig;
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:Lgig;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(Landroid/view/View;Lgig;I)V
+    .locals 0
 
-    new-instance v0, Lbig;
+    iput p3, p0, Lbig;->a:I
 
-    const-string v1, "TTL_1M"
+    iput-object p1, p0, Lbig;->b:Landroid/view/View;
+
+    iput-object p2, p0, Lbig;->c:Lgig;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 4
+
+    iget p1, p0, Lbig;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lbig;->b:Landroid/view/View;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object p1, p0, Lbig;->c:Lgig;
+
+    iget-object v0, p1, Lgig;->c:Lr2h;
+
+    iget-object v0, v0, Lr2h;->a:Lspf;
+
+    new-instance v1, Lfig;
 
     const/4 v2, 0x0
 
+    invoke-direct {v1, v0, v2, p1}, Lfig;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Lcig;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v2}, Lcig;-><init>(Lgig;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v2, Lm96;
+
     const/4 v3, 0x1
 
-    const-string v4, "1M"
+    invoke-direct {v2, v1, v0, v3}, Lm96;-><init>(Ld76;Lbr6;I)V
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lbig;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    :try_start_0
+    iget-object v0, p1, Lgig;->b:Landroid/widget/TextView;
 
-    sput-object v0, Lbig;->c:Lbig;
-
-    new-instance v1, Lbig;
-
-    const-string v2, "3M"
-
-    const/4 v4, 0x3
-
-    const-string v5, "TTL_3M"
-
-    invoke-direct {v1, v5, v3, v4, v2}, Lbig;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v1, Lbig;->d:Lbig;
-
-    new-instance v2, Lbig;
-
-    const-string v3, "6M"
-
-    const/4 v4, 0x6
-
-    const-string v5, "TTL_6M"
-
-    const/4 v6, 0x2
-
-    invoke-direct {v2, v5, v6, v4, v3}, Lbig;-><init>(Ljava/lang/String;IILjava/lang/String;)V
-
-    sput-object v2, Lbig;->o:Lbig;
-
-    filled-new-array {v0, v1, v2}, [Lbig;
+    invoke-static {v0}, Ljth;->b(Landroid/view/View;)Ly78;
 
     move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput-object v0, Lbig;->X:[Lbig;
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lszd;
+
+    invoke-direct {v1, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_0
+    nop
+
+    instance-of v1, v0, Lszd;
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    move-object p1, v0
+
+    :goto_1
+    check-cast p1, Lzb4;
+
+    invoke-static {v2, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget p1, p0, Lbig;->a:I
 
-    iput-object p4, p0, Lbig;->a:Ljava/lang/String;
+    packed-switch p1, :pswitch_data_0
 
-    iput p3, p0, Lbig;->b:I
+    iget-object p1, p0, Lbig;->b:Landroid/view/View;
 
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object p1, p0, Lbig;->c:Lgig;
+
+    :try_start_0
+    const-string v0, "onDetach"
+
+    new-instance v1, Ljava/util/concurrent/CancellationException;
+
+    invoke-direct {v1, v0}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    invoke-static {p1, v1}, Lilj;->b(Lzb4;Ljava/util/concurrent/CancellationException;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :catchall_0
+    :pswitch_0
     return-void
-.end method
 
-.method public static valueOf(Ljava/lang/String;)Lbig;
-    .locals 1
+    nop
 
-    const-class v0, Lbig;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lbig;
-
-    return-object p0
-.end method
-
-.method public static values()[Lbig;
-    .locals 1
-
-    sget-object v0, Lbig;->X:[Lbig;
-
-    invoke-virtual {v0}, [Lbig;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lbig;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,181 +1,156 @@
 .class public final Lydf;
-.super Ljpe;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
 # instance fields
-.field public final o:Lxdf;
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Lfef;
+
+.field public final synthetic c:I
+
+.field public final synthetic d:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lxdf;Ljava/util/concurrent/ExecutorService;)V
+.method public constructor <init>(Ljava/lang/String;Lfef;ILjava/lang/Integer;)V
     .locals 0
 
-    invoke-direct {p0, p2}, Ljpe;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lydf;->o:Lxdf;
+    iput-object p1, p0, Lydf;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lydf;->b:Lfef;
+
+    iput p3, p0, Lydf;->c:I
+
+    iput-object p4, p0, Lydf;->d:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Liqe;I)V
-    .locals 0
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 6
 
-    check-cast p1, Lbef;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1, p2}, Lydf;->J(Lbef;I)V
+    const-string v1, "Playback("
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final J(Lbef;I)V
-    .locals 5
+    iget-object v2, p0, Lydf;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    const-string v3, ") | player prepared"
 
-    check-cast p2, Li28;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p2, Laef;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p1, p1, Lm7d;->a:Landroid/view/View;
+    move-result-object v0
 
-    check-cast p1, Lyra;
+    const-string v3, "SimpleRingtonePlayer"
 
-    sget v0, Lm1b;->B:I
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setId(I)V
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
-    iget-object v0, p2, Laef;->b:Ljava/lang/CharSequence;
+    iget-object p1, p0, Lydf;->b:Lfef;
 
-    invoke-virtual {p1, v0}, Lyra;->setTitle(Ljava/lang/CharSequence;)V
+    iget v0, p1, Lfef;->t0:F
 
-    iget-object v1, p2, Laef;->d:Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lfef;->d()Z
 
-    invoke-virtual {p1, v1}, Lyra;->setSubtitle(Ljava/lang/CharSequence;)V
+    move-result v4
 
-    iget v1, p2, Laef;->Y:I
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    invoke-direct {v5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v1, :cond_4
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x1
+    const-string v1, ") | requesting audio focus after player start, volume:"
 
-    if-eq v1, v3, :cond_1
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x2
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    if-ne v1, v3, :cond_0
+    const-string v0, " isPlaying:"
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lfef;->h()Lwx5;
+
+    move-result-object v0
+
+    check-cast v0, Lpy5;
+
+    invoke-virtual {v0}, Lpy5;->r()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x2
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p1, Lfef;->o:Le40;
+
+    iget-object v1, p0, Lydf;->d:Ljava/lang/Integer;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p1, Lyra;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lru7;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lapa;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    iget-wide v3, p2, Laef;->a:J
-
-    iget-object v1, p2, Laef;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v3, v4, v0, v1}, Lyra;->f(JLjava/lang/CharSequence;Ljava/lang/String;)V
-
-    :cond_2
-    :goto_1
-    iget-object v0, p2, Laef;->X:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v0
-
-    const/4 v1, 0x6
-
-    iget-object v3, p0, Lydf;->o:Lxdf;
-
-    if-nez v0, :cond_3
-
-    sget v0, Ll1b;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    new-instance v2, Lxr;
-
-    const/16 v4, 0xe
-
-    invoke-direct {v2, v3, p1, p2, v4}, Lxr;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {p1, v0, v2, v1}, Lyra;->i(Lyra;Ljava/lang/Integer;Loi6;I)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-static {p1, v2, v2, v1}, Lyra;->i(Lyra;Ljava/lang/Integer;Loi6;I)V
-
-    :goto_2
-    new-instance v0, Lpde;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v3, v1, p2}, Lpde;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_4
-    throw v2
-.end method
-
-.method public final bridge synthetic r(Lm7d;I)V
-    .locals 0
-
-    check-cast p1, Lbef;
-
-    invoke-virtual {p0, p1, p2}, Lydf;->J(Lbef;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lm7d;
-    .locals 2
-
-    new-instance p2, Lbef;
-
-    new-instance v0, Lyra;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Lfef;->h()Lwx5;
 
     move-result-object p1
 
-    const/4 v1, 0x0
+    check-cast p1, Lpy5;
 
-    invoke-direct {v0, p1, v1}, Lyra;-><init>(Landroid/content/Context;Z)V
+    invoke-virtual {p1}, Lpy5;->r()J
 
-    invoke-direct {p2, v0}, Lm7d;-><init>(Landroid/view/View;)V
+    move-result-wide v1
 
-    return-object p2
+    const-wide/16 v3, 0x1
+
+    cmp-long p1, v1, v3
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x2
+
+    :goto_0
+    iget v1, p0, Lydf;->c:I
+
+    invoke-virtual {v0, v1, p1}, Le40;->n(II)V
+
+    :cond_2
+    return-void
 .end method

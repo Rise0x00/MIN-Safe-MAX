@@ -1,93 +1,48 @@
 .class public final Lezd;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Lo84;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Lg4a;
 
-.field public final b:J
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public constructor <init>(Lg4a;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lezd;->X:Lg4a;
 
-    iput-wide p1, p0, Lezd;->a:J
-
-    iput-wide p3, p0, Lezd;->b:J
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lezd;->d:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lezd;->o:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    const/4 v1, 0x0
+    or-int/2addr p1, v0
 
-    if-eqz p1, :cond_2
+    iput p1, p0, Lezd;->o:I
 
-    const-class v2, Lezd;
+    iget-object p1, p0, Lezd;->X:Lg4a;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    move-result-object v3
+    invoke-virtual {p1, v0, p0}, Lg4a;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-eq v2, v3, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lezd;
-
-    iget-wide v2, p0, Lezd;->a:J
-
-    iget-wide v4, p1, Lezd;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_2
-
-    iget-wide v2, p0, Lezd;->b:J
-
-    iget-wide v4, p1, Lezd;->b:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lezd;->a:J
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lezd;->b:J
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object p1
 .end method

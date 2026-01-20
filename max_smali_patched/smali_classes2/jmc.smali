@@ -1,10 +1,19 @@
-.class public abstract Ljmc;
+.class public final Ljmc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static emoji_grid_scrollbar:I = 0x7f08036e
+# instance fields
+.field public final a:Ljhg;
 
-.field public static ic_msg_emoji_erase:I = 0x7f08071b
 
-.field public static ic_settings_2_24:I = 0x7f080791
+# direct methods
+.method public constructor <init>(Ljhg;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljmc;->a:Ljhg;
+
+    return-void
+.end method

@@ -1,118 +1,110 @@
 .class public final Lsg1;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ltg1;
 
 
-# instance fields
-.field public final synthetic X:Lbh1;
+# static fields
+.field public static final a:Lsg1;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:J
+
+.field public static final c:Llhg;
+
+.field public static final d:Lx5b;
 
 
 # direct methods
-.method public constructor <init>(Lbh1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lsg1;->X:Lbh1;
+    new-instance v0, Lsg1;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lsg1;->a:Lsg1;
+
+    sget-wide v0, Lo6b;->c:J
+
+    sput-wide v0, Lsg1;->b:J
+
+    sget v0, Lq6b;->m:I
+
+    new-instance v1, Llhg;
+
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+
+    sput-object v1, Lsg1;->c:Llhg;
+
+    sget-object v0, Lx5b;->b:Lx5b;
+
+    sput-object v0, Lsg1;->d:Lx5b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lx5b;
+    .locals 1
 
-    check-cast p1, Lw31;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lsg1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lsg1;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lsg1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lsg1;
-
-    iget-object v1, p0, Lsg1;->X:Lbh1;
-
-    invoke-direct {v0, v1, p2}, Lsg1;-><init>(Lbh1;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lsg1;->o:Ljava/lang/Object;
+    sget-object v0, Lsg1;->d:Lx5b;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lsg1;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lw31;
-
-    iget-object v0, p0, Lsg1;->X:Lbh1;
-
-    iget-object v0, v0, Lbh1;->y0:La1f;
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, La1f;->getValue()Ljava/lang/Object;
+    instance-of p1, p1, Lsg1;
 
-    move-result-object v1
+    if-nez p1, :cond_1
 
-    move-object v2, v1
+    const/4 p1, 0x0
 
-    check-cast v2, Llh1;
-
-    iget-object v3, p1, Lw31;->c:Ljava/lang/CharSequence;
-
-    if-nez v3, :cond_1
-
-    const-string v3, ""
+    return p1
 
     :cond_1
-    move-object v6, v3
+    return v0
+.end method
 
-    const/4 v7, 0x0
+.method public final getItemId()J
+    .locals 2
 
-    const/16 v8, 0x2f
+    sget-wide v0, Lsg1;->b:J
 
-    const/4 v3, 0x0
+    return-wide v0
+.end method
 
-    const/4 v4, 0x0
+.method public final getTitle()Llhg;
+    .locals 1
 
-    const/4 v5, 0x0
+    sget-object v0, Lsg1;->c:Llhg;
 
-    invoke-static/range {v2 .. v8}, Llh1;->a(Llh1;Ljava/util/List;Le28;Ljava/util/List;Ljava/lang/CharSequence;ZI)Llh1;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {v0, v1, v2}, La1f;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const v0, -0x1dcefff1
 
-    move-result v1
+    return v0
+.end method
 
-    if-eqz v1, :cond_0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    sget-object p1, Lybg;->a:Lybg;
+    const-string v0, "TryLoadLinkAgain"
 
-    return-object p1
+    return-object v0
 .end method

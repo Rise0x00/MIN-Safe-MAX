@@ -1,161 +1,120 @@
-.class public abstract Lboi;
-.super Ljava/lang/Object;
+.class public final Lboi;
+.super Lsde;
 .source "SourceFile"
 
 
+# instance fields
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Ljava/nio/ByteBuffer;
+
+
 # direct methods
-.method public static a(III)Lfv0;
-    .locals 3
+.method public constructor <init>([B)V
+    .locals 9
 
-    and-int/lit8 v0, p2, 0x1
+    invoke-direct {p0}, Lsde;-><init>()V
 
-    const/4 v1, 0x0
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    move p0, v1
+    sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    const v1, 0xffff
+
+    and-int/2addr v0, v1
+
+    iput v0, p0, Lboi;->b:I
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v2}, Lt02;->w(I)[I
+
+    move-result-object v2
+
+    array-length v3, v2
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :goto_0
+    if-ge v5, v3, :cond_3
+
+    aget v6, v2, v5
+
+    const/4 v7, 0x1
+
+    if-eq v6, v7, :cond_1
+
+    const/4 v8, 0x2
+
+    if-ne v6, v8, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    const/4 v0, 0x2
+    const/4 p1, 0x0
 
-    and-int/2addr p2, v0
-
-    const/4 v2, 0x1
-
-    if-eqz p2, :cond_1
-
-    move p1, v2
+    throw p1
 
     :cond_1
-    const/4 p2, -0x2
-
-    if-eq p0, p2, :cond_8
-
-    const/4 p2, -0x1
-
-    if-eq p0, p2, :cond_6
-
-    if-eqz p0, :cond_4
-
-    const p2, 0x7fffffff
-
-    if-eq p0, p2, :cond_3
-
-    if-ne p1, v2, :cond_2
-
-    new-instance p1, Lfv0;
-
-    invoke-direct {p1, p0}, Lfv0;-><init>(I)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p2, Lco3;
-
-    invoke-direct {p2, p0, p1}, Lco3;-><init>(II)V
-
-    return-object p2
-
-    :cond_3
-    new-instance p0, Lfv0;
-
-    invoke-direct {p0, p2}, Lfv0;-><init>(I)V
-
-    return-object p0
-
-    :cond_4
-    if-ne p1, v2, :cond_5
-
-    new-instance p0, Lfv0;
-
-    invoke-direct {p0, v1}, Lfv0;-><init>(I)V
-
-    return-object p0
-
-    :cond_5
-    new-instance p0, Lco3;
-
-    invoke-direct {p0, v2, p1}, Lco3;-><init>(II)V
-
-    return-object p0
-
-    :cond_6
-    if-ne p1, v2, :cond_7
-
-    new-instance p0, Lco3;
-
-    invoke-direct {p0, v2, v0}, Lco3;-><init>(II)V
-
-    return-object p0
-
-    :cond_7
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "CONFLATED capacity cannot be used with non-default onBufferOverflow"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_8
-    if-ne p1, v2, :cond_9
-
-    new-instance p0, Lfv0;
-
-    sget-object p1, Lu72;->m:Lt72;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget p1, Lt72;->b:I
-
-    invoke-direct {p0, p1}, Lfv0;-><init>(I)V
-
-    return-object p0
-
-    :cond_9
-    new-instance p0, Lco3;
-
-    invoke-direct {p0, v2, p1}, Lco3;-><init>(II)V
-
-    return-object p0
-.end method
-
-.method public static final b(Ll0e;JLqi6;)V
-    .locals 8
-
-    new-instance v2, Lgna;
-
-    invoke-direct {v2, p1, p2}, Lgna;-><init>(J)V
-
-    sget-object v3, Lfna;->a:Lfna;
-
-    const/4 p1, 0x3
-
-    invoke-static {p1, v3}, Lsag;->d(ILjava/lang/Object;)V
-
-    sget-object p1, Lo0e;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    sget-object v4, Ln0e;->b:Ln0e;
-
-    new-instance v0, Lj0e;
-
-    sget-object v5, Lo0e;->e:Lkotlinx/coroutines/internal/Symbol;
-
-    move-object v6, p3
-
-    check-cast v6, Logf;
-
     const/4 v7, 0x0
 
-    move-object v1, p0
+    :goto_1
+    if-ne v7, v0, :cond_2
 
-    invoke-direct/range {v0 .. v7}, Lj0e;-><init>(Ll0e;Ljava/lang/Object;Lgj6;Lgj6;Ljava/lang/Object;Logf;Lgj6;)V
+    move v4, v6
 
-    sget-object p0, Ll0e;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    goto :goto_2
 
-    const/4 p0, 0x0
+    :cond_2
+    add-int/lit8 v5, v5, 0x1
 
-    invoke-virtual {v1, v0, p0}, Ll0e;->f(Lj0e;Z)V
+    goto :goto_0
+
+    :cond_3
+    :goto_2
+    iput v4, p0, Lboi;->c:I
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    and-int/2addr v0, v1
+
+    iput v0, p0, Lboi;->d:I
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v0
+
+    iput-byte v0, p0, Lsde;->a:B
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lboi;->e:Ljava/nio/ByteBuffer;
 
     return-void
 .end method

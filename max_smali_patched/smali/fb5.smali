@@ -1,23 +1,31 @@
-.class public interface abstract Lfb5;
+.class public final Lfb5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/AutoCloseable;
+
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:[B
+
+.field public final d:[B
 
 
-# virtual methods
-.method public abstract C()Z
-.end method
+# direct methods
+.method public constructor <init>(IZ[B[B)V
+    .locals 0
 
-.method public abstract U()J
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract o()Ljava/nio/ByteBuffer;
-.end method
+    iput p1, p0, Lfb5;->a:I
 
-.method public abstract size()J
-.end method
+    iput-boolean p2, p0, Lfb5;->b:Z
 
-.method public abstract z()Landroid/media/MediaCodec$BufferInfo;
+    iput-object p3, p0, Lfb5;->c:[B
+
+    iput-object p4, p0, Lfb5;->d:[B
+
+    return-void
 .end method

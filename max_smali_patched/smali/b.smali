@@ -1,45 +1,61 @@
-.class public final synthetic Lb;
-.super Lbec;
+.class public final Lb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lb;
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(IILjava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lb;
+    .line 1
+    iput p1, p0, Lb;->a:I
 
-    const-string v1, "getFreezeCount()J"
+    iput p2, p0, Lb;->b:I
 
-    const/4 v2, 0x0
+    iput-object p3, p0, Lb;->c:Ljava/lang/String;
 
-    const-class v3, Lrxe;
-
-    const-string v4, "freezeCount"
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lb;->a:Lb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public synthetic constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .line 2
+    iput-object p1, p0, Lb;->c:Ljava/lang/String;
 
-    check-cast p1, Lrxe;
+    iput p2, p0, Lb;->a:I
 
-    iget-wide v0, p1, Lrxe;->v:J
+    iput p3, p0, Lb;->b:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+.method public constructor <init>(Ljava/lang/String;IIIJ)V
+    .locals 0
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lb;->c:Ljava/lang/String;
+
+    .line 5
+    iput p2, p0, Lb;->b:I
+
+    .line 6
+    iput p3, p0, Lb;->a:I
+
+    return-void
 .end method

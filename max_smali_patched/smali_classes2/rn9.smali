@@ -1,69 +1,144 @@
 .class public final Lrn9;
-.super Ljava/lang/Object;
+.super Landroid/text/method/LinkMovementMethod;
 .source "SourceFile"
 
-# interfaces
-.implements Lpj9;
 
-
-# instance fields
-.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
-
-.field public final synthetic b:Losd;
+# static fields
+.field public static final a:Lrn9;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Losd;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrn9;
 
-    iput-object p1, p0, Lrn9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-direct {v0}, Landroid/text/method/LinkMovementMethod;-><init>()V
 
-    iput-object p2, p0, Lrn9;->b:Losd;
+    sput-object v0, Lrn9;->a:Lrn9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
+.method public final onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
+    .locals 5
 
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Les7;
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getAction()I
 
-    iget-object v0, p0, Lrn9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    move-result v0
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    const/4 v2, 0x1
 
-    invoke-virtual {v1}, Landroidx/recyclerview/widget/a;->w()I
+    if-eq v0, v2, :cond_0
 
-    move-result v1
+    if-eqz v0, :cond_0
 
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lrn9;->b:Losd;
-
-    invoke-static {v0, v1}, Lone/me/messages/list/ui/MessagesListWidget;->z0(Lone/me/messages/list/ui/MessagesListWidget;Losd;)V
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Ld1a;
-
-    invoke-virtual {v0, p0}, Ld1a;->h(Ljava/lang/Object;)V
+    return v1
 
     :cond_0
-    return-void
-.end method
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getX()F
 
-.method public final getTag()Ljava/lang/String;
-    .locals 1
+    move-result v3
 
-    const-string v0, "ScrollButton"
+    float-to-int v3, v3
 
-    return-object v0
+    invoke-virtual {p3}, Landroid/view/MotionEvent;->getY()F
+
+    move-result p3
+
+    float-to-int p3, p3
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingLeft()I
+
+    move-result v4
+
+    sub-int/2addr v3, v4
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTotalPaddingTop()I
+
+    move-result v4
+
+    sub-int/2addr p3, v4
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result v3
+
+    add-int/2addr v3, p3
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
+
+    move-result-object p3
+
+    invoke-virtual {p3, v3}, Landroid/text/Layout;->getLineForVertical(I)I
+
+    move-result v3
+
+    int-to-float v4, v4
+
+    invoke-virtual {p3, v3, v4}, Landroid/text/Layout;->getOffsetForHorizontal(IF)I
+
+    move-result p3
+
+    const-class v3, Landroid/text/style/ClickableSpan;
+
+    invoke-interface {p2, p3, p3, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Landroid/text/style/ClickableSpan;
+
+    array-length v3, p3
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v3, v1
+
+    :goto_0
+    if-nez v3, :cond_4
+
+    aget-object p3, p3, v1
+
+    if-eqz v0, :cond_3
+
+    if-eq v0, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p3, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-interface {p2, p3}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result p1
+
+    invoke-interface {p2, p3}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result p3
+
+    invoke-static {p2, p1, p3}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    :goto_1
+    return v2
+
+    :cond_4
+    return v1
 .end method

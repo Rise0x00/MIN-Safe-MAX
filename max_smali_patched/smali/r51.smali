@@ -1,185 +1,225 @@
 .class public final Lr51;
-.super Lwf4;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final b:Lr51;
 
-.field public static final c:Lrf4;
+# instance fields
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-.field public static final d:Lrf4;
-
-.field public static final e:Lrf4;
-
-.field public static final f:Lrf4;
-
-.field public static final g:Lrf4;
-
-.field public static final h:Lrf4;
-
-.field public static final i:Lrf4;
-
-.field public static final j:Lrf4;
-
-.field public static final k:Lrf4;
-
-.field public static final l:Lrf4;
-
-.field public static final m:Lrf4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    .locals 0
+
+    iput-object p2, p0, Lr51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lr51;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lr51;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lr51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lr51;
 
-    invoke-direct {v0}, Lwf4;-><init>()V
+    iget-object v1, p0, Lr51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    sput-object v0, Lr51;->b:Lr51;
+    invoke-direct {v0, p2, v1}, Lr51;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
 
-    const-string v1, "opponent_id"
+    iput-object p1, v0, Lr51;->o:Ljava/lang/Object;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget-object v0, p0, Lr51;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lau0;
+
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
+
+    iget-object p1, p0, Lr51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lt41;
 
     move-result-object v1
 
-    const-string v2, ":call-user"
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lt41;
+
+    move-result-object v2
 
     const/4 v3, 0x0
 
-    const/16 v4, 0xe
+    if-eqz v2, :cond_0
 
-    invoke-static {v0, v2, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_0
+    move-object v2, v3
 
-    sput-object v1, Lr51;->c:Lrf4;
+    :goto_0
+    if-eqz v2, :cond_4
 
-    const-string v1, "link"
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-result v2
 
-    move-result-object v2
+    if-nez v2, :cond_4
 
-    const-string v5, ":call-join-link"
+    iget-object v2, v0, Lau0;->b:Lzv8;
 
-    invoke-static {v0, v5, v2, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    iget-object v4, v0, Lau0;->a:Lzv8;
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Lt41;->setVideoEnabled(Lzv8;)V
 
-    sput-object v2, Lr51;->d:Lrf4;
+    invoke-virtual {v1, v4}, Lt41;->setMicrophoneEnabled(Lzv8;)V
 
-    const-string v2, "chat_id"
+    iget-object v2, v0, Lau0;->c:Lzv8;
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lt41;->setRaiseHand(Lzv8;)V
 
-    move-result-object v5
-
-    const-string v6, ":call-chat"
-
-    invoke-static {v0, v6, v5, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
-
-    move-result-object v5
-
-    sput-object v5, Lr51;->e:Lrf4;
-
-    const-string v5, "call_name"
-
-    filled-new-array {v2, v5}, [Ljava/lang/String;
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lt41;
 
     move-result-object v2
 
-    const-string v5, ":call-incoming"
+    iget-object v5, v0, Lau0;->d:Lw81;
 
-    invoke-static {v0, v5, v2, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    invoke-virtual {v2, v5}, Lt41;->setAudioInfo(Lw81;)V
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lt41;
 
     move-result-object v2
 
-    sput-object v2, Lr51;->f:Lrf4;
+    sget-object v5, Lzv8;->b:Lzv8;
 
-    const/4 v2, 0x0
+    if-ne v4, v5, :cond_1
 
-    new-array v5, v2, [Ljava/lang/String;
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
 
-    const-string v6, ":call-active"
+    move-result-object v4
 
-    invoke-static {v0, v6, v5, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    new-instance v5, Lo51;
 
-    move-result-object v5
+    invoke-direct {v5, p1, v2, v3}, Lo51;-><init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lt41;Lkotlin/coroutines/Continuation;)V
 
-    sput-object v5, Lr51;->g:Lrf4;
+    const/4 v2, 0x3
 
-    const-string v5, ":call-join-preview"
+    invoke-static {v4, v3, v3, v5, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v1
+    :cond_1
+    iget-object v2, p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->o:Lx07;
 
-    invoke-static {v0, v5, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    sget-object v4, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
 
-    move-result-object v1
+    const/4 v5, 0x1
 
-    sput-object v1, Lr51;->h:Lrf4;
+    aget-object v4, v4, v5
 
-    const-string v1, ":call-opponents-list"
+    invoke-virtual {v2, p1, v4, v3}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
 
-    new-array v5, v2, [Ljava/lang/String;
+    iget-boolean p1, v0, Lau0;->f:Z
 
-    invoke-static {v0, v1, v5, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    if-eqz p1, :cond_4
 
-    move-result-object v1
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sput-object v1, Lr51;->i:Lrf4;
+    move-result-object p1
 
-    const-string v1, ":call-admin-settings"
+    sget-object v0, Lt05;->a:Ljava/lang/Object;
 
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
-
-    move-result-object v1
-
-    sput-object v1, Lr51;->j:Lrf4;
-
-    const-string v1, ":call-pip"
-
-    new-array v5, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v5, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
-
-    move-result-object v1
-
-    sput-object v1, Lr51;->k:Lrf4;
-
-    const-string v1, ":call-admin-waiting-room"
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    invoke-static {v0, v1, v2, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
-
-    move-result-object v1
-
-    sput-object v1, Lr51;->l:Lrf4;
-
-    const-string v1, "is_group"
-
-    const-string v2, "is_video"
-
-    const-string v5, "call_id"
-
-    filled-new-array {v5, v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":call-rate"
-
-    invoke-static {v0, v2, v1, v3, v4}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sput-object v0, Lr51;->m:Lrf4;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return-void
+    move-result-object v0
+
+    invoke-static {p1}, Lkkj;->a(Landroid/content/Context;)Landroid/view/WindowManager;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object p1
+
+    new-instance v2, Landroid/graphics/Point;
+
+    invoke-direct {v2}, Landroid/graphics/Point;-><init>()V
+
+    invoke-virtual {p1, v2}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
+
+    iget p1, v2, Landroid/graphics/Point;->x:I
+
+    int-to-float p1, p1
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr p1, v0
+
+    const/high16 v0, 0x43c30000    # 390.0f
+
+    cmpl-float v0, p1, v0
+
+    if-ltz v0, :cond_2
+
+    sget-object p1, Lx41;->a:Lx41;
+
+    goto :goto_1
+
+    :cond_2
+    const/high16 v0, 0x43b40000    # 360.0f
+
+    cmpl-float p1, p1, v0
+
+    if-ltz p1, :cond_3
+
+    sget-object p1, Lw41;->a:Lw41;
+
+    goto :goto_1
+
+    :cond_3
+    sget-object p1, Lv41;->a:Lv41;
+
+    :goto_1
+    invoke-virtual {v1, p1}, Lt41;->setControlsSize(Lb51;)V
+
+    :cond_4
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

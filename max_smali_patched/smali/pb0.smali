@@ -4,32 +4,50 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lj88;
 
-.field public final b:J
-
-.field public final c:J
+.field public final b:Lqa0;
 
 
 # direct methods
-.method public constructor <init>(JJJ)V
+.method public constructor <init>(Lj88;Lqa0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lpb0;->a:J
+    if-eqz p1, :cond_1
 
-    iput-wide p3, p0, Lpb0;->b:J
+    iput-object p1, p0, Lpb0;->a:Lj88;
 
-    iput-wide p5, p0, Lpb0;->c:J
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Lpb0;->b:Lqa0;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null cameraId"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null lifecycleOwner"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -46,29 +64,25 @@
 
     check-cast p1, Lpb0;
 
-    iget-wide v3, p0, Lpb0;->a:J
+    iget-object v1, p0, Lpb0;->a:Lj88;
 
-    iget-wide v5, p1, Lpb0;->a:J
+    iget-object v3, p1, Lpb0;->a:Lj88;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result v1
 
-    iget-wide v3, p0, Lpb0;->b:J
+    if-eqz v1, :cond_1
 
-    iget-wide v5, p1, Lpb0;->b:J
+    iget-object v1, p0, Lpb0;->b:Lqa0;
 
-    cmp-long v1, v3, v5
+    iget-object p1, p1, Lpb0;->b:Lqa0;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1, p1}, Lqa0;->equals(Ljava/lang/Object;)Z
 
-    iget-wide v3, p0, Lpb0;->c:J
+    move-result p1
 
-    iget-wide v5, p1, Lpb0;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -77,17 +91,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 7
+    .locals 2
 
-    iget-wide v0, p0, Lpb0;->a:J
+    iget-object v0, p0, Lpb0;->a:Lj88;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
+    move-result v0
 
     const v1, 0xf4243
 
@@ -95,25 +105,11 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v3, p0, Lpb0;->b:J
+    iget-object v1, p0, Lpb0;->b:Lqa0;
 
-    ushr-long v5, v3, v2
+    invoke-virtual {v1}, Lqa0;->hashCode()I
 
-    xor-long/2addr v3, v5
-
-    long-to-int v3, v3
-
-    xor-int/2addr v0, v3
-
-    mul-int/2addr v0, v1
-
-    iget-wide v3, p0, Lpb0;->c:J
-
-    ushr-long v1, v3, v2
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
+    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -121,35 +117,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "StartupTime{epochMillis="
+    const-string v1, "Key{lifecycleOwner="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lpb0;->a:J
+    iget-object v1, p0, Lpb0;->a:Lj88;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", elapsedRealtime="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lpb0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uptimeMillis="
+    const-string v1, ", cameraId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lpb0;->c:J
+    iget-object v1, p0, Lpb0;->b:Lqa0;
 
-    const-string v3, "}"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1, v2, v3}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

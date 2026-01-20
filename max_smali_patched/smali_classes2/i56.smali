@@ -3,78 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li28;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Li56;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/view/View;
+
+.field public final synthetic c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/view/View;Ljava/lang/Runnable;I)V
+    .locals 0
 
-    new-instance v0, Li56;
+    iput p3, p0, Li56;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Li56;->b:Landroid/view/View;
 
-    sput-object v0, Li56;->a:Li56;
+    iput-object p2, p0, Li56;->c:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Li56;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
+.method public final run()V
     .locals 2
 
-    const-wide v0, 0x7ffffffffffffffdL
+    iget v0, p0, Li56;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v0, p0, Li56;->b:Landroid/view/View;
 
-    const v0, 0xb62c3a2
+    iget-object v1, p0, Li56;->c:Ljava/lang/Runnable;
 
-    return v0
-.end method
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-.method public final m()I
-    .locals 1
+    return-void
 
-    const/16 v0, 0x8
+    :pswitch_0
+    iget-object v0, p0, Li56;->b:Landroid/view/View;
 
-    return v0
-.end method
+    iget-object v1, p0, Li56;->c:Ljava/lang/Runnable;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    const-string v0, "FolderEditDeleteItem"
+    return-void
 
-    return-object v0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,70 +1,52 @@
-.class public final Lkad;
+.class public abstract Lkad;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lr7b;
+# static fields
+.field public static oneme_stickers_settings_confirm_cancel:I = 0x7f0a0866
 
-.field public final b:Landroid/view/Surface;
+.field public static oneme_stickers_settings_confirm_delete_set_action:I = 0x7f0a0867
 
+.field public static oneme_stickers_settings_confirm_delete_stickers_action:I = 0x7f0a0868
 
-# direct methods
-.method public constructor <init>(Lr7b;Landroid/view/Surface;)V
-    .locals 0
+.field public static oneme_stickers_settings_confirm_favorite_clear_action:I = 0x7f0a0869
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_stickers_settings_confirm_recent_clear_action:I = 0x7f0a086a
 
-    iput-object p1, p0, Lkad;->a:Lr7b;
+.field public static oneme_stickers_settings_content_recycler:I = 0x7f0a086b
 
-    iput-object p2, p0, Lkad;->b:Landroid/view/Surface;
+.field public static oneme_stickers_settings_emoji_suggest_view_type:I = 0x7f0a086c
 
-    return-void
-.end method
+.field public static oneme_stickers_settings_favorite_view_type:I = 0x7f0a086d
 
+.field public static oneme_stickers_settings_menu_copy_link:I = 0x7f0a086e
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static oneme_stickers_settings_menu_delete_set:I = 0x7f0a086f
 
-    instance-of v0, p1, Lkad;
+.field public static oneme_stickers_settings_menu_forward:I = 0x7f0a0870
 
-    if-eqz v0, :cond_0
+.field public static oneme_stickers_settings_menu_share:I = 0x7f0a0871
 
-    check-cast p1, Lkad;
+.field public static oneme_stickers_settings_recent_view_type:I = 0x7f0a0872
 
-    goto :goto_0
+.field public static oneme_stickers_settings_set_item_drag:I = 0x7f0a0873
 
-    :cond_0
-    const/4 p1, 0x0
+.field public static oneme_stickers_settings_set_item_icon:I = 0x7f0a0874
 
-    :goto_0
-    if-nez p1, :cond_1
+.field public static oneme_stickers_settings_set_item_subtitle:I = 0x7f0a0875
 
-    const/4 p1, 0x0
+.field public static oneme_stickers_settings_set_item_title:I = 0x7f0a0876
 
-    return p1
+.field public static oneme_stickers_settings_set_view_type:I = 0x7f0a0877
 
-    :cond_1
-    iget-object v0, p0, Lkad;->a:Lr7b;
+.field public static oneme_stickers_settings_sets_title_view_type:I = 0x7f0a0878
 
-    iget-object p1, p1, Lkad;->a:Lr7b;
+.field public static oneme_stickers_settings_stickers_favorite_menu_clear:I = 0x7f0a0879
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+.field public static oneme_stickers_settings_stickers_menu_change:I = 0x7f0a087a
 
-    move-result p1
+.field public static oneme_stickers_settings_stickers_multiselect_delete:I = 0x7f0a087b
 
-    return p1
-.end method
+.field public static oneme_stickers_settings_stickers_recent_menu_clear:I = 0x7f0a087c
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lkad;->a:Lr7b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
+.field public static oneme_stickers_settings_toolbar:I = 0x7f0a087d

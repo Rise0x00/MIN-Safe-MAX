@@ -1,181 +1,43 @@
-.class public abstract Lbb3;
-.super Lwti;
+.class public final Lbb3;
+.super Landroidx/appcompat/widget/AppCompatCheckBox;
 .source "SourceFile"
 
 
-# direct methods
-.method public static c(Ljava/util/Collection;)Laj7;
-    .locals 3
+# instance fields
+.field public o:I
 
-    new-instance v0, Laj7;
 
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
-
-    move-result p0
-
-    const/4 v1, 0x1
-
-    sub-int/2addr p0, v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, p0, v1}, Lyi7;-><init>(III)V
-
-    return-object v0
-.end method
-
-.method public static d(Ljava/util/List;)I
-    .locals 0
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    add-int/lit8 p0, p0, -0x1
-
-    return p0
-.end method
-
-.method public static varargs e([Ljava/lang/Object;)Ljava/util/List;
-    .locals 1
-
-    array-length v0, p0
-
-    if-lez v0, :cond_0
-
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lna5;->a:Lna5;
-
-    return-object p0
-.end method
-
-.method public static varargs f([Ljava/lang/Object;)Ljava/util/ArrayList;
-    .locals 3
-
-    array-length v0, p0
-
-    if-nez v0, :cond_0
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    new-instance v1, Lps;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v2}, Lps;-><init>([Ljava/lang/Object;Z)V
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v0
-.end method
-
-.method public static final g(Ljava/util/List;)Ljava/util/List;
+# virtual methods
+.method public getCompoundPaddingLeft()I
     .locals 2
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-super {p0}, Landroid/widget/TextView;->getCompoundPaddingLeft()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    iget v1, p0, Lbb3;->o:I
 
-    const/4 v1, 0x1
+    add-int/2addr v0, v1
 
-    if-eq v0, v1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    sget-object p0, Lna5;->a:Lna5;
-
-    return-object p0
+    return v0
 .end method
 
-.method public static final h(II)V
-    .locals 4
+.method public final getPaddingBetweenCheckbox()I
+    .locals 1
 
-    const-string v0, ")."
+    iget v0, p0, Lbb3;->o:I
 
-    if-ltz p1, :cond_1
+    return v0
+.end method
 
-    if-gt p1, p0, :cond_0
+.method public final setPaddingBetweenCheckbox(I)V
+    .locals 0
+
+    iput p1, p0, Lbb3;->o:I
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
 
     return-void
-
-    :cond_0
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v2, "toIndex ("
-
-    const-string v3, ") is greater than size ("
-
-    invoke-static {v2, p1, v3, p0, v0}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "fromIndex (0) is greater than toIndex ("
-
-    invoke-static {p1, v1, v0}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static i()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/ArithmeticException;
-
-    const-string v1, "Count overflow has happened."
-
-    invoke-direct {v0, v1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static j()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/ArithmeticException;
-
-    const-string v1, "Index overflow has happened."
-
-    invoke-direct {v0, v1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

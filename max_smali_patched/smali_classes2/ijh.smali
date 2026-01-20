@@ -1,38 +1,32 @@
 .class public final Lijh;
-.super Liqe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lljh;
 
-# instance fields
-.field public E0:Lfjh;
+
+# static fields
+.field public static final a:Lijh;
+
+.field public static final b:Lijh;
 
 
-# virtual methods
-.method public final z(Li28;)V
+# direct methods
+.method static synthetic constructor <clinit>()V
     .locals 1
 
-    instance-of v0, p1, Lejh;
+    new-instance v0, Lijh;
 
-    if-nez v0, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-void
+    sput-object v0, Lijh;->a:Lijh;
 
-    :cond_0
-    move-object v0, p1
+    new-instance v0, Lijh;
 
-    check-cast v0, Lfjh;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lijh;->E0:Lfjh;
-
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
-
-    check-cast v0, Lnde;
-
-    check-cast p1, Lejh;
-
-    iget-object p1, p1, Lejh;->a:Lode;
-
-    invoke-virtual {v0, p1}, Lnde;->setModelItem(Ldde;)V
+    sput-object v0, Lijh;->b:Lijh;
 
     return-void
 .end method

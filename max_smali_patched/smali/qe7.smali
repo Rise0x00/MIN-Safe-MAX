@@ -1,19 +1,35 @@
-.class public final Lqe7;
+.class public interface abstract Lqe7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/IInterface;
 
-# instance fields
-.field public final a:Lpe7;
+
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lpe7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0x24
 
-    iput-object p1, p0, Lqe7;->a:Lpe7;
+    const/16 v1, 0x2e
+
+    const-string v2, "androidx$room$IMultiInstanceInvalidationCallback"
+
+    invoke-virtual {v2, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lqe7;->a:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract j([Ljava/lang/String;)V
 .end method

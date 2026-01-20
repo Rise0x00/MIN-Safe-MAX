@@ -2,635 +2,163 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lfhd;
-
-.field public final synthetic c:Lr05;
+.field public final a:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr05;Lfhd;I)V
+.method public synthetic constructor <init>(J)V
     .locals 0
-
-    iput p3, p0, Lq05;->a:I
-
-    iput-object p1, p0, Lq05;->c:Lr05;
-
-    iput-object p2, p0, Lq05;->b:Lfhd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-wide p1, p0, Lq05;->a:J
+
     return-void
+.end method
+
+.method public static final synthetic a(J)Lq05;
+    .locals 1
+
+    new-instance v0, Lq05;
+
+    invoke-direct {v0, p0, p1}, Lq05;-><init>(J)V
+
+    return-object v0
+.end method
+
+.method public static b(IF)J
+    .locals 3
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result p1
+
+    int-to-long v0, p1
+
+    int-to-long p0, p0
+
+    const/16 v2, 0x20
+
+    shl-long/2addr p0, v2
+
+    add-long/2addr v0, p0
+
+    return-wide v0
+.end method
+
+.method public static final c(JLandroid/content/Context;)F
+    .locals 0
+
+    invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    invoke-static {p0, p1, p2}, Lq05;->d(JLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final d(JLandroid/util/DisplayMetrics;)F
+    .locals 2
+
+    const/16 v0, 0x20
+
+    shr-long v0, p0, v0
+
+    long-to-int v0, v0
+
+    invoke-static {p0, p1}, Lq05;->e(J)F
+
+    move-result p0
+
+    invoke-static {v0, p0, p2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static final e(J)F
+    .locals 2
+
+    const-wide v0, 0xffffffffL
+
+    and-long/2addr p0, v0
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result p0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 21
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-object/from16 v1, p0
+    instance-of v0, p1, Lq05;
 
-    iget v0, v1, Lq05;->a:I
+    if-nez v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, v1, Lq05;->c:Lr05;
-
-    iget-object v0, v0, Lr05;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    iget-object v2, v1, Lq05;->b:Lfhd;
-
-    invoke-virtual {v0, v2}, Lpgd;->n(Lhff;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    :try_start_0
-    const-string v0, "path"
-
-    invoke-static {v2, v0}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v0
-
-    const-string v3, "last_modified"
-
-    invoke-static {v2, v3}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v3
-
-    const-string v4, "upload_type"
-
-    invoke-static {v2, v4}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v4
-
-    const-string v5, "chat_id"
-
-    invoke-static {v2, v5}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v5
-
-    const-string v6, "attach_id"
-
-    invoke-static {v2, v6}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v6
-
-    const-string v7, "video_quality"
-
-    invoke-static {v2, v7}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v7
-
-    const-string v8, "video_start_trim_position"
-
-    invoke-static {v2, v8}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v8
-
-    const-string v9, "video_end_trim_position"
-
-    invoke-static {v2, v9}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v9
-
-    const-string v10, "mute"
-
-    invoke-static {v2, v10}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v10
-
-    new-instance v11, Ljava/util/ArrayList;
-
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-
-    move-result v12
-
-    invoke-direct {v11, v12}, Ljava/util/ArrayList;-><init>(I)V
-
-    :goto_0
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_7
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_0
-
-    const/16 v16, 0x0
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    check-cast p1, Lq05;
 
-    move-result-object v12
+    iget-wide v0, p1, Lq05;->a:J
 
-    move-object/from16 v16, v12
+    iget-wide v2, p0, Lq05;->a:J
 
-    :goto_1
-    invoke-interface {v2, v3}, Landroid/database/Cursor;->getLong(I)J
+    cmp-long p1, v2, v0
 
-    move-result-wide v17
+    if-eqz p1, :cond_1
 
-    invoke-interface {v2, v4}, Landroid/database/Cursor;->isNull(I)Z
+    :goto_0
+    const/4 p1, 0x0
 
-    move-result v12
-
-    if-eqz v12, :cond_1
-
-    const/4 v12, 0x0
-
-    goto :goto_2
+    return p1
 
     :cond_1
-    invoke-interface {v2, v4}, Landroid/database/Cursor;->getInt(I)I
+    const/4 p1, 0x1
 
-    move-result v12
+    return p1
+.end method
 
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object v12
+    iget-wide v0, p0, Lq05;->a:J
 
-    :goto_2
-    invoke-static {v12}, Lhai;->f(Ljava/lang/Integer;)I
-
-    move-result v19
-
-    invoke-interface {v2, v5}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v14
-
-    invoke-interface {v2, v6}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_2
-
-    const/4 v12, 0x0
-
-    goto :goto_3
-
-    :cond_2
-    invoke-interface {v2, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v12
-
-    :goto_3
-    new-instance v13, Ld05;
-
-    invoke-direct {v13, v14, v15, v12}, Ld05;-><init>(JLjava/lang/String;)V
-
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_4
-
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_4
-
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_4
-
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-nez v12, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    const/16 v20, 0x0
-
-    goto :goto_7
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_8
-
-    :cond_4
-    :goto_4
-    new-instance v12, Lx10;
-
-    invoke-direct {v12}, Ljava/lang/Object;-><init>()V
-
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v14
-
-    if-eqz v14, :cond_5
-
-    const/16 v20, 0x0
-
-    goto :goto_5
-
-    :cond_5
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v14
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    move-object/from16 v20, v14
-
-    :goto_5
-    invoke-static {}, Lkhc;->values()[Lkhc;
-
-    move-result-object v14
-
-    invoke-virtual/range {v20 .. v20}, Ljava/lang/Integer;->intValue()I
-
-    move-result v15
-
-    aget-object v14, v14, v15
-
-    iput-object v14, v12, Lx10;->c:Lkhc;
-
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->getFloat(I)F
-
-    move-result v14
-
-    iput v14, v12, Lx10;->a:F
-
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->getFloat(I)F
-
-    move-result v14
-
-    iput v14, v12, Lx10;->b:F
-
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v14
-
-    if-eqz v14, :cond_6
-
-    const/4 v14, 0x1
-
-    goto :goto_6
-
-    :cond_6
-    const/4 v14, 0x0
-
-    :goto_6
-    iput-boolean v14, v12, Lx10;->d:Z
-
-    move-object/from16 v20, v12
-
-    :goto_7
-    new-instance v14, Ll05;
-
-    move-object v15, v13
-
-    invoke-direct/range {v14 .. v20}, Ll05;-><init>(Ld05;Ljava/lang/String;JILx10;)V
-
-    invoke-virtual {v11, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto/16 :goto_0
-
-    :cond_7
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    return-object v11
-
-    :goto_8
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, v1, Lq05;->c:Lr05;
-
-    iget-object v0, v0, Lr05;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    iget-object v2, v1, Lq05;->b:Lfhd;
-
-    invoke-virtual {v0, v2}, Lpgd;->n(Lhff;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    :try_start_1
-    const-string v0, "path"
-
-    invoke-static {v2, v0}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    const-string v3, "last_modified"
-
-    invoke-static {v2, v3}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v3
-
-    const-string v4, "upload_type"
-
-    invoke-static {v2, v4}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v4
-
-    const-string v5, "chat_id"
-
-    invoke-static {v2, v5}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v5
-
-    const-string v6, "attach_id"
-
-    invoke-static {v2, v6}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v6
-
-    const-string v7, "video_quality"
-
-    invoke-static {v2, v7}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v7
-
-    const-string v8, "video_start_trim_position"
-
-    invoke-static {v2, v8}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v8
-
-    const-string v9, "video_end_trim_position"
-
-    invoke-static {v2, v9}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v9
-
-    const-string v10, "mute"
-
-    invoke-static {v2, v10}, Lvwi;->d(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v10
-
-    new-instance v11, Ljava/util/ArrayList;
-
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-
-    move-result v12
-
-    invoke-direct {v11, v12}, Ljava/util/ArrayList;-><init>(I)V
-
-    :goto_9
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v12
-
-    if-eqz v12, :cond_f
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_8
-
-    const/16 v16, 0x0
-
-    goto :goto_a
-
-    :cond_8
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v12
-
-    move-object/from16 v16, v12
-
-    :goto_a
-    invoke-interface {v2, v3}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v17
-
-    invoke-interface {v2, v4}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_9
-
-    const/4 v12, 0x0
-
-    goto :goto_b
-
-    :cond_9
-    invoke-interface {v2, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v12
-
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v12
-
-    :goto_b
-    invoke-static {v12}, Lhai;->f(Ljava/lang/Integer;)I
-
-    move-result v19
-
-    invoke-interface {v2, v5}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v14
-
-    invoke-interface {v2, v6}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_a
-
-    const/4 v12, 0x0
-
-    goto :goto_c
-
-    :cond_a
-    invoke-interface {v2, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v12
-
-    :goto_c
-    new-instance v13, Ld05;
-
-    invoke-direct {v13, v14, v15, v12}, Ld05;-><init>(JLjava/lang/String;)V
-
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_c
-
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_c
-
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_c
-
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v12
-
-    if-nez v12, :cond_b
-
-    goto :goto_d
-
-    :cond_b
-    const/16 v20, 0x0
-
-    goto :goto_10
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_11
-
-    :cond_c
-    :goto_d
-    new-instance v12, Lx10;
-
-    invoke-direct {v12}, Ljava/lang/Object;-><init>()V
-
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v14
-
-    if-eqz v14, :cond_d
-
-    const/16 v20, 0x0
-
-    goto :goto_e
-
-    :cond_d
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v14
-
-    invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v14
-
-    move-object/from16 v20, v14
-
-    :goto_e
-    invoke-static {}, Lkhc;->values()[Lkhc;
-
-    move-result-object v14
-
-    invoke-virtual/range {v20 .. v20}, Ljava/lang/Integer;->intValue()I
-
-    move-result v15
-
-    aget-object v14, v14, v15
-
-    iput-object v14, v12, Lx10;->c:Lkhc;
-
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->getFloat(I)F
-
-    move-result v14
-
-    iput v14, v12, Lx10;->a:F
-
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->getFloat(I)F
-
-    move-result v14
-
-    iput v14, v12, Lx10;->b:F
-
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v14
-
-    if-eqz v14, :cond_e
-
-    const/4 v14, 0x1
-
-    goto :goto_f
-
-    :cond_e
-    const/4 v14, 0x0
-
-    :goto_f
-    iput-boolean v14, v12, Lx10;->d:Z
-
-    move-object/from16 v20, v12
-
-    :goto_10
-    new-instance v14, Ll05;
-
-    move-object v15, v13
-
-    invoke-direct/range {v14 .. v20}, Ll05;-><init>(Ld05;Ljava/lang/String;JILx10;)V
-
-    invoke-virtual {v11, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto/16 :goto_9
-
-    :cond_f
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    return-object v11
-
-    :goto_11
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    throw v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public final finalize()V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget v0, p0, Lq05;->a:I
+    const-string v0, "Dimension(encodedValue="
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, ")"
 
-    iget-object v0, p0, Lq05;->b:Lfhd;
+    iget-wide v2, p0, Lq05;->a:J
 
-    invoke-virtual {v0}, Lfhd;->l()V
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    iget-object v0, p0, Lq05;->b:Lfhd;
-
-    invoke-virtual {v0}, Lfhd;->l()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

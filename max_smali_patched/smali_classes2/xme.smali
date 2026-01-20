@@ -1,90 +1,43 @@
 .class public final Lxme;
-.super Logf;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public final synthetic o:Lyme;
-
-
-# direct methods
-.method public constructor <init>(Lyme;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lxme;->o:Lyme;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onMeasure(II)V
+    .locals 3
 
-    check-cast p1, Lg54;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    invoke-virtual {p0, p1, p2}, Lxme;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/16 v1, 0x96
 
-    move-result-object p1
+    int-to-float v1, v1
 
-    check-cast p1, Lxme;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result-object v2
 
-    invoke-virtual {p1, p2}, Lxme;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object p1
+    move-result-object v2
 
-    return-object p1
-.end method
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-static {v1, v2, v0}, Lxi4;->r(FFI)I
 
-    new-instance p1, Lxme;
+    move-result v0
 
-    iget-object v0, p0, Lxme;->o:Lyme;
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    invoke-direct {p1, v0, p2}, Lxme;-><init>(Lyme;Lkotlin/coroutines/Continuation;)V
+    move-result p2
 
-    return-object p1
-.end method
+    invoke-static {v0, p2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    move-result p2
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->onMeasure(II)V
 
-    iget-object p1, p0, Lxme;->o:Lyme;
-
-    iget-object p1, p1, Lyme;->x0:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lc3b;
-
-    sget v0, Lvsc;->oneme_location_map_location_error:I
-
-    new-instance v1, Lirf;
-
-    invoke-direct {v1, v0}, Lirf;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lc3b;->g(Lnrf;)V
-
-    invoke-virtual {p1}, Lc3b;->i()Lb3b;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

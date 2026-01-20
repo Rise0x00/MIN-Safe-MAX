@@ -1,85 +1,79 @@
-.class public final enum Lh2f;
-.super Ljava/lang/Enum;
+.class public final Lh2f;
+.super Llm4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lh2f;
+.field public static final b:Lh2f;
 
-.field public static final enum b:Lh2f;
+.field public static final c:Lhm4;
 
-.field public static final enum c:Lh2f;
+.field public static final d:Lhm4;
 
-.field public static final synthetic d:[Lh2f;
+.field public static final e:Lhm4;
+
+.field public static final f:Lhm4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
     new-instance v0, Lh2f;
 
-    const-string v1, "DEFAULT"
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Lh2f;->b:Lh2f;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const/4 v1, 0x0
 
-    sput-object v0, Lh2f;->a:Lh2f;
+    new-array v2, v1, [Ljava/lang/String;
 
-    new-instance v1, Lh2f;
+    const-string v3, ":settings/privacy"
 
-    const-string v2, "WITH_CALL_PIP"
+    const/4 v4, 0x0
 
-    const/4 v3, 0x1
+    const/16 v5, 0xe
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    sput-object v1, Lh2f;->b:Lh2f;
+    move-result-object v2
 
-    new-instance v2, Lh2f;
+    sput-object v2, Lh2f;->c:Lhm4;
 
-    const-string v3, "WITH_VIDEO_PIP"
+    const-string v2, ":settings/blacklist"
 
-    const/4 v4, 0x2
+    new-array v3, v1, [Ljava/lang/String;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-static {v0, v2, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    sput-object v2, Lh2f;->c:Lh2f;
+    move-result-object v2
 
-    filled-new-array {v0, v1, v2}, [Lh2f;
+    sput-object v2, Lh2f;->d:Lhm4;
+
+    const-string v2, ":settings/privacy/onboarding"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v1
+
+    sput-object v1, Lh2f;->e:Lhm4;
+
+    const-string v1, "mode"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, ":settings/privacy/pincode"
+
+    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     move-result-object v0
 
-    sput-object v0, Lh2f;->d:[Lh2f;
+    sput-object v0, Lh2f;->f:Lhm4;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lh2f;
-    .locals 1
-
-    const-class v0, Lh2f;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lh2f;
-
-    return-object p0
-.end method
-
-.method public static values()[Lh2f;
-    .locals 1
-
-    sget-object v0, Lh2f;->d:[Lh2f;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lh2f;
-
-    return-object v0
 .end method

@@ -1,130 +1,80 @@
-.class public final Llg2;
-.super Lrj0;
+.class public final synthetic Llg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcy3;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Z
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public synthetic constructor <init>(ZI)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lrj0;-><init>(J)V
+    iput p2, p0, Llg2;->a:I
 
-    iput-wide p3, p0, Llg2;->b:J
+    iput-boolean p1, p0, Llg2;->b:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    const-class v2, Llg2;
-
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    check-cast p1, Llg2;
-
-    iget-wide v3, p0, Llg2;->b:J
-
-    iget-wide v5, p1, Llg2;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_3
-
-    iget-wide v3, p0, Lrj0;->a:J
-
-    iget-wide v5, p1, Lrj0;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final accept(Ljava/lang/Object;)V
     .locals 3
 
-    iget-wide v0, p0, Llg2;->b:J
+    iget v0, p0, Llg2;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    check-cast p1, Lnd2;
 
-    iget-wide v1, p0, Lrj0;->a:J
+    iget-object p1, p1, Lnd2;->b:Luh2;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-boolean v0, p0, Llg2;->b:Z
 
-    move-result-object v1
+    iput-boolean v0, p1, Luh2;->g0:Z
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    check-cast p1, Lch2;
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    iget-object v0, p1, Lch2;->b0:Lpt0;
 
-    move-result v0
+    new-instance v1, Lpt0;
 
-    return v0
-.end method
+    iget-boolean v0, v0, Lpt0;->a:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    iget-boolean v2, p0, Llg2;->b:Z
 
-    const-string v0, "ChatLeaveEvent(requestId="
+    invoke-direct {v1, v0, v2}, Lpt0;-><init>(ZZ)V
 
-    const-string v1, ", chatId="
+    iput-object v1, p1, Lch2;->b0:Lpt0;
 
-    iget-wide v2, p0, Lrj0;->a:J
+    return-void
 
-    invoke-static {v2, v3, v0, v1}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_1
+    iget-boolean v0, p0, Llg2;->b:Z
 
-    move-result-object v0
+    check-cast p1, Lch2;
 
-    const-string v1, ")"
+    iput-boolean v0, p1, Lch2;->j0:Z
 
-    iget-wide v2, p0, Llg2;->b:J
+    return-void
 
-    invoke-static {v0, v2, v3, v1}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    nop
 
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

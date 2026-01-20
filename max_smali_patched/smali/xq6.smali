@@ -1,23 +1,19 @@
-.class public final Lxq6;
+.class public interface abstract Lxq6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+.end method
 
-.field public b:Ljava/nio/FloatBuffer;
-
-.field public c:I
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p2, p0, Lxq6;->a:I
-
-    return-void
+.method public abstract equals(Ljava/lang/Object;)Z
 .end method

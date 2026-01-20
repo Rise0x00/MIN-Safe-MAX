@@ -2,34 +2,46 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwbh;
 
-# instance fields
-.field public a:Z
 
-.field public b:Z
+# virtual methods
+.method public final a(ILjava/lang/String;)Llhg;
+    .locals 1
 
-.field public c:Z
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
 
-.field public d:Z
+    move-result p2
 
-.field public e:Z
+    const/16 v0, 0x3c
 
-.field public f:Z
+    if-lt p2, v0, :cond_0
 
-.field public g:Z
+    const-class p2, La78;
 
-.field public h:Z
+    invoke-static {p2}, Lctd;->a(Ljava/lang/Class;)Lrd3;
 
-.field public i:Lkhc;
+    move-result-object p2
 
-.field public j:Z
+    invoke-static {p1, p2}, Lr4j;->a(ILrd3;)Ljava/lang/Integer;
 
-.field public k:I
+    move-result-object p1
 
-.field public l:Z
+    if-eqz p1, :cond_0
 
-.field public m:Z
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-.field public n:Z
+    move-result p1
 
-.field public o:Z
+    new-instance p2, Llhg;
+
+    invoke-direct {p2, p1}, Llhg;-><init>(I)V
+
+    return-object p2
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method

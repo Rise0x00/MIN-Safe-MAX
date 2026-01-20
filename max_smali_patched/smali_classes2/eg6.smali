@@ -3,25 +3,35 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Leg6;
+
+
 # instance fields
-.field public final a:Landroid/graphics/Bitmap;
-
-.field public final b:I
-
-.field public final c:I
+.field public final a:Ljfa;
 
 
 # direct methods
-.method public constructor <init>(IILandroid/graphics/Bitmap;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Leg6;
+
+    sget-object v1, Leae;->b:Ljfa;
+
+    invoke-direct {v0, v1}, Leg6;-><init>(Ljfa;)V
+
+    sput-object v0, Leg6;->b:Leg6;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljfa;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Leg6;->a:Landroid/graphics/Bitmap;
-
-    iput p1, p0, Leg6;->b:I
-
-    iput p2, p0, Leg6;->c:I
+    iput-object p1, p0, Leg6;->a:Ljfa;
 
     return-void
 .end method
@@ -29,7 +39,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -49,108 +59,52 @@
     :cond_1
     check-cast p1, Leg6;
 
-    iget-object v1, p0, Leg6;->a:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Leg6;->a:Ljfa;
 
-    iget-object v3, p1, Leg6;->a:Landroid/graphics/Bitmap;
+    iget-object p1, p1, Leg6;->a:Ljfa;
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Leg6;->b:I
-
-    iget v3, p1, Leg6;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Leg6;->c:I
-
-    iget p1, p1, Leg6;->c:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Leg6;->a:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Leg6;->a:Ljfa;
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljfa;->hashCode()I
 
     move-result v0
 
-    :goto_0
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Leg6;->b:I
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
-
-    move-result v0
-
-    iget v1, p0, Leg6;->c:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ResultFrame(bitmap="
+    const-string v1, "FoldersCounters(counters="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Leg6;->a:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Leg6;->a:Ljfa;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", width="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Leg6;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", height="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     const-string v1, ")"
 
-    iget v2, p0, Leg6;->c:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

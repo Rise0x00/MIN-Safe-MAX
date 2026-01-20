@@ -1,183 +1,169 @@
-.class public final synthetic Lzn3;
-.super Ljava/lang/Object;
+.class public final Lzn3;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lao3;
 
-.field public final synthetic b:Landroidx/fragment/app/DialogFragment;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/fragment/app/DialogFragment;I)V
+.method public constructor <init>(Lao3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lzn3;->a:I
+    iput-object p1, p0, Lzn3;->X:Lao3;
 
-    iput-object p1, p0, Lzn3;->b:Landroidx/fragment/app/DialogFragment;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lzn3;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lzn3;->b:Landroidx/fragment/app/DialogFragment;
+    invoke-virtual {p0, p1, p2}, Lzn3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast p1, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;
+    move-result-object p1
 
-    sget-object p2, Lsvg;->a:Lsvg;
+    check-cast p1, Lzn3;
 
-    invoke-virtual {p1, p2}, Lru/ok/messages/views/dialogs/VideoQualityPickerDialog;->y0(Luvg;)V
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-void
+    invoke-virtual {p1, p2}, Lzn3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p1, p0, Lzn3;->b:Landroidx/fragment/app/DialogFragment;
+    move-result-object p1
 
-    check-cast p1, Lru/ok/messages/views/dialogs/ConfirmationDialog;
+    return-object p1
+.end method
 
-    invoke-virtual {p1}, Lru/ok/messages/views/dialogs/ConfirmationDialog;->y0()V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    return-void
+    new-instance p1, Lzn3;
 
-    :pswitch_1
-    iget-object p1, p0, Lzn3;->b:Landroidx/fragment/app/DialogFragment;
+    iget-object v0, p0, Lzn3;->X:Lao3;
 
-    check-cast p1, Lru/ok/messages/views/dialogs/ConfirmationDialog;
+    invoke-direct {p1, v0, p2}, Lzn3;-><init>(Lao3;Lkotlin/coroutines/Continuation;)V
 
-    iget-object p2, p1, Landroidx/fragment/app/a;->X:Landroid/os/Bundle;
+    return-object p1
+.end method
 
-    const-string v0, "oneme:share:data"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    :goto_0
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->x()Landroidx/fragment/app/c;
-
-    move-result-object v1
-
-    new-instance v2, Lvcb;
-
-    const-string v3, "POSITIVE"
-
-    sget-object v4, Lbo3;->a:Lbo3;
-
-    invoke-direct {v2, v3, v4}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2}, [Lvcb;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ltki;->b([Lvcb;)Landroid/os/Bundle;
-
-    move-result-object v2
-
-    const-string v3, "ConfirmationDialog:request_key"
-
-    invoke-virtual {v1, v3, v2}, Landroidx/fragment/app/c;->b0(Ljava/lang/String;Landroid/os/Bundle;)V
+    iget v0, p0, Lzn3;->o:I
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v1}, Landroidx/fragment/app/a;->z(Z)Landroidx/fragment/app/a;
+    if-eqz v0, :cond_1
 
-    move-result-object v2
+    if-ne v0, v1, :cond_0
 
-    const/4 v3, -0x1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz v2, :cond_2
+    return-object p1
 
-    instance-of v4, v2, Lao3;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-eqz v4, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    check-cast v2, Lao3;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v2, p2}, Lao3;->q(Landroid/os/Bundle;)V
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    new-instance v4, Landroid/content/Intent;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
+    iget-object p1, p0, Lzn3;->X:Lao3;
 
-    invoke-virtual {v4, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+    iget-object v0, p1, Lao3;->u0:Lo58;
 
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->A()I
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    move-result p2
+    move-result-object v0
 
-    invoke-virtual {v2, p2, v3, v4}, Landroidx/fragment/app/a;->J(IILandroid/content/Intent;)V
+    check-cast v0, Lm2a;
 
-    goto :goto_1
+    iget-object v2, p1, Lao3;->c:Ljava/lang/Long;
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    iget-object p1, p1, Lao3;->b:[J
+
+    invoke-static {p1}, Lct;->B([J)Ljava/util/List;
+
+    move-result-object v8
+
+    iput v1, p0, Lzn3;->o:I
+
+    iget-object p1, v0, Lm2a;->a:Lu2e;
+
+    invoke-virtual {p1}, Lu2e;->d()Lku9;
+
+    move-result-object p1
+
+    check-cast p1, Liv9;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "SELECT server_id FROM messages WHERE chat_id = ? AND id in ("
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v8}, Ljava/util/Collection;->size()I
+
+    move-result v2
+
+    invoke-static {v0, v2}, Leca;->a(Ljava/lang/StringBuilder;I)V
+
+    const-string v2, ")"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    iget-object p1, p1, Liv9;->a:Lb2e;
+
+    new-instance v3, Lsu9;
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v3 .. v8}, Lsu9;-><init>(IJLjava/lang/String;Ljava/util/List;)V
+
+    const/4 v0, 0x0
+
+    invoke-static {v3, p1, p0, v1, v0}, Lulj;->f(Lnq6;Lb2e;Lkotlin/coroutines/Continuation;ZZ)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
-
-    move-result-object v2
-
-    instance-of v4, v2, Lao3;
-
-    if-eqz v4, :cond_3
-
-    check-cast v2, Lao3;
-
-    invoke-interface {v2, p2}, Lao3;->q(Landroid/os/Bundle;)V
-
-    goto :goto_1
-
-    :cond_3
-    instance-of v4, v2, Lj6;
-
-    if-eqz v4, :cond_4
-
-    new-instance v4, Landroid/content/Intent;
-
-    invoke-direct {v4}, Landroid/content/Intent;-><init>()V
-
-    invoke-virtual {v4, v0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
-
-    check-cast v2, Lj6;
-
-    invoke-virtual {p1}, Landroidx/fragment/app/a;->A()I
-
-    move-result p2
-
-    invoke-virtual {v2, p2, v3, v4}, Lj6;->onActivityResult(IILandroid/content/Intent;)V
-
-    :cond_4
-    :goto_1
-    iput-boolean v1, p1, Lru/ok/messages/views/dialogs/ConfirmationDialog;->y1:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,48 +1,110 @@
 .class public final Lfh7;
-.super Lp14;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lgh7;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Ljh7;
 
-.field public o:I
+.field public final synthetic c:Landroid/graphics/drawable/Animatable;
+
+.field public final synthetic d:Lai7;
 
 
 # direct methods
-.method public constructor <init>(Lgh7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ljh7;Landroid/graphics/drawable/Animatable;Lai7;I)V
     .locals 0
 
-    iput-object p1, p0, Lfh7;->X:Lgh7;
+    iput p4, p0, Lfh7;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfh7;->b:Ljh7;
+
+    iput-object p2, p0, Lfh7;->c:Landroid/graphics/drawable/Animatable;
+
+    iput-object p3, p0, Lfh7;->d:Lai7;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iput-object p1, p0, Lfh7;->d:Ljava/lang/Object;
+    iget v0, p0, Lfh7;->a:I
 
-    iget p1, p0, Lfh7;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lfh7;->b:Ljh7;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Ljh7;->getImageAttach()Lyg7;
 
-    iput p1, p0, Lfh7;->o:I
+    move-result-object v1
 
-    iget-object p1, p0, Lfh7;->X:Lgh7;
+    iget-boolean v1, v1, Lyg7;->e:Z
 
-    const/4 v0, 0x0
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Lgh7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lfh7;->c:Landroid/graphics/drawable/Animatable;
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    return-object p1
+    invoke-interface {v1}, Landroid/graphics/drawable/Animatable;->start()V
+
+    :cond_0
+    iget-object v1, p0, Lfh7;->d:Lai7;
+
+    invoke-virtual {v0, v1}, Ljh7;->setImageInfo(Lai7;)V
+
+    invoke-virtual {v0}, Ljh7;->getOnFinalImageSetCallback()Llq6;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lfh7;->b:Ljh7;
+
+    invoke-virtual {v0}, Ljh7;->getImageAttach()Lyg7;
+
+    move-result-object v1
+
+    iget-boolean v1, v1, Lyg7;->e:Z
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lfh7;->c:Landroid/graphics/drawable/Animatable;
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Landroid/graphics/drawable/Animatable;->start()V
+
+    :cond_1
+    iget-object v1, p0, Lfh7;->d:Lai7;
+
+    invoke-virtual {v0, v1}, Ljh7;->setImageInfo(Lai7;)V
+
+    invoke-virtual {v0}, Ljh7;->getOnFinalImageSetCallback()Llq6;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

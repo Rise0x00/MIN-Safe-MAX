@@ -1,114 +1,90 @@
 .class public final Lcq3;
-.super Laq3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqyd;
+.implements Lope;
 
 
 # instance fields
-.field public final Z:J
+.field public final a:Lope;
 
-.field public final s0:I
-
-.field public final t0:I
-
-.field public final u0:Z
-
-.field public final v0:J
+.field public final b:Lhk7;
 
 
 # direct methods
-.method public constructor <init>(JJIIZ)V
-    .locals 1
+.method public constructor <init>(Lope;Ljava/util/List;)V
+    .locals 0
 
-    invoke-direct/range {p0 .. p7}, Laq3;-><init>(JJIIZ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move v0, p7
+    iput-object p1, p0, Lcq3;->a:Lope;
 
-    move p7, p6
+    invoke-static {p2}, Lhk7;->j(Ljava/util/Collection;)Lhk7;
 
-    move p6, p5
+    move-result-object p1
 
-    move-wide p4, p3
-
-    move-wide p2, p1
-
-    move-object p1, p0
-
-    iput-wide p4, p1, Lcq3;->Z:J
-
-    iput p6, p1, Lcq3;->s0:I
-
-    iput p7, p1, Lcq3;->t0:I
-
-    iput-boolean v0, p1, Lcq3;->u0:Z
-
-    const-wide/16 p4, -0x1
-
-    cmp-long p6, p2, p4
-
-    if-eqz p6, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move-wide p2, p4
-
-    :goto_0
-    iput-wide p2, p1, Lcq3;->v0:J
+    iput-object p1, p0, Lcq3;->b:Lhk7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
+.method public final d()J
     .locals 2
 
-    iget-wide v0, p0, Lcq3;->v0:J
+    iget-object v0, p0, Lcq3;->a:Lope;
+
+    invoke-interface {v0}, Lope;->d()J
+
+    move-result-wide v0
 
     return-wide v0
 .end method
 
-.method public final b(J)J
-    .locals 4
-
-    const-wide/16 v0, 0x0
-
-    iget-wide v2, p0, Laq3;->b:J
-
-    sub-long/2addr p1, v2
-
-    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p1
-
-    const-wide/32 v0, 0x7a1200
-
-    mul-long/2addr p1, v0
-
-    iget v0, p0, Laq3;->o:I
-
-    int-to-long v0, v0
-
-    div-long/2addr p1, v0
-
-    return-wide p1
-.end method
-
-.method public final g()J
-    .locals 2
-
-    iget-wide v0, p0, Lcq3;->Z:J
-
-    return-wide v0
-.end method
-
-.method public final h()I
+.method public final i()Z
     .locals 1
 
-    iget v0, p0, Lcq3;->s0:I
+    iget-object v0, p0, Lcq3;->a:Lope;
+
+    invoke-interface {v0}, Lope;->i()Z
+
+    move-result v0
 
     return v0
+.end method
+
+.method public final m()J
+    .locals 2
+
+    iget-object v0, p0, Lcq3;->a:Lope;
+
+    invoke-interface {v0}, Lope;->m()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final n(J)V
+    .locals 1
+
+    iget-object v0, p0, Lcq3;->a:Lope;
+
+    invoke-interface {v0, p1, p2}, Lope;->n(J)V
+
+    return-void
+.end method
+
+.method public final s(Ljg8;)Z
+    .locals 1
+
+    iget-object v0, p0, Lcq3;->a:Lope;
+
+    invoke-interface {v0, p1}, Lope;->s(Ljg8;)Z
+
+    move-result p1
+
+    return p1
 .end method

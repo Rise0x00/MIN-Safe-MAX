@@ -2,53 +2,32 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Flushable;
+.implements Ljava/io/Closeable;
+
 
 # virtual methods
-.method public abstract getItemId()J
+.method public abstract T(Ljava/io/InputStreamReader;)V
 .end method
 
-.method public h(Li28;)Z
-    .locals 4
-
-    invoke-interface {p0}, Li28;->getItemId()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Li28;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+.method public abstract j(Ljava/lang/String;)V
 .end method
 
-.method public k(Li28;)Ljava/lang/Object;
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return-object p1
+.method public abstract n()V
 .end method
 
-.method public abstract m()I
+.method public abstract n0()V
 .end method
 
-.method public q(Li28;)Z
-    .locals 0
+.method public abstract q()V
+.end method
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+.method public abstract r()V
+.end method
 
-    move-result p1
+.method public abstract r0(Ljava/lang/String;)Li28;
+.end method
 
-    return p1
+.method public abstract t()V
 .end method

@@ -1,74 +1,113 @@
-.class public final Lry4;
-.super Logf;
+.class public final synthetic Lry4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic o:Lty4;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/List;
+
+.field public final synthetic c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
 
 
 # direct methods
-.method public constructor <init>(Lty4;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>(Ljava/util/List;Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;)V
+    .locals 1
 
-    iput-object p1, p0, Lry4;->o:Lty4;
+    .line 1
+    const/4 v0, 0x1
 
-    const/4 p1, 0x2
+    iput v0, p0, Lry4;->a:I
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lry4;->b:Ljava/util/List;
+
+    iput-object p2, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;Ljava/util/List;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Lry4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+
+    iput-object p2, p0, Lry4;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lry4;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lry4;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lry4;->b:Ljava/util/List;
 
-    move-result-object p1
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    check-cast p1, Lry4;
+    move-result v0
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/4 v1, 0x1
 
-    invoke-virtual {p1, p2}, Lry4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
 
-    move-result-object p1
+    if-ne v0, v1, :cond_0
 
-    return-object p1
-.end method
+    invoke-virtual {v2}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-result-object v0
 
-    new-instance p1, Lry4;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    iget-object v0, p0, Lry4;->o:Lty4;
+    :cond_0
+    invoke-virtual {v2}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {p1, v0, p2}, Lry4;-><init>(Lty4;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    return-object p1
-.end method
+    const/4 v1, 0x0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->x0(I)V
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    return-void
 
-    iget-object p1, p0, Lry4;->o:Lty4;
+    :pswitch_0
+    iget-object v0, p0, Lry4;->c:Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
 
-    invoke-virtual {p1}, Lty4;->j()Ljava/io/File;
+    invoke-virtual {v0}, Lone/me/sdk/sections/SectionRecyclerWidget;->A0()Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object p1
+    move-result-object v1
 
-    return-object p1
+    new-instance v2, Lry4;
+
+    iget-object v3, p0, Lry4;->b:Ljava/util/List;
+
+    invoke-direct {v2, v3, v0}, Lry4;-><init>(Ljava/util/List;Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

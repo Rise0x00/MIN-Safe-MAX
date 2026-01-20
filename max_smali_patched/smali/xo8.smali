@@ -1,36 +1,38 @@
-.class public abstract Lxo8;
+.class public final Lxo8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/media/LoudnessCodecController$OnLoudnessCodecUpdateListener;
+
+
+# instance fields
+.field public final synthetic a:Llji;
+
 
 # direct methods
-.method public static a(Lno8;Ljub;)V
-    .locals 1
+.method public constructor <init>(Llji;)V
+    .locals 0
 
-    iget-object p1, p1, Ljub;->a:Liub;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxo8;->a:Llji;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onLoudnessCodecUpdate(Landroid/media/MediaCodec;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 0
+
+    iget-object p1, p0, Lxo8;->a:Llji;
+
+    iget-object p1, p1, Llji;->b:Ljava/lang/Object;
+
+    check-cast p1, Lc01;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p1, p1, Liub;->a:Landroid/media/metrics/LogSessionId;
-
-    invoke-static {}, Lgu8;->f()Landroid/media/metrics/LogSessionId;
-
-    invoke-static {p1}, Lgu8;->z(Landroid/media/metrics/LogSessionId;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lno8;->b:Landroid/media/MediaFormat;
-
-    const-string v0, "log-session-id"
-
-    invoke-static {p1}, La04;->o(Landroid/media/metrics/LogSessionId;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, p1}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    return-object p2
 .end method

@@ -1,88 +1,53 @@
-.class public final synthetic Lyjh;
-.super Ljava/lang/Object;
+.class public final Lyjh;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lzjh;
 
-.field public final synthetic b:Lh10;
+.field public Y:I
 
-.field public final synthetic c:Lx4e;
+.field public d:Lzjh;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh10;Lx4e;I)V
+.method public constructor <init>(Lzjh;Lo84;)V
     .locals 0
 
-    iput p3, p0, Lyjh;->a:I
+    iput-object p1, p0, Lyjh;->X:Lzjh;
 
-    iput-object p1, p0, Lyjh;->b:Lh10;
-
-    iput-object p2, p0, Lyjh;->c:Lx4e;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lyjh;->a:I
+    iput-object p1, p0, Lyjh;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lyjh;->Y:I
 
-    new-instance v1, Lsjh;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Lyjh;->b:Lh10;
+    or-int/2addr p1, v0
 
-    iget-wide v2, v0, Lh10;->a:J
+    iput p1, p0, Lyjh;->Y:I
 
-    iget-wide v4, v0, Lh10;->b:J
+    const/4 p1, 0x0
 
-    iget-object v0, v0, Lh10;->c:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-object v6, v0
+    iget-object v1, p0, Lyjh;->X:Lzjh;
 
-    check-cast v6, Landroid/content/Context;
+    invoke-virtual {v1, p1, v0, v0, p0}, Lzjh;->c(Ljava/util/List;IILo84;)Ljava/lang/Object;
 
-    iget-object v7, p0, Lyjh;->c:Lx4e;
+    move-result-object p1
 
-    invoke-direct/range {v1 .. v7}, Lsjh;-><init>(JJLandroid/content/Context;Lx4e;)V
-
-    return-object v1
-
-    :pswitch_0
-    new-instance v2, Lqjh;
-
-    iget-object v0, p0, Lyjh;->b:Lh10;
-
-    iget-wide v3, v0, Lh10;->a:J
-
-    iget-wide v5, v0, Lh10;->b:J
-
-    iget-object v0, v0, Lh10;->c:Ljava/lang/Object;
-
-    move-object v7, v0
-
-    check-cast v7, Landroid/content/Context;
-
-    iget-object v8, p0, Lyjh;->c:Lx4e;
-
-    invoke-direct/range {v2 .. v8}, Lqjh;-><init>(JJLandroid/content/Context;Lx4e;)V
-
-    return-object v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/Conversation$addParticipants$1;
-.super Lbu7;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Lnq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/Conversation;->addParticipants$default(Lru/ok/android/externcalls/sdk/Conversation;Ljava/util/Collection;Ljava/lang/Boolean;ZLqi6;Lqi6;ILjava/lang/Object;)V
+    value = Lru/ok/android/externcalls/sdk/Conversation;->addParticipants$default(Lru/ok/android/externcalls/sdk/Conversation;Ljava/util/Collection;Ljava/lang/Boolean;ZLnq6;Lnq6;ILjava/lang/Object;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lbu7;",
-        "Lqi6;"
+        "Ly48;",
+        "Lnq6;"
     }
 .end annotation
 
@@ -30,7 +30,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;",
         "it",
-        "Lybg;",
+        "Lb3h;",
         "invoke",
         "(Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;)V",
         "<anonymous>"
@@ -66,7 +66,7 @@
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lbu7;-><init>(I)V
+    invoke-direct {p0, v0}, Ly48;-><init>(I)V
 
     return-void
 .end method
@@ -81,7 +81,7 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/Conversation$addParticipants$1;->invoke(Lru/ok/android/externcalls/sdk/participant/add/AddParticipantsResult;)V
 
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

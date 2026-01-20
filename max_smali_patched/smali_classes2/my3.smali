@@ -1,66 +1,58 @@
-.class public final synthetic Lmy3;
+.class public final Lmy3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyf4;
+.implements Ly00;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/CharSequence;
+
+.field public final f:I
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Landroid/graphics/drawable/Drawable;
+
+.field public final i:Landroid/graphics/drawable/Drawable;
+
+.field public final j:J
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;ILjava/lang/String;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;J)V
     .locals 0
-
-    iput p1, p0, Lmy3;->a:I
-
-    iput-object p2, p0, Lmy3;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-wide p1, p0, Lmy3;->a:J
+
+    iput-object p3, p0, Lmy3;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lmy3;->c:Ljava/lang/String;
+
+    iput-object p5, p0, Lmy3;->d:Ljava/lang/String;
+
+    iput-object p6, p0, Lmy3;->e:Ljava/lang/CharSequence;
+
+    iput p7, p0, Lmy3;->f:I
+
+    iput-object p8, p0, Lmy3;->g:Ljava/lang/String;
+
+    iput-object p9, p0, Lmy3;->h:Landroid/graphics/drawable/Drawable;
+
+    iput-object p10, p0, Lmy3;->i:Landroid/graphics/drawable/Drawable;
+
+    iput-wide p11, p0, Lmy3;->j:J
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lmy3;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmy3;->b:Ljava/lang/Object;
-
-    check-cast v0, [J
-
-    new-instance v1, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
-
-    sget-object v2, Lbze;->b:Lbze;
-
-    invoke-direct {v1, v0, v2}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLbze;)V
-
-    return-object v1
-
-    :pswitch_0
-    iget-object v0, p0, Lmy3;->b:Ljava/lang/Object;
-
-    check-cast v0, Lpy3;
-
-    new-instance v1, Lny3;
-
-    invoke-direct {v1, v0}, Lny3;-><init>(Lpy3;)V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

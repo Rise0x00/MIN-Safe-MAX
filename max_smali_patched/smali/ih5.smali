@@ -2,65 +2,41 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
+# interfaces
+.implements Lm8e;
 
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v2, p3, v0
-
-    if-nez v2, :cond_0
-
-    iput-wide v0, p0, Lih5;->a:J
-
-    const-wide/16 p1, 0x1
-
-    iput-wide p1, p0, Lih5;->b:J
-
-    return-void
-
-    :cond_0
-    iput-wide p1, p0, Lih5;->a:J
-
-    iput-wide p3, p0, Lih5;->b:J
+# virtual methods
+.method public final b()V
+    .locals 0
 
     return-void
 .end method
 
+.method public final e()Z
+    .locals 1
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    const/4 v0, 0x1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+.method public final g(J)I
+    .locals 0
 
-    iget-wide v1, p0, Lih5;->a:J
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    return p1
+.end method
 
-    const-string v1, "/"
+.method public final o(Lzii;Lnl4;I)I
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p1, 0x4
 
-    iget-wide v1, p0, Lih5;->b:J
+    iput p1, p2, Laz;->b:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const/4 p1, -0x4
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method

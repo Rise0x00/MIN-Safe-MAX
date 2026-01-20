@@ -3,193 +3,87 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Ly6e;
-
-.field public static final f:Lltb;
-
-
 # instance fields
-.field public final a:Ly6e;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Lltb;
+.field public final b:Landroid/media/browse/MediaBrowser;
 
-.field public final c:Lec7;
+.field public final c:Landroid/os/Bundle;
 
-.field public final d:Lec7;
+.field public final d:Lcz8;
+
+.field public final e:Lys;
+
+.field public f:Ldgc;
+
+.field public g:Landroid/os/Messenger;
+
+.field public h:Lya9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;Lbg8;Landroid/os/Bundle;)V
+    .locals 2
 
-    new-instance v0, Ljava/util/HashSet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    new-instance v0, Lcz8;
 
-    sget-object v1, Lx6e;->d:Lz8d;
+    invoke-direct {v0, p0}, Lcz8;-><init>(Lez8;)V
 
-    const/4 v2, 0x0
+    iput-object v0, p0, Lez8;->d:Lcz8;
 
-    move v3, v2
+    new-instance v0, Lys;
 
-    :goto_0
-    iget v4, v1, Lz8d;->d:I
+    const/4 v1, 0x0
 
-    if-ge v3, v4, :cond_0
+    invoke-direct {v0, v1}, Ladf;-><init>(I)V
 
-    new-instance v4, Lx6e;
+    iput-object v0, p0, Lez8;->e:Lys;
 
-    invoke-virtual {v1, v3}, Lz8d;->get(I)Ljava/lang/Object;
+    iput-object p1, p0, Lez8;->a:Landroid/content/Context;
 
-    move-result-object v5
+    new-instance v0, Landroid/os/Bundle;
 
-    check-cast v5, Ljava/lang/Integer;
+    if-eqz p4, :cond_0
 
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    invoke-direct {v4, v5}, Lx6e;-><init>(I)V
-
-    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
+    invoke-direct {v0, p4}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
     goto :goto_0
 
     :cond_0
-    new-instance v3, Ly6e;
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-direct {v3, v0}, Ly6e;-><init>(Ljava/util/HashSet;)V
+    :goto_0
+    iput-object v0, p0, Lez8;->c:Landroid/os/Bundle;
 
-    sput-object v3, Lez8;->e:Ly6e;
+    const-string p4, "extra_client_version"
 
-    new-instance v0, Ljava/util/HashSet;
+    const/4 v1, 0x1
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    sget-object v3, Lx6e;->e:Lz8d;
+    const-string p4, "extra_calling_pid"
 
-    move v4, v2
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    :goto_1
-    iget v5, v3, Lz8d;->d:I
+    move-result v1
 
-    if-ge v4, v5, :cond_1
+    invoke-virtual {v0, p4, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
 
-    new-instance v5, Lx6e;
+    iput-object p0, p3, Lbg8;->b:Ljava/lang/Object;
 
-    invoke-virtual {v3, v4}, Lz8d;->get(I)Ljava/lang/Object;
+    new-instance p4, Landroid/media/browse/MediaBrowser;
 
-    move-result-object v6
+    iget-object p3, p3, Lbg8;->a:Ljava/lang/Object;
 
-    check-cast v6, Ljava/lang/Integer;
+    check-cast p3, Ldz8;
 
-    invoke-virtual {v6}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v6
+    invoke-direct {p4, p1, p2, p3, v0}, Landroid/media/browse/MediaBrowser;-><init>(Landroid/content/Context;Landroid/content/ComponentName;Landroid/media/browse/MediaBrowser$ConnectionCallback;Landroid/os/Bundle;)V
 
-    invoke-direct {v5, v6}, Lx6e;-><init>(I)V
-
-    invoke-virtual {v0, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v2
-
-    :goto_2
-    iget v4, v1, Lz8d;->d:I
-
-    if-ge v3, v4, :cond_2
-
-    new-instance v4, Lx6e;
-
-    invoke-virtual {v1, v3}, Lz8d;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Integer;
-
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    invoke-direct {v4, v5}, Lx6e;-><init>(I)V
-
-    invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    new-instance v1, Ly6e;
-
-    invoke-direct {v1, v0}, Ly6e;-><init>(Ljava/util/HashSet;)V
-
-    new-instance v0, Landroid/util/SparseBooleanArray;
-
-    invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
-
-    sget-object v1, Lcua;->c:[I
-
-    array-length v3, v1
-
-    move v4, v2
-
-    :goto_3
-    const/4 v5, 0x1
-
-    if-ge v4, v3, :cond_3
-
-    aget v6, v1, v4
-
-    const/4 v7, 0x0
-
-    xor-int/2addr v7, v5
-
-    invoke-static {v7}, Ligi;->h(Z)V
-
-    invoke-virtual {v0, v6, v5}, Landroid/util/SparseBooleanArray;->append(IZ)V
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    new-instance v1, Lltb;
-
-    xor-int/2addr v2, v5
-
-    invoke-static {v2}, Ligi;->h(Z)V
-
-    new-instance v2, Lky5;
-
-    invoke-direct {v2, v0}, Lky5;-><init>(Landroid/util/SparseBooleanArray;)V
-
-    invoke-direct {v1, v2}, Lltb;-><init>(Lky5;)V
-
-    sput-object v1, Lez8;->f:Lltb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly6e;Lltb;Lec7;Lec7;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lez8;->a:Ly6e;
-
-    iput-object p2, p0, Lez8;->b:Lltb;
-
-    iput-object p3, p0, Lez8;->c:Lec7;
-
-    iput-object p4, p0, Lez8;->d:Lec7;
+    iput-object p4, p0, Lez8;->b:Landroid/media/browse/MediaBrowser;
 
     return-void
 .end method

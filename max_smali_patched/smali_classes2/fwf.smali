@@ -1,131 +1,110 @@
 .class public final Lfwf;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lem4;
 
 
-# instance fields
-.field public final synthetic X:Ltwf;
+# static fields
+.field public static final a:Lfwf;
 
-.field public final synthetic Y:Ljava/nio/ByteBuffer;
-
-.field public o:I
+.field public static final b:Lgwf;
 
 
 # direct methods
-.method public constructor <init>(Ltwf;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lfwf;->X:Ltwf;
+    new-instance v0, Lfwf;
 
-    iput-object p2, p0, Lfwf;->Y:Ljava/nio/ByteBuffer;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    sput-object v0, Lfwf;->a:Lfwf;
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget-object v0, Lgwf;->b:Lgwf;
+
+    sput-object v0, Lfwf;->b:Lgwf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Llm4;
+    .locals 1
 
-    check-cast p1, Lg54;
+    sget-object v0, Lfwf;->b:Lgwf;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfwf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfwf;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lfwf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
+    .locals 9
 
-    new-instance p1, Lfwf;
+    sget-object v0, Lfwf;->b:Lgwf;
 
-    iget-object v0, p0, Lfwf;->X:Ltwf;
+    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
 
-    iget-object v1, p0, Lfwf;->Y:Ljava/nio/ByteBuffer;
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    invoke-direct {p1, v0, v1, p2}, Lfwf;-><init>(Ltwf;Ljava/nio/ByteBuffer;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
-.end method
+    if-nez v0, :cond_0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lfwf;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 p1, 0x0
 
     return-object p1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    sget-object v0, Lgwf;->b:Lgwf;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget-object v0, Lgwf;->c:Lhm4;
 
-    throw p1
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lom4;
+
+    new-instance v7, Ljr1;
+
+    const/16 v0, 0xe
+
+    invoke-direct {v7, p3, v0}, Ljr1;-><init>(Landroid/os/Bundle;I)V
+
+    const/16 v8, 0x10
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v8}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
+
+    return-object v1
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    move-object v3, p2
 
-    iget-object p1, p0, Lfwf;->X:Ltwf;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget-object p1, p1, Ltwf;->b:Ljava/nio/channels/AsynchronousByteChannel;
+    const-string p2, "invalid route "
 
-    iput v1, p0, Lfwf;->o:I
+    invoke-static {p2, v3}, Lt02;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
 
-    new-instance v0, Ly22;
+    move-result-object p2
 
-    invoke-static {p0}, Ls9i;->b(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Ly22;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    invoke-virtual {v0}, Ly22;->o()V
-
-    sget-object v1, Lkv;->b:Lkv;
-
-    iget-object v2, p0, Lfwf;->Y:Ljava/nio/ByteBuffer;
-
-    invoke-interface {p1, v2, v0, v1}, Ljava/nio/channels/AsynchronousByteChannel;->write(Ljava/nio/ByteBuffer;Ljava/lang/Object;Ljava/nio/channels/CompletionHandler;)V
-
-    invoke-virtual {v0}, Ly22;->n()Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    throw p1
 .end method

@@ -1,48 +1,47 @@
 .class public final Lo23;
-.super Lp14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lh13;
+.field public final a:J
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public o:I
+.field public final c:Lqhg;
+
+.field public final d:Z
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/CharSequence;
+
+.field public final g:Lomb;
+
+.field public final h:Lxe0;
 
 
 # direct methods
-.method public constructor <init>(Lh13;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLjava/lang/CharSequence;Lqhg;ZLjava/lang/String;Ljava/lang/CharSequence;Lomb;Lxe0;)V
     .locals 0
 
-    iput-object p1, p0, Lo23;->X:Lh13;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lo23;->a:J
+
+    iput-object p3, p0, Lo23;->b:Ljava/lang/CharSequence;
+
+    iput-object p4, p0, Lo23;->c:Lqhg;
+
+    iput-boolean p5, p0, Lo23;->d:Z
+
+    iput-object p6, p0, Lo23;->e:Ljava/lang/String;
+
+    iput-object p7, p0, Lo23;->f:Ljava/lang/CharSequence;
+
+    iput-object p8, p0, Lo23;->g:Lomb;
+
+    iput-object p9, p0, Lo23;->h:Lxe0;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lo23;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lo23;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lo23;->o:I
-
-    iget-object p1, p0, Lo23;->X:Lh13;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lh13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

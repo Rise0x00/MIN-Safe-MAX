@@ -2,92 +2,86 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbqd;
 
-# static fields
-.field public static final synthetic a:Laqd;
 
-.field public static final b:Ljava/lang/String;
-
-.field public static final c:[Ljava/lang/String;
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Laqd;->a:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    new-instance v0, Laqd;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    sput-object v0, Laqd;->a:Laqd;
+    return v0
 
-    const-class v0, Lbqd;
+    :cond_0
+    instance-of v1, p1, Laqd;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Laqd;
+
+    iget-wide v3, p0, Laqd;->a:J
+
+    iget-wide v5, p1, Laqd;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Laqd;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "VideoMsg(duration="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Laqd;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Laqd;->b:Ljava/lang/String;
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const-string v1, "android.permission.WRITE_EXTERNAL_STORAGE"
-
-    const-string v2, "android.permission.READ_EXTERNAL_STORAGE"
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    const/16 v6, 0x1d
-
-    if-lt v0, v6, :cond_2
-
-    if-ne v0, v6, :cond_0
-
-    new-array v0, v3, [Ljava/lang/String;
-
-    aput-object v2, v0, v5
-
-    aput-object v1, v0, v4
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x21
-
-    if-lt v0, v1, :cond_1
-
-    new-array v0, v3, [Ljava/lang/String;
-
-    const-string v1, "android.permission.READ_MEDIA_IMAGES"
-
-    aput-object v1, v0, v5
-
-    const-string v1, "android.permission.READ_MEDIA_VIDEO"
-
-    aput-object v1, v0, v4
-
-    goto :goto_0
-
-    :cond_1
-    new-array v0, v4, [Ljava/lang/String;
-
-    aput-object v2, v0, v5
-
-    goto :goto_0
-
-    :cond_2
-    new-array v0, v3, [Ljava/lang/String;
-
-    aput-object v2, v0, v5
-
-    aput-object v1, v0, v4
-
-    :goto_0
-    sput-object v0, Laqd;->c:[Ljava/lang/String;
-
-    return-void
+    return-object v0
 .end method

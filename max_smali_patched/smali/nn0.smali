@@ -4,11 +4,5 @@
 
 
 # virtual methods
-.method public n()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract o(Lzl5;J)Lmn0;
+.method public abstract accept(Ljava/lang/Object;Ljava/lang/Object;)V
 .end method

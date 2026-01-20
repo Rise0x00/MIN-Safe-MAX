@@ -1,34 +1,16 @@
 .class public final Lxh9;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-    .locals 0
-
-    iput-object p2, p0, Lxh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Lbr6;
 
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
+
+    check-cast p1, Ljava/util/Set;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +20,7 @@
 
     check-cast p1, Lxh9;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lxh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,33 +28,23 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lxh9;
+    new-instance p1, Lxh9;
 
-    iget-object v1, p0, Lxh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    const/4 v0, 0x2
 
-    invoke-direct {v0, p2, v1}, Lxh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    invoke-direct {p1, v0, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lxh9;->o:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 0
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lxh9;->o:Ljava/lang/Object;
-
-    check-cast p1, Ldg9;
-
-    iget-object v0, p0, Lxh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-static {v0, p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->x0(Lone/me/sdk/messagewrite/MessageWriteWidget;Ldg9;)V
-
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

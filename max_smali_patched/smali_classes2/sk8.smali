@@ -1,8 +1,6 @@
-.class public interface abstract Lsk8;
+.class public abstract synthetic Lsk8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract n(Ltk8;)V
-.end method
+# interfaces
+.implements Lnq6;

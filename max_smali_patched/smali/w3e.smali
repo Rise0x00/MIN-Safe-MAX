@@ -1,435 +1,164 @@
 .class public final Lw3e;
-.super Lm36;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:Lw3e;
+
+.field public static final d:Lw3e;
+
+
 # instance fields
-.field public final b:Lwbg;
+.field public final a:I
 
-.field public c:Z
-
-.field public d:Lxg6;
-
-.field public volatile o:Z
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lwbg;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    new-instance v0, Lw3e;
+
+    const/4 v1, 0x0
+
+    const/4 v2, -0x1
+
+    invoke-direct {v0, v2, v1}, Lw3e;-><init>(IZ)V
+
+    sput-object v0, Lw3e;->c:Lw3e;
+
+    new-instance v0, Lw3e;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v2, v1}, Lw3e;-><init>(IZ)V
+
+    sput-object v0, Lw3e;->d:Lw3e;
+
+    return-void
+.end method
+
+.method public constructor <init>(IZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lw3e;->b:Lwbg;
+    iput p1, p0, Lw3e;->a:I
+
+    iput-boolean p2, p0, Lw3e;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-boolean v0, p0, Lw3e;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lw3e;->o:Z
-
-    if-eqz v0, :cond_1
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    iget-boolean v0, p0, Lw3e;->c:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lw3e;->d:Lxg6;
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lxg6;
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lxg6;-><init>(IB)V
-
-    iput-object v0, p0, Lw3e;->d:Lxg6;
-
-    :cond_2
-    invoke-virtual {v0, p1}, Lxg6;->p(Ljava/lang/Object;)V
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_3
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lw3e;->c:Z
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lw3e;->b:Lwbg;
-
-    invoke-virtual {v0, p1}, Lwbg;->b(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Lw3e;->h()V
-
-    return-void
-
-    :goto_0
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget-boolean v0, p0, Lw3e;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
     :cond_0
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lw3e;->o:Z
-
-    if-eqz v0, :cond_1
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lw3e;->o:Z
-
-    iget-boolean v1, p0, Lw3e;->c:Z
-
-    if-eqz v1, :cond_3
-
-    iget-object v0, p0, Lw3e;->d:Lxg6;
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lxg6;
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lxg6;-><init>(IB)V
-
-    iput-object v0, p0, Lw3e;->d:Lxg6;
-
-    :cond_2
-    sget-object v1, Lbea;->a:Lbea;
-
-    invoke-virtual {v0, v1}, Lxg6;->p(Ljava/lang/Object;)V
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_3
-    iput-boolean v0, p0, Lw3e;->c:Z
-
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lw3e;->b:Lwbg;
-
-    invoke-virtual {v0}, Lwbg;->c()V
-
-    return-void
-
-    :goto_0
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final e(Lecf;)V
-    .locals 3
-
-    iget-boolean v0, p0, Lw3e;->o:Z
-
-    const/4 v1, 0x1
-
-    if-nez v0, :cond_3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lw3e;->o:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-boolean v0, p0, Lw3e;->c:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lw3e;->d:Lxg6;
+    instance-of v0, p1, Lw3e;
 
     if-nez v0, :cond_1
 
-    new-instance v0, Lxg6;
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lxg6;-><init>(IB)V
-
-    iput-object v0, p0, Lw3e;->d:Lxg6;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
+    goto :goto_1
 
     :cond_1
+    check-cast p1, Lw3e;
+
+    iget v0, p1, Lw3e;->a:I
+
+    iget v1, p0, Lw3e;->a:I
+
+    if-ne v1, v0, :cond_2
+
+    iget-boolean v0, p0, Lw3e;->b:Z
+
+    iget-boolean p1, p1, Lw3e;->b:Z
+
+    if-ne v0, p1, :cond_2
+
     :goto_0
-    new-instance v1, Laea;
+    const/4 p1, 0x1
 
-    invoke-direct {v1, p1}, Laea;-><init>(Lecf;)V
-
-    invoke-virtual {v0, v1}, Lxg6;->p(Ljava/lang/Object;)V
-
-    monitor-exit p0
-
-    return-void
+    return p1
 
     :cond_2
-    iput-boolean v1, p0, Lw3e;->c:Z
-
-    const/4 v1, 0x0
-
     :goto_1
-    monitor-exit p0
+    const/4 p1, 0x0
 
-    goto :goto_3
-
-    :goto_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-
-    :cond_3
-    :goto_3
-    if-eqz v1, :cond_4
-
-    invoke-interface {p1}, Lecf;->cancel()V
-
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lw3e;->b:Lwbg;
-
-    invoke-virtual {v0, p1}, Lwbg;->e(Lecf;)V
-
-    invoke-virtual {p0}, Lw3e;->h()V
-
-    return-void
+    return p1
 .end method
 
-.method public final g(Lz36;)V
-    .locals 1
-
-    iget-object v0, p0, Lw3e;->b:Lwbg;
-
-    invoke-virtual {v0, p1}, Lr26;->f(Lccf;)V
-
-    return-void
-.end method
-
-.method public final h()V
+.method public final hashCode()I
     .locals 2
 
-    :goto_0
-    monitor-enter p0
+    iget v0, p0, Lw3e;->a:I
 
-    :try_start_0
-    iget-object v0, p0, Lw3e;->d:Lxg6;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    const/4 v0, 0x0
+    iget-boolean v1, p0, Lw3e;->b:Z
 
-    iput-boolean v0, p0, Lw3e;->c:Z
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    monitor-exit p0
+    move-result-object v1
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :catchall_0
-    move-exception v0
+    move-result v0
 
-    goto :goto_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    :cond_0
-    const/4 v1, 0x0
+    move-result v1
 
-    iput-object v1, p0, Lw3e;->d:Lxg6;
+    add-int/lit8 v0, v0, 0x1f
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lw3e;->b:Lwbg;
+    add-int/2addr v0, v1
 
-    invoke-virtual {v0, v1}, Lxg6;->h(Lccf;)Z
-
-    goto :goto_0
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    return v0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-boolean v0, p0, Lw3e;->o:Z
+    iget v0, p0, Lw3e;->a:I
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
+    move-result-object v0
 
-    return-void
+    iget-boolean v1, p0, Lw3e;->b:Z
 
-    :cond_0
-    monitor-enter p0
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    :try_start_0
-    iget-boolean v0, p0, Lw3e;->o:Z
+    move-result-object v1
 
-    const/4 v1, 0x1
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iput-boolean v1, p0, Lw3e;->o:Z
-
-    iget-boolean v0, p0, Lw3e;->c:Z
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lw3e;->d:Lxg6;
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lxg6;
+    move-result-object v0
 
     const/4 v1, 0x2
 
-    const/4 v3, 0x0
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
-    invoke-direct {v0, v1, v3}, Lxg6;-><init>(IB)V
+    move-result-object v0
 
-    iput-object v0, p0, Lw3e;->d:Lxg6;
+    const/4 v1, 0x0
 
-    goto :goto_0
+    const-string v2, "%d defer:%b"
 
-    :catchall_0
-    move-exception p1
+    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    goto :goto_2
+    move-result-object v0
 
-    :cond_2
-    :goto_0
-    new-instance v1, Lzda;
-
-    invoke-direct {v1, p1}, Lzda;-><init>(Ljava/lang/Throwable;)V
-
-    iget-object p1, v0, Lxg6;->c:Ljava/lang/Object;
-
-    check-cast p1, [Ljava/lang/Object;
-
-    aput-object v1, p1, v2
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_3
-    iput-boolean v1, p0, Lw3e;->c:Z
-
-    move v1, v2
-
-    :goto_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v1, :cond_4
-
-    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lw3e;->b:Lwbg;
-
-    invoke-virtual {v0, p1}, Lwbg;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :goto_2
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-object v0
 .end method

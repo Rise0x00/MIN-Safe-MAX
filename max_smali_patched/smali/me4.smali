@@ -3,307 +3,64 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/LinkedHashMap;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
+.method public static a(Landroid/security/keystore/KeyGenParameterSpec$Builder;)Landroid/security/keystore/KeyGenParameterSpec;
+    .locals 0
 
-    new-instance v0, Lxg6;
+    invoke-virtual {p0}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->build()Landroid/security/keystore/KeyGenParameterSpec;
 
-    const/4 v1, 0x4
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Lxg6;-><init>(I)V
+    return-object p0
+.end method
 
-    const-string v1, "Start"
+.method public static b(Ljava/lang/String;I)Landroid/security/keystore/KeyGenParameterSpec$Builder;
+    .locals 1
 
-    invoke-static {v1}, Lec7;->n(Ljava/lang/Object;)Lz8d;
+    new-instance v0, Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
-    move-result-object v1
+    invoke-direct {v0, p0, p1}, Landroid/security/keystore/KeyGenParameterSpec$Builder;-><init>(Ljava/lang/String;I)V
 
-    const-string v2, "TransformerInternal"
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v2, v1}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
+.method public static c(Ljavax/crypto/KeyGenerator;Landroid/security/keystore/KeyGenParameterSpec;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/security/InvalidAlgorithmParameterException;
+        }
+    .end annotation
 
-    const-string v1, "InputFormat"
-
-    const-string v2, "OutputFormat"
-
-    invoke-static {v1, v2}, Lec7;->o(Ljava/lang/Object;Ljava/lang/Object;)Lz8d;
-
-    move-result-object v3
-
-    const-string v4, "AssetLoader"
-
-    invoke-virtual {v0, v4, v3}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v5, "InputFormat"
-
-    const-string v6, "OutputFormat"
-
-    const-string v7, "AcceptedInput"
-
-    const-string v8, "ProducedOutput"
-
-    const-string v9, "InputEnded"
-
-    const-string v10, "OutputEnded"
-
-    filled-new-array/range {v5 .. v10}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    const/4 v4, 0x6
-
-    invoke-static {v4, v3}, Lsmi;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v4, v3}, Lec7;->i(I[Ljava/lang/Object;)Lz8d;
-
-    move-result-object v3
-
-    const-string v5, "AudioDecoder"
-
-    invoke-virtual {v0, v5, v3}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v3, "RegisterNewInputStream"
-
-    const-string v5, "OutputEnded"
-
-    invoke-static {v3, v5}, Lec7;->o(Ljava/lang/Object;Ljava/lang/Object;)Lz8d;
-
-    move-result-object v6
-
-    const-string v7, "AudioGraph"
-
-    invoke-virtual {v0, v7, v6}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v6, "ProducedOutput"
-
-    filled-new-array {v3, v2, v6}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const/4 v3, 0x3
-
-    invoke-static {v3, v2}, Lsmi;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v3, v2}, Lec7;->i(I[Ljava/lang/Object;)Lz8d;
-
-    move-result-object v2
-
-    const-string v3, "AudioMixer"
-
-    invoke-virtual {v0, v3, v2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v10, "InputEnded"
-
-    const-string v11, "OutputEnded"
-
-    const-string v6, "InputFormat"
-
-    const-string v7, "OutputFormat"
-
-    const-string v8, "AcceptedInput"
-
-    const-string v9, "ProducedOutput"
-
-    filled-new-array/range {v6 .. v11}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v4, v2}, Lsmi;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v4, v2}, Lec7;->i(I[Ljava/lang/Object;)Lz8d;
-
-    move-result-object v2
-
-    const-string v3, "AudioEncoder"
-
-    invoke-virtual {v0, v3, v2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v10, "InputEnded"
-
-    const-string v11, "OutputEnded"
-
-    const-string v6, "InputFormat"
-
-    const-string v7, "OutputFormat"
-
-    const-string v8, "AcceptedInput"
-
-    const-string v9, "ProducedOutput"
-
-    filled-new-array/range {v6 .. v11}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v4, v2}, Lsmi;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v4, v2}, Lec7;->i(I[Ljava/lang/Object;)Lz8d;
-
-    move-result-object v2
-
-    const-string v3, "VideoDecoder"
-
-    invoke-virtual {v0, v3, v2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v6, "RegisterNewInputStream"
-
-    const-string v7, "SurfaceTextureInput"
-
-    const-string v8, "QueueFrame"
-
-    const-string v9, "QueueBitmap"
-
-    const-string v10, "QueueTexture"
-
-    const-string v11, "RenderedToOutputSurface"
-
-    const-string v12, "OutputTextureRendered"
-
-    const-string v13, "ReceiveEndOfAllInput"
-
-    const-string v14, "SignalEnded"
-
-    filled-new-array/range {v6 .. v14}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    const/16 v3, 0x9
-
-    invoke-static {v3, v2}, Lsmi;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v3, v2}, Lec7;->i(I[Ljava/lang/Object;)Lz8d;
-
-    move-result-object v2
-
-    const-string v3, "VideoFrameProcessor"
-
-    invoke-virtual {v0, v3, v2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v2, "SurfaceTextureTransformFix"
-
-    const-string v3, "SignalEOS"
-
-    invoke-static {v3, v2}, Lec7;->o(Ljava/lang/Object;Ljava/lang/Object;)Lz8d;
-
-    move-result-object v2
-
-    const-string v6, "ExternalTextureManager"
-
-    invoke-virtual {v0, v6, v2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v2, "BitmapTextureManager"
-
-    invoke-static {v3}, Lec7;->n(Ljava/lang/Object;)Lz8d;
-
-    move-result-object v6
-
-    invoke-virtual {v0, v2, v6}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v2, "TexIdTextureManager"
-
-    invoke-static {v3}, Lec7;->n(Ljava/lang/Object;)Lz8d;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v2, "OutputTextureRendered"
-
-    invoke-static {v2}, Lec7;->n(Ljava/lang/Object;)Lz8d;
-
-    move-result-object v2
-
-    const-string v3, "Compositor"
-
-    invoke-virtual {v0, v3, v2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v10, "InputEnded"
-
-    const-string v11, "OutputEnded"
-
-    const-string v6, "InputFormat"
-
-    const-string v7, "OutputFormat"
-
-    const-string v8, "AcceptedInput"
-
-    const-string v9, "ProducedOutput"
-
-    filled-new-array/range {v6 .. v11}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-static {v4, v2}, Lsmi;->a(I[Ljava/lang/Object;)V
-
-    invoke-static {v4, v2}, Lec7;->i(I[Ljava/lang/Object;)Lz8d;
-
-    move-result-object v2
-
-    const-string v3, "VideoEncoder"
-
-    invoke-virtual {v0, v3, v2}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    const-string v2, "AcceptedInput"
-
-    const-string v3, "InputEnded"
-
-    const-string v4, "CanWriteSample"
-
-    invoke-static {v1, v4, v2, v3, v5}, Lec7;->p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lz8d;
-
-    move-result-object v1
-
-    const-string v2, "Muxer"
-
-    invoke-virtual {v0, v2, v1}, Lxg6;->T(Ljava/lang/Object;Ljava/lang/Object;)Lxg6;
-
-    invoke-virtual {v0}, Lxg6;->C()Lic7;
-
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    sput-object v0, Lme4;->a:Ljava/util/LinkedHashMap;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-virtual {p0, p1}, Ljavax/crypto/KeyGenerator;->init(Ljava/security/spec/AlgorithmParameterSpec;)V
 
     return-void
 .end method
 
-.method public static declared-synchronized a()V
-    .locals 2
+.method public static d(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
+    .locals 1
 
-    const-class v0, Lme4;
+    const-string v0, "CBC"
 
-    monitor-enter v0
+    filled-new-array {v0}, [Ljava/lang/String;
 
-    :try_start_0
-    const-class v1, Lme4;
+    move-result-object v0
 
-    monitor-enter v1
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
+    invoke-virtual {p0, v0}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setBlockModes([Ljava/lang/String;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
 
     return-void
+.end method
 
-    :goto_0
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+.method public static e(Landroid/security/keystore/KeyGenParameterSpec$Builder;)V
+    .locals 1
 
-    throw v1
+    const-string v0, "PKCS7Padding"
 
-    :catchall_0
-    move-exception v1
+    filled-new-array {v0}, [Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/security/keystore/KeyGenParameterSpec$Builder;->setEncryptionPaddings([Ljava/lang/String;)Landroid/security/keystore/KeyGenParameterSpec$Builder;
+
+    return-void
 .end method

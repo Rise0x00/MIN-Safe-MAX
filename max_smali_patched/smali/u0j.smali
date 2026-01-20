@@ -1,331 +1,90 @@
-.class public abstract Lu0j;
+.class public final Lu0j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lu0j;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 3
 
-    const-string v1, "getDataColumn: _data - ["
+    new-instance v0, Lu0j;
 
-    const-string v0, "_data"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    sput-object v0, Lu0j;->a:Lu0j;
 
-    move-result-object v4
+    new-instance v0, Lbri;
 
-    const/4 v8, 0x0
+    const/4 v1, 0x1
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    move-result-object v2
+    const-class v1, Lpri;
 
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v5, p2
-
-    move-object v6, p3
-
-    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    if-eqz p0, :cond_0
-
-    :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
-
-    move-result p1
-
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-    :try_end_1
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    return-object p1
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object v8, p0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    return-object v8
-
-    :catchall_1
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    move-object p1, v0
-
-    move-object p0, v8
-
-    :goto_0
-    :try_start_2
-    const-string p2, "FileUtils"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "]"
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-
-    :cond_1
-    return-object v8
-
-    :goto_1
-    if-eqz v8, :cond_2
-
-    invoke-interface {v8}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    throw p1
-.end method
-
-.method public static b(Ljava/lang/String;)Lxg6;
-    .locals 8
-
-    const-string v0, "HTTP/1."
-
-    const/4 v1, 0x0
-
-    invoke-static {p0, v0, v1}, Lfbf;->u(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    const/4 v2, 0x4
-
-    sget-object v3, Lmec;->b:Lmec;
-
-    const/16 v4, 0x20
-
-    const-string v5, "Unexpected status line: "
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    const/16 v1, 0x9
-
-    if-lt v0, v1, :cond_2
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v0
-
-    if-ne v0, v4, :cond_2
-
-    const/4 v0, 0x7
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x30
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v3, 0x1
-
-    if-ne v0, v3, :cond_1
-
-    sget-object v3, Lmec;->c:Lmec;
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/net/ProtocolException;
-
-    invoke-virtual {v5, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    new-instance v0, Ljava/net/ProtocolException;
-
-    invoke-virtual {v5, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    const-string v0, "ICY "
-
-    invoke-static {p0, v0, v1}, Lfbf;->u(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    move v1, v2
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    add-int/lit8 v6, v1, 0x3
-
-    if-lt v0, v6, :cond_6
-
-    :try_start_0
-    invoke-virtual {p0, v1, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    const/4 v2, 0x2
 
-    move-result v0
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    move-result-object v0
 
-    move-result v7
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    if-le v7, v6, :cond_5
+    move-result-object v0
 
-    invoke-virtual {p0, v6}, Ljava/lang/String;->charAt(I)C
+    const/4 v2, 0x4
 
-    move-result v6
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    if-ne v6, v4, :cond_4
+    move-result-object v0
 
-    add-int/2addr v1, v2
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x5
 
-    goto :goto_1
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    :cond_4
-    new-instance v0, Ljava/net/ProtocolException;
+    move-result-object v0
 
-    invoke-virtual {v5, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-direct {v0, p0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+    const/4 v2, 0x6
 
-    throw v0
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    :cond_5
-    const-string p0, ""
+    move-result-object v0
 
-    :goto_1
-    new-instance v1, Lxg6;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    const/16 v2, 0x18
+    move-result-object v0
 
-    invoke-direct {v1, v0, v2, v3, p0}, Lxg6;-><init>(IILjava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
-    return-object v1
+    return-void
+.end method
 
-    :catch_0
-    new-instance v0, Ljava/net/ProtocolException;
 
-    invoke-virtual {v5, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-object p0
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-direct {v0, p0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    throw v0
-
-    :cond_6
-    new-instance v0, Ljava/net/ProtocolException;
-
-    invoke-virtual {v5, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_7
-    new-instance v0, Ljava/net/ProtocolException;
-
-    invoke-virtual {v5, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    throw p1
 .end method

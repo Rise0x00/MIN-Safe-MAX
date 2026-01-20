@@ -1,23 +1,75 @@
 .class public final Lrab;
-.super Ljava/lang/Object;
+.super Lone/me/sdk/concurrent/LinkedTransferQueue34;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public final b:Lv00;
+    if-nez p1, :cond_0
 
+    const/4 v0, 0x1
 
-# direct methods
-.method public constructor <init>(JLv00;)V
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final offer(Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ljava/lang/Runnable;
 
-    iput-wide p1, p0, Lrab;->a:J
+    invoke-virtual {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->tryTransfer(Ljava/lang/Object;)Z
 
-    iput-object p3, p0, Lrab;->b:Lv00;
+    move-result p1
 
-    return-void
+    return p1
+.end method
+
+.method public final bridge remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-super {p0, p1}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->remove(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

@@ -1,611 +1,406 @@
 .class public final Lokf;
-.super Landroid/widget/LinearLayout;
+.super Likf;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic c:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lokf;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public a:Landroid/animation/ValueAnimator;
+.field public final X:J
 
-.field public final synthetic b:Lcom/google/android/material/tabs/TabLayout;
+.field public final Y:J
+
+.field public final Z:Ljava/util/List;
+
+.field public final a:J
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final o:Z
+
+.field public final t0:Z
+
+.field public final u0:J
+
+.field public final v0:I
+
+.field public final w0:I
+
+.field public final x0:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/tabs/TabLayout;Landroid/content/Context;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lhne;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lhne;-><init>(I)V
+
+    sput-object v0, Lokf;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JZZZZJJLjava/util/List;ZJIII)V
     .locals 0
 
-    iput-object p1, p0, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    .line 2
+    iput-wide p1, p0, Lokf;->a:J
 
-    const/4 p1, 0x0
+    .line 3
+    iput-boolean p3, p0, Lokf;->b:Z
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setWillNotDraw(Z)V
+    .line 4
+    iput-boolean p4, p0, Lokf;->c:Z
+
+    .line 5
+    iput-boolean p5, p0, Lokf;->d:Z
+
+    .line 6
+    iput-boolean p6, p0, Lokf;->o:Z
+
+    .line 7
+    iput-wide p7, p0, Lokf;->X:J
+
+    .line 8
+    iput-wide p9, p0, Lokf;->Y:J
+
+    .line 9
+    invoke-static {p11}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lokf;->Z:Ljava/util/List;
+
+    .line 10
+    iput-boolean p12, p0, Lokf;->t0:Z
+
+    .line 11
+    iput-wide p13, p0, Lokf;->u0:J
+
+    .line 12
+    iput p15, p0, Lokf;->v0:I
+
+    move/from16 p1, p16
+
+    .line 13
+    iput p1, p0, Lokf;->w0:I
+
+    move/from16 p1, p17
+
+    .line 14
+    iput p1, p0, Lokf;->x0:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 11
+
+    .line 15
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 16
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lokf;->a:J
+
+    .line 17
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iput-boolean v0, p0, Lokf;->b:Z
+
+    .line 18
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_1
+    move v0, v1
+
+    :goto_1
+    iput-boolean v0, p0, Lokf;->c:Z
+
+    .line 19
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    if-ne v0, v2, :cond_2
+
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_2
+    move v0, v1
+
+    :goto_2
+    iput-boolean v0, p0, Lokf;->d:Z
+
+    .line 20
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    if-ne v0, v2, :cond_3
+
+    move v0, v2
+
+    goto :goto_3
+
+    :cond_3
+    move v0, v1
+
+    :goto_3
+    iput-boolean v0, p0, Lokf;->o:Z
+
+    .line 21
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lokf;->X:J
+
+    .line 22
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lokf;->Y:J
+
+    .line 23
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 24
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
+
+    move v4, v1
+
+    :goto_4
+    if-ge v4, v0, :cond_4
+
+    .line 25
+    new-instance v5, Lmkf;
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v6
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v7
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v9
+
+    invoke-direct/range {v5 .. v10}, Lmkf;-><init>(IJJ)V
+
+    .line 26
+    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_4
+
+    .line 27
+    :cond_4
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lokf;->Z:Ljava/util/List;
+
+    .line 28
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result v0
+
+    if-ne v0, v2, :cond_5
+
+    move v1, v2
+
+    :cond_5
+    iput-boolean v1, p0, Lokf;->t0:Z
+
+    .line 29
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lokf;->u0:J
+
+    .line 30
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lokf;->v0:I
+
+    .line 31
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lokf;->w0:I
+
+    .line 32
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Lokf;->x0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 6
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 5
 
-    iget-object v0, p0, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
+    iget-wide v0, p0, Lokf;->a:J
 
-    iget v1, v0, Lcom/google/android/material/tabs/TabLayout;->e1:I
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    if-eqz v1, :cond_1
+    iget-boolean p2, p0, Lokf;->b:Z
 
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getTabSelectedIndicator()Landroid/graphics/drawable/Drawable;
+    int-to-byte p2, p2
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget-boolean p2, p0, Lokf;->c:Z
 
-    move-result-object v1
+    int-to-byte p2, p2
 
-    iget v1, v1, Landroid/graphics/Rect;->left:I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    const/4 v2, -0x1
+    iget-boolean p2, p0, Lokf;->d:Z
 
-    if-ne v1, v2, :cond_0
+    int-to-byte p2, p2
 
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getTabSelectedIndicator()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    move-result-object v1
+    iget-boolean p2, p0, Lokf;->o:Z
 
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    int-to-byte p2, p2
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget v1, v1, Landroid/graphics/Rect;->right:I
+    iget-wide v0, p0, Lokf;->X:J
 
-    if-eq v1, v2, :cond_1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    :cond_0
-    return-void
+    iget-wide v0, p0, Lokf;->Y:J
 
-    :cond_1
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    move-result-object v1
+    iget-object p2, p0, Lokf;->Z:Ljava/util/List;
 
-    iget-object v2, v0, Lcom/google/android/material/tabs/TabLayout;->U0:Low3;
-
-    iget-object v3, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, v1}, Low3;->c(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;)Landroid/graphics/RectF;
-
-    move-result-object v1
-
-    iget v2, v1, Landroid/graphics/RectF;->left:F
-
-    float-to-int v2, v2
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/graphics/Rect;->top:I
-
-    iget v1, v1, Landroid/graphics/RectF;->right:F
-
-    float-to-int v1, v1
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v3, v2, v4, v1, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    iput p1, v0, Lcom/google/android/material/tabs/TabLayout;->a:I
-
-    return-void
-.end method
-
-.method public final b(I)V
-    .locals 4
-
-    iget-object v0, p0, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
-
-    iget-object v1, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    iget-object v0, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    iget v2, v1, Landroid/graphics/Rect;->left:I
-
-    const/4 v3, 0x0
-
-    iget v1, v1, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v0, v2, v3, v1, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    return-void
-.end method
-
-.method public final c(Landroid/view/View;Landroid/view/View;F)V
-    .locals 6
-
-    iget-object v1, p0, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, v1, Lcom/google/android/material/tabs/TabLayout;->U0:Low3;
-
-    iget-object v5, v1, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    invoke-virtual/range {v0 .. v5}, Low3;->i(Lcom/google/android/material/tabs/TabLayout;Landroid/view/View;Landroid/view/View;FLandroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, v1, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/graphics/Rect;->top:I
-
-    iget-object p3, v1, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {p3}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/graphics/Rect;->bottom:I
-
-    const/4 v0, -0x1
-
-    invoke-virtual {p1, v0, p2, v0, p3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    const/4 v1, 0x0
 
     :goto_0
-    sget-object p1, Ltyg;->a:Ljava/util/WeakHashMap;
+    if-ge v1, v0, :cond_0
 
-    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
-
-    return-void
-.end method
-
-.method public final d(IIZ)V
-    .locals 4
-
-    iget-object v0, p0, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
-
-    iget v1, v0, Lcom/google/android/material/tabs/TabLayout;->a:I
-
-    if-ne v1, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    if-nez v2, :cond_1
+    check-cast v2, Lmkf;
 
-    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
+    iget v3, v2, Lmkf;->a:I
 
-    move-result p1
+    invoke-virtual {p1, v3}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {p0, p1}, Lokf;->a(I)V
+    iget-wide v3, v2, Lmkf;->b:J
 
-    return-void
+    invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    :cond_1
-    iput p1, v0, Lcom/google/android/material/tabs/TabLayout;->a:I
+    iget-wide v2, v2, Lmkf;->c:J
 
-    new-instance p1, Ljn;
+    invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeLong(J)V
 
-    const/4 v3, 0x1
-
-    invoke-direct {p1, p0, v1, v2, v3}, Ljn;-><init>(Ljava/lang/Object;Landroid/view/View;Landroid/view/View;I)V
-
-    if-eqz p3, :cond_2
-
-    new-instance p3, Landroid/animation/ValueAnimator;
-
-    invoke-direct {p3}, Landroid/animation/ValueAnimator;-><init>()V
-
-    iput-object p3, p0, Lokf;->a:Landroid/animation/ValueAnimator;
-
-    iget-object v0, v0, Lcom/google/android/material/tabs/TabLayout;->V0:Landroid/animation/TimeInterpolator;
-
-    invoke-virtual {p3, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    int-to-long v0, p2
-
-    invoke-virtual {p3, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    const/4 p2, 0x2
-
-    new-array p2, p2, [F
-
-    fill-array-data p2, :array_0
-
-    invoke-virtual {p3, p2}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
-
-    invoke-virtual {p3, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    invoke-virtual {p3}, Landroid/animation/ValueAnimator;->start()V
-
-    return-void
-
-    :cond_2
-    iget-object p2, p0, Lokf;->a:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->removeAllUpdateListeners()V
-
-    iget-object p2, p0, Lokf;->a:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p2, p1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    return-void
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 6
-
-    iget-object v0, p0, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
-
-    iget-object v1, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    if-gez v1, :cond_0
-
-    iget-object v1, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v1
-
-    :cond_0
-    iget v2, v0, Lcom/google/android/material/tabs/TabLayout;->N0:I
-
-    if-eqz v2, :cond_3
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x2
-
-    if-eq v2, v3, :cond_2
-
-    const/4 v3, 0x0
-
-    if-eq v2, v4, :cond_4
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_1
-
-    move v1, v3
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    sub-int/2addr v2, v1
-
-    div-int/lit8 v3, v2, 0x2
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    div-int/lit8 v1, v2, 0x2
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v2
-
-    sub-int v3, v2, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    :cond_4
-    :goto_0
-    iget-object v2, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result v2
-
-    if-lez v2, :cond_5
-
-    iget-object v2, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v2
-
-    iget-object v4, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    iget v5, v2, Landroid/graphics/Rect;->left:I
-
-    iget v2, v2, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v4, v5, v3, v2, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    iget-object v0, v0, Lcom/google/android/material/tabs/TabLayout;->B0:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    :cond_5
-    invoke-super {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
-
-    return-void
-.end method
-
-.method public final onLayout(ZIIII)V
-    .locals 0
-
-    invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
-
-    move-object p1, p0
-
-    iget-object p2, p1, Lokf;->a:Landroid/animation/ValueAnimator;
-
-    const/4 p3, -0x1
-
-    iget-object p4, p1, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->isRunning()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p4}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
-
-    move-result p4
-
-    invoke-virtual {p0, p4, p3, p2}, Lokf;->d(IIZ)V
-
-    return-void
-
     :cond_0
-    iget p2, p4, Lcom/google/android/material/tabs/TabLayout;->a:I
+    iget-boolean p2, p0, Lokf;->t0:Z
 
-    if-ne p2, p3, :cond_1
+    int-to-byte p2, p2
 
-    invoke-virtual {p4}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
 
-    move-result p2
+    iget-wide v0, p0, Lokf;->u0:J
 
-    iput p2, p4, Lcom/google/android/material/tabs/TabLayout;->a:I
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    :cond_1
-    iget p2, p4, Lcom/google/android/material/tabs/TabLayout;->a:I
+    iget p2, p0, Lokf;->v0:I
 
-    invoke-virtual {p0, p2}, Lokf;->a(I)V
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    return-void
-.end method
+    iget p2, p0, Lokf;->w0:I
 
-.method public final onMeasure(II)V
-    .locals 9
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
+    iget p2, p0, Lokf;->x0:I
 
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result v0
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    if-eq v0, v1, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    iget-object v0, p0, Lokf;->b:Lcom/google/android/material/tabs/TabLayout;
-
-    iget v1, v0, Lcom/google/android/material/tabs/TabLayout;->L0:I
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x1
-
-    if-eq v1, v3, :cond_1
-
-    iget v1, v0, Lcom/google/android/material/tabs/TabLayout;->O0:I
-
-    if-ne v1, v2, :cond_9
-
-    :cond_1
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v1
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    move v6, v5
-
-    :goto_0
-    if-ge v5, v1, :cond_3
-
-    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/view/View;->getVisibility()I
-
-    move-result v8
-
-    if-nez v8, :cond_2
-
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v7
-
-    invoke-static {v6, v7}, Ljava/lang/Math;->max(II)I
-
-    move-result v6
-
-    :cond_2
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    if-gtz v6, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v5
-
-    const/16 v7, 0x10
-
-    invoke-static {v5, v7}, Lbei;->c(Landroid/content/Context;I)F
-
-    move-result v5
-
-    float-to-int v5, v5
-
-    mul-int v7, v6, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v8
-
-    mul-int/2addr v5, v2
-
-    sub-int/2addr v8, v5
-
-    if-gt v7, v8, :cond_8
-
-    move v0, v4
-
-    :goto_1
-    if-ge v4, v1, :cond_7
-
-    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/LinearLayout$LayoutParams;
-
-    iget v5, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
-
-    const/4 v7, 0x0
-
-    if-ne v5, v6, :cond_5
-
-    iget v5, v2, Landroid/widget/LinearLayout$LayoutParams;->weight:F
-
-    cmpl-float v5, v5, v7
-
-    if-eqz v5, :cond_6
-
-    :cond_5
-    iput v6, v2, Landroid/widget/LinearLayout$LayoutParams;->width:I
-
-    iput v7, v2, Landroid/widget/LinearLayout$LayoutParams;->weight:F
-
-    move v0, v3
-
-    :cond_6
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_7
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_8
-    iput v4, v0, Lcom/google/android/material/tabs/TabLayout;->L0:I
-
-    invoke-virtual {v0, v4}, Lcom/google/android/material/tabs/TabLayout;->q(Z)V
-
-    :goto_2
-    if-eqz v3, :cond_9
-
-    invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
-
-    :cond_9
-    :goto_3
     return-void
 .end method

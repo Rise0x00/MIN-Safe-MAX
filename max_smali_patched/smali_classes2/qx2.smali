@@ -1,52 +1,82 @@
-.class public final synthetic Lqx2;
-.super Ljava/lang/Object;
+.class public final Lqx2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/LongConsumer;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Ltr6;
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ltr6;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lqx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iput-object p1, p0, Lqx2;->a:Ltr6;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(J)V
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lqx2;->a:Ltr6;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0, p1, p2}, Lqx2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lt23;->c:Lt23;
+    move-result-object p1
 
-    const/4 v8, 0x0
+    check-cast p1, Lqx2;
 
-    const/16 v9, 0x7c
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const-string v4, "local"
+    invoke-virtual {p1, p2}, Lqx2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v5, 0x0
+    return-object p2
+.end method
 
-    const/4 v6, 0x0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v7, 0x0
+    new-instance v0, Lqx2;
 
-    move-wide v2, p1
+    iget-object v1, p0, Lqx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-static/range {v1 .. v9}, Lt23;->T0(Lt23;JLjava/lang/String;Ljava/lang/Long;Ljava/lang/Long;Ljava/util/List;Ljava/lang/String;I)V
+    invoke-direct {v0, p2, v1}, Lqx2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    return-void
+    iput-object p1, v0, Lqx2;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lqx2;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lqx2;->X:Lone/me/chatscreen/ChatScreen;
+
+    iput-boolean p1, v0, Lone/me/chatscreen/ChatScreen;->D0:Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

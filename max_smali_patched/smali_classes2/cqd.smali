@@ -4,26 +4,32 @@
 
 
 # virtual methods
-.method public abstract a()Lzr9;
+.method public abstract a()I
 .end method
 
-.method public abstract d(Landroid/content/ContentResolver;Landroid/net/Uri;)V
+.method public abstract b()Z
 .end method
 
-.method public abstract getHeight()Ljava/lang/Integer;
+.method public abstract c()V
 .end method
 
-.method public abstract getWidth()Ljava/lang/Integer;
+.method public abstract d()V
 .end method
 
-.method public abstract h()Landroid/net/Uri;
+.method public abstract e(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end method
+
+.method public abstract f(Lbqd;)Ljava/lang/Object;
+.end method
+
+.method public abstract g()V
+.end method
+
+.method public abstract h()Z
 .end method
 
 .method public abstract i()Ljava/lang/String;
 .end method
 
-.method public abstract k()Ljava/lang/Integer;
-.end method
-
-.method public abstract n(Ljava/io/File;)V
+.method public abstract j(Lfpd;)V
 .end method

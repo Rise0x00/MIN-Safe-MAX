@@ -1,59 +1,93 @@
 .class public final Lkta;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lnz;
+.field public final a:Z
 
-.field public Y:Z
+.field public final b:Ljava/lang/String;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public final c:I
 
-.field public d:Lqta;
+.field public final d:Z
 
-.field public o:Lgb9;
-
-.field public final synthetic s0:Lqta;
-
-.field public t0:I
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lqta;Lp14;)V
+.method public constructor <init>(ZLjava/lang/String;IZZ)V
     .locals 0
 
-    iput-object p1, p0, Lkta;->s0:Lqta;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lkta;->a:Z
+
+    iput-object p2, p0, Lkta;->b:Ljava/lang/String;
+
+    iput p3, p0, Lkta;->c:I
+
+    iput-boolean p4, p0, Lkta;->d:Z
+
+    iput-boolean p5, p0, Lkta;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iput-object p1, p0, Lkta;->Z:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget p1, p0, Lkta;->t0:I
+    const-string v1, "Settings{notify="
 
-    const/high16 v0, -0x80000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    or-int/2addr p1, v0
+    iget-boolean v1, p0, Lkta;->a:Z
 
-    iput p1, p0, Lkta;->t0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x0
+    const-string v1, ", ringtone=\'"
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lkta;->s0:Lqta;
+    iget-object v1, p0, Lkta;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, p1, p1, v0, p0}, Lqta;->d(Lgb9;Lnz;ZLp14;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, "\', led="
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lkta;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", vibrate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lkta;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", maxPriority="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lkta;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

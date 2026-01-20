@@ -3,89 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpj9;
+.implements Lmo9;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final a:Landroid/text/Layout;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Landroid/text/Layout;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lko9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p1, p0, Lko9;->a:Landroid/text/Layout;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    sget-object v0, Lcuh;->b:Lnxa;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object v1, La98;->d:La98;
+    instance-of v1, p1, Lko9;
 
-    invoke-virtual {v0, v1}, Lnxa;->b(La98;)Z
+    const/4 v2, 0x0
 
-    move-result v2
+    if-nez v1, :cond_1
 
-    if-eqz v2, :cond_1
-
-    const-string v2, "Player autoplay. Try start autoplay after recycler layout."
-
-    const/4 v3, 0x0
-
-    const-string v4, "AutoPlayRegulator"
-
-    invoke-virtual {v0, v1, v4, v2, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_1
-    :goto_0
-    iget-object v0, p0, Lko9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    check-cast p1, Lko9;
 
-    sget-object v1, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Les7;
+    iget-object v1, p0, Lko9;->a:Landroid/text/Layout;
 
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget-object p1, p1, Lko9;->a:Landroid/text/Layout;
 
-    move-result-object v0
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lko9;->a:Lone/me/messages/list/ui/MessagesListWidget;
+    move-result p1
 
-    new-instance v2, Llk6;
+    if-nez p1, :cond_2
 
-    const/16 v3, 0x10
+    return v2
 
-    invoke-direct {v2, v0, v3, v1}, Llk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, v2}, Li7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Li7b;
-
-    iget-object v0, p0, Lko9;->a:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {v0}, Lone/me/messages/list/ui/MessagesListWidget;->E0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->K:Ld1a;
-
-    invoke-virtual {v0, p0}, Ld1a;->h(Ljava/lang/Object;)V
-
-    return-void
+    :cond_2
+    return v0
 .end method
 
-.method public final getTag()Ljava/lang/String;
+.method public final hashCode()I
     .locals 1
 
-    const-string v0, "AutoPlayRegulator"
+    iget-object v0, p0, Lko9;->a:Landroid/text/Layout;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Simple(bodyLayout="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lko9;->a:Landroid/text/Layout;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

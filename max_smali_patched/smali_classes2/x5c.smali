@@ -1,202 +1,137 @@
-.class public final synthetic Lx5c;
-.super Ljava/lang/Object;
+.class public final Lx5c;
+.super Lnth;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
+.field public final b:Lpld;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
-    .locals 0
+.method public constructor <init>(Lo58;Lubb;Lmbg;Lybb;)V
+    .locals 8
 
-    iput p2, p0, Lx5c;->a:I
+    invoke-direct {p0}, Lnth;-><init>()V
 
-    iput-object p1, p0, Lx5c;->b:Lone/me/profileedit/ProfileEditScreen;
+    new-instance v0, Lye6;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p4, p4, Lybb;->a:Landroid/content/Context;
 
-    return-void
-.end method
+    sget v1, Lj6e;->a0:I
 
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lx5c;->a:I
-
-    iget-object v1, p0, Lx5c;->b:Lone/me/profileedit/ProfileEditScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/profileedit/ProfileEditScreen;->x0:[Les7;
-
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p4, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
+
+    const-class p4, Laf6;
+
+    invoke-static {p4}, Ljava/util/EnumSet;->allOf(Ljava/lang/Class;)Ljava/util/EnumSet;
+
+    move-result-object v5
+
+    const-string v1, "all.chat.folder"
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v2, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    sget-object v4, Lhc4;->b:Lhc4;
 
-    sget v2, Lrza;->c0:I
+    invoke-direct/range {v0 .. v5}, Lye6;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;Ljava/lang/String;Lhc4;Ljava/util/Set;)V
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    sget-object v2, Lmqa;->c:Lmqa;
+    move-result-object p4
 
-    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lmqa;)V
+    invoke-static {p4}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    sget-object v2, Llqa;->a:Llqa;
+    move-result-object v2
 
-    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Llqa;)V
+    new-instance p4, Lpld;
 
-    sget-object v2, Ljqa;->d:Ljqa;
+    invoke-direct {p4, v2}, Lpld;-><init>(Lmfa;)V
 
-    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Ljqa;)V
+    iput-object p4, p0, Lx5c;->b:Lpld;
 
-    new-instance v2, Le44;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    const/4 v3, -0x1
+    move-result-object p1
 
-    const/4 v4, -0x2
+    check-cast p1, Lhe4;
 
-    invoke-direct {v2, v3, v4}, Le44;-><init>(II)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v3, 0x50
+    iget-object p1, p1, Lhe4;->w0:Lpld;
 
-    iput v3, v2, Le44;->c:I
+    new-instance p4, Lr83;
 
-    const/16 v3, 0x10
+    const/16 v0, 0xd
 
-    int-to-float v3, v3
+    invoke-direct {p4, p1, v0}, Lr83;-><init>(Ld76;I)V
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    iget-object p1, p2, Lubb;->g:Lpld;
 
-    move-result-object v4
+    new-instance p2, Lazb;
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/4 v0, 0x1
 
-    move-result-object v4
+    invoke-direct {p2, p1, v0}, Lazb;-><init>(Ld76;I)V
 
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+    new-instance p1, Ln3;
 
-    mul-float/2addr v4, v3
+    const/4 v0, 0x0
 
-    invoke-static {v4}, Lkhi;->c(F)I
+    const/16 v1, 0x18
 
-    move-result v4
+    invoke-direct {p1, p0, v0, v1}, Ln3;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    new-instance v0, Lu61;
 
-    move-result-object v5
+    const/4 v1, 0x3
 
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct {v0, p4, p2, p1, v1}, Lu61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    move-result-object v5
+    check-cast p3, Lj9b;
 
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {p3}, Lj9b;->a()Lsb4;
 
-    mul-float/2addr v3, v5
+    move-result-object p1
 
-    invoke-static {v3}, Lkhi;->c(F)I
+    invoke-static {v0, p1}, Lgu0;->v(Ld76;Lqb4;)Ld76;
 
-    move-result v3
+    move-result-object p1
 
-    const/16 v5, 0xc
-
-    int-to-float v5, v5
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v5, v6
-
-    invoke-static {v5}, Lkhi;->c(F)I
-
-    move-result v5
+    new-instance v0, Ldw9;
 
     const/4 v6, 0x0
 
-    invoke-virtual {v2, v4, v6, v3, v5}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
+    const/16 v7, 0xa
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    const/4 v1, 0x2
 
-    sget v2, Luza;->R:I
+    const-class v3, Lmfa;
 
-    invoke-virtual {v0, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+    const-string v4, "emit"
 
-    new-instance v2, Ly5c;
+    const-string v5, "emit(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;"
 
-    const/4 v3, 0x1
+    invoke-direct/range {v0 .. v7}, Ldw9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-direct {v2, v1, v3}, Ly5c;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
+    new-instance p2, Lm96;
 
-    invoke-static {v0, v2}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    const/4 p4, 0x1
 
-    return-object v0
+    invoke-direct {p2, p1, v0, p4}, Lm96;-><init>(Ld76;Lbr6;I)V
 
-    :pswitch_0
-    iget-wide v0, v1, Lone/me/profileedit/ProfileEditScreen;->a:J
+    invoke-virtual {p3}, Lj9b;->c()Lzp8;
 
-    sget-object v2, Ll4c;->a:Ll4c;
+    move-result-object p1
 
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lt5;
+    invoke-static {p2, p1}, Lgu0;->v(Ld76;Lqb4;)Ld76;
 
-    move-result-object v2
+    move-result-object p1
 
-    const-class v3, Ll83;
+    iget-object p2, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {v2, v3}, Lt5;->d(Ljava/lang/Class;)Ltif;
+    invoke-static {p1, p2}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ll83;
-
-    check-cast v2, Lztd;
-
-    invoke-virtual {v2}, Lztd;->s()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Ldqd;->k1:Ldqd;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ldqd;->Z0:Ldqd;
-
-    :goto_0
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

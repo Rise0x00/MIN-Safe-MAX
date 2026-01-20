@@ -1,110 +1,49 @@
-.class public final Lvag;
-.super Luag;
+.class public Lvag;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final T0(Ljava/lang/Object;)Landroid/graphics/Typeface;
-    .locals 3
+# static fields
+.field public static final b:Lvag;
 
-    const/4 v0, -0x1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+# instance fields
+.field public final a:Landroid/util/ArrayMap;
 
-    move-result-object v0
 
-    :try_start_0
-    iget-object v1, p0, Luag;->c:Ljava/lang/Class;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v2, 0x1
+    new-instance v0, Lvag;
 
-    invoke-static {v1, v2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
+    new-instance v1, Landroid/util/ArrayMap;
 
-    move-result-object v1
+    invoke-direct {v1}, Landroid/util/ArrayMap;-><init>()V
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lvag;-><init>(Landroid/util/ArrayMap;)V
 
-    invoke-static {v1, v2, p1}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
+    sput-object v0, Lvag;->b:Lvag;
 
-    iget-object p1, p0, Luag;->s0:Ljava/lang/reflect/Method;
-
-    const-string v2, "sans-serif"
-
-    filled-new-array {v1, v2, v0, v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/Typeface;
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p1
-
-    :catch_0
-    move-exception p1
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p1
-
-    :goto_0
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    return-void
 .end method
 
-.method public final X0(Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    .locals 3
-
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    const-class v1, Ljava/lang/String;
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {p1, v1, v2, v2}, [Ljava/lang/Class;
-
-    move-result-object p1
-
-    const-class v1, Landroid/graphics/Typeface;
-
-    const-string v2, "createFromFamiliesWithDefault"
-
-    invoke-virtual {v1, v2, p1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    return-object p1
-.end method
-
-.method public final h0(Landroid/content/Context;Landroid/graphics/Typeface;I)Landroid/graphics/Typeface;
+.method public constructor <init>(Landroid/util/ArrayMap;)V
     .locals 0
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p2, p3, p1}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
+    iput-object p1, p0, Lvag;->a:Landroid/util/ArrayMap;
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "android.hardware.camera2.CaptureRequest.setTag.CX"
+
+    return-object v0
 .end method

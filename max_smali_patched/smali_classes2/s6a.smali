@@ -1,127 +1,137 @@
-.class public final Ls6a;
-.super Lvke;
+.class public final synthetic Ls6a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic j:[Les7;
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final g:Landroid/graphics/Path;
+.field public final synthetic a:I
 
-.field public final h:Landroid/graphics/RectF;
-
-.field public final i:Ltk;
+.field public final synthetic b:Lnk0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lnk0;)V
+    .locals 1
 
-    new-instance v0, La1a;
+    .line 1
+    const/4 v0, 0x0
 
-    const-string v1, "cornerRadius"
+    iput v0, p0, Ls6a;->a:I
 
-    const-string v2, "getCornerRadius()F"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class v3, Ls6a;
-
-    invoke-direct {v0, v3, v1, v2}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lv7d;->a:Lw7d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Les7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Ls6a;->j:[Les7;
+    iput-object p1, p0, Ls6a;->b:Lnk0;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lzb4;Lnk0;)V
+    .locals 0
 
-    invoke-direct {p0}, Lvke;-><init>()V
+    .line 2
+    const/4 p1, 0x1
 
-    new-instance v0, Landroid/graphics/Path;
+    iput p1, p0, Ls6a;->a:I
 
-    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Ls6a;->g:Landroid/graphics/Path;
-
-    new-instance v0, Landroid/graphics/RectF;
-
-    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
-
-    iput-object v0, p0, Ls6a;->h:Landroid/graphics/RectF;
-
-    new-instance v0, Ltk;
-
-    invoke-direct {v0, p0}, Ltk;-><init>(Ls6a;)V
-
-    iput-object v0, p0, Ls6a;->i:Ltk;
+    iput-object p2, p0, Ls6a;->b:Lnk0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    iget v0, p0, Ls6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ls6a;->b:Lnk0;
+
+    :try_start_0
+    invoke-virtual {v0}, Lnk0;->n()Lhz;
 
     move-result-object v0
 
-    iget-object v1, p0, Ls6a;->h:Landroid/graphics/RectF;
+    iget-object v1, v0, Lhz;->c:Ljava/io/File;
 
-    invoke-virtual {v1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    iget-object v0, p0, Ls6a;->g:Landroid/graphics/Path;
+    move-result v1
 
-    invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
+    if-eqz v1, :cond_0
 
-    sget-object v2, Ls6a;->j:[Les7;
+    iget-object v1, v0, Lhz;->d:Ljava/io/File;
 
-    const/4 v3, 0x0
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    aget-object v4, v2, v3
+    move-result v1
 
-    iget-object v4, p0, Ls6a;->i:Ltk;
+    if-eqz v1, :cond_0
 
-    iget-object v5, v4, Ladi;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lhz;->e:Ljava/io/File;
 
-    check-cast v5, Ljava/lang/Number;
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    invoke-virtual {v5}, Ljava/lang/Number;->floatValue()F
+    move-result v0
 
-    move-result v5
+    if-eqz v0, :cond_0
 
-    aget-object v2, v2, v3
+    const/4 v0, 0x1
 
-    iget-object v2, v4, Ladi;->b:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast v2, Ljava/lang/Number;
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result v2
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget-object v3, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+    goto :goto_1
 
-    invoke-virtual {v0, v1, v5, v2, v3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+    new-instance v1, Lszd;
 
-    invoke-super {p0, p1}, Lvke;->draw(Landroid/graphics/Canvas;)V
+    invoke-direct {v1, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
 
-    return-void
+    move-object v0, v1
+
+    :goto_1
+    new-instance v1, Luzd;
+
+    invoke-direct {v1, v0}, Luzd;-><init>(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Ls6a;->b:Lnk0;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,60 +1,119 @@
-.class public final Lq0d;
-.super Lbu7;
+.class public final enum Lq0d;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Loi6;
 
+# static fields
+.field public static final enum a:Lq0d;
 
-# instance fields
-.field public final synthetic a:Lq52;
-
-.field public final synthetic b:Lkw6;
-
-.field public final synthetic c:Lea;
+.field public static final synthetic b:[Lq0d;
 
 
 # direct methods
-.method public constructor <init>(Lq52;Lkw6;Lea;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 13
 
-    iput-object p1, p0, Lq0d;->a:Lq52;
+    new-instance v0, Lq0d;
 
-    iput-object p2, p0, Lq0d;->b:Lkw6;
+    const-string v1, "DEFAULT"
 
-    iput-object p3, p0, Lq0d;->c:Lea;
+    const/4 v6, 0x0
 
-    const/4 p1, 0x0
+    invoke-direct {v0, v1, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
+    sput-object v0, Lq0d;->a:Lq0d;
+
+    new-instance v1, Lq0d;
+
+    const-string v2, "UNMETERED_ONLY"
+
+    const/4 v7, 0x1
+
+    invoke-direct {v1, v2, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Lq0d;
+
+    const-string v3, "UNMETERED_OR_DAILY"
+
+    const/4 v8, 0x2
+
+    invoke-direct {v2, v3, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v3, Lq0d;
+
+    const-string v4, "FAST_IF_RADIO_AWAKE"
+
+    const/4 v9, 0x3
+
+    invoke-direct {v3, v4, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v4, Lq0d;
+
+    const-string v5, "NEVER"
+
+    const/4 v10, 0x4
+
+    invoke-direct {v4, v5, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v5, Lq0d;
+
+    const-string v11, "UNRECOGNIZED"
+
+    const/4 v12, 0x5
+
+    invoke-direct {v5, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array/range {v0 .. v5}, [Lq0d;
+
+    move-result-object v11
+
+    sput-object v11, Lq0d;->b:[Lq0d;
+
+    new-instance v11, Landroid/util/SparseArray;
+
+    invoke-direct {v11}, Landroid/util/SparseArray;-><init>()V
+
+    invoke-virtual {v11, v6, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v7, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v8, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v9, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    invoke-virtual {v11, v10, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    const/4 v0, -0x1
+
+    invoke-virtual {v11, v0, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lq0d;
+    .locals 1
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+    const-class v0, Lq0d;
 
-    iget-object v0, p0, Lq0d;->a:Lq52;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, v0, Lq52;->b:Lrni;
+    move-result-object p0
 
-    iget-object v1, p0, Lq0d;->b:Lkw6;
+    check-cast p0, Lq0d;
 
-    invoke-virtual {v1}, Lkw6;->a()Ljava/util/List;
+    return-object p0
+.end method
 
-    move-result-object v1
+.method public static values()[Lq0d;
+    .locals 1
 
-    iget-object v2, p0, Lq0d;->c:Lea;
+    sget-object v0, Lq0d;->b:[Lq0d;
 
-    iget-object v2, v2, Lea;->a:Lx57;
-
-    iget-object v2, v2, Lx57;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v1}, Lrni;->a(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0}, [Lq0d;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lq0d;
 
     return-object v0
 .end method

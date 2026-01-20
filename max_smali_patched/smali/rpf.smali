@@ -1,140 +1,59 @@
 .class public final Lrpf;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-.field public static final synthetic d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-.field public static final synthetic e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-
 # instance fields
-.field private volatile synthetic _value$volatile:Ljava/lang/Object;
+.field public X:Lupf;
 
-.field private volatile synthetic exceptionWhenReading$volatile:Ljava/lang/Object;
+.field public Y:Lsx7;
 
-.field private volatile synthetic reader$volatile:Ljava/lang/Object;
+.field public Z:Ljava/lang/Object;
 
-.field private volatile synthetic readers$volatile:I
+.field public d:Lspf;
 
-.field private volatile synthetic writer$volatile:Ljava/lang/Object;
+.field public o:Lf76;
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lspf;
+
+.field public v0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    const-string v0, "reader$volatile"
-
-    const-class v1, Lrpf;
-
-    const-class v2, Ljava/lang/Object;
-
-    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lrpf;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    const-string v0, "readers$volatile"
-
-    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lrpf;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    const-string v0, "writer$volatile"
-
-    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lrpf;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    const-string v0, "exceptionWhenReading$volatile"
-
-    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lrpf;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    const-string v0, "_value$volatile"
-
-    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    move-result-object v0
-
-    sput-object v0, Lrpf;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lbe8;)V
+.method public constructor <init>(Lspf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrpf;->u0:Lspf;
 
-    iput-object p1, p0, Lrpf;->_value$volatile:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/Throwable;
+    iput-object p1, p0, Lrpf;->t0:Ljava/lang/Object;
 
-    const-string v1, "reader location"
+    iget p1, p0, Lrpf;->v0:I
 
-    invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    const/high16 v0, -0x80000000
 
-    sget-object v1, Lrpf;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v1, p0, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    iput p1, p0, Lrpf;->v0:I
 
-    sget-object v0, Lrpf;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iget-object p1, p0, Lrpf;->u0:Lspf;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->incrementAndGet(Ljava/lang/Object;)I
+    const/4 v0, 0x0
 
-    sget-object v1, Lrpf;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-virtual {p1, v0, p0}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p1, Lac4;->a:Lac4;
 
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Throwable;
-
-    if-eqz v1, :cond_0
-
-    new-instance v2, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Dispatchers.Main is used concurrently with setting it"
-
-    invoke-direct {v2, v3, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object v1, Lrpf;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, p0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    :cond_0
-    sget-object v1, Lrpf;->e:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
-
-    return-object v1
+    return-object p1
 .end method

@@ -21,7 +21,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/stereo/listener/StereoRoomManagerListener$ListenersUpdated;",
         "event",
-        "Lybg;",
+        "Lb3h;",
         "onListenersChanged",
         "(Lru/ok/android/externcalls/sdk/stereo/listener/StereoRoomManagerListener$ListenersUpdated;)V",
         "Lru/ok/android/externcalls/sdk/stereo/listener/StereoRoomManagerListener$HandStatusUpdated;",

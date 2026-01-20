@@ -1,445 +1,282 @@
 .class public final Liy6;
-.super Lhmh;
+.super Lg4;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final a(Lfr4;)V
-    .locals 7
+# static fields
+.field public static final A0:[Lvx5;
 
-    iget-object p1, p0, Lhmh;->b:Lar3;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Liy6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-    check-cast p1, Lpi0;
+.field public static final z0:[Lcom/google/android/gms/common/api/Scope;
 
-    iget v0, p1, Lpi0;->s0:I
 
-    iget-object v1, p0, Lhmh;->h:Lir4;
+# instance fields
+.field public X:[Lcom/google/android/gms/common/api/Scope;
 
-    iget-object v2, v1, Lir4;->l:Ljava/util/ArrayList;
+.field public Y:Landroid/os/Bundle;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+.field public Z:Landroid/accounts/Account;
 
-    move-result-object v2
+.field public final a:I
 
-    const/4 v3, -0x1
+.field public final b:I
 
-    const/4 v4, 0x0
+.field public final c:I
 
-    move v5, v3
+.field public d:Ljava/lang/String;
 
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+.field public o:Landroid/os/IBinder;
 
-    move-result v6
+.field public t0:[Lvx5;
 
-    if-eqz v6, :cond_3
+.field public u0:[Lvx5;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.field public final v0:Z
 
-    move-result-object v6
+.field public final w0:I
 
-    check-cast v6, Lir4;
+.field public x0:Z
 
-    iget v6, v6, Lir4;->g:I
+.field public final y0:Ljava/lang/String;
 
-    if-eq v5, v3, :cond_1
 
-    if-ge v6, v5, :cond_2
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    :cond_1
-    move v5, v6
+    new-instance v0, Leri;
 
-    :cond_2
-    if-ge v4, v6, :cond_0
+    const/16 v1, 0x1b
 
-    move v4, v6
+    invoke-direct {v0, v1}, Leri;-><init>(I)V
 
-    goto :goto_0
+    sput-object v0, Liy6;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    :cond_3
-    if-eqz v0, :cond_5
+    const/4 v0, 0x0
 
-    const/4 v2, 0x2
+    new-array v1, v0, [Lcom/google/android/gms/common/api/Scope;
 
-    if-ne v0, v2, :cond_4
+    sput-object v1, Liy6;->z0:[Lcom/google/android/gms/common/api/Scope;
 
-    goto :goto_1
+    new-array v0, v0, [Lvx5;
 
-    :cond_4
-    iget p1, p1, Lpi0;->u0:I
-
-    add-int/2addr v4, p1
-
-    invoke-virtual {v1, v4}, Lir4;->d(I)V
-
-    return-void
-
-    :cond_5
-    :goto_1
-    iget p1, p1, Lpi0;->u0:I
-
-    add-int/2addr v5, p1
-
-    invoke-virtual {v1, v5}, Lir4;->d(I)V
+    sput-object v0, Liy6;->A0:[Lvx5;
 
     return-void
 .end method
 
-.method public final d()V
+.method public constructor <init>(IIILjava/lang/String;Landroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Landroid/os/Bundle;Landroid/accounts/Account;[Lvx5;[Lvx5;ZIZLjava/lang/String;)V
     .locals 7
 
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    instance-of v1, v0, Lpi0;
+    if-nez p6, :cond_0
 
-    if-eqz v1, :cond_c
+    sget-object v1, Liy6;->z0:[Lcom/google/android/gms/common/api/Scope;
 
-    iget-object v1, p0, Lhmh;->h:Lir4;
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, v1, Lir4;->b:Z
-
-    check-cast v0, Lpi0;
-
-    iget v3, v0, Lpi0;->s0:I
-
-    iget-boolean v4, v0, Lpi0;->t0:Z
-
-    const/16 v5, 0x8
-
-    const/4 v6, 0x0
-
-    if-eqz v3, :cond_9
-
-    if-eq v3, v2, :cond_6
-
-    const/4 v2, 0x2
-
-    if-eq v3, v2, :cond_3
-
-    const/4 v2, 0x3
-
-    if-eq v3, v2, :cond_0
-
-    goto/16 :goto_8
+    goto :goto_0
 
     :cond_0
-    const/4 v2, 0x7
-
-    iput v2, v1, Lir4;->e:I
+    move-object v1, p6
 
     :goto_0
-    iget v2, v0, Ljy6;->r0:I
+    if-nez p7, :cond_1
 
-    if-ge v6, v2, :cond_2
+    new-instance v2, Landroid/os/Bundle;
 
-    iget-object v2, v0, Ljy6;->q0:[Lar3;
-
-    aget-object v2, v2, v6
-
-    if-nez v4, :cond_1
-
-    iget v3, v2, Lar3;->g0:I
-
-    if-ne v3, v5, :cond_1
+    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
     goto :goto_1
 
     :cond_1
-    iget-object v2, v2, Lar3;->e:Lrkg;
-
-    iget-object v2, v2, Lhmh;->i:Lir4;
-
-    iget-object v3, v2, Lir4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v3, v1, Lir4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-object v2, p7
 
     :goto_1
-    add-int/lit8 v6, v6, 0x1
+    sget-object v3, Liy6;->A0:[Lvx5;
 
-    goto :goto_0
+    if-nez p9, :cond_2
 
-    :cond_2
-    iget-object v0, p0, Lhmh;->b:Lar3;
-
-    iget-object v0, v0, Lar3;->e:Lrkg;
-
-    iget-object v0, v0, Lhmh;->h:Lir4;
-
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
-
-    iget-object v0, p0, Lhmh;->b:Lar3;
-
-    iget-object v0, v0, Lar3;->e:Lrkg;
-
-    iget-object v0, v0, Lhmh;->i:Lir4;
-
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
-
-    return-void
-
-    :cond_3
-    const/4 v2, 0x6
-
-    iput v2, v1, Lir4;->e:I
-
-    :goto_2
-    iget v2, v0, Ljy6;->r0:I
-
-    if-ge v6, v2, :cond_5
-
-    iget-object v2, v0, Ljy6;->q0:[Lar3;
-
-    aget-object v2, v2, v6
-
-    if-nez v4, :cond_4
-
-    iget v3, v2, Lar3;->g0:I
-
-    if-ne v3, v5, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    iget-object v2, v2, Lar3;->e:Lrkg;
-
-    iget-object v2, v2, Lhmh;->h:Lir4;
-
-    iget-object v3, v2, Lir4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v3, v1, Lir4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_3
-    add-int/lit8 v6, v6, 0x1
+    move-object v4, v3
 
     goto :goto_2
 
-    :cond_5
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    :cond_2
+    move-object/from16 v4, p9
 
-    iget-object v0, v0, Lar3;->e:Lrkg;
+    :goto_2
+    if-nez p10, :cond_3
 
-    iget-object v0, v0, Lhmh;->h:Lir4;
+    goto :goto_3
 
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
+    :cond_3
+    move-object/from16 v3, p10
 
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    :goto_3
+    iput p1, p0, Liy6;->a:I
 
-    iget-object v0, v0, Lar3;->e:Lrkg;
+    iput p2, p0, Liy6;->b:I
 
-    iget-object v0, v0, Lhmh;->i:Lir4;
+    iput p3, p0, Liy6;->c:I
 
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
+    const-string p2, "com.google.android.gms"
 
-    return-void
+    invoke-virtual {p2, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_6
-    const/4 v2, 0x5
+    move-result p3
 
-    iput v2, v1, Lir4;->e:I
+    if-eqz p3, :cond_4
 
-    :goto_4
-    iget v2, v0, Ljy6;->r0:I
-
-    if-ge v6, v2, :cond_8
-
-    iget-object v2, v0, Ljy6;->q0:[Lar3;
-
-    aget-object v2, v2, v6
-
-    if-nez v4, :cond_7
-
-    iget v3, v2, Lar3;->g0:I
-
-    if-ne v3, v5, :cond_7
-
-    goto :goto_5
-
-    :cond_7
-    iget-object v2, v2, Lar3;->d:Lt27;
-
-    iget-object v2, v2, Lhmh;->i:Lir4;
-
-    iget-object v3, v2, Lir4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v3, v1, Lir4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :goto_5
-    add-int/lit8 v6, v6, 0x1
+    iput-object p2, p0, Liy6;->d:Ljava/lang/String;
 
     goto :goto_4
 
-    :cond_8
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    :cond_4
+    iput-object p4, p0, Liy6;->d:Ljava/lang/String;
 
-    iget-object v0, v0, Lar3;->d:Lt27;
+    :goto_4
+    const/4 p2, 0x2
 
-    iget-object v0, v0, Lhmh;->h:Lir4;
+    if-ge p1, p2, :cond_7
 
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    if-eqz p5, :cond_6
 
-    iget-object v0, v0, Lar3;->d:Lt27;
+    sget p3, Ls5;->d:I
 
-    iget-object v0, v0, Lhmh;->i:Lir4;
+    const-string p3, "com.google.android.gms.common.internal.IAccountAccessor"
 
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
+    invoke-interface {p5, p3}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    return-void
+    move-result-object p4
 
-    :cond_9
-    const/4 v2, 0x4
+    instance-of v5, p4, Lae7;
 
-    iput v2, v1, Lir4;->e:I
+    if-eqz v5, :cond_5
 
-    :goto_6
-    iget v2, v0, Ljy6;->r0:I
+    check-cast p4, Lae7;
 
-    if-ge v6, v2, :cond_b
+    goto :goto_5
 
-    iget-object v2, v0, Ljy6;->q0:[Lar3;
+    :cond_5
+    new-instance p4, Leqj;
 
-    aget-object v2, v2, v6
+    invoke-direct {p4, p5, p3, p2}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    if-nez v4, :cond_a
+    :goto_5
+    if-eqz p4, :cond_6
 
-    iget v3, v2, Lar3;->g0:I
+    invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
-    if-ne v3, v5, :cond_a
+    move-result-wide v5
 
-    goto :goto_7
+    :try_start_0
+    check-cast p4, Leqj;
 
-    :cond_a
-    iget-object v2, v2, Lar3;->d:Lt27;
+    invoke-virtual {p4}, Lwoi;->V()Landroid/os/Parcel;
 
-    iget-object v2, v2, Lhmh;->h:Lir4;
+    move-result-object p3
 
-    iget-object v3, v2, Lir4;->k:Ljava/util/ArrayList;
+    invoke-virtual {p4, p3, p2}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object p2
 
-    iget-object v3, v1, Lir4;->l:Ljava/util/ArrayList;
+    sget-object p3, Landroid/accounts/Account;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-static {p2, p3}, Lfvi;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    :goto_7
-    add-int/lit8 v6, v6, 0x1
+    move-result-object p3
+
+    check-cast p3, Landroid/accounts/Account;
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
+
+    move-object p1, p3
 
     goto :goto_6
 
-    :cond_b
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    :catch_0
+    :try_start_1
+    const-string p2, "AccountAccessor"
 
-    iget-object v0, v0, Lar3;->d:Lt27;
+    const-string p3, "Remote account accessor probably died"
 
-    iget-object v0, v0, Lhmh;->h:Lir4;
+    invoke-static {p2, p3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
+    invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    goto :goto_6
 
-    iget-object v0, v0, Lar3;->d:Lt27;
+    :catchall_0
+    move-exception v0
 
-    iget-object v0, v0, Lhmh;->i:Lir4;
+    move-object p1, v0
 
-    invoke-virtual {p0, v0}, Liy6;->m(Lir4;)V
+    invoke-static {v5, v6}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    :cond_c
-    :goto_8
-    return-void
-.end method
+    throw p1
 
-.method public final e()V
-    .locals 4
+    :cond_6
+    :goto_6
+    iput-object p1, p0, Liy6;->Z:Landroid/accounts/Account;
 
-    iget-object v0, p0, Lhmh;->b:Lar3;
+    goto :goto_7
 
-    instance-of v1, v0, Lpi0;
+    :cond_7
+    iput-object p5, p0, Liy6;->o:Landroid/os/IBinder;
 
-    if-eqz v1, :cond_2
+    iput-object p8, p0, Liy6;->Z:Landroid/accounts/Account;
 
-    move-object v1, v0
+    :goto_7
+    iput-object v1, p0, Liy6;->X:[Lcom/google/android/gms/common/api/Scope;
 
-    check-cast v1, Lpi0;
+    iput-object v2, p0, Liy6;->Y:Landroid/os/Bundle;
 
-    iget v1, v1, Lpi0;->s0:I
+    iput-object v4, p0, Liy6;->t0:[Lvx5;
 
-    iget-object v2, p0, Lhmh;->h:Lir4;
+    iput-object v3, p0, Liy6;->u0:[Lvx5;
 
-    if-eqz v1, :cond_1
+    move/from16 p1, p11
 
-    const/4 v3, 0x1
+    iput-boolean p1, p0, Liy6;->v0:Z
 
-    if-ne v1, v3, :cond_0
+    move/from16 p1, p12
 
-    goto :goto_0
+    iput p1, p0, Liy6;->w0:I
 
-    :cond_0
-    iget v1, v2, Lir4;->g:I
+    move/from16 p1, p13
 
-    iput v1, v0, Lar3;->Z:I
+    iput-boolean p1, p0, Liy6;->x0:Z
 
-    return-void
+    move-object/from16 p1, p14
 
-    :cond_1
-    :goto_0
-    iget v1, v2, Lir4;->g:I
-
-    iput v1, v0, Lar3;->Y:I
-
-    :cond_2
-    return-void
-.end method
-
-.method public final f()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lhmh;->c:Lrkd;
-
-    iget-object v0, p0, Lhmh;->h:Lir4;
-
-    invoke-virtual {v0}, Lir4;->c()V
+    iput-object p1, p0, Liy6;->y0:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public final k()Z
-    .locals 1
 
-    const/4 v0, 0x0
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    return v0
-.end method
-
-.method public final m(Lir4;)V
-    .locals 2
-
-    iget-object v0, p0, Lhmh;->h:Lir4;
-
-    iget-object v1, v0, Lir4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object p1, p1, Lir4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-static {p0, p1, p2}, Leri;->a(Liy6;Landroid/os/Parcel;I)V
 
     return-void
 .end method

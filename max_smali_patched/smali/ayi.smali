@@ -1,107 +1,140 @@
-.class public abstract Layi;
+.class public final Layi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpnd;
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Layi;
 
 
 # direct methods
-.method public static final b(Lbr4;)I
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget-object v0, Lcr4;->$EnumSwitchMapping$0:[I
+    new-instance v0, Layi;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    sput-object v0, Layi;->a:Layi;
 
-    aget p0, v0, p0
+    new-instance v0, Lbri;
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    packed-switch p0, :pswitch_data_0
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    const-class v1, Lpri;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    throw p0
+    move-result-object v0
 
-    :pswitch_0
-    const/4 p0, 0x4
+    const/4 v2, 0x2
 
-    return p0
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    :pswitch_1
-    const/4 p0, 0x3
+    move-result-object v0
 
-    return p0
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    :pswitch_2
-    const/4 p0, 0x2
+    move-result-object v0
 
-    return p0
+    const/4 v2, 0x3
 
-    :pswitch_3
-    return v0
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_3
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x6
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x7
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x8
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0x9
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/16 v2, 0xa
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
-    .locals 10
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result v0
+    move-result-object p1
 
-    int-to-float v0, v0
-
-    int-to-float v1, p3
-
-    div-float v8, v0, v1
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    int-to-float v1, p4
-
-    div-float v9, v0, v1
-
-    move-object v1, p0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    move v6, p5
-
-    move/from16 v7, p6
-
-    invoke-virtual/range {v1 .. v9}, Layi;->c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
-
-    return-object p1
-.end method
-
-.method public abstract c(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFFFF)V
+    throw p1
 .end method

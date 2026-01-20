@@ -3,104 +3,156 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/util/regex/Pattern;
-
-.field public static final e:Ljava/util/regex/Pattern;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
+.field public b:Landroid/net/Uri;
 
-.field public final c:[Ljava/lang/String;
+.field public c:Ljava/lang/String;
 
+.field public d:Lh39;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public e:Ln39;
 
-    const-string v0, "([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)/([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)"
+.field public f:Ljava/util/List;
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+.field public g:Ljava/lang/String;
 
-    move-result-object v0
+.field public h:Lhk7;
 
-    sput-object v0, Lf39;->d:Ljava/util/regex/Pattern;
+.field public i:Le39;
 
-    const-string v0, ";\\s*(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)=(?:([a-zA-Z0-9-!#$%&\'*+.^_`{|}~]+)|\"([^\"]*)\"))?"
+.field public j:J
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+.field public k:Lm59;
 
-    move-result-object v0
+.field public l:Lp39;
 
-    sput-object v0, Lf39;->e:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf39;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lf39;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lf39;->c:[Ljava/lang/String;
-
-    return-void
-.end method
+.field public m:Lw39;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ld49;
+    .locals 11
 
-    instance-of v0, p1, Lf39;
+    iget-object v0, p0, Lf39;->e:Ln39;
+
+    iget-object v1, v0, Ln39;->b:Landroid/net/Uri;
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Ln39;->a:Ljava/util/UUID;
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lf39;
-
-    iget-object p1, p1, Lf39;->a:Ljava/lang/String;
-
-    iget-object v0, p0, Lf39;->a:Ljava/lang/String;
-
-    invoke-static {p1, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    return p1
-.end method
+    goto :goto_1
 
-.method public final hashCode()I
-    .locals 1
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Lh6j;->g(Z)V
+
+    iget-object v2, p0, Lf39;->b:Landroid/net/Uri;
+
+    const/4 v0, 0x0
+
+    if-eqz v2, :cond_3
+
+    new-instance v1, Lt39;
+
+    iget-object v3, p0, Lf39;->c:Ljava/lang/String;
+
+    iget-object v4, p0, Lf39;->e:Ln39;
+
+    iget-object v5, v4, Ln39;->a:Ljava/util/UUID;
+
+    if-eqz v5, :cond_2
+
+    new-instance v0, Lo39;
+
+    invoke-direct {v0, v4}, Lo39;-><init>(Ln39;)V
+
+    :cond_2
+    move-object v4, v0
+
+    iget-object v5, p0, Lf39;->i:Le39;
+
+    iget-object v6, p0, Lf39;->f:Ljava/util/List;
+
+    iget-object v7, p0, Lf39;->g:Ljava/lang/String;
+
+    iget-object v8, p0, Lf39;->h:Lhk7;
+
+    iget-wide v9, p0, Lf39;->j:J
+
+    invoke-direct/range {v1 .. v10}, Lt39;-><init>(Landroid/net/Uri;Ljava/lang/String;Lo39;Le39;Ljava/util/List;Ljava/lang/String;Lhk7;J)V
+
+    move-object v5, v1
+
+    goto :goto_2
+
+    :cond_3
+    move-object v5, v0
+
+    :goto_2
+    new-instance v2, Ld49;
 
     iget-object v0, p0, Lf39;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    if-eqz v0, :cond_4
 
-    move-result v0
+    :goto_3
+    move-object v3, v0
 
-    return v0
-.end method
+    goto :goto_4
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    :cond_4
+    const-string v0, ""
 
-    iget-object v0, p0, Lf39;->a:Ljava/lang/String;
+    goto :goto_3
 
-    return-object v0
+    :goto_4
+    iget-object v0, p0, Lf39;->d:Lh39;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v4, Ll39;
+
+    invoke-direct {v4, v0}, Lj39;-><init>(Lh39;)V
+
+    iget-object v0, p0, Lf39;->l:Lp39;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v6, Lr39;
+
+    invoke-direct {v6, v0}, Lr39;-><init>(Lp39;)V
+
+    iget-object v0, p0, Lf39;->k:Lm59;
+
+    if-eqz v0, :cond_5
+
+    :goto_5
+    move-object v7, v0
+
+    goto :goto_6
+
+    :cond_5
+    sget-object v0, Lm59;->K:Lm59;
+
+    goto :goto_5
+
+    :goto_6
+    iget-object v8, p0, Lf39;->m:Lw39;
+
+    invoke-direct/range {v2 .. v8}, Ld49;-><init>(Ljava/lang/String;Ll39;Lt39;Lr39;Lm59;Lw39;)V
+
+    return-object v2
 .end method

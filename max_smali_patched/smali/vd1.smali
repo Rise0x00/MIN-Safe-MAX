@@ -1,110 +1,85 @@
-.class public final Lvd1;
-.super Ljava/lang/Object;
+.class public final enum Lvd1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lwd1;
 
 
 # static fields
-.field public static final a:Lvd1;
+.field public static final enum a:Lvd1;
 
-.field public static final b:J
+.field public static final enum b:Lvd1;
 
-.field public static final c:Lirf;
+.field public static final enum c:Lvd1;
 
-.field public static final d:Llqa;
+.field public static final synthetic d:[Lvd1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
     new-instance v0, Lvd1;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "CALLING"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lvd1;->a:Lvd1;
 
-    sget-wide v0, Lcra;->c:J
+    new-instance v1, Lvd1;
 
-    sput-wide v0, Lvd1;->b:J
+    const-string v2, "ACTIVE"
 
-    sget v0, Lera;->m:I
+    const/4 v3, 0x1
 
-    new-instance v1, Lirf;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v1, v0}, Lirf;-><init>(I)V
+    sput-object v1, Lvd1;->b:Lvd1;
 
-    sput-object v1, Lvd1;->c:Lirf;
+    new-instance v2, Lvd1;
 
-    sget-object v0, Llqa;->b:Llqa;
+    const-string v3, "NO_CONNECTION"
 
-    sput-object v0, Lvd1;->d:Llqa;
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lvd1;->c:Lvd1;
+
+    filled-new-array {v0, v1, v2}, [Lvd1;
+
+    move-result-object v0
+
+    sput-object v0, Lvd1;->d:[Lvd1;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Llqa;
+.method public static valueOf(Ljava/lang/String;)Lvd1;
     .locals 1
 
-    sget-object v0, Lvd1;->d:Llqa;
+    const-class v0, Lvd1;
 
-    return-object v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lvd1;
+
+    return-object p0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public static values()[Lvd1;
     .locals 1
 
-    const/4 v0, 0x1
+    sget-object v0, Lvd1;->d:[Lvd1;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of p1, p1, Lvd1;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Lvd1;->b:J
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lirf;
-    .locals 1
-
-    sget-object v0, Lvd1;->c:Lirf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x1dcefff1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "TryLoadLinkAgain"
+    check-cast v0, [Lvd1;
 
     return-object v0
 .end method

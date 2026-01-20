@@ -1,94 +1,69 @@
-.class public final Laf3;
-.super Lx9b;
+.class public final enum Laf3;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# static fields
+.field public static final enum a:Laf3;
 
-# instance fields
-.field public final a:Ljava/util/Comparator;
+.field public static final synthetic b:[Laf3;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Comparator;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Laf3;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v1, "UNKNOWN"
 
-    iput-object p1, p0, Laf3;->a:Ljava/util/Comparator;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v1, Laf3;
+
+    const-string v2, "ANDROID_FIREBASE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Laf3;->a:Laf3;
+
+    filled-new-array {v0, v1}, [Laf3;
+
+    move-result-object v0
+
+    sput-object v0, Laf3;->b:[Laf3;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public static valueOf(Ljava/lang/String;)Laf3;
     .locals 1
 
-    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
+    const-class v0, Laf3;
 
-    invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result p1
+    move-result-object p0
 
-    return p1
+    check-cast p0, Laf3;
+
+    return-object p0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
+.method public static values()[Laf3;
     .locals 1
 
-    if-ne p1, p0, :cond_0
+    sget-object v0, Laf3;->b:[Laf3;
 
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    instance-of v0, p1, Laf3;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Laf3;
-
-    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
-
-    iget-object p1, p1, Laf3;->a:Ljava/util/Comparator;
-
-    invoke-interface {v0, p1}, Ljava/util/Comparator;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Laf3;->a:Ljava/util/Comparator;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, [Laf3;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Laf3;
 
     return-object v0
 .end method

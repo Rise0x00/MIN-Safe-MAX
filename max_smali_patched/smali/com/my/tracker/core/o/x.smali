@@ -302,7 +302,7 @@
 .end method
 
 .method private a(Ljava/lang/String;Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;)Lcom/my/tracker/core/net/HttpResult;
-    .locals 6
+    .locals 7
 
     const-string v0, "OkHttpGetRequest error: response code "
 
@@ -332,34 +332,38 @@
     invoke-static {v1}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
     .line 31
-    new-instance v1, Lzp6;
+    new-instance v1, Lho4;
 
-    invoke-direct {v1}, Lzp6;-><init>()V
+    const/4 v4, 0x4
 
-    invoke-virtual {v1, p1}, Lzp6;->k(Ljava/lang/String;)V
+    const/4 v5, 0x0
+
+    invoke-direct {v1, v4, v5}, Lho4;-><init>(IZ)V
+
+    invoke-virtual {v1, p1}, Lho4;->q(Ljava/lang/String;)V
 
     .line 32
     const-string p1, "GET"
 
-    invoke-virtual {v1, p1, v3}, Lzp6;->e(Ljava/lang/String;Lb1i;)V
+    invoke-virtual {v1, p1, v3}, Lho4;->d(Ljava/lang/String;Laui;)V
 
     .line 33
-    invoke-virtual {v1}, Lzp6;->c()Lxbd;
+    invoke-virtual {v1}, Lho4;->a()Lz8b;
 
     move-result-object p1
 
     .line 34
-    invoke-interface {p2}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Lbma;
+    invoke-interface {p2}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Ld1b;
 
     move-result-object p2
 
     .line 35
-    invoke-virtual {p2, p1}, Lbma;->b(Lxbd;)Lo0d;
+    invoke-virtual {p2, p1}, Ld1b;->b(Lz8b;)Luld;
 
     move-result-object p1
 
     .line 36
-    invoke-virtual {p1}, Lo0d;->f()Lldd;
+    invoke-virtual {p1}, Luld;->f()Lyyd;
 
     move-result-object p1
     :try_end_0
@@ -367,7 +371,7 @@
 
     .line 37
     :try_start_1
-    iget p2, p1, Lldd;->d:I
+    iget p2, p1, Lyyd;->d:I
 
     const/16 v1, 0xc8
 
@@ -412,12 +416,12 @@
     invoke-static {p2}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
     .line 41
-    iget-object p2, p1, Lldd;->Y:Lndd;
+    iget-object p2, p1, Lyyd;->Y:Lazd;
 
     if-eqz p2, :cond_1
 
     .line 42
-    invoke-virtual {p2}, Lndd;->Q()Ljava/lang/String;
+    invoke-virtual {p2}, Lazd;->g0()Ljava/lang/String;
 
     move-result-object p2
 
@@ -450,7 +454,7 @@
     .line 45
     :goto_2
     :try_start_2
-    invoke-virtual {p1}, Lldd;->close()V
+    invoke-virtual {p1}, Lyyd;->close()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -468,7 +472,7 @@
     .line 46
     :goto_3
     :try_start_3
-    invoke-virtual {p1}, Lldd;->close()V
+    invoke-virtual {p1}, Lyyd;->close()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
@@ -494,11 +498,11 @@
 
     invoke-static {p2, p1}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-object v5, v3
+    move-object v6, v3
 
     move-object v3, p2
 
-    move-object p2, v5
+    move-object p2, v6
 
     .line 48
     :goto_6
@@ -1013,13 +1017,14 @@
     :try_start_5
     const-string p2, "application/octet-stream"
 
-    sget-object v4, Lf39;->d:Ljava/util/regex/Pattern;
+    .line 100
+    sget-object v4, Lle9;->c:Ljava/util/regex/Pattern;
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 100
+    .line 101
     :try_start_6
-    invoke-static {p2}, Lvji;->c(Ljava/lang/String;)Lf39;
+    invoke-static {p2}, Lq9j;->c(Ljava/lang/String;)Lle9;
 
     move-result-object p2
     :try_end_6
@@ -1031,45 +1036,47 @@
     :catch_0
     move-object p2, v3
 
-    .line 101
+    .line 102
     :goto_1
     :try_start_7
-    new-instance v4, Lzp6;
+    new-instance v4, Lho4;
 
-    invoke-direct {v4}, Lzp6;-><init>()V
+    const/4 v5, 0x4
 
-    invoke-virtual {v4, p1}, Lzp6;->k(Ljava/lang/String;)V
+    invoke-direct {v4, v5, v2}, Lho4;-><init>(IZ)V
+
+    invoke-virtual {v4, p1}, Lho4;->q(Ljava/lang/String;)V
 
     const-string p1, "Content-Encoding"
 
     const-string v5, "gzip"
 
-    .line 102
-    iget-object v6, v4, Lzp6;->c:Ljava/lang/Object;
-
-    check-cast v6, Lnx6;
-
-    invoke-virtual {v6, p1, v5}, Lnx6;->i(Ljava/lang/String;Ljava/lang/String;)V
-
     .line 103
+    iget-object v6, v4, Lho4;->c:Ljava/lang/Object;
+
+    check-cast v6, Ld57;
+
+    invoke-virtual {v6, p1, v5}, Ld57;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 104
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object p1
 
     const/4 v5, 0x6
 
-    .line 104
-    invoke-static {p1, p2, v5}, Luqi;->b([BLf39;I)Lzbd;
+    .line 105
+    invoke-static {p1, p2, v5}, Lkme;->m([BLle9;I)Llxd;
 
     move-result-object p1
 
-    .line 105
+    .line 106
     const-string p2, "POST"
 
-    invoke-virtual {v4, p2, p1}, Lzp6;->e(Ljava/lang/String;Lb1i;)V
+    invoke-virtual {v4, p2, p1}, Lho4;->d(Ljava/lang/String;Laui;)V
 
-    .line 106
-    invoke-virtual {v4}, Lzp6;->c()Lxbd;
+    .line 107
+    invoke-virtual {v4}, Lho4;->a()Lz8b;
 
     move-result-object p1
     :try_end_7
@@ -1077,7 +1084,7 @@
 
     if-eqz p3, :cond_1
 
-    .line 107
+    .line 108
     :try_start_8
     invoke-virtual {p3}, Ljava/io/OutputStream;->close()V
 
@@ -1090,31 +1097,31 @@
 
     goto/16 :goto_7
 
-    .line 108
+    .line 109
     :cond_1
     :goto_2
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 109
-    invoke-interface {p4}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Lbma;
+    .line 110
+    invoke-interface {p4}, Lcom/my/tracker/MyTrackerConfig$OkHttpClientProvider;->getOkHttpClient()Ld1b;
 
     move-result-object p2
 
-    .line 110
-    invoke-virtual {p2, p1}, Lbma;->b(Lxbd;)Lo0d;
+    .line 111
+    invoke-virtual {p2, p1}, Ld1b;->b(Lz8b;)Luld;
 
     move-result-object p1
 
-    .line 111
-    invoke-virtual {p1}, Lo0d;->f()Lldd;
+    .line 112
+    invoke-virtual {p1}, Luld;->f()Lyyd;
 
     move-result-object p1
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 112
+    .line 113
     :try_start_9
-    iget p2, p1, Lldd;->d:I
+    iget p2, p1, Lyyd;->d:I
 
     const/16 p3, 0xc8
 
@@ -1126,7 +1133,7 @@
 
     goto :goto_3
 
-    .line 113
+    .line 114
     :cond_2
     new-instance p4, Ljava/lang/StringBuilder;
 
@@ -1157,7 +1164,7 @@
 
     goto :goto_7
 
-    .line 114
+    .line 115
     :cond_3
     :goto_3
     const-string p4, "HttpCoreReal: response successfully received"
@@ -1169,24 +1176,24 @@
     :goto_4
     if-ne p2, p3, :cond_4
 
-    .line 115
+    .line 116
     const-string p2, "HttpCoreReal: processing server response"
 
     invoke-static {p2}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
 
-    .line 116
-    iget-object p2, p1, Lldd;->Y:Lndd;
+    .line 117
+    iget-object p2, p1, Lyyd;->Y:Lazd;
 
     if-eqz p2, :cond_4
 
-    .line 117
-    invoke-virtual {p2}, Lndd;->Q()Ljava/lang/String;
+    .line 118
+    invoke-virtual {p2}, Lazd;->g0()Ljava/lang/String;
 
     move-result-object p2
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 118
+    .line 119
     :try_start_a
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1194,7 +1201,7 @@
 
     if-eqz p3, :cond_5
 
-    .line 119
+    .line 120
     const-string p3, "HttpCoreReal: response data is empty"
 
     invoke-static {p3}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;)V
@@ -1237,28 +1244,28 @@
     :goto_6
     if-eqz p3, :cond_6
 
-    .line 120
+    .line 121
     :try_start_b
     invoke-virtual {p3}, Ljava/io/OutputStream;->close()V
 
     :cond_6
     if-eqz v1, :cond_7
 
-    .line 121
+    .line 122
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 122
+    .line 123
     :cond_7
     throw p1
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_2
 
-    .line 123
+    .line 124
     :goto_7
     :try_start_c
     const-string p3, "HttpCoreReal error: error while sending data"
 
-    .line 124
+    .line 125
     invoke-static {p3, p1}, Lcom/my/tracker/core/Tracer;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_6
@@ -1269,13 +1276,13 @@
 
     goto :goto_5
 
-    .line 125
+    .line 126
     :goto_8
-    invoke-virtual {p1}, Lldd;->close()V
+    invoke-virtual {p1}, Lyyd;->close()V
 
     move-object p2, v3
 
-    .line 126
+    .line 127
     :cond_8
     new-instance p1, Lcom/my/tracker/core/net/HttpResult;
 
@@ -1288,10 +1295,10 @@
 
     if-eqz v3, :cond_9
 
-    .line 127
-    invoke-virtual {v3}, Lldd;->close()V
-
     .line 128
+    invoke-virtual {v3}, Lyyd;->close()V
+
+    .line 129
     :cond_9
     throw p1
 .end method

@@ -1,266 +1,217 @@
 .class public final Lq4g;
-.super Lj2;
+.super Landroid/view/ActionMode;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:I
+.field public final a:Landroid/content/Context;
 
-.field public d:[Ljava/lang/Object;
-
-.field public o:Z
+.field public final b:Ld7;
 
 
 # direct methods
-.method public constructor <init>([Ljava/lang/Object;III)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Ld7;)V
+    .locals 0
 
-    invoke-direct {p0, p2, p3}, Lj2;-><init>(II)V
+    invoke-direct {p0}, Landroid/view/ActionMode;-><init>()V
 
-    iput p4, p0, Lq4g;->c:I
+    iput-object p1, p0, Lq4g;->a:Landroid/content/Context;
 
-    new-array p4, p4, [Ljava/lang/Object;
-
-    iput-object p4, p0, Lq4g;->d:[Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-ne p2, p3, :cond_0
-
-    move p3, v1
-
-    goto :goto_0
-
-    :cond_0
-    move p3, v0
-
-    :goto_0
-    iput-boolean p3, p0, Lq4g;->o:Z
-
-    aput-object p1, p4, v0
-
-    sub-int/2addr p2, p3
-
-    invoke-virtual {p0, p2, v1}, Lq4g;->b(II)V
+    iput-object p2, p0, Lq4g;->b:Ld7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lj2;->a:I
-
-    and-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lq4g;->d:[Ljava/lang/Object;
-
-    iget v2, p0, Lq4g;->c:I
-
-    add-int/lit8 v2, v2, -0x1
-
-    aget-object v1, v1, v2
-
-    if-eqz v1, :cond_0
-
-    check-cast v1, [Ljava/lang/Object;
-
-    aget-object v0, v1, v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "null cannot be cast to non-null type kotlin.Array<E of kotlinx.collections.immutable.implementations.immutableList.TrieIterator>"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final b(II)V
-    .locals 4
-
-    iget v0, p0, Lq4g;->c:I
-
-    sub-int/2addr v0, p2
-
-    mul-int/lit8 v0, v0, 0x5
-
-    :goto_0
-    iget v1, p0, Lq4g;->c:I
-
-    if-ge p2, v1, :cond_1
-
-    iget-object v1, p0, Lq4g;->d:[Ljava/lang/Object;
-
-    add-int/lit8 v2, p2, -0x1
-
-    aget-object v2, v1, v2
-
-    if-eqz v2, :cond_0
-
-    check-cast v2, [Ljava/lang/Object;
-
-    invoke-static {p1, v0}, Lnbi;->c(II)I
-
-    move-result v3
-
-    aget-object v2, v2, v3
-
-    aput-object v2, v1, p2
-
-    add-int/lit8 v0, v0, -0x5
-
-    add-int/lit8 p2, p2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c(I)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v1, p0, Lj2;->a:I
-
-    invoke-static {v1, v0}, Lnbi;->c(II)I
-
-    move-result v1
-
-    if-ne v1, p1, :cond_0
-
-    add-int/lit8 v0, v0, 0x5
-
-    goto :goto_0
-
-    :cond_0
-    if-lez v0, :cond_1
-
-    iget p1, p0, Lq4g;->c:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    div-int/lit8 v0, v0, 0x5
-
-    sub-int/2addr p1, v0
-
-    iget v0, p0, Lj2;->a:I
-
-    add-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {p0, v0, p1}, Lq4g;->b(II)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 4
-
-    invoke-virtual {p0}, Lj2;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lq4g;->a()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget v1, p0, Lj2;->a:I
-
-    const/4 v2, 0x1
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lj2;->a:I
-
-    iget v3, p0, Lj2;->b:I
-
-    if-ne v1, v3, :cond_0
-
-    iput-boolean v2, p0, Lq4g;->o:Z
-
-    return-object v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1}, Lq4g;->c(I)V
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
+.method public final finish()V
     .locals 1
 
-    invoke-virtual {p0}, Lj2;->hasPrevious()Z
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0}, Ld7;->a()V
+
+    return-void
+.end method
+
+.method public final getCustomView()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0}, Ld7;->b()Landroid/view/View;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getMenu()Landroid/view/Menu;
+    .locals 3
+
+    new-instance v0, Lhk9;
+
+    iget-object v1, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v1}, Ld7;->c()Lnj9;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lq4g;->a:Landroid/content/Context;
+
+    invoke-direct {v0, v2, v1}, Lhk9;-><init>(Landroid/content/Context;Lnj9;)V
+
+    return-object v0
+.end method
+
+.method public final getMenuInflater()Landroid/view/MenuInflater;
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0}, Ld7;->d()Landroid/view/MenuInflater;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getSubtitle()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0}, Ld7;->e()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getTag()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    iget-object v0, v0, Ld7;->a:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final getTitle()Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0}, Ld7;->f()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final getTitleOptionalHint()Z
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    iget-boolean v0, v0, Ld7;->b:Z
+
+    return v0
+.end method
+
+.method public final invalidate()V
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0}, Ld7;->h()V
+
+    return-void
+.end method
+
+.method public final isTitleOptional()Z
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0}, Ld7;->i()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    iget v0, p0, Lj2;->a:I
+.method public final setCustomView(Landroid/view/View;)V
+    .locals 1
 
-    add-int/lit8 v0, v0, -0x1
+    iget-object v0, p0, Lq4g;->b:Ld7;
 
-    iput v0, p0, Lj2;->a:I
+    invoke-virtual {v0, p1}, Ld7;->j(Landroid/view/View;)V
 
-    iget-boolean v0, p0, Lq4g;->o:Z
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public final setSubtitle(I)V
+    .locals 1
 
-    const/4 v0, 0x0
+    .line 2
+    iget-object v0, p0, Lq4g;->b:Ld7;
 
-    iput-boolean v0, p0, Lq4g;->o:Z
+    invoke-virtual {v0, p1}, Ld7;->k(I)V
 
-    invoke-virtual {p0}, Lq4g;->a()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final setSubtitle(Ljava/lang/CharSequence;)V
+    .locals 1
 
-    return-object v0
+    .line 1
+    iget-object v0, p0, Lq4g;->b:Ld7;
 
-    :cond_0
-    const/16 v0, 0x1f
+    invoke-virtual {v0, p1}, Ld7;->l(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p0, v0}, Lq4g;->c(I)V
+    return-void
+.end method
 
-    invoke-virtual {p0}, Lq4g;->a()Ljava/lang/Object;
+.method public final setTag(Ljava/lang/Object;)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lq4g;->b:Ld7;
 
-    return-object v0
+    iput-object p1, v0, Ld7;->a:Ljava/lang/Object;
 
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+.method public final setTitle(I)V
+    .locals 1
 
-    throw v0
+    .line 2
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0, p1}, Ld7;->m(I)V
+
+    return-void
+.end method
+
+.method public final setTitle(Ljava/lang/CharSequence;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0, p1}, Ld7;->n(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public final setTitleOptionalHint(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lq4g;->b:Ld7;
+
+    invoke-virtual {v0, p1}, Ld7;->p(Z)V
+
+    return-void
 .end method

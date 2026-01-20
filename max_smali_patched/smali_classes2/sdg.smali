@@ -1,73 +1,122 @@
-.class public final enum Lsdg;
-.super Ljava/lang/Enum;
+.class public final synthetic Lsdg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Comparator;
 
-# static fields
-.field public static final enum a:Lsdg;
 
-.field public static final enum b:Lsdg;
-
-.field public static final synthetic c:[Lsdg;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lsdg;
+    iput p1, p0, Lsdg;->a:I
 
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lsdg;->a:Lsdg;
-
-    new-instance v1, Lsdg;
-
-    const-string v2, "NOT_ENOUGH_VIDEO_TRACKS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsdg;->b:Lsdg;
-
-    filled-new-array {v0, v1}, [Lsdg;
-
-    move-result-object v0
-
-    sput-object v0, Lsdg;->c:[Lsdg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsdg;
-    .locals 1
 
-    const-class v0, Lsdg;
+# virtual methods
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lsdg;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lsdg;
+    check-cast p1, Lbfi;
 
-    return-object p0
-.end method
+    check-cast p2, Lbfi;
 
-.method public static values()[Lsdg;
-    .locals 1
+    iget-wide v0, p1, Lbfi;->b:J
 
-    sget-object v0, Lsdg;->c:[Lsdg;
+    iget-wide p1, p2, Lbfi;->b:J
 
-    invoke-virtual {v0}, [Lsdg;->clone()Ljava/lang/Object;
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Long;->compare(JJ)I
 
-    move-result-object v0
+    move-result p1
 
-    check-cast v0, [Lsdg;
+    return p1
 
-    return-object v0
+    :pswitch_0
+    check-cast p1, Lafi;
+
+    check-cast p2, Lafi;
+
+    iget-wide v0, p1, Lafi;->b:J
+
+    iget-wide p1, p2, Lafi;->b:J
+
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Long;->compare(JJ)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_1
+    check-cast p1, Ldfi;
+
+    check-cast p2, Ldfi;
+
+    iget-object p1, p1, Ldfi;->a:Lffi;
+
+    iget p1, p1, Lffi;->b:I
+
+    iget-object p2, p2, Ldfi;->a:Lffi;
+
+    iget p2, p2, Lffi;->b:I
+
+    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_2
+    check-cast p1, Lcfi;
+
+    check-cast p2, Lcfi;
+
+    iget-object p1, p1, Lcfi;->a:Lefi;
+
+    iget p1, p1, Lefi;->b:I
+
+    iget-object p2, p2, Lcfi;->a:Lefi;
+
+    iget p2, p2, Lefi;->b:I
+
+    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_3
+    check-cast p1, Lerg;
+
+    check-cast p2, Lerg;
+
+    iget p1, p1, Lerg;->X:I
+
+    iget p2, p2, Lerg;->X:I
+
+    invoke-static {p1, p2}, Ljava/lang/Integer;->compare(II)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

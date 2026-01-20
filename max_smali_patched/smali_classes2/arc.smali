@@ -1,100 +1,172 @@
-.class public abstract Larc;
-.super Ljava/lang/Object;
+.class public final Larc;
+.super Lp6g;
+.source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
-# static fields
-.field public static channel_subscribers_count:I = 0x7f11000a
+# instance fields
+.field public final synthetic X:Lhrc;
 
-.field public static tt_active_live_location_in_many_chats:I = 0x7f110044
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static tt_chat_subtitle_count:I = 0x7f110045
 
-.field public static tt_control_message_add_error:I = 0x7f110046
+# direct methods
+.method public constructor <init>(Lhrc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static tt_dates_days:I = 0x7f110047
+    iput-object p1, p0, Larc;->X:Lhrc;
 
-.field public static tt_dates_days_last_seen_f:I = 0x7f110048
+    const/4 p1, 0x2
 
-.field public static tt_dates_days_last_seen_m:I = 0x7f110049
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static tt_dates_days_last_seen_u:I = 0x7f11004a
+    return-void
+.end method
 
-.field public static tt_dates_days_last_update:I = 0x7f11004b
 
-.field public static tt_dates_days_live_location_end:I = 0x7f11004c
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static tt_dates_days_past:I = 0x7f11004d
+    check-cast p1, Lzb4;
 
-.field public static tt_dates_hours:I = 0x7f11004e
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static tt_dates_hours_after:I = 0x7f11004f
+    invoke-virtual {p0, p1, p2}, Larc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static tt_dates_hours_last_seen_f:I = 0x7f110050
+    move-result-object p1
 
-.field public static tt_dates_hours_last_seen_m:I = 0x7f110051
+    check-cast p1, Larc;
 
-.field public static tt_dates_hours_last_seen_u:I = 0x7f110052
+    sget-object p2, Lb3h;->a:Lb3h;
 
-.field public static tt_dates_hours_last_update:I = 0x7f110053
+    invoke-virtual {p1, p2}, Larc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static tt_dates_hours_left:I = 0x7f110054
+    return-object p2
+.end method
 
-.field public static tt_dates_hours_live_location_end:I = 0x7f110055
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static tt_dates_hours_past:I = 0x7f110056
+    new-instance v0, Larc;
 
-.field public static tt_dates_minutes:I = 0x7f110057
+    iget-object v1, p0, Larc;->X:Lhrc;
 
-.field public static tt_dates_minutes_after:I = 0x7f110058
+    invoke-direct {v0, v1, p2}, Larc;-><init>(Lhrc;Lkotlin/coroutines/Continuation;)V
 
-.field public static tt_dates_minutes_last_seen_f:I = 0x7f110059
+    iput-object p1, v0, Larc;->o:Ljava/lang/Object;
 
-.field public static tt_dates_minutes_last_seen_m:I = 0x7f11005a
+    return-object v0
+.end method
 
-.field public static tt_dates_minutes_last_seen_u:I = 0x7f11005b
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-.field public static tt_dates_minutes_last_update:I = 0x7f11005c
+    iget-object v0, p0, Larc;->o:Ljava/lang/Object;
 
-.field public static tt_dates_minutes_left:I = 0x7f11005d
+    check-cast v0, Lzb4;
 
-.field public static tt_dates_minutes_live_location_end:I = 0x7f11005e
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static tt_dates_minutes_past:I = 0x7f11005f
+    sget-object p1, Lhrc;->I0:[Lz28;
 
-.field public static tt_dates_months_last_seen_f:I = 0x7f110060
+    iget-object p1, p0, Larc;->X:Lhrc;
 
-.field public static tt_dates_months_last_seen_m:I = 0x7f110061
+    invoke-virtual {p1}, Lhrc;->t()Lnd2;
 
-.field public static tt_dates_months_last_seen_u:I = 0x7f110062
+    move-result-object v1
 
-.field public static tt_dates_months_last_update:I = 0x7f110063
+    sget-object v2, Lb3h;->a:Lb3h;
 
-.field public static tt_dates_months_live_location_end:I = 0x7f110064
+    if-nez v1, :cond_0
 
-.field public static tt_dates_months_past:I = 0x7f110065
+    goto :goto_0
 
-.field public static tt_dates_weeks_last_seen_f:I = 0x7f110066
+    :cond_0
+    iget-object v3, v1, Lnd2;->b:Luh2;
 
-.field public static tt_dates_weeks_last_seen_m:I = 0x7f110067
+    invoke-virtual {v1}, Lnd2;->h0()Z
 
-.field public static tt_dates_weeks_last_seen_u:I = 0x7f110068
+    move-result v4
 
-.field public static tt_dates_weeks_last_update:I = 0x7f110069
+    if-nez v4, :cond_1
 
-.field public static tt_dates_weeks_live_location_end:I = 0x7f11006a
+    :goto_0
+    return-object v2
 
-.field public static tt_dates_weeks_past:I = 0x7f11006b
+    :cond_1
+    iget-wide v4, v3, Luh2;->a:J
 
-.field public static tt_in_chat:I = 0x7f11006c
+    const-wide/16 v6, 0x0
 
-.field public static tt_live_location_members_with_me:I = 0x7f11006d
+    cmp-long v4, v4, v6
 
-.field public static tt_live_location_members_without_me:I = 0x7f11006e
+    if-nez v4, :cond_2
 
-.field public static tt_new_messages:I = 0x7f11006f
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static tt_notification_text_hidden_content:I = 0x7f110070
+    move-result-object v0
 
-.field public static tt_privacy_restricted_error:I = 0x7f110071
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-.field public static tt_summary_messages:I = 0x7f110072
+    move-result-object v0
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0"
+
+    invoke-static {v0, v1}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p1, Lhrc;->w0:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lwc4;
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Try update revokePrivateLink with charServerId == 0. ProfileInvite"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "ONEME-18920"
+
+    invoke-virtual {p1, v1, v0}, Lwc4;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v2
+
+    :cond_2
+    iget-object v0, p1, Lhrc;->X:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v4, v0
+
+    check-cast v4, Lt2b;
+
+    iget-wide v5, v1, Lnd2;->a:J
+
+    iget-wide v7, v3, Luh2;->a:J
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x1
+
+    const/4 v12, 0x0
+
+    invoke-virtual/range {v4 .. v12}, Lt2b;->f(JJILjava/lang/String;ZLjava/util/HashMap;)J
+
+    move-result-wide v0
+
+    iget-object p1, p1, Lhrc;->A0:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v2
+.end method

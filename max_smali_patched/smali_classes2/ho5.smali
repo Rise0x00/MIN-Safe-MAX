@@ -1,92 +1,91 @@
-.class public final synthetic Lho5;
+.class public final Lho5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final synthetic b:J
+.field public b:I
 
-.field public final synthetic c:Z
-
-
-# direct methods
-.method public synthetic constructor <init>(IJZ)V
-    .locals 0
-
-    iput p1, p0, Lho5;->a:I
-
-    iput-wide p2, p0, Lho5;->b:J
-
-    iput-boolean p4, p0, Lho5;->c:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public c:I
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-class v2, Lho5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lho5;
+
+    iget v2, p0, Lho5;->a:I
+
+    iget v3, p1, Lho5;->a:I
+
+    if-eq v2, v3, :cond_2
+
+    return v1
+
+    :cond_2
+    iget v2, p0, Lho5;->b:I
+
+    iget v3, p1, Lho5;->b:I
+
+    if-eq v2, v3, :cond_3
+
+    return v1
+
+    :cond_3
+    iget v2, p0, Lho5;->c:I
+
+    iget p1, p1, Lho5;->c:I
+
+    if-ne v2, p1, :cond_4
+
+    return v0
+
+    :cond_4
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
 
     iget v0, p0, Lho5;->a:I
 
-    iget-boolean v1, p0, Lho5;->c:Z
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v2, p0, Lho5;->b:J
+    iget v1, p0, Lho5;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    add-int/2addr v0, v1
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object v0
+    iget v1, p0, Lho5;->c:I
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    add-int/2addr v0, v1
 
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "fp5"
-
-    const-string v2, "markAsFavorite: complete for stickerId=%d favorite=%b"
-
-    invoke-static {v1, v2, v0}, Lcuh;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "lo5"
-
-    const-string v2, "markAsFavorite: complete for setId=%d favorite=%b"
-
-    invoke-static {v1, v2, v0}, Lcuh;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

@@ -1,156 +1,128 @@
-.class public final Lv3d;
-.super Logf;
+.class public final synthetic Lv3d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic X:Lc4d;
+.field public final synthetic X:Landroid/view/View;
 
-.field public o:I
+.field public final synthetic a:I
+
+.field public final synthetic b:F
+
+.field public final synthetic c:F
+
+.field public final synthetic d:F
+
+.field public final synthetic o:F
 
 
 # direct methods
-.method public constructor <init>(Lc4d;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/view/View;FFFFI)V
     .locals 0
 
-    iput-object p1, p0, Lv3d;->X:Lc4d;
+    iput p6, p0, Lv3d;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lv3d;->X:Landroid/view/View;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lv3d;->b:F
+
+    iput p3, p0, Lv3d;->c:F
+
+    iput p4, p0, Lv3d;->d:F
+
+    iput p5, p0, Lv3d;->o:F
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 7
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lv3d;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lv3d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lv3d;->X:Landroid/view/View;
 
-    move-result-object p1
+    check-cast v0, Lpjh;
 
-    check-cast p1, Lv3d;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result p1
 
-    invoke-virtual {p1, p2}, Lv3d;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v1, p0, Lv3d;->c:F
 
-    move-result-object p1
+    iget v2, p0, Lv3d;->b:F
 
-    return-object p1
-.end method
+    invoke-static {v1, v2, p1, v2}, Lpqb;->g(FFFF)F
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-result v1
 
-    new-instance p1, Lv3d;
+    iput v1, v0, Lpjh;->H0:F
 
-    iget-object v0, p0, Lv3d;->X:Lc4d;
+    iget v1, p0, Lv3d;->o:F
 
-    invoke-direct {p1, v0, p2}, Lv3d;-><init>(Lc4d;Lkotlin/coroutines/Continuation;)V
+    iget v2, p0, Lv3d;->d:F
 
-    return-object p1
-.end method
+    invoke-static {v1, v2, p1, v2}, Lpqb;->g(FFFF)F
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    move-result p1
 
-    iget v0, p0, Lv3d;->o:I
+    iput p1, v0, Lpjh;->G0:F
 
-    const/4 v1, 0x1
+    iget-object v1, v0, Lpjh;->v0:Landroid/graphics/Paint;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    if-ne v0, v1, :cond_0
+    iget-object p1, v0, Lpjh;->d:Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget v1, v0, Lpjh;->G0:F
 
-    goto :goto_0
+    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return-void
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_0
+    iget-object v0, p0, Lv3d;->X:Landroid/view/View;
 
-    throw p1
+    move-object v1, v0
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    check-cast v1, Lz3d;
 
-    iput v1, p0, Lv3d;->o:I
-
-    const-wide/16 v2, 0xc8
-
-    invoke-static {v2, v3, p0}, Lxxi;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lh54;->a:Lh54;
+    check-cast p1, Ljava/lang/Float;
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    return-object v0
+    move-result v6
 
-    :cond_2
-    :goto_0
-    iget-object p1, p0, Lv3d;->X:Lc4d;
+    iget v2, p0, Lv3d;->b:F
 
-    iget-object v0, p1, Lc4d;->c:Lg3d;
+    iget v3, p0, Lv3d;->c:F
 
-    iget-object v0, v0, Lg3d;->c:Laf5;
+    iget v4, p0, Lv3d;->d:F
 
-    sget-object v2, Lz2d;->a:Lz2d;
+    iget v5, p0, Lv3d;->o:F
 
-    invoke-static {v0, v2}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lz3d;->c(Lz3d;FFFFF)V
 
-    iget-object v0, p1, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    return-void
 
-    iget-object v2, p1, Lc4d;->X:Lru7;
-
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ltlf;
-
-    check-cast v2, Lsta;
-
-    invoke-virtual {v2}, Lsta;->c()Lbe8;
-
-    move-result-object v2
-
-    new-instance v3, Ly3d;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v4}, Ly3d;-><init>(Lc4d;Lkotlin/coroutines/Continuation;)V
-
-    sget-object v4, Lj54;->b:Lj54;
-
-    invoke-static {v0, v2, v4, v3}, Lkki;->d(Lg54;Ly44;Lj54;Lej6;)Lgye;
-
-    move-result-object v0
-
-    iget-object v2, p1, Lc4d;->G0:Lpqe;
-
-    sget-object v3, Lc4d;->I0:[Les7;
-
-    aget-object v1, v3, v1
-
-    invoke-virtual {v2, p1, v1, v0}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

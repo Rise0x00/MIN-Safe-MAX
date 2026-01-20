@@ -1,312 +1,64 @@
 .class public final Lz3;
-.super Lgj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
+# static fields
+.field public static final c:Lz3;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public static final d:Lz3;
+
+
+# instance fields
+.field public final a:Z
+
+.field public final b:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lz3;->b:I
-
-    iput-object p2, p0, Lz3;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Lgj0;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final d()V
+.method static constructor <clinit>()V
     .locals 3
 
-    iget v0, p0, Lz3;->b:I
+    sget-boolean v0, Lf4;->d:Z
 
-    packed-switch v0, :pswitch_data_0
-
-    :try_start_0
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhz9;
-
-    monitor-enter v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    iget-object v1, v0, Lhz9;->g:Lz3;
-
-    if-eq v1, p0, :cond_0
-
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
     const/4 v1, 0x0
 
-    iput-object v1, v0, Lhz9;->g:Lz3;
+    if-eqz v0, :cond_0
 
-    iput-object v1, v0, Lhz9;->f:Lmk0;
+    sput-object v1, Lz3;->d:Lz3;
 
-    iget-object v2, v0, Lhz9;->c:Ljava/io/Closeable;
-
-    invoke-static {v2}, Lhz9;->b(Ljava/io/Closeable;)V
-
-    iput-object v1, v0, Lhz9;->c:Ljava/io/Closeable;
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const/4 v1, 0x3
-
-    :try_start_2
-    invoke-virtual {v0, v1}, Lhz9;->i(I)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :goto_0
-    invoke-static {}, Lyh6;->b()Lxh6;
+    sput-object v1, Lz3;->c:Lz3;
 
     return-void
-
-    :goto_1
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    throw v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    throw v0
-
-    :pswitch_0
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lo93;
-
-    monitor-enter v0
-
-    :try_start_5
-    invoke-virtual {v0}, Lr0;->g()Z
-
-    move-result v1
-
-    invoke-static {v1}, Ljui;->h(Z)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    monitor-exit v0
-
-    return-void
-
-    :catchall_2
-    move-exception v1
-
-    :try_start_6
-    monitor-exit v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
-
-    throw v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f(Ljava/lang/Throwable;)V
-    .locals 3
-
-    iget v0, p0, Lz3;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :try_start_0
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhz9;
-
-    invoke-virtual {v0, p0, p1}, Lhz9;->f(Lz3;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lo93;
-
-    iget-object v1, v0, Lo93;->h:Ll9e;
-
-    iget-object v2, v1, Lmk0;->X:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, v2}, Lr0;->j(Ljava/lang/Throwable;Ljava/util/Map;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-object v0, v0, Lo93;->i:Ltj7;
-
-    invoke-virtual {v0, v1, p1}, Ltj7;->f(Lb0c;Ljava/lang/Throwable;)V
 
     :cond_0
-    return-void
+    new-instance v0, Lz3;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lz3;-><init>(Ljava/lang/Throwable;Z)V
+
+    sput-object v0, Lz3;->d:Lz3;
+
+    new-instance v0, Lz3;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, v2}, Lz3;-><init>(Ljava/lang/Throwable;Z)V
+
+    sput-object v0, Lz3;->c:Lz3;
+
+    return-void
 .end method
 
-.method public final h(ILjava/lang/Object;)V
-    .locals 3
+.method public constructor <init>(Ljava/lang/Throwable;Z)V
+    .locals 0
 
-    iget v0, p0, Lz3;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch v0, :pswitch_data_0
+    iput-boolean p2, p0, Lz3;->a:Z
 
-    check-cast p2, Ljava/io/Closeable;
-
-    :try_start_0
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhz9;
-
-    invoke-virtual {v0, p0, p2, p1}, Lhz9;->g(Lz3;Ljava/io/Closeable;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lyh6;->b()Lxh6;
+    iput-object p1, p0, Lz3;->b:Ljava/lang/Throwable;
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lo93;
-
-    iget-object v1, v0, Lo93;->h:Ll9e;
-
-    iget v2, v0, Lo93;->j:I
-
-    packed-switch v2, :pswitch_data_1
-
-    invoke-virtual {v0, p2, p1, v1}, Lo93;->o(Ljava/lang/Object;ILb0c;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    check-cast p2, Lq93;
-
-    invoke-static {p2}, Lq93;->y(Lq93;)Lq93;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2, p1, v1}, Lo93;->o(Ljava/lang/Object;ILb0c;)V
-
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final j(F)V
-    .locals 1
-
-    iget v0, p0, Lz3;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :try_start_0
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhz9;
-
-    invoke-virtual {v0, p0, p1}, Lhz9;->h(Lz3;F)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {}, Lyh6;->b()Lxh6;
-
-    throw p1
-
-    :pswitch_0
-    iget-object v0, p0, Lz3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lo93;
-
-    invoke-virtual {v0, p1}, Lr0;->k(F)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

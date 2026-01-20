@@ -6,75 +6,182 @@
 # instance fields
 .field public final a:I
 
-.field public final b:[Lxi3;
+.field public b:I
 
-.field public c:J
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public final synthetic j:Lw3;
 
 
 # direct methods
-.method public constructor <init>(ILjava/util/concurrent/ThreadFactory;)V
-    .locals 3
+.method public constructor <init>(Lw3;II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lwi3;->a:I
+    iput-object p1, p0, Lwi3;->j:Lw3;
 
-    new-array v0, p1, [Lxi3;
+    iput p2, p0, Lwi3;->a:I
 
-    iput-object v0, p0, Lwi3;->b:[Lxi3;
+    iput p3, p0, Lwi3;->b:I
 
-    const/4 v0, 0x0
+    invoke-virtual {p0}, Lwi3;->a()V
 
-    :goto_0
-    if-ge v0, p1, :cond_0
-
-    iget-object v1, p0, Lwi3;->b:[Lxi3;
-
-    new-instance v2, Lxi3;
-
-    invoke-direct {v2, p2}, Ls8a;-><init>(Ljava/util/concurrent/ThreadFactory;)V
-
-    aput-object v2, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lxi3;
-    .locals 5
+.method public final a()V
+    .locals 13
 
-    iget v0, p0, Lwi3;->a:I
+    iget-object v0, p0, Lwi3;->j:Lw3;
 
-    if-nez v0, :cond_0
+    iget-object v1, v0, Lw3;->a:Ljava/lang/Object;
 
-    sget-object v0, Lyi3;->g:Lxi3;
+    check-cast v1, [I
 
-    return-object v0
+    iget-object v0, v0, Lw3;->b:Ljava/lang/Object;
+
+    check-cast v0, [I
+
+    const v2, 0x7fffffff
+
+    const/high16 v3, -0x80000000
+
+    const/4 v4, 0x0
+
+    iget v5, p0, Lwi3;->a:I
+
+    move v6, v3
+
+    move v7, v6
+
+    move v8, v4
+
+    move v9, v5
+
+    move v3, v2
+
+    move v4, v3
+
+    move v5, v7
+
+    :goto_0
+    iget v10, p0, Lwi3;->b:I
+
+    if-gt v9, v10, :cond_6
+
+    aget v10, v1, v9
+
+    aget v11, v0, v10
+
+    add-int/2addr v8, v11
+
+    shr-int/lit8 v11, v10, 0xa
+
+    and-int/lit8 v11, v11, 0x1f
+
+    shr-int/lit8 v12, v10, 0x5
+
+    and-int/lit8 v12, v12, 0x1f
+
+    and-int/lit8 v10, v10, 0x1f
+
+    if-le v11, v5, :cond_0
+
+    move v5, v11
 
     :cond_0
-    iget-wide v1, p0, Lwi3;->c:J
+    if-ge v11, v2, :cond_1
 
-    const-wide/16 v3, 0x1
+    move v2, v11
 
-    add-long/2addr v3, v1
+    :cond_1
+    if-le v12, v6, :cond_2
 
-    iput-wide v3, p0, Lwi3;->c:J
+    move v6, v12
 
-    int-to-long v3, v0
+    :cond_2
+    if-ge v12, v3, :cond_3
 
-    rem-long/2addr v1, v3
+    move v3, v12
 
-    long-to-int v0, v1
+    :cond_3
+    if-le v10, v7, :cond_4
 
-    iget-object v1, p0, Lwi3;->b:[Lxi3;
+    move v7, v10
 
-    aget-object v0, v1, v0
+    :cond_4
+    if-ge v10, v4, :cond_5
 
-    return-object v0
+    move v4, v10
+
+    :cond_5
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    iput v2, p0, Lwi3;->d:I
+
+    iput v5, p0, Lwi3;->e:I
+
+    iput v3, p0, Lwi3;->f:I
+
+    iput v6, p0, Lwi3;->g:I
+
+    iput v4, p0, Lwi3;->h:I
+
+    iput v7, p0, Lwi3;->i:I
+
+    iput v8, p0, Lwi3;->c:I
+
+    return-void
+.end method
+
+.method public final b()I
+    .locals 3
+
+    iget v0, p0, Lwi3;->e:I
+
+    iget v1, p0, Lwi3;->d:I
+
+    sub-int/2addr v0, v1
+
+    add-int/lit8 v0, v0, 0x1
+
+    iget v1, p0, Lwi3;->g:I
+
+    iget v2, p0, Lwi3;->f:I
+
+    sub-int/2addr v1, v2
+
+    add-int/lit8 v1, v1, 0x1
+
+    mul-int/2addr v1, v0
+
+    iget v0, p0, Lwi3;->i:I
+
+    iget v2, p0, Lwi3;->h:I
+
+    sub-int/2addr v0, v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    mul-int/2addr v0, v1
+
+    return v0
 .end method

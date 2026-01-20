@@ -1,48 +1,60 @@
-.class public final Lm53;
-.super Lp14;
+.class public abstract Lm53;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# static fields
+.field public static final b:Lyna;
+
+.field public static final c:Lj53;
 
 
 # instance fields
-.field public final synthetic X:Lh13;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lh13;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lyna;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lyna;-><init>(I)V
+
+    sput-object v0, Lm53;->b:Lyna;
+
+    new-instance v0, Lj53;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lj53;-><init>(I)V
+
+    sput-object v0, Lm53;->c:Lj53;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lm53;->X:Lh13;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lm53;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract a()Ljava/util/Comparator;
+.end method
+
+.method public b()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lm53;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lm53;->a:Ljava/lang/String;
 
-    iget p1, p0, Lm53;->o:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lm53;->o:I
-
-    iget-object p1, p0, Lm53;->X:Lh13;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lh13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

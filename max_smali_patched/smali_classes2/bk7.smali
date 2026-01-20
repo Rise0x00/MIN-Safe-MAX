@@ -1,730 +1,258 @@
 .class public final Lbk7;
-.super Ljava/lang/Object;
+.super Lw1;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Lxbh;
 
 
 # instance fields
-.field public X:I
+.field public final a:B
 
-.field public final Y:Z
-
-.field public Z:I
-
-.field public final a:Ldkb;
-
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Llt;
-
-.field public o:I
-
-.field public s0:I
+.field public final b:[B
 
 
 # direct methods
-.method public constructor <init>(Ldkb;Ljava/lang/String;II)V
-    .locals 1
+.method public constructor <init>(B[B)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-byte p1, p0, Lbk7;->a:B
 
-    iput-boolean v0, p0, Lbk7;->b:Z
-
-    iput v0, p0, Lbk7;->Z:I
-
-    iput v0, p0, Lbk7;->s0:I
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lbk7;->a:Ldkb;
-
-    invoke-virtual {p0, p3, p2}, Lbk7;->b(ILjava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lbk7;->Y:Z
-
-    iput p4, p0, Lbk7;->X:I
+    iput-object p2, p0, Lbk7;->b:[B
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/text/Editable;)Ljava/lang/String;
-    .locals 11
-
-    iget-object v0, p0, Lbk7;->d:Llt;
-
-    invoke-virtual {v0}, Llt;->f()V
+.method public final a()Ljava/lang/String;
+    .locals 6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "+"
+    const-string v1, "["
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lbk7;->o:I
+    iget-byte v1, p0, Lbk7;->a:B
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbk7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_0
+
+    aget-byte v4, v1, v3
+
+    const/16 v5, 0x10
+
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "\"]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const/16 v1, 0x30
-
-    const/4 v2, 0x0
-
-    iget-boolean v3, p0, Lbk7;->Y:Z
-
-    if-nez v3, :cond_0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-lez v4, :cond_1
-
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    if-eq v4, v1, :cond_1
-
-    :cond_0
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    :cond_1
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    const-string v5, ""
-
-    move v6, v2
-
-    move v7, v6
-
-    move-object v8, v5
-
-    :goto_0
-    if-ge v6, v4, :cond_4
-
-    invoke-interface {p1, v6}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v9
-
-    invoke-static {v9}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_3
-
-    if-eqz v7, :cond_2
-
-    iget-object v8, p0, Lbk7;->d:Llt;
-
-    invoke-virtual {v8, v7}, Llt;->h(C)Ljava/lang/String;
-
-    move-result-object v8
-
-    :cond_2
-    move v7, v9
-
-    :cond_3
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    if-eqz v7, :cond_5
-
-    iget-object v4, p0, Lbk7;->d:Llt;
-
-    invoke-virtual {v4, v7}, Llt;->h(C)Ljava/lang/String;
-
-    move-result-object v8
-
-    :cond_5
-    invoke-virtual {v8}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v4
-
-    const/16 v6, 0x20
-
-    if-nez v3, :cond_6
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result p1
-
-    if-eq p1, v1, :cond_9
-
-    :cond_6
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-le p1, v1, :cond_8
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->charAt(I)C
-
-    move-result p1
-
-    if-ne p1, v6, :cond_7
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    add-int/lit8 p1, p1, 0x1
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    goto :goto_1
-
-    :cond_7
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    invoke-virtual {v4, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    goto :goto_1
-
-    :cond_8
-    move-object v4, v5
-
-    :cond_9
-    :goto_1
-    const/16 p1, 0x2d
-
-    invoke-virtual {v4, p1, v6}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    return-object v5
-
-    :cond_a
-    return-object p1
+    return-object v0
 .end method
 
-.method public final declared-synchronized afterTextChanged(Landroid/text/Editable;)V
-    .locals 11
+.method public final b()I
+    .locals 1
 
-    monitor-enter p0
+    const/16 v0, 0x9
 
-    :try_start_0
-    iget-boolean v0, p0, Lbk7;->b:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    invoke-static {p1}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    :goto_0
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v4
-
-    if-ge v2, v4, :cond_2
-
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v4
-
-    invoke-static {v4}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    add-int/lit8 v3, v3, 0x1
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    iget v2, p0, Lbk7;->X:I
+    :cond_0
+    instance-of v0, p1, Lxbh;
 
-    const/4 v4, 0x1
+    if-nez v0, :cond_1
 
-    if-le v3, v2, :cond_5
+    goto :goto_1
 
-    sub-int/2addr v3, v2
+    :cond_1
+    check-cast p1, Lxbh;
 
-    iget v0, p0, Lbk7;->Z:I
+    move-object v0, p1
 
-    iget v2, p0, Lbk7;->s0:I
+    check-cast v0, Lw1;
 
-    add-int/2addr v0, v2
-
-    invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
+    invoke-interface {v0}, Lxbh;->b()I
 
     move-result v0
 
-    sub-int/2addr v0, v4
+    if-eqz v0, :cond_3
 
-    iput-boolean v4, p0, Lbk7;->b:Z
+    const/16 v1, 0x9
 
-    :goto_1
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    if-ne v0, v1, :cond_2
 
-    move-result v2
+    invoke-interface {p1}, Lxbh;->n()Lbk7;
 
-    if-ge v0, v2, :cond_4
+    move-result-object p1
 
-    if-lez v3, :cond_4
+    iget-byte v0, p0, Lbk7;->a:B
 
-    invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
+    iget-byte v1, p1, Lbk7;->a:B
 
-    move-result v2
+    if-ne v0, v1, :cond_2
 
-    invoke-static {v2}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
+    iget-object v0, p0, Lbk7;->b:[B
 
-    move-result v2
+    iget-object p1, p1, Lbk7;->b:[B
 
-    if-eqz v2, :cond_3
-
-    add-int/lit8 v2, v0, 0x1
-
-    invoke-interface {p1, v0, v2}, Landroid/text/Editable;->delete(II)Landroid/text/Editable;
-
-    add-int/lit8 v3, v3, -0x1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    goto/16 :goto_9
-
-    :cond_3
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_4
-    iput-boolean v1, p0, Lbk7;->b:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_5
-    :try_start_2
-    iget-boolean v2, p0, Lbk7;->c:Z
-
-    if-eqz v2, :cond_7
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result p1
 
-    if-eqz p1, :cond_6
+    if-eqz p1, :cond_2
 
-    move v1, v4
+    :goto_0
+    const/4 p1, 0x1
 
-    :cond_6
-    iput-boolean v1, p0, Lbk7;->c:Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    return p1
 
-    monitor-exit p0
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
 
-    return-void
+    return p1
 
-    :cond_7
-    :try_start_3
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    if-ne v0, v2, :cond_8
-
-    move v2, v4
-
-    goto :goto_2
-
-    :cond_8
-    move v2, v1
-
-    :goto_2
-    invoke-virtual {p0, p1}, Lbk7;->a(Landroid/text/Editable;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v8, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_9
-
-    goto :goto_6
-
-    :cond_9
-    if-eqz v2, :cond_a
-
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    goto :goto_6
-
-    :cond_a
-    move v3, v1
-
-    move v5, v3
-
-    :goto_3
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v6
-
-    if-ge v3, v6, :cond_d
-
-    if-lt v3, v0, :cond_b
-
-    goto :goto_4
-
-    :cond_b
-    invoke-interface {p1, v3}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v6
-
-    invoke-static {v6}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_c
-
-    add-int/lit8 v5, v5, 0x1
-
-    :cond_c
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
-
-    :cond_d
-    :goto_4
-    move v0, v1
-
-    move v3, v0
-
-    :goto_5
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
-
-    move-result v6
-
-    if-ge v0, v6, :cond_10
-
-    if-ne v3, v5, :cond_e
-
-    goto :goto_6
-
-    :cond_e
-    invoke-virtual {v8, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v6
-
-    invoke-static {v6}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_f
-
-    add-int/lit8 v3, v3, 0x1
-
-    :cond_f
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_5
-
-    :cond_10
-    move v0, v1
-
-    :goto_6
-    if-nez v2, :cond_11
-
-    :goto_7
-    add-int/lit8 v2, v0, -0x1
-
-    if-lez v2, :cond_11
-
-    invoke-virtual {v8, v2}, Ljava/lang/String;->charAt(I)C
-
-    move-result v2
-
-    invoke-static {v2}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
-
-    move-result v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    if-nez v2, :cond_11
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_7
-
-    :cond_11
-    :try_start_4
-    iput-boolean v4, p0, Lbk7;->b:Z
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v7
-
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
-
-    move-result v10
-
-    const/4 v6, 0x0
-
-    const/4 v9, 0x0
-
-    move-object v5, p1
-
-    invoke-interface/range {v5 .. v10}, Landroid/text/Editable;->replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
-
-    iput-boolean v1, p0, Lbk7;->b:Z
-
-    invoke-static {v5, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
-    :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    goto :goto_8
-
-    :catch_0
-    move-exception v0
-
-    move-object p1, v0
-
-    :try_start_5
-    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    :goto_8
-    monitor-exit p0
-
-    return-void
-
-    :goto_9
-    :try_start_6
-    monitor-exit p0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    :cond_3
+    const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public final b(ILjava/lang/String;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 5
 
-    iput p1, p0, Lbk7;->o:I
+    iget-byte v0, p0, Lbk7;->a:B
 
-    iget-object p1, p0, Lbk7;->a:Ldkb;
+    add-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lbk7;->b:[B
 
-    new-instance v0, Llt;
+    array-length v2, v1
 
-    invoke-direct {v0, p1, p2}, Llt;-><init>(Ldkb;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lbk7;->d:Llt;
-
-    invoke-virtual {v0}, Llt;->f()V
-
-    return-void
-.end method
-
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 1
-
-    iget-boolean p4, p0, Lbk7;->b:Z
-
-    if-nez p4, :cond_2
-
-    iget-boolean p4, p0, Lbk7;->c:Z
-
-    if-eqz p4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    if-lez p3, :cond_2
-
-    move p4, p2
+    const/4 v3, 0x0
 
     :goto_0
-    add-int v0, p2, p3
+    if-ge v3, v2, :cond_0
 
-    if-ge p4, v0, :cond_2
+    aget-byte v4, v1, v3
 
-    invoke-interface {p1, p4}, Ljava/lang/CharSequence;->charAt(I)C
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result v0
+    add-int/2addr v0, v4
 
-    invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lbk7;->c:Z
-
-    iget-object p1, p0, Lbk7;->d:Llt;
-
-    invoke-virtual {p1}, Llt;->f()V
-
-    return-void
-
-    :cond_1
-    add-int/lit8 p4, p4, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_2
-    :goto_1
-    return-void
+    :cond_0
+    return v0
 .end method
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 1
+.method public final n()Lbk7;
+    .locals 0
 
-    iput p2, p0, Lbk7;->Z:I
+    return-object p0
+.end method
 
-    iput p4, p0, Lbk7;->s0:I
+.method public final toString()Ljava/lang/String;
+    .locals 6
 
-    iget-boolean p3, p0, Lbk7;->b:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez p3, :cond_2
+    const-string v1, "("
 
-    iget-boolean p3, p0, Lbk7;->c:Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz p3, :cond_0
+    iget-byte v1, p0, Lbk7;->a:B
 
-    goto :goto_1
+    invoke-static {v1}, Ljava/lang/Byte;->toString(B)Ljava/lang/String;
 
-    :cond_0
-    if-lez p4, :cond_2
+    move-result-object v1
 
-    move p3, p2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ",0x"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lbk7;->b:[B
+
+    array-length v2, v1
+
+    const/4 v3, 0x0
 
     :goto_0
-    add-int v0, p2, p4
+    if-ge v3, v2, :cond_0
 
-    if-ge p3, v0, :cond_2
+    aget-byte v4, v1, v3
 
-    invoke-interface {p1, p3}, Ljava/lang/CharSequence;->charAt(I)C
+    const/16 v5, 0x10
 
-    move-result v0
+    invoke-static {v4, v5}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
 
-    invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->isNonSeparator(C)Z
+    move-result-object v4
 
-    move-result v0
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lbk7;->c:Z
-
-    iget-object p1, p0, Lbk7;->d:Llt;
-
-    invoke-virtual {p1}, Llt;->f()V
-
-    return-void
-
-    :cond_1
-    add-int/lit8 p3, p3, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_2
-    :goto_1
-    return-void
+    :cond_0
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final u()Lbk7;
+    .locals 0
+
+    return-object p0
 .end method

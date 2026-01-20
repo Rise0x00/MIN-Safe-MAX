@@ -1,28 +1,55 @@
-.class public abstract Ldh4;
+.class public final Ldh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lpj6;
+
+.field public final b:Lhk7;
+
+.field public final c:Lhle;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public final f:Ljava/util/ArrayList;
+
+.field public final g:J
+
+.field public final h:Ljava/util/List;
+
+.field public final i:Ljava/util/List;
+
+
 # direct methods
-.method public static a(Landroid/media/AudioTrack;Ljub;)V
-    .locals 1
+.method public constructor <init>(Lpj6;Ljava/util/List;Lhle;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/List;Ljava/util/List;J)V
+    .locals 0
 
-    iget-object p1, p1, Ljub;->a:Liub;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p1, p0, Ldh4;->a:Lpj6;
 
-    iget-object p1, p1, Liub;->a:Landroid/media/metrics/LogSessionId;
+    invoke-static {p2}, Lhk7;->j(Ljava/util/Collection;)Lhk7;
 
-    invoke-static {}, Lgu8;->f()Landroid/media/metrics/LogSessionId;
+    move-result-object p1
 
-    invoke-static {p1}, Lgu8;->z(Landroid/media/metrics/LogSessionId;)Z
+    iput-object p1, p0, Ldh4;->b:Lhk7;
 
-    move-result v0
+    iput-object p3, p0, Ldh4;->c:Lhle;
 
-    if-nez v0, :cond_0
+    iput-object p4, p0, Ldh4;->d:Ljava/lang/String;
 
-    invoke-static {p0, p1}, La04;->q(Landroid/media/AudioTrack;Landroid/media/metrics/LogSessionId;)V
+    iput-object p5, p0, Ldh4;->e:Ljava/util/ArrayList;
 
-    :cond_0
+    iput-object p6, p0, Ldh4;->f:Ljava/util/ArrayList;
+
+    iput-object p7, p0, Ldh4;->h:Ljava/util/List;
+
+    iput-object p8, p0, Ldh4;->i:Ljava/util/List;
+
+    iput-wide p9, p0, Ldh4;->g:J
+
     return-void
 .end method

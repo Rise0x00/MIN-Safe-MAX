@@ -1,80 +1,40 @@
 .class public final Ln26;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lfpe;
 
 
 # instance fields
-.field public final synthetic X:Ltx1;
+.field public final a:Ljava/io/File;
 
-.field public final synthetic o:Lq38;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lq38;Ltx1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    iput-object p1, p0, Ln26;->o:Lq38;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ln26;->X:Ltx1;
+    iput-object p1, p0, Ln26;->a:Ljava/io/File;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p1, p0, Ln26;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ln26;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ln26;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ln26;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ln26;
-
-    iget-object v0, p0, Ln26;->o:Lq38;
-
-    iget-object v1, p0, Ln26;->X:Ltx1;
-
-    invoke-direct {p1, v0, v1, p2}, Ln26;-><init>(Lq38;Ltx1;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Ll26;
 
-    iget-object p1, p0, Ln26;->o:Lq38;
+    invoke-direct {v0, p0}, Ll26;-><init>(Ln26;)V
 
-    iget-object v0, p0, Ln26;->X:Ltx1;
-
-    invoke-virtual {p1, v0}, Lq38;->f(Lhla;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-object v0
 .end method

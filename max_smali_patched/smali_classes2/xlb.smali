@@ -1,3 +1,3 @@
-.class public interface abstract Lxlb;
-.super Ljava/lang/Object;
+.class public final Lxlb;
+.super Lwk9;
 .source "SourceFile"

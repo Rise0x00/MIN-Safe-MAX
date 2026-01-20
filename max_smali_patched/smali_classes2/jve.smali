@@ -1,84 +1,43 @@
 .class public final Ljve;
-.super Lnve;
+.super Lkk0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(JLjava/util/List;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
 
-    invoke-direct {p0, p1, p2, v0}, Lnve;-><init>(JI)V
-
-    iput-wide p1, p0, Ljve;->c:J
+    iput-object p3, p0, Ljve;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ljve;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ljve;
-
-    iget-wide v3, p0, Ljve;->c:J
-
-    iget-wide v5, p1, Ljve;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-wide v0, p0, Ljve;->c:J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const-string v1, "SessionsInfoEvent{sessions="
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return v0
-.end method
+    iget-object v1, p0, Ljve;->b:Ljava/util/List;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v0, "ChatId(chatId="
+    const/16 v1, 0x7d
 
-    const-string v1, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-wide v2, p0, Ljve;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

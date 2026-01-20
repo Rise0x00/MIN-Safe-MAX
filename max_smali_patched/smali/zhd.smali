@@ -1,164 +1,233 @@
 .class public final Lzhd;
-.super Ljava/lang/Object;
+.super Landroid/widget/TextView;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lzhd;
-
-.field public static final d:Lzhd;
+# interfaces
+.implements Landroid/widget/Checkable;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/graphics/drawable/GradientDrawable;
 
-.field public final b:Z
+.field public b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    new-instance v0, Lzhd;
+    const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    const/4 v2, -0x1
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-direct {v0, v2, v1}, Lzhd;-><init>(IZ)V
+    new-instance p1, Landroid/graphics/drawable/GradientDrawable;
 
-    sput-object v0, Lzhd;->c:Lzhd;
+    invoke-direct {p1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
 
-    new-instance v0, Lzhd;
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
 
-    const/4 v1, 0x1
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    invoke-direct {v0, v2, v1}, Lzhd;-><init>(IZ)V
+    move-result-object v1
 
-    sput-object v0, Lzhd;->d:Lzhd;
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public constructor <init>(IZ)V
-    .locals 0
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/high16 v2, 0x41a00000    # 20.0f
 
-    iput p1, p0, Lzhd;->a:I
+    mul-float/2addr v1, v2
 
-    iput-boolean p2, p0, Lzhd;->b:Z
+    invoke-virtual {p1, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    iput-object p1, p0, Lzhd;->a:Landroid/graphics/drawable/GradientDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/RippleDrawable;
+
+    sget-object v2, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v2, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lzlb;->c()Leqf;
+
+    move-result-object v2
+
+    iget-object v2, v2, Leqf;->a:Lcqf;
+
+    iget-object v2, v2, Lcqf;->a:Lbqf;
+
+    iget v2, v2, Lbqf;->i:I
+
+    invoke-static {v2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, p1, v0}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    const/16 p1, 0xc
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, p1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    const/16 v2, 0xa
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v2
+
+    invoke-static {v3}, Lq7j;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v4
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v4
+
+    invoke-static {v2}, Lq7j;->c(F)I
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v3, p1, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lzhd;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lzhd;
-
-    iget v0, p1, Lzhd;->a:I
-
-    iget v1, p0, Lzhd;->a:I
-
-    if-ne v1, v0, :cond_2
+.method public final isChecked()Z
+    .locals 1
 
     iget-boolean v0, p0, Lzhd;->b:Z
-
-    iget-boolean p1, p1, Lzhd;->b:Z
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lzhd;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lzhd;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/lit8 v0, v0, 0x1f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    add-int/2addr v0, v1
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final onCreateDrawableState(I)[I
+    .locals 1
 
-    iget v0, p0, Lzhd;->a:I
+    add-int/lit8 p1, p1, 0x1
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-super {p0, p1}, Landroid/widget/TextView;->onCreateDrawableState(I)[I
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-boolean v1, p0, Lzhd;->b:Z
+    iget-boolean v0, p0, Lzhd;->b:Z
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
+    const v0, 0x10100a0
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    filled-new-array {v0}, [I
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-static {p1, v0}, Landroid/view/View;->mergeDrawableStates([I[I)[I
 
-    const-string v2, "%d defer:%b"
+    :cond_0
+    return-object p1
+.end method
 
-    invoke-static {v1, v2, v0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+.method public final setBackgroundColors(Landroid/content/res/ColorStateList;)V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lzhd;->a:Landroid/graphics/drawable/GradientDrawable;
 
-    return-object v0
+    invoke-static {v0, p1}, Lv75;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
+
+    return-void
+.end method
+
+.method public setChecked(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lzhd;->b:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->refreshDrawableState()V
+
+    return-void
+.end method
+
+.method public final setTextColors(Landroid/content/res/ColorStateList;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
+
+    return-void
+.end method
+
+.method public final toggle()V
+    .locals 1
+
+    iget-boolean v0, p0, Lzhd;->b:Z
+
+    xor-int/lit8 v0, v0, 0x1
+
+    iput-boolean v0, p0, Lzhd;->b:Z
+
+    return-void
 .end method

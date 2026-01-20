@@ -1,136 +1,80 @@
 .class public final Lis9;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ld76;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/logout/a;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Los9;
+.field public final synthetic b:Lspf;
 
-.field public o:I
+.field public final synthetic c:Los9;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/logout/a;Los9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lspf;Los9;I)V
     .locals 0
 
-    iput-object p1, p0, Lis9;->X:Lru/ok/tamtam/logout/a;
+    iput p3, p0, Lis9;->a:I
 
-    iput-object p2, p0, Lis9;->Y:Los9;
+    iput-object p1, p0, Lis9;->b:Lspf;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lis9;->c:Los9;
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lis9;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lis9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lhs9;
 
-    move-result-object p1
+    iget-object v1, p0, Lis9;->c:Los9;
 
-    check-cast p1, Lis9;
+    const/4 v2, 0x1
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-direct {v0, p1, v1, v2}, Lhs9;-><init>(Lf76;Los9;I)V
 
-    invoke-virtual {p1, p2}, Lis9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Lis9;->b:Lspf;
 
-    move-result-object p1
+    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lis9;
-
-    iget-object v0, p0, Lis9;->X:Lru/ok/tamtam/logout/a;
-
-    iget-object v1, p0, Lis9;->Y:Los9;
-
-    invoke-direct {p1, v0, v1, p2}, Lis9;-><init>(Lru/ok/tamtam/logout/a;Los9;Lkotlin/coroutines/Continuation;)V
+    sget-object p1, Lac4;->a:Lac4;
 
     return-object p1
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    :pswitch_0
+    new-instance v0, Lhs9;
 
-    iget v0, p0, Lis9;->o:I
+    iget-object v1, p0, Lis9;->c:Los9;
 
-    const/4 v1, 0x1
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    invoke-direct {v0, p1, v1, v2}, Lhs9;-><init>(Lf76;Los9;I)V
 
-    if-ne v0, v1, :cond_0
+    iget-object p1, p0, Lis9;->b:Lspf;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0, p2}, Lspf;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iput v1, p0, Lis9;->o:I
-
-    iget-object p1, p0, Lis9;->X:Lru/ok/tamtam/logout/a;
-
-    invoke-interface {p1, p0}, Lru/ok/tamtam/logout/a;->b(Logf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    iget-object p1, p0, Lis9;->Y:Los9;
-
-    iget-object v0, p1, Los9;->f:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvc0;
-
-    iget-object v0, v0, Lvc0;->b:Lpj8;
-
-    invoke-virtual {v0}, Ljava/util/AbstractMap;->clear()V
-
-    iget-object p1, p1, Los9;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Ljwi;->b(Lg54;Ljava/util/concurrent/CancellationException;)V
-
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lac4;->a:Lac4;
 
     return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

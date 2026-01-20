@@ -1,147 +1,101 @@
 .class public final Lpx2;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lpx2;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
 
-.field public final b:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lpx2;
-
-    sget-object v1, Lna5;->a:Lna5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lpx2;-><init>(Ljava/util/List;Z)V
-
-    sput-object v0, Lpx2;->c:Lpx2;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;Z)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lpx2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iput-object p1, p0, Lpx2;->a:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    iput-boolean p2, p0, Lpx2;->b:Z
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_1
+    invoke-virtual {p0, p1, p2}, Lpx2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lpx2;
+    move-result-object p1
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lpx2;
 
-    iget-object v0, p0, Lpx2;->a:Ljava/lang/Object;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v1, p1, Lpx2;->a:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lpx2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    return-object p2
+.end method
 
-    move-result v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    if-nez v0, :cond_2
+    new-instance v0, Lpx2;
+
+    iget-object v1, p0, Lpx2;->X:Lone/me/chatscreen/ChatScreen;
+
+    invoke-direct {v0, p2, v1}, Lpx2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+
+    iput-object p1, v0, Lpx2;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lpx2;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lhja;
+
+    instance-of p1, v0, Lag3;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lpx2;->X:Lone/me/chatscreen/ChatScreen;
+
+    invoke-virtual {p1}, La94;->getRouter()Lw4e;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lw4e;->C()Z
 
     goto :goto_0
 
-    :cond_2
-    iget-boolean v0, p0, Lpx2;->b:Z
+    :cond_0
+    instance-of p1, v0, Lfm4;
 
-    iget-boolean p1, p1, Lpx2;->b:Z
+    if-eqz p1, :cond_1
 
-    if-eq v0, p1, :cond_3
+    sget-object p1, Lgy2;->c:Lgy2;
 
+    check-cast v0, Lfm4;
+
+    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
+
+    :cond_1
     :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lpx2;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lpx2;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ChatsList(chats="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lpx2;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hasMore="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lpx2;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

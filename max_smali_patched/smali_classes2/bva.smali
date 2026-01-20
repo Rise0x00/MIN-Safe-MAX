@@ -1,80 +1,80 @@
 .class public final Lbva;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ldph;
+.field public final synthetic X:Lone/me/notifications/settings/NotificationsSettingsScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ldph;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lbva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    iput-object p1, p0, Lbva;->a:Ldph;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)Lew5;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/16 v1, 0x23
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Lzua;
-
-    invoke-direct {v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;-><init>()V
-
-    :goto_0
-    move-object v7, v0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v0, Lava;
-
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedTransferQueue;-><init>()V
-
-    goto :goto_0
-
-    :goto_1
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v0, p0, Lbva;->a:Ldph;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0, p1, p2}, Lbva;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {v0, p2, p1}, Ldph;->q(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
+    check-cast p1, Lbva;
 
-    move-result-object v8
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    new-instance v1, Lew5;
+    invoke-virtual {p1, p2}, Lbva;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    return-object p2
+.end method
 
-    const/4 v3, 0x1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const-wide/16 v4, 0x0
+    new-instance v0, Lbva;
 
-    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+    iget-object v1, p0, Lbva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    new-instance p1, Lr02;
+    invoke-direct {v0, p2, v1}, Lbva;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
 
-    const/4 p2, 0x1
+    iput-object p1, v0, Lbva;->o:Ljava/lang/Object;
 
-    invoke-direct {p1, p2}, Lr02;-><init>(I)V
+    return-object v0
+.end method
 
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-object v1
+    iget-object v0, p0, Lbva;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object p1, p0, Lbva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
+
+    iget-object p1, p1, Lone/me/notifications/settings/NotificationsSettingsScreen;->Y:Lbj0;
+
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

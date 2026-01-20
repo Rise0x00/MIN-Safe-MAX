@@ -1,96 +1,108 @@
-.class public final Li2c;
-.super Lp2c;
+.class public final synthetic Li2c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lnq6;
 
 
 # instance fields
-.field public final b:Lkrf;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lj2c;
+
+.field public final synthetic c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lkrf;)V
+.method public synthetic constructor <init>(Lj2c;Ljava/util/ArrayList;I)V
     .locals 0
 
-    invoke-direct {p0}, Lp2c;-><init>()V
+    iput p3, p0, Li2c;->a:I
 
-    iput-object p1, p0, Li2c;->b:Lkrf;
+    iput-object p1, p0, Li2c;->b:Lj2c;
+
+    iput-object p2, p0, Li2c;->c:Ljava/util/ArrayList;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Li2c;->a:I
 
-    goto :goto_1
+    check-cast p1, Lf7e;
 
-    :cond_0
-    instance-of v0, p1, Li2c;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Li2c;->b:Lj2c;
 
-    goto :goto_0
+    iget-object v0, v0, Lj2c;->c:Lcua;
 
-    :cond_1
-    check-cast p1, Li2c;
+    iget-object v1, p0, Li2c;->c:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Li2c;->b:Lkrf;
+    invoke-virtual {v0, p1, v1}, Luoj;->d(Lf7e;Ljava/lang/Iterable;)V
 
-    iget-object p1, p1, Li2c;->b:Lkrf;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v0, p1}, Lkrf;->equals(Ljava/lang/Object;)Z
+    return-object p1
 
-    move-result p1
+    :pswitch_0
+    iget-object p1, p0, Li2c;->c:Ljava/util/ArrayList;
 
-    if-nez p1, :cond_2
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Li2c;->b:Lkrf;
-
-    invoke-virtual {v0}, Lkrf;->hashCode()I
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    return v0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ExternalShareLink(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Li2c;->b:Lkrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    iget-object v2, p0, Li2c;->b:Lj2c;
+
+    iget-object v2, v2, Lj2c;->a:Lb2e;
+
+    new-instance v3, Ln33;
+
+    const/16 v4, 0x10
+
+    invoke-direct {v3, v0, v1, v4}, Ln33;-><init>(JI)V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-static {v2, v0, v1, v3}, Lulj;->d(Lb2e;ZZLnq6;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

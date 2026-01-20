@@ -1,185 +1,129 @@
 .class public final Lkii;
-.super Lt6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk9i;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field private static final zzb:Lkii;
+.field public static final Y:Ljava/lang/String;
 
 
 # instance fields
-.field private zzd:I
+.field public final X:Lbg8;
 
-.field private zze:I
+.field public final a:Lrve;
 
-.field private zzf:Lf7i;
+.field public final b:Landroid/content/Context;
 
-.field private zzg:I
+.field public final c:Lhji;
 
-.field private zzh:Lizi;
+.field public final d:Lne8;
 
-.field private zzi:Lpti;
-
-.field private zzj:Lmki;
-
-.field private zzk:I
-
-.field private zzl:Lf7i;
-
-.field private zzm:B
+.field public final o:Llii;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lkii;
+    const-string v0, "WorkForegroundRunnable"
 
-    invoke-direct {v0}, Lkii;-><init>()V
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    sput-object v0, Lkii;->zzb:Lkii;
+    move-result-object v0
 
-    const-class v1, Lkii;
-
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
+    sput-object v0, Lkii;->Y:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;Lhji;Lne8;Llii;Lbg8;)V
     .locals 1
 
-    invoke-direct {p0}, Lt6i;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
+    new-instance v0, Lrve;
 
-    iput-byte v0, p0, Lkii;->zzm:B
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x11
+    iput-object v0, p0, Lkii;->a:Lrve;
 
-    iput v0, p0, Lkii;->zze:I
+    iput-object p1, p0, Lkii;->b:Landroid/content/Context;
 
-    sget-object v0, Lcai;->d:Lcai;
+    iput-object p2, p0, Lkii;->c:Lhji;
 
-    iput-object v0, p0, Lkii;->zzf:Lf7i;
+    iput-object p3, p0, Lkii;->d:Lne8;
 
-    iput-object v0, p0, Lkii;->zzl:Lf7i;
+    iput-object p4, p0, Lkii;->o:Llii;
+
+    iput-object p5, p0, Lkii;->X:Lbg8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
-    .locals 12
+.method public final run()V
+    .locals 5
 
-    add-int/lit8 p1, p1, -0x1
+    iget-object v0, p0, Lkii;->c:Lhji;
 
-    if-eqz p1, :cond_5
+    iget-boolean v0, v0, Lhji;->q:Z
 
-    const/4 v0, 0x2
+    if-eqz v0, :cond_1
 
-    if-eq p1, v0, :cond_4
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v0, 0x3
+    const/16 v1, 0x1f
 
-    if-eq p1, v0, :cond_3
-
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_2
-
-    const/4 v0, 0x5
-
-    if-eq p1, v0, :cond_1
-
-    if-nez p2, :cond_0
-
-    const/4 p1, 0x0
+    if-lt v0, v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x1
+    new-instance v0, Lrve;
 
-    :goto_0
-    iput-byte p1, p0, Lkii;->zzm:B
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iget-object v1, p0, Lkii;->X:Lbg8;
 
-    return-object p1
+    iget-object v2, v1, Lbg8;->c:Ljava/lang/Object;
+
+    check-cast v2, Lv30;
+
+    new-instance v3, Lghh;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v3, p0, v4, v0}, Lghh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v2, v3}, Lv30;->execute(Ljava/lang/Runnable;)V
+
+    new-instance v2, Lkuf;
+
+    const/4 v3, 0x5
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p0, v0, v4, v3}, Lkuf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object v1, v1, Lbg8;->c:Ljava/lang/Object;
+
+    check-cast v1, Lv30;
+
+    invoke-virtual {v0, v2, v1}, Lu1;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    return-void
 
     :cond_1
-    sget-object p1, Lkii;->zzb:Lkii;
+    :goto_0
+    iget-object v0, p0, Lkii;->a:Lrve;
 
-    return-object p1
+    const/4 v1, 0x0
 
-    :cond_2
-    new-instance p1, Ljki;
+    invoke-virtual {v0, v1}, Lrve;->i(Ljava/lang/Object;)Z
 
-    sget-object p2, Lkii;->zzb:Lkii;
-
-    const/16 v0, 0xe
-
-    invoke-direct {p1, v0, p2}, Ljki;-><init>(ILt6i;)V
-
-    return-object p1
-
-    :cond_3
-    new-instance p1, Lkii;
-
-    invoke-direct {p1}, Lkii;-><init>()V
-
-    return-object p1
-
-    :cond_4
-    sget-object v2, Lwwh;->m:Lwwh;
-
-    const-class v10, Lpxh;
-
-    const-string v11, "zzj"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    const-string v3, "zzf"
-
-    const-class v4, Lcxh;
-
-    const-string v5, "zzg"
-
-    const-string v6, "zzh"
-
-    const-string v7, "zzi"
-
-    const-string v8, "zzk"
-
-    const-string v9, "zzl"
-
-    filled-new-array/range {v0 .. v11}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lkii;->zzb:Lkii;
-
-    new-instance v0, Lfai;
-
-    const-string v1, "\u0001\u0008\u0000\u0001\u0001\u000f\u0008\u0000\u0002\u0004\u0001\u180c\u0000\u0003\u041b\u0004\u1004\u0001\u0005\u1409\u0002\u0006\u1409\u0003\u0007\u1004\u0005\u0008\u001b\u000f\u1409\u0004"
-
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_5
-    iget-byte p1, p0, Lkii;->zzm:B
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

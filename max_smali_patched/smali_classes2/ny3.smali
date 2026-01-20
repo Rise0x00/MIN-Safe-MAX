@@ -1,159 +1,186 @@
-.class public final synthetic Lny3;
+.class public final Lny3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lf8;
-
 
 # instance fields
-.field public final synthetic a:Lpy3;
+.field public final a:Lo58;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpy3;)V
+.method public constructor <init>(Lo58;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lny3;->a:Lpy3;
+    iput-object p1, p0, Lny3;->a:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lyid;)V
-    .locals 6
+.method public final a(I)V
+    .locals 13
 
-    iget-object v0, p0, Lny3;->a:Lpy3;
+    new-instance v0, Llr8;
 
-    iget-object v0, v0, Lpy3;->b:Lru7;
+    invoke-direct {v0}, Llr8;-><init>()V
 
-    const/4 v1, 0x0
+    const/16 v1, 0x190
 
-    :try_start_0
-    invoke-virtual {p1}, Lyid;->d()Landroid/app/Activity;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object p1
+    move-result-object v1
 
-    if-eqz p1, :cond_2
+    const-string v2, "screen"
 
-    new-instance v2, Lp66;
+    invoke-virtual {v0, v2, v1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v3, 0xb
+    const/4 v1, 0x1
 
-    invoke-direct {v2, p1, v3}, Lp66;-><init>(Landroid/content/Context;I)V
+    if-eq p1, v1, :cond_1
 
-    iget-object v3, v2, Lp66;->d:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    check-cast v3, Landroid/content/Intent;
+    if-ne p1, v1, :cond_0
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lx4e;
-
-    check-cast v4, Ljud;
-
-    const-string v5, "invite-header"
-
-    iget-object v4, v4, Ly3;->h:Luu7;
-
-    invoke-virtual {v4, v5, v1}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_0
+    const-string p1, "block"
 
     goto :goto_0
 
     :cond_0
-    sget v4, Lfkd;->A:I
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_0
-    iput-object v4, v2, Lp66;->b:Ljava/lang/Object;
-
-    const-string v4, "text/plain"
-
-    invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lx4e;
-
-    check-cast v0, Ljud;
-
-    const-string v4, "invite-long"
-
-    iget-object v5, v0, Ly3;->h:Luu7;
-
-    invoke-virtual {v5, v4, v1}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    goto :goto_1
+    throw p1
 
     :cond_1
-    sget v4, Lfkd;->G:I
+    const-string p1, "to_contacts"
 
-    invoke-virtual {p1, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    :goto_0
+    const-string v1, "clickType"
+
+    invoke-virtual {v0, v1, p1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-virtual {v0}, Llr8;->b()Llr8;
+
+    move-result-object v9
+
+    new-instance v2, Lgk8;
+
+    const-string v3, "CONTACT_OR_BLOCK"
+
+    const-string v4, "clicked"
+
+    const-wide/16 v5, 0x0
+
+    const-wide/16 v7, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const/16 v12, 0x2c
+
+    invoke-direct/range {v2 .. v12}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
+
+    iget-object p1, p0, Lny3;->a:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Ljud;->l()Ljava/lang/String;
+    check-cast p1, Ldd;
 
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const/4 v4, 0x1
-
-    invoke-static {v0, v4}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_1
-    const-string p1, "android.intent.extra.TEXT"
-
-    invoke-virtual {v3, p1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    invoke-virtual {v2}, Lp66;->M()V
+    invoke-virtual {p1, v2}, Ldd;->h(Lgk8;)V
 
     return-void
+.end method
+
+.method public final b(I)V
+    .locals 13
+
+    new-instance v0, Llr8;
+
+    invoke-direct {v0}, Llr8;-><init>()V
+
+    const/16 v1, 0x15e
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "screen"
+
+    invoke-virtual {v0, v2, v1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "UIElementType"
+
+    const-string v2, "add_or_block_infobar"
+
+    invoke-virtual {v0, v1, v2}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v1, 0x1
+
+    if-eq p1, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq p1, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-ne p1, v1, :cond_0
+
+    const-string p1, "close"
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    throw p1
+
+    :cond_1
+    const-string p1, "block"
+
+    goto :goto_0
 
     :cond_2
-    const-string p1, "Required value was null."
+    const-string p1, "to_contacts"
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    :goto_0
+    const-string v1, "clickType"
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw v0
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Llr8;->b()Llr8;
 
-    :catch_0
-    const-string p1, "ContactsDeepLinkFactory"
+    move-result-object v9
 
-    const-string v0, "shareInvite: failed, no activity found"
+    new-instance v2, Lgk8;
 
-    invoke-static {p1, v0, v1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const-string v3, "CONTACT_OR_BLOCK"
+
+    const-string v4, "clicked"
+
+    const-wide/16 v5, 0x0
+
+    const-wide/16 v7, 0x0
+
+    const-wide/16 v10, 0x0
+
+    const/16 v12, 0x2c
+
+    invoke-direct/range {v2 .. v12}, Lgk8;-><init>(Ljava/lang/String;Ljava/lang/String;JJLjava/util/Map;JI)V
+
+    iget-object p1, p0, Lny3;->a:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldd;
+
+    invoke-virtual {p1, v2}, Ldd;->h(Lgk8;)V
 
     return-void
 .end method

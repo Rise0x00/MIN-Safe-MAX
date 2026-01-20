@@ -1,5 +1,5 @@
 .class Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;
-.super Lkzg;
+.super Loth;
 .source "SourceFile"
 
 
@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field public final b:Lyve;
+.field public final b:Lakf;
 
 .field public c:Z
 
@@ -29,15 +29,15 @@
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lkzg;-><init>()V
+    invoke-direct {p0}, Loth;-><init>()V
 
-    new-instance v0, Lyve;
+    new-instance v0, Lakf;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lyve;-><init>(I)V
+    invoke-direct {v0, v1}, Lakf;-><init>(I)V
 
-    iput-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->b:Lyve;
+    iput-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->b:Lakf;
 
     iput-boolean v1, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->c:Z
 
@@ -46,12 +46,12 @@
 
 
 # virtual methods
-.method public final d()V
+.method public final b()V
     .locals 10
 
-    iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->b:Lyve;
+    iget-object v0, p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;->b:Lakf;
 
-    iget v1, v0, Lyve;->c:I
+    iget v1, v0, Lakf;->c:I
 
     const/4 v2, 0x0
 
@@ -62,47 +62,47 @@
 
     if-ge v3, v1, :cond_4
 
-    iget-object v5, v0, Lyve;->b:[Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Lakf;->d(I)Ljava/lang/Object;
 
-    aget-object v5, v5, v3
+    move-result-object v5
 
-    check-cast v5, Lz48;
+    check-cast v5, Leg8;
 
-    iget-object v6, v5, Lz48;->l:La4i;
+    iget-object v6, v5, Leg8;->l:Luwi;
 
-    invoke-virtual {v6}, La4i;->a()V
+    invoke-virtual {v6}, Luwi;->a()V
 
     const/4 v7, 0x1
 
-    iput-boolean v7, v6, La4i;->c:Z
+    iput-boolean v7, v6, Luwi;->c:Z
 
-    iget-object v8, v5, Lz48;->n:La58;
+    iget-object v8, v5, Leg8;->n:Lfg8;
 
     if-eqz v8, :cond_0
 
-    invoke-virtual {v5, v8}, Lz48;->j(Lhla;)V
+    invoke-virtual {v5, v8}, Leg8;->j(Lf0b;)V
 
     :cond_0
-    iget-object v9, v6, La4i;->a:Lz48;
+    iget-object v9, v6, Luwi;->a:Leg8;
 
     if-eqz v9, :cond_3
 
     if-ne v9, v5, :cond_2
 
-    iput-object v4, v6, La4i;->a:Lz48;
+    iput-object v4, v6, Luwi;->a:Leg8;
 
     if-eqz v8, :cond_1
 
-    iget-boolean v4, v8, La58;->b:Z
+    iget-boolean v4, v8, Lfg8;->b:Z
 
     :cond_1
-    iput-boolean v7, v6, La4i;->d:Z
+    iput-boolean v7, v6, Luwi;->d:Z
 
-    iput-boolean v2, v6, La4i;->b:Z
+    iput-boolean v2, v6, Luwi;->b:Z
 
-    iput-boolean v2, v6, La4i;->c:Z
+    iput-boolean v2, v6, Luwi;->c:Z
 
-    iput-boolean v2, v6, La4i;->e:Z
+    iput-boolean v2, v6, Luwi;->e:Z
 
     add-int/lit8 v3, v3, 0x1
 
@@ -127,9 +127,9 @@
     throw v0
 
     :cond_4
-    iget v1, v0, Lyve;->c:I
+    iget v1, v0, Lakf;->c:I
 
-    iget-object v3, v0, Lyve;->b:[Ljava/lang/Object;
+    iget-object v3, v0, Lakf;->b:[Ljava/lang/Object;
 
     move v5, v2
 
@@ -143,7 +143,7 @@
     goto :goto_1
 
     :cond_5
-    iput v2, v0, Lyve;->c:I
+    iput v2, v0, Lakf;->c:I
 
     return-void
 .end method

@@ -1,117 +1,253 @@
 .class public final Ldwh;
-.super Lt6i;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 # interfaces
-.implements Lk9i;
-
-
-# static fields
-.field private static final zzb:Ldwh;
+.implements Lrtg;
 
 
 # instance fields
-.field private zzd:I
+.field public final a:Landroid/view/View;
 
-.field private zze:Llwh;
+.field public final b:I
 
-.field private zzf:Z
+.field public final c:Landroid/view/ViewGroup;
+
+.field public final d:Z
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/view/View;I)V
+    .locals 1
 
-    new-instance v0, Ldwh;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    invoke-direct {v0}, Lt6i;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Ldwh;->zzb:Ldwh;
+    iput-boolean v0, p0, Ldwh;->f:Z
 
-    const-class v1, Ldwh;
+    iput-object p1, p0, Ldwh;->a:Landroid/view/View;
 
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
+    iput p2, p0, Ldwh;->b:I
+
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    iput-object p1, p0, Ldwh;->c:Landroid/view/ViewGroup;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ldwh;->d:Z
+
+    invoke-virtual {p0, p1}, Ldwh;->g(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
+.method public final a(Lstg;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final b()V
     .locals 2
 
-    add-int/lit8 p1, p1, -0x1
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_4
+    invoke-virtual {p0, v0}, Ldwh;->g(Z)V
 
-    const/4 p2, 0x2
+    iget-boolean v0, p0, Ldwh;->f:Z
 
-    if-eq p1, p2, :cond_3
+    if-nez v0, :cond_0
 
-    const/4 p2, 0x3
+    iget-object v0, p0, Ldwh;->a:Landroid/view/View;
 
-    if-eq p1, p2, :cond_2
+    iget v1, p0, Ldwh;->b:I
 
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    invoke-static {v0, v1}, Lkvh;->b(Landroid/view/View;I)V
 
     :cond_0
-    sget-object p1, Ldwh;->zzb:Ldwh;
+    return-void
+.end method
 
-    return-object p1
+.method public final c(Lstg;)V
+    .locals 0
 
-    :cond_1
-    new-instance p1, Lmii;
+    invoke-virtual {p1, p0}, Lstg;->D(Lrtg;)Lstg;
 
-    sget-object p2, Ldwh;->zzb:Ldwh;
+    return-void
+.end method
 
-    invoke-direct {p1, p2}, Lj6i;-><init>(Lt6i;)V
+.method public final f()V
+    .locals 2
 
-    return-object p1
+    const/4 v0, 0x1
 
-    :cond_2
-    new-instance p1, Ldwh;
+    invoke-virtual {p0, v0}, Ldwh;->g(Z)V
 
-    invoke-direct {p1}, Lt6i;-><init>()V
+    iget-boolean v0, p0, Ldwh;->f:Z
 
-    return-object p1
+    if-nez v0, :cond_0
 
-    :cond_3
-    const-string p1, "zze"
+    iget-object v0, p0, Ldwh;->a:Landroid/view/View;
 
-    const-string p2, "zzf"
+    const/4 v1, 0x0
 
-    const-string v0, "zzd"
+    invoke-static {v0, v1}, Lkvh;->b(Landroid/view/View;I)V
 
-    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
+    :cond_0
+    return-void
+.end method
 
-    move-result-object p1
+.method public final g(Z)V
+    .locals 1
 
-    sget-object p2, Ldwh;->zzb:Ldwh;
+    iget-boolean v0, p0, Ldwh;->d:Z
 
-    new-instance v0, Lfai;
+    if-eqz v0, :cond_0
 
-    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1009\u0000\u0002\u1007\u0001"
+    iget-boolean v0, p0, Ldwh;->e:Z
 
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-eq v0, p1, :cond_0
 
-    return-object v0
+    iget-object v0, p0, Ldwh;->c:Landroid/view/ViewGroup;
 
-    :cond_4
+    if-eqz v0, :cond_0
+
+    iput-boolean p1, p0, Ldwh;->e:Z
+
+    invoke-static {v0, p1}, Lw5j;->b(Landroid/view/ViewGroup;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(Lstg;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
     const/4 p1, 0x1
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    iput-boolean p1, p0, Ldwh;->f:Z
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 1
+    iget-boolean p1, p0, Ldwh;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 2
+    iget-object p1, p0, Ldwh;->a:Landroid/view/View;
+
+    iget v0, p0, Ldwh;->b:I
+
+    invoke-static {p1, v0}, Lkvh;->b(Landroid/view/View;I)V
+
+    .line 3
+    iget-object p1, p0, Ldwh;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 5
+    invoke-virtual {p0, p1}, Ldwh;->g(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-nez p2, :cond_1
+
+    .line 6
+    iget-boolean p1, p0, Ldwh;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 7
+    iget-object p1, p0, Ldwh;->a:Landroid/view/View;
+
+    iget p2, p0, Ldwh;->b:I
+
+    invoke-static {p1, p2}, Lkvh;->b(Landroid/view/View;I)V
+
+    .line 8
+    iget-object p1, p0, Ldwh;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 9
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 10
+    invoke-virtual {p0, p1}, Ldwh;->g(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    .line 2
+    iget-object p1, p0, Ldwh;->a:Landroid/view/View;
+
+    const/4 p2, 0x0
+
+    invoke-static {p1, p2}, Lkvh;->b(Landroid/view/View;I)V
+
+    .line 3
+    iget-object p1, p0, Ldwh;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 4
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    return-void
 .end method

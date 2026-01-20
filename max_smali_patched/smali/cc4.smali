@@ -1,100 +1,97 @@
-.class public final Lcc4;
-.super Ljava/lang/Object;
+.class public final enum Lcc4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Landroid/net/Uri;
+# static fields
+.field public static final enum a:Lcc4;
 
-.field public b:J
+.field public static final enum b:Lcc4;
 
-.field public c:I
+.field public static final enum c:Lcc4;
 
-.field public d:[B
+.field public static final enum d:Lcc4;
 
-.field public e:Ljava/util/Map;
-
-.field public f:J
-
-.field public g:J
-
-.field public h:Ljava/lang/String;
-
-.field public i:I
+.field public static final synthetic o:[Lcc4;
 
 
-# virtual methods
-.method public a()Ldc4;
-    .locals 14
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
-    iget-object v0, p0, Lcc4;->a:Landroid/net/Uri;
+    new-instance v0, Lcc4;
 
-    if-eqz v0, :cond_0
+    const-string v1, "DEFAULT"
 
-    new-instance v1, Ldc4;
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lcc4;->a:Landroid/net/Uri;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v3, p0, Lcc4;->b:J
+    sput-object v0, Lcc4;->a:Lcc4;
 
-    iget v5, p0, Lcc4;->c:I
+    new-instance v1, Lcc4;
 
-    iget-object v6, p0, Lcc4;->d:[B
+    const-string v2, "LAZY"
 
-    iget-object v7, p0, Lcc4;->e:Ljava/util/Map;
+    const/4 v3, 0x1
 
-    iget-wide v8, p0, Lcc4;->f:J
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v10, p0, Lcc4;->g:J
+    sput-object v1, Lcc4;->b:Lcc4;
 
-    iget-object v12, p0, Lcc4;->h:Ljava/lang/String;
+    new-instance v2, Lcc4;
 
-    iget v13, p0, Lcc4;->i:I
+    const-string v3, "ATOMIC"
 
-    invoke-direct/range {v1 .. v13}, Ldc4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
+    const/4 v4, 0x2
 
-    return-object v1
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    sput-object v2, Lcc4;->c:Lcc4;
 
-    const-string v1, "The uri must be set."
+    new-instance v3, Lcc4;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v4, "UNDISPATCHED"
 
-    throw v0
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lcc4;->d:Lcc4;
+
+    filled-new-array {v0, v1, v2, v3}, [Lcc4;
+
+    move-result-object v0
+
+    sput-object v0, Lcc4;->o:[Lcc4;
+
+    return-void
 .end method
 
-.method public b()Lec4;
-    .locals 15
+.method public static valueOf(Ljava/lang/String;)Lcc4;
+    .locals 1
 
-    iget-object v0, p0, Lcc4;->a:Landroid/net/Uri;
+    const-class v0, Lcc4;
 
-    const-string v1, "The uri must be set."
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-static {v0, v1}, Ligi;->j(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object p0
 
-    new-instance v2, Lec4;
+    check-cast p0, Lcc4;
 
-    iget-object v3, p0, Lcc4;->a:Landroid/net/Uri;
+    return-object p0
+.end method
 
-    iget-wide v4, p0, Lcc4;->b:J
+.method public static values()[Lcc4;
+    .locals 1
 
-    iget v6, p0, Lcc4;->c:I
+    sget-object v0, Lcc4;->o:[Lcc4;
 
-    iget-object v7, p0, Lcc4;->d:[B
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v8, p0, Lcc4;->e:Ljava/util/Map;
+    move-result-object v0
 
-    iget-wide v9, p0, Lcc4;->f:J
+    check-cast v0, [Lcc4;
 
-    iget-wide v11, p0, Lcc4;->g:J
-
-    iget-object v13, p0, Lcc4;->h:Ljava/lang/String;
-
-    iget v14, p0, Lcc4;->i:I
-
-    invoke-direct/range {v2 .. v14}, Lec4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
-
-    return-object v2
+    return-object v0
 .end method

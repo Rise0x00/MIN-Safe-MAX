@@ -1,90 +1,92 @@
-.class public final synthetic Ln4c;
-.super Ljava/lang/Object;
+.class public final Ln4c;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lyf4;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:J
+.field public final synthetic X:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/String;J)V
+.method public constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ln4c;->X:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    iput-wide p1, p0, Ln4c;->a:J
+    const/4 p1, 0x2
 
-    iput-wide p4, p0, Ln4c;->b:J
-
-    iput-object p3, p0, Ln4c;->c:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    check-cast p1, Ljava/util/Set;
 
-    sget-object v1, Lt3c;->o:Lce5;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1}, Li2;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1, p2}, Ln4c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    move-result-object p1
 
-    :cond_0
-    move-object v2, v1
+    check-cast p1, Ln4c;
 
-    check-cast v2, Lf2;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v2}, Lf2;->hasNext()Z
+    invoke-virtual {p1, p2}, Ln4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v3
+    return-object p2
+.end method
 
-    if-eqz v3, :cond_1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
+    new-instance v0, Ln4c;
 
-    move-result-object v2
+    iget-object v1, p0, Ln4c;->X:Lone/me/startconversation/channel/PickSubscribersScreen;
 
-    move-object v5, v2
+    invoke-direct {v0, v1, p2}, Ln4c;-><init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v5, Lt3c;
-
-    iget-object v2, v5, Lt3c;->a:Ljava/lang/String;
-
-    iget-object v3, p0, Ln4c;->c:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    iget-wide v1, p0, Ln4c;->a:J
-
-    iget-wide v3, p0, Ln4c;->b:J
-
-    invoke-direct/range {v0 .. v5}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;-><init>(JJLt3c;)V
+    iput-object p1, v0, Ln4c;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :cond_1
-    new-instance v0, Ljava/util/NoSuchElementException;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const-string v1, "Collection contains no element matching the predicate."
+    iget-object v0, p0, Ln4c;->o:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+    check-cast v0, Ljava/util/Set;
 
-    throw v0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-static {v0}, Lpi3;->a0(Ljava/util/Collection;)[J
+
+    move-result-object p1
+
+    iget-object v0, p0, Ln4c;->X:Lone/me/startconversation/channel/PickSubscribersScreen;
+
+    iget-object v1, v0, Lone/me/startconversation/channel/PickSubscribersScreen;->u0:Lls;
+
+    sget-object v2, Lone/me/startconversation/channel/PickSubscribersScreen;->A0:[Lz28;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, v0, p1}, Lls;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

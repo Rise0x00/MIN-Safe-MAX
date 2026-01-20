@@ -1,272 +1,233 @@
-.class public final synthetic Lk7a;
-.super Ljava/lang/Object;
+.class public final Lk7a;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lyv4;
 
-.field public final synthetic b:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lyv4;
+
+.field public final synthetic t0:[J
+
+.field public final synthetic u0:Ll7a;
+
+.field public final synthetic v0:Ljava/lang/Long;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/neuroavatars/NeuroAvatarsScreen;I)V
+.method public constructor <init>(Ll7a;Ljava/lang/Long;Lkotlin/coroutines/Continuation;[J)V
     .locals 0
 
-    iput p2, p0, Lk7a;->a:I
+    iput-object p4, p0, Lk7a;->t0:[J
 
-    iput-object p1, p0, Lk7a;->b:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iput-object p1, p0, Lk7a;->u0:Ll7a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lk7a;->v0:Ljava/lang/Long;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lk7a;->a:I
+    check-cast p1, Lzb4;
 
-    sget-object v1, Lybg;->a:Lybg;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lk7a;->b:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    invoke-virtual {p0, p1, p2}, Lk7a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p1
 
-    new-instance v0, Lf7a;
+    check-cast p1, Lk7a;
 
-    iget-object v1, v2, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->C0:Los;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    sget-object v3, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
+    invoke-virtual {p1, p2}, Lk7a;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v4, 0x9
+    move-result-object p1
 
-    aget-object v3, v3, v4
+    return-object p1
+.end method
 
-    invoke-virtual {v1, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    move-result-object v1
+    new-instance v0, Lk7a;
 
-    check-cast v1, Lfyb;
+    iget-object v1, p0, Lk7a;->u0:Ll7a;
 
-    invoke-direct {v0, v1}, Lf7a;-><init>(Lfyb;)V
+    iget-object v2, p0, Lk7a;->v0:Ljava/lang/Long;
 
-    return-object v0
+    iget-object v3, p0, Lk7a;->t0:[J
 
-    :pswitch_0
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
+    invoke-direct {v0, v1, v2, p2, v3}, Lk7a;-><init>(Ll7a;Ljava/lang/Long;Lkotlin/coroutines/Continuation;[J)V
 
-    sget v0, Lyjd;->j0:I
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lr04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
+    iput-object p1, v0, Lk7a;->Z:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_1
-    new-instance v1, Lk8a;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v0, v2, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->D0:Los;
+    iget-object v0, p0, Lk7a;->Z:Ljava/lang/Object;
 
-    sget-object v3, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
+    check-cast v0, Lzb4;
 
-    const/16 v4, 0xa
+    iget v1, p0, Lk7a;->Y:I
 
-    aget-object v3, v3, v4
-
-    invoke-virtual {v0, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0()Lm8d;
-
-    move-result-object v3
-
-    new-instance v4, Lk7a;
-
-    const/4 v5, 0x6
-
-    invoke-direct {v4, v2, v5}, Lk7a;-><init>(Lone/me/login/neuroavatars/NeuroAvatarsScreen;I)V
-
-    move-object v2, v4
-
-    new-instance v4, Ltif;
-
-    invoke-direct {v4, v2}, Ltif;-><init>(Loi6;)V
-
-    sget-object v2, Lw98;->a:Lw98;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v5, Lal7;
-
-    const/16 v6, 0x14
-
-    invoke-direct {v5, v6}, Lal7;-><init>(I)V
-
-    move-object v6, v5
-
-    new-instance v5, Ltif;
-
-    invoke-direct {v5, v6}, Ltif;-><init>(Loi6;)V
-
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v6
-
-    const-class v7, Lua8;
-
-    invoke-virtual {v6, v7}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v6
-
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v7
-
-    const-class v8, Ltlf;
-
-    invoke-virtual {v7, v8}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v7
-
-    invoke-virtual {v2}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v2
-
-    const-class v8, Lwo3;
-
-    invoke-virtual {v2, v8}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v8
-
-    const v9, 0x1ff80
-
-    move-object v2, v0
-
-    invoke-direct/range {v1 .. v9}, Lk8a;-><init>(Ljava/lang/Long;Lm8d;Ltif;Ltif;Lru7;Lru7;Lru7;I)V
-
-    return-object v1
-
-    :pswitch_2
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
-
-    invoke-virtual {v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0()Lm8d;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Lddb;
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    const/16 v8, 0x2f
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_1
 
-    const/4 v4, 0x0
+    if-ne v1, v2, :cond_0
 
-    const/4 v5, 0x0
+    iget-object v1, p0, Lk7a;->X:Lyv4;
 
-    const/4 v7, 0x0
+    iget-object v2, p0, Lk7a;->o:Lyv4;
 
-    invoke-direct/range {v1 .. v8}, Lddb;-><init>(Lxrb;ILmve;Ljava/lang/Long;Ljava/lang/Long;Lbt;I)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lddb;->g:Lddb;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :goto_0
-    return-object v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :pswitch_3
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0()Lm8d;
+    throw p1
 
-    move-result-object v0
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    iget-object p1, p0, Lk7a;->t0:[J
 
-    sget-object v0, Ldqd;->Y:Ldqd;
+    array-length v1, p1
+
+    if-nez v1, :cond_2
 
     goto :goto_1
 
-    :cond_1
-    sget-object v0, Ldqd;->v1:Ldqd;
+    :cond_2
+    iget-object v1, p0, Lk7a;->u0:Ll7a;
 
+    invoke-virtual {v1}, Ll7a;->i()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    invoke-static {v0}, Lilj;->e(Lzb4;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v4, Li7a;
+
+    iget-object v5, p0, Lk7a;->v0:Ljava/lang/Long;
+
+    invoke-direct {v4, v1, v5, v3, p1}, Li7a;-><init>(Ll7a;Ljava/lang/Long;Lkotlin/coroutines/Continuation;[J)V
+
+    const/4 v5, 0x3
+
+    invoke-static {v0, v3, v4, v5}, Ls9j;->d(Lzb4;Lsb4;Lbr6;I)Lyv4;
+
+    move-result-object v4
+
+    new-instance v6, Lj7a;
+
+    invoke-direct {v6, v1, p1, v3}, Lj7a;-><init>(Ll7a;[JLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v3, v6, v5}, Ls9j;->d(Lzb4;Lsb4;Lbr6;I)Lyv4;
+
+    move-result-object v1
+
+    const/4 p1, 0x2
+
+    new-array p1, p1, [Lxv4;
+
+    const/4 v5, 0x0
+
+    aput-object v4, p1, v5
+
+    aput-object v1, p1, v2
+
+    invoke-static {p1}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object v0, p0, Lk7a;->Z:Ljava/lang/Object;
+
+    iput-object v4, p0, Lk7a;->o:Lyv4;
+
+    iput-object v1, p0, Lk7a;->X:Lyv4;
+
+    iput v2, p0, Lk7a;->Y:I
+
+    invoke-static {p1, p0}, La8j;->a(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v2, Lac4;->a:Lac4;
+
+    if-ne p1, v2, :cond_4
+
+    return-object v2
+
+    :cond_4
+    move-object v2, v4
+
+    :goto_0
+    invoke-static {v0}, Lilj;->d(Lzb4;)V
+
+    invoke-interface {v2}, Lxv4;->l()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lf14;
+
+    invoke-interface {v1}, Lxv4;->l()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, La44;
+
+    if-nez p1, :cond_5
+
+    if-nez v0, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    new-instance v1, Lktb;
+
+    invoke-direct {v1, p1, v0}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_6
     :goto_1
-    return-object v0
-
-    :pswitch_4
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
-
-    iget-object v0, v2, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->X:Ld0d;
-
-    sget-object v3, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
-
-    const/4 v4, 0x1
-
-    aget-object v3, v3, v4
-
-    invoke-interface {v0, v2, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lapa;
-
-    invoke-virtual {v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Lk8a;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lk8a;->w()Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lapa;->setCloseBadgeVisibility(Z)V
-
-    return-object v1
-
-    :pswitch_5
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Les7;
-
-    invoke-virtual {v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Lk8a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lk8a;->u()V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v3
 .end method

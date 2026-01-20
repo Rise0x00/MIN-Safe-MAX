@@ -1,128 +1,156 @@
-.class public Ls09;
+.class public final Ls09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lr09;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:I
 
-.field public final b:I
-
-.field public final c:I
+.field public b:[Landroid/media/MediaCodecInfo;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls09;->a:Ljava/lang/String;
+    if-nez p1, :cond_1
 
-    iput p2, p0, Ls09;->b:I
+    if-eqz p2, :cond_0
 
-    iput p3, p0, Ls09;->c:I
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    .line 4
+    :goto_1
+    iput p1, p0, Ls09;->a:I
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZZ)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-nez p1, :cond_1
+
+    if-nez p2, :cond_1
+
+    if-eqz p3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    .line 2
+    :goto_1
+    iput p1, p0, Ls09;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ls09;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ls09;
-
-    iget v1, p0, Ls09;->c:I
-
-    iget-object v3, p0, Ls09;->a:Ljava/lang/String;
-
-    iget v4, p0, Ls09;->b:I
-
-    if-ltz v4, :cond_4
-
-    iget v5, p1, Ls09;->b:I
-
-    if-gez v5, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v5, p1, Ls09;->a:Ljava/lang/String;
-
-    invoke-static {v3, v5}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    iget v3, p1, Ls09;->b:I
-
-    if-ne v4, v3, :cond_3
-
-    iget p1, p1, Ls09;->c:I
-
-    if-ne v1, p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-
-    :cond_4
-    :goto_0
-    iget-object v4, p1, Ls09;->a:Ljava/lang/String;
-
-    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    iget p1, p1, Ls09;->c:I
-
-    if-ne v1, p1, :cond_5
-
-    return v0
-
-    :cond_5
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public c(I)Landroid/media/MediaCodecInfo;
     .locals 2
 
-    iget v0, p0, Ls09;->c:I
+    iget-object v0, p0, Ls09;->b:[Landroid/media/MediaCodecInfo;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/media/MediaCodecList;
+
+    iget v1, p0, Ls09;->a:I
+
+    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+
+    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
     move-result-object v0
 
-    iget-object v1, p0, Ls09;->a:Ljava/lang/String;
+    iput-object v0, p0, Ls09;->b:[Landroid/media/MediaCodecInfo;
 
-    filled-new-array {v1, v0}, [Ljava/lang/Object;
+    :cond_0
+    iget-object v0, p0, Ls09;->b:[Landroid/media/MediaCodecInfo;
+
+    aget-object p1, v0, p1
+
+    return-object p1
+.end method
+
+.method public d(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
+    .locals 0
+
+    invoke-virtual {p3, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public r(Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Z
+    .locals 0
+
+    invoke-virtual {p2, p1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureRequired(Ljava/lang/String;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public s()I
+    .locals 2
+
+    iget-object v0, p0, Ls09;->b:[Landroid/media/MediaCodecInfo;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/media/MediaCodecList;
+
+    iget v1, p0, Ls09;->a:I
+
+    invoke-direct {v0, v1}, Landroid/media/MediaCodecList;-><init>(I)V
+
+    invoke-virtual {v0}, Landroid/media/MediaCodecList;->getCodecInfos()[Landroid/media/MediaCodecInfo;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    iput-object v0, p0, Ls09;->b:[Landroid/media/MediaCodecInfo;
 
-    move-result v0
+    :cond_0
+    iget-object v0, p0, Ls09;->b:[Landroid/media/MediaCodecInfo;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public u()Z
+    .locals 1
+
+    const/4 v0, 0x1
 
     return v0
 .end method

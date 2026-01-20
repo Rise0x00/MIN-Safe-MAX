@@ -13,16 +13,16 @@
         "",
         "<init>",
         "()V",
-        "Ltkd;",
+        "Lt6e;",
         "rxApiClient",
-        "(Ltkd;)V",
+        "(Lt6e;)V",
         "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
         "params",
-        "Lsl0;",
+        "Lsm0;",
         "joinReq",
-        "Lybg;",
+        "Lb3h;",
         "addJoinToConversationParams",
-        "(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsl0;)V",
+        "(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsm0;)V",
         "Lru/ok/android/externcalls/sdk/ConversationParticipant;",
         "opponent",
         "",
@@ -30,7 +30,7 @@
         "opponents",
         "startReq",
         "addCreateConversationParams",
-        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsl0;)V",
+        "(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsm0;)V",
         "",
         "addCreateConversationParamsByExternalOpponentIds",
         "calls-sdk_release"
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ltkd;)V
+.method public constructor <init>(Lt6e;)V
     .locals 0
 
     .line 2
@@ -66,7 +66,7 @@
 
 
 # virtual methods
-.method public addCreateConversationParams(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsl0;)V
+.method public addCreateConversationParams(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsm0;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -76,7 +76,7 @@
             "Ljava/lang/Long;",
             ">;",
             "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
-            "Lsl0;",
+            "Lsm0;",
             ")V"
         }
     .end annotation
@@ -99,19 +99,19 @@
 
     move-object v0, p2
 
-    invoke-static/range {v0 .. v5}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
+    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "uids"
 
-    invoke-virtual {p4, p2, p1}, Lsl0;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p4, p2, p1}, Lsm0;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public addCreateConversationParamsByExternalOpponentIds(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsl0;)V
+.method public addCreateConversationParamsByExternalOpponentIds(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ljava/util/List;Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsm0;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -121,7 +121,7 @@
             "Ljava/lang/String;",
             ">;",
             "Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;",
-            "Lsl0;",
+            "Lsm0;",
             ")V"
         }
     .end annotation
@@ -144,19 +144,19 @@
 
     move-object v0, p2
 
-    invoke-static/range {v0 .. v5}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
+    invoke-static/range {v0 .. v5}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "externalIds"
 
-    invoke-virtual {p4, p2, p1}, Lsl0;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p4, p2, p1}, Lsm0;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public addJoinToConversationParams(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsl0;)V
+.method public addJoinToConversationParams(Lru/ok/android/externcalls/sdk/conversation/StartCallApiParams;Lsm0;)V
     .locals 0
 
     return-void

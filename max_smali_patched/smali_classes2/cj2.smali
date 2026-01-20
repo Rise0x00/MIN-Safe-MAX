@@ -1,59 +1,133 @@
-.class public abstract synthetic Lcj2;
+.class public final synthetic Lcj2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnq6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic X:Ljava/util/Set;
+
+.field public final synthetic Y:Ljava/util/Set;
+
+.field public final synthetic a:Lfj2;
+
+.field public final synthetic b:Ljava/util/Set;
+
+.field public final synthetic c:Ljava/util/Set;
+
+.field public final synthetic d:Ljava/util/Map;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lfj2;Ljava/util/Set;Ljava/util/Set;Ljava/util/Map;Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;)V
+    .locals 0
 
-    invoke-static {}, Lqk2;->values()[Lqk2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lcj2;->a:Lfj2;
 
-    array-length v0, v0
+    iput-object p2, p0, Lcj2;->b:Ljava/util/Set;
 
-    new-array v0, v0, [I
+    iput-object p3, p0, Lcj2;->c:Ljava/util/Set;
 
-    const/4 v1, 0x1
+    iput-object p4, p0, Lcj2;->d:Ljava/util/Map;
 
-    const/4 v2, 0x0
+    iput-object p5, p0, Lcj2;->o:Ljava/lang/String;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p6, p0, Lcj2;->X:Ljava/util/Set;
 
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v1, 0x3
-
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x4
-
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    sput-object v0, Lcj2;->$EnumSwitchMapping$0:[I
+    iput-object p7, p0, Lcj2;->Y:Ljava/util/Set;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    move-object v3, p1
+
+    check-cast v3, Lnd2;
+
+    iget-object v0, p0, Lcj2;->a:Lfj2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v3, Lnd2;->b:Luh2;
+
+    iget-wide v1, p1, Luh2;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcj2;->b:Ljava/util/Set;
+
+    invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    iget-object v2, p0, Lcj2;->d:Ljava/util/Map;
+
+    iget-object v4, p0, Lcj2;->o:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    const/4 v5, 0x1
+
+    iget-object v1, p0, Lcj2;->c:Ljava/util/Set;
+
+    invoke-virtual/range {v0 .. v5}, Lfj2;->f(Ljava/util/Set;Ljava/util/Map;Lnd2;Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    :cond_0
+    iget-wide v5, p1, Luh2;->a:J
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lcj2;->X:Ljava/util/Set;
+
+    invoke-interface {v1, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const/4 v5, 0x0
+
+    iget-object v1, p0, Lcj2;->Y:Ljava/util/Set;
+
+    invoke-virtual/range {v0 .. v5}, Lfj2;->f(Ljava/util/Set;Ljava/util/Map;Lnd2;Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    const/4 p1, 0x0
+
+    :goto_1
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
 .end method

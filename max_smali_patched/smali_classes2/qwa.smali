@@ -2,56 +2,31 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Lru7;
-
-.field public final b:Ltif;
-
-.field public final c:Ltif;
+# interfaces
+.implements Lorg/webrtc/VideoDecoderFactory;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;Lru7;Lru7;)V
-    .locals 7
+.method public constructor <init>(Lahd;Ljava/lang/IllegalStateException;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p6, p0, Lqwa;->a:Lru7;
+    const-string v0, "OKDefaultVideoDecoderFactory"
 
-    new-instance v0, Llwa;
+    const-string v1, "Video decoder factory init failed"
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    move-object v6, p6
-
-    invoke-direct/range {v0 .. v6}, Llwa;-><init>(Lru7;Lru7;Lru7;Lru7;Lru7;Lru7;)V
-
-    new-instance p1, Ltif;
-
-    invoke-direct {p1, v0}, Ltif;-><init>(Loi6;)V
-
-    iput-object p1, p0, Lqwa;->b:Ltif;
-
-    new-instance p1, Lmwa;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, v1, v6, v4, p2}, Lmwa;-><init>(Lru7;Lru7;Lru7;I)V
-
-    new-instance p2, Ltif;
-
-    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
-
-    iput-object p2, p0, Lqwa;->c:Ltif;
+    invoke-interface {p1, v0, v1, p2}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
 .end method

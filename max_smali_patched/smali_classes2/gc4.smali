@@ -1,156 +1,160 @@
-.class public abstract Lgc4;
-.super Ljava/lang/Object;
+.class public final Lgc4;
+.super Landroidx/appcompat/widget/AppCompatTextView;
 .source "SourceFile"
 
+# interfaces
+.implements Luig;
 
-# static fields
-.field public static final a:Lyib;
+
+# instance fields
+.field public v0:J
+
+.field public final w0:Landroid/animation/ValueAnimator;
+
+.field public final x0:Lmd3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    new-instance v0, Lvcb;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 p1, 0x2
+
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_0
+
+    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lgc4;->w0:Landroid/animation/ValueAnimator;
+
+    new-instance p1, Lmd3;
+
+    invoke-direct {p1}, Lmd3;-><init>()V
+
+    sget-object v0, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
     move-result-object v1
 
-    sget-object v2, Lx7b;->a:Lx7b;
+    invoke-interface {v1}, Lzlb;->i()Lb0g;
 
-    invoke-direct {v0, v1, v2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v1
 
-    new-instance v1, Lvcb;
+    iget v1, v1, Lb0g;->c:I
 
-    const/4 v2, 0x1
+    iget-object v2, p1, Lmd3;->a:Landroid/graphics/Paint;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result-object v2
+    iput-object p1, p0, Lgc4;->x0:Lmd3;
 
-    sget-object v3, Lx7b;->b:Lx7b;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-direct {v1, v2, v3}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    sget-object p1, Lr1h;->k:Lrhg;
 
-    new-instance v2, Lvcb;
+    invoke-static {p1, p0}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
 
-    const/4 v3, 0x2
+    const/4 p1, 0x4
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTextAlignment(I)V
 
-    move-result-object v3
+    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
-    sget-object v4, Lx7b;->c:Lx7b;
+    move-result-object p1
 
-    invoke-direct {v2, v3, v4}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
-    new-instance v3, Lvcb;
+    const/4 p1, -0x1
 
-    const/4 v4, 0x3
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/16 p1, 0x11
 
-    move-result-object v4
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setGravity(I)V
 
-    sget-object v5, Lx7b;->d:Lx7b;
+    return-void
 
-    invoke-direct {v3, v4, v5}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    nop
 
-    new-instance v4, Lvcb;
+    :array_0
+    .array-data 4
+        0x43b40000    # 360.0f
+        0x0
+    .end array-data
+.end method
 
-    const/4 v5, 0x4
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+# virtual methods
+.method public final onAttachedToWindow()V
+    .locals 3
 
-    move-result-object v5
+    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    sget-object v6, Lx7b;->o:Lx7b;
+    iget-wide v0, p0, Lgc4;->v0:J
 
-    invoke-direct {v4, v5, v6}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    iget-object v2, p0, Lgc4;->w0:Landroid/animation/ValueAnimator;
 
-    new-instance v5, Lvcb;
+    invoke-virtual {v2, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    const/4 v6, 0x5
+    new-instance v0, Lc10;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/16 v1, 0x9
 
-    move-result-object v6
+    invoke-direct {v0, v1, p0}, Lc10;-><init>(ILjava/lang/Object;)V
 
-    sget-object v7, Lx7b;->X:Lx7b;
+    invoke-virtual {v2, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    invoke-direct {v5, v6, v7}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v6, Lvcb;
-
-    const/4 v7, 0x6
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    sget-object v8, Lx7b;->Y:Lx7b;
-
-    invoke-direct {v6, v7, v8}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v7, Lvcb;
-
-    const/4 v8, 0x7
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    sget-object v9, Lx7b;->Z:Lx7b;
-
-    invoke-direct {v7, v8, v9}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    new-instance v8, Lvcb;
-
-    const/16 v9, 0x2710
-
-    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    sget-object v10, Lx7b;->s0:Lx7b;
-
-    invoke-direct {v8, v9, v10}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array/range {v0 .. v8}, [Lvcb;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lh0j;->c([Lvcb;)Lyib;
-
-    move-result-object v0
-
-    sput-object v0, Lgc4;->a:Lyib;
+    invoke-virtual {v2}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
 .end method
 
-.method public static a(I)Lx7b;
+.method public final onDetachedFromWindow()V
     .locals 1
 
-    sget-object v0, Lgc4;->a:Lyib;
+    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatTextView;->onDetachedFromWindow()V
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lgc4;->w0:Landroid/animation/ValueAnimator;
 
-    move-result-object p0
+    invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    invoke-virtual {v0, p0}, Lyib;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p0
+.method public final onThemeChanged(Lzlb;)V
+    .locals 1
 
-    check-cast p0, Lx7b;
+    invoke-interface {p1}, Lzlb;->i()Lb0g;
 
-    if-nez p0, :cond_0
+    move-result-object p1
 
-    sget-object p0, Lx7b;->a:Lx7b;
+    iget p1, p1, Lb0g;->c:I
 
-    :cond_0
-    return-object p0
+    iget-object v0, p0, Lgc4;->x0:Lmd3;
+
+    iget-object v0, v0, Lmd3;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    const/4 p1, -0x1
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
+.end method
+
+.method public final setMaxValue(J)V
+    .locals 0
+
+    iput-wide p1, p0, Lgc4;->v0:J
+
+    return-void
 .end method

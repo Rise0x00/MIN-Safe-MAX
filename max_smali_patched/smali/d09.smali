@@ -1,80 +1,61 @@
-.class public final synthetic Ld09;
+.class public interface abstract Ld09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lj09;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lk09;
-
-.field public final synthetic c:I
-
-
-# direct methods
-.method public synthetic constructor <init>(Lk09;II)V
-    .locals 0
-
-    iput p3, p0, Ld09;->a:I
-
-    iput-object p1, p0, Ld09;->b:Lk09;
-
-    iput p2, p0, Ld09;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final b(Lgz8;)V
-    .locals 1
+.method public abstract B(La19;Landroid/os/Handler;)V
+.end method
 
-    iget p1, p0, Ld09;->a:I
+.method public abstract d(JIII)V
+.end method
 
-    packed-switch p1, :pswitch_data_0
+.method public abstract flush()V
+.end method
 
-    iget-object p1, p0, Ld09;->b:Lk09;
+.method public abstract getInputBuffer(I)Ljava/nio/ByteBuffer;
+.end method
 
-    iget-object p1, p1, Lk09;->g:Lzz8;
+.method public abstract getOutputBuffer(I)Ljava/nio/ByteBuffer;
+.end method
 
-    iget-object p1, p1, Lzz8;->t:Lxub;
+.method public abstract getOutputFormat()Landroid/media/MediaFormat;
+.end method
 
-    iget v0, p0, Ld09;->c:I
+.method public abstract h(IJ)V
+.end method
 
-    invoke-static {v0}, Lpv7;->s(I)Z
+.method public abstract i()I
+.end method
 
-    move-result v0
+.method public abstract l(Landroid/media/MediaCodec$BufferInfo;)I
+.end method
 
-    invoke-virtual {p1, v0}, Lxub;->k0(Z)V
+.method public abstract o(I)V
+.end method
 
-    return-void
+.method public abstract p(ILle4;JI)V
+.end method
 
-    :pswitch_0
-    iget-object p1, p0, Ld09;->b:Lk09;
+.method public abstract q(Landroid/view/Surface;)V
+.end method
 
-    iget-object p1, p1, Lk09;->g:Lzz8;
+.method public abstract release()V
+.end method
 
-    iget-object p1, p1, Lzz8;->t:Lxub;
+.method public abstract s(I)V
+.end method
 
-    iget v0, p0, Ld09;->c:I
+.method public abstract setParameters(Landroid/os/Bundle;)V
+.end method
 
-    invoke-static {v0}, Lpv7;->q(I)I
+.method public u(Ls3e;)Z
+    .locals 0
 
-    move-result v0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Lxub;->j0(I)V
+    return p1
+.end method
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract v()V
 .end method

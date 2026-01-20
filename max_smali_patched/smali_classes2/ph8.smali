@@ -4,250 +4,80 @@
 
 
 # instance fields
-.field public final a:Lq78;
+.field public final a:Lo58;
 
-.field public final b:J
-
-.field public final c:J
-
-.field public final d:Lsh8;
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:F
-
-.field public final h:Z
-
-.field public final i:Z
-
-.field public final j:J
-
-.field public final k:Z
-
-.field public final l:Ljava/lang/String;
+.field public final b:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Loh8;)V
-    .locals 2
+.method public constructor <init>(Lo58;Lo58;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Loh8;->a:Lq78;
+    iput-object p1, p0, Lph8;->a:Lo58;
 
-    iput-object v0, p0, Lph8;->a:Lq78;
-
-    iget-wide v0, p1, Loh8;->b:J
-
-    iput-wide v0, p0, Lph8;->b:J
-
-    iget-wide v0, p1, Loh8;->c:J
-
-    iput-wide v0, p0, Lph8;->c:J
-
-    iget-object v0, p1, Loh8;->d:Lsh8;
-
-    iput-object v0, p0, Lph8;->d:Lsh8;
-
-    iget-object v0, p1, Loh8;->e:Ljava/lang/String;
-
-    iput-object v0, p0, Lph8;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Loh8;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Lph8;->f:Ljava/lang/String;
-
-    iget v0, p1, Loh8;->g:F
-
-    iput v0, p0, Lph8;->g:F
-
-    iget-boolean v0, p1, Loh8;->h:Z
-
-    iput-boolean v0, p0, Lph8;->h:Z
-
-    iget-boolean v0, p1, Loh8;->i:Z
-
-    iput-boolean v0, p0, Lph8;->i:Z
-
-    iget-wide v0, p1, Loh8;->j:J
-
-    iput-wide v0, p0, Lph8;->j:J
-
-    iget-boolean v0, p1, Loh8;->k:Z
-
-    iput-boolean v0, p0, Lph8;->k:Z
-
-    iget-object p1, p1, Loh8;->l:Ljava/lang/String;
-
-    iput-object p1, p0, Lph8;->l:Ljava/lang/String;
+    iput-object p2, p0, Lph8;->b:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Loh8;
-    .locals 3
+.method public final a(JZ)Lwk9;
+    .locals 1
 
-    new-instance v0, Loh8;
+    iget-object v0, p0, Lph8;->a:Lo58;
 
-    iget-object v1, p0, Lph8;->a:Lq78;
-
-    invoke-direct {v0, v1}, Loh8;-><init>(Lq78;)V
-
-    iget-wide v1, p0, Lph8;->b:J
-
-    iput-wide v1, v0, Loh8;->b:J
-
-    iget-wide v1, p0, Lph8;->c:J
-
-    iput-wide v1, v0, Loh8;->c:J
-
-    iget-object v1, p0, Lph8;->d:Lsh8;
-
-    iput-object v1, v0, Loh8;->d:Lsh8;
-
-    iget-object v1, p0, Lph8;->e:Ljava/lang/String;
-
-    iput-object v1, v0, Loh8;->e:Ljava/lang/String;
-
-    iget-object v1, p0, Lph8;->f:Ljava/lang/String;
-
-    iput-object v1, v0, Loh8;->f:Ljava/lang/String;
-
-    iget v1, p0, Lph8;->g:F
-
-    iput v1, v0, Loh8;->g:F
-
-    iget-boolean v1, p0, Lph8;->h:Z
-
-    iput-boolean v1, v0, Loh8;->h:Z
-
-    iget-boolean v1, p0, Lph8;->i:Z
-
-    iput-boolean v1, v0, Loh8;->i:Z
-
-    iget-wide v1, p0, Lph8;->j:J
-
-    iput-wide v1, v0, Loh8;->j:J
-
-    iget-boolean v1, p0, Lph8;->k:Z
-
-    iput-boolean v1, v0, Loh8;->k:Z
-
-    iget-object v1, p0, Lph8;->l:Ljava/lang/String;
-
-    iput-object v1, v0, Loh8;->l:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MarkerData{location="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lph8;->a:Lq78;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contactId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph8;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph8;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", markerWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lph8;->d:Lsh8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", title=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lph8;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', address=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lph8;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', distance="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lph8;->g:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", live="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lph8;->h:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", decoding="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lph8;->i:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", date="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lph8;->j:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", active="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lph8;->k:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", deviceId=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lph8;->l:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lhm9;
+
+    invoke-virtual {v0, p1, p2}, Lhm9;->m(J)Ljm9;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    if-nez p3, :cond_0
+
+    iget p2, p1, Ljm9;->S0:I
+
+    const/4 p3, 0x2
+
+    if-eq p2, p3, :cond_1
+
+    :cond_0
+    iget-object p2, p0, Lph8;->b:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lgn9;
+
+    invoke-static {p2, p1}, Lgn9;->a(Lgn9;Ljm9;)Lwk9;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "message not found or deleted"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

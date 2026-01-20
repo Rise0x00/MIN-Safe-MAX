@@ -1,180 +1,74 @@
-.class public final synthetic Ln35;
+.class public final Ln35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements La38;
 
 
-# instance fields
-.field public final synthetic X:Ljava/lang/Object;
+# static fields
+.field public static final a:Ln35;
 
-.field public final synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public static final b:Lxhc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p7, p0, Ln35;->a:I
+    new-instance v0, Ln35;
 
-    iput-object p1, p0, Ln35;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ln35;->c:Ljava/lang/Object;
+    sput-object v0, Ln35;->a:Ln35;
 
-    iput-object p3, p0, Ln35;->d:Ljava/lang/Object;
+    new-instance v0, Lxhc;
 
-    iput-object p4, p0, Ln35;->o:Ljava/lang/Object;
+    const-string v1, "kotlin.Double"
 
-    iput-object p5, p0, Ln35;->X:Ljava/lang/Object;
+    sget-object v2, Lvhc;->e:Lvhc;
 
-    iput-object p6, p0, Ln35;->Y:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lxhc;-><init>(Ljava/lang/String;Lwhc;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ln35;->b:Lxhc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 2
 
-    iget v0, p0, Ln35;->a:I
+    check-cast p2, Ljava/lang/Number;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2}, Ljava/lang/Number;->doubleValue()D
 
-    iget-object v0, p0, Ln35;->b:Ljava/lang/Object;
+    move-result-wide v0
 
-    check-cast v0, Lqrd;
-
-    iget-object v1, p0, Ln35;->c:Ljava/lang/Object;
-
-    check-cast v1, Lorg/webrtc/EglBase$Context;
-
-    iget-object v2, p0, Ln35;->d:Ljava/lang/Object;
-
-    check-cast v2, Landroid/content/Context;
-
-    iget-object v3, p0, Ln35;->o:Ljava/lang/Object;
-
-    check-cast v3, Lxsd;
-
-    iget-object v4, p0, Ln35;->X:Ljava/lang/Object;
-
-    check-cast v4, Lcwc;
-
-    iget-object v5, p0, Ln35;->Y:Ljava/lang/Object;
-
-    check-cast v5, Lcid;
-
-    new-instance v6, Lyf6;
-
-    invoke-direct {v6, v1, v2, v3, v4}, Lyf6;-><init>(Lorg/webrtc/EglBase$Context;Landroid/content/Context;Lxsd;Lcwc;)V
-
-    iput-object v6, v0, Lqrd;->d:Lyf6;
-
-    new-instance v1, Lcg6;
-
-    invoke-direct {v1, v4, v5}, Lcg6;-><init>(Lcwc;Lcid;)V
-
-    iput-object v1, v0, Lqrd;->o:Lcg6;
-
-    new-instance v1, Lqg6;
-
-    invoke-direct {v1}, Lqg6;-><init>()V
-
-    iput-object v1, v0, Lqrd;->X:Lqg6;
-
-    iget-object v1, v0, Lqrd;->d:Lyf6;
-
-    iget-object v2, v0, Lqrd;->o:Lcg6;
-
-    iput-object v2, v1, Lyf6;->Y:Lorg/webrtc/VideoSink;
-
-    iget-object v1, v0, Lqrd;->X:Lqg6;
-
-    iget-object v3, v2, Lcg6;->c:Lu14;
-
-    new-instance v4, Lag6;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v2, v1, v5}, Lag6;-><init>(Lcg6;Lqg6;I)V
-
-    invoke-virtual {v3, v4}, Lu14;->c(Ljava/lang/Runnable;)V
-
-    iget-object v1, v0, Lqrd;->o:Lcg6;
-
-    iget-object v0, v0, Lqrd;->X:Lqg6;
-
-    iget-object v2, v1, Lcg6;->c:Lu14;
-
-    new-instance v3, Lag6;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v1, v0, v4}, Lag6;-><init>(Lcg6;Lqg6;I)V
-
-    invoke-virtual {v2, v3}, Lu14;->c(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->f(D)V
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ln35;->b:Ljava/lang/Object;
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 2
 
-    move-object v1, v0
+    invoke-interface {p1}, Lkl4;->C()D
 
-    check-cast v1, Lh76;
+    move-result-wide v0
 
-    iget-object v0, p0, Ln35;->c:Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    move-object v2, v0
+    move-result-object p1
 
-    check-cast v2, Lb12;
+    return-object p1
+.end method
 
-    iget-object v0, p0, Ln35;->d:Ljava/lang/Object;
+.method public final d()Lxpe;
+    .locals 1
 
-    move-object v3, v0
+    sget-object v0, Ln35;->b:Lxhc;
 
-    check-cast v3, Lb12;
-
-    iget-object v0, p0, Ln35;->o:Ljava/lang/Object;
-
-    move-object v4, v0
-
-    check-cast v4, Lsff;
-
-    iget-object v0, p0, Ln35;->X:Ljava/lang/Object;
-
-    move-object v5, v0
-
-    check-cast v5, Lsff;
-
-    iget-object v0, p0, Ln35;->Y:Ljava/lang/Object;
-
-    move-object v6, v0
-
-    check-cast v6, Ljava/util/Map$Entry;
-
-    invoke-virtual/range {v1 .. v6}, Lh76;->i(Lb12;Lb12;Lsff;Lsff;Ljava/util/Map$Entry;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

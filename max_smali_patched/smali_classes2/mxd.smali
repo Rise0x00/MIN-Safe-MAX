@@ -1,67 +1,21 @@
-.class public interface abstract Lmxd;
+.class public final Lmxd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldde;
+
+# static fields
+.field public static final a:Lmxd;
 
 
-# virtual methods
-.method public a()Lnrf;
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x0
+    new-instance v0, Lmxd;
 
-    return-object v0
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public b()Lsce;
-    .locals 1
+    sput-object v0, Lmxd;->a:Lmxd;
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public c()Lnrf;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public d()Lade;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public e()Lbv7;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public abstract f()I
-.end method
-
-.method public g()Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public getType()Lcde;
-    .locals 1
-
-    sget-object v0, Lcde;->b:Lcde;
-
-    return-object v0
+    return-void
 .end method

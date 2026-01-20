@@ -1,106 +1,106 @@
 .class public final Lgpi;
-.super Leii;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Ljava/util/Set;
+
+
 # instance fields
-.field public final synthetic b:Lsof;
-
-.field public final synthetic c:Ld8i;
-
-.field public final synthetic d:Lgyi;
+.field public final a:Lb07;
 
 
 # direct methods
-.method public constructor <init>(Lgyi;Lsof;Lsof;Ld8i;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/util/WeakHashMap;
+
+    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lgpi;->b:Ljava/util/Set;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lb07;)V
     .locals 0
 
-    iput-object p3, p0, Lgpi;->b:Lsof;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lgpi;->c:Ld8i;
-
-    iput-object p1, p0, Lgpi;->d:Lgyi;
-
-    invoke-direct {p0, p2}, Leii;-><init>(Lsof;)V
+    iput-object p1, p0, Lgpi;->a:Lb07;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
+.method public final a(Li8j;)Li8j;
+    .locals 5
 
-    iget-object v0, p0, Lgpi;->d:Lgyi;
+    iget-boolean v0, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
 
-    iget-object v0, v0, Lgyi;->f:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    monitor-enter v0
+    if-nez v0, :cond_1
 
-    :try_start_0
-    iget-object v1, p0, Lgpi;->d:Lgyi;
+    sget-object v0, Lcom/google/android/gms/common/api/internal/BasePendingResult;->j:Lay0;
 
-    iget-object v2, p0, Lgpi;->b:Lsof;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    iget-object v3, v1, Lgyi;->e:Ljava/util/HashSet;
+    move-result-object v0
 
-    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    check-cast v0, Ljava/lang/Boolean;
 
-    iget-object v3, v2, Lsof;->a:Lj1j;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    new-instance v4, Ltqe;
+    move-result v0
 
-    const/16 v5, 0x9
-
-    invoke-direct {v4, v1, v5, v2}, Ltqe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v3, v4}, Lj1j;->i(Luma;)Lj1j;
-
-    iget-object v1, p0, Lgpi;->d:Lgyi;
-
-    iget-object v1, v1, Lgyi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Lgpi;->d:Lgyi;
-
-    iget-object v1, v1, Lgyi;->b:Lsw4;
-
-    const-string v2, "Already connected to the service."
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v2, v3}, Lsw4;->d(Ljava/lang/String;[Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
     :cond_0
+    const/4 v1, 0x0
+
+    :cond_1
     :goto_0
-    iget-object v1, p0, Lgpi;->d:Lgyi;
+    iput-boolean v1, p1, Lcom/google/android/gms/common/api/internal/BasePendingResult;->i:Z
 
-    iget-object v2, p0, Lgpi;->c:Ld8i;
+    iget-object v0, p0, Lgpi;->a:Lb07;
 
-    invoke-static {v1, v2}, Lgyi;->b(Lgyi;Ld8i;)V
+    iget-object v1, v0, Lb07;->j:Lg07;
 
-    monitor-exit v0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
+    new-instance v2, Lvpi;
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v2, p1}, Lvpi;-><init>(Li8j;)V
 
-    throw v1
+    iget-object v3, v1, Lg07;->t0:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v4, Lnpi;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v3
+
+    invoke-direct {v4, v2, v3, v0}, Lnpi;-><init>(Lhqi;ILb07;)V
+
+    iget-object v0, v1, Lg07;->x0:Lz7a;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    return-object p1
 .end method

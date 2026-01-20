@@ -1,48 +1,37 @@
 .class public final Lym3;
-.super Lp14;
+.super Licg;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lh13;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lh13;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, Lym3;->X:Lh13;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lym3;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lym3;->d:Ljava/lang/Object;
+    const-string v0, "Response(success="
 
-    iget p1, p0, Lym3;->o:I
+    const-string v1, ")"
 
-    const/high16 v0, -0x80000000
+    iget-boolean v2, p0, Lym3;->c:Z
 
-    or-int/2addr p1, v0
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
-    iput p1, p0, Lym3;->o:I
+    move-result-object v0
 
-    iget-object p1, p0, Lym3;->X:Lh13;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lh13;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

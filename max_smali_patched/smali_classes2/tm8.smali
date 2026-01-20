@@ -1,97 +1,136 @@
-.class public final synthetic Ltm8;
-.super Ljava/lang/Object;
+.class public final Ltm8;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lum8;
 
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public constructor <init>(Lum8;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ltm8;->a:I
+    iput-object p1, p0, Ltm8;->X:Lum8;
 
-    iput-object p1, p0, Ltm8;->b:Ljava/lang/Object;
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Ltm8;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p1, p0, Ltm8;->a:I
+    check-cast p1, Lzb4;
 
-    iget-object p2, p0, Ltm8;->c:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p3, p0, Ltm8;->b:Ljava/lang/Object;
-
-    packed-switch p1, :pswitch_data_0
-
-    check-cast p3, Landroid/os/Handler;
-
-    check-cast p2, Lu7d;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p3, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object p1, p2, Lu7d;->a:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Runnable;
-
-    const-wide/16 p4, 0x12c
-
-    invoke-virtual {p3, p1, p4, p5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
-
-    :pswitch_0
-    check-cast p3, Lkwb;
-
-    check-cast p2, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    if-eq p5, p9, :cond_0
-
-    invoke-virtual {p3}, Lkwb;->getCallback()Lewb;
+    invoke-virtual {p0, p1, p2}, Ltm8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
+    check-cast p1, Ltm8;
 
-    invoke-virtual {p2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result-object p2
+    invoke-virtual {p1, p2}, Ltm8;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+    move-result-object p1
 
-    move-result p2
+    return-object p1
+.end method
 
-    invoke-virtual {p1, p2}, Lewb;->m(I)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Ltm8;
+
+    iget-object v0, p0, Ltm8;->X:Lum8;
+
+    invoke-direct {p1, v0, p2}, Ltm8;-><init>(Lum8;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Ltm8;->o:I
+
+    iget-object v1, p0, Ltm8;->X:Lum8;
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Lac4;->a:Lac4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_2
 
     :cond_0
-    return-void
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    nop
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Lum8;->b:Lsm8;
+
+    iput v3, p0, Ltm8;->o:I
+
+    invoke-virtual {p1, p0}, Lsm8;->a(Lp6g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_0
+    iget-object p1, v1, Lum8;->c:Lp6g;
+
+    iput v2, p0, Ltm8;->o:I
+
+    invoke-interface {p1, p0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_4
+
+    :goto_1
+    return-object v4
+
+    :cond_4
+    :goto_2
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

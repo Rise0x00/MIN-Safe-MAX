@@ -1,224 +1,241 @@
 .class public final Lldf;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Li09;
+.field public final a:I
 
-.field public final synthetic Y:Ljava/util/LinkedHashSet;
+.field public final b:I
 
-.field public o:I
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public f:[F
+
+.field public g:[F
+
+.field public final h:I
+
+.field public i:I
 
 
 # direct methods
-.method public constructor <init>(Li09;Ljava/util/LinkedHashSet;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 6
 
-    iput-object p1, p0, Lldf;->X:Li09;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lldf;->Y:Ljava/util/LinkedHashSet;
+    const v0, 0x8b31
 
-    const/4 p1, 0x2
+    const-string v1, "precision mediump float;\nuniform mat4 mvpMatrix;\nuniform mat4 texMatrix;\nattribute vec4 aVertexCoord;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n    gl_Position = mvpMatrix * aVertexCoord;\n    vTextureCoord = (texMatrix * aTextureCoord).xy;\n}\n"
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1}, Ldi9;->b(ILjava/lang/String;)I
+
+    move-result v0
+
+    const v1, 0x8b30
+
+    const-string v2, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nvarying vec2 vTextureCoord;\nuniform samplerExternalOES sTexture;\nvoid main() {\n   gl_FragColor = texture2D(sTexture, vTextureCoord);\n}\n"
+
+    invoke-static {v1, v2}, Ldi9;->b(ILjava/lang/String;)I
+
+    move-result v1
+
+    invoke-static {}, Landroid/opengl/GLES20;->glCreateProgram()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    new-array v4, v3, [I
+
+    const-string v5, "glCreateProgram"
+
+    invoke-static {v5, v4}, Ldi9;->a(Ljava/lang/String;[I)V
+
+    iput v2, p0, Lldf;->a:I
+
+    invoke-static {v2, v0}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    new-array v4, v3, [I
+
+    const-string v5, "glAttachShader"
+
+    invoke-static {v5, v4}, Ldi9;->a(Ljava/lang/String;[I)V
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+
+    new-array v0, v3, [I
+
+    const-string v4, "glDeleteShader"
+
+    invoke-static {v4, v0}, Ldi9;->a(Ljava/lang/String;[I)V
+
+    invoke-static {v2, v1}, Landroid/opengl/GLES20;->glAttachShader(II)V
+
+    new-array v0, v3, [I
+
+    invoke-static {v5, v0}, Ldi9;->a(Ljava/lang/String;[I)V
+
+    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+
+    new-array v0, v3, [I
+
+    invoke-static {v4, v0}, Ldi9;->a(Ljava/lang/String;[I)V
+
+    invoke-static {v2}, Landroid/opengl/GLES20;->glLinkProgram(I)V
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [I
+
+    const v4, 0x8b82
+
+    invoke-static {v2, v4, v1, v3}, Landroid/opengl/GLES20;->glGetProgramiv(II[II)V
+
+    aget v1, v1, v3
+
+    const-string v3, "GLESUtils"
+
+    if-ne v1, v0, :cond_2
+
+    const-string v0, "aVertexCoord"
+
+    invoke-static {v2, v0}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    iput v0, p0, Lldf;->b:I
+
+    const-string v0, "aTextureCoord"
+
+    invoke-static {v2, v0}, Landroid/opengl/GLES20;->glGetAttribLocation(ILjava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    iput v0, p0, Lldf;->c:I
+
+    const-string v0, "mvpMatrix"
+
+    invoke-virtual {p0, v0}, Lldf;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lldf;->d:I
+
+    const-string v0, "texMatrix"
+
+    invoke-virtual {p0, v0}, Lldf;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lldf;->e:I
+
+    const-string v0, "sTexture"
+
+    invoke-virtual {p0, v0}, Lldf;->a(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lldf;->h:I
 
     return-void
+
+    :cond_0
+    const-string v0, "Unable to locate \'aTextureCoord\' in program"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_1
+    const-string v0, "Unable to locate \'aVertexCoord\' in program"
+
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_2
+    invoke-static {v2}, Landroid/opengl/GLES20;->glGetProgramInfoLog(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Could not link program: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lldf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lldf;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lldf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a(Ljava/lang/String;)I
     .locals 2
 
-    new-instance p1, Lldf;
+    iget v0, p0, Lldf;->a:I
 
-    iget-object v0, p0, Lldf;->X:Li09;
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glGetUniformLocation(ILjava/lang/String;)I
 
-    iget-object v1, p0, Lldf;->Y:Ljava/util/LinkedHashSet;
+    move-result v0
 
-    invoke-direct {p1, v0, v1, p2}, Lldf;-><init>(Li09;Ljava/util/LinkedHashSet;Lkotlin/coroutines/Continuation;)V
+    if-ltz v0, :cond_0
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    iget v0, p0, Lldf;->o:I
-
-    iget-object v1, p0, Lldf;->X:Li09;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const-string v1, "Unable to locate \'"
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    throw p1
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-string p1, "\' in program"
 
-    iget-object p1, v1, Li09;->a:Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lml;
-
-    new-instance v0, Lbe2;
-
-    iget-object v3, p0, Lldf;->Y:Ljava/util/LinkedHashSet;
-
-    invoke-static {v3}, Lab3;->Y(Ljava/util/Collection;)[J
-
-    move-result-object v3
-
-    invoke-direct {v0, v3}, Lbe2;-><init>([J)V
-
-    iput v2, p0, Lldf;->o:I
-
-    check-cast p1, Lona;
-
-    invoke-virtual {p1, v0, p0}, Lona;->I(Lkh;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    sget-object v0, Lh54;->a:Lh54;
+    const-string v0, "GLESUtils"
 
-    if-ne p1, v0, :cond_2
+    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    return-object v0
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    :cond_2
-    :goto_0
-    check-cast p1, Lju3;
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lju3;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {p1, v2}, Lcb3;->k(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    check-cast p1, Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lgu3;
-
-    iget-object v3, v2, Lgu3;->v0:Ljava/lang/String;
-
-    invoke-static {v3}, Lisf;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v3, v2, Lgu3;->o:Ljava/util/List;
-
-    invoke-static {v7, v3}, Li09;->n(Ljava/util/ArrayList;Ljava/util/List;)V
-
-    iget-object v3, v1, Li09;->b:Ljava/lang/Object;
-
-    move-object v4, v3
-
-    check-cast v4, Luoe;
-
-    iget-wide v5, v2, Lgu3;->a:J
-
-    invoke-virtual {v2}, Lgu3;->a()Ljava/lang/String;
-
-    move-result-object v9
-
-    sget-object v3, Lhl0;->c:Lhl0;
-
-    invoke-virtual {v2, v3}, Lgu3;->d(Lhl0;)Ljava/lang/String;
-
-    move-result-object v10
-
-    iget-object v3, v1, Li09;->o:Ljava/lang/Object;
-
-    check-cast v3, Lru7;
-
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ll1e;
-
-    iget-wide v11, v2, Lgu3;->a:J
-
-    invoke-virtual {v3, v11, v12}, Ll1e;->a(J)I
-
-    move-result v12
-
-    const/4 v11, 0x0
-
-    invoke-virtual/range {v4 .. v12}, Luoe;->c(JLjava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Luxb;I)Lhdf;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_3
-    return-object v0
+    throw v0
 .end method

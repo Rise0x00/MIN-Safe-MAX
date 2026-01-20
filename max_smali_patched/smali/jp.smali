@@ -1,51 +1,118 @@
 .class public final Ljp;
-.super Landroid/view/View$BaseSavedState;
+.super Lomj;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ljp;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/ref/WeakReference;
+
+.field public final synthetic d:Lop;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lop;IILjava/lang/ref/WeakReference;)V
+    .locals 0
 
-    new-instance v0, Lj8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x3
+    iput-object p1, p0, Ljp;->d:Lop;
 
-    invoke-direct {v0, v1}, Lj8;-><init>(I)V
+    iput p2, p0, Ljp;->a:I
 
-    sput-object v0, Ljp;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput p3, p0, Ljp;->b:I
+
+    iput-object p4, p0, Ljp;->c:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final b(I)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    return-void
+.end method
 
-    iget-boolean p2, p0, Ljp;->a:Z
+.method public final c(Landroid/graphics/Typeface;)V
+    .locals 4
 
-    int-to-byte p2, p2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByte(B)V
+    const/16 v1, 0x1c
 
+    if-lt v0, v1, :cond_1
+
+    const/4 v0, -0x1
+
+    iget v1, p0, Ljp;->a:I
+
+    if-eq v1, v0, :cond_1
+
+    iget v0, p0, Ljp;->b:I
+
+    and-int/lit8 v0, v0, 0x2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {p1, v1, v0}, Lnp;->a(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
+
+    move-result-object p1
+
+    :cond_1
+    iget-object v0, p0, Ljp;->d:Lop;
+
+    iget-boolean v1, v0, Lop;->m:Z
+
+    if-eqz v1, :cond_3
+
+    iput-object p1, v0, Lop;->l:Landroid/graphics/Typeface;
+
+    iget-object v1, p0, Ljp;->c:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget v0, v0, Lop;->j:I
+
+    new-instance v2, Lkp;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v1, p1, v0, v3}, Lkp;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :cond_2
+    iget v0, v0, Lop;->j:I
+
+    invoke-virtual {v1, p1, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
+
+    :cond_3
     return-void
 .end method

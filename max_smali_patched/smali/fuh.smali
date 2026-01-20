@@ -1,6 +1,9 @@
-.class public abstract Lfuh;
-.super Lcom/google/android/gms/common/api/internal/LifecycleCallback;
+.class public final Lfuh;
+.super Landroid/view/ViewGroup$LayoutParams;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+
+# instance fields
+.field public a:Z
+
+.field public b:I

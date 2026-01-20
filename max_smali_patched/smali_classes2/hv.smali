@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu6;
+.implements Lnq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lgj2;
+.field public final synthetic b:Lvea;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lgj2;I)V
+.method public synthetic constructor <init>(Lvea;I)V
     .locals 0
 
     iput p2, p0, Lhv;->a:I
 
-    iput-object p1, p0, Lhv;->b:Lgj2;
+    iput-object p1, p0, Lhv;->b:Lvea;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,66 +27,65 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Lhv;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lhv;->b:Lgj2;
+    check-cast p1, Lg77;
 
-    iget-object v1, v0, Lgj2;->Z:Ljv;
+    invoke-interface {p1}, Lg77;->getId()J
 
-    monitor-enter v1
+    move-result-wide v0
 
-    monitor-exit v1
+    iget-object p1, p0, Lhv;->b:Lvea;
 
-    iget-object v1, v0, Lgj2;->t0:Ljv;
+    invoke-virtual {p1, v0, v1}, Lvea;->d(J)Z
 
-    monitor-enter v1
+    move-result p1
 
-    monitor-exit v1
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v1, v0, Lgj2;->s0:Ljv;
+    move-result-object p1
 
-    monitor-enter v1
-
-    monitor-exit v1
-
-    iget-object v1, v0, Lgj2;->d:Lgpd;
-
-    new-instance v2, Lqc;
-
-    invoke-direct {v2, v0}, Lqc;-><init>(Lgj2;)V
-
-    invoke-virtual {v1, v2}, Lgpd;->b(Ljava/lang/Runnable;)Lzv4;
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lhv;->b:Lgj2;
+    check-cast p1, Lx4c;
 
-    iget-object v1, v0, Lgj2;->s0:Ljv;
+    iget-wide v0, p1, Lx4c;->a:J
 
-    monitor-enter v1
+    iget-object p1, p0, Lhv;->b:Lvea;
 
-    monitor-exit v1
+    invoke-virtual {p1, v0, v1}, Lvea;->a(J)Z
 
-    iget-object v1, v0, Lgj2;->d:Lgpd;
+    move-result p1
 
-    new-instance v2, Lqc;
+    xor-int/lit8 p1, p1, 0x1
 
-    invoke-direct {v2, v0}, Lqc;-><init>(Lgj2;)V
+    goto :goto_0
 
-    invoke-virtual {v1, v2}, Lgpd;->b(Ljava/lang/Runnable;)Lzv4;
+    :pswitch_1
+    check-cast p1, Lg77;
 
-    return-void
+    invoke-interface {p1}, Lg77;->getId()J
 
-    nop
+    move-result-wide v0
+
+    iget-object p1, p0, Lhv;->b:Lvea;
+
+    invoke-virtual {p1, v0, v1}, Lvea;->d(J)Z
+
+    move-result p1
+
+    goto :goto_0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

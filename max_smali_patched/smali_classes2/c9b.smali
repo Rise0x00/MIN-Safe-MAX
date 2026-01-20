@@ -1,119 +1,57 @@
 .class public final Lc9b;
-.super La5a;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public X:Z
 
-.field public final c:Z
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lh9b;
+
+.field public d:Ljm9;
+
+.field public o:Lxz;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(JZ)V
-    .locals 1
+.method public constructor <init>(Lh9b;Lo84;)V
+    .locals 0
 
-    sget-object v0, Lybg;->a:Lybg;
+    iput-object p1, p0, Lc9b;->Z:Lh9b;
 
-    invoke-direct {p0, v0}, La5a;-><init>(Ljava/lang/Object;)V
-
-    iput-wide p1, p0, Lc9b;->b:J
-
-    iput-boolean p3, p0, Lc9b;->c:Z
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lc9b;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lc9b;
-
-    iget-wide v3, p0, Lc9b;->b:J
-
-    iget-wide v5, p1, Lc9b;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lc9b;->c:Z
-
-    iget-boolean p1, p1, Lc9b;->c:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-wide v0, p0, Lc9b;->b:J
+    iput-object p1, p0, Lc9b;->Y:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iget p1, p0, Lc9b;->t0:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    mul-int/lit8 v0, v0, 0x1f
+    or-int/2addr p1, v0
 
-    iget-boolean v1, p0, Lc9b;->c:Z
+    iput p1, p0, Lc9b;->t0:I
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    const/4 p1, 0x0
 
-    move-result v1
+    const/4 v0, 0x0
 
-    add-int/2addr v1, v0
+    iget-object v1, p0, Lc9b;->Z:Lh9b;
 
-    return v1
-.end method
+    invoke-virtual {v1, p1, p1, v0, p0}, Lh9b;->d(Ljm9;Lxz;ZLo84;)Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    move-result-object p1
 
-    const-string v0, "OpenOneToOneCall(opponentId="
-
-    const-string v1, ", isVideo="
-
-    iget-wide v2, p0, Lc9b;->b:J
-
-    iget-boolean v4, p0, Lc9b;->c:Z
-
-    invoke-static {v2, v3, v0, v1, v4}, Lcd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

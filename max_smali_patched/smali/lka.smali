@@ -1,394 +1,177 @@
 .class public final Llka;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lpx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lgla;
-.implements Lzv4;
-
-
-# static fields
-.field public static final X:[Lika;
-
-.field public static final Y:[Lika;
 
 
 # instance fields
-.field public final a:Lkka;
+.field public final f:Landroid/net/ConnectivityManager;
 
-.field public b:Z
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final g:Lov3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    new-array v1, v0, [Lika;
-
-    sput-object v1, Llka;->X:[Lika;
-
-    new-array v0, v0, [Lika;
-
-    sput-object v0, Llka;->Y:[Lika;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lkka;Ljava/util/concurrent/atomic/AtomicReference;)V
+.method public constructor <init>(Landroid/content/Context;Lbg8;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-direct {p0, p1, p2}, Lpx3;-><init>(Landroid/content/Context;Lbg8;)V
 
-    iput-object p1, p0, Llka;->a:Lkka;
+    iget-object p1, p0, Lpx3;->b:Ljava/lang/Object;
 
-    iput-object p2, p0, Llka;->o:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast p1, Landroid/content/Context;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    const-string p2, "connectivity"
 
-    sget-object p2, Llka;->X:[Lika;
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    move-result-object p1
 
-    iput-object p1, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast p1, Landroid/net/ConnectivityManager;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p1, p0, Llka;->f:Landroid/net/ConnectivityManager;
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    new-instance p1, Lov3;
 
-    iput-object p1, p0, Llka;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2, p0}, Lov3;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Llka;->g:Lov3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lika;)V
-    .locals 7
+.method public final i()Ljava/lang/Object;
+    .locals 1
 
-    :goto_0
-    iget-object v0, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Llka;->f:Landroid/net/ConnectivityManager;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {v0}, Lmka;->a(Landroid/net/ConnectivityManager;)Lkka;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final r()V
+    .locals 4
+
+    const-string v0, "Received exception while registering network callback"
+
+    :try_start_0
+    invoke-static {}, Lkgi;->g()Lkgi;
 
     move-result-object v1
 
-    check-cast v1, [Lika;
+    sget-object v2, Lmka;->a:Ljava/lang/String;
 
-    array-length v2, v1
+    const-string v3, "Registering network callback"
 
-    if-nez v2, :cond_0
+    invoke-virtual {v1, v2, v3}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_4
+    iget-object v1, p0, Llka;->f:Landroid/net/ConnectivityManager;
 
-    :cond_0
-    const/4 v3, 0x0
+    iget-object v2, p0, Llka;->g:Lov3;
 
-    move v4, v3
+    invoke-static {v1, v2}, Ldka;->a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_1
-    if-ge v4, v2, :cond_2
+    return-void
 
-    aget-object v5, v1, v4
+    :catch_0
+    move-exception v1
 
-    invoke-virtual {v5, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
+    :catch_1
+    move-exception v1
 
     goto :goto_1
 
-    :cond_2
-    const/4 v4, -0x1
+    :goto_0
+    invoke-static {}, Lkgi;->g()Lkgi;
+
+    move-result-object v2
+
+    sget-object v3, Lmka;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :goto_1
+    invoke-static {}, Lkgi;->g()Lkgi;
+
+    move-result-object v2
+
+    sget-object v3, Lmka;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_2
-    if-gez v4, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    const/4 v5, 0x1
-
-    if-ne v2, v5, :cond_4
-
-    sget-object v2, Llka;->X:[Lika;
-
-    goto :goto_3
-
-    :cond_4
-    add-int/lit8 v6, v2, -0x1
-
-    new-array v6, v6, [Lika;
-
-    invoke-static {v1, v3, v6, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/lit8 v3, v4, 0x1
-
-    sub-int/2addr v2, v4
-
-    sub-int/2addr v2, v5
-
-    invoke-static {v1, v3, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    move-object v2, v6
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    :goto_4
     return-void
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v1, :cond_5
-
-    goto :goto_0
 .end method
 
-.method public final b(Ljava/lang/Object;)V
+.method public final s()V
     .locals 4
 
-    iget-boolean v0, p0, Llka;->b:Z
+    const-string v0, "Received exception while unregistering network callback"
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Llka;->a:Lkka;
-
-    invoke-interface {v0, p1}, Lkka;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lika;
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p1, v2
-
-    invoke-interface {v0, v3}, Lkka;->d(Lika;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 5
-
-    iget-boolean v0, p0, Llka;->b:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Llka;->b:Z
-
-    iget-object v0, p0, Llka;->a:Lkka;
-
-    invoke-interface {v0}, Lkka;->a()V
-
-    iget-object v1, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v2, Llka;->Y:[Lika;
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_start_0
+    invoke-static {}, Lkgi;->g()Lkgi;
 
     move-result-object v1
 
-    check-cast v1, [Lika;
+    sget-object v2, Lmka;->a:Ljava/lang/String;
 
-    array-length v2, v1
+    const-string v3, "Unregistering network callback"
 
-    const/4 v3, 0x0
+    invoke-virtual {v1, v2, v3}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_0
-    if-ge v3, v2, :cond_0
+    iget-object v1, p0, Llka;->f:Landroid/net/ConnectivityManager;
 
-    aget-object v4, v1, v3
+    iget-object v2, p0, Llka;->g:Lov3;
 
-    invoke-interface {v0, v4}, Lkka;->d(Lika;)V
+    invoke-static {v1, v2}, Lbka;->c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    add-int/lit8 v3, v3, 0x1
+    return-void
+
+    :catch_0
+    move-exception v1
 
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
+    :catch_1
+    move-exception v1
 
-.method public final d(Lzv4;)V
-    .locals 4
-
-    invoke-static {p0, p1}, Ldw4;->g(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lika;
-
-    array-length v0, p1
-
-    const/4 v1, 0x0
+    goto :goto_1
 
     :goto_0
-    if-ge v1, v0, :cond_0
+    invoke-static {}, Lkgi;->g()Lkgi;
 
-    aget-object v2, p1, v1
+    move-result-object v2
 
-    iget-object v3, p0, Llka;->a:Lkka;
+    sget-object v3, Lmka;->a:Ljava/lang/String;
 
-    invoke-interface {v3, v2}, Lkka;->d(Lika;)V
+    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    add-int/lit8 v1, v1, 0x1
+    goto :goto_2
 
-    goto :goto_0
+    :goto_1
+    invoke-static {}, Lkgi;->g()Lkgi;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object v2
 
-.method public final dispose()V
-    .locals 2
+    sget-object v3, Lmka;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-virtual {v2, v3, v0, v1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget-object v1, Llka;->Y:[Lika;
-
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, p0, Llka;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, p0, :cond_0
-
-    :goto_0
-    invoke-static {p0}, Ldw4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 2
-
-    iget-object v0, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Llka;->Y:[Lika;
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    iget-boolean v0, p0, Llka;->b:Z
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Llka;->b:Z
-
-    iget-object v0, p0, Llka;->a:Lkka;
-
-    invoke-interface {v0, p1}, Lkka;->e(Ljava/lang/Throwable;)V
-
-    iget-object p1, p0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    sget-object v1, Llka;->Y:[Lika;
-
-    invoke-virtual {p1, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Lika;
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p1, v2
-
-    invoke-interface {v0, v3}, Lkka;->d(Lika;)V
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
-
+    :goto_2
     return-void
 .end method

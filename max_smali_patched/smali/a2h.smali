@@ -1,203 +1,134 @@
 .class public final La2h;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Luhc;
 .source "SourceFile"
 
-# interfaces
-.implements Lo3g;
 
-
-# instance fields
-.field public final a:Landroid/view/ViewGroup;
-
-.field public final b:Landroid/view/View;
-
-.field public final c:Landroid/view/View;
-
-.field public d:Z
-
-.field public final synthetic e:Lb2h;
+# static fields
+.field public static final c:La2h;
 
 
 # direct methods
-.method public constructor <init>(Lb2h;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, La2h;->e:Lb2h;
+    new-instance v0, La2h;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    sget-object v1, Lb2h;->a:Lb2h;
 
-    const/4 p1, 0x1
+    invoke-direct {v0, v1}, Luhc;-><init>(La38;)V
 
-    iput-boolean p1, p0, La2h;->d:Z
-
-    iput-object p2, p0, La2h;->a:Landroid/view/ViewGroup;
-
-    iput-object p3, p0, La2h;->b:Landroid/view/View;
-
-    iput-object p4, p0, La2h;->c:Landroid/view/View;
+    sput-object v0, La2h;->c:La2h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lp3g;)V
+.method public final h(Ljava/lang/Object;)I
     .locals 0
+
+    check-cast p1, Ly1h;
+
+    iget-object p1, p1, Ly1h;->a:[I
+
+    array-length p1, p1
+
+    return p1
+.end method
+
+.method public final j(Lqp3;ILjava/lang/Object;)V
+    .locals 2
+
+    check-cast p3, Lz1h;
+
+    iget-object v0, p0, Luhc;->b:Lthc;
+
+    invoke-interface {p1, v0, p2}, Lqp3;->a(Lthc;I)Lkl4;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lkl4;->k()I
+
+    move-result p1
+
+    invoke-static {p3}, Lshc;->c(Lshc;)V
+
+    iget-object p2, p3, Lz1h;->a:[I
+
+    iget v0, p3, Lz1h;->b:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p3, Lz1h;->b:I
+
+    aput p1, p2, v0
 
     return-void
 .end method
 
-.method public final b()V
-    .locals 0
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
+    check-cast p1, Ly1h;
+
+    iget-object p1, p1, Ly1h;->a:[I
+
+    new-instance v0, Lz1h;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v0, Lz1h;->a:[I
+
+    array-length p1, p1
+
+    iput p1, v0, Lz1h;->b:I
+
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lz1h;->b(I)V
+
+    return-object v0
 .end method
 
-.method public final c(Lp3g;)V
-    .locals 0
-
-    invoke-virtual {p1, p0}, Lp3g;->E(Lo3g;)Lp3g;
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 3
-
-    sget v0, Lvmc;->save_overlay_view:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, La2h;->c:Landroid/view/View;
-
-    invoke-virtual {v2, v0, v1}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget-object v0, p0, La2h;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
-
-    move-result-object v0
-
-    iget-object v1, p0, La2h;->b:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
+.method public final n()Ljava/lang/Object;
+    .locals 2
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, La2h;->d:Z
+    new-array v0, v0, [I
 
-    return-void
+    new-instance v1, Ly1h;
+
+    invoke-direct {v1, v0}, Ly1h;-><init>([I)V
+
+    return-object v1
 .end method
 
-.method public final h(Lp3g;)V
-    .locals 0
+.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
+    .locals 3
 
-    iget-boolean p1, p0, La2h;->d:Z
+    check-cast p2, Ly1h;
 
-    if-eqz p1, :cond_0
+    iget-object p2, p2, Ly1h;->a:[I
 
-    invoke-virtual {p0}, La2h;->g()V
+    const/4 v0, 0x0
 
-    :cond_0
-    return-void
-.end method
+    :goto_0
+    if-ge v0, p3, :cond_0
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    iget-object v1, p0, Luhc;->b:Lthc;
 
-    .line 1
-    invoke-virtual {p0}, La2h;->g()V
+    invoke-virtual {p1, v1, v0}, Lkotlinx/serialization/json/internal/b;->j(Lthc;I)Lkotlinx/serialization/json/internal/b;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
-    .locals 0
+    aget v2, p2, v0
 
-    if-nez p2, :cond_0
+    invoke-virtual {v1, v2}, Lkotlinx/serialization/json/internal/b;->k(I)V
 
-    .line 2
-    invoke-virtual {p0}, La2h;->g()V
+    add-int/lit8 v0, v0, 0x1
 
-    :cond_0
-    return-void
-.end method
-
-.method public final onAnimationPause(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p1, p0, La2h;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
-
-    move-result-object p1
-
-    iget-object v0, p0, La2h;->b:Landroid/view/View;
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroupOverlay;->remove(Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public final onAnimationResume(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-object p1, p0, La2h;->b:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, La2h;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/view/ViewGroupOverlay;->add(Landroid/view/View;)V
-
-    return-void
-
-    :cond_0
-    iget-object p1, p0, La2h;->e:Lb2h;
-
-    invoke-virtual {p1}, Lp3g;->d()V
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;Z)V
-    .locals 1
-
-    if-eqz p2, :cond_0
-
-    iget-object p1, p0, La2h;->c:Landroid/view/View;
-
-    sget p2, Lvmc;->save_overlay_view:I
-
-    iget-object v0, p0, La2h;->b:Landroid/view/View;
-
-    invoke-virtual {p1, p2, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    iget-object p1, p0, La2h;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getOverlay()Landroid/view/ViewGroupOverlay;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v0}, Landroid/view/ViewGroupOverlay;->add(Landroid/view/View;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, La2h;->d:Z
+    goto :goto_0
 
     :cond_0
     return-void

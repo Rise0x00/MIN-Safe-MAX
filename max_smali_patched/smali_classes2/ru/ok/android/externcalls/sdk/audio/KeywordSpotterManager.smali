@@ -20,7 +20,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;",
         "params",
-        "Lybg;",
+        "Lb3h;",
         "setKeywordSpotterParams",
         "(Lru/ok/android/externcalls/sdk/audio/KeywordSpotterManager$KeywordSpotterParams;)V",
         "KeywordSpotterConfig",

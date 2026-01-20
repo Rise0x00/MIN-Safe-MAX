@@ -1,66 +1,41 @@
 .class public final Lrg7;
-.super Landroid/view/inputmethod/InputConnectionWrapper;
+.super Lqg7;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lsg7;
-
-
-# direct methods
-.method public constructor <init>(Landroid/view/inputmethod/InputConnection;Lsg7;)V
+# virtual methods
+.method public final a(Lwi7;)Lui7;
     .locals 0
 
-    iput-object p2, p0, Lrg7;->a:Lsg7;
+    invoke-interface {p1}, Lwi7;->o()Lui7;
 
-    const/4 p2, 0x0
+    move-result-object p1
 
-    invoke-direct {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
+    return-object p1
+.end method
+
+.method public final c()V
+    .locals 0
 
     return-void
 .end method
 
+.method public final e(Lui7;)V
+    .locals 2
 
-# virtual methods
-.method public final commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
-    .locals 3
+    invoke-virtual {p0, p1}, Lqg7;->b(Lui7;)Lie8;
 
-    if-nez p1, :cond_0
+    move-result-object v0
 
-    const/4 v0, 0x0
+    new-instance v1, Lkp8;
 
-    goto :goto_0
+    invoke-direct {v1, p1}, Lkp8;-><init>(Ljava/lang/Object;)V
 
-    :cond_0
-    new-instance v0, Lcye;
+    invoke-static {}, Lacj;->a()Lc15;
 
-    new-instance v1, Lpqe;
+    move-result-object p1
 
-    const/16 v2, 0x13
+    invoke-static {v0, v1, p1}, Lnge;->b(Lie8;Las6;Ljava/util/concurrent/Executor;)V
 
-    invoke-direct {v1, v2, p1}, Lpqe;-><init>(ILjava/lang/Object;)V
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v2, v1}, Lcye;-><init>(ILjava/lang/Object;)V
-
-    :goto_0
-    iget-object v1, p0, Lrg7;->a:Lsg7;
-
-    invoke-interface {v1, v0, p2, p3}, Lsg7;->g(Lcye;ILandroid/os/Bundle;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
-
-    move-result p1
-
-    return p1
+    return-void
 .end method

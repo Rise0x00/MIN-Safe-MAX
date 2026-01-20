@@ -1,64 +1,20 @@
 .class public abstract Lv7d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static final a:Lw7d;
+.field public static join_widget_confirm_button:I = 0x7f0a03fa
 
+.field public static join_widget_root:I = 0x7f0a03fb
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static link_interceptor_widget_view:I = 0x7f0a042c
 
-    const/4 v0, 0x0
+.field public static root:I = 0x7f0a0a07
 
-    :try_start_0
-    const-string v1, "kotlin.reflect.jvm.internal.ReflectionFactoryImpl"
+.field public static root_dialogs_container:I = 0x7f0a0a08
 
-    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+.field public static root_screen:I = 0x7f0a0a09
 
-    move-result-object v1
+.field public static root_top_indicator:I = 0x7f0a0a0a
 
-    invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lw7d;
-    :try_end_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-object v0, v1
-
-    :catch_0
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lw7d;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    :goto_0
-    sput-object v0, Lv7d;->a:Lw7d;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Class;)La73;
-    .locals 1
-
-    sget-object v0, Lv7d;->a:Lw7d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, La73;
-
-    invoke-direct {v0, p0}, La73;-><init>(Ljava/lang/Class;)V
-
-    return-object v0
-.end method
+.field public static root_view_group:I = 0x7f0a0a0b

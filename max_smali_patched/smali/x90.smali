@@ -2,142 +2,39 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final a:I
 
-.field public final b:I
-
-.field public final c:Lqt1;
+# static fields
+.field public static final a:Lx90;
 
 
 # direct methods
-.method public constructor <init>(IILqt1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lx90;
 
-    iput p1, p0, Lx90;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lx90;->b:I
+    sput-object v0, Lx90;->a:Lx90;
 
-    iput-object p3, p0, Lx90;->c:Lqt1;
+    const-string v0, "clientMetrics"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    if-ne p1, p0, :cond_0
+    move-result-object p1
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lx90;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Lx90;
-
-    iget v1, p0, Lx90;->a:I
-
-    iget v3, p1, Lx90;->a:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lx90;->b:I
-
-    iget v3, p1, Lx90;->b:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-object v1, p0, Lx90;->c:Lqt1;
-
-    iget-object p1, p1, Lx90;->c:Lqt1;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lx90;->a:I
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lx90;->b:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lx90;->c:Lqt1;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PendingSnapshot{jpegQuality="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lx90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rotationDegrees="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lx90;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", completer="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx90;->c:Lqt1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    throw p1
 .end method

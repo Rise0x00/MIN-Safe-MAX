@@ -1,49 +1,98 @@
 .class public final Lf1c;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Li1c;
+.field public a:J
 
-.field public Y:I
+.field public b:I
 
-.field public d:Li1c;
+.field public c:Ljava/lang/String;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public d:J
 
+.field public e:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Li1c;Lp14;)V
-    .locals 0
+.field public f:Ljava/lang/String;
 
-    iput-object p1, p0, Lf1c;->X:Li1c;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public g:Ljava/lang/String;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Lg1c;
+    .locals 14
 
-    iput-object p1, p0, Lf1c;->o:Ljava/lang/Object;
+    new-instance v0, Lg1c;
 
-    iget p1, p0, Lf1c;->Y:I
+    iget-wide v3, p0, Lf1c;->a:J
 
-    const/high16 v0, -0x80000000
+    iget v5, p0, Lf1c;->b:I
 
-    or-int/2addr p1, v0
+    iget-object v6, p0, Lf1c;->c:Ljava/lang/String;
 
-    iput p1, p0, Lf1c;->Y:I
+    iget-wide v7, p0, Lf1c;->d:J
 
-    iget-object p1, p0, Lf1c;->X:Li1c;
+    iget-object v10, p0, Lf1c;->e:Ljava/lang/String;
 
-    invoke-virtual {p1, p0}, Li1c;->b(Lp14;)Ljava/lang/Object;
+    iget-object v11, p0, Lf1c;->f:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object v12, p0, Lf1c;->g:Ljava/lang/String;
 
-    return-object p1
+    const/4 v13, 0x0
+
+    const-wide/16 v1, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v0 .. v13}, Lg1c;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 2
+
+    iget-object v0, p0, Lf1c;->e:Ljava/lang/String;
+
+    invoke-static {v0}, Lzsi;->f(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lf1c;->f:Ljava/lang/String;
+
+    invoke-static {v0}, Lzsi;->f(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lf1c;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lf1c;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lf1c;->e:Ljava/lang/String;
+
+    return-object v0
 .end method

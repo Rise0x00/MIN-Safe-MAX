@@ -4,26 +4,23 @@
 
 
 # virtual methods
-.method public e()V
+.method public d(Landroid/graphics/RectF;Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public k()V
+.method public e(Z)V
     .locals 0
 
     return-void
 .end method
 
-.method public l()V
-    .locals 0
-
-    return-void
+.method public abstract f(Lqd8;ZJ)V
 .end method
 
-.method public onCallAccepted()V
-    .locals 0
+.method public abstract getShouldScaleMainOpponent()Z
+.end method
 
-    return-void
+.method public abstract n(Z)V
 .end method

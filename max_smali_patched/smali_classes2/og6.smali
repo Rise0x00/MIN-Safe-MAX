@@ -1,192 +1,104 @@
 .class public final Log6;
-.super Llk0;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final c:Limg;
+.field public final synthetic X:Lone/me/folders/list/FoldersListScreen;
 
-.field public final d:J
-
-.field public final e:Ljava/lang/String;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Limg;J)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Log6;->X:Lone/me/folders/list/FoldersListScreen;
 
-    iput-object p1, p0, Log6;->c:Limg;
+    const/4 p2, 0x2
 
-    iput-wide p2, p0, Log6;->d:J
-
-    const-class p1, Log6;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Log6;->e:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;Lpsb;)Lq93;
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Log6;->c:Limg;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-interface {v0}, Limg;->f()Lty;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    iget-object v0, p0, Log6;->e:Ljava/lang/String;
-
-    const-string v1, "No video collage"
-
-    invoke-static {v0, v1}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v6
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v7
-
-    const/4 v8, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v3, p1
-
-    move-object v2, p2
-
-    invoke-virtual/range {v2 .. v8}, Lpsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lci4;
+    invoke-virtual {p0, p1, p2}, Log6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Log6;
 
-    :cond_0
-    move-object v3, p1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-object v2, p2
+    invoke-virtual {p1, p2}, Log6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget p1, v1, Lty;->d:I
-
-    iget p2, v1, Lty;->o:I
-
-    invoke-interface {v0}, Limg;->getDuration()J
-
-    move-result-wide v4
-
-    long-to-int v0, v4
-
-    div-int/2addr v0, p2
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v4
-
-    div-int/2addr v4, p1
-
-    iget-wide v5, p0, Log6;->d:J
-
-    long-to-int v5, v5
-
-    div-int/2addr v5, v0
-
-    add-int/lit8 p2, p2, -0x1
-
-    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    rem-int/2addr v0, v4
-
-    mul-int/2addr v0, p1
-
-    invoke-static {v5, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p1
-
-    div-int/2addr p1, v4
-
-    iget v5, v1, Lty;->c:I
-
-    mul-int/2addr p1, v5
-
-    iget v4, v1, Lty;->d:I
-
-    const/4 v6, 0x0
-
-    move-object v1, v2
-
-    move v2, v0
-
-    move-object v0, v1
-
-    move-object v1, v3
-
-    move v3, p1
-
-    invoke-virtual/range {v0 .. v6}, Lpsb;->b(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;)Lci4;
-
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
-.method public final b()Ley0;
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v0, Lope;
+    new-instance v0, Log6;
 
-    iget-object v1, p0, Log6;->c:Limg;
+    iget-object v1, p0, Log6;->X:Lone/me/folders/list/FoldersListScreen;
 
-    invoke-interface {v1}, Limg;->i()J
+    invoke-direct {v0, p2, v1}, Log6;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/list/FoldersListScreen;)V
 
-    move-result-wide v1
-
-    const-string v3, "videoId="
-
-    const-string v4, ", millis="
-
-    invoke-static {v1, v2, v3, v4}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Log6;->d:J
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lope;-><init>(Ljava/lang/String;)V
+    iput-object p1, v0, Log6;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final getName()Ljava/lang/String;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    const-class v0, Log6;
+    iget-object v0, p0, Log6;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object v0
+    check-cast v0, Ljava/util/List;
 
-    return-object v0
+    iget-object p1, p0, Log6;->X:Lone/me/folders/list/FoldersListScreen;
+
+    iget-object v1, p1, Lone/me/folders/list/FoldersListScreen;->X:Ljld;
+
+    sget-object v2, Lone/me/folders/list/FoldersListScreen;->Y:[Lz28;
+
+    const/4 v3, 0x0
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+
+    move-result-object v1
+
+    check-cast v1, Llg6;
+
+    new-instance v2, Lve;
+
+    const/16 v3, 0x12
+
+    invoke-direct {v2, v3, p1}, Lve;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v0, v2}, Lnd8;->G(Ljava/util/List;Ljava/lang/Runnable;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

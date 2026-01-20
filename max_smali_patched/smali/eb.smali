@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpb;
+.implements Llb;
 
 
 # instance fields
@@ -40,6 +40,8 @@
     :cond_1
     check-cast p1, Leb;
 
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
     iget-boolean v0, p0, Leb;->a:Z
 
     iget-boolean p1, p1, Leb;->a:Z
@@ -59,27 +61,37 @@
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-boolean v0, p0, Leb;->a:Z
+    const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean v1, p0, Leb;->a:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "DisableAllCamerasOnce(isSuccess="
+    const-string v0, "DisableAllScreenRecordInCall(isSuccess=true, isEnabled="
 
     const-string v1, ")"
 
     iget-boolean v2, p0, Leb;->a:Z
 
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lmrf;->k(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,49 +1,51 @@
-.class public final Lgz4;
-.super Lp14;
+.class public final synthetic Lgz4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lere;
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+.field public final synthetic d:Liz4;
 
-.field public Y:I
-
-.field public d:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic e:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;Lp14;)V
+.method public synthetic constructor <init>(Liz4;Ljava/lang/ref/WeakReference;)V
     .locals 0
 
-    iput-object p1, p0, Lgz4;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgz4;->d:Liz4;
+
+    iput-object p2, p0, Lgz4;->e:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 1
 
-    iput-object p1, p0, Lgz4;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lgz4;->e:Ljava/lang/ref/WeakReference;
 
-    iget p1, p0, Lgz4;->Y:I
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    check-cast v0, Liz4;
 
-    iput p1, p0, Lgz4;->Y:I
+    if-eqz v0, :cond_0
 
-    iget-object p1, p0, Lgz4;->X:Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;
+    iget-object v0, p0, Lgz4;->d:Liz4;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadFileFromWebAppWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v0, v0, Liz4;->e:Leyd;
 
-    move-result-object p1
+    invoke-virtual {v0}, Leyd;->reset()V
 
-    return-object p1
+    :cond_0
+    return-void
 .end method

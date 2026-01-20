@@ -1,356 +1,157 @@
 .class public final Lcdc;
-.super Ljava/lang/Object;
+.super Lfm6;
 .source "SourceFile"
-
-# interfaces
-.implements Lyz4;
 
 
 # instance fields
-.field public volatile a:Z
+.field public final synthetic f:I
 
-.field public volatile b:Ljava/lang/Object;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Ljava/lang/Object;
-
-.field public final f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
+.field public final g:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/net/DatagramSocket;Lq98;Lzhc;Lb6;)V
-    .locals 2
+.method public constructor <init>(Lrlg;)V
+    .locals 1
 
-    .line 1
-    const-string v0, "Socket receive buffer size: "
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v1, 0x0
-
-    .line 2
-    iput-boolean v1, p0, Lcdc;->a:Z
+    iput v0, p0, Lcdc;->f:I
 
     .line 3
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-object p1, p0, Lcdc;->b:Ljava/lang/Object;
+    invoke-direct {p0, p1}, Lfm6;-><init>(Lrlg;)V
 
     .line 4
-    iput-object p2, p0, Lcdc;->c:Ljava/lang/Object;
+    new-instance p1, Lplg;
 
-    .line 5
-    iput-object p3, p0, Lcdc;->d:Ljava/lang/Object;
+    invoke-direct {p1}, Lplg;-><init>()V
 
-    .line 6
-    iput-object p4, p0, Lcdc;->e:Ljava/lang/Object;
+    iput-object p1, p0, Lcdc;->g:Ljava/lang/Object;
 
-    .line 7
-    new-instance p3, Ljava/lang/Thread;
-
-    new-instance p4, Lfoa;
-
-    const/16 v1, 0xd
-
-    invoke-direct {p4, v1, p0}, Lfoa;-><init>(ILjava/lang/Object;)V
-
-    const-string v1, "receiver"
-
-    invoke-direct {p3, p4, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    iput-object p3, p0, Lcdc;->f:Ljava/lang/Object;
-
-    const/4 p4, 0x1
-
-    .line 8
-    invoke-virtual {p3, p4}, Ljava/lang/Thread;->setDaemon(Z)V
-
-    .line 9
-    new-instance p3, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {p3}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    iput-object p3, p0, Lcdc;->g:Ljava/lang/Object;
-
-    .line 10
-    :try_start_0
-    invoke-virtual {p1}, Ljava/net/DatagramSocket;->getReceiveBufferSize()I
-
-    move-result p1
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    invoke-direct {p3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {p2, p1}, Lq98;->debug(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/net/SocketException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
     return-void
 .end method
 
-.method public constructor <init>(Lqs8;Lvx0;Ljava/util/concurrent/ExecutorService;JJ)V
-    .locals 13
+.method public constructor <init>(Lrlg;Ld49;)V
+    .locals 1
 
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    move-object/from16 v0, p3
+    iput v0, p0, Lcdc;->f:I
 
-    .line 12
-    iput-object v0, p0, Lcdc;->c:Ljava/lang/Object;
+    .line 1
+    invoke-direct {p0, p1}, Lfm6;-><init>(Lrlg;)V
 
-    .line 13
-    iget-object p1, p1, Lqs8;->b:Lgs8;
-
-    .line 14
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 15
-    sget-object v6, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    .line 16
-    iget-object v1, p1, Lgs8;->a:Landroid/net/Uri;
-
-    .line 17
-    iget-object v11, p1, Lgs8;->f:Ljava/lang/String;
-
-    .line 18
-    const-string p1, "The uri must be set."
-
-    invoke-static {v1, p1}, Ligi;->j(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 19
-    new-instance v0, Lec4;
-
-    const-wide/16 v2, 0x0
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    const/4 v12, 0x4
-
-    move-wide/from16 v7, p4
-
-    move-wide/from16 v9, p6
-
-    .line 20
-    invoke-direct/range {v0 .. v12}, Lec4;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
-
-    .line 21
-    iput-object v0, p0, Lcdc;->d:Ljava/lang/Object;
-
-    .line 22
-    invoke-virtual {p2}, Lvx0;->c()Lxx0;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcdc;->e:Ljava/lang/Object;
-
-    .line 23
-    new-instance v1, Lcb9;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v1, v2, p0}, Lcb9;-><init>(ILjava/lang/Object;)V
-
-    .line 24
-    new-instance v2, Lny0;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v0, v3, v1}, Lny0;-><init>(Lxx0;Lec4;[BLmy0;)V
-
-    iput-object v2, p0, Lcdc;->f:Ljava/lang/Object;
+    .line 2
+    iput-object p2, p0, Lcdc;->g:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lnz4;)V
-    .locals 2
+.method public f(ILmlg;Z)Lmlg;
+    .locals 11
 
-    iput-object p1, p0, Lcdc;->g:Ljava/lang/Object;
+    iget v0, p0, Lcdc;->f:I
 
-    const/4 p1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    :goto_0
-    if-nez p1, :cond_2
+    invoke-super {p0, p1, p2, p3}, Lfm6;->f(ILmlg;Z)Lmlg;
 
-    :try_start_0
-    iget-boolean v0, p0, Lcdc;->a:Z
+    move-result-object p1
 
-    if-nez v0, :cond_2
+    return-object p1
 
-    new-instance v0, Lbdc;
+    :pswitch_0
+    iget-object v0, p0, Lfm6;->e:Lrlg;
 
-    invoke-direct {v0, p0}, Lbdc;-><init>(Lcdc;)V
+    invoke-virtual {v0, p1, p2, p3}, Lrlg;->f(ILmlg;Z)Lmlg;
 
-    iput-object v0, p0, Lcdc;->b:Ljava/lang/Object;
+    move-result-object v1
 
-    iget-object v0, p0, Lcdc;->c:Ljava/lang/Object;
+    iget p1, v1, Lmlg;->c:I
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
+    iget-object p3, p0, Lcdc;->g:Ljava/lang/Object;
 
-    iget-object v1, p0, Lcdc;->b:Ljava/lang/Object;
+    check-cast p3, Lplg;
 
-    check-cast v1, Lbdc;
+    const-wide/16 v2, 0x0
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, p1, p3, v2, v3}, Lrlg;->m(ILplg;J)Lplg;
 
-    :try_start_1
-    iget-object v0, p0, Lcdc;->b:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lbdc;
+    invoke-virtual {p1}, Lplg;->a()Z
 
-    invoke-virtual {v0}, Lskd;->get()Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result p1
 
+    if-eqz p1, :cond_0
+
+    iget-object v2, p2, Lmlg;->a:Ljava/lang/Object;
+
+    iget-object v3, p2, Lmlg;->b:Ljava/lang/Object;
+
+    iget v4, p2, Lmlg;->c:I
+
+    iget-wide v5, p2, Lmlg;->d:J
+
+    iget-wide v7, p2, Lmlg;->e:J
+
+    sget-object v9, Lq8;->f:Lq8;
+
+    const/4 v10, 0x1
+
+    invoke-virtual/range {v1 .. v10}, Lmlg;->i(Ljava/lang/Object;Ljava/lang/Object;IJJLq8;Z)V
+
+    goto :goto_0
+
+    :cond_0
     const/4 p1, 0x1
 
-    goto :goto_0
+    iput-boolean p1, v1, Lmlg;->f:Z
 
-    :catchall_0
-    move-exception p1
+    :goto_0
+    return-object v1
 
-    goto :goto_1
+    nop
 
-    :catch_0
-    move-exception v0
-
-    :try_start_2
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    instance-of v1, v0, Landroidx/media3/common/PriorityTaskManager$PriorityTooLowException;
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of p1, v0, Ljava/io/IOException;
-
-    if-eqz p1, :cond_1
-
-    check-cast v0, Ljava/io/IOException;
-
-    throw v0
-
-    :cond_1
-    sget-object p1, Llig;->a:Ljava/lang/String;
-
-    throw v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_1
-    iget-object v0, p0, Lcdc;->b:Ljava/lang/Object;
-
-    check-cast v0, Lbdc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lskd;->a()V
-
-    throw p1
-
-    :cond_2
-    iget-object p1, p0, Lcdc;->b:Ljava/lang/Object;
-
-    check-cast p1, Lbdc;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Lskd;->a()V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public b()Lpxc;
-    .locals 4
+.method public m(ILplg;J)Lplg;
+    .locals 1
 
-    iget-object v0, p0, Lcdc;->g:Ljava/lang/Object;
+    iget v0, p0, Lcdc;->f:I
 
-    check-cast v0, Ljava/util/concurrent/LinkedBlockingQueue;
+    packed-switch v0, :pswitch_data_0
 
-    const/16 v1, 0xf
+    invoke-super {p0, p1, p2, p3, p4}, Lfm6;->m(ILplg;J)Lplg;
 
-    int-to-long v1, v1
+    move-result-object p1
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    return-object p1
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/LinkedBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    :pswitch_0
+    invoke-super {p0, p1, p2, p3, p4}, Lfm6;->m(ILplg;J)Lplg;
 
-    move-result-object v0
+    iget-object p1, p0, Lcdc;->g:Ljava/lang/Object;
 
-    check-cast v0, Lpxc;
+    check-cast p1, Ld49;
 
-    return-object v0
-.end method
+    iput-object p1, p2, Lplg;->c:Ld49;
 
-.method public cancel()V
-    .locals 2
+    iget-object p1, p1, Ld49;->b:Lt39;
 
-    const/4 v0, 0x1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-boolean v0, p0, Lcdc;->a:Z
+    return-object p2
 
-    iget-object v1, p0, Lcdc;->b:Ljava/lang/Object;
+    nop
 
-    check-cast v1, Lbdc;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v0}, Lskd;->cancel(Z)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public remove()V
-    .locals 3
-
-    iget-object v0, p0, Lcdc;->e:Ljava/lang/Object;
-
-    check-cast v0, Lxx0;
-
-    iget-object v1, v0, Lxx0;->a:Lqx0;
-
-    iget-object v0, v0, Lxx0;->o:Lfy0;
-
-    iget-object v2, p0, Lcdc;->d:Ljava/lang/Object;
-
-    check-cast v2, Lec4;
-
-    invoke-virtual {v0, v2}, Lfy0;->e(Lec4;)Ljava/lang/String;
-
-    move-result-object v0
-
-    check-cast v1, Lnpe;
-
-    invoke-virtual {v1, v0}, Lnpe;->l(Ljava/lang/String;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

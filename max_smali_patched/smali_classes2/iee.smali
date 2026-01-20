@@ -3,120 +3,97 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lof4;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
-# static fields
-.field public static final a:Liee;
+# instance fields
+.field public final synthetic a:Ljee;
 
-.field public static final b:Ljee;
+.field public final synthetic b:Ldee;
+
+.field public final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljee;Ldee;Landroid/view/View;)V
+    .locals 0
 
-    new-instance v0, Liee;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Liee;->a:Ljee;
 
-    sput-object v0, Liee;->a:Liee;
+    iput-object p2, p0, Liee;->b:Ldee;
 
-    sget-object v0, Ljee;->b:Ljee;
-
-    sput-object v0, Liee;->b:Ljee;
+    iput-object p3, p0, Liee;->c:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lwf4;
-    .locals 1
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    sget-object v0, Liee;->b:Ljee;
-
-    return-object v0
+    return-void
 .end method
 
-.method public final b(Ljava/lang/String;Lrf4;Landroid/os/Bundle;)Lzf4;
-    .locals 10
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    sget-object v0, Liee;->b:Ljee;
+    iget-object p1, p0, Liee;->a:Ljee;
 
-    iget-object v0, v0, Lwf4;->a:Ljava/util/LinkedHashSet;
+    iget-object p1, p1, Ljee;->u0:Ljava/util/EnumMap;
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Liee;->b:Ldee;
 
     const/4 v1, 0x0
 
-    if-nez v0, :cond_0
+    invoke-interface {p1, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v1
+    return-void
+.end method
 
-    :cond_0
-    sget-object v0, Ljee;->b:Ljee;
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
+.end method
 
-    sget-object v0, Ljee;->c:Lrf4;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 2
 
-    invoke-virtual {p2, v0}, Lrf4;->equals(Ljava/lang/Object;)Z
+    const/4 p1, 0x0
 
-    move-result v0
+    iget-object v0, p0, Liee;->c:Landroid/view/View;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v8, Lh;
+    invoke-virtual {v0}, Landroid/view/View;->getTranslationY()F
 
-    const/16 v0, 0x1b
+    move-result p1
 
-    invoke-direct {v8, v0}, Lh;-><init>(I)V
+    const/4 v1, 0x0
 
-    new-instance v2, Lzf4;
+    cmpg-float p1, p1, v1
 
-    const/16 v9, 0x18
+    if-nez p1, :cond_0
 
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Lzf4;-><init>(Ljava/lang/String;Lrf4;Landroid/os/Bundle;ILxf4;Lyf4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Liee;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
     move-result-object p1
 
-    const-string p2, "invalid route "
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-static {p2, v4}, Lok7;->h(Ljava/lang/String;Lrf4;)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p3
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    const/high16 v1, 0x40800000    # 4.0f
 
-    invoke-static {p2, v4}, Lok7;->h(Ljava/lang/String;Lrf4;)Ljava/lang/String;
+    mul-float/2addr p1, v1
 
-    move-result-object p2
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
 
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    :cond_0
+    return-void
 .end method

@@ -1,181 +1,97 @@
 .class public final Lmia;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgla;
+.implements Ljava/io/FilenameFilter;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Lgla;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicInteger;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lgla;Ljava/util/concurrent/atomic/AtomicInteger;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p3, p0, Lmia;->a:I
+    iput p1, p0, Lmia;->a:I
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lmia;->b:Lgla;
-
-    iput-object p2, p0, Lmia;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)V
-    .locals 1
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 0
 
-    iget v0, p0, Lmia;->a:I
+    iget p1, p0, Lmia;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object v0, p0, Lmia;->b:Lgla;
+    const-string p1, "dso_state"
 
-    check-cast v0, Lv3e;
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p1}, Lv3e;->b(Ljava/lang/Object;)V
+    move-result p1
 
-    return-void
+    if-nez p1, :cond_0
 
-    :pswitch_0
-    iget-object v0, p0, Lmia;->b:Lgla;
+    const-string p1, "dso_lock"
 
-    invoke-interface {v0, p1}, Lgla;->b(Ljava/lang/Object;)V
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-void
+    move-result p1
 
-    nop
+    if-nez p1, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    const-string p1, "dso_deps"
 
-.method public final c()V
-    .locals 2
+    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget v0, p0, Lmia;->a:I
+    move-result p1
 
-    packed-switch v0, :pswitch_data_0
+    if-nez p1, :cond_0
 
-    iget-object v0, p0, Lmia;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+    const/4 p1, 0x1
 
-    check-cast v0, Loia;
+    goto :goto_0
 
-    const/4 v1, 0x0
+    :cond_0
+    const/4 p1, 0x0
 
-    iput-boolean v1, v0, Loia;->Y:Z
-
-    invoke-virtual {v0}, Loia;->a()V
-
-    return-void
+    :goto_0
+    return p1
 
     :pswitch_0
-    iget-object v0, p0, Lmia;->c:Ljava/util/concurrent/atomic/AtomicInteger;
+    const-string p1, "liblz4-java-"
 
-    check-cast v0, Lnia;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lnia;->s0:Z
-
-    invoke-virtual {v0}, Lnia;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(Lzv4;)V
-    .locals 1
-
-    iget v0, p0, Lmia;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0, p1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ldw4;->d(Ljava/util/concurrent/atomic/AtomicReference;Lzv4;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
-
-    iget v0, p0, Lmia;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmia;->c:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    check-cast v0, Loia;
-
-    invoke-virtual {v0}, Loia;->dispose()V
-
-    iget-object v0, p0, Lmia;->b:Lgla;
-
-    check-cast v0, Lv3e;
-
-    invoke-virtual {v0, p1}, Lv3e;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmia;->c:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    check-cast v0, Lnia;
-
-    iget-object v1, v0, Lnia;->d:Lyy;
-
-    invoke-virtual {v1, p1}, Lyy;->b(Ljava/lang/Throwable;)Z
+    invoke-virtual {p2, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    iget-boolean p1, v0, Lnia;->X:Z
+    const-string p1, ".lck"
 
-    if-nez p1, :cond_0
+    invoke-virtual {p2, p1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
-    iget-object p1, v0, Lnia;->Z:Lzv4;
+    move-result p1
 
-    invoke-interface {p1}, Lzv4;->dispose()V
+    if-nez p1, :cond_1
 
-    :cond_0
-    const/4 p1, 0x0
+    const/4 p1, 0x1
 
-    iput-boolean p1, v0, Lnia;->s0:Z
-
-    invoke-virtual {v0}, Lnia;->a()V
+    goto :goto_1
 
     :cond_1
-    return-void
+    const/4 p1, 0x0
+
+    :goto_1
+    return p1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

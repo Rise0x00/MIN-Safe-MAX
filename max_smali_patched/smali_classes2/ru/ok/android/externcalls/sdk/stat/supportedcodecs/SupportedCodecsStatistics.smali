@@ -15,13 +15,13 @@
         "()V",
         "Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;",
         "okApiService",
-        "Lnxb;",
+        "Lfgc;",
         "preferencesHelper",
-        "Lcwc;",
+        "Lahd;",
         "rtcLog",
-        "Lybg;",
+        "Lb3h;",
         "tryToReport",
-        "(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lnxb;Lcwc;)V",
+        "(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lfgc;Lahd;)V",
         "Lorg/json/JSONObject;",
         "buildCodecLists",
         "()Lorg/json/JSONObject;",
@@ -85,65 +85,65 @@
 
     sput-wide v0, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics;->ONE_MONTH_IN_MS:J
 
-    new-instance v2, Lvcb;
+    new-instance v2, Lktb;
 
     const-string v0, "video/av1"
 
     const-string v1, "AV1"
 
-    invoke-direct {v2, v0, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v2, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v3, Lvcb;
+    new-instance v3, Lktb;
 
     const-string v0, "video/av01"
 
-    invoke-direct {v3, v0, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v3, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v4, Lvcb;
+    new-instance v4, Lktb;
 
     const-string v0, "video/x-vnd.on2.vp8"
 
     const-string v1, "VP8"
 
-    invoke-direct {v4, v0, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v4, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v5, Lvcb;
+    new-instance v5, Lktb;
 
     const-string v0, "video/x-vnd.on2.vp9"
 
     const-string v1, "VP9"
 
-    invoke-direct {v5, v0, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v5, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v6, Lvcb;
+    new-instance v6, Lktb;
 
     const-string v0, "video/avc"
 
     const-string v1, "H264"
 
-    invoke-direct {v6, v0, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v6, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v7, Lvcb;
+    new-instance v7, Lktb;
 
     const-string v0, "video/hevc"
 
     const-string v1, "H265"
 
-    invoke-direct {v7, v0, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v7, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v8, Lvcb;
+    new-instance v8, Lktb;
 
     const-string v0, "audio/opus"
 
     const-string v1, "OPUS"
 
-    invoke-direct {v8, v0, v1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v8, v0, v1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array/range {v2 .. v8}, [Lvcb;
+    filled-new-array/range {v2 .. v8}, [Lktb;
 
     move-result-object v0
 
-    invoke-static {v0}, Lyg8;->h([Lvcb;)Ljava/util/Map;
+    invoke-static {v0}, Lss8;->i([Lktb;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -301,7 +301,7 @@
 
     const-string v1, "is_hardware"
 
-    invoke-static {v6}, Ld15;->A(Landroid/media/MediaCodecInfo;)Z
+    invoke-static {v6}, La85;->A(Landroid/media/MediaCodecInfo;)Z
 
     move-result v11
 
@@ -333,7 +333,7 @@
     return-object v2
 .end method
 
-.method public static final tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lnxb;Lcwc;)V
+.method public static final tryToReport(Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;Lfgc;Lahd;)V
     .locals 6
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -349,7 +349,7 @@
 
     move-result-wide v0
 
-    iget-object v2, p1, Lnxb;->a:Landroid/content/SharedPreferences;
+    iget-object v2, p1, Lfgc;->a:Landroid/content/SharedPreferences;
 
     const-wide/16 v3, 0x0
 
@@ -390,35 +390,29 @@
 
     const-string v4, "SupportedCodecsStatistics"
 
-    invoke-interface {p2, v4, v3}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p2, v4, v3}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v2}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->sendSupportedCodecsStatistics(Lorg/json/JSONObject;)Ljqe;
+    invoke-virtual {p0, v2}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->sendSupportedCodecsStatistics(Lorg/json/JSONObject;)Lkef;
 
     move-result-object p0
 
-    invoke-static {}, Lie;->a()Lgpd;
+    invoke-static {}, Lde;->a()Lpbe;
 
     move-result-object v2
 
-    invoke-virtual {p0, v2}, Ljqe;->i(Lgpd;)Lbre;
+    invoke-virtual {p0, v2}, Lkef;->i(Lpbe;)Lcff;
 
     move-result-object p0
 
     new-instance v2, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;
 
-    invoke-direct {v2, p2, p1, v0, v1}, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;-><init>(Lcwc;Lnxb;J)V
+    invoke-direct {v2, p2, p1, v0, v1}, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$1;-><init>(Lahd;Lfgc;J)V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;
 
-    invoke-direct {p1, p2}, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;-><init>(Lcwc;)V
+    invoke-direct {p1, p2}, Lru/ok/android/externcalls/sdk/stat/supportedcodecs/SupportedCodecsStatistics$tryToReport$2;-><init>(Lahd;)V
 
-    new-instance p2, Lnt1;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p2, v2, v0, p1}, Lnt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p2}, Ljqe;->k(Lcre;)V
+    invoke-virtual {p0, v2, p1}, Lkef;->k(Lay3;Lay3;)Lnw1;
 
     return-void
 .end method

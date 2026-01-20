@@ -1,80 +1,73 @@
-.class public final Lk8f;
-.super Logf;
+.class public final enum Lk8f;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lkj6;
+
+# static fields
+.field public static final enum a:Lk8f;
+
+.field public static final enum b:Lk8f;
+
+.field public static final synthetic c:[Lk8f;
 
 
-# instance fields
-.field public synthetic X:Ljava/util/List;
-
-.field public synthetic Y:Ljava/util/List;
-
-.field public synthetic Z:Lone;
-
-.field public synthetic o:Ljava/util/List;
-
-
-# virtual methods
-.method public final b(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lk26;)Ljava/lang/Object;
-    .locals 2
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Ljava/util/List;
-
-    check-cast p3, Ljava/util/List;
-
-    check-cast p4, Lone;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
     new-instance v0, Lk8f;
 
-    const/4 v1, 0x5
+    const-string v1, "CLOCKWISE"
 
-    invoke-direct {v0, v1, p5}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
 
-    iput-object p1, v0, Lk8f;->o:Ljava/util/List;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p2, v0, Lk8f;->X:Ljava/util/List;
+    sput-object v0, Lk8f;->a:Lk8f;
 
-    iput-object p3, v0, Lk8f;->Y:Ljava/util/List;
+    new-instance v1, Lk8f;
 
-    iput-object p4, v0, Lk8f;->Z:Lone;
+    const-string v2, "COUNTERCLOCKWISE"
 
-    sget-object p1, Lybg;->a:Lybg;
+    const/4 v3, 0x1
 
-    invoke-virtual {v0, p1}, Lk8f;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object p1
+    sput-object v1, Lk8f;->b:Lk8f;
 
-    return-object p1
+    filled-new-array {v0, v1}, [Lk8f;
+
+    move-result-object v0
+
+    sput-object v0, Lk8f;->c:[Lk8f;
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lk8f;
+    .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-class v0, Lk8f;
 
-    iget-object p1, p0, Lk8f;->o:Ljava/util/List;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lk8f;->X:Ljava/util/List;
+    move-result-object p0
 
-    iget-object v1, p0, Lk8f;->Y:Ljava/util/List;
+    check-cast p0, Lk8f;
 
-    iget-object v2, p0, Lk8f;->Z:Lone;
+    return-object p0
+.end method
 
-    new-instance v3, Ly7f;
+.method public static values()[Lk8f;
+    .locals 1
 
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lk8f;->c:[Lk8f;
 
-    iput-object p1, v3, Ly7f;->a:Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iput-object v0, v3, Ly7f;->b:Ljava/util/List;
+    move-result-object v0
 
-    iput-object v1, v3, Ly7f;->c:Ljava/util/List;
+    check-cast v0, [Lk8f;
 
-    iput-object v2, v3, Ly7f;->d:Lone;
-
-    return-object v3
+    return-object v0
 .end method

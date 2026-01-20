@@ -1,26 +1,26 @@
 .class public final Lv9g;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+.field public final synthetic X:Lbag;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic o:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
+.method public constructor <init>(Lbag;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lv9g;->X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    iput-object p1, p0, Lv9g;->X:Lbag;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,9 +28,19 @@
 
 # virtual methods
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 2
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
 
     check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
 
     invoke-virtual {p0, p1, p2}, Lv9g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
@@ -38,7 +48,7 @@
 
     check-cast p1, Lv9g;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lv9g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,128 +60,184 @@
 
     new-instance v0, Lv9g;
 
-    iget-object v1, p0, Lv9g;->X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    iget-object v1, p0, Lv9g;->X:Lbag;
 
-    invoke-direct {v0, p2, v1}, Lv9g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
+    invoke-direct {v0, v1, p2}, Lv9g;-><init>(Lbag;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lv9g;->o:Ljava/lang/Object;
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide p1
+
+    iput-wide p1, v0, Lv9g;->o:J
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+    .locals 6
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lv9g;->X:Lbag;
 
-    iget-object p1, p0, Lv9g;->o:Ljava/lang/Object;
+    iget-wide v1, p0, Lv9g;->o:J
 
-    check-cast p1, Ljava/lang/String;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lv9g;->X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    const-wide/16 v3, -0x1
 
-    iget-object v1, v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->Y:Ld0d;
+    cmp-long p1, v1, v3
 
-    const/4 v2, 0x1
+    const-string v3, "userId"
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {v0}, Lbag;->d()Lwc4;
+
+    move-result-object p1
+
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v5
+
+    check-cast p1, Lpq;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lpq;->d:Ln8g;
+
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldqg;
 
     if-eqz p1, :cond_1
 
-    sget-object v4, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Les7;
+    :try_start_0
+    sget-object p1, Ldqg;->e:Lyue;
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-nez v4, :cond_0
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move v4, v3
+    move-object p1, v4
 
-    goto :goto_1
-
-    :cond_1
     :goto_0
-    move v4, v2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_1
-    iget-object v5, v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->Z:Ld0d;
+    invoke-static {v3, v5}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
-    sget-object v6, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Les7;
+    move-result-object v3
 
-    const/4 v7, 0x2
+    invoke-virtual {p1, v3}, Lyue;->f(Ljava/util/Map;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    aget-object v7, v6, v7
+    :catch_0
+    :cond_1
+    invoke-virtual {v0}, Lbag;->d()Lwc4;
 
-    invoke-interface {v5, v0, v7}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v5
+    long-to-int v0, v1
 
-    check-cast v5, Lone/me/sdk/uikit/common/button/OneMeButton;
+    and-int/lit16 v0, v0, 0xff
 
-    const/16 v7, 0x8
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    if-eqz v4, :cond_2
+    move-result-object v0
 
-    move v8, v3
+    check-cast p1, Lpq;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lpq;->d:Ln8g;
+
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldqg;
+
+    if-eqz p1, :cond_6
+
+    sget-object p1, Ldqg;->a:Ldqg;
+
+    const-string p1, "p"
+
+    invoke-static {p1, v0}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
+
+    move-result-object p1
+
+    sget-boolean v0, Ldqg;->b:Z
+
+    if-eqz v0, :cond_2
 
     goto :goto_2
 
     :cond_2
-    move v8, v7
+    :try_start_1
+    sget-object v0, Ldqg;->f:Lxag;
 
-    :goto_2
-    invoke-virtual {v5, v8}, Landroid/view/View;->setVisibility(I)V
+    if-eqz v0, :cond_3
 
-    aget-object v5, v6, v2
-
-    invoke-interface {v1, v0, v5}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/widget/TextView;
-
-    if-nez v4, :cond_3
-
-    goto :goto_3
+    move-object v4, v0
 
     :cond_3
-    move v3, v7
+    invoke-virtual {v4, p1}, Lxag;->c(Ljava/util/Map;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    :goto_3
-    invoke-virtual {v5, v3}, Landroid/view/View;->setVisibility(I)V
+    goto :goto_2
 
-    if-nez v4, :cond_4
+    :cond_4
+    invoke-virtual {v0}, Lbag;->d()Lwc4;
 
-    aget-object v2, v6, v2
+    move-result-object p1
 
-    invoke-interface {v1, v0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    check-cast p1, Lpq;
 
-    move-result-object v1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Landroid/widget/TextView;
+    sget-object p1, Lpq;->d:Ln8g;
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ldqg;
+
+    if-eqz p1, :cond_6
+
+    :try_start_2
+    sget-object p1, Ldqg;->e:Lyue;
+
+    if-eqz p1, :cond_5
+
+    goto :goto_1
+
+    :cond_5
+    move-object p1, v4
+
+    :goto_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v3, v4}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v0
 
-    sget v2, Lvtc;->oneme_settings_twofa_creation_email_verify_resend_code_timer:I
+    invoke-virtual {p1, v0}, Lyue;->f(Ljava/util/Map;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v2, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_4
-    sget-object p1, Lybg;->a:Lybg;
+    :catch_1
+    :cond_6
+    :goto_2
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

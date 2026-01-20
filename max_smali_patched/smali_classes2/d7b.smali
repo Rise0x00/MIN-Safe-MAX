@@ -1,91 +1,80 @@
-.class public abstract Ld7b;
+.class public final synthetic Ld7b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
+.field public final synthetic b:Lnq6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILnq6;)V
+    .locals 0
 
-    sget v0, Lopc;->web_app_root_choose_media_bottomsheet_camera:I
+    iput p1, p0, Ld7b;->a:I
 
-    sput v0, Ld7b;->a:I
+    iput-object p2, p0, Ld7b;->b:Lnq6;
 
-    sget v0, Lopc;->web_app_root_choose_media_bottomsheet_file_manager:I
-
-    sput v0, Ld7b;->b:I
-
-    sget v0, Lopc;->web_app_root_choose_media_bottomsheet_gallery:I
-
-    sput v0, Ld7b;->c:I
-
-    sget v0, Lopc;->webapp_root_content_container:I
-
-    sput v0, Ld7b;->d:I
-
-    sget v0, Lopc;->webapp_root_error_container:I
-
-    sput v0, Ld7b;->e:I
-
-    sget v0, Lopc;->webapp_root_frame:I
-
-    sput v0, Ld7b;->f:I
-
-    sget v0, Lopc;->webapp_root_progressbar:I
-
-    sput v0, Ld7b;->g:I
-
-    sget v0, Lopc;->webapp_root_settings_header:I
-
-    sput v0, Ld7b;->h:I
-
-    sget v0, Lopc;->webapp_root_settings_sections_recycler:I
-
-    sput v0, Ld7b;->i:I
-
-    sget v0, Lopc;->webapp_root_settings_switcher:I
-
-    sput v0, Ld7b;->j:I
-
-    sget v0, Lopc;->webapp_root_settings_transition:I
-
-    sput v0, Ld7b;->k:I
-
-    sget v0, Lopc;->webapp_root_toolbar:I
-
-    sput v0, Ld7b;->l:I
-
-    sget v0, Lopc;->webapp_root_webview:I
-
-    sput v0, Ld7b;->m:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    iget p1, p0, Ld7b;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Ld7b;->b:Lnq6;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Ld7b;->b:Lnq6;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Ld7b;->b:Lnq6;
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Ld7b;->b:Lnq6;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,59 +1,49 @@
 .class public final Lfa3;
-.super Ljj0;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:Lga3;
+.field public X:I
 
-.field public final synthetic c:Lea3;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lla3;
 
 
 # direct methods
-.method public constructor <init>(Lga3;Lea3;)V
+.method public constructor <init>(Lla3;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfa3;->o:Lla3;
 
-    iput-object p1, p0, Lfa3;->b:Lga3;
-
-    iput-object p2, p0, Lfa3;->c:Lea3;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    .locals 0
-
-    iget-object p1, p0, Lfa3;->b:Lga3;
-
-    iget-object p2, p1, Lga3;->b:Landroid/view/ViewGroup;
-
-    invoke-virtual {p2}, Landroid/view/View;->postInvalidate()V
-
-    iget-object p1, p1, Lga3;->g:Lqi6;
-
-    iget-object p2, p0, Lfa3;->c:Lea3;
-
-    invoke-interface {p2}, Lea3;->i()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-interface {p1, p2}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final d(Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-string p1, "CollageImageAttachDraweeWrapper"
+    iput-object p1, p0, Lfa3;->d:Ljava/lang/Object;
 
-    const-string v0, "onFailure"
+    iget p1, p0, Lfa3;->X:I
 
-    invoke-static {p1, v0, p2}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/high16 v0, -0x80000000
 
-    return-void
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lfa3;->X:I
+
+    iget-object p1, p0, Lfa3;->o:Lla3;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lla3;->n(Ljava/util/Set;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

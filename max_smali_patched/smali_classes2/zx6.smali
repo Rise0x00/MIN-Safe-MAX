@@ -1,50 +1,51 @@
-.class public final Lzx6;
+.class public abstract synthetic Lzx6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lzx6;
-
-.field public static final b:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public static c:Landroid/content/Context;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lzx6;
+    const/4 v0, 0x3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    sput-object v0, Lzx6;->a:Lzx6;
+    move-result-object v1
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    array-length v1, v1
 
-    const/4 v1, 0x1
+    new-array v1, v1, [I
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    const/4 v2, 0x1
 
-    sput-object v0, Lzx6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 v3, 0x0
 
-    return-void
-.end method
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public static a(Ljava/io/File;)V
-    .locals 1
+    :catch_0
+    const/4 v3, 0x2
 
-    invoke-virtual {p0}, Ljava/io/File;->exists()Z
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result v0
+    :catch_1
+    :try_start_2
+    aput v0, v1, v3
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-eqz v0, :cond_0
+    :catch_2
+    sput-object v1, Lzx6;->$EnumSwitchMapping$0:[I
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/io/File;->delete()Z
-
-    :cond_0
     return-void
 .end method

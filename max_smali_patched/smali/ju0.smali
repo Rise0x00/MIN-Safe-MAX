@@ -1,106 +1,135 @@
-.class public final synthetic Lju0;
+.class public final Lju0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrt1;
+.implements Lsif;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+# static fields
+.field public static final a:Liu0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lju0;->a:I
+    new-instance v0, Liu0;
 
-    iput-object p1, p0, Lju0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lju0;->a:Liu0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lqt1;)Ljava/lang/String;
-    .locals 2
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
-    iget v0, p0, Lju0;->a:I
+    const/4 p1, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return p1
+.end method
 
-    iget-object v0, p0, Lju0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+.method public final b()Z
+    .locals 1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    sget-boolean v0, Lhu0;->d:Z
 
-    const-string p1, "Terminate InputBuffer"
+    sget-boolean v0, Lhu0;->d:Z
 
+    return v0
+.end method
+
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
+
+    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
+
+    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getApplicationProtocol()Ljava/lang/String;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const-string v0, ""
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    :cond_2
+    :goto_1
     return-object p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lju0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lju0;->a(Ljavax/net/ssl/SSLSocket;)Z
 
-    const-string p1, "mReleasedFuture"
+    move-result p2
 
-    return-object p1
+    if-eqz p2, :cond_1
 
-    :pswitch_1
-    iget-object v0, p0, Lju0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast p1, Lorg/bouncycastle/jsse/BCSSLSocket;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-interface {p1}, Lorg/bouncycastle/jsse/BCSSLSocket;->getParameters()Lorg/bouncycastle/jsse/BCSSLParameters;
 
-    const-string p1, "acquireInputBuffer"
+    move-result-object p2
 
-    return-object p1
+    sget-object v0, Lmac;->a:Lmac;
 
-    :pswitch_2
-    iget-object v0, p0, Lju0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {p3}, Ltna;->b(Ljava/util/List;)Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    move-result-object p3
 
-    const-string p1, "Data closed"
+    const/4 v0, 0x0
 
-    return-object p1
+    new-array v0, v0, [Ljava/lang/String;
 
-    :pswitch_3
-    new-instance v0, Lky1;
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object p3
 
-    invoke-direct {v0, v1, p1}, Lky1;-><init>(ILjava/lang/Object;)V
+    if-eqz p3, :cond_0
 
-    iget-object p1, p0, Lju0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    check-cast p3, [Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-virtual {p2, p3}, Lorg/bouncycastle/jsse/BCSSLParameters;->setApplicationProtocols([Ljava/lang/String;)V
 
-    const-string p1, "OnScreenFlashUiApplied"
+    invoke-interface {p1, p2}, Lorg/bouncycastle/jsse/BCSSLSocket;->setParameters(Lorg/bouncycastle/jsse/BCSSLParameters;)V
 
-    return-object p1
+    return-void
 
-    :pswitch_4
-    iget-object v0, p0, Lju0;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
 
-    const-string p1, "Data closed"
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    return-object p1
+    throw p1
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

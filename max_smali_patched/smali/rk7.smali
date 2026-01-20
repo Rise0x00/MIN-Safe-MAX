@@ -1,56 +1,75 @@
 .class public final Lrk7;
-.super Lpk7;
+.super Lxj7;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lsk7;
+# virtual methods
+.method public final bridge synthetic c(Ljava/lang/Object;)Lxj7;
+    .locals 0
 
-.field public final c:Ljava/lang/ref/WeakReference;
+    invoke-virtual {p0, p1}, Lrk7;->i(Ljava/lang/Object;)V
 
+    return-object p0
+.end method
 
-# direct methods
-.method public constructor <init>(Lsk7;Lo54;)V
-    .locals 1
+.method public final i(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p2, Lpk7;->a:[Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p0, v0}, Lpk7;-><init>([Ljava/lang/String;)V
-
-    iput-object p1, p0, Lrk7;->b:Lsk7;
-
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lrk7;->c:Ljava/lang/ref/WeakReference;
+    invoke-virtual {p0, p1}, Lxj7;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
 
+.method public final j()Lsk7;
+    .locals 3
 
-# virtual methods
-.method public final a(Ljava/util/Set;)V
-    .locals 1
+    iget v0, p0, Lxj7;->b:I
 
-    iget-object v0, p0, Lrk7;->c:Ljava/lang/ref/WeakReference;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v2, p0, Lxj7;->c:[Ljava/lang/Object;
+
+    invoke-static {v0, v2}, Lsk7;->i(I[Ljava/lang/Object;)Lsk7;
 
     move-result-object v0
 
-    check-cast v0, Lpk7;
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
 
-    if-nez v0, :cond_0
+    move-result v2
 
-    iget-object p1, p0, Lrk7;->b:Lsk7;
+    iput v2, p0, Lxj7;->b:I
 
-    invoke-virtual {p1, p0}, Lsk7;->c(Lpk7;)V
+    iput-boolean v1, p0, Lxj7;->a:Z
 
-    return-void
+    return-object v0
 
     :cond_0
-    invoke-virtual {v0, p1}, Lpk7;->a(Ljava/util/Set;)V
+    iget-object v0, p0, Lxj7;->c:[Ljava/lang/Object;
 
-    return-void
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget v1, Lsk7;->c:I
+
+    new-instance v1, Ljgf;
+
+    invoke-direct {v1, v0}, Ljgf;-><init>(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_1
+    sget v0, Lsk7;->c:I
+
+    sget-object v0, Lnud;->u0:Lnud;
+
+    return-object v0
 .end method

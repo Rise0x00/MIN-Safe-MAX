@@ -1,106 +1,142 @@
-.class public final synthetic Lgi5;
+.class public final Lgi5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc38;
-.implements Ld38;
-.implements Lhr3;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhj5;
 
-.field public final synthetic b:F
+.field public final b:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(IF)V
+.method public constructor <init>(Lhj5;[B)V
     .locals 0
-
-    iput p1, p0, Lgi5;->a:I
-
-    iput p2, p0, Lgi5;->b:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    iput-object p1, p0, Lgi5;->a:Lhj5;
+
+    iput-object p2, p0, Lgi5;->b:[B
+
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "bytes is null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "encoding is null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lgi5;->a:I
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/4 p1, 0x1
 
-    check-cast p1, Lxub;
+    return p1
 
-    invoke-virtual {p1}, Lxub;->m0()V
+    :cond_0
+    instance-of v0, p1, Lgi5;
 
-    iget-object p1, p1, Lxub;->a:Lzi5;
+    const/4 v1, 0x0
 
-    iget v0, p0, Lgi5;->b:F
+    if-nez v0, :cond_1
 
-    invoke-virtual {p1, v0}, Lzi5;->z1(F)V
+    return v1
 
-    return-void
+    :cond_1
+    check-cast p1, Lgi5;
 
-    :pswitch_0
-    iget v0, p0, Lgi5;->b:F
+    iget-object v0, p0, Lgi5;->a:Lhj5;
 
-    check-cast p1, Lxub;
+    iget-object v2, p1, Lgi5;->a:Lhj5;
 
-    invoke-virtual {p1, v0}, Lxub;->i0(F)V
+    invoke-virtual {v0, v2}, Lhj5;->equals(Ljava/lang/Object;)Z
 
-    return-void
+    move-result v0
 
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
+    if-nez v0, :cond_2
+
+    return v1
+
+    :cond_2
+    iget-object v0, p0, Lgi5;->b:[B
+
+    iget-object p1, p1, Lgi5;->b:[B
+
+    invoke-static {v0, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    iget v0, p0, Lgi5;->a:I
+    iget-object v0, p0, Lgi5;->a:Lhj5;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lhj5;->hashCode()I
 
-    iget v0, p0, Lgi5;->b:F
+    move-result v0
 
-    check-cast p1, Lotb;
+    const v1, 0xf4243
 
-    invoke-interface {p1, v0}, Lotb;->j(F)V
+    xor-int/2addr v0, v1
 
-    return-void
+    mul-int/2addr v0, v1
 
-    :pswitch_0
-    iget v0, p0, Lgi5;->b:F
+    iget-object v1, p0, Lgi5;->b:[B
 
-    check-cast p1, Lotb;
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
 
-    invoke-interface {p1, v0}, Lotb;->j(F)V
+    move-result v1
 
-    return-void
+    xor-int/2addr v0, v1
 
-    :pswitch_1
-    iget v0, p0, Lgi5;->b:F
+    return v0
+.end method
 
-    check-cast p1, Lntb;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-interface {p1, v0}, Lntb;->j(F)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, "EncodedPayload{encoding="
 
-    nop
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-object v1, p0, Lgi5;->a:Lhj5;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bytes=[...]}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

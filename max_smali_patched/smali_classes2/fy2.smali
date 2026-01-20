@@ -1,120 +1,101 @@
 .class public final Lfy2;
-.super Logf;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public final synthetic X:Lsy2;
-
-.field public final synthetic Y:Llx2;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lsy2;Llx2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lfy2;->X:Lsy2;
-
-    iput-object p2, p0, Lfy2;->Y:Llx2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final measureChildWithMargins(Landroid/view/View;IIII)V
+    .locals 7
 
-    check-cast p1, Lg54;
+    if-eqz p1, :cond_2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    invoke-virtual {p0, p1, p2}, Lfy2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result v0
 
-    move-result-object p1
+    sget v1, Lc8b;->b:I
 
-    check-cast p1, Lfy2;
+    if-ne v0, v1, :cond_2
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1, p2}, Lfy2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p4, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
-    move-result-object p1
+    move-result v5
 
-    return-object p1
-.end method
+    sget p4, Lc8b;->o:I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-virtual {p0, p4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    new-instance p1, Lfy2;
+    move-result-object p4
 
-    iget-object v0, p0, Lfy2;->X:Lsy2;
+    invoke-virtual {p4}, Landroid/view/View;->getMeasuredHeight()I
 
-    iget-object v1, p0, Lfy2;->Y:Llx2;
+    move-result p4
 
-    invoke-direct {p1, v0, v1, p2}, Lfy2;-><init>(Lsy2;Llx2;Lkotlin/coroutines/Continuation;)V
+    sget v0, Lc8b;->l:I
 
-    return-object p1
-.end method
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    move-result-object v0
 
-    iget v0, p0, Lfy2;->o:I
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
-    const/4 v1, 0x1
+    move-result v0
 
-    if-eqz v0, :cond_1
+    invoke-static {p0}, Ls5j;->h(Landroid/view/View;)Ljava/lang/Integer;
 
-    if-ne v0, v1, :cond_0
+    move-result-object v1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move v1, v2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-static {p0}, Ls5j;->m(Landroid/view/View;)Ljava/lang/Integer;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
-    throw p1
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    add-int/2addr v1, v2
 
-    iget-object p1, p0, Lfy2;->Y:Llx2;
+    add-int/2addr p4, v0
 
-    check-cast p1, Ljx2;
+    add-int/2addr p4, v1
 
-    iput v1, p0, Lfy2;->o:I
+    invoke-static {p5, p4}, Ljava/lang/Math;->max(II)I
 
-    iget-object v0, p0, Lfy2;->X:Lsy2;
+    move-result v6
 
-    invoke-static {v0, p1, p0}, Lsy2;->a(Lsy2;Ljx2;Lp14;)Ljava/lang/Object;
+    move-object v1, p0
 
-    move-result-object p1
+    move-object v2, p1
 
-    sget-object v0, Lh54;->a:Lh54;
+    move v3, p2
 
-    if-ne p1, v0, :cond_2
+    move v4, p3
 
-    return-object v0
+    invoke-super/range {v1 .. v6}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
+
+    return-void
 
     :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-super/range {p0 .. p5}, Landroid/view/ViewGroup;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    return-object p1
+    return-void
 .end method

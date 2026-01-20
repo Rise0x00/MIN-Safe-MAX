@@ -1,136 +1,59 @@
 .class public final Ln2e;
-.super Lkh;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Lp2e;
+
+# instance fields
+.field public X:Ljava/util/Collection;
+
+.field public Y:I
+
+.field public Z:I
+
+.field public d:Ljava/util/Collection;
+
+.field public o:Ljava/util/Iterator;
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lu2e;
+
+.field public v0:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lu2e;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lxyc;
+    iput-object p1, p0, Ln2e;->u0:Lu2e;
 
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Lxyc;-><init>(I)V
-
-    invoke-direct {p0, v0}, Lkh;-><init>(Lqi6;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final h0()I
-    .locals 3
-
-    iget-object v0, p0, Lkh;->c:Ljava/lang/Object;
-
-    invoke-static {v0}, Ltci;->p(Lru7;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lkh;->N()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    int-to-float v1, v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Lm65;->c(FFI)I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final setAlias(Landroid/text/Layout;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    if-nez p1, :cond_1
+    iput-object p1, p0, Ln2e;->t0:Ljava/lang/Object;
 
-    iget-object p1, p0, Lkh;->c:Ljava/lang/Object;
+    iget p1, p0, Ln2e;->v0:I
 
-    invoke-interface {p1}, Lru7;->e()Z
+    const/high16 v0, -0x80000000
 
-    move-result v0
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Ln2e;->v0:I
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lo2e;
-
-    const/16 v0, 0x8
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Lkh;->T()Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lo2e;
-
-    invoke-virtual {v0, p1}, Lo2e;->setLayout(Landroid/text/Layout;)V
-
-    invoke-virtual {p0}, Lkh;->T()Landroid/view/View;
-
-    move-result-object p1
+    iget-object p1, p0, Ln2e;->u0:Lu2e;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {p1, v0, p0}, Lu2e;->l([JLo84;)Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lkh;->y()V
+    move-result-object p1
 
-    return-void
-.end method
-
-.method public final setAliasColor(I)V
-    .locals 2
-
-    iget-object v0, p0, Lkh;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lru7;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo2e;
-
-    invoke-virtual {v0, p1}, Lo2e;->setTextColor(I)V
-
-    :cond_0
-    return-void
+    return-object p1
 .end method

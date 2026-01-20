@@ -1,23 +1,6 @@
-.class public final Ll9d;
-.super Lfg6;
-.source "SourceFile"
+.class public abstract Ll9d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final f:Lma7;
-
-.field public g:Lr0;
-
-.field public h:Lr0;
-
-
-# direct methods
-.method public constructor <init>(Lnmf;Lvf5;Lma7;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lfg6;-><init>(Lnmf;Lvf5;)V
-
-    iput-object p3, p0, Ll9d;->f:Lma7;
-
-    return-void
-.end method
+# static fields
+.field public static swipe_fade:I = 0x7f0a0bc9

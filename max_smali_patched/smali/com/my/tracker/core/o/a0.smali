@@ -55,11 +55,11 @@
 
     new-instance v0, Lcom/my/tracker/core/o/a0$b;
 
-    new-instance v1, Lfsg;
+    new-instance v1, Lhgh;
 
-    const/16 v2, 0x8
+    const/16 v2, 0xb
 
-    invoke-direct {v1, v2, p0}, Lfsg;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lhgh;-><init>(ILjava/lang/Object;)V
 
     invoke-direct {v0, p2, p1, v1}, Lcom/my/tracker/core/o/a0$b;-><init>(Landroid/os/Handler;Lcom/my/tracker/core/TrackerConfig;Ljava/lang/Runnable;)V
 

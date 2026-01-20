@@ -1,107 +1,122 @@
 .class public final Lnye;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic e:[Les7;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ltw4;
+.field public final synthetic X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
-.field public final b:Ltw4;
-
-.field public final c:Ltw4;
-
-.field public final d:Ltw4;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+    .locals 0
 
-    new-instance v0, Lbec;
+    iput-object p2, p0, Lnye;->X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
 
-    const-class v1, Lnye;
+    const/4 p2, 0x2
 
-    const-string v2, "messageController"
-
-    const-string v3, "getMessageController()Lru/ok/tamtam/messages/MessageController;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Lv7d;->a:Lw7d;
-
-    const-string v3, "workerService"
-
-    const-string v5, "getWorkerService()Lru/ok/tamtam/services/WorkerService;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lok7;->d(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lbec;
-
-    move-result-object v2
-
-    new-instance v3, Lbec;
-
-    const-string v5, "fileAttachUploader"
-
-    const-string v6, "getFileAttachUploader()Lru/ok/tamtam/FileAttachUploader;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v5, Lbec;
-
-    const-string v6, "clientPrefs"
-
-    const-string v7, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
-
-    invoke-direct {v5, v1, v6, v7, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v6, 0x4
-
-    new-array v6, v6, [Les7;
-
-    aput-object v0, v6, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v6, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v6, v0
-
-    const/4 v0, 0x3
-
-    aput-object v5, v6, v0
-
-    sput-object v6, Lnye;->e:[Les7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lnye;->f:Ljava/lang/String;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ltw4;Ltw4;Ltw4;Ltw4;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object p1, p0, Lnye;->a:Ltw4;
+    invoke-virtual {p0, p1, p2}, Lnye;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput-object p2, p0, Lnye;->b:Ltw4;
+    move-result-object p1
 
-    iput-object p3, p0, Lnye;->c:Ltw4;
+    check-cast p1, Lnye;
 
-    iput-object p4, p0, Lnye;->d:Ltw4;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-void
+    invoke-virtual {p1, p2}, Lnye;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lnye;
+
+    iget-object v1, p0, Lnye;->X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+
+    invoke-direct {v0, p2, v1}, Lnye;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;)V
+
+    iput-object p1, v0, Lnye;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lnye;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/util/Map;
+
+    iget-object p1, p0, Lnye;->X:Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+
+    iget-object v1, p1, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->o:Ljld;
+
+    sget-object v2, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->Y:[Lz28;
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lpab;
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v2, 0x8
+
+    :goto_0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p1, p1, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;->X:Lnf6;
+
+    invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

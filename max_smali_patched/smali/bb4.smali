@@ -1,35 +1,38 @@
-.class public interface abstract Lbb4;
+.class public final Lbb4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+
+# instance fields
+.field public final synthetic a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+
+# direct methods
+.method public constructor <init>(Landroidx/coordinatorlayout/widget/CoordinatorLayout;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbb4;->a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract A()Z
-.end method
+.method public final onPreDraw()Z
+    .locals 2
 
-.method public abstract C()J
-.end method
+    iget-object v0, p0, Lbb4;->a:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.method public abstract D(J)J
-.end method
+    const/4 v1, 0x0
 
-.method public abstract E(JJ)J
-.end method
+    invoke-virtual {v0, v1}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->p(I)V
 
-.method public abstract b(J)J
-.end method
+    const/4 v0, 0x1
 
-.method public abstract d(JJ)J
-.end method
-
-.method public abstract h(JJ)J
-.end method
-
-.method public abstract j(JJ)J
-.end method
-
-.method public abstract k(J)Ltwc;
-.end method
-
-.method public abstract u(JJ)J
+    return v0
 .end method

@@ -1,645 +1,472 @@
 .class public final Lafb;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/VideoEncoderFactory$VideoEncoderSelector;
-.implements Lsk8;
+.implements Luig;
+
+
+# static fields
+.field public static final synthetic t0:[Lz28;
 
 
 # instance fields
-.field public final a:Lyeb;
+.field public final a:Lzeb;
 
-.field public final b:Lm71;
+.field public final b:Lzeb;
 
-.field public final c:Lcwc;
+.field public final c:Lvib;
 
-.field public d:Lorg/webrtc/VideoCodecInfo;
+.field public final d:Landroid/graphics/drawable/ShapeDrawable;
 
-.field public e:Lorg/webrtc/VideoCodecInfo;
-
-.field public f:Ltvc;
-
-.field public g:Z
-
-.field public final h:Ljava/lang/Object;
+.field public final o:Landroid/graphics/drawable/RippleDrawable;
 
 
 # direct methods
-.method public constructor <init>(Lyeb;Lm71;Lcwc;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhfa;
 
-    iput-object p1, p0, Lafb;->a:Lyeb;
+    const-string v1, "size"
 
-    iput-object p2, p0, Lafb;->b:Lm71;
+    const-string v2, "getSize()Lone/me/sdk/uikit/common/overlaybutton/OneMeOverlayButton$Size;"
 
-    iput-object p3, p0, Lafb;->c:Lcwc;
+    const-class v3, Lafb;
 
-    new-instance p1, Ltvc;
+    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance p2, Luk8;
+    sget-object v1, Lctd;->a:Ldtd;
 
-    const-wide/16 v0, 0x0
+    const-string v2, "mode"
 
-    invoke-direct {p2, v0, v1, v0, v1}, Luk8;-><init>(DD)V
+    const-string v4, "getMode()Lone/me/sdk/uikit/common/overlaybutton/OneMeOverlayButton$Mode;"
 
-    const/4 p3, 0x0
+    invoke-static {v1, v3, v2, v4}, Lxi4;->g(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lhfa;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lz28;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, v0, p2, p3}, Ltvc;-><init>(ILuk8;Z)V
+    aput-object v1, v2, v0
 
-    iput-object p1, p0, Lafb;->f:Ltvc;
-
-    iput-boolean v0, p0, Lafb;->g:Z
-
-    new-instance p1, Ljava/lang/Object;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lafb;->h:Ljava/lang/Object;
+    sput-object v2, Lafb;->t0:[Lz28;
 
     return-void
 .end method
 
-.method public static b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    array-length v0, p0
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v0, Lzeb;
 
     const/4 v1, 0x0
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    invoke-direct {v0, p0, v1}, Lzeb;-><init>(Lafb;I)V
 
-    aget-object v2, p0, v1
+    iput-object v0, p0, Lafb;->a:Lzeb;
 
-    iget-object v3, v2, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
+    new-instance v0, Lzeb;
 
-    invoke-static {v3, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v1, 0x1
 
-    move-result v3
+    invoke-direct {v0, p0, v1}, Lzeb;-><init>(Lafb;I)V
 
-    if-eqz v3, :cond_0
+    iput-object v0, p0, Lafb;->b:Lzeb;
 
-    return-object v2
+    new-instance v0, Lvib;
 
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
+    invoke-direct {v0, p1}, Lvib;-><init>(Landroid/content/Context;)V
 
-    goto :goto_0
+    sget p1, Lw5e;->i:I
 
-    :cond_1
-    const/4 p0, 0x0
+    invoke-virtual {v0, p1}, Landroid/view/View;->setId(I)V
 
-    return-object p0
+    iput-object v0, p0, Lafb;->c:Lvib;
+
+    new-instance p1, Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-direct {p1}, Landroid/graphics/drawable/ShapeDrawable;-><init>()V
+
+    iput-object p1, p0, Lafb;->d:Landroid/graphics/drawable/ShapeDrawable;
+
+    sget-object v1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->c()Leqf;
+
+    move-result-object v1
+
+    iget-object v1, v1, Leqf;->a:Lcqf;
+
+    iget-object v1, v1, Lcqf;->a:Lbqf;
+
+    iget v1, v1, Lbqf;->e:I
+
+    new-instance v2, Landroid/graphics/drawable/ColorDrawable;
+
+    const/high16 v3, -0x10000
+
+    invoke-direct {v2, v3}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+
+    new-instance v3, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    invoke-direct {v3, v1, p1, v2}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    iput-object v3, p0, Lafb;->o:Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0}, Lafb;->c()V
+
+    invoke-virtual {p0}, Lafb;->d()V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lorg/webrtc/VideoCodecInfo;
-    .locals 10
+.method public final a(FILjava/lang/String;)V
+    .locals 1
 
-    iget-object v0, p0, Lafb;->e:Lorg/webrtc/VideoCodecInfo;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    invoke-static {v0, p2}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    goto/16 :goto_1
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    return-void
 
     :cond_0
-    iget-object v0, p0, Lafb;->f:Ltvc;
+    invoke-virtual {p0, p2, p3, p1}, Lafb;->b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;F)V
 
-    iget v2, v0, Ltvc;->a:I
-
-    sget-object v3, Lzeb;->$EnumSwitchMapping$0:[I
-
-    invoke-static {v2}, Lnx1;->v(I)I
-
-    move-result v2
-
-    aget v2, v3, v2
-
-    const/4 v3, 0x1
-
-    if-ne v2, v3, :cond_1
-
-    iget-object v0, p0, Lafb;->e:Lorg/webrtc/VideoCodecInfo;
-
-    goto :goto_0
-
-    :cond_1
-    iget-boolean v0, v0, Ltvc;->c:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lafb;->a:Lyeb;
-
-    iget-object v0, v0, Lyeb;->e:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/webrtc/VideoEncoderFactory;
-
-    invoke-interface {v0}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v0
-
-    const-string v2, "VP9"
-
-    invoke-static {v0, v2}, Lafb;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v2
-
-    if-nez v2, :cond_2
-
-    const-string v2, "VP8"
-
-    invoke-static {v0, v2}, Lafb;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lafb;->a:Lyeb;
-
-    iget-object v0, v0, Lyeb;->f:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/webrtc/VideoEncoderFactory;
-
-    invoke-interface {v0}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v0
-
-    const-string v2, "VP8"
-
-    invoke-static {v0, v2}, Lafb;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
-    move-object v0, v2
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lafb;->a:Lyeb;
-
-    iget-object v0, v0, Lyeb;->f:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lorg/webrtc/VideoEncoderFactory;
-
-    invoke-interface {v0}, Lorg/webrtc/VideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v0
-
-    const-string v2, "VP8"
-
-    invoke-static {v0, v2}, Lafb;->b([Lorg/webrtc/VideoCodecInfo;Ljava/lang/String;)Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v0
-
-    if-nez v0, :cond_4
-
-    iget-object v2, p0, Lafb;->c:Lcwc;
-
-    const-string v4, "PatchedVideoEncoderFactoryCodecSelector"
-
-    const-string v5, "Software VP8 encoder not found"
-
-    invoke-interface {v2, v4, v5}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_4
-    :goto_0
-    iget-object v2, p0, Lafb;->d:Lorg/webrtc/VideoCodecInfo;
-
-    invoke-static {v0, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    :goto_1
-    return-object v1
-
-    :cond_5
-    iget-object v2, p0, Lafb;->d:Lorg/webrtc/VideoCodecInfo;
-
-    if-eqz v2, :cond_6
-
-    iget-object v2, v2, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
-
-    goto :goto_2
-
-    :cond_6
-    move-object v2, v1
-
-    :goto_2
-    if-nez v2, :cond_7
-
-    const-string v2, ""
-
-    :cond_7
-    if-eqz v0, :cond_8
-
-    iget-object v4, v0, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
-
-    goto :goto_3
-
-    :cond_8
-    move-object v4, v1
-
-    :goto_3
-    if-nez v4, :cond_9
-
-    const-string v4, ""
-
-    :cond_9
-    iget-object v5, p0, Lafb;->c:Lcwc;
-
-    const-string v6, "Selected encoder \""
-
-    const-string v7, "\" differs from current one \""
-
-    const-string v8, "\". Let us suggest an update"
-
-    invoke-static {v6, v4, v7, v2, v8}, Lox1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, "PatchedVideoEncoderFactoryCodecSelector"
-
-    invoke-interface {v5, v7, v6}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v5, p0, Lafb;->h:Ljava/lang/Object;
-
-    monitor-enter v5
-
-    :try_start_0
-    iget-boolean v6, p0, Lafb;->g:Z
-
-    if-eqz v6, :cond_a
-
-    move-object v3, v1
-
-    goto :goto_4
-
-    :cond_a
-    iput-boolean v3, p0, Lafb;->g:Z
-
-    iget-object v3, p0, Lafb;->f:Ltvc;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_4
-    monitor-exit v5
-
-    if-eqz v3, :cond_e
-
-    iget-object v3, p0, Lafb;->b:Lm71;
-
-    new-instance v5, Lorg/json/JSONObject;
-
-    invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
-
-    iget-object v6, p0, Lafb;->f:Ltvc;
-
-    iget-object v6, v6, Ltvc;->b:Luk8;
-
-    iget-wide v6, v6, Luk8;->a:D
-
-    const-string v8, "rtt"
-
-    invoke-virtual {v5, v8, v6, v7}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lafb;->f:Ltvc;
-
-    iget-object v6, v6, Ltvc;->b:Luk8;
-
-    iget-wide v6, v6, Luk8;->b:D
-
-    const/16 v8, 0x64
-
-    int-to-double v8, v8
-
-    mul-double/2addr v6, v8
-
-    invoke-static {v6, v7}, Lkhi;->b(D)I
-
-    move-result v6
-
-    const-string v7, "loss"
-
-    invoke-virtual {v5, v7, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lafb;->f:Ltvc;
-
-    iget v6, v6, Ltvc;->a:I
-
-    const/4 v7, 0x1
-
-    if-eq v6, v7, :cond_d
-
-    const/4 v7, 0x2
-
-    if-eq v6, v7, :cond_c
-
-    const/4 v7, 0x3
-
-    if-ne v6, v7, :cond_b
-
-    const-string v6, "bad_2"
-
-    goto :goto_5
-
-    :cond_b
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_c
-    const-string v6, "bad_1"
-
-    goto :goto_5
-
-    :cond_d
-    const-string v6, "good"
-
-    :goto_5
-    const-string v7, "network_quality"
-
-    invoke-virtual {v5, v7, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v5
-
-    const-string v6, "codec_old"
-
-    invoke-virtual {v5, v6, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    const-string v5, "codec_new"
-
-    invoke-virtual {v2, v5, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->constructor-impl(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;->box-impl(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemValue$StringValue;
-
-    move-result-object v2
-
-    const-string v4, "video_encoder_changed_by_network_adapter"
-
-    const/4 v5, 0x4
-
-    invoke-static {v3, v4, v2, v1, v5}, Lm71;->a(Lm71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
-
-    :cond_e
-    return-object v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v5
-
-    throw v0
+    return-void
 .end method
 
-.method public final n(Ltk8;)V
-    .locals 4
+.method public final b(Landroid/graphics/drawable/Drawable;Ljava/lang/String;F)V
+    .locals 1
 
-    iget-object v0, p0, Lafb;->c:Lcwc;
+    iget-object v0, p0, Lafb;->c:Lvib;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    const-string v2, "Network condition did change. New condition is "
+    invoke-static {p2}, Lejj;->d(Ljava/lang/String;)Landroid/graphics/Path;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-object p1, v0, Lvib;->o:Landroid/graphics/Path;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput p3, v0, Lvib;->d:F
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 3
+
+    sget-object v0, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
     move-result-object v1
 
-    const-string v2, "PatchedVideoEncoderFactoryCodecSelector"
+    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
 
-    invoke-interface {v0, v2, v1}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, -0x1
 
-    iget-object v0, p0, Lafb;->h:Ljava/lang/Object;
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    monitor-enter v0
+    move-result-object v1
 
-    :try_start_0
-    new-instance v1, Ltvc;
+    iget-object v2, p0, Lafb;->c:Lvib;
 
-    iget v2, p1, Ltk8;->a:I
+    invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
 
-    iget-object v3, p1, Ltk8;->b:Luk8;
+    invoke-virtual {p0}, Lafb;->getMode()Lxeb;
 
-    iget-boolean p1, p1, Ltk8;->d:Z
+    move-result-object v1
 
-    invoke-direct {v1, v2, v3, p1}, Ltvc;-><init>(ILuk8;Z)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iput-object v1, p0, Lafb;->f:Ltvc;
+    move-result v1
 
-    const/4 p1, 0x0
+    if-eqz v1, :cond_1
 
-    iput-boolean p1, p0, Lafb;->g:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v2, 0x1
 
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public final onAvailableBitrate(I)Lorg/webrtc/VideoCodecInfo;
-    .locals 0
-
-    invoke-virtual {p0}, Lafb;->a()Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final onCurrentEncoder(Lorg/webrtc/VideoCodecInfo;)V
-    .locals 5
-
-    iget-object v0, p0, Lafb;->e:Lorg/webrtc/VideoCodecInfo;
-
-    const-string v1, "PatchedVideoEncoderFactoryCodecSelector"
-
-    iget-object v2, p0, Lafb;->c:Lcwc;
-
-    if-nez v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v3, "Encoder  "
-
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, " was selected as default"
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v2, v1, v0}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lafb;->e:Lorg/webrtc/VideoCodecInfo;
-
-    :cond_0
-    iput-object p1, p0, Lafb;->d:Lorg/webrtc/VideoCodecInfo;
-
-    iget-object v0, p0, Lafb;->f:Ltvc;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Codec selected: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " for condition "
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v2, v1, p1}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final onEncoderBroken()Lorg/webrtc/VideoCodecInfo;
-    .locals 7
-
-    iget-object v0, p0, Lafb;->d:Lorg/webrtc/VideoCodecInfo;
-
-    iget-object v1, p0, Lafb;->e:Lorg/webrtc/VideoCodecInfo;
-
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
+    if-ne v1, v2, :cond_0
 
     const/4 v1, 0x0
 
-    const-string v2, "PatchedVideoEncoderFactoryCodecSelector"
+    goto :goto_0
 
-    const-string v3, " was broken. reset"
+    :cond_0
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object v4, p0, Lafb;->c:Lcwc;
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
+
+    move-result-object v1
+
+    iget v1, v1, Lxf0;->g:I
+
+    :goto_0
+    iget-object v2, p0, Lafb;->d:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-virtual {v2}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lzlb;->b()Lxf0;
+
+    const/high16 v0, -0x67000000
+
+    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lafb;->o:Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/drawable/RippleDrawable;->setColor(Landroid/content/res/ColorStateList;)V
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public final d()V
+    .locals 4
+
+    invoke-virtual {p0}, Lafb;->getSize()Lyeb;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lafb;->e:Lorg/webrtc/VideoCodecInfo;
+    if-ne v0, v1, :cond_0
 
-    if-eqz v0, :cond_0
+    const/16 v0, 0x20
 
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Default encoder "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v4, v2, v0}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_0
 
     :cond_0
-    iput-object v1, p0, Lafb;->e:Lorg/webrtc/VideoCodecInfo;
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
 
     :cond_1
-    iget-object v0, p0, Lafb;->d:Lorg/webrtc/VideoCodecInfo;
+    const/16 v0, 0x18
 
-    if-eqz v0, :cond_2
+    :goto_0
+    int-to-float v0, v0
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    const-string v6, "Current encoder "
+    move-result-object v2
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    mul-float/2addr v0, v2
 
-    move-result-object v0
+    invoke-static {v0}, Lq7j;->c(F)I
 
-    invoke-interface {v4, v2, v0}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v0
+
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v2, v0, v0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    iget-object v3, p0, Lafb;->c:Lvib;
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {p0}, Lafb;->getSize()Lyeb;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    if-ne v2, v1, :cond_2
+
+    const/16 v1, 0xa
+
+    goto :goto_1
 
     :cond_2
-    iput-object v1, p0, Lafb;->d:Lorg/webrtc/VideoCodecInfo;
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-virtual {p0}, Lafb;->a()Lorg/webrtc/VideoCodecInfo;
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    move-result-object v0
+    throw v0
+
+    :cond_3
+    const/16 v1, 0x8
+
+    :goto_1
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1, v1, v1, v1}, Landroid/view/View;->setPadding(IIII)V
+
+    new-instance v1, Lnb4;
+
+    int-to-float v0, v0
+
+    invoke-direct {v1, v0}, Lnb4;-><init>(F)V
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public final getMode()Lxeb;
+    .locals 2
+
+    sget-object v0, Lafb;->t0:[Lz28;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lafb;->b:Lzeb;
+
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxeb;
 
     return-object v0
 .end method
 
-.method public final onResolutionChange(II)Lorg/webrtc/VideoCodecInfo;
+.method public final getSize()Lyeb;
+    .locals 2
+
+    sget-object v0, Lafb;->t0:[Lz28;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v0, p0, Lafb;->a:Lzeb;
+
+    iget-object v0, v0, Ld3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lyeb;
+
+    return-object v0
+.end method
+
+.method public final onThemeChanged(Lzlb;)V
     .locals 0
 
-    invoke-virtual {p0}, Lafb;->a()Lorg/webrtc/VideoCodecInfo;
+    invoke-virtual {p0}, Lafb;->c()V
 
-    move-result-object p1
+    return-void
+.end method
 
-    return-object p1
+.method public final setMode(Lxeb;)V
+    .locals 2
+
+    sget-object v0, Lafb;->t0:[Lz28;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lafb;->b:Lzeb;
+
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setSize(Lyeb;)V
+    .locals 2
+
+    sget-object v0, Lafb;->t0:[Lz28;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lafb;->a:Lzeb;
+
+    invoke-virtual {v1, p0, v0, p1}, Ld3;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    return-void
 .end method

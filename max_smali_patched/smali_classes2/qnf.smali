@@ -1,100 +1,151 @@
-.class public final Lqnf;
+.class public final synthetic Lqnf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lonf;
+.implements Lnq6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final synthetic a:I
 
-.field public final synthetic b:Ly22;
+.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
 
 
 # direct methods
-.method public constructor <init>(Ly22;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lqnf;->a:I
+
+    iput-object p1, p0, Lqnf;->b:Lone/me/startconversation/StartConversationScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqnf;->b:Ly22;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
-
-    iput-object p1, p0, Lqnf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Lmmf;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lqnf;->b:Ly22;
+    iget v0, p0, Lqnf;->a:I
 
-    invoke-virtual {v0}, Ly22;->r()Z
+    iget-object v1, p0, Lqnf;->b:Lone/me/startconversation/StartConversationScreen;
 
-    move-result v1
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, v1, Lone/me/startconversation/StartConversationScreen;->z0:Lnf6;
+
+    invoke-virtual {v0}, Lnd8;->j()I
+
+    move-result v0
+
+    iget-object v2, v1, Lone/me/startconversation/StartConversationScreen;->E0:Llz6;
+
+    invoke-virtual {v2}, Lnd8;->j()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    iget-object v0, v1, Lone/me/startconversation/StartConversationScreen;->A0:Lbj0;
+
+    invoke-virtual {v0}, Lnd8;->j()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    iget-object v3, v1, Lone/me/startconversation/StartConversationScreen;->B0:Lrdi;
+
+    invoke-virtual {v3}, Lnd8;->j()I
+
+    move-result v4
+
+    add-int/2addr v4, v0
+
+    iget-object v5, v1, Lone/me/startconversation/StartConversationScreen;->F0:Lbj0;
+
+    invoke-virtual {v5}, Lnd8;->j()I
+
+    move-result v5
+
+    invoke-virtual {v1}, Lone/me/startconversation/StartConversationScreen;->z0()Ljava/lang/CharSequence;
+
+    move-result-object v1
 
     if-eqz v1, :cond_0
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lqnf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p1}, Ly22;->resumeWith(Ljava/lang/Object;)V
+    if-nez v1, :cond_3
 
     :cond_0
-    return-void
-.end method
+    if-ge p1, v2, :cond_1
 
-.method public final j(Lxlf;)V
-    .locals 4
+    goto :goto_0
 
-    iget-object v0, p0, Lqnf;->b:Ly22;
+    :cond_1
+    if-lt p1, v0, :cond_3
 
-    invoke-virtual {v0}, Ly22;->r()Z
+    if-ge p1, v5, :cond_2
 
-    move-result v1
+    goto :goto_0
 
-    if-eqz v1, :cond_0
+    :cond_2
+    if-ge p1, v4, :cond_3
 
-    const/4 v1, 0x0
+    sub-int/2addr p1, v0
 
-    const/4 v2, 0x1
+    invoke-virtual {v3, p1}, Lnd8;->D(I)Ljava/lang/Object;
 
-    iget-object v3, p0, Lqnf;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object p1
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    check-cast p1, Lud8;
 
-    move-result v1
+    check-cast p1, Ls14;
 
-    if-eqz v1, :cond_0
+    iget-object p1, p1, Ls14;->b:Ljava/lang/CharSequence;
 
-    new-instance v1, Lru/ok/tamtam/errors/TamErrorException;
+    goto :goto_1
 
-    invoke-direct {v1, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lxlf;)V
+    :cond_3
+    :goto_0
+    const/4 p1, 0x0
 
-    new-instance p1, Lfed;
+    :goto_1
+    return-object p1
 
-    invoke-direct {p1, v1}, Lfed;-><init>(Ljava/lang/Throwable;)V
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {v0, p1}, Ly22;->resumeWith(Ljava/lang/Object;)V
+    sget-object p1, Lone/me/startconversation/StartConversationScreen;->J0:[Lz28;
 
-    :cond_0
-    return-void
+    invoke-virtual {v1}, La94;->getOnBackPressedDispatcher()Lv1b;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-virtual {p1}, Lv1b;->d()V
+
+    :cond_4
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

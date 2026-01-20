@@ -1,201 +1,90 @@
-.class public final Ld42;
-.super Lqy;
+.class public final synthetic Ld42;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ly32;
 
 
 # instance fields
-.field public final synthetic c:I
-
-.field public final synthetic d:Lcom/google/android/material/carousel/CarouselLayoutManager;
+.field public final synthetic b:Le42;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/carousel/CarouselLayoutManager;I)V
+.method public synthetic constructor <init>(Le42;)V
     .locals 0
 
-    iput p2, p0, Ld42;->c:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p2, :pswitch_data_0
-
-    iput-object p1, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    const/4 p1, 0x3
-
-    const/4 p2, 0x1
-
-    invoke-direct {p0, p2, p1}, Lqy;-><init>(II)V
+    iput-object p1, p0, Ld42;->b:Le42;
 
     return-void
-
-    :pswitch_0
-    iput-object p1, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    const/4 p1, 0x3
-
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p2, p1}, Lqy;-><init>(II)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final k()I
-    .locals 2
+.method public final a(Ljava/util/List;)Ljava/util/List;
+    .locals 3
 
-    iget v0, p0, Ld42;->c:I
+    iget-object v0, p0, Ld42;->b:Le42;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Le42;->d()Ljava/lang/String;
 
-    iget-object v0, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
+    move-result-object v0
 
-    iget v1, v0, Landroidx/recyclerview/widget/a;->o:I
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->I()I
+    move-result-object p1
 
-    move-result v0
-
-    sub-int/2addr v1, v0
-
-    return v1
-
-    :pswitch_0
-    iget-object v0, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget v0, v0, Landroidx/recyclerview/widget/a;->o:I
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final l()I
-    .locals 1
-
-    iget v0, p0, Ld42;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->J()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final m()I
-    .locals 2
-
-    iget v0, p0, Ld42;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget v0, v0, Landroidx/recyclerview/widget/a;->n:I
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    iget v1, v0, Landroidx/recyclerview/widget/a;->n:I
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->K()I
-
-    move-result v0
-
-    sub-int/2addr v1, v0
-
-    return v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n()I
-    .locals 2
-
-    iget v0, p0, Ld42;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
-
-    invoke-virtual {v0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->L0()Z
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    iget v0, v0, Landroidx/recyclerview/widget/a;->n:I
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    const/4 v0, 0x0
+    check-cast v1, Le42;
 
-    :goto_0
-    return v0
+    instance-of v2, v1, Le42;
 
-    :pswitch_0
-    const/4 v0, 0x0
+    invoke-static {v2}, Ljkj;->b(Z)V
 
-    return v0
+    move-object v2, v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    check-cast v2, Le42;
 
-.method public final p()I
-    .locals 1
+    invoke-interface {v2}, Le42;->d()Ljava/lang/String;
 
-    iget v0, p0, Ld42;->c:I
+    move-result-object v2
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Ld42;->d:Lcom/google/android/material/carousel/CarouselLayoutManager;
+    move-result v2
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->L()I
+    if-eqz v2, :cond_0
 
-    move-result v0
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    return v0
+    move-result-object p1
 
-    :pswitch_0
-    const/4 v0, 0x0
+    return-object p1
 
-    return v0
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const-string v1, "Unable to find camera with id "
+
+    const-string v2, " from list of available cameras."
+
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

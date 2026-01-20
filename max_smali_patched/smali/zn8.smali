@@ -1,65 +1,151 @@
-.class public final Lzn8;
-.super Lyn8;
+.class public abstract synthetic Lzn8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic g:Lv09;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Lv09;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lzn8;->g:Lv09;
+    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
 
-    invoke-direct {p0, p1}, Lyn8;-><init>(Lv09;)V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lzn8;->a:[I
+
+    :try_start_0
+    sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v0, Lzn8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v0, Lzn8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Lzn8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Lzn8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v0, Lzn8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v0, Lzn8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v0, Lzn8;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
-.end method
-
-
-# virtual methods
-.method public final l()Lm09;
-    .locals 2
-
-    iget-object v0, p0, Lzn8;->g:Lv09;
-
-    iget-object v1, v0, Lv09;->X:Lwn8;
-
-    if-eqz v1, :cond_1
-
-    iget-object v0, v0, Lv09;->c:Lwn8;
-
-    if-ne v1, v0, :cond_0
-
-    new-instance v0, Lm09;
-
-    iget-object v1, p0, Lnp4;->b:Ljava/lang/Object;
-
-    check-cast v1, Lxn8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lx4;->f(Lxn8;)Landroid/media/session/MediaSessionManager$RemoteUserInfo;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lm09;-><init>(Landroid/media/session/MediaSessionManager$RemoteUserInfo;)V
-
-    return-object v0
-
-    :cond_0
-    iget-object v0, v1, Lwn8;->d:Lm09;
-
-    return-object v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "This should be called inside of onGetRoot, onLoadChildren, onLoadItem, onSearch, or onCustomAction methods"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

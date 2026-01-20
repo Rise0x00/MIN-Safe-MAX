@@ -1,235 +1,143 @@
 .class public final Lcri;
-.super Lt6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk9i;
+.implements Lgri;
 
 
 # static fields
-.field private static final zzb:Lcri;
+.field public static final c:Ljava/lang/Object;
 
 
 # instance fields
-.field private zzd:I
+.field public volatile a:Lgri;
 
-.field private zze:Ljava/lang/String;
-
-.field private zzf:Ljava/lang/String;
-
-.field private zzg:Ljava/lang/String;
-
-.field private zzh:Ljava/lang/String;
-
-.field private zzi:Ljava/lang/String;
-
-.field private zzj:Ldni;
-
-.field private zzk:Ldni;
+.field public volatile b:Ljava/lang/Object;
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcri;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static a(Lgri;)Lgri;
     .locals 2
 
+    instance-of v0, p0, Lcri;
+
+    if-eqz v0, :cond_0
+
+    return-object p0
+
+    :cond_0
     new-instance v0, Lcri;
 
-    invoke-direct {v0}, Lcri;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcri;->zzb:Lcri;
+    sget-object v1, Lcri;->c:Ljava/lang/Object;
 
-    const-class v1, Lcri;
+    iput-object v1, v0, Lcri;->b:Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lt6i;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcri;->zze:Ljava/lang/String;
-
-    iput-object v0, p0, Lcri;->zzf:Ljava/lang/String;
-
-    iput-object v0, p0, Lcri;->zzg:Ljava/lang/String;
-
-    iput-object v0, p0, Lcri;->zzh:Ljava/lang/String;
-
-    iput-object v0, p0, Lcri;->zzi:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static p()Lcri;
-    .locals 1
-
-    sget-object v0, Lcri;->zzb:Lcri;
+    iput-object p0, v0, Lcri;->a:Lgri;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
-    .locals 8
+.method public final b()Ljava/lang/Object;
+    .locals 5
 
-    add-int/lit8 p1, p1, -0x1
+    const-string v0, "Scoped provider was invoked recursively returning different results: "
 
-    if-eqz p1, :cond_4
+    iget-object v1, p0, Lcri;->b:Ljava/lang/Object;
 
-    const/4 p2, 0x2
+    sget-object v2, Lcri;->c:Ljava/lang/Object;
 
-    if-eq p1, p2, :cond_3
+    if-ne v1, v2, :cond_3
 
-    const/4 p2, 0x3
+    monitor-enter p0
 
-    if-eq p1, p2, :cond_2
+    :try_start_0
+    iget-object v1, p0, Lcri;->b:Ljava/lang/Object;
 
-    const/4 p2, 0x4
+    if-ne v1, v2, :cond_2
 
-    if-eq p1, p2, :cond_1
+    iget-object v1, p0, Lcri;->a:Lgri;
 
-    const/4 p2, 0x5
+    invoke-interface {v1}, Lgri;->b()Ljava/lang/Object;
 
-    if-eq p1, p2, :cond_0
+    move-result-object v1
 
-    const/4 p1, 0x0
+    iget-object v3, p0, Lcri;->b:Ljava/lang/Object;
 
-    return-object p1
+    if-eq v3, v2, :cond_1
+
+    if-ne v3, v1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lcri;->zzb:Lcri;
+    new-instance v2, Ljava/lang/IllegalStateException;
 
-    return-object p1
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " & "
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ". This is likely due to a circular dependency."
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_1
-    new-instance p1, Lmii;
+    :goto_0
+    iput-object v1, p0, Lcri;->b:Ljava/lang/Object;
 
-    sget-object p2, Lcri;->zzb:Lcri;
+    const/4 v0, 0x0
 
-    invoke-direct {p1, p2}, Lj6i;-><init>(Lt6i;)V
-
-    return-object p1
+    iput-object v0, p0, Lcri;->a:Lgri;
 
     :cond_2
-    new-instance p1, Lcri;
+    monitor-exit p0
 
-    invoke-direct {p1}, Lcri;-><init>()V
+    return-object v1
 
-    return-object p1
+    :goto_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 
     :cond_3
-    const-string v6, "zzj"
-
-    const-string v7, "zzk"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    const-string v2, "zzf"
-
-    const-string v3, "zzg"
-
-    const-string v4, "zzh"
-
-    const-string v5, "zzi"
-
-    filled-new-array/range {v0 .. v7}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lcri;->zzb:Lcri;
-
-    new-instance v0, Lfai;
-
-    const-string v1, "\u0004\u0007\u0000\u0001\u0001\u0007\u0007\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001\u0003\u1008\u0002\u0004\u1008\u0003\u0005\u1008\u0004\u0006\u1009\u0005\u0007\u1009\u0006"
-
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final n()Ldni;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->zzk:Ldni;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Ldni;->t()Ldni;
-
-    move-result-object v0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public final o()Ldni;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->zzj:Ldni;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Ldni;->t()Ldni;
-
-    move-result-object v0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public final q()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->zzf:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final r()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->zzg:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final s()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->zzh:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final t()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->zzi:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final u()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcri;->zze:Ljava/lang/String;
-
-    return-object v0
+    return-object v1
 .end method

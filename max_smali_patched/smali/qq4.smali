@@ -1,90 +1,104 @@
-.class public final Lqq4;
-.super Lg4;
+.class public final synthetic Lqq4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/ScheduledFuture;
+.implements Ljp3;
 
 
 # instance fields
-.field public final Z:Ljava/util/concurrent/ScheduledFuture;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lg2d;
 
 
 # direct methods
-.method public constructor <init>(Lpq4;)V
-    .locals 2
+.method public synthetic constructor <init>(Lg2d;I)V
+    .locals 0
+
+    iput p2, p0, Lqq4;->a:I
+
+    iput-object p1, p0, Lqq4;->b:Lg2d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lwui;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1, p0}, Lwui;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p1, v0}, Lpq4;->b(Lwui;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqq4;->Z:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
+.method public final j(Law4;)Ljava/lang/Object;
+    .locals 6
 
-    iget-object v0, p0, Lqq4;->Z:Ljava/util/concurrent/ScheduledFuture;
+    iget v0, p0, Lqq4;->a:I
 
-    iget-object v1, p0, Lg4;->a:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    instance-of v2, v1, La4;
+    iget-object v0, p0, Lqq4;->b:Lg2d;
 
-    if-eqz v2, :cond_0
+    invoke-static {v0, p1}, Lcom/google/firebase/messaging/FirebaseMessagingRegistrar;->a(Lg2d;Law4;)Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    check-cast v1, La4;
+    move-result-object p1
 
-    iget-boolean v1, v1, La4;->a:Z
+    return-object p1
 
-    if-eqz v1, :cond_0
+    :pswitch_0
+    new-instance v0, Lsq4;
 
-    const/4 v1, 0x1
+    const-class v1, Landroid/content/Context;
 
-    goto :goto_0
+    invoke-virtual {p1, v1}, Law4;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
-    :cond_0
-    const/4 v1, 0x0
+    move-result-object v1
 
-    :goto_0
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    check-cast v1, Landroid/content/Context;
 
-    return-void
-.end method
+    const-class v2, Lm46;
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+    invoke-virtual {p1, v2}, Law4;->a(Ljava/lang/Class;)Ljava/lang/Object;
 
-    check-cast p1, Ljava/util/concurrent/Delayed;
+    move-result-object v2
 
-    iget-object v0, p0, Lqq4;->Z:Ljava/util/concurrent/ScheduledFuture;
+    check-cast v2, Lm46;
 
-    invoke-interface {v0, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    invoke-virtual {v2}, Lm46;->c()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v2
 
-    return p1
-.end method
+    const-class v3, Lq57;
 
-.method public final getDelay(Ljava/util/concurrent/TimeUnit;)J
-    .locals 2
+    invoke-static {v3}, Lg2d;->a(Ljava/lang/Class;)Lg2d;
 
-    iget-object v0, p0, Lqq4;->Z:Ljava/util/concurrent/ScheduledFuture;
+    move-result-object v3
 
-    invoke-interface {v0, p1}, Ljava/util/concurrent/Delayed;->getDelay(Ljava/util/concurrent/TimeUnit;)J
+    invoke-virtual {p1, v3}, Law4;->b(Lg2d;)Ljava/util/Set;
 
-    move-result-wide v0
+    move-result-object v3
 
-    return-wide v0
+    const-class v4, Lav4;
+
+    invoke-virtual {p1, v4}, Law4;->c(Ljava/lang/Class;)Llzc;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lqq4;->b:Lg2d;
+
+    invoke-virtual {p1, v5}, Law4;->g(Lg2d;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v5, p1
+
+    check-cast v5, Ljava/util/concurrent/Executor;
+
+    invoke-direct/range {v0 .. v5}, Lsq4;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Llzc;Ljava/util/concurrent/Executor;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

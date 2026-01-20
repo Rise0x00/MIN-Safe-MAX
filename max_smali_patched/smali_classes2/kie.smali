@@ -3,183 +3,129 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnpb;
+.implements Llie;
 
 
 # instance fields
-.field public final a:Lru/ok/tamtam/android/util/share/ShareData;
+.field public final a:[Ljava/lang/String;
 
-.field public final b:Lt71;
+.field public final b:Lxg2;
 
-.field public final c:Lsoh;
-
-.field public final d:Lnrf;
-
-.field public final e:Z
-
-.field public final f:Lru7;
-
-.field public final g:Lru7;
-
-.field public final h:Lru7;
-
-.field public final i:La1f;
-
-.field public final j:Lj0d;
-
-.field public final k:Lake;
-
-.field public final l:Li0d;
-
-.field public final m:Lch8;
-
-.field public n:Lg54;
-
-.field public o:Z
+.field public final c:Lpie;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/util/share/ShareData;Lt71;Lsoh;Lru7;Lru7;Lru7;Lmrf;Z)V
+.method public constructor <init>([Ljava/lang/String;Lxg2;Lpie;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkie;->a:Lru/ok/tamtam/android/util/share/ShareData;
+    iput-object p1, p0, Lkie;->a:[Ljava/lang/String;
 
-    iput-object p2, p0, Lkie;->b:Lt71;
+    iput-object p2, p0, Lkie;->b:Lxg2;
 
-    iput-object p3, p0, Lkie;->c:Lsoh;
-
-    iput-object p7, p0, Lkie;->d:Lnrf;
-
-    iput-boolean p8, p0, Lkie;->e:Z
-
-    iput-object p4, p0, Lkie;->f:Lru7;
-
-    iput-object p5, p0, Lkie;->g:Lru7;
-
-    iput-object p6, p0, Lkie;->h:Lru7;
-
-    const/4 p2, 0x0
-
-    invoke-static {p2}, Lb1f;->a(Ljava/lang/Object;)La1f;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lkie;->i:La1f;
-
-    new-instance p3, Lj0d;
-
-    invoke-direct {p3, p2}, Lj0d;-><init>(Lf1a;)V
-
-    iput-object p3, p0, Lkie;->j:Lj0d;
-
-    const p2, 0x7fffffff
-
-    const/4 p3, 0x5
-
-    const/4 p4, 0x0
-
-    invoke-static {p4, p2, p3}, Lbke;->b(III)Lake;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lkie;->k:Lake;
-
-    new-instance p3, Li0d;
-
-    invoke-direct {p3, p2}, Li0d;-><init>(Le1a;)V
-
-    iput-object p3, p0, Lkie;->l:Li0d;
-
-    new-instance p2, Lch8;
-
-    const/16 p3, 0xd
-
-    invoke-direct {p2, p3}, Lch8;-><init>(I)V
-
-    iput-object p2, p0, Lkie;->m:Lch8;
-
-    if-eqz p1, :cond_0
+    iput-object p3, p0, Lkie;->c:Lpie;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "ShareData is null"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final a(Ljava/lang/String;)Ljava/util/List;
+    .locals 8
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lkie;->c:Lpie;
 
-    iput-object v0, p0, Lkie;->n:Lg54;
+    iget-object v1, p0, Lkie;->b:Lxg2;
 
-    return-void
-.end method
+    invoke-virtual {v1}, Lxg2;->T()Lspf;
 
-.method public final b(Ldpb;)V
-    .locals 2
+    move-result-object v1
 
-    iget-object v0, p0, Lkie;->k:Lake;
+    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
 
-    sget-object v1, Lpie;->a:Lpie;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lake;->h(Ljava/lang/Object;)Z
+    check-cast v1, Lnd2;
 
-    iget-object v0, p0, Lkie;->c:Lsoh;
+    sget-object v2, Ldh5;->a:Ldh5;
 
-    invoke-virtual {v0, p1}, Lsoh;->o(Ldpb;)V
+    if-nez v1, :cond_0
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public final d(J)V
-    .locals 1
+    :cond_0
+    :try_start_0
+    invoke-virtual {v0, v1, p1}, Lpie;->g(Lnd2;Ljava/lang/String;)Z
 
-    iget-object v0, p0, Lkie;->c:Lsoh;
+    move-result v3
 
-    invoke-virtual {v0, p1, p2}, Lsoh;->m(J)V
+    if-eqz v3, :cond_1
 
-    return-void
-.end method
+    invoke-virtual {v0, v1, p1}, Lpie;->a(Lnd2;Ljava/lang/String;)Luhe;
 
-.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 4
+    move-result-object p1
 
-    iput-object p1, p0, Lkie;->n:Lg54;
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    iget-object v0, p0, Lkie;->f:Lru7;
+    move-result-object p1
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v3, p0, Lkie;->a:[Ljava/lang/String;
+
+    array-length v4, v3
+
+    const/4 v5, 0x0
+
+    :goto_0
+    if-ge v5, v4, :cond_3
+
+    aget-object v6, v3, v5
+
+    invoke-virtual {v0, v6, p1}, Lpie;->i(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_2
+
+    invoke-virtual {v0, v1, v6}, Lpie;->a(Lnd2;Ljava/lang/String;)Luhe;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p1
+
+    :cond_2
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    return-object v2
+
+    :goto_2
+    const-class v0, Lkie;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ltlf;
+    const-string v1, "fail to search saved messages chat"
 
-    check-cast v0, Lsta;
+    invoke-static {v0, v1, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-virtual {v0}, Lsta;->b()La54;
-
-    move-result-object v0
-
-    new-instance v1, Liie;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Liie;-><init>(Lkie;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v3, 0x2
-
-    invoke-static {p1, v0, v2, v1, v3}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    return-void
+    return-object v2
 .end method

@@ -1,75 +1,55 @@
 .class public final Lhx7;
-.super Ljava/lang/Object;
+.super Lx1;
 .source "SourceFile"
 
 
+# static fields
+.field public static final o:Lhx7;
+
+
 # instance fields
-.field public final a:Z
-
-.field public b:Landroid/app/Activity;
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
-
-.field public g:Landroid/util/SparseArray;
-
-.field public h:Landroid/util/SparseArray;
-
-.field public i:Ljava/util/ArrayList;
-
-.field public final j:Ljava/util/LinkedHashMap;
+.field public final d:[Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Z)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 2
 
-    new-instance v0, Landroid/util/SparseArray;
+    new-instance v0, Lhx7;
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+    const/4 v1, 0x0
 
-    new-instance v1, Landroid/util/SparseArray;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
+    invoke-direct {v0, v1}, Lhx7;-><init>([Ljava/lang/Object;)V
 
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v3, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v3}, Ljava/util/LinkedHashMap;-><init>()V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lhx7;->a:Z
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lhx7;->b:Landroid/app/Activity;
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lhx7;->c:Z
-
-    iput-boolean p1, p0, Lhx7;->d:Z
-
-    iput-boolean p1, p0, Lhx7;->e:Z
-
-    iput-boolean p1, p0, Lhx7;->f:Z
-
-    iput-object v0, p0, Lhx7;->g:Landroid/util/SparseArray;
-
-    iput-object v1, p0, Lhx7;->h:Landroid/util/SparseArray;
-
-    iput-object v2, p0, Lhx7;->i:Ljava/util/ArrayList;
-
-    iput-object v3, p0, Lhx7;->j:Ljava/util/LinkedHashMap;
+    sput-object v0, Lhx7;->o:Lhx7;
 
     return-void
+.end method
+
+.method public constructor <init>([Ljava/lang/Object;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    array-length v1, p1
+
+    invoke-direct {p0, v1, v0}, Lx1;-><init>(II)V
+
+    iput-object p1, p0, Lhx7;->d:[Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(I)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lhx7;->d:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    return-object p1
 .end method

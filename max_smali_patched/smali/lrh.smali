@@ -1,89 +1,41 @@
 .class public final Llrh;
-.super Lk6a;
+.super Llm4;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final bridge synthetic d(Ljava/lang/Object;)V
-    .locals 0
+# static fields
+.field public static final b:Llrh;
 
-    const/4 p0, 0x0
 
-    throw p0
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-.method public final g(Lsa7;)V
-    .locals 3
+    new-instance v0, Llrh;
 
-    invoke-interface {p1}, Lsa7;->getImageInfo()Ly97;
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Llrh;->b:Llrh;
 
-    instance-of v1, v0, Lgz1;
+    const-string v1, "chat_id"
 
-    if-eqz v1, :cond_0
+    const-string v2, "msg_id"
 
-    check-cast v0, Lgz1;
-
-    iget-object v0, v0, Lgz1;->a:Lfz1;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-interface {v0}, Lfz1;->q()Lcz1;
+    filled-new-array {v1, v2}, [Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v2, Lcz1;->X:Lcz1;
+    const-string v2, "video_url"
 
-    if-eq v1, v2, :cond_1
+    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-    invoke-interface {v0}, Lfz1;->q()Lcz1;
+    move-result-object v2
 
-    move-result-object v1
+    const/16 v3, 0xc
 
-    sget-object v2, Lcz1;->d:Lcz1;
+    const-string v4, ":videoweb/full"
 
-    if-eq v1, v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-interface {v0}, Lfz1;->m()Lbz1;
-
-    move-result-object v1
-
-    sget-object v2, Lbz1;->o:Lbz1;
-
-    if-eq v1, v2, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {v0}, Lfz1;->d()Ldz1;
-
-    move-result-object v0
-
-    sget-object v1, Ldz1;->d:Ldz1;
-
-    if-eq v0, v1, :cond_3
-
-    :goto_1
-    iget-object v0, p0, Lk6a;->d:Ljava/lang/Object;
-
-    check-cast v0, Li4g;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
-
-    return-void
-
-    :cond_3
-    invoke-super {p0, p1}, Lk6a;->d(Ljava/lang/Object;)V
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     return-void
 .end method

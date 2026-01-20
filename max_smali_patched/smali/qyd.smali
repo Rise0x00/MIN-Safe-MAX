@@ -1,20 +1,25 @@
-.class public interface abstract Lqyd;
+.class public abstract Lqyd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Liyd;
 
+# direct methods
+.method public static a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-# virtual methods
-.method public abstract a()J
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public abstract b(J)J
-.end method
+.method public static b(Landroid/content/res/Resources;IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-.method public abstract g()J
-.end method
+    invoke-virtual {p0, p1, p2, p3}, Landroid/content/res/Resources;->getDrawableForDensity(IILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
-.method public abstract h()I
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -1,133 +1,61 @@
 .class public final Lnaf;
-.super Landroid/text/style/CharacterStyle;
+.super Lxl5;
 .source "SourceFile"
 
-# interfaces
-.implements Ljh8;
-.implements Landroid/text/style/UpdateAppearance;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:I
+# static fields
+.field public static final a:Lnaf;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lnaf;->a:I
+    new-instance v0, Lnaf;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
-
-    const/4 p1, 0x7
-
-    iput p1, p0, Lnaf;->b:I
+    sput-object v0, Lnaf;->a:Lnaf;
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
-
-    const/4 p1, 0x4
-
-    iput p1, p0, Lnaf;->b:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final copy()Lh44;
-    .locals 2
-
-    iget v0, p0, Lnaf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lnaf;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lnaf;-><init>(I)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lnaf;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lnaf;-><init>(I)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getType()I
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
-
-    iget v0, p0, Lnaf;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lnaf;->b:I
-
-    return v0
-
-    :pswitch_0
-    iget v0, p0, Lnaf;->b:I
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    iget v0, p0, Lnaf;->a:I
-
-    packed-switch v0, :pswitch_data_0
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
-    :pswitch_0
-    const/4 v0, 0x1
+    :cond_0
+    instance-of p1, p1, Lnaf;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setStrikeThruText(Z)V
+    if-nez p1, :cond_1
 
-    return-void
+    const/4 p1, 0x0
 
-    nop
+    return p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x195d1509
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ShowPlaceholderSurnameEvent"
+
+    return-object v0
 .end method

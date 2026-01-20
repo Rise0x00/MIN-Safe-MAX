@@ -1,142 +1,61 @@
-.class public abstract Lquh;
-.super Lhuh;
+.class public final Lquh;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lquh;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public a:I
+
+.field public b:I
+
+.field public c:Landroid/os/Parcelable;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lc0;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, v1}, Lc0;-><init>(I)V
+
+    sput-object v0, Lquh;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final S(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    packed-switch p1, :pswitch_data_0
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    :pswitch_0
-    const/4 p1, 0x0
+    iget v0, p0, Lquh;->a:I
 
-    return p1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    :pswitch_1
-    sget-object p1, Lgvh;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget v0, p0, Lquh;->b:I
 
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object p1
+    iget-object v0, p0, Lquh;->c:Landroid/os/Parcelable;
 
-    check-cast p1, Lgvh;
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    invoke-static {p2}, Lpuh;->b(Landroid/os/Parcel;)V
-
-    goto :goto_0
-
-    :pswitch_2
-    sget-object p1, Lnvh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lnvh;
-
-    invoke-static {p2}, Lpuh;->b(Landroid/os/Parcel;)V
-
-    move-object p2, p0
-
-    check-cast p2, Luuh;
-
-    new-instance v0, Lb6g;
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p2, p1, v2, v1}, Lb6g;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    iget-object p1, p2, Luuh;->e:Landroid/os/Handler;
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
-
-    :pswitch_3
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    sget-object p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
-
-    invoke-static {p2}, Lpuh;->b(Landroid/os/Parcel;)V
-
-    goto :goto_0
-
-    :pswitch_4
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    invoke-static {p2}, Lpuh;->b(Landroid/os/Parcel;)V
-
-    goto :goto_0
-
-    :pswitch_5
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
-
-    invoke-static {p2}, Lpuh;->b(Landroid/os/Parcel;)V
-
-    goto :goto_0
-
-    :pswitch_6
-    sget-object p1, Lgp3;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lgp3;
-
-    sget-object p1, Lduh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Lpuh;->a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Lduh;
-
-    invoke-static {p2}, Lpuh;->b(Landroid/os/Parcel;)V
-
-    :goto_0
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_6
-        :pswitch_5
-        :pswitch_0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
+    return-void
 .end method

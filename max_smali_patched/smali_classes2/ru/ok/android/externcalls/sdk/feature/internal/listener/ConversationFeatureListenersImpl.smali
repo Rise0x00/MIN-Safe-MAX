@@ -16,17 +16,17 @@
         "Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListeners;",
         "<init>",
         "()V",
-        "La81;",
+        "Lva1;",
         "event",
         "",
-        "Lw71;",
+        "Lra1;",
         "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
         "getFeaturesRolesMap",
-        "(La81;)Ljava/util/Map;",
+        "(Lva1;)Ljava/util/Map;",
         "",
         "oldFeatures",
         "newFeatures",
-        "Lybg;",
+        "Lb3h;",
         "notifyListenersWithNewEnabledFeatures",
         "(Ljava/util/Set;Ljava/util/Set;)V",
         "oldFeatureRolesMap",
@@ -37,19 +37,19 @@
         "Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;",
         "listener",
         "notifyNewListener",
-        "(Lw71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V",
+        "(Lra1;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V",
         "addFeatureListener",
         "removeFeatureListener",
         "",
         "isFeatureEnabled",
-        "(Lw71;)Z",
+        "(Lra1;)Z",
         "getFeatureRoles",
-        "(Lw71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
-        "Lz71;",
+        "(Lra1;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
+        "Lua1;",
         "onFeatureSetChanged",
-        "(Lz71;)V",
+        "(Lua1;)V",
         "onFeaturesPerRoleChanged",
-        "(La81;)V",
+        "(Lva1;)V",
         "Ljava/util/EnumMap;",
         "",
         "listenersMap",
@@ -76,7 +76,7 @@
         value = {
             "Ljava/util/Set<",
             "+",
-            "Lw71;",
+            "Lra1;",
             ">;"
         }
     .end annotation
@@ -86,7 +86,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map<",
-            "Lw71;",
+            "Lra1;",
             "+",
             "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
             ">;"
@@ -98,7 +98,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/EnumMap<",
-            "Lw71;",
+            "Lra1;",
             "Ljava/util/Set<",
             "Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;",
             ">;>;"
@@ -115,32 +115,32 @@
 
     new-instance v0, Ljava/util/EnumMap;
 
-    const-class v1, Lw71;
+    const-class v1, Lra1;
 
     invoke-direct {v0, v1}, Ljava/util/EnumMap;-><init>(Ljava/lang/Class;)V
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->listenersMap:Ljava/util/EnumMap;
 
-    sget-object v0, Lxa5;->a:Lxa5;
+    sget-object v0, Lnh5;->a:Lnh5;
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->enabledFeatureSet:Ljava/util/Set;
 
-    sget-object v0, Loa5;->a:Loa5;
+    sget-object v0, Leh5;->a:Leh5;
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->featureRolesMap:Ljava/util/Map;
 
     return-void
 .end method
 
-.method private final getFeaturesRolesMap(La81;)Ljava/util/Map;
+.method private final getFeaturesRolesMap(Lva1;)Ljava/util/Map;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "La81;",
+            "Lva1;",
             ")",
             "Ljava/util/Map<",
-            "Lw71;",
+            "Lra1;",
             "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
             ">;"
         }
@@ -150,7 +150,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    invoke-static {}, Lw71;->values()[Lw71;
+    invoke-static {}, Lra1;->values()[Lra1;
 
     move-result-object v1
 
@@ -163,7 +163,7 @@
 
     aget-object v4, v1, v3
 
-    iget-object v5, p1, La81;->a:Ljava/lang/Object;
+    iget-object v5, p1, Lva1;->a:Ljava/lang/Object;
 
     invoke-interface {v5, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -212,16 +212,16 @@
             "(",
             "Ljava/util/Set<",
             "+",
-            "Lw71;",
+            "Lra1;",
             ">;",
             "Ljava/util/Set<",
             "+",
-            "Lw71;",
+            "Lra1;",
             ">;)V"
         }
     .end annotation
 
-    invoke-static {p1, p2}, Lh9e;->d(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;
+    invoke-static {p1, p2}, Lpve;->e(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
@@ -240,7 +240,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lw71;
+    check-cast v1, Lra1;
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->listenersMap:Ljava/util/EnumMap;
 
@@ -271,12 +271,12 @@
 
     const/4 v4, 0x0
 
-    invoke-interface {v3, v1, v4}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lw71;Z)V
+    invoke-interface {v3, v1, v4}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lra1;Z)V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p2, p1}, Lh9e;->d(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;
+    invoke-static {p2, p1}, Lpve;->e(Ljava/util/Set;Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p1
 
@@ -295,7 +295,7 @@
 
     move-result-object p2
 
-    check-cast p2, Lw71;
+    check-cast p2, Lra1;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->listenersMap:Ljava/util/EnumMap;
 
@@ -326,7 +326,7 @@
 
     const/4 v2, 0x1
 
-    invoke-interface {v1, p2, v2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lw71;Z)V
+    invoke-interface {v1, p2, v2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lra1;Z)V
 
     goto :goto_1
 
@@ -340,12 +340,12 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lw71;",
+            "Lra1;",
             "+",
             "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
             ">;",
             "Ljava/util/Map<",
-            "Lw71;",
+            "Lra1;",
             "+",
             "Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;",
             ">;)V"
@@ -360,7 +360,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lh9e;->f(Ljava/util/Set;Ljava/util/Collection;)Ljava/util/LinkedHashSet;
+    invoke-static {v0, v1}, Lpve;->g(Ljava/util/Set;Ljava/util/Collection;)Ljava/util/LinkedHashSet;
 
     move-result-object v0
 
@@ -379,7 +379,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lw71;
+    check-cast v1, Lra1;
 
     invoke-interface {p1, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -389,7 +389,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -437,7 +437,7 @@
     :cond_1
     check-cast v5, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
 
-    invoke-interface {v3, v1, v5}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lw71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
+    invoke-interface {v3, v1, v5}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lra1;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
 
     goto :goto_0
 
@@ -445,27 +445,27 @@
     return-void
 .end method
 
-.method private final notifyNewListener(Lw71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+.method private final notifyNewListener(Lra1;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
     .locals 1
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->isFeatureEnabled(Lw71;)Z
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->isFeatureEnabled(Lra1;)Z
 
     move-result v0
 
-    invoke-interface {p2, p1, v0}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lw71;Z)V
+    invoke-interface {p2, p1, v0}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Lra1;Z)V
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->getFeatureRoles(Lw71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->getFeatureRoles(Lra1;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
 
     move-result-object v0
 
-    invoke-interface {p2, p1, v0}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lw71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
+    invoke-interface {p2, p1, v0}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Lra1;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public addFeatureListener(Lw71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+.method public addFeatureListener(Lra1;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->listenersMap:Ljava/util/EnumMap;
@@ -487,12 +487,12 @@
 
     invoke-interface {v1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->notifyNewListener(Lw71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+    invoke-direct {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->notifyNewListener(Lra1;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
 
     return-void
 .end method
 
-.method public getFeatureRoles(Lw71;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
+.method public getFeatureRoles(Lra1;)Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->featureRolesMap:Ljava/util/Map;
@@ -515,7 +515,7 @@
     return-object p1
 .end method
 
-.method public isFeatureEnabled(Lw71;)Z
+.method public isFeatureEnabled(Lra1;)Z
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->enabledFeatureSet:Ljava/util/Set;
@@ -527,10 +527,10 @@
     return p1
 .end method
 
-.method public final onFeatureSetChanged(Lz71;)V
+.method public final onFeatureSetChanged(Lua1;)V
     .locals 1
 
-    iget-object p1, p1, Lz71;->a:Ljava/util/LinkedHashSet;
+    iget-object p1, p1, Lua1;->a:Ljava/util/LinkedHashSet;
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->enabledFeatureSet:Ljava/util/Set;
 
@@ -541,10 +541,10 @@
     return-void
 .end method
 
-.method public final onFeaturesPerRoleChanged(La81;)V
+.method public final onFeaturesPerRoleChanged(Lva1;)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->getFeaturesRolesMap(La81;)Ljava/util/Map;
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->getFeaturesRolesMap(Lva1;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -557,7 +557,7 @@
     return-void
 .end method
 
-.method public removeFeatureListener(Lw71;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
+.method public removeFeatureListener(Lra1;Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;)V
     .locals 1
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/feature/internal/listener/ConversationFeatureListenersImpl;->listenersMap:Ljava/util/EnumMap;

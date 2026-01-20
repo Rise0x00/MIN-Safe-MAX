@@ -2,159 +2,47 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final Companion:Lfgh;
+# interfaces
+.implements Lzb4;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Z
+.field public final a:Ln8g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lfgh;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lggh;->Companion:Lfgh;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
+.method public constructor <init>(Lo58;Lo58;)V
     .locals 2
-
-    and-int/lit8 v0, p2, 0x3
-
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lggh;->a:Ljava/lang/String;
+    new-instance v0, Lox1;
 
-    iput-boolean p3, p0, Lggh;->b:Z
+    const/4 v1, 0x4
+
+    invoke-direct {v0, p1, p2, v1}, Lox1;-><init>(Lo58;Lo58;I)V
+
+    new-instance p1, Ln8g;
+
+    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p1, p0, Lggh;->a:Ln8g;
 
     return-void
-
-    :cond_0
-    sget-object p1, Legh;->a:Legh;
-
-    invoke-virtual {p1}, Legh;->d()Lo3e;
-
-    move-result-object p1
-
-    invoke-static {p2, v1, p1}, Lbi3;->b(IILo3e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final getCoroutineContext()Lqb4;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lggh;->a:Ln8g;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lggh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lggh;
-
-    iget-object v1, p0, Lggh;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lggh;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lggh;->b:Z
-
-    iget-boolean p1, p1, Lggh;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lggh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lggh;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppSetupScreenCaptureBehaviorRequest(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lggh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isScreenCaptureEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lggh;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lqb4;
 
     return-object v0
 .end method

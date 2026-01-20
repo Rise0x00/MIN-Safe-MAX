@@ -1,23 +1,25 @@
-.class public final Lryd;
+.class public abstract Lryd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:I
-
-
 # direct methods
-.method public constructor <init>(JI)V
+.method public static a(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getColor(ILandroid/content/res/Resources$Theme;)I
 
-    iput-wide p1, p0, Lryd;->a:J
+    move-result p0
 
-    iput p3, p0, Lryd;->b:I
+    return p0
+.end method
 
-    return-void
+.method public static b(Landroid/content/res/Resources;ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/content/res/Resources;->getColorStateList(ILandroid/content/res/Resources$Theme;)Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
 .end method

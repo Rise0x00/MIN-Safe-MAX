@@ -1,201 +1,93 @@
 .class public final Lj89;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
-.implements Landroid/content/DialogInterface$OnClickListener;
-.implements Landroid/content/DialogInterface$OnDismissListener;
-.implements Ly89;
 
 
 # instance fields
-.field public a:Lsbf;
+.field public final a:Landroid/content/Context;
 
-.field public b:Lzc;
+.field public b:Z
 
-.field public c:Lk28;
+.field public final c:Ljava/util/ArrayList;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lj89;->b:Z
+
+    iput-object p1, p0, Lj89;->a:Landroid/content/Context;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lj89;->c:Ljava/util/ArrayList;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final C(Li89;)Z
-    .locals 0
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final i(Li89;Z)V
-    .locals 0
-
-    if-nez p2, :cond_0
-
-    iget-object p2, p0, Lj89;->a:Lsbf;
-
-    if-ne p1, p2, :cond_1
-
-    :cond_0
-    iget-object p1, p0, Lj89;->b:Lzc;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lqo;->dismiss()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
-
-    iget-object p1, p0, Lj89;->a:Lsbf;
-
-    iget-object v0, p0, Lj89;->c:Lk28;
-
-    iget-object v1, v0, Lk28;->Y:Lj28;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lj28;
-
-    invoke-direct {v1, v0}, Lj28;-><init>(Lk28;)V
-
-    iput-object v1, v0, Lk28;->Y:Lj28;
-
-    :cond_0
-    iget-object v0, v0, Lk28;->Y:Lj28;
-
-    invoke-virtual {v0, p2}, Lj28;->b(I)Lm89;
-
-    move-result-object p2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, p2, v1, v0}, Li89;->q(Landroid/view/MenuItem;Lz89;I)Z
-
-    return-void
-.end method
-
-.method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 2
-
-    iget-object p1, p0, Lj89;->c:Lk28;
-
-    iget-object v0, p0, Lj89;->a:Lsbf;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v0, v1}, Lk28;->i(Li89;Z)V
-
-    return-void
-.end method
-
-.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 3
-
-    iget-object v0, p0, Lj89;->a:Lsbf;
-
-    const/16 v1, 0x52
-
-    if-eq p2, v1, :cond_0
-
-    const/4 v1, 0x4
-
-    if-ne p2, v1, :cond_2
-
-    :cond_0
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_1
-
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getRepeatCount()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object p1, p0, Lj89;->b:Lzc;
-
-    invoke-virtual {p1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object p1
 
-    if-eqz p1, :cond_2
+    const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1, p3, p0}, Landroid/view/KeyEvent$DispatcherState;->startTracking(Landroid/view/KeyEvent;Ljava/lang/Object;)V
-
-    return v2
-
-    :cond_1
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v1
-
-    if-ne v1, v2, :cond_2
-
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->isCanceled()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lj89;->b:Lzc;
-
-    invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Landroid/view/View;->getKeyDispatcherState()Landroid/view/KeyEvent$DispatcherState;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1, p3}, Landroid/view/KeyEvent$DispatcherState;->isTracking(Landroid/view/KeyEvent;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v0, v2}, Li89;->c(Z)V
-
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
-
-    return v2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, p2, p3, p1}, Li89;->performShortcut(ILandroid/view/KeyEvent;I)Z
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    return p1
+    if-eqz p1, :cond_0
+
+    const-string p1, "noConnectivity"
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iget-boolean p2, p0, Lj89;->b:Z
+
+    if-eq p2, p1, :cond_0
+
+    iput-boolean p1, p0, Lj89;->b:Z
+
+    iget-object p1, p0, Lj89;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lm89;
+
+    invoke-virtual {p2}, Lm89;->c()V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

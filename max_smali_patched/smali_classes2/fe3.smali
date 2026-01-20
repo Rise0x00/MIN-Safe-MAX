@@ -1,111 +1,311 @@
 .class public final Lfe3;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lge3;
 
-.field public final b:I
+.field public final synthetic Y:J
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(II)V
+.method public constructor <init>(Lge3;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfe3;->X:Lge3;
 
-    iput p1, p0, Lfe3;->a:I
+    iput-wide p2, p0, Lfe3;->Y:J
 
-    iput p2, p0, Lfe3;->b:I
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lzb4;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lfe3;
+    invoke-virtual {p0, p1, p2}, Lfe3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lfe3;
 
-    iget v0, p0, Lfe3;->a:I
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget v1, p1, Lfe3;->a:I
+    invoke-virtual {p1, p2}, Lfe3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_2
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
+
+    new-instance p1, Lfe3;
+
+    iget-object v0, p0, Lfe3;->X:Lge3;
+
+    iget-wide v1, p0, Lfe3;->Y:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lfe3;-><init>(Lge3;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
+
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    iget v2, p0, Lfe3;->o:I
+
+    const/4 v3, 0x1
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    iget-wide v4, p0, Lfe3;->Y:J
+
+    sget-object v2, Lc5j;->a:Ledb;
+
+    const/4 v6, 0x0
+
+    if-nez v2, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget v0, p0, Lfe3;->b:I
+    sget-object v7, Lkk8;->d:Lkk8;
 
-    iget p1, p1, Lfe3;->b:I
+    invoke-virtual {v2, v7}, Ledb;->b(Lkk8;)Z
 
-    if-eq v0, p1, :cond_3
+    move-result v8
 
-    :goto_0
-    const/4 p1, 0x0
+    if-eqz v8, :cond_3
 
-    return p1
+    const-string v8, "start clear draft for chatId:"
+
+    invoke-static {v4, v5, v8}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v7, p1, v4, v6}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
+    :goto_0
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->c:Ljava/lang/Object;
+
+    check-cast p1, Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lla3;
+
+    iget-wide v4, p0, Lfe3;->Y:J
+
+    invoke-virtual {p1, v4, v5}, Lla3;->k(J)Lpld;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lpld;->a:Llpf;
+
+    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnd2;
+
+    if-nez p1, :cond_4
+
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    const-string v1, "can\'t clear draft because chat is null"
+
+    invoke-static {p1, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_4
+    iget-object v2, p1, Lnd2;->b:Luh2;
+
+    iget-object v2, v2, Luh2;->d0:Lgab;
+
+    instance-of v4, v2, Lgab;
+
+    if-eqz v4, :cond_5
+
+    move-object v6, v2
+
+    :cond_5
+    if-nez v6, :cond_6
+
+    iget-object p1, p0, Lfe3;->X:Lge3;
+
+    iget-object p1, p1, Lge3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/String;
+
+    const-string v1, "Draft empty in chat don\'t need clear"
+
+    invoke-static {p1, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_6
+    iget-object v2, p0, Lfe3;->X:Lge3;
+
+    iget-object v2, v2, Lge3;->b:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    const-string v4, "Clear local draft"
+
+    invoke-static {v2, v4}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lfe3;->X:Lge3;
+
+    iput v3, p0, Lfe3;->o:I
+
+    iget-object v3, v2, Lge3;->b:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    iget-wide v4, p1, Lnd2;->a:J
+
+    const-string v7, "dropAllDrafts "
+
+    invoke-static {v4, v5, v7, v3}, Lob3;->g(JLjava/lang/String;Ljava/lang/String;)V
+
+    iget-object v3, p1, Lnd2;->b:Luh2;
+
+    iget-object v4, v3, Luh2;->d0:Lgab;
+
+    if-eqz v4, :cond_9
+
+    iget-object v4, v6, Lgab;->e:Ljava/lang/Long;
+
+    if-eqz v4, :cond_7
+
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    goto :goto_1
+
+    :cond_7
+    iget-wide v3, v3, Luh2;->e0:J
+
     :goto_1
-    const/4 p1, 0x1
+    iget-object v5, v2, Lge3;->f:Ljava/lang/Object;
 
-    return p1
-.end method
+    check-cast v5, Lo58;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-interface {v5}, Lo58;->getValue()Ljava/lang/Object;
 
-    iget v0, p0, Lfe3;->a:I
+    move-result-object v5
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    check-cast v5, Lgre;
 
-    move-result v0
+    check-cast v5, Lidc;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v5}, Lidc;->s()Z
 
-    iget v1, p0, Lfe3;->b:I
+    move-result v5
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    if-nez v5, :cond_8
 
-    move-result v1
+    const-wide/16 v3, 0x0
 
-    add-int/2addr v1, v0
+    :cond_8
+    move-wide v10, v3
 
-    return v1
-.end method
+    iget-object v3, v2, Lge3;->c:Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    check-cast v3, Lo58;
 
-    const-string v0, ", secondary="
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
 
-    const-string v1, ")"
+    move-result-object v3
 
-    const-string v2, "CommonShadowsElevation2Colors(primary="
+    check-cast v3, Lla3;
 
-    iget v3, p0, Lfe3;->a:I
+    iget-wide v8, p1, Lnd2;->a:J
 
-    iget v4, p0, Lfe3;->b:I
+    invoke-virtual {v3}, Lla3;->j()Lxg2;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    move-result-object v7
 
-    move-result-object v0
+    const/4 v12, 0x0
 
+    invoke-virtual/range {v7 .. v12}, Lxg2;->v(JJLgab;)V
+
+    :cond_9
+    iget-wide v3, p1, Lnd2;->a:J
+
+    invoke-virtual {v2, v3, v4, v6, p0}, Lge3;->b(JLgab;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v1, :cond_a
+
+    goto :goto_2
+
+    :cond_a
+    move-object p1, v0
+
+    :goto_2
+    if-ne p1, v1, :cond_b
+
+    return-object v1
+
+    :cond_b
     return-object v0
 .end method

@@ -1,134 +1,83 @@
 .class public final Lle2;
-.super Logf;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lve2;
+.field public final b:J
 
-.field public o:I
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Lve2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JJLjava/util/List;Ljava/util/Map;)V
     .locals 0
 
-    iput-object p1, p0, Lle2;->X:Lve2;
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
 
-    const/4 p1, 0x2
+    iput-wide p3, p0, Lle2;->b:J
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p5, p0, Lle2;->c:Ljava/util/List;
+
+    iput-object p6, p0, Lle2;->d:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    check-cast p1, Lg54;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "ChatBotCommandsEvent{chatId="
 
-    invoke-virtual {p0, p1, p2}, Lle2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-wide v1, p0, Lle2;->b:J
 
-    check-cast p1, Lle2;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    sget-object p2, Lybg;->a:Lybg;
+    const-string v1, ", botCommands count="
 
-    invoke-virtual {p1, p2}, Lle2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    iget-object v1, p0, Lle2;->c:Ljava/util/List;
 
-    return-object p1
-.end method
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    move-result v1
 
-    new-instance p1, Lle2;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lle2;->X:Lve2;
+    const-string v1, ", botsInfoMap count="
 
-    invoke-direct {p1, v0, p2}, Lle2;-><init>(Lve2;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
-.end method
+    iget-object v1, p0, Lle2;->d:Ljava/util/Map;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-interface {v1}, Ljava/util/Map;->size()I
 
-    iget v0, p0, Lle2;->o:I
+    move-result v1
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_1
+    const-string v1, "} "
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-super {p0}, Lkk0;->toString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lve2;->F:[Les7;
-
-    iget-object p1, p0, Lle2;->X:Lve2;
-
-    iget-object v0, p1, Lve2;->r:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    check-cast v0, Lu23;
-
-    iget-wide v2, p1, Lve2;->n:J
-
-    check-cast v0, Lw33;
-
-    invoke-virtual {v0}, Lw33;->M()Lad2;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Lad2;->Q(J)V
-
-    iget-object p1, p1, Lf65;->d:Lake;
-
-    sget-object v0, Lm5c;->b:Lm5c;
-
-    iput v1, p0, Lle2;->o:I
-
-    invoke-virtual {p1, v0, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

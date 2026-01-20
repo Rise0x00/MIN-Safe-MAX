@@ -1,250 +1,169 @@
-.class public final Lss9;
+.class public final synthetic Lss9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lts9;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lnrf;
+.field public final synthetic a:I
 
-.field public final b:Lnrf;
-
-.field public final c:Latb;
-
-.field public final d:Z
-
-.field public final e:I
+.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(Lnrf;Lnrf;Latb;ZI)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
+    iput p2, p0, Lss9;->a:I
+
+    iput-object p1, p0, Lss9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lss9;->a:Lnrf;
-
-    iput-object p2, p0, Lss9;->b:Lnrf;
-
-    iput-object p3, p0, Lss9;->c:Latb;
-
-    iput-boolean p4, p0, Lss9;->d:Z
-
-    iput p5, p0, Lss9;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lss9;->a:I
 
-    goto :goto_1
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lss9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    iget-object v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->X:Lth8;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Leo9;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lth8;->f:Lgne;
+
+    iput-object v1, v0, Lgne;->j:Ljava/lang/CharSequence;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0()Los9;
+
+    move-result-object p1
+
+    iget-object p1, p1, Los9;->D0:Lcm5;
+
+    sget-object v0, Lwr9;->a:Lwr9;
+
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lss9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    iget v0, p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->L0:I
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lss9;
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0()Los9;
 
-    if-nez v0, :cond_1
+    move-result-object v1
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Leo9;->getMessageState()Llpf;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/CharSequence;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0()Leo9;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Leo9;->getMessagePosition()Llpf;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lt02;->t(I)I
+
+    move-result v0
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_3
+
+    const/4 v4, 0x1
+
+    if-eq v0, v4, :cond_2
+
+    const/4 p1, 0x2
+
+    if-ne v0, p1, :cond_1
+
+    iget-object p1, v1, Los9;->D0:Lcm5;
+
+    new-instance v0, Lvr9;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lss9;
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-object v0, p0, Lss9;->a:Lnrf;
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-object v1, p1, Lss9;->a:Lnrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
+    throw p1
 
     :cond_2
-    iget-object v0, p0, Lss9;->b:Lnrf;
+    iget-object v0, v1, Los9;->T0:Lspf;
 
-    iget-object v1, p1, Lss9;->b:Lnrf;
+    new-instance v4, Lor9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v4, v2, p1}, Lor9;-><init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
 
-    move-result v0
+    invoke-virtual {v0, v3, v4}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_3
+    invoke-virtual {v1, v3}, Los9;->I(Ljava/lang/Long;)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lss9;->c:Latb;
+    const/16 p1, 0xe
 
-    iget-object v1, p1, Lss9;->c:Latb;
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lss9;->d:Z
-
-    iget-boolean v1, p1, Lss9;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lss9;->e:I
-
-    iget p1, p1, Lss9;->e:I
-
-    if-eq v0, p1, :cond_6
+    invoke-static {v1, v3, v3, v3, p1}, Los9;->H(Los9;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/Integer;I)V
 
     :goto_0
-    const/4 p1, 0x0
+    return-void
 
-    return p1
+    nop
 
-    :cond_6
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lss9;->a:Lnrf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lss9;->b:Lnrf;
-
-    invoke-static {v0, v1, v2}, Lcd0;->c(IILnrf;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lss9;->c:Latb;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lss9;->d:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget v1, p0, Lss9;->e:I
-
-    invoke-static {v1}, Lnx1;->v(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "State(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lss9;->a:Lnrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", subtitle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lss9;->b:Lnrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", speed="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lss9;->c:Latb;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isPlaying="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lss9;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lss9;->e:I
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "VIDEO_MSG"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "AUDIO"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

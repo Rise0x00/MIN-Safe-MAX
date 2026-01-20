@@ -1,19 +1,32 @@
 .class public final Lb2f;
-.super Ljava/lang/Object;
+.super Ljef;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lorg/webrtc/RTCStatsReport;
-
-
-# direct methods
-.method public constructor <init>(Lorg/webrtc/RTCStatsReport;)V
+# virtual methods
+.method public final C()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Lb2f;->a:Lorg/webrtc/RTCStatsReport;
+.method public final y(Lud8;)V
+    .locals 1
+
+    instance-of v0, p1, Leje;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+
+    check-cast v0, Lt0f;
+
+    check-cast p1, Lj0f;
+
+    invoke-virtual {v0, p1}, Lt0f;->setModelItem(Lj0f;)V
 
     return-void
 .end method

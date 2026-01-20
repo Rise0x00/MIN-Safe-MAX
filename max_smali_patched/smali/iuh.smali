@@ -1,46 +1,103 @@
 .class public final Liuh;
-.super Ljava/lang/Object;
+.super Lyrd;
 .source "SourceFile"
-
-# interfaces
-.implements Lgf0;
 
 
 # instance fields
-.field public final synthetic a:Lis6;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lis6;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Liuh;->a:I
 
-    iput-object p1, p0, Liuh;->a:Lis6;
+    iput-object p2, p0, Liuh;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
+.method public final a()V
     .locals 2
 
-    iget-object v0, p0, Liuh;->a:Lis6;
+    iget v0, p0, Liuh;->a:I
 
-    iget-object v0, v0, Lis6;->w0:Ldu9;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Liuh;->b:Ljava/lang/Object;
+
+    check-cast v0, Lloe;
+
+    invoke-virtual {v0}, Lloe;->s()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Liuh;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/viewpager2/widget/ViewPager2;
 
     const/4 v1, 0x1
 
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iput-boolean v1, v0, Landroidx/viewpager2/widget/ViewPager2;->o:Z
 
-    move-result-object p1
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->z0:Lmee;
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    iput-boolean v1, v0, Lmee;->l:Z
 
-    move-result-object p1
+    return-void
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Liuh;->a()V
+
+    return-void
+.end method
+
+.method public final c(IILjava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0}, Liuh;->a()V
+
+    return-void
+.end method
+
+.method public final d(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Liuh;->a()V
+
+    return-void
+.end method
+
+.method public final e(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Liuh;->a()V
+
+    return-void
+.end method
+
+.method public final f(II)V
+    .locals 0
+
+    invoke-virtual {p0}, Liuh;->a()V
 
     return-void
 .end method

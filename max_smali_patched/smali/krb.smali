@@ -3,77 +3,93 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/hardware/camera2/params/OutputConfiguration;
+
+.field public b:J
+
+
 # direct methods
-.method public static final a(Lkrb;Landroid/view/View;Loi1;Landroid/graphics/RectF;)V
-    .locals 0
+.method public constructor <init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+    .locals 2
 
-    iget p0, p3, Landroid/graphics/RectF;->top:F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotX(F)V
+    const-wide/16 v0, 0x1
 
-    iget p0, p3, Landroid/graphics/RectF;->left:F
+    iput-wide v0, p0, Lkrb;->b:J
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotY(F)V
-
-    iget p0, p3, Landroid/graphics/RectF;->top:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setX(F)V
-
-    iget p0, p3, Landroid/graphics/RectF;->left:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setY(F)V
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleY(F)V
-
-    const/4 p3, 0x0
-
-    invoke-static {p1, p3}, Lyyg;->p(Landroid/view/View;F)V
-
-    invoke-virtual {p2, p0}, Landroid/view/View;->setAlpha(F)V
+    iput-object p1, p0, Lkrb;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
     return-void
 .end method
 
-.method public static b()Z
-    .locals 3
 
-    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    instance-of v0, p1, Lkrb;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    return v1
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    :cond_0
+    check-cast p1, Lkrb;
 
-    move-result-object v0
+    iget-object v0, p0, Lkrb;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    const-string v2, "huawei"
+    iget-object v2, p1, Lkrb;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    invoke-static {v0, v2, v1}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "honor"
-
-    invoke-static {v0, v2, v1}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    :cond_0
-    const/4 v0, 0x1
+    iget-wide v2, p0, Lkrb;->b:J
 
-    return v0
+    iget-wide v4, p1, Lkrb;->b:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_1
     return v1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lkrb;->a:Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    xor-int/2addr v0, v1
+
+    shl-int/lit8 v1, v0, 0x5
+
+    sub-int/2addr v1, v0
+
+    iget-wide v2, p0, Lkrb;->b:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    xor-int/2addr v0, v1
+
+    return v0
 .end method

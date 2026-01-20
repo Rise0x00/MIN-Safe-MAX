@@ -1,26 +1,30 @@
 .class public final Law1;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/String;
+.field public final synthetic X:Lbw1;
 
-.field public o:I
+.field public final synthetic Y:Lo58;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lbw1;Lo58;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Law1;->X:Ljava/lang/String;
+    iput-object p1, p0, Law1;->X:Lbw1;
+
+    iput-object p2, p0, Law1;->Y:Lo58;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lg54;
+    check-cast p1, Lqa;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,203 +44,372 @@
 
     check-cast p1, Law1;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Law1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 3
 
-    new-instance p1, Law1;
+    new-instance v0, Law1;
 
-    iget-object v0, p0, Law1;->X:Ljava/lang/String;
+    iget-object v1, p0, Law1;->X:Lbw1;
 
-    invoke-direct {p1, v0, p2}, Law1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    iget-object v2, p0, Law1;->Y:Lo58;
 
-    return-object p1
+    invoke-direct {v0, v1, v2, p2}, Law1;-><init>(Lbw1;Lo58;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Law1;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 17
 
-    iget v0, p0, Law1;->o:I
+    move-object/from16 v0, p0
 
-    const/4 v1, 0x1
+    iget-object v1, v0, Law1;->o:Ljava/lang/Object;
 
-    const-string v2, "CallsNotification"
+    check-cast v1, Lqa;
 
-    const/4 v3, 0x0
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    iget-object v2, v0, Law1;->X:Lbw1;
 
-    if-ne v0, v1, :cond_0
+    iget-object v3, v2, Lbw1;->c:Lspf;
 
-    :try_start_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    :cond_0
+    invoke-virtual {v3}, Lspf;->getValue()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v4
 
-    :catch_0
-    move-exception p1
+    move-object v5, v4
+
+    check-cast v5, Lzv1;
+
+    iget-object v6, v1, Lqa;->a:Ljava/util/Map;
+
+    invoke-interface {v6}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    iget-object v7, v1, Lqa;->b:Ljava/util/Set;
+
+    invoke-interface {v7}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v7
+
+    if-nez v7, :cond_1
+
+    goto/16 :goto_1
+
+    :cond_1
+    invoke-interface {v6}, Ljava/util/Map;->isEmpty()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    new-instance v5, Lxv1;
+
+    iget-wide v6, v1, Lqa;->c:J
+
+    invoke-direct {v5, v6, v7}, Lxv1;-><init>(J)V
+
+    goto/16 :goto_1
+
+    :cond_2
+    invoke-interface {v6}, Ljava/util/Map;->size()I
+
+    move-result v5
+
+    const/4 v7, 0x1
+
+    iget-object v8, v0, Law1;->Y:Lo58;
+
+    if-ne v5, v7, :cond_3
+
+    invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lpi3;->C(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/util/Map$Entry;
+
+    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v5
+
+    move-object v10, v5
+
+    check-cast v10, Lyk1;
+
+    invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lpi3;->C(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/util/Map$Entry;
+
+    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lcu1;
+
+    invoke-interface {v5}, Lcu1;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Lbw1;->t(Lbw1;Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    new-instance v11, Lphg;
+
+    invoke-direct {v11, v6}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lit1;
+
+    sget v7, Lb7b;->g2:I
+
+    new-instance v8, Llhg;
+
+    invoke-direct {v8, v7}, Llhg;-><init>(I)V
+
+    invoke-virtual {v6, v8}, Lit1;->a(Llhg;)Lphg;
+
+    move-result-object v12
+
+    invoke-interface {v5}, Lcu1;->d()J
+
+    move-result-wide v6
+
+    new-instance v8, Ljava/lang/Long;
+
+    invoke-direct {v8, v6, v7}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-interface {v5}, Lcu1;->j()Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    invoke-static {v6, v8}, Ls7j;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lod0;
+
+    move-result-object v13
+
+    invoke-interface {v5}, Lcu1;->q()Ljava/lang/String;
+
+    move-result-object v14
+
+    iget-wide v5, v1, Lqa;->c:J
+
+    new-instance v9, Lyv1;
+
+    move-wide v15, v5
+
+    invoke-direct/range {v9 .. v16}, Lyv1;-><init>(Lyk1;Lphg;Lphg;Lod0;Ljava/lang/String;J)V
+
+    move-object v5, v9
+
+    goto/16 :goto_1
+
+    :cond_3
+    invoke-interface {v6}, Ljava/util/Map;->size()I
+
+    move-result v5
+
+    const/4 v9, 0x2
+
+    if-ne v5, v9, :cond_4
+
+    invoke-interface {v6}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lpi3;->S(Ljava/util/Collection;)Ljava/util/List;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lpi3;->D(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lcu1;
+
+    invoke-static {v5}, Lpi3;->M(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lcu1;
+
+    sget v9, Lb7b;->f2:I
+
+    invoke-interface {v6}, Lcu1;->getName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v2, v6}, Lbw1;->t(Lbw1;Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v6
+
+    invoke-interface {v7}, Lcu1;->getName()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v2, v7}, Lbw1;->t(Lbw1;Ljava/lang/String;)Ljava/lang/CharSequence;
+
+    move-result-object v7
+
+    filled-new-array {v6, v7}, [Ljava/lang/Object;
+
+    move-result-object v6
+
+    new-instance v11, Lnhg;
+
+    invoke-static {v6}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    invoke-direct {v11, v9, v6}, Lnhg;-><init>(ILjava/util/List;)V
+
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lit1;
+
+    sget v7, Lb7b;->h2:I
+
+    new-instance v8, Llhg;
+
+    invoke-direct {v8, v7}, Llhg;-><init>(I)V
+
+    invoke-virtual {v6, v8}, Lit1;->a(Llhg;)Lphg;
+
+    move-result-object v12
+
+    invoke-static {v2, v5}, Lbw1;->s(Lbw1;Ljava/util/List;)Lqd8;
+
+    move-result-object v14
+
+    iget-wide v5, v1, Lqa;->c:J
+
+    new-instance v10, Lwv1;
+
+    const/4 v13, 0x1
+
+    move-wide v15, v5
+
+    invoke-direct/range {v10 .. v16}, Lwv1;-><init>(Lnhg;Lphg;ILqd8;J)V
+
+    :goto_0
+    move-object v5, v10
 
     goto :goto_1
 
-    :catch_1
-    move-exception p1
+    :cond_4
+    invoke-interface {v6}, Ljava/util/Map;->values()Ljava/util/Collection;
 
-    goto :goto_2
+    move-result-object v5
 
-    :catch_2
-    move-exception p1
+    invoke-static {v5}, Lpi3;->S(Ljava/util/Collection;)Ljava/util/List;
 
-    goto :goto_3
+    move-result-object v5
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-static {v5}, Lpi3;->D(Ljava/util/List;)Ljava/lang/Object;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object v6
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast v6, Lcu1;
 
-    throw p1
+    sget v9, Lb7b;->e2:I
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-interface {v6}, Lcu1;->getName()Ljava/lang/String;
 
-    :try_start_1
-    const-string p1, "handle loading notification image"
+    move-result-object v6
 
-    invoke-static {v2, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-static {v2, v6}, Lbw1;->t(Lbw1;Ljava/lang/String;)Ljava/lang/CharSequence;
 
-    iget-object p1, p0, Law1;->X:Ljava/lang/String;
+    move-result-object v6
 
-    if-eqz p1, :cond_4
+    invoke-interface {v5}, Ljava/util/List;->size()I
 
-    :try_start_2
-    invoke-static {p1}, Lxaf;->J(Ljava/lang/CharSequence;)Z
+    move-result v10
 
-    move-result v0
+    sub-int/2addr v10, v7
 
-    if-eqz v0, :cond_2
+    invoke-static {v10}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    filled-new-array {v6, v7}, [Ljava/lang/Object;
+
+    move-result-object v6
+
+    new-instance v11, Lnhg;
+
+    invoke-static {v6}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    invoke-direct {v11, v9, v6}, Lnhg;-><init>(ILjava/util/List;)V
+
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lit1;
+
+    sget v7, Lb7b;->h2:I
+
+    new-instance v8, Llhg;
+
+    invoke-direct {v8, v7}, Llhg;-><init>(I)V
+
+    invoke-virtual {v6, v8}, Lit1;->a(Llhg;)Lphg;
+
+    move-result-object v12
+
+    invoke-static {v2, v5}, Lbw1;->s(Lbw1;Ljava/util/List;)Lqd8;
+
+    move-result-object v14
+
+    iget-wide v5, v1, Lqa;->c:J
+
+    new-instance v10, Lwv1;
+
+    const/4 v13, 0x2
+
+    move-wide v15, v5
+
+    invoke-direct/range {v10 .. v16}, Lwv1;-><init>(Lnhg;Lphg;ILqd8;J)V
 
     goto :goto_0
 
-    :cond_2
-    const-string v0, "start loading call push avatar"
-
-    invoke-static {v2, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lzv1;
-
-    invoke-direct {v0, p1, v3}, Lzv1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    iput v1, p0, Law1;->o:I
-
-    const-wide/16 v4, 0x1f4
-
-    invoke-static {v4, v5, v0, p0}, Lpyh;->m(JLej6;Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_2
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
-
-    :cond_3
-    return-object p1
-
-    :cond_4
-    :goto_0
-    :try_start_3
-    const-string p1, "avatar for call push is empty"
-
-    invoke-static {v2, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
-
-    return-object v3
-
     :goto_1
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {v3, v4, v5}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v4
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    if-eqz v4, :cond_0
 
-    const-string v4, "Failed to load call notification avatar due to: "
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v3
-
-    :goto_2
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to load call notification avatar due to InterruptedException: "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :goto_3
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to load call notification avatar due to CancellationException: "
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
+    return-object v1
 .end method

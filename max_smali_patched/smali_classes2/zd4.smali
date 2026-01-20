@@ -1,35 +1,55 @@
-.class public Lzd4;
-.super Ljava/lang/Object;
+.class public final Lzd4;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Z
+.field public final synthetic Y:Lhe4;
 
-.field public final c:Lf04;
+.field public Z:I
+
+.field public d:Lgj2;
+
+.field public o:Lg1e;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lhe4;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lzd4;->Y:Lhe4;
 
-    iput-wide p1, p0, Lzd4;->a:J
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lzd4;->b:Z
-
-    new-instance p1, Lf04;
-
-    const/16 p2, 0x8
-
-    invoke-direct {p1, p2, p0}, Lf04;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lzd4;->c:Lf04;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iput-object p1, p0, Lzd4;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lzd4;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lzd4;->Z:I
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lzd4;->Y:Lhe4;
+
+    invoke-static {v1, p1, v0, p0}, Lhe4;->a(Lhe4;ILgj2;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

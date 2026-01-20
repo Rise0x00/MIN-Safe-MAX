@@ -1,92 +1,191 @@
 .class public final Lkt4;
-.super Lri7;
+.super Ldkf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic G0:Lme6;
-
-.field public final synthetic H0:Landroidx/fragment/app/DialogFragment;
+.field public final c:Llt4;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/DialogFragment;Lme6;)V
+.method public constructor <init>(Llt4;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkt4;->H0:Landroidx/fragment/app/DialogFragment;
-
-    iput-object p2, p0, Lkt4;->G0:Lme6;
+    iput-object p1, p0, Lkt4;->c:Llt4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(I)Landroid/view/View;
-    .locals 2
+.method public final a(Landroid/view/ViewGroup;)V
+    .locals 3
 
-    iget-object v0, p0, Lkt4;->G0:Lme6;
+    iget-object v0, p0, Lkt4;->c:Llt4;
 
-    invoke-virtual {v0}, Lme6;->n()Z
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
 
-    move-result v1
+    check-cast v1, Lekf;
 
-    if-eqz v1, :cond_0
+    iget-object v2, v1, Lekf;->c:Landroidx/fragment/app/a;
 
-    invoke-virtual {v0, p1}, Lme6;->m(I)Landroid/view/View;
+    iget-object v2, v2, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
+
+    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+
+    iget-object p1, v0, Ld3;->b:Ljava/lang/Object;
+
+    check-cast p1, Lekf;
+
+    invoke-virtual {p1, p0}, Lekf;->c(Ldkf;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Animation from operation "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " has been cancelled."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
+    const-string v0, "FragmentManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
-    iget-object v0, p0, Lkt4;->H0:Landroidx/fragment/app/DialogFragment;
-
-    iget-object v0, v0, Landroidx/fragment/app/DialogFragment;->t1:Landroid/app/Dialog;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, p1}, Landroid/app/Dialog;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return-object p1
+    return-void
 .end method
 
-.method public final n()Z
-    .locals 1
+.method public final b(Landroid/view/ViewGroup;)V
+    .locals 5
 
-    iget-object v0, p0, Lkt4;->G0:Lme6;
+    iget-object v0, p0, Lkt4;->c:Llt4;
 
-    invoke-virtual {v0}, Lme6;->n()Z
+    iget-object v1, v0, Ld3;->b:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v1, Lekf;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v0}, Ld3;->B0()Z
 
-    iget-object v0, p0, Lkt4;->H0:Landroidx/fragment/app/DialogFragment;
+    move-result v2
 
-    iget-boolean v0, v0, Landroidx/fragment/app/DialogFragment;->x1:Z
+    if-eqz v2, :cond_0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1, p0}, Lekf;->c(Ldkf;)V
 
-    goto :goto_0
+    return-void
 
     :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return v0
+    move-result-object v2
+
+    iget-object v3, v1, Lekf;->c:Landroidx/fragment/app/a;
+
+    iget-object v3, v3, Landroidx/fragment/app/a;->T0:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Llt4;->L0(Landroid/content/Context;)Lws8;
+
+    move-result-object v0
+
+    const-string v2, "Required value was null."
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, v0, Lws8;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/animation/Animation;
+
+    if-eqz v0, :cond_3
+
+    iget v2, v1, Lekf;->a:I
+
+    const/4 v4, 0x1
+
+    if-eq v2, v4, :cond_1
+
+    invoke-virtual {v3, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    invoke-virtual {v1, p0}, Lekf;->c(Ldkf;)V
+
+    return-void
 
     :cond_1
-    :goto_0
-    const/4 v0, 0x1
+    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
 
-    return v0
+    new-instance v2, Lom6;
+
+    invoke-direct {v2, v0, p1, v3}, Lom6;-><init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
+
+    new-instance v0, Ljt4;
+
+    invoke-direct {v0, v1, p1, v3, p0}, Ljt4;-><init>(Lekf;Landroid/view/ViewGroup;Landroid/view/View;Lkt4;)V
+
+    invoke-virtual {v2, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    invoke-virtual {v3, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Animation from operation "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, " has started."
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "FragmentManager"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

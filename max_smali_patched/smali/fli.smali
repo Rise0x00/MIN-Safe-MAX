@@ -1,218 +1,72 @@
-.class public final Lfli;
+.class public final synthetic Lfli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lfli;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:Lmr5;
+.field public final synthetic b:Lcs4;
 
-.field public static final c:Lmr5;
+.field public final synthetic c:Lqw1;
 
-.field public static final d:Lmr5;
-
-.field public static final e:Lmr5;
-
-.field public static final f:Lmr5;
-
-.field public static final g:Lmr5;
+.field public final synthetic d:Llb0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lcs4;Lqw1;Llb0;I)V
+    .locals 0
 
-    new-instance v0, Lfli;
+    iput p4, p0, Lfli;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfli;->b:Lcs4;
 
-    sput-object v0, Lfli;->a:Lfli;
+    iput-object p2, p0, Lfli;->c:Lqw1;
 
-    new-instance v0, Lz7i;
+    iput-object p3, p0, Lfli;->d:Llb0;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lmr5;
-
-    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "maxMs"
-
-    invoke-direct {v2, v3, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lfli;->b:Lmr5;
-
-    new-instance v0, Lz7i;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2}, Lz7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lmr5;
-
-    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "minMs"
-
-    invoke-direct {v2, v3, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lfli;->c:Lmr5;
-
-    new-instance v0, Lz7i;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2}, Lz7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lmr5;
-
-    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "avgMs"
-
-    invoke-direct {v2, v3, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lfli;->d:Lmr5;
-
-    new-instance v0, Lz7i;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v2}, Lz7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lmr5;
-
-    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "firstQuartileMs"
-
-    invoke-direct {v2, v3, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lfli;->e:Lmr5;
-
-    new-instance v0, Lz7i;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v2}, Lz7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v2, Lmr5;
-
-    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v3, "medianMs"
-
-    invoke-direct {v2, v3, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v2, Lfli;->f:Lmr5;
-
-    new-instance v0, Lz7i;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v2}, Lz7i;-><init>(I)V
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    new-instance v1, Lmr5;
-
-    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
-
-    move-result-object v0
-
-    const-string v2, "thirdQuartileMs"
-
-    invoke-direct {v1, v2, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
-
-    sput-object v1, Lfli;->g:Lmr5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final run()V
+    .locals 3
 
-    check-cast p1, Lyui;
+    iget v0, p0, Lfli;->a:I
 
-    check-cast p2, Laia;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lfli;->b:Lmr5;
+    iget-object v0, p0, Lfli;->c:Lqw1;
 
-    iget-object v1, p1, Lyui;->a:Ljava/lang/Long;
+    iget-object v1, p0, Lfli;->d:Llb0;
 
-    invoke-interface {p2, v0, v1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
+    iget-object v2, p0, Lfli;->b:Lcs4;
 
-    sget-object v0, Lfli;->c:Lmr5;
-
-    iget-object v1, p1, Lyui;->b:Ljava/lang/Long;
-
-    invoke-interface {p2, v0, v1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
-
-    sget-object v0, Lfli;->d:Lmr5;
-
-    iget-object v1, p1, Lyui;->c:Ljava/lang/Long;
-
-    invoke-interface {p2, v0, v1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
-
-    sget-object v0, Lfli;->e:Lmr5;
-
-    iget-object v1, p1, Lyui;->d:Ljava/lang/Long;
-
-    invoke-interface {p2, v0, v1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
-
-    sget-object v0, Lfli;->f:Lmr5;
-
-    iget-object v1, p1, Lyui;->e:Ljava/lang/Long;
-
-    invoke-interface {p2, v0, v1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
-
-    sget-object v0, Lfli;->g:Lmr5;
-
-    iget-object p1, p1, Lyui;->f:Ljava/lang/Long;
-
-    invoke-interface {p2, v0, p1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
+    invoke-virtual {v2, v0, v1}, Lcs4;->c(Lqw1;Llb0;)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lfli;->c:Lqw1;
+
+    iget-object v1, p0, Lfli;->d:Llb0;
+
+    iget-object v2, p0, Lfli;->b:Lcs4;
+
+    invoke-virtual {v2, v0, v1}, Lcs4;->c(Lqw1;Llb0;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

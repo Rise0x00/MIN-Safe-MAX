@@ -1,31 +1,93 @@
-.class public abstract Lbwh;
-.super Ljava/lang/Object;
+.class public final Lbwh;
+.super Ljl6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final b:Ljava/lang/String;
+
+.field public c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Le42;)V
     .locals 2
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-direct {p0, p1}, Ljl6;-><init>(Le42;)V
 
-    const/16 v1, 0x1f
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-lt v0, v1, :cond_0
+    const-string v1, "virtual-"
 
-    const/high16 v0, 0x2000000
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    invoke-interface {p1}, Le42;->d()Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object p1
 
-    :goto_0
-    sput v0, Lbwh;->a:I
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, "-"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lbwh;->b:Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final b()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lbwh;->l(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lbwh;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final l(I)I
+    .locals 1
+
+    iget-object v0, p0, Ljl6;->a:Le42;
+
+    invoke-interface {v0, p1}, Le42;->l(I)I
+
+    move-result p1
+
+    iget v0, p0, Lbwh;->c:I
+
+    sub-int/2addr p1, v0
+
+    invoke-static {p1}, Ldtg;->h(I)I
+
+    move-result p1
+
+    return p1
 .end method

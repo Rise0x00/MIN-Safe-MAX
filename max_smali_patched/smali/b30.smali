@@ -1,137 +1,58 @@
-.class public final synthetic Lb30;
-.super Ljava/lang/Object;
+.class public final Lb30;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lxp5;
 
-.field public final synthetic b:I
+.field public final b:Lb9g;
+
+.field public final synthetic c:Lnp6;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
+.method public constructor <init>(Lnp6;Lb9g;Lxp5;)V
     .locals 0
 
-    iput p2, p0, Lb30;->a:I
+    iput-object p1, p0, Lb30;->c:Lnp6;
 
-    iput p1, p0, Lb30;->b:I
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lb30;->b:Lb9g;
+
+    iput-object p3, p0, Lb30;->a:Lxp5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 3
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 0
 
-    iget v0, p0, Lb30;->a:I
+    const-string p1, "android.media.AUDIO_BECOMING_NOISY"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    check-cast p1, Landroid/util/Size;
+    move-result-object p2
 
-    check-cast p2, Landroid/util/Size;
-
-    invoke-static {p1}, Llse;->a(Landroid/util/Size;)I
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget v0, p0, Lb30;->b:I
+    if-eqz p1, :cond_0
 
-    sub-int/2addr p1, v0
+    new-instance p1, Lj3;
 
-    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+    const/16 p2, 0xc
 
-    move-result p1
+    invoke-direct {p1, p2, p0}, Lj3;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {p2}, Llse;->a(Landroid/util/Size;)I
+    iget-object p2, p0, Lb30;->b:Lb9g;
 
-    move-result p2
-
-    sub-int/2addr p2, v0
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    sub-int/2addr p1, p2
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Integer;
-
-    check-cast p2, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget v1, p0, Lb30;->b:I
-
-    sub-int/2addr v0, v1
-
-    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
-
-    move-result v0
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    sub-int/2addr v2, v1
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(I)I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    sub-int/2addr p1, p2
-
-    int-to-float p1, p1
-
-    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
-
-    move-result p1
-
-    :goto_0
-    float-to-int p1, p1
-
-    goto :goto_1
+    invoke-virtual {p2, p1}, Lb9g;->d(Ljava/lang/Runnable;)Z
 
     :cond_0
-    int-to-float p1, v0
-
-    invoke-static {p1}, Ljava/lang/Math;->signum(F)F
-
-    move-result p1
-
-    goto :goto_0
-
-    :goto_1
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,36 +1,167 @@
-.class public abstract Lulc;
+.class public final Lulc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static contact_icon_corner:I = 0x7f080341
+# instance fields
+.field public final a:Lo58;
 
-.field public static done_superelips_fill_40:I = 0x7f08035f
+.field public final b:Ljava/lang/Object;
 
-.field public static geo_icon_corner:I = 0x7f0804e6
+.field public final c:Ljava/lang/Object;
 
-.field public static ic_call_incoming_audio_24:I = 0x7f08055e
+.field public final d:Ljava/lang/Object;
 
-.field public static ic_call_incoming_audio_missed_24:I = 0x7f08055f
+.field public final e:Ljava/lang/Object;
 
-.field public static ic_call_incoming_video_missed_24:I = 0x7f080561
+.field public final f:Ljava/lang/Object;
 
-.field public static ic_call_incomnig_video_24:I = 0x7f080562
+.field public final g:Ljava/lang/Object;
 
-.field public static ic_call_outgoing_audio_24:I = 0x7f080568
+.field public final h:Ljava/lang/Object;
 
-.field public static ic_call_outgoing_video_24:I = 0x7f080569
+.field public final i:Ljava/lang/Object;
 
-.field public static ic_chat_16:I = 0x7f080580
+.field public final j:Ljava/lang/Object;
 
-.field public static ic_contact_16:I = 0x7f0805a6
+.field public final k:Ljava/lang/Object;
 
-.field public static ic_geolocation_filled_28:I = 0x7f080606
 
-.field public static ic_reply_outline_12:I = 0x7f080773
+# direct methods
+.method public constructor <init>()V
+    .locals 3
 
-.field public static link_icon_corner:I = 0x7f08082b
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static miniapp_icon_corner:I = 0x7f0808a6
+    sget-object v0, Lslc;->a:Lslc;
 
-.field public static wallet_fill_40:I = 0x7f080991
+    invoke-virtual {v0}, Lslc;->f()Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->a:Lo58;
+
+    new-instance v0, Lr4c;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lr4c;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->b:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->c:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x11
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->d:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x12
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->e:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x13
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->f:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->g:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->h:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->i:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x17
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->j:Ljava/lang/Object;
+
+    new-instance v0, Lr4c;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v0, v2}, Lr4c;-><init>(I)V
+
+    invoke-static {v1, v0}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lulc;->k:Ljava/lang/Object;
+
+    return-void
+.end method

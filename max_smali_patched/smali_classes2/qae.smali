@@ -1,128 +1,93 @@
 .class public final Lqae;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lwae;
 
 
 # instance fields
-.field public final synthetic X:Luae;
-
-.field public final synthetic Y:I
-
-.field public o:I
+.field public final a:Lx40;
 
 
 # direct methods
-.method public constructor <init>(Luae;ILkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lx40;)V
     .locals 0
 
-    iput-object p1, p0, Lqae;->X:Luae;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lqae;->Y:I
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqae;->a:Lx40;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lg54;
+    instance-of v0, p1, Lqae;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqae;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqae;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lqae;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lqae;
-
-    iget-object v0, p0, Lqae;->X:Luae;
-
-    iget v1, p0, Lqae;->Y:I
-
-    invoke-direct {p1, v0, v1, p2}, Lqae;-><init>(Luae;ILkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lqae;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lqae;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p1, p1, Lqae;->a:Lx40;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lqae;->a:Lx40;
 
-    throw p1
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 p1, 0x1
 
-    sget-object p1, Luae;->A0:[Les7;
+    return p1
+.end method
 
-    iget-object p1, p0, Lqae;->X:Luae;
+.method public final hashCode()I
+    .locals 1
 
-    invoke-virtual {p1}, Luae;->v()Latd;
+    iget-object v0, p0, Lqae;->a:Lx40;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AudioMessage(media="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqae;->a:Lx40;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget v2, p0, Lqae;->Y:I
-
-    const-string v3, "app.video.auto.play"
-
-    invoke-virtual {v0, v2, v3}, Ly3;->g(ILjava/lang/String;)V
-
-    iput v1, p0, Lqae;->o:I
-
-    invoke-static {p1, p0}, Luae;->u(Luae;Logf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

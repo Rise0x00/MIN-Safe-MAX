@@ -1,165 +1,99 @@
 .class public final Luu;
-.super Lui0;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final o:[J
+.field public c:Z
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(IJ[J)V
+.method public constructor <init>(Lpq9;)V
     .locals 0
 
-    invoke-direct {p0, p2, p3, p1}, Lui0;-><init>(JI)V
-
-    iput-object p4, p0, Luu;->o:[J
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()[B
-    .locals 3
+.method public final d(Lpq9;Ljava/lang/String;)V
+    .locals 2
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsRemove;-><init>()V
+    const-string v0, "success"
 
-    iget v1, p0, Lui0;->d:I
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
+    move-result v0
 
-    move-result v1
+    if-nez v0, :cond_1
 
-    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->assetType:I
+    const-string v0, "updateTime"
 
-    iget-object v1, p0, Luu;->o:[J
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->ids:[J
+    move-result p2
 
-    iget-wide v1, p0, Lzm;->a:J
+    if-nez p2, :cond_0
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsRemove;->requestId:J
+    invoke-virtual {p1}, Lpq9;->B()V
 
-    invoke-static {v0}, Lud9;->toByteArray(Lud9;)[B
+    return-void
+
+    :cond_0
+    const-wide/16 v0, 0x0
+
+    invoke-static {p1, v0, v1}, Lcti;->n(Lpq9;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Luu;->d:J
+
+    return-void
+
+    :cond_1
+    invoke-static {p1}, Lcti;->h(Lpq9;)Z
+
+    move-result p1
+
+    iput-boolean p1, p0, Luu;->c:Z
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    iget-boolean v0, p0, Luu;->c:Z
+
+    iget-wide v1, p0, Luu;->d:J
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Response{success="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v0, ", updateTime="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public final getType()Lxib;
-    .locals 1
-
-    sget-object v0, Lxib;->S0:Lxib;
-
-    return-object v0
-.end method
-
-.method public final h()Lkh;
-    .locals 4
-
-    new-instance v0, Lfma;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, v2}, Lfma;-><init>(Lo8b;I)V
-
-    iget v1, p0, Lui0;->d:I
-
-    if-eqz v1, :cond_1
-
-    iget-object v2, p0, Luu;->o:[J
-
-    if-eqz v2, :cond_0
-
-    array-length v3, v2
-
-    if-eqz v3, :cond_0
-
-    const-string v3, "type"
-
-    invoke-static {v1}, Lnx1;->d(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v3, v1}, Lkh;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "ids"
-
-    invoke-virtual {v0, v1, v2}, Lkh;->q(Ljava/lang/String;[J)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "ids must not be null or empty"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "type must not be null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final t(Lmmf;)V
-    .locals 4
-
-    check-cast p1, Lvu;
-
-    iget-boolean v0, p1, Lvu;->c:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-wide v2, p1, Lvu;->d:J
-
-    invoke-virtual {p0, v2, v3}, Lui0;->u(J)V
-
-    iget-object p1, p0, Lzm;->c:Lan;
-
-    if-eqz p1, :cond_0
-
-    move-object v1, p1
-
-    :cond_0
-    invoke-virtual {v1}, Lan;->b()Liw0;
-
-    move-result-object p1
-
-    new-instance v0, Lwu;
-
-    iget-wide v1, p0, Lzm;->a:J
-
-    invoke-direct {v0, v1, v2}, Lrj0;-><init>(J)V
-
-    invoke-virtual {p1, v0}, Liw0;->c(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    new-instance p1, Lxlf;
-
-    const-string v0, "asset.task.failed"
-
-    const-string v2, "failed to remove asset"
-
-    invoke-direct {p1, v0, v2, v1}, Lxlf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lui0;->j(Lxlf;)V
-
-    return-void
 .end method

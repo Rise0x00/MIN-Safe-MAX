@@ -1,49 +1,28 @@
-.class public final Lycd;
+.class public abstract Lycd;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
 # static fields
-.field public static final c:Lycd;
+.field public static banner_big_permit_phone_book_contacts_action_button_text:I = 0x7f1300ab
 
+.field public static banner_big_permit_phone_book_contacts_subtitle:I = 0x7f1300ac
 
-# instance fields
-.field public a:Landroid/util/Size;
+.field public static banner_big_permit_phone_book_contacts_title:I = 0x7f1300ad
 
-.field public b:I
+.field public static banner_compact_permit_mic_subtitle:I = 0x7f1300ae
 
+.field public static banner_compact_permit_mic_title:I = 0x7f1300af
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.field public static banner_compact_permit_notifications_title:I = 0x7f1300b0
 
-    new-instance v0, Lycd;
+.field public static banner_compact_permit_phone_book_contacts_subtitle:I = 0x7f1300b1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static banner_compact_permit_phone_book_contacts_title:I = 0x7f1300b2
 
-    const/4 v1, 0x0
+.field public static banner_middle_permit_notifications_title:I = 0x7f1300b3
 
-    iput-object v1, v0, Lycd;->a:Landroid/util/Size;
+.field public static banner_middle_permit_phone_book_contacts_subtitle:I = 0x7f1300b4
 
-    const/4 v1, 0x0
+.field public static banner_middle_permit_phone_book_contacts_title:I = 0x7f1300b5
 
-    iput v1, v0, Lycd;->b:I
-
-    sput-object v0, Lycd;->c:Lycd;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/util/Size;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lycd;->a:Landroid/util/Size;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lycd;->b:I
-
-    return-void
-.end method
+.field public static banner_permit_notifications_subtitle:I = 0x7f1300b6

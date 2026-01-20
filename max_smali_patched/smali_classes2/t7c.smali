@@ -1,255 +1,173 @@
 .class public final Lt7c;
-.super Ljpe;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+.field public final synthetic X:Lone/me/pinbars/PinBarsWidget;
+
+.field public final synthetic Y:Landroid/view/View;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lone/me/profile/screens/invite/ProfileInviteScreen;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ljpe;-><init>(Ljava/util/concurrent/Executor;)V
+    iput-object p3, p0, Lt7c;->X:Lone/me/pinbars/PinBarsWidget;
 
-    iput-object p2, p0, Lt7c;->o:Lone/me/profile/screens/invite/ProfileInviteScreen;
+    iput-object p1, p0, Lt7c;->Y:Landroid/view/View;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic H(Liqe;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lacc;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p1, p2}, Lt7c;->J(Lacc;I)V
+    invoke-virtual {p0, p1, p2}, Lt7c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-void
+    move-result-object p1
+
+    check-cast p1, Lt7c;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lt7c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final J(Lacc;I)V
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
+    new-instance v0, Lt7c;
 
-    move-result-object p2
+    iget-object v1, p0, Lt7c;->X:Lone/me/pinbars/PinBarsWidget;
 
-    check-cast p2, Li28;
+    iget-object v2, p0, Lt7c;->Y:Landroid/view/View;
 
-    check-cast p2, Lz8c;
+    invoke-direct {v0, v2, p2, v1}, Lt7c;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;Lone/me/pinbars/PinBarsWidget;)V
 
-    invoke-virtual {p1, p2}, Liqe;->z(Li28;)V
+    iput-object p1, v0, Lt7c;->o:Ljava/lang/Object;
 
-    instance-of v0, p2, Lt8c;
+    return-object v0
+.end method
 
-    const/4 v1, 0x0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lt7c;->o:Ljava/lang/Object;
 
-    instance-of v0, p1, Ltk7;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lx27;
+
+    iget-object p1, p0, Lt7c;->Y:Landroid/view/View;
+
+    check-cast p1, Landroid/view/ViewGroup;
+
+    iget-object v1, p0, Lt7c;->X:Lone/me/pinbars/PinBarsWidget;
+
+    iget-object v2, v1, Lone/me/pinbars/PinBarsWidget;->v0:Landroid/transition/AutoTransition;
+
+    instance-of v3, v0, Lv27;
+
+    if-nez v3, :cond_1
+
+    sget v0, Lffb;->c:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    move-object v1, p1
+    invoke-static {p1, v2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    check-cast v1, Ltk7;
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
     :cond_0
-    if-eqz v1, :cond_5
+    const/4 p1, 0x0
 
-    new-instance p1, Lb6b;
-
-    const/16 v0, 0x8
-
-    invoke-direct {p1, p0, v0, p2}, Lb6b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iget-object p2, v1, Lm7d;->a:Landroid/view/View;
-
-    new-instance v0, Lkb6;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p1}, Lkb6;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p2, v0}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_1
-    instance-of p2, p2, Lm8c;
-
-    if-eqz p2, :cond_5
-
-    instance-of p2, p1, Lqg2;
-
-    if-eqz p2, :cond_2
-
-    move-object v0, p1
-
-    check-cast v0, Lqg2;
+    iput-object p1, v1, Lone/me/pinbars/PinBarsWidget;->t0:Ly27;
 
     goto :goto_0
 
+    :cond_1
+    iget-object v3, v1, Lone/me/pinbars/PinBarsWidget;->t0:Ly27;
+
+    if-nez v3, :cond_2
+
+    new-instance v3, Ly27;
+
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Ly27;-><init>(Landroid/content/Context;)V
+
+    sget v4, Lffb;->c:I
+
+    invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    new-instance v4, Lm7c;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v1, v5}, Lm7c;-><init>(Lone/me/pinbars/PinBarsWidget;I)V
+
+    invoke-virtual {v3, v4}, Ly27;->setJoinAction(Llq6;)V
+
+    iput-object v3, v1, Lone/me/pinbars/PinBarsWidget;->t0:Ly27;
+
+    invoke-static {p1, v2}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
+
+    iget-object v2, v1, Lone/me/pinbars/PinBarsWidget;->t0:Ly27;
+
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+
     :cond_2
-    move-object v0, v1
+    iget-object p1, v1, Lone/me/pinbars/PinBarsWidget;->t0:Ly27;
 
-    :goto_0
-    if-eqz v0, :cond_3
+    if-eqz p1, :cond_3
 
-    new-instance v2, Ls7c;
+    check-cast v0, Lv27;
 
-    const/4 v3, 0x0
+    iget-object v1, p1, Ly27;->I0:Llkb;
 
-    invoke-direct {v2, p0, v3}, Ls7c;-><init>(Lt7c;I)V
+    iget-object v2, v0, Lv27;->c:Ljava/util/List;
 
-    iget-object v0, v0, Lm7d;->a:Landroid/view/View;
+    invoke-virtual {v1, v2}, Llkb;->setAvatars(Ljava/util/List;)V
 
-    new-instance v3, Lo6;
+    iget-object v1, p1, Ly27;->K0:Landroid/widget/TextView;
 
-    const/16 v4, 0xc
+    iget-object v0, v0, Lv27;->b:Lqhg;
 
-    invoke-direct {v3, v4, v2}, Lo6;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lqhg;->d(Landroid/view/View;)Ljava/lang/CharSequence;
 
-    invoke-static {v0, v3}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    move-result-object p1
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_3
-    if-eqz p2, :cond_4
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    move-object v1, p1
-
-    check-cast v1, Lqg2;
-
-    :cond_4
-    if-eqz v1, :cond_5
-
-    new-instance p1, Ls7c;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p0, p2}, Ls7c;-><init>(Lt7c;I)V
-
-    iget-object p2, v1, Lm7d;->a:Landroid/view/View;
-
-    check-cast p2, Lng2;
-
-    invoke-virtual {p2, p1}, Lng2;->setOnMoreActionsClickListener(Loi6;)V
-
-    :cond_5
-    return-void
-.end method
-
-.method public final l(I)I
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lb28;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Li28;
-
-    check-cast p1, Lz8c;
-
-    invoke-interface {p1}, Li28;->m()I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final bridge synthetic r(Lm7d;I)V
-    .locals 0
-
-    check-cast p1, Lacc;
-
-    invoke-virtual {p0, p1, p2}, Lt7c;->J(Lacc;I)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lm7d;
-    .locals 2
-
-    const v0, 0xfffffff
-
-    and-int/2addr v0, p2
-
-    const/16 v1, 0x2000
-
-    if-ne v0, v1, :cond_0
-
-    new-instance p2, Ltk7;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Lnde;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lnde;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p2, v0}, Lm7d;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    :cond_0
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_1
-
-    new-instance p2, Ld20;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ld20;-><init>(Landroid/content/Context;)V
-
-    return-object p2
-
-    :cond_1
-    const/16 v1, 0x4000
-
-    if-ne v0, v1, :cond_2
-
-    new-instance p2, Lqg2;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Lng2;
-
-    invoke-direct {v0, p1}, Lng2;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p2, v0}, Lm7d;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "unknown item viewType: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p1
 .end method

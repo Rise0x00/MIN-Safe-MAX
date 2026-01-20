@@ -2,59 +2,149 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln25;
+
+# instance fields
+.field public final a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+.field public final b:I
+
+.field public final c:I
+
+
+# direct methods
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;II)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    iput p2, p0, Lk25;->b:I
+
+    iput p3, p0, Lk25;->c:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lxg6;Lsb6;)Lhf;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p1, p2, Lsb6;->y0:Lb25;
+    const/4 v0, 0x1
 
-    if-nez p1, :cond_0
+    if-ne p0, p1, :cond_0
 
-    const/4 p1, 0x0
-
-    return-object p1
+    return v0
 
     :cond_0
-    new-instance p1, Lhf;
+    instance-of v1, p1, Lk25;
 
-    new-instance p2, Lcom/google/android/exoplayer2/drm/DrmSession$DrmSessionException;
+    const/4 v2, 0x0
 
-    new-instance v0, Lcom/google/android/exoplayer2/drm/UnsupportedDrmException;
+    if-nez v1, :cond_1
 
-    invoke-direct {v0}, Ljava/lang/Exception;-><init>()V
+    return v2
 
-    const/16 v1, 0x1771
+    :cond_1
+    check-cast p1, Lk25;
 
-    invoke-direct {p2, v0, v1}, Lcom/google/android/exoplayer2/drm/DrmSession$DrmSessionException;-><init>(Ljava/lang/Exception;I)V
+    iget-object v1, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-    invoke-direct {p1, p2}, Lhf;-><init>(Ljava/lang/Object;)V
+    iget-object v3, p1, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-    return-object p1
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Lk25;->b:I
+
+    iget v3, p1, Lk25;->b:I
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget v1, p0, Lk25;->c:I
+
+    iget p1, p1, Lk25;->c:I
+
+    if-eq v1, p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
 .end method
 
-.method public final b(Lsb6;)I
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    iget-object p1, p1, Lsb6;->y0:Lb25;
+    iget-object v0, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->hashCode()I
 
-    const/4 p1, 0x1
+    move-result v0
 
-    return p1
+    const/16 v1, 0x1f
 
-    :cond_0
-    const/4 p1, 0x0
+    mul-int/2addr v0, v1
 
-    return p1
+    iget v2, p0, Lk25;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget v1, p0, Lk25;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final c(Landroid/os/Looper;Ljub;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    return-void
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DisplayLayout(track="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lk25;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", w="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lk25;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", h="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget v2, p0, Lk25;->c:I
+
+    invoke-static {v0, v2, v1}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

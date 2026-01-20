@@ -1,341 +1,104 @@
-.class public abstract Lgj0;
+.class public final Lgj0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final a:I
+
+.field public final b:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/util/concurrent/ExecutorService;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput p1, p0, Lgj0;->a:I
 
-    iput-boolean v0, p0, Lgj0;->a:Z
+    iput-object p2, p0, Lgj0;->b:Ljava/util/concurrent/ExecutorService;
 
     return-void
-.end method
-
-.method public static a(I)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    and-int/2addr p0, v0
-
-    if-ne p0, v0, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static b(I)Z
-    .locals 0
-
-    invoke-static {p0}, Lgj0;->a(I)Z
-
-    move-result p0
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
-.method public static l(II)Z
-    .locals 0
-
-    and-int/2addr p0, p1
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized c()V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lgj0;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :try_start_1
-    iput-boolean v0, p0, Lgj0;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-virtual {p0}, Lgj0;->d()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    instance-of v0, p1, Lgj0;
+
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :catch_0
-    move-exception v0
+    :cond_1
+    check-cast p1, Lgj0;
 
-    :try_start_3
-    invoke-virtual {p0, v0}, Lgj0;->k(Ljava/lang/Exception;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    iget v0, p0, Lgj0;->a:I
 
-    :goto_0
-    monitor-exit p0
+    iget v1, p1, Lgj0;->a:I
 
-    return-void
+    if-ne v0, v1, :cond_2
 
-    :goto_1
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    iget-object v0, p0, Lgj0;->b:Ljava/util/concurrent/ExecutorService;
 
-    throw v0
-.end method
+    iget-object p1, p1, Lgj0;->b:Ljava/util/concurrent/ExecutorService;
 
-.method public abstract d()V
-.end method
+    invoke-static {v0, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final declared-synchronized e(Ljava/lang/Throwable;)V
-    .locals 1
+    move-result p1
 
-    monitor-enter p0
+    if-eqz p1, :cond_2
 
-    :try_start_0
-    iget-boolean v0, p0, Lgj0;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 p1, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-static {p1, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    monitor-exit p0
+    move-result p1
 
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :try_start_1
-    iput-boolean v0, p0, Lgj0;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-virtual {p0, p1}, Lgj0;->f(Ljava/lang/Throwable;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    :try_start_3
-    invoke-virtual {p0, p1}, Lgj0;->k(Ljava/lang/Exception;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    if-eqz p1, :cond_2
 
     :goto_0
-    monitor-exit p0
+    const/4 p1, 0x1
 
-    return-void
+    return p1
 
+    :cond_2
     :goto_1
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+    const/4 p1, 0x0
 
-    throw p1
+    return p1
 .end method
 
-.method public abstract f(Ljava/lang/Throwable;)V
-.end method
+.method public final hashCode()I
+    .locals 4
 
-.method public final declared-synchronized g(ILjava/lang/Object;)V
-    .locals 1
+    iget v0, p0, Lgj0;->a:I
 
-    monitor-enter p0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :try_start_0
-    iget-boolean v0, p0, Lgj0;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    monitor-exit p0
+    iget-object v2, p0, Lgj0;->b:Ljava/util/concurrent/ExecutorService;
 
-    return-void
+    const/4 v3, 0x0
 
-    :cond_0
-    :try_start_1
-    invoke-static {p1}, Lgj0;->a(I)Z
+    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    iput-boolean v0, p0, Lgj0;->a:Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-virtual {p0, p1, p2}, Lgj0;->h(ILjava/lang/Object;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    :try_start_3
-    invoke-virtual {p0, p1}, Lgj0;->k(Ljava/lang/Exception;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_4
-    monitor-exit p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    throw p1
-.end method
-
-.method public abstract h(ILjava/lang/Object;)V
-.end method
-
-.method public final declared-synchronized i(F)V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lgj0;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    invoke-virtual {p0, p1}, Lgj0;->j(F)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    :try_start_2
-    invoke-virtual {p0, p1}, Lgj0;->k(Ljava/lang/Exception;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public abstract j(F)V
-.end method
-
-.method public final k(Ljava/lang/Exception;)V
-    .locals 3
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    sget-object v1, Lgm5;->a:Lr98;
-
-    const/4 v2, 0x6
-
-    invoke-interface {v1, v2}, Lr98;->h(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v1, Lgm5;->a:Lr98;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v1, p1, v0}, Lr98;->f(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    return v0
 .end method

@@ -1,47 +1,79 @@
-.class public Lb6e;
-.super Ld6e;
+.class public abstract Lb6e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final g:Ljava/util/List;
+# static fields
+.field public static final a:I
 
-.field public h:Ljava/lang/String;
+.field public static final b:I
 
-.field public i:Ljava/util/List;
+.field public static final c:I
 
-.field public j:Z
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p1, p2}, Ld6e;-><init>(J)V
+    sget v0, Lsad;->link_context_menu_action_copy_call:I
 
-    iput-object p3, p0, Lb6e;->g:Ljava/util/List;
+    sput v0, Lb6e;->a:I
+
+    sget v0, Lsad;->link_context_menu_action_copy_link:I
+
+    sput v0, Lb6e;->b:I
+
+    sget v0, Lsad;->link_context_menu_action_copy_mail:I
+
+    sput v0, Lb6e;->c:I
+
+    sget v0, Lsad;->link_context_menu_action_copy_profile:I
+
+    sput v0, Lb6e;->d:I
+
+    sget v0, Lsad;->link_context_menu_action_open_call:I
+
+    sput v0, Lb6e;->e:I
+
+    sget v0, Lsad;->link_context_menu_action_open_chat:I
+
+    sput v0, Lb6e;->f:I
+
+    sget v0, Lsad;->link_context_menu_action_open_link:I
+
+    sput v0, Lb6e;->g:I
+
+    sget v0, Lsad;->link_context_menu_action_open_mail:I
+
+    sput v0, Lb6e;->h:I
+
+    sget v0, Lsad;->link_context_menu_action_open_profile:I
+
+    sput v0, Lb6e;->i:I
+
+    sget v0, Lsad;->link_context_menu_action_open_user_chat:I
+
+    sput v0, Lb6e;->j:I
+
+    sget v0, Lsad;->send_context_menu_action_scheduled_send:I
+
+    sput v0, Lb6e;->k:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public bridge synthetic a()Le6e;
-    .locals 1
-
-    invoke-virtual {p0}, Lb6e;->b()Lc6e;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public b()Lc6e;
-    .locals 1
-
-    new-instance v0, Lc6e;
-
-    invoke-direct {v0, p0}, Lc6e;-><init>(Lb6e;)V
-
-    return-object v0
 .end method

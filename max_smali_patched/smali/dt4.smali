@@ -2,52 +2,59 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lobe;
+
+
+# static fields
+.field public static final f:Ljava/util/logging/Logger;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lux7;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public final c:J
+.field public final c:Lu4a;
 
-.field public d:J
+.field public final d:Lrm5;
 
-.field public e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public h:[I
-
-.field public final i:Ljava/util/TreeMap;
+.field public final e:Li8g;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JIII[ILjava/util/TreeMap;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-class v0, Llug;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+
+    move-result-object v0
+
+    sput-object v0, Ldt4;->f:Ljava/util/logging/Logger;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lu4a;Lux7;Lrm5;Li8g;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldt4;->a:Ljava/lang/String;
+    iput-object p1, p0, Ldt4;->b:Ljava/util/concurrent/Executor;
 
-    iput-object p2, p0, Ldt4;->b:Ljava/lang/String;
+    iput-object p2, p0, Ldt4;->c:Lu4a;
 
-    iput-wide p3, p0, Ldt4;->c:J
+    iput-object p3, p0, Ldt4;->a:Lux7;
 
-    const-wide/16 p1, 0x0
+    iput-object p4, p0, Ldt4;->d:Lrm5;
 
-    iput-wide p1, p0, Ldt4;->d:J
-
-    iput p5, p0, Ldt4;->e:I
-
-    iput p6, p0, Ldt4;->f:I
-
-    iput p7, p0, Ldt4;->g:I
-
-    iput-object p8, p0, Ldt4;->h:[I
-
-    iput-object p9, p0, Ldt4;->i:Ljava/util/TreeMap;
+    iput-object p5, p0, Ldt4;->e:Li8g;
 
     return-void
 .end method

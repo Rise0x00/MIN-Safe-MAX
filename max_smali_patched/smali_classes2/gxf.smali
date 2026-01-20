@@ -1,199 +1,346 @@
-.class public final enum Lgxf;
-.super Ljava/lang/Enum;
+.class public final Lgxf;
+.super Lyrd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lgxf;
-
-.field public static final enum Y:Lgxf;
-
-.field public static final enum Z:Lgxf;
-
-.field public static final enum b:Lgxf;
-
-.field public static final enum c:Lgxf;
-
-.field public static final enum d:Lgxf;
-
-.field public static final enum o:Lgxf;
-
-.field public static final enum s0:Lgxf;
-
-.field public static final synthetic t0:[Lgxf;
-
-
 # instance fields
-.field public final a:B
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 14
-
-    new-instance v0, Lgxf;
-
-    const-string v1, "client_hello"
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lgxf;->b:Lgxf;
-
-    new-instance v1, Lgxf;
-
-    const-string v2, "server_hello"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v1, v2, v3, v4}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lgxf;->c:Lgxf;
-
-    new-instance v2, Lgxf;
-
-    const-string v3, "new_session_ticket"
-
-    const/4 v5, 0x4
-
-    invoke-direct {v2, v3, v4, v5}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lgxf;->d:Lgxf;
-
-    new-instance v3, Lgxf;
-
-    const-string v4, "end_of_early_data"
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x5
-
-    invoke-direct {v3, v4, v6, v7}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v4, Lgxf;
-
-    const-string v6, "encrypted_extensions"
-
-    const/16 v8, 0x8
-
-    invoke-direct {v4, v6, v5, v8}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lgxf;->o:Lgxf;
-
-    new-instance v5, Lgxf;
-
-    const-string v6, "certificate"
-
-    const/16 v9, 0xb
-
-    invoke-direct {v5, v6, v7, v9}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lgxf;->X:Lgxf;
-
-    new-instance v6, Lgxf;
-
-    const/4 v7, 0x6
-
-    const/16 v9, 0xd
-
-    const-string v10, "certificate_request"
-
-    invoke-direct {v6, v10, v7, v9}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lgxf;->Y:Lgxf;
-
-    new-instance v7, Lgxf;
-
-    const/4 v9, 0x7
-
-    const/16 v10, 0xf
-
-    const-string v11, "certificate_verify"
-
-    invoke-direct {v7, v11, v9, v10}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v7, Lgxf;->Z:Lgxf;
-
-    move v9, v8
-
-    new-instance v8, Lgxf;
-
-    const-string v10, "finished"
-
-    const/16 v11, 0x14
-
-    invoke-direct {v8, v10, v9, v11}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v8, Lgxf;->s0:Lgxf;
-
-    new-instance v9, Lgxf;
-
-    const/16 v10, 0x9
-
-    const/16 v11, 0x18
-
-    const-string v12, "key_update"
-
-    invoke-direct {v9, v12, v10, v11}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v10, Lgxf;
-
-    const/16 v11, 0xa
-
-    const/16 v12, 0xfe
-
-    const-string v13, "message_hash"
-
-    invoke-direct {v10, v13, v11, v12}, Lgxf;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v10}, [Lgxf;
-
-    move-result-object v0
-
-    sput-object v0, Lgxf;->t0:[Lgxf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lgxf;->a:I
 
-    int-to-byte p1, p3
+    iput-object p1, p0, Lgxf;->b:Ljava/lang/Object;
 
-    iput-byte p1, p0, Lgxf;->a:B
+    iput-object p3, p0, Lgxf;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgxf;
+
+# virtual methods
+.method public a()V
     .locals 1
 
-    const-class v0, Lgxf;
+    iget v0, p0, Lgxf;->a:I
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    return-void
 
-    check-cast p0, Lgxf;
+    :pswitch_0
+    iget-object v0, p0, Lgxf;->b:Ljava/lang/Object;
 
-    return-object p0
+    check-cast v0, Lxgd;
+
+    invoke-static {v0}, Lxgd;->b(Lxgd;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public static values()[Lgxf;
-    .locals 1
+.method public b(II)V
+    .locals 5
 
-    sget-object v0, Lgxf;->t0:[Lgxf;
+    iget p1, p0, Lgxf;->a:I
 
-    invoke-virtual {v0}, [Lgxf;->clone()Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lkk8;->d:Lkk8;
+
+    const-class p2, Lgxf;
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lgxf;
+    iget-object v1, p0, Lgxf;->c:Ljava/lang/Object;
 
-    return-object v0
+    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v2, Lc5j;->a:Ledb;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2, p1}, Ledb;->b(Lkk8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v1
+
+    const-string v4, "onItemRangeInserted start. isComputingLayout:"
+
+    invoke-static {v4, v1}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, p1, v0, v1, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast v0, Lxgd;
+
+    invoke-static {v0}, Lxgd;->b(Lxgd;)V
+
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p2
+
+    iget-object v0, p0, Lgxf;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v1, p1}, Ledb;->b(Lkk8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v0
+
+    const-string v2, "onItemRangeInserted end. isComputingLayout:"
+
+    invoke-static {v2, v0}, Lva9;->e(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, p1, p2, v0, v3}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public c(IILjava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lgxf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Lyrd;->c(IILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lxgd;
+
+    invoke-static {p1}, Lxgd;->b(Lxgd;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(II)V
+    .locals 1
+
+    iget v0, p0, Lgxf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnog;
+
+    iget-object p2, p0, Lgxf;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1, p2}, Lnog;->d(Lnog;Landroidx/recyclerview/widget/RecyclerView;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
+
+    if-eqz p2, :cond_2
+
+    iget-object p2, v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->H0:Lnf6;
+
+    invoke-virtual {p2, p1}, Lnf6;->K(I)Ldla;
+
+    move-result-object p1
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->P0()Lqma;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lqma;->w()V
+
+    iget-object p1, p0, Lgxf;->c:Ljava/lang/Object;
+
+    check-cast p1, Lwrd;
+
+    invoke-virtual {p1, p0}, Lwrd;->C(Lyrd;)V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lxgd;
+
+    invoke-static {p1}, Lxgd;->b(Lxgd;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public e(II)V
+    .locals 1
+
+    iget v0, p0, Lgxf;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    if-eqz p1, :cond_0
+
+    if-nez p2, :cond_1
+
+    :cond_0
+    iget-object p1, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnog;
+
+    iget-object p2, p0, Lgxf;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1, p2}, Lnog;->d(Lnog;Landroidx/recyclerview/widget/RecyclerView;)V
+
+    :cond_1
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lxgd;
+
+    invoke-static {p1}, Lxgd;->b(Lxgd;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public f(II)V
+    .locals 0
+
+    iget p2, p0, Lgxf;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lnog;
+
+    iget-object p2, p0, Lgxf;->c:Ljava/lang/Object;
+
+    check-cast p2, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1, p2}, Lnog;->d(Lnog;Landroidx/recyclerview/widget/RecyclerView;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lgxf;->b:Ljava/lang/Object;
+
+    check-cast p1, Lxgd;
+
+    invoke-static {p1}, Lxgd;->b(Lxgd;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

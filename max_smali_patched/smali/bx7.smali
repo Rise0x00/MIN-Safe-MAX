@@ -1,70 +1,136 @@
 .class public final Lbx7;
-.super Lzw7;
+.super Landroid/view/GestureDetector$SimpleOnGestureListener;
 .source "SourceFile"
-
-# interfaces
-.implements Lfx7;
 
 
 # instance fields
-.field public final a:Lpx7;
+.field public a:Z
 
-.field public final b:Ly44;
+.field public final synthetic b:Ldx7;
 
 
 # direct methods
-.method public constructor <init>(Lpx7;Ly44;)V
-    .locals 1
+.method public constructor <init>(Ldx7;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbx7;->b:Ldx7;
 
-    iput-object p1, p0, Lbx7;->a:Lpx7;
+    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
-    iput-object p2, p0, Lbx7;->b:Ly44;
+    const/4 p1, 0x1
 
-    iget-object p1, p1, Lpx7;->d:Lpw7;
+    iput-boolean p1, p0, Lbx7;->a:Z
 
-    sget-object v0, Lpw7;->a:Lpw7;
-
-    if-ne p1, v0, :cond_0
-
-    invoke-static {p2}, Lfbi;->b(Ly44;)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lnx7;Low7;)V
-    .locals 1
+.method public final onDown(Landroid/view/MotionEvent;)Z
+    .locals 0
 
-    iget-object p1, p0, Lbx7;->a:Lpx7;
+    const/4 p1, 0x1
 
-    iget-object p2, p1, Lpx7;->d:Lpw7;
-
-    sget-object v0, Lpw7;->a:Lpw7;
-
-    invoke-virtual {p2, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
-
-    move-result p2
-
-    if-gtz p2, :cond_0
-
-    invoke-virtual {p1, p0}, Lpx7;->f(Ljx7;)V
-
-    iget-object p1, p0, Lbx7;->b:Ly44;
-
-    invoke-static {p1}, Lfbi;->b(Ly44;)V
-
-    :cond_0
-    return-void
+    return p1
 .end method
 
-.method public final getCoroutineContext()Ly44;
-    .locals 1
+.method public final onLongPress(Landroid/view/MotionEvent;)V
+    .locals 5
 
-    iget-object v0, p0, Lbx7;->b:Ly44;
+    iget-boolean v0, p0, Lbx7;->a:Z
 
-    return-object v0
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lbx7;->b:Ldx7;
+
+    invoke-virtual {v0, p1}, Ldx7;->o(Landroid/view/MotionEvent;)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, v0, Ldx7;->C0:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView;->T(Landroid/view/View;)Ltsd;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Ldx7;->x0:Lcx7;
+
+    iget-object v2, v0, Ldx7;->C0:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget v3, v1, Lcx7;->c:I
+
+    iget v1, v1, Lcx7;->b:I
+
+    or-int v4, v1, v3
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v1, v4
+
+    shl-int/lit8 v3, v3, 0x10
+
+    or-int/2addr v1, v3
+
+    sget-object v3, Lxsh;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {v2}, Landroid/view/View;->getLayoutDirection()I
+
+    move-result v2
+
+    invoke-static {v1, v2}, Lcx7;->b(II)I
+
+    move-result v1
+
+    const/high16 v2, 0xff0000
+
+    and-int/2addr v1, v2
+
+    if-eqz v1, :cond_1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getPointerId(I)I
+
+    move-result v1
+
+    iget v2, v0, Ldx7;->w0:I
+
+    if-ne v1, v2, :cond_1
+
+    invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
+
+    move-result v1
+
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getX(I)F
+
+    move-result v2
+
+    invoke-virtual {p1, v1}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result p1
+
+    iput v2, v0, Ldx7;->d:F
+
+    iput p1, v0, Ldx7;->o:F
+
+    const/4 p1, 0x0
+
+    iput p1, v0, Ldx7;->t0:F
+
+    iput p1, v0, Ldx7;->Z:F
+
+    iget-object p1, v0, Ldx7;->x0:Lcx7;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_1
+    :goto_0
+    return-void
 .end method

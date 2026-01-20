@@ -2,43 +2,113 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# instance fields
+.field public final a:Landroid/util/Size;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Lone/me/sdk/gl/effects/VideoMessageStencilHolder;
+
+.field public final f:Lone/me/sdk/gl/effects/objects/FrameBuffer;
 
 
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 4
+# direct methods
+.method public constructor <init>(Landroid/util/Size;)V
+    .locals 6
 
-    new-instance v0, Lgrf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    iput-object p1, p0, Lfrf;->a:Landroid/util/Size;
 
-    move-result v1
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    move-result v0
+
+    iput v0, p0, Lfrf;->b:I
+
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    iput v0, p0, Lfrf;->c:I
+
+    const-class v0, Lfrf;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lfrf;->d:Ljava/lang/String;
+
+    new-instance v1, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;
+
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v2
 
-    const-class v3, Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
-    invoke-virtual {v3}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    move-result v3
 
-    move-result-object v3
+    invoke-direct {v1, v2, v3}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;-><init>(II)V
 
-    invoke-virtual {p1, v3}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+    iput-object v1, p0, Lfrf;->e:Lone/me/sdk/gl/effects/VideoMessageStencilHolder;
+
+    new-instance v2, Lone/me/sdk/gl/effects/objects/FrameBuffer;
+
+    invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
+
+    move-result v3
+
+    invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
+
+    move-result v4
+
+    invoke-direct {v2, v3, v4}, Lone/me/sdk/gl/effects/objects/FrameBuffer;-><init>(II)V
+
+    iput-object v2, p0, Lfrf;->f:Lone/me/sdk/gl/effects/objects/FrameBuffer;
+
+    sget-object v2, Lc5j;->a:Ledb;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v3, Lkk8;->d:Lkk8;
+
+    invoke-virtual {v2, v3}, Ledb;->b(Lkk8;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "init, previewSize="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1, v1, v2}, Lgrf;-><init>(Ljava/util/List;II)V
+    const/4 v4, 0x0
 
-    return-object v0
-.end method
+    invoke-virtual {v2, v3, v0, p1, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-.method public final newArray(I)[Ljava/lang/Object;
-    .locals 0
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    new-array p1, p1, [Lgrf;
+    invoke-virtual {v1, p1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->notifyRecording(Z)Z
 
-    return-object p1
+    return-void
 .end method

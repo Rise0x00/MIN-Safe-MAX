@@ -1,49 +1,61 @@
-.class public abstract Ln4b;
-.super Ljava/lang/Object;
+.class public final Ln4b;
+.super Lxdj;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
+.field public static final a:Ln4b;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lztc;->oneme_stickers_preview_action_favorite_title:I
+    new-instance v0, Ln4b;
 
-    sput v0, Ln4b;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lztc;->oneme_stickers_preview_action_forward_title:I
-
-    sput v0, Ln4b;->b:I
-
-    sget v0, Lztc;->oneme_stickers_preview_action_in_favorite_title:I
-
-    sput v0, Ln4b;->c:I
-
-    sget v0, Lztc;->oneme_stickers_preview_action_send_title:I
-
-    sput v0, Ln4b;->d:I
-
-    sget v0, Lztc;->oneme_stickers_preview_snackbar_favorite_added:I
-
-    sput v0, Ln4b;->e:I
-
-    sget v0, Lztc;->oneme_stickers_preview_snackbar_favorite_removed:I
-
-    sput v0, Ln4b;->f:I
+    sput-object v0, Ln4b;->a:Ln4b;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Ln4b;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x2654655d
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Dot"
+
+    return-object v0
 .end method

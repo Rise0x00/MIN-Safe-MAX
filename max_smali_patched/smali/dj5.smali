@@ -1,52 +1,103 @@
-.class public final Ldj5;
+.class public interface abstract Ldj5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lnj5;
+# static fields
+.field public static final r:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lnj5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    iput-object p1, p0, Ldj5;->a:Lnj5;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const/16 v0, 0xa
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/16 v0, 0x8
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/16 v0, 0xb
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const/4 v0, 0x6
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const/4 v0, 0x5
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    const/4 v0, 0x4
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    const/16 v0, 0x9
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    const/4 v0, 0x7
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v10
+
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    filled-new-array/range {v1 .. v11}, [Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Ldj5;->r:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public abstract i(I)Z
+.end method
 
-    iget-object v0, p0, Ldj5;->a:Lnj5;
-
-    iget-boolean v1, v0, Lnj5;->N0:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v0, Lnj5;->M0:Lysd;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    goto :goto_0
-
-    :cond_0
-    iget-boolean v1, v0, Lnj5;->c1:Z
-
-    if-eqz v1, :cond_1
-
-    :goto_0
-    iget-object v0, v0, Lnj5;->Z:Lhjf;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lhjf;->f(I)Z
-
-    :cond_1
-    return-void
+.method public abstract k(I)Lej5;
 .end method

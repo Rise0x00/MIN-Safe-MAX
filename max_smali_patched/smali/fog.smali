@@ -1,8 +1,13 @@
-.class public interface abstract Lfog;
+.class public abstract Lfog;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Landroid/content/Context;Lfy0;Llb3;ZLi22;)Lhog;
+# direct methods
+.method public static a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setTooltipText(Ljava/lang/CharSequence;)V
+
+    return-void
 .end method

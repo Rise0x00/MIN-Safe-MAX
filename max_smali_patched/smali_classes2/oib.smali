@@ -1,94 +1,109 @@
-.class public final Loib;
-.super Logf;
+.class public abstract Loib;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic X:Lqib;
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>(Lqib;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Loib;->X:Lqib;
+    sget v0, Ly9d;->oneme_settings_change_avatar_cancel:I
 
-    const/4 p1, 0x2
+    sput v0, Loib;->a:I
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget v0, Ly9d;->oneme_settings_change_avatar_upload_from_camera:I
+
+    sput v0, Loib;->b:I
+
+    sget v0, Ly9d;->oneme_settings_change_avatar_upload_from_gallery:I
+
+    sput v0, Loib;->c:I
+
+    sget v0, Ly9d;->oneme_settings_change_avatar_upload_from_neuroavatars:I
+
+    sput v0, Loib;->d:I
+
+    sget v0, Ly9d;->oneme_settings_collapsingstoolbar:I
+
+    sput v0, Loib;->e:I
+
+    sget v0, Ly9d;->oneme_settings_container:I
+
+    sput v0, Loib;->f:I
+
+    sget v0, Ly9d;->oneme_settings_list_screen_appbar:I
+
+    sput v0, Loib;->g:I
+
+    sget v0, Ly9d;->oneme_settings_list_screen_pinned_toolbar:I
+
+    sput v0, Loib;->h:I
+
+    sget v0, Ly9d;->oneme_settings_toolbar:I
+
+    sput v0, Loib;->i:I
+
+    sget v0, Ly9d;->oneme_settings_topbar:I
+
+    sput v0, Loib;->j:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_avatar:I
+
+    sput v0, Loib;->k:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_container:I
+
+    sput v0, Loib;->l:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_dotdivider:I
+
+    sput v0, Loib;->m:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_name:I
+
+    sput v0, Loib;->n:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_nick:I
+
+    sput v0, Loib;->o:I
+
+    sget v0, Ly9d;->oneme_settings_topbar_phone:I
+
+    sput v0, Loib;->p:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lrib;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Loib;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Loib;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Loib;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Loib;
-
-    iget-object v1, p0, Loib;->X:Lqib;
-
-    invoke-direct {v0, v1, p2}, Loib;-><init>(Lqib;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Loib;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Loib;->o:Ljava/lang/Object;
-
-    check-cast p1, Lrib;
-
-    sget-object v0, Lrib;->a:Lrib;
-
-    if-ne p1, v0, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "denied"
-
-    :goto_0
-    iget-object v0, p0, Loib;->X:Lqib;
-
-    const-string v1, "microphone"
-
-    invoke-static {v0, v1, p1}, Lqib;->a(Lqib;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

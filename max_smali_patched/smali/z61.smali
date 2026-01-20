@@ -1,59 +1,59 @@
 .class public final Lz61;
-.super Ljava/lang/Object;
+.super Laq;
 .source "SourceFile"
 
-# interfaces
-.implements Lbq1;
 
-
-# instance fields
-.field public final synthetic a:Lf0c;
+# static fields
+.field public static final a:Lz61;
 
 
 # direct methods
-.method public constructor <init>(Lf0c;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lz61;
 
-    iput-object p1, p0, Lz61;->a:Lf0c;
+    invoke-direct {v0}, Laq;-><init>()V
+
+    sput-object v0, Lz61;->a:Lz61;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
-    .locals 1
+.method public final a()Lvy1;
+    .locals 2
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;->isFirstConnection()Z
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    move-result p1
+    move-result-object v0
 
-    if-nez p1, :cond_0
+    const/16 v1, 0x1e
 
-    sget-object p1, Lf61;->c:Lf61;
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
-    iget-object v0, p0, Lz61;->a:Lf0c;
+    move-result-object v0
 
-    check-cast v0, Lc0c;
+    check-cast v0, Lvy1;
 
-    invoke-virtual {v0, p1}, Lc0c;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
+    return-object v0
 .end method
 
-.method public final onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
-    .locals 1
+.method public final b()Lqx1;
+    .locals 2
 
-    sget-object p1, Lg61;->c:Lg61;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    iget-object v0, p0, Lz61;->a:Lf0c;
+    move-result-object v0
 
-    check-cast v0, Lc0c;
+    const/16 v1, 0x14
 
-    invoke-virtual {v0, p1}, Lc0c;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, Lqx1;
+
+    return-object v0
 .end method

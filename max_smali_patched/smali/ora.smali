@@ -3,23 +3,11 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
+    .locals 0
 
-    sget v0, Ldrc;->call_users_in_wait_room_count:I
-
-    sput v0, Lora;->a:I
-
-    sget v0, Ldrc;->call_users_info_count:I
-
-    sput v0, Lora;->b:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigLargeIcon(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
 
     return-void
 .end method

@@ -1,14 +1,11 @@
-.class public interface abstract Lhpi;
-.super Ljava/lang/Object;
+.class public abstract Lhpi;
+.super Lhqi;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract a(Lvg7;)Ljava/util/ArrayList;
+.method public abstract f(Lepi;)Z
 .end method
 
-.method public abstract b()V
-.end method
-
-.method public abstract c()Z
+.method public abstract g(Lepi;)[Lvx5;
 .end method

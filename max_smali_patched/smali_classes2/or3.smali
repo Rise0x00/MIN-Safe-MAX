@@ -1,33 +1,23 @@
-.class public abstract Lor3;
+.class public final Lor3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lun3;
+# instance fields
+.field public final a:Lt07;
+
+.field public b:Ljava/lang/Boolean;
+
+.field public c:Ljava/lang/Float;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lt07;)V
+    .locals 0
 
-    new-instance v0, Lun3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Lvsa;->k:I
-
-    sget v2, Lmkd;->q:I
-
-    new-instance v3, Lirf;
-
-    invoke-direct {v3, v2}, Lirf;-><init>(I)V
-
-    const/4 v2, 0x2
-
-    const/16 v4, 0x38
-
-    invoke-direct {v0, v1, v3, v2, v4}, Lun3;-><init>(ILnrf;II)V
-
-    sput-object v0, Lor3;->a:Lun3;
+    iput-object p1, p0, Lor3;->a:Lt07;
 
     return-void
 .end method

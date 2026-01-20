@@ -1,148 +1,239 @@
-.class public final Lr9h;
-.super Logf;
+.class public final synthetic Lr9h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Llo3;
+.implements Lsv8;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lfoa;
 
-.field public final synthetic Y:Ls9h;
-
-.field public final synthetic Z:Lv9h;
-
-.field public o:I
+.field public final synthetic b:Lp7h;
 
 
 # direct methods
-.method public constructor <init>(Ls9h;Lv9h;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lfoa;Lp7h;)V
     .locals 0
 
-    iput-object p1, p0, Lr9h;->Y:Ls9h;
+    iput-object p1, p0, Lr9h;->a:Lfoa;
 
-    iput-object p2, p0, Lr9h;->Z:Lv9h;
+    iput-object p2, p0, Lr9h;->b:Lp7h;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public b(Ldo3;)V
+    .locals 5
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object v0, p0, Lr9h;->a:Lfoa;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lr9h;->b:Lp7h;
 
-    invoke-virtual {p0, p1, p2}, Lr9h;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "foa"
 
-    move-result-object p1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    check-cast p1, Lr9h;
+    const-string v4, "removeUpload: upload="
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Lr9h;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p1
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v2, v0, Lfoa;->c:Ljava/lang/Object;
+
+    check-cast v2, Lt9h;
+
+    invoke-virtual {v2, v1}, Lt9h;->d(Lp7h;)Lbo3;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lfoa;->b:Ln8g;
+
+    invoke-virtual {v3}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lp9h;
+
+    invoke-interface {v3, v1}, Lp9h;->d(Lp7h;)Lbo3;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Lbo3;->c(Lbo3;)Lco3;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lbo3;->a()V
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Ldo3;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Ldo3;->b()V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+.method public c(Lhv8;)V
+    .locals 5
 
-    new-instance v0, Lr9h;
+    iget-object v0, p0, Lr9h;->a:Lfoa;
 
-    iget-object v1, p0, Lr9h;->Y:Ls9h;
+    iget-object v1, p0, Lr9h;->b:Lp7h;
 
-    iget-object v2, p0, Lr9h;->Z:Lv9h;
+    const-string v2, "foa"
 
-    invoke-direct {v0, v1, v2, p2}, Lr9h;-><init>(Ls9h;Lv9h;Lkotlin/coroutines/Continuation;)V
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Lr9h;->X:Ljava/lang/Object;
+    const-string v4, "getUpload: upload="
 
-    return-object v0
-.end method
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lr9h;->o:I
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v1, 0x1
+    move-result-object v3
 
-    if-eqz v0, :cond_1
+    invoke-static {v2, v3}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-ne v0, v1, :cond_0
+    monitor-enter v0
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :try_start_0
+    iget-object v2, v0, Lfoa;->c:Ljava/lang/Object;
+
+    check-cast v2, Lt9h;
+
+    invoke-virtual {v2, v1}, Lt9h;->e(Lp7h;)Lev8;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lev8;->a()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lq6h;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_0
+    const/4 v2, 0x0
+
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v2, :cond_0
+
+    :try_start_2
+    iget-object v3, v0, Lfoa;->b:Ln8g;
+
+    invoke-virtual {v3}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lp9h;
+
+    invoke-interface {v3, v1}, Lp9h;->e(Lp7h;)Lev8;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lfoa;->c:Ljava/lang/Object;
+
+    check-cast v0, Lt9h;
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Lq9h;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v4, v0}, Lq9h;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Ltv8;
+
+    sget-object v4, Lhbe;->d:Lkme;
+
+    invoke-direct {v0, v1, v3, v4}, Ltv8;-><init>(Lev8;Lay3;Lay3;)V
+
+    invoke-virtual {v0}, Lev8;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lq6h;
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    move-object v2, v0
+
+    :catch_1
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-virtual {p1}, Lhv8;->e()Z
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result v0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_2
 
-    throw p1
+    if-nez v2, :cond_1
+
+    invoke-virtual {p1}, Lhv8;->b()V
+
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lr9h;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object v0, p0, Lr9h;->Y:Ls9h;
-
-    invoke-static {v0, p1}, Ls9h;->e(Ls9h;Ljava/lang/Throwable;)Leq7;
-
-    move-result-object v4
-
-    iget-object p1, v0, Ls9h;->c:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v2, p1
-
-    check-cast v2, Lbe3;
-
-    iget-object v3, v0, Ls9h;->e:Lfv0;
-
-    iget-object p1, p0, Lr9h;->Z:Lv9h;
-
-    iget-object v6, p1, Lv9h;->a:Ljava/lang/String;
-
-    iput v1, p0, Lr9h;->o:I
-
-    sget-object v5, Li9h;->a:Li9h;
-
-    move-object v7, p0
-
-    invoke-virtual/range {v2 .. v7}, Lbe3;->a(Lu72;Leq7;Lbch;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    invoke-virtual {p1, v2}, Lhv8;->a(Ljava/lang/Object;)V
 
     :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    :goto_1
+    return-void
 
-    return-object p1
+    :goto_2
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
 .end method

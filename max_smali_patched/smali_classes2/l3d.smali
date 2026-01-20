@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x7ab69f16
+    const v0, -0x55c70cd5
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "PerformErrorHaptic"
+    const-string v0, "ModePhotoTaking"
 
     return-object v0
 .end method

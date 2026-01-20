@@ -1,747 +1,262 @@
 .class public final Lgzf;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
-
-# static fields
-.field public static final i:J
-
-.field public static final synthetic j:I
+# interfaces
+.implements Lxb6;
+.implements Lb1g;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public volatile X:Z
 
-.field public final b:Ljtg;
+.field public final a:Lz0g;
 
-.field public final c:Lu30;
+.field public final b:Liz;
 
-.field public final d:Lcom/google/firebase/messaging/FirebaseMessaging;
+.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field public final e:Lbt;
+.field public final d:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public final f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-.field public g:Z
-
-.field public final h:Lezf;
+.field public final o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lz0g;)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    const-wide/16 v1, 0x8
+    iput-object p1, p0, Lgzf;->a:Lz0g;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+    new-instance p1, Liz;
 
-    move-result-wide v0
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput-wide v0, Lgzf;->i:J
+    iput-object p1, p0, Lgzf;->b:Liz;
 
-    return-void
-.end method
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
 
-.method public constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;Ljtg;Lezf;Lu30;Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
-    .locals 2
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgzf;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
-    new-instance v0, Lbt;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 v1, 0x0
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {v0, v1}, Llpe;-><init>(I)V
+    iput-object p1, p0, Lgzf;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object v0, p0, Lgzf;->e:Lbt;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-boolean v1, p0, Lgzf;->g:Z
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    iput-object p1, p0, Lgzf;->d:Lcom/google/firebase/messaging/FirebaseMessaging;
-
-    iput-object p2, p0, Lgzf;->b:Ljtg;
-
-    iput-object p3, p0, Lgzf;->h:Lezf;
-
-    iput-object p4, p0, Lgzf;->c:Lu30;
-
-    iput-object p5, p0, Lgzf;->a:Landroid/content/Context;
-
-    iput-object p6, p0, Lgzf;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    iput-object p1, p0, Lgzf;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
-.end method
-
-.method public static a(Lj1j;)V
-    .locals 2
-
-    :try_start_0
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v0, 0x1e
-
-    invoke-static {p0, v0, v1}, Lby9;->b(Lcom/google/android/gms/tasks/Task;J)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/io/IOException;
-
-    const-string v1, "SERVICE_NOT_AVAILABLE"
-
-    invoke-direct {v0, v1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :catch_1
-    move-exception p0
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    instance-of v1, v0, Ljava/io/IOException;
-
-    if-nez v1, :cond_1
-
-    instance-of v1, v0, Ljava/lang/RuntimeException;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Ljava/lang/RuntimeException;
-
-    throw v0
-
-    :cond_0
-    new-instance v0, Ljava/io/IOException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :cond_1
-    check-cast v0, Ljava/io/IOException;
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/String;)V
+.method public final b()V
+    .locals 3
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lgzf;->X:Z
+
+    iget-object v0, p0, Lgzf;->a:Lz0g;
+
+    iget-object v1, p0, Lgzf;->b:Liz;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1, v0}, Liz;->f(Lz0g;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final cancel()V
+    .locals 1
+
+    iget-boolean v0, p0, Lgzf;->X:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lgzf;->d:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v0}, Le1g;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final d(Lb1g;)V
     .locals 5
 
-    iget-object v0, p0, Lgzf;->d:Lcom/google/firebase/messaging/FirebaseMessaging;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->a()Ljava/lang/String;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    iget-object v2, p0, Lgzf;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    new-instance v1, Landroid/os/Bundle;
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    move-result v0
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v3, "/topics/"
+    iget-object v0, p0, Lgzf;->a:Lz0g;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0, p0}, Lz0g;->d(Lb1g;)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lgzf;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, "gcm.topic"
-
-    invoke-virtual {v1, v4, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object v2, p0, Lgzf;->c:Lu30;
-
-    invoke-virtual {v2, v0, p1, v1}, Lu30;->m(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lj1j;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Lu30;->c(Lj1j;)Lj1j;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lgzf;->a(Lj1j;)V
-
-    return-void
-.end method
-
-.method public final c(Ljava/lang/String;)V
-    .locals 5
-
-    iget-object v0, p0, Lgzf;->d:Lcom/google/firebase/messaging/FirebaseMessaging;
-
-    invoke-virtual {v0}, Lcom/google/firebase/messaging/FirebaseMessaging;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "/topics/"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v4, "gcm.topic"
-
-    invoke-virtual {v1, v4, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "delete"
-
-    const-string v4, "1"
-
-    invoke-virtual {v1, v2, v4}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object v2, p0, Lgzf;->c:Lu30;
-
-    invoke-virtual {v2, v0, p1, v1}, Lu30;->m(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lj1j;
-
-    move-result-object p1
-
-    invoke-virtual {v2, p1}, Lu30;->c(Lj1j;)Lj1j;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lgzf;->a(Lj1j;)V
-
-    return-void
-.end method
-
-.method public final declared-synchronized d(Z)V
-    .locals 0
-
-    monitor-enter p0
-
-    :try_start_0
-    iput-boolean p1, p0, Lgzf;->g:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final e()Z
-    .locals 13
-
-    :goto_0
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lgzf;->h:Lezf;
-
-    invoke-virtual {v0}, Lezf;->a()Ldzf;
-
-    move-result-object v0
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    if-nez v0, :cond_1
-
-    const-string v0, "FirebaseMessaging"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+    invoke-static {v0, p1}, Le1g;->d(Ljava/util/concurrent/atomic/AtomicReference;Lb1g;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string v0, "FirebaseMessaging"
+    iget-object v0, p0, Lgzf;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
-    const-string v1, "topic sync succeeded"
+    const-wide/16 v1, 0x0
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
 
-    goto :goto_1
+    move-result-wide v3
 
-    :catchall_0
-    move-exception v0
+    cmp-long v0, v3, v1
 
-    goto/16 :goto_9
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1, v3, v4}, Lb1g;->f(J)V
 
     :cond_0
-    :goto_1
-    monitor-exit p0
-
-    return v2
+    return-void
 
     :cond_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {p1}, Lb1g;->cancel()V
 
-    const-string v3, " succeeded."
+    invoke-virtual {p0}, Lgzf;->cancel()V
 
-    const-string v4, "FirebaseMessaging"
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string v5, "Unknown topic operation"
+    const-string v0, "\u00a72.12 violated: onSubscribe must be called at most once"
 
-    const-string v6, "Subscribe to topic: "
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const-string v7, "Unsubscribe from topic: "
+    invoke-virtual {p0, p1}, Lgzf;->onError(Ljava/lang/Throwable;)V
 
-    const/4 v8, 0x0
-
-    :try_start_1
-    iget-object v9, v0, Ldzf;->b:Ljava/lang/String;
-
-    iget-object v10, v0, Ldzf;->a:Ljava/lang/String;
-
-    invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
-
-    move-result v11
-
-    const/16 v12, 0x53
-
-    if-eq v11, v12, :cond_3
-
-    const/16 v12, 0x55
-
-    if-eq v11, v12, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    const-string v11, "U"
-
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_4
-
-    move v9, v2
-
-    goto :goto_3
-
-    :catch_0
-    move-exception v0
-
-    goto/16 :goto_6
-
-    :cond_3
-    const-string v11, "S"
-
-    invoke-virtual {v9, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_4
-
-    move v9, v8
-
-    goto :goto_3
-
-    :cond_4
-    :goto_2
-    const/4 v9, -0x1
-
-    :goto_3
-    if-eqz v9, :cond_6
-
-    if-eq v9, v2, :cond_5
-
-    const-string v2, "FirebaseMessaging"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, "."
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_4
-
-    :cond_5
-    invoke-virtual {p0, v10}, Lgzf;->c(Ljava/lang/String;)V
-
-    const-string v2, "FirebaseMessaging"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_4
-
-    :cond_6
-    invoke-virtual {p0, v10}, Lgzf;->b(Ljava/lang/String;)V
-
-    const-string v2, "FirebaseMessaging"
-
-    invoke-static {v2, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :cond_7
-    :goto_4
-    iget-object v1, p0, Lgzf;->h:Lezf;
-
-    monitor-enter v1
-
-    :try_start_2
-    iget-object v2, v1, Lezf;->a:Lsh4;
-
-    iget-object v3, v0, Ldzf;->c:Ljava/lang/String;
-
-    iget-object v4, v2, Lsh4;->d:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/ArrayDeque;
-
-    monitor-enter v4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_3
-
-    :try_start_3
-    iget-object v5, v2, Lsh4;->d:Ljava/lang/Object;
-
-    check-cast v5, Ljava/util/ArrayDeque;
-
-    invoke-virtual {v5, v3}, Ljava/util/ArrayDeque;->remove(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_8
-
-    iget-object v3, v2, Lsh4;->o:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    new-instance v5, Ldke;
-
-    const/4 v6, 0x1
-
-    invoke-direct {v5, v6, v2}, Ldke;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v3, v5}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_8
-    monitor-exit v4
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    monitor-exit v1
-
-    iget-object v2, p0, Lgzf;->e:Lbt;
-
-    monitor-enter v2
-
-    :try_start_4
-    iget-object v0, v0, Ldzf;->c:Ljava/lang/String;
-
-    iget-object v1, p0, Lgzf;->e:Lbt;
-
-    invoke-virtual {v1, v0}, Llpe;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    monitor-exit v2
-
-    goto/16 :goto_0
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_5
-
-    :cond_9
-    iget-object v1, p0, Lgzf;->e:Lbt;
-
-    invoke-virtual {v1, v0}, Llpe;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lsof;
-
-    if-eqz v3, :cond_a
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v4}, Lsof;->b(Ljava/lang/Object;)V
-
-    :cond_a
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    iget-object v1, p0, Lgzf;->e:Lbt;
-
-    invoke-virtual {v1, v0}, Llpe;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_b
-    monitor-exit v2
-
-    goto/16 :goto_0
-
-    :goto_5
-    monitor-exit v2
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    throw v0
-
-    :catchall_2
-    move-exception v0
-
-    :try_start_5
-    monitor-exit v4
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
-
-    :try_start_6
-    throw v0
-
-    :catchall_3
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_3
-
-    throw v0
-
-    :goto_6
-    const-string v1, "SERVICE_NOT_AVAILABLE"
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_e
-
-    const-string v1, "INTERNAL_SERVER_ERROR"
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_e
-
-    const-string v1, "TOO_MANY_SUBSCRIBERS"
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_c
-
-    goto :goto_7
-
-    :cond_c
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_d
-
-    const-string v0, "Topic operation failed without exception message. Will retry Topic operation."
-
-    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_8
-
-    :cond_d
-    throw v0
-
-    :cond_e
-    :goto_7
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Topic operation failed: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ". Will retry Topic operation."
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :goto_8
-    return v8
-
-    :goto_9
-    :try_start_7
-    monitor-exit p0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    throw v0
+    return-void
 .end method
 
 .method public final f(J)V
-    .locals 10
+    .locals 2
 
-    const-wide/16 v0, 0x2
+    const-wide/16 v0, 0x0
 
-    mul-long/2addr v0, p1
+    cmp-long v0, p1, v0
 
-    const-wide/16 v2, 0x1e
+    if-gtz v0, :cond_0
 
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
+    invoke-virtual {p0}, Lgzf;->cancel()V
 
-    move-result-wide v0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    sget-wide v2, Lgzf;->i:J
+    const-string v1, "\u00a73.9 violated: positive request amount required but it was "
 
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+    invoke-static {p1, p2, v1}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
 
-    move-result-wide v8
+    move-result-object p1
 
-    new-instance v4, Lizf;
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v6, p0, Lgzf;->a:Landroid/content/Context;
+    invoke-virtual {p0, v0}, Lgzf;->onError(Ljava/lang/Throwable;)V
 
-    iget-object v7, p0, Lgzf;->b:Ljtg;
+    return-void
 
-    move-object v5, p0
+    :cond_0
+    iget-object v0, p0, Lgzf;->d:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-direct/range {v4 .. v9}, Lizf;-><init>(Lgzf;Landroid/content/Context;Ljtg;J)V
+    iget-object v1, p0, Lgzf;->c:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iget-object v0, v5, Lgzf;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    invoke-static {v0, v1, p1, p2}, Le1g;->b(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;J)V
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    return-void
+.end method
 
-    invoke-virtual {v0, v4, p1, p2, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
 
-    const/4 p1, 0x1
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1}, Lgzf;->d(Z)V
+    iput-boolean v0, p0, Lgzf;->X:Z
 
+    iget-object v0, p0, Lgzf;->a:Lz0g;
+
+    iget-object v1, p0, Lgzf;->b:Liz;
+
+    invoke-virtual {v1, p1}, Liz;->b(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {v1, v0}, Liz;->f(Lz0g;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lgzf;->a:Lz0g;
+
+    invoke-interface {v0, p1}, Lz0g;->r(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p0, Lgzf;->b:Liz;
+
+    invoke-virtual {p1, v0}, Liz;->f(Lz0g;)V
+
+    :cond_1
+    :goto_0
     return-void
 .end method

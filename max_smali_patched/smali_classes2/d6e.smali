@@ -3,36 +3,35 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final a:I
 
-.field public b:Lhd9;
+.field public static final b:I
 
-.field public c:J
+.field public static final c:I
 
-.field public d:Z
-
-.field public e:Ljava/lang/String;
-
-.field public f:Lbq4;
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lr5d;->gray_66:I
 
-    const/4 v0, 0x1
+    sput v0, Ld6e;->a:I
 
-    iput-boolean v0, p0, Ld6e;->d:Z
+    sget v0, Lr5d;->range_seek_bar_border_shadow_color:I
 
-    iput-wide p1, p0, Ld6e;->a:J
+    sput v0, Ld6e;->b:I
+
+    sget v0, Lr5d;->white:I
+
+    sput v0, Ld6e;->c:I
+
+    sget v0, Lr5d;->white_50:I
+
+    sput v0, Ld6e;->d:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()Le6e;
 .end method

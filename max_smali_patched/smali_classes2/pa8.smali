@@ -1,174 +1,168 @@
-.class public final enum Lpa8;
-.super Ljava/lang/Enum;
+.class public final Lpa8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltgb;
+.implements Lxa8;
+.implements Lva8;
 
 
 # static fields
-.field public static final enum X:Lpa8;
-
-.field public static final enum Y:Lpa8;
-
-.field public static final enum Z:Lpa8;
-
-.field public static final enum b:Lpa8;
-
-.field public static final enum c:Lpa8;
-
-.field public static final enum d:Lpa8;
-
-.field public static final enum o:Lpa8;
-
-.field public static final synthetic s0:[Lpa8;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpa8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:I
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/Long;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 2
 
-    new-instance v0, Lpa8;
+    new-instance v0, Lj58;
 
-    const/4 v1, 0x0
+    const/16 v1, 0x11
 
-    const/16 v2, 0x64
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
-    const-string v3, "SOCKET_CLOSED"
-
-    invoke-direct {v0, v3, v1, v2}, Lpa8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lpa8;->b:Lpa8;
-
-    new-instance v1, Lpa8;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0x6e
-
-    const-string v4, "SESSION_FORCE_UPDATE"
-
-    invoke-direct {v1, v4, v2, v3}, Lpa8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lpa8;->c:Lpa8;
-
-    new-instance v2, Lpa8;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x6f
-
-    const-string v5, "SESSION_RESTART"
-
-    invoke-direct {v2, v5, v3, v4}, Lpa8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lpa8;->d:Lpa8;
-
-    new-instance v3, Lpa8;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0x78
-
-    const-string v6, "LOGIN_DROP_CACHE"
-
-    invoke-direct {v3, v6, v4, v5}, Lpa8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lpa8;->o:Lpa8;
-
-    new-instance v4, Lpa8;
-
-    const/4 v5, 0x4
-
-    const/16 v6, 0x79
-
-    const-string v7, "LOGIN_BACK_BLOCKED"
-
-    invoke-direct {v4, v7, v5, v6}, Lpa8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lpa8;->X:Lpa8;
-
-    new-instance v5, Lpa8;
-
-    const/4 v6, 0x5
-
-    const/16 v7, 0x7a
-
-    const-string v8, "LOGIN_RESTART"
-
-    invoke-direct {v5, v8, v6, v7}, Lpa8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v5, Lpa8;->Y:Lpa8;
-
-    new-instance v6, Lpa8;
-
-    const/4 v7, 0x6
-
-    const/16 v8, 0x7b
-
-    const-string v9, "LOGIN_UNKNOWN"
-
-    invoke-direct {v6, v9, v7, v8}, Lpa8;-><init>(Ljava/lang/String;II)V
-
-    sput-object v6, Lpa8;->Z:Lpa8;
-
-    filled-new-array/range {v0 .. v6}, [Lpa8;
-
-    move-result-object v0
-
-    sput-object v0, Lpa8;->s0:[Lpa8;
+    sput-object v0, Lpa8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(JJLjava/lang/Long;Ljava/lang/String;I)V
+    .locals 8
+
+    and-int/lit8 v0, p7, 0x2
+
+    if-eqz v0, :cond_0
+
+    const-wide/16 p3, 0x0
+
+    :cond_0
+    move-wide v3, p3
+
+    and-int/lit8 p3, p7, 0x8
+
+    if-eqz p3, :cond_1
+
+    const/4 p5, 0x0
+
+    :cond_1
+    move-object v6, p5
+
+    const/4 v5, 0x0
+
+    move-object v0, p0
+
+    move-wide v1, p1
+
+    move-object v7, p6
+
+    .line 1
+    invoke-direct/range {v0 .. v7}, Lpa8;-><init>(JJZLjava/lang/Long;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JJZLjava/lang/Long;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lpa8;->a:I
+    .line 3
+    iput-wide p1, p0, Lpa8;->a:J
+
+    .line 4
+    iput-wide p3, p0, Lpa8;->b:J
+
+    .line 5
+    iput-boolean p5, p0, Lpa8;->c:Z
+
+    .line 6
+    iput-object p6, p0, Lpa8;->d:Ljava/lang/Long;
+
+    .line 7
+    iput-object p7, p0, Lpa8;->o:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lpa8;
-    .locals 1
-
-    const-class v0, Lpa8;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lpa8;
-
-    return-object p0
-.end method
-
-.method public static values()[Lpa8;
-    .locals 1
-
-    sget-object v0, Lpa8;->s0:[Lpa8;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lpa8;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final describeContents()I
     .locals 1
 
-    iget v0, p0, Lpa8;->a:I
+    const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final n()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lpa8;->o:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Lpa8;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-wide v0, p0, Lpa8;->b:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-boolean p2, p0, Lpa8;->c:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p2, p0, Lpa8;->d:Ljava/lang/Long;
+
+    if-nez p2, :cond_0
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    :goto_0
+    iget-object p2, p0, Lpa8;->o:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

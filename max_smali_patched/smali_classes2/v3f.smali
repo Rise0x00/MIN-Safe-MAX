@@ -1,21 +1,32 @@
 .class public final Lv3f;
-.super Lu1d;
+.super Ljef;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:J
+# virtual methods
+.method public final C()V
+    .locals 0
 
+    return-void
+.end method
 
-# direct methods
-.method public constructor <init>(JJ)V
+.method public final y(Lud8;)V
     .locals 1
 
-    sget-object v0, Li2d;->d:Li2d;
+    instance-of v0, p1, Lyje;
 
-    invoke-direct {p0, v0, p3, p4}, Lu1d;-><init>(Li2d;J)V
+    if-nez v0, :cond_0
 
-    iput-wide p1, p0, Lv3f;->c:J
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+
+    check-cast v0, Lt0f;
+
+    check-cast p1, Lj0f;
+
+    invoke-virtual {v0, p1}, Lt0f;->setModelItem(Lj0f;)V
 
     return-void
 .end method

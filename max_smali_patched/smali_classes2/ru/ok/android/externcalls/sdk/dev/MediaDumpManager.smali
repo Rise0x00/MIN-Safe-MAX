@@ -21,7 +21,7 @@
         "",
         "",
         "path",
-        "Lybg;",
+        "Lb3h;",
         "setLocalAudioDumpLocation",
         "(Ljava/lang/String;)V",
         "",

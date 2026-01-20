@@ -4,20 +4,18 @@
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Z
+.field public final a:Lnsi;
 
 
 # direct methods
-.method public constructor <init>(IZ)V
+.method public constructor <init>(Lnsi;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lmdc;->a:I
+    invoke-static {p1}, Ldkj;->g(Ljava/lang/Object;)V
 
-    iput-boolean p2, p0, Lmdc;->b:Z
+    iput-object p1, p0, Lmdc;->a:Lnsi;
 
     return-void
 .end method
@@ -25,62 +23,97 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    instance-of v0, p1, Lmdc;
 
-    goto :goto_0
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
 
     :cond_0
-    if-eqz p1, :cond_2
+    :try_start_0
+    iget-object v0, p0, Lmdc;->a:Lnsi;
 
-    const-class v0, Lmdc;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
     check-cast p1, Lmdc;
 
-    iget v0, p0, Lmdc;->a:I
+    iget-object p1, p1, Lmdc;->a:Lnsi;
 
-    iget v1, p1, Lmdc;->a:I
+    check-cast v0, Lisi;
 
-    if-ne v0, v1, :cond_2
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
 
-    iget-boolean v0, p0, Lmdc;->b:Z
+    move-result-object v2
 
-    iget-boolean p1, p1, Lmdc;->b:Z
+    invoke-static {v2, p1}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    if-ne v0, p1, :cond_2
+    const/16 p1, 0xf
 
-    :goto_0
-    const/4 p1, 0x1
+    invoke-virtual {v0, v2, p1}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    return p1
+    move-result-object p1
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    return p1
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception p1
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget v0, p0, Lmdc;->a:I
+    :try_start_0
+    iget-object v0, p0, Lmdc;->a:Lnsi;
 
-    mul-int/lit8 v0, v0, 0x1f
+    check-cast v0, Lisi;
 
-    iget-boolean v1, p0, Lmdc;->b:Z
+    invoke-virtual {v0}, Lwoi;->V()Landroid/os/Parcel;
 
-    add-int/2addr v0, v1
+    move-result-object v1
 
-    return v0
+    const/16 v2, 0x10
+
+    invoke-virtual {v0, v1, v2}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

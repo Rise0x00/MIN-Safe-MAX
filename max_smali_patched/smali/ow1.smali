@@ -1,25 +1,25 @@
 .class public final Low1;
-.super Lp14;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lqw1;
+.field public final synthetic X:Lpw1;
 
 .field public Y:I
 
-.field public d:Lqw1;
+.field public d:Lfjc;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lqw1;Lp14;)V
+.method public constructor <init>(Lpw1;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Low1;->X:Lqw1;
+    iput-object p1, p0, Low1;->X:Lpw1;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -39,9 +39,11 @@
 
     iput p1, p0, Low1;->Y:I
 
-    iget-object p1, p0, Low1;->X:Lqw1;
+    iget-object p1, p0, Low1;->X:Lpw1;
 
-    invoke-virtual {p1, p0}, Lqw1;->a(Lp14;)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lpw1;->j(Lfjc;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

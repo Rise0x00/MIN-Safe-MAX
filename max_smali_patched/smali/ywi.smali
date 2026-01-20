@@ -1,107 +1,109 @@
-.class public abstract Lywi;
-.super Lhni;
+.class public final Lywi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Set;
+.implements Lyjj;
+.implements Lh2b;
+.implements Lz1b;
+.implements Lw1b;
 
 
 # instance fields
-.field public transient b:Lqti;
+.field public final synthetic a:I
+
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Lm84;
+
+.field public final d:Liqj;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lm84;Liqj;I)V
+    .locals 0
+
+    iput p4, p0, Lywi;->a:I
+
+    iput-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p2, p0, Lywi;->c:Lm84;
+
+    iput-object p3, p0, Lywi;->d:Liqj;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public a(Ljava/lang/Object;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lywi;->d:Liqj;
 
-    if-eq p1, p0, :cond_3
+    invoke-virtual {v0, p1}, Liqj;->o(Ljava/lang/Object;)V
 
-    if-ne p1, p0, :cond_0
+    return-void
+.end method
 
-    return v0
+.method public final b(Lcom/google/android/gms/tasks/Task;)V
+    .locals 3
 
-    :cond_0
-    instance-of v1, p1, Ljava/util/Set;
+    iget v0, p0, Lywi;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ldkg;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p0, v1, p1}, Ldkg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lkuf;
+
+    const/16 v1, 0x9
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_2
+    invoke-direct {v0, p0, p1, v2, v1}, Lkuf;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    check-cast p1, Ljava/util/Set;
+    iget-object p1, p0, Lywi;->b:Ljava/util/concurrent/Executor;
 
-    :try_start_0
-    invoke-interface {p0}, Ljava/util/Set;->size()I
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    move-result v1
+    return-void
 
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_2
-
-    invoke-interface {p0, p1}, Ljava/util/Set;->containsAll(Ljava/util/Collection;)Z
-
-    move-result p1
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-nez p1, :cond_1
-
-    return v2
-
-    :cond_1
-    return v0
-
-    :catch_0
-    :cond_2
-    return v2
-
-    :cond_3
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public e()V
+    .locals 1
 
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lywi;->d:Liqj;
 
-    move-result-object v0
+    invoke-virtual {v0}, Liqj;->p()V
 
-    const/4 v1, 0x0
+    return-void
+.end method
 
-    move v2, v1
+.method public onFailure(Ljava/lang/Exception;)V
+    .locals 1
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p0, Lywi;->d:Liqj;
 
-    move-result v3
+    invoke-virtual {v0, p1}, Liqj;->n(Ljava/lang/Exception;)V
 
-    if-eqz v3, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_0
-    move v3, v1
-
-    :goto_1
-    add-int/2addr v2, v3
-
-    goto :goto_0
-
-    :cond_1
-    return v2
+    return-void
 .end method

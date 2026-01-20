@@ -36,7 +36,7 @@
         "getTime",
         "(J)J",
         "statItem",
-        "Lybg;",
+        "Lb3h;",
         "sendStat",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)V",
         "Lru/ok/android/externcalls/sdk/log/LogItem;",

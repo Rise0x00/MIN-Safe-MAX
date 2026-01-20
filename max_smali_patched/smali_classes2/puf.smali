@@ -1,64 +1,110 @@
 .class public final Lpuf;
-.super Lm7d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lznf;
+.implements Lem4;
 
 
-# instance fields
-.field public final E0:Landroidx/appcompat/widget/AppCompatTextView;
+# static fields
+.field public static final a:Lpuf;
+
+.field public static final b:Lquf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0, p1}, Lm7d;-><init>(Landroid/view/View;)V
+    new-instance v0, Lpuf;
 
-    move-object v0, p1
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    check-cast v0, Landroidx/appcompat/widget/AppCompatTextView;
+    sput-object v0, Lpuf;->a:Lpuf;
 
-    iput-object v0, p0, Lpuf;->E0:Landroidx/appcompat/widget/AppCompatTextView;
+    sget-object v0, Lquf;->b:Lquf;
 
-    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lon4;->e0:Lon4;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget-object v0, Lvnf;->a0:Ltif;
-
-    invoke-static {p1}, Lri7;->o(Landroid/content/Context;)Lvnf;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-virtual {p0, p1}, Lpuf;->k(Lvnf;)V
+    sput-object v0, Lpuf;->b:Lquf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(Lvnf;)V
+.method public final a()Llm4;
     .locals 1
 
-    iget-object v0, p0, Lpuf;->E0:Landroidx/appcompat/widget/AppCompatTextView;
+    sget-object v0, Lpuf;->b:Lquf;
 
-    iget p1, p1, Lvnf;->F:I
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+.method public final b(Ljava/lang/String;Lhm4;Landroid/os/Bundle;)Lom4;
+    .locals 9
 
-    return-void
+    sget-object v0, Lpuf;->b:Lquf;
+
+    iget-object v0, v0, Llm4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    sget-object v0, Lquf;->b:Lquf;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lquf;->c:Lhm4;
+
+    invoke-virtual {p2, v0}, Lhm4;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v1, Lom4;
+
+    new-instance v7, Ljr1;
+
+    const/16 v0, 0xd
+
+    invoke-direct {v7, p3, v0}, Ljr1;-><init>(Landroid/os/Bundle;I)V
+
+    const/16 v8, 0x10
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v8}, Lom4;-><init>(Ljava/lang/String;Lhm4;Landroid/os/Bundle;ILmm4;Lnm4;I)V
+
+    return-object v1
+
+    :cond_1
+    move-object v3, p2
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "invalid route "
+
+    invoke-static {p2, v3}, Lt02;->i(Ljava/lang/String;Lhm4;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

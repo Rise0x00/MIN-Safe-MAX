@@ -1,215 +1,164 @@
-.class public final synthetic Lcz2;
-.super Ljava/lang/Object;
+.class public final Lcz2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ll03;
 
-.field public final synthetic b:Z
+.field public final synthetic Y:Ljava/lang/Long;
 
-.field public final synthetic c:Z
+.field public final synthetic Z:Ljava/lang/Long;
 
-.field public final synthetic d:Ljava/lang/Object;
+.field public o:I
+
+.field public final synthetic t0:Ljava/lang/CharSequence;
+
+.field public final synthetic u0:Ljava/util/List;
+
+.field public final synthetic v0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lv1f;ZZ)V
-    .locals 1
+.method public constructor <init>(Ll03;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/util/List;ZLkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x1
+    iput-object p1, p0, Lcz2;->X:Ll03;
 
-    iput v0, p0, Lcz2;->a:I
+    iput-object p2, p0, Lcz2;->Y:Ljava/lang/Long;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lcz2;->Z:Ljava/lang/Long;
 
-    iput-object p1, p0, Lcz2;->d:Ljava/lang/Object;
+    iput-object p4, p0, Lcz2;->t0:Ljava/lang/CharSequence;
 
-    iput-boolean p2, p0, Lcz2;->b:Z
+    iput-object p5, p0, Lcz2;->u0:Ljava/util/List;
 
-    iput-boolean p3, p0, Lcz2;->c:Z
+    iput-boolean p6, p0, Lcz2;->v0:Z
 
-    return-void
-.end method
+    const/4 p1, 0x2
 
-.method public synthetic constructor <init>(ZLone/me/chats/search/ChatsListSearchScreen;Z)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcz2;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lcz2;->b:Z
-
-    iput-object p2, p0, Lcz2;->d:Ljava/lang/Object;
-
-    iput-boolean p3, p0, Lcz2;->c:Z
+    invoke-direct {p0, p1, p7}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lcz2;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lcz2;->d:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lcz2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lv1f;
+    move-result-object p1
 
-    iget-boolean v1, p0, Lcz2;->b:Z
+    check-cast p1, Lcz2;
 
-    iget-boolean v2, p0, Lcz2;->c:Z
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v3, v0, Lv1f;->b:Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lcz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v3, Lx68;
+    move-result-object p1
 
-    iget-object v3, v3, Lx68;->n:Lcwc;
+    return-object p1
+.end method
 
-    new-instance v4, Ljava/lang/StringBuilder;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 8
 
-    const-string v5, "capture state changed, isCapturing="
+    new-instance v0, Lcz2;
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v5, p0, Lcz2;->u0:Ljava/util/List;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-boolean v6, p0, Lcz2;->v0:Z
 
-    const-string v5, ", isFailedStart="
+    iget-object v1, p0, Lcz2;->X:Ll03;
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lcz2;->Y:Ljava/lang/Long;
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lcz2;->Z:Ljava/lang/Long;
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v4, p0, Lcz2;->t0:Ljava/lang/CharSequence;
 
-    move-result-object v4
+    move-object v7, p2
 
-    const-string v5, "OKRTCLmsAdapter"
+    invoke-direct/range {v0 .. v7}, Lcz2;-><init>(Ll03;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/util/List;ZLkotlin/coroutines/Continuation;)V
 
-    invoke-interface {v3, v5, v4}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    iget-object v3, v0, Lv1f;->b:Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    check-cast v3, Lx68;
+    iget v0, p0, Lcz2;->o:I
 
-    iget-object v3, v3, Lx68;->r:Lrz1;
+    const/4 v1, 0x1
 
-    if-nez v3, :cond_0
+    if-eqz v0, :cond_1
 
-    goto :goto_1
+    if-ne v0, v1, :cond_0
 
-    :cond_0
-    if-eqz v1, :cond_1
-
-    iget-object v2, v3, Lrz1;->f:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lx68;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_1
-    if-eqz v2, :cond_2
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_3
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcz2;->X:Ll03;
+
+    iget-object v2, p1, Ll03;->Z:Lzc5;
+
+    iget-object p1, p0, Lcz2;->Y:Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    iget-object p1, p0, Lcz2;->Z:Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
+
+    iput v1, p0, Lcz2;->o:I
+
+    iget-object v7, p0, Lcz2;->t0:Ljava/lang/CharSequence;
+
+    iget-object v8, p0, Lcz2;->u0:Ljava/util/List;
+
+    iget-boolean v9, p0, Lcz2;->v0:Z
+
+    move-object v10, p0
+
+    invoke-virtual/range {v2 .. v10}, Lzc5;->a(JJLjava/lang/CharSequence;Ljava/util/List;ZLp6g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    invoke-virtual {v3}, Lrz1;->b()V
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :cond_3
-    :goto_1
-    iget-object v2, v0, Lv1f;->b:Ljava/lang/Object;
-
-    check-cast v2, Lx68;
-
-    iget-object v2, v2, Lx68;->x:Lv68;
-
-    if-eqz v2, :cond_4
-
-    invoke-interface {v2, v1}, Lv68;->b(Z)V
-
-    :cond_4
-    iget-object v0, v0, Lv1f;->b:Ljava/lang/Object;
-
-    check-cast v0, Lx68;
-
-    iget-object v1, v0, Lx68;->c:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_2
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ly68;
-
-    invoke-interface {v2, v0}, Ly68;->b(Lx68;)V
-
-    goto :goto_2
-
-    :cond_5
-    :goto_3
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Lcz2;->b:Z
-
-    iget-object v1, p0, Lcz2;->d:Ljava/lang/Object;
-
-    check-cast v1, Lone/me/chats/search/ChatsListSearchScreen;
-
-    iget-boolean v2, p0, Lcz2;->c:Z
-
-    sget-object v3, Lone/me/chats/search/ChatsListSearchScreen;->I0:[Les7;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v1}, Lone/me/chats/search/ChatsListSearchScreen;->B0()V
-
-    :cond_6
-    invoke-virtual {v1, v2}, Lone/me/chats/search/ChatsListSearchScreen;->C0(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

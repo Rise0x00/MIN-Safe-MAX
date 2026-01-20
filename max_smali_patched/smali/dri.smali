@@ -1,71 +1,137 @@
-.class public abstract Ldri;
-.super Ljava/lang/Object;
+.class public final Ldri;
+.super Lhri;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lg8i;
+# instance fields
+.field public final transient c:I
 
-.field public static final b:Lg8i;
+.field public final transient d:I
 
-.field public static c:Landroid/content/Context;
+.field public final synthetic o:Lhri;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lhri;II)V
+    .locals 0
 
-    new-instance v0, Lg8i;
+    iput-object p1, p0, Ldri;->o:Lhri;
 
-    const-string v1, "0\u0082\u0005\u00c80\u0082\u0003\u00b0\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0010\u008ae\u0008s\u00f9/\u008eQ\u00ed"
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-static {v1}, Lhii;->W(Ljava/lang/String;)[B
+    iput p2, p0, Ldri;->c:I
 
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v2, v1}, Lg8i;-><init>(I[B)V
-
-    new-instance v0, Lg8i;
-
-    const-string v1, "0\u0082\u0006\u00040\u0082\u0003\u00ec\u00a0\u0003\u0002\u0001\u0002\u0002\u0014\u0003\u00a3\u00b2\u00ad\u00d7\u00e1r\u00cak\u00ec"
-
-    invoke-static {v1}, Lhii;->W(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v2, v1}, Lg8i;-><init>(I[B)V
-
-    new-instance v0, Lg8i;
-
-    const-string v1, "0\u0082\u0004C0\u0082\u0003+\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00c2\u00e0\u0087FdJ0\u008d0"
-
-    invoke-static {v1}, Lhii;->W(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v2, v1}, Lg8i;-><init>(I[B)V
-
-    sput-object v0, Ldri;->a:Lg8i;
-
-    new-instance v0, Lg8i;
-
-    const-string v1, "0\u0082\u0004\u00a80\u0082\u0003\u0090\u00a0\u0003\u0002\u0001\u0002\u0002\t\u0000\u00d5\u0085\u00b8l}\u00d3N\u00f50"
-
-    invoke-static {v1}, Lhii;->W(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v2, v1}, Lg8i;-><init>(I[B)V
-
-    sput-object v0, Ldri;->b:Lg8i;
+    iput p3, p0, Ldri;->d:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final b()I
+    .locals 2
+
+    iget-object v0, p0, Ldri;->o:Lhri;
+
+    invoke-virtual {v0}, Lxqi;->c()I
+
+    move-result v0
+
+    iget v1, p0, Ldri;->c:I
+
+    add-int/2addr v0, v1
+
+    iget v1, p0, Ldri;->d:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 2
+
+    iget-object v0, p0, Ldri;->o:Lhri;
+
+    invoke-virtual {v0}, Lxqi;->c()I
+
+    move-result v0
+
+    iget v1, p0, Ldri;->c:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final d()[Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Ldri;->o:Lhri;
+
+    invoke-virtual {v0}, Lxqi;->d()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final e(II)Lhri;
+    .locals 1
+
+    iget v0, p0, Ldri;->d:I
+
+    invoke-static {p1, p2, v0}, Lkbj;->h(III)V
+
+    iget v0, p0, Ldri;->c:I
+
+    add-int/2addr p1, v0
+
+    add-int/2addr p2, v0
+
+    iget-object v0, p0, Ldri;->o:Lhri;
+
+    invoke-virtual {v0, p1, p2}, Lhri;->e(II)Lhri;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Ldri;->d:I
+
+    invoke-static {p1, v0}, Lkbj;->f(II)V
+
+    iget v0, p0, Ldri;->c:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Ldri;->o:Lhri;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Ldri;->d:I
+
+    return v0
+.end method
+
+.method public final bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Ldri;->e(II)Lhri;
+
+    move-result-object p1
+
+    return-object p1
 .end method

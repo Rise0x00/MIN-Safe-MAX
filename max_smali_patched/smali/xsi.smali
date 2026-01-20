@@ -1,80 +1,92 @@
-.class public final Lxsi;
+.class public abstract Lxsi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
-
 
 # static fields
-.field public static final a:Lxsi;
+.field public static final a:Latc;
+
+.field public static b:Latc;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lxsi;
+    new-instance v0, Latc;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lxsi;->a:Lxsi;
+    const/16 v2, 0xa
 
-    new-instance v0, Lz7i;
+    invoke-direct {v0, v1, v1, v1, v2}, Latc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    sput-object v0, Lxsi;->a:Latc;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/String;)Z
+    .locals 1
 
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+    const-string v0, "GET"
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p1
+    move-result v0
 
-    throw p1
+    if-nez v0, :cond_0
+
+    const-string v0, "HEAD"
+
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final b(Ljava/io/Reader;)Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/io/StringWriter;
+
+    invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
+
+    const/16 v1, 0x2000
+
+    new-array v1, v1, [C
+
+    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
+
+    move-result v2
+
+    :goto_0
+    if-ltz v2, :cond_0
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v3, v2}, Ljava/io/Writer;->write([CII)V
+
+    invoke-virtual {p0, v1}, Ljava/io/Reader;->read([C)I
+
+    move-result v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

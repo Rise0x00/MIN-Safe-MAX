@@ -2,182 +2,105 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb51;
 
-# instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/Conversation;
 
-.field public final b:Lami;
+# static fields
+.field public static final a:Lx41;
 
-.field public final c:Z
+.field public static final b:I
 
-.field public final d:Z
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation;Lami;ZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lx41;
 
-    iput-object p1, p0, Lx41;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lx41;->b:Lami;
+    sput-object v0, Lx41;->a:Lx41;
 
-    iput-boolean p3, p0, Lx41;->c:Z
+    const/16 v0, 0x40
 
-    iput-boolean p4, p0, Lx41;->d:Z
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lx41;->b:I
+
+    const/16 v0, 0x20
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lx41;->c:I
+
+    const/4 v0, 0x1
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lx41;->d:I
+
+    const/4 v0, 0x6
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lx41;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a()I
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lx41;->c:I
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lx41;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lx41;
-
-    iget-object v0, p0, Lx41;->a:Lru/ok/android/externcalls/sdk/Conversation;
-
-    iget-object v1, p1, Lx41;->a:Lru/ok/android/externcalls/sdk/Conversation;
-
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lx41;->b:Lami;
-
-    iget-object v1, p1, Lx41;->b:Lami;
-
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lx41;->c:Z
-
-    iget-boolean v1, p1, Lx41;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lx41;->d:Z
-
-    iget-boolean p1, p1, Lx41;->d:Z
-
-    if-eq v0, p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return v0
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final b()I
+    .locals 1
 
-    iget-object v0, p0, Lx41;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    sget v0, Lx41;->d:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lx41;->b:Lami;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-boolean v0, p0, Lx41;->c:Z
-
-    invoke-static {v2, v1, v0}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lx41;->d:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final c()I
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget v0, Lx41;->b:I
 
-    const-string v1, "Result(conversation="
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final d()I
+    .locals 1
 
-    iget-object v1, p0, Lx41;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    sget v0, Lx41;->e:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", callTarget="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx41;->b:Lami;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isNewCall="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isIncoming="
-
-    const-string v2, ")"
-
-    iget-boolean v3, p0, Lx41;->c:Z
-
-    iget-boolean v4, p0, Lx41;->d:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lcd0;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

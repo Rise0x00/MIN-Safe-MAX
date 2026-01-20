@@ -1,286 +1,66 @@
-.class public final synthetic Ln0;
+.class public final Ln0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/function/ToIntFunction;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Z
+
+.field public final synthetic b:Lbj4;
+
+.field public final synthetic c:Z
+
+.field public final synthetic d:Lo0;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lo0;ZLbj4;Z)V
     .locals 0
 
-    iput p1, p0, Ln0;->a:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ln0;->d:Lo0;
+
+    iput-boolean p2, p0, Ln0;->a:Z
+
+    iput-object p3, p0, Ln0;->b:Lbj4;
+
+    iput-boolean p4, p0, Ln0;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final applyAsInt(Ljava/lang/Object;)I
-    .locals 2
+.method public final run()V
+    .locals 3
 
-    iget v0, p0, Ln0;->a:I
+    iget-boolean v0, p0, Ln0;->a:Z
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Ln0;->d:Lo0;
 
-    check-cast p1, Leic;
+    iget-object v2, p0, Ln0;->b:Lbj4;
 
-    invoke-virtual {p1}, Leic;->c()I
+    if-eqz v0, :cond_0
 
-    move-result p1
+    invoke-interface {v2, v1}, Lbj4;->b(Lpi4;)V
 
-    return p1
+    return-void
 
-    :pswitch_0
-    check-cast p1, Leic;
+    :cond_0
+    iget-boolean v0, p0, Ln0;->c:Z
 
-    check-cast p1, Ll9f;
+    if-eqz v0, :cond_1
 
-    iget p1, p1, Ll9f;->d:I
+    invoke-interface {v2}, Lbj4;->c()V
 
-    return p1
+    return-void
 
-    :pswitch_1
-    check-cast p1, Lfic;
+    :cond_1
+    invoke-interface {v2, v1}, Lbj4;->d(Lpi4;)V
 
-    iget-object p1, p1, Lfic;->c:Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
-
-    move-result-object p1
-
-    new-instance v0, Loc8;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Loc8;-><init>(I)V
-
-    invoke-interface {p1, v0}, Ljava/util/stream/Stream;->filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-
-    move-result-object p1
-
-    new-instance v0, Ln0;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Ln0;-><init>(I)V
-
-    invoke-interface {p1, v0}, Ljava/util/stream/Stream;->mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/stream/IntStream;->sum()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_2
-    check-cast p1, Leic;
-
-    invoke-virtual {p1}, Leic;->c()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_3
-    check-cast p1, Leic;
-
-    invoke-virtual {p1}, Leic;->c()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_4
-    check-cast p1, Lhxf;
-
-    sget-object v0, Los7;->c:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_5
-    check-cast p1, [B
-
-    array-length p1, p1
-
-    return p1
-
-    :pswitch_6
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/String;
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    add-int/2addr p1, v0
-
-    return p1
-
-    :pswitch_7
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_8
-    check-cast p1, Le83;
-
-    iget-object p1, p1, Le83;->a:[B
-
-    array-length p1, p1
-
-    add-int/lit8 p1, p1, 0x1
-
-    return p1
-
-    :pswitch_9
-    check-cast p1, Lf83;
-
-    iget-object p1, p1, Lf83;->a:[B
-
-    array-length p1, p1
-
-    add-int/lit8 p1, p1, 0x6
-
-    return p1
-
-    :pswitch_a
-    check-cast p1, Llk5;
-
-    invoke-virtual {p1}, Llk5;->a()[B
-
-    move-result-object p1
-
-    array-length p1, p1
-
-    return p1
-
-    :pswitch_b
-    check-cast p1, [B
-
-    array-length p1, p1
-
-    return p1
-
-    :pswitch_c
-    check-cast p1, Ljavax/security/auth/x500/X500Principal;
-
-    invoke-virtual {p1}, Ljavax/security/auth/x500/X500Principal;->getEncoded()[B
-
-    move-result-object p1
-
-    array-length p1, p1
-
-    return p1
-
-    :pswitch_d
-    check-cast p1, Ljava/lang/String;
-
-    const-string v0, "UTF-8"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object p1
-
-    array-length p1, p1
-
-    return p1
-
-    :pswitch_e
-    check-cast p1, Lfic;
-
-    invoke-virtual {p1}, Lfic;->o()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_f
-    check-cast p1, Lfic;
-
-    invoke-virtual {p1}, Lfic;->o()I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_10
-    check-cast p1, Lfic;
-
-    invoke-virtual {p1}, Lfic;->o()I
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

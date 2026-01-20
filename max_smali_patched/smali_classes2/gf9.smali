@@ -1,58 +1,98 @@
-.class public final synthetic Lgf9;
-.super Ljava/lang/Object;
+.class public final Lgf9;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-.field public final synthetic b:Landroid/graphics/drawable/Drawable;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
     .locals 0
 
-    iput p2, p0, Lgf9;->a:I
+    iput-object p2, p0, Lgf9;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-    iput-object p1, p0, Lgf9;->b:Landroid/graphics/drawable/Drawable;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lgf9;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lgf9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lgf9;->b:Landroid/graphics/drawable/Drawable;
+    move-result-object p1
 
-    check-cast v0, Landroid/graphics/drawable/AnimationDrawable;
+    check-cast p1, Lgf9;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/AnimationDrawable;->start()V
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-void
+    invoke-virtual {p1, p2}, Lgf9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lgf9;->b:Landroid/graphics/drawable/Drawable;
+    return-object p2
+.end method
 
-    invoke-static {v0}, Lhf9;->d(Landroid/graphics/drawable/Drawable;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-void
+    new-instance v0, Lgf9;
 
-    nop
+    iget-object v1, p0, Lgf9;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v0, p2, v1}, Lgf9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
+
+    iput-object p1, v0, Lgf9;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lgf9;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lef9;
+
+    sget-object p1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lz28;
+
+    iget-object p1, p0, Lgf9;->X:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+
+    iget-object p1, p1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->o:Lro0;
+
+    sget-object v1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lz28;
+
+    const/4 v2, 0x2
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {p1}, Lro0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lne9;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Laf9;->a:Laf9;
+
+    invoke-virtual {p1, v0}, Lne9;->setSelected(Ldf9;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

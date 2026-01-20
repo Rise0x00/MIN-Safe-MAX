@@ -2,270 +2,193 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyl5;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lpj6;
+
+.field public final c:Lpj6;
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Lpj6;Lpj6;II)V
+    .locals 1
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lrl4;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/lit8 p1, p1, 0x1
+    if-eqz p4, :cond_1
 
-    if-eqz p1, :cond_0
-
-    .line 2
-    new-instance p1, Lire;
-
-    const/4 v0, 0x2
-
-    const-string v1, "image/jpeg"
-
-    const v2, 0xffd8
-
-    invoke-direct {p1, v2, v0, v1}, Lire;-><init>(IILjava/lang/String;)V
-
-    iput-object p1, p0, Lrl4;->b:Ljava/lang/Object;
+    if-nez p5, :cond_0
 
     goto :goto_0
 
-    .line 3
     :cond_0
-    new-instance p1, Lop7;
-
-    invoke-direct {p1}, Lop7;-><init>()V
-
-    iput-object p1, p0, Lrl4;->b:Ljava/lang/Object;
-
-    :goto_0
-    return-void
-.end method
-
-.method public constructor <init>(Lub6;)V
-    .locals 1
-
     const/4 v0, 0x0
 
-    iput v0, p0, Lrl4;->a:I
+    goto :goto_1
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
 
-    .line 5
-    iput-object p1, p0, Lrl4;->b:Ljava/lang/Object;
+    :goto_1
+    invoke-static {v0}, Lh6j;->b(Z)V
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iput-object p1, p0, Lrl4;->a:Ljava/lang/String;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lrl4;->b:Lpj6;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p3, p0, Lrl4;->c:Lpj6;
+
+    iput p4, p0, Lrl4;->d:I
+
+    iput p5, p0, Lrl4;->e:I
 
     return-void
-.end method
 
-.method private final a()V
-    .locals 0
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    return-void
-.end method
+    invoke-direct {p1}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-.method private final b(JJ)V
-    .locals 0
-
-    return-void
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final d(JJ)V
-    .locals 1
-
-    iget v0, p0, Lrl4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lrl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lyl5;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Lyl5;->d(JJ)V
-
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final i(Lam5;)Z
-    .locals 1
-
-    iget v0, p0, Lrl4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lrl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lyl5;
-
-    invoke-interface {v0, p1}, Lyl5;->i(Lam5;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final release()V
-    .locals 1
-
-    iget v0, p0, Lrl4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lrl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lyl5;
-
-    invoke-interface {v0}, Lyl5;->release()V
-
-    :pswitch_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final w(Lcm5;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lrl4;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lrl4;->b:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lyl5;
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-interface {v0, p1}, Lyl5;->w(Lcm5;)V
+    if-eqz p1, :cond_2
 
-    return-void
+    const-class v2, Lrl4;
 
-    :pswitch_0
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v1, 0x3
+    move-result-object v3
 
-    invoke-interface {p1, v0, v1}, Lcm5;->B(II)Ln1g;
-
-    move-result-object v0
-
-    new-instance v1, Lje0;
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct {v1, v2, v3}, Lje0;-><init>(J)V
-
-    invoke-interface {p1, v1}, Lcm5;->Q(Liyd;)V
-
-    invoke-interface {p1}, Lcm5;->w()V
-
-    iget-object p1, p0, Lrl4;->b:Ljava/lang/Object;
-
-    check-cast p1, Lub6;
-
-    invoke-virtual {p1}, Lub6;->a()Lrb6;
-
-    move-result-object v1
-
-    const-string v2, "text/x-unknown"
-
-    invoke-static {v2}, Lcs9;->n(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Lrb6;->m:Ljava/lang/String;
-
-    iget-object p1, p1, Lub6;->n:Ljava/lang/String;
-
-    iput-object p1, v1, Lrb6;->j:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lo3h;->o(Lrb6;Ln1g;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final y(Lam5;Ls7;)I
-    .locals 1
-
-    iget v0, p0, Lrl4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lrl4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lyl5;
-
-    invoke-interface {v0, p1, p2}, Lyl5;->y(Lam5;Ls7;)I
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    const p2, 0x7fffffff
-
-    invoke-interface {p1, p2}, Lam5;->v(I)I
-
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_0
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p2, 0x0
+    :cond_1
+    check-cast p1, Lrl4;
 
+    iget v2, p0, Lrl4;->d:I
+
+    iget v3, p1, Lrl4;->d:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lrl4;->e:I
+
+    iget v3, p1, Lrl4;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lrl4;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lrl4;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lrl4;->b:Lpj6;
+
+    iget-object v3, p1, Lrl4;->b:Lpj6;
+
+    invoke-virtual {v2, v3}, Lpj6;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lrl4;->c:Lpj6;
+
+    iget-object p1, p1, Lrl4;->c:Lpj6;
+
+    invoke-virtual {v2, p1}, Lpj6;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
     :goto_0
-    return p2
+    return v1
+.end method
 
-    nop
+.method public final hashCode()I
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    const/16 v0, 0x20f
+
+    iget v1, p0, Lrl4;->d:I
+
+    add-int/2addr v0, v1
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lrl4;->e:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lrl4;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lrl4;->b:Lpj6;
+
+    invoke-virtual {v2}, Lpj6;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lrl4;->c:Lpj6;
+
+    invoke-virtual {v0}, Lpj6;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
 .end method

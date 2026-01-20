@@ -1,112 +1,92 @@
 .class public final Lc3c;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/startconversation/chat/PickChatMembers;
 
-.field public final synthetic b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chat/PickChatMembers;)V
     .locals 0
 
-    iput p2, p0, Lc3c;->a:I
+    iput-object p2, p0, Lc3c;->X:Lone/me/startconversation/chat/PickChatMembers;
 
-    iput-object p1, p0, Lc3c;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p1, p0, Lc3c;->a:I
+    check-cast p1, Ljava/util/Set;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p0, Lc3c;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
-    invoke-virtual {p1}, Lc24;->getRouter()Lyid;
+    invoke-virtual {p0, p1, p2}, Lc3c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lyid;->C()Z
+    check-cast p1, Lc3c;
 
-    return-void
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :pswitch_0
-    iget-object p1, p0, Lc3c;->b:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    invoke-virtual {p1, p2}, Lc3c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sget-object v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->X:[Les7;
+    return-object p2
+.end method
 
-    iget-object p1, p1, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->c:Lru7;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    new-instance v0, Lc3c;
+
+    iget-object v1, p0, Lc3c;->X:Lone/me/startconversation/chat/PickChatMembers;
+
+    invoke-direct {v0, p2, v1}, Lc3c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chat/PickChatMembers;)V
+
+    iput-object p1, v0, Lc3c;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lc3c;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Set;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-static {v0}, Lpi3;->a0(Ljava/util/Collection;)[J
 
     move-result-object p1
 
-    check-cast p1, Ll3c;
+    iget-object v0, p0, Lc3c;->X:Lone/me/startconversation/chat/PickChatMembers;
 
-    iget-object v0, p1, Ll3c;->t0:Lgye;
+    iget-object v1, v0, Lone/me/startconversation/chat/PickChatMembers;->u0:Lls;
 
-    if-eqz v0, :cond_0
+    sget-object v2, Lone/me/startconversation/chat/PickChatMembers;->y0:[Lz28;
 
-    invoke-virtual {v0}, Lo0;->isActive()Z
+    const/4 v3, 0x0
 
-    move-result v0
+    aget-object v2, v2, v3
 
-    const/4 v1, 0x1
+    invoke-virtual {v1, v0, p1}, Lls;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
-    if-ne v0, v1, :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p1, Ll3c;->o:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltlf;
-
-    check-cast v0, Lsta;
-
-    invoke-virtual {v0}, Lsta;->b()La54;
-
-    move-result-object v0
-
-    new-instance v1, Lk3c;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Lk3c;-><init>(Ll3c;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    invoke-static {p1, v0, v1, v2}, Ljzg;->r(Ljzg;Ly44;Lej6;I)Lgye;
-
-    move-result-object v0
-
-    iput-object v0, p1, Ll3c;->t0:Lgye;
-
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

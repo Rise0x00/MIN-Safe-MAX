@@ -1,86 +1,353 @@
-.class public abstract Llnc;
+.class public final Llnc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static chat__audio_record:I = 0x7f0a0238
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static chat__background:I = 0x7f0a0239
+.field public final b:J
 
-.field public static chat__bottom_container:I = 0x7f0a023a
+.field public final c:Ljava/lang/CharSequence;
 
-.field public static chat__bottom_container_chat_status_button:I = 0x7f0a023b
+.field public final d:Ljava/lang/CharSequence;
 
-.field public static chat__bottom_container_search:I = 0x7f0a023c
+.field public final e:Z
 
-.field public static chat__bottom_container_search_down_button:I = 0x7f0a023d
+.field public final f:Z
 
-.field public static chat__bottom_container_search_separator:I = 0x7f0a023e
+.field public final g:I
 
-.field public static chat__bottom_container_search_up_button:I = 0x7f0a023f
 
-.field public static chat__main_container:I = 0x7f0a0240
+# direct methods
+.method public constructor <init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZI)V
+    .locals 0
 
-.field public static chat__media_bar_container:I = 0x7f0a0241
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static chat__media_keyboard:I = 0x7f0a0242
+    iput-object p1, p0, Llnc;->a:Ljava/lang/String;
 
-.field public static chat__messages_container:I = 0x7f0a0243
+    iput-wide p2, p0, Llnc;->b:J
 
-.field public static chat__pinbars_container:I = 0x7f0a0244
+    iput-object p4, p0, Llnc;->c:Ljava/lang/CharSequence;
 
-.field public static chat__root_container:I = 0x7f0a0245
+    iput-object p5, p0, Llnc;->d:Ljava/lang/CharSequence;
 
-.field public static chat__search_view:I = 0x7f0a0246
+    iput-boolean p6, p0, Llnc;->e:Z
 
-.field public static chat__suggestion_container:I = 0x7f0a0247
+    iput-boolean p7, p0, Llnc;->f:Z
 
-.field public static chat__toolbar:I = 0x7f0a0248
+    iput p8, p0, Llnc;->g:I
 
-.field public static chat__video_msg_container:I = 0x7f0a0249
+    return-void
+.end method
 
-.field public static chat_screen__action_cancel:I = 0x7f0a026a
+.method public static a(Llnc;Ljava/lang/String;ZI)Llnc;
+    .locals 9
 
-.field public static chat_screen__error_restricted_send_message_action:I = 0x7f0a026b
+    and-int/lit8 v0, p3, 0x1
 
-.field public static chat_screen__error_restricted_send_message_cancel:I = 0x7f0a026c
+    if-eqz v0, :cond_0
 
-.field public static chat_screen__leave_chat_confirm:I = 0x7f0a026d
+    iget-object p1, p0, Llnc;->a:Ljava/lang/String;
 
-.field public static chat_screen__remove_chat_confirm:I = 0x7f0a026e
+    :cond_0
+    move-object v1, p1
 
-.field public static chat_screen__video_msg_placeholder:I = 0x7f0a026f
+    iget-wide v2, p0, Llnc;->b:J
 
-.field public static chat_screen__video_msg_preview:I = 0x7f0a0270
+    iget-object v4, p0, Llnc;->c:Ljava/lang/CharSequence;
 
-.field public static chat_screen__video_msg_progress:I = 0x7f0a0271
+    iget-object v5, p0, Llnc;->d:Ljava/lang/CharSequence;
 
-.field public static chat_screen__video_msg_root_container:I = 0x7f0a0272
+    and-int/lit8 p1, p3, 0x10
 
-.field public static chat_screen__video_msg_switch_camera_btn:I = 0x7f0a0273
+    if-eqz p1, :cond_1
 
-.field public static chat_screen__video_msg_timer:I = 0x7f0a0274
+    iget-boolean p2, p0, Llnc;->e:Z
 
-.field public static chat_screen__video_msg_torch_btn:I = 0x7f0a0275
+    :cond_1
+    move v6, p2
 
-.field public static chat_screen__video_msg_video_view:I = 0x7f0a0276
+    iget-boolean v7, p0, Llnc;->f:Z
 
-.field public static media_bar__album_chooser:I = 0x7f0a0483
+    iget v8, p0, Llnc;->g:I
 
-.field public static media_bar__bottom_container:I = 0x7f0a0484
+    new-instance v0, Llnc;
 
-.field public static media_bar__draggable_container:I = 0x7f0a0485
+    invoke-direct/range {v0 .. v8}, Llnc;-><init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/CharSequence;ZZI)V
 
-.field public static media_bar__emoji_keyboard_container:I = 0x7f0a0486
+    return-object v0
+.end method
 
-.field public static media_bar__media_type_picker_button:I = 0x7f0a0487
 
-.field public static media_bar__message_container:I = 0x7f0a0488
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static media_bar__partial_media_access_container:I = 0x7f0a0489
+    if-ne p0, p1, :cond_0
 
-.field public static media_bar__popup_layout:I = 0x7f0a048a
+    goto :goto_1
 
-.field public static media_bar__primary_container:I = 0x7f0a048b
+    :cond_0
+    instance-of v0, p1, Llnc;
 
-.field public static media_bar__select_album_container:I = 0x7f0a048c
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Llnc;
+
+    iget-object v0, p0, Llnc;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Llnc;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Llnc;->b:J
+
+    iget-wide v2, p1, Llnc;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Llnc;->c:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Llnc;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Llnc;->d:Ljava/lang/CharSequence;
+
+    iget-object v1, p1, Llnc;->d:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v0, p0, Llnc;->e:Z
+
+    iget-boolean v1, p1, Llnc;->e:Z
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-boolean v0, p0, Llnc;->f:Z
+
+    iget-boolean v1, p1, Llnc;->f:Z
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Llnc;->g:I
+
+    iget p1, p1, Llnc;->g:I
+
+    if-eq v0, p1, :cond_8
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_8
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Llnc;->a:Ljava/lang/String;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-wide v3, p0, Llnc;->b:J
+
+    invoke-static {v1, v2, v3, v4}, Lcbh;->i(IIJ)I
+
+    move-result v1
+
+    iget-object v3, p0, Llnc;->c:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_1
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v1, v3
+
+    mul-int/2addr v1, v2
+
+    iget-object v3, p0, Llnc;->d:Ljava/lang/CharSequence;
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_2
+    add-int/2addr v1, v0
+
+    mul-int/2addr v1, v2
+
+    iget-boolean v0, p0, Llnc;->e:Z
+
+    invoke-static {v1, v2, v0}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Llnc;->f:Z
+
+    invoke-static {v0, v2, v1}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget v1, p0, Llnc;->g:I
+
+    invoke-static {v1}, Lt02;->t(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "ProfileEditAppBarState(avatarUrl="
+
+    const-string v1, ", avatarSourceId="
+
+    iget-wide v2, p0, Llnc;->b:J
+
+    iget-object v4, p0, Llnc;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v1}, Lmrf;->m(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", firstName="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llnc;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", abbreviation="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llnc;->d:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", showAcceptChanges="
+
+    const-string v2, ", showAddPhoto="
+
+    iget-boolean v3, p0, Llnc;->e:Z
+
+    iget-boolean v4, p0, Llnc;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lob3;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", confirmType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Llnc;->g:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "TOOLBAR_ACTION"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "BUTTON"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

@@ -1,26 +1,86 @@
-.class public abstract Lilc;
-.super Ljava/lang/Object;
+.class public final Lilc;
+.super Lqlc;
+.source "SourceFile"
 
 
-# static fields
-.field public static size_border_radius_new_banner:I = 0x7f0703fe
+# instance fields
+.field public final b:Ljava/lang/String;
 
-.field public static size_border_radius_semantic_border_radius_card:I = 0x7f0703ff
 
-.field public static spacing_size_2xl:I = 0x7f070402
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-.field public static spacing_size_2xs:I = 0x7f070403
+    invoke-direct {p0}, Lqlc;-><init>()V
 
-.field public static spacing_size_3xl:I = 0x7f070404
+    iput-object p1, p0, Lilc;->b:Ljava/lang/String;
 
-.field public static spacing_size_4xl:I = 0x7f070405
+    return-void
+.end method
 
-.field public static spacing_size_l:I = 0x7f070406
 
-.field public static spacing_size_m:I = 0x7f070407
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static spacing_size_s:I = 0x7f070408
+    const/4 v0, 0x1
 
-.field public static spacing_size_xl:I = 0x7f070409
+    if-ne p0, p1, :cond_0
 
-.field public static spacing_size_xs:I = 0x7f07040a
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lilc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lilc;
+
+    iget-object v1, p0, Lilc;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lilc;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lilc;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "CopyToClipboard(link="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lilc;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

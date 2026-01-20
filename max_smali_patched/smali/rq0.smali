@@ -1,101 +1,99 @@
-.class public final Lrq0;
-.super Ljava/util/concurrent/CountDownLatch;
+.class public final synthetic Lrq0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgla;
-.implements Lzv4;
+.implements Lnhh;
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/Throwable;
+.field public final synthetic b:Ltq0;
 
-.field public c:Lzv4;
 
-.field public volatile d:Z
+# direct methods
+.method public synthetic constructor <init>(Ltq0;I)V
+    .locals 0
+
+    iput p2, p0, Lrq0;->a:I
+
+    iput-object p1, p0, Lrq0;->b:Ltq0;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    iget-object v0, p0, Lrq0;->a:Ljava/lang/Object;
+    iget v0, p0, Lrq0;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p1, p0, Lrq0;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lrq0;->b:Ltq0;
 
-    iget-object p1, p0, Lrq0;->c:Lzv4;
+    iget-object v1, v0, Ltq0;->Z:Lbz6;
 
-    invoke-interface {p1}, Lzv4;->dispose()V
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public final d(Lzv4;)V
-    .locals 1
-
-    iput-object p1, p0, Lrq0;->c:Lzv4;
-
-    iget-boolean v0, p0, Lrq0;->d:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Lzv4;->dispose()V
+    invoke-virtual {v1}, Lbz6;->a()V
 
     :cond_0
-    return-void
-.end method
+    iget-object v0, v0, Ltq0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
 
-.method public final dispose()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lrq0;->d:Z
-
-    iget-object v0, p0, Lrq0;->c:Lzv4;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lzv4;->dispose()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lrq0;->d:Z
-
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Lrq0;->a:Ljava/lang/Object;
-
-    if-nez v0, :cond_0
-
-    iput-object p1, p0, Lrq0;->b:Ljava/lang/Throwable;
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    invoke-virtual {v0}, Ljava/util/concurrent/LinkedBlockingQueue;->clear()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lrq0;->b:Ltq0;
+
+    iget v1, v0, Ltq0;->t0:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    iput v1, v0, Ltq0;->t0:I
+
+    invoke-virtual {v0}, Ltq0;->A()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lrq0;->b:Ltq0;
+
+    iget-object v1, v0, Ltq0;->d:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v0, v0, Ltq0;->Y:Lht4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lok0;->c()V
+
+    invoke-static {}, Lzk4;->a()V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Ltq0;->u0:Z
+
+    :goto_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

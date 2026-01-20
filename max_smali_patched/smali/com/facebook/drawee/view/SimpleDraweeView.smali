@@ -1,5 +1,5 @@
 .class public Lcom/facebook/drawee/view/SimpleDraweeView;
-.super Ltn6;
+.super Lqv6;
 .source "SourceFile"
 
 
@@ -9,24 +9,24 @@
 
 
 # static fields
-.field public static v0:Lla7;
+.field public static w0:Lni7;
 
 
 # instance fields
-.field public u0:Ly0;
+.field public v0:Lv0;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .line 1
-    invoke-direct {p0, p1}, Ltn6;-><init>(Landroid/content/Context;)V
+    .line 4
+    invoke-direct {p0, p1}, Lqv6;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x0
 
-    .line 2
-    invoke-virtual {p0, p1, v0}, Lcom/facebook/drawee/view/SimpleDraweeView;->e(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 5
+    invoke-virtual {p0, p1, v0}, Lcom/facebook/drawee/view/SimpleDraweeView;->f(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
@@ -34,22 +34,25 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .line 3
-    invoke-direct {p0, p1, p2}, Ltn6;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 1
+    invoke-direct {p0, p1, p2}, Lq85;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 4
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/drawee/view/SimpleDraweeView;->e(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 2
+    invoke-virtual {p0, p1, p2}, Lqv6;->e(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 3
+    invoke-virtual {p0, p1, p2}, Lcom/facebook/drawee/view/SimpleDraweeView;->f(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public final f(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
     :try_start_0
-    invoke-static {}, Lyh6;->b()Lxh6;
+    invoke-static {}, Lvp6;->e()Lup6;
 
     invoke-virtual {p0}, Landroid/view/View;->isInEditMode()Z
 
@@ -57,7 +60,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lt15;->getTopLevelDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lq85;->getTopLevelDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -67,7 +70,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    invoke-virtual {p0}, Lt15;->getTopLevelDrawable()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lq85;->getTopLevelDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -81,24 +84,24 @@
     goto :goto_4
 
     :cond_0
-    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->v0:Lla7;
+    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->w0:Lni7;
 
     const-string v1, "SimpleDraweeView was not initialized!"
 
-    invoke-static {v0, v1}, Ljui;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lbkj;->f(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->v0:Lla7;
+    sget-object v0, Lcom/facebook/drawee/view/SimpleDraweeView;->w0:Lni7;
 
-    invoke-virtual {v0}, Lla7;->a()Lasb;
+    invoke-virtual {v0}, Lni7;->a()Ly9c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->u0:Ly0;
+    iput-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->v0:Lv0;
 
     :goto_0
     if-eqz p2, :cond_4
 
-    sget-object v0, Lavc;->SimpleDraweeView:[I
+    sget-object v0, Lzfd;->SimpleDraweeView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -107,7 +110,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    sget p2, Lavc;->SimpleDraweeView_actualImageUri:I
+    sget p2, Lzfd;->SimpleDraweeView_actualImageUri:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -115,7 +118,7 @@
 
     if-eqz p2, :cond_1
 
-    sget p2, Lavc;->SimpleDraweeView_actualImageUri:I
+    sget p2, Lzfd;->SimpleDraweeView_actualImageUri:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -125,7 +128,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Lcom/facebook/drawee/view/SimpleDraweeView;->f(Landroid/net/Uri;)V
+    invoke-virtual {p0, p2}, Lcom/facebook/drawee/view/SimpleDraweeView;->g(Landroid/net/Uri;)V
 
     goto :goto_1
 
@@ -135,7 +138,7 @@
     goto :goto_2
 
     :cond_1
-    sget p2, Lavc;->SimpleDraweeView_actualImageResource:I
+    sget p2, Lzfd;->SimpleDraweeView_actualImageResource:I
 
     invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
@@ -143,7 +146,7 @@
 
     if-eqz p2, :cond_3
 
-    sget p2, Lavc;->SimpleDraweeView_actualImageResource:I
+    sget p2, Lzfd;->SimpleDraweeView_actualImageResource:I
 
     const/4 v0, -0x1
 
@@ -184,46 +187,46 @@
 
     :cond_4
     :goto_3
-    invoke-static {}, Lyh6;->b()Lxh6;
+    invoke-static {}, Lvp6;->e()Lup6;
 
     return-void
 
     :goto_4
-    invoke-static {}, Lyh6;->b()Lxh6;
+    invoke-static {}, Lvp6;->e()Lup6;
 
     throw p1
 .end method
 
-.method public final f(Landroid/net/Uri;)V
+.method public final g(Landroid/net/Uri;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->u0:Ly0;
+    iget-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->v0:Lv0;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Lasb;
+    check-cast v0, Ly9c;
 
-    invoke-virtual {v0, p1}, Lasb;->c(Landroid/net/Uri;)V
+    invoke-virtual {v0, p1}, Ly9c;->c(Landroid/net/Uri;)V
 
-    invoke-virtual {p0}, Lt15;->getController()Ln15;
-
-    move-result-object p1
-
-    iput-object p1, v0, Ly0;->i:Ln15;
-
-    invoke-virtual {v0}, Ly0;->a()Lzrb;
+    invoke-virtual {p0}, Lq85;->getController()Lk85;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lt15;->setController(Ln15;)V
+    iput-object p1, v0, Lv0;->i:Lk85;
+
+    invoke-virtual {v0}, Lv0;->a()Lx9c;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lq85;->setController(Lk85;)V
 
     return-void
 .end method
 
-.method public getControllerBuilder()Ly0;
+.method public getControllerBuilder()Lv0;
     .locals 1
 
-    iget-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->u0:Ly0;
+    iget-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->v0:Lv0;
 
     return-object v0
 .end method
@@ -231,33 +234,33 @@
 .method public setActualImageResource(I)V
     .locals 0
 
-    invoke-static {p1}, Lygg;->c(I)Landroid/net/Uri;
+    invoke-static {p1}, Lw9h;->c(I)Landroid/net/Uri;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->f(Landroid/net/Uri;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->g(Landroid/net/Uri;)V
 
     return-void
 .end method
 
-.method public setImageRequest(Lab7;)V
+.method public setImageRequest(Lcj7;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->u0:Ly0;
+    iget-object v0, p0, Lcom/facebook/drawee/view/SimpleDraweeView;->v0:Lv0;
 
-    iput-object p1, v0, Ly0;->b:Lab7;
+    iput-object p1, v0, Lv0;->b:Lcj7;
 
-    invoke-virtual {p0}, Lt15;->getController()Ln15;
-
-    move-result-object p1
-
-    iput-object p1, v0, Ly0;->i:Ln15;
-
-    invoke-virtual {v0}, Ly0;->a()Lzrb;
+    invoke-virtual {p0}, Lq85;->getController()Lk85;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lt15;->setController(Ln15;)V
+    iput-object p1, v0, Lv0;->i:Lk85;
+
+    invoke-virtual {v0}, Lv0;->a()Lx9c;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lq85;->setController(Lk85;)V
 
     return-void
 .end method
@@ -265,7 +268,7 @@
 .method public setImageResource(I)V
     .locals 0
 
-    invoke-super {p0, p1}, Lt15;->setImageResource(I)V
+    invoke-super {p0, p1}, Lq85;->setImageResource(I)V
 
     return-void
 .end method
@@ -274,7 +277,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->f(Landroid/net/Uri;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->g(Landroid/net/Uri;)V
 
     return-void
 .end method
@@ -296,7 +299,7 @@
 
     .line 3
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->f(Landroid/net/Uri;)V
+    invoke-virtual {p0, p1}, Lcom/facebook/drawee/view/SimpleDraweeView;->g(Landroid/net/Uri;)V
 
     return-void
 .end method

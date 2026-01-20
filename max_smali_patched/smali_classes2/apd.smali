@@ -1,76 +1,65 @@
 .class public final Lapd;
-.super Logf;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+.field public X:Z
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lfpd;
+
+.field public d:Lynd;
+
+.field public o:Loba;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lfpd;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lapd;->o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+    iput-object p1, p0, Lapd;->Z:Lfpd;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    check-cast p1, Lg54;
+    iput-object p1, p0, Lapd;->Y:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lapd;->t0:I
 
-    invoke-virtual {p0, p1, p2}, Lapd;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lapd;->t0:I
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    iget-object v0, p0, Lapd;->Z:Lfpd;
+
+    const/4 v1, 0x0
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v7, p0
+
+    invoke-static/range {v0 .. v7}, Lfpd;->s(Lfpd;Lynd;J[BLoba;ZLo84;)Ljava/lang/Object;
 
     move-result-object p1
-
-    check-cast p1, Lapd;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lapd;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lapd;
-
-    iget-object v0, p0, Lapd;->o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
-
-    invoke-direct {p1, v0, p2}, Lapd;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lapd;->o:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
-
-    invoke-static {p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->e(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;)Llod;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->g(Llod;)V
-
-    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

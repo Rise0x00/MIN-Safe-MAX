@@ -1,129 +1,69 @@
-.class public final Lxwb;
+.class public final synthetic Lxwb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lby3;
+
 
 # instance fields
-.field public final a:Liw0;
+.field public final synthetic a:Lfxb;
 
-.field public final b:Lru7;
+.field public final synthetic b:Z
 
-.field public final c:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final synthetic c:Lorg/webrtc/SessionDescription;
 
 
 # direct methods
-.method public constructor <init>(Liw0;Lru7;)V
+.method public synthetic constructor <init>(Lfxb;ZLorg/webrtc/SessionDescription;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxwb;->a:Liw0;
+    iput-object p1, p0, Lxwb;->a:Lfxb;
 
-    iput-object p2, p0, Lxwb;->b:Lru7;
+    iput-boolean p2, p0, Lxwb;->b:Z
 
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lxwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    iput-object p3, p0, Lxwb;->c:Lorg/webrtc/SessionDescription;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final accept(Ljava/lang/Object;)V
     .locals 4
 
-    iget-object v0, p0, Lxwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->entrySet()Ljava/util/Set;
+    iget-object p1, p0, Lxwb;->a:Lfxb;
 
-    move-result-object v1
+    iget-object v0, p1, Lfxb;->v:Landroid/os/Handler;
 
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-boolean v1, p0, Lxwb;->b:Z
 
-    move-result-object v1
+    iget-object v2, p0, Lxwb;->c:Lorg/webrtc/SessionDescription;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v1, :cond_0
 
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/Map$Entry;
-
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lywb;
+    new-instance v1, Laxb;
 
     const/4 v3, 0x0
 
-    iput-object v3, v2, Lywb;->g:Ljava/lang/CharSequence;
+    invoke-direct {v1, p1, v2, v3}, Laxb;-><init>(Lfxb;Lorg/webrtc/SessionDescription;I)V
 
-    iput-object v3, v2, Lywb;->h:Ljava/lang/CharSequence;
-
-    iput-object v3, v2, Lywb;->i:Ljava/lang/CharSequence;
-
-    iput-object v3, v2, Lywb;->j:Ljava/lang/CharSequence;
-
-    iput-object v3, v2, Lywb;->k:Ljava/lang/String;
-
-    iput-object v3, v2, Lywb;->l:Ljava/lang/String;
-
-    iput-object v3, v2, Lywb;->m:Ltc4;
-
-    const/4 v3, 0x0
-
-    iput-boolean v3, v2, Lywb;->n:Z
-
-    iput-boolean v3, v2, Lywb;->o:Z
-
-    iput-boolean v3, v2, Lywb;->p:Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
-.end method
 
-.method public final b(Lt92;Lgb9;)V
-    .locals 3
+    :cond_0
+    new-instance v1, Laxb;
 
-    iget-object v0, p0, Lxwb;->b:Lru7;
+    const/4 v3, 0x1
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-direct {v1, p1, v2, v3}, Laxb;-><init>(Lfxb;Lorg/webrtc/SessionDescription;I)V
 
-    move-result-object v0
-
-    check-cast v0, Lzwb;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, p2}, Lzwb;->a(Lt92;Lgb9;)Lywb;
-
-    move-result-object v0
-
-    iget-wide v1, p2, Loj0;->a:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    iget-object v1, p0, Lxwb;->c:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v1, p2, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0, p1}, Lywb;->h(Lt92;)V
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

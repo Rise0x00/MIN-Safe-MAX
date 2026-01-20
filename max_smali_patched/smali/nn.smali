@@ -1,29 +1,50 @@
 .class public final Lnn;
-.super Landroid/widget/LinearLayout$LayoutParams;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ly1b;
 
 
 # instance fields
-.field public a:I
-
-.field public b:Lqoh;
-
-.field public c:Landroid/view/animation/Interpolator;
+.field public final synthetic a:Lon;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lon;)V
+    .locals 0
 
-    const/4 v0, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, -0x2
+    iput-object p1, p0, Lnn;->a:Lon;
 
-    invoke-direct {p0, v0, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    return-void
+.end method
 
-    const/4 v0, 0x1
 
-    iput v0, p0, Lnn;->a:I
+# virtual methods
+.method public final a()V
+    .locals 3
+
+    iget-object v0, p0, Lnn;->a:Lon;
+
+    invoke-virtual {v0}, Lon;->D()Lxn;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lxn;->a()V
+
+    iget-object v0, v0, Lfp3;->d:Lvd;
+
+    iget-object v0, v0, Lvd;->d:Ljava/lang/Object;
+
+    check-cast v0, Lsn;
+
+    const-string v2, "androidx:appcompat"
+
+    invoke-virtual {v0, v2}, Lsn;->c(Ljava/lang/String;)Landroid/os/Bundle;
+
+    invoke-virtual {v1}, Lxn;->d()V
 
     return-void
 .end method

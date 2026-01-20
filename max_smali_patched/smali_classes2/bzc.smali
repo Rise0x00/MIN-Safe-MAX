@@ -1,331 +1,265 @@
 .class public final Lbzc;
-.super Ljava/lang/Object;
+.super Lbp9;
 .source "SourceFile"
 
 
+# static fields
+.field public static volatile c:[Lbzc;
+
+
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public a:I
 
-.field public b:Lazc;
-
-.field public final c:Lw6f;
-
-.field public final d:Landroidx/recyclerview/widget/RecyclerView;
+.field public b:[F
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
-    .locals 12
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
-    iput-object p1, p0, Lbzc;->a:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    new-instance v2, Lryc;
+    iput v0, p0, Lbzc;->a:I
 
-    invoke-direct {v2, p1}, Lryc;-><init>(Landroid/content/Context;)V
+    sget-object v0, Lc2j;->c:[F
 
-    new-instance v0, Lw6f;
+    iput-object v0, p0, Lbzc;->b:[F
 
-    new-instance v3, Ldob;
+    const/4 v0, -0x1
 
-    const/16 v1, 0xd
-
-    invoke-direct {v3, v1, p0}, Ldob;-><init>(ILjava/lang/Object;)V
-
-    new-instance v4, Ly4b;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v4, v1, p0}, Ly4b;-><init>(ILjava/lang/Object;)V
-
-    const/4 v5, 0x1
-
-    move-object v1, p2
-
-    invoke-direct/range {v0 .. v5}, Lw6f;-><init>(Ljava/util/concurrent/Executor;Ljava/lang/Object;Lqi6;Ljj6;I)V
-
-    iput-object v0, p0, Lbzc;->c:Lw6f;
-
-    new-instance p2, Lv44;
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41c00000    # 24.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-direct {p2, v1}, Lv44;-><init>(F)V
-
-    new-instance v1, Landroidx/recyclerview/widget/RecyclerView;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p1, v2}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v3, Lspc;->one_chat_react_panel_layout:I
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
-
-    new-instance v3, Landroidx/recyclerview/widget/GridLayoutManager;
-
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    const/16 v4, 0x8
-
-    invoke-direct {v3, v4}, Landroidx/recyclerview/widget/GridLayoutManager;-><init>(I)V
-
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    new-instance v3, Lo56;
-
-    invoke-static {p1}, Lcyi;->a(Landroid/content/Context;)I
-
-    move-result p1
-
-    const/16 v5, 0x168
-
-    if-lt p1, v5, :cond_0
-
-    const/16 p1, 0xa
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v4
-
-    :goto_0
-    int-to-float p1, p1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v5
-
-    invoke-static {p1}, Lkhi;->c(F)I
-
-    move-result p1
-
-    new-instance v5, Lod8;
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x2
-
-    const-class v8, Lbzc;
-
-    const-string v10, "isExpanded"
-
-    const-string v11, "isExpanded()Z"
-
-    move-object v9, p0
-
-    invoke-direct/range {v5 .. v11}, Lod8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {v3, p1, v5}, Lo56;-><init>(ILod8;)V
-
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lv6d;)V
-
-    invoke-virtual {v1, p2}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lp6d;)V
-
-    const/4 p2, 0x2
-
-    invoke-virtual {v1, p2}, Landroid/view/View;->setOverScrollMode(I)V
-
-    invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lu6d;)V
-
-    invoke-virtual {v1, p1}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
-
-    invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->setClipChildren(Z)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setClipToOutline(Z)V
-
-    int-to-float p1, v4
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, p1
-
-    invoke-static {p2}, Lkhi;->c(F)I
-
-    move-result p2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v0
-
-    invoke-static {p1}, Lkhi;->c(F)I
-
-    move-result p1
-
-    const/16 v0, 0xc
-
-    int-to-float v0, v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v0
-
-    invoke-static {v3}, Lkhi;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v4
-
-    invoke-static {v0}, Lkhi;->c(F)I
-
-    move-result v0
-
-    invoke-virtual {v1, v3, p2, v0, p1}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance p1, Lg8a;
-
-    const/16 p2, 0xe
-
-    invoke-direct {p1, p0, v2, p2}, Lg8a;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p1, v1}, Ludi;->e(Lgj6;Landroid/view/View;)V
-
-    iput-object v1, v9, Lbzc;->d:Landroidx/recyclerview/widget/RecyclerView;
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;Ljava/lang/Integer;)V
-    .locals 4
+.method public final computeSerializedSize()I
+    .locals 3
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iget v0, p0, Lbzc;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Lwg3;->f(II)I
 
     move-result v0
 
-    const/16 v1, 0x8
-
-    if-le v0, v1, :cond_2
-
-    if-eqz p2, :cond_2
-
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
-
-    move-result p2
-
-    iget-object v0, p0, Lbzc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    const/16 v2, 0xf0
-
-    int-to-float v2, v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lkhi;->c(F)I
-
-    move-result v2
-
-    if-lez p2, :cond_0
-
-    invoke-static {v2, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result v2
+    goto :goto_0
 
     :cond_0
-    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    :goto_0
+    iget-object v1, p0, Lbzc;->b:[F
+
+    array-length v2, v1
+
+    if-lez v2, :cond_1
+
+    array-length v2, v1
+
+    mul-int/lit8 v2, v2, 0x4
+
+    add-int/2addr v2, v0
+
+    array-length v0, v1
+
+    add-int/2addr v2, v0
+
+    return v2
+
+    :cond_1
+    return v0
+.end method
+
+.method public final mergeFrom(Lvg3;)Lbp9;
+    .locals 6
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lvg3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_7
+
+    const/16 v1, 0x12
+
+    const/4 v2, 0x0
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_3
+
+    :cond_1
+    invoke-static {p1, v1}, Lc2j;->e(Lvg3;I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lbzc;->b:[F
+
+    array-length v3, v1
+
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [F
+
+    if-eqz v3, :cond_2
+
+    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_3
+
+    invoke-virtual {p1}, Lvg3;->i()F
+
+    move-result v1
+
+    aput v1, v4, v3
+
+    invoke-virtual {p1}, Lvg3;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1}, Lvg3;->i()F
+
+    move-result v0
+
+    aput v0, v4, v3
+
+    iput-object v4, p0, Lbzc;->b:[F
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lvg3;->p()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Lvg3;->e(I)I
+
+    move-result v1
+
+    div-int/lit8 v0, v0, 0x4
+
+    iget-object v3, p0, Lbzc;->b:[F
+
+    array-length v4, v3
+
+    add-int/2addr v0, v4
+
+    new-array v5, v0, [F
+
+    if-eqz v4, :cond_5
+
+    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_5
+    :goto_2
+    if-ge v4, v0, :cond_6
+
+    invoke-virtual {p1}, Lvg3;->i()F
+
+    move-result v2
+
+    aput v2, v5, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    iput-object v5, p0, Lbzc;->b:[F
+
+    invoke-virtual {p1, v1}, Lvg3;->d(I)V
+
+    goto :goto_0
+
+    :cond_7
+    invoke-virtual {p1}, Lvg3;->p()I
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    const/4 v1, 0x1
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iput v0, p0, Lbzc;->a:I
+
+    goto :goto_0
+
+    :cond_9
+    :goto_3
+    return-object p0
+.end method
+
+.method public final writeTo(Lwg3;)V
+    .locals 3
+
+    iget v0, p0, Lbzc;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
+
+    :cond_0
+    iget-object v0, p0, Lbzc;->b:[F
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lbzc;->b:[F
+
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_1
+
+    const/4 v2, 0x2
+
+    aget v1, v1, v0
+
+    invoke-virtual {p1, v2, v1}, Lwg3;->v(IF)V
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_1
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    const-string p2, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
-
-    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    :goto_0
-    new-instance p2, Lfoa;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p2, v0, p0}, Lfoa;-><init>(ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lbzc;->c:Lw6f;
-
-    invoke-virtual {v0, p1, p2}, Lb28;->F(Ljava/util/List;Ljava/lang/Runnable;)V
-
     return-void
 .end method

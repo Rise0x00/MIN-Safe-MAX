@@ -1,26 +1,28 @@
 .class public final Lwb;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Lac;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
+.method public constructor <init>(Lac;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lwb;->X:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+    iput-object p1, p0, Lwb;->Y:Lac;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +32,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Ljava/util/List;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lwb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,11 +42,13 @@
 
     check-cast p1, Lwb;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -50,145 +56,69 @@
 
     new-instance v0, Lwb;
 
-    iget-object v1, p0, Lwb;->X:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
+    iget-object v1, p0, Lwb;->Y:Lac;
 
-    invoke-direct {v0, p2, v1}, Lwb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
+    invoke-direct {v0, v1, p2}, Lwb;-><init>(Lac;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lwb;->o:Ljava/lang/Object;
+    iput-object p1, v0, Lwb;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lwb;->X:Ljava/lang/Object;
 
-    iget-object p1, p0, Lwb;->o:Ljava/lang/Object;
+    check-cast v0, Ljava/util/List;
 
-    check-cast p1, Ljava/util/List;
+    iget v1, p0, Lwb;->o:I
 
-    sget-object v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:[Les7;
-
-    iget-object v0, p0, Lwb;->X:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
-
-    iget-object v1, v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->c:Lru7;
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lec;
-
-    invoke-virtual {v1}, Lec;->u()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->y0()Landroidx/recyclerview/widget/RecyclerView;
+    if-ne v1, v2, :cond_0
 
-    move-result-object v3
-
-    iget-object v4, v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lw8f;
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v3, v4}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lv6d;)V
-
-    :cond_0
-    iput-object v2, v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lw8f;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    invoke-virtual {v0}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->y0()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object v3
+    iget-object p1, p0, Lwb;->Y:Lac;
 
-    iget-object v4, v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lw8f;
+    iget-object p1, p1, Lac;->X:Li7f;
 
-    if-eqz v4, :cond_2
+    const/4 v1, 0x0
 
-    invoke-virtual {v3, v4}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lv6d;)V
+    iput-object v1, p0, Lwb;->X:Ljava/lang/Object;
+
+    iput v2, p0, Lwb;->o:I
+
+    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
 
     :cond_2
-    iput-object v2, v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lw8f;
-
-    invoke-virtual {v0}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->y0()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->x0(Landroidx/recyclerview/widget/RecyclerView;)V
-
     :goto_0
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    const/4 v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    move v1, v2
-
-    :goto_1
-    iget-object v3, v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->o:Ld0d;
-
-    sget-object v4, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:[Les7;
-
-    const/4 v5, 0x2
-
-    aget-object v4, v4, v5
-
-    invoke-interface {v3, v0, v4}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lone/me/sdk/uikit/common/views/EmptySearchView;
-
-    const/16 v4, 0x8
-
-    if-eqz v1, :cond_4
-
-    move v5, v2
-
-    goto :goto_2
-
-    :cond_4
-    move v5, v4
-
-    :goto_2
-    invoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->y0()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v3
-
-    if-nez v1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move v2, v4
-
-    :goto_3
-    invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->s0:Ljjh;
-
-    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
-
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

@@ -1,84 +1,22 @@
-.class public final Lz9d;
-.super Lmmf;
-.source "SourceFile"
+.class public abstract Lz9d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final c:J
+# static fields
+.field public static settings_devices_allow_camera_permission_btn:I = 0x7f0a0b87
 
+.field public static settings_devices_auth_hint_accept_button:I = 0x7f0a0b88
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.field public static settings_devices_auth_hint_deny_button:I = 0x7f0a0b89
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static settings_devices_deny_camera_permission_btn:I = 0x7f0a0b8a
 
-    iput-wide p1, p0, Lz9d;->c:J
+.field public static settings_devices_recycler_header_viewtype:I = 0x7f0a0b8b
 
-    return-void
-.end method
+.field public static settings_devices_recycler_session_item_viewtype:I = 0x7f0a0b8c
 
+.field public static settings_devices_recycler_view:I = 0x7f0a0b8d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.field public static settings_devices_scan_qr_btn:I = 0x7f0a0b8e
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lz9d;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lz9d;
-
-    iget-wide v3, p0, Lz9d;->c:J
-
-    iget-wide v5, p1, Lz9d;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lz9d;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Response(timestampRemoveProfile="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lz9d;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static settings_devices_toolbar:I = 0x7f0a0b8f

@@ -1,22 +1,23 @@
 .class public final Lvu1;
-.super Lp14;
+.super Lo84;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lqn1;
+.field public X:I
 
 .field public synthetic d:Ljava/lang/Object;
 
-.field public o:I
+.field public final synthetic o:Lxu1;
 
 
 # direct methods
-.method public constructor <init>(Lqn1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lxu1;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lvu1;->X:Lqn1;
+    iput-object p1, p0, Lvu1;->o:Lxu1;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,19 +29,17 @@
 
     iput-object p1, p0, Lvu1;->d:Ljava/lang/Object;
 
-    iget p1, p0, Lvu1;->o:I
+    iget p1, p0, Lvu1;->X:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lvu1;->o:I
+    iput p1, p0, Lvu1;->X:I
 
-    iget-object p1, p0, Lvu1;->X:Lqn1;
+    iget-object p1, p0, Lvu1;->o:Lxu1;
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lqn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1, p0}, Lxu1;->a(Lxu1;Lo84;)Ljava/lang/Comparable;
 
     move-result-object p1
 

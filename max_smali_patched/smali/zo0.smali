@@ -1,26 +1,13 @@
-.class public interface abstract Lzo0;
+.class public abstract Lzo0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract clear()V
-.end method
+# direct methods
+.method public static a(Landroid/hardware/biometrics/BiometricPrompt$Builder;I)V
+    .locals 0
 
-.method public abstract e(I)Z
-.end method
+    invoke-virtual {p0, p1}, Landroid/hardware/biometrics/BiometricPrompt$Builder;->setAllowedAuthenticators(I)Landroid/hardware/biometrics/BiometricPrompt$Builder;
 
-.method public abstract f()Lq93;
-.end method
-
-.method public abstract g(ILq93;)V
-.end method
-
-.method public abstract i(ILq93;)V
-.end method
-
-.method public abstract j()Lq93;
-.end method
-
-.method public abstract l(I)Lq93;
+    return-void
 .end method

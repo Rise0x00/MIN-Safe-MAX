@@ -1,128 +1,59 @@
 .class public final Lll8;
-.super Ljava/lang/Object;
+.super Llm4;
 .source "SourceFile"
 
-# interfaces
-.implements Lol8;
 
+# static fields
+.field public static final b:Lll8;
 
-# instance fields
-.field public final a:Ld1e;
+.field public static final c:Lhm4;
 
-.field public final b:I
+.field public static final d:Lhm4;
 
 
 # direct methods
-.method public constructor <init>(Ld1e;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lll8;
 
-    iput-object p1, p0, Lll8;->a:Ld1e;
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    iput p2, p0, Lll8;->b:I
+    sput-object v0, Lll8;->b:Lll8;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    new-array v1, v1, [Ljava/lang/String;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    sget-object v2, Lfca;->w0:Lbm4;
 
-    const/4 v0, 0x1
+    const/16 v3, 0xa
 
-    if-ne p0, p1, :cond_0
+    const-string v4, ":login"
 
-    return v0
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->b(Llm4;Ljava/lang/String;[Ljava/lang/String;Lcm4;I)Lhm4;
 
-    :cond_0
-    instance-of v1, p1, Lll8;
+    move-result-object v1
+
+    sput-object v1, Lll8;->c:Lhm4;
+
+    const-string v1, "id"
+
+    filled-new-array {v1}, [Ljava/lang/String;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const/16 v3, 0xe
 
-    return v2
+    const-string v4, ":neuro-avatars"
 
-    :cond_1
-    check-cast p1, Lll8;
-
-    iget-object v1, p0, Lll8;->a:Ld1e;
-
-    iget-object v3, p1, Lll8;->a:Ld1e;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lll8;->b:I
-
-    iget p1, p1, Lll8;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lll8;->a:Ld1e;
-
-    invoke-virtual {v0}, Ld1e;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lll8;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShowMediaItem(item="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lll8;->a:Ld1e;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", uiPosition="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lll8;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
     move-result-object v0
 
-    return-object v0
+    sput-object v0, Lll8;->d:Lhm4;
+
+    return-void
 .end method

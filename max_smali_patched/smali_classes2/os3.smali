@@ -1,131 +1,131 @@
-.class public final synthetic Los3;
-.super Ljava/lang/Object;
+.class public final Los3;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lu6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic b:J
-
-.field public final synthetic c:J
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final c:Lahc;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lahc;)V
+    .locals 1
 
-    iput p1, p0, Los3;->a:I
+    const/4 v0, 0x7
 
-    iput-object p6, p0, Los3;->d:Ljava/lang/Object;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    iput-wide p2, p0, Los3;->b:J
+    iput-object p1, p0, Los3;->b:Ljava/lang/String;
 
-    iput-wide p4, p0, Los3;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Los3;->c:Lahc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Los3;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Los3;->d:Ljava/lang/Object;
+    return v0
 
-    check-cast v0, Lyo5;
+    :cond_0
+    instance-of v1, p1, Los3;
 
-    iget-wide v1, p0, Los3;->b:J
+    const/4 v2, 0x0
 
-    iget-wide v3, p0, Los3;->c:J
+    if-nez v1, :cond_1
 
-    iget-object v5, v0, Lyo5;->a:Lpgd;
+    return v2
 
-    invoke-virtual {v5}, Lpgd;->c()V
+    :cond_1
+    check-cast p1, Los3;
 
-    :try_start_0
-    invoke-virtual {v0}, Lyo5;->c()Ljava/util/ArrayList;
+    iget-object v1, p0, Los3;->b:Ljava/lang/String;
 
-    move-result-object v6
+    iget-object v3, p1, Los3;->b:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-nez v1, :cond_2
 
-    move-result-object v2
+    return v2
 
-    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+    :cond_2
+    iget-object v1, p0, Los3;->c:Lahc;
 
-    move-result v2
+    iget-object p1, p1, Los3;->c:Lahc;
 
-    if-ltz v1, :cond_0
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-ltz v2, :cond_0
+    move-result p1
 
-    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    if-nez p1, :cond_3
 
-    move-result-object v3
+    return v2
 
-    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    :cond_3
+    return v0
+.end method
 
-    invoke-virtual {v6, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {v0, v6}, Lyo5;->a(Ljava/util/List;)V
+    iget-object v0, p0, Los3;->b:Ljava/lang/String;
 
-    :cond_0
-    invoke-virtual {v5}, Lpgd;->q()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v5}, Lpgd;->k()V
+    move-result v0
 
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
 
-    :catchall_0
-    move-exception v0
+    iget-object v1, p0, Los3;->c:Lahc;
 
-    invoke-virtual {v5}, Lpgd;->k()V
+    invoke-virtual {v1}, Lahc;->hashCode()I
 
-    throw v0
+    move-result v1
 
-    :pswitch_0
-    iget-object v0, p0, Los3;->d:Ljava/lang/Object;
+    add-int/2addr v1, v0
 
-    check-cast v0, Lqs3;
+    return v1
+.end method
 
-    new-instance v1, Lw00;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/16 v2, 0xc
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-wide v3, p0, Los3;->c:J
+    const-string v1, "NameInputScreen(token="
 
-    invoke-direct {v1, v3, v4, v2}, Lw00;-><init>(JI)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Los3;->b:J
+    iget-object v1, p0, Los3;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v3, v1}, Lqs3;->c(JLir3;)Lmr3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", presetAvatars="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Los3;->c:Lahc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

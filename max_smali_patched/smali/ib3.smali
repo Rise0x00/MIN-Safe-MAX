@@ -1,187 +1,318 @@
 .class public final Lib3;
-.super Ljava/lang/Object;
+.super Lu4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic d:I
 
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public i:I
-
-.field public final synthetic j:Lx3;
+.field public final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lx3;II)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lib3;->d:I
 
-    iput-object p1, p0, Lib3;->j:Lx3;
+    iput-object p2, p0, Lib3;->e:Ljava/lang/Object;
 
-    iput p2, p0, Lib3;->a:I
-
-    iput p3, p0, Lib3;->b:I
-
-    invoke-virtual {p0}, Lib3;->a()V
+    invoke-direct {p0}, Lu4;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 13
+.method public c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    .locals 1
 
-    iget-object v0, p0, Lib3;->j:Lx3;
+    iget v0, p0, Lib3;->d:I
 
-    iget-object v1, v0, Lx3;->b:Ljava/lang/Object;
+    sparse-switch v0, :sswitch_data_0
 
-    check-cast v1, [I
+    invoke-super {p0, p1, p2}, Lu4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    iget-object v0, v0, Lx3;->c:Ljava/lang/Object;
+    return-void
 
-    check-cast v0, [I
+    :sswitch_0
+    invoke-super {p0, p1, p2}, Lu4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    const v2, 0x7fffffff
+    const-class p1, Landroidx/viewpager/widget/ViewPager;
 
-    const/high16 v3, -0x80000000
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const/4 v4, 0x0
+    move-result-object p1
 
-    iget v5, p0, Lib3;->a:I
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
 
-    move v6, v3
+    const/4 p1, 0x0
 
-    move v7, v6
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityRecord;->setScrollable(Z)V
 
-    move v8, v4
+    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
 
-    move v9, v5
+    return-void
 
-    move v3, v2
+    :sswitch_1
+    invoke-super {p0, p1, p2}, Lu4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
-    move v4, v3
+    iget-object p1, p0, Lib3;->e:Ljava/lang/Object;
 
-    move v5, v7
+    check-cast p1, Lcom/google/android/material/internal/CheckableImageButton;
 
-    :goto_0
-    iget v10, p0, Lib3;->b:I
+    iget-boolean p1, p1, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
 
-    if-gt v9, v10, :cond_6
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityRecord;->setChecked(Z)V
 
-    aget v10, v1, v9
+    return-void
 
-    aget v11, v0, v10
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_1
+        0x4 -> :sswitch_0
+    .end sparse-switch
+.end method
 
-    add-int/2addr v8, v11
+.method public final d(Landroid/view/View;Lg5;)V
+    .locals 6
 
-    shr-int/lit8 v11, v10, 0xa
+    iget v0, p0, Lib3;->d:I
 
-    and-int/lit8 v11, v11, 0x1f
+    const/4 v1, 0x0
 
-    shr-int/lit8 v12, v10, 0x5
+    iget-object v2, p0, Lib3;->e:Ljava/lang/Object;
 
-    and-int/lit8 v12, v12, 0x1f
+    iget-object v3, p0, Lu4;->a:Landroid/view/View$AccessibilityDelegate;
 
-    and-int/lit8 v10, v10, 0x1f
+    packed-switch v0, :pswitch_data_0
 
-    if-le v11, v5, :cond_0
+    iget-object v0, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    move v5, v11
+    invoke-virtual {v3, p1, v0}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    :cond_0
-    if-ge v11, v2, :cond_1
+    const-class p1, Landroidx/viewpager/widget/ViewPager;
 
-    move v2, v11
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    :cond_1
-    if-le v12, v6, :cond_2
+    move-result-object p1
 
-    move v6, v12
+    invoke-virtual {p2, p1}, Lg5;->h(Ljava/lang/CharSequence;)V
 
-    :cond_2
-    if-ge v12, v3, :cond_3
+    invoke-virtual {p2, v1}, Lg5;->j(Z)V
 
-    move v3, v12
+    return-void
 
-    :cond_3
-    if-le v10, v7, :cond_4
+    :pswitch_0
+    iget-object p2, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    move v7, v10
+    invoke-virtual {v3, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    :cond_4
-    if-ge v10, v4, :cond_5
+    check-cast v2, Lcom/google/android/material/internal/NavigationMenuItemView;
 
-    move v4, v10
+    iget-boolean p1, v2, Lcom/google/android/material/internal/NavigationMenuItemView;->w0:Z
 
-    :cond_5
-    add-int/lit8 v9, v9, 0x1
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p2, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v3, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    check-cast v2, Lcom/google/android/material/datepicker/MaterialCalendar;
+
+    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->t1:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    sget p1, Ltcd;->mtrl_picker_toggle_to_year_selection:I
+
+    invoke-virtual {v2, p1}, Landroidx/fragment/app/a;->w(I)Ljava/lang/String;
+
+    move-result-object p1
 
     goto :goto_0
 
-    :cond_6
-    iput v2, p0, Lib3;->d:I
+    :cond_0
+    sget p1, Ltcd;->mtrl_picker_toggle_to_day_selection:I
 
-    iput v5, p0, Lib3;->e:I
+    invoke-virtual {v2, p1}, Landroidx/fragment/app/a;->w(I)Ljava/lang/String;
 
-    iput v3, p0, Lib3;->f:I
+    move-result-object p1
 
-    iput v6, p0, Lib3;->g:I
-
-    iput v4, p0, Lib3;->h:I
-
-    iput v7, p0, Lib3;->i:I
-
-    iput v8, p0, Lib3;->c:I
+    :goto_0
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setHintText(Ljava/lang/CharSequence;)V
 
     return-void
+
+    :pswitch_2
+    iget-object v0, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v3, p1, v0}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    check-cast v2, Lcom/google/android/material/button/MaterialButtonToggleGroup;
+
+    sget v0, Lcom/google/android/material/button/MaterialButtonToggleGroup;->y0:I
+
+    instance-of v0, p1, Lcom/google/android/material/button/MaterialButton;
+
+    const/4 v3, -0x1
+
+    if-nez v0, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    move v0, v1
+
+    move v4, v0
+
+    :goto_1
+    invoke-virtual {v2}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v5
+
+    if-ge v0, v5, :cond_4
+
+    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v5
+
+    if-ne v5, p1, :cond_2
+
+    move v3, v4
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v5
+
+    instance-of v5, v5, Lcom/google/android/material/button/MaterialButton;
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v2, v0}, Lcom/google/android/material/button/MaterialButtonToggleGroup;->c(I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    add-int/lit8 v4, v4, 0x1
+
+    :cond_3
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    :goto_2
+    check-cast p1, Lcom/google/android/material/button/MaterialButton;
+
+    iget-boolean p1, p1, Lcom/google/android/material/button/MaterialButton;->C0:Z
+
+    const/4 v0, 0x1
+
+    invoke-static {p1, v1, v0, v3, v0}, Lf5;->a(ZIIII)Lf5;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Lg5;->i(Lf5;)V
+
+    return-void
+
+    :pswitch_3
+    iget-object p2, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v3, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    check-cast v2, Lcom/google/android/material/internal/CheckableImageButton;
+
+    iget-boolean p1, v2, Lcom/google/android/material/internal/CheckableImageButton;->o:Z
+
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCheckable(Z)V
+
+    iget-boolean p1, v2, Lcom/google/android/material/internal/CheckableImageButton;->d:Z
+
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setChecked(Z)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b()I
-    .locals 3
+.method public g(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 1
 
-    iget v0, p0, Lib3;->e:I
+    iget v0, p0, Lib3;->d:I
 
-    iget v1, p0, Lib3;->d:I
+    packed-switch v0, :pswitch_data_0
 
-    sub-int/2addr v0, v1
+    invoke-super {p0, p1, p2, p3}, Lu4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
 
-    add-int/lit8 v0, v0, 0x1
+    move-result p1
 
-    iget v1, p0, Lib3;->g:I
+    return p1
 
-    iget v2, p0, Lib3;->f:I
+    :pswitch_0
+    iget-object v0, p0, Lib3;->e:Ljava/lang/Object;
 
-    sub-int/2addr v1, v2
+    check-cast v0, Landroidx/viewpager/widget/ViewPager;
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-super {p0, p1, p2, p3}, Lu4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
 
-    mul-int/2addr v1, v0
+    move-result p1
 
-    iget v0, p0, Lib3;->i:I
+    if-eqz p1, :cond_0
 
-    iget v2, p0, Lib3;->h:I
+    const/4 p1, 0x1
 
-    sub-int/2addr v0, v2
+    goto :goto_1
 
-    add-int/lit8 v0, v0, 0x1
+    :cond_0
+    const/16 p1, 0x1000
 
-    mul-int/2addr v0, v1
+    const/4 p3, 0x0
 
-    return v0
+    if-eq p2, p1, :cond_2
+
+    const/16 p1, 0x2000
+
+    if-eq p2, p1, :cond_1
+
+    :goto_0
+    move p1, p3
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    goto :goto_0
+
+    :goto_1
+    return p1
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_0
+    .end packed-switch
 .end method

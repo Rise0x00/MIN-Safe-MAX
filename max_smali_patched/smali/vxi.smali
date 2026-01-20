@@ -1,117 +1,60 @@
-.class public abstract Lvxi;
+.class public final Lvxi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lvxi;
+
 
 # direct methods
-.method public static a(Lvp4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    const-wide/16 v0, 0x0
+    new-instance v0, Lvxi;
 
-    cmp-long v0, p1, v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-gtz v0, :cond_0
+    sput-object v0, Lvxi;->a:Lvxi;
 
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ly22;
-
-    invoke-static {p3}, Ls9i;->b(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p3
+    new-instance v0, Lbri;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1, p3}, Ly22;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    invoke-virtual {v0}, Ly22;->o()V
+    const-class v1, Lpri;
 
-    invoke-interface {p0, p1, p2, v0}, Lvp4;->scheduleResumeAfterDelay(JLx22;)V
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Ly22;->n()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
+    const/4 v2, 0x2
 
-    sget-object p1, Lh54;->a:Lh54;
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    if-ne p0, p1, :cond_1
+    move-result-object v0
 
-    return-object p0
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    :cond_1
-    :goto_0
-    sget-object p0, Lybg;->a:Lybg;
+    move-result-object v0
 
-    return-object p0
-.end method
-
-.method public static b(Ljava/io/File;Ljava/io/File;)V
-    .locals 2
-
-    new-instance v0, Ljava/io/FileInputStream;
-
-    invoke-direct {v0, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    :try_start_0
-    new-instance p0, Ljava/io/FileOutputStream;
-
-    invoke-direct {p0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    new-instance p1, Ljava/util/zip/GZIPOutputStream;
-
-    invoke-direct {p1, p0}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-static {v0, p1}, Lmli;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-interface {p1}, Ljava/io/Closeable;->close()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception p0
 
-    goto :goto_0
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    :catchall_1
-    move-exception p0
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    :try_start_3
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    :catchall_2
-    move-exception v1
-
-    :try_start_4
-    invoke-static {p1, p0}, Ltti;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :goto_0
-    :try_start_5
-    throw p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    :catchall_3
-    move-exception p1
-
-    invoke-static {v0, p0}, Ltti;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    move-result-object p1
 
     throw p1
 .end method

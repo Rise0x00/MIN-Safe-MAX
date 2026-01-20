@@ -1,103 +1,73 @@
-.class public abstract Lf7b;
-.super Ljava/lang/Object;
+.class public final enum Lf7b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
+.field public static final enum a:Lf7b;
 
-.field public static final b:I
+.field public static final enum b:Lf7b;
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
+.field public static final synthetic c:[Lf7b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
-    sget v0, Lduc;->web_app_root_biometry_open_settings_dialog_accept:I
+    new-instance v0, Lf7b;
 
-    sput v0, Lf7b;->a:I
+    const-string v1, "PRIMARY"
 
-    sget v0, Lduc;->web_app_root_biometry_open_settings_dialog_title:I
+    const/4 v2, 0x0
 
-    sput v0, Lf7b;->b:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lduc;->web_app_root_biometry_request_dialog_accept:I
+    sput-object v0, Lf7b;->a:Lf7b;
 
-    sput v0, Lf7b;->c:I
+    new-instance v1, Lf7b;
 
-    sget v0, Lduc;->web_app_root_biometry_request_dialog_decline:I
+    const-string v2, "SECONDARY"
 
-    sput v0, Lf7b;->d:I
+    const/4 v3, 0x1
 
-    sget v0, Lduc;->web_app_root_biometry_request_dialog_default_reason:I
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput v0, Lf7b;->e:I
+    sput-object v1, Lf7b;->b:Lf7b;
 
-    sget v0, Lduc;->web_app_root_biometry_request_dialog_title:I
+    filled-new-array {v0, v1}, [Lf7b;
 
-    sput v0, Lf7b;->f:I
+    move-result-object v0
 
-    sget v0, Lduc;->web_app_root_biometry_setting:I
-
-    sput v0, Lf7b;->g:I
-
-    sget v0, Lduc;->web_app_root_biometry_setting_description:I
-
-    sput v0, Lf7b;->h:I
-
-    sget v0, Lduc;->web_app_root_choose_media_bottomsheet_gallery:I
-
-    sput v0, Lf7b;->i:I
-
-    sget v0, Lduc;->web_app_root_choose_media_bottomsheet_title:I
-
-    sput v0, Lf7b;->j:I
-
-    sget v0, Lduc;->web_app_root_max_share_quote_title:I
-
-    sput v0, Lf7b;->k:I
-
-    sget v0, Lduc;->web_app_root_setting_open_webapp:I
-
-    sput v0, Lf7b;->l:I
-
-    sget v0, Lduc;->web_app_root_settings_header_subtitle:I
-
-    sput v0, Lf7b;->m:I
-
-    sget v0, Lduc;->web_app_root_settings_header_title:I
-
-    sput v0, Lf7b;->n:I
-
-    sget v0, Lduc;->web_app_root_settings_webapps:I
-
-    sput v0, Lf7b;->o:I
+    sput-object v0, Lf7b;->c:[Lf7b;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lf7b;
+    .locals 1
+
+    const-class v0, Lf7b;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lf7b;
+
+    return-object p0
+.end method
+
+.method public static values()[Lf7b;
+    .locals 1
+
+    sget-object v0, Lf7b;->c:[Lf7b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lf7b;
+
+    return-object v0
 .end method

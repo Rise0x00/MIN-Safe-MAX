@@ -1,120 +1,200 @@
 .class public final Lhtb;
-.super Ljava/lang/Object;
+.super Lc98;
 .source "SourceFile"
 
-# interfaces
-.implements Lfog;
 
+# instance fields
+.field public final synthetic q:I
 
-# static fields
-.field public static final a:Lsef;
+.field public final synthetic r:Lhj4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lhj4;Landroid/content/Context;I)V
+    .locals 0
 
-    new-instance v0, Lyb4;
+    iput p3, p0, Lhtb;->q:I
 
-    const/4 v1, 0x4
+    iput-object p1, p0, Lhtb;->r:Lhj4;
 
-    invoke-direct {v0, v1}, Lyb4;-><init>(I)V
-
-    invoke-static {v0}, Lbh2;->b(Lsef;)Lsef;
-
-    move-result-object v0
-
-    sput-object v0, Lhtb;->a:Lsef;
+    invoke-direct {p0, p2}, Lc98;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lfy0;Llb3;ZLi22;)Lhog;
-    .locals 7
+.method public final d(Landroid/util/DisplayMetrics;)F
+    .locals 1
 
-    :try_start_0
-    sget-object v0, Lhtb;->a:Lsef;
+    iget v0, p0, Lhtb;->q:I
 
-    invoke-interface {v0}, Lsef;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    :goto_0
+    int-to-float p1, p1
+
+    const/high16 v0, 0x42c80000    # 100.0f
+
+    div-float/2addr v0, p1
+
+    return v0
+
+    :pswitch_0
+    iget p1, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f(I)I
+    .locals 1
+
+    iget v0, p0, Lhtb;->q:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Lc98;->f(I)I
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    const/16 v0, 0x64
+
+    invoke-super {p0, p1}, Lc98;->f(I)I
+
+    move-result p1
+
+    invoke-static {v0, p1}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Landroid/view/View;Lpsd;Lnsd;)V
+    .locals 2
+
+    iget p2, p0, Lhtb;->q:I
+
+    packed-switch p2, :pswitch_data_0
+
+    iget-object p2, p0, Lhtb;->r:Lhj4;
+
+    iget-object v0, p2, Lhj4;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    const-string v3, "setEnableReplayableCache"
-
-    sget-object v4, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    filled-new-array {v4}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v3
-
-    sget-object v4, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    filled-new-array {v4}, [Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "build"
-
-    invoke-virtual {v0, v3, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-object v1, v0
-
-    check-cast v1, Lfog;
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object v6, p5
-
-    invoke-interface/range {v1 .. v6}, Lfog;->a(Landroid/content/Context;Lfy0;Llb3;ZLi22;)Lhog;
+    invoke-virtual {p2, v0, p1}, Lhj4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
 
     move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p1
+    const/4 p2, 0x0
 
-    :catch_0
-    move-exception v0
+    aget p2, p1, p2
 
-    move-object p1, v0
+    const/4 v0, 0x1
 
-    new-instance p2, Landroidx/media3/common/VideoFrameProcessingException;
+    aget p1, p1, v0
 
-    invoke-direct {p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
-    throw p2
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lc98;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    iget-object v1, p0, Lc98;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Lnsd;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p2, p0, Lhtb;->r:Lhj4;
+
+    iget-object v0, p2, Lhj4;->a:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0, p1}, Lhj4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    aget p2, p1, p2
+
+    const/4 v0, 0x1
+
+    aget p1, p1, v0
+
+    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    invoke-static {p1}, Ljava/lang/Math;->abs(I)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lc98;->e(I)I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    iget-object v1, p0, Lc98;->j:Landroid/view/animation/DecelerateInterpolator;
+
+    invoke-virtual {p3, p2, p1, v0, v1}, Lnsd;->b(IIILandroid/view/animation/BaseInterpolator;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

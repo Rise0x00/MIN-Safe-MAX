@@ -1,316 +1,379 @@
-.class public abstract Lrwa;
+.class public final Lrwa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lorg/webrtc/VideoDecoderFactory;
 
-# static fields
-.field public static final a:Ljava/util/regex/Pattern;
+
+# instance fields
+.field public final a:Lorg/webrtc/EglBase$Context;
+
+.field public final b:Lahd;
+
+.field public final c:Ln8g;
+
+.field public final d:Ln8g;
+
+.field public volatile e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lorg/webrtc/EglBase$Context;Lahd;)V
+    .locals 0
 
-    const-string v0, "[^\\p{L}\\p{Nd} ]+"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+    iput-object p1, p0, Lrwa;->a:Lorg/webrtc/EglBase$Context;
 
-    move-result-object v0
+    iput-object p2, p0, Lrwa;->b:Lahd;
 
-    sput-object v0, Lrwa;->a:Ljava/util/regex/Pattern;
+    new-instance p1, Lnoi;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lnoi;-><init>(Lrwa;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lrwa;->c:Ln8g;
+
+    new-instance p1, Lnoi;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lnoi;-><init>(Lrwa;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lrwa;->d:Ln8g;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lrwa;->e:Z
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lgya;)Ljava/lang/CharSequence;
+
+# virtual methods
+.method public final a(Lorg/webrtc/VideoCodecInfo;)Lxz0;
     .locals 5
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    const/4 v0, 0x0
 
-    move-result v0
-
-    const-string v1, ""
-
-    if-nez v0, :cond_0
+    if-nez p1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    iget-object p1, p1, Lgya;->j:Lw85;
+    iget-object v1, p1, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    const-string v2, "VP8"
 
-    invoke-interface {p1, v0, p0}, Lw85;->a(ILjava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {p1, p0}, Lw85;->c(Ljava/lang/CharSequence;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    invoke-static {p1}, Lab3;->A(Ljava/util/List;)Ljava/lang/Object;
+    const-string v2, "VP9"
 
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/CharSequence;
-
-    return-object p0
-
-    :cond_1
-    sget-object p1, Lrwa;->a:Ljava/util/regex/Pattern;
-
-    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lxaf;->J(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p1
-
-    if-lez p1, :cond_3
-
-    invoke-static {p0}, Lxaf;->A(Ljava/lang/CharSequence;)C
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(C)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    :goto_1
-    return-object v1
-
-    :cond_4
-    const-string p0, " "
-
-    filled-new-array {p0}, [Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v1, 0x6
-
-    invoke-static {p1, p0, v1}, Lxaf;->W(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_5
-    :goto_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_2
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_1
+    iget-boolean v1, p0, Lrwa;->e:Z
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lrwa;->d:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    move-object v2, v1
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
 
-    check-cast v2, Ljava/lang/String;
+    invoke-interface {v1, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
 
-    invoke-static {v2}, Lxaf;->J(Ljava/lang/CharSequence;)Z
+    move-result-object v1
 
-    move-result v2
+    if-eqz v1, :cond_4
 
-    if-nez v2, :cond_5
+    new-instance v0, Lxz0;
 
-    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v2, p0, Lrwa;->b:Lahd;
+
+    invoke-direct {v0, v1, p1, v2}, Lxz0;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoCodecInfo;Lahd;)V
+
+    return-object v0
+
+    :cond_2
+    :try_start_0
+    iget-object v1, p0, Lrwa;->c:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v1, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    iget-object v2, p0, Lrwa;->b:Lahd;
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "Hardware encoder creating failed! Error="
+
+    const-string v4, "OKDefaultVideoDecoderFactory"
+
+    invoke-static {v3, v1, v2, v4}, Lcbh;->u(Ljava/lang/String;Ljava/lang/String;Lahd;Ljava/lang/String;)V
+
+    move-object v1, v0
+
+    :goto_0
+    iget-object v2, p0, Lrwa;->d:Ln8g;
+
+    invoke-virtual {v2}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v2, p1}, Lorg/webrtc/VideoDecoderFactory;->createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+
+    move-result-object v2
+
+    if-eqz v1, :cond_3
+
+    if-eqz v2, :cond_3
+
+    new-instance v0, Lorg/webrtc/VideoDecoderFallback;
+
+    invoke-direct {v0, v2, v1}, Lorg/webrtc/VideoDecoderFallback;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoDecoder;)V
+
+    move-object v1, v0
 
     goto :goto_2
 
+    :cond_3
+    if-nez v1, :cond_6
+
+    if-nez v2, :cond_5
+
+    :cond_4
+    :goto_1
+    return-object v0
+
+    :cond_5
+    move-object v1, v2
+
     :cond_6
-    new-instance p0, Ljava/lang/StringBuilder;
+    :goto_2
+    new-instance v0, Lxz0;
 
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v2, p0, Lrwa;->b:Lahd;
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    invoke-direct {v0, v1, p1, v2}, Lxz0;-><init>(Lorg/webrtc/VideoDecoder;Lorg/webrtc/VideoCodecInfo;Lahd;)V
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v1
-
-    move v2, v0
-
-    :goto_3
-    if-ge v2, v1, :cond_9
-
-    invoke-virtual {p1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    if-nez v4, :cond_7
-
-    goto :goto_4
-
-    :cond_7
-    invoke-static {v3}, Lxaf;->J(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    invoke-virtual {v3, v0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Character;->toUpperCase(C)C
-
-    move-result v3
-
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    :goto_4
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    :cond_9
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method
 
-.method public static b(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-    .locals 3
+.method public final b()[Lorg/webrtc/VideoCodecInfo;
+    .locals 8
 
-    if-nez p1, :cond_0
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    const/4 v0, 0x1
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+
+    iget-object v1, p0, Lrwa;->d:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v1}, Lorg/webrtc/VideoDecoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    iget-object v1, p0, Lrwa;->c:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lorg/webrtc/VideoDecoderFactory;
+
+    invoke-interface {v1}, Lorg/webrtc/VideoDecoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v1
+
+    iget-boolean v2, p0, Lrwa;->e:Z
+
+    const-string v3, "H265"
+
+    if-eqz v2, :cond_0
+
+    invoke-static {v3}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x2
+    const-string v2, "VP8"
 
-    :goto_0
-    sget-object v1, Lrwa;->a:Ljava/util/regex/Pattern;
+    const-string v4, "VP9"
 
-    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p0
-
-    const-string v2, ""
-
-    invoke-virtual {p0, v2}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    if-nez p1, :cond_1
-
-    move-object p1, v2
-
-    :cond_1
-    invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v2}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {p0}, Lxaf;->B(Ljava/lang/CharSequence;)Ljava/lang/Character;
-
-    move-result-object p0
-
-    invoke-static {p1}, Lxaf;->B(Ljava/lang/CharSequence;)Ljava/lang/Character;
-
-    move-result-object p1
-
-    filled-new-array {p0, p1}, [Ljava/lang/Character;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lbb3;->e([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    :goto_1
-    if-ge p1, v0, :cond_3
-
-    invoke-static {p1, p0}, Lab3;->D(ILjava/util/List;)Ljava/lang/Object;
+    filled-new-array {v3, v2, v4}, [Ljava/lang/String;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/Character;
+    invoke-static {v2}, Lct;->E([Ljava/lang/Object;)Ljava/util/Set;
 
-    if-eqz v2, :cond_2
+    move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/Character;->charValue()C
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Set;->isEmpty()Z
 
-    move-result v2
+    move-result v3
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    const/4 v4, 0x0
+
+    if-eqz v3, :cond_1
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_1
+    array-length v3, v1
+
+    move v5, v4
+
+    :goto_1
+    if-ge v5, v3, :cond_3
+
+    aget-object v6, v1, v5
+
+    iget-object v7, v6, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
+
+    invoke-interface {v2, v7}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-nez v7, :cond_2
+
+    invoke-virtual {v0, v6}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
     :cond_2
-    add-int/lit8 p1, p1, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_2
+    new-array v1, v4, [Lorg/webrtc/VideoCodecInfo;
 
-    move-result-object p0
+    invoke-interface {v0, v1}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v0
+
+    check-cast v0, [Lorg/webrtc/VideoCodecInfo;
+
+    return-object v0
+.end method
+
+.method public final createDecoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoDecoder;
+    .locals 3
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Lrwa;->a(Lorg/webrtc/VideoCodecInfo;)Lxz0;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    const-string v0, "OKDefaultVideoDecoderFactory"
+
+    const-string v1, "Can\'t create video decoder"
+
+    iget-object v2, p0, Lrwa;->b:Lahd;
+
+    invoke-interface {v2, v0, v1, p1}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
+    .locals 4
+
+    :try_start_0
+    invoke-virtual {p0}, Lrwa;->b()[Lorg/webrtc/VideoCodecInfo;
+
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    const-string v1, "OKDefaultVideoDecoderFactory"
+
+    const-string v2, "get.supported.codecs.failed"
+
+    iget-object v3, p0, Lrwa;->b:Lahd;
+
+    invoke-interface {v3, v1, v2, v0}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Lorg/webrtc/VideoCodecInfo;
+
+    return-object v0
 .end method

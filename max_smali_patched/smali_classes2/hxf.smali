@@ -1,185 +1,69 @@
-.class public final enum Lhxf;
-.super Ljava/lang/Enum;
+.class public final synthetic Lhxf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lhxf;
-
-.field public static final synthetic Y:[Lhxf;
-
-.field public static final enum b:Lhxf;
-
-.field public static final enum c:Lhxf;
-
-.field public static final enum d:Lhxf;
-
-.field public static final enum o:Lhxf;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:S
+.field public final synthetic a:I
+
+.field public final synthetic b:Lkxf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 13
-
-    new-instance v0, Lhxf;
-
-    const/4 v1, 0x0
-
-    const/16 v2, 0x17
-
-    const-string v3, "secp256r1"
-
-    invoke-direct {v0, v3, v1, v2}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Lhxf;->b:Lhxf;
-
-    new-instance v1, Lhxf;
-
-    const/4 v2, 0x1
-
-    const/16 v3, 0x18
-
-    const-string v4, "secp384r1"
-
-    invoke-direct {v1, v4, v2, v3}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lhxf;->c:Lhxf;
-
-    new-instance v2, Lhxf;
-
-    const/4 v3, 0x2
-
-    const/16 v4, 0x19
-
-    const-string v5, "secp521r1"
-
-    invoke-direct {v2, v5, v3, v4}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lhxf;->d:Lhxf;
-
-    new-instance v3, Lhxf;
-
-    const/4 v4, 0x3
-
-    const/16 v5, 0x1d
-
-    const-string v6, "x25519"
-
-    invoke-direct {v3, v6, v4, v5}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Lhxf;->o:Lhxf;
-
-    new-instance v4, Lhxf;
-
-    const/4 v5, 0x4
-
-    const/16 v6, 0x1e
-
-    const-string v7, "x448"
-
-    invoke-direct {v4, v7, v5, v6}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    sput-object v4, Lhxf;->X:Lhxf;
-
-    new-instance v5, Lhxf;
-
-    const/4 v6, 0x5
-
-    const/16 v7, 0x100
-
-    const-string v8, "ffdhe2048"
-
-    invoke-direct {v5, v8, v6, v7}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v6, Lhxf;
-
-    const/4 v7, 0x6
-
-    const/16 v8, 0x101
-
-    const-string v9, "ffdhe3072"
-
-    invoke-direct {v6, v9, v7, v8}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v7, Lhxf;
-
-    const/4 v8, 0x7
-
-    const/16 v9, 0x102
-
-    const-string v10, "ffdhe4096"
-
-    invoke-direct {v7, v10, v8, v9}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v8, Lhxf;
-
-    const/16 v9, 0x8
-
-    const/16 v10, 0x103
-
-    const-string v11, "ffdhe6144"
-
-    invoke-direct {v8, v11, v9, v10}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    new-instance v9, Lhxf;
-
-    const/16 v10, 0x9
-
-    const/16 v11, 0x104
-
-    const-string v12, "ffdhe8192"
-
-    invoke-direct {v9, v12, v10, v11}, Lhxf;-><init>(Ljava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v9}, [Lhxf;
-
-    move-result-object v0
-
-    sput-object v0, Lhxf;->Y:[Lhxf;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public synthetic constructor <init>(Lkxf;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lhxf;->a:I
 
-    int-to-short p1, p3
+    iput-object p1, p0, Lhxf;->b:Lkxf;
 
-    iput-short p1, p0, Lhxf;->a:S
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lhxf;
-    .locals 1
 
-    const-class v0, Lhxf;
+# virtual methods
+.method public final run()V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lhxf;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lhxf;
+    iget-object v0, p0, Lhxf;->b:Lkxf;
 
-    return-object p0
-.end method
+    iget-object v0, v0, Lkxf;->u0:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.method public static values()[Lhxf;
-    .locals 1
+    const/4 v1, 0x1
 
-    sget-object v0, Lhxf;->Y:[Lhxf;
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    invoke-virtual {v0}, [Lhxf;->clone()Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Lhxf;->b:Lkxf;
 
-    check-cast v0, [Lhxf;
+    iget-object v1, v0, Lkxf;->o:Landroidx/recyclerview/widget/RecyclerView;
 
-    return-object v0
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->Z()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v0, v0, Lkxf;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

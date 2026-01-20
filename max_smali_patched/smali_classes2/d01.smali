@@ -1,23 +1,37 @@
-.class public final Ld01;
+.class public abstract Ld01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/Collection;
-
-.field public final b:Ljava/util/Collection;
+# static fields
+.field public static final a:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Collection;Ljava/util/Collection;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/LinkedList;
 
-    iput-object p1, p0, Ld01;->a:Ljava/util/Collection;
+    invoke-static {}, Lh01;->values()[Lh01;
 
-    iput-object p2, p0, Ld01;->b:Ljava/util/Collection;
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
+
+    sget-object v1, Lh01;->a:Lh01;
+
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
+
+    new-instance v1, Ljava/util/LinkedHashSet;
+
+    invoke-direct {v1, v0}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
+
+    sput-object v1, Ld01;->a:Ljava/util/LinkedHashSet;
 
     return-void
 .end method

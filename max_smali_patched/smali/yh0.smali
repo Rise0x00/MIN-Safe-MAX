@@ -1,21 +1,14 @@
-.class public final Lyh0;
-.super Leq;
+.class public interface abstract Lyh0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lyh0;
+# virtual methods
+.method public abstract a(JJ)V
+.end method
 
+.method public abstract b()J
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lyh0;
-
-    invoke-direct {v0}, Leq;-><init>()V
-
-    sput-object v0, Lyh0;->a:Lyh0;
-
-    return-void
+.method public abstract reset()V
 .end method

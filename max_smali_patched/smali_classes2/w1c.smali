@@ -1,71 +1,48 @@
 .class public final Lw1c;
-.super Ljzg;
-.source "SourceFile"
+.super Lo84;
 
 
 # instance fields
-.field public volatile X:I
+.field public final synthetic X:Lzx;
 
-.field public final Y:Laf5;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final b:La1c;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Lru7;
-
-.field public final o:Lru7;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(La1c;Lru7;Lru7;)V
+.method public constructor <init>(Lzx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljzg;-><init>()V
+    iput-object p1, p0, Lw1c;->X:Lzx;
 
-    iput-object p1, p0, Lw1c;->b:La1c;
-
-    const-class p1, Lw1c;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lw1c;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Lw1c;->d:Lru7;
-
-    iput-object p3, p0, Lw1c;->o:Lru7;
-
-    new-instance p1, Laf5;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Laf5;-><init>(I)V
-
-    iput-object p1, p0, Lw1c;->Y:Laf5;
-
-    invoke-interface {p3}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltlf;
-
-    check-cast p1, Lsta;
-
-    invoke-virtual {p1}, Lsta;->b()La54;
-
-    move-result-object p1
-
-    new-instance p2, Ln1c;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p0, p3}, Ln1c;-><init>(Lw1c;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p3, 0x2
-
-    invoke-static {p0, p1, p2, p3}, Ljzg;->r(Ljzg;Ly44;Lej6;I)Lgye;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lw1c;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lw1c;->o:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lw1c;->o:I
+
+    iget-object p1, p0, Lw1c;->X:Lzx;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lzx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,167 +1,151 @@
 .class public final Lzyc;
-.super Ljava/lang/Object;
+.super Lbp9;
 .source "SourceFile"
 
 
+# static fields
+.field public static volatile c:[Lzyc;
+
+
 # instance fields
-.field public final a:Lzxc;
+.field public a:I
 
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(JLzxc;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
-    iput-object p3, p0, Lzyc;->a:Lzxc;
+    const/4 v0, 0x0
 
-    iput-wide p1, p0, Lzyc;->b:J
+    iput v0, p0, Lzyc;->a:I
 
-    iput-object p4, p0, Lzyc;->c:Ljava/lang/String;
+    iput v0, p0, Lzyc;->b:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final computeSerializedSize()I
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lzyc;->a:I
 
-    if-ne p0, p1, :cond_0
+    if-eqz v0, :cond_0
 
-    return v0
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Lwg3;->f(II)I
+
+    move-result v0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lzyc;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lzyc;
-
-    iget-object v1, p0, Lzyc;->a:Lzxc;
-
-    iget-object v2, p1, Lzyc;->a:Lzxc;
-
-    invoke-static {v1, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v1, p0, Lzyc;->b:J
-
-    iget-wide v3, p1, Lzyc;->b:J
-
-    cmp-long v1, v1, v3
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v1, p0, Lzyc;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Lzyc;->c:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
+    const/4 v0, 0x0
 
     :goto_0
-    const/4 p1, 0x0
+    iget v1, p0, Lzyc;->b:I
 
-    return p1
+    if-eqz v1, :cond_1
 
-    :cond_4
-    return v0
-.end method
+    const/4 v2, 0x2
 
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lzyc;->a:Lzxc;
-
-    invoke-virtual {v0}, Lzxc;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lzyc;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
-
-    move-result v0
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lzyc;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v2, v1}, Lwg3;->f(II)I
 
     move-result v1
 
     add-int/2addr v1, v0
 
     return v1
+
+    :cond_1
+    return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final mergeFrom(Lvg3;)Lbp9;
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lvg3;->s()I
 
-    const-string v1, "AddReaction(selfReaction="
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_4
 
-    iget-object v1, p0, Lzyc;->a:Lzxc;
+    const/16 v1, 0x8
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eq v0, v1, :cond_2
 
-    const-string v1, ", msgLocalId="
+    const/16 v1, 0x10
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eq v0, v1, :cond_1
 
-    iget-wide v1, p0, Lzyc;->b:J
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string v1, ", msgTime=0, effectLottieUrl="
+    if-nez v0, :cond_0
 
-    const-string v2, ", checkIsVisibleInWindow=false)"
+    goto :goto_1
 
-    iget-object v3, p0, Lzyc;->c:Ljava/lang/String;
+    :cond_1
+    invoke-virtual {p1}, Lvg3;->p()I
 
-    invoke-static {v0, v1, v3, v2}, Lsfd;->i(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    iput v0, p0, Lzyc;->b:I
 
-    return-object v0
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lvg3;->p()I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iput v0, p0, Lzyc;->a:I
+
+    goto :goto_0
+
+    :cond_4
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lwg3;)V
+    .locals 2
+
+    iget v0, p0, Lzyc;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
+
+    :cond_0
+    iget v0, p0, Lzyc;->b:I
+
+    if-eqz v0, :cond_1
+
+    const/4 v1, 0x2
+
+    invoke-virtual {p1, v1, v0}, Lwg3;->w(II)V
+
+    :cond_1
+    return-void
 .end method

@@ -2,264 +2,222 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ln8e;
+
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public a:I
+
+.field public b:Z
+
+.field public final synthetic c:Lnff;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lnff;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Llff;->c:Lnff;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Llff;->a:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public static b(Ljava/util/ArrayList;I[II)V
-    .locals 4
-
-    array-length v0, p2
-
-    if-lt p3, v0, :cond_0
-
-    invoke-virtual {p2}, [I->clone()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [I
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, p1, :cond_3
-
-    move v2, v0
-
-    :goto_1
-    if-ge v2, p3, :cond_2
-
-    aget v3, p2, v2
-
-    if-ne v1, v3, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    aput v1, p2, p3
-
-    add-int/lit8 v2, p3, 0x1
-
-    invoke-static {p0, p1, p2, v2}, Llff;->b(Ljava/util/ArrayList;I[II)V
-
-    :goto_2
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lub0;)V
-    .locals 1
+.method public final a()V
+    .locals 8
 
-    iget-object v0, p0, Llff;->a:Ljava/util/ArrayList;
+    iget-boolean v0, p0, Llff;->b:Z
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    iget-object v0, p0, Llff;->c:Lnff;
 
-.method public final c(Ljava/util/List;)Ljava/util/List;
-    .locals 12
+    iget-object v1, v0, Lnff;->o:Lto6;
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    iget-object v2, v0, Lnff;->u0:Lpj6;
 
-    move-result v0
+    iget-object v2, v2, Lpj6;->n:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    return-object p1
-
-    :cond_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    iget-object v1, p0, Llff;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-static {v2}, Lw5a;->h(Ljava/lang/String;)I
 
     move-result v2
 
-    if-eq v0, v2, :cond_1
+    iget-object v3, v0, Lnff;->u0:Lpj6;
 
-    goto/16 :goto_3
+    const/4 v5, 0x0
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    new-array v3, v0, [I
+    const-wide/16 v6, 0x0
 
     const/4 v4, 0x0
 
-    invoke-static {v2, v0, v3, v4}, Llff;->b(Ljava/util/ArrayList;I[II)V
+    invoke-virtual/range {v1 .. v7}, Lto6;->A(ILpj6;ILjava/lang/Object;J)V
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    const/4 v0, 0x1
 
-    move-result v0
+    iput-boolean v0, p0, Llff;->b:Z
 
-    new-array v0, v0, [Lub0;
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+.method public final b()V
+    .locals 2
 
-    move-result-object v2
+    iget-object v0, p0, Llff;->c:Lnff;
 
-    :cond_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-boolean v1, v0, Lnff;->v0:Z
 
-    move-result v3
+    if-nez v1, :cond_0
 
-    if-eqz v3, :cond_7
+    iget-object v0, v0, Lnff;->t0:Lui8;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Lui8;->b()V
 
-    move-result-object v3
+    :cond_0
+    return-void
+.end method
 
-    check-cast v3, [I
+.method public final e()Z
+    .locals 1
 
-    const/4 v5, 0x1
+    iget-object v0, p0, Llff;->c:Lnff;
 
-    move v6, v4
+    iget-boolean v0, v0, Lnff;->w0:Z
 
-    move v7, v5
+    return v0
+.end method
 
-    :goto_0
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+.method public final g(J)I
+    .locals 2
 
-    move-result v8
+    invoke-virtual {p0}, Llff;->a()V
 
-    if-ge v6, v8, :cond_6
+    const-wide/16 v0, 0x0
 
-    aget v8, v3, v6
+    cmp-long p1, p1, v0
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    if-lez p1, :cond_0
 
-    move-result v9
+    iget p1, p0, Llff;->a:I
 
-    if-ge v8, v9, :cond_5
+    const/4 p2, 0x2
 
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    if-eq p1, p2, :cond_0
 
-    move-result-object v8
+    iput p2, p0, Llff;->a:I
 
-    check-cast v8, Lub0;
+    const/4 p1, 0x1
 
-    aget v9, v3, v6
+    return p1
 
-    invoke-interface {p1, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    :cond_0
+    const/4 p1, 0x0
 
-    move-result-object v9
+    return p1
+.end method
 
-    check-cast v9, Lub0;
+.method public final p(Ltx4;Lol4;I)I
+    .locals 9
 
-    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Llff;->a()V
 
-    iget v10, v9, Lub0;->a:I
+    iget-object v0, p0, Llff;->c:Lnff;
 
-    iget-object v9, v9, Lub0;->b:Lmff;
+    iget-boolean v1, v0, Lnff;->w0:Z
 
-    iget v9, v9, Lmff;->a:I
+    const/4 v2, 0x2
 
-    iget-object v11, v8, Lub0;->b:Lmff;
+    if-eqz v1, :cond_0
 
-    iget v11, v11, Lmff;->a:I
+    iget-object v3, v0, Lnff;->x0:[B
 
-    if-gt v9, v11, :cond_3
+    if-nez v3, :cond_0
 
-    iget v8, v8, Lub0;->a:I
+    iput v2, p0, Llff;->a:I
 
-    if-ne v10, v8, :cond_3
+    :cond_0
+    iget v3, p0, Llff;->a:I
 
-    move v8, v5
+    const/4 v4, -0x4
 
-    goto :goto_1
+    if-ne v3, v2, :cond_1
 
-    :cond_3
-    move v8, v4
+    const/4 p1, 0x4
 
-    :goto_1
-    and-int/2addr v7, v8
+    invoke-virtual {p2, p1}, Laz;->a(I)V
 
-    if-nez v7, :cond_4
+    return v4
 
-    goto :goto_2
+    :cond_1
+    and-int/lit8 v5, p3, 0x2
 
-    :cond_4
-    aget v8, v3, v6
+    const/4 v6, 0x1
 
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    if-nez v5, :cond_6
 
-    move-result-object v9
-
-    check-cast v9, Lub0;
-
-    aput-object v9, v0, v8
-
-    :cond_5
-    add-int/lit8 v6, v6, 0x1
+    if-nez v3, :cond_2
 
     goto :goto_0
 
+    :cond_2
+    if-nez v1, :cond_3
+
+    const/4 p1, -0x3
+
+    return p1
+
+    :cond_3
+    iget-object p1, v0, Lnff;->x0:[B
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p2, v6}, Laz;->a(I)V
+
+    const-wide/16 v7, 0x0
+
+    iput-wide v7, p2, Lol4;->Y:J
+
+    and-int/lit8 p1, p3, 0x4
+
+    if-nez p1, :cond_4
+
+    iget p1, v0, Lnff;->y0:I
+
+    invoke-virtual {p2, p1}, Lol4;->z(I)V
+
+    iget-object p1, p2, Lol4;->o:Ljava/nio/ByteBuffer;
+
+    iget-object p2, v0, Lnff;->x0:[B
+
+    const/4 v1, 0x0
+
+    iget v0, v0, Lnff;->y0:I
+
+    invoke-virtual {p1, p2, v1, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
+
+    :cond_4
+    and-int/lit8 p1, p3, 0x1
+
+    if-nez p1, :cond_5
+
+    iput v2, p0, Llff;->a:I
+
+    :cond_5
+    return v4
+
     :cond_6
-    :goto_2
-    if-eqz v7, :cond_2
+    :goto_0
+    iget-object p2, v0, Lnff;->u0:Lpj6;
 
-    move v4, v5
+    iput-object p2, p1, Ltx4;->c:Ljava/lang/Object;
 
-    :cond_7
-    if-eqz v4, :cond_8
+    iput v6, p0, Llff;->a:I
 
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    const/4 p1, -0x5
 
-    move-result-object p1
-
-    return-object p1
-
-    :cond_8
-    :goto_3
-    const/4 p1, 0x0
-
-    return-object p1
+    return p1
 .end method

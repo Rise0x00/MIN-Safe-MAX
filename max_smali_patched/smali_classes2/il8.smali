@@ -1,9 +1,6 @@
 .class public final Lil8;
-.super Ljava/lang/Object;
+.super Laq;
 .source "SourceFile"
-
-# interfaces
-.implements Lol8;
 
 
 # static fields
@@ -16,7 +13,7 @@
 
     new-instance v0, Lil8;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Laq;-><init>()V
 
     sput-object v0, Lil8;->a:Lil8;
 
@@ -25,40 +22,18 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Lo58;
+    .locals 2
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    if-ne p0, p1, :cond_0
+    move-result-object v0
 
-    return v0
+    const/16 v1, 0x20a
 
-    :cond_0
-    instance-of p1, p1, Lil8;
+    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
 
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x8c5b203
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Show"
+    move-result-object v0
 
     return-object v0
 .end method

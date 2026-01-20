@@ -1,37 +1,50 @@
-.class public final Luy7;
-.super Lwf4;
+.class public final synthetic Luy7;
+.super Lqr6;
 .source "SourceFile"
+
+# interfaces
+.implements Ldr6;
 
 
 # static fields
-.field public static final b:Luy7;
+.field public static final a:Luy7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 6
 
     new-instance v0, Luy7;
 
-    invoke-direct {v0}, Lwf4;-><init>()V
+    const-string v4, "registerSelectForOnJoin(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
 
-    sput-object v0, Luy7;->b:Luy7;
+    const/4 v5, 0x0
 
-    const/4 v1, 0x0
+    const/4 v1, 0x3
 
-    new-array v1, v1, [Ljava/lang/String;
+    const-class v2, Lvy7;
 
-    const-string v2, "link"
+    const-string v3, "registerSelectForOnJoin"
 
-    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-direct/range {v0 .. v5}, Lqr6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    move-result-object v2
-
-    const/16 v3, 0xc
-
-    const-string v4, ":link-intercept"
-
-    invoke-static {v0, v4, v1, v2, v3}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    sput-object v0, Luy7;->a:Luy7;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lvy7;
+
+    check-cast p2, Lqme;
+
+    invoke-static {p1, p2, p3}, Lvy7;->access$registerSelectForOnJoin(Lvy7;Lqme;Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

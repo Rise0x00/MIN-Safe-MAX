@@ -1,43 +1,77 @@
 .class public final Li5f;
-.super Ljava/lang/Object;
+.super Ljz;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Li5f;
-
-
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final X:Ljava/lang/String;
 
-.field public final b:J
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final d:J
+
+.field public final o:Ljava/lang/String;
+
+.field public final t0:Ll2c;
+
+.field public final u0:Ljz;
+
+.field public final v0:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ll2c;Ljz;ZZZ)V
+    .locals 1
 
-    new-instance v0, Li5f;
+    sget-object v0, Le10;->Z:Le10;
 
-    sget-object v1, Lna5;->a:Lna5;
+    invoke-direct {p0, v0, p9, p10}, Ljz;-><init>(Le10;ZZ)V
 
-    const-wide/16 v2, 0x0
+    iput-wide p1, p0, Li5f;->d:J
 
-    invoke-direct {v0, v2, v3, v1}, Li5f;-><init>(JLjava/util/List;)V
+    iput-object p3, p0, Li5f;->o:Ljava/lang/String;
 
-    sput-object v0, Li5f;->c:Li5f;
+    iput-object p4, p0, Li5f;->X:Ljava/lang/String;
+
+    iput-object p5, p0, Li5f;->Y:Ljava/lang/String;
+
+    iput-object p6, p0, Li5f;->Z:Ljava/lang/String;
+
+    iput-object p7, p0, Li5f;->t0:Ll2c;
+
+    iput-object p8, p0, Li5f;->u0:Ljz;
+
+    iput-boolean p11, p0, Li5f;->v0:Z
 
     return-void
 .end method
 
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final a()Ljava/util/HashMap;
+    .locals 3
 
-    iput-object p3, p0, Li5f;->a:Ljava/util/List;
+    invoke-super {p0}, Ljz;->a()Ljava/util/HashMap;
 
-    iput-wide p1, p0, Li5f;->b:J
+    move-result-object v0
 
-    return-void
+    iget-wide v1, p0, Li5f;->d:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    const-string v2, "shareId"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "url"
+
+    iget-object v2, p0, Li5f;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v0
 .end method

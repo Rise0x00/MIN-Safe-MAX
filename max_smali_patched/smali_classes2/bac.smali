@@ -1,21 +1,26 @@
 .class public final Lbac;
-.super Lmd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lfac;
 
 
 # instance fields
+.field public final a:Ljava/lang/CharSequence;
+
 .field public final b:J
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/CharSequence;J)V
+    .locals 0
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
+    iput-object p1, p0, Lbac;->a:Ljava/lang/CharSequence;
 
-    iput-wide p1, p0, Lbac;->b:J
+    iput-wide p2, p0, Lbac;->b:J
 
     return-void
 .end method
@@ -43,42 +48,81 @@
     :cond_1
     check-cast p1, Lbac;
 
+    iget-object v1, p0, Lbac;->a:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lbac;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
     iget-wide v3, p0, Lbac;->b:J
 
     iget-wide v5, p1, Lbac;->b:J
 
     cmp-long p1, v3, v5
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_3
 
     return v2
 
-    :cond_2
+    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
-    iget-wide v0, p0, Lbac;->b:J
+    iget-object v0, p0, Lbac;->a:Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    return v0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lbac;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
-    const-string v0, "ChatAttaches(chatId="
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Abbreviation(abbreviation="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lbac;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", avatarSourceId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lbac;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Lbac;->b:J
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

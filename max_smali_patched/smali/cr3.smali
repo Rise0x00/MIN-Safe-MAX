@@ -4,106 +4,40 @@
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:Ltt8;
 
-.field public final b:Z
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:Ljava/util/HashMap;
+
+.field public e:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Z)V
-    .locals 0
+.method public constructor <init>(Layc;IJ)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcr3;->a:Landroid/net/Uri;
+    new-instance v0, Ltt8;
 
-    iput-boolean p2, p0, Lcr3;->b:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
     const/4 v1, 0x0
 
-    :goto_0
-    const-class v2, Lcr3;
+    invoke-direct {v0, p1, v1}, Ltt8;-><init>(Lxk0;Z)V
 
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iput-object v0, p0, Lcr3;->a:Ltt8;
 
-    move-result v1
+    iput p2, p0, Lcr3;->b:I
 
-    const/4 v2, 0x0
+    iput-wide p3, p0, Lcr3;->c:J
 
-    if-nez v1, :cond_2
+    new-instance p1, Ljava/util/HashMap;
 
-    return v2
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    :cond_2
-    check-cast p1, Lcr3;
+    iput-object p1, p0, Lcr3;->d:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcr3;->a:Landroid/net/Uri;
-
-    iget-object v3, p1, Lcr3;->a:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lcr3;->b:Z
-
-    iget-boolean p1, p1, Lcr3;->b:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lcr3;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lcr3;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method

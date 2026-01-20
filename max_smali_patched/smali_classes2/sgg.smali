@@ -1,29 +1,23 @@
-.class public interface abstract Lsgg;
+.class public final Lsgg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lkeg;)Ljg3;
-.end method
+# instance fields
+.field public final a:Ldhg;
 
-.method public abstract b(J)Ljg3;
-.end method
+.field public final b:Ldhg;
 
-.method public abstract c(Lseg;)Ljg3;
-.end method
 
-.method public abstract clear()Ljg3;
-.end method
+# direct methods
+.method public constructor <init>(Ldhg;Ldhg;)V
+    .locals 0
 
-.method public abstract d(Lseg;)Ltj8;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract e(Ljava/lang/String;)Ljg3;
-.end method
+    iput-object p1, p0, Lsgg;->a:Ldhg;
 
-.method public abstract f(Ljava/lang/String;)Ltj8;
-.end method
+    iput-object p2, p0, Lsgg;->b:Ldhg;
 
-.method public abstract g()Ltj8;
+    return-void
 .end method

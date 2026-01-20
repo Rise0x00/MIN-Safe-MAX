@@ -3,78 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lez5;
+.implements Lah9;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:La1f;
-
-.field public final synthetic c:Leh9;
+# static fields
+.field public static final a:Lzg9;
 
 
 # direct methods
-.method public synthetic constructor <init>(La1f;Leh9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lzg9;->a:I
+    new-instance v0, Lzg9;
 
-    iput-object p1, p0, Lzg9;->b:La1f;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzg9;->c:Leh9;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lzg9;->a:Lzg9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lzg9;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lyg9;
+    return v0
 
-    iget-object v1, p0, Lzg9;->c:Leh9;
+    :cond_0
+    instance-of p1, p1, Lzg9;
 
-    const/4 v2, 0x1
+    if-nez p1, :cond_1
 
-    invoke-direct {v0, p1, v1, v2}, Lyg9;-><init>(Lgz5;Leh9;I)V
+    const/4 p1, 0x0
 
-    iget-object p1, p0, Lzg9;->b:La1f;
+    return p1
 
-    invoke-virtual {p1, v0, p2}, La1f;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    sget-object p1, Lh54;->a:Lh54;
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, -0x62c3c567
 
-    :pswitch_0
-    new-instance v0, Lyg9;
+    return v0
+.end method
 
-    iget-object v1, p0, Lzg9;->c:Leh9;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    const/4 v2, 0x0
+    const-string v0, "LocalRestoreMembers"
 
-    invoke-direct {v0, p1, v1, v2}, Lyg9;-><init>(Lgz5;Leh9;I)V
-
-    iget-object p1, p0, Lzg9;->b:La1f;
-
-    invoke-virtual {p1, v0, p2}, La1f;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p1, Lh54;->a:Lh54;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

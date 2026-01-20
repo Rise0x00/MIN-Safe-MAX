@@ -1,112 +1,50 @@
-.class public final Lzy3;
-.super Logf;
+.class public final synthetic Lzy3;
+.super Lt8;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ldr6;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final Z:Lzy3;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lzy3;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+    new-instance v0, Lzy3;
 
-    const/4 p1, 0x2
+    const-string v1, "<init>(Lone/me/profileedit/screens/changelink/ChangeLinkScreenState;Ljava/util/List;)V"
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x4
+
+    const/4 v3, 0x3
+
+    const-class v4, Lfa2;
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lt8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+
+    sput-object v0, Lzy3;->Z:Lzy3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/Set;
+    check-cast p1, Lta2;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p2, Ljava/util/List;
 
-    invoke-virtual {p0, p1, p2}, Lzy3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
+    new-instance p3, Lfa2;
 
-    check-cast p1, Lzy3;
+    invoke-direct {p3, p1, p2}, Lfa2;-><init>(Lta2;Ljava/util/List;)V
 
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lzy3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lzy3;
-
-    iget-object v1, p0, Lzy3;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-direct {v0, v1, p2}, Lzy3;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lzy3;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lzy3;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lzy3;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    if-nez p1, :cond_0
-
-    const/16 p1, 0x8
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    sget v2, Lnsa;->F:I
-
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v2, Ljava/lang/Integer;
-
-    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-virtual {v1, v2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
-
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-object p3
 .end method

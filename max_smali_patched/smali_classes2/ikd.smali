@@ -1,835 +1,412 @@
-.class public abstract Likd;
-.super Ljava/lang/Object;
+.class public final Likd;
+.super Lisd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final a:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public static final A0:I
+.field public final b:Lnjd;
 
-.field public static final A1:I
+.field public final c:Lbz8;
 
-.field public static final B:I
+.field public final d:Ljava/lang/String;
 
-.field public static final B0:I
+.field public final e:Ljava/util/LinkedHashSet;
 
-.field public static final B1:I
+.field public final f:Ljava/util/LinkedList;
 
-.field public static final C:I
-
-.field public static final C0:I
-
-.field public static final C1:I
-
-.field public static final D:I
-
-.field public static final D0:I
-
-.field public static final D1:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final E1:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final F1:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final G1:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final N:I
-
-.field public static final N0:I
-
-.field public static final O:I
-
-.field public static final O0:I
-
-.field public static final P:I
-
-.field public static final P0:I
-
-.field public static final Q:I
-
-.field public static final Q0:I
-
-.field public static final R:I
-
-.field public static final R0:I
-
-.field public static final S:I
-
-.field public static final S0:I
-
-.field public static final T:I
-
-.field public static final T0:I
-
-.field public static final U:I
-
-.field public static final U0:I
-
-.field public static final V:I
-
-.field public static final V0:I
-
-.field public static final W:I
-
-.field public static final W0:I
-
-.field public static final X:I
-
-.field public static final X0:I
-
-.field public static final Y:I
-
-.field public static final Y0:I
-
-.field public static final Z:I
-
-.field public static final Z0:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final a1:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final b1:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final c1:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final d1:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final e1:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final f1:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final g1:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final h1:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final i1:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final j1:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final k1:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final l1:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final m1:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final n1:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final o1:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final p1:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final q1:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final r1:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final s1:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final t1:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final u1:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final v1:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final w1:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final x1:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final y1:I
-
-.field public static final z:I
-
-.field public static final z0:I
-
-.field public static final z1:I
+.field public g:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;Lnjd;Lbz8;)V
+    .locals 0
 
-    sget v0, Limc;->a_24:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Likd;->a:I
+    iput-object p1, p0, Likd;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    sget v0, Limc;->a_36:I
+    iput-object p2, p0, Likd;->b:Lnjd;
 
-    sput v0, Likd;->b:I
+    iput-object p3, p0, Likd;->c:Lbz8;
 
-    sget v0, Limc;->add_photo_24:I
+    const-class p1, Likd;
 
-    sput v0, Likd;->c:I
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    sget v0, Limc;->baseline_done_all_white_48:I
+    move-result-object p1
 
-    sput v0, Likd;->d:I
+    iput-object p1, p0, Likd;->d:Ljava/lang/String;
 
-    sget v0, Limc;->baseline_reply_white_48:I
+    new-instance p1, Ljava/util/LinkedHashSet;
 
-    sput v0, Likd;->e:I
+    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    sget v0, Limc;->chats:I
+    iput-object p1, p0, Likd;->e:Ljava/util/LinkedHashSet;
 
-    sput v0, Likd;->f:I
+    new-instance p1, Ljava/util/LinkedList;
 
-    sget v0, Limc;->check_24:I
+    invoke-direct {p1}, Ljava/util/LinkedList;-><init>()V
 
-    sput v0, Likd;->g:I
+    iput-object p1, p0, Likd;->f:Ljava/util/LinkedList;
 
-    sget v0, Limc;->chevron_right_16:I
+    return-void
+.end method
 
-    sput v0, Likd;->h:I
+.method public static final c(Likd;Ljava/lang/String;JLandroid/graphics/Rect;)V
+    .locals 19
 
-    sget v0, Limc;->code_32:I
+    move-object/from16 v0, p0
 
-    sput v0, Likd;->i:I
+    iget-object v1, v0, Likd;->d:Ljava/lang/String;
 
-    sget v0, Limc;->cross_24:I
+    sget-object v2, Lc5j;->a:Ledb;
 
-    sput v0, Likd;->j:I
+    if-nez v2, :cond_1
 
-    sget v0, Limc;->cross_fill_28:I
+    :cond_0
+    move-wide/from16 v6, p2
 
-    sput v0, Likd;->k:I
+    goto :goto_0
 
-    sget v0, Limc;->delete_fill_24:I
+    :cond_1
+    sget-object v3, Lkk8;->d:Lkk8;
 
-    sput v0, Likd;->l:I
+    invoke-virtual {v2, v3}, Ledb;->b(Lkk8;)Z
 
-    sget v0, Limc;->delete_fill_32:I
+    move-result v4
 
-    sput v0, Likd;->m:I
+    if-eqz v4, :cond_0
 
-    sget v0, Limc;->done_fill_round_28:I
+    const-string v4, "Play message "
 
-    sput v0, Likd;->n:I
+    move-wide/from16 v6, p2
 
-    sget v0, Limc;->downloads_fill_round_28:I
+    invoke-static {v6, v7, v4}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
 
-    sput v0, Likd;->o:I
+    move-result-object v4
 
-    sget v0, Limc;->draw_sticker_background_black:I
+    const/4 v5, 0x0
 
-    sput v0, Likd;->p:I
+    invoke-virtual {v2, v3, v1, v4, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget v0, Limc;->draw_sticker_background_white:I
+    :goto_0
+    sget-object v1, Lone/me/rlottie/RLottieFactory;->INSTANCE:Lone/me/rlottie/RLottieFactory;
 
-    sput v0, Likd;->q:I
+    sget-object v1, Lyjd;->b:Landroid/util/Size;
 
-    sget v0, Limc;->email_24:I
+    invoke-virtual {v1}, Landroid/util/Size;->getWidth()I
 
-    sput v0, Likd;->r:I
+    move-result v2
 
-    sget v0, Limc;->hide_24:I
+    int-to-float v2, v2
 
-    sput v0, Likd;->s:I
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    sget v0, Limc;->ic_add_24:I
+    move-result-object v3
 
-    sput v0, Likd;->t:I
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sget v0, Limc;->ic_add_contact_fill_24:I
+    move-result-object v3
 
-    sput v0, Likd;->u:I
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    sget v0, Limc;->ic_add_users_24:I
+    mul-float/2addr v2, v3
 
-    sput v0, Likd;->v:I
+    invoke-static {v2}, Lq7j;->c(F)I
 
-    sget v0, Limc;->ic_alert_16:I
+    move-result v9
 
-    sput v0, Likd;->w:I
+    invoke-virtual {v1}, Landroid/util/Size;->getHeight()I
 
-    sget v0, Limc;->ic_arrow_forward_24:I
+    move-result v1
 
-    sput v0, Likd;->x:I
+    int-to-float v1, v1
 
-    sget v0, Limc;->ic_back_24:I
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    sput v0, Likd;->y:I
+    move-result-object v2
 
-    sget v0, Limc;->ic_call_24:I
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    sput v0, Likd;->z:I
+    move-result-object v2
 
-    sget v0, Limc;->ic_call_fill_32:I
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    sput v0, Likd;->A:I
+    mul-float/2addr v1, v2
 
-    sget v0, Limc;->ic_call_grid_fill_24:I
+    invoke-static {v1}, Lq7j;->c(F)I
 
-    sput v0, Likd;->B:I
+    move-result v10
 
-    sget v0, Limc;->ic_call_speaker_fill_24:I
+    const/16 v17, 0x48
 
-    sput v0, Likd;->C:I
+    const/16 v18, 0x0
 
-    sget v0, Limc;->ic_camera_24:I
+    const/4 v11, 0x0
 
-    sput v0, Likd;->D:I
+    const/4 v12, 0x0
 
-    sget v0, Limc;->ic_check_24:I
+    const/4 v13, 0x1
 
-    sput v0, Likd;->E:I
+    const/4 v14, 0x0
 
-    sget v0, Limc;->ic_checkbox_24:I
+    const/4 v15, 0x1
 
-    sput v0, Likd;->F:I
+    const/16 v16, 0x0
 
-    sget v0, Limc;->ic_checkbox_bg_28:I
+    move-object/from16 v8, p1
 
-    sput v0, Likd;->G:I
+    invoke-static/range {v8 .. v18}, Lone/me/rlottie/RLottieFactory;->createByUrl$default(Ljava/lang/String;IIZZZZZZILjava/lang/Object;)Lone/me/rlottie/RLottieDrawable;
 
-    sget v0, Limc;->ic_checkbox_disabled_28:I
+    move-result-object v8
 
-    sput v0, Likd;->H:I
+    const/4 v1, 0x0
 
-    sget v0, Limc;->ic_checkbox_empty_28:I
+    invoke-virtual {v8, v1}, Lone/me/rlottie/RLottieDrawable;->setAutoRepeat(I)V
 
-    sput v0, Likd;->I:I
+    iget-object v5, v0, Likd;->b:Lnjd;
 
-    sget v0, Limc;->ic_collage_mode_24:I
+    const/16 v10, 0x10
 
-    sput v0, Likd;->J:I
+    move-object/from16 v9, p4
 
-    sget v0, Limc;->ic_collage_mode_selected_24:I
+    invoke-static/range {v5 .. v10}, Lnjd;->a(Lnjd;JLone/me/rlottie/RLottieDrawable;Landroid/graphics/Rect;I)V
 
-    sput v0, Likd;->K:I
+    return-void
+.end method
 
-    sget v0, Limc;->ic_copy_24:I
 
-    sput v0, Likd;->L:I
+# virtual methods
+.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
+    .locals 0
 
-    sget v0, Limc;->ic_cross_24:I
+    iget-object p2, p0, Likd;->b:Lnjd;
 
-    sput v0, Likd;->M:I
+    neg-int p3, p3
 
-    sget v0, Limc;->ic_cross_rounded_24:I
+    invoke-virtual {p2, p3}, Lnjd;->setScrollOffset(I)V
 
-    sput v0, Likd;->N:I
+    iget-boolean p2, p0, Likd;->g:Z
 
-    sget v0, Limc;->ic_down_2_24:I
+    const/4 p3, 0x0
 
-    sput v0, Likd;->O:I
+    if-eqz p2, :cond_0
 
-    sget v0, Limc;->ic_draw_sticker_24:I
+    iput-boolean p3, p0, Likd;->g:Z
 
-    sput v0, Likd;->P:I
+    new-instance p2, Lag8;
 
-    sget v0, Limc;->ic_draw_sticker_selected_24:I
+    const/16 p3, 0xd
 
-    sput v0, Likd;->Q:I
+    invoke-direct {p2, p3, p1, p0}, Lag8;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
 
-    sget v0, Limc;->ic_edit_24:I
+    invoke-static {p1, p2}, Lmnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmnb;
 
-    sput v0, Likd;->R:I
+    return-void
 
-    sget v0, Limc;->ic_file_mode_24:I
+    :cond_0
+    invoke-virtual {p0, p3}, Likd;->f(Z)V
 
-    sput v0, Likd;->S:I
+    return-void
+.end method
 
-    sget v0, Limc;->ic_file_mode_selected_24:I
+.method public final d(JLbjd;Ljava/lang/String;)V
+    .locals 5
 
-    sput v0, Likd;->T:I
+    iget-object v0, p0, Likd;->d:Ljava/lang/String;
 
-    sget v0, Limc;->ic_folder_24:I
+    sget-object v1, Lc5j;->a:Ledb;
 
-    sput v0, Likd;->U:I
+    if-nez v1, :cond_0
 
-    sget v0, Limc;->ic_gallery_item_placeholder:I
+    goto :goto_0
 
-    sput v0, Likd;->V:I
+    :cond_0
+    sget-object v2, Lkk8;->d:Lkk8;
 
-    sget v0, Limc;->ic_geo_dot_blue:I
+    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
 
-    sput v0, Likd;->W:I
+    move-result v3
 
-    sget v0, Limc;->ic_geo_dot_grey:I
+    if-eqz v3, :cond_1
 
-    sput v0, Likd;->X:I
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    sget v0, Limc;->ic_geo_layers_24:I
+    const-string v4, "Add reaction effect, reaction:"
 
-    sput v0, Likd;->Y:I
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v0, Limc;->ic_geo_pin_blue_big_combine:I
+    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sput v0, Likd;->Z:I
+    const-string v4, ", "
 
-    sget v0, Limc;->ic_geo_pin_blue_small_combine:I
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sput v0, Likd;->a0:I
+    invoke-virtual {v3, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    sget v0, Limc;->ic_geo_pin_grey_big_combine:I
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sput v0, Likd;->b0:I
+    move-result-object v3
 
-    sget v0, Limc;->ic_geo_pin_grey_small_combine:I
+    const/4 v4, 0x0
 
-    sput v0, Likd;->c0:I
+    invoke-virtual {v1, v2, v0, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget v0, Limc;->ic_geolocation_filled_28:I
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Likd;->e:Ljava/util/LinkedHashSet;
 
-    sput v0, Likd;->d0:I
+    new-instance v1, Lekd;
 
-    sget v0, Limc;->ic_incoming_call_fill_16:I
+    invoke-direct {v1, p1, p2, p3, p4}, Lekd;-><init>(JLbjd;Ljava/lang/String;)V
 
-    sput v0, Likd;->e0:I
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    sget v0, Limc;->ic_incoming_video_call_fill_16:I
+    return-void
+.end method
 
-    sput v0, Likd;->f0:I
+.method public final e(I)Z
+    .locals 3
 
-    sget v0, Limc;->ic_info_24:I
+    iget-object v0, p0, Likd;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    sput v0, Likd;->g0:I
+    invoke-static {v0}, Lgmj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    sget v0, Limc;->ic_lighting_24:I
+    move-result-object v1
 
-    sput v0, Likd;->h0:I
+    const/4 v2, -0x1
 
-    sget v0, Limc;->ic_lighting_auto_24:I
+    if-eqz v1, :cond_0
 
-    sput v0, Likd;->i0:I
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->Y0()I
 
-    sget v0, Limc;->ic_lighting_off_24:I
+    move-result v1
 
-    sput v0, Likd;->j0:I
+    goto :goto_0
 
-    sget v0, Limc;->ic_message_fill_24:I
+    :cond_0
+    move v1, v2
 
-    sput v0, Likd;->k0:I
+    :goto_0
+    invoke-static {v0}, Lgmj;->d(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    sget v0, Limc;->ic_missed_call_fill_16:I
+    move-result-object v0
 
-    sput v0, Likd;->l0:I
+    if-eqz v0, :cond_1
 
-    sget v0, Limc;->ic_missed_video_call_fill_16:I
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->a1()I
 
-    sput v0, Likd;->m0:I
+    move-result v0
 
-    sget v0, Limc;->ic_music_24:I
+    goto :goto_1
 
-    sput v0, Likd;->n0:I
+    :cond_1
+    move v0, v2
 
-    sget v0, Limc;->ic_outgoing_call_fill_16:I
+    :goto_1
+    if-eq p1, v2, :cond_2
 
-    sput v0, Likd;->o0:I
+    if-gt v1, p1, :cond_2
 
-    sget v0, Limc;->ic_outgoing_video_call_fill_16:I
+    if-gt p1, v0, :cond_2
 
-    sput v0, Likd;->p0:I
+    const/4 p1, 0x0
 
-    sget v0, Limc;->ic_pending_send_24:I
+    return p1
 
-    sput v0, Likd;->q0:I
+    :cond_2
+    const/4 p1, 0x1
 
-    sget v0, Limc;->ic_phone_off_fill_32:I
+    return p1
+.end method
 
-    sput v0, Likd;->r0:I
+.method public final f(Z)V
+    .locals 10
 
-    sget v0, Limc;->ic_photo_24:I
+    iget-object v0, p0, Likd;->f:Ljava/util/LinkedList;
 
-    sput v0, Likd;->s0:I
+    invoke-virtual {v0}, Ljava/util/LinkedList;->peek()Ljava/lang/Object;
 
-    sget v0, Limc;->ic_photo_gallery_24:I
+    move-result-object v1
 
-    sput v0, Likd;->t0:I
+    check-cast v1, Ljava/lang/Long;
 
-    sget v0, Limc;->ic_play_24:I
+    if-eqz v1, :cond_4
 
-    sput v0, Likd;->u0:I
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    sget v0, Limc;->ic_postpone_24:I
+    move-result-wide v6
 
-    sput v0, Likd;->v0:I
+    iget-object v2, p0, Likd;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    sget v0, Limc;->ic_privacy_24:I
+    invoke-virtual {v2, v6, v7}, Landroidx/recyclerview/widget/RecyclerView;->N(J)Ltsd;
 
-    sput v0, Likd;->w0:I
+    move-result-object v5
 
-    sget v0, Limc;->ic_privacy_fill_32:I
+    if-nez v5, :cond_0
 
-    sput v0, Likd;->x0:I
+    goto :goto_1
 
-    sget v0, Limc;->ic_profile_fill_24:I
+    :cond_0
+    iget-object v2, p0, Likd;->e:Ljava/util/LinkedHashSet;
 
-    sput v0, Likd;->y0:I
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    sget v0, Limc;->ic_recording_fill_24:I
+    move-result-object v2
 
-    sput v0, Likd;->z0:I
+    :cond_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    sget v0, Limc;->ic_refresh_24:I
+    move-result v3
 
-    sput v0, Likd;->A0:I
+    if-eqz v3, :cond_2
 
-    sget v0, Limc;->ic_reorder_24:I
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    sput v0, Likd;->B0:I
+    move-result-object v3
 
-    sget v0, Limc;->ic_rotate_camera_24:I
+    move-object v4, v3
 
-    sput v0, Likd;->C0:I
+    check-cast v4, Lekd;
 
-    sget v0, Limc;->ic_route_sign_24:I
+    iget-wide v8, v4, Lekd;->a:J
 
-    sput v0, Likd;->D0:I
+    cmp-long v4, v8, v6
 
-    sget v0, Limc;->ic_search_24:I
+    if-nez v4, :cond_1
 
-    sput v0, Likd;->E0:I
+    goto :goto_0
 
-    sget v0, Limc;->ic_send_24:I
+    :cond_2
+    const/4 v3, 0x0
 
-    sput v0, Likd;->F0:I
+    :goto_0
+    move-object v8, v3
 
-    sget v0, Limc;->ic_settings_fill_24:I
+    check-cast v8, Lekd;
 
-    sput v0, Likd;->G0:I
+    if-nez v8, :cond_3
 
-    sget v0, Limc;->ic_share_24:I
+    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    sput v0, Likd;->H0:I
+    return-void
 
-    sget v0, Limc;->ic_share_screen_on_fill_24:I
+    :cond_3
+    new-instance v2, Lgkd;
 
-    sput v0, Likd;->I0:I
+    iget-object v3, p0, Likd;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    sget v0, Limc;->ic_sound_off_24:I
+    move-object v4, p0
 
-    sput v0, Likd;->J0:I
+    move v9, p1
 
-    sget v0, Limc;->ic_sound_on_24:I
+    invoke-direct/range {v2 .. v9}, Lgkd;-><init>(Landroid/view/View;Likd;Ltsd;JLekd;Z)V
 
-    sput v0, Likd;->K0:I
+    invoke-static {v3, v2}, Lmnb;->a(Landroid/view/View;Ljava/lang/Runnable;)Lmnb;
 
-    sget v0, Limc;->ic_sound_on_fill_24:I
-
-    sput v0, Likd;->L0:I
-
-    sget v0, Limc;->ic_statusbar_downloads_24:I
-
-    sput v0, Likd;->M0:I
-
-    sget v0, Limc;->ic_statusbar_play_24:I
-
-    sput v0, Likd;->N0:I
-
-    sget v0, Limc;->ic_statusbar_uploads_24:I
-
-    sput v0, Likd;->O0:I
-
-    sget v0, Limc;->ic_text_28:I
-
-    sput v0, Likd;->P0:I
-
-    sget v0, Limc;->ic_trash_24:I
-
-    sput v0, Likd;->Q0:I
-
-    sget v0, Limc;->ic_unlocked_24:I
-
-    sput v0, Likd;->R0:I
-
-    sget v0, Limc;->ic_video_16:I
-
-    sput v0, Likd;->S0:I
-
-    sget v0, Limc;->ic_video_32:I
-
-    sput v0, Likd;->T0:I
-
-    sget v0, Limc;->ic_videocam_off_fill_28:I
-
-    sput v0, Likd;->U0:I
-
-    sget v0, Limc;->ic_videocam_on_fill_28:I
-
-    sput v0, Likd;->V0:I
-
-    sget v0, Limc;->ic_videocam_on_fill_32:I
-
-    sput v0, Likd;->W0:I
-
-    sget v0, Limc;->info_fill_24:I
-
-    sput v0, Likd;->X0:I
-
-    sget v0, Limc;->key_24:I
-
-    sput v0, Likd;->Y0:I
-
-    sget v0, Limc;->lamp_32:I
-
-    sput v0, Likd;->Z0:I
-
-    sget v0, Limc;->link_broken_28:I
-
-    sput v0, Likd;->a1:I
-
-    sget v0, Limc;->lock:I
-
-    sput v0, Likd;->b1:I
-
-    sget v0, Limc;->media_fill_24:I
-
-    sput v0, Likd;->c1:I
-
-    sget v0, Limc;->mention_32:I
-
-    sput v0, Likd;->d1:I
-
-    sget v0, Limc;->mirror_outline_24:I
-
-    sput v0, Likd;->e1:I
-
-    sget v0, Limc;->not_delivered_fill_28:I
-
-    sput v0, Likd;->f1:I
-
-    sget v0, Limc;->password_32:I
-
-    sput v0, Likd;->g1:I
-
-    sget v0, Limc;->picture_24:I
-
-    sput v0, Likd;->h1:I
-
-    sget v0, Limc;->play_fill_48:I
-
-    sput v0, Likd;->i1:I
-
-    sget v0, Limc;->presense_on:I
-
-    sput v0, Likd;->j1:I
-
-    sget v0, Limc;->presense_on_small:I
-
-    sput v0, Likd;->k1:I
-
-    sget v0, Limc;->privacy_fill_24:I
-
-    sput v0, Likd;->l1:I
-
-    sget v0, Limc;->profile:I
-
-    sput v0, Likd;->m1:I
-
-    sget v0, Limc;->quote_12:I
-
-    sput v0, Likd;->n1:I
-
-    sget v0, Limc;->right_arrow_1:I
-
-    sput v0, Likd;->o1:I
-
-    sget v0, Limc;->right_arrow_10:I
-
-    sput v0, Likd;->p1:I
-
-    sget v0, Limc;->right_arrow_11:I
-
-    sput v0, Likd;->q1:I
-
-    sget v0, Limc;->right_arrow_12:I
-
-    sput v0, Likd;->r1:I
-
-    sget v0, Limc;->right_arrow_13:I
-
-    sput v0, Likd;->s1:I
-
-    sget v0, Limc;->right_arrow_14:I
-
-    sput v0, Likd;->t1:I
-
-    sget v0, Limc;->right_arrow_15:I
-
-    sput v0, Likd;->u1:I
-
-    sget v0, Limc;->right_arrow_2:I
-
-    sput v0, Likd;->v1:I
-
-    sget v0, Limc;->right_arrow_3:I
-
-    sput v0, Likd;->w1:I
-
-    sget v0, Limc;->right_arrow_4:I
-
-    sput v0, Likd;->x1:I
-
-    sget v0, Limc;->right_arrow_5:I
-
-    sput v0, Likd;->y1:I
-
-    sget v0, Limc;->right_arrow_6:I
-
-    sput v0, Likd;->z1:I
-
-    sget v0, Limc;->right_arrow_7:I
-
-    sput v0, Likd;->A1:I
-
-    sget v0, Limc;->right_arrow_8:I
-
-    sput v0, Likd;->B1:I
-
-    sget v0, Limc;->right_arrow_9:I
-
-    sput v0, Likd;->C1:I
-
-    sget v0, Limc;->rotate_screen_24:I
-
-    sput v0, Likd;->D1:I
-
-    sget v0, Limc;->rotation_outline_24:I
-
-    sput v0, Likd;->E1:I
-
-    sget v0, Limc;->show_24:I
-
-    sput v0, Likd;->F1:I
-
-    sget v0, Limc;->show_fill_12:I
-
-    sput v0, Likd;->G1:I
-
+    :cond_4
+    :goto_1
     return-void
 .end method

@@ -1,92 +1,80 @@
-.class public abstract Ljvc;
+.class public final Ljvc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
-# static fields
-.field public static AsyncViewStub:[I = null
-
-.field public static AsyncViewStub_layout:I = 0x0
-
-.field public static LongRoundedTitleSubtitleButton:[I = null
-
-.field public static LongRoundedTitleSubtitleButton_lrts_subtitle:I = 0x0
-
-.field public static LongRoundedTitleSubtitleButton_lrts_title:I = 0x1
-
-.field public static PopupLayout:[I = null
-
-.field public static PopupLayout_sensitivity:I = 0x0
-
-.field public static RoundedRectConstraintLayout:[I = null
-
-.field public static RoundedRectConstraintLayout_roundRadius:I = 0x0
-
-.field public static RoundedRectFrameLayout:[I = null
-
-.field public static RoundedRectFrameLayout_cornersRadius:I = 0x0
-
-.field public static TamLoadingView:[I = null
-
-.field public static TamLoadingView_tlv_auto_repeat:I = 0x0
-
-.field public static TamLoadingView_tlv_network_fetch:I = 0x1
+# instance fields
+.field public final synthetic a:Lone/me/profile/ProfileScreen;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lone/me/profile/ProfileScreen;)V
+    .locals 0
 
-    const v0, 0x7f040593
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ljvc;->AsyncViewStub:[I
-
-    const v0, 0x7f040608
-
-    const v1, 0x7f040609
-
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ljvc;->LongRoundedTitleSubtitleButton:[I
-
-    const v0, 0x7f04074e
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ljvc;->PopupLayout:[I
-
-    const v0, 0x7f040727
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ljvc;->RoundedRectConstraintLayout:[I
-
-    const v0, 0x7f04031a
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ljvc;->RoundedRectFrameLayout:[I
-
-    const v0, 0x7f040897
-
-    const v1, 0x7f040898
-
-    filled-new-array {v0, v1}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ljvc;->TamLoadingView:[I
+    iput-object p1, p0, Ljvc;->a:Lone/me/profile/ProfileScreen;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    check-cast p2, Llz1;
+
+    iget-object v0, p0, Ljvc;->a:Lone/me/profile/ProfileScreen;
+
+    iget-object v0, v0, Lone/me/profile/ProfileScreen;->C0:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsz1;
+
+    const/4 v1, 0x1
+
+    iput v1, v0, Lsz1;->f:I
+
+    iget-object v0, p0, Ljvc;->a:Lone/me/profile/ProfileScreen;
+
+    iget-object v0, v0, Lone/me/profile/ProfileScreen;->C0:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lsz1;
+
+    iput-object p2, v0, Lsz1;->d:Llz1;
+
+    iget-object p2, p0, Ljvc;->a:Lone/me/profile/ProfileScreen;
+
+    iget-object p2, p2, Lone/me/profile/ProfileScreen;->C0:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lsz1;
+
+    sget-object v0, Lnz1;->c:Lnz1;
+
+    invoke-virtual {p2, v0, p1}, Lsz1;->h(Loz1;Z)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

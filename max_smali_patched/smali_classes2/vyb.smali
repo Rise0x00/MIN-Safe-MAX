@@ -1,73 +1,152 @@
-.class public final enum Lvyb;
-.super Ljava/lang/Enum;
+.class public final Lvyb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field public static final enum a:Lvyb;
 
-.field public static final enum b:Lvyb;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lvyb;
+.field public final synthetic b:Lone/me/sdk/permissionhost/PermissionBottomSheet;
+
+.field public final synthetic c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lone/me/sdk/permissionhost/PermissionBottomSheet;Lone/me/sdk/permissionhost/PermissionBottomSheet;I)V
+    .locals 0
 
-    new-instance v0, Lvyb;
+    iput p3, p0, Lvyb;->a:I
 
-    const-string v1, "Gallery"
+    iput-object p1, p0, Lvyb;->b:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lvyb;->c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lvyb;->a:Lvyb;
-
-    new-instance v1, Lvyb;
-
-    const-string v2, "Permissions"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lvyb;->b:Lvyb;
-
-    filled-new-array {v0, v1}, [Lvyb;
-
-    move-result-object v0
-
-    sput-object v0, Lvyb;->c:[Lvyb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lvyb;
-    .locals 1
 
-    const-class v0, Lvyb;
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Lvyb;->a:I
 
-    move-result-object p0
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p0, Lvyb;
+    iget-object p1, p0, Lvyb;->b:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    return-object p0
-.end method
+    const/4 v0, 0x1
 
-.method public static values()[Lvyb;
-    .locals 1
+    iput-boolean v0, p1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->P0:Z
 
-    sget-object v0, Lvyb;->c:[Lvyb;
+    iget-object p1, p0, Lvyb;->c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, p1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:Lo58;
 
-    move-result-object v0
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
-    check-cast v0, [Lvyb;
+    move-result-object v1
 
-    return-object v0
+    check-cast v1, Lyzb;
+
+    invoke-virtual {p1}, La94;->getTargetController()La94;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lone/me/sdk/arch/Widget;
+
+    if-eqz v3, :cond_0
+
+    check-cast v2, Lone/me/sdk/arch/Widget;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :goto_0
+    if-eqz v2, :cond_2
+
+    new-instance v3, Ljgi;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v2, v4}, Ljgi;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    iget-object v2, p1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->K0:Lls;
+
+    sget-object v4, Lone/me/sdk/permissionhost/PermissionBottomSheet;->Q0:[Lz28;
+
+    const/4 v5, 0x6
+
+    aget-object v5, v4, v5
+
+    invoke-virtual {v2, p1}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, [Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/String;
+
+    :cond_1
+    iget-object v5, p1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->L0:Lls;
+
+    const/4 v6, 0x7
+
+    aget-object v4, v4, v6
+
+    invoke-virtual {v5, p1}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Number;
+
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
+
+    move-result v4
+
+    invoke-virtual {v1, v3, v2, v4}, Lyzb;->j(Ljgi;[Ljava/lang/String;I)V
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Required value was null."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-object p1, p0, Lvyb;->b:Lone/me/sdk/permissionhost/PermissionBottomSheet;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->P0:Z
+
+    iget-object p1, p0, Lvyb;->c:Lone/me/sdk/permissionhost/PermissionBottomSheet;
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

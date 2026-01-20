@@ -1,58 +1,75 @@
-.class public final synthetic Lu1e;
-.super Ltj6;
+.class public final Lu1e;
+.super Laz;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
-
-# static fields
-.field public static final a:Lu1e;
+# instance fields
+.field public final synthetic c:Lux4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lux4;I)V
+    .locals 0
 
-    new-instance v0, Lu1e;
+    iput-object p1, p0, Lu1e;->c:Lux4;
 
-    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
+    const/4 p1, 0x5
 
-    const/4 v5, 0x1
-
-    const/4 v1, 0x2
-
-    const-class v2, Lw1e;
-
-    const-string v3, "createSegment"
-
-    invoke-direct/range {v0 .. v5}, Ltj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lu1e;->a:Lu1e;
+    invoke-direct {p0, p2, p1}, Laz;-><init>(II)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final r(Lxo6;)V
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    new-instance v0, Lv4g;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    invoke-direct {v0, p1}, Lv4g;-><init>(Lw4g;)V
 
-    move-result-wide v0
+    iget-object p1, p0, Lu1e;->c:Lux4;
 
-    check-cast p2, Lx1e;
+    invoke-virtual {p1, v0}, Lux4;->j(Lf7e;)V
 
-    sget p1, Lw1e;->a:I
+    return-void
+.end method
 
-    new-instance p1, Lx1e;
+.method public final t(Lxo6;II)V
+    .locals 0
 
-    const/4 v2, 0x0
+    invoke-virtual {p0, p1, p2, p3}, Lu1e;->v(Lxo6;II)V
 
-    invoke-direct {p1, v0, v1, p2, v2}, Lx1e;-><init>(JLx1e;I)V
+    return-void
+.end method
 
-    return-object p1
+.method public final u(Lxo6;)V
+    .locals 2
+
+    new-instance v0, Lv4g;
+
+    invoke-direct {v0, p1}, Lv4g;-><init>(Lw4g;)V
+
+    iget-object v1, p0, Lu1e;->c:Lux4;
+
+    invoke-virtual {v1, v0}, Lux4;->l(Lf7e;)V
+
+    iput-object p1, v1, Lux4;->h:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final v(Lxo6;II)V
+    .locals 1
+
+    new-instance v0, Lv4g;
+
+    invoke-direct {v0, p1}, Lv4g;-><init>(Lw4g;)V
+
+    iget-object p1, p0, Lu1e;->c:Lux4;
+
+    invoke-virtual {p1, v0, p2, p3}, Lux4;->k(Lf7e;II)V
+
+    return-void
 .end method

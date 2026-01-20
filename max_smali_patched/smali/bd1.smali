@@ -1,91 +1,117 @@
 .class public final Lbd1;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lqu1;
 
 
 # instance fields
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+
+
+# direct methods
+.method public constructor <init>(Lone/me/calls/ui/ui/incoming/CallIncomingScreen;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lbd1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final j()V
+    .locals 11
 
-    check-cast p1, [Lmr3;
+    iget-object v0, p0, Lbd1;->a:Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->b:Ljzb;
 
-    invoke-virtual {p0, p1, p2}, Lbd1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Y:Ljava/lang/Object;
 
-    move-result-object p1
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Lbd1;
+    move-result-object v2
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-object v4, v2
 
-    invoke-virtual {p1, p2}, Lbd1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v4, Ljgi;
 
-    move-result-object p1
+    invoke-virtual {v1}, Ljzb;->b()Lyzb;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    sget-object v5, Lyzb;->m:[Ljava/lang/String;
 
-    new-instance v0, Lbd1;
+    invoke-virtual {v2, v5}, Lyzb;->c([Ljava/lang/String;)Z
 
-    const/4 v1, 0x2
+    move-result v2
 
-    invoke-direct {v0, v1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    if-nez v2, :cond_0
 
-    iput-object p1, v0, Lbd1;->o:Ljava/lang/Object;
+    invoke-virtual {v1}, Ljzb;->b()Lyzb;
 
-    return-object v0
-.end method
+    move-result-object v3
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    sget v8, Ljed;->permissions_video_message_request_only_camera_title:I
 
-    iget-object p1, p0, Lbd1;->o:Ljava/lang/Object;
+    sget v7, Ljed;->permissions_calls_video_preview_request:I
 
-    check-cast p1, [Lmr3;
+    const/4 v9, 0x0
 
-    array-length v0, p1
+    const/16 v10, 0x20
 
-    const/4 v1, 0x0
+    const/16 v6, 0xb7
 
-    move v2, v1
+    invoke-static/range {v3 .. v10}, Lyzb;->n(Lyzb;Ljgi;[Ljava/lang/String;IIILezb;I)V
 
-    :goto_0
-    if-ge v2, v0, :cond_0
+    return-void
 
-    aget-object v3, p1, v2
+    :cond_0
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->B0()Ljd1;
 
-    if-eqz v3, :cond_1
+    move-result-object v1
 
-    invoke-virtual {v3}, Lmr3;->z()Z
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->B0()Ljd1;
 
-    move-result v3
+    move-result-object v0
 
-    if-nez v3, :cond_1
+    iget-object v0, v0, Ljd1;->v0:Lspf;
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    instance-of v2, v0, Led1;
+
+    if-eqz v2, :cond_1
+
+    check-cast v0, Led1;
 
     goto :goto_0
 
-    :cond_0
-    const/4 v1, 0x1
-
     :cond_1
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    :goto_0
+    if-nez v0, :cond_2
 
-    return-object p1
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_2
+    iget-boolean v0, v0, Led1;->b:Z
+
+    :goto_1
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {v1, v0}, Ljd1;->t(Z)V
+
+    return-void
 .end method

@@ -1,48 +1,70 @@
 .class public final Lnn1;
-.super Lp14;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lng0;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Lone/me/calls/ui/ui/call/CallScreen;
 
 
 # direct methods
-.method public constructor <init>(Lng0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lnn1;->X:Lng0;
+    iput p2, p0, Lnn1;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lnn1;->b:Lone/me/calls/ui/ui/call/CallScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 0
 
-    iput-object p1, p0, Lnn1;->d:Ljava/lang/Object;
+    iget p2, p0, Lnn1;->a:I
 
-    iget p1, p0, Lnn1;->o:I
+    iget-object p3, p0, Lnn1;->b:Lone/me/calls/ui/ui/call/CallScreen;
 
-    const/high16 v0, -0x80000000
+    packed-switch p2, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    iput p1, p0, Lnn1;->o:I
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
 
-    iget-object p1, p0, Lnn1;->X:Lng0;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lng0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Ld9c;
 
     move-result-object p1
 
-    return-object p1
+    invoke-virtual {p1}, Ld9c;->c()V
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
+
+    invoke-virtual {p3}, Lone/me/calls/ui/ui/call/CallScreen;->H0()Ld9c;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ld9c;->c()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

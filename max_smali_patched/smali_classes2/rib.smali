@@ -1,73 +1,55 @@
-.class public final enum Lrib;
-.super Ljava/lang/Enum;
+.class public abstract Lrib;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Lrib;
+.field public static final a:J
 
-.field public static final enum b:Lrib;
+.field public static final b:J
 
-.field public static final synthetic c:[Lrib;
+.field public static final c:J
+
+.field public static final d:J
+
+.field public static final e:J
+
+.field public static final synthetic f:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lrib;
+    sget v0, Ldad;->oneme_settings_ringtone_section_bottom_vh:I
 
-    const-string v1, "GRANTED"
+    int-to-long v0, v0
 
-    const/4 v2, 0x0
+    sput-wide v0, Lrib;->a:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Ldad;->oneme_settings_ringtone_section_custom_add:I
 
-    sput-object v0, Lrib;->a:Lrib;
+    int-to-long v0, v0
 
-    new-instance v1, Lrib;
+    sput-wide v0, Lrib;->b:J
 
-    const-string v2, "DENIED"
+    sget v0, Ldad;->oneme_settings_ringtone_section_default:I
 
-    const/4 v3, 0x1
+    int-to-long v0, v0
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput-wide v0, Lrib;->c:J
 
-    sput-object v1, Lrib;->b:Lrib;
+    sget v0, Ldad;->oneme_settings_ringtone_section_header_vh:I
 
-    filled-new-array {v0, v1}, [Lrib;
+    int-to-long v0, v0
 
-    move-result-object v0
+    sput-wide v0, Lrib;->d:J
 
-    sput-object v0, Lrib;->c:[Lrib;
+    sget v0, Ldad;->oneme_settings_ringtone_section_system:I
+
+    int-to-long v0, v0
+
+    sput-wide v0, Lrib;->e:J
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lrib;
-    .locals 1
-
-    const-class v0, Lrib;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lrib;
-
-    return-object p0
-.end method
-
-.method public static values()[Lrib;
-    .locals 1
-
-    sget-object v0, Lrib;->c:[Lrib;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lrib;
-
-    return-object v0
 .end method

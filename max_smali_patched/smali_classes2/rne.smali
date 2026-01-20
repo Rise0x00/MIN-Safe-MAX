@@ -1,23 +1,23 @@
-.class public final Lrne;
+.class public interface abstract Lrne;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lru7;
+# virtual methods
+.method public abstract a(Lyme;)V
+.end method
 
-.field public final b:Lru7;
+.method public abstract b(Lane;)V
+.end method
 
+.method public abstract c()Lpld;
+.end method
 
-# direct methods
-.method public constructor <init>(Lru7;Lru7;)V
-    .locals 0
+.method public abstract d(Ldla;)V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract e()Lold;
+.end method
 
-    iput-object p1, p0, Lrne;->a:Lru7;
-
-    iput-object p2, p0, Lrne;->b:Lru7;
-
-    return-void
+.method public abstract f()Loig;
 .end method

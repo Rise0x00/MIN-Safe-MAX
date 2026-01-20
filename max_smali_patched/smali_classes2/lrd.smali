@@ -1,129 +1,50 @@
 .class public final Llrd;
-.super Ljava/lang/Object;
+.super Ljava/io/InputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lm71;
+.field public final a:Lvi4;
 
-.field public final b:Ltuf;
-
-.field public final c:Ljava/util/LinkedHashMap;
-
-.field public final d:Ljava/util/LinkedHashSet;
+.field public final b:Ljava/io/ByteArrayOutputStream;
 
 
 # direct methods
-.method public constructor <init>(Lm71;Ltuf;)V
+.method public constructor <init>(Lvi4;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    iput-object p1, p0, Llrd;->a:Lm71;
+    iput-object p1, p0, Llrd;->a:Lvi4;
 
-    iput-object p2, p0, Llrd;->b:Ltuf;
+    new-instance p1, Ljava/io/ByteArrayOutputStream;
 
-    new-instance p1, Ljava/util/LinkedHashMap;
+    invoke-direct {p1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object p1, p0, Llrd;->c:Ljava/util/LinkedHashMap;
-
-    new-instance p1, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iput-object p1, p0, Llrd;->d:Ljava/util/LinkedHashSet;
+    iput-object p1, p0, Llrd;->b:Ljava/io/ByteArrayOutputStream;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)V
-    .locals 4
+.method public final read()I
+    .locals 2
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iget-object v0, p0, Llrd;->a:Lvi4;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    invoke-virtual {v0}, Lvi4;->read()I
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    move-result v0
 
-    move-result-object p1
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    iget-object v1, p0, Llrd;->b:Ljava/io/ByteArrayOutputStream;
+
+    invoke-virtual {v1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lt51;
-
-    iget-object v1, v1, Lt51;->a:Lks1;
-
-    iget-object v2, v1, Lks1;->a:Lfxg;
-
-    sget-object v3, Lfxg;->b:Lfxg;
-
-    if-ne v2, v3, :cond_0
-
-    iget-object v1, v1, Lks1;->b:Lsh1;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, p0, Llrd;->c:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {p1}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :cond_2
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/Map$Entry;
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsh1;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    iget-object v2, p0, Llrd;->d:Ljava/util/LinkedHashSet;
-
-    invoke-interface {v2, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
-
-    goto :goto_1
-
-    :cond_3
-    return-void
+    return v0
 .end method

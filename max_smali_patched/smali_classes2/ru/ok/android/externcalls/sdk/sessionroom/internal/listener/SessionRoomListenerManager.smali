@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$OwnRoomsListener;",
         "listener",
-        "Lybg;",
+        "Lb3h;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/sessionroom/SessionRoomsManager$OwnRoomsListener;)V",
         "removeListener",

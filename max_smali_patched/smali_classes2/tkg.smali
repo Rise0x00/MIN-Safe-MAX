@@ -1,51 +1,21 @@
 .class public final Ltkg;
-.super Ljava/lang/Object;
+.super Ltsd;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+# instance fields
+.field public final F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+# direct methods
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 0
 
-    return v0
+    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
 
-    :cond_0
-    instance-of v1, p1, Ltkg;
+    check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
 
-    if-nez v1, :cond_1
+    iput-object p1, p0, Ltkg;->F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Ltkg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const/high16 v0, 0x1f000000
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "VfxButtonIconOverlayPlainElevation1Colors(color=520093696)"
-
-    return-object v0
+    return-void
 .end method

@@ -1,320 +1,249 @@
 .class public final Lwlf;
-.super Ljava/lang/Object;
+.super Lulf;
 .source "SourceFile"
-
-# interfaces
-.implements Lvo3;
 
 
 # instance fields
-.field public final X:Lru7;
+.field public final l:J
 
-.field public final Y:Lru7;
+.field public final m:J
 
-.field public Z:Lnt1;
+.field public final n:J
 
-.field public final a:Lru7;
+.field public final o:J
 
-.field public final b:Lru7;
+.field public final p:J
 
-.field public final c:Lru7;
+.field public final q:J
 
-.field public final d:Lru7;
+.field public final r:J
 
-.field public final o:Lru7;
+.field public final s:J
 
-.field public s0:Lcu7;
+.field public final t:Ljava/lang/Double;
 
-.field public t0:Ltr6;
+.field public final u:Ljava/lang/Double;
 
-.field public u0:I
+.field public final v:J
 
-.field public v0:J
+.field public final w:J
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;Lru7;Lru7;Lru7;)V
-    .locals 0
+.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JJJJJJJJLjava/lang/String;JLjava/lang/Double;Ljava/lang/Double;La2c;JJ)V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x2
 
-    iput-object p1, p0, Lwlf;->a:Lru7;
+    move-object v0, p0
 
-    iput-object p2, p0, Lwlf;->b:Lru7;
+    move-wide v2, p1
 
-    iput-object p3, p0, Lwlf;->c:Lru7;
+    move-object v4, p3
 
-    iput-object p4, p0, Lwlf;->d:Lru7;
+    move-object/from16 v5, p4
 
-    iput-object p5, p0, Lwlf;->o:Lru7;
+    move-object/from16 v6, p5
 
-    iput-object p6, p0, Lwlf;->X:Lru7;
+    move-object/from16 v7, p6
 
-    iput-object p7, p0, Lwlf;->Y:Lru7;
+    move-wide/from16 v8, p7
+
+    move-object/from16 v10, p23
+
+    move-object/from16 v11, p28
+
+    invoke-direct/range {v0 .. v11}, Lulf;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;La2c;)V
+
+    move-wide/from16 p1, p9
+
+    iput-wide p1, p0, Lwlf;->l:J
+
+    move-wide/from16 p1, p11
+
+    iput-wide p1, p0, Lwlf;->m:J
+
+    move-wide/from16 p1, p13
+
+    iput-wide p1, p0, Lwlf;->n:J
+
+    move-wide/from16 p1, p15
+
+    iput-wide p1, p0, Lwlf;->o:J
+
+    move-wide/from16 p1, p17
+
+    iput-wide p1, p0, Lwlf;->p:J
+
+    move-wide/from16 p1, p19
+
+    iput-wide p1, p0, Lwlf;->q:J
+
+    move-wide/from16 p1, p21
+
+    iput-wide p1, p0, Lwlf;->r:J
+
+    move-wide/from16 p1, p24
+
+    iput-wide p1, p0, Lwlf;->s:J
+
+    move-object/from16 p1, p26
+
+    iput-object p1, p0, Lwlf;->t:Ljava/lang/Double;
+
+    move-object/from16 p1, p27
+
+    iput-object p1, p0, Lwlf;->u:Ljava/lang/Double;
+
+    move-wide/from16 p1, p29
+
+    iput-wide p1, p0, Lwlf;->v:J
+
+    move-wide/from16 p1, p31
+
+    iput-wide p1, p0, Lwlf;->w:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Lwlf;->Y:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwo3;
-
-    invoke-interface {v0}, Lwo3;->b()Lqp3;
-
-    move-result-object v0
-
-    sget-object v1, Lqp3;->b:Lqp3;
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Lwlf;->s0:Lcu7;
-
-    invoke-static {v0}, Lzkd;->b(Lzv4;)V
-
-    iget-object v0, p0, Lwlf;->t0:Ltr6;
-
-    invoke-virtual {p0, v0}, Lwlf;->e(Ltr6;)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lwlf;->t0:Ltr6;
-
-    invoke-virtual {p0, v0}, Lwlf;->c(Ltr6;)V
-
-    return-void
-.end method
-
-.method public final c(Ltr6;)V
+.method public final toString()Ljava/lang/String;
     .locals 4
 
-    const-string v0, "Load font"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "wlf"
+    const-string v1, "VideoRecv{ssrc="
 
-    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lwlf;->t0:Ltr6;
+    iget-wide v1, p0, Lylf;->c:J
 
-    iget-object v0, p0, Lwlf;->Z:Lnt1;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lzkd;->c(Lzv4;)Z
+    const-string v1, ", transportId=\'"
 
-    move-result v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lylf;->d:Ljava/lang/String;
 
-    const-string p1, "Font already loading"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v1, "\', trackId=\'"
 
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    new-instance v0, Le6;
+    iget-object v1, p0, Lylf;->e:Ljava/lang/String;
 
-    const/16 v1, 0xe
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1, p0}, Le6;-><init>(ILjava/lang/Object;)V
+    const-string v1, "\', packetsReceived="
 
-    new-instance v1, Lah3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x5
+    iget-object v1, p0, Lulf;->h:Ljava/math/BigInteger;
 
-    invoke-direct {v1, v2, v0}, Lah3;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lwlf;->o:Lru7;
+    const-string v1, ", packetsLost="
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lulf;->i:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bytesReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lulf;->j:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", jitterBufferMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lulf;->k:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", nacksSent="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->l:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", pliSent="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->m:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", firSent="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->n:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", framesDecoded="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->o:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", framesReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->p:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameHeight="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->q:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", frameWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->r:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lylf;->g:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", framesDropped="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lwlf;->s:J
+
+    const/16 v3, 0x7d
+
+    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lnmf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v0, Lomf;
-
-    invoke-virtual {v0}, Lomf;->a()Lgpd;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljqe;->m(Lgpd;)Lbre;
-
-    move-result-object v0
-
-    sget-object v1, Ltpd;->d:Lm2g;
-
-    invoke-virtual {v0, v1}, Ljqe;->i(Lgpd;)Lbre;
-
-    move-result-object v0
-
-    new-instance v1, Lulf;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lulf;-><init>(Lwlf;Ltr6;I)V
-
-    new-instance v2, Lulf;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, p1, v3}, Lulf;-><init>(Lwlf;Ltr6;I)V
-
-    new-instance p1, Lnt1;
-
-    const/4 v3, 0x2
-
-    invoke-direct {p1, v1, v3, v2}, Lnt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1}, Ljqe;->k(Lcre;)V
-
-    iput-object p1, p0, Lwlf;->Z:Lnt1;
-
-    return-void
-.end method
-
-.method public final d(Ljava/io/File;Ltr6;)V
-    .locals 3
-
-    const-string v0, "wlf"
-
-    const-string v1, "Tam emoji font loaded"
-
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lpa6;
-
-    new-instance v1, Lsoh;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v1, Lsoh;->a:Ljava/lang/Object;
-
-    iget-object p1, p0, Lwlf;->o:Lru7;
-
-    iput-object p1, v1, Lsoh;->b:Ljava/lang/Object;
-
-    iget-object p1, p0, Lwlf;->X:Lru7;
-
-    iput-object p1, v1, Lsoh;->c:Ljava/lang/Object;
-
-    invoke-direct {v0, v1}, Lpa6;-><init>(Lz75;)V
-
-    if-eqz p2, :cond_0
-
-    const-string p1, "onDownloadEmojiFontSuccess %s"
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "LoadEmojiFontWorker"
-
-    invoke-static {v2, p1, v1}, Lcuh;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object p1, p2, Ltr6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
-
-    new-instance p2, Lf48;
-
-    invoke-direct {p2, v0}, Lf48;-><init>(Lpa6;)V
-
-    invoke-static {p1, p2}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lg48;)V
-
-    :cond_0
-    iget-object p1, p0, Lwlf;->Y:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwo3;
-
-    invoke-interface {p1, p0}, Lwo3;->e(Lvo3;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lwlf;->t0:Ltr6;
-
-    return-void
-.end method
-
-.method public final e(Ltr6;)V
-    .locals 4
-
-    if-eqz p1, :cond_3
-
-    iget v0, p0, Lwlf;->u0:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    filled-new-array {v1}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    const-string v2, "LoadEmojiFontWorker"
-
-    const-string v3, "onDownloadEmojiFontProgressChange %d"
-
-    invoke-static {v2, v3, v1}, Lcuh;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object p1, p1, Ltr6;->b:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;
-
-    new-instance v1, Le48;
-
-    if-gez v0, :cond_0
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v2, 0x1
-
-    if-gt v2, v0, :cond_2
-
-    const/16 v2, 0x65
-
-    if-ge v0, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/16 v0, 0x64
-
-    :goto_0
-    invoke-direct {v1, v0}, Le48;-><init>(I)V
-
-    invoke-static {p1, v1}, Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;->access$setState$p(Lru/ok/tamtam/android/emoji/font/LoadEmojiFontWorker;Lg48;)V
-
-    :cond_3
-    return-void
+    return-object v0
 .end method

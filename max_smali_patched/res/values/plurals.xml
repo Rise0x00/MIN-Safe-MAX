@@ -46,11 +46,11 @@
         <item quantity="many">Вы скопировали сообщения</item>
     </plurals>
     <plurals name="chat_screen_confirmation_delete_title">
-        <item quantity="other">Удалить сообщений?</item>
+        <item quantity="other">Удалить сообщения?</item>
         <item quantity="one">Удалить сообщение?</item>
         <item quantity="two">Удалить сообщения?</item>
         <item quantity="few">Удалить сообщения?</item>
-        <item quantity="many">Удалить сообщений?</item>
+        <item quantity="many">Удалить сообщения?</item>
     </plurals>
     <plurals name="forward_snackbar_messages_sent">
         <item quantity="other">Вы переслали сообщения</item>
@@ -203,6 +203,14 @@
         <item quantity="few">Удалим ваш профиль через %d дня</item>
         <item quantity="many">Удалим ваш профиль через %d дней</item>
     </plurals>
+    <plurals name="profile_edit_reactions_settings_slider_current_value">
+        <item quantity="other">%d реакций</item>
+        <item quantity="zero">%d реакций</item>
+        <item quantity="one">%d реакция</item>
+        <item quantity="two">%d реакции</item>
+        <item quantity="few">%d реакции</item>
+        <item quantity="many">%d реакций</item>
+    </plurals>
     <plurals name="profile_members_list_delete_from_channel_snackbar">
         <item quantity="other">Вы удалили подписчиков</item>
         <item quantity="one">Вы удалили подписчика</item>
@@ -212,12 +220,12 @@
         <item quantity="one">Вы удалили участника</item>
     </plurals>
     <plurals name="profile_members_list_restore_in_channel_snackbar">
-        <item quantity="other">Подписчики добавлены</item>
-        <item quantity="one">Подписчик добавлен</item>
+        <item quantity="other">Вы добавили подписчиков</item>
+        <item quantity="one">Вы добавили подписчика</item>
     </plurals>
     <plurals name="profile_members_list_restore_in_chat_snackbar">
-        <item quantity="other">Контакты добавлены</item>
-        <item quantity="one">Контакт добавлен</item>
+        <item quantity="other">Вы добавили контакты</item>
+        <item quantity="one">Вы добавили контакт</item>
     </plurals>
     <plurals name="to_chats">
         <item quantity="other">в %d чатов</item>

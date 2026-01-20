@@ -95,14 +95,14 @@
     if-eqz v3, :cond_2
 
     .line 4
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lqi6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnPrepared()Lnq6;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lqi6;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getOnError()Lnq6;
 
     move-result-object v5
 
@@ -119,13 +119,13 @@
     move-result v6
 
     .line 8
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()La42;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getFrameInterceptor()Ln72;
 
     .line 9
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/factory/JoinCallParams$Builder;->chatId:Ljava/lang/Long;
 
     .line 10
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lsha;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->getCameraCapturerFactory()Lowa;
 
     move-result-object v9
 
@@ -141,7 +141,7 @@
 
     const/4 v8, 0x0
 
-    invoke-direct/range {v0 .. v11}, Lru/ok/android/externcalls/sdk/factory/JoinCallParams;-><init>(Ljava/lang/String;Ljava/lang/Long;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lqi6;Lqi6;ZLru/ok/android/externcalls/sdk/events/ConversationEventsListener;La42;Lsha;Ljava/lang/String;Lfi4;)V
+    invoke-direct/range {v0 .. v11}, Lru/ok/android/externcalls/sdk/factory/JoinCallParams;-><init>(Ljava/lang/String;Ljava/lang/Long;Lru/ok/android/externcalls/sdk/id/ParticipantId;Lnq6;Lnq6;ZLru/ok/android/externcalls/sdk/events/ConversationEventsListener;Ln72;Lowa;Ljava/lang/String;Lso4;)V
 
     return-object v0
 

@@ -1,122 +1,167 @@
-.class public final synthetic Lhze;
+.class public final Lhze;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lsu3;
+.implements Lize;
+.implements Lj0f;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Li0f;
 
-.field public final synthetic b:Lone/me/startconversation/StartConversationScreen;
+.field public final Y:I
+
+.field public final a:Lqhg;
+
+.field public final b:J
+
+.field public final c:I
+
+.field public final d:Lqhg;
+
+.field public final o:Lg0f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/StartConversationScreen;I)V
-    .locals 0
+.method public constructor <init>(Lqhg;JILphg;Lf0f;I)V
+    .locals 2
 
-    iput p2, p0, Lhze;->a:I
+    and-int/lit8 v0, p7, 0x10
 
-    iput-object p1, p0, Lhze;->b:Lone/me/startconversation/StartConversationScreen;
+    const/4 v1, 0x0
 
+    if-eqz v0, :cond_0
+
+    move-object p5, v1
+
+    :cond_0
+    and-int/lit8 v0, p7, 0x20
+
+    if-eqz v0, :cond_1
+
+    move-object p6, v1
+
+    :cond_1
+    and-int/lit8 p7, p7, 0x40
+
+    if-eqz p7, :cond_2
+
+    sget-object p7, Li0f;->b:Li0f;
+
+    goto :goto_0
+
+    :cond_2
+    sget-object p7, Li0f;->d:Li0f;
+
+    :goto_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhze;->a:Lqhg;
+
+    iput-wide p2, p0, Lhze;->b:J
+
+    iput p4, p0, Lhze;->c:I
+
+    iput-object p5, p0, Lhze;->d:Lqhg;
+
+    iput-object p6, p0, Lhze;->o:Lg0f;
+
+    iput-object p7, p0, Lhze;->X:Li0f;
+
+    sget p1, Leib;->f:I
+
+    iput p1, p0, Lhze;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(I)Z
-    .locals 5
+.method public final a()I
+    .locals 1
 
-    iget v0, p0, Lhze;->a:I
+    iget v0, p0, Lhze;->c:I
 
-    const/4 v1, 0x0
+    return v0
+.end method
 
-    const/4 v2, 0x1
+.method public final b()Lqhg;
+    .locals 1
 
-    iget-object v3, p0, Lhze;->b:Lone/me/startconversation/StartConversationScreen;
+    iget-object v0, p0, Lhze;->d:Lqhg;
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    sget-object p1, Lone/me/startconversation/StartConversationScreen;->H0:[Les7;
+.method public final c()Lyze;
+    .locals 1
 
-    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->x0()Ljava/lang/CharSequence;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    return-object v0
+.end method
 
-    if-eqz p1, :cond_0
+.method public final d()Lqhg;
+    .locals 1
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    const/4 v0, 0x0
 
-    move-result p1
+    return-object v0
+.end method
 
-    if-nez p1, :cond_1
+.method public final e()Lg0f;
+    .locals 1
 
-    :cond_0
-    move v1, v2
+    iget-object v0, p0, Lhze;->o:Lg0f;
 
-    :cond_1
-    xor-int/lit8 p1, v1, 0x1
+    return-object v0
+.end method
 
-    return p1
+.method public final f()Ly58;
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->x0:Lp76;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lb28;->j()I
+    return-object v0
+.end method
 
-    move-result v0
+.method public final getItemId()J
+    .locals 2
 
-    iget-object v4, v3, Lone/me/startconversation/StartConversationScreen;->C0:Lgi0;
+    iget-wide v0, p0, Lhze;->b:J
 
-    invoke-virtual {v4}, Lb28;->j()I
+    return-wide v0
+.end method
 
-    move-result v4
+.method public final getTitle()Lqhg;
+    .locals 1
 
-    add-int/2addr v4, v0
+    iget-object v0, p0, Lhze;->a:Lqhg;
 
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->y0:Lgi0;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Lb28;->j()I
+.method public final getType()Li0f;
+    .locals 1
 
-    move-result v0
+    iget-object v0, p0, Lhze;->X:Li0f;
 
-    add-int/2addr v0, v4
+    return-object v0
+.end method
 
-    if-eq p1, v0, :cond_2
+.method public final m()I
+    .locals 1
 
-    iget-object v0, v3, Lone/me/startconversation/StartConversationScreen;->E0:Laj3;
+    iget v0, p0, Lhze;->Y:I
 
-    invoke-virtual {v0}, Laj3;->j()I
+    return v0
+.end method
 
-    move-result v0
+.method public final t()I
+    .locals 1
 
-    if-ne p1, v0, :cond_3
+    const/4 v0, 0x0
 
-    invoke-virtual {v3}, Lone/me/startconversation/StartConversationScreen;->x0()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :cond_2
-    move v1, v2
-
-    :cond_3
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

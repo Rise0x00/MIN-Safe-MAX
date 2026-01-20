@@ -1,113 +1,128 @@
 .class public final Ltf1;
-.super Ladi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvf1;
 
-# static fields
-.field public static final c:Ltf1;
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Ltf1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Ladi;-><init>(I)V
-
-    sput-object v0, Ltf1;->c:Ltf1;
+    iput-object p1, p0, Ltf1;->a:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public static R0(Ltf1;J)Lpf4;
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string v0, ":profile?id="
-
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p1, "&type="
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "local_chat"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lpf4;
-
-    invoke-direct {p1, p0}, Lpf4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
 .end method
 
 
 # virtual methods
-.method public final S0(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance v0, Landroid/content/Intent;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    const-string v1, "android.intent.action.SEND"
+    return v0
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    :cond_0
+    instance-of v1, p1, Ltf1;
 
-    const-string v1, "android.intent.extra.TEXT"
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    if-nez v1, :cond_1
 
-    const-string p1, "text/plain"
+    return v2
 
-    invoke-virtual {v0, p1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    :cond_1
+    check-cast p1, Ltf1;
 
-    invoke-virtual {p0}, Ladi;->p0()Ltf4;
+    iget-object v1, p0, Ltf1;->a:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object p1, p1, Ltf1;->a:Ljava/lang/String;
 
-    new-instance v1, Lvcb;
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v2, "oneme:share:data"
+    move-result p1
 
-    invoke-direct {v1, v2, v0}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-nez p1, :cond_2
 
-    new-instance v0, Lvcb;
+    return v2
 
-    const-string v2, "oneme:share:title"
+    :cond_2
+    return v0
+.end method
 
-    invoke-direct {v0, v2, p2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final getItemId()J
+    .locals 2
 
-    new-instance p2, Lvcb;
+    const-wide v0, 0x7ffffffffffffffdL
 
-    const-string v2, "tag"
+    return-wide v0
+.end method
 
-    invoke-direct {p2, v2, p3}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final h(Lud8;)Z
+    .locals 4
 
-    filled-new-array {v1, v0, p2}, [Lvcb;
+    const-wide v0, 0x7ffffffffffffffdL
 
-    move-result-object p2
+    invoke-interface {p1}, Lud8;->getItemId()J
 
-    invoke-static {p2}, Ltki;->b([Lvcb;)Landroid/os/Bundle;
+    move-result-wide v2
 
-    move-result-object p2
+    cmp-long p1, v0, v2
 
-    const-string p3, ":chats/share"
+    if-nez p1, :cond_0
 
-    invoke-virtual {p1, p3, p2}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    const/4 p1, 0x1
 
-    return-void
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ltf1;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    const/4 v0, 0x3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "CallShareLinkPreviewState(link="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Ltf1;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

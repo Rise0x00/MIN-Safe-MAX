@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltuf;
+.implements Lxkg;
 
 
 # annotations
@@ -13,7 +13,7 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/log/TimeProviderAdapter;",
-        "Ltuf;",
+        "Lxkg;",
         "Lru/ok/android/externcalls/sdk/log/ExtLogger$TimeProvider;",
         "loggerTimeProvider",
         "<init>",

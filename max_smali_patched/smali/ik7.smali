@@ -1,13 +1,8 @@
-.class public final Lik7;
-.super Lxdd;
+.class public interface abstract Lik7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object p1
-.end method
+# interfaces
+.implements Ljava/util/List;
+.implements Ljava/util/Collection;
+.implements Lo28;

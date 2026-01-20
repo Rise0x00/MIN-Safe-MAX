@@ -1,103 +1,207 @@
-.class public interface abstract Lgc5;
+.class public final Lgc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+.implements Ljava/lang/Runnable;
+
 
 # static fields
-.field public static final r:Ljava/util/List;
+.field public static final Z:[I
+
+.field public static final t0:[I
+
+
+# instance fields
+.field public X:Landroid/opengl/EGLSurface;
+
+.field public Y:Landroid/graphics/SurfaceTexture;
+
+.field public final synthetic a:I
+
+.field public final b:Landroid/os/Handler;
+
+.field public final c:[I
+
+.field public d:Landroid/opengl/EGLDisplay;
+
+.field public o:Landroid/opengl/EGLContext;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
-    const/16 v0, 0xd
+    const/16 v0, 0x11
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v1, v0, [I
 
-    move-result-object v1
+    fill-array-data v1, :array_0
 
-    const/16 v0, 0xa
+    sput-object v1, Lgc5;->Z:[I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v0, v0, [I
 
-    move-result-object v2
+    fill-array-data v0, :array_1
 
-    const/16 v0, 0x8
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const/16 v0, 0xb
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const/4 v0, 0x6
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    const/4 v0, 0x5
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    const/16 v0, 0x9
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    const/4 v0, 0x3
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v9
-
-    const/4 v0, 0x7
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v10
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    filled-new-array/range {v1 .. v11}, [Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lgc5;->r:Ljava/util/List;
+    sput-object v0, Lgc5;->t0:[I
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3040
+        0x4
+        0x3024
+        0x8
+        0x3023
+        0x8
+        0x3022
+        0x8
+        0x3021
+        0x8
+        0x3025
+        0x0
+        0x3027
+        0x3038
+        0x3033
+        0x4
+        0x3038
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3040
+        0x4
+        0x3024
+        0x8
+        0x3023
+        0x8
+        0x3022
+        0x8
+        0x3021
+        0x8
+        0x3025
+        0x0
+        0x3027
+        0x3038
+        0x3033
+        0x4
+        0x3038
+    .end array-data
+.end method
+
+.method public constructor <init>(Landroid/os/Handler;I)V
+    .locals 0
+
+    iput p2, p0, Lgc5;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Lgc5;->c:[I
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Lgc5;->c:[I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public abstract n(I)Z
+.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
+    .locals 0
+
+    iget p1, p0, Lgc5;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lgc5;->b:Landroid/os/Handler;
+
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public abstract q(I)Lhc5;
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lgc5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lgc5;->Y:Landroid/graphics/SurfaceTexture;
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lgc5;->Y:Landroid/graphics/SurfaceTexture;
+
+    if-eqz v0, :cond_1
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

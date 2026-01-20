@@ -2,30 +2,57 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvjb;
 
-# instance fields
-.field public final a:Ljava/lang/String;
 
-.field public final b:J
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lujb;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lujb;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lujb;
 
-    iput-object p1, p0, Lujb;->a:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lujb;->b:J
+    sput-object v0, Lujb;->a:Lujb;
+
+    new-instance v0, Lhu8;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Lhu8;-><init>(I)V
+
+    sput-object v0, Lujb;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -34,88 +61,40 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lujb;
+    instance-of p1, p1, Lujb;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Lujb;
-
-    iget-object v1, p0, Lujb;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lujb;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lujb;->b:J
-
-    iget-wide v5, p1, Lujb;->b:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
-    iget-object v0, p0, Lujb;->a:Ljava/lang/String;
+    const v0, -0x77b9f821
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lujb;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 1
 
-    const-string v0, "PhoneAndServerPhone(phone="
-
-    const-string v1, ", serverPhone="
-
-    iget-wide v2, p0, Lujb;->b:J
-
-    iget-object v4, p0, Lujb;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v1}, Lijf;->r(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "Timer"
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

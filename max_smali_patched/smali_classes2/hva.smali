@@ -1,94 +1,145 @@
-.class public final synthetic Lhva;
-.super Ljava/lang/Object;
+.class public final Lhva;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/FileFilter;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic o:Lkva;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lkva;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lhva;->a:I
+    iput-object p1, p0, Lhva;->o:Lkva;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/io/File;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lhva;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lhva;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lhva;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Lhva;->a:I
+    new-instance p1, Lhva;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lhva;->o:Lkva;
 
-    invoke-static {p1}, Lvv5;->c(Ljava/io/File;)Ljava/lang/String;
+    invoke-direct {p1, v0, p2}, Lhva;-><init>(Lkva;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object p1
+    return-object p1
+.end method
 
-    const-string v0, "log"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result p1
+    sget-object p1, Lkva;->G0:[Lz28;
 
-    return p1
+    iget-object p1, p0, Lhva;->o:Lkva;
 
-    :pswitch_0
-    invoke-static {p1}, Lvv5;->c(Ljava/io/File;)Ljava/lang/String;
+    invoke-virtual {p1}, Lkva;->s()Lfbh;
 
-    move-result-object p1
+    move-result-object v0
 
-    const-string v0, "zip"
+    iget-object v0, v0, Lx3;->g:Lr58;
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-string v1, "app.notification.dontDisturbUntil"
 
-    move-result p1
+    const-wide/16 v2, 0x0
 
-    return p1
+    invoke-virtual {v0, v1, v2, v3}, Lr58;->getLong(Ljava/lang/String;J)J
 
-    :pswitch_1
-    invoke-static {p1}, Lvv5;->c(Ljava/io/File;)Ljava/lang/String;
+    move-result-wide v4
 
-    move-result-object p1
+    cmp-long v0, v4, v2
 
-    const-string v0, "zip"
+    if-nez v0, :cond_0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const-wide/16 v2, -0x1
 
-    move-result p1
+    :cond_0
+    invoke-virtual {p1}, Lkva;->s()Lfbh;
 
-    return p1
+    move-result-object v0
 
-    :pswitch_2
-    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+    invoke-virtual {v0, v2, v3, v1}, Lx3;->h(JLjava/lang/String;)V
 
-    move-result-object p1
+    iget-object v0, p1, Lkva;->o:Lo58;
 
-    invoke-static {p1}, Lxaf;->A(Ljava/lang/CharSequence;)C
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    move-result p1
+    move-result-object v0
 
-    invoke-static {p1}, Ljava/lang/Character;->isLetter(C)Z
+    check-cast v0, Lt2b;
 
-    move-result p1
+    new-instance v1, Lzah;
 
-    return p1
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    nop
+    new-instance v4, Ljava/lang/Long;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v4, v2, v3}, Ljava/lang/Long;-><init>(J)V
+
+    iput-object v4, v1, Lzah;->b:Ljava/lang/Long;
+
+    new-instance v2, Ldbh;
+
+    invoke-direct {v2, v1}, Ldbh;-><init>(Lzah;)V
+
+    invoke-virtual {v0, v2}, Lt2b;->n(Ldbh;)J
+
+    iget-object p1, p1, Lkva;->z0:Lspf;
+
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Number;
+
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    new-instance v1, Ljava/lang/Integer;
+
+    invoke-direct {v1, v0}, Ljava/lang/Integer;-><init>(I)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

@@ -1,98 +1,120 @@
-.class public final synthetic Lbk2;
-.super Ljava/lang/Object;
+.class public final Lbk2;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lck2;
 
-.field public final synthetic b:Lck2;
+.field public final synthetic Y:Ldk2;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lck2;I)V
+.method public constructor <init>(Lck2;Ldk2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lbk2;->a:I
+    iput-object p1, p0, Lbk2;->X:Lck2;
 
-    iput-object p1, p0, Lbk2;->b:Lck2;
+    iput-object p2, p0, Lbk2;->Y:Ldk2;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lbk2;->a:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lbk2;->b:Lck2;
+    invoke-virtual {p0, p1, p2}, Lbk2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Ly53;->s0:Lvh4;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    check-cast p1, Lbk2;
 
-    move-result-object v0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
+    invoke-virtual {p1, p2}, Lbk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    iget-object v0, v0, Lcf0;->a:Lbf0;
+    return-object p1
+.end method
 
-    iget v0, v0, Lbf0;->h:I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
+    new-instance p1, Lbk2;
 
-    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
+    iget-object v0, p0, Lbk2;->X:Lck2;
 
-    return-object v1
+    iget-object v1, p0, Lbk2;->Y:Ldk2;
 
-    :pswitch_0
-    sget v0, Lyjd;->W:I
+    invoke-direct {p1, v0, v1, p2}, Lbk2;-><init>(Lck2;Ldk2;Lkotlin/coroutines/Continuation;)V
 
-    sget-object v1, Ly53;->s0:Lvh4;
+    return-object p1
+.end method
 
-    iget-object v2, p0, Lbk2;->b:Lck2;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v1, v2}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    iget v0, p0, Lbk2;->o:I
 
-    move-result-object v1
+    const/4 v1, 0x1
 
-    invoke-interface {v1}, Lw5b;->getIcon()Le77;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    if-ne v0, v1, :cond_0
 
-    iget v1, v1, Le77;->h:I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+    goto :goto_0
 
-    move-result-object v2
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-static {v2, v0}, Lr04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+    throw p1
 
-    move-result-object v0
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1}, Lw1f;->e(Landroid/graphics/drawable/Drawable;I)V
+    iget-object p1, p0, Lbk2;->X:Lck2;
+
+    iget-object p1, p1, Lck2;->a:Li7f;
+
+    iput v1, p0, Lbk2;->o:I
+
+    iget-object v0, p0, Lbk2;->Y:Ldk2;
+
+    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
-    nop
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

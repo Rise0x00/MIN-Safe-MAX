@@ -1,85 +1,48 @@
 .class public final Lux1;
-.super Ln49;
-.source "SourceFile"
+.super Lo84;
 
 
 # instance fields
-.field public m:Lq38;
+.field public final synthetic X:Lnq1;
 
-.field public final n:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ln49;-><init>()V
+    iput-object p1, p0, Lux1;->X:Lnq1;
 
-    iput-object p1, p0, Lux1;->n:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lux1;->m:Lq38;
+    iput-object p1, p0, Lux1;->d:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    iget p1, p0, Lux1;->o:I
 
-    iget-object v0, p0, Lux1;->n:Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    return-object v0
+    or-int/2addr p1, v0
 
-    :cond_0
-    invoke-virtual {v0}, Lq38;->d()Ljava/lang/Object;
+    iput p1, p0, Lux1;->o:I
 
-    move-result-object v0
+    iget-object p1, p0, Lux1;->X:Lnq1;
 
-    return-object v0
-.end method
+    const/4 v0, 0x0
 
-.method public final l(Lq38;Lhla;)V
-    .locals 0
+    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const/4 p0, 0x0
+    move-result-object p1
 
-    throw p0
-.end method
-
-.method public final m(Lk0a;)V
-    .locals 2
-
-    iget-object v0, p0, Lux1;->m:Lq38;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Ln49;->l:Lold;
-
-    invoke-virtual {v1, v0}, Lold;->d(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm49;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lm49;->a:Lq38;
-
-    invoke-virtual {v1, v0}, Lq38;->j(Lhla;)V
-
-    :cond_0
-    iput-object p1, p0, Lux1;->m:Lq38;
-
-    new-instance v0, Ltx1;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p0}, Ltx1;-><init>(ILjava/lang/Object;)V
-
-    invoke-super {p0, p1, v0}, Ln49;->l(Lq38;Lhla;)V
-
-    return-void
+    return-object p1
 .end method

@@ -4,11 +4,5 @@
 
 
 # virtual methods
-.method public abstract setTextMessageColors(Lot0;)V
-.end method
-
-.method public abstract setTextMessageLayout(Lff9;)V
-.end method
-
-.method public abstract setTextMessageLinkClickListener(Lw08;)V
+.method public abstract a(Ltqf;)V
 .end method

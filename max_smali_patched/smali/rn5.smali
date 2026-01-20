@@ -1,284 +1,239 @@
 .class public final Lrn5;
-.super Ljava/lang/Object;
+.super Lpbe;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Z
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final d:Ljava/util/concurrent/Executor;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Z)V
     .locals 0
 
-    iput p1, p0, Lrn5;->a:I
-
-    iput-object p2, p0, Lrn5;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrn5;->d:Ljava/util/concurrent/Executor;
+
+    iput-boolean p2, p0, Lrn5;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 7
+.method public final a()Lnbe;
+    .locals 3
 
-    iget v0, p0, Lrn5;->a:I
+    new-instance v0, Lpn5;
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lrn5;->d:Ljava/util/concurrent/Executor;
 
-    const/4 v2, 0x0
+    iget-boolean v2, p0, Lrn5;->c:Z
 
-    iget-object v3, p0, Lrn5;->b:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Lpn5;-><init>(Ljava/util/concurrent/Executor;Z)V
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    check-cast p1, Landroid/widget/Checkable;
+.method public final b(Ljava/lang/Runnable;)Lo25;
+    .locals 3
 
-    invoke-interface {p1}, Landroid/widget/Checkable;->isChecked()Z
+    iget-object v0, p0, Lrn5;->d:Ljava/util/concurrent/Executor;
 
-    move-result p1
+    :try_start_0
+    instance-of v1, v0, Ljava/util/concurrent/ExecutorService;
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eqz p1, :cond_0
+    iget-boolean v2, p0, Lrn5;->c:Z
 
-    check-cast v3, Landroid/view/GestureDetector;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v3, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    :try_start_1
+    new-instance v1, Liae;
 
-    move-result v2
+    invoke-direct {v1, p1, v2}, Lp0;-><init>(Ljava/lang/Runnable;Z)V
 
-    :cond_0
-    return v2
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
-    :pswitch_0
-    check-cast v3, Lq28;
+    invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    iget-object p1, v3, Lq28;->B0:Lo28;
+    move-result-object p1
 
-    iget-object v0, v3, Lq28;->F0:Landroid/os/Handler;
+    invoke-virtual {v1, p1}, Lp0;->a(Ljava/util/concurrent/Future;)V
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    return-object v1
 
-    move-result v4
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v5
-
-    float-to-int v5, v5
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p2
-
-    float-to-int p2, p2
-
-    if-nez v4, :cond_1
-
-    iget-object v6, v3, Lq28;->J0:Lvo;
-
-    if-eqz v6, :cond_1
-
-    invoke-virtual {v6}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    if-ltz v5, :cond_1
-
-    iget-object v6, v3, Lq28;->J0:Lvo;
-
-    invoke-virtual {v6}, Landroid/widget/PopupWindow;->getWidth()I
-
-    move-result v6
-
-    if-ge v5, v6, :cond_1
-
-    if-ltz p2, :cond_1
-
-    iget-object v3, v3, Lq28;->J0:Lvo;
-
-    invoke-virtual {v3}, Landroid/widget/PopupWindow;->getHeight()I
-
-    move-result v3
-
-    if-ge p2, v3, :cond_1
-
-    const-wide/16 v3, 0xfa
-
-    invoke-virtual {v0, p1, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    :catch_0
+    move-exception p1
 
     goto :goto_0
 
+    :cond_0
+    if-eqz v2, :cond_1
+
+    new-instance v1, Lon5;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lon5;-><init>(Ljava/lang/Runnable;Lp25;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-object v1
+
     :cond_1
-    if-ne v4, v1, :cond_2
+    new-instance v1, Lnn5;
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-direct {v1, p1}, Lnn5;-><init>(Ljava/lang/Runnable;)V
 
-    :cond_2
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
+
+    return-object v1
+
     :goto_0
-    return v2
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
 
-    :pswitch_1
-    check-cast v3, Lcom/futuremind/recyclerviewfastscroll/FastScroller;
+    sget-object p1, Lyg5;->a:Lyg5;
 
-    invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
+    return-object p1
+.end method
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
+    .locals 4
 
-    move-result p1
+    const-string v0, "run is null"
 
-    if-eqz p1, :cond_5
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    iget-object v0, p0, Lrn5;->d:Ljava/util/concurrent/Executor;
 
-    move-result p1
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    const/4 v0, 0x2
+    if-eqz v1, :cond_0
 
-    if-ne p1, v0, :cond_3
+    :try_start_0
+    new-instance v1, Liae;
 
-    goto :goto_1
+    iget-boolean v2, p0, Lrn5;->c:Z
 
-    :cond_3
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    invoke-direct {v1, p1, v2}, Lp0;-><init>(Ljava/lang/Runnable;Z)V
 
-    move-result p1
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    if-ne p1, v1, :cond_4
+    invoke-interface {v0, v1, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    iput-boolean v2, v3, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:Z
+    move-result-object p1
 
-    goto :goto_4
+    invoke-virtual {v1, p1}, Lp0;->a(Ljava/util/concurrent/Future;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_4
-    move v1, v2
+    return-object v1
 
-    goto :goto_4
+    :catch_0
+    move-exception p1
 
-    :cond_5
-    :goto_1
-    sget p1, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->A0:I
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
 
-    iput-boolean v1, v3, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->y0:Z
+    sget-object p1, Lyg5;->a:Lyg5;
 
-    invoke-virtual {v3}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->c()Z
+    return-object p1
 
-    move-result p1
+    :cond_0
+    new-instance v0, Lmn5;
 
-    if-eqz p1, :cond_6
+    invoke-direct {v0, p1}, Lmn5;-><init>(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawY()F
+    sget-object p1, Lqn5;->a:Lpbe;
 
-    move-result p1
+    new-instance v1, Lis6;
 
-    iget-object p2, v3, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->d:Landroid/view/View;
+    const/16 v2, 0x8
 
-    invoke-virtual {p2}, Landroid/view/View;->getY()F
+    const/4 v3, 0x0
 
-    move-result v0
+    invoke-direct {v1, p0, v0, v3, v2}, Lis6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
 
-    float-to-int v0, v0
+    invoke-virtual {p1, v1, p2, p3, p4}, Lpbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
 
-    filled-new-array {v2, v0}, [I
+    move-result-object p1
 
-    move-result-object v0
+    iget-object p2, v0, Lmn5;->a:Li62;
 
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p2
+    invoke-static {p2, p1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
 
-    check-cast p2, Landroid/view/View;
+    return-object v0
+.end method
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->getLocationInWindow([I)V
+.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lo25;
+    .locals 9
 
-    aget p2, v0, v1
+    iget-object v0, p0, Lrn5;->d:Ljava/util/concurrent/Executor;
 
-    int-to-float p2, p2
+    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    sub-float/2addr p1, p2
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+    :try_start_0
+    new-instance v3, Lhae;
 
-    move-result p2
+    iget-boolean v1, p0, Lrn5;->c:Z
 
-    iget-object v0, v3, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->d:Landroid/view/View;
+    invoke-direct {v3, p1, v1}, Lp0;-><init>(Ljava/lang/Runnable;Z)V
 
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+    move-object v2, v0
 
-    move-result v0
+    check-cast v2, Ljava/util/concurrent/ScheduledExecutorService;
 
-    :goto_2
-    sub-int/2addr p2, v0
+    move-wide v4, p2
 
-    int-to-float p2, p2
+    move-wide v6, p4
 
-    div-float/2addr p1, p2
+    move-object v8, p6
 
-    goto :goto_3
+    invoke-interface/range {v2 .. v8}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    :cond_6
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+    move-result-object p1
 
-    move-result p1
+    invoke-virtual {v3, p1}, Lp0;->a(Ljava/util/concurrent/Future;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object p2, v3, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->d:Landroid/view/View;
+    return-object v3
 
-    invoke-virtual {p2}, Landroid/view/View;->getX()F
+    :catch_0
+    move-exception v0
 
-    move-result v0
+    move-object p1, v0
 
-    float-to-int v0, v0
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
 
-    filled-new-array {v0, v2}, [I
+    sget-object p1, Lyg5;->a:Lyg5;
 
-    move-result-object v0
+    return-object p1
 
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    :cond_0
+    move-object v1, p0
 
-    move-result-object p2
+    move-object v2, p1
 
-    check-cast p2, Landroid/view/View;
+    move-wide v3, p2
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->getLocationInWindow([I)V
+    move-wide v5, p4
 
-    aget p2, v0, v2
+    move-object v7, p6
 
-    int-to-float p2, p2
+    invoke-super/range {v1 .. v7}, Lpbe;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Lo25;
 
-    sub-float/2addr p1, p2
+    move-result-object p1
 
-    invoke-virtual {v3}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    iget-object v0, v3, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->d:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    goto :goto_2
-
-    :goto_3
-    invoke-virtual {v3, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->setScrollerPosition(F)V
-
-    invoke-static {v3, p1}, Lcom/futuremind/recyclerviewfastscroll/FastScroller;->a(Lcom/futuremind/recyclerviewfastscroll/FastScroller;F)V
-
-    :goto_4
-    return v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

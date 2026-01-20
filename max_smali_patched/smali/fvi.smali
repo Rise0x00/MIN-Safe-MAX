@@ -4,167 +4,81 @@
 
 
 # direct methods
-.method public static final a(Landroid/database/Cursor;I)Landroid/net/Uri;
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 1
 
-    :try_start_0
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    const-class v0, Lfvi;
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
-    goto :goto_0
+    return-void
+.end method
 
-    :catchall_0
-    move-exception p0
+.method public static a(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    .locals 1
 
-    new-instance p1, Lfed;
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
-    invoke-direct {p1, p0}, Lfed;-><init>(Ljava/lang/Throwable;)V
+    move-result v0
 
-    move-object p0, p1
+    if-nez v0, :cond_0
 
-    :goto_0
-    nop
+    const/4 p0, 0x0
 
-    instance-of p1, p0, Lfed;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    move-object p0, v0
+    return-object p0
 
     :cond_0
-    check-cast p0, Ljava/lang/String;
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
 
-    if-eqz p0, :cond_2
+    move-result-object p0
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    check-cast p0, Landroid/os/Parcelable;
 
-    move-result p1
+    return-object p0
+.end method
 
-    if-nez p1, :cond_1
+.method public static b(Landroid/os/Parcel;)V
+    .locals 2
 
-    goto :goto_1
+    invoke-virtual {p0}, Landroid/os/Parcel;->dataAvail()I
 
-    :cond_1
-    :try_start_1
-    invoke-static {p0}, Lx0j;->c(Ljava/lang/String;)Z
+    move-result p0
 
-    move-result p1
+    if-gtz p0, :cond_0
 
-    if-eqz p1, :cond_2
+    return-void
 
-    invoke-static {p0}, Lm0i;->g(Ljava/lang/String;)Ljava/lang/String;
+    :cond_0
+    new-instance v0, Landroid/os/BadParcelableException;
+
+    const-string v1, "Parcel data not fully consumed, unread size: "
+
+    invoke-static {p0, v1}, Lj27;->g(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Landroid/os/BadParcelableException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
     move-result-object p1
 
-    invoke-static {p1}, Lpdi;->m(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Failure Uri.fromFile(File("
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "))"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, "LocalMediaRepository:Cursor:getUri"
-
-    invoke-static {v1, p0, p1}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_1
-    return-object v0
-.end method
-
-.method public static final b(Lvcg;)V
-    .locals 3
-
-    new-instance v0, Lhpa;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lhpa;-><init>(I)V
-
-    const-class v1, Lof4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lipa;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lipa;-><init>(I)V
-
-    const-class v1, Lc5c;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhpa;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, v1}, Lhpa;-><init>(I)V
-
-    const-class v1, Lrac;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhpa;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Lhpa;-><init>(I)V
-
-    const-class v1, Lrs4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhpa;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v0, v2}, Lhpa;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhpa;
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v0, v2}, Lhpa;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lipa;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Lipa;-><init>(I)V
-
-    const-class v1, Lka;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
 
     return-void
 .end method

@@ -1,48 +1,70 @@
-.class public final Lc40;
-.super Lp14;
+.class public final synthetic Lc40;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Ld40;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Le40;
 
 
 # direct methods
-.method public constructor <init>(Ld40;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Le40;I)V
     .locals 0
 
-    iput-object p1, p0, Lc40;->X:Ld40;
+    iput p2, p0, Lc40;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lc40;->b:Le40;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lc40;->d:Ljava/lang/Object;
+    iget v0, p0, Lc40;->a:I
 
-    iget p1, p0, Lc40;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lc40;->b:Le40;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Le40;->b:Ljava/lang/Object;
 
-    iput p1, p0, Lc40;->o:I
+    check-cast v0, Landroid/content/Context;
 
-    iget-object p1, p0, Lc40;->X:Ld40;
+    const-string v1, "audio"
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Ld40;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Landroid/media/AudioManager;
 
-    return-object p1
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lho;
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lc40;->b:Le40;
+
+    invoke-direct {v0, v1, v2}, Lho;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

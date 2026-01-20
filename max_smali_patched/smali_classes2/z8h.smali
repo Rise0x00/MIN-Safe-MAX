@@ -1,66 +1,49 @@
-.class public final synthetic Lz8h;
-.super Ljava/lang/Object;
+.class public final Lz8h;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lyf4;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public X:I
 
-.field public final synthetic a:J
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic b:Lg4h;
-
-.field public final synthetic c:Ljava/lang/Long;
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic o:Z
+.field public final synthetic o:Ld9h;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLg4h;Ljava/lang/Long;Ljava/lang/String;ZI)V
+.method public constructor <init>(Ld9h;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz8h;->o:Ld9h;
 
-    iput-wide p1, p0, Lz8h;->a:J
-
-    iput-object p3, p0, Lz8h;->b:Lg4h;
-
-    iput-object p4, p0, Lz8h;->c:Ljava/lang/Long;
-
-    iput-object p5, p0, Lz8h;->d:Ljava/lang/String;
-
-    iput-boolean p6, p0, Lz8h;->o:Z
-
-    iput p7, p0, Lz8h;->X:I
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 8
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lone/me/webapp/rootscreen/WebAppRootScreen;
+    iput-object p1, p0, Lz8h;->d:Ljava/lang/Object;
 
-    iget-wide v1, p0, Lz8h;->a:J
+    iget p1, p0, Lz8h;->X:I
 
-    iget-object v3, p0, Lz8h;->b:Lg4h;
+    const/high16 v0, -0x80000000
 
-    iget-object v4, p0, Lz8h;->c:Ljava/lang/Long;
+    or-int/2addr p1, v0
 
-    iget-object v5, p0, Lz8h;->d:Ljava/lang/String;
+    iput p1, p0, Lz8h;->X:I
 
-    iget-boolean v6, p0, Lz8h;->o:Z
+    iget-object p1, p0, Lz8h;->o:Ld9h;
 
-    iget v7, p0, Lz8h;->X:I
+    const/4 v0, 0x0
 
-    invoke-direct/range {v0 .. v7}, Lone/me/webapp/rootscreen/WebAppRootScreen;-><init>(JLg4h;Ljava/lang/Long;Ljava/lang/String;ZI)V
+    invoke-virtual {p1, v0, p0}, Ld9h;->h(Lod7;Lo84;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

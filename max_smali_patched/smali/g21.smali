@@ -1,187 +1,240 @@
 .class public final Lg21;
-.super Ljava/lang/Object;
+.super Lzcf;
 .source "SourceFile"
-
-# interfaces
-.implements Lf21;
 
 
 # instance fields
-.field public final a:Lyt1;
-
-.field public final b:Lru7;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final o:Lrz6;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lyt1;)V
+.method public constructor <init>(Lrz6;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-object p2, p0, Lg21;->a:Lyt1;
-
-    iput-object p1, p0, Lg21;->b:Lru7;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Lg21;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Lg21;->o:Lrz6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;)V
-    .locals 7
+.method public final I(Ljef;I)V
+    .locals 5
 
-    iget-object v0, p0, Lg21;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    instance-of v0, p1, Lf21;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    move-result-object v0
+    check-cast p1, Lf21;
 
+    iget-object v0, p1, Ltsd;->a:Landroid/view/View;
+
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lud8;
+
+    instance-of v1, p2, Lk31;
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    :cond_0
     move-object v1, v0
 
-    check-cast v1, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
+    check-cast v1, Lt0f;
 
-    if-eqz v1, :cond_0
+    sget-object v2, Lo0f;->b:Lo0f;
 
-    const/4 v5, 0x6
+    invoke-virtual {v1, v2}, Lt0f;->setThemeDepended(Lo0f;)V
 
-    const/4 v6, 0x0
+    invoke-virtual {p1, p2}, Lf21;->y(Lud8;)V
 
-    const/4 v3, 0x0
+    move-object v2, p2
 
-    const/4 v4, 0x0
+    check-cast v2, Lk31;
 
-    move-object v2, p1
+    iget-boolean v2, v2, Lk31;->t0:Z
 
-    invoke-static/range {v1 .. v6}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->changeStateAsync$default(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$State;Loi6;Lqi6;ILjava/lang/Object;)V
+    iget-object v3, p0, Lg21;->o:Lrz6;
 
-    :cond_0
-    return-void
-.end method
-
-.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-    .locals 1
-
-    iget-object v0, p0, Lg21;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager;->getCurrentDevice()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-object v0
-
-    :cond_1
-    :goto_0
-    sget-object v0, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->Companion:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;
-
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo$Companion;->getNONE()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-    .locals 1
-
-    iget-object v0, p0, Lg21;->b:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lo34;
-
-    invoke-virtual {v0}, Lo34;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getMicrophoneManager()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final d()Z
-    .locals 3
-
-    invoke-virtual {p0}, Lg21;->c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;->isMicEnabled()Z
-
-    move-result v0
+    if-eqz v2, :cond_1
 
     const/4 v2, 0x1
 
-    if-ne v0, v2, :cond_0
+    invoke-virtual {v1, v2}, Landroid/view/View;->setEnabled(Z)V
 
-    return v2
+    new-instance v2, Le21;
 
-    :cond_0
-    return v1
+    check-cast p2, Lk31;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p1, v3, p2, v4}, Le21;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {v0, v2}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p1, 0x0
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setEnabled(Z)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    :goto_0
+    new-instance p1, Lsk;
+
+    const/4 p2, 0x3
+
+    invoke-direct {p1, p2, v3}, Lsk;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v1, p1}, Lt0f;->setOnSwitchCheckedListener(Lbr6;)V
+
+    return-void
+
+    :cond_2
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lud8;
+
+    invoke-virtual {p1, p2}, Ljef;->y(Lud8;)V
+
+    return-void
 .end method
 
-.method public final e(Z)V
+.method public final bridge synthetic s(Ltsd;I)V
+    .locals 0
+
+    check-cast p1, Ljef;
+
+    invoke-virtual {p0, p1, p2}, Lg21;->I(Ljef;I)V
+
+    return-void
+.end method
+
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lpc3;->t0:Lkme;
 
-    const-string v1, "CallAudioController microphone changed="
+    sget v1, Ly6b;->g:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ne p2, v1, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    new-instance p2, Lf21;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v1, "CallAudioController"
+    new-instance v0, Lt0f;
 
-    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    invoke-virtual {p0}, Lg21;->c()Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;
+    invoke-direct {v0, p1, v1}, Lt0f;-><init>(Landroid/content/Context;I)V
 
-    move-result-object v0
+    invoke-direct {p2, v0}, Ltsd;-><init>(Landroid/view/View;)V
 
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lru/ok/android/externcalls/sdk/audio/MicrophoneManager;->setMicEnabled(Z)V
+    return-object p2
 
     :cond_0
-    return-void
+    sget v1, Ly6b;->f:I
+
+    if-ne p2, v1, :cond_1
+
+    new-instance p2, Ld21;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v1, Landroid/widget/TextView;
+
+    invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget-object p1, Lr1h;->q:Lrhg;
+
+    invoke-static {p1, v1}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    invoke-virtual {v0, v1}, Lkme;->s(Landroid/view/View;)Lzbb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lzbb;->c:Lzlb;
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+
+    move-result-object p1
+
+    iget p1, p1, Lrfg;->g:I
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const/4 p1, 0x1
+
+    invoke-direct {p2, v1, p1}, Ld21;-><init>(Landroid/view/View;I)V
+
+    return-object p2
+
+    :cond_1
+    sget v1, Ly6b;->e:I
+
+    if-ne p2, v1, :cond_2
+
+    new-instance p2, Ld21;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v1, Landroid/widget/TextView;
+
+    invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    sget-object p1, Lr1h;->j:Lrhg;
+
+    invoke-static {p1, v1}, Lrhg;->d(Lrhg;Landroid/widget/TextView;)V
+
+    invoke-virtual {v0, v1}, Lkme;->s(Landroid/view/View;)Lzbb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lzbb;->c:Lzlb;
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+
+    move-result-object p1
+
+    iget p1, p1, Lrfg;->g:I
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    const/4 p1, 0x0
+
+    invoke-direct {p2, v1, p1}, Ld21;-><init>(Landroid/view/View;I)V
+
+    return-object p2
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "unknown item viewType "
+
+    invoke-static {p2, v0}, Lmrf;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

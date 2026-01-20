@@ -1,150 +1,98 @@
-.class public final Lht2;
-.super Logf;
+.class public final synthetic Lht2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lnq6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lvu2;
-
-.field public o:Ln73;
+.field public final synthetic b:Lone/me/profile/screens/members/ChatMembersScreen;
 
 
 # direct methods
-.method public constructor <init>(Lvu2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
     .locals 0
 
-    iput-object p1, p0, Lht2;->Y:Lvu2;
+    iput p2, p0, Lht2;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lht2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lht2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p0, p1, p2}, Lht2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lht2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Landroid/view/View;
+
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->u0:[Lz28;
+
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->B0()Ljh9;
 
     move-result-object p1
 
-    check-cast p1, Lht2;
+    iget-object p1, p1, Ljh9;->Y:Lspf;
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, p2}, Lht2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v2, Lnh5;->a:Lnh5;
+
+    invoke-virtual {p1, v0, v2}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    return-object v1
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->u0:[Lz28;
+
+    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->A0()Lut2;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, v1}, Lut2;->t(J)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
-.end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :pswitch_1
+    check-cast p1, Landroid/view/View;
 
-    new-instance p1, Lht2;
+    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->u0:[Lz28;
 
-    iget-object v0, p0, Lht2;->Y:Lvu2;
-
-    invoke-direct {p1, v0, p2}, Lht2;-><init>(Lvu2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lht2;->X:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    sget-object v3, Lh54;->a:Lh54;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    iget-object v0, p0, Lht2;->o:Ln73;
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lht2;->Y:Lvu2;
-
-    iget-object v0, p1, Lvu2;->s0:Ln73;
-
-    iput-object v0, p0, Lht2;->o:Ln73;
-
-    iput v2, p0, Lht2;->X:I
-
-    invoke-virtual {p1, p0}, Lvu2;->C(Logf;)Ljava/lang/Object;
+    invoke-virtual {v2}, La94;->getRouter()Lw4e;
 
     move-result-object p1
 
-    if-ne p1, v3, :cond_3
+    invoke-virtual {p1}, Lw4e;->C()Z
 
-    goto :goto_1
+    return-object v1
 
-    :cond_3
-    :goto_0
-    check-cast p1, Ljava/lang/Number;
+    nop
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v4
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lht2;->o:Ln73;
-
-    iput v1, p0, Lht2;->X:I
-
-    invoke-virtual {v0, v4, v5, p0}, Ln73;->h(JLogf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v3, :cond_4
-
-    :goto_1
-    return-object v3
-
-    :cond_4
-    :goto_2
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

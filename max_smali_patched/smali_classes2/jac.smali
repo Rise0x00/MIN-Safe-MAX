@@ -1,125 +1,107 @@
 .class public final Ljac;
-.super Lmd0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public a:Landroid/util/Size;
 
-.field public final c:La3c;
+.field public b:Landroid/util/Size;
+
+.field public final c:[F
+
+.field public final d:[F
+
+.field public final e:Lx07;
+
+.field public f:Lldf;
 
 
 # direct methods
-.method public constructor <init>(JLa3c;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 6
 
-    const/16 v0, 0xf
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
+    const/16 v0, 0x10
 
-    iput-wide p1, p0, Ljac;->b:J
+    new-array v1, v0, [F
 
-    iput-object p3, p0, Ljac;->c:La3c;
+    iput-object v1, p0, Ljac;->c:[F
 
-    return-void
-.end method
+    new-array v0, v0, [F
 
+    const/4 v1, 0x0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    invoke-static {v0, v1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
-    const/4 v0, 0x1
+    iput-object v0, p0, Ljac;->d:[F
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lx07;
 
-    return v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    :cond_0
-    instance-of v1, p1, Ljac;
+    new-instance v1, Lzii;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    sget-object v2, Lx07;->c:[F
+
+    array-length v3, v2
+
+    mul-int/lit8 v3, v3, 0x4
+
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v3
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-virtual {v3, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    return v2
+    iput-object v3, v1, Lzii;->a:Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Ljac;
+    sget-object v3, Lx07;->d:[F
 
-    iget-wide v3, p0, Ljac;->b:J
+    array-length v4, v3
 
-    iget-wide v5, p1, Ljac;->b:J
+    mul-int/lit8 v4, v4, 0x4
 
-    cmp-long v1, v3, v5
+    invoke-static {v4}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    if-eqz v1, :cond_2
+    move-result-object v4
 
-    return v2
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
-    :cond_2
-    iget-object v1, p0, Ljac;->c:La3c;
+    move-result-object v5
 
-    iget-object p1, p1, Ljac;->c:La3c;
+    invoke-virtual {v4, v5}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    if-eq v1, p1, :cond_3
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
-    return v2
+    move-result-object v4
 
-    :cond_3
-    return v0
-.end method
+    invoke-virtual {v4, v3}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-.method public final hashCode()I
-    .locals 2
+    invoke-virtual {v4, v2}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
 
-    iget-wide v0, p0, Ljac;->b:J
+    iput-object v4, v1, Lzii;->b:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    iput-object v1, v0, Lx07;->a:Ljava/lang/Object;
 
-    move-result v0
+    iput-object v0, p0, Ljac;->e:Lx07;
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ljac;->c:La3c;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenChat(chatId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Ljac;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ljac;->c:La3c;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

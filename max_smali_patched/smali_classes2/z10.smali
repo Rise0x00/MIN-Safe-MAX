@@ -3,474 +3,163 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic B:I
-
-
 # instance fields
-.field public final A:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final a:Lv10;
+.field public b:F
 
-.field public final b:Ln10;
+.field public c:F
 
-.field public final c:Lg10;
+.field public d:F
 
-.field public final d:Ly10;
-
-.field public final e:Lz00;
-
-.field public final f:Lu10;
-
-.field public final g:Lr10;
-
-.field public final h:Lx00;
-
-.field public final i:Lc10;
-
-.field public final j:Li10;
-
-.field public final k:Ld10;
-
-.field public final l:Lo10;
-
-.field public final m:Lk10;
-
-.field public final n:Lylh;
-
-.field public final o:Ls10;
-
-.field public final p:J
-
-.field public final q:F
-
-.field public final r:Ljava/lang/String;
-
-.field public final s:Ljava/lang/String;
-
-.field public final t:Z
-
-.field public final u:J
-
-.field public final v:J
-
-.field public final w:J
-
-.field public final x:Lp10;
-
-.field public final y:Z
-
-.field public final z:Z
+.field public e:F
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>()V
     .locals 1
 
-    new-instance v0, La10;
+    .line 1
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lz10;->a:I
 
-    invoke-virtual {v0}, La10;->a()Lz10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(La10;)V
-    .locals 2
+.method public synthetic constructor <init>(FFFFI)V
+    .locals 0
+
+    .line 2
+    iput p5, p0, Lz10;->a:I
+
+    iput p1, p0, Lz10;->b:F
+
+    iput p2, p0, Lz10;->c:F
+
+    iput p3, p0, Lz10;->d:F
+
+    iput p4, p0, Lz10;->e:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v0, p1, La10;->a:Lv10;
-
-    iput-object v0, p0, Lz10;->a:Lv10;
-
-    iget-object v0, p1, La10;->b:Ln10;
-
-    iput-object v0, p0, Lz10;->b:Ln10;
-
-    iget-object v0, p1, La10;->c:Lg10;
-
-    iput-object v0, p0, Lz10;->c:Lg10;
-
-    iget-object v0, p1, La10;->d:Ly10;
-
-    iput-object v0, p0, Lz10;->d:Ly10;
-
-    iget-object v0, p1, La10;->e:Lz00;
-
-    iput-object v0, p0, Lz10;->e:Lz00;
-
-    iget-object v0, p1, La10;->f:Lu10;
-
-    iput-object v0, p0, Lz10;->f:Lu10;
-
-    iget-object v0, p1, La10;->g:Lr10;
-
-    iput-object v0, p0, Lz10;->g:Lr10;
-
-    iget-object v0, p1, La10;->h:Lx00;
-
-    iput-object v0, p0, Lz10;->h:Lx00;
-
-    iget-object v0, p1, La10;->q:Lc10;
-
-    iput-object v0, p0, Lz10;->i:Lc10;
-
-    iget-object v0, p1, La10;->r:Li10;
-
-    iput-object v0, p0, Lz10;->j:Li10;
-
-    iget-object v0, p1, La10;->s:Ld10;
-
-    iput-object v0, p0, Lz10;->k:Ld10;
-
-    iget-object v0, p1, La10;->t:Lo10;
-
-    iput-object v0, p0, Lz10;->l:Lo10;
-
-    iget-object v0, p1, La10;->i:Ls10;
-
-    iput-object v0, p0, Lz10;->o:Ls10;
-
-    iget-wide v0, p1, La10;->j:J
-
-    iput-wide v0, p0, Lz10;->p:J
-
-    iget v0, p1, La10;->k:F
-
-    iput v0, p0, Lz10;->q:F
-
-    iget-object v0, p1, La10;->l:Ljava/lang/String;
-
-    iput-object v0, p0, Lz10;->r:Ljava/lang/String;
-
-    iget-object v0, p1, La10;->m:Ljava/lang/String;
-
-    iput-object v0, p0, Lz10;->s:Ljava/lang/String;
-
-    iget-boolean v0, p1, La10;->n:Z
-
-    iput-boolean v0, p0, Lz10;->t:Z
-
-    iget-wide v0, p1, La10;->o:J
-
-    iput-wide v0, p0, Lz10;->u:J
-
-    iget-wide v0, p1, La10;->p:J
-
-    iput-wide v0, p0, Lz10;->v:J
-
-    iget-wide v0, p1, La10;->u:J
-
-    iput-wide v0, p0, Lz10;->w:J
-
-    iget-object v0, p1, La10;->v:Lk10;
-
-    iput-object v0, p0, Lz10;->m:Lk10;
-
-    iget-object v0, p1, La10;->w:Lylh;
-
-    iput-object v0, p0, Lz10;->n:Lylh;
-
-    iget-object v0, p1, La10;->x:Lp10;
-
-    iput-object v0, p0, Lz10;->x:Lp10;
-
-    iget-boolean v0, p1, La10;->y:Z
-
-    iput-boolean v0, p0, Lz10;->y:Z
-
-    iget-boolean v0, p1, La10;->z:Z
-
-    iput-boolean v0, p0, Lz10;->z:Z
-
-    iget-object p1, p1, La10;->A:Ljava/lang/String;
-
-    iput-object p1, p0, Lz10;->A:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
+.method public a()Ljava/util/HashMap;
+    .locals 3
 
-    sget-object v0, Lv10;->d:Lv10;
+    new-instance v0, Ljava/util/HashMap;
 
-    iget-object v1, p0, Lz10;->a:Lv10;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    if-ne v1, v0, :cond_2
+    iget v1, p0, Lz10;->b:F
 
-    iget-object v0, p0, Lz10;->d:Ly10;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iget v0, v0, Ly10;->b:I
+    move-result-object v1
 
-    const/4 v1, 0x1
+    const-string v2, "x1"
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v1, 0x2
+    iget v1, p0, Lz10;->c:F
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    const-string v0, "VIDEO_MESSAGE"
+    move-result-object v1
 
-    goto :goto_0
+    const-string v2, "y1"
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw v0
+    iget v1, p0, Lz10;->d:F
 
-    :cond_1
-    const-string v0, "VIDEO"
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    :goto_0
+    move-result-object v1
+
+    const-string v2, "x2"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget v1, p0, Lz10;->e:F
+
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v1
+
+    const-string v2, "y2"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     return-object v0
+.end method
 
-    :cond_2
-    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+.method public toString()Ljava/lang/String;
+    .locals 6
+
+    iget v0, p0, Lz10;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
 
-.method public final b()Z
-    .locals 1
+    :pswitch_0
+    iget v0, p0, Lz10;->b:F
 
-    iget-object v0, p0, Lz10;->e:Lz00;
+    iget v1, p0, Lz10;->c:F
 
-    if-eqz v0, :cond_0
+    iget v2, p0, Lz10;->d:F
 
-    const/4 v0, 0x1
+    iget v3, p0, Lz10;->e:F
 
-    return v0
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 v0, 0x0
+    const-string v5, "{x1="
 
-    return v0
-.end method
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final c()Z
-    .locals 1
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lz10;->k:Ld10;
+    const-string v0, ", y1="
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    return v0
+    const-string v0, ", x2="
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v0
-.end method
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-.method public final d()Z
-    .locals 1
+    const-string v0, ", y2="
 
-    iget-object v0, p0, Lz10;->j:Li10;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    const-string v0, "}"
 
-    return v0
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return v0
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-object v0, p0, Lz10;->b:Ln10;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v0, v0, Ln10;->o:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final f()Z
-    .locals 1
-
-    iget-object v0, p0, Lz10;->b:Ln10;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget-object v0, p0, Lz10;->g:Lr10;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final h()Z
-    .locals 1
-
-    iget-object v0, p0, Lz10;->d:Ly10;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final i()La10;
-    .locals 3
-
-    new-instance v0, La10;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v1, p0, Lz10;->a:Lv10;
-
-    iput-object v1, v0, La10;->a:Lv10;
-
-    iget-object v1, p0, Lz10;->b:Ln10;
-
-    iput-object v1, v0, La10;->b:Ln10;
-
-    iget-object v1, p0, Lz10;->c:Lg10;
-
-    iput-object v1, v0, La10;->c:Lg10;
-
-    iget-object v1, p0, Lz10;->d:Ly10;
-
-    iput-object v1, v0, La10;->d:Ly10;
-
-    iget-object v1, p0, Lz10;->e:Lz00;
-
-    iput-object v1, v0, La10;->e:Lz00;
-
-    iget-object v1, p0, Lz10;->f:Lu10;
-
-    iput-object v1, v0, La10;->f:Lu10;
-
-    iget-object v1, p0, Lz10;->g:Lr10;
-
-    iput-object v1, v0, La10;->g:Lr10;
-
-    iget-object v1, p0, Lz10;->h:Lx00;
-
-    iput-object v1, v0, La10;->h:Lx00;
-
-    iget-object v1, p0, Lz10;->i:Lc10;
-
-    iput-object v1, v0, La10;->q:Lc10;
-
-    iget-object v1, p0, Lz10;->j:Li10;
-
-    iput-object v1, v0, La10;->r:Li10;
-
-    iget-object v1, p0, Lz10;->k:Ld10;
-
-    iput-object v1, v0, La10;->s:Ld10;
-
-    iget-object v1, p0, Lz10;->l:Lo10;
-
-    iput-object v1, v0, La10;->t:Lo10;
-
-    iget-object v1, p0, Lz10;->o:Ls10;
-
-    iput-object v1, v0, La10;->i:Ls10;
-
-    iget-wide v1, p0, Lz10;->p:J
-
-    iput-wide v1, v0, La10;->j:J
-
-    iget v1, p0, Lz10;->q:F
-
-    iput v1, v0, La10;->k:F
-
-    iget-object v1, p0, Lz10;->r:Ljava/lang/String;
-
-    iput-object v1, v0, La10;->l:Ljava/lang/String;
-
-    iget-object v1, p0, Lz10;->s:Ljava/lang/String;
-
-    iput-object v1, v0, La10;->m:Ljava/lang/String;
-
-    iget-boolean v1, p0, Lz10;->t:Z
-
-    iput-boolean v1, v0, La10;->n:Z
-
-    iget-wide v1, p0, Lz10;->u:J
-
-    iput-wide v1, v0, La10;->o:J
-
-    iget-wide v1, p0, Lz10;->v:J
-
-    iput-wide v1, v0, La10;->p:J
-
-    iget-wide v1, p0, Lz10;->w:J
-
-    iput-wide v1, v0, La10;->u:J
-
-    iget-object v1, p0, Lz10;->m:Lk10;
-
-    iput-object v1, v0, La10;->v:Lk10;
-
-    iget-object v1, p0, Lz10;->x:Lp10;
-
-    iput-object v1, v0, La10;->x:Lp10;
-
-    iget-boolean v1, p0, Lz10;->y:Z
-
-    iput-boolean v1, v0, La10;->y:Z
-
-    iget-boolean v1, p0, Lz10;->z:Z
-
-    iput-boolean v1, v0, La10;->z:Z
-
-    iget-object v1, p0, Lz10;->n:Lylh;
-
-    iput-object v1, v0, La10;->w:Lylh;
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method

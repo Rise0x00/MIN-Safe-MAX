@@ -1,58 +1,89 @@
-.class public final synthetic Lt1e;
-.super Ltj6;
+.class public final Lt1e;
+.super Lre5;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
-
-
-# static fields
-.field public static final a:Lt1e;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lt1e;
-
-    const-string v4, "createSegment(JLkotlinx/coroutines/sync/SemaphoreSegment;)Lkotlinx/coroutines/sync/SemaphoreSegment;"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x2
-
-    const-class v2, Lw1e;
-
-    const-string v3, "createSegment"
-
-    invoke-direct/range {v0 .. v5}, Ltj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lt1e;->a:Lt1e;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final a(Lf7e;)V
+    .locals 1
 
-    check-cast p1, Ljava/lang/Number;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    const-string v0, "NOP delegate should never be called"
 
-    move-result-wide v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast p2, Lx1e;
+    throw p1
+.end method
 
-    sget p1, Lw1e;->a:I
+.method public final c(Lf7e;)V
+    .locals 1
 
-    new-instance p1, Lx1e;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v2, 0x0
+    const-string v0, "NOP delegate should never be called"
 
-    invoke-direct {p1, v0, v1, p2, v2}, Lx1e;-><init>(JLx1e;I)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-object p1
+    throw p1
+.end method
+
+.method public final s()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "NOP delegate should never be called"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final t(Lf7e;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "NOP delegate should never be called"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final u()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "NOP delegate should never be called"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final v(Lf7e;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "NOP delegate should never be called"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final w(Lf7e;)Lgq9;
+    .locals 1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "NOP delegate should never be called"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

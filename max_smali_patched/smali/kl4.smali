@@ -1,9 +1,47 @@
-.class public final Lkl4;
+.class public interface abstract Lkl4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# virtual methods
+.method public abstract A()S
+.end method
 
-.field public b:I
+.method public abstract B()F
+.end method
+
+.method public abstract C()D
+.end method
+
+.method public abstract b()Z
+.end method
+
+.method public abstract c()C
+.end method
+
+.method public abstract d(La38;)Ljava/lang/Object;
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public abstract o(Lxpe;)Lkl4;
+.end method
+
+.method public abstract q()Ljava/lang/String;
+.end method
+
+.method public abstract r(Lxpe;)Lqp3;
+.end method
+
+.method public abstract s(Lxpe;)I
+.end method
+
+.method public abstract t()J
+.end method
+
+.method public abstract v()Z
+.end method
+
+.method public abstract z()B
+.end method

@@ -1,307 +1,399 @@
-.class public abstract Lxoi;
+.class public final Lxoi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic b:I
+
+
+# instance fields
+.field public final synthetic a:I
+
+
 # direct methods
-.method public static a([B)Ljava/util/ArrayList;
-    .locals 6
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const/16 v0, 0xb
+    iput p1, p0, Lxoi;->a:I
 
-    aget-byte v0, p0, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    and-int/lit16 v0, v0, 0xff
-
-    const/16 v1, 0x8
-
-    shl-int/2addr v0, v1
-
-    const/16 v2, 0xa
-
-    aget-byte v2, p0, v2
-
-    and-int/lit16 v2, v2, 0xff
-
-    or-int/2addr v0, v2
-
-    int-to-long v2, v0
-
-    const-wide/32 v4, 0x3b9aca00
-
-    mul-long/2addr v2, v4
-
-    const-wide/32 v4, 0xbb80
-
-    div-long/2addr v2, v4
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    const-wide/32 v1, 0x4c4b400
-
-    invoke-virtual {p0, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object v0
+    return-void
 .end method
 
-.method public static b(JLvd2;)J
-    .locals 7
+.method public static final b(Lr4h;)V
+    .locals 2
 
-    iget-wide v0, p2, Lvd2;->d0:J
+    new-instance v0, Ledh;
 
-    iget-object v2, p2, Lvd2;->c0:Lqua;
+    const/4 v1, 0x0
 
-    const-wide/16 v3, 0x0
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
 
-    if-nez v2, :cond_0
+    const/16 v1, 0x39
 
-    move-wide v0, v3
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    goto :goto_0
-
-    :cond_0
-    cmp-long v5, v0, v3
-
-    if-nez v5, :cond_3
-
-    invoke-virtual {v2}, Lqua;->b()Ljava/lang/Long;
-
-    move-result-object v5
-
-    if-eqz v5, :cond_2
-
-    invoke-virtual {v2}, Lqua;->b()Ljava/lang/Long;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v5
-
-    cmp-long v2, v5, v3
-
-    if-nez v2, :cond_3
-
-    :cond_2
-    iget-wide v0, p2, Lvd2;->e0:J
-
-    :cond_3
-    :goto_0
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    iget-wide v5, p2, Lvd2;->P:J
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v5
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    filled-new-array {v5, p0, p1}, [Ljava/lang/Long;
-
-    move-result-object p0
-
-    check-cast p0, [Ljava/lang/Comparable;
-
-    array-length p1, p0
-
-    if-nez p1, :cond_4
-
-    const/4 p0, 0x0
-
-    goto :goto_2
-
-    :cond_4
-    const/4 p1, 0x0
-
-    aget-object p1, p0, p1
-
-    array-length v0, p0
+    new-instance v0, Ledh;
 
     const/4 v1, 0x1
 
-    sub-int/2addr v0, v1
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
 
-    if-gt v1, v0, :cond_6
+    const/16 v1, 0x3a
 
-    :goto_1
-    aget-object v5, p0, v1
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    invoke-interface {p1, v5}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+    new-instance v0, Ledh;
 
-    move-result v6
+    const/4 v1, 0x2
 
-    if-gez v6, :cond_5
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
 
-    move-object p1, v5
+    const/16 v1, 0x3b
 
-    :cond_5
-    if-eq v1, v0, :cond_6
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    add-int/lit8 v1, v1, 0x1
+    new-instance v0, Lffe;
 
-    goto :goto_1
+    const/16 v1, 0x1b
 
-    :cond_6
-    move-object p0, p1
+    invoke-direct {v0, v1}, Lffe;-><init>(I)V
 
-    :goto_2
-    if-nez p0, :cond_7
+    const/4 v1, 0x0
 
-    goto :goto_3
+    invoke-virtual {p0, v1, v0}, Lr4h;->c(ILhs7;)V
 
-    :cond_7
-    move-object v2, p0
-
-    :goto_3
-    check-cast v2, Ljava/lang/Number;
-
-    invoke-virtual {v2}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide p0
-
-    cmp-long v0, p0, v3
-
-    if-nez v0, :cond_8
-
-    iget-wide p0, p2, Lvd2;->k:J
-
-    :cond_8
-    return-wide p0
-.end method
-
-.method public static c(BB)J
-    .locals 5
-
-    and-int/lit16 v0, p0, 0xff
+    new-instance v0, Ledh;
 
     const/4 v1, 0x3
 
-    and-int/2addr p0, v1
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
 
-    const/4 v2, 0x1
+    const/16 v1, 0x12
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    const/4 v3, 0x2
+    new-instance v0, Ledh;
 
-    if-eq p0, v2, :cond_1
+    const/4 v1, 0x4
 
-    if-eq p0, v3, :cond_1
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
 
-    and-int/lit8 v3, p1, 0x3f
+    const/16 v1, 0x3c
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
+    new-instance v0, Ledh;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
+
+    const/16 v1, 0x3d
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
+    new-instance v0, Ledh;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
+
+    const/16 v1, 0x28
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
+    new-instance v0, Ledh;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
+
+    const/16 v1, 0x3e
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
+    new-instance v0, Ledh;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Ledh;-><init>(I)V
+
+    const/16 v1, 0x3f
+
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/content/Context;Landroid/os/Looper;Lj5a;Ljava/lang/Object;Le07;Lf07;)Lhl;
+    .locals 10
+
+    iget v0, p0, Lxoi;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    move-object v6, p5
+
+    check-cast v6, Lepi;
+
+    move-object/from16 v7, p6
+
+    check-cast v7, Lepi;
+
+    iget p5, p0, Lxoi;->a:I
+
+    packed-switch p5, :pswitch_data_1
+
+    :pswitch_1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "buildClient must be implemented"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :pswitch_2
+    check-cast p4, Lfl;
+
+    new-instance v1, Lhyi;
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object v5, v6
+
+    move-object v6, v7
+
+    invoke-direct/range {v1 .. v6}, Lhyi;-><init>(Landroid/content/Context;Landroid/os/Looper;Lj5a;Lepi;Lepi;)V
 
     goto :goto_0
 
-    :cond_0
-    move v3, v2
+    :pswitch_3
+    check-cast p4, Lfl;
 
-    :cond_1
+    new-instance v1, Lpqi;
+
+    const/16 v4, 0x134
+
+    const/4 v8, 0x0
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v5, p3
+
+    invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILj5a;Le07;Lf07;I)V
+
+    goto :goto_0
+
+    :pswitch_4
+    move-object v5, p4
+
+    check-cast v5, Lifg;
+
+    new-instance v1, Lkqi;
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    invoke-direct/range {v1 .. v7}, Lkqi;-><init>(Landroid/content/Context;Landroid/os/Looper;Lj5a;Lifg;Lepi;Lepi;)V
+
     :goto_0
-    shr-int/lit8 p0, v0, 0x3
+    return-object v1
 
-    and-int/lit8 p1, p0, 0x3
+    :pswitch_5
+    move-object v6, p4
 
-    const/16 v0, 0x10
+    check-cast v6, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
-    if-lt p0, v0, :cond_2
+    new-instance v2, Lf0j;
 
-    const/16 p0, 0x9c4
+    move-object v7, p5
 
-    shl-int/2addr p0, p1
+    check-cast v7, Lepi;
 
-    goto :goto_1
+    move-object/from16 v8, p6
 
-    :cond_2
-    const/16 v0, 0xc
+    check-cast v8, Lepi;
 
-    const/16 v4, 0x2710
+    move-object v3, p1
 
-    if-lt p0, v0, :cond_3
+    move-object v4, p2
 
-    and-int/2addr p0, v2
+    move-object v5, p3
 
-    shl-int p0, v4, p0
+    invoke-direct/range {v2 .. v8}, Lf0j;-><init>(Landroid/content/Context;Landroid/os/Looper;Lj5a;Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;Lepi;Lepi;)V
 
-    goto :goto_1
+    return-object v2
 
-    :cond_3
-    if-ne p1, v1, :cond_4
+    :pswitch_6
+    move-object v6, p4
 
-    const p0, 0xea60
+    check-cast v6, Ls70;
 
-    goto :goto_1
+    new-instance v2, Lwjj;
 
-    :cond_4
-    shl-int p0, v4, p1
+    move-object v7, p5
 
-    :goto_1
-    int-to-long v0, v3
+    check-cast v7, Lepi;
 
-    int-to-long p0, p0
+    move-object/from16 v8, p6
 
-    mul-long/2addr v0, p0
+    check-cast v8, Lepi;
 
-    return-wide v0
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-direct/range {v2 .. v8}, Lwjj;-><init>(Landroid/content/Context;Landroid/os/Looper;Lj5a;Ls70;Lepi;Lepi;)V
+
+    return-object v2
+
+    :pswitch_7
+    new-instance v2, Lc6j;
+
+    const/16 v5, 0x7e
+
+    const/4 v9, 0x0
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v6, p3
+
+    move-object v7, p5
+
+    move-object/from16 v8, p6
+
+    invoke-direct/range {v2 .. v9}, Lcom/google/android/gms/common/internal/a;-><init>(Landroid/content/Context;Landroid/os/Looper;ILj5a;Le07;Lf07;I)V
+
+    return-object v2
+
+    :pswitch_8
+    invoke-static {p4}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
+
+    :pswitch_9
+    check-cast p4, Llbf;
+
+    new-instance v2, Ljbf;
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p4, p3, Lj5a;->X:Ljava/lang/Object;
+
+    check-cast p4, Ljava/lang/Integer;
+
+    new-instance v6, Landroid/os/Bundle;
+
+    invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
+
+    const-string v0, "com.google.android.gms.signin.internal.clientRequestedAccount"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v6, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    if-eqz p4, :cond_0
+
+    const-string v0, "com.google.android.gms.common.internal.ClientSettings.sessionId"
+
+    invoke-virtual {p4}, Ljava/lang/Integer;->intValue()I
+
+    move-result p4
+
+    invoke-virtual {v6, v0, p4}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    :cond_0
+    const-string p4, "com.google.android.gms.signin.internal.offlineAccessRequested"
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v6, p4, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p4, "com.google.android.gms.signin.internal.idTokenRequested"
+
+    invoke-virtual {v6, p4, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p4, "com.google.android.gms.signin.internal.serverClientId"
+
+    invoke-virtual {v6, p4, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p4, "com.google.android.gms.signin.internal.usePromptModeForAuthCode"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v6, p4, v3}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p4, "com.google.android.gms.signin.internal.forceCodeForRefreshToken"
+
+    invoke-virtual {v6, p4, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    const-string p4, "com.google.android.gms.signin.internal.hostedDomain"
+
+    invoke-virtual {v6, p4, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p4, "com.google.android.gms.signin.internal.logSessionId"
+
+    invoke-virtual {v6, p4, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string p4, "com.google.android.gms.signin.internal.waitForAccessTokenRefresh"
+
+    invoke-virtual {v6, p4, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-object v7, p5
+
+    move-object/from16 v8, p6
+
+    invoke-direct/range {v2 .. v8}, Ljbf;-><init>(Landroid/content/Context;Landroid/os/Looper;Lj5a;Landroid/os/Bundle;Le07;Lf07;)V
+
+    return-object v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_9
+        :pswitch_8
+        :pswitch_0
+        :pswitch_0
+        :pswitch_7
+        :pswitch_0
+        :pswitch_6
+        :pswitch_5
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x2
+        :pswitch_4
+        :pswitch_3
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

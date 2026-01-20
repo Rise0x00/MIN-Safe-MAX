@@ -1,155 +1,45 @@
-.class public final Ljvh;
-.super Lmuh;
+.class public abstract Ljvh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lsof;
-
-
 # direct methods
-.method public constructor <init>(Lb38;Lsof;)V
-    .locals 0
+.method public static a(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 2
 
-    const/4 p1, 0x4
+    new-instance v0, Landroid/view/WindowInsets$Builder;
 
-    invoke-direct {p0, p1}, Lmvh;-><init>(I)V
+    invoke-direct {v0}, Landroid/view/WindowInsets$Builder;-><init>()V
 
-    iput-object p2, p0, Ljvh;->b:Lsof;
+    invoke-static {p1}, Landroid/graphics/Insets;->of(Landroid/graphics/Rect;)Landroid/graphics/Insets;
 
-    return-void
-.end method
+    move-result-object v1
 
-
-# virtual methods
-.method public final a(Lcom/google/android/gms/common/api/Status;)V
-    .locals 1
-
-    new-instance v0, Lcom/google/android/gms/common/api/ApiException;
-
-    invoke-direct {v0, p1}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
-
-    iget-object p1, p0, Ljvh;->b:Lsof;
-
-    invoke-virtual {p1, v0}, Lsof;->c(Ljava/lang/Exception;)Z
-
-    return-void
-.end method
-
-.method public final b(Ljava/lang/Exception;)V
-    .locals 1
-
-    iget-object v0, p0, Ljvh;->b:Lsof;
-
-    invoke-virtual {v0, p1}, Lsof;->c(Ljava/lang/Exception;)Z
-
-    return-void
-.end method
-
-.method public final c(Ljuh;)V
-    .locals 1
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Ljvh;->h(Ljuh;)V
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    iget-object v0, p0, Ljvh;->b:Lsof;
-
-    invoke-virtual {v0, p1}, Lsof;->c(Ljava/lang/Exception;)Z
-
-    return-void
-
-    :catch_1
-    move-exception p1
-
-    invoke-static {p1}, Lmvh;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljvh;->a(Lcom/google/android/gms/common/api/Status;)V
-
-    return-void
-
-    :catch_2
-    move-exception p1
-
-    invoke-static {p1}, Lmvh;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+    invoke-virtual {v0, v1}, Landroid/view/WindowInsets$Builder;->setSystemWindowInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ljvh;->a(Lcom/google/android/gms/common/api/Status;)V
+    invoke-virtual {v0}, Landroid/view/WindowInsets$Builder;->build()Landroid/view/WindowInsets;
 
-    throw p1
-.end method
+    move-result-object v0
 
-.method public final bridge synthetic d(Ljfc;Z)V
-    .locals 0
+    invoke-virtual {p0, v0, p2}, Landroid/view/View;->computeSystemWindowInsets(Landroid/view/WindowInsets;Landroid/graphics/Rect;)Landroid/view/WindowInsets;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public final f(Ljuh;)Z
-    .locals 1
+    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsets()Landroid/graphics/Insets;
 
-    iget-object p1, p1, Ljuh;->h:Ljava/util/HashMap;
+    move-result-object p0
 
-    const/4 v0, 0x0
+    iget p2, p0, Landroid/graphics/Insets;->left:I
 
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Landroid/graphics/Insets;->top:I
 
-    move-result-object p1
+    iget v1, p0, Landroid/graphics/Insets;->right:I
 
-    check-cast p1, Ltuh;
+    iget p0, p0, Landroid/graphics/Insets;->bottom:I
 
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final g(Ljuh;)[Ljq5;
-    .locals 1
-
-    iget-object p1, p1, Ljuh;->h:Ljava/util/HashMap;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltuh;
-
-    const/4 p1, 0x0
-
-    return-object p1
-.end method
-
-.method public final h(Ljuh;)V
-    .locals 1
-
-    iget-object p1, p1, Ljuh;->h:Ljava/util/HashMap;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltuh;
-
-    iget-object p1, p0, Ljvh;->b:Lsof;
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {p1, v0}, Lsof;->d(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2, v0, v1, p0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 .end method

@@ -1,131 +1,92 @@
 .class public final Laa8;
-.super Lba8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxa8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Laa8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final d:Lnrf;
+.field public final a:J
 
-.field public final e:Lnrf;
+.field public final b:Ljava/lang/String;
+
+.field public final c:Z
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lnrf;Lnrf;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lj58;
 
-    invoke-direct {p0, p1, v0}, Lba8;-><init>(Lnrf;Ljava/lang/Throwable;)V
+    const/4 v1, 0x2
 
-    iput-object p1, p0, Laa8;->d:Lnrf;
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
-    iput-object p2, p0, Laa8;->e:Lnrf;
+    sput-object v0, Laa8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Laa8;->a:J
+
+    iput-object p3, p0, Laa8;->b:Ljava/lang/String;
+
+    iput-boolean p5, p0, Laa8;->c:Z
+
+    iput-object p4, p0, Laa8;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final describeContents()I
+    .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Laa8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Laa8;
-
-    iget-object v1, p0, Laa8;->d:Lnrf;
-
-    iget-object v3, p1, Laa8;->d:Lnrf;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Laa8;->e:Lnrf;
-
-    iget-object p1, p1, Laa8;->e:Lnrf;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
-.method public final hashCode()I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    iget-object v0, p0, Laa8;->d:Lnrf;
+    iget-wide v0, p0, Laa8;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    move-result v0
+    iget-object p2, p0, Laa8;->b:Ljava/lang/String;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object v1, p0, Laa8;->e:Lnrf;
+    iget-boolean p2, p0, Laa8;->c:Z
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result v1
+    iget-object p2, p0, Laa8;->d:Ljava/lang/String;
 
-    add-int/2addr v1, v0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SmsCountExceeded(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Laa8;->d:Lnrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", description="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Laa8;->e:Lnrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

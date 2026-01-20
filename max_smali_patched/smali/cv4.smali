@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lnhh;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ldv4;
-
-.field public final synthetic c:Lev4;
+.field public final synthetic b:Lgv4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldv4;Lev4;I)V
+.method public synthetic constructor <init>(Lgv4;I)V
     .locals 0
 
-    iput p3, p0, Lcv4;->a:I
+    iput p2, p0, Lcv4;->a:I
 
-    iput-object p1, p0, Lcv4;->b:Ldv4;
-
-    iput-object p2, p0, Lcv4;->c:Lev4;
+    iput-object p1, p0, Lcv4;->b:Lgv4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,198 +27,116 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 14
+.method public final run()V
+    .locals 5
 
     iget v0, p0, Lcv4;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lcv4;->c:Lev4;
+    iget-object v0, p0, Lcv4;->b:Lgv4;
 
-    iget-object v1, v0, Lev4;->c:Lwg5;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v2, v0, Lev4;->b:Lqvb;
+    invoke-static {}, La9f;->p()Landroid/opengl/EGLDisplay;
 
-    iget-object v3, p0, Lcv4;->b:Ldv4;
+    move-result-object v1
 
-    iget-object v3, v3, Ldv4;->e:Ljava/lang/Object;
+    iput-object v1, v0, Lgv4;->m:Landroid/opengl/EGLDisplay;
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    iget-object v2, v0, Lgv4;->c:Luy6;
 
-    move-result-object v3
+    const/4 v3, 0x2
 
-    check-cast v3, Ljava/util/Map;
+    sget-object v4, La9f;->c:[I
 
-    new-instance v4, Ljava/util/LinkedHashMap;
+    invoke-interface {v2, v1, v3, v4}, Luy6;->h(Landroid/opengl/EGLDisplay;I[I)Landroid/opengl/EGLContext;
 
-    invoke-interface {v3}, Ljava/util/Map;->size()I
+    move-result-object v1
 
-    move-result v5
+    iget-object v3, v0, Lgv4;->m:Landroid/opengl/EGLDisplay;
 
-    invoke-static {v5}, Lyg8;->g(I)I
+    invoke-interface {v2, v1, v3}, Luy6;->l(Landroid/opengl/EGLContext;Landroid/opengl/EGLDisplay;)Landroid/opengl/EGLSurface;
 
-    move-result v5
+    move-result-object v1
 
-    invoke-direct {v4, v5}, Ljava/util/LinkedHashMap;-><init>(I)V
+    iput-object v1, v0, Lgv4;->n:Landroid/opengl/EGLSurface;
 
-    invoke-interface {v3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    return-void
 
-    move-result-object v3
+    :pswitch_0
+    iget-object v0, p0, Lcv4;->b:Lgv4;
 
-    invoke-interface {v3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lgv4;->c()V
 
-    move-result-object v3
+    return-void
 
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    :pswitch_1
+    iget-object v0, p0, Lcv4;->b:Lgv4;
 
-    move-result v5
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v5, :cond_0
+    :try_start_0
+    iget-object v1, v0, Lgv4;->d:La2c;
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_1
 
-    move-result-object v5
+    :try_start_1
+    iget-object v1, v1, La2c;->c:Ljava/lang/Object;
 
-    check-cast v5, Ljava/util/Map$Entry;
+    check-cast v1, Lpy;
 
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    move-result-object v6
+    iget v1, v1, Lpy;->b:I
 
-    invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-static {v1}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
-    move-result-object v5
-
-    move-object v8, v5
-
-    check-cast v8, Lds5;
-
-    new-instance v7, Ljv0;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v2, v5}, Lqvb;->b(I)Lgr4;
-
-    move-result-object v9
-
-    invoke-virtual {v2}, Lqvb;->c()Lgj;
-
-    move-result-object v10
-
-    invoke-interface {v1}, Lwg5;->j()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v11
-
-    invoke-interface {v1}, Lwg5;->f()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v12
-
-    iget-object v13, v0, Lev4;->d:Lj97;
-
-    invoke-direct/range {v7 .. v13}, Ljv0;-><init>(Lds5;Lgr4;Lgj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lj97;)V
-
-    invoke-interface {v4, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, La9f;->d()V
+    :try_end_1
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
+    :catch_0
+    move-exception v1
+
+    :try_start_2
+    const-string v2, "CompositorGlProgram"
+
+    const-string v3, "Error releasing GL Program"
+
+    invoke-static {v2, v3, v1}, Li1h;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :cond_0
-    new-instance v0, Ljc7;
+    :goto_0
+    iget-object v1, v0, Lgv4;->h:Ldu0;
 
-    invoke-direct {v0, v4}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    invoke-virtual {v1}, Ldu0;->h()V
 
-    return-object v0
+    iget-object v1, v0, Lgv4;->m:Landroid/opengl/EGLDisplay;
 
-    :pswitch_0
-    new-instance v5, Ljv0;
+    iget-object v0, v0, Lgv4;->n:Landroid/opengl/EGLSurface;
 
-    iget-object v0, p0, Lcv4;->b:Ldv4;
+    invoke-static {v1, v0}, La9f;->l(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)V
+    :try_end_2
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_2 .. :try_end_2} :catch_1
 
-    iget-object v0, v0, Ldv4;->c:Ljava/lang/Object;
+    goto :goto_1
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    :catch_1
+    move-exception v0
 
-    move-result-object v0
+    const-string v1, "DefaultVideoCompositor"
 
-    move-object v6, v0
+    const-string v2, "Error releasing GL resources"
 
-    check-cast v6, Lds5;
+    invoke-static {v1, v2, v0}, Li1h;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lcv4;->c:Lev4;
-
-    iget-object v1, v0, Lev4;->b:Lqvb;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lqvb;->b(I)Lgr4;
-
-    move-result-object v7
-
-    invoke-virtual {v1}, Lqvb;->c()Lgj;
-
-    move-result-object v8
-
-    iget-object v1, v0, Lev4;->c:Lwg5;
-
-    invoke-interface {v1}, Lwg5;->j()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v9
-
-    invoke-interface {v1}, Lwg5;->f()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v10
-
-    iget-object v11, v0, Lev4;->d:Lj97;
-
-    invoke-direct/range {v5 .. v11}, Ljv0;-><init>(Lds5;Lgr4;Lgj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lj97;)V
-
-    return-object v5
-
-    :pswitch_1
-    new-instance v6, Ljv0;
-
-    iget-object v0, p0, Lcv4;->b:Ldv4;
-
-    iget-object v0, v0, Ldv4;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, Lds5;
-
-    iget-object v0, p0, Lcv4;->c:Lev4;
-
-    iget-object v1, v0, Lev4;->b:Lqvb;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v2}, Lqvb;->b(I)Lgr4;
-
-    move-result-object v8
-
-    invoke-virtual {v1}, Lqvb;->c()Lgj;
-
-    move-result-object v9
-
-    iget-object v1, v0, Lev4;->c:Lwg5;
-
-    invoke-interface {v1}, Lwg5;->j()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v10
-
-    invoke-interface {v1}, Lwg5;->f()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v11
-
-    iget-object v12, v0, Lev4;->d:Lj97;
-
-    invoke-direct/range {v6 .. v12}, Ljv0;-><init>(Lds5;Lgr4;Lgj;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lj97;)V
-
-    return-object v6
+    :goto_1
+    return-void
 
     nop
 

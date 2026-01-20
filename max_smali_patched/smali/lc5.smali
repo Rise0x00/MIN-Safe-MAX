@@ -1,143 +1,63 @@
-.class public final enum Llc5;
-.super Ljava/lang/Enum;
+.class public abstract Llc5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Llc5;
-
-.field public static final enum b:Llc5;
-
-.field public static final enum c:Llc5;
-
-.field public static final enum d:Llc5;
-
-.field public static final synthetic o:[Llc5;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Llc5;
-
-    const-string v1, "Initial"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Llc5;->a:Llc5;
-
-    new-instance v1, Llc5;
-
-    const-string v2, "ZeroRTT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Llc5;->b:Llc5;
-
-    new-instance v2, Llc5;
-
-    const-string v3, "Handshake"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Llc5;->c:Llc5;
-
-    new-instance v3, Llc5;
-
-    const-string v4, "App"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Llc5;->d:Llc5;
-
-    filled-new-array {v0, v1, v2, v3}, [Llc5;
-
-    move-result-object v0
-
-    sput-object v0, Llc5;->o:[Llc5;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Llc5;
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;)Landroid/widget/EdgeEffect;
     .locals 1
 
-    const-class v0, Llc5;
+    :try_start_0
+    new-instance v0, Landroid/widget/EdgeEffect;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-direct {v0, p0, p1}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object p0
+    return-object v0
 
-    check-cast p0, Llc5;
+    :catchall_0
+    new-instance p1, Landroid/widget/EdgeEffect;
 
-    return-object p0
+    invoke-direct {p1, p0}, Landroid/widget/EdgeEffect;-><init>(Landroid/content/Context;)V
+
+    return-object p1
 .end method
 
-.method public static values()[Llc5;
-    .locals 1
+.method public static b(Landroid/widget/EdgeEffect;)F
+    .locals 0
 
-    sget-object v0, Llc5;->o:[Llc5;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/widget/EdgeEffect;->getDistance()F
 
-    invoke-virtual {v0}, [Llc5;->clone()Ljava/lang/Object;
+    move-result p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
+    return p0
 
-    check-cast v0, [Llc5;
+    :catchall_0
+    const/4 p0, 0x0
 
-    return-object v0
+    return p0
 .end method
 
+.method public static c(Landroid/widget/EdgeEffect;FF)F
+    .locals 0
 
-# virtual methods
-.method public final a()Livb;
-    .locals 3
+    :try_start_0
+    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPullDistance(FF)F
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    move-result p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v0
+    return p0
 
-    if-eqz v0, :cond_3
+    :catchall_0
+    invoke-virtual {p0, p1, p2}, Landroid/widget/EdgeEffect;->onPull(FF)V
 
-    const/4 v1, 0x1
+    const/4 p0, 0x0
 
-    sget-object v2, Livb;->c:Livb;
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x0
-
-    return-object v0
-
-    :cond_0
-    return-object v2
-
-    :cond_1
-    sget-object v0, Livb;->b:Livb;
-
-    return-object v0
-
-    :cond_2
-    return-object v2
-
-    :cond_3
-    sget-object v0, Livb;->a:Livb;
-
-    return-object v0
+    return p0
 .end method

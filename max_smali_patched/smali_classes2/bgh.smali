@@ -3,150 +3,99 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lln6;
+.implements Lay3;
+.implements Lcr6;
 
 
-# static fields
-.field public static final a:Lbgh;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Lo3e;
+.field public final synthetic b:Lufh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lufh;I)V
+    .locals 0
 
-    new-instance v0, Lbgh;
+    iput p2, p0, Lbgh;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbgh;->b:Lufh;
 
-    sput-object v0, Lbgh;->a:Lbgh;
-
-    new-instance v1, Lfvb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupClosingBehaviorRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
-
-    const-string v0, "needConfirmation"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lbgh;->descriptor:Lo3e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Le9;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Lbgh;->descriptor:Lo3e;
-
-    invoke-virtual {p1, v0}, Le9;->k(Lo3e;)Le9;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    move v3, v1
-
-    move v4, v2
-
-    move v5, v4
-
-    :goto_0
-    if-eqz v3, :cond_2
-
-    invoke-virtual {p1, v0}, Le9;->q(Lo3e;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-virtual {p1, v0, v2}, Le9;->p(Lo3e;I)Z
-
-    move-result v5
-
-    move v4, v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    move v3, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0}, Le9;->z(Lo3e;)V
-
-    new-instance p1, Ldgh;
-
-    invoke-direct {p1, v4, v5}, Ldgh;-><init>(IZ)V
-
-    return-object p1
-.end method
-
-.method public final b(Lf24;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Ldgh;
-
-    sget-object v0, Lbgh;->descriptor:Lo3e;
-
-    invoke-virtual {p1, v0}, Lf24;->b(Lo3e;)Lf24;
-
-    move-result-object p1
-
-    iget-boolean p2, p2, Ldgh;->a:Z
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1, p2}, Lf24;->e(Lo3e;IZ)V
-
-    invoke-virtual {p1}, Lf24;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lfs7;
+.method public accept(Ljava/lang/Object;)V
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lbgh;->a:I
 
-    new-array v0, v0, [Lfs7;
+    iget-object v1, p0, Lbgh;->b:Lufh;
 
-    sget-object v1, Ldr0;->a:Ldr0;
+    check-cast p1, Ljava/lang/Throwable;
 
-    const/4 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    aput-object v1, v0, v2
+    iget-object p1, v1, Lufh;->d:Ljava/lang/String;
 
-    return-object v0
+    invoke-static {p1}, Lyna;->v(Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v2, "putConversionInRepository: failed, videoConversion="
+
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "dgh"
+
+    invoke-static {v1, v0, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final d()Lo3e;
-    .locals 1
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    sget-object v0, Lbgh;->descriptor:Lo3e;
+    check-cast p1, Lyfh;
 
-    return-object v0
+    iget-object v0, p0, Lbgh;->b:Lufh;
+
+    invoke-static {v0}, Lc5j;->m(Lufh;)Lxfh;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lyfh;->a:Lb2e;
+
+    new-instance v2, Lk1e;
+
+    const/16 v3, 0x13
+
+    invoke-direct {v2, p1, v3, v0}, Lk1e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v1, v2}, Lmnj;->a(Lb2e;Lnq6;)Leo3;
+
+    move-result-object p1
+
+    return-object p1
 .end method

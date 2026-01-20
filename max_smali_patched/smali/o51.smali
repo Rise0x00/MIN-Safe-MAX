@@ -1,84 +1,118 @@
 .class public final Lo51;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lyf4;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Landroid/os/Bundle;
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+.field public final synthetic Y:Lt41;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Bundle;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lt41;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    iput-object p1, p0, Lo51;->a:Landroid/os/Bundle;
+    iput-object p2, p0, Lo51;->Y:Lt41;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "call_id"
+    check-cast p1, Lzb4;
 
-    iget-object v1, p0, Lo51;->a:Landroid/os/Bundle;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v1}, Lrxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lo51;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    move-result-object p1
 
-    const-string v2, "is_video"
+    check-cast p1, Lo51;
 
-    invoke-static {v2, v1}, Lrxi;->f(Ljava/lang/String;Landroid/os/Bundle;)Z
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result v2
+    invoke-virtual {p1, p2}, Lo51;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, "is_group"
+    return-object p2
+.end method
 
-    invoke-static {v3, v1}, Lrxi;->f(Ljava/lang/String;Landroid/os/Bundle;)Z
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    move-result v3
+    new-instance v0, Lo51;
 
-    const-string v4, "sdk_reasons"
+    iget-object v1, p0, Lo51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    invoke-virtual {v1, v4}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
+    iget-object v2, p0, Lo51;->Y:Lt41;
 
-    move-result v5
+    invoke-direct {v0, v1, v2, p2}, Lo51;-><init>(Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;Lt41;Lkotlin/coroutines/Continuation;)V
 
-    if-eqz v5, :cond_0
+    iput-object p1, v0, Lo51;->o:Ljava/lang/Object;
 
-    invoke-static {v4, v1}, Lrxi;->k(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    const-string v4, ","
+    iget-object v0, p0, Lo51;->o:Ljava/lang/Object;
 
-    filled-new-array {v4}, [Ljava/lang/String;
+    check-cast v0, Lzb4;
 
-    move-result-object v4
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v5, 0x4
+    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
 
-    invoke-static {v1, v4, v5}, Lxaf;->W(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
+    iget-object p1, p0, Lo51;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
 
-    move-result-object v1
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->A0()Ln51;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    const/4 v1, 0x0
+    iget-object p1, p1, Ln51;->u0:Ld76;
 
-    :goto_0
-    new-instance v4, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    new-instance v1, Lrx;
 
-    invoke-direct {v4, v0, v3, v2, v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;-><init>(Ljava/lang/String;ZZLjava/util/List;)V
+    const/4 v7, 0x4
 
-    return-object v4
+    const/4 v8, 0x4
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Lo51;->Y:Lt41;
+
+    const-class v4, Lt41;
+
+    const-string v5, "setVolumeMicrophone"
+
+    const-string v6, "setVolumeMicrophone(F)V"
+
+    invoke-direct/range {v1 .. v8}, Lrx;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance v2, Lm96;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, p1, v1, v3}, Lm96;-><init>(Ld76;Lbr6;I)V
+
+    invoke-static {v2, v0}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

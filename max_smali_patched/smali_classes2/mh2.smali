@@ -3,138 +3,103 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgz6;
+.implements Ljava/io/Serializable;
+.implements Lsc3;
 
 
 # instance fields
-.field public final synthetic b:Lid2;
+.field public final a:J
 
-.field public final synthetic c:Lp66;
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lp66;Lid2;)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmh2;->c:Lp66;
+    iput-wide p1, p0, Lmh2;->a:J
 
-    iput-object p2, p0, Lmh2;->b:Lid2;
+    iput-wide p3, p0, Lmh2;->b:J
 
+    const-wide/16 v0, -0x1
+
+    cmp-long p1, p1, v0
+
+    const-string p2, ""
+
+    const-string v2, "Chunk"
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v3, "start time is -1"
+
+    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2, p2, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    cmp-long p1, p3, v0
+
+    if-nez p1, :cond_1
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p3, "end time is -1"
+
+    invoke-direct {p1, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v2, p2, p1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()J
+.method public final a()J
     .locals 2
 
-    iget-object v0, p0, Lmh2;->b:Lid2;
-
-    iget-wide v0, v0, Lid2;->c:J
+    iget-wide v0, p0, Lmh2;->a:J
 
     return-wide v0
 .end method
 
-.method public final h()J
-    .locals 7
+.method public final c()J
+    .locals 2
 
-    iget-object v0, p0, Lmh2;->b:Lid2;
+    iget-wide v0, p0, Lmh2;->b:J
 
-    iget-wide v0, v0, Lid2;->d:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    if-nez v2, :cond_0
-
-    iget-object v2, p0, Lmh2;->c:Lp66;
-
-    iget-object v3, v2, Lp66;->b:Ljava/lang/Object;
-
-    check-cast v3, Lt92;
-
-    iget-object v3, v3, Lt92;->b:Lvd2;
-
-    iget-wide v3, v3, Lvd2;->j:J
-
-    iget-object v2, v2, Lp66;->c:Ljava/lang/Object;
-
-    check-cast v2, Lgb9;
-
-    iget-wide v5, v2, Loj0;->a:J
-
-    cmp-long v2, v3, v5
-
-    if-nez v2, :cond_0
-
-    return-wide v5
-
-    :cond_0
     return-wide v0
 .end method
 
-.method public final j()Ljava/util/List;
-    .locals 5
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lmh2;->b:Lid2;
+    const-string v1, "Chunk(startTime="
 
-    iget-object v1, v1, Lid2;->e:Ljava/util/List;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    iget-wide v1, p0, Lmh2;->a:J
 
-    iget-object v1, p0, Lmh2;->c:Lp66;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object v2, v1, Lp66;->b:Ljava/lang/Object;
+    const-string v1, ", endTime="
 
-    check-cast v2, Lt92;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v2, Lt92;->b:Lvd2;
+    iget-wide v1, p0, Lmh2;->b:J
 
-    iget-object v2, v2, Lvd2;->n:Lpd2;
+    const/16 v3, 0x29
 
-    sget-object v3, Laq4;->o:Laq4;
+    invoke-static {v0, v1, v2, v3}, Lpqb;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lpd2;->d(Laq4;)Ljava/util/ArrayList;
+    move-result-object v0
 
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    invoke-static {v0}, Llti;->i(Ljava/util/ArrayList;)V
-
-    iget-object v1, v1, Lp66;->c:Ljava/lang/Object;
-
-    check-cast v1, Lgb9;
-
-    iget-wide v2, v1, Lgb9;->c:J
-
-    invoke-static {v2, v3, v0}, Llti;->d(JLjava/util/List;)Lvcb;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lvcb;->b:Ljava/lang/Object;
-
-    check-cast v2, Lod2;
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Lod2;
-
-    iget-wide v3, v1, Lgb9;->c:J
-
-    invoke-direct {v2, v3, v4, v3, v4}, Lod2;-><init>(JJ)V
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v1
+    return-object v0
 .end method

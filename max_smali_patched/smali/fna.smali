@@ -1,83 +1,79 @@
-.class public final synthetic Lfna;
-.super Ltj6;
+.class public final Lfna;
+.super Lpbe;
 .source "SourceFile"
-
-# interfaces
-.implements Lgj6;
 
 
 # static fields
-.field public static final a:Lfna;
+.field public static final d:Lb7e;
+
+
+# instance fields
+.field public final c:Ljava/util/concurrent/ThreadFactory;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 4
 
-    new-instance v0, Lfna;
+    const-string v0, "rx3.newthread-priority"
 
-    const-string v4, "register(Lkotlinx/coroutines/selects/SelectInstance;Ljava/lang/Object;)V"
+    const/4 v1, 0x5
 
-    const/4 v5, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Integer;->getInteger(Ljava/lang/String;I)Ljava/lang/Integer;
 
-    const/4 v1, 0x3
+    move-result-object v0
 
-    const-class v2, Lgna;
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    const-string v3, "register"
+    move-result v0
 
-    invoke-direct/range {v0 .. v5}, Ltj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    const/16 v1, 0xa
 
-    sput-object v0, Lfna;->a:Lfna;
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    new-instance v1, Lb7e;
+
+    const-string v2, "RxNewThreadScheduler"
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v0, v3}, Lb7e;-><init>(Ljava/lang/String;IZ)V
+
+    sput-object v1, Lfna;->d:Lb7e;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Lfna;->d:Lb7e;
+
+    iput-object v0, p0, Lfna;->c:Ljava/util/concurrent/ThreadFactory;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final a()Lnbe;
+    .locals 2
 
-    check-cast p1, Lgna;
+    new-instance v0, Lgna;
 
-    check-cast p2, Lm0e;
+    iget-object v1, p0, Lfna;->c:Ljava/util/concurrent/ThreadFactory;
 
-    iget-wide v0, p1, Lgna;->a:J
+    invoke-direct {v0, v1}, Lgna;-><init>(Ljava/util/concurrent/ThreadFactory;)V
 
-    const-wide/16 v2, 0x0
-
-    cmp-long p3, v0, v2
-
-    sget-object v2, Lybg;->a:Lybg;
-
-    if-gtz p3, :cond_0
-
-    check-cast p2, Ll0e;
-
-    iput-object v2, p2, Ll0e;->o:Ljava/lang/Object;
-
-    return-object v2
-
-    :cond_0
-    new-instance p3, Llk6;
-
-    const/16 v3, 0x12
-
-    invoke-direct {p3, p2, v3, p1}, Llk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    check-cast p2, Ll0e;
-
-    iget-object p1, p2, Ll0e;->a:Ly44;
-
-    invoke-static {p1}, Lxxi;->e(Ly44;)Lvp4;
-
-    move-result-object v3
-
-    invoke-interface {v3, v0, v1, p3, p1}, Lvp4;->invokeOnTimeout(JLjava/lang/Runnable;Ly44;)Lcw4;
-
-    move-result-object p1
-
-    iput-object p1, p2, Ll0e;->c:Ljava/lang/Object;
-
-    return-object v2
+    return-object v0
 .end method

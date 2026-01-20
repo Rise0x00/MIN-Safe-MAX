@@ -1,68 +1,95 @@
 .class public final Lm82;
-.super Lh82;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final c:La10;
+
+
 # instance fields
-.field public final o:Logf;
+.field public final a:Lte4;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lgj6;Lez5;Ly44;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p4, p5, p3, p2}, Lh82;-><init>(IILy44;Lez5;)V
+    new-instance v0, La10;
 
-    check-cast p1, Logf;
+    const/4 v1, 0x7
 
-    iput-object p1, p0, Lm82;->o:Logf;
+    invoke-direct {v0, v1}, La10;-><init>(I)V
+
+    sput-object v0, Lm82;->c:La10;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/text/SpannableStringBuilder;Landroid/text/Layout$Alignment;FIFIZII)V
+    .locals 21
 
-# virtual methods
-.method public final k(Ly44;II)La82;
-    .locals 6
+    move-object/from16 v0, p0
 
-    new-instance v0, Lm82;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lm82;->o:Logf;
+    if-eqz p7, :cond_0
 
-    iget-object v2, p0, Lh82;->d:Lez5;
+    move/from16 v17, p8
 
-    move-object v3, p1
-
-    move v4, p2
-
-    move v5, p3
-
-    invoke-direct/range {v0 .. v5}, Lm82;-><init>(Lgj6;Lez5;Ly44;II)V
-
-    return-object v0
-.end method
-
-.method public final n(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
-
-    new-instance v0, Ll82;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Ll82;-><init>(Lm82;Lgz5;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, p2}, Ljwi;->c(Lej6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lh54;->a:Lh54;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lybg;->a:Lybg;
+    const/high16 v1, -0x1000000
 
-    return-object p1
+    move/from16 v17, v1
+
+    :goto_0
+    new-instance v2, Lte4;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v8, 0x0
+
+    const/high16 v12, -0x80000000
+
+    const v13, -0x800001
+
+    const v14, -0x800001
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    move v15, v13
+
+    move/from16 v18, v12
+
+    move-object/from16 v3, p1
+
+    move-object/from16 v4, p2
+
+    move/from16 v7, p3
+
+    move/from16 v9, p4
+
+    move/from16 v10, p5
+
+    move/from16 v11, p6
+
+    move/from16 v16, p7
+
+    invoke-direct/range {v2 .. v20}, Lte4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIFI)V
+
+    iput-object v2, v0, Lm82;->a:Lte4;
+
+    move/from16 v1, p9
+
+    iput v1, v0, Lm82;->b:I
+
+    return-void
 .end method

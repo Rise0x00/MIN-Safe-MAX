@@ -1,92 +1,61 @@
-.class public final synthetic Llo1;
-.super Ljava/lang/Object;
+.class public final Llo1;
+.super Lcp1;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lno1;
+# static fields
+.field public static final D:Llo1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lno1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Llo1;->a:I
+    new-instance v0, Llo1;
 
-    iput-object p1, p0, Llo1;->b:Lno1;
+    invoke-direct {v0}, Lcp1;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Llo1;->D:Llo1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p1, p0, Llo1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Llo1;->b:Lno1;
-
-    iget-object p1, p1, Lno1;->F0:Lmo1;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Lmo1;->l()V
+    return v0
 
     :cond_0
-    return-void
+    instance-of p1, p1, Llo1;
 
-    :pswitch_0
-    iget-object p1, p0, Llo1;->b:Lno1;
+    if-nez p1, :cond_1
 
-    iget-object p1, p1, Lno1;->F0:Lmo1;
+    const/4 p1, 0x0
 
-    if-eqz p1, :cond_1
-
-    invoke-interface {p1}, Lmo1;->f()V
+    return p1
 
     :cond_1
-    return-void
+    return v0
+.end method
 
-    :pswitch_1
-    iget-object p1, p0, Llo1;->b:Lno1;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object p1, p1, Lno1;->F0:Lmo1;
+    const v0, -0x377eee04
 
-    if-eqz p1, :cond_2
+    return v0
+.end method
 
-    invoke-interface {p1}, Lmo1;->g()V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    :cond_2
-    return-void
+    const-string v0, "InviteToP2PCall"
 
-    :pswitch_2
-    iget-object p1, p0, Llo1;->b:Lno1;
-
-    iget-object p1, p1, Lno1;->F0:Lmo1;
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Lmo1;->h()V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

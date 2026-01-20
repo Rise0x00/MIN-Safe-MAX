@@ -4,7 +4,10 @@
 
 
 # virtual methods
-.method public abstract b(J[F)V
+.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)Lie8;
+.end method
+
+.method public abstract b()Z
 .end method
 
 .method public abstract c()V

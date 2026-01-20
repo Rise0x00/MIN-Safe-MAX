@@ -1,36 +1,51 @@
-.class public final synthetic Lz1a;
-.super Ljava/lang/Object;
+.class public final Lz1a;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lpj6;
 
 
 # instance fields
-.field public final synthetic a:Z
+.field public final synthetic X:Le2a;
+
+.field public Y:I
+
+.field public d:Lusa;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Z)V
+.method public constructor <init>(Le2a;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz1a;->X:Le2a;
 
-    iput-boolean p1, p0, Lz1a;->a:Z
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    check-cast p1, La78;
+    iput-object p1, p0, Lz1a;->o:Ljava/lang/Object;
 
-    iget-boolean v0, p0, Lz1a;->a:Z
+    iget p1, p0, Lz1a;->Y:I
 
-    iput-boolean v0, p1, La78;->n:Z
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lz1a;->Y:I
+
+    iget-object p1, p0, Lz1a;->X:Le2a;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Le2a;->b(Le2a;Lusa;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
 
     return-object p1
 .end method

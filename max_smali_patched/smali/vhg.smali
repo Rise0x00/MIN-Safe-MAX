@@ -1,171 +1,77 @@
-.class public final Lvhg;
+.class public abstract Lvhg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldde;
-
-
-# instance fields
-.field public final a:Lkrf;
-
 
 # direct methods
-.method public constructor <init>(Lkrf;)V
+.method public static a(Landroid/widget/TextView;)I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/widget/TextView;->getBreakStrategy()I
 
-    iput-object p1, p0, Lvhg;->a:Lkrf;
+    move-result p0
+
+    return p0
+.end method
+
+.method public static b(Landroid/widget/TextView;)Landroid/content/res/ColorStateList;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintList()Landroid/content/res/ColorStateList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static c(Landroid/widget/TextView;)Landroid/graphics/PorterDuff$Mode;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getCompoundDrawableTintMode()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static d(Landroid/widget/TextView;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getHyphenationFrequency()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static e(Landroid/widget/TextView;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setBreakStrategy(I)V
 
     return-void
 .end method
 
+.method public static f(Landroid/widget/TextView;Landroid/content/res/ColorStateList;)V
+    .locals 0
 
-# virtual methods
-.method public final a()Lnrf;
-    .locals 1
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintList(Landroid/content/res/ColorStateList;)V
 
-    const/4 v0, 0x0
-
-    return-object v0
+    return-void
 .end method
 
-.method public final b()Lsce;
-    .locals 1
+.method public static g(Landroid/widget/TextView;Landroid/graphics/PorterDuff$Mode;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCompoundDrawableTintMode(Landroid/graphics/PorterDuff$Mode;)V
 
-    return-object v0
+    return-void
 .end method
 
-.method public final c()Lnrf;
-    .locals 1
+.method public static h(Landroid/widget/TextView;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setHyphenationFrequency(I)V
 
-    return-object v0
-.end method
-
-.method public final d()Lade;
-    .locals 1
-
-    sget-object v0, Ltce;->a:Ltce;
-
-    return-object v0
-.end method
-
-.method public final e()Lbv7;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lvhg;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lvhg;
-
-    iget-object v0, p0, Lvhg;->a:Lkrf;
-
-    iget-object p1, p1, Lvhg;->a:Lkrf;
-
-    invoke-virtual {v0, p1}, Lkrf;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const-wide/high16 v0, -0x8000000000000000L
-
-    return-wide v0
-.end method
-
-.method public final getTitle()Lnrf;
-    .locals 1
-
-    iget-object v0, p0, Lvhg;->a:Lkrf;
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lvhg;->a:Lkrf;
-
-    invoke-virtual {v0}, Lkrf;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    sget v0, Lmra;->P0:I
-
-    return v0
-.end method
-
-.method public final t()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UserInWaitingMore(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvhg;->a:Lkrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

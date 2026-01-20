@@ -1,74 +1,102 @@
 .class public final Lun4;
-.super Lio4;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final X:I
+.field public final a:Lpj6;
 
-.field public final o:I
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:Lw50;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
 
 
 # direct methods
-.method public constructor <init>(ILg1g;ILzn4;I)V
+.method public constructor <init>(Lpj6;IIIIIIILw50;ZZZ)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lio4;-><init>(ILg1g;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean p1, p4, Lzn4;->t0:Z
+    iput-object p1, p0, Lun4;->a:Lpj6;
 
-    invoke-static {p5, p1}, Ltk0;->k(IZ)Z
+    iput p2, p0, Lun4;->b:I
 
-    move-result p1
+    iput p3, p0, Lun4;->c:I
 
-    iput p1, p0, Lun4;->o:I
+    iput p4, p0, Lun4;->d:I
 
-    iget-object p1, p0, Lio4;->d:Lub6;
+    iput p5, p0, Lun4;->e:I
 
-    invoke-virtual {p1}, Lub6;->b()I
+    iput p6, p0, Lun4;->f:I
 
-    move-result p1
+    iput p7, p0, Lun4;->g:I
 
-    iput p1, p0, Lun4;->X:I
+    iput p8, p0, Lun4;->h:I
+
+    iput-object p9, p0, Lun4;->i:Lw50;
+
+    iput-boolean p10, p0, Lun4;->j:Z
+
+    iput-boolean p11, p0, Lun4;->k:Z
+
+    iput-boolean p12, p0, Lun4;->l:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
+.method public final a()Ln60;
+    .locals 7
 
-    iget v0, p0, Lun4;->o:I
+    new-instance v0, Ln60;
 
-    return v0
-.end method
+    iget v1, p0, Lun4;->c:I
 
-.method public final bridge synthetic c(Lio4;)Z
-    .locals 0
+    const/4 v2, 0x1
 
-    check-cast p1, Lun4;
+    if-ne v1, v2, :cond_0
 
-    const/4 p1, 0x0
+    :goto_0
+    move v5, v2
 
-    return p1
-.end method
+    goto :goto_1
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 1
+    :cond_0
+    const/4 v2, 0x0
 
-    check-cast p1, Lun4;
+    goto :goto_0
 
-    iget v0, p0, Lun4;->X:I
+    :goto_1
+    iget v6, p0, Lun4;->h:I
 
-    iget p1, p1, Lun4;->X:I
+    iget v1, p0, Lun4;->g:I
 
-    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+    iget v2, p0, Lun4;->e:I
 
-    move-result p1
+    iget v3, p0, Lun4;->f:I
 
-    return p1
+    iget-boolean v4, p0, Lun4;->l:Z
+
+    invoke-direct/range {v0 .. v6}, Ln60;-><init>(IIIZZI)V
+
+    return-object v0
 .end method

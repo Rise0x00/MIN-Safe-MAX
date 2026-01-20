@@ -1,19 +1,23 @@
 .class public final Llih;
-.super Ljava/lang/Object;
+.super Lndf;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final serializer()Lfs7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lfs7;"
-        }
-    .end annotation
+# instance fields
+.field public final c:Lzfh;
 
-    sget-object v0, Lkih;->a:Lkih;
+.field public final d:Ljava/lang/String;
 
-    return-object v0
+
+# direct methods
+.method public constructor <init>(ILjava/lang/String;Lzfh;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lndf;-><init>(ILjava/lang/String;)V
+
+    iput-object p3, p0, Llih;->c:Lzfh;
+
+    iput-object p4, p0, Llih;->d:Ljava/lang/String;
+
+    return-void
 .end method

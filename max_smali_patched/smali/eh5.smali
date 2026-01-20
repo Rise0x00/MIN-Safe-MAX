@@ -1,138 +1,195 @@
 .class public final Leh5;
-.super Landroid/media/MediaDataSource;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Map;
+.implements Ljava/io/Serializable;
+.implements Lo28;
 
-# instance fields
-.field public a:J
 
-.field public final synthetic b:Ljh5;
+# static fields
+.field public static final a:Leh5;
 
 
 # direct methods
-.method public constructor <init>(Ljh5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Leh5;->b:Ljh5;
+    new-instance v0, Leh5;
 
-    invoke-direct {p0}, Landroid/media/MediaDataSource;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Leh5;->a:Leh5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final getSize()J
+.method public final clear()V
     .locals 2
 
-    const-wide/16 v0, -0x1
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    return-wide v0
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final readAt(J[BII)I
-    .locals 7
-
-    if-nez p5, :cond_0
+.method public final containsKey(Ljava/lang/Object;)Z
+    .locals 0
 
     const/4 p1, 0x0
 
     return p1
+.end method
 
-    :cond_0
-    const-wide/16 v0, 0x0
+.method public final bridge containsValue(Ljava/lang/Object;)Z
+    .locals 0
 
-    cmp-long v2, p1, v0
+    const/4 p1, 0x0
 
-    const/4 v3, -0x1
+    return p1
+.end method
 
-    if-gez v2, :cond_1
+.method public final bridge entrySet()Ljava/util/Set;
+    .locals 1
 
-    return v3
+    sget-object v0, Lnh5;->a:Lnh5;
 
-    :cond_1
-    :try_start_0
-    iget-wide v4, p0, Leh5;->a:J
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
+.end method
 
-    cmp-long v2, v4, p1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v6, p0, Leh5;->b:Ljh5;
+    instance-of v0, p1, Ljava/util/Map;
 
-    if-eqz v2, :cond_3
+    if-eqz v0, :cond_0
 
-    cmp-long v0, v4, v0
+    check-cast p1, Ljava/util/Map;
 
-    if-ltz v0, :cond_2
-
-    :try_start_1
-    iget-object v0, v6, Lfh5;->a:Ljava/io/DataInputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->available()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    add-long/2addr v4, v0
-
-    cmp-long v0, p1, v4
-
-    if-ltz v0, :cond_2
-
-    return v3
-
-    :cond_2
-    invoke-virtual {v6, p1, p2}, Ljh5;->d(J)V
-
-    iput-wide p1, p0, Leh5;->a:J
-
-    :cond_3
-    iget-object p1, v6, Lfh5;->a:Ljava/io/DataInputStream;
-
-    invoke-virtual {p1}, Ljava/io/InputStream;->available()I
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
 
     move-result p1
 
-    if-le p5, p1, :cond_4
+    if-eqz p1, :cond_0
 
-    iget-object p1, v6, Lfh5;->a:Ljava/io/DataInputStream;
-
-    invoke-virtual {p1}, Ljava/io/InputStream;->available()I
-
-    move-result p5
-
-    :cond_4
-    invoke-virtual {v6, p3, p4, p5}, Lfh5;->read([BII)I
-
-    move-result p1
-
-    if-ltz p1, :cond_5
-
-    iget-wide p2, p0, Leh5;->a:J
-
-    int-to-long p4, p1
-
-    add-long/2addr p2, p4
-
-    iput-wide p2, p0, Leh5;->a:J
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    const/4 p1, 0x1
 
     return p1
 
-    :catch_0
-    :cond_5
-    const-wide/16 p1, -0x1
+    :cond_0
+    const/4 p1, 0x0
 
-    iput-wide p1, p0, Leh5;->a:J
+    return p1
+.end method
 
-    return v3
+.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final bridge keySet()Ljava/util/Set;
+    .locals 1
+
+    sget-object v0, Lnh5;->a:Lnh5;
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final putAll(Ljava/util/Map;)V
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 2
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string p2, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final bridge size()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "{}"
+
+    return-object v0
+.end method
+
+.method public final bridge values()Ljava/util/Collection;
+    .locals 1
+
+    sget-object v0, Ldh5;->a:Ldh5;
+
+    return-object v0
 .end method

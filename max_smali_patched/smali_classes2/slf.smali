@@ -1,103 +1,181 @@
 .class public final Lslf;
-.super Ljava/lang/Object;
+.super Lulf;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile b:Lslf;
-
-.field public static final c:Ljava/util/concurrent/CountDownLatch;
-
-
 # instance fields
-.field public final a:Ltif;
+.field public final l:D
+
+.field public final m:D
+
+.field public final n:J
+
+.field public final o:J
+
+.field public final p:J
+
+.field public final q:J
+
+.field public final r:J
+
+.field public final s:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+.method public constructor <init>(JLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;DDJLjava/lang/String;JJJJJJLa2c;)V
+    .locals 12
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    move-object v0, p0
 
-    sput-object v0, Lslf;->c:Ljava/util/concurrent/CountDownLatch;
+    move-wide v2, p1
+
+    move-object v4, p3
+
+    move-object/from16 v5, p4
+
+    move-object/from16 v6, p5
+
+    move-object/from16 v7, p6
+
+    move-wide/from16 v8, p11
+
+    move-object/from16 v10, p13
+
+    move-object/from16 v11, p26
+
+    invoke-direct/range {v0 .. v11}, Lulf;-><init>(IJLjava/lang/String;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;JLjava/lang/String;La2c;)V
+
+    move-wide/from16 p1, p7
+
+    iput-wide p1, p0, Lslf;->l:D
+
+    move-wide/from16 p1, p9
+
+    iput-wide p1, p0, Lslf;->m:D
+
+    move-wide/from16 p1, p14
+
+    iput-wide p1, p0, Lslf;->n:J
+
+    move-wide/from16 p1, p16
+
+    iput-wide p1, p0, Lslf;->o:J
+
+    move-wide/from16 p1, p18
+
+    iput-wide p1, p0, Lslf;->p:J
+
+    move-wide/from16 p1, p20
+
+    iput-wide p1, p0, Lslf;->q:J
+
+    move-wide/from16 p1, p22
+
+    iput-wide p1, p0, Lslf;->r:J
+
+    move-wide/from16 p1, p24
+
+    iput-wide p1, p0, Lslf;->s:J
 
     return-void
 .end method
 
-.method public constructor <init>(Ltif;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput-object p1, p0, Lslf;->a:Ltif;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "AudioRecv{ssrc="
 
-.method public static a()Lnlf;
-    .locals 4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :try_start_0
-    sget-object v0, Lslf;->c:Ljava/util/concurrent/CountDownLatch;
+    iget-wide v1, p0, Lylf;->c:J
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string v1, ", transportId=\'"
 
-    :catch_0
-    move-exception v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    iget-object v1, p0, Lylf;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', trackId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lylf;->e:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', packetsReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lulf;->h:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", packetsLost="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lulf;->i:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bytesReceived="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lulf;->j:Ljava/math/BigInteger;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", jitterBufferMs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lulf;->k:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioLevel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lslf;->l:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", totalAudioEnergy="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lslf;->m:D
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lylf;->g:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "TamContextAndroid"
-
-    const-string v2, "TamContext initialization was interrupted: %s"
-
-    invoke-static {v1, v2, v0}, Lcuh;->h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :goto_0
-    sget-object v0, Lslf;->c:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lslf;->b:Lslf;
-
-    iget-object v0, v0, Lslf;->a:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnlf;
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "TamContextAndroid should call `init` before `getInstance`"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

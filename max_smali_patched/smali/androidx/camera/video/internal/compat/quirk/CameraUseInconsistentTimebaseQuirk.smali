@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgjc;
+.implements Ld4d;
 
 
 # static fields

@@ -2,22 +2,43 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lil3;
 
-# instance fields
-.field public final a:Lsh4;
 
-.field public b:Ljava/lang/Boolean;
+# static fields
+.field public static final a:Lgl3;
 
-.field public c:Ljava/lang/Float;
+.field public static final b:J
 
 
 # direct methods
-.method public constructor <init>(Lsh4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lgl3;
 
-    iput-object p1, p0, Lgl3;->a:Lsh4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lgl3;->a:Lgl3;
+
+    const-class v0, Lgl3;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    const-wide/16 v0, 0x1
+
+    sput-wide v0, Lgl3;->b:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getId()J
+    .locals 2
+
+    sget-wide v0, Lgl3;->b:J
+
+    return-wide v0
 .end method

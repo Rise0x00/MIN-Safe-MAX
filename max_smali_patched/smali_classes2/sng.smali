@@ -1,345 +1,141 @@
 .class public final Lsng;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lam;
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public final a:Ljavax/inject/Provider;
 
-.field public Y:I
-
-.field public Z:I
-
-.field public o:Lt92;
-
-.field public s0:I
-
-.field public final synthetic t0:Ljava/util/List;
-
-.field public final synthetic u0:Lvng;
-
-.field public final synthetic v0:J
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lvng;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Ljavax/inject/Provider;)V
     .locals 0
 
-    iput-object p1, p0, Lsng;->t0:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lsng;->u0:Lvng;
+    iput-object p1, p0, Lsng;->b:Ljava/lang/String;
 
-    iput-wide p3, p0, Lsng;->v0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lsng;->a:Ljavax/inject/Provider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final getOkParser()Lq18;
+    .locals 1
 
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lsng;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lsng;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lsng;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lsng;
-
-    iget-object v2, p0, Lsng;->u0:Lvng;
-
-    iget-wide v3, p0, Lsng;->v0:J
-
-    iget-object v1, p0, Lsng;->t0:Ljava/util/List;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lsng;-><init>(Ljava/util/List;Lvng;JLkotlin/coroutines/Continuation;)V
+    sget-object v0, Lfca;->b:Lfca;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+.method public final getScope()Lqm;
+    .locals 1
 
-    iget-object v0, p0, Lsng;->u0:Lvng;
+    sget-object v0, Lqm;->b:Lqm;
 
-    iget-object v1, v0, Lvng;->f:Ljava/lang/String;
+    return-object v0
+.end method
 
-    iget v2, p0, Lsng;->s0:I
+.method public final getScopeAfter()Lrm;
+    .locals 1
 
-    const/4 v3, 0x3
+    sget-object v0, Lrm;->b:Lrm;
 
-    const/4 v4, 0x2
+    return-object v0
+.end method
 
-    sget-object v5, Lybg;->a:Lybg;
+.method public final getUri()Landroid/net/Uri;
+    .locals 1
 
-    const/4 v6, 0x1
+    const-string v0, "auth.anonymLogin"
 
-    sget-object v7, Lh54;->a:Lh54;
+    invoke-static {v0}, Lzm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
-    if-eqz v2, :cond_3
+    move-result-object v0
 
-    if-eq v2, v6, :cond_2
+    return-object v0
+.end method
 
-    if-eq v2, v4, :cond_1
+.method public final writeParams(Li28;)V
+    .locals 2
 
-    if-ne v2, v3, :cond_0
+    const-string v0, "session_data"
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    return-object v5
+    invoke-interface {p1}, Li28;->q()V
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lsng;->a:Ljavax/inject/Provider;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p1
+    check-cast v0, Ljava/lang/String;
 
-    :cond_1
-    iget v1, p0, Lsng;->Z:I
+    if-eqz v0, :cond_0
 
-    iget v2, p0, Lsng;->Y:I
+    const-string v1, "auth_token"
 
-    iget-object v8, p0, Lsng;->X:Ljava/util/List;
-
-    iget-object v9, p0, Lsng;->o:Lt92;
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto/16 :goto_3
-
-    :cond_2
-    iget-object v1, p0, Lsng;->o:Lt92;
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v2, p0, Lsng;->t0:Ljava/util/List;
-
-    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_4
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_5
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    move-object v9, v8
-
-    check-cast v9, Ljava/lang/Number;
-
-    invoke-virtual {v9}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v9
-
-    iget-object v11, v0, Lvng;->l:Ljava/util/Set;
-
-    new-instance v12, Ljava/lang/Long;
-
-    invoke-direct {v12, v9, v10}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-interface {v11, v12}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_4
-
-    invoke-virtual {p1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    const-string p1, "Fetch video. Don\'t start because ids empty"
-
-    invoke-static {v1, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v5
-
-    :cond_6
-    iget-object v2, v0, Lvng;->i:Lru7;
-
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lu23;
-
-    iget-wide v8, p0, Lsng;->v0:J
-
-    check-cast v2, Lw33;
-
-    invoke-virtual {v2, v8, v9}, Lw33;->N(J)Lj0d;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lj0d;->a:Lt0f;
-
-    invoke-interface {v2}, Lt0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lt92;
-
-    if-nez v2, :cond_7
-
-    const-string p1, "Fetch video. Can\'t start fetch because chat not exist"
-
-    invoke-static {v1, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v5
-
-    :cond_7
-    iget-object v1, v0, Lvng;->h:Lru7;
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1, v1}, Li28;->r0(Ljava/lang/String;)Li28;
 
     move-result-object v1
 
-    check-cast v1, Lmp9;
+    invoke-interface {v1, v0}, Li28;->j(Ljava/lang/String;)V
 
-    iput-object v2, p0, Lsng;->o:Lt92;
+    :cond_0
+    const-string v0, "version"
 
-    iput v6, p0, Lsng;->s0:I
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    invoke-virtual {v1, p1, p0}, Lmp9;->d(Ljava/util/Collection;Lp14;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    const/4 v1, 0x3
 
-    if-ne p1, v7, :cond_8
+    check-cast v0, La2;
 
-    goto :goto_4
+    invoke-virtual {v0, v1}, La2;->H(I)V
 
-    :cond_8
-    move-object v1, v2
+    const-string v0, "device_id"
 
-    :goto_1
-    check-cast p1, Ljava/util/List;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
+    move-result-object v0
 
-    move-result v2
+    iget-object v1, p0, Lsng;->b:Ljava/lang/String;
 
-    const/4 v8, 0x0
+    invoke-interface {v0, v1}, Li28;->j(Ljava/lang/String;)V
 
-    move-object v9, v1
+    const-string v0, "client_version"
 
-    move v1, v2
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    move v2, v8
+    move-result-object v0
 
-    move-object v8, p1
+    const/4 v1, 0x1
 
-    :goto_2
-    if-ge v2, v1, :cond_a
+    check-cast v0, La2;
 
-    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, La2;->H(I)V
 
-    move-result-object p1
+    const-string v0, "client_type"
 
-    check-cast p1, Lgb9;
+    invoke-interface {p1, v0}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    iget-object v10, v9, Lt92;->b:Lvd2;
+    move-result-object v0
 
-    iget-wide v10, v10, Lvd2;->a:J
+    const-string v1, "SDK_ANDROID"
 
-    iput-object v9, p0, Lsng;->o:Lt92;
+    invoke-interface {v0, v1}, Li28;->j(Ljava/lang/String;)V
 
-    iput-object v8, p0, Lsng;->X:Ljava/util/List;
+    invoke-interface {p1}, Li28;->n()V
 
-    iput v2, p0, Lsng;->Y:I
-
-    iput v1, p0, Lsng;->Z:I
-
-    iput v4, p0, Lsng;->s0:I
-
-    invoke-static {v0, p1, v10, v11, p0}, Lvng;->a(Lvng;Lgb9;JLp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    :goto_3
-    add-int/2addr v2, v6
-
-    goto :goto_2
-
-    :cond_a
-    iget-object p1, v0, Lvng;->j:Lake;
-
-    new-instance v0, Lnng;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lsng;->o:Lt92;
-
-    iput-object v1, p0, Lsng;->X:Ljava/util/List;
-
-    iput v3, p0, Lsng;->s0:I
-
-    invoke-virtual {p1, v0, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_b
-
-    :goto_4
-    return-object v7
-
-    :cond_b
-    return-object v5
+    return-void
 .end method

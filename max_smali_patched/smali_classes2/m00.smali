@@ -1,43 +1,69 @@
-.class public abstract synthetic Lm00;
+.class public final Lm00;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final b:Li7f;
+
+.field public final c:Lold;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lmbg;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    check-cast p1, Lj9b;
+
+    invoke-virtual {p1}, Lj9b;->a()Lsb4;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lm00;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 p1, 0x0
+
+    const/4 v0, 0x7
+
+    invoke-static {p1, p1, v0}, Lj7f;->b(III)Li7f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lm00;->b:Li7f;
+
+    new-instance v0, Lold;
+
+    invoke-direct {v0, p1}, Lold;-><init>(Llfa;)V
+
+    iput-object v0, p0, Lm00;->c:Lold;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lyid;)V
     .locals 3
 
-    invoke-static {}, Ln00;->values()[Ln00;
+    new-instance v0, Ll00;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    array-length v0, v0
+    invoke-direct {v0, p0, p1, v1}, Ll00;-><init>(Lm00;Lyid;Lkotlin/coroutines/Continuation;)V
 
-    new-array v0, v0, [I
+    const/4 p1, 0x3
 
-    const/4 v1, 0x1
+    iget-object v2, p0, Lm00;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    const/4 v2, 0x0
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lm00;->$EnumSwitchMapping$0:[I
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
     return-void
 .end method

@@ -1,142 +1,141 @@
 .class public final Lxa0;
-.super Lx5a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lw5a;
+.field public final a:Lp5g;
 
-.field public final b:Lv5a;
+.field public final b:Lp5g;
+
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lw5a;Lv5a;)V
+.method public constructor <init>(Lp5g;Lp5g;Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxa0;->a:Lw5a;
+    if-eqz p1, :cond_1
 
-    iput-object p2, p0, Lxa0;->b:Lv5a;
+    iput-object p1, p0, Lxa0;->a:Lp5g;
+
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Lxa0;->b:Lp5g;
+
+    iput-object p3, p0, Lxa0;->c:Ljava/util/ArrayList;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null secondarySurfaceEdge"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null primarySurfaceEdge"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p1, p0, :cond_0
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lx5a;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_3
-
-    check-cast p1, Lx5a;
-
-    iget-object v1, p0, Lxa0;->a:Lw5a;
-
-    if-nez v1, :cond_1
-
-    move-object v1, p1
-
-    check-cast v1, Lxa0;
-
-    iget-object v1, v1, Lxa0;->a:Lw5a;
-
-    if-nez v1, :cond_3
-
     goto :goto_0
 
-    :cond_1
-    move-object v3, p1
+    :cond_0
+    instance-of v0, p1, Lxa0;
 
-    check-cast v3, Lxa0;
-
-    iget-object v3, v3, Lxa0;->a:Lw5a;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    :goto_0
-    iget-object v1, p0, Lxa0;->b:Lv5a;
-
-    if-nez v1, :cond_2
+    if-eqz v0, :cond_1
 
     check-cast p1, Lxa0;
 
-    iget-object p1, p1, Lxa0;->b:Lv5a;
+    iget-object v0, p0, Lxa0;->a:Lp5g;
 
-    if-nez p1, :cond_3
+    iget-object v1, p1, Lxa0;->a:Lp5g;
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    :cond_2
-    check-cast p1, Lxa0;
+    move-result v0
 
-    iget-object p1, p1, Lxa0;->b:Lv5a;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p0, Lxa0;->b:Lp5g;
+
+    iget-object v1, p1, Lxa0;->b:Lp5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lxa0;->c:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Lxa0;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_3
+    if-eqz p1, :cond_1
 
-    :goto_1
-    return v0
+    :goto_0
+    const/4 p1, 0x1
 
-    :cond_3
-    return v2
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lxa0;->a:Lp5g;
 
-    iget-object v1, p0, Lxa0;->a:Lw5a;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    const v2, 0xf4243
-
-    xor-int/2addr v1, v2
-
-    mul-int/2addr v1, v2
-
-    iget-object v2, p0, Lxa0;->b:Lv5a;
-
-    if-nez v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    :goto_1
+    const v1, 0xf4243
+
+    xor-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lxa0;->b:Lp5g;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v1, p0, Lxa0;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->hashCode()I
+
+    move-result v1
+
     xor-int/2addr v0, v1
 
     return v0
@@ -147,19 +146,27 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "NetworkConnectionInfo{networkType="
+    const-string v1, "In{primarySurfaceEdge="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lxa0;->a:Lw5a;
+    iget-object v1, p0, Lxa0;->a:Lp5g;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mobileSubtype="
+    const-string v1, ", secondarySurfaceEdge="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lxa0;->b:Lv5a;
+    iget-object v1, p0, Lxa0;->b:Lp5g;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", outConfigs="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lxa0;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

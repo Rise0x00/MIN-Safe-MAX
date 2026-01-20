@@ -1,87 +1,88 @@
-.class public final Lnth;
+.class public abstract Lnth;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ltif;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Throwable;
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 2
 
-    new-instance v0, Ly8h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0xf
+    invoke-static {}, Llpb;->a()Lh4g;
 
-    invoke-direct {v0, v1}, Ly8h;-><init>(I)V
+    move-result-object v0
 
-    new-instance v1, Ltif;
+    sget-object v1, Lf25;->a:Lct4;
 
-    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
+    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lzp8;
 
-    sput-object v1, Lnth;->c:Ltif;
+    invoke-virtual {v1}, Lzp8;->getImmediate()Lzp8;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lqb4;->plus(Lqb4;)Lqb4;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 3
+.method public static n(Lnth;Lqb4;Lbr6;I)Lmmf;
+    .locals 1
 
-    const-string v0, "gleff"
+    and-int/lit8 v0, p3, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz v0, :cond_0
 
-    const-class v1, Lnth;
+    sget-object p1, Lxg5;->a:Lxg5;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    :cond_0
+    and-int/lit8 p3, p3, 0x2
 
-    move-result-object v1
+    if-eqz p3, :cond_1
 
-    iput-object v1, p0, Lnth;->a:Ljava/lang/String;
-
-    sget-object v1, Llth;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    :try_start_0
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v0, 0x0
+    sget-object p3, Lcc4;->a:Lcc4;
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Lnth;->a:Ljava/lang/String;
-
-    const-string v2, "failed to load gl-effects library with system loader"
-
-    invoke-static {v1, v2, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :cond_1
+    sget-object p3, Lcc4;->b:Lcc4;
 
     :goto_0
-    iput-object v0, p0, Lnth;->b:Ljava/lang/Throwable;
+    iget-object p0, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {p0, p1, p3, p2}, Ls9j;->f(Lzb4;Lqb4;Lcc4;Lbr6;)Lmmf;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static q(Lcm5;Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p0, p0, Lcm5;->b:Li7f;
+
+    invoke-virtual {p0, p1}, Li7f;->h(Ljava/lang/Object;)Z
 
     return-void
+.end method
 
-    :cond_0
-    new-instance v0, Ljava/lang/ClassCastException;
 
-    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+# virtual methods
+.method public r()V
+    .locals 0
 
-    throw v0
+    return-void
 .end method

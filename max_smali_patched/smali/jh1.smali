@@ -1,145 +1,186 @@
 .class public final Ljh1;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lkh1;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+.field public final a:J
 
-.field public final synthetic Y:Lxh1;
+.field public final b:Ljava/lang/String;
 
-.field public o:I
+.field public final c:Z
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;Lxh1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    iput-object p1, p0, Ljh1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljh1;->Y:Lxh1;
+    iput-wide p1, p0, Ljh1;->a:J
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Ljh1;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p5, p0, Ljh1;->c:Z
+
+    iput-object p4, p0, Ljh1;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Lg54;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljh1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljh1;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ljh1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Ljh1;
-
-    iget-object v0, p0, Ljh1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-    iget-object v1, p0, Ljh1;->Y:Lxh1;
-
-    invoke-direct {p1, v0, v1, p2}, Ljh1;-><init>(Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;Lxh1;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Ljh1;->o:I
-
-    sget-object v1, Lybg;->a:Lybg;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object v1
+    goto :goto_1
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v0, p1, Ljh1;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez v0, :cond_1
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    check-cast p1, Ljh1;
 
-    sget-object p1, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->H0:[Les7;
+    iget-wide v0, p0, Ljh1;->a:J
 
-    iget-object p1, p0, Ljh1;->X:Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
+    iget-wide v2, p1, Ljh1;->a:J
 
-    invoke-virtual {p1}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->C0()Lbh1;
+    cmp-long v0, v0, v2
 
-    move-result-object p1
-
-    iput v2, p0, Ljh1;->o:I
-
-    iget-object v0, p1, Lbh1;->o:Ltlf;
-
-    check-cast v0, Lsta;
-
-    invoke-virtual {v0}, Lsta;->b()La54;
-
-    move-result-object v0
-
-    new-instance v2, Lyg1;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Ljh1;->Y:Lxh1;
-
-    invoke-direct {v2, p1, v4, v3}, Lyg1;-><init>(Lbh1;Lxh1;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {v0, v2, p0}, Lkki;->h(Ly44;Lej6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    move-object p1, v1
+    iget-object v0, p0, Ljh1;->b:Ljava/lang/String;
 
-    :goto_0
-    if-ne p1, v0, :cond_3
+    iget-object v1, p1, Ljh1;->b:Ljava/lang/String;
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
 
     :cond_3
-    return-object v1
+    iget-boolean v0, p0, Ljh1;->c:Z
+
+    iget-boolean v1, p1, Ljh1;->c:Z
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Ljh1;->d:Ljava/lang/String;
+
+    iget-object p1, p1, Ljh1;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ljh1;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ljh1;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ljh1;->c:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-object v1, p0, Ljh1;->d:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "Exist(serverChatId="
+
+    const-string v1, ", link="
+
+    iget-wide v2, p0, Ljh1;->a:J
+
+    iget-object v4, p0, Ljh1;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", isLinkCall="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ljh1;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljh1;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

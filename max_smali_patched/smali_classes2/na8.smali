@@ -1,132 +1,76 @@
-.class public final synthetic Lna8;
+.class public final Lna8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Lxa8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lna8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final a:J
 
-.field public final synthetic Y:I
-
-.field public final synthetic a:Ljava/lang/String;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Ljava/lang/String;
-
-.field public final synthetic o:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lj58;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+
+    sput-object v0, Lna8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lna8;->a:Ljava/lang/String;
+    iput-wide p1, p0, Lna8;->a:J
 
-    iput-object p2, p0, Lna8;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lna8;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lna8;->d:Ljava/lang/String;
-
-    iput p5, p0, Lna8;->o:I
-
-    iput p6, p0, Lna8;->X:I
-
-    iput p7, p0, Lna8;->Y:I
+    iput-object p3, p0, Lna8;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.method public final describeContents()I
+    .locals 1
 
-    check-cast p1, Lsf4;
+    const/4 v0, 0x0
 
-    const-string v0, ":twofa/auth/password/check"
+    return v0
+.end method
 
-    iput-object v0, p1, Lsf4;->a:Ljava/lang/String;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    const-string v0, "track_id"
+    iget-wide v0, p0, Lna8;->a:J
 
-    iget-object v1, p0, Lna8;->a:Ljava/lang/String;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-virtual {p1, v1, v0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    iget-object p2, p0, Lna8;->b:Ljava/lang/String;
 
-    iget-object v0, p1, Lsf4;->b:Ljava/util/ArrayList;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lna8;->b:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "hint="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const-string v0, "email"
-
-    iget-object v1, p0, Lna8;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "phone"
-
-    iget-object v1, p0, Lna8;->d:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "p_mn_l"
-
-    iget v1, p0, Lna8;->o:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "p_mx_l"
-
-    iget v1, p0, Lna8;->X:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v0, "h_mx_l"
-
-    iget v1, p0, Lna8;->Y:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, v0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

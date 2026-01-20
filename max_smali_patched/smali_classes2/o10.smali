@@ -1,146 +1,181 @@
-.class public final Lo10;
-.super Ljava/lang/Object;
+.class public final enum Lo10;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final enum X:Lo10;
 
-.field public b:J
+.field public static final enum Y:Lo10;
 
-.field public c:J
+.field public static final enum Z:Lo10;
 
-.field public d:J
+.field public static final enum a:Lo10;
 
-.field public e:I
+.field public static final enum b:Lo10;
 
-.field public f:Ljava/lang/Object;
+.field public static final enum c:Lo10;
+
+.field public static final enum d:Lo10;
+
+.field public static final enum o:Lo10;
+
+.field public static final enum t0:Lo10;
+
+.field public static final enum u0:Lo10;
+
+.field public static final enum v0:Lo10;
+
+.field public static final synthetic w0:[Lo10;
 
 
 # direct methods
-.method public constructor <init>(Lo10;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 13
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lo10;
 
-    iget-wide v0, p1, Lo10;->a:J
+    const-string v1, "UNKNOWN"
 
-    iput-wide v0, p0, Lo10;->a:J
+    const/4 v2, 0x0
 
-    iget-wide v0, p1, Lo10;->b:J
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-wide v0, p0, Lo10;->b:J
+    sput-object v0, Lo10;->a:Lo10;
 
-    iget-wide v0, p1, Lo10;->c:J
+    new-instance v1, Lo10;
 
-    iput-wide v0, p0, Lo10;->c:J
+    const-string v2, "NEW"
 
-    iget-wide v0, p1, Lo10;->d:J
+    const/4 v3, 0x1
 
-    iput-wide v0, p0, Lo10;->d:J
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p1, Lo10;->e:I
+    sput-object v1, Lo10;->b:Lo10;
 
-    iput v0, p0, Lo10;->e:I
+    new-instance v2, Lo10;
 
-    iget-object p1, p1, Lo10;->f:Ljava/lang/Object;
+    const-string v3, "ADD"
 
-    check-cast p1, Ljava/lang/String;
+    const/4 v4, 0x2
 
-    iput-object p1, p0, Lo10;->f:Ljava/lang/Object;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lo10;->c:Lo10;
+
+    new-instance v3, Lo10;
+
+    const-string v4, "REMOVE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lo10;->d:Lo10;
+
+    new-instance v4, Lo10;
+
+    const-string v5, "LEAVE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lo10;->o:Lo10;
+
+    new-instance v5, Lo10;
+
+    const-string v6, "TITLE"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lo10;->X:Lo10;
+
+    new-instance v6, Lo10;
+
+    const-string v7, "ICON"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Lo10;->Y:Lo10;
+
+    new-instance v7, Lo10;
+
+    const-string v8, "SYSTEM"
+
+    const/4 v9, 0x7
+
+    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v7, Lo10;->Z:Lo10;
+
+    new-instance v8, Lo10;
+
+    const-string v9, "JOIN_BY_LINK"
+
+    const/16 v10, 0x8
+
+    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v8, Lo10;->t0:Lo10;
+
+    new-instance v9, Lo10;
+
+    const-string v10, "PIN"
+
+    const/16 v11, 0x9
+
+    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v9, Lo10;->u0:Lo10;
+
+    new-instance v10, Lo10;
+
+    const-string v11, "BOT_STARTED"
+
+    const/16 v12, 0xa
+
+    invoke-direct {v10, v11, v12}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v10, Lo10;->v0:Lo10;
+
+    filled-new-array/range {v0 .. v10}, [Lo10;
+
+    move-result-object v0
+
+    sput-object v0, Lo10;->w0:[Lo10;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public a()V
+.method public static valueOf(Ljava/lang/String;)Lo10;
     .locals 1
 
-    iget-object v0, p0, Lo10;->f:Ljava/lang/Object;
+    const-class v0, Lo10;
 
-    check-cast v0, Lqv5;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
 
-    const/4 v0, 0x0
+    check-cast p0, Lo10;
 
-    invoke-virtual {p0, v0}, Lo10;->b(I)V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method
 
-.method public b(I)V
-    .locals 6
+.method public static values()[Lo10;
+    .locals 1
 
-    iput p1, p0, Lo10;->e:I
+    sget-object v0, Lo10;->w0:[Lo10;
 
-    const-wide/16 v0, 0x2710
+    invoke-virtual {v0}, [Lo10;->clone()Ljava/lang/Object;
 
-    if-eqz p1, :cond_3
+    move-result-object v0
 
-    const/4 v2, 0x1
+    check-cast v0, [Lo10;
 
-    if-eq p1, v2, :cond_2
-
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_0
-
-    const-wide/32 v0, 0x7a120
-
-    iput-wide v0, p0, Lo10;->b:J
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    const-wide/32 v0, 0x989680
-
-    iput-wide v0, p0, Lo10;->b:J
-
-    return-void
-
-    :cond_2
-    iput-wide v0, p0, Lo10;->b:J
-
-    return-void
-
-    :cond_3
-    const-wide/16 v2, 0x0
-
-    iput-wide v2, p0, Lo10;->c:J
-
-    const-wide/16 v2, -0x1
-
-    iput-wide v2, p0, Lo10;->d:J
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x3e8
-
-    div-long/2addr v2, v4
-
-    iput-wide v2, p0, Lo10;->a:J
-
-    iput-wide v0, p0, Lo10;->b:J
-
-    return-void
+    return-object v0
 .end method

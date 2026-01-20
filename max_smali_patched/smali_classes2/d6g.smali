@@ -1,119 +1,224 @@
 .class public final Ld6g;
-.super Logf;
+.super Lvm;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ledg;
+.implements Lb0c;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+.field public final X:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+.method public constructor <init>(JJZJ)V
     .locals 0
 
-    iput-object p2, p0, Ld6g;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-direct {p0, p1, p2}, Lvm;-><init>(J)V
 
-    const/4 p2, 0x2
+    iput-wide p3, p0, Ld6g;->d:J
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p6, p0, Ld6g;->o:J
+
+    iput-boolean p5, p0, Ld6g;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c()I
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Ld6g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ld6g;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ld6g;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final d()V
+    .locals 13
 
-    new-instance v0, Ld6g;
+    invoke-virtual {p0}, Lvm;->r()Lteg;
 
-    iget-object v1, p0, Ld6g;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    move-result-object v0
 
-    invoke-direct {v0, p2, v1}, Ld6g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+    iget-wide v1, p0, Lvm;->a:J
 
-    iput-object p1, v0, Ld6g;->o:Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lteg;->d(J)V
+
+    invoke-virtual {p0}, Lvm;->l()Lxg2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Llg2;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v3, v2}, Llg2;-><init>(ZI)V
+
+    iget-wide v4, p0, Ld6g;->d:J
+
+    invoke-virtual {v0, v4, v5, v3, v1}, Lxg2;->s(JZLcy3;)Lnd2;
+
+    invoke-virtual {p0}, Lvm;->j()Lcy0;
+
+    move-result-object v0
+
+    new-instance v6, Lab3;
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v7
+
+    const/4 v11, 0x0
+
+    const/16 v12, 0x7c
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    invoke-direct/range {v6 .. v12}, Lab3;-><init>(Ljava/util/Collection;ZZLmw4;Lgic;I)V
+
+    invoke-virtual {v0, v6}, Lcy0;->c(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Lvm;->j()Lcy0;
+
+    move-result-object v0
+
+    new-instance v1, Lu64;
+
+    iget-wide v2, p0, Ld6g;->o:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Lu64;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v0, v1}, Lcy0;->c(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final e()[B
+    .locals 3
+
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SuspendBot;-><init>()V
+
+    iget-wide v1, p0, Lvm;->a:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->requestId:J
+
+    iget-wide v1, p0, Ld6g;->d:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->chatId:J
+
+    iget-wide v1, p0, Ld6g;->o:J
+
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->botId:J
+
+    iget-boolean v1, p0, Ld6g;->X:Z
+
+    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$SuspendBot;->suspend:Z
+
+    invoke-static {v0}, Lbp9;->toByteArray(Lbp9;)[B
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final f()I
+    .locals 1
+
+    const v0, 0xf4240
+
+    return v0
+.end method
+
+.method public final g(Licg;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lvm;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lc0c;
+    .locals 1
+
+    sget-object v0, Lc0c;->K0:Lc0c;
+
+    return-object v0
+.end method
+
+.method public final h()Lj2;
     .locals 4
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Le6g;
 
-    iget-object p1, p0, Ld6g;->o:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast p1, Ljag;
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Ld6g;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+    invoke-direct {v0, v1, v2}, Le6g;-><init>(Lwob;I)V
 
-    iget-object v1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->X:Ld0d;
+    const-string v1, "botId"
 
-    sget-object v2, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->t0:[Les7;
+    iget-wide v2, p0, Ld6g;->o:J
 
-    const/4 v3, 0x0
+    invoke-virtual {v0, v2, v3, v1}, Lj2;->y(JLjava/lang/String;)V
 
-    aget-object v3, v2, v3
+    const-string v1, "value"
 
-    invoke-interface {v1, v0, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    iget-boolean v2, p0, Ld6g;->X:Z
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2}, Lj2;->h(Ljava/lang/String;Z)V
 
-    check-cast v1, Lnag;
+    return-object v0
+.end method
 
-    invoke-virtual {v1, p1}, Lnag;->f(Ljag;)V
+.method public final k(Lnbg;)V
+    .locals 0
 
-    invoke-interface {p1}, Ljag;->b()Z
+    iget-object p1, p1, Lnbg;->b:Ljava/lang/String;
+
+    invoke-static {p1}, Lwoj;->a(Ljava/lang/String;)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_0
 
-    iget-object p1, v0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Y:Ld0d;
-
-    const/4 v1, 0x1
-
-    aget-object v1, v2, v1
-
-    invoke-interface {p1, v0, v1}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ScrollView;
-
-    new-instance v1, Ldke;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v1, v2, v0}, Ldke;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0}, Ld6g;->d()V
 
     :cond_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

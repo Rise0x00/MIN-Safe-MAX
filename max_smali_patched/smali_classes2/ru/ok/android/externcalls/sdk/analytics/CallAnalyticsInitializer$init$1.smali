@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer$init$1;
-.super Lbu7;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Llq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer;->init(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Ltla;Loi6;)V
+    value = Lru/ok/android/externcalls/sdk/analytics/CallAnalyticsInitializer;->init(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Lv0b;Llq6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lbu7;",
-        "Loi6;"
+        "Ly48;",
+        "Llq6;"
     }
 .end annotation
 
@@ -54,7 +54,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method

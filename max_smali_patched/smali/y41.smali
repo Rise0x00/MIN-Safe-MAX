@@ -2,214 +2,111 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lb51;
 
-# instance fields
-.field public final a:Llv1;
 
-.field public final b:Lru7;
+# static fields
+.field public static final a:Ly41;
 
-.field public final c:Lru7;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
-.method public constructor <init>(Llv1;Lru7;Lru7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ly41;
 
-    iput-object p1, p0, Ly41;->a:Llv1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ly41;->b:Lru7;
+    sput-object v0, Ly41;->a:Ly41;
 
-    iput-object p3, p0, Ly41;->c:Lru7;
+    const/16 v0, 0x3a
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Ly41;->b:I
+
+    const/16 v0, 0x1c
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Ly41;->c:I
+
+    invoke-static {}, Lt05;->c()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    const-wide/high16 v2, 0x4004000000000000L    # 2.5
+
+    mul-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Lq7j;->b(D)I
+
+    move-result v0
+
+    sput v0, Ly41;->d:I
+
+    const/4 v0, 0x7
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Ly41;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lhq1;Lwye;Lqu1;Lyw0;)Lx41;
-    .locals 11
+.method public final a()I
+    .locals 1
 
-    invoke-virtual {p0}, Ly41;->c()J
+    sget v0, Ly41;->c:I
 
-    move-result-wide v3
-
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v0, "is_video"
-
-    iget-boolean v1, p2, Lwye;->b:Z
-
-    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    new-instance v9, Lx41;
-
-    iget-object v0, p0, Ly41;->a:Llv1;
-
-    invoke-static {v0}, Llv1;->a(Llv1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    move-result-object v10
-
-    new-instance v0, Lv41;
-
-    move-object v6, p0
-
-    move-object v1, p1
-
-    move-object v5, p2
-
-    move-object v7, p3
-
-    move-object v8, p4
-
-    invoke-direct/range {v0 .. v8}, Lv41;-><init>(Lhq1;Lorg/json/JSONObject;JLwye;Ly41;Lqu1;Lyw0;)V
-
-    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->call(Lqi6;)Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    const/4 p3, 0x0
-
-    invoke-direct {v9, p1, v1, p2, p3}, Lx41;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lami;ZZ)V
-
-    return-object v9
+    return v0
 .end method
 
-.method public final b(Lfq1;Lwye;Lqu1;Lyw0;)Lx41;
-    .locals 11
+.method public final b()I
+    .locals 1
 
-    invoke-virtual {p0}, Ly41;->c()J
+    sget v0, Ly41;->d:I
 
-    move-result-wide v2
-
-    new-instance v1, Lorg/json/JSONObject;
-
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v0, "chat_id"
-
-    iget-wide v4, p1, Lfq1;->a:J
-
-    invoke-virtual {v1, v0, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
-
-    const-string v0, "is_video"
-
-    iget-boolean v4, p2, Lwye;->b:Z
-
-    invoke-virtual {v1, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    new-instance v9, Lx41;
-
-    iget-object v0, p0, Ly41;->a:Llv1;
-
-    invoke-static {v0}, Llv1;->a(Llv1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    move-result-object v10
-
-    new-instance v0, Lu41;
-
-    const/4 v8, 0x0
-
-    move-object v5, p0
-
-    move-object v4, p2
-
-    move-object v6, p3
-
-    move-object v7, p4
-
-    invoke-direct/range {v0 .. v8}, Lu41;-><init>(Ljava/lang/Object;JLwye;Ly41;Lqu1;Lyw0;I)V
-
-    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->createConfRoom(Lqi6;)Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p2
-
-    const/4 p3, 0x1
-
-    const/4 p4, 0x0
-
-    invoke-direct {v9, p2, p1, p3, p4}, Lx41;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lami;ZZ)V
-
-    return-object v9
+    return v0
 .end method
 
-.method public final c()J
-    .locals 2
+.method public final c()I
+    .locals 1
 
-    iget-object v0, p0, Ly41;->c:Lru7;
+    sget v0, Ly41;->b:I
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxr1;
-
-    iget-object v0, v0, Lxr1;->a:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll83;
-
-    check-cast v0, Lztd;
-
-    invoke-virtual {v0}, Lztd;->s()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return v0
 .end method
 
-.method public final d(Ljava/lang/String;ZLwye;Lqu1;Lyw0;)Lx41;
-    .locals 11
+.method public final d()I
+    .locals 1
 
-    invoke-virtual {p0}, Ly41;->c()J
+    sget v0, Ly41;->e:I
 
-    move-result-wide v2
-
-    new-instance v9, Lx41;
-
-    iget-object v0, p0, Ly41;->a:Llv1;
-
-    invoke-static {v0}, Llv1;->a(Llv1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
-
-    move-result-object v10
-
-    new-instance v0, Lu41;
-
-    const/4 v8, 0x1
-
-    move-object v5, p0
-
-    move-object v1, p1
-
-    move-object v4, p3
-
-    move-object v6, p4
-
-    move-object/from16 v7, p5
-
-    invoke-direct/range {v0 .. v8}, Lu41;-><init>(Ljava/lang/Object;JLwye;Ly41;Lqu1;Lyw0;I)V
-
-    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->joinByLink(Lqi6;)Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p3
-
-    new-instance v0, Lgq1;
-
-    invoke-direct {v0, p1, p2}, Lgq1;-><init>(Ljava/lang/String;Z)V
-
-    xor-int/lit8 p1, p2, 0x1
-
-    const/4 p2, 0x0
-
-    invoke-direct {v9, p3, v0, p1, p2}, Lx41;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lami;ZZ)V
-
-    return-object v9
+    return v0
 .end method

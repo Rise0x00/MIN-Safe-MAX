@@ -13,7 +13,7 @@
         "",
         "",
         "isEnabled",
-        "Lybg;",
+        "Lb3h;",
         "enableAsrOnline",
         "(Z)V",
         "onMigratedToServerCallTopology",

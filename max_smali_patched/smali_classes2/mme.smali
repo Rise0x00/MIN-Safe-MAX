@@ -1,156 +1,117 @@
-.class public final synthetic Lmme;
-.super Ljava/lang/Object;
+.class public final Lmme;
+.super Lnth;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Lspf;
 
-.field public final synthetic b:Lone/me/location/map/show/ShowLocationScreen;
+.field public final c:Lspf;
+
+.field public final d:Ld76;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/location/map/show/ShowLocationScreen;I)V
-    .locals 0
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 6
 
-    iput p2, p0, Lmme;->a:I
+    sget-object v0, Lj1c;->a:Lj1c;
 
-    iput-object p1, p0, Lmme;->b:Lone/me/location/map/show/ShowLocationScreen;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
+
+    const/16 v1, 0xc
+
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmbg;
+
+    invoke-direct {p0}, Lnth;-><init>()V
+
+    const-string v1, ""
+
+    invoke-static {v1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lmme;->b:Lspf;
+
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmme;->c:Lspf;
+
+    new-instance v3, Lr83;
+
+    const/16 v4, 0x8
+
+    invoke-direct {v3, v2, v4}, Lr83;-><init>(Ld76;I)V
+
+    sget v2, Lta5;->d:I
+
+    const/16 v2, 0xc8
+
+    sget-object v4, Lza5;->c:Lza5;
+
+    invoke-static {v2, v4}, Laoj;->g(ILza5;)J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Lumj;->j(J)J
+
+    move-result-wide v4
+
+    invoke-static {v3, v4, v5}, Lgu0;->k(Ld76;J)Ld76;
+
+    move-result-object v2
+
+    new-instance v3, Lazb;
+
+    const/16 v4, 0xa
+
+    invoke-direct {v3, v2, v4}, Lazb;-><init>(Ld76;I)V
+
+    sget-object v2, Lx7f;->a:Lvof;
+
+    iget-object v4, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v3, v4, v2, v1}, Lgu0;->E(Ld76;Lzb4;Ly7f;Ljava/lang/Object;)Lpld;
+
+    move-result-object v1
+
+    new-instance v2, Lz0a;
+
+    const/16 v3, 0x1a
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x0
+
+    invoke-direct {v2, v4, v5, v3}, Lz0a;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    new-instance v3, Lu61;
+
+    invoke-direct {v3, p1, v1, v2, v4}, Lu61;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {v3}, Lgu0;->m(Ld76;)Ld76;
+
+    move-result-object p1
+
+    check-cast v0, Lj9b;
+
+    invoke-virtual {v0}, Lj9b;->a()Lsb4;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lgu0;->v(Ld76;Lqb4;)Ld76;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lmme;->d:Ld76;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
-
-    iget v0, p0, Lmme;->a:I
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lmme;->b:Lone/me/location/map/show/ShowLocationScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v3, Lyme;
-
-    new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
-
-    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->b:Los;
-
-    sget-object v5, Lone/me/location/map/show/ShowLocationScreen;->B0:[Les7;
-
-    const/4 v6, 0x0
-
-    aget-object v6, v5, v6
-
-    invoke-virtual {v0, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v6
-
-    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->c:Los;
-
-    aget-object v1, v5, v1
-
-    invoke-virtual {v0, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->doubleValue()D
-
-    move-result-wide v0
-
-    invoke-direct {v4, v6, v7, v0, v1}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
-
-    iget-object v0, v2, Lone/me/location/map/show/ShowLocationScreen;->d:Los;
-
-    const/4 v1, 0x2
-
-    aget-object v1, v5, v1
-
-    invoke-virtual {v0, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v0
-
-    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->o:Los;
-
-    const/4 v6, 0x3
-
-    aget-object v6, v5, v6
-
-    invoke-virtual {v1, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v6, v1
-
-    check-cast v6, Ljava/lang/Long;
-
-    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->X:Los;
-
-    const/4 v7, 0x4
-
-    aget-object v7, v5, v7
-
-    invoke-virtual {v1, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v7, v1
-
-    check-cast v7, Ljava/lang/Long;
-
-    iget-object v1, v2, Lone/me/location/map/show/ShowLocationScreen;->Y:Los;
-
-    const/4 v8, 0x5
-
-    aget-object v5, v5, v8
-
-    invoke-virtual {v1, v2}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v8, v1
-
-    check-cast v8, Ljava/lang/Long;
-
-    move v5, v0
-
-    invoke-direct/range {v3 .. v8}, Lyme;-><init>(Lcom/google/android/gms/maps/model/LatLng;FLjava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;)V
-
-    return-object v3
-
-    :pswitch_0
-    sget-object v0, Lone/me/location/map/show/ShowLocationScreen;->B0:[Les7;
-
-    new-instance v0, Lamh;
-
-    invoke-direct {v0, v2, v1}, Lamh;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

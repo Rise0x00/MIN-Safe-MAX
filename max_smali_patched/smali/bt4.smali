@@ -1,37 +1,31 @@
-.class public abstract Lbt4;
+.class public final Lbt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile a:Lnx6;
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(IIII)V
+    .locals 0
 
-    sget-object v0, Ljjc;->c:Ljjc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lcr7;->a()Lnu4;
+    iput p1, p0, Lbt4;->a:I
 
-    move-result-object v1
+    iput p2, p0, Lbt4;->b:I
 
-    new-instance v2, Ldk0;
+    iput p3, p0, Lbt4;->c:I
 
-    const/16 v3, 0xc
-
-    invoke-direct {v2, v3}, Ldk0;-><init>(I)V
-
-    iget-object v0, v0, Ljjc;->a:Lfy;
-
-    new-instance v3, Lijc;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v4, v2}, Lijc;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1, v3}, Lfy;->f(Ljava/util/concurrent/Executor;Ldia;)V
+    iput p4, p0, Lbt4;->d:I
 
     return-void
 .end method

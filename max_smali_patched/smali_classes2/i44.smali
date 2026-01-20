@@ -1,97 +1,81 @@
 .class public final Li44;
-.super Ljava/lang/Object;
+.super Lkpc;
 .source "SourceFile"
-
-# interfaces
-.implements Lk44;
-
-
-# instance fields
-.field public final a:Lnrf;
-
-
-# direct methods
-.method public constructor <init>(Lnrf;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Li44;->a:Lnrf;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final y(Lud8;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    check-cast p1, Lg14;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    return v0
+    check-cast v0, Lk7b;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, p1, Lg14;->Y:Lumc;
+
+    sget-object v2, Lumc;->c:Lumc;
+
+    if-ne v1, v2, :cond_1
+
+    const/16 v1, 0x40
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    invoke-virtual {v0}, Lk7b;->getCellHeight()Lh7b;
+
+    move-result-object v1
+
+    sget-object v2, Lh7b;->c:Lh7b;
+
+    if-eq v1, v2, :cond_0
+
+    invoke-virtual {v0, v2}, Lk7b;->setCellHeight(Lh7b;)V
 
     :cond_0
-    instance-of v1, p1, Li44;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
+    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     :cond_1
-    check-cast p1, Li44;
+    iget-wide v1, p1, Lg14;->a:J
 
-    iget-object v1, p0, Li44;->a:Lnrf;
+    iget-object v3, p1, Lg14;->X:Ljava/lang/CharSequence;
 
-    iget-object p1, p1, Li44;->a:Lnrf;
+    iget-object v4, p1, Lg14;->d:Ljava/lang/String;
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1, v2, v3, v4}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
-    move-result p1
+    iget-object v1, p1, Lg14;->b:Ljava/lang/String;
 
-    if-nez p1, :cond_2
+    invoke-virtual {v0, v1}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
 
-    return v2
+    iget-object p1, p1, Lg14;->c:Lqhg;
 
-    :cond_2
-    return v0
-.end method
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-.method public final hashCode()I
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Li44;->a:Lnrf;
+    invoke-virtual {p1, v1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    move-result-object p1
 
-    move-result v0
+    invoke-virtual {v0, p1}, Lk7b;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Failed(message="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Li44;->a:Lnrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

@@ -1,188 +1,45 @@
-.class public abstract Lvoi;
-.super Ljava/lang/Object;
+.class public final synthetic Lvoi;
+.super Liyc;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lvoi;
+
+
 # direct methods
-.method public static a([B)Ljava/util/ArrayList;
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 5
 
-    const/16 v0, 0xb
+    new-instance v0, Lvoi;
 
-    aget-byte v0, p0, v0
+    const-string v1, "getFreezeCount()J"
 
-    and-int/lit16 v0, v0, 0xff
+    const/4 v2, 0x0
 
-    const/16 v1, 0x8
+    const-class v3, Lwlf;
 
-    shl-int/2addr v0, v1
+    const-string v4, "freezeCount"
 
-    const/16 v2, 0xa
+    invoke-direct {v0, v3, v4, v1, v2}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    aget-byte v2, p0, v2
+    sput-object v0, Lvoi;->a:Lvoi;
 
-    and-int/lit16 v2, v2, 0xff
-
-    or-int/2addr v0, v2
-
-    int-to-long v2, v0
-
-    const-wide/32 v4, 0x3b9aca00
-
-    mul-long/2addr v2, v4
-
-    const-wide/32 v4, 0xbb80
-
-    div-long/2addr v2, v4
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v4}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    const-wide/32 v1, 0x4c4b400
-
-    invoke-virtual {p0, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object v0
+    return-void
 .end method
 
-.method public static b(ZZZZZZZZZZZZ)J
-    .locals 4
 
-    if-eqz p11, :cond_0
+# virtual methods
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    const-wide/16 v0, 0x1
+    check-cast p1, Lwlf;
 
-    goto :goto_0
+    iget-wide v0, p1, Lwlf;->v:J
 
-    :cond_0
-    const-wide/16 v0, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    :goto_0
-    if-eqz p0, :cond_1
+    move-result-object p1
 
-    const-wide/16 v2, 0x2
-
-    or-long/2addr v0, v2
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    const-wide/16 p0, 0x4
-
-    or-long/2addr v0, p0
-
-    :cond_2
-    if-eqz p2, :cond_3
-
-    const-wide/16 p0, 0x8
-
-    or-long/2addr v0, p0
-
-    :cond_3
-    if-eqz p3, :cond_4
-
-    const-wide/16 p0, 0x10
-
-    or-long/2addr v0, p0
-
-    :cond_4
-    if-eqz p4, :cond_5
-
-    const-wide/16 p0, 0x20
-
-    or-long/2addr v0, p0
-
-    :cond_5
-    if-eqz p5, :cond_6
-
-    const-wide/16 p0, 0x40
-
-    or-long/2addr v0, p0
-
-    :cond_6
-    if-eqz p6, :cond_7
-
-    const-wide/16 p0, 0x80
-
-    or-long/2addr v0, p0
-
-    :cond_7
-    if-eqz p7, :cond_8
-
-    const-wide/16 p0, 0x100
-
-    or-long/2addr v0, p0
-
-    :cond_8
-    if-eqz p8, :cond_9
-
-    const-wide/16 p0, 0x200
-
-    or-long/2addr v0, p0
-
-    :cond_9
-    if-eqz p9, :cond_a
-
-    const-wide/16 p0, 0x400
-
-    or-long/2addr v0, p0
-
-    :cond_a
-    if-eqz p10, :cond_b
-
-    const-wide/16 p0, 0x800
-
-    or-long/2addr p0, v0
-
-    return-wide p0
-
-    :cond_b
-    return-wide v0
+    return-object p1
 .end method

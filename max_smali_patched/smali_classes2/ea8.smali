@@ -1,73 +1,100 @@
 .class public final Lea8;
-.super Lrj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxa8;
 
-# instance fields
-.field public final b:Z
 
-.field public final c:Z
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lea8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final d:Z
-
-.field public final o:Lo0a;
+.field public static final a:Lea8;
 
 
 # direct methods
-.method public constructor <init>(JZZZLo0a;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0, p1, p2}, Lrj0;-><init>(J)V
+    new-instance v0, Lea8;
 
-    iput-boolean p3, p0, Lea8;->b:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p4, p0, Lea8;->c:Z
+    sput-object v0, Lea8;->a:Lea8;
 
-    iput-boolean p5, p0, Lea8;->d:Z
+    new-instance v0, Lj58;
 
-    iput-object p6, p0, Lea8;->o:Lo0a;
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+
+    sput-object v0, Lea8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lea8;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x608c29e1
+
+    return v0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 6
+    .locals 1
 
-    iget-object v0, p0, Lea8;->o:Lo0a;
-
-    iget v0, v0, Lo0a;->d:I
-
-    const-string v1, "LoginEvent(requestId="
-
-    const-string v2, ", isFirstLogin="
-
-    iget-wide v3, p0, Lrj0;->a:J
-
-    iget-boolean v5, p0, Lea8;->b:Z
-
-    invoke-static {v3, v4, v1, v2, v5}, Lcd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", hasNewMessages="
-
-    const-string v3, ", videoChatHistory="
-
-    iget-boolean v4, p0, Lea8;->c:Z
-
-    iget-boolean v5, p0, Lea8;->d:Z
-
-    invoke-static {v2, v3, v1, v4, v5}, Lmb3;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    const-string v2, ", chats="
-
-    const-string v3, ")"
-
-    invoke-static {v1, v2, v0, v3}, Lmb3;->d(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "ErrorPostNotFounded"
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

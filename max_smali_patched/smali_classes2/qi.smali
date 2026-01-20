@@ -1,11 +1,25 @@
-.class public interface abstract Lqi;
+.class public final Lqi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract h()Ljava/lang/String;
-.end method
+# instance fields
+.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
 
-.method public abstract k(Loi6;)V
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    const/16 v1, 0x20
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(I)V
+
+    iput-object v0, p0, Lqi;->a:Ljava/util/concurrent/ConcurrentHashMap;
+
+    return-void
 .end method

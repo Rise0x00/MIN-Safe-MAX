@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(Lib5;ILohc;Lq97;)Ln93;
+.method public abstract g()Lytb;
+.end method
+
+.method public abstract z(Lk97;Lc97;)Lytb;
 .end method

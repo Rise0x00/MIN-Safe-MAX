@@ -1,23 +1,14 @@
-.class public final Llu8;
+.class public interface abstract Llu8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Lgq8;
-
-.field public b:Z
-
-.field public c:Z
+# interfaces
+.implements Landroid/widget/Checkable;
 
 
-# direct methods
-.method public constructor <init>(Lgq8;)V
-    .locals 0
+# virtual methods
+.method public abstract getId()I
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llu8;->a:Lgq8;
-
-    return-void
+.method public abstract setInternalOnCheckedChangeListener(Lku8;)V
 .end method

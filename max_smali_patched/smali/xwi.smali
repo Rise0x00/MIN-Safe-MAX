@@ -1,65 +1,77 @@
 .class public final Lxwi;
-.super Lh4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxwi;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lc0j;
+.implements Landroid/os/IInterface;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
+.field public final c:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 0
 
-    new-instance v0, Lqwh;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lqwh;-><init>(I)V
-
-    sput-object v0, Lxwi;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object p1, p0, Lxwi;->c:Landroid/os/IBinder;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final asBinder()Landroid/os/IBinder;
+    .locals 1
 
-    const/16 p2, 0x4f45
+    iget-object v0, p0, Lxwi;->c:Landroid/os/IBinder;
 
-    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
+    return-object v0
+.end method
 
-    move-result p2
+.method public final i(Landroid/os/Parcel;I)Landroid/os/Parcel;
+    .locals 3
 
-    const/4 v0, 0x2
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
-    iget-object v1, p0, Lxwi;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    :try_start_0
+    iget-object v1, p0, Lxwi;->c:Landroid/os/IBinder;
 
-    const/4 v0, 0x3
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lxwi;->b:Ljava/lang/String;
+    invoke-interface {v1, p2, p1, v0, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-virtual {v0}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    return-void
+    return-object v0
+
+    :catchall_0
+    move-exception p2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p2
+
+    :try_start_1
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    throw p2
 .end method

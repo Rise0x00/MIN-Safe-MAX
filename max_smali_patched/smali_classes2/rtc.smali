@@ -1,56 +1,86 @@
-.class public abstract Lrtc;
-.super Ljava/lang/Object;
+.class public final Lrtc;
+.super Lie0;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_media_action_always:I = 0x7f130987
+# instance fields
+.field public final b:J
 
-.field public static oneme_settings_media_action_disabled:I = 0x7f130988
 
-.field public static oneme_settings_media_action_dont_load:I = 0x7f130989
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
 
-.field public static oneme_settings_media_action_video_quality_1080:I = 0x7f13098a
+    const/16 v0, 0x10
 
-.field public static oneme_settings_media_action_video_quality_480:I = 0x7f13098b
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-.field public static oneme_settings_media_action_video_quality_720:I = 0x7f13098c
+    iput-wide p1, p0, Lrtc;->b:J
 
-.field public static oneme_settings_media_action_wifi:I = 0x7f13098d
+    return-void
+.end method
 
-.field public static oneme_settings_media_animoji:I = 0x7f13098e
 
-.field public static oneme_settings_media_caching:I = 0x7f13098f
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static oneme_settings_media_gif:I = 0x7f130990
+    const/4 v0, 0x1
 
-.field public static oneme_settings_media_gif_play:I = 0x7f130991
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_media_gif_title:I = 0x7f130992
+    return v0
 
-.field public static oneme_settings_media_load_media_in_roaming:I = 0x7f130993
+    :cond_0
+    instance-of v1, p1, Lrtc;
 
-.field public static oneme_settings_media_photo:I = 0x7f130994
+    const/4 v2, 0x0
 
-.field public static oneme_settings_media_photo_title:I = 0x7f130995
+    if-nez v1, :cond_1
 
-.field public static oneme_settings_media_playlist:I = 0x7f130996
+    return v2
 
-.field public static oneme_settings_media_screen_autoloading_section:I = 0x7f130997
+    :cond_1
+    check-cast p1, Lrtc;
 
-.field public static oneme_settings_media_screen_autoplaying_section:I = 0x7f130998
+    iget-wide v3, p0, Lrtc;->b:J
 
-.field public static oneme_settings_media_screen_datapressing_section:I = 0x7f130999
+    iget-wide v5, p1, Lrtc;->b:J
 
-.field public static oneme_settings_media_screen_toolbar_title:I = 0x7f13099a
+    cmp-long p1, v3, v5
 
-.field public static oneme_settings_media_video:I = 0x7f13099b
+    if-eqz p1, :cond_2
 
-.field public static oneme_settings_media_video_messages:I = 0x7f13099c
+    return v2
 
-.field public static oneme_settings_media_video_messages_title:I = 0x7f13099d
+    :cond_2
+    return v0
+.end method
 
-.field public static oneme_settings_media_video_quality:I = 0x7f13099e
+.method public final hashCode()I
+    .locals 2
 
-.field public static oneme_settings_media_video_quality_title:I = 0x7f13099f
+    iget-wide v0, p0, Lrtc;->b:J
 
-.field public static oneme_settings_media_video_title:I = 0x7f1309a0
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Search(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lrtc;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

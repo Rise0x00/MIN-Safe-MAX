@@ -1,88 +1,99 @@
 .class public final Llia;
-.super Ljqe;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lak6;
 
 
 # instance fields
-.field public final a:Lak8;
+.field public final a:I
 
-.field public final b:Lwj6;
+.field public final b:I
 
-.field public final c:Lx1d;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:F
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:I
+
+.field public final m:I
+
+.field public final n:I
+
+.field public final o:Z
+
+.field public final p:I
+
+.field public final q:I
+
+.field public final r:I
+
+.field public final s:I
 
 
 # direct methods
-.method public constructor <init>(Lak8;Lwj6;Lx1d;)V
+.method public constructor <init>(IIIIIIFIIZZIIIZIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llia;->a:Lak8;
+    iput p1, p0, Llia;->a:I
 
-    iput-object p2, p0, Llia;->b:Lwj6;
+    iput p2, p0, Llia;->b:I
 
-    iput-object p3, p0, Llia;->c:Lx1d;
+    iput p3, p0, Llia;->c:I
 
-    return-void
-.end method
+    iput p4, p0, Llia;->d:I
 
+    iput p5, p0, Llia;->e:I
 
-# virtual methods
-.method public final b()Leia;
-    .locals 5
+    iput p6, p0, Llia;->f:I
 
-    new-instance v0, Lkia;
+    iput p7, p0, Llia;->g:F
 
-    iget-object v1, p0, Llia;->c:Lx1d;
+    iput p8, p0, Llia;->h:I
 
-    const/4 v2, 0x0
+    iput p9, p0, Llia;->i:I
 
-    iget-object v3, p0, Llia;->a:Lak8;
+    iput-boolean p10, p0, Llia;->j:Z
 
-    iget-object v4, p0, Llia;->b:Lwj6;
+    iput-boolean p11, p0, Llia;->k:Z
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lkia;-><init>(Leia;Ljava/lang/Object;Ljava/lang/Object;I)V
+    iput p12, p0, Llia;->l:I
 
-    return-object v0
-.end method
+    iput p13, p0, Llia;->m:I
 
-.method public final l(Lcre;)V
-    .locals 4
+    iput p14, p0, Llia;->n:I
 
-    :try_start_0
-    iget-object v0, p0, Llia;->b:Lwj6;
+    iput-boolean p15, p0, Llia;->o:Z
 
-    iget-object v0, v0, Lwj6;->a:Ljava/lang/Object;
+    move/from16 p1, p16
 
-    const-string v1, "The initialSupplier returned a null value"
+    iput p1, p0, Llia;->p:I
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move/from16 p1, p17
 
-    new-instance v1, Ljia;
+    iput p1, p0, Llia;->q:I
 
-    iget-object v2, p0, Llia;->c:Lx1d;
+    move/from16 p1, p18
 
-    const/4 v3, 0x1
+    iput p1, p0, Llia;->r:I
 
-    invoke-direct {v1, p1, v0, v2, v3}, Ljia;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lx1d;I)V
+    move/from16 p1, p19
 
-    iget-object p1, p0, Llia;->a:Lak8;
-
-    invoke-virtual {p1, v1}, Leia;->a(Lgla;)V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
-
-    invoke-static {v0, p1}, Lia5;->d(Ljava/lang/Throwable;Lcre;)V
+    iput p1, p0, Llia;->s:I
 
     return-void
 .end method

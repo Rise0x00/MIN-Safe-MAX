@@ -1,86 +1,125 @@
 .class public final Lqug;
-.super Logf;
+.super Lpug;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+.field public b:Z
 
-.field public synthetic o:Ljava/lang/Object;
+.field public c:Ljava/util/Iterator;
+
+.field public d:Z
+
+.field public final synthetic e:Ll26;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+.method public constructor <init>(Ll26;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p2, p0, Lqug;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    iput-object p1, p0, Lqug;->e:Ll26;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Luug;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lqug;->e:Ll26;
 
-    invoke-virtual {p0, p1, p2}, Lqug;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Ll26;->o:Lfpe;
 
-    move-result-object p1
+    check-cast v0, Lh66;
 
-    check-cast p1, Lqug;
+    iget-boolean v1, p0, Lqug;->d:Z
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, p2}, Lqug;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    return-object p2
-.end method
+    iget-object v4, p0, Luug;->a:Ljava/lang/Object;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    if-nez v1, :cond_2
 
-    new-instance v0, Lqug;
+    iget-object v1, p0, Lqug;->c:Ljava/util/Iterator;
 
-    iget-object v1, p0, Lqug;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    if-nez v1, :cond_2
 
-    invoke-direct {v0, p2, v1}, Lqug;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/videomsg/VideoMessageWidget;)V
+    iget-object v1, v0, Lh66;->c:Lnq6;
 
-    iput-object p1, v0, Lqug;->o:Ljava/lang/Object;
+    invoke-interface {v1, v4}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object v1
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast v1, Ljava/lang/Boolean;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-object p1, p0, Lqug;->o:Ljava/lang/Object;
+    move-result v1
 
-    check-cast p1, Landroid/graphics/Bitmap;
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Lqug;->X:Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    return-object v3
 
-    iget-object v0, v0, Lone/me/chatscreen/videomsg/VideoMessageWidget;->A0:Ltcd;
+    :cond_0
+    iget-object v0, v0, Lh66;->b:Lnq6;
 
-    invoke-virtual {v0}, Ltcd;->getValue()Ljava/lang/Object;
+    invoke-interface {v0, v4}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Litg;
+    check-cast v0, Lfpe;
 
-    invoke-virtual {v0, p1}, Litg;->setFramesListBitmap(Landroid/graphics/Bitmap;)V
+    if-eqz v0, :cond_1
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-interface {v0}, Lfpe;->iterator()Ljava/util/Iterator;
 
-    return-object p1
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    move-object v0, v3
+
+    :goto_0
+    iput-object v0, p0, Lqug;->c:Ljava/util/Iterator;
+
+    if-nez v0, :cond_2
+
+    iput-boolean v2, p0, Lqug;->d:Z
+
+    :cond_2
+    iget-object v0, p0, Lqug;->c:Ljava/util/Iterator;
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-ne v0, v2, :cond_3
+
+    iget-object v0, p0, Lqug;->c:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_3
+    iget-boolean v0, p0, Lqug;->b:Z
+
+    if-nez v0, :cond_4
+
+    iput-boolean v2, p0, Lqug;->b:Z
+
+    return-object v4
+
+    :cond_4
+    return-object v3
 .end method

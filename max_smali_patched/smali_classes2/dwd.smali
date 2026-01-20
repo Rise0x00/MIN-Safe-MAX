@@ -1,64 +1,80 @@
-.class public final Ldwd;
+.class public final synthetic Ldwd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgwd;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Ldwd;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lvnb;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Lvnb;)V
     .locals 1
 
-    new-instance v0, Ldwd;
+    .line 1
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Ldwd;->a:I
 
-    sput-object v0, Ldwd;->a:Ldwd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldwd;->b:Lvnb;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lvnb;J)V
+    .locals 0
+
+    .line 2
+    const/4 p2, 0x0
+
+    iput p2, p0, Ldwd;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldwd;->b:Lvnb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Ldwd;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Ldwd;->b:Lvnb;
 
-    :cond_0
-    instance-of p1, p1, Ldwd;
+    iget-object v0, v0, Lvnb;->c:Ljava/lang/Object;
 
-    if-nez p1, :cond_1
+    check-cast v0, Lwnb;
 
-    const/4 p1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return p1
+    iget-object v1, v0, Lpm0;->i:Lxl6;
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {v1, v0}, Lxl6;->r(Lgob;)V
 
-.method public final hashCode()I
-    .locals 1
+    return-void
 
-    const v0, 0x24f68a67
+    :pswitch_0
+    iget-object v0, p0, Ldwd;->b:Lvnb;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    return-void
 
-    const-string v0, "None"
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

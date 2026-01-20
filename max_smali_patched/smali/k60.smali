@@ -1,131 +1,157 @@
-.class public final Lk60;
+.class public final synthetic Lk60;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Lj60;
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:J
 
-.field public final c:Ls95;
-
-.field public d:I
-
-.field public e:J
-
-.field public f:J
-
-.field public g:J
-
-.field public h:J
-
-.field public i:J
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/AudioTrack;Ls95;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+    .locals 0
+
+    iput p4, p0, Lk60;->a:I
+
+    iput-object p1, p0, Lk60;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lk60;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lj60;
-
-    invoke-direct {v0, p1}, Lj60;-><init>(Landroid/media/AudioTrack;)V
-
-    iput-object v0, p0, Lk60;->a:Lj60;
-
-    invoke-virtual {p1}, Landroid/media/AudioTrack;->getSampleRate()I
-
-    move-result p1
-
-    iput p1, p0, Lk60;->b:I
-
-    iput-object p2, p0, Lk60;->c:Ls95;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lk60;->a(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
+.method public final run()V
     .locals 6
 
-    iput p1, p0, Lk60;->d:I
+    iget v0, p0, Lk60;->a:I
 
-    const-wide/16 v0, 0x2710
+    iget-wide v1, p0, Lk60;->b:J
 
-    if-eqz p1, :cond_3
+    iget-object v3, p0, Lk60;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-eq p1, v2, :cond_2
+    check-cast v3, Lxnb;
 
-    const/4 v0, 0x2
+    iget-object v0, v3, Lxnb;->d:Lnm0;
 
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_0
-
-    const-wide/32 v0, 0x7a120
-
-    iput-wide v0, p0, Lk60;->f:J
+    invoke-virtual {v0, v1, v2}, Lnm0;->a(J)V
 
     return-void
+
+    :pswitch_0
+    check-cast v3, Lone/me/messages/list/ui/MessagesListWidget;
+
+    iget-object v0, v3, Lone/me/messages/list/ui/MessagesListWidget;->D0:Lx67;
+
+    iget-object v3, v0, Lx67;->d:Lu67;
+
+    if-eqz v3, :cond_0
+
+    iget-wide v4, v3, Lu67;->a:J
+
+    cmp-long v4, v4, v1
+
+    if-nez v4, :cond_0
+
+    iget-object v3, v3, Lu67;->b:Ljava/util/List;
+
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const/4 v3, 0x0
 
-    invoke-direct {p1}, Ljava/lang/IllegalStateException;-><init>()V
+    :goto_0
+    new-instance v4, Lu67;
 
-    throw p1
+    invoke-direct {v4, v1, v2, v3}, Lu67;-><init>(JLjava/util/List;)V
+
+    invoke-virtual {v0, v4}, Lx67;->a(Lu67;)V
+
+    return-void
+
+    :pswitch_1
+    check-cast v3, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl;
+
+    invoke-static {v3, v1, v2}, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl;->c(Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManagerImpl;J)V
+
+    return-void
+
+    :pswitch_2
+    check-cast v3, Lbh4;
+
+    iget-object v0, v3, Lbh4;->Z:Lnm0;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0, v1, v2}, Lnm0;->a(J)V
 
     :cond_1
-    const-wide/32 v0, 0x989680
+    return-void
 
-    iput-wide v0, p0, Lk60;->f:J
+    :pswitch_3
+    check-cast v3, Lgf4;
+
+    iget-object v0, v3, Lgf4;->c:Lnm0;
+
+    invoke-virtual {v0, v1, v2}, Lnm0;->a(J)V
 
     return-void
 
-    :cond_2
-    iput-wide v0, p0, Lk60;->f:J
+    :pswitch_4
+    check-cast v3, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;
+
+    invoke-static {v3, v1, v2}, Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;->a(Lru/ok/android/externcalls/sdk/AudioSampleEnergyCalculator;J)V
 
     return-void
 
-    :cond_3
-    const-wide/16 v2, 0x0
+    :pswitch_5
+    check-cast v3, Lxz0;
 
-    iput-wide v2, p0, Lk60;->g:J
+    iget-object v0, v3, Lxz0;->b:Ljava/lang/Object;
 
-    const-wide/16 v2, -0x1
+    check-cast v0, Lxp5;
 
-    iput-wide v2, p0, Lk60;->h:J
+    sget-object v3, Lmbh;->a:Ljava/lang/String;
 
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
+    iget-object v0, v0, Lxp5;->a:Ldq5;
 
-    iput-wide v2, p0, Lk60;->i:J
+    iget-object v0, v0, Ldq5;->E0:Lon4;
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    invoke-virtual {v0}, Lon4;->H()Lid;
 
-    move-result-wide v2
+    move-result-object v3
 
-    const-wide/16 v4, 0x3e8
+    new-instance v4, Lg02;
 
-    div-long/2addr v2, v4
+    const/4 v5, 0x3
 
-    iput-wide v2, p0, Lk60;->e:J
+    invoke-direct {v4, v3, v1, v2, v5}, Lg02;-><init>(Ljava/lang/Object;JI)V
 
-    iput-wide v0, p0, Lk60;->f:J
+    const/16 v1, 0x3f2
+
+    invoke-virtual {v0, v3, v1, v4}, Lon4;->I(Lid;ILqe8;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

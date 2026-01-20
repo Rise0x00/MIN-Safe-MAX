@@ -4,34 +4,42 @@
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public final a:Landroid/graphics/Typeface;
 
-.field public final b:Ljava/lang/Object;
-
-.field public c:Z
-
-.field public final d:Ljava/util/ArrayList;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lqh3;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lni6;->a:Ljava/util/concurrent/Executor;
+    const/4 v0, 0x0
 
-    new-instance p1, Ljava/lang/Object;
+    .line 2
+    iput-object v0, p0, Lni6;->a:Landroid/graphics/Typeface;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    .line 3
+    iput p1, p0, Lni6;->b:I
 
-    iput-object p1, p0, Lni6;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    new-instance p1, Ljava/util/ArrayList;
+.method public constructor <init>(Landroid/graphics/Typeface;)V
+    .locals 0
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lni6;->d:Ljava/util/ArrayList;
+    .line 5
+    iput-object p1, p0, Lni6;->a:Landroid/graphics/Typeface;
+
+    const/4 p1, 0x0
+
+    .line 6
+    iput p1, p0, Lni6;->b:I
 
     return-void
 .end method

@@ -1,90 +1,98 @@
 .class public final Lgi6;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final synthetic o:Lii6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/ConcurrentHashMap;)V
+.method public constructor <init>(Lii6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgi6;->o:Lii6;
 
-    iput-object p1, p0, Lgi6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    instance-of v0, p1, Lgi6;
+    check-cast p1, Lzb4;
 
-    if-nez v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    invoke-virtual {p0, p1, p2}, Lgi6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
+    move-result-object p1
+
     check-cast p1, Lgi6;
 
-    iget-object p1, p1, Lgi6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v0, p0, Lgi6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-virtual {p1, p2}, Lgi6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p1
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object v0, p0, Lgi6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    new-instance p1, Lgi6;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->hashCode()I
+    iget-object v0, p0, Lgi6;->o:Lii6;
 
-    move-result v0
+    invoke-direct {p1, v0, p2}, Lgi6;-><init>(Lii6;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const-string v1, "FtsCache(titles="
+    iget-object p1, p0, Lgi6;->o:Lii6;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lii6;->Z:Lo58;
 
-    iget-object v1, p0, Lgi6;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, ")"
+    check-cast p1, Ldjb;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget v0, Lj6e;->g2:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance v1, Llhg;
 
-    move-result-object v0
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
 
-    return-object v0
+    invoke-virtual {p1, v1}, Ldjb;->g(Lqhg;)V
+
+    sget v0, Lj6e;->f2:I
+
+    new-instance v1, Llhg;
+
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Ldjb;->a(Lqhg;)V
+
+    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+
+    move-result-object p1
+
+    return-object p1
 .end method

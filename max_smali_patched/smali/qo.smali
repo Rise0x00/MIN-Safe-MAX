@@ -1,395 +1,447 @@
-.class public Lqo;
-.super Lth3;
+.class public final Lqo;
+.super Landroid/widget/MultiAutoCompleteTextView;
 .source "SourceFile"
 
 # interfaces
-.implements Lun;
+.implements Lwe5;
+
+
+# static fields
+.field public static final d:[I
 
 
 # instance fields
-.field public d:Loo;
+.field public final a:Lv8;
 
-.field public final o:Lpo;
+.field public final b:Lop;
+
+.field public final c:Lzii;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    const v0, 0x1010176
+
+    filled-new-array {v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lqo;->d:[I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
 
-    const/4 v0, 0x1
+    sget v0, Lh5d;->autoCompleteTextViewStyle:I
 
-    if-nez p2, :cond_0
+    invoke-static {p1}, Lzlg;->a(Landroid/content/Context;)V
 
-    new-instance v1, Landroid/util/TypedValue;
+    invoke-direct {p0, p1, p2, v0}, Landroid/widget/MultiAutoCompleteTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    invoke-direct {v1}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v2
-
-    sget v3, Likc;->dialogTheme:I
-
-    invoke-virtual {v2, v3, v1, v0}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    iget v1, v1, Landroid/util/TypedValue;->resourceId:I
-
-    goto :goto_0
-
-    :cond_0
-    move v1, p2
-
-    :goto_0
-    invoke-direct {p0, p1, v1}, Lth3;-><init>(Landroid/content/Context;I)V
-
-    new-instance v1, Lpo;
-
-    invoke-direct {v1, p0}, Lpo;-><init>(Lqo;)V
-
-    iput-object v1, p0, Lqo;->o:Lpo;
-
-    invoke-virtual {p0}, Lqo;->c()Lbo;
-
-    move-result-object v1
-
-    if-nez p2, :cond_1
-
-    new-instance p2, Landroid/util/TypedValue;
-
-    invoke-direct {p2}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v2, Likc;->dialogTheme:I
+    invoke-static {p0, p1}, Ljjg;->a(Landroid/view/View;Landroid/content/Context;)V
 
-    invoke-virtual {p1, v2, p2, v0}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget p2, p2, Landroid/util/TypedValue;->resourceId:I
+    move-result-object p1
+
+    sget-object v1, Lqo;->d:[I
+
+    invoke-static {p1, p2, v1, v0}, Lbg8;->w(Landroid/content/Context;Landroid/util/AttributeSet;[II)Lbg8;
+
+    move-result-object p1
+
+    iget-object v1, p1, Lbg8;->b:Ljava/lang/Object;
+
+    check-cast v1, Landroid/content/res/TypedArray;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p1, v2}, Lbg8;->o(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Landroid/widget/AutoCompleteTextView;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    invoke-virtual {p1}, Lbg8;->A()V
+
+    new-instance p1, Lv8;
+
+    invoke-direct {p1, p0}, Lv8;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lqo;->a:Lv8;
+
+    invoke-virtual {p1, p2, v0}, Lv8;->v(Landroid/util/AttributeSet;I)V
+
+    new-instance p1, Lop;
+
+    invoke-direct {p1, p0}, Lop;-><init>(Landroid/widget/TextView;)V
+
+    iput-object p1, p0, Lqo;->b:Lop;
+
+    invoke-virtual {p1, p2, v0}, Lop;->f(Landroid/util/AttributeSet;I)V
+
+    invoke-virtual {p1}, Lop;->b()V
+
+    new-instance p1, Lzii;
+
+    invoke-direct {p1, p0}, Lzii;-><init>(Landroid/widget/EditText;)V
+
+    iput-object p1, p0, Lqo;->c:Lzii;
+
+    invoke-virtual {p1, p2, v0}, Lzii;->s(Landroid/util/AttributeSet;I)V
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getKeyListener()Landroid/text/method/KeyListener;
+
+    move-result-object p2
+
+    instance-of v0, p2, Landroid/text/method/NumberKeyListener;
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/View;->isFocusable()Z
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/view/View;->isClickable()Z
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/view/View;->isLongClickable()Z
+
+    move-result v2
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getInputType()I
+
+    move-result v3
+
+    invoke-virtual {p1, p2}, Lzii;->n(Landroid/text/method/KeyListener;)Landroid/text/method/KeyListener;
+
+    move-result-object p1
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    move-object p1, v1
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setKeyListener(Landroid/text/method/KeyListener;)V
 
-    check-cast p1, Loo;
+    invoke-virtual {p0, v3}, Landroid/widget/TextView;->setRawInputType(I)V
 
-    iput p2, p1, Loo;->d1:I
+    invoke-virtual {p0, v0}, Landroid/view/View;->setFocusable(Z)V
 
-    invoke-virtual {v1}, Lbo;->d()V
+    invoke-virtual {p0, v1}, Landroid/view/View;->setClickable(Z)V
 
+    invoke-virtual {p0, v2}, Landroid/view/View;->setLongClickable(Z)V
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 3
+.method public final a()Z
+    .locals 1
 
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    iget-object v0, p0, Lqo;->c:Lzii;
 
-    move-result-object v0
+    iget-object v0, v0, Lzii;->b:Ljava/lang/Object;
 
-    check-cast v0, Loo;
+    check-cast v0, Laf5;
 
-    invoke-virtual {v0}, Loo;->v()V
+    iget-object v0, v0, Laf5;->a:Ldgc;
 
-    iget-object v1, v0, Loo;->K0:Landroid/view/ViewGroup;
+    iget-object v0, v0, Ldgc;->c:Ljava/lang/Object;
 
-    const v2, 0x1020002
+    check-cast v0, Lgg5;
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-boolean v0, v0, Lgg5;->X:Z
 
-    move-result-object v1
+    return v0
+.end method
 
-    check-cast v1, Landroid/view/ViewGroup;
+.method public final drawableStateChanged()V
+    .locals 1
 
-    invoke-virtual {v1, p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    iget-object p1, v0, Loo;->w0:Ljo;
+    iget-object v0, p0, Lqo;->a:Lv8;
 
-    iget-object p2, v0, Loo;->v0:Landroid/view/Window;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p2}, Landroid/view/Window;->getCallback()Landroid/view/Window$Callback;
+    invoke-virtual {v0}, Lv8;->j()V
 
-    move-result-object p2
+    :cond_0
+    iget-object v0, p0, Lqo;->b:Lop;
 
-    invoke-virtual {p1, p2}, Ljo;->a(Landroid/view/Window$Callback;)V
+    if-eqz v0, :cond_1
 
+    invoke-virtual {v0}, Lop;->b()V
+
+    :cond_1
     return-void
 .end method
 
-.method public final c()Lbo;
-    .locals 3
+.method public getSupportBackgroundTintList()Landroid/content/res/ColorStateList;
+    .locals 1
 
-    iget-object v0, p0, Lqo;->d:Loo;
+    iget-object v0, p0, Lqo;->a:Lv8;
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    sget-object v0, Lbo;->a:Lao;
+    invoke-virtual {v0}, Lv8;->r()Landroid/content/res/ColorStateList;
 
-    new-instance v0, Loo;
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2, p0, p0}, Loo;-><init>(Landroid/content/Context;Landroid/view/Window;Lun;Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lqo;->d:Loo;
+    return-object v0
 
     :cond_0
-    iget-object v0, p0, Lqo;->d:Loo;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public final d()V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-static {v0, p0}, Lwdi;->g(Landroid/view/View;Lnx7;)V
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-static {v0, p0}, Lzdi;->j(Landroid/view/View;Lhnd;)V
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object v0
-
-    sget v1, Lbqc;->view_tree_on_back_pressed_dispatcher_owner:I
-
-    invoke-virtual {v0, v1, p0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final dismiss()V
+.method public getSupportBackgroundTintMode()Landroid/graphics/PorterDuff$Mode;
     .locals 1
 
-    invoke-super {p0}, Landroid/app/Dialog;->dismiss()V
+    iget-object v0, p0, Lqo;->a:Lv8;
 
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lbo;->e()V
-
-    return-void
-.end method
-
-.method public final dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    invoke-virtual {v0}, Lv8;->s()Landroid/graphics/PorterDuff$Mode;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    return-object v0
 
-    move-result-object v0
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lqo;->o:Lpo;
-
-    invoke-static {v1, v0, p0, p1}, Lbci;->c(Ljs7;Landroid/view/View;Landroid/view/Window$Callback;Landroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final e(Landroid/view/KeyEvent;)Z
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/app/Dialog;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final findViewById(I)Landroid/view/View;
+.method public getSupportCompoundDrawablesTintList()Landroid/content/res/ColorStateList;
     .locals 1
 
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    iget-object v0, p0, Lqo;->b:Lop;
+
+    invoke-virtual {v0}, Lop;->d()Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
-    check-cast v0, Loo;
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Loo;->v()V
+.method public getSupportCompoundDrawablesTintMode()Landroid/graphics/PorterDuff$Mode;
+    .locals 1
 
-    iget-object v0, v0, Loo;->v0:Landroid/view/Window;
+    iget-object v0, p0, Lqo;->b:Lop;
 
-    invoke-virtual {v0, p1}, Landroid/view/Window;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Lop;->e()Landroid/graphics/PorterDuff$Mode;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+    .locals 2
+
+    invoke-super {p0, p1}, Landroid/view/View;->onCreateInputConnection(Landroid/view/inputmethod/EditorInfo;)Landroid/view/inputmethod/InputConnection;
+
+    move-result-object v0
+
+    invoke-static {p1, v0, p0}, Le5j;->c(Landroid/view/inputmethod/EditorInfo;Landroid/view/inputmethod/InputConnection;Landroid/widget/TextView;)V
+
+    iget-object v1, p0, Lqo;->c:Lzii;
+
+    iget-object v1, v1, Lzii;->b:Ljava/lang/Object;
+
+    check-cast v1, Laf5;
+
+    invoke-virtual {v1, v0, p1}, Laf5;->a(Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)Lff5;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final invalidateOptionsMenu()V
-    .locals 1
+.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    invoke-super {p0, p1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lqo;->a:Lv8;
 
-    invoke-virtual {v0}, Lbo;->b()V
+    if-eqz p1, :cond_0
 
-    return-void
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lqo;->c()Lbo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lbo;->a()V
-
-    invoke-super {p0, p1}, Lth3;->onCreate(Landroid/os/Bundle;)V
-
-    invoke-virtual {p0}, Lqo;->c()Lbo;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lbo;->d()V
-
-    return-void
-.end method
-
-.method public final onStop()V
-    .locals 2
-
-    invoke-super {p0}, Lth3;->onStop()V
-
-    invoke-virtual {p0}, Lqo;->c()Lbo;
-
-    move-result-object v0
-
-    check-cast v0, Loo;
-
-    invoke-virtual {v0}, Loo;->z()V
-
-    iget-object v0, v0, Loo;->y0:Lzci;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lzci;->n(Z)V
+    invoke-virtual {p1}, Lv8;->y()V
 
     :cond_0
     return-void
 .end method
 
-.method public setContentView(I)V
+.method public setBackgroundResource(I)V
     .locals 1
 
-    .line 1
-    invoke-virtual {p0}, Lqo;->d()V
+    invoke-super {p0, p1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 2
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    iget-object v0, p0, Lqo;->a:Lv8;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lbo;->i(I)V
+    invoke-virtual {v0, p1}, Lv8;->z(I)V
 
+    :cond_0
     return-void
 .end method
 
-.method public setContentView(Landroid/view/View;)V
-    .locals 1
+.method public final setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    .line 3
-    invoke-virtual {p0}, Lqo;->d()V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 4
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    iget-object p1, p0, Lqo;->b:Lop;
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1}, Lbo;->j(Landroid/view/View;)V
+    invoke-virtual {p1}, Lop;->b()V
 
+    :cond_0
     return-void
 .end method
 
-.method public setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 1
+.method public final setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .locals 0
 
-    .line 5
-    invoke-virtual {p0}, Lqo;->d()V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setCompoundDrawablesRelative(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 6
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    iget-object p1, p0, Lqo;->b:Lop;
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lbo;->k(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1}, Lop;->b()V
 
+    :cond_0
     return-void
 .end method
 
-.method public setTitle(I)V
-    .locals 2
+.method public setDropDownBackgroundResource(I)V
+    .locals 1
 
-    .line 3
-    invoke-super {p0, p1}, Landroid/app/Dialog;->setTitle(I)V
-
-    .line 4
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-static {v0, p1}, Lg5j;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lbo;->l(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0, p1}, Landroid/widget/AutoCompleteTextView;->setDropDownBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
-.method public setTitle(Ljava/lang/CharSequence;)V
+.method public setEmojiCompatEnabled(Z)V
     .locals 1
 
-    .line 1
-    invoke-super {p0, p1}, Landroid/app/Dialog;->setTitle(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lqo;->c:Lzii;
 
-    .line 2
-    invoke-virtual {p0}, Lqo;->c()Lbo;
+    invoke-virtual {v0, p1}, Lzii;->z(Z)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-virtual {v0, p1}, Lbo;->l(Ljava/lang/CharSequence;)V
+.method public setKeyListener(Landroid/text/method/KeyListener;)V
+    .locals 1
 
+    iget-object v0, p0, Lqo;->c:Lzii;
+
+    invoke-virtual {v0, p1}, Lzii;->n(Landroid/text/method/KeyListener;)Landroid/text/method/KeyListener;
+
+    move-result-object p1
+
+    invoke-super {p0, p1}, Landroid/widget/TextView;->setKeyListener(Landroid/text/method/KeyListener;)V
+
+    return-void
+.end method
+
+.method public setSupportBackgroundTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+
+    iget-object v0, p0, Lqo;->a:Lv8;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lv8;->G(Landroid/content/res/ColorStateList;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+
+    iget-object v0, p0, Lqo;->a:Lv8;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lv8;->H(Landroid/graphics/PorterDuff$Mode;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setSupportCompoundDrawablesTintList(Landroid/content/res/ColorStateList;)V
+    .locals 1
+
+    iget-object v0, p0, Lqo;->b:Lop;
+
+    invoke-virtual {v0, p1}, Lop;->l(Landroid/content/res/ColorStateList;)V
+
+    invoke-virtual {v0}, Lop;->b()V
+
+    return-void
+.end method
+
+.method public setSupportCompoundDrawablesTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    .locals 1
+
+    iget-object v0, p0, Lqo;->b:Lop;
+
+    invoke-virtual {v0, p1}, Lop;->m(Landroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v0}, Lop;->b()V
+
+    return-void
+.end method
+
+.method public final setTextAppearance(Landroid/content/Context;I)V
+    .locals 1
+
+    invoke-super {p0, p1, p2}, Landroid/widget/TextView;->setTextAppearance(Landroid/content/Context;I)V
+
+    iget-object v0, p0, Lqo;->b:Lop;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lop;->g(Landroid/content/Context;I)V
+
+    :cond_0
     return-void
 .end method

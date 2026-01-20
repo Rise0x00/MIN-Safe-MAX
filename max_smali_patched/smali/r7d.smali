@@ -1,24 +1,30 @@
-.class public final Lr7d;
+.class public abstract Lr7d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static ghost_view:I = 0x7f0a03c8
 
+.field public static ghost_view_holder:I = 0x7f0a03c9
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.field public static parent_matrix:I = 0x7f0a08c1
 
-    iget-boolean v0, p0, Lr7d;->a:Z
+.field public static save_non_transition_alpha:I = 0x7f0a0af8
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+.field public static save_overlay_view:I = 0x7f0a0af9
 
-    move-result-object v0
+.field public static transition_clip:I = 0x7f0a0c17
 
-    return-object v0
-.end method
+.field public static transition_current_scene:I = 0x7f0a0c18
+
+.field public static transition_image_transform:I = 0x7f0a0c19
+
+.field public static transition_layout_save:I = 0x7f0a0c1a
+
+.field public static transition_pause_alpha:I = 0x7f0a0c1b
+
+.field public static transition_position:I = 0x7f0a0c1c
+
+.field public static transition_scene_layoutid_cache:I = 0x7f0a0c1d
+
+.field public static transition_transform:I = 0x7f0a0c1e

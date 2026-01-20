@@ -1,64 +1,17 @@
 .class public final Lv8a;
-.super Ljava/lang/Object;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lz8a;
-
-
-# static fields
-.field public static final b:Lv8a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lv8a;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    sput-object v0, Lv8a;->b:Lv8a;
+    invoke-direct {p0, p1}, Lhja;-><init>(Ljava/lang/Object;)V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lv8a;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x3fe4569e
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Disabled"
-
-    return-object v0
 .end method

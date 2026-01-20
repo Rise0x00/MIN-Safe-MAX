@@ -1,35 +1,37 @@
 .class public final Lh3e;
-.super Lx1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final Z:I
+# static fields
+.field public static final synthetic a:Lh3e;
 
-.field public final s0:Ljava/lang/Object;
+.field public static final b:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lh3e;
 
-    iput p1, p0, Lh3e;->Z:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lh3e;->s0:Ljava/lang/Object;
+    sput-object v0, Lh3e;->a:Lh3e;
 
-    return-void
-.end method
+    const-string v0, "android.intent.action.SEND_MULTIPLE"
 
+    const-string v1, "android.intent.action.SEND"
 
-# virtual methods
-.method public final m()V
-    .locals 1
+    filled-new-array {v0, v1}, [Ljava/lang/String;
 
-    iget-object v0, p0, Lh3e;->s0:Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-super {p0, v0}, Lx1;->k(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lct;->E([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lh3e;->b:Ljava/util/Set;
 
     return-void
 .end method

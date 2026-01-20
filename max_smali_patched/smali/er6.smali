@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lfr6;Ldr6;J)V
+.method public abstract apply(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 .end method

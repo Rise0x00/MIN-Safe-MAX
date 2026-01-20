@@ -1,362 +1,111 @@
 .class public final Lco3;
-.super Lfv0;
+.super Lbo3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final u0:I
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lfv0;-><init>(I)V
+    iput p2, p0, Lco3;->a:I
 
-    iput p2, p0, Lco3;->u0:I
+    iput-object p1, p0, Lco3;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Lco3;->c:Ljava/lang/Object;
 
-    if-eq p2, v0, :cond_1
-
-    if-lt p1, v0, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    const-string p2, "Buffered channel capacity must be at least 1, but "
-
-    const-string v0, " was specified"
-
-    invoke-static {p1, p2, v0}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
-
-    :cond_1
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string p2, "This implementation does not support suspension for senders, use "
-
-    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-class p2, Lfv0;
-
-    invoke-static {p2}, Lv7d;->a(Ljava/lang/Class;)La73;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, La73;->b()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " instead"
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
 .end method
 
 
 # virtual methods
-.method public final J(Ljava/lang/Object;Z)Ljava/lang/Object;
-    .locals 16
+.method public final g(Lko3;)V
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget v0, p0, Lco3;->a:I
 
-    sget-object v8, Lybg;->a:Lybg;
+    packed-switch v0, :pswitch_data_0
 
-    iget v1, v0, Lco3;->u0:I
+    new-instance v0, Lnw1;
 
-    const/4 v9, 0x3
+    iget-object v1, p0, Lco3;->c:Ljava/lang/Object;
 
-    if-ne v1, v9, :cond_2
+    check-cast v1, Lcr6;
 
-    invoke-super/range {p0 .. p1}, Lfv0;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v2, 0x9
 
-    move-result-object v1
+    invoke-direct {v0, p1, v2, v1}, Lnw1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    instance-of v2, v1, Lt82;
+    invoke-interface {p1, v0}, Lko3;->c(Lo25;)V
 
-    if-eqz v2, :cond_1
+    iget-object p1, p0, Lco3;->b:Ljava/lang/Object;
 
-    instance-of v2, v1, Ls82;
+    check-cast p1, Lkef;
 
-    if-eqz v2, :cond_0
+    invoke-virtual {p1, v0}, Lkef;->l(Ldff;)V
 
-    goto :goto_0
+    return-void
 
-    :cond_0
-    return-object v8
+    :pswitch_0
+    new-instance v0, Ljo3;
 
-    :cond_1
-    :goto_0
-    return-object v1
+    iget-object v1, p0, Lco3;->b:Ljava/lang/Object;
 
-    :cond_2
-    sget-object v6, Lhv0;->d:Lkotlinx/coroutines/internal/Symbol;
+    check-cast v1, Lbo3;
 
-    sget-object v1, Lfv0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-direct {v0, p1, v1}, Ljo3;-><init>(Lko3;Lbo3;)V
 
-    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lko3;->c(Lo25;)V
 
-    move-result-object v1
+    iget-object p1, p0, Lco3;->c:Ljava/lang/Object;
 
-    check-cast v1, Lv82;
+    check-cast p1, Lpbe;
 
-    :cond_3
-    :goto_1
-    sget-object v2, Lfv0;->b:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+    invoke-virtual {p1, v0}, Lpbe;->b(Ljava/lang/Runnable;)Lo25;
 
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->getAndIncrement(Ljava/lang/Object;)J
+    move-result-object p1
 
-    move-result-wide v2
+    iget-object v0, v0, Ljo3;->c:Ljava/lang/Object;
 
-    const-wide v4, 0xfffffffffffffffL
+    check-cast v0, Li62;
 
-    and-long/2addr v4, v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v7, 0x0
+    invoke-static {v0, p1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
 
-    invoke-virtual {v0, v2, v3, v7}, Lfv0;->u(JZ)Z
+    return-void
 
-    move-result v7
+    :pswitch_1
+    iget-object v0, p0, Lco3;->b:Ljava/lang/Object;
 
-    sget v10, Lhv0;->b:I
+    check-cast v0, Lbo3;
 
-    int-to-long v11, v10
+    new-instance v1, Lnw1;
 
-    div-long v2, v4, v11
+    iget-object v2, p0, Lco3;->c:Ljava/lang/Object;
 
-    rem-long v13, v4, v11
-
-    long-to-int v13, v13
-
-    iget-wide v14, v1, Lkotlinx/coroutines/internal/Segment;->id:J
-
-    cmp-long v14, v14, v2
-
-    if-eqz v14, :cond_5
-
-    invoke-static {v0, v2, v3, v1}, Lfv0;->c(Lfv0;JLv82;)Lv82;
-
-    move-result-object v2
-
-    if-nez v2, :cond_4
-
-    if-eqz v7, :cond_3
-
-    invoke-virtual {v0}, Lfv0;->r()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    new-instance v2, Ls82;
-
-    invoke-direct {v2, v1}, Ls82;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_4
-    move-object v1, v2
-
-    :cond_5
-    move-object/from16 v3, p1
-
-    move v2, v13
-
-    invoke-static/range {v0 .. v7}, Lfv0;->e(Lfv0;Lv82;ILjava/lang/Object;JLjava/lang/Object;Z)I
-
-    move-result v13
-
-    if-eqz v13, :cond_f
+    check-cast v2, Lbo3;
 
     const/4 v3, 0x1
 
-    if-eq v13, v3, :cond_e
+    invoke-direct {v1, p1, v3, v2}, Lnw1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/4 v3, 0x2
+    invoke-virtual {v0, v1}, Lbo3;->f(Lko3;)V
 
-    if-eq v13, v3, :cond_a
+    return-void
 
-    if-eq v13, v9, :cond_9
-
-    const/4 v2, 0x4
-
-    if-eq v13, v2, :cond_7
-
-    const/4 v2, 0x5
-
-    if-eq v13, v2, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    goto :goto_1
-
-    :cond_7
-    sget-object v2, Lfv0;->c:Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
-
-    invoke-virtual {v2, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->get(Ljava/lang/Object;)J
-
-    move-result-wide v2
-
-    cmp-long v2, v4, v2
-
-    if-gez v2, :cond_8
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    :cond_8
-    invoke-virtual {v0}, Lfv0;->r()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    new-instance v2, Ls82;
-
-    invoke-direct {v2, v1}, Ls82;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_9
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "unexpected"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-
-    :cond_a
-    if-eqz v7, :cond_b
-
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/Segment;->onSlotCleaned()V
-
-    invoke-virtual {v0}, Lfv0;->r()Ljava/lang/Throwable;
-
-    move-result-object v1
-
-    new-instance v2, Ls82;
-
-    invoke-direct {v2, v1}, Ls82;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v2
-
-    :cond_b
-    instance-of v3, v6, Lz2h;
-
-    if-eqz v3, :cond_c
-
-    check-cast v6, Lz2h;
-
-    goto :goto_2
-
-    :cond_c
-    const/4 v6, 0x0
-
-    :goto_2
-    if-eqz v6, :cond_d
-
-    add-int v13, v2, v10
-
-    invoke-interface {v6, v1, v13}, Lz2h;->a(Lkotlinx/coroutines/internal/Segment;I)V
-
-    :cond_d
-    iget-wide v3, v1, Lkotlinx/coroutines/internal/Segment;->id:J
-
-    mul-long/2addr v3, v11
-
-    int-to-long v1, v2
-
-    add-long/2addr v3, v1
-
-    invoke-virtual {v0, v3, v4}, Lfv0;->m(J)V
-
-    :cond_e
-    return-object v8
-
-    :cond_f
-    invoke-virtual {v1}, Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;->cleanPrev()V
-
-    return-object v8
-.end method
-
-.method public final g(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Lco3;->J(Ljava/lang/Object;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p0, p1, p2}, Lco3;->J(Ljava/lang/Object;Z)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of p1, p1, Ls82;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :cond_0
-    invoke-virtual {p0}, Lfv0;->r()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public final x()Z
-    .locals 2
-
-    iget v0, p0, Lco3;->u0:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,110 +1,94 @@
-.class public final Lwmi;
-.super Ljava/lang/Object;
+.class public abstract Lwmi;
+.super Lpmi;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
 
+# instance fields
+.field private fragmentSource:Ljava/lang/String;
 
-# static fields
-.field public static final a:Lwmi;
+.field private height:I
+
+.field public final id:I
+
+.field private width:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-    new-instance v0, Lwmi;
+    invoke-direct {p0, p1}, Lyni;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwmi;->fragmentSource:Ljava/lang/String;
 
-    sput-object v0, Lwmi;->a:Lwmi;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    iput p2, p0, Lwmi;->id:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final getHeight()I
+    .locals 1
+
+    iget v0, p0, Lwmi;->height:I
+
+    return v0
+.end method
+
+.method public getSource()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lwmi;->fragmentSource:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTarget()I
+    .locals 1
+
+    const/16 v0, 0xde1
+
+    return v0
+.end method
+
+.method public final getWidth()I
+    .locals 1
+
+    iget v0, p0, Lwmi;->width:I
+
+    return v0
+.end method
+
+.method public final setSize(II)V
+    .locals 1
+
+    iget v0, p0, Lwmi;->width:I
+
+    if-ne p1, v0, :cond_1
+
+    iget v0, p0, Lwmi;->height:I
+
+    if-eq p2, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    iput p2, p0, Lwmi;->height:I
+
+    iput p1, p0, Lwmi;->width:I
+
+    invoke-virtual {p0, p1, p2}, Lwmi;->updateLocations(II)V
+
+    return-void
+.end method
+
+.method public updateLocations(II)V
     .locals 0
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
+    return-void
 .end method

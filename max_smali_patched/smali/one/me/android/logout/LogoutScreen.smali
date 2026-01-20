@@ -19,20 +19,16 @@
         "Lone/me/sdk/arch/Widget;",
         "<init>",
         "()V",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
 .end annotation
-
-
-# instance fields
-.field public final a:Z
 
 
 # direct methods
@@ -45,11 +41,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfi4;)V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lone/me/android/logout/LogoutScreen;->a:Z
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
 
     return-void
 .end method
@@ -60,14 +52,6 @@
     .locals 1
 
     const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final isDialog()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lone/me/android/logout/LogoutScreen;->a:Z
 
     return v0
 .end method
@@ -87,19 +71,19 @@
 
     const/high16 p3, 0x3f000000    # 0.5f
 
-    invoke-static {p2, p3}, Lxti;->b(IF)I
+    invoke-static {p2, p3}, Lcjj;->b(IF)I
 
     move-result p2
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    new-instance p2, Lm0b;
+    new-instance p2, Lhgb;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p2, p3}, Lm0b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p3}, Lhgb;-><init>(Landroid/content/Context;)V
 
     new-instance p3, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -113,13 +97,13 @@
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget-object p3, Le0b;->a:Le0b;
+    sget-object p3, Lzfb;->a:Lzfb;
 
-    invoke-virtual {p2, p3}, Lm0b;->setAppearance(Lf0b;)V
+    invoke-virtual {p2, p3}, Lhgb;->setAppearance(Lagb;)V
 
-    sget-object p3, Lh0b;->a:Lh0b;
+    sget-object p3, Lcgb;->a:Lcgb;
 
-    invoke-virtual {p2, p3}, Lm0b;->setSize(Lk0b;)V
+    invoke-virtual {p2, p3}, Lhgb;->setSize(Lfgb;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 

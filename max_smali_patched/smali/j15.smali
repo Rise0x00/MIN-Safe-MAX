@@ -1,137 +1,86 @@
 .class public final Lj15;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Li4g;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lk15;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk15;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Lj15;->a:I
+    iput p1, p0, Lj15;->a:I
 
-    iput-object p1, p0, Lj15;->b:Lk15;
+    iput-object p2, p0, Lj15;->b:Ljava/lang/Object;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public final get()Ljava/lang/Object;
     .locals 2
 
     iget v0, p0, Lj15;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    iget-object v0, p0, Lj15;->b:Ljava/lang/Object;
 
-    return-void
+    return-object v0
 
     :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
+    iget-object v0, p0, Lj15;->b:Ljava/lang/Object;
 
-    iget-object p1, p0, Lj15;->b:Lk15;
+    check-cast v0, Lo58;
 
-    invoke-static {p1}, Lk15;->a(Lk15;)V
-
-    iget-object v0, p1, Lk15;->X:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v1, p1, Lk15;->Y:Z
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lm36;
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lre;
-
-    invoke-virtual {v1, p1}, Lre;->a(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget v0, p0, Lj15;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    return-void
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
-
-    iget-object p1, p0, Lj15;->b:Lk15;
-
-    iget-object v0, p1, Lk15;->X:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    iget-boolean v1, p1, Lk15;->Y:Z
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lm36;->k()Ljava/io/File;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-object v0
 
-    move-result v1
+    :pswitch_1
+    iget-object v0, p0, Lj15;->b:Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
+    check-cast v0, Ll15;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, v0, Ll15;->j:Landroid/content/Context;
 
-    move-result-object v1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lre;
+    iget-object v0, v0, Ll15;->j:Landroid/content/Context;
 
-    invoke-virtual {v1, p1}, Lre;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    return-void
+    invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

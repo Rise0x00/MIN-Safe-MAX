@@ -2,365 +2,165 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpyd;
+
+# static fields
+.field public static final d:Liqh;
+
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:J
+.field public final a:I
 
 .field public final b:I
 
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:[J
+.field public final c:F
 
 
 # direct methods
-.method public constructor <init>(JIJJ[J)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Liqh;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, v1}, Liqh;-><init>(II)V
+
+    sput-object v0, Liqh;->d:Liqh;
+
+    sget-object v0, Lmbh;->a:Ljava/lang/String;
+
+    const/16 v0, 0x24
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Liqh;->e:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v1
+
+    sput-object v1, Liqh;->f:Ljava/lang/String;
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Liqh;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(IFI)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Liqh;->a:J
+    .line 3
+    iput p1, p0, Liqh;->a:I
 
+    .line 4
     iput p3, p0, Liqh;->b:I
 
-    iput-wide p4, p0, Liqh;->c:J
+    .line 5
+    iput p2, p0, Liqh;->c:F
 
-    iput-object p8, p0, Liqh;->f:[J
+    return-void
+.end method
 
-    iput-wide p6, p0, Liqh;->d:J
+.method public constructor <init>(II)V
+    .locals 1
 
-    const-wide/16 p3, -0x1
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    cmp-long p5, p6, p3
-
-    if-nez p5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    add-long p3, p1, p6
-
-    :goto_0
-    iput-wide p3, p0, Liqh;->e:J
+    .line 1
+    invoke-direct {p0, p1, v0, p2}, Liqh;-><init>(IFI)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Liqh;->e:J
-
-    return-wide v0
-.end method
-
-.method public final b(J)J
-    .locals 13
-
-    iget-wide v0, p0, Liqh;->a:J
-
-    sub-long/2addr p1, v0
-
-    invoke-virtual {p0}, Liqh;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget v0, p0, Liqh;->b:I
-
-    int-to-long v0, v0
-
-    cmp-long v0, p1, v0
-
-    if-gtz v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    iget-object v0, p0, Liqh;->f:[J
-
-    invoke-static {v0}, Lggi;->f(Ljava/lang/Object;)V
-
-    long-to-double p1, p1
-
-    const-wide/high16 v1, 0x4070000000000000L    # 256.0
-
-    mul-double/2addr p1, v1
-
-    iget-wide v1, p0, Liqh;->d:J
-
-    long-to-double v1, v1
-
-    div-double/2addr p1, v1
-
-    double-to-long v1, p1
-
-    const/4 v3, 0x1
-
-    invoke-static {v0, v1, v2, v3}, Ljig;->e([JJZ)I
-
-    move-result v1
-
-    int-to-long v2, v1
-
-    iget-wide v4, p0, Liqh;->c:J
-
-    mul-long/2addr v2, v4
-
-    const-wide/16 v6, 0x64
-
-    div-long/2addr v2, v6
-
-    aget-wide v8, v0, v1
-
-    add-int/lit8 v10, v1, 0x1
-
-    int-to-long v11, v10
-
-    mul-long/2addr v4, v11
-
-    div-long/2addr v4, v6
-
-    const/16 v6, 0x63
-
-    if-ne v1, v6, :cond_1
-
-    const-wide/16 v0, 0x100
-
-    goto :goto_0
-
-    :cond_1
-    aget-wide v6, v0, v10
-
-    move-wide v0, v6
-
-    :goto_0
-    cmp-long v6, v8, v0
-
-    if-nez v6, :cond_2
-
-    const-wide/16 p1, 0x0
-
-    goto :goto_1
-
-    :cond_2
-    long-to-double v6, v8
-
-    sub-double/2addr p1, v6
-
-    sub-long/2addr v0, v8
-
-    long-to-double v0, v0
-
-    div-double/2addr p1, v0
-
-    :goto_1
-    sub-long/2addr v4, v2
-
-    long-to-double v0, v4
-
-    mul-double/2addr p1, v0
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide p1
-
-    add-long/2addr p1, v2
-
-    return-wide p1
-
-    :cond_3
-    :goto_2
-    const-wide/16 p1, 0x0
-
-    return-wide p1
-.end method
-
-.method public final c()Z
-    .locals 1
-
-    iget-object v0, p0, Liqh;->f:[J
-
-    if-eqz v0, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
+    if-ne p0, p1, :cond_0
+
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v1, p1, Liqh;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Liqh;
+
+    iget v1, p0, Liqh;->a:I
+
+    iget v3, p1, Liqh;->a:I
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Liqh;->b:I
+
+    iget v3, p1, Liqh;->b:I
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Liqh;->c:F
+
+    iget p1, p1, Liqh;->c:F
+
+    cmpl-float p1, v1, p1
+
+    if-nez p1, :cond_1
 
     return v0
+
+    :cond_1
+    return v2
 .end method
 
-.method public final e(J)Lfyd;
-    .locals 19
+.method public final hashCode()I
+    .locals 2
 
-    move-object/from16 v0, p0
+    const/16 v0, 0xd9
 
-    invoke-virtual {v0}, Liqh;->c()Z
+    iget v1, p0, Liqh;->a:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Liqh;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Liqh;->c:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToRawIntBits(F)I
 
     move-result v1
 
-    iget v2, v0, Liqh;->b:I
+    add-int/2addr v1, v0
 
-    iget-wide v3, v0, Liqh;->a:J
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lfyd;
-
-    new-instance v5, Llyd;
-
-    int-to-long v6, v2
-
-    add-long/2addr v3, v6
-
-    const-wide/16 v6, 0x0
-
-    invoke-direct {v5, v6, v7, v3, v4}, Llyd;-><init>(JJ)V
-
-    invoke-direct {v1, v5, v5}, Lfyd;-><init>(Llyd;Llyd;)V
-
-    return-object v1
-
-    :cond_0
-    const-wide/16 v10, 0x0
-
-    iget-wide v12, v0, Liqh;->c:J
-
-    move-wide/from16 v8, p1
-
-    invoke-static/range {v8 .. v13}, Ljig;->j(JJJ)J
-
-    move-result-wide v5
-
-    long-to-double v7, v5
-
-    const-wide/high16 v9, 0x4059000000000000L    # 100.0
-
-    mul-double/2addr v7, v9
-
-    iget-wide v11, v0, Liqh;->c:J
-
-    long-to-double v11, v11
-
-    div-double/2addr v7, v11
-
-    const-wide/16 v11, 0x0
-
-    cmpg-double v1, v7, v11
-
-    if-gtz v1, :cond_1
-
-    const-wide/high16 p1, 0x4070000000000000L    # 256.0
-
-    goto :goto_1
-
-    :cond_1
-    cmpl-double v1, v7, v9
-
-    if-ltz v1, :cond_2
-
-    const-wide/high16 p1, 0x4070000000000000L    # 256.0
-
-    const-wide/high16 v11, 0x4070000000000000L    # 256.0
-
-    goto :goto_1
-
-    :cond_2
-    double-to-int v1, v7
-
-    iget-object v9, v0, Liqh;->f:[J
-
-    invoke-static {v9}, Lggi;->f(Ljava/lang/Object;)V
-
-    aget-wide v10, v9, v1
-
-    long-to-double v10, v10
-
-    const/16 v12, 0x63
-
-    if-ne v1, v12, :cond_3
-
-    const-wide/high16 p1, 0x4070000000000000L    # 256.0
-
-    const-wide/high16 v12, 0x4070000000000000L    # 256.0
-
-    goto :goto_0
-
-    :cond_3
-    add-int/lit8 v12, v1, 0x1
-
-    const-wide/high16 p1, 0x4070000000000000L    # 256.0
-
-    aget-wide v13, v9, v12
-
-    long-to-double v12, v13
-
-    :goto_0
-    int-to-double v14, v1
-
-    sub-double/2addr v7, v14
-
-    sub-double/2addr v12, v10
-
-    mul-double/2addr v12, v7
-
-    add-double v11, v12, v10
-
-    :goto_1
-    div-double v11, v11, p1
-
-    iget-wide v7, v0, Liqh;->d:J
-
-    long-to-double v9, v7
-
-    mul-double/2addr v11, v9
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v13
-
-    int-to-long v1, v2
-
-    const-wide/16 v9, 0x1
-
-    sub-long v17, v7, v9
-
-    move-wide v15, v1
-
-    invoke-static/range {v13 .. v18}, Ljig;->j(JJJ)J
-
-    move-result-wide v1
-
-    new-instance v7, Lfyd;
-
-    new-instance v8, Llyd;
-
-    add-long/2addr v3, v1
-
-    invoke-direct {v8, v5, v6, v3, v4}, Llyd;-><init>(JJ)V
-
-    invoke-direct {v7, v8, v8}, Lfyd;-><init>(Llyd;Llyd;)V
-
-    return-object v7
-.end method
-
-.method public final f()J
-    .locals 2
-
-    iget-wide v0, p0, Liqh;->c:J
-
-    return-wide v0
+    return v1
 .end method

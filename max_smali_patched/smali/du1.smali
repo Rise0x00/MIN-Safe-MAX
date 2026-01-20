@@ -1,140 +1,51 @@
-.class public final synthetic Ldu1;
-.super Ljava/lang/Object;
+.class public final Ldu1;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lmu1;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lgu1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmu1;I)V
+.method public constructor <init>(Lgu1;Lo84;)V
     .locals 0
 
-    iput p2, p0, Ldu1;->a:I
+    iput-object p1, p0, Ldu1;->o:Lgu1;
 
-    iput-object p1, p0, Ldu1;->b:Lmu1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Ldu1;->a:I
+    iput-object p1, p0, Ldu1;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Ldu1;->X:I
 
-    new-instance v0, Lhu1;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Ldu1;->b:Lmu1;
+    or-int/2addr p1, v0
 
-    invoke-direct {v0, v1}, Lhu1;-><init>(Lmu1;)V
+    iput p1, p0, Ldu1;->X:I
 
-    return-object v0
+    const/4 p1, 0x0
 
-    :pswitch_0
-    new-instance v0, Lru/ok/android/externcalls/sdk/AudioLevelListener;
+    const/4 v0, 0x0
 
-    new-instance v1, Landroid/os/Handler;
+    iget-object v1, p0, Ldu1;->o:Lgu1;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-virtual {v1, p1, v0, p0}, Lgu1;->c(ILandroid/os/Bundle;Lo84;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p1
 
-    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    new-instance v2, Lk3;
-
-    const/16 v3, 0x1b
-
-    iget-object v4, p0, Ldu1;->b:Lmu1;
-
-    invoke-direct {v2, v3, v4}, Lk3;-><init>(ILjava/lang/Object;)V
-
-    const/16 v3, 0x1f4
-
-    invoke-direct {v0, v3, v1, v2}, Lru/ok/android/externcalls/sdk/AudioLevelListener;-><init>(SLandroid/os/Handler;Ljava/lang/Runnable;)V
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Ldu1;->b:Lmu1;
-
-    iget-object v0, v0, Lmu1;->s:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Le1a;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Ldu1;->b:Lmu1;
-
-    iget-object v0, v0, Lmu1;->s:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Le1a;
-
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {v0, v1}, Le1a;->h(Ljava/lang/Object;)Z
-
-    sget-object v0, Lybg;->a:Lybg;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Ldu1;->b:Lmu1;
-
-    iget-object v0, v0, Lmu1;->q:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lf1a;
-
-    return-object v0
-
-    :pswitch_4
-    iget-object v0, p0, Ldu1;->b:Lmu1;
-
-    iget-object v0, v0, Lmu1;->b:Lf21;
-
-    check-cast v0, Lg21;
-
-    invoke-virtual {v0}, Lg21;->b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lb1f;->a(Ljava/lang/Object;)La1f;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,9 +1,6 @@
 .class public final Lrih;
-.super Ljava/lang/Object;
+.super Ltih;
 .source "SourceFile"
-
-# interfaces
-.implements Lxp7;
 
 
 # static fields
@@ -50,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x62efdd2c
+    const v0, -0x158415d4
 
     return v0
 .end method
@@ -58,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "WebAppReady"
+    const-string v0, "PauseClicked"
 
     return-object v0
 .end method

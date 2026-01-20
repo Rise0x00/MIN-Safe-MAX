@@ -1,70 +1,118 @@
 .class public final Looi;
-.super Ljava/lang/Object;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Lnq6;
 
 
-# static fields
-.field public static final a:Looi;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lwi1;
+
+.field public final synthetic c:Lxi1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lwi1;Lxi1;)V
+    .locals 1
 
-    new-instance v0, Looi;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Looi;->a:I
 
-    sput-object v0, Looi;->a:Looi;
+    .line 1
+    iput-object p1, p0, Looi;->b:Lwi1;
 
-    new-instance v0, Lz7i;
+    iput-object p2, p0, Looi;->c:Lxi1;
 
-    const/4 v1, 0x1
+    const/4 p1, 0x1
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
-    const-class v1, Lu8i;
+    return-void
+.end method
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
+.method public constructor <init>(Lxi1;Lwi1;)V
+    .locals 1
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    const/4 v2, 0x2
+    iput v0, p0, Looi;->a:I
 
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
+    .line 2
+    iput-object p1, p0, Looi;->c:Lxi1;
 
-    move-result-object v0
+    iput-object p2, p0, Looi;->b:Lwi1;
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
+    const/4 p1, 0x1
 
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Looi;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    throw p1
+    check-cast p1, Lvi1;
+
+    iget-object v0, p0, Looi;->b:Lwi1;
+
+    iget-object v1, p0, Looi;->c:Lxi1;
+
+    invoke-virtual {v0, v1, p1}, Lwi1;->d(Lxi1;Lvi1;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p1, Lvi1;
+
+    iget-object v0, p0, Looi;->c:Lxi1;
+
+    iget-object v1, v0, Lxi1;->i:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Looi;->b:Lwi1;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v2, Lwi1;->a:Landroid/opengl/EGLSurface;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v2, Lwi1;->a:Landroid/opengl/EGLSurface;
+
+    invoke-virtual {p1, v0}, Lvi1;->d(Landroid/opengl/EGLSurface;)V
+
+    invoke-virtual {v2, p1}, Lwi1;->c(Lvi1;)V
+
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

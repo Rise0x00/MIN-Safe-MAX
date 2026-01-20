@@ -1,133 +1,361 @@
-.class public final enum Ly7b;
-.super Ljava/lang/Enum;
+.class public abstract Ly7b;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Ly7b;
+.field public static final A:I
 
-.field public static final enum Y:Ly7b;
+.field public static final B:I
 
-.field public static final synthetic Z:[Ly7b;
+.field public static final C:I
 
-.field public static final enum a:Ly7b;
+.field public static final D:I
 
-.field public static final enum b:Ly7b;
+.field public static final E:I
 
-.field public static final enum c:Ly7b;
+.field public static final F:I
 
-.field public static final enum d:Ly7b;
+.field public static final G:I
 
-.field public static final enum o:Ly7b;
+.field public static final H:I
+
+.field public static final I:I
+
+.field public static final J:I
+
+.field public static final K:I
+
+.field public static final L:I
+
+.field public static final M:I
+
+.field public static final N:I
+
+.field public static final O:I
+
+.field public static final P:I
+
+.field public static final Q:I
+
+.field public static final R:I
+
+.field public static final S:I
+
+.field public static final T:I
+
+.field public static final U:I
+
+.field public static final V:I
+
+.field public static final W:I
+
+.field public static final X:I
+
+.field public static final Y:I
+
+.field public static final Z:I
+
+.field public static final a:I
+
+.field public static final a0:I
+
+.field public static final b:I
+
+.field public static final b0:I
+
+.field public static final c:I
+
+.field public static final c0:I
+
+.field public static final d:I
+
+.field public static final d0:I
+
+.field public static final e:I
+
+.field public static final e0:I
+
+.field public static final f:I
+
+.field public static final f0:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 9
+    .locals 1
 
-    new-instance v0, Ly7b;
+    sget v0, Lg8d;->chat_item_view_type:I
 
-    const-string v1, "AUTO_TRANSITION"
+    sput v0, Ly7b;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lg8d;->chat_item_view_type_pinned:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Ly7b;->b:I
 
-    sput-object v0, Ly7b;->a:Ly7b;
+    sget v0, Lg8d;->chat_suggest_item_view_type:I
 
-    new-instance v1, Ly7b;
+    sput v0, Ly7b;->c:I
 
-    const-string v2, "SEEK"
+    sget v0, Lg8d;->chat_suggest_stub_item_view_type:I
 
-    const/4 v3, 0x1
+    sput v0, Ly7b;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lg8d;->chats_list_folders_container:I
 
-    sput-object v1, Ly7b;->b:Ly7b;
+    sput v0, Ly7b;->e:I
 
-    new-instance v2, Ly7b;
+    sget v0, Lg8d;->chats_list_folders_pager:I
 
-    const-string v3, "SEEK_ADJUSTMENT"
+    sput v0, Ly7b;->f:I
 
-    const/4 v4, 0x2
+    sget v0, Lg8d;->chats_list_folders_tabs:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Ly7b;->g:I
 
-    sput-object v2, Ly7b;->c:Ly7b;
+    sget v0, Lg8d;->chats_list_pinbars_view:I
 
-    new-instance v3, Ly7b;
+    sput v0, Ly7b;->h:I
 
-    const-string v4, "SKIP"
+    sget v0, Lg8d;->chats_list_search_recycler_view:I
 
-    const/4 v5, 0x3
+    sput v0, Ly7b;->i:I
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lg8d;->chats_list_search_root_view:I
 
-    sput-object v3, Ly7b;->d:Ly7b;
+    sput v0, Ly7b;->j:I
 
-    new-instance v4, Ly7b;
+    sget v0, Lg8d;->chats_list_search_toolbar:I
 
-    const-string v5, "REMOVE"
+    sput v0, Ly7b;->k:I
 
-    const/4 v6, 0x4
+    sget v0, Lg8d;->chats_list_toolbar:I
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Ly7b;->l:I
 
-    sput-object v4, Ly7b;->o:Ly7b;
+    sget v0, Lg8d;->chats_list_view:I
 
-    new-instance v5, Ly7b;
+    sput v0, Ly7b;->m:I
 
-    const-string v6, "INTERNAL"
+    sget v0, Lg8d;->chats_search_chat_view_type:I
 
-    const/4 v7, 0x5
+    sput v0, Ly7b;->n:I
 
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lg8d;->chats_search_contact_view_type:I
 
-    sput-object v5, Ly7b;->X:Ly7b;
+    sput v0, Ly7b;->o:I
 
-    new-instance v6, Ly7b;
+    sget v0, Lg8d;->chats_search_empty_view_type:I
 
-    const-string v7, "UNKNOWN"
+    sput v0, Ly7b;->p:I
 
-    const/4 v8, 0x6
+    sget v0, Lg8d;->chats_search_global_chat_view_type:I
 
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Ly7b;->q:I
 
-    sput-object v6, Ly7b;->Y:Ly7b;
+    sget v0, Lg8d;->chats_search_global_contact_view_type:I
 
-    filled-new-array/range {v0 .. v6}, [Ly7b;
+    sput v0, Ly7b;->r:I
 
-    move-result-object v0
+    sget v0, Lg8d;->chats_search_loading_view_type:I
 
-    sput-object v0, Ly7b;->Z:[Ly7b;
+    sput v0, Ly7b;->s:I
+
+    sget v0, Lg8d;->chats_search_message_view_type:I
+
+    sput v0, Ly7b;->t:I
+
+    sget v0, Lg8d;->chats_search_recent_header_view_type:I
+
+    sput v0, Ly7b;->u:I
+
+    sget v0, Lg8d;->chats_search_recent_view_type:I
+
+    sput v0, Ly7b;->v:I
+
+    sget v0, Lg8d;->fake_chat_contact_item_view_type:I
+
+    sput v0, Ly7b;->w:I
+
+    sget v0, Lg8d;->fake_chat_phone_item_view_type:I
+
+    sput v0, Ly7b;->x:I
+
+    sget v0, Lg8d;->oneme_chat_action_add_favorite:I
+
+    sput v0, Ly7b;->y:I
+
+    sget v0, Lg8d;->oneme_chat_action_add_to_folder:I
+
+    sput v0, Ly7b;->z:I
+
+    sget v0, Lg8d;->oneme_chat_action_block:I
+
+    sput v0, Ly7b;->A:I
+
+    sget v0, Lg8d;->oneme_chat_action_clear_chat_history:I
+
+    sput v0, Ly7b;->B:I
+
+    sget v0, Lg8d;->oneme_chat_action_clear_saved_messages:I
+
+    sput v0, Ly7b;->C:I
+
+    sget v0, Lg8d;->oneme_chat_action_close_channel:I
+
+    sput v0, Ly7b;->D:I
+
+    sget v0, Lg8d;->oneme_chat_action_close_chat:I
+
+    sput v0, Ly7b;->E:I
+
+    sget v0, Lg8d;->oneme_chat_action_delete_channel:I
+
+    sput v0, Ly7b;->F:I
+
+    sget v0, Lg8d;->oneme_chat_action_delete_chat:I
+
+    sput v0, Ly7b;->G:I
+
+    sget v0, Lg8d;->oneme_chat_action_leave:I
+
+    sput v0, Ly7b;->H:I
+
+    sget v0, Lg8d;->oneme_chat_action_mark_as_read:I
+
+    sput v0, Ly7b;->I:I
+
+    sget v0, Lg8d;->oneme_chat_action_mark_as_unread:I
+
+    sput v0, Ly7b;->J:I
+
+    sget v0, Lg8d;->oneme_chat_action_move_rights_and_leave:I
+
+    sput v0, Ly7b;->K:I
+
+    sget v0, Lg8d;->oneme_chat_action_mute:I
+
+    sput v0, Ly7b;->L:I
+
+    sget v0, Lg8d;->oneme_chat_action_remove_favorite:I
+
+    sput v0, Ly7b;->M:I
+
+    sget v0, Lg8d;->oneme_chat_action_remove_from_folder:I
+
+    sput v0, Ly7b;->N:I
+
+    sget v0, Lg8d;->oneme_chat_action_select:I
+
+    sput v0, Ly7b;->O:I
+
+    sget v0, Lg8d;->oneme_chat_action_suspend_and_delete_bot:I
+
+    sput v0, Ly7b;->P:I
+
+    sget v0, Lg8d;->oneme_chat_action_suspend_bot:I
+
+    sput v0, Ly7b;->Q:I
+
+    sget v0, Lg8d;->oneme_chat_action_unmute:I
+
+    sput v0, Ly7b;->R:I
+
+    sget v0, Lg8d;->oneme_confirm_block:I
+
+    sput v0, Ly7b;->S:I
+
+    sget v0, Lg8d;->oneme_confirm_cancel:I
+
+    sput v0, Ly7b;->T:I
+
+    sget v0, Lg8d;->oneme_confirm_delete:I
+
+    sput v0, Ly7b;->U:I
+
+    sget v0, Lg8d;->oneme_confirm_delete_for_all:I
+
+    sput v0, Ly7b;->V:I
+
+    sget v0, Lg8d;->oneme_confirm_leave:I
+
+    sput v0, Ly7b;->W:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_1_day:I
+
+    sput v0, Ly7b;->X:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_1_hour:I
+
+    sput v0, Ly7b;->Y:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_4_hour:I
+
+    sput v0, Ly7b;->Z:I
+
+    sget v0, Lg8d;->oneme_confirm_mute_infinite:I
+
+    sput v0, Ly7b;->a0:I
+
+    sget v0, Lg8d;->oneme_contacts_picker_toolbar:I
+
+    sput v0, Ly7b;->b0:I
+
+    sget v0, Lg8d;->oneme_picker_chat_item_view_type:I
+
+    sput v0, Ly7b;->c0:I
+
+    sget v0, Lg8d;->oneme_picker_container_chats:I
+
+    sput v0, Ly7b;->d0:I
+
+    sget v0, Lg8d;->oneme_picker_main_container:I
+
+    sput v0, Ly7b;->e0:I
+
+    sget v0, Lg8d;->oneme_picker_members_list_view:I
+
+    sput v0, Ly7b;->f0:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ly7b;
-    .locals 1
-
-    const-class v0, Ly7b;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ly7b;
-
-    return-object p0
-.end method
-
-.method public static values()[Ly7b;
-    .locals 1
-
-    sget-object v0, Ly7b;->Z:[Ly7b;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ly7b;
-
-    return-object v0
 .end method

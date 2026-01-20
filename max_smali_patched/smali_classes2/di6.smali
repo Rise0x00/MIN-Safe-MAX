@@ -1,622 +1,143 @@
-.class public final synthetic Ldi6;
-.super Ljava/lang/Object;
+.class public final Ldi6;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lu6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lru/ok/messages/media/crop/FrgTamCropImage;
+.field public final synthetic Y:Latd;
+
+.field public final synthetic Z:J
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+.method public constructor <init>(Latd;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ldi6;->a:I
+    iput-object p1, p0, Ldi6;->Y:Latd;
 
-    iput-object p1, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
+    iput-wide p2, p0, Ldi6;->Z:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ldi6;->a:I
+    check-cast p1, Lc57;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
+    invoke-virtual {p0, p1, p2}, Ldi6;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lj6;
+    move-result-object p1
 
-    move-result-object v1
+    check-cast p1, Ldi6;
 
-    if-nez v1, :cond_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    goto :goto_0
+    invoke-virtual {p1, p2}, Ldi6;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    invoke-virtual {v0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lj6;
+    move-result-object p1
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    if-nez v1, :cond_1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    goto :goto_0
-
-    :cond_1
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
-
-    iget-object v3, v0, Landroidx/fragment/app/a;->X:Landroid/os/Bundle;
-
-    const-string v4, "ru.ok.tamtam.extra.RESULT_URI"
-
-    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/net/Uri;
-
-    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    filled-new-array {v3}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v4, "ru.ok.messages.media.crop.FrgTamCropImage"
-
-    const-string v5, "finishWithSuccess: result: %s"
-
-    invoke-static {v4, v5, v3}, Lcuh;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v3, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v3, v3, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    invoke-virtual {v3}, Llj7;->getInitialMatrix()Landroid/graphics/Matrix;
-
-    move-result-object v4
-
-    iget-object v3, v3, Ly2g;->t0:Landroid/graphics/Matrix;
-
-    invoke-virtual {v4, v3}, Landroid/graphics/Matrix;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    iget-object v3, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    invoke-virtual {v3}, Lone/me/image/crop/view/ImageCropView;->getCropState()Lf74;
-
-    move-result-object v3
-
-    const-string v4, "ru.ok.tamtam.extra.CROP_STATE"
-
-    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    :cond_2
-    const/4 v3, -0x1
-
-    invoke-virtual {v1, v3, v2}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
-
-    invoke-virtual {v0}, Lru/ok/messages/views/fragments/base/FrgBase;->s0()V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
-
-    iget-object v1, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v0, v0, Landroidx/fragment/app/a;->X:Landroid/os/Bundle;
-
-    const-string v2, "ru.ok.tamtam.extra.SAVE_AS_PNG"
-
-    invoke-virtual {v0, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    :goto_1
-    iget-object v1, v1, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    invoke-virtual {v1}, Ly2g;->getViewBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Ly2g;->getImageOutputPath()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1}, Llj7;->getCropState()Lf74;
-
-    move-result-object v1
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    new-instance v4, Landroid/graphics/Matrix;
-
-    invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
-
-    iget-object v5, v1, Lf74;->c:[F
-
-    iget-object v1, v1, Lf74;->a:Landroid/graphics/RectF;
-
-    invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->setValues([F)V
-
-    new-instance v5, Landroid/graphics/Matrix;
-
-    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
-
-    invoke-virtual {v5, v4}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    invoke-static {v4}, Ljzh;->a(Landroid/graphics/Matrix;)F
-
-    move-result v4
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    div-float/2addr v6, v4
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v5, v6, v6, v4, v4}, Landroid/graphics/Matrix;->postScale(FFFF)Z
-
-    sget-object v4, Ljzh;->a:[F
-
-    invoke-virtual {v5, v4}, Landroid/graphics/Matrix;->getValues([F)V
-
-    const/4 v6, 0x2
-
-    aget v6, v4, v6
-
-    neg-float v6, v6
-
-    invoke-virtual {v5, v4}, Landroid/graphics/Matrix;->getValues([F)V
-
-    const/4 v7, 0x5
-
-    aget v4, v4, v7
-
-    neg-float v4, v4
-
-    invoke-virtual {v5, v6, v4}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    invoke-virtual {v5, v1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    iget v4, v1, Landroid/graphics/RectF;->left:F
-
-    neg-float v4, v4
-
-    iget v6, v1, Landroid/graphics/RectF;->top:F
-
-    neg-float v6, v6
-
-    invoke-virtual {v5, v4, v6}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    invoke-virtual {v1}, Landroid/graphics/RectF;->height()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    sget-object v6, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {v4, v1, v6}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    new-instance v4, Landroid/graphics/Canvas;
-
-    invoke-direct {v4, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v4, v2, v5, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
-
-    new-instance v2, Ljava/io/FileOutputStream;
-
-    invoke-direct {v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-
-    const/16 v3, 0x64
-
-    :try_start_0
-    invoke-virtual {v1, v0, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_2
-    throw v0
-
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "bitmap recycled or null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_1
     new-instance v0, Ldi6;
 
-    const/4 v1, 0x5
+    iget-object v1, p0, Ldi6;->Y:Latd;
 
-    iget-object v2, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
+    iget-wide v2, p0, Ldi6;->Z:J
 
-    invoke-direct {v0, v2, v1}, Ldi6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+    invoke-direct {v0, v1, v2, v3, p2}, Ldi6;-><init>(Latd;JLkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Lmg3;
+    iput-object p1, v0, Ldi6;->X:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    return-object v0
+.end method
 
-    invoke-direct {v1, v3, v0}, Lmg3;-><init>(ILjava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {}, Ltpd;->a()Lgpd;
+    iget-object v0, p0, Ldi6;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Lc57;
 
-    invoke-virtual {v1, v0}, Ljg3;->j(Lgpd;)Lsg3;
+    iget v1, p0, Ldi6;->o:I
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    invoke-static {}, Lie;->a()Lgpd;
+    if-eqz v1, :cond_1
 
-    move-result-object v1
+    if-ne v1, v2, :cond_0
 
-    new-instance v3, Ldi6;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v4, 0x6
+    return-object v0
 
-    invoke-direct {v3, v2, v4}, Ldi6;-><init>(Lru/ok/messages/media/crop/FrgTamCropImage;I)V
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v4, Ls56;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const/4 v5, 0x3
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4, v5, v2}, Ls56;-><init>(ILjava/lang/Object;)V
+    throw p1
 
-    new-instance v2, Lnt1;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v5, 0x0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-direct {v2, v4, v5, v3}, Lnt1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-wide v3
 
-    :try_start_2
-    new-instance v3, Lrg3;
+    iget-object p1, p0, Ldi6;->Y:Latd;
 
-    invoke-direct {v3, v2, v1}, Lrg3;-><init>(Ltg3;Lgpd;)V
+    iget-wide v5, p1, Latd;->a:J
 
-    invoke-virtual {v0, v3}, Ljg3;->h(Ltg3;)V
-    :try_end_2
-    .catch Ljava/lang/NullPointerException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+    sub-long/2addr v3, v5
 
-    return-void
+    iget-wide v5, p0, Ldi6;->Z:J
 
-    :catchall_2
-    move-exception v0
+    cmp-long p1, v3, v5
 
-    invoke-static {v0}, Lose;->c(Ljava/lang/Throwable;)V
+    if-lez p1, :cond_2
 
-    invoke-static {v0}, Lrxi;->a(Ljava/lang/Throwable;)V
+    goto :goto_0
 
-    new-instance v1, Ljava/lang/NullPointerException;
+    :cond_2
+    sub-long/2addr v5, v3
 
-    const-string v2, "Actually not, but can\'t pass out an exception otherwise..."
+    iput-object v0, p0, Ldi6;->X:Ljava/lang/Object;
 
-    invoke-direct {v1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    iput v2, p0, Ldi6;->o:I
 
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-static {v5, v6, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    throw v1
+    move-result-object p1
 
-    :catch_0
-    move-exception v0
+    sget-object v1, Lac4;->a:Lac4;
 
-    throw v0
+    if-ne p1, v1, :cond_3
 
-    :pswitch_2
-    iget-object v0, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
+    return-object v1
 
-    invoke-virtual {v0}, Lru/ok/messages/views/fragments/base/FrgBase;->s0()V
-
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
-
-    iget-object v0, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v0, v0, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Llj7;->E0:F
-
-    invoke-virtual {v0}, Llj7;->f()V
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
-
-    iget-object v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lch8;
-
-    iget-object v1, v1, Lch8;->b:Ljava/lang/Object;
-
-    check-cast v1, Lri3;
-
-    check-cast v1, Lusa;
-
-    invoke-virtual {v1}, Lusa;->a()Lhd;
-
-    move-result-object v1
-
-    const-string v2, "LOCAL_MEDIA_FLIP"
-
-    invoke-virtual {v1, v2}, Lhd;->f(Ljava/lang/String;)V
-
-    iget-object v1, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v1, v1, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    iget-object v2, v1, Llj7;->B0:Landroid/graphics/RectF;
-
-    invoke-virtual {v2}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v3
-
-    invoke-virtual {v2}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v2
-
-    iget-object v4, v1, Ly2g;->t0:Landroid/graphics/Matrix;
-
-    const/high16 v5, -0x40800000    # -1.0f
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    invoke-virtual {v4, v5, v6, v3, v2}, Landroid/graphics/Matrix;->postScale(FFFF)Z
-
-    invoke-virtual {v1, v4}, Ly2g;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    iget-object v0, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    invoke-virtual {v0}, Lone/me/image/crop/view/ImageCropView;->a()V
-
-    return-void
-
-    :pswitch_5
-    iget-object v0, p0, Ldi6;->b:Lru/ok/messages/media/crop/FrgTamCropImage;
-
-    iget-object v1, v0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lch8;
-
-    iget-object v1, v1, Lch8;->b:Ljava/lang/Object;
-
-    check-cast v1, Lri3;
-
-    check-cast v1, Lusa;
-
-    invoke-virtual {v1}, Lusa;->a()Lhd;
-
-    move-result-object v1
-
-    const-string v2, "LOCAL_MEDIA_ROTATE"
-
-    invoke-virtual {v1, v2}, Lhd;->f(Ljava/lang/String;)V
-
-    iget-object v1, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v1, v1, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    iget-object v2, v1, Llj7;->C0:Landroid/graphics/Matrix;
-
-    invoke-virtual {v2}, Landroid/graphics/Matrix;->reset()V
-
-    invoke-virtual {v1}, Ly2g;->getCurrentScale()F
-
-    move-result v3
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    div-float v3, v4, v3
-
-    invoke-virtual {v2, v3, v3}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    iget-object v3, v1, Llj7;->D0:Landroid/graphics/RectF;
-
-    iget-object v1, v1, Llj7;->B0:Landroid/graphics/RectF;
-
-    invoke-virtual {v3, v1}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
-
-    invoke-virtual {v2, v3}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
-
-    move-result v1
-
-    iget-object v2, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v2, v2, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    iget-object v3, v2, Llj7;->B0:Landroid/graphics/RectF;
-
-    invoke-virtual {v3}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v5
-
-    invoke-virtual {v3}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v3
-
-    iget-object v6, v2, Ly2g;->t0:Landroid/graphics/Matrix;
-
-    const/high16 v7, 0x42b40000    # 90.0f
-
-    invoke-virtual {v6, v7, v5, v3}, Landroid/graphics/Matrix;->postRotate(FFF)Z
-
-    invoke-virtual {v2, v6}, Ly2g;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    iget-object v2, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v2, v2, Lone/me/image/crop/view/ImageCropView;->b:Libb;
-
-    iget v3, v2, Libb;->s0:F
-
-    div-float v3, v4, v3
-
-    iput v3, v2, Libb;->s0:F
-
-    iget-object v5, v2, Libb;->a:Landroid/graphics/RectF;
-
-    invoke-virtual {v2, v5, v3}, Libb;->a(Landroid/graphics/RectF;F)V
-
-    invoke-virtual {v2}, Libb;->b()V
-
-    iget-object v3, v2, Libb;->L0:Ljbb;
-
-    if-eqz v3, :cond_5
-
-    check-cast v3, Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v3, v3, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    invoke-virtual {v3, v5}, Llj7;->setCropRect(Landroid/graphics/RectF;)V
-
-    :cond_5
-    invoke-virtual {v2}, Landroid/view/View;->postInvalidateOnAnimation()V
-
-    iget-object v2, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    iget-object v2, v2, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    iget-object v3, v2, Llj7;->C0:Landroid/graphics/Matrix;
-
-    invoke-virtual {v3}, Landroid/graphics/Matrix;->reset()V
-
-    invoke-virtual {v2}, Ly2g;->getCurrentScale()F
-
-    move-result v5
-
-    div-float/2addr v4, v5
-
-    invoke-virtual {v3, v4, v4}, Landroid/graphics/Matrix;->postScale(FF)Z
-
-    iget-object v4, v2, Llj7;->D0:Landroid/graphics/RectF;
-
-    iget-object v2, v2, Llj7;->B0:Landroid/graphics/RectF;
-
-    invoke-virtual {v4, v2}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
-
-    move-result v2
-
-    iget-object v3, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    div-float/2addr v2, v1
-
-    iget-object v1, v3, Lone/me/image/crop/view/ImageCropView;->a:Lco6;
-
-    iget-object v3, v1, Llj7;->B0:Landroid/graphics/RectF;
-
-    invoke-virtual {v3}, Landroid/graphics/RectF;->centerX()F
-
-    move-result v4
-
-    invoke-virtual {v3}, Landroid/graphics/RectF;->centerY()F
-
-    move-result v3
-
-    iget-object v5, v1, Ly2g;->t0:Landroid/graphics/Matrix;
-
-    const/4 v6, 0x0
-
-    cmpl-float v6, v2, v6
-
-    if-eqz v6, :cond_6
-
-    invoke-virtual {v5, v2, v2, v4, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
-
-    invoke-virtual {v1, v5}, Ly2g;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    :cond_6
-    iget-object v0, v0, Lru/ok/messages/media/crop/FrgTamCropImage;->u1:Lone/me/image/crop/view/ImageCropView;
-
-    invoke-virtual {v0}, Lone/me/image/crop/view/ImageCropView;->a()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    :goto_0
+    return-object v0
 .end method

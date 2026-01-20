@@ -3,77 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lco8;
+.implements La38;
 
 
-# instance fields
-.field public final a:Landroid/os/Messenger;
+# static fields
+.field public static final a:Ldo8;
+
+.field public static final b:Lxhc;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Messenger;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ldo8;
 
-    iput-object p1, p0, Ldo8;->a:Landroid/os/Messenger;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ldo8;->a:Ldo8;
+
+    new-instance v0, Lxhc;
+
+    const-string v1, "kotlin.Long"
+
+    sget-object v2, Lvhc;->h:Lvhc;
+
+    invoke-direct {v0, v1, v2}, Lxhc;-><init>(Ljava/lang/String;Lwhc;)V
+
+    sput-object v0, Ldo8;->b:Lxhc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/util/List;Landroid/os/Bundle;)V
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
     .locals 2
 
-    new-instance v0, Landroid/os/Bundle;
+    check-cast p2, Ljava/lang/Number;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    invoke-virtual {p2}, Ljava/lang/Number;->longValue()J
 
-    const-string v1, "data_media_item_id"
+    move-result-wide v0
 
-    invoke-virtual {v0, v1, p1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p1, "data_options"
-
-    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    const-string p1, "data_notify_children_changed_options"
-
-    const/4 p3, 0x0
-
-    invoke-virtual {v0, p1, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    if-eqz p2, :cond_0
-
-    sget-object p1, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-static {p2, p1}, Ltv7;->b(Ljava/util/List;Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    const-string p2, "data_media_item_list"
-
-    invoke-virtual {v0, p2, p1}, Landroid/os/Bundle;->putParcelableArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
-
-    :cond_0
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object p1
-
-    const/4 p2, 0x3
-
-    iput p2, p1, Landroid/os/Message;->what:I
-
-    const/4 p2, 0x2
-
-    iput p2, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iget-object p2, p0, Ldo8;->a:Landroid/os/Messenger;
-
-    invoke-virtual {p2, p1}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->l(J)V
 
     return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-interface {p1}, Lkl4;->t()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final d()Lxpe;
+    .locals 1
+
+    sget-object v0, Ldo8;->b:Lxhc;
+
+    return-object v0
 .end method

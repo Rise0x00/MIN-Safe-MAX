@@ -44,29 +44,29 @@
         "eventListener",
         "setEventListener",
         "(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
-        "Lsha;",
+        "Lowa;",
         "factory",
         "setCameraCapturerFactory",
-        "(Lsha;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
+        "(Lowa;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
         "Lkotlin/Function1;",
         "Lru/ok/android/externcalls/sdk/Conversation;",
-        "Lybg;",
+        "Lb3h;",
         "onPrepared",
         "setOnPrepared",
-        "(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
-        "Ljr3;",
-        "(Ljr3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
+        "(Lnq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
+        "Lby3;",
+        "(Lby3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
         "Lkotlin/Function0;",
-        "(Loi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
+        "(Llq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
         "Ljava/lang/Runnable;",
         "(Ljava/lang/Runnable;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
         "",
         "onError",
         "setOnError",
-        "La42;",
+        "Ln72;",
         "frameInterceptor",
         "setFrameInterceptor",
-        "(La42;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
+        "(Ln72;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;",
         "",
         "shouldStartWithVideo",
         "setStartWithVideo",
@@ -87,24 +87,24 @@
         "()Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;",
         "(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)V",
         "cameraCapturerFactory",
-        "Lsha;",
+        "Lowa;",
         "getCameraCapturerFactory",
-        "()Lsha;",
-        "(Lsha;)V",
-        "Lqi6;",
+        "()Lowa;",
+        "(Lowa;)V",
+        "Lnq6;",
         "getOnPrepared",
-        "()Lqi6;",
-        "(Lqi6;)V",
+        "()Lnq6;",
+        "(Lnq6;)V",
         "getOnError",
         "Z",
         "getShouldStartWithVideo",
         "()Z",
         "setShouldStartWithVideo",
         "(Z)V",
-        "La42;",
+        "Ln72;",
         "getFrameInterceptor",
-        "()La42;",
-        "(La42;)V",
+        "()Ln72;",
+        "(Ln72;)V",
         "Ljava/lang/String;",
         "getFieldTrials",
         "()Ljava/lang/String;",
@@ -122,28 +122,28 @@
 
 
 # instance fields
-.field private cameraCapturerFactory:Lsha;
+.field private cameraCapturerFactory:Lowa;
 
 .field private eventListener:Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
 
 .field private fieldTrials:Ljava/lang/String;
 
-.field private frameInterceptor:La42;
+.field private frameInterceptor:Ln72;
 
 .field private myId:Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-.field private onError:Lqi6;
+.field private onError:Lnq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lqi6;"
+            "Lnq6;"
         }
     .end annotation
 .end field
 
-.field private onPrepared:Lqi6;
+.field private onPrepared:Lnq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lqi6;"
+            "Lnq6;"
         }
     .end annotation
 .end field
@@ -160,18 +160,18 @@
     return-void
 .end method
 
-.method public static synthetic a(Loi6;)V
+.method public static synthetic a(Llq6;)V
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared$lambda$0(Loi6;)V
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared$lambda$0(Llq6;)V
 
     return-void
 .end method
 
-.method private static final setOnPrepared$lambda$0(Loi6;)V
+.method private static final setOnPrepared$lambda$0(Llq6;)V
     .locals 0
 
-    invoke-interface {p0}, Loi6;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Llq6;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -186,10 +186,10 @@
     .end annotation
 .end method
 
-.method public final getCameraCapturerFactory()Lsha;
+.method public final getCameraCapturerFactory()Lowa;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->cameraCapturerFactory:Lsha;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->cameraCapturerFactory:Lowa;
 
     return-object v0
 .end method
@@ -210,7 +210,7 @@
     return-object v0
 .end method
 
-.method public final getFrameInterceptor()La42;
+.method public final getFrameInterceptor()Ln72;
     .locals 1
 
     const/4 v0, 0x0
@@ -226,30 +226,30 @@
     return-object v0
 .end method
 
-.method public final getOnError()Lqi6;
+.method public final getOnError()Lnq6;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lqi6;"
+            "Lnq6;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lqi6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lnq6;
 
     return-object v0
 .end method
 
-.method public final getOnPrepared()Lqi6;
+.method public final getOnPrepared()Lnq6;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lqi6;"
+            "Lnq6;"
         }
     .end annotation
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lqi6;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lnq6;
 
     return-object v0
 .end method
@@ -262,27 +262,27 @@
     return v0
 .end method
 
-.method public final setCameraCapturerFactory(Lsha;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+.method public final setCameraCapturerFactory(Lowa;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lsha;",
+            "Lowa;",
             ")TB;"
         }
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->cameraCapturerFactory:Lsha;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->cameraCapturerFactory:Lowa;
 
     return-object p0
 .end method
 
-.method public final setCameraCapturerFactory(Lsha;)V
+.method public final setCameraCapturerFactory(Lowa;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->cameraCapturerFactory:Lsha;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->cameraCapturerFactory:Lowa;
 
     return-void
 .end method
@@ -337,12 +337,12 @@
     return-void
 .end method
 
-.method public final setFrameInterceptor(La42;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+.method public final setFrameInterceptor(Ln72;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "La42;",
+            "Ln72;",
             ")TB;"
         }
     .end annotation
@@ -351,7 +351,7 @@
     return-object p0
 .end method
 
-.method public final setFrameInterceptor(La42;)V
+.method public final setFrameInterceptor(Ln72;)V
     .locals 0
 
     .line 1
@@ -383,12 +383,12 @@
     return-void
 .end method
 
-.method public final setOnError(Ljr3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+.method public final setOnError(Lby3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljr3;",
+            "Lby3;",
             ")TB;"
         }
     .end annotation
@@ -398,41 +398,61 @@
 
     invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder$setOnError$1;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lqi6;
+    iput-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lnq6;
 
     return-object p0
 .end method
 
-.method public final setOnError(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+.method public final setOnError(Lnq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lqi6;",
+            "Lnq6;",
             ")TB;"
         }
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lqi6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lnq6;
 
     return-object p0
 .end method
 
-.method public final setOnError(Lqi6;)V
+.method public final setOnError(Lnq6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lqi6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lqi6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onError:Lnq6;
 
     return-void
+.end method
+
+.method public final setOnPrepared(Lby3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lby3;",
+            ")TB;"
+        }
+    .end annotation
+
+    .line 5
+    new-instance v0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder$setOnPrepared$1;
+
+    invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder$setOnPrepared$1;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lnq6;
+
+    return-object p0
 .end method
 
 .method public final setOnPrepared(Ljava/lang/Runnable;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
@@ -446,94 +466,74 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lgr3;
+    new-instance v0, Lyx3;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lgr3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lyx3;-><init>(ILjava/lang/Object;)V
 
     .line 2
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Ljr3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lby3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
     return-object p0
 .end method
 
-.method public final setOnPrepared(Ljr3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljr3;",
-            ")TB;"
-        }
-    .end annotation
-
-    .line 5
-    new-instance v0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder$setOnPrepared$1;
-
-    invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder$setOnPrepared$1;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lqi6;
-
-    return-object p0
-.end method
-
-.method public final setOnPrepared(Loi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+.method public final setOnPrepared(Llq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi6;",
+            "Llq6;",
             ")TB;"
         }
     .end annotation
 
     .line 6
-    new-instance v0, Lzi0;
+    new-instance v0, Lsj0;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p1}, Lzi0;-><init>(ILoi6;)V
+    invoke-direct {v0, v1, p1}, Lsj0;-><init>(ILlq6;)V
 
     .line 7
-    new-instance p1, Lgr3;
+    new-instance p1, Lyx3;
 
-    invoke-direct {p1, v1, v0}, Lgr3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v1, v0}, Lyx3;-><init>(ILjava/lang/Object;)V
 
     .line 8
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Ljr3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lby3;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
     return-object p0
 .end method
 
-.method public setOnPrepared(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
+.method public setOnPrepared(Lnq6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lqi6;",
+            "Lnq6;",
             ")TB;"
         }
     .end annotation
 
     .line 4
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lqi6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lnq6;
 
     return-object p0
 .end method
 
-.method public final setOnPrepared(Lqi6;)V
+.method public final setOnPrepared(Lnq6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lqi6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation
 
     .line 3
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lqi6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->onPrepared:Lnq6;
 
     return-void
 .end method

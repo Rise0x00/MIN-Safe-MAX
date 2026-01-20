@@ -1,100 +1,154 @@
-.class public final Ly3b;
+.class public final synthetic Ly3b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La4b;
+.implements Llq6;
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ly3b;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public final synthetic a:I
 
-.field public static final a:Ly3b;
+.field public final synthetic b:Lj4b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lj4b;I)V
+    .locals 0
 
-    new-instance v0, Ly3b;
+    iput p2, p0, Ly3b;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ly3b;->b:Lj4b;
 
-    sput-object v0, Ly3b;->a:Ly3b;
-
-    new-instance v0, Lw3b;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lw3b;-><init>(I)V
-
-    sput-object v0, Ly3b;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x0
+    iget v0, p0, Ly3b;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    iget-object v0, p0, Ly3b;->b:Lj4b;
 
-    const/4 v0, 0x1
+    invoke-static {v0}, Lj4b;->a(Lj4b;)Landroid/graphics/drawable/LayerDrawable;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ly3b;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x472bda66
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Empty"
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    :pswitch_0
+    sget v0, Lt6d;->call_fill_16:I
 
-    const/4 p2, 0x1
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v2, p0, Ly3b;->b:Lj4b;
 
-    return-void
+    invoke-virtual {v1, v2}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    const/4 v1, -0x1
+
+    invoke-static {v0, v1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    const/4 v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lq7j;->c(F)I
+
+    move-result v1
+
+    sget-object v2, Lpc3;->t0:Lkme;
+
+    iget-object v3, p0, Ly3b;->b:Lj4b;
+
+    invoke-virtual {v2, v3}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Lzlb;->b()Lxf0;
+
+    move-result-object v4
+
+    iget v4, v4, Lxf0;->l:I
+
+    invoke-virtual {v0, v1, v4}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    invoke-virtual {v2, v3}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
+
+    move-result-object v1
+
+    iget v1, v1, Lwe7;->k:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v2, 0x42000000    # 32.0f
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

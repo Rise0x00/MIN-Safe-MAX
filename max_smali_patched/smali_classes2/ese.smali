@@ -1,80 +1,57 @@
 .class public final Lese;
-.super Logf;
+.super Lnse;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lfse;
+.field public final synthetic h:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final i:J
 
 
 # direct methods
-.method public constructor <init>(Lfse;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(IJJ)V
     .locals 0
 
-    iput-object p1, p0, Lese;->X:Lfse;
+    iput p1, p0, Lese;->h:I
 
-    const/4 p1, 0x2
+    invoke-direct {p0, p2, p3}, Lnse;-><init>(J)V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p4, p0, Lese;->i:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Lose;
+    .locals 5
 
-    check-cast p1, Lzz;
+    iget v0, p0, Lese;->h:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lese;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Lfse;
 
-    move-result-object p1
-
-    check-cast p1, Lese;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lese;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lese;
-
-    iget-object v1, p0, Lese;->X:Lfse;
-
-    invoke-direct {v0, v1, p2}, Lese;-><init>(Lfse;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lese;->o:Ljava/lang/Object;
+    invoke-direct {v0, p0}, Lfse;-><init>(Lese;)V
 
     return-object v0
-.end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    :pswitch_0
+    new-instance v0, Lfse;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-wide v1, p0, Lnse;->a:J
 
-    iget-object p1, p0, Lese;->o:Ljava/lang/Object;
+    iget-wide v3, p0, Lese;->i:J
 
-    check-cast p1, Lzz;
+    invoke-direct {v0, v1, v2, v3, v4}, Lfse;-><init>(JJ)V
 
-    iget-object v0, p0, Lese;->X:Lfse;
+    return-object v0
 
-    invoke-static {v0, p1}, Lfse;->A(Lfse;Lzz;)V
+    nop
 
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

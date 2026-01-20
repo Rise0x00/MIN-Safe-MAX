@@ -1,63 +1,172 @@
 .class public final Lys2;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lc14;
 
-.field public final synthetic Y:Lbx3;
+.field public final b:Lngc;
 
-.field public Z:I
-
-.field public d:Z
-
-.field public o:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lbx3;Lp14;)V
+.method public constructor <init>(Lc14;Lngc;J)V
     .locals 0
 
-    iput-object p1, p0, Lys2;->Y:Lbx3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lys2;->a:Lc14;
+
+    iput-object p2, p0, Lys2;->b:Lngc;
+
+    iput-wide p3, p0, Lys2;->c:J
 
     return-void
 .end method
 
+.method public static a(Lpq9;)Lys2;
+    .locals 12
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    invoke-static {p0}, Lcti;->o(Lpq9;)I
 
-    iput-object p1, p0, Lys2;->X:Ljava/lang/Object;
+    move-result v0
 
-    iget p1, p0, Lys2;->Z:I
+    const/4 v1, 0x0
 
-    const/high16 v0, -0x80000000
+    if-nez v0, :cond_0
 
-    or-int/2addr p1, v0
+    return-object v1
 
-    iput p1, p0, Lys2;->Z:I
+    :cond_0
+    const/4 v2, 0x0
 
-    const/4 v5, 0x0
+    const-wide/16 v3, 0x0
 
-    const/4 v6, 0x0
+    move-object v5, v1
 
-    iget-object v0, p0, Lys2;->Y:Lbx3;
+    move v6, v2
 
-    const-wide/16 v1, 0x0
+    move-wide v7, v3
 
-    const/4 v3, 0x0
+    :goto_0
+    if-ge v6, v0, :cond_4
 
-    const/4 v4, 0x0
+    invoke-virtual {p0}, Lpq9;->O0()Ljava/lang/String;
 
-    move-object v7, p0
+    move-result-object v9
 
-    invoke-virtual/range {v0 .. v7}, Lbx3;->a(JILtv0;Lic6;ZLp14;)Ljava/lang/Object;
+    invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
 
-    return-object p1
+    move-result v10
+
+    const/4 v11, -0x1
+
+    sparse-switch v10, :sswitch_data_0
+
+    goto :goto_1
+
+    :sswitch_0
+    const-string v10, "contact"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v11, 0x2
+
+    goto :goto_1
+
+    :sswitch_1
+    const-string v10, "readMark"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v11, 0x1
+
+    goto :goto_1
+
+    :sswitch_2
+    const-string v10, "presence"
+
+    invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v11, v2
+
+    :goto_1
+    packed-switch v11, :pswitch_data_0
+
+    invoke-virtual {p0}, Lpq9;->B()V
+
+    goto :goto_2
+
+    :pswitch_0
+    invoke-static {p0}, Lc14;->g(Lpq9;)Lc14;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :pswitch_1
+    invoke-static {p0, v3, v4}, Lcti;->n(Lpq9;J)J
+
+    move-result-wide v7
+
+    goto :goto_2
+
+    :pswitch_2
+    invoke-static {p0}, Lkkj;->c(Lpq9;)Lngc;
+
+    move-result-object v5
+
+    :goto_2
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    new-instance p0, Lys2;
+
+    invoke-direct {p0, v1, v5, v7, v8}, Lys2;-><init>(Lc14;Lngc;J)V
+
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x4c186305 -> :sswitch_2
+        -0x33b8e67d -> :sswitch_1
+        0x38b72420 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

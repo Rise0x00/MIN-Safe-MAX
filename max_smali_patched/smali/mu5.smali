@@ -1,74 +1,41 @@
 .class public final Lmu5;
-.super Llu5;
+.super Lo3;
 .source "SourceFile"
 
 
 # instance fields
-.field public b:Z
+.field public final c:Lay0;
 
-.field public c:[Ljava/io/File;
 
-.field public d:I
+# direct methods
+.method public constructor <init>()V
+    .locals 2
 
-.field public e:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lay0;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lay0;-><init>(I)V
+
+    iput-object v0, p0, Lmu5;->c:Lay0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ljava/io/File;
-    .locals 5
+.method public final g()Ljava/util/Random;
+    .locals 1
 
-    iget-boolean v0, p0, Lmu5;->e:Z
+    iget-object v0, p0, Lmu5;->c:Lay0;
 
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lqu5;->a:Ljava/io/File;
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lmu5;->c:[Ljava/io/File;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {v2}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lmu5;->c:[Ljava/io/File;
-
-    if-nez v0, :cond_0
-
-    iput-boolean v1, p0, Lmu5;->e:Z
-
-    :cond_0
-    iget-object v0, p0, Lmu5;->c:[Ljava/io/File;
-
-    if-eqz v0, :cond_1
-
-    iget v3, p0, Lmu5;->d:I
-
-    array-length v4, v0
-
-    if-ge v3, v4, :cond_1
-
-    add-int/lit8 v1, v3, 0x1
-
-    iput v1, p0, Lmu5;->d:I
-
-    aget-object v0, v0, v3
-
-    return-object v0
-
-    :cond_1
-    iget-boolean v0, p0, Lmu5;->b:Z
-
-    if-nez v0, :cond_2
-
-    iput-boolean v1, p0, Lmu5;->b:Z
-
-    return-object v2
-
-    :cond_2
-    const/4 v0, 0x0
+    check-cast v0, Ljava/util/Random;
 
     return-object v0
 .end method

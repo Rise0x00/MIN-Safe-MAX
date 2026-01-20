@@ -1,100 +1,19 @@
 .class public final Ljli;
-.super Ljava/lang/Object;
+.super Lo9j;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
 
-
-# static fields
-.field public static final a:Ljli;
+# instance fields
+.field public final a:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ljli;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljli;->a:Ljli;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(F)V
     .locals 0
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p1
+    iput p1, p0, Ljli;->a:F
 
-    throw p1
+    return-void
 .end method

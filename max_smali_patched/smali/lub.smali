@@ -1,130 +1,100 @@
-.class public final Llub;
+.class public abstract Llub;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Llub;
-
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
-
-
-# instance fields
-.field public final a:Z
-
-.field public final b:Z
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Llub;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1}, Llub;-><init>(ZZ)V
-
-    sput-object v0, Llub;->c:Llub;
-
-    sget-object v0, Llig;->a:Ljava/lang/String;
-
-    const/16 v0, 0x24
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Llub;->d:Ljava/lang/String;
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Llub;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Llub;->a:Z
-
-    iput-boolean p2, p0, Llub;->b:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static final a(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lyk1;
     .locals 4
 
-    const/4 v0, 0x1
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/id/ParticipantId;->id:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    const-string v0, ":"
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Llub;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Llub;
-
-    iget-boolean v1, p0, Llub;->a:Z
-
-    iget-boolean v3, p1, Llub;->a:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Llub;->b:Z
-
-    iget-boolean p1, p1, Llub;->b:Z
-
-    if-ne v1, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Llub;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    filled-new-array {v0}, [Ljava/lang/String;
 
     move-result-object v0
 
-    iget-boolean v1, p0, Llub;->b:Z
+    const/4 v1, 0x6
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {p0, v0, v1}, Lrzf;->U(Ljava/lang/CharSequence;[Ljava/lang/String;I)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object p0
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+    invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    return v0
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-le v0, v2, :cond_0
+
+    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {v0}, Lyzf;->k(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    :cond_0
+    new-instance v0, Lyk1;
+
+    invoke-static {p0}, Lpi3;->D(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/String;
+
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    invoke-direct {v0, v2, v3, v1}, Lyk1;-><init>(JI)V
+
+    return-object v0
+.end method
+
+.method public static final b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    .locals 0
+
+    invoke-static {p0, p1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;->authorized(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static final c(Lyk1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    .locals 3
+
+    new-instance v0, Lru/ok/android/externcalls/sdk/id/ParticipantId;
+
+    iget-wide v1, p0, Lyk1;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    iget p0, p0, Lyk1;->b:I
+
+    invoke-direct {v0, v1, v2, p0}, Lru/ok/android/externcalls/sdk/id/ParticipantId;-><init>(Ljava/lang/String;ZI)V
+
+    return-object v0
 .end method

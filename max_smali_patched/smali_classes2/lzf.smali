@@ -1,63 +1,130 @@
-.class public final Llzf;
-.super Lmzf;
+.class public abstract Llzf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
-
-.field public final c:J
+# static fields
+.field public static final a:Ljava/text/DecimalFormat;
 
 
 # direct methods
-.method public constructor <init>(JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Llzf;->b:I
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    packed-switch p3, :pswitch_data_0
+    const-string v1, "#.#"
 
-    sget-object p3, Lkzf;->b:Lkzf;
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
 
-    iput-wide p1, p0, Llzf;->c:J
+    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
 
-    return-void
+    sput-object v0, Llzf;->a:Ljava/text/DecimalFormat;
 
-    :pswitch_0
-    sget-object p3, Lkzf;->o:Lkzf;
+    new-instance v0, Ljava/text/DecimalFormat;
 
-    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
+    const-string v2, "0.0"
 
-    iput-wide p1, p0, Llzf;->c:J
+    invoke-direct {v0, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    return-void
-
-    :pswitch_1
-    sget-object p3, Lkzf;->d:Lkzf;
-
-    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
-
-    iput-wide p1, p0, Llzf;->c:J
+    invoke-virtual {v0, v1}, Ljava/text/DecimalFormat;->setRoundingMode(Ljava/math/RoundingMode;)V
 
     return-void
+.end method
 
-    :pswitch_2
-    sget-object p3, Lkzf;->c:Lkzf;
+.method public static final a(I)Ljava/lang/String;
+    .locals 5
 
-    invoke-direct {p0, p3}, Lmzf;-><init>(Lkzf;)V
+    int-to-long v0, p0
 
-    iput-wide p1, p0, Llzf;->c:J
+    const-wide/32 v2, 0x3b9aca00
 
-    return-void
+    cmp-long p0, v0, v2
 
-    nop
+    sget-object v2, Llzf;->a:Ljava/text/DecimalFormat;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-ltz p0, :cond_0
+
+    long-to-double v0, v0
+
+    const-wide v3, 0x41cdcd6500000000L    # 1.0E9
+
+    div-double/2addr v0, v3
+
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "B"
+
+    invoke-static {p0, v0}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const-wide/32 v3, 0xf4240
+
+    cmp-long p0, v0, v3
+
+    if-ltz p0, :cond_1
+
+    long-to-double v0, v0
+
+    const-wide v3, 0x412e848000000000L    # 1000000.0
+
+    div-double/2addr v0, v3
+
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "M"
+
+    invoke-static {p0, v0}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    const-wide/16 v3, 0x3e8
+
+    cmp-long p0, v0, v3
+
+    if-ltz p0, :cond_2
+
+    long-to-double v0, v0
+
+    const-wide v3, 0x408f400000000000L    # 1000.0
+
+    div-double/2addr v0, v3
+
+    invoke-virtual {v2, v0, v1}, Ljava/text/NumberFormat;->format(D)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "K"
+
+    invoke-static {p0, v0}, Lhc0;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

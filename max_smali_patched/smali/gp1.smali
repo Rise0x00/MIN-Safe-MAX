@@ -1,308 +1,280 @@
 .class public final Lgp1;
-.super Lnh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic w0:I
+.field public static final g:Lgp1;
 
 
 # instance fields
-.field public final u0:Z
+.field public final a:Z
 
-.field public final v0:Lru7;
+.field public final b:Z
+
+.field public final c:Lyk1;
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 7
 
-    const-wide/16 v0, -0x1
+    new-instance v0, Lgp1;
 
-    const/4 v2, 0x1
+    const/4 v5, 0x0
 
-    .line 1
-    invoke-direct {p0, v0, v1, v2}, Lgp1;-><init>(JZ)V
-
-    return-void
-.end method
-
-.method public constructor <init>(JZ)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    .line 2
-    invoke-direct {p0, p1, p2, v0}, Lnh;-><init>(JI)V
-
-    .line 3
-    iput-boolean p3, p0, Lgp1;->u0:Z
-
-    .line 4
-    sget-object p1, Ldl1;->a:Ldl1;
-
-    .line 5
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object p1
-
-    .line 6
-    const-class p2, Llb1;
-
-    invoke-virtual {p1, p2}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object p1
-
-    .line 7
-    iput-object p1, p0, Lgp1;->v0:Lru7;
-
-    return-void
-.end method
-
-.method public static final o(Lgp1;Landroid/view/View;Z)V
-    .locals 2
-
-    instance-of p0, p1, Lgm1;
-
-    if-eqz p0, :cond_0
-
-    move-object p0, p1
-
-    check-cast p0, Lgm1;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, p2}, Lgm1;->a(Z)V
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const/4 p0, 0x1
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance p0, Landroid/graphics/Rect;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v0
+    const/4 v6, 0x0
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v1, v1, p2, v0}, Landroid/graphics/Rect;-><init>(IIII)V
+    const/4 v2, 0x0
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    const/4 v3, 0x0
 
-    move-result-object p2
+    const/4 v4, 0x0
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-direct/range {v0 .. v6}, Lgp1;-><init>(ZZLyk1;ZZZ)V
 
-    move-result-object p2
+    sput-object v0, Lgp1;->g:Lgp1;
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public constructor <init>(ZZLyk1;ZZZ)V
+    .locals 0
 
-    mul-float/2addr p2, v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1, p0, p2}, Lyyg;->d(Landroid/view/View;Landroid/graphics/Rect;F)V
+    iput-boolean p1, p0, Lgp1;->a:Z
 
-    :cond_2
+    iput-boolean p2, p0, Lgp1;->b:Z
+
+    iput-object p3, p0, Lgp1;->c:Lyk1;
+
+    iput-boolean p4, p0, Lgp1;->d:Z
+
+    iput-boolean p5, p0, Lgp1;->e:Z
+
+    iput-boolean p6, p0, Lgp1;->f:Z
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Z
+.method public final a()Z
     .locals 1
 
-    iget-boolean v0, p0, Lgp1;->u0:Z
+    iget-boolean v0, p0, Lgp1;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lgp1;->b:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    const/4 v0, 0x1
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    if-eqz p4, :cond_0
-
-    if-eqz p3, :cond_0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p0, p1, p3, p2}, Lgp1;->p(Landroid/animation/AnimatorSet;Landroid/view/View;Z)V
-
-    return-object p1
+    return v0
 
     :cond_0
-    if-nez p4, :cond_1
+    instance-of v1, p1, Lgp1;
 
-    if-eqz p2, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p3, 0x0
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1, p2, p3}, Lgp1;->p(Landroid/animation/AnimatorSet;Landroid/view/View;Z)V
+    return v2
 
     :cond_1
-    return-object p1
+    check-cast p1, Lgp1;
+
+    iget-boolean v1, p0, Lgp1;->a:Z
+
+    iget-boolean v3, p1, Lgp1;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lgp1;->b:Z
+
+    iget-boolean v3, p1, Lgp1;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lgp1;->c:Lyk1;
+
+    iget-object v3, p1, Lgp1;->c:Lyk1;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Lgp1;->d:Z
+
+    iget-boolean v3, p1, Lgp1;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Lgp1;->e:Z
+
+    iget-boolean v3, p1, Lgp1;->e:Z
+
+    if-eq v1, v3, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Lgp1;->f:Z
+
+    iget-boolean p1, p1, Lgp1;->f:Z
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
 .end method
 
-.method public final n(Landroid/view/View;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 3
 
-    return-void
-.end method
+    iget-boolean v0, p0, Lgp1;->a:Z
 
-.method public final p(Landroid/animation/AnimatorSet;Landroid/view/View;Z)V
-    .locals 10
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
+    move-result v0
 
-    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
+    const/16 v1, 0x1f
 
-    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    mul-int/2addr v0, v1
 
-    new-instance v1, Lek1;
+    iget-boolean v2, p0, Lgp1;->b:Z
 
-    const/4 v9, 0x1
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    move-object v5, p2
+    move-result v0
 
-    move v6, p3
+    iget-object v2, p0, Lgp1;->c:Lyk1;
 
-    move-object v7, p2
+    if-nez v2, :cond_0
 
-    move v8, p3
-
-    move-object v2, p0
-
-    move-object v3, p2
-
-    move v4, p3
-
-    invoke-direct/range {v1 .. v9}, Lek1;-><init>(Lnh;Landroid/view/View;ZLandroid/view/View;ZLandroid/view/View;ZI)V
-
-    invoke-virtual {p1, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-static {}, Lwti;->b()Le28;
-
-    move-result-object p2
-
-    if-eqz v4, :cond_0
-
-    iget-object p3, v2, Lgp1;->v0:Lru7;
-
-    invoke-interface {p3}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Llb1;
-
-    check-cast p3, Lmb1;
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 p3, 0xae
-
-    int-to-float p3, p3
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p3, v0
-
-    invoke-static {p3}, Lkhi;->c(F)I
-
-    move-result p3
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+    invoke-virtual {v2}, Lyk1;->hashCode()I
 
-    move-result p3
+    move-result v2
 
     :goto_0
-    if-eqz v4, :cond_1
+    add-int/2addr v0, v2
 
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lgp1;->d:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 
-    goto :goto_1
+    iget-boolean v2, p0, Lgp1;->e:Z
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    :goto_1
-    new-instance v1, Lpg;
+    move-result v0
 
-    const-string v5, "bounds"
+    iget-boolean v1, p0, Lgp1;->f:Z
 
-    invoke-direct {v1, v5, p3}, Lpg;-><init>(Ljava/lang/String;I)V
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    filled-new-array {p3, v0}, [I
+    move-result v1
 
-    move-result-object p3
+    add-int/2addr v1, v0
 
-    const/4 v0, 0x0
+    return v1
+.end method
 
-    invoke-static {v0, v1, p3}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    move-result-object p3
+    const-string v0, ", isSharingStateEnabled="
 
-    new-instance v5, Lxg;
+    const-string v1, ", sharedScreenOpponentId="
 
-    const/4 v6, 0x1
+    const-string v2, "CallScreenSharingState(isMe="
 
-    invoke-direct {v5, v3, v1, v6}, Lxg;-><init>(Landroid/view/View;Lpg;I)V
+    iget-boolean v3, p0, Lgp1;->a:Z
 
-    invoke-virtual {p3, v5}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    iget-boolean v4, p0, Lgp1;->b:Z
 
-    invoke-virtual {p2, p3}, Le28;->add(Ljava/lang/Object;)Z
+    invoke-static {v2, v3, v0, v4, v1}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
-    instance-of p3, v3, Lgm1;
+    move-result-object v0
 
-    if-eqz p3, :cond_2
+    iget-object v1, p0, Lgp1;->c:Lyk1;
 
-    move-object v0, v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v0, Lgm1;
+    const-string v1, ", isAdminDisableScreenSharing="
 
-    :cond_2
-    if-eqz v0, :cond_3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v5, v2, Lnh;->d:J
+    iget-boolean v1, p0, Lgp1;->d:Z
 
-    invoke-interface {v0, p2, v4, v5, v6}, Lgm1;->g(Le28;ZJ)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    :cond_3
-    invoke-static {p2}, Lwti;->a(Ljava/util/List;)Le28;
+    const-string v1, ", isMeAudioSharingEnabled="
 
-    move-result-object p2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, p2}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+    const-string v1, ", isMeAdmin="
 
-    return-void
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lgp1;->e:Z
+
+    iget-boolean v4, p0, Lgp1;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

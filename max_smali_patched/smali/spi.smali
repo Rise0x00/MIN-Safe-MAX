@@ -3,48 +3,74 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Ldqi;
 
 
-# static fields
-.field public static final a:Lspi;
+# instance fields
+.field public final synthetic a:Landroid/widget/FrameLayout;
+
+.field public final synthetic b:Landroid/view/LayoutInflater;
+
+.field public final synthetic c:Landroid/view/ViewGroup;
+
+.field public final synthetic d:Landroid/os/Bundle;
+
+.field public final synthetic e:Lnk0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lnk0;Landroid/widget/FrameLayout;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Lspi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lspi;->e:Lnk0;
 
-    sput-object v0, Lspi;->a:Lspi;
+    iput-object p2, p0, Lspi;->a:Landroid/widget/FrameLayout;
 
-    new-instance v0, Lz7i;
+    iput-object p3, p0, Lspi;->b:Landroid/view/LayoutInflater;
 
-    const/4 v1, 0x1
+    iput-object p4, p0, Lspi;->c:Landroid/view/ViewGroup;
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    iput-object p5, p0, Lspi;->d:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v0, 0x2
 
-    move-result-object p1
+    return v0
+.end method
 
-    throw p1
+.method public final b()V
+    .locals 5
+
+    iget-object v0, p0, Lspi;->a:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
+
+    iget-object v1, p0, Lspi;->e:Lnk0;
+
+    iget-object v1, v1, Lnk0;->a:Ljava/lang/Object;
+
+    check-cast v1, Lz78;
+
+    iget-object v2, p0, Lspi;->c:Landroid/view/ViewGroup;
+
+    iget-object v3, p0, Lspi;->d:Landroid/os/Bundle;
+
+    iget-object v4, p0, Lspi;->b:Landroid/view/LayoutInflater;
+
+    invoke-interface {v1, v4, v2, v3}, Lz78;->l(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    return-void
 .end method

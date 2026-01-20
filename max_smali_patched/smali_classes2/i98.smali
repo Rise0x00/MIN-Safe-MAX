@@ -1,8 +1,8 @@
-.class public interface abstract Li98;
+.class public abstract Li98;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract c()Z
+.method public abstract a()J
 .end method

@@ -1,194 +1,264 @@
 .class public final Ljj1;
-.super Logf;
+.super Ljef;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
+
+# static fields
+.field public static final synthetic G0:I
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final F0:La4a;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;La4a;)V
+    .locals 2
 
-    iput-object p2, p0, Ljj1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    new-instance v0, Lk7b;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p1, v1}, Lk7b;-><init>(Landroid/content/Context;Z)V
+
+    invoke-direct {p0, v0}, Ltsd;-><init>(Landroid/view/View;)V
+
+    iput-object p2, p0, Ljj1;->F0:La4a;
+
+    sget-object p2, Lpc3;->t0:Lkme;
+
+    invoke-virtual {p2, p1}, Lkme;->r(Landroid/content/Context;)Lzbb;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lzbb;->c:Lzlb;
+
+    invoke-virtual {v0, p1}, Lk7b;->setCustomTheme(Lzlb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ljj1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ljj1;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ljj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ljj1;
-
-    iget-object v1, p0, Ljj1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Ljj1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
-
-    iput-object p1, v0, Ljj1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final D(Lyk1;ZZ)V
     .locals 5
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Ljj1;->o:Ljava/lang/Object;
+    iget-object v1, p0, Ltsd;->a:Landroid/view/View;
 
-    check-cast p1, Lmj1;
+    if-eqz p2, :cond_0
 
-    sget-object v0, Lkj1;->a:Lkj1;
+    move-object p2, v1
 
-    invoke-static {p1, v0}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    check-cast p2, Lk7b;
 
-    move-result v0
+    sget v2, Lx6b;->o0:I
 
-    iget-object v1, p0, Ljj1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-eqz v0, :cond_1
+    move-result-object v2
 
-    invoke-static {v1}, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->N0(Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)Lfxc;
+    new-instance v3, Lh3;
 
-    move-result-object p1
+    const/16 v4, 0x12
 
-    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+    invoke-direct {v3, p0, v4, p1}, Lh3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result v0
+    sget-object p1, Lx5b;->d:Lx5b;
 
-    const/4 v1, 0x0
+    sget-object v4, Lv5b;->o:Lv5b;
 
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_3
-
-    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    instance-of v4, v3, Lzwc;
-
-    if-eqz v4, :cond_0
-
-    check-cast v3, Lzwc;
-
-    invoke-virtual {v3, v1}, Lzwc;->setChecked(Z)V
-
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {p2, v2, p1, v4, v3}, Lk7b;->i(Ljava/lang/Integer;Lx5b;Lv5b;Llq6;)V
 
     goto :goto_0
 
-    :cond_1
-    instance-of v0, p1, Llj1;
+    :cond_0
+    move-object p1, v1
 
-    if-eqz v0, :cond_4
+    check-cast p1, Lk7b;
 
-    check-cast p1, Llj1;
+    new-instance p2, Lg31;
 
-    iget-boolean p1, p1, Llj1;->a:Z
+    const/16 v2, 0x15
 
-    if-eqz p1, :cond_2
+    invoke-direct {p2, v2}, Lg31;-><init>(I)V
 
-    sget p1, Lmkd;->X1:I
+    const/4 v2, 0x6
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-static {p1, v0, p2, v2}, Lk7b;->j(Lk7b;Ljava/lang/Integer;Llq6;I)V
+
+    :goto_0
+    if-eqz p3, :cond_1
+
+    sget p1, Lx6b;->H:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Le8;->d(Landroid/content/Context;I)Ljava/lang/String;
+    :cond_1
+    check-cast v1, Lk7b;
+
+    invoke-virtual {v1, v0}, Lk7b;->setIconInfo(Ljava/lang/Integer;)V
+
+    return-void
+.end method
+
+.method public final y(Lud8;)V
+    .locals 9
+
+    check-cast p1, Lej1;
+
+    iget-boolean v0, p1, Lej1;->Y:Z
+
+    iget-object v1, p0, Ltsd;->a:Landroid/view/View;
+
+    move-object v2, v1
+
+    check-cast v2, Lk7b;
+
+    iget-wide v3, p1, Lej1;->u0:J
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setId(I)V
+
+    iget-object v3, p1, Lej1;->b:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lk7b;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v4, p1, Lej1;->a:Lyk1;
+
+    iget-wide v5, v4, Lyk1;->a:J
+
+    iget-object v7, p1, Lej1;->c:Ljava/lang/String;
+
+    invoke-virtual {v2, v5, v6, v3, v7}, Lk7b;->g(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    iget-object v3, p1, Lej1;->t0:Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
+
+    move-result v3
+
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lk7b;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    sget-object v3, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v3, v2}, Lkme;->s(Landroid/view/View;)Lzbb;
+
+    move-result-object v5
+
+    iget-object v5, v5, Lzbb;->c:Lzlb;
+
+    invoke-interface {v5}, Lzlb;->c()Leqf;
+
+    move-result-object v5
+
+    iget-object v5, v5, Leqf;->a:Lcqf;
+
+    iget-object v5, v5, Lcqf;->a:Lbqf;
+
+    iget v5, v5, Lbqf;->d:I
+
+    new-instance v6, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v7, Landroid/graphics/drawable/shapes/RectShape;
+
+    invoke-direct {v7}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
+
+    invoke-direct {v6, v7}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v6}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v7
+
+    invoke-virtual {v3, v2}, Lkme;->s(Landroid/view/View;)Lzbb;
+
+    move-result-object v8
+
+    iget-object v8, v8, Lzbb;->c:Lzlb;
+
+    invoke-interface {v8}, Lzlb;->b()Lxf0;
+
+    move-result-object v8
+
+    iget v8, v8, Lxf0;->l:I
+
+    invoke-virtual {v7, v8}, Landroid/graphics/Paint;->setColor(I)V
+
+    new-instance v7, Landroid/graphics/drawable/RippleDrawable;
+
+    invoke-static {v5}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v5
+
+    const/4 v8, 0x0
+
+    invoke-direct {v7, v5, v6, v8}, Landroid/graphics/drawable/RippleDrawable;-><init>(Landroid/content/res/ColorStateList;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    invoke-virtual {v2, v7}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    iget-boolean v5, p1, Lej1;->o:Z
+
+    invoke-virtual {p0, v4, v5, v0}, Ljj1;->D(Lyk1;ZZ)V
+
+    if-eqz v0, :cond_0
+
+    sget v0, Lx6b;->H:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v8
+
+    :goto_0
+    move-object v5, v1
+
+    check-cast v5, Lk7b;
+
+    invoke-virtual {v5, v0}, Lk7b;->setIconInfo(Ljava/lang/Integer;)V
+
+    iget-boolean p1, p1, Lej1;->d:Z
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v1, v8}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Lub;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p1, p0, v0, v4}, Lub;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v1, p1}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    :goto_1
+    invoke-virtual {v3, v2}, Lkme;->s(Landroid/view/View;)Lzbb;
 
     move-result-object p1
 
-    sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    iget-object p1, p1, Lzbb;->c:Lzlb;
 
-    invoke-virtual {p1, v0}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lk7b;->setCustomTheme(Lzlb;)V
 
-    move-result-object p1
-
-    new-instance v0, Lc3b;
-
-    invoke-direct {v0, v1}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget v2, Lpra;->K0:I
-
-    new-instance v3, Lirf;
-
-    invoke-direct {v3, v2}, Lirf;-><init>(I)V
-
-    invoke-virtual {v0, v3}, Lc3b;->g(Lnrf;)V
-
-    sget v2, Lpra;->J0:I
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    new-instance v3, Lkrf;
-
-    invoke-static {p1}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-direct {v3, v2, p1}, Lkrf;-><init>(ILjava/util/List;)V
-
-    invoke-virtual {v0, v3}, Lc3b;->a(Lnrf;)V
-
-    new-instance p1, Lq3b;
-
-    sget v2, Llra;->d:I
-
-    invoke-direct {p1, v2}, Lq3b;-><init>(I)V
-
-    invoke-virtual {v0, p1}, Lc3b;->e(Lu3b;)V
-
-    invoke-virtual {v0}, Lc3b;->i()Lb3b;
-
-    :cond_2
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
-
-    :cond_3
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-void
 .end method

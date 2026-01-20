@@ -1,61 +1,29 @@
-.class public final Lane;
-.super Lwe5;
+.class public abstract Lane;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lane;
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lane;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lane;->a:Lane;
+    iput-object p1, p0, Lane;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public a()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lane;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x195d1509
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ShowPlaceholderSurnameEvent"
+    iget-object v0, p0, Lane;->a:Ljava/lang/String;
 
     return-object v0
 .end method

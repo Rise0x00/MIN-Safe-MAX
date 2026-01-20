@@ -1,94 +1,47 @@
-.class public final Leke;
+.class public abstract synthetic Leke;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljke;
-
-.field public b:Ll40;
-
-.field public c:Ls0a;
-
-.field public d:Landroid/content/Context;
-
-.field public e:Lcwc;
-
-.field public f:Lrh1;
-
-.field public g:Lw68;
-
-.field public h:Lxsd;
-
-.field public i:Ljava/lang/Integer;
-
-.field public j:Z
-
-.field public k:Lorg/webrtc/EglBase$Context;
-
-.field public l:Ll68;
-
-.field public m:Ltuf;
-
-.field public n:Lcid;
-
-.field public o:Lfke;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
-# virtual methods
-.method public final a()Lgke;
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object v0, p0, Leke;->a:Ljke;
+    const/4 v0, 0x4
 
-    if-eqz v0, :cond_0
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    iget-object v0, p0, Leke;->b:Ll40;
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    array-length v0, v0
 
-    iget-object v0, p0, Leke;->l:Ll68;
+    new-array v0, v0, [I
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Leke;->d:Landroid/content/Context;
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_0
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, p0, Leke;->c:Ls0a;
+    :catch_0
+    const/4 v1, 0x3
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x2
 
-    iget-object v0, p0, Leke;->e:Lcwc;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    if-eqz v0, :cond_0
+    :catch_1
+    sput-object v0, Leke;->$EnumSwitchMapping$0:[I
 
-    iget-object v0, p0, Leke;->f:Lrh1;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Leke;->g:Lw68;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Leke;->n:Lcid;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Leke;->h:Lxsd;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lgke;
-
-    invoke-direct {v0, p0}, Lgke;-><init>(Leke;)V
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
+    return-void
 .end method

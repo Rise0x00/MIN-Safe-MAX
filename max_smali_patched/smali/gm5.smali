@@ -1,431 +1,55 @@
-.class public abstract Lgm5;
-.super Ljava/lang/Object;
+.class public final Lgm5;
+.super Lhm5;
 .source "SourceFile"
 
 
-# static fields
-.field public static a:Lr98;
+# instance fields
+.field public final c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/Runnable;J)V
+    .locals 0
+
+    invoke-direct {p0, p2, p3}, Lhm5;-><init>(J)V
+
+    iput-object p1, p0, Lgm5;->c:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
     .locals 1
 
-    sget-object v0, Lhm5;->b:Lhm5;
+    iget-object v0, p0, Lgm5;->c:Ljava/lang/Runnable;
 
-    sput-object v0, Lgm5;->a:Lr98;
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/Class;Ljava/lang/String;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Lgm5;->a:Lr98;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x6
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
+    invoke-super {p0}, Lhm5;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lgm5;->a:Lr98;
+    iget-object v1, p0, Lgm5;->c:Ljava/lang/Runnable;
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {v0, p0, p1}, Lr98;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs b(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x6
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, p0, p1}, Lr98;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x6
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    invoke-interface {v0, p0, p1, p2}, Lr98;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static d(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p2, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, p0, p1}, Lr98;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static e(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    filled-new-array {p2, p3}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    invoke-static {p3, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, p0, p1}, Lr98;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static f(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    filled-new-array {p2, p3, p4}, [Ljava/lang/Object;
-
-    move-result-object p2
-
-    const/4 p3, 0x0
-
-    invoke-static {p3, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lgm5;->a:Lr98;
-
-    invoke-interface {p2, v1}, Lr98;->h(I)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    sget-object p2, Lgm5;->a:Lr98;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {p2, p0, p1}, Lr98;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static g(Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    filled-new-array {p1, p2, p3}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    invoke-static {p2, p0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "RequestLoggingListener"
-
-    invoke-interface {v0, p1, p0}, Lr98;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs h(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x2
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, p0, p1}, Lr98;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static i(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Exception;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x5
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {v0, p0, p1, p2}, Lr98;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs j(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x5
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, p0, p1}, Lr98;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static k(Ljava/lang/Exception;)V
-    .locals 3
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x5
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const-string v1, "OkHttpNetworkFetchProducer"
-
-    const-string v2, "Exception when closing response body"
-
-    invoke-interface {v0, v1, v2, p0}, Lr98;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs l(Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
-
-    const/4 v0, 0x5
-
-    sget-object v1, Lgm5;->a:Lr98;
-
-    invoke-interface {v1, v0}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-static {v0, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-class p2, Ljv0;
-
-    invoke-static {p2, p1, p0}, Lgm5;->i(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Exception;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs m(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x5
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, p0, p1}, Lr98;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public static varargs n(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    .locals 2
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x6
-
-    invoke-interface {v0, v1}, Lr98;->h(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lgm5;->a:Lr98;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p1, p2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-interface {v0, p0, p1}, Lr98;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

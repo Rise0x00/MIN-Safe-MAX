@@ -1,102 +1,103 @@
 .class public final Ls8c;
-.super Ly8c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Llpf;
+
+.field public final b:Lmbg;
+
+.field public final c:Lr23;
+
+.field public final d:Lzb4;
+
+.field public final e:Lo58;
+
+.field public final f:Lo58;
+
+.field public g:Lmmf;
+
+.field public final h:Lspf;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Llpf;Lmbg;Lo58;Lr23;Lo58;Lkotlinx/coroutines/internal/ContextScope;)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ls8c;->a:J
+    iput-object p1, p0, Ls8c;->a:Llpf;
+
+    iput-object p2, p0, Ls8c;->b:Lmbg;
+
+    iput-object p4, p0, Ls8c;->c:Lr23;
+
+    iput-object p6, p0, Ls8c;->d:Lzb4;
+
+    iput-object p5, p0, Ls8c;->e:Lo58;
+
+    iput-object p3, p0, Ls8c;->f:Lo58;
+
+    const/4 p3, 0x0
+
+    invoke-static {p3}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p3
+
+    iput-object p3, p0, Ls8c;->h:Lspf;
+
+    new-instance p3, Lr83;
+
+    const/16 p4, 0xc
+
+    invoke-direct {p3, p1, p4}, Lr83;-><init>(Ld76;I)V
+
+    new-instance p1, Luj0;
+
+    const/16 p4, 0x1c
+
+    invoke-direct {p1, p4}, Luj0;-><init>(I)V
+
+    invoke-static {p3, p1}, Lgu0;->l(Ld76;Lbr6;)Lx25;
+
+    move-result-object p1
+
+    new-instance v0, Ldda;
+
+    const/4 v6, 0x4
+
+    const/4 v7, 0x5
+
+    const/4 v1, 0x2
+
+    const-class v3, Ls8c;
+
+    const-string v4, "updatePinnedMessage"
+
+    const-string v5, "updatePinnedMessage(Lru/ok/tamtam/chats/Chat;)V"
+
+    move-object v2, p0
+
+    invoke-direct/range {v0 .. v7}, Ldda;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    new-instance p3, Lm96;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p3, p1, v0, p4}, Lm96;-><init>(Ld76;Lbr6;I)V
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->a()Lsb4;
+
+    move-result-object p1
+
+    invoke-static {p3, p1}, Lgu0;->v(Ld76;Lqb4;)Ld76;
+
+    move-result-object p1
+
+    invoke-static {p1, p6}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ls8c;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ls8c;
-
-    iget-wide v3, p0, Ls8c;->a:J
-
-    iget-wide v5, p1, Ls8c;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/16 v0, 0x1000
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ls8c;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/16 v0, 0x1000
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "DebugProfileInfo(id="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ls8c;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

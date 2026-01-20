@@ -2,313 +2,192 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ley0;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lwcd;
-
-.field public final c:Lzhd;
-
-.field public final d:Lq97;
-
-.field public final e:Ley0;
-
-.field public final f:Ljava/lang/String;
-
-.field public g:Ljava/lang/Object;
-
-.field public final h:I
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Lwcd;Lzhd;Lq97;Ley0;Ljava/lang/String;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhp0;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lhp0;->b:Lwcd;
-
-    iput-object p3, p0, Lhp0;->c:Lzhd;
-
-    iput-object p4, p0, Lhp0;->d:Lq97;
-
-    iput-object p5, p0, Lhp0;->e:Ley0;
-
-    iput-object p6, p0, Lhp0;->f:Ljava/lang/String;
-
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result p1
-
-    mul-int/lit8 p1, p1, 0x1f
-
-    const/4 v0, 0x0
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p2}, Lwcd;->hashCode()I
-
-    move-result p2
-
-    goto :goto_0
-
-    :cond_0
-    move p2, v0
-
-    :goto_0
-    add-int/2addr p1, p2
-
-    mul-int/lit8 p1, p1, 0x1f
-
-    invoke-virtual {p3}, Lzhd;->hashCode()I
-
-    move-result p2
-
-    add-int/2addr p2, p1
-
-    mul-int/lit8 p2, p2, 0x1f
-
-    invoke-virtual {p4}, Lq97;->hashCode()I
-
-    move-result p1
-
-    add-int/2addr p1, p2
-
-    mul-int/lit8 p1, p1, 0x1f
-
-    if-eqz p5, :cond_1
-
-    invoke-virtual {p5}, Ljava/lang/Object;->hashCode()I
-
-    move-result p2
-
-    goto :goto_1
-
-    :cond_1
-    move p2, v0
-
-    :goto_1
-    add-int/2addr p1, p2
-
-    mul-int/lit8 p1, p1, 0x1f
-
-    if-eqz p6, :cond_2
-
-    invoke-virtual {p6}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    :cond_2
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lhp0;->h:I
-
-    invoke-static {}, Lcom/facebook/common/time/RealtimeSinceBootClock;->get()Lcom/facebook/common/time/RealtimeSinceBootClock;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    return-void
-.end method
+.field public a:Lcn6;
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final a(Lui8;Lgp0;)V
+    .locals 6
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lhp0;->a:Lcn6;
 
-    return v0
-.end method
+    const-string v1, "BiometricPromptCompat"
 
-.method public final b()Ljava/lang/String;
-    .locals 1
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lhp0;->a:Ljava/lang/String;
+    const-string p1, "Unable to start authentication. Client fragment manager was null."
 
-    return-object v0
-.end method
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    return-void
 
     :cond_0
-    if-eqz p1, :cond_1
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->P()Z
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result v0
 
-    move-result-object v1
+    if-eqz v0, :cond_1
 
-    goto :goto_0
+    const-string p1, "Unable to start authentication. Called after onSaveInstanceState()."
+
+    invoke-static {v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
 
     :cond_1
-    const/4 v1, 0x0
+    iget-object v0, p0, Lhp0;->a:Lcn6;
 
-    :goto_0
-    const-class v2, Lhp0;
+    const-string v1, "androidx.biometric.BiometricFragment"
 
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    move-result v1
+    move-result-object v2
 
-    const/4 v2, 0x0
+    check-cast v2, Landroidx/biometric/BiometricFragment;
 
-    if-nez v1, :cond_2
+    const/4 v3, 0x1
 
-    return v2
+    if-nez v2, :cond_2
+
+    new-instance v2, Landroidx/biometric/BiometricFragment;
+
+    invoke-direct {v2}, Landroidx/biometric/BiometricFragment;-><init>()V
+
+    new-instance v4, Lqf0;
+
+    invoke-direct {v4, v0}, Lqf0;-><init>(Landroidx/fragment/app/c;)V
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4, v5, v2, v1, v3}, Lqf0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
+
+    invoke-virtual {v4, v3}, Lqf0;->d(Z)I
+
+    invoke-virtual {v0, v3}, Landroidx/fragment/app/c;->z(Z)Z
+
+    invoke-virtual {v0}, Landroidx/fragment/app/c;->E()V
 
     :cond_2
-    check-cast p1, Lhp0;
-
-    iget-object v1, p0, Lhp0;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lhp0;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lhp0;->b:Lwcd;
-
-    iget-object v3, p1, Lhp0;->b:Lwcd;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lhp0;->c:Lzhd;
-
-    iget-object v3, p1, Lhp0;->c:Lzhd;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lhp0;->d:Lq97;
-
-    iget-object v3, p1, Lhp0;->d:Lq97;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lhp0;->e:Ley0;
-
-    iget-object v3, p1, Lhp0;->e:Ley0;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lhp0;->f:Ljava/lang/String;
-
-    iget-object p1, p1, Lhp0;->f:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    return v0
-
-    :cond_3
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lhp0;->h:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "BitmapMemoryCacheKey(sourceString="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lhp0;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", resizeOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhp0;->b:Lwcd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", rotationOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhp0;->c:Lzhd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", imageDecodeOptions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhp0;->d:Lq97;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", postprocessorCacheKey="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhp0;->e:Ley0;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", postprocessorName="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhp0;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Landroidx/fragment/app/a;->r()Landroidx/fragment/app/b;
 
     move-result-object v0
 
-    return-object v0
+    if-nez v0, :cond_3
+
+    const-string p1, "BiometricFragment"
+
+    const-string p2, "Not launching prompt. Client activity was null."
+
+    invoke-static {p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    :cond_3
+    iget-object v1, v2, Landroidx/biometric/BiometricFragment;->j1:Landroidx/biometric/BiometricViewModel;
+
+    iput-object p1, v1, Landroidx/biometric/BiometricViewModel;->c:Lui8;
+
+    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0x1e
+
+    if-ge p1, v4, :cond_4
+
+    if-nez p2, :cond_4
+
+    invoke-static {}, Lklj;->a()Lgp0;
+
+    move-result-object p1
+
+    iput-object p1, v1, Landroidx/biometric/BiometricViewModel;->d:Lgp0;
+
+    goto :goto_0
+
+    :cond_4
+    iput-object p2, v1, Landroidx/biometric/BiometricViewModel;->d:Lgp0;
+
+    :goto_0
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->s0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->j1:Landroidx/biometric/BiometricViewModel;
+
+    sget p2, Lddd;->confirm_device_credential_password:I
+
+    invoke-virtual {v2, p2}, Landroidx/fragment/app/a;->w(I)Ljava/lang/String;
+
+    move-result-object p2
+
+    iput-object p2, p1, Landroidx/biometric/BiometricViewModel;->h:Ljava/lang/String;
+
+    goto :goto_1
+
+    :cond_5
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->j1:Landroidx/biometric/BiometricViewModel;
+
+    const/4 p2, 0x0
+
+    iput-object p2, p1, Landroidx/biometric/BiometricViewModel;->h:Ljava/lang/String;
+
+    :goto_1
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->s0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    new-instance p1, Lle5;
+
+    new-instance p2, Lep0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, v1}, Lep0;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p1, p2}, Lle5;-><init>(Lep0;)V
+
+    const/16 p2, 0xff
+
+    invoke-virtual {p1, p2}, Lle5;->i(I)I
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->j1:Landroidx/biometric/BiometricViewModel;
+
+    iput-boolean v3, p1, Landroidx/biometric/BiometricViewModel;->k:Z
+
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->u0()V
+
+    return-void
+
+    :cond_6
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->j1:Landroidx/biometric/BiometricViewModel;
+
+    iget-boolean p1, p1, Landroidx/biometric/BiometricViewModel;->m:Z
+
+    if-eqz p1, :cond_7
+
+    iget-object p1, v2, Landroidx/biometric/BiometricFragment;->i1:Landroid/os/Handler;
+
+    new-instance p2, Lbp0;
+
+    invoke-direct {p2, v2}, Lbp0;-><init>(Landroidx/biometric/BiometricFragment;)V
+
+    const-wide/16 v0, 0x258
+
+    invoke-virtual {p1, p2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+
+    :cond_7
+    invoke-virtual {v2}, Landroidx/biometric/BiometricFragment;->z0()V
+
+    return-void
 .end method

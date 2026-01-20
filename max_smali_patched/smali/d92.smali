@@ -4,165 +4,119 @@
 
 
 # static fields
-.field public static final a:[C
+.field public static final c:Ld92;
 
-.field public static final b:[B
+
+# instance fields
+.field public final a:Ljava/util/Set;
+
+.field public final b:Lwcj;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 3
 
-    const/16 v0, 0x75
+    new-instance v0, Ljava/util/ArrayList;
 
-    new-array v0, v0, [C
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Ld92;->a:[C
+    new-instance v1, Ld92;
 
-    const/16 v0, 0x7e
+    invoke-static {v0}, Lpi3;->d0(Ljava/lang/Iterable;)Ljava/util/Set;
 
-    new-array v0, v0, [B
+    move-result-object v0
 
-    sput-object v0, Ld92;->b:[B
+    const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    invoke-direct {v1, v0, v2}, Ld92;-><init>(Ljava/util/Set;Lwcj;)V
 
-    move v1, v0
-
-    :goto_0
-    const/16 v2, 0x20
-
-    if-ge v1, v2, :cond_0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x62
-
-    const/16 v3, 0x8
-
-    invoke-static {v1, v3}, Ld92;->a(CI)V
-
-    const/16 v1, 0x74
-
-    const/16 v4, 0x9
-
-    invoke-static {v1, v4}, Ld92;->a(CI)V
-
-    const/16 v1, 0x6e
-
-    const/16 v5, 0xa
-
-    invoke-static {v1, v5}, Ld92;->a(CI)V
-
-    const/16 v1, 0xc
-
-    const/16 v6, 0x66
-
-    invoke-static {v6, v1}, Ld92;->a(CI)V
-
-    const/16 v1, 0x72
-
-    const/16 v6, 0xd
-
-    invoke-static {v1, v6}, Ld92;->a(CI)V
-
-    const/16 v1, 0x2f
-
-    invoke-static {v1, v1}, Ld92;->a(CI)V
-
-    const/16 v1, 0x22
-
-    invoke-static {v1, v1}, Ld92;->a(CI)V
-
-    const/16 v7, 0x5c
-
-    invoke-static {v7, v7}, Ld92;->a(CI)V
-
-    sget-object v8, Ld92;->b:[B
-
-    :goto_1
-    const/16 v9, 0x21
-
-    if-ge v0, v9, :cond_1
-
-    const/16 v9, 0x7f
-
-    aput-byte v9, v8, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x3
-
-    aput-byte v0, v8, v4
-
-    aput-byte v0, v8, v5
-
-    aput-byte v0, v8, v6
-
-    aput-byte v0, v8, v2
-
-    const/16 v0, 0x2c
-
-    const/4 v2, 0x4
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x3a
-
-    const/4 v2, 0x5
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x7b
-
-    const/4 v2, 0x6
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x7d
-
-    const/4 v2, 0x7
-
-    aput-byte v2, v8, v0
-
-    const/16 v0, 0x5b
-
-    aput-byte v3, v8, v0
-
-    const/16 v0, 0x5d
-
-    aput-byte v4, v8, v0
-
-    const/4 v0, 0x1
-
-    aput-byte v0, v8, v1
-
-    const/4 v0, 0x2
-
-    aput-byte v0, v8, v7
+    sput-object v1, Ld92;->c:Ld92;
 
     return-void
 .end method
 
-.method public static a(CI)V
-    .locals 1
+.method public constructor <init>(Ljava/util/Set;Lwcj;)V
+    .locals 0
 
-    const/16 v0, 0x75
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_0
+    iput-object p1, p0, Ld92;->a:Ljava/util/Set;
 
-    sget-object v0, Ld92;->a:[C
+    iput-object p2, p0, Ld92;->b:Lwcj;
 
-    int-to-char p1, p1
+    return-void
+.end method
 
-    aput-char p1, v0, p0
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Ld92;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Ld92;
+
+    iget-object v0, p1, Ld92;->a:Ljava/util/Set;
+
+    iget-object v1, p0, Ld92;->a:Ljava/util/Set;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Ld92;->b:Lwcj;
+
+    iget-object v0, p0, Ld92;->b:Lwcj;
+
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    return-void
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Ld92;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    add-int/lit16 v0, v0, 0x5ed
+
+    mul-int/lit8 v0, v0, 0x29
+
+    iget-object v1, p0, Ld92;->b:Lwcj;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    return v0
 .end method

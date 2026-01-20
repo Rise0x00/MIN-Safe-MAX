@@ -1,48 +1,35 @@
-.class public final Lcv1;
-.super Lp14;
+.class public interface abstract Lcv1;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lqn1;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lqn1;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public i(Lyk1;)V
     .locals 0
-
-    iput-object p1, p0, Lcv1;->X:Lqn1;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
+.method public j(Lyk1;Landroid/graphics/Point;)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return-void
+.end method
 
-    iput-object p1, p0, Lcv1;->d:Ljava/lang/Object;
+.method public l(Lyk1;)V
+    .locals 0
 
-    iget p1, p0, Lcv1;->o:I
+    return-void
+.end method
 
-    const/high16 v0, -0x80000000
+.method public q(Lyk1;)V
+    .locals 0
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lcv1;->o:I
+.method public u()V
+    .locals 0
 
-    iget-object p1, p0, Lcv1;->X:Lqn1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lqn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

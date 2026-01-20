@@ -1,124 +1,74 @@
-.class public Liz8;
+.class public final Liz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Ljava/lang/Object;
-
-.field public static final c:Ljava/util/HashMap;
+# interfaces
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public final a:Lzz8;
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Ltb9;
+
+.field public final e:Loz8;
+
+.field public final f:Ljava/util/HashMap;
+
+.field public final synthetic g:Lcc9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Liz8;->b:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Liz8;->c:Ljava/util/HashMap;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lone/me/android/media/service/OneMeMediaSessionService;Lzi5;Lec7;Lec7;Lec7;Ls9d;Landroid/os/Bundle;Landroid/os/Bundle;Lmxb;)V
-    .locals 11
-
-    const-string v0, ""
+.method public constructor <init>(Lcc9;Ljava/lang/String;IILpz8;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v2, Liz8;->b:Ljava/lang/Object;
+    iput-object p1, p0, Liz8;->g:Lcc9;
 
-    monitor-enter v2
+    new-instance p1, Ljava/util/HashMap;
 
-    :try_start_0
-    sget-object v3, Liz8;->c:Ljava/util/HashMap;
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
 
-    invoke-virtual {v3, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    iput-object p1, p0, Liz8;->f:Ljava/util/HashMap;
 
-    move-result v4
+    iput-object p2, p0, Liz8;->a:Ljava/lang/String;
 
-    if-nez v4, :cond_0
+    iput p3, p0, Liz8;->b:I
 
-    invoke-virtual {v3, v0, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput p4, p0, Liz8;->c:I
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance p1, Ltb9;
 
-    new-instance v0, Lzz8;
+    invoke-direct {p1, p2, p3, p4}, Ltb9;-><init>(Ljava/lang/String;II)V
 
-    move-object v1, p0
+    iput-object p1, p0, Liz8;->d:Ltb9;
 
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move-object v5, p4
-
-    move-object/from16 v6, p5
-
-    move-object/from16 v7, p6
-
-    move-object/from16 v8, p7
-
-    move-object/from16 v9, p8
-
-    move-object/from16 v10, p9
-
-    invoke-direct/range {v0 .. v10}, Lzz8;-><init>(Liz8;Lone/me/android/media/service/OneMeMediaSessionService;Lzi5;Lec7;Lec7;Lec7;Ls9d;Landroid/os/Bundle;Landroid/os/Bundle;Lmxb;)V
-
-    iput-object v0, p0, Liz8;->a:Lzz8;
+    iput-object p5, p0, Liz8;->e:Loz8;
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_0
-    :try_start_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v3, "Session ID must be unique. ID="
-
-    invoke-direct {v0, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :goto_0
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
 .end method
 
 
 # virtual methods
-.method public final a()Lrtb;
-    .locals 1
+.method public final binderDied()V
+    .locals 3
 
-    iget-object v0, p0, Liz8;->a:Lzz8;
+    iget-object v0, p0, Liz8;->g:Lcc9;
 
-    iget-object v0, v0, Lzz8;->t:Lxub;
+    iget-object v0, v0, Lcc9;->Y:Lqy;
 
-    iget-object v0, v0, Lxub;->a:Lzi5;
+    new-instance v1, Lag8;
 
-    return-object v0
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, p0}, Lag8;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

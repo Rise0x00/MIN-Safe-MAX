@@ -1,151 +1,167 @@
-.class public final enum Lfu3;
-.super Ljava/lang/Enum;
+.class public abstract synthetic Lfu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum X:Lfu3;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static final enum Y:Lfu3;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
-.field public static final synthetic Z:[Lfu3;
+.field public static final synthetic $EnumSwitchMapping$2:[I
 
-.field public static final enum b:Lfu3;
+.field public static final synthetic $EnumSwitchMapping$3:[I
 
-.field public static final enum c:Lfu3;
-
-.field public static final enum d:Lfu3;
-
-.field public static final enum o:Lfu3;
-
-
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final synthetic $EnumSwitchMapping$4:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 10
+    .locals 6
 
-    new-instance v0, Lfu3;
+    const/4 v0, 0x2
 
-    const-string v1, "TT"
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    const/4 v2, 0x0
+    move-result-object v1
 
-    invoke-direct {v0, v1, v2, v1}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    array-length v1, v1
 
-    new-instance v1, Lfu3;
+    new-array v1, v1, [I
 
-    const-string v2, "OFFICIAL"
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {v1, v2, v3, v2}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    sput-object v1, Lfu3;->b:Lfu3;
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    new-instance v2, Lfu3;
+    :catch_1
+    sput-object v1, Lfu3;->$EnumSwitchMapping$0:[I
 
-    const-string v3, "PRIVATE"
+    invoke-static {v0}, Lt02;->w(I)[I
 
-    const/4 v4, 0x2
+    move-result-object v1
 
-    invoke-direct {v2, v3, v4, v3}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    array-length v1, v1
 
-    new-instance v3, Lfu3;
+    new-array v1, v1, [I
 
-    const-string v4, "BOT"
+    :try_start_2
+    aput v2, v1, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
+    :catch_2
+    :try_start_3
+    aput v0, v1, v3
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v1, Lfu3;->$EnumSwitchMapping$1:[I
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Lt02;->w(I)[I
+
+    move-result-object v4
+
+    array-length v4, v4
+
+    new-array v4, v4, [I
+
+    :try_start_4
+    aput v2, v4, v3
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    aput v0, v4, v2
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
     const/4 v5, 0x3
 
-    invoke-direct {v3, v4, v5, v4}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    :try_start_6
+    aput v5, v4, v0
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    sput-object v3, Lfu3;->c:Lfu3;
+    :catch_6
+    :try_start_7
+    aput v1, v4, v5
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-    new-instance v4, Lfu3;
+    :catch_7
+    sput-object v4, Lfu3;->$EnumSwitchMapping$2:[I
 
-    const-string v5, "SERVICE_ACCOUNT"
+    invoke-static {v5}, Lt02;->w(I)[I
 
-    const/4 v6, 0x4
+    move-result-object v1
 
-    invoke-direct {v4, v5, v6, v5}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    array-length v1, v1
 
-    sput-object v4, Lfu3;->d:Lfu3;
+    new-array v1, v1, [I
 
-    new-instance v5, Lfu3;
+    :try_start_8
+    aput v2, v1, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    const-string v6, "HAS_WEBAPP"
+    :catch_8
+    :try_start_9
+    aput v0, v1, v2
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    const/4 v7, 0x5
+    :catch_9
+    :try_start_a
+    aput v5, v1, v0
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    invoke-direct {v5, v6, v7, v6}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    :catch_a
+    sput-object v1, Lfu3;->$EnumSwitchMapping$3:[I
 
-    sput-object v5, Lfu3;->o:Lfu3;
+    invoke-static {v5}, Lt02;->w(I)[I
 
-    new-instance v6, Lfu3;
+    move-result-object v1
 
-    const-string v7, "RESTRICTED"
+    array-length v1, v1
 
-    const/4 v8, 0x6
+    new-array v1, v1, [I
 
-    invoke-direct {v6, v7, v8, v7}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    :try_start_b
+    aput v2, v1, v3
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
 
-    sput-object v6, Lfu3;->X:Lfu3;
+    :catch_b
+    :try_start_c
+    aput v0, v1, v2
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_c
 
-    new-instance v7, Lfu3;
+    :catch_c
+    :try_start_d
+    aput v5, v1, v0
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_d
 
-    const-string v8, "NO_FORWARD"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9, v8}, Lfu3;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lfu3;->Y:Lfu3;
-
-    filled-new-array/range {v0 .. v7}, [Lfu3;
-
-    move-result-object v0
-
-    sput-object v0, Lfu3;->Z:[Lfu3;
+    :catch_d
+    sput-object v1, Lfu3;->$EnumSwitchMapping$4:[I
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lfu3;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lfu3;
-    .locals 1
-
-    const-class v0, Lfu3;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lfu3;
-
-    return-object p0
-.end method
-
-.method public static values()[Lfu3;
-    .locals 1
-
-    sget-object v0, Lfu3;->Z:[Lfu3;
-
-    invoke-virtual {v0}, [Lfu3;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lfu3;
-
-    return-object v0
 .end method

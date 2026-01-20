@@ -1,49 +1,30 @@
 .class public final Lry2;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvy2;
 
 
 # instance fields
-.field public final synthetic X:Lsy2;
+.field public final a:Ljava/lang/CharSequence;
 
-.field public Y:I
+.field public final b:Ljava/lang/Long;
 
-.field public d:Lsy2;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Lsy2;Lp14;)V
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/Long;Ljava/lang/Long;)V
     .locals 0
 
-    iput-object p1, p0, Lry2;->X:Lsy2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lry2;->a:Ljava/lang/CharSequence;
+
+    iput-object p2, p0, Lry2;->b:Ljava/lang/Long;
+
+    iput-object p3, p0, Lry2;->c:Ljava/lang/Long;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lry2;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lry2;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lry2;->Y:I
-
-    iget-object p1, p0, Lry2;->X:Lsy2;
-
-    invoke-virtual {p1, p0}, Lsy2;->g(Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

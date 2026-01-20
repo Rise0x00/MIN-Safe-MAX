@@ -1,65 +1,51 @@
 .class public final Lkmg;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/util/LruCache;
+# instance fields
+.field public final synthetic X:Lxmg;
+
+.field public Y:I
+
+.field public d:Lp0b;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lxmg;Lo84;)V
+    .locals 0
 
-    new-instance v0, Landroid/util/LruCache;
+    iput-object p1, p0, Lkmg;->X:Lxmg;
 
-    const/16 v1, 0x3e8
-
-    invoke-direct {v0, v1}, Landroid/util/LruCache;-><init>(I)V
-
-    sput-object v0, Lkmg;->a:Landroid/util/LruCache;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Limg;
-    .locals 7
 
-    sget-object v0, Lkmg;->a:Landroid/util/LruCache;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, p0, Lkmg;->o:Ljava/lang/Object;
 
-    move-result-object v1
+    iget p1, p0, Lkmg;->Y:I
 
-    check-cast v1, Ljmg;
+    const/high16 v0, -0x80000000
 
-    const/4 v2, 0x0
+    or-int/2addr p1, v0
 
-    if-nez v1, :cond_0
+    iput p1, p0, Lkmg;->Y:I
 
-    return-object v2
+    iget-object p1, p0, Lkmg;->X:Lxmg;
 
-    :cond_0
-    iget-wide v3, v1, Ljmg;->b:J
+    const/4 v0, 0x0
 
-    const-wide/32 v5, 0x36ee80
+    invoke-virtual {p1, v0, p0}, Lxmg;->c(Lp0b;Lo84;)Ljava/lang/Object;
 
-    add-long/2addr v3, v5
+    move-result-object p1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_1
-
-    iget-object p0, v1, Ljmg;->a:Limg;
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {v0, p0}, Landroid/util/LruCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v2
+    return-object p1
 .end method

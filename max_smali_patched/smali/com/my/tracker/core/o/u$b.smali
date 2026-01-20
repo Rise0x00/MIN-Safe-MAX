@@ -67,7 +67,7 @@
 .end method
 
 .method public static a(Landroid/app/Application;Lcom/my/tracker/core/o/u$c;)V
-    .locals 2
+    .locals 3
 
     .line 1
     invoke-static {}, Lcom/my/tracker/core/o/g;->a()Ljava/util/concurrent/Executor;
@@ -103,11 +103,13 @@
     move-result-object p0
 
     .line 6
-    new-instance v1, Lfoh;
+    new-instance v1, Lq9h;
 
-    invoke-direct {v1, p1}, Lfoh;-><init>(Ljava/lang/Object;)V
+    const/16 v2, 0x10
 
-    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/tasks/Task;->b(Ljava/util/concurrent/Executor;Luma;)Lj1j;
+    invoke-direct {v1, v2, p1}, Lq9h;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, v0, v1}, Lcom/google/android/gms/tasks/Task;->b(Ljava/util/concurrent/Executor;Lx1b;)Liqj;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

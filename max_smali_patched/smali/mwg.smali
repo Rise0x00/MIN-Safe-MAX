@@ -2,281 +2,273 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxt6;
-
 
 # instance fields
-.field public final a:Lwog;
+.field public a:Ljava/lang/String;
 
-.field public final b:I
+.field public b:I
 
-.field public final c:J
+.field public c:Z
 
-.field public final d:Ljava/util/concurrent/atomic/AtomicLong;
+.field public d:I
+
+.field public e:Z
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public l:Ljava/lang/String;
+
+.field public m:I
+
+.field public n:I
+
+.field public o:Landroid/text/Layout$Alignment;
+
+.field public p:Landroid/text/Layout$Alignment;
+
+.field public q:I
+
+.field public r:Lzfg;
+
+.field public s:F
+
+.field public t:Ljava/lang/String;
+
+.field public u:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lwog;IJ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmwg;->a:Lwog;
+    const/4 v0, -0x1
 
-    iput p2, p0, Lmwg;->b:I
+    iput v0, p0, Lmwg;->f:I
 
-    iput-wide p3, p0, Lmwg;->c:J
+    iput v0, p0, Lmwg;->g:I
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+    iput v0, p0, Lmwg;->h:I
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    iput v0, p0, Lmwg;->i:I
 
-    iput-object p1, p0, Lmwg;->d:Ljava/util/concurrent/atomic/AtomicLong;
+    iput v0, p0, Lmwg;->j:I
+
+    iput v0, p0, Lmwg;->m:I
+
+    iput v0, p0, Lmwg;->n:I
+
+    iput v0, p0, Lmwg;->q:I
+
+    const v0, 0x7f7fffff    # Float.MAX_VALUE
+
+    iput v0, p0, Lmwg;->s:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lk65;JLub6;Z)V
-    .locals 10
+.method public final a(Lmwg;)V
+    .locals 4
 
-    iget-object p5, p1, Lk65;->a:Lqs8;
+    if-eqz p1, :cond_10
 
-    iget-object p5, p5, Lqs8;->b:Lgs8;
+    iget-boolean v0, p0, Lmwg;->c:Z
 
-    const/4 v0, 0x0
+    const/4 v1, 0x1
 
-    if-nez p5, :cond_0
+    if-nez v0, :cond_0
 
-    :goto_0
-    move p5, v0
+    iget-boolean v0, p1, Lmwg;->c:Z
 
-    goto :goto_1
+    if-eqz v0, :cond_0
+
+    iget v0, p1, Lmwg;->b:I
+
+    iput v0, p0, Lmwg;->b:I
+
+    iput-boolean v1, p0, Lmwg;->c:Z
 
     :cond_0
-    iget-object p5, p5, Lgs8;->a:Landroid/net/Uri;
+    iget v0, p0, Lmwg;->h:I
 
-    invoke-virtual {p5}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+    const/4 v2, -0x1
 
-    move-result-object p5
+    if-ne v0, v2, :cond_1
 
-    if-nez p5, :cond_1
+    iget v0, p1, Lmwg;->h:I
 
-    goto :goto_0
+    iput v0, p0, Lmwg;->h:I
 
     :cond_1
-    const-string v1, "transformer_surface_asset"
+    iget v0, p0, Lmwg;->i:I
 
-    invoke-virtual {p5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne v0, v2, :cond_2
 
-    move-result p5
+    iget v0, p1, Lmwg;->i:I
 
-    :goto_1
-    invoke-virtual {p1, p2, p3}, Lk65;->b(J)J
-
-    move-result-wide p2
-
-    iget-object v1, p0, Lmwg;->d:Ljava/util/concurrent/atomic/AtomicLong;
-
-    if-eqz p4, :cond_7
-
-    iget v2, p4, Lub6;->z:I
-
-    rem-int/lit16 v2, v2, 0xb4
-
-    if-nez v2, :cond_2
-
-    :goto_2
-    move-object v6, p4
-
-    goto :goto_3
+    iput v0, p0, Lmwg;->i:I
 
     :cond_2
-    invoke-virtual {p4}, Lub6;->a()Lrb6;
+    iget-object v0, p0, Lmwg;->a:Ljava/lang/String;
 
-    move-result-object v2
+    if-nez v0, :cond_3
 
-    iget v3, p4, Lub6;->v:I
+    iget-object v0, p1, Lmwg;->a:Ljava/lang/String;
 
-    iput v3, v2, Lrb6;->t:I
+    if-eqz v0, :cond_3
 
-    iget p4, p4, Lub6;->u:I
-
-    iput p4, v2, Lrb6;->u:I
-
-    iput v0, v2, Lrb6;->y:I
-
-    new-instance p4, Lub6;
-
-    invoke-direct {p4, v2}, Lub6;-><init>(Lrb6;)V
-
-    goto :goto_2
-
-    :goto_3
-    if-eqz p5, :cond_3
-
-    const/4 p4, 0x4
-
-    :goto_4
-    move v5, p4
-
-    goto :goto_5
+    iput-object v0, p0, Lmwg;->a:Ljava/lang/String;
 
     :cond_3
-    iget-object p4, v6, Lub6;->n:Ljava/lang/String;
+    iget v0, p0, Lmwg;->f:I
 
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne v0, v2, :cond_4
 
-    invoke-static {p4}, Lcs9;->k(Ljava/lang/String;)Z
+    iget v0, p1, Lmwg;->f:I
 
-    move-result p5
-
-    if-eqz p5, :cond_4
-
-    const/4 p4, 0x2
-
-    goto :goto_4
+    iput v0, p0, Lmwg;->f:I
 
     :cond_4
-    const-string p5, "video/raw"
+    iget v0, p0, Lmwg;->g:I
 
-    invoke-virtual {p4, p5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne v0, v2, :cond_5
 
-    move-result p5
+    iget v0, p1, Lmwg;->g:I
 
-    if-eqz p5, :cond_5
-
-    const/4 p4, 0x3
-
-    goto :goto_4
+    iput v0, p0, Lmwg;->g:I
 
     :cond_5
-    invoke-static {p4}, Lcs9;->m(Ljava/lang/String;)Z
+    iget v0, p0, Lmwg;->n:I
 
-    move-result p5
+    if-ne v0, v2, :cond_6
 
-    if-eqz p5, :cond_6
+    iget v0, p1, Lmwg;->n:I
 
-    const/4 p4, 0x1
-
-    goto :goto_4
-
-    :goto_5
-    iget-object p1, p1, Lk65;->f:Lz65;
-
-    iget-object v7, p1, Lz65;->b:Lec7;
-
-    iget-wide p4, p0, Lmwg;->c:J
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v2
-
-    add-long v8, v2, p4
-
-    iget-object v3, p0, Lmwg;->a:Lwog;
-
-    iget v4, p0, Lmwg;->b:I
-
-    invoke-interface/range {v3 .. v9}, Lwog;->m(IILub6;Ljava/util/List;J)V
-
-    goto :goto_6
+    iput v0, p0, Lmwg;->n:I
 
     :cond_6
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Lmwg;->o:Landroid/text/Layout$Alignment;
 
-    const-string p2, "MIME type not supported "
+    if-nez v0, :cond_7
 
-    invoke-virtual {p2, p4}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p1, Lmwg;->o:Landroid/text/Layout$Alignment;
 
-    move-result-object p2
+    if-eqz v0, :cond_7
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    iput-object v0, p0, Lmwg;->o:Landroid/text/Layout$Alignment;
 
     :cond_7
-    :goto_6
-    invoke-virtual {v1, p2, p3}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+    iget-object v0, p0, Lmwg;->p:Landroid/text/Layout$Alignment;
 
+    if-nez v0, :cond_8
+
+    iget-object v0, p1, Lmwg;->p:Landroid/text/Layout$Alignment;
+
+    if-eqz v0, :cond_8
+
+    iput-object v0, p0, Lmwg;->p:Landroid/text/Layout$Alignment;
+
+    :cond_8
+    iget v0, p0, Lmwg;->q:I
+
+    if-ne v0, v2, :cond_9
+
+    iget v0, p1, Lmwg;->q:I
+
+    iput v0, p0, Lmwg;->q:I
+
+    :cond_9
+    iget v0, p0, Lmwg;->j:I
+
+    if-ne v0, v2, :cond_a
+
+    iget v0, p1, Lmwg;->j:I
+
+    iput v0, p0, Lmwg;->j:I
+
+    iget v0, p1, Lmwg;->k:F
+
+    iput v0, p0, Lmwg;->k:F
+
+    :cond_a
+    iget-object v0, p0, Lmwg;->r:Lzfg;
+
+    if-nez v0, :cond_b
+
+    iget-object v0, p1, Lmwg;->r:Lzfg;
+
+    iput-object v0, p0, Lmwg;->r:Lzfg;
+
+    :cond_b
+    iget v0, p0, Lmwg;->s:F
+
+    const v3, 0x7f7fffff    # Float.MAX_VALUE
+
+    cmpl-float v0, v0, v3
+
+    if-nez v0, :cond_c
+
+    iget v0, p1, Lmwg;->s:F
+
+    iput v0, p0, Lmwg;->s:F
+
+    :cond_c
+    iget-object v0, p0, Lmwg;->t:Ljava/lang/String;
+
+    if-nez v0, :cond_d
+
+    iget-object v0, p1, Lmwg;->t:Ljava/lang/String;
+
+    iput-object v0, p0, Lmwg;->t:Ljava/lang/String;
+
+    :cond_d
+    iget-object v0, p0, Lmwg;->u:Ljava/lang/String;
+
+    if-nez v0, :cond_e
+
+    iget-object v0, p1, Lmwg;->u:Ljava/lang/String;
+
+    iput-object v0, p0, Lmwg;->u:Ljava/lang/String;
+
+    :cond_e
+    iget-boolean v0, p0, Lmwg;->e:Z
+
+    if-nez v0, :cond_f
+
+    iget-boolean v0, p1, Lmwg;->e:Z
+
+    if-eqz v0, :cond_f
+
+    iget v0, p1, Lmwg;->d:I
+
+    iput v0, p0, Lmwg;->d:I
+
+    iput-boolean v1, p0, Lmwg;->e:Z
+
+    :cond_f
+    iget v0, p0, Lmwg;->m:I
+
+    if-ne v0, v2, :cond_10
+
+    iget p1, p1, Lmwg;->m:I
+
+    if-eq p1, v2, :cond_10
+
+    iput p1, p0, Lmwg;->m:I
+
+    :cond_10
     return-void
-.end method
-
-.method public final b()Landroid/view/Surface;
-    .locals 2
-
-    iget-object v0, p0, Lmwg;->a:Lwog;
-
-    iget v1, p0, Lmwg;->b:I
-
-    invoke-interface {v0, v1}, Lwog;->k(I)Landroid/view/Surface;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c()I
-    .locals 2
-
-    iget-object v0, p0, Lmwg;->a:Lwog;
-
-    iget v1, p0, Lmwg;->b:I
-
-    invoke-interface {v0, v1}, Lwog;->g(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final d(Landroid/graphics/Bitmap;Leq3;)I
-    .locals 2
-
-    iget-object v0, p0, Lmwg;->a:Lwog;
-
-    iget v1, p0, Lmwg;->b:I
-
-    invoke-interface {v0, v1, p1, p2}, Lwog;->n(ILandroid/graphics/Bitmap;Leq3;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x2
-
-    return p1
-.end method
-
-.method public final f()V
-    .locals 2
-
-    iget-object v0, p0, Lmwg;->a:Lwog;
-
-    iget v1, p0, Lmwg;->b:I
-
-    invoke-interface {v0, v1}, Lwog;->q(I)V
-
-    return-void
-.end method
-
-.method public final h(J)Z
-    .locals 0
-
-    iget-object p1, p0, Lmwg;->a:Lwog;
-
-    iget p2, p0, Lmwg;->b:I
-
-    invoke-interface {p1, p2}, Lwog;->f(I)Z
-
-    move-result p1
-
-    return p1
 .end method

@@ -1,400 +1,602 @@
 .class public final Lufc;
-.super Lubf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:[Ltfc;
-
-.field public static final d:[Ltfc;
-
-
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:Landroid/text/TextPaint;
 
-.field public b:Ljava/lang/Throwable;
+.field public final b:Landroid/text/TextDirectionHeuristic;
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/text/PrecomputedText$Params;)V
+    .locals 1
 
-    const/4 v0, 0x0
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v1, v0, [Ltfc;
+    .line 13
+    invoke-static {p1}, Lw4;->m(Landroid/text/PrecomputedText$Params;)Landroid/text/TextPaint;
 
-    sput-object v1, Lufc;->c:[Ltfc;
+    move-result-object v0
 
-    new-array v0, v0, [Ltfc;
+    iput-object v0, p0, Lufc;->a:Landroid/text/TextPaint;
 
-    sput-object v0, Lufc;->d:[Ltfc;
+    .line 14
+    invoke-static {p1}, Lw4;->l(Landroid/text/PrecomputedText$Params;)Landroid/text/TextDirectionHeuristic;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+
+    .line 15
+    invoke-static {p1}, Lw4;->c(Landroid/text/PrecomputedText$Params;)I
+
+    move-result v0
+
+    iput v0, p0, Lufc;->c:I
+
+    .line 16
+    invoke-static {p1}, Lw4;->A(Landroid/text/PrecomputedText$Params;)I
+
+    move-result p1
+
+    iput p1, p0, Lufc;->d:I
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/text/TextPaint;Landroid/text/TextDirectionHeuristic;II)V
     .locals 2
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    sget-object v1, Lufc;->d:[Ltfc;
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    if-lt v0, v1, :cond_0
 
-    iput-object v0, p0, Lufc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    .line 3
+    invoke-static {p1}, Ltfc;->i(Landroid/text/TextPaint;)Landroid/text/PrecomputedText$Params$Builder;
+
+    move-result-object v0
+
+    .line 4
+    invoke-static {v0, p3}, Lw4;->k(Landroid/text/PrecomputedText$Params$Builder;I)Landroid/text/PrecomputedText$Params$Builder;
+
+    move-result-object v0
+
+    .line 5
+    invoke-static {v0, p4}, Ltfc;->g(Landroid/text/PrecomputedText$Params$Builder;I)Landroid/text/PrecomputedText$Params$Builder;
+
+    move-result-object v0
+
+    .line 6
+    invoke-static {v0, p2}, Ltfc;->h(Landroid/text/PrecomputedText$Params$Builder;Landroid/text/TextDirectionHeuristic;)Landroid/text/PrecomputedText$Params$Builder;
+
+    move-result-object v0
+
+    .line 7
+    invoke-static {v0}, Ltfc;->q(Landroid/text/PrecomputedText$Params$Builder;)V
+
+    .line 8
+    :cond_0
+    iput-object p1, p0, Lufc;->a:Landroid/text/TextPaint;
+
+    .line 9
+    iput-object p2, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+
+    .line 10
+    iput p3, p0, Lufc;->c:I
+
+    .line 11
+    iput p4, p0, Lufc;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const-string v0, "onNext called with a null value."
+    if-ne p1, p0, :cond_0
 
-    invoke-static {p1, v0}, Lxf5;->b(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lufc;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ltfc;
-
-    array-length v1, v0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    iget-object v3, v3, Ltfc;->a:Lgla;
-
-    invoke-interface {v3, p1}, Lgla;->b(Ljava/lang/Object;)V
+    goto/16 :goto_0
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    instance-of v0, p1, Lufc;
 
-    goto :goto_0
+    if-nez v0, :cond_1
+
+    goto/16 :goto_1
 
     :cond_1
-    return-void
-.end method
+    check-cast p1, Lufc;
 
-.method public final c()V
-    .locals 5
+    iget v0, p0, Lufc;->c:I
 
-    iget-object v0, p0, Lufc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget v1, p1, Lufc;->c:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    if-eq v0, v1, :cond_2
 
-    move-result-object v1
+    goto/16 :goto_1
 
-    sget-object v2, Lufc;->c:[Ltfc;
+    :cond_2
+    iget v0, p0, Lufc;->d:I
 
-    if-ne v1, v2, :cond_0
+    iget v1, p1, Lufc;->d:I
+
+    if-eq v0, v1, :cond_3
+
+    goto/16 :goto_1
+
+    :cond_3
+    iget-object v0, p0, Lufc;->a:Landroid/text/TextPaint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSize()F
+
+    move-result v1
+
+    iget-object v2, p1, Lufc;->a:Landroid/text/TextPaint;
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSize()F
+
+    move-result v3
+
+    cmpl-float v1, v1, v3
+
+    if-eqz v1, :cond_4
+
+    goto/16 :goto_1
+
+    :cond_4
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextScaleX()F
+
+    move-result v1
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextScaleX()F
+
+    move-result v3
+
+    cmpl-float v1, v1, v3
+
+    if-eqz v1, :cond_5
+
+    goto/16 :goto_1
+
+    :cond_5
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSkewX()F
+
+    move-result v1
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSkewX()F
+
+    move-result v3
+
+    cmpl-float v1, v1, v3
+
+    if-eqz v1, :cond_6
 
     goto :goto_1
 
-    :cond_0
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_6
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getLetterSpacing()F
+
+    move-result v1
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getLetterSpacing()F
+
+    move-result v3
+
+    cmpl-float v1, v1, v3
+
+    if-eqz v1, :cond_7
+
+    goto :goto_1
+
+    :cond_7
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getFontFeatureSettings()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getFontFeatureSettings()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    goto :goto_1
+
+    :cond_8
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getFlags()I
+
+    move-result v1
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getFlags()I
+
+    move-result v3
+
+    if-eq v1, v3, :cond_9
+
+    goto :goto_1
+
+    :cond_9
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
+
+    move-result-object v1
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Landroid/os/LocaleList;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_a
+
+    goto :goto_1
+
+    :cond_a
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v1
+
+    if-nez v1, :cond_b
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    check-cast v0, [Ltfc;
+    if-eqz v0, :cond_c
 
-    array-length v1, v0
+    goto :goto_1
 
-    const/4 v2, 0x0
+    :cond_b
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Typeface;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_c
+
+    goto :goto_1
+
+    :cond_c
+    iget-object v0, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+
+    iget-object p1, p1, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+
+    if-ne v0, p1, :cond_d
 
     :goto_0
-    if-ge v2, v1, :cond_2
+    const/4 p1, 0x1
 
-    aget-object v3, v0, v2
+    return p1
 
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    iget-object v3, v3, Ltfc;->a:Lgla;
-
-    invoke-interface {v3}, Lgla;->c()V
-
-    :cond_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
+    :cond_d
     :goto_1
-    return-void
+    const/4 p1, 0x0
+
+    return p1
 .end method
 
-.method public final d(Lzv4;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 13
 
-    iget-object v0, p0, Lufc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lufc;->a:Landroid/text/TextPaint;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSize()F
 
-    move-result-object v0
+    move-result v1
 
-    sget-object v1, Lufc;->c:[Ltfc;
-
-    if-ne v0, v1, :cond_0
-
-    invoke-interface {p1}, Lzv4;->dispose()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final o(Lgla;)V
-    .locals 6
-
-    new-instance v0, Ltfc;
-
-    invoke-direct {v0, p1, p0}, Ltfc;-><init>(Lgla;Lufc;)V
-
-    invoke-interface {p1, v0}, Lgla;->d(Lzv4;)V
-
-    :goto_0
-    iget-object v1, p0, Lufc;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v2
 
-    check-cast v2, [Ltfc;
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextScaleX()F
 
-    sget-object v3, Lufc;->c:[Ltfc;
+    move-result v1
 
-    if-ne v2, v3, :cond_1
-
-    iget-object v0, p0, Lufc;->b:Ljava/lang/Throwable;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1, v0}, Lgla;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {p1}, Lgla;->c()V
-
-    return-void
-
-    :cond_1
-    array-length v3, v2
-
-    add-int/lit8 v4, v3, 0x1
-
-    new-array v4, v4, [Ltfc;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    aput-object v0, v4, v3
-
-    :cond_2
-    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p0, v0}, Lufc;->t(Ltfc;)V
-
-    :cond_3
-    return-void
-
-    :cond_4
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v3
 
-    if-eq v3, v2, :cond_2
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSkewX()F
 
-    goto :goto_0
-.end method
+    move-result v1
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 5
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    const-string v0, "onError called with a null Throwable."
+    move-result-object v4
 
-    invoke-static {p1, v0}, Lxf5;->b(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getLetterSpacing()F
 
-    iget-object v0, p0, Lufc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v1
+    move-result-object v5
 
-    sget-object v2, Lufc;->c:[Ltfc;
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getFlags()I
 
-    if-ne v1, v2, :cond_0
+    move-result v1
 
-    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-void
+    move-result-object v6
 
-    :cond_0
-    iput-object p1, p0, Lufc;->b:Ljava/lang/Throwable;
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v7
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v8
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->isElegantTextHeight()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v9
+
+    iget v0, p0, Lufc;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v11
+
+    iget v0, p0, Lufc;->d:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v12
+
+    iget-object v10, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+
+    filled-new-array/range {v2 .. v12}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Ltfc;
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
 
-    array-length v1, v0
+    move-result v0
 
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_2
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v3, v3, Ltfc;->a:Lgla;
-
-    invoke-interface {v3, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
-
-    :goto_1
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
+    return v0
 .end method
 
-.method public final t(Ltfc;)V
-    .locals 7
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :goto_0
-    iget-object v0, p0, Lufc;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const-string v1, "{"
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v1, [Ltfc;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget-object v2, Lufc;->c:[Ltfc;
+    const-string v2, "textSize="
 
-    if-eq v1, v2, :cond_7
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lufc;->d:[Ltfc;
+    iget-object v2, p0, Lufc;->a:Landroid/text/TextPaint;
 
-    if-ne v1, v2, :cond_0
-
-    goto :goto_4
-
-    :cond_0
-    array-length v3, v1
-
-    const/4 v4, 0x0
-
-    move v5, v4
-
-    :goto_1
-    if-ge v5, v3, :cond_2
-
-    aget-object v6, v1, v5
-
-    if-ne v6, p1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v5, -0x1
-
-    :goto_2
-    if-gez v5, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    const/4 v6, 0x1
-
-    if-ne v3, v6, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    add-int/lit8 v2, v3, -0x1
-
-    new-array v2, v2, [Ltfc;
-
-    invoke-static {v1, v4, v2, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/lit8 v4, v5, 0x1
-
-    sub-int/2addr v3, v5
-
-    sub-int/2addr v3, v6
-
-    invoke-static {v1, v4, v2, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSize()F
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    goto :goto_4
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", textScaleX="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextScaleX()F
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", textSkewX="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextSkewX()F
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", letterSpacing="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getLetterSpacing()F
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", elegantTextHeight="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->isElegantTextHeight()Z
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", textLocale="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTextLocales()Landroid/os/LocaleList;
 
     move-result-object v3
 
-    if-eq v3, v1, :cond_5
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_7
-    :goto_4
-    return-void
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", typeface="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, ", variationSettings="
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getFontVariationSettings()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, ", textDir="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lufc;->b:Landroid/text/TextDirectionHeuristic;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, ", breakStrategy="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lufc;->c:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, ", hyphenationFrequency="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lufc;->d:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

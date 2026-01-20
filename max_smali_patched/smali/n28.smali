@@ -1,21 +1,24 @@
-.class public abstract Ln28;
+.class public interface abstract Ln28;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lk28;
+.implements Lgr6;
 
-# direct methods
-.method public static a(Landroid/widget/PopupWindow;Landroid/graphics/Rect;)V
-    .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setEpicenterBounds(Landroid/graphics/Rect;)V
-
-    return-void
+# virtual methods
+.method public abstract isExternal()Z
 .end method
 
-.method public static b(Landroid/widget/PopupWindow;Z)V
-    .locals 0
+.method public abstract isInfix()Z
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/widget/PopupWindow;->setIsClippedToScreen(Z)V
+.method public abstract isInline()Z
+.end method
 
-    return-void
+.method public abstract isOperator()Z
+.end method
+
+.method public abstract isSuspend()Z
 .end method

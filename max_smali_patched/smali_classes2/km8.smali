@@ -1,54 +1,55 @@
-.class public final synthetic Lkm8;
-.super Lc9;
+.class public final Lkm8;
+.super Lnth;
 .source "SourceFile"
 
-# interfaces
-.implements Lgj6;
 
+# instance fields
+.field public final b:Lspf;
 
-# static fields
-.field public static final Z:Lkm8;
+.field public final c:Lpld;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Lo58;)V
+    .locals 2
 
-    new-instance v0, Lkm8;
+    invoke-direct {p0}, Lnth;-><init>()V
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    const/4 v2, 0x4
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    const/4 v3, 0x3
+    move-result-object v0
 
-    const-class v4, Lvcb;
+    iput-object v0, p0, Lkm8;->b:Lspf;
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lc9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
+    new-instance v1, Lpld;
 
-    sput-object v0, Lkm8;->Z:Lkm8;
+    invoke-direct {v1, v0}, Lpld;-><init>(Lmfa;)V
+
+    iput-object v1, p0, Lkm8;->c:Lpld;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lyzb;
+
+    sget-object v1, Lyzb;->f:[Ljava/lang/String;
+
+    invoke-virtual {p1, v1}, Lyzb;->c([Ljava/lang/String;)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    check-cast p2, Ljava/util/List;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    sget-object p3, Lsm8;->J0:[Les7;
-
-    new-instance p3, Lvcb;
-
-    invoke-direct {p3, p1, p2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p3
 .end method

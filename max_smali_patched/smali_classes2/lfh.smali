@@ -1,94 +1,105 @@
-.class public final synthetic Llfh;
-.super Ljava/lang/Object;
+.class public final enum Llfh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lqi6;
+
+# static fields
+.field public static final enum b:Llfh;
+
+.field public static final enum c:Llfh;
+
+.field public static final enum d:Llfh;
+
+.field public static final synthetic o:[Llfh;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/webapp/settings/WebAppSettingsScreen;
+.field public final a:Lh2d;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/webapp/settings/WebAppSettingsScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Llfh;->a:I
+    new-instance v0, Llfh;
 
-    iput-object p1, p0, Llfh;->b:Lone/me/webapp/settings/WebAppSettingsScreen;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v2, Lh2d;->Y:Lh2d;
+
+    const-string v3, "WITHOUT_COMPRESS"
+
+    invoke-direct {v0, v3, v1, v2}, Llfh;-><init>(Ljava/lang/String;ILh2d;)V
+
+    sput-object v0, Llfh;->b:Llfh;
+
+    new-instance v1, Llfh;
+
+    const/4 v2, 0x1
+
+    sget-object v3, Lh2d;->Z:Lh2d;
+
+    const-string v4, "OPTIMAL"
+
+    invoke-direct {v1, v4, v2, v3}, Llfh;-><init>(Ljava/lang/String;ILh2d;)V
+
+    sput-object v1, Llfh;->c:Llfh;
+
+    new-instance v2, Llfh;
+
+    const/4 v3, 0x2
+
+    sget-object v4, Lh2d;->t0:Lh2d;
+
+    const-string v5, "MAXIMUM"
+
+    invoke-direct {v2, v5, v3, v4}, Llfh;-><init>(Ljava/lang/String;ILh2d;)V
+
+    sput-object v2, Llfh;->d:Llfh;
+
+    filled-new-array {v0, v1, v2}, [Llfh;
+
+    move-result-object v0
+
+    sput-object v0, Llfh;->o:[Llfh;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILh2d;)V
+    .locals 0
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Llfh;->a:I
+    iput-object p3, p0, Llfh;->a:Lh2d;
 
-    sget-object v1, Lybg;->a:Lybg;
+    return-void
+.end method
 
-    iget-object v2, p0, Llfh;->b:Lone/me/webapp/settings/WebAppSettingsScreen;
+.method public static valueOf(Ljava/lang/String;)Llfh;
+    .locals 1
 
-    packed-switch v0, :pswitch_data_0
+    const-class v0, Llfh;
 
-    check-cast p1, Landroid/view/View;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Les7;
+    move-result-object p0
 
-    invoke-virtual {v2}, Lc24;->getRouter()Lyid;
+    check-cast p0, Llfh;
 
-    move-result-object p1
+    return-object p0
+.end method
 
-    invoke-virtual {p1}, Lyid;->C()Z
+.method public static values()[Llfh;
+    .locals 1
 
-    return-object v1
+    sget-object v0, Llfh;->o:[Llfh;
 
-    :pswitch_0
-    check-cast p1, Lfo0;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    sget-object p1, Lone/me/webapp/settings/WebAppSettingsScreen;->Z:[Les7;
+    move-result-object v0
 
-    invoke-virtual {v2}, Lone/me/webapp/settings/WebAppSettingsScreen;->x0()Lxfh;
+    check-cast v0, [Llfh;
 
-    move-result-object p1
-
-    iget-object v0, p1, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    iget-object v2, p1, Lxfh;->Z:Lru7;
-
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ltlf;
-
-    check-cast v2, Lsta;
-
-    invoke-virtual {v2}, Lsta;->b()La54;
-
-    move-result-object v2
-
-    new-instance v3, Lvfh;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, p1, v4}, Lvfh;-><init>(Lxfh;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v0, v2, v4, v3, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

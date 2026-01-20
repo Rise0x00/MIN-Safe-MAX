@@ -2,16 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgr6;
+
 
 # virtual methods
-.method public b()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(Ldr6;J)V
-    .locals 0
-
-    return-void
+.method public abstract invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 .end method

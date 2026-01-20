@@ -1,40 +1,87 @@
-.class public abstract Lwnc;
+.class public final Lwnc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lync;
 
 
-# static fields
-.field public static oneme_contact_not_found_bottom_sheet_negative_button:I = 0x7f0a0655
+# instance fields
+.field public final a:J
 
-.field public static oneme_contact_not_found_bottom_sheet_positive_button:I = 0x7f0a0656
 
-.field public static oneme_invite_action_view_type:I = 0x7f0a06a8
+# direct methods
+.method public constructor <init>(J)V
+    .locals 0
 
-.field public static oneme_invite_by_link_action_menu_item:I = 0x7f0a06a9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_invite_by_phone_action_menu_item:I = 0x7f0a06aa
+    iput-wide p1, p0, Lwnc;->a:J
 
-.field public static oneme_invite_by_phone_continue_button:I = 0x7f0a06ab
+    return-void
+.end method
 
-.field public static oneme_invite_by_phone_description:I = 0x7f0a06ac
 
-.field public static oneme_invite_by_phone_input:I = 0x7f0a06ad
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static oneme_invite_by_phone_title:I = 0x7f0a06ae
+    const/4 v0, 0x1
 
-.field public static oneme_invite_by_phone_toolbar:I = 0x7f0a06af
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_invite_by_qr_action_menu_item:I = 0x7f0a06b0
+    return v0
 
-.field public static oneme_invite_by_qr_bottom_sheet_name:I = 0x7f0a06b1
+    :cond_0
+    instance-of v1, p1, Lwnc;
 
-.field public static oneme_invite_by_qr_bottom_sheet_qr_code:I = 0x7f0a06b2
+    const/4 v2, 0x0
 
-.field public static oneme_invite_by_qr_bottom_sheet_qr_code_share:I = 0x7f0a06b3
+    if-nez v1, :cond_1
 
-.field public static oneme_invite_by_qr_bottom_sheet_short_name:I = 0x7f0a06b4
+    return v2
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_image_stack:I = 0x7f0a06b5
+    :cond_1
+    check-cast p1, Lwnc;
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_invite_button:I = 0x7f0a06b6
+    iget-wide v3, p0, Lwnc;->a:J
 
-.field public static oneme_invite_friends_to_max_bottom_sheet_title:I = 0x7f0a06b7
+    iget-wide v5, p1, Lwnc;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lwnc;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ProfilePhotoUpdate(photoId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lwnc;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

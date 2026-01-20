@@ -1,19 +1,8 @@
-.class public final Lybh;
+.class public interface abstract Lybh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lfs7;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lfs7;"
-        }
-    .end annotation
-
-    sget-object v0, Lxbh;->a:Lxbh;
-
-    return-object v0
+.method public abstract J(JLjava/lang/String;)V
 .end method

@@ -1,43 +1,37 @@
-.class public Lup;
-.super Lot7;
+.class public final Lup;
+.super Ltp;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic o:Landroidx/appcompat/widget/AppCompatTextView;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    iput-object p1, p0, Lup;->o:Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v0, p1}, Lot7;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0}, Ltp;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(I)V
-    .locals 1
+.method public a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
+    .locals 0
 
-    iget-object v0, p0, Lup;->o:Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-static {p2}, Lx4;->f(Landroid/widget/TextView;)Landroid/text/TextDirectionHeuristic;
 
-    invoke-static {v0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->g(Landroidx/appcompat/widget/AppCompatTextView;I)V
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/text/StaticLayout$Builder;->setTextDirection(Landroid/text/TextDirectionHeuristic;)Landroid/text/StaticLayout$Builder;
 
     return-void
 .end method
 
-.method public final o(I)V
-    .locals 1
+.method public b(Landroid/widget/TextView;)Z
+    .locals 0
 
-    iget-object v0, p0, Lup;->o:Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-static {p1}, Lx4;->w(Landroid/widget/TextView;)Z
 
-    invoke-static {v0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->f(Landroidx/appcompat/widget/AppCompatTextView;I)V
+    move-result p1
 
-    return-void
+    return p1
 .end method

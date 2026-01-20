@@ -2,142 +2,196 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ltwh;
-
-
-# static fields
-.field public static final c:Ljava/lang/Object;
-
 
 # instance fields
-.field public volatile a:Ltwh;
+.field public final a:[I
 
-.field public volatile b:Ljava/lang/Object;
+.field public b:Z
+
+.field public c:Z
+
+.field public d:[I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:Landroid/graphics/Rect;
+
+.field public h:I
+
+.field public i:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    sput-object v0, Lnwh;->c:Ljava/lang/Object;
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Lnwh;->a:[I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lnwh;->h:I
+
+    iput v0, p0, Lnwh;->i:I
 
     return-void
 .end method
 
-.method public static a(Ltwh;)Ltwh;
-    .locals 2
+.method public static a(I[I)I
+    .locals 1
 
-    instance-of v0, p0, Lnwh;
+    if-ltz p0, :cond_0
 
-    if-eqz v0, :cond_0
+    array-length v0, p1
 
-    return-object p0
+    if-ge p0, v0, :cond_0
+
+    aget p0, p1, p0
+
+    return p0
 
     :cond_0
-    new-instance v0, Lnwh;
+    const/4 p0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    aget p0, p1, p0
 
-    sget-object v1, Lnwh;->c:Ljava/lang/Object;
+    return p0
+.end method
 
-    iput-object v1, v0, Lnwh;->b:Ljava/lang/Object;
+.method public static c(II)I
+    .locals 1
 
-    iput-object p0, v0, Lnwh;->a:Ltwh;
+    const v0, 0xffffff
 
-    return-object v0
+    and-int/2addr p0, v0
+
+    mul-int/lit8 p1, p1, 0x11
+
+    shl-int/lit8 p1, p1, 0x18
+
+    or-int/2addr p0, p1
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final c()Ljava/lang/Object;
-    .locals 5
+.method public final b(Lp82;ZLandroid/graphics/Rect;[I)V
+    .locals 9
 
-    const-string v0, "Scoped provider was invoked recursively returning different results: "
+    invoke-virtual {p3}, Landroid/graphics/Rect;->width()I
 
-    iget-object v1, p0, Lnwh;->b:Ljava/lang/Object;
+    move-result v0
 
-    sget-object v2, Lnwh;->c:Ljava/lang/Object;
+    invoke-virtual {p3}, Landroid/graphics/Rect;->height()I
 
-    if-ne v1, v2, :cond_3
+    move-result p3
 
-    monitor-enter p0
+    const/4 v1, 0x1
 
-    :try_start_0
-    iget-object v1, p0, Lnwh;->b:Ljava/lang/Object;
+    xor-int/2addr p2, v1
 
-    if-ne v1, v2, :cond_2
+    mul-int v2, p2, v0
 
-    iget-object v1, p0, Lnwh;->a:Ltwh;
+    const/4 v3, 0x0
 
-    invoke-interface {v1}, Ltwh;->c()Ljava/lang/Object;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lnwh;->b:Ljava/lang/Object;
-
-    if-eq v3, v2, :cond_1
-
-    if-ne v3, v1, :cond_0
-
-    goto :goto_0
+    :goto_0
+    move v4, v3
 
     :cond_0
-    new-instance v2, Ljava/lang/IllegalStateException;
+    move v6, v1
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    move v5, v3
 
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_1
+    const/4 v7, 0x4
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-ge v5, v6, :cond_2
 
-    const-string v0, " & "
+    const/16 v8, 0x40
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-gt v6, v8, :cond_2
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lp82;->b()I
 
-    const-string v0, ". This is likely due to a circular dependency."
+    move-result v8
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ge v8, v7, :cond_1
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v5, -0x1
 
-    move-result-object v0
+    move v6, v5
 
-    invoke-direct {v2, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move v5, v3
 
-    throw v2
+    goto :goto_2
 
-    :catchall_0
-    move-exception v0
+    :cond_1
+    shl-int/lit8 v5, v5, 0x4
+
+    invoke-virtual {p1, v7}, Lp82;->i(I)I
+
+    move-result v7
+
+    or-int/2addr v5, v7
+
+    shl-int/lit8 v6, v6, 0x2
 
     goto :goto_1
 
-    :cond_1
-    :goto_0
-    iput-object v1, p0, Lnwh;->b:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lnwh;->a:Ltwh;
-
     :cond_2
-    monitor-exit p0
+    and-int/lit8 v6, v5, 0x3
 
-    return-object v1
+    if-ge v5, v7, :cond_3
 
-    :goto_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move v5, v0
 
-    throw v0
+    goto :goto_2
 
     :cond_3
-    return-object v1
+    shr-int/lit8 v5, v5, 0x2
+
+    :goto_2
+    sub-int v7, v0, v4
+
+    invoke-static {v5, v7}, Ljava/lang/Math;->min(II)I
+
+    move-result v5
+
+    if-lez v5, :cond_4
+
+    add-int v7, v2, v5
+
+    iget-object v8, p0, Lnwh;->a:[I
+
+    aget v6, v8, v6
+
+    invoke-static {p4, v2, v7, v6}, Ljava/util/Arrays;->fill([IIII)V
+
+    add-int/2addr v4, v5
+
+    move v2, v7
+
+    :cond_4
+    if-lt v4, v0, :cond_0
+
+    add-int/lit8 p2, p2, 0x2
+
+    if-lt p2, p3, :cond_5
+
+    return-void
+
+    :cond_5
+    mul-int v2, p2, v0
+
+    invoke-virtual {p1}, Lp82;->c()V
+
+    goto :goto_0
 .end method

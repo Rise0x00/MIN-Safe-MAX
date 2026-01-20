@@ -1,52 +1,84 @@
-.class public final Lu84;
+.class public final synthetic Lu84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lx4e;
+
 
 # instance fields
-.field public final a:Lec7;
+.field public final synthetic a:I
 
-.field public final b:J
+.field public final synthetic b:La94;
 
-.field public final c:J
+.field public final synthetic c:I
 
-.field public final d:J
+.field public final synthetic d:Ljava/lang/Cloneable;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/List;)V
-    .locals 2
+.method public synthetic constructor <init>(La94;Ljava/lang/Cloneable;II)V
+    .locals 0
+
+    iput p4, p0, Lu84;->a:I
+
+    iput-object p1, p0, Lu84;->b:La94;
+
+    iput-object p2, p0, Lu84;->d:Ljava/lang/Cloneable;
+
+    iput p3, p0, Lu84;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p5}, Lec7;->k(Ljava/util/Collection;)Lec7;
+    return-void
+.end method
 
-    move-result-object p5
 
-    iput-object p5, p0, Lu84;->a:Lec7;
+# virtual methods
+.method public final a()V
+    .locals 4
 
-    iput-wide p1, p0, Lu84;->b:J
+    iget v0, p0, Lu84;->a:I
 
-    iput-wide p3, p0, Lu84;->c:J
+    packed-switch v0, :pswitch_data_0
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    iget-object v0, p0, Lu84;->d:Ljava/lang/Cloneable;
 
-    cmp-long p5, p1, v0
+    check-cast v0, [Ljava/lang/String;
 
-    if-eqz p5, :cond_1
+    iget-object v1, p0, Lu84;->b:La94;
 
-    cmp-long p5, p3, v0
+    iget-object v2, v1, La94;->router:Lw4e;
 
-    if-nez p5, :cond_0
+    iget-object v1, v1, La94;->instanceId:Ljava/lang/String;
 
-    goto :goto_0
+    iget v3, p0, Lu84;->c:I
 
-    :cond_0
-    add-long v0, p1, p3
-
-    :cond_1
-    :goto_0
-    iput-wide v0, p0, Lu84;->d:J
+    invoke-virtual {v2, v1, v0, v3}, Lw4e;->N(Ljava/lang/String;[Ljava/lang/String;I)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lu84;->d:Ljava/lang/Cloneable;
+
+    check-cast v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lu84;->b:La94;
+
+    iget-object v2, v1, La94;->router:Lw4e;
+
+    iget-object v1, v1, La94;->instanceId:Ljava/lang/String;
+
+    iget v3, p0, Lu84;->c:I
+
+    invoke-virtual {v2, v1, v0, v3}, Lw4e;->V(Ljava/lang/String;Landroid/content/Intent;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

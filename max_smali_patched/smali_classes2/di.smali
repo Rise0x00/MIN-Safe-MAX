@@ -1,85 +1,19 @@
 .class public final Ldi;
-.super Ljava/lang/Object;
+.super Lei;
 .source "SourceFile"
-
-# interfaces
-.implements Lyi;
 
 
 # instance fields
-.field public final synthetic a:Lei;
+.field public final a:[F
 
 
 # direct methods
-.method public constructor <init>(Lei;)V
+.method public constructor <init>([F)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldi;->a:Lei;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a([Ljava/lang/Double;)V
-    .locals 7
-
-    iget-object v0, p0, Ldi;->a:Lei;
-
-    iget-object v1, v0, Lei;->a:Lvz0;
-
-    iget-object v1, v1, Lvz0;->j0:Lbi1;
-
-    iget-object v1, v1, Lbi1;->a:Lwh1;
-
-    iget-object v1, v1, Lwh1;->a:Lsh1;
-
-    if-eqz v1, :cond_1
-
-    array-length v2, p1
-
-    new-array v3, v2, [F
-
-    const/4 v4, 0x0
-
-    :goto_0
-    if-ge v4, v2, :cond_0
-
-    aget-object v5, p1, v4
-
-    invoke-virtual {v5}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v5
-
-    double-to-float v5, v5
-
-    aput v5, v3, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p1, v0, Lei;->h:Ljj;
-
-    iget-object v0, p1, Ljj;->g:Landroid/os/Handler;
-
-    new-instance v2, Lhj;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v2, p1, v1, v3, v4}, Lhj;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final b()V
-    .locals 0
+    iput-object p1, p0, Ldi;->a:[F
 
     return-void
 .end method

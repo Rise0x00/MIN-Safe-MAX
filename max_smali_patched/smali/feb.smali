@@ -1,78 +1,49 @@
 .class public final Lfeb;
-.super Logf;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lij6;
 
 
 # instance fields
-.field public synthetic o:Ljava/lang/Throwable;
+.field public final synthetic X:Lkeb;
+
+.field public Y:I
+
+.field public d:Lnd2;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lkeb;Lo84;)V
+    .locals 0
+
+    iput-object p1, p0, Lfeb;->X:Lkeb;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lgz5;
-
-    check-cast p2, Ljava/lang/Throwable;
-
-    check-cast p3, Ljava/lang/Number;
-
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
-
-    check-cast p4, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lfeb;
-
-    const/4 p3, 0x4
-
-    invoke-direct {p1, p3, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p2, p1, Lfeb;->o:Ljava/lang/Throwable;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lfeb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Lfeb;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lfeb;->o:Ljava/lang/Throwable;
+    iget p1, p0, Lfeb;->Y:I
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iput p1, p0, Lfeb;->Y:I
 
-    const-string v2, "ParticipantsUpdates retry due to "
+    iget-object p1, p0, Lfeb;->X:Lkeb;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ParticipantsRepository"
-
-    invoke-static {v1, v0, p1}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    instance-of p1, p1, Ljava/util/concurrent/CancellationException;
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, v0, p0}, Lkeb;->b(Lnd2;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

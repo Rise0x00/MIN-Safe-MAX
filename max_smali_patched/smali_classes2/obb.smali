@@ -1,42 +1,61 @@
-.class public final synthetic Lobb;
-.super Ljava/lang/Object;
+.class public final Lobb;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lrbb;
+.field public X:Ljava/io/BufferedWriter;
 
-.field public final synthetic b:D
+.field public Y:Lsw0;
+
+.field public Z:I
+
+.field public d:Ljava/nio/file/Path;
+
+.field public o:Ljava/io/Closeable;
+
+.field public t0:I
+
+.field public synthetic u0:Ljava/lang/Object;
+
+.field public final synthetic v0:Lpbb;
+
+.field public w0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrbb;D)V
+.method public constructor <init>(Lpbb;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lobb;->v0:Lpbb;
 
-    iput-object p1, p0, Lobb;->a:Lrbb;
-
-    iput-wide p2, p0, Lobb;->b:D
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Lobb;->b:D
+    iput-object p1, p0, Lobb;->u0:Ljava/lang/Object;
 
-    iget-object v2, p0, Lobb;->a:Lrbb;
+    iget p1, p0, Lobb;->w0:I
 
-    iget-object v2, v2, Lrbb;->b:Lqbb;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {v2, v0, v1}, Lqbb;->c(D)V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lobb;->w0:I
+
+    iget-object p1, p0, Lobb;->v0:Lpbb;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, p0}, Lpbb;->b(Lpbb;Ljava/nio/file/Path;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

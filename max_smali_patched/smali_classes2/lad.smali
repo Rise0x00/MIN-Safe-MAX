@@ -1,23 +1,8 @@
-.class public final Llad;
+.class public abstract Llad;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lr7b;
+# static fields
+.field public static oneme_stickers_showcase_sets_list:I = 0x7f0a087e
 
-.field public final b:Landroid/util/Size;
-
-
-# direct methods
-.method public constructor <init>(Lr7b;Landroid/util/Size;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Llad;->a:Lr7b;
-
-    iput-object p2, p0, Llad;->b:Landroid/util/Size;
-
-    return-void
-.end method
+.field public static oneme_stickers_showcase_toolbar:I = 0x7f0a087f

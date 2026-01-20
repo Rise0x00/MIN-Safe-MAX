@@ -4,46 +4,24 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:[B
-
-.field public final c:Lzyb;
+.field public final a:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;[BLzyb;)V
+.method public constructor <init>(Ljava/lang/Integer;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lec0;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lec0;->b:[B
-
-    iput-object p3, p0, Lec0;->c:Lzyb;
+    iput-object p1, p0, Lec0;->a:Ljava/lang/Integer;
 
     return-void
-.end method
-
-.method public static a()Ldph;
-    .locals 2
-
-    new-instance v0, Ldph;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v1, Lzyb;->a:Lzyb;
-
-    iput-object v1, v0, Ldph;->c:Ljava/lang/Object;
-
-    return-object v0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -56,76 +34,54 @@
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
     check-cast p1, Lec0;
 
-    iget-object v1, p0, Lec0;->a:Ljava/lang/String;
+    iget-object v1, p0, Lec0;->a:Ljava/lang/Integer;
 
-    iget-object v3, p1, Lec0;->a:Ljava/lang/String;
+    if-nez v1, :cond_2
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object p1, p1, Lec0;->a:Ljava/lang/Integer;
 
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lec0;->b:[B
-
-    iget-object v3, p1, Lec0;->b:[B
-
-    invoke-static {v1, v3}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lec0;->c:Lzyb;
-
-    iget-object p1, p1, Lec0;->c:Lzyb;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_1
 
     return v0
 
     :cond_1
     return v2
+
+    :cond_2
+    iget-object p1, p1, Lec0;->a:Ljava/lang/Integer;
+
+    invoke-virtual {v1, p1}, Ljava/lang/Integer;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lec0;->a:Ljava/lang/String;
+    iget-object v0, p0, Lec0;->a:Ljava/lang/Integer;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Integer;->hashCode()I
 
     move-result v0
 
+    :goto_0
     const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lec0;->b:[B
-
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v1, p0, Lec0;->c:Lzyb;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -133,47 +89,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
-    iget-object v0, p0, Lec0;->b:[B
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_0
+    const-string v1, "ProductData{productId="
 
-    const-string v0, ""
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    iget-object v1, p0, Lec0;->a:Ljava/lang/Integer;
 
-    :cond_0
-    const/4 v1, 0x2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    const-string v1, "}"
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "TransportContext("
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lec0;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lec0;->c:Lzyb;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, ")"
-
-    invoke-static {v1, v0, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

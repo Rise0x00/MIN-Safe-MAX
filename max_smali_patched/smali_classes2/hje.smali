@@ -1,66 +1,64 @@
-.class public final synthetic Lhje;
+.class public final Lhje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyf4;
+.implements Lije;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Boolean;
+.field public final a:Lv0f;
 
-.field public final synthetic a:J
+.field public final b:Lfm4;
 
-.field public final synthetic b:J
+.field public final c:I
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final d:J
 
-.field public final synthetic d:I
-
-.field public final synthetic o:Ljava/lang/Integer;
+.field public final o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
+.method public constructor <init>(Lv0f;Lfm4;IJI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lhje;->a:J
+    iput-object p1, p0, Lhje;->a:Lv0f;
 
-    iput-wide p3, p0, Lhje;->b:J
+    iput-object p2, p0, Lhje;->b:Lfm4;
 
-    iput-object p5, p0, Lhje;->c:Ljava/lang/String;
+    iput p3, p0, Lhje;->c:I
 
-    iput p6, p0, Lhje;->d:I
+    iput-wide p4, p0, Lhje;->d:J
 
-    iput-object p7, p0, Lhje;->o:Ljava/lang/Integer;
-
-    iput-object p8, p0, Lhje;->X:Ljava/lang/Boolean;
+    iput p6, p0, Lhje;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 9
+.method public final a()I
+    .locals 1
 
-    new-instance v0, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    iget v0, p0, Lhje;->o:I
 
-    iget-wide v1, p0, Lhje;->a:J
+    return v0
+.end method
 
-    iget-wide v3, p0, Lhje;->b:J
+.method public final getItemId()J
+    .locals 2
 
-    iget-object v5, p0, Lhje;->c:Ljava/lang/String;
+    iget-wide v0, p0, Lhje;->d:J
 
-    iget v6, p0, Lhje;->d:I
+    return-wide v0
+.end method
 
-    iget-object v7, p0, Lhje;->o:Ljava/lang/Integer;
+.method public final m()I
+    .locals 1
 
-    iget-object v8, p0, Lhje;->X:Ljava/lang/Boolean;
+    iget v0, p0, Lhje;->c:I
 
-    invoke-direct/range {v0 .. v8}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;-><init>(JJLjava/lang/String;ILjava/lang/Integer;Ljava/lang/Boolean;)V
-
-    return-object v0
+    return v0
 .end method

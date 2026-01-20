@@ -1,77 +1,128 @@
-.class public final Lqg2;
-.super Lacc;
+.class public final synthetic Lqg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcy3;
+
+
+# instance fields
+.field public final synthetic a:Lxg2;
+
+.field public final synthetic b:J
+
+.field public final synthetic c:J
+
+.field public final synthetic d:J
+
+
+# direct methods
+.method public synthetic constructor <init>(Lxg2;JJJ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqg2;->a:Lxg2;
+
+    iput-wide p2, p0, Lqg2;->b:J
+
+    iput-wide p4, p0, Lqg2;->c:J
+
+    iput-wide p6, p0, Lqg2;->d:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final z(Li28;)V
-    .locals 6
+.method public final accept(Ljava/lang/Object;)V
+    .locals 9
 
-    check-cast p1, Lm8c;
+    check-cast p1, Lch2;
 
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+    iget-object v0, p0, Lqg2;->a:Lxg2;
 
-    check-cast v0, Lng2;
+    iget-object v1, v0, Lxg2;->A:Lj35;
 
-    iget-object p1, p1, Lm8c;->a:Lcg2;
+    invoke-virtual {p1}, Lch2;->c()Ljava/util/Map;
 
-    iget-object v1, p1, Lcg2;->e:Ljava/lang/String;
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Lng2;->setLink(Ljava/lang/String;)V
+    iget-wide v2, p0, Lqg2;->b:J
 
-    iget-boolean v1, p1, Lcg2;->f:Z
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v0, v1}, Lng2;->setLoading(Z)V
+    move-result-object v4
 
-    iget-object v1, p1, Lcg2;->d:Ljava/lang/String;
+    invoke-interface {p1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lng2;->setChatTitle(Ljava/lang/String;)V
+    move-result-object v4
 
-    iget-wide v1, p1, Lcg2;->b:J
+    check-cast v4, Ljava/lang/Long;
 
-    iget-object v3, p1, Lcg2;->a:Ljava/lang/String;
-
-    iget-object v4, p1, Lcg2;->c:Ljava/lang/CharSequence;
-
-    iget-object v5, v0, Lng2;->H0:Lapa;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v5, v3, v1, v4}, Lapa;->n(Lapa;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
-
-    iget-boolean v1, p1, Lcg2;->g:Z
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    iget-boolean p1, p1, Lcg2;->h:Z
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v2
-
-    :goto_0
-    iget-object v1, v0, Lng2;->K0:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_1
+    if-nez v4, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    iget-wide v6, p0, Lqg2;->c:J
+
+    cmp-long v4, v4, v6
+
+    if-eqz v4, :cond_1
+
+    const/4 v4, 0x1
+
+    goto :goto_0
+
     :cond_1
-    const/16 v2, 0x8
+    const/4 v4, 0x0
 
+    :goto_0
+    if-eqz v4, :cond_2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v8
+
+    invoke-interface {p1, v5, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v0}, Lxg2;->U()J
+
+    move-result-wide v4
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_3
+
+    invoke-virtual {v1}, Lj35;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v1}, Lj35;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltua;
+
+    iget-wide v0, p0, Lqg2;->d:J
+
+    invoke-virtual {p1, v0, v1, v6, v7}, Ltua;->e(JJ)V
+
+    :cond_3
     :goto_1
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lng2;->v()V
-
     return-void
 .end method

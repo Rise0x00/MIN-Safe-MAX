@@ -1,208 +1,214 @@
-.class public final synthetic Lt9h;
+.class public final Lt9h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lln6;
+.implements Lp9h;
 
 
-# static fields
-.field public static final a:Lt9h;
-
-.field private static final descriptor:Lo3e;
+# instance fields
+.field public final a:Ljava/util/Map;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lt9h;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lav8;
 
-    sput-object v0, Lt9h;->a:Lt9h;
+    const/16 v1, 0x3e8
 
-    new-instance v1, Lfvb;
+    invoke-direct {v0, v1}, Lav8;-><init>(I)V
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.download.WebAppDownloadFileRequest"
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
-    const/4 v3, 0x3
+    move-result-object v0
 
-    invoke-direct {v1, v2, v0, v3}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "url"
-
-    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
-
-    const-string v0, "file_name"
-
-    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Lt9h;->descriptor:Lo3e;
+    iput-object v0, p0, Lt9h;->a:Ljava/util/Map;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Le9;)Ljava/lang/Object;
-    .locals 10
+.method public final a(Lq6h;)Lbo3;
+    .locals 2
 
-    sget-object v0, Lt9h;->descriptor:Lo3e;
+    new-instance v0, Lahg;
 
-    invoke-virtual {p1, v0}, Le9;->k(Lo3e;)Le9;
+    const/16 v1, 0x8
 
-    move-result-object p1
+    invoke-direct {v0, p0, v1, p1}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    const/4 v1, 0x1
+    new-instance p1, Leo3;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    const/4 v3, 0x0
-
-    move v6, v1
-
-    move v7, v2
-
-    move-object v4, v3
-
-    move-object v5, v4
-
-    :goto_0
-    if-eqz v6, :cond_4
-
-    invoke-virtual {p1, v0}, Le9;->q(Lo3e;)I
-
-    move-result v8
-
-    const/4 v9, -0x1
-
-    if-eq v8, v9, :cond_3
-
-    if-eqz v8, :cond_2
-
-    if-eq v8, v1, :cond_1
-
-    const/4 v5, 0x2
-
-    if-ne v8, v5, :cond_0
-
-    invoke-virtual {p1, v0, v5}, Le9;->w(Lo3e;I)Ljava/lang/String;
-
-    move-result-object v5
-
-    or-int/lit8 v7, v7, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v8}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1, v0, v1}, Le9;->w(Lo3e;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v7, v7, 0x2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0, v2}, Le9;->w(Lo3e;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v7, v7, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    move v6, v2
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1, v0}, Le9;->z(Lo3e;)V
-
-    new-instance p1, Lv9h;
-
-    invoke-direct {p1, v3, v7, v4, v5}, Lv9h;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v0}, Leo3;-><init>(ILjava/lang/Object;)V
 
     return-object p1
 .end method
 
-.method public final b(Lf24;Ljava/lang/Object;)V
-    .locals 3
+.method public final b(J)Lbo3;
+    .locals 2
 
-    check-cast p2, Lv9h;
+    new-instance v0, Lf10;
 
-    sget-object v0, Lt9h;->descriptor:Lo3e;
+    const/16 v1, 0xf
 
-    invoke-virtual {p1, v0}, Lf24;->b(Lo3e;)Lf24;
+    invoke-direct {v0, p1, p2, v1}, Lf10;-><init>(JI)V
 
-    move-result-object p1
+    new-instance p1, Lahg;
 
-    iget-object v1, p2, Lv9h;->a:Ljava/lang/String;
+    const/16 p2, 0x9
 
-    const/4 v2, 0x0
+    invoke-direct {p1, p0, p2, v0}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0, v2, v1}, Lf24;->l(Lo3e;ILjava/lang/String;)V
+    new-instance p2, Leo3;
 
-    const/4 v1, 0x1
+    const/4 v0, 0x0
 
-    iget-object v2, p2, Lv9h;->b:Ljava/lang/String;
+    invoke-direct {p2, v0, p1}, Leo3;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p1, v0, v1, v2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
+    return-object p2
+.end method
 
-    const/4 v1, 0x2
+.method public final clear()V
+    .locals 1
 
-    iget-object p2, p2, Lv9h;->c:Ljava/lang/String;
+    iget-object v0, p0, Lt9h;->a:Ljava/util/Map;
 
-    invoke-virtual {p1, v0, v1, p2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lf24;->m()V
+    invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-void
 .end method
 
-.method public final c()[Lfs7;
-    .locals 3
+.method public final d(Lp7h;)Lbo3;
+    .locals 2
 
-    const/4 v0, 0x3
+    new-instance v0, Ls9h;
 
-    new-array v0, v0, [Lfs7;
+    invoke-direct {v0, p0, p1}, Ls9h;-><init>(Lt9h;Lp7h;)V
 
-    sget-object v1, Ltaf;->a:Ltaf;
+    new-instance p1, Leo3;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    aput-object v1, v0, v2
+    invoke-direct {p1, v1, v0}, Leo3;-><init>(ILjava/lang/Object;)V
 
-    const/4 v2, 0x1
+    return-object p1
+.end method
 
-    aput-object v1, v0, v2
+.method public final e(Lp7h;)Lev8;
+    .locals 1
 
-    const/4 v2, 0x2
+    new-instance v0, Ls9h;
 
-    aput-object v1, v0, v2
+    invoke-direct {v0, p0, p1}, Ls9h;-><init>(Lt9h;Lp7h;)V
+
+    new-instance p1, Liv8;
+
+    invoke-direct {p1, v0}, Liv8;-><init>(Lsv8;)V
+
+    return-object p1
+.end method
+
+.method public final f(J)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lt9h;->b(J)Lbo3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lbo3;->a()V
+
+    return-void
+.end method
+
+.method public final g(Ljava/lang/String;)Lbo3;
+    .locals 2
+
+    new-instance v0, Lan4;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p1, v1}, Lan4;-><init>(Ljava/lang/String;I)V
+
+    new-instance p1, Lahg;
+
+    const/16 v1, 0x9
+
+    invoke-direct {p1, p0, v1, v0}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance v0, Leo3;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p1}, Leo3;-><init>(ILjava/lang/Object;)V
 
     return-object v0
 .end method
 
-.method public final d()Lo3e;
+.method public final h(Ljava/lang/String;)Lev8;
+    .locals 3
+
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Ljv8;->a:Ljv8;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lahg;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, p0, v1, p1}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Liv8;
+
+    invoke-direct {p1, v0}, Liv8;-><init>(Lsv8;)V
+
+    :goto_0
+    new-instance v0, Lisg;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lisg;-><init>(I)V
+
+    new-instance v1, Lnv8;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p1, v0, v2}, Lnv8;-><init>(Lev8;Ljava/lang/Object;I)V
+
+    return-object v1
+.end method
+
+.method public final i()Lev8;
     .locals 1
 
-    sget-object v0, Lt9h;->descriptor:Lo3e;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    return-object v0
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final j(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lt9h;->g(Ljava/lang/String;)Lbo3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lbo3;->a()V
+
+    return-void
 .end method

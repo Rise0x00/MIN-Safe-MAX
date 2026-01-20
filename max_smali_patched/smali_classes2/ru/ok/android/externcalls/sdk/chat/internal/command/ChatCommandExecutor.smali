@@ -14,13 +14,13 @@
         "Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;",
         "message",
         "Lkotlin/Function0;",
-        "Lybg;",
+        "Lb3h;",
         "onSuccess",
         "Lkotlin/Function1;",
         "",
         "onError",
         "sendMessage",
-        "(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Loi6;Lqi6;)V",
+        "(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Llq6;Lnq6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -34,13 +34,13 @@
 
 
 # virtual methods
-.method public abstract sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Loi6;Lqi6;)V
+.method public abstract sendMessage(Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;Llq6;Lnq6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/chat/message/OutboundMessage;",
-            "Loi6;",
-            "Lqi6;",
+            "Llq6;",
+            "Lnq6;",
             ")V"
         }
     .end annotation

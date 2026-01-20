@@ -1,195 +1,52 @@
-.class public Lqp4;
-.super Lwl0;
+.class public final Lqp4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lj95;
 
 
 # instance fields
-.field public final a:Lgla;
+.field public final a:Le95;
 
-.field public b:Ljava/lang/Object;
+.field public b:La95;
+
+.field public c:Z
+
+.field public final synthetic d:Lsp4;
 
 
 # direct methods
-.method public constructor <init>(Lgla;)V
+.method public constructor <init>(Lsp4;Le95;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqp4;->a:Lgla;
+    iput-object p1, p0, Lqp4;->d:Lsp4;
+
+    iput-object p2, p0, Lqp4;->a:Le95;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lqp4;->e(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    const/16 v0, 0x20
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lqp4;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public dispose()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lqp4;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final e(Ljava/lang/Object;)V
+.method public final release()V
     .locals 3
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    iget-object v0, p0, Lqp4;->d:Lsp4;
 
-    move-result v0
+    iget-object v0, v0, Lsp4;->u:Landroid/os/Handler;
 
-    and-int/lit8 v1, v0, 0x36
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    const/16 v1, 0x8
-
-    iget-object v2, p0, Lqp4;->a:Lgla;
-
-    if-ne v0, v1, :cond_1
-
-    iput-object p1, p0, Lqp4;->b:Ljava/lang/Object;
-
-    const/16 p1, 0x10
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    const/4 p1, 0x0
-
-    invoke-interface {v2, p1}, Lgla;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    invoke-interface {v2, p1}, Lgla;->b(Ljava/lang/Object;)V
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result p1
-
-    const/4 v0, 0x4
-
-    if-eq p1, v0, :cond_2
-
-    invoke-interface {v2}, Lgla;->c()V
-
-    :cond_2
-    :goto_1
-    return-void
-.end method
-
-.method public final f()Z
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final isEmpty()Z
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    const/16 v1, 0x10
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 3
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v0
-
-    const/16 v1, 0x10
+    new-instance v1, Lpp4;
 
     const/4 v2, 0x0
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v1, v2, p0}, Lpp4;-><init>(ILjava/lang/Object;)V
 
-    iget-object v0, p0, Lqp4;->b:Ljava/lang/Object;
+    invoke-static {v0, v1}, Lmbh;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    iput-object v2, p0, Lqp4;->b:Ljava/lang/Object;
-
-    const/16 v1, 0x20
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    return-object v0
-
-    :cond_0
-    return-object v2
-.end method
-
-.method public final q(I)I
-    .locals 0
-
-    const/16 p1, 0x8
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
-
-    const/4 p1, 0x2
-
-    return p1
+    return-void
 .end method

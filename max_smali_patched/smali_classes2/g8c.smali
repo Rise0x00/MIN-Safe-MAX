@@ -1,178 +1,193 @@
-.class public final Lg8c;
-.super Lz8c;
+.class public final synthetic Lg8c;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/List;
-
-.field public final c:Z
-
-.field public final d:I
+.field public final synthetic b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;Z)V
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;I)V
     .locals 0
 
+    iput p2, p0, Lg8c;->a:I
+
+    iput-object p1, p0, Lg8c;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lg8c;->a:Ljava/util/List;
-
-    iput-object p2, p0, Lg8c;->b:Ljava/util/List;
-
-    iput-boolean p3, p0, Lg8c;->c:Z
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lg8c;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 6
 
-    const/4 v0, 0x1
+    iget v0, p0, Lg8c;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lg8c;->b:Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->D0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->C0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_1
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->z0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_2
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->y0:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_3
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iput p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->o:F
+
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_4
+    sget v0, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->K0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    iget-object v0, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->w0:Landroid/graphics/Paint;
+
+    const/high16 v2, 0x437f0000    # 255.0f
+
+    mul-float/2addr v2, p1
+
+    float-to-int v2, v2
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    float-to-double v2, p1
+
+    const-wide/16 v4, 0x0
+
+    cmpl-double p1, v2, v4
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, v1, Lru/ok/messages/video/widgets/PinchToZoomVideoViewWrapper;->v0:Z
 
     :cond_0
-    instance-of v1, p1, Lg8c;
+    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    const/4 v2, 0x0
+    return-void
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lg8c;
-
-    iget-object v1, p0, Lg8c;->a:Ljava/util/List;
-
-    iget-object v3, p1, Lg8c;->a:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lg8c;->b:Ljava/util/List;
-
-    iget-object v3, p1, Lg8c;->b:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Lg8c;->c:Z
-
-    iget-boolean p1, p1, Lg8c;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const/4 v0, 0x1
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lg8c;->a:Ljava/util/List;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lg8c;->b:Ljava/util/List;
-
-    invoke-static {v2, v0, v1}, Lijf;->n(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lg8c;->c:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    iget v0, p0, Lg8c;->d:I
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ButtonsStack(buttons="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lg8c;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", contextMenuButtons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lg8c;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMoreButtonEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lg8c;->c:Z
-
-    invoke-static {v0, v2, v1}, Lnx1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,62 +1,48 @@
 .class public final Lst1;
-.super Lg4;
-.source "SourceFile"
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic Z:Ltt1;
+.field public final synthetic X:Lnq1;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ltt1;)V
+.method public constructor <init>(Lnq1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lst1;->X:Lnq1;
 
-    iput-object p1, p0, Lst1;->Z:Ltt1;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final j()Ljava/lang/String;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lst1;->Z:Ltt1;
+    iput-object p1, p0, Lst1;->d:Ljava/lang/Object;
 
-    iget-object v0, v0, Ltt1;->a:Ljava/lang/ref/WeakReference;
+    iget p1, p0, Lst1;->o:I
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/high16 v0, -0x80000000
 
-    move-result-object v0
+    or-int/2addr p1, v0
 
-    check-cast v0, Lqt1;
+    iput p1, p0, Lst1;->o:I
 
-    if-nez v0, :cond_0
+    iget-object p1, p0, Lst1;->X:Lnq1;
 
-    const-string v0, "Completer object has been garbage collected, future will fail soon"
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-virtual {p1, v0, p0}, Lnq1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v2, "tag=["
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, v0, Lqt1;->a:Ljava/lang/Object;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "]"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

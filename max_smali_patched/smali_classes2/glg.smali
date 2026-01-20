@@ -2,129 +2,132 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhlg;
-
 
 # instance fields
-.field public final a:J
+.field public volatile a:J
 
-.field public final b:Lepg;
+.field public final b:Lhe5;
+
+.field public volatile c:Z
 
 
 # direct methods
-.method public constructor <init>(JLepg;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lglg;->a:J
+    const/4 v0, 0x0
 
-    iput-object p3, p0, Lglg;->b:Lepg;
+    iput-boolean v0, p0, Lglg;->c:Z
+
+    new-instance v0, Lhe5;
+
+    invoke-direct {v0}, Lhe5;-><init>()V
+
+    iput-object v0, p0, Lglg;->b:Lhe5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final declared-synchronized a()V
+    .locals 6
 
-    const/4 v0, 0x1
+    monitor-enter p0
 
-    if-ne p0, p1, :cond_0
+    :try_start_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
-    return v0
+    move-result-wide v0
+
+    iget-wide v2, p0, Lglg;->a:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_0
+
+    iput-wide v0, p0, Lglg;->a:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lglg;
+    :try_start_1
+    iget-wide v2, p0, Lglg;->a:J
 
-    const/4 v2, 0x0
+    sub-long v2, v0, v2
 
-    if-nez v1, :cond_1
+    iget-boolean v4, p0, Lglg;->c:Z
 
-    return v2
+    if-nez v4, :cond_1
+
+    iget-object v4, p0, Lglg;->b:Lhe5;
+
+    long-to-double v2, v2
+
+    iput-wide v2, v4, Lhe5;->b:D
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lglg;->c:Z
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lglg;
+    iget-object v4, p0, Lglg;->b:Lhe5;
 
-    iget-wide v3, p0, Lglg;->a:J
+    long-to-double v2, v2
 
-    iget-wide v5, p1, Lglg;->a:J
+    invoke-virtual {v4, v2, v3}, Lhe5;->a(D)V
 
-    cmp-long v1, v3, v5
+    :goto_0
+    iput-wide v0, p0, Lglg;->a:J
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v1, :cond_2
+    monitor-exit p0
 
-    return v2
+    return-void
 
-    :cond_2
-    iget-object v1, p0, Lglg;->b:Lepg;
+    :goto_1
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget-object p1, p1, Lglg;->b:Lepg;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    throw v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final b()D
+    .locals 4
 
-    iget-wide v0, p0, Lglg;->a:J
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const-wide/16 v1, 0x1
 
-    move-result v0
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-wide v0
 
-    iget-object v1, p0, Lglg;->b:Lepg;
+    long-to-double v0, v0
 
-    invoke-virtual {v1}, Lepg;->hashCode()I
+    iget-object v2, p0, Lglg;->b:Lhe5;
 
-    move-result v1
+    iget-wide v2, v2, Lhe5;->b:D
 
-    add-int/2addr v1, v0
+    div-double/2addr v0, v2
 
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StartVideoMessage(msgId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lglg;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", attachModel="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lglg;->b:Lepg;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-wide v0
 .end method

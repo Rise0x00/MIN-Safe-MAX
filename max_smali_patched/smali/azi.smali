@@ -1,68 +1,70 @@
-.class public abstract Lazi;
+.class public final Lazi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lazi;
+
 
 # direct methods
-.method public static final a(DLb45;Lb45;)D
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget-object p3, p3, Lb45;->a:Ljava/util/concurrent/TimeUnit;
+    new-instance v0, Lazi;
 
-    iget-object p2, p2, Lb45;->a:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x1
+    sput-object v0, Lazi;->a:Lazi;
 
-    invoke-virtual {p3, v0, v1, p2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    new-instance v0, Lbri;
 
-    move-result-wide v2
+    const/4 v1, 0x1
 
-    const-wide/16 v4, 0x0
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    cmp-long v4, v2, v4
+    const-class v1, Lpri;
 
-    if-lez v4, :cond_0
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    long-to-double p2, v2
+    move-result-object v0
 
-    mul-double/2addr p0, p2
+    const/4 v2, 0x2
 
-    return-wide p0
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    :cond_0
-    invoke-virtual {p2, v0, v1, p3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    move-result-object v0
 
-    move-result-wide p2
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    long-to-double p2, p2
+    move-result-object v0
 
-    div-double/2addr p0, p2
+    const/4 v2, 0x3
 
-    return-wide p0
-.end method
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-.method public static final b(Lvcg;)V
-    .locals 2
+    move-result-object v0
 
-    new-instance v0, Lctd;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    const/4 v1, 0x3
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lctd;-><init>(I)V
-
-    const-class v1, Lof4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lctd;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lctd;-><init>(I)V
-
-    const-class v1, Lrs4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

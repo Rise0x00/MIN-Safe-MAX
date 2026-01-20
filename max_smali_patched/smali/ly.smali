@@ -1,315 +1,208 @@
-.class public final Lly;
-.super Landroid/media/MediaCodec$Callback;
+.class public final synthetic Lly;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/media/MediaCodec$OnFrameRenderedListener;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final b:Landroid/os/HandlerThread;
-
-.field public c:Landroid/os/Handler;
-
-.field public final d:Lty;
-
-.field public final e:Lty;
-
-.field public final f:Ljava/util/ArrayDeque;
-
-.field public final g:Ljava/util/ArrayDeque;
-
-.field public h:Landroid/media/MediaFormat;
-
-.field public i:Landroid/media/MediaFormat;
-
-.field public j:Landroid/media/MediaCodec$CodecException;
-
-.field public k:J
-
-.field public l:Z
-
-.field public m:Ljava/lang/IllegalStateException;
+.field public final synthetic b:La19;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/HandlerThread;)V
-    .locals 2
+.method public synthetic constructor <init>(Lc09;La19;I)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
+    iput p3, p0, Lly;->a:I
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p2, p0, Lly;->b:La19;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lly;->a:Ljava/lang/Object;
-
-    iput-object p1, p0, Lly;->b:Landroid/os/HandlerThread;
-
-    new-instance p1, Lty;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lty;-><init>(IB)V
-
-    iput-object p1, p0, Lly;->d:Lty;
-
-    new-instance p1, Lty;
-
-    invoke-direct {p1, v0, v1}, Lty;-><init>(IB)V
-
-    iput-object p1, p0, Lly;->e:Lty;
-
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Lly;->f:Ljava/util/ArrayDeque;
-
-    new-instance p1, Ljava/util/ArrayDeque;
-
-    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object p1, p0, Lly;->g:Ljava/util/ArrayDeque;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/media/MediaCodec;)V
-    .locals 5
+.method public final onFrameRendered(Landroid/media/MediaCodec;JJ)V
+    .locals 2
 
-    iget-object v0, p0, Lly;->a:Ljava/lang/Object;
+    iget p1, p0, Lly;->a:I
 
-    monitor-enter v0
+    packed-switch p1, :pswitch_data_0
 
-    :try_start_0
-    iget-wide v1, p0, Lly;->k:J
+    iget-object p1, p0, Lly;->b:La19;
 
-    const-wide/16 v3, 0x1
+    iget-object p4, p1, La19;->b:Landroid/os/Handler;
 
-    add-long/2addr v1, v3
+    sget p5, Lkbh;->a:I
 
-    iput-wide v1, p0, Lly;->k:J
+    const/16 v0, 0x1e
 
-    iget-object v1, p0, Lly;->c:Landroid/os/Handler;
+    if-ge p5, v0, :cond_0
 
-    sget v2, Ljig;->a:I
+    const/16 p1, 0x20
 
-    new-instance v2, Lzd;
+    shr-long v0, p2, p1
 
-    const/4 v3, 0x5
+    long-to-int p1, v0
 
-    invoke-direct {v2, p0, v3, p1}, Lzd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    long-to-int p2, p2
 
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 p3, 0x0
 
-    monitor-exit v0
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
 
-    return-void
+    move-result-object p1
 
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p1
-.end method
-
-.method public final b()V
-    .locals 4
-
-    iget-object v0, p0, Lly;->g:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->getLast()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/media/MediaFormat;
-
-    iput-object v1, p0, Lly;->i:Landroid/media/MediaFormat;
-
-    :cond_0
-    iget-object v1, p0, Lly;->d:Lty;
-
-    const/4 v2, 0x0
-
-    iput v2, v1, Lty;->b:I
-
-    const/4 v3, -0x1
-
-    iput v3, v1, Lty;->c:I
-
-    iput v2, v1, Lty;->d:I
-
-    iget-object v1, p0, Lly;->e:Lty;
-
-    iput v2, v1, Lty;->b:I
-
-    iput v3, v1, Lty;->c:I
-
-    iput v2, v1, Lty;->d:I
-
-    iget-object v1, p0, Lly;->f:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->clear()V
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lly;->j:Landroid/media/MediaCodec$CodecException;
-
-    return-void
-.end method
-
-.method public final onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
-    .locals 0
-
-    iget-object p1, p0, Lly;->a:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    iput-object p2, p0, Lly;->j:Landroid/media/MediaCodec$CodecException;
-
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception p2
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final onInputBufferAvailable(Landroid/media/MediaCodec;I)V
-    .locals 1
-
-    iget-object p1, p0, Lly;->a:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p0, Lly;->d:Lty;
-
-    invoke-virtual {v0, p2}, Lty;->d(I)V
-
-    monitor-exit p1
-
-    return-void
-
-    :catchall_0
-    move-exception p2
-
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final onOutputBufferAvailable(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
-    .locals 3
-
-    iget-object p1, p0, Lly;->a:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p0, Lly;->i:Landroid/media/MediaFormat;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lly;->e:Lty;
-
-    const/4 v2, -0x2
-
-    invoke-virtual {v1, v2}, Lty;->d(I)V
-
-    iget-object v1, p0, Lly;->g:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lly;->i:Landroid/media/MediaFormat;
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p2
+    :cond_0
+    iget-object p4, p1, La19;->c:Ljava/lang/Object;
+
+    check-cast p4, Lb19;
+
+    iget-object p5, p4, Lb19;->w2:La19;
+
+    if-eq p1, p5, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-wide v0, 0x7fffffffffffffffL
+
+    cmp-long p1, p2, v0
+
+    const/4 p5, 0x1
+
+    if-nez p1, :cond_2
+
+    iput-boolean p5, p4, Ll09;->I1:Z
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_0
+    invoke-virtual {p4, p2, p3}, Ll09;->n0(J)V
+
+    invoke-virtual {p4}, Lb19;->v0()V
+
+    iget-object p1, p4, Ll09;->K1:Lml4;
+
+    iget v0, p1, Lml4;->f:I
+
+    add-int/2addr v0, p5
+
+    iput v0, p1, Lml4;->f:I
+
+    invoke-virtual {p4}, Lb19;->u0()V
+
+    invoke-virtual {p4, p2, p3}, Lb19;->X(J)V
+    :try_end_0
+    .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    iput-object p1, p4, Ll09;->J1:Lcom/google/android/exoplayer2/ExoPlaybackException;
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lly;->b:La19;
+
+    iget-object p4, p1, La19;->b:Landroid/os/Handler;
+
+    sget p5, Lkbh;->a:I
+
+    const/16 v0, 0x1e
+
+    if-ge p5, v0, :cond_3
+
+    const/16 p1, 0x20
+
+    shr-long v0, p2, p1
+
+    long-to-int p1, v0
+
+    long-to-int p2, p2
+
+    const/4 p3, 0x0
+
+    invoke-static {p4, p3, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;III)Landroid/os/Message;
+
+    move-result-object p1
+
+    invoke-virtual {p4, p1}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
     goto :goto_1
 
-    :cond_0
-    :goto_0
-    iget-object v0, p0, Lly;->e:Lty;
+    :cond_3
+    iget-object p4, p1, La19;->c:Ljava/lang/Object;
 
-    invoke-virtual {v0, p2}, Lty;->d(I)V
+    check-cast p4, Lb19;
 
-    iget-object p2, p0, Lly;->f:Ljava/util/ArrayDeque;
+    iget-object p5, p4, Lb19;->w2:La19;
 
-    invoke-virtual {p2, p3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+    if-eq p1, p5, :cond_4
 
-    monitor-exit p1
+    goto :goto_1
 
-    return-void
+    :cond_4
+    const-wide v0, 0x7fffffffffffffffL
+
+    cmp-long p1, p2, v0
+
+    const/4 p5, 0x1
+
+    if-nez p1, :cond_5
+
+    iput-boolean p5, p4, Ll09;->I1:Z
+
+    goto :goto_1
+
+    :cond_5
+    :try_start_1
+    invoke-virtual {p4, p2, p3}, Ll09;->n0(J)V
+
+    invoke-virtual {p4}, Lb19;->v0()V
+
+    iget-object p1, p4, Ll09;->K1:Lml4;
+
+    iget v0, p1, Lml4;->f:I
+
+    add-int/2addr v0, p5
+
+    iput v0, p1, Lml4;->f:I
+
+    invoke-virtual {p4}, Lb19;->u0()V
+
+    invoke-virtual {p4, p2, p3}, Lb19;->X(J)V
+    :try_end_1
+    .catch Lcom/google/android/exoplayer2/ExoPlaybackException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception p1
+
+    iput-object p1, p4, Ll09;->J1:Lcom/google/android/exoplayer2/ExoPlaybackException;
 
     :goto_1
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final onOutputFormatChanged(Landroid/media/MediaCodec;Landroid/media/MediaFormat;)V
-    .locals 2
-
-    iget-object p1, p0, Lly;->a:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p0, Lly;->e:Lty;
-
-    const/4 v1, -0x2
-
-    invoke-virtual {v0, v1}, Lty;->d(I)V
-
-    iget-object v0, p0, Lly;->g:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0, p2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
-
-    const/4 p2, 0x0
-
-    iput-object p2, p0, Lly;->i:Landroid/media/MediaFormat;
-
-    monitor-exit p1
-
     return-void
 
-    :catchall_0
-    move-exception p2
+    nop
 
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

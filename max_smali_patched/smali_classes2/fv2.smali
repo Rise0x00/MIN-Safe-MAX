@@ -1,162 +1,130 @@
 .class public final Lfv2;
-.super Lzm;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lonf;
-.implements Lwib;
+.implements Ldr6;
 
 
 # instance fields
-.field public final d:J
+.field public synthetic X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-.field public final o:Z
+.field public final synthetic Y:Lkxf;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(JJZ)V
+.method public synthetic constructor <init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lzm;-><init>(J)V
+    iput p3, p0, Lfv2;->o:I
 
-    iput-wide p3, p0, Lfv2;->d:J
+    iput-object p1, p0, Lfv2;->Y:Lkxf;
 
-    iput-boolean p5, p0, Lfv2;->o:Z
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final d()V
-    .locals 3
-
-    invoke-virtual {p0}, Lzm;->s()Lfpf;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lzm;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lfpf;->d(J)V
-
-    return-void
-.end method
-
-.method public final e(Lmmf;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final f()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;-><init>()V
-
-    iget-wide v1, p0, Lzm;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->requestId:J
-
-    iget-wide v1, p0, Lfv2;->d:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->chatServerId:J
-
-    iget-boolean v1, p0, Lfv2;->o:Z
-
-    iput-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatSubscribe;->subscribe:Z
-
-    invoke-static {v0}, Lud9;->toByteArray(Lud9;)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final g()I
-    .locals 1
-
-    const v0, 0xf4240
-
-    return v0
-.end method
-
-.method public final getId()J
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget-wide v0, p0, Lzm;->a:J
+    iget v0, p0, Lfv2;->o:I
 
-    return-wide v0
-.end method
+    check-cast p1, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-.method public final getType()Lxib;
-    .locals 1
+    check-cast p2, Lzlb;
 
-    sget-object v0, Lxib;->D0:Lxib;
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final h()Lkh;
-    .locals 4
+    new-instance p2, Lfv2;
 
-    new-instance v0, Lbe2;
+    iget-object v0, p0, Lfv2;->Y:Lkxf;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v0, p3, v1}, Lfv2;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lfv2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p2, p1}, Lfv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p2, Lfv2;
+
+    iget-object v0, p0, Lfv2;->Y:Lkxf;
 
     const/4 v1, 0x0
 
-    const/16 v2, 0xc
+    invoke-direct {p2, v0, p3, v1}, Lfv2;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-direct {v0, v1, v2}, Lbe2;-><init>(Lo8b;I)V
+    iput-object p1, p2, Lfv2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    const-string v1, "chatId"
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-wide v2, p0, Lfv2;->d:J
+    invoke-virtual {p2, p1}, Lfv2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v2, v3, v1}, Lkh;->u(JLjava/lang/String;)V
+    return-object p1
 
-    const-string v1, "subscribe"
+    nop
 
-    iget-boolean v2, p0, Lfv2;->o:Z
-
-    invoke-virtual {v0, v1, v2}, Lkh;->i(Ljava/lang/String;Z)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final j(Lxlf;)V
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0}, Lzm;->l()Liw0;
+    iget v0, p0, Lfv2;->o:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v1, Lqj0;
+    iget-object v0, p0, Lfv2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    iget-wide v2, p0, Lzm;->a:J
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v1, v2, v3, p1}, Lqj0;-><init>(JLxlf;)V
+    iget-object p1, p0, Lfv2;->Y:Lkxf;
 
-    invoke-virtual {v0, v1}, Liw0;->c(Ljava/lang/Object;)V
+    invoke-virtual {p1}, Lkxf;->k()V
 
-    iget-object p1, p1, Lxlf;->b:Ljava/lang/String;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    invoke-static {p1}, Lnse;->c(Ljava/lang/String;)Z
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    move-result p1
+    return-object p1
 
-    if-nez p1, :cond_0
+    :pswitch_0
+    iget-object v0, p0, Lfv2;->X:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
-    invoke-virtual {p0}, Lfv2;->d()V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    :cond_0
-    return-void
+    iget-object p1, p0, Lfv2;->Y:Lkxf;
+
+    invoke-virtual {p1}, Lkxf;->k()V
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

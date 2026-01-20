@@ -1,211 +1,296 @@
 .class public final Lfzc;
-.super Ljava/lang/Object;
+.super Lbp9;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Z
+.field public a:F
 
-.field public final synthetic a:Landroid/view/View;
+.field public b:F
 
-.field public final synthetic b:Lhzc;
+.field public c:F
 
-.field public final synthetic c:Lm7d;
-
-.field public final synthetic d:J
-
-.field public final synthetic o:Ldzc;
+.field public d:F
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lhzc;Lm7d;JLdzc;Z)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lbp9;-><init>()V
 
-    iput-object p1, p0, Lfzc;->a:Landroid/view/View;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lfzc;->b:Lhzc;
+    iput v0, p0, Lfzc;->a:F
 
-    iput-object p3, p0, Lfzc;->c:Lm7d;
+    iput v0, p0, Lfzc;->b:F
 
-    iput-wide p4, p0, Lfzc;->d:J
+    iput v0, p0, Lfzc;->c:F
 
-    iput-object p6, p0, Lfzc;->o:Ldzc;
+    iput v0, p0, Lfzc;->d:F
 
-    iput-boolean p7, p0, Lfzc;->X:Z
+    const/4 v0, -0x1
+
+    iput v0, p0, Lbp9;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final computeSerializedSize()I
+    .locals 4
 
-    iget-object v0, p0, Lfzc;->b:Lhzc;
+    iget v0, p0, Lfzc;->a:F
 
-    iget-object v1, p0, Lfzc;->c:Lm7d;
-
-    invoke-virtual {v1}, Lm7d;->g()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lhzc;->e(I)Z
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    goto/16 :goto_2
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    :cond_0
-    iget-object v0, p0, Lfzc;->b:Lhzc;
+    move-result v2
 
-    iget-object v0, v0, Lhzc;->f:Ljava/util/LinkedList;
+    if-eq v0, v2, :cond_0
 
-    iget-wide v1, p0, Lfzc;->d:J
+    const/4 v0, 0x1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0}, Lwg3;->e(I)I
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lfzc;->b:Lhzc;
-
-    iget-object v0, v0, Lhzc;->e:Ljava/util/LinkedHashSet;
-
-    iget-object v1, p0, Lfzc;->o:Ldzc;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lfzc;->c:Lm7d;
-
-    iget-object v0, v0, Lm7d;->a:Landroid/view/View;
-
-    iget-object v1, p0, Lfzc;->o:Ldzc;
-
-    iget-object v1, v1, Ldzc;->c:Lzxc;
-
-    iget-object v1, v1, Lzxc;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lfzc;->b:Lhzc;
-
-    iget-object v1, v1, Lhzc;->c:Lim7;
-
-    iget-object v1, v1, Lim7;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/view/View;
-
-    sget-object v2, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Les7;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_1
-
-    move-object v1, v2
+    move-result v0
 
     goto :goto_0
 
-    :cond_1
-    invoke-static {v0, v1}, Ld1h;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
-
-    move-result-object v1
+    :cond_0
+    const/4 v0, 0x0
 
     :goto_0
-    if-nez v1, :cond_2
+    iget v2, p0, Lfzc;->b:F
 
-    goto :goto_2
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_1
+
+    const/4 v2, 0x2
+
+    invoke-static {v2}, Lwg3;->e(I)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    :cond_1
+    iget v2, p0, Lfzc;->c:F
+
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-eq v2, v3, :cond_2
+
+    const/4 v2, 0x3
+
+    invoke-static {v2}, Lwg3;->e(I)I
+
+    move-result v2
+
+    add-int/2addr v0, v2
 
     :cond_2
-    iget-object v3, p0, Lfzc;->b:Lhzc;
+    iget v2, p0, Lfzc;->d:F
 
-    iget-object v3, v3, Lhzc;->d:Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    sget-object v4, Lcuh;->b:Lnxa;
+    move-result v2
 
-    if-nez v4, :cond_3
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v2, v1, :cond_3
+
+    const/4 v1, 0x4
+
+    invoke-static {v1}, Lwg3;->e(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+
+    :cond_3
+    return v0
+.end method
+
+.method public final mergeFrom(Lvg3;)Lbp9;
+    .locals 2
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lvg3;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    const/16 v1, 0xd
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x15
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x1d
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x25
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lvg3;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
 
     goto :goto_1
 
+    :cond_1
+    invoke-virtual {p1}, Lvg3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lfzc;->d:F
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lvg3;->i()F
+
+    move-result v0
+
+    iput v0, p0, Lfzc;->c:F
+
+    goto :goto_0
+
     :cond_3
-    sget-object v5, La98;->d:La98;
+    invoke-virtual {p1}, Lvg3;->i()F
 
-    invoke-virtual {v4, v5}, Lnxa;->b(La98;)Z
+    move-result v0
 
-    move-result v6
+    iput v0, p0, Lfzc;->b:F
 
-    if-eqz v6, :cond_4
-
-    iget-boolean v6, p0, Lfzc;->X:Z
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "Play pending reaction effect, by place:"
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v8, ", onCreation:"
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v5, v3, v6, v2}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    goto :goto_0
 
     :cond_4
-    :goto_1
-    iget-object v2, p0, Lfzc;->b:Lhzc;
+    invoke-virtual {p1}, Lvg3;->i()F
 
-    iget-object v3, p0, Lfzc;->o:Ldzc;
+    move-result v0
 
-    iget-object v4, v3, Ldzc;->b:Ljava/lang/String;
+    iput v0, p0, Lfzc;->a:F
 
-    iget-wide v5, v3, Ldzc;->a:J
-
-    invoke-static {v2, v4, v5, v6, v1}, Lhzc;->c(Lhzc;Ljava/lang/String;JLandroid/graphics/Rect;)V
-
-    iget-boolean v1, p0, Lfzc;->X:Z
-
-    if-eqz v1, :cond_5
-
-    iget-object v1, p0, Lfzc;->c:Lm7d;
-
-    iget-object v1, v1, Lm7d;->a:Landroid/view/View;
-
-    new-instance v2, Lgzc;
-
-    iget-object v3, p0, Lfzc;->b:Lhzc;
-
-    iget-wide v4, p0, Lfzc;->d:J
-
-    invoke-direct {v2, v3, v0, v4, v5}, Lgzc;-><init>(Lhzc;Landroid/view/View;J)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    goto :goto_0
 
     :cond_5
-    :goto_2
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lwg3;)V
+    .locals 3
+
+    iget v0, p0, Lfzc;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    iget v2, p0, Lfzc;->a:F
+
+    invoke-virtual {p1, v0, v2}, Lwg3;->v(IF)V
+
+    :cond_0
+    iget v0, p0, Lfzc;->b:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_1
+
+    const/4 v0, 0x2
+
+    iget v2, p0, Lfzc;->b:F
+
+    invoke-virtual {p1, v0, v2}, Lwg3;->v(IF)V
+
+    :cond_1
+    iget v0, p0, Lfzc;->c:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    if-eq v0, v2, :cond_2
+
+    const/4 v0, 0x3
+
+    iget v2, p0, Lfzc;->c:F
+
+    invoke-virtual {p1, v0, v2}, Lwg3;->v(IF)V
+
+    :cond_2
+    iget v0, p0, Lfzc;->d:F
+
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v0
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    if-eq v0, v1, :cond_3
+
+    const/4 v0, 0x4
+
+    iget v1, p0, Lfzc;->d:F
+
+    invoke-virtual {p1, v0, v1}, Lwg3;->v(IF)V
+
+    :cond_3
     return-void
 .end method

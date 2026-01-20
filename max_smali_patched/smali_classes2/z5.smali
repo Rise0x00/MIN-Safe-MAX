@@ -1,141 +1,132 @@
 .class public final Lz5;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic c:I
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lx5;
+.field public final synthetic X:Ly5;
 
-.field public final b:Ltif;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lx5;)V
-    .locals 1
+.method public constructor <init>(Ly5;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz5;->X:Ly5;
 
-    iput-object p2, p0, Lz5;->a:Lx5;
+    const/4 p1, 0x2
 
-    new-instance p2, Ly5;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p1, v0}, Ly5;-><init>(Landroid/content/Context;I)V
-
-    new-instance p1, Ltif;
-
-    invoke-direct {p1, p2}, Ltif;-><init>(Loi6;)V
-
-    iput-object p1, p0, Lz5;->b:Ltif;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/accounts/Account;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    :try_start_0
-    iget-object v0, p0, Lz5;->b:Ltif;
+    check-cast p1, Lzb4;
 
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v0
+    invoke-virtual {p0, p1, p2}, Lz5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Landroid/accounts/AccountManager;
+    move-result-object p1
 
-    iget-object v1, p0, Lz5;->a:Lx5;
+    check-cast p1, Lz5;
 
-    iget-object v1, v1, Lx5;->a:Ljava/lang/String;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v0, v1}, Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;
+    invoke-virtual {p1, p2}, Lz5;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    const/4 v1, 0x0
-
-    invoke-static {v1, v0}, Lft;->v(I[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/accounts/Account;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    new-instance v1, Lfed;
-
-    invoke-direct {v1, v0}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    :goto_0
-    nop
-
-    instance-of v1, v0, Lfed;
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    check-cast v0, Landroid/accounts/Account;
-
-    return-object v0
+    return-object p1
 .end method
 
-.method public final b()V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lz5;
+
+    iget-object v0, p0, Lz5;->X:Ly5;
+
+    invoke-direct {p1, v0, p2}, Lz5;-><init>(Ly5;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    const-string v0, "removeAccount start"
+    iget v0, p0, Lz5;->o:I
 
-    const-string v1, "z5"
+    iget-object v1, p0, Lz5;->X:Ly5;
 
-    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    invoke-virtual {p0}, Lz5;->a()Landroid/accounts/Account;
+    if-eqz v0, :cond_1
 
-    move-result-object v0
+    if-ne v0, v2, :cond_0
 
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v2, p0, Lz5;->b:Ltif;
-
-    invoke-virtual {v2}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/accounts/AccountManager;
-
-    invoke-virtual {v2, v0}, Landroid/accounts/AccountManager;->removeAccountExplicitly(Landroid/accounts/Account;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    const-string v2, "removeAccountExplicitly failed!"
-
-    invoke-static {v1, v2, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v1, Ly5;->K0:Lo2b;
+
+    iget-object p1, p1, Lo2b;->b:Ljava/lang/Object;
+
+    check-cast p1, Liq3;
+
+    check-cast p1, Lj8b;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object p1
+
+    const/16 v0, 0x177
+
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsm8;
+
+    iput v2, p0, Lz5;->o:I
+
+    invoke-virtual {p1, p0}, Lsm8;->a(Lp6g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     :goto_0
-    const-string v0, "removeAccount finished!"
+    invoke-virtual {v1}, Ly5;->J()V
 
-    invoke-static {v1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    return-void
+    return-object p1
 .end method

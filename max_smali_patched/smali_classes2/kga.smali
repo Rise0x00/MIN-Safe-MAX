@@ -1,147 +1,156 @@
-.class public final Lkga;
+.class public final synthetic Lkga;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lkga;
+# interfaces
+.implements Lay3;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/List;
+.field public final synthetic b:Lnga;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lkga;
-
-    sget-object v1, Lna5;->a:Lna5;
-
-    invoke-direct {v0, v1, v1}, Lkga;-><init>(Ljava/util/List;Ljava/util/List;)V
-
-    sput-object v0, Lkga;->c:Lkga;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public synthetic constructor <init>(Lnga;I)V
     .locals 0
 
+    iput p2, p0, Lkga;->a:I
+
+    iput-object p1, p0, Lkga;->b:Lnga;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lkga;->a:Ljava/util/List;
-
-    iput-object p2, p0, Lkga;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lkga;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    check-cast p1, Ljava/lang/Long;
+
+    iget-object p1, p0, Lkga;->b:Lnga;
+
+    iget-object v0, p1, Lnga;->x0:Lkw8;
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object v1, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->d1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    iget-object v1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lru/ok/messages/messages/widgets/MessageComposeEditText;
+
+    invoke-virtual {v1}, Landroid/view/View;->isFocused()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Ln48;
+
+    iget-object v0, v0, Ln48;->b:Lm48;
+
+    iget-boolean v0, v0, Lm48;->o:Z
+
+    if-nez v0, :cond_2
 
     :cond_0
-    instance-of v1, p1, Lkga;
+    new-instance v0, Lyk0;
 
-    const/4 v2, 0x0
+    const/16 v1, 0xe
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1}, Lyk0;-><init>(I)V
 
-    return v2
+    invoke-virtual {p1, v0}, Lnga;->P0(Ldy3;)V
+
+    iget-object p1, p1, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-nez p1, :cond_1
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lkga;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lkga;->a:Ljava/util/List;
-
-    iget-object v3, p1, Lkga;->a:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
+    invoke-virtual {p1, v0}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->C0(Z)V
 
     :cond_2
-    iget-object v1, p0, Lkga;->b:Ljava/util/List;
+    :goto_0
+    return-void
 
-    iget-object p1, p1, Lkga;->b:Ljava/util/List;
+    :pswitch_0
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, p0, Lkga;->b:Lnga;
 
-    move-result p1
+    iget-object v0, v0, Lnga;->Y:Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
-    if-nez p1, :cond_3
+    if-nez v0, :cond_3
 
-    return v2
+    goto :goto_1
 
     :cond_3
-    return v0
-.end method
+    invoke-virtual {v0, p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->F0(Ljava/lang/Throwable;)V
 
-.method public final hashCode()I
-    .locals 2
+    :goto_1
+    return-void
 
-    iget-object v0, p0, Lkga;->a:Ljava/util/List;
+    :pswitch_1
+    check-cast p1, Lpfh;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v0, p0, Lkga;->b:Lnga;
 
-    move-result v0
+    iget-object v1, v0, Lnga;->c:Lyh8;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v1, p1, v0}, Lyh8;->j(Lpfh;Lj79;)V
 
-    iget-object v1, p0, Lkga;->b:Ljava/util/List;
+    new-instance v1, Lm52;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/4 v2, 0x2
 
-    move-result v1
+    invoke-direct {v1, v2, p1}, Lm52;-><init>(ILjava/lang/Object;)V
 
-    add-int/2addr v1, v0
+    invoke-virtual {v0, v1}, Lnga;->P0(Ldy3;)V
 
-    return v1
-.end method
+    iget-object p1, v0, Ld3;->b:Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    check-cast p1, Ltga;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Ldha;
 
-    const-string v1, "PendingNotifications(insert="
+    iget-object p1, p1, Ldha;->X:Lru/ok/messages/video/widgets/VideoView;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lru/ok/messages/video/widgets/VideoView;->a(Lwqh;)V
 
-    iget-object v1, p0, Lkga;->a:Ljava/util/List;
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_2
+    check-cast p1, Ljava/lang/Long;
 
-    const-string v1, ", delete="
+    new-instance p1, Llga;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lkga;->b:Ljava/util/List;
+    iget-object v1, p0, Lkga;->b:Lnga;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v1, v0}, Llga;-><init>(Lnga;I)V
 
-    const-string v1, ")"
+    invoke-virtual {v1, p1}, Lnga;->P0(Ldy3;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

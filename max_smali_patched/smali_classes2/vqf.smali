@@ -1,40 +1,29 @@
 .class public final Lvqf;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgj6;
+
+# instance fields
+.field public final a:Lb2e;
+
+.field public final b:Lai;
 
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+# direct methods
+.method public constructor <init>(Lb2e;)V
+    .locals 1
 
-    check-cast p1, Lw5b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lx45;
+    iput-object p1, p0, Lvqf;->a:Lb2e;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    new-instance p1, Lai;
 
-    new-instance p1, Lvqf;
+    const/16 v0, 0x13
 
-    const/4 p2, 0x3
+    invoke-direct {p1, v0}, Lai;-><init>(I)V
 
-    invoke-direct {p1, p2, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvqf;->b:Lai;
 
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lvqf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

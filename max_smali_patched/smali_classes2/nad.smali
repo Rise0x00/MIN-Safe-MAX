@@ -1,125 +1,34 @@
-.class public final synthetic Lnad;
+.class public abstract Lnad;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static web_app_root_choose_media_bottomsheet_camera:I = 0x7f0a0cf8
 
-.field public final synthetic b:Lpad;
+.field public static web_app_root_choose_media_bottomsheet_file_manager:I = 0x7f0a0cf9
 
+.field public static web_app_root_choose_media_bottomsheet_gallery:I = 0x7f0a0cfa
 
-# direct methods
-.method public synthetic constructor <init>(Lpad;I)V
-    .locals 0
+.field public static web_app_root_choose_media_bottomsheet_video:I = 0x7f0a0cfb
 
-    iput p2, p0, Lnad;->a:I
+.field public static webapp_root_content_container:I = 0x7f0a0cfc
 
-    iput-object p1, p0, Lnad;->b:Lpad;
+.field public static webapp_root_error_container:I = 0x7f0a0cfd
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static webapp_root_frame:I = 0x7f0a0cfe
 
-    return-void
-.end method
+.field public static webapp_root_progressbar:I = 0x7f0a0cff
 
+.field public static webapp_root_settings_header:I = 0x7f0a0d00
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.field public static webapp_root_settings_sections_recycler:I = 0x7f0a0d01
 
-    iget v0, p0, Lnad;->a:I
+.field public static webapp_root_settings_switcher:I = 0x7f0a0d02
 
-    packed-switch v0, :pswitch_data_0
+.field public static webapp_root_settings_toolbar:I = 0x7f0a0d03
 
-    iget-object v0, p0, Lnad;->b:Lpad;
+.field public static webapp_root_settings_transition:I = 0x7f0a0d04
 
-    invoke-virtual {v0}, Lpad;->a()V
+.field public static webapp_root_toolbar:I = 0x7f0a0d05
 
-    :goto_0
-    sget-object v0, Lybg;->a:Lybg;
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lnad;->b:Lpad;
-
-    iget v1, v0, Lpad;->f:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, v0, Lpad;->f:I
-
-    iget-object v1, v0, Lpad;->b:Le2e;
-
-    new-instance v2, Lnad;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3}, Lnad;-><init>(Lpad;I)V
-
-    invoke-virtual {v1, v2}, Le2e;->D(Loi6;)V
-
-    invoke-virtual {v0}, Lpad;->b()V
-
-    goto :goto_0
-
-    :goto_1
-    :pswitch_1
-    iget-object v0, p0, Lnad;->b:Lpad;
-
-    iget v1, v0, Lpad;->f:I
-
-    if-lez v1, :cond_2
-
-    iget-object v1, v0, Lpad;->g:Lxg6;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    iget-object v2, v1, Lxg6;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/graphics/SurfaceTexture;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-
-    :cond_0
-    iget-object v1, v1, Lxg6;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/graphics/SurfaceTexture;
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    if-eqz v1, :cond_1
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lpad;->e:Z
-
-    :catch_0
-    :cond_1
-    iget v1, v0, Lpad;->f:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, v0, Lpad;->f:I
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v0, Lybg;->a:Lybg;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static webapp_root_webview:I = 0x7f0a0d06

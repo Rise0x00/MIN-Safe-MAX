@@ -1,64 +1,71 @@
 .class public final Lxxa;
-.super Logf;
+.super Lf3;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
+
+# instance fields
+.field public final synthetic b:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Lsza;I)V
+    .locals 0
+
+    iput p2, p0, Lxxa;->b:I
+
+    invoke-direct {p0, p1}, Lf3;-><init>(Lsza;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final k(Le0b;)V
+    .locals 2
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lxxa;->b:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lxxa;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Luya;
 
-    move-result-object p1
+    const/4 v1, 0x1
 
-    check-cast p1, Lxxa;
+    invoke-direct {v0, v1, p1}, Luya;-><init>(ILjava/lang/Object;)V
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-object p1, p0, Lf3;->a:Lsza;
 
-    invoke-virtual {p1, p2}, Lxxa;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lsza;->a(Le0b;)V
 
-    return-object p2
-.end method
+    return-void
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :pswitch_0
+    new-instance v0, Luya;
 
-    new-instance p1, Lxxa;
+    const/4 v1, 0x0
 
-    const/4 v0, 0x2
+    invoke-direct {v0, v1, p1}, Luya;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p1, v0, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object p1, p0, Lf3;->a:Lsza;
 
-    return-object p1
-.end method
+    invoke-interface {p1, v0}, Lsza;->a(Le0b;)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    return-void
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :pswitch_1
+    new-instance v0, Lwxa;
 
-    sget-object p1, Lsp8;->a:Lsp8;
+    invoke-direct {v0, p1}, Lvm0;-><init>(Le0b;)V
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
+    iget-object p1, p0, Lf3;->a:Lsza;
 
-    move-result-object p1
+    invoke-interface {p1, v0}, Lsza;->a(Le0b;)V
 
-    const-class v0, Lnpe;
+    return-void
 
-    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnpe;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

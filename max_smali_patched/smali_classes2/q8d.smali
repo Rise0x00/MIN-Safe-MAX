@@ -1,119 +1,50 @@
-.class public final Lq8d;
-.super Logf;
-.source "SourceFile"
-
-# interfaces
-.implements Lej6;
+.class public abstract Lq8d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+# static fields
+.field public static oneme_folders_chats_picker_toolbar:I = 0x7f0a0667
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static oneme_folders_delete_folder_bottom_sheet_cancel_button:I = 0x7f0a0668
 
+.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f0a0669
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
-    .locals 0
+.field public static oneme_folders_edit_bottom_sheet_cancel_button:I = 0x7f0a066a
 
-    iput-object p2, p0, Lq8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+.field public static oneme_folders_edit_bottom_sheet_delete_button:I = 0x7f0a066b
 
-    const/4 p2, 0x2
+.field public static oneme_folders_edit_create_button:I = 0x7f0a066c
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static oneme_folders_edit_delete_button:I = 0x7f0a066d
 
-    return-void
-.end method
+.field public static oneme_folders_edit_folder_name_field:I = 0x7f0a066e
 
+.field public static oneme_folders_edit_members_add_button:I = 0x7f0a066f
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static oneme_folders_edit_members_list:I = 0x7f0a0670
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static oneme_folders_edit_save_button:I = 0x7f0a0671
 
-    invoke-virtual {p0, p1, p2}, Lq8d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static oneme_folders_edit_screen:I = 0x7f0a0672
 
-    move-result-object p1
+.field public static oneme_folders_edit_title_input:I = 0x7f0a0673
 
-    check-cast p1, Lq8d;
+.field public static oneme_folders_edit_toolbar:I = 0x7f0a0674
 
-    sget-object p2, Lybg;->a:Lybg;
+.field public static oneme_folders_list_all_folder_view_type:I = 0x7f0a0675
 
-    invoke-virtual {p1, p2}, Lq8d;->n(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static oneme_folders_list_create_folder_view_type:I = 0x7f0a0676
 
-    return-object p2
-.end method
+.field public static oneme_folders_list_menu_action_change:I = 0x7f0a0677
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f0a0678
 
-    new-instance v0, Lq8d;
+.field public static oneme_folders_list_recommended_folder_view_type:I = 0x7f0a0679
 
-    iget-object v1, p0, Lq8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+.field public static oneme_folders_list_recycler_view:I = 0x7f0a067a
 
-    invoke-direct {v0, p2, v1}, Lq8d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
+.field public static oneme_folders_list_screen:I = 0x7f0a067b
 
-    iput-object p1, v0, Lq8d;->o:Ljava/lang/Object;
+.field public static oneme_folders_list_toolbar:I = 0x7f0a067c
 
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lq8d;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-static {p1}, Lab3;->C(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of v0, p1, Lv6a;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lv6a;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    iget-object v0, p0, Lq8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
-
-    invoke-virtual {v0}, Lc24;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->Z:Ld0d;
-
-    sget-object v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Les7;
-
-    const/4 v3, 0x2
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, v0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lapa;
-
-    iget-object p1, p1, Lv6a;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Lapa;->setAvatarUrl(Ljava/lang/String;)V
-
-    :cond_1
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-.end method
+.field public static oneme_folders_list_user_folder_view_type:I = 0x7f0a067d

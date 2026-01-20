@@ -1,60 +1,48 @@
 .class public final Lnp8;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lswg;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:Lro8;
+.field public final synthetic X:Lnq7;
 
-.field public final synthetic b:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final synthetic c:Lrp8;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lrp8;Lro8;IJ)V
+.method public constructor <init>(Lnq7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnp8;->X:Lnq7;
 
-    iput-object p1, p0, Lnp8;->c:Lrp8;
-
-    iput-object p2, p0, Lnp8;->a:Lro8;
-
-    iput p3, p0, Lnp8;->b:I
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final G()V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lnp8;->a:Lro8;
+    iput-object p1, p0, Lnp8;->d:Ljava/lang/Object;
 
-    iget v1, p0, Lnp8;->b:I
+    iget p1, p0, Lnp8;->o:I
 
-    iget-object v2, p0, Lnp8;->c:Lrp8;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v2, v0, v1}, Lrp8;->N0(Lro8;I)V
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Lnp8;->o:I
 
-.method public final a(J)V
-    .locals 3
+    iget-object p1, p0, Lnp8;->X:Lnq7;
 
-    iget-object v0, p0, Lnp8;->a:Lro8;
+    const/4 v0, 0x0
 
-    iget v1, p0, Lnp8;->b:I
+    invoke-virtual {p1, v0, p0}, Lnq7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-object v2, p0, Lnp8;->c:Lrp8;
+    move-result-object p1
 
-    invoke-virtual {v2, v0, v1, p1, p2}, Lrp8;->J0(Lro8;IJ)V
-
-    return-void
+    return-object p1
 .end method

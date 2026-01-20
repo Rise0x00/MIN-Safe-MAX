@@ -1,58 +1,73 @@
-.class public final Lrdb;
+.class public abstract Lrdb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lai1;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lwdd;->media_picker_default_toolbar_title:I
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lrdb;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    sget v0, Lwdd;->media_picker_default_toolbar_title_only_photo:I
 
-    iput-object v0, p0, Lrdb;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lrdb;->b:I
 
-    return-void
-.end method
+    sget v0, Lwdd;->media_picker_empty_media_data:I
 
+    sput v0, Lrdb;->c:I
 
-# virtual methods
-.method public final onStateChanged(Lsh1;Luh1;)V
-    .locals 2
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__button:I
 
-    iget-object v0, p0, Lrdb;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lrdb;->d:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
 
-    move-result-object v0
+    sput v0, Lrdb;->e:I
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_camera_title:I
 
-    move-result v1
+    sput v0, Lrdb;->f:I
 
-    if-eqz v1, :cond_0
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_subtitle:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sput v0, Lrdb;->g:I
 
-    move-result-object v1
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__gallery_title:I
 
-    check-cast v1, Lai1;
+    sput v0, Lrdb;->h:I
 
-    invoke-interface {v1, p1, p2}, Lai1;->onStateChanged(Lsh1;Luh1;)V
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__subtitle:I
 
-    goto :goto_0
+    sput v0, Lrdb;->i:I
 
-    :cond_0
+    sget v0, Lwdd;->media_type_picker__permissions_dialog__title:I
+
+    sput v0, Lrdb;->j:I
+
     return-void
 .end method

@@ -1,72 +1,77 @@
 .class public final Lel2;
-.super Logf;
+.super Lewc;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public final synthetic o:Ltl2;
-
-
-# direct methods
-.method public constructor <init>(Ltl2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lel2;->o:Ltl2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final y(Lud8;)V
+    .locals 6
 
-    check-cast p1, Lg54;
+    check-cast p1, Lprc;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    invoke-virtual {p0, p1, p2}, Lel2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    check-cast v0, Lbl2;
 
-    move-result-object p1
+    iget-object p1, p1, Lprc;->a:Lxj2;
 
-    check-cast p1, Lel2;
+    iget-object v1, p1, Lxj2;->e:Ljava/lang/String;
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-virtual {v0, v1}, Lbl2;->setLink(Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Lel2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v1, p1, Lxj2;->f:Z
 
-    return-object p2
-.end method
+    invoke-virtual {v0, v1}, Lbl2;->setLoading(Z)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object v1, p1, Lxj2;->d:Ljava/lang/String;
 
-    new-instance p1, Lel2;
+    invoke-virtual {v0, v1}, Lbl2;->setChatTitle(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lel2;->o:Ltl2;
+    iget-wide v1, p1, Lxj2;->b:J
 
-    invoke-direct {p1, v0, p2}, Lel2;-><init>(Ltl2;Lkotlin/coroutines/Continuation;)V
+    iget-object v3, p1, Lxj2;->a:Ljava/lang/String;
 
-    return-object p1
-.end method
+    iget-object v4, p1, Lxj2;->c:Ljava/lang/CharSequence;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object v5, v0, Lbl2;->K0:Lj4b;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object p1, p0, Lel2;->o:Ltl2;
+    move-result-object v1
 
-    invoke-static {p1}, Ltl2;->w(Ltl2;)V
+    invoke-static {v5, v3, v1, v4}, Lj4b;->o(Lj4b;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
 
-    sget-object p1, Lybg;->a:Lybg;
+    iget-boolean v1, p1, Lxj2;->g:Z
 
-    return-object p1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    iget-boolean p1, p1, Lxj2;->h:Z
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move p1, v2
+
+    :goto_0
+    iget-object v1, v0, Lbl2;->N0:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    const/16 v2, 0x8
+
+    :goto_1
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lbl2;->v()V
+
+    return-void
 .end method

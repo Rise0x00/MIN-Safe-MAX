@@ -1,16 +1,23 @@
-.class public final synthetic Lk87;
+.class public interface abstract Lk87;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/IntSupplier;
+
+# static fields
+.field public static final v:Lyna;
 
 
-# virtual methods
-.method public final getAsInt()I
-    .locals 1
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lyna;
 
-    return v0
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lyna;-><init>(I)V
+
+    sput-object v0, Lk87;->v:Lyna;
+
+    return-void
 .end method

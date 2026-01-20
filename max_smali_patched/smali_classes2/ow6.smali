@@ -1,61 +1,55 @@
-.class public final enum Low6;
-.super Ljava/lang/Enum;
+.class public final Low6;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Low6;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final synthetic b:[Low6;
+.field public final synthetic Y:Lpw6;
+
+.field public Z:I
+
+.field public d:J
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lpw6;Lo84;)V
+    .locals 0
 
-    new-instance v0, Low6;
+    iput-object p1, p0, Low6;->Y:Lpw6;
 
-    const-string v1, "ONE_VIDEO_TIMEOUT"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Low6;->a:Low6;
-
-    filled-new-array {v0}, [Low6;
-
-    move-result-object v0
-
-    sput-object v0, Low6;->b:[Low6;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Low6;
-    .locals 1
 
-    const-class v0, Low6;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Low6;->X:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Low6;->Z:I
 
-    check-cast p0, Low6;
+    const/high16 v0, -0x80000000
 
-    return-object p0
-.end method
+    or-int/2addr p1, v0
 
-.method public static values()[Low6;
-    .locals 1
+    iput p1, p0, Low6;->Z:I
 
-    sget-object v0, Low6;->b:[Low6;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0}, [Low6;->clone()Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    iget-object v2, p0, Low6;->Y:Lpw6;
 
-    check-cast v0, [Low6;
+    invoke-virtual {v2, v0, v1, p1, p0}, Lpw6;->a(JZLo84;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    return-object p1
 .end method

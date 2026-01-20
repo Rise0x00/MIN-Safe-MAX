@@ -1,60 +1,64 @@
-.class public final synthetic Lhh9;
+.class public final Lhh9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
+.implements Lih9;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+# static fields
+.field public static final a:Lhh9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lhh9;->a:I
+    new-instance v0, Lhh9;
 
-    iput-object p1, p0, Lhh9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lhh9;->a:Lhh9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lhh9;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lhh9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    return v0
 
-    const/4 v1, 0x0
+    :cond_0
+    instance-of p1, p1, Lhh9;
 
-    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0:Lkyf;
+    if-nez p1, :cond_1
 
-    return-void
+    const/4 p1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lhh9;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    return p1
 
-    const/4 v1, 0x0
+    :cond_1
+    return v0
+.end method
 
-    iput-object v1, v0, Lone/me/sdk/messagewrite/MessageWriteWidget;->F0:Lkyf;
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, -0x27fcdd22
 
-    nop
+    return v0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "OnSelfClicked"
+
+    return-object v0
 .end method

@@ -4,24 +4,24 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
 .field public final b:J
 
-.field public final c:Ljava/util/Set;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/Set;)V
+.method public constructor <init>(Ljava/lang/String;JJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lnb0;->a:J
+    iput-object p1, p0, Lnb0;->a:Ljava/lang/String;
 
-    iput-wide p3, p0, Lnb0;->b:J
+    iput-wide p2, p0, Lnb0;->b:J
 
-    iput-object p5, p0, Lnb0;->c:Ljava/util/Set;
+    iput-wide p4, p0, Lnb0;->c:J
 
     return-void
 .end method
@@ -46,13 +46,15 @@
 
     check-cast p1, Lnb0;
 
-    iget-wide v3, p0, Lnb0;->a:J
+    iget-object v1, p0, Lnb0;->a:Ljava/lang/String;
 
-    iget-wide v5, p1, Lnb0;->a:J
+    iget-object v3, p1, Lnb0;->a:Ljava/lang/String;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result v1
+
+    if-eqz v1, :cond_1
 
     iget-wide v3, p0, Lnb0;->b:J
 
@@ -62,15 +64,13 @@
 
     if-nez v1, :cond_1
 
-    iget-object v1, p0, Lnb0;->c:Ljava/util/Set;
+    iget-wide v3, p0, Lnb0;->c:J
 
-    iget-object p1, p1, Lnb0;->c:Ljava/util/Set;
+    iget-wide v5, p1, Lnb0;->c:J
 
-    invoke-interface {v1, p1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result p1
-
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_1
 
     return v0
 
@@ -81,15 +81,11 @@
 .method public final hashCode()I
     .locals 7
 
-    iget-wide v0, p0, Lnb0;->a:J
+    iget-object v0, p0, Lnb0;->a:Ljava/lang/String;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
+    move-result v0
 
     const v1, 0xf4243
 
@@ -97,11 +93,13 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v3, p0, Lnb0;->b:J
+    iget-wide v2, p0, Lnb0;->b:J
 
-    ushr-long v5, v3, v2
+    const/16 v4, 0x20
 
-    xor-long v2, v5, v3
+    ushr-long v5, v2, v4
+
+    xor-long/2addr v2, v5
 
     long-to-int v2, v2
 
@@ -109,11 +107,13 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lnb0;->c:Ljava/util/Set;
+    iget-wide v1, p0, Lnb0;->c:J
 
-    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
+    ushr-long v3, v1, v4
 
-    move-result v1
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
 
     xor-int/2addr v0, v1
 
@@ -121,19 +121,19 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ConfigValue{delta="
+    const-string v1, "InstallationTokenResult{token="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lnb0;->a:J
+    iget-object v1, p0, Lnb0;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", maxAllowedDelay="
+    const-string v1, ", tokenExpirationTimestamp="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -141,19 +141,15 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", flags="
+    const-string v1, ", tokenCreationTimestamp="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lnb0;->c:Ljava/util/Set;
+    iget-wide v1, p0, Lnb0;->c:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v3, "}"
 
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -4,28 +4,24 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ldzf;
 
-.field public final b:I
+.field public final b:Z
 
-.field public final c:I
-
-.field public final d:I
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(IIII)V
+.method public constructor <init>(Ldzf;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lbzf;->a:I
+    iput-object p1, p0, Lbzf;->a:Ldzf;
 
-    iput p2, p0, Lbzf;->b:I
+    iput-boolean p2, p0, Lbzf;->b:Z
 
-    iput p3, p0, Lbzf;->c:I
-
-    iput p4, p0, Lbzf;->d:I
+    iput-boolean p3, p0, Lbzf;->c:Z
 
     return-void
 .end method
@@ -49,45 +45,42 @@
     :cond_1
     check-cast p1, Lbzf;
 
-    iget v0, p0, Lbzf;->a:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget v1, p1, Lbzf;->a:I
+    iget-object v0, p0, Lbzf;->a:Ldzf;
 
-    if-eq v0, v1, :cond_2
+    iget-object v1, p1, Lbzf;->a:Ldzf;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    iget v0, p0, Lbzf;->b:I
+    iget-boolean v0, p0, Lbzf;->b:Z
 
-    iget v1, p1, Lbzf;->b:I
+    iget-boolean v1, p1, Lbzf;->b:Z
 
     if-eq v0, v1, :cond_3
 
     goto :goto_0
 
     :cond_3
-    iget v0, p0, Lbzf;->c:I
+    iget-boolean v0, p0, Lbzf;->c:Z
 
-    iget v1, p1, Lbzf;->c:I
+    iget-boolean p1, p1, Lbzf;->c:Z
 
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lbzf;->d:I
-
-    iget p1, p1, Lbzf;->d:I
-
-    if-eq v0, p1, :cond_5
+    if-eq v0, p1, :cond_4
 
     :goto_0
     const/4 p1, 0x0
 
     return p1
 
-    :cond_5
+    :cond_4
     :goto_1
     const/4 p1, 0x1
 
@@ -97,9 +90,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lbzf;->a:I
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -107,27 +100,25 @@
 
     mul-int/2addr v0, v1
 
-    const/4 v2, -0x1
+    iget-object v2, p0, Lbzf;->a:Ldzf;
 
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    move-result v0
+    move-result v2
 
-    iget v2, p0, Lbzf;->b:I
+    add-int/2addr v2, v0
 
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
+    mul-int/2addr v2, v1
 
-    move-result v0
+    iget-boolean v0, p0, Lbzf;->b:Z
 
-    iget v2, p0, Lbzf;->c:I
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
+    invoke-static {v2, v1, v0}, Lcbh;->j(IIZ)I
 
     move-result v0
 
-    iget v1, p0, Lbzf;->d:I
+    iget-boolean v1, p0, Lbzf;->c:Z
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -137,31 +128,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, ", contrastStatic=-1, primary="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ", secondary="
+    const-string v1, "StrictModeConfig(enabled=false, violationHandler="
 
-    const-string v2, "TopbarTextDefaultColors(contrast="
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v3, p0, Lbzf;->a:I
+    iget-object v1, p0, Lbzf;->a:Ldzf;
 
-    iget v4, p0, Lbzf;->b:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, ", allowNetwork="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", themed="
+    iget-boolean v1, p0, Lbzf;->b:Z
 
-    const-string v2, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget v3, p0, Lbzf;->c:I
+    const-string v1, ", allowDisk="
 
-    iget v4, p0, Lbzf;->d:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v3, v1, v4, v2}, Lcd0;->i(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    const-string v1, ")"
+
+    iget-boolean v2, p0, Lbzf;->c:Z
+
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

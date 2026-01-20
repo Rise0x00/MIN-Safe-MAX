@@ -1,19 +1,28 @@
-.class public final Lkp3;
-.super Landroid/os/Binder;
+.class public interface abstract Lkp3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:Llp3;
+# static fields
+.field public static final n:Ljf3;
 
 
 # direct methods
-.method public constructor <init>(Llp3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lkp3;->c:Llp3;
+    new-instance v0, Ljf3;
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Ljf3;-><init>(I)V
+
+    sput-object v0, Lkp3;->n:Ljf3;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(Lcom/google/firebase/components/ComponentRegistrar;)Ljava/util/List;
 .end method

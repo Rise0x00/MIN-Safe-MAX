@@ -1,84 +1,20 @@
-.class public final Lbed;
+.class public abstract Lbed;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static audio_onboarding_intro:I = 0x7f130083
 
+.field public static pinbars_group_call_bar_button_text:I = 0x7f130b2f
 
-# direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.field public static pinbars_group_call_bar_title:I = 0x7f130b30
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static pinbars_snackbar_unpinned:I = 0x7f130b31
 
-    iput-wide p1, p0, Lbed;->a:J
+.field public static unknown_contact_add_to_contact:I = 0x7f130e7a
 
-    return-void
-.end method
+.field public static unknown_contact_block_contact:I = 0x7f130e7b
 
+.field public static unknown_contact_snackbar_add_contact:I = 0x7f130e7c
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lbed;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lbed;
-
-    iget-wide v3, p0, Lbed;->a:J
-
-    iget-wide v5, p1, Lbed;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lbed;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "RestrictionsInfo(expiration="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lbed;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static videomsg_player_type:I = 0x7f130eaa

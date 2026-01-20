@@ -1,84 +1,51 @@
 .class public final Lrv;
-.super Luv;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Luw;
+
+.field public Y:I
+
+.field public d:Ljava/util/ArrayList;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Luw;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrv;->X:Luw;
 
-    iput-wide p1, p0, Lrv;->a:J
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lrv;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lrv;->Y:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lrv;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lrv;->Y:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lrv;->X:Luw;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lrv;
+    invoke-virtual {p1, v0, p0}, Luw;->k(Lym9;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget-wide v3, p0, Lrv;->a:J
+    move-result-object p1
 
-    iget-wide v5, p1, Lrv;->a:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lrv;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "LoadingAround(time="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lrv;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,146 +1,99 @@
 .class public final Lto;
-.super Ljava/lang/Object;
+.super Landroid/widget/RatingBar;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/widget/TextView;
-
-.field public final b:Lcua;
+.field public final a:Lws8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
-    .locals 1
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lh5d;->ratingBarStyle:I
 
-    iput-object p1, p0, Lto;->a:Landroid/widget/TextView;
+    invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Lcua;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {v0, p1}, Lcua;-><init>(Landroid/widget/TextView;)V
+    move-result-object p1
 
-    iput-object v0, p0, Lto;->b:Lcua;
+    invoke-static {p0, p1}, Ljjg;->a(Landroid/view/View;Landroid/content/Context;)V
+
+    new-instance p1, Lws8;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v1, p0}, Lws8;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lto;->a:Lws8;
+
+    invoke-virtual {p1, p2, v0}, Lws8;->z(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+.method public final declared-synchronized onMeasure(II)V
     .locals 1
 
-    iget-object v0, p0, Lto;->b:Lcua;
-
-    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmzi;
-
-    invoke-virtual {v0, p1}, Lmzi;->a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget-object v0, p0, Lto;->b:Lcua;
-
-    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmzi;
-
-    invoke-virtual {v0}, Lmzi;->d()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c(Landroid/util/AttributeSet;I)V
-    .locals 3
-
-    iget-object v0, p0, Lto;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    sget-object v1, Lsvc;->AppCompatTextView:[I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, p1, v1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
-
-    move-result-object p1
+    monitor-enter p0
 
     :try_start_0
-    sget p2, Lsvc;->AppCompatTextView_emojiCompatEnabled:I
+    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
 
-    invoke-virtual {p1, p2}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    iget-object p2, p0, Lto;->a:Lws8;
 
-    move-result p2
+    iget-object p2, p2, Lws8;->c:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    check-cast p2, Landroid/graphics/Bitmap;
 
     if-eqz p2, :cond_0
 
-    sget p2, Lsvc;->AppCompatTextView_emojiCompatEnabled:I
+    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
 
     move-result v0
+
+    mul-int/2addr p2, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception p2
+    move-exception p1
 
     goto :goto_1
 
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
-
-    invoke-virtual {p0, v0}, Lto;->e(Z)V
+    monitor-exit p0
 
     return-void
 
     :goto_1
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    throw p2
-.end method
-
-.method public final d(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lto;->b:Lcua;
-
-    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmzi;
-
-    invoke-virtual {v0, p1}, Lmzi;->e(Z)V
-
-    return-void
-.end method
-
-.method public final e(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lto;->b:Lcua;
-
-    iget-object v0, v0, Lcua;->b:Ljava/lang/Object;
-
-    check-cast v0, Lmzi;
-
-    invoke-virtual {v0, p1}, Lmzi;->f(Z)V
-
-    return-void
+    throw p1
 .end method

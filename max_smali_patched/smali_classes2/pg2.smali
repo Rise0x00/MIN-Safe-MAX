@@ -1,94 +1,132 @@
-.class public final Lpg2;
-.super Lbj2;
+.class public final synthetic Lpg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcy3;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lxg2;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lxg2;Ljava/lang/Object;JI)V
+    .locals 0
+
+    iput p5, p0, Lpg2;->a:I
+
+    iput-object p1, p0, Lpg2;->b:Lxg2;
+
+    iput-object p2, p0, Lpg2;->d:Ljava/lang/Object;
+
+    iput-wide p3, p0, Lpg2;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final F(Lj49;Lqi6;Lej6;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    check-cast p1, Lg49;
+    iget v0, p0, Lpg2;->a:I
 
-    invoke-virtual {p0, p1}, Lpg2;->G(Lg49;)V
+    packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0, p1, p2, p3}, Lbj2;->F(Lj49;Lqi6;Lej6;)V
+    iget-object v0, p0, Lpg2;->d:Ljava/lang/Object;
+
+    check-cast v0, Lgab;
+
+    check-cast p1, Lch2;
+
+    iget-object v1, p0, Lpg2;->b:Lxg2;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v0, p1, Lch2;->d0:Lgab;
+
+    iget-wide v2, p0, Lpg2;->c:J
+
+    iput-wide v2, p1, Lch2;->e0:J
+
+    iget-object v0, v1, Lxg2;->o:Llgc;
+
+    iget-object v0, v0, Llgc;->a:Lqi8;
+
+    invoke-virtual {v0}, Lyfe;->j()J
+
+    move-result-wide v0
+
+    iput-wide v0, p1, Lch2;->f0:J
 
     return-void
-.end method
 
-.method public final G(Lg49;)V
-    .locals 5
+    :pswitch_0
+    iget-object v0, p0, Lpg2;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+    check-cast v0, Ljm9;
 
-    check-cast v0, Lyi2;
+    check-cast p1, Lch2;
 
-    iget-wide v1, p1, Lg49;->a:J
+    iget-object v1, p0, Lpg2;->b:Lxg2;
 
-    long-to-int v1, v1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+    if-nez v0, :cond_0
 
-    iget-object v1, p1, Lg49;->o:Ljava/lang/String;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0, v1}, Lyi2;->setTitle(Ljava/lang/CharSequence;)V
+    iput-wide v0, p1, Lch2;->i0:J
 
-    iget-object v1, p1, Lg49;->Y:Ljava/lang/CharSequence;
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Lyi2;->setLink(Ljava/lang/CharSequence;)V
+    :cond_0
+    iget-wide v2, p1, Lch2;->i0:J
 
-    iget-object v1, p1, Lg49;->X:Ljava/lang/CharSequence;
+    iget-object v1, v1, Lxg2;->t:Lj35;
 
-    invoke-virtual {v0, v1}, Lyi2;->setSubtitle(Ljava/lang/CharSequence;)V
-
-    iget-boolean v1, p1, Lg49;->Z:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object p1, v0, Lyi2;->J0:Lapa;
-
-    iget-object v1, v0, Lyi2;->F0:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lj35;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Landroid/graphics/drawable/Drawable;
+    check-cast v1, Lhm9;
 
-    new-instance v2, Lfe1;
+    iget-wide v4, p0, Lpg2;->c:J
 
-    const/16 v3, 0x11
+    invoke-virtual {v1, v4, v5, v2, v3}, Lhm9;->h(JJ)Ljm9;
 
-    invoke-direct {v2, v3}, Lfe1;-><init>(I)V
+    move-result-object v1
 
-    new-instance v3, Lfe1;
+    if-eqz v1, :cond_1
 
-    const/16 v4, 0x12
+    iget-wide v2, v0, Ljm9;->c:J
 
-    invoke-direct {v3, v4}, Lfe1;-><init>(I)V
+    iget-wide v4, v1, Ljm9;->c:J
 
-    const/4 v4, 0x6
+    cmp-long v1, v2, v4
 
-    invoke-static {p1, v1, v2, v3, v4}, Lapa;->o(Lapa;Landroid/graphics/drawable/Drawable;Lqi6;Lqi6;I)V
+    if-lez v1, :cond_2
 
-    invoke-virtual {v0}, Lyi2;->v()V
+    :cond_1
+    iget-wide v0, v0, Ljm9;->b:J
 
+    iput-wide v0, p1, Lch2;->i0:J
+
+    :cond_2
+    :goto_0
     return-void
 
-    :cond_0
-    iget-object p1, p1, Lg49;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Lyi2;->setLinkPhoto(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic z(Li28;)V
-    .locals 0
-
-    check-cast p1, Lg49;
-
-    invoke-virtual {p0, p1}, Lpg2;->G(Lg49;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

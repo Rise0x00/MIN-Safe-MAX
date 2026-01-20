@@ -1,31 +1,20 @@
-.class public final Lqke;
+.class public interface abstract Lqke;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lipd;
-
-.field public static final b:Lopd;
+# interfaces
+.implements Like;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public abstract a(J)J
+.end method
 
-    new-instance v0, Lipd;
+.method public abstract b()J
+.end method
 
-    const/16 v1, 0xe
+.method public abstract g()J
+.end method
 
-    invoke-direct {v0, v1}, Lipd;-><init>(I)V
-
-    sput-object v0, Lqke;->a:Lipd;
-
-    new-instance v0, Lopd;
-
-    invoke-direct {v0, v1}, Lopd;-><init>(I)V
-
-    sput-object v0, Lqke;->b:Lopd;
-
-    return-void
+.method public abstract h()I
 .end method

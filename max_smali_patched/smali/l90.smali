@@ -2,116 +2,149 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final a:I
 
-.field public final b:J
+# static fields
+.field public static final a:Ll90;
+
+.field public static final b:Lfz5;
+
+.field public static final c:Lfz5;
+
+.field public static final d:Lfz5;
+
+.field public static final e:Lfz5;
+
+.field public static final f:Lfz5;
+
+.field public static final g:Lfz5;
+
+.field public static final h:Lfz5;
 
 
 # direct methods
-.method public constructor <init>(IJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ll90;
 
-    iput p1, p0, Ll90;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Ll90;->b:J
+    sput-object v0, Ll90;->a:Ll90;
+
+    const-string v0, "requestTimeMs"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
+
+    move-result-object v0
+
+    sput-object v0, Ll90;->b:Lfz5;
+
+    const-string v0, "requestUptimeMs"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
+
+    move-result-object v0
+
+    sput-object v0, Ll90;->c:Lfz5;
+
+    const-string v0, "clientInfo"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
+
+    move-result-object v0
+
+    sput-object v0, Ll90;->d:Lfz5;
+
+    const-string v0, "logSource"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
+
+    move-result-object v0
+
+    sput-object v0, Ll90;->e:Lfz5;
+
+    const-string v0, "logSourceName"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
+
+    move-result-object v0
+
+    sput-object v0, Ll90;->f:Lfz5;
+
+    const-string v0, "logEvent"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
+
+    move-result-object v0
+
+    sput-object v0, Ll90;->g:Lfz5;
+
+    const-string v0, "qosTier"
+
+    invoke-static {v0}, Lfz5;->c(Ljava/lang/String;)Lfz5;
+
+    move-result-object v0
+
+    sput-object v0, Ll90;->h:Lfz5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    check-cast p1, Lmk8;
 
-    if-ne p1, p0, :cond_0
+    check-cast p2, Lwwa;
 
-    return v0
+    check-cast p1, Lrb0;
 
-    :cond_0
-    instance-of v1, p1, Ll90;
+    iget-wide v0, p1, Lrb0;->a:J
 
-    const/4 v2, 0x0
+    sget-object v2, Ll90;->b:Lfz5;
 
-    if-eqz v1, :cond_1
+    invoke-interface {p2, v2, v0, v1}, Lwwa;->e(Lfz5;J)Lwwa;
 
-    check-cast p1, Ll90;
+    sget-object v0, Ll90;->c:Lfz5;
 
-    iget v1, p0, Ll90;->a:I
+    iget-wide v1, p1, Lrb0;->b:J
 
-    iget v3, p1, Ll90;->a:I
+    invoke-interface {p2, v0, v1, v2}, Lwwa;->e(Lfz5;J)Lwwa;
 
-    if-ne v1, v3, :cond_1
+    sget-object v0, Ll90;->d:Lfz5;
 
-    iget-wide v3, p0, Ll90;->b:J
+    iget-object v1, p1, Lrb0;->c:Lsa0;
 
-    iget-wide v5, p1, Ll90;->b:J
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    cmp-long p1, v3, v5
+    sget-object v0, Ll90;->e:Lfz5;
 
-    if-nez p1, :cond_1
+    iget-object v1, p1, Lrb0;->d:Ljava/lang/Integer;
 
-    return v0
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    :cond_1
-    return v2
-.end method
+    sget-object v0, Ll90;->f:Lfz5;
 
-.method public final hashCode()I
-    .locals 6
+    iget-object v1, p1, Lrb0;->e:Ljava/lang/String;
 
-    iget v0, p0, Ll90;->a:I
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    const v1, 0xf4243
+    sget-object v0, Ll90;->g:Lfz5;
 
-    xor-int/2addr v0, v1
+    iget-object p1, p1, Lrb0;->f:Ljava/util/ArrayList;
 
-    mul-int/2addr v0, v1
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    const/16 v1, 0x20
+    sget-object p1, Ll90;->h:Lfz5;
 
-    iget-wide v2, p0, Ll90;->b:J
+    sget-object v0, Lq0d;->a:Lq0d;
 
-    ushr-long v4, v2, v1
+    invoke-interface {p2, p1, v0}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    xor-long v1, v4, v2
-
-    long-to-int v1, v1
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PacketInfo{sizeInBytes="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Ll90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", timestampNs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Ll90;->b:J
-
-    const-string v3, "}"
-
-    invoke-static {v0, v1, v2, v3}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

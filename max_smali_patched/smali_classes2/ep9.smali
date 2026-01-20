@@ -1,48 +1,47 @@
 .class public final Lep9;
-.super Lp14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
-
-# instance fields
-.field public final synthetic X:Lfp9;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Lfp9;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lep9;->X:Lfp9;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final clone()Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lep9;->d:Ljava/lang/Object;
+    new-instance v0, Lep9;
 
-    iget p1, p0, Lep9;->o:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, -0x80000000
+    return-object v0
+.end method
 
-    or-int/2addr p1, v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput p1, p0, Lep9;->o:I
+    instance-of v0, p1, Lep9;
 
-    iget-object p1, p0, Lep9;->X:Lfp9;
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lfp9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    check-cast p1, Lep9;
 
-    return-object p1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x164be01
+
+    return v0
 .end method

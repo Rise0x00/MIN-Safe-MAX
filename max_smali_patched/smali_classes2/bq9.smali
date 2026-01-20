@@ -1,506 +1,528 @@
 .class public final Lbq9;
-.super Logf;
+.super Ljhe;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Leq9;
+.field public final X:Lnd2;
 
-.field public final synthetic Y:Lone/me/messages/list/loader/MessageModel;
+.field public final Y:Ljava/lang/String;
 
-.field public o:I
+.field public final Z:Lofc;
+
+.field public final c:Landroid/net/Uri;
+
+.field public final d:Ljava/util/List;
+
+.field public final o:Lxk9;
+
+.field public final t0:Ljava/lang/CharSequence;
+
+.field public final u0:J
+
+.field public final v0:Ljava/lang/String;
+
+.field public final w0:I
+
+.field public final x0:J
 
 
 # direct methods
-.method public constructor <init>(Leq9;Lone/me/messages/list/loader/MessageModel;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/net/Uri;Ljava/util/List;Lxk9;Lnd2;Ljava/lang/String;Lofc;Ljava/lang/CharSequence;JLjava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lbq9;->X:Leq9;
+    const/4 v0, 0x5
 
-    iput-object p2, p0, Lbq9;->Y:Lone/me/messages/list/loader/MessageModel;
+    invoke-direct {p0, v0, p2}, Ljhe;-><init>(ILjava/util/List;)V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lbq9;->c:Landroid/net/Uri;
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lbq9;->d:Ljava/util/List;
+
+    iput-object p3, p0, Lbq9;->o:Lxk9;
+
+    iput-object p4, p0, Lbq9;->X:Lnd2;
+
+    iput-object p5, p0, Lbq9;->Y:Ljava/lang/String;
+
+    iput-object p6, p0, Lbq9;->Z:Lofc;
+
+    iput-object p7, p0, Lbq9;->t0:Ljava/lang/CharSequence;
+
+    iput-wide p8, p0, Lbq9;->u0:J
+
+    iput-object p10, p0, Lbq9;->v0:Ljava/lang/String;
+
+    sget p1, Ly7b;->t:I
+
+    iput p1, p0, Lbq9;->w0:I
+
+    iget-wide p1, p3, Lxk9;->a:J
+
+    iput-wide p1, p0, Lbq9;->x0:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lg54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lbq9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lbq9;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lbq9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lbq9;
-
-    iget-object v0, p0, Lbq9;->X:Leq9;
-
-    iget-object v1, p0, Lbq9;->Y:Lone/me/messages/list/loader/MessageModel;
-
-    invoke-direct {p1, v0, v1, p2}, Lbq9;-><init>(Leq9;Lone/me/messages/list/loader/MessageModel;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 20
-
-    move-object/from16 v0, p0
-
-    sget-object v1, Lybg;->a:Lybg;
-
-    sget-object v2, La98;->d:La98;
-
-    sget-object v3, Lh54;->a:Lh54;
-
-    iget v4, v0, Lbq9;->o:I
-
-    const/4 v5, 0x3
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x1
-
-    if-eqz v4, :cond_3
-
-    if-eq v4, v7, :cond_2
-
-    if-eq v4, v6, :cond_1
-
-    if-ne v4, v5, :cond_0
-
-    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object v1
+    return v0
 
     :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lbq9;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw v1
+    return v2
 
     :cond_1
-    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+    check-cast p1, Lbq9;
 
-    return-object v1
+    iget-object v1, p0, Lbq9;->c:Landroid/net/Uri;
+
+    iget-object v3, p1, Lbq9;->c:Landroid/net/Uri;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v1, p0, Lbq9;->d:Ljava/util/List;
 
-    return-object v1
+    iget-object v3, p1, Lbq9;->d:Ljava/util/List;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
 
     :cond_3
-    invoke-static/range {p1 .. p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v1, p0, Lbq9;->o:Lxk9;
 
-    iget-object v4, v0, Lbq9;->X:Leq9;
+    iget-object v3, p1, Lbq9;->o:Lxk9;
 
-    iget-object v4, v4, Leq9;->i:Ljava/lang/String;
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v8, v0, Lbq9;->Y:Lone/me/messages/list/loader/MessageModel;
+    move-result v1
 
-    sget-object v9, Lcuh;->b:Lnxa;
+    if-nez v1, :cond_4
 
-    const/4 v10, 0x0
+    return v2
 
-    if-nez v9, :cond_4
+    :cond_4
+    iget-object v1, p0, Lbq9;->X:Lnd2;
+
+    iget-object v3, p1, Lbq9;->X:Lnd2;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Lbq9;->Y:Ljava/lang/String;
+
+    iget-object v3, p1, Lbq9;->Y:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-object v1, p0, Lbq9;->Z:Lofc;
+
+    iget-object v3, p1, Lbq9;->Z:Lofc;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Lbq9;->t0:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Lbq9;->t0:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    return v2
+
+    :cond_8
+    iget-wide v3, p0, Lbq9;->u0:J
+
+    iget-wide v5, p1, Lbq9;->u0:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_9
+
+    return v2
+
+    :cond_9
+    iget-object v1, p0, Lbq9;->v0:Ljava/lang/String;
+
+    iget-object p1, p1, Lbq9;->v0:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_a
+
+    return v2
+
+    :cond_a
+    return v0
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lbq9;->x0:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lbq9;->c:Landroid/net/Uri;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
 
     goto :goto_0
 
-    :cond_4
-    invoke-virtual {v9, v2}, Lnxa;->b(La98;)Z
+    :cond_0
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
-    move-result v11
+    move-result v1
 
-    if-eqz v11, :cond_5
-
-    invoke-virtual {v8}, Lone/me/messages/list/loader/MessageModel;->n()Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v11, "On unreadScrollButton clicked, current messageModel="
-
-    invoke-virtual {v11, v8}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v9, v2, v4, v8, v10}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_5
     :goto_0
-    iget-object v4, v0, Lbq9;->X:Leq9;
+    const/16 v2, 0x1f
 
-    iget-object v4, v4, Leq9;->d:Lt0f;
+    mul-int/2addr v1, v2
 
-    invoke-interface {v4}, Lt0f;->getValue()Ljava/lang/Object;
+    iget-object v3, p0, Lbq9;->d:Ljava/util/List;
 
-    move-result-object v4
+    invoke-static {v3, v1, v2}, Lmrf;->e(Ljava/util/List;II)I
 
-    check-cast v4, Lt92;
+    move-result v1
 
-    if-nez v4, :cond_6
+    iget-object v3, p0, Lbq9;->o:Lxk9;
 
-    goto/16 :goto_a
+    invoke-virtual {v3}, Lxk9;->hashCode()I
 
-    :cond_6
-    invoke-virtual {v4}, Lt92;->p()J
+    move-result v3
 
-    move-result-wide v8
+    add-int/2addr v3, v1
 
-    iget-object v11, v4, Lt92;->c:Lr99;
+    mul-int/2addr v3, v2
 
-    if-eqz v11, :cond_7
+    iget-object v1, p0, Lbq9;->X:Lnd2;
 
-    invoke-virtual {v11}, Lr99;->getTime()J
+    if-nez v1, :cond_1
 
-    move-result-wide v11
-
-    :goto_1
-    move-wide v14, v11
-
-    goto :goto_2
-
-    :cond_7
-    const-wide/16 v11, 0x0
+    move v1, v0
 
     goto :goto_1
 
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_1
+    add-int/2addr v3, v1
+
+    mul-int/2addr v3, v2
+
+    iget-object v1, p0, Lbq9;->Y:Ljava/lang/String;
+
+    if-nez v1, :cond_2
+
+    move v1, v0
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
     :goto_2
-    cmp-long v11, v8, v14
+    add-int/2addr v3, v1
 
-    const/16 v18, 0x2
+    mul-int/2addr v3, v2
 
-    if-gez v11, :cond_15
+    iget-object v1, p0, Lbq9;->Z:Lofc;
 
-    iget-object v11, v0, Lbq9;->Y:Lone/me/messages/list/loader/MessageModel;
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    iget-wide v11, v11, Lone/me/messages/list/loader/MessageModel;->c:J
+    move-result v1
 
-    cmp-long v11, v11, v8
+    add-int/2addr v1, v3
 
-    if-ltz v11, :cond_8
+    mul-int/2addr v1, v2
 
-    goto/16 :goto_7
+    iget-object v3, p0, Lbq9;->t0:Ljava/lang/CharSequence;
 
-    :cond_8
-    iget-object v11, v0, Lbq9;->X:Leq9;
+    if-nez v3, :cond_3
 
-    iget-object v11, v11, Leq9;->e:Lt0f;
-
-    invoke-interface {v11}, Lt0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Lyj9;
-
-    iget-object v12, v11, Lyj9;->a:Ljava/util/List;
-
-    invoke-interface {v11, v8, v9}, Lek9;->g(J)I
-
-    move-result v11
-
-    if-gez v11, :cond_9
-
-    invoke-static {v11}, Ljava/lang/Math;->abs(I)I
-
-    move-result v11
-
-    sub-int/2addr v11, v7
-
-    :cond_9
-    invoke-static {v11, v12}, Lab3;->D(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Lone/me/messages/list/loader/MessageModel;
-
-    if-nez v7, :cond_c
-
-    iget-object v3, v0, Lbq9;->X:Leq9;
-
-    iget-object v3, v3, Leq9;->i:Ljava/lang/String;
-
-    sget-object v4, Lcuh;->b:Lnxa;
-
-    if-nez v4, :cond_a
+    move v3, v0
 
     goto :goto_3
 
-    :cond_a
-    invoke-virtual {v4, v2}, Lnxa;->b(La98;)Z
+    :cond_3
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    move-result v5
+    move-result v3
 
-    if-eqz v5, :cond_b
-
-    const-string v5, "onUnreadScrollButtonClicked: message with ts=selfReadMark is not loaded, load around it"
-
-    invoke-virtual {v4, v2, v3, v5, v10}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_b
     :goto_3
-    iget-object v2, v0, Lbq9;->X:Leq9;
+    add-int/2addr v1, v3
 
-    iget-object v2, v2, Leq9;->m:Ljava/util/concurrent/atomic/AtomicReference;
+    mul-int/2addr v1, v2
 
-    new-instance v3, Liw8;
+    iget-wide v3, p0, Lbq9;->u0:J
 
-    const/4 v4, 0x3
+    invoke-static {v1, v2, v3, v4}, Lcbh;->i(IIJ)I
 
-    invoke-direct {v3, v8, v9, v4}, Liw8;-><init>(JI)V
+    move-result v1
 
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+    iget-object v2, p0, Lbq9;->v0:Ljava/lang/String;
 
-    iget-object v2, v0, Lbq9;->X:Leq9;
-
-    iget-object v2, v2, Leq9;->g:Let7;
-
-    new-instance v3, Ljava/lang/Long;
-
-    invoke-direct {v3, v8, v9}, Ljava/lang/Long;-><init>(J)V
-
-    invoke-virtual {v2, v3}, Let7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object v1
-
-    :cond_c
-    iget-wide v8, v7, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    iget-object v11, v0, Lbq9;->Y:Lone/me/messages/list/loader/MessageModel;
-
-    iget-wide v11, v11, Lone/me/messages/list/loader/MessageModel;->c:J
-
-    cmp-long v8, v8, v11
-
-    if-nez v8, :cond_f
-
-    iget-object v4, v0, Lbq9;->X:Leq9;
-
-    iget-object v4, v4, Leq9;->i:Ljava/lang/String;
-
-    sget-object v5, Lcuh;->b:Lnxa;
-
-    if-nez v5, :cond_d
+    if-nez v2, :cond_4
 
     goto :goto_4
 
-    :cond_d
-    invoke-virtual {v5, v2}, Lnxa;->b(La98;)Z
+    :cond_4
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    move-result v7
+    move-result v0
 
-    if-eqz v7, :cond_e
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "onUnreadScrollButtonClicked: message with ts=selfReadMark is loaded and is last on screen, \n                            |scroll to lastMessageTime="
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v7}, Lyaf;->i(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v2, v4, v7, v10}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_e
     :goto_4
-    iget-object v13, v0, Lbq9;->X:Leq9;
+    add-int/2addr v1, v0
 
-    iput v6, v0, Lbq9;->o:I
+    return v1
+.end method
 
-    const/16 v18, 0x0
+.method public final l(Ljhe;)Z
+    .locals 5
 
-    const-wide/16 v16, 0x0
+    check-cast p1, Lbq9;
 
-    const/16 v19, 0xe
+    iget-object v0, p1, Lbq9;->o:Lxk9;
 
-    invoke-static/range {v13 .. v19}, Leq9;->d(Leq9;JJII)V
+    iget-object v1, p0, Lbq9;->c:Landroid/net/Uri;
 
-    if-ne v1, v3, :cond_18
+    iget-object p1, p1, Lbq9;->c:Landroid/net/Uri;
 
-    goto/16 :goto_9
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :cond_f
-    iget-object v4, v4, Lt92;->b:Lvd2;
+    move-result p1
 
-    iget v4, v4, Lvd2;->m:I
+    if-eqz p1, :cond_0
 
-    if-lez v4, :cond_12
+    iget-object p1, p0, Lbq9;->o:Lxk9;
 
-    iget-object v4, v0, Lbq9;->X:Leq9;
+    iget-wide v1, p1, Lxk9;->c:J
 
-    iget-object v4, v4, Leq9;->i:Ljava/lang/String;
+    iget-wide v3, v0, Lxk9;->c:J
 
-    sget-object v6, Lcuh;->b:Lnxa;
+    cmp-long v1, v1, v3
 
-    if-nez v6, :cond_10
+    if-nez v1, :cond_0
 
-    goto :goto_5
+    iget-object v1, p1, Lxk9;->Y:Ljava/lang/String;
 
-    :cond_10
-    invoke-virtual {v6, v2}, Lnxa;->b(La98;)Z
+    iget-object v2, v0, Lxk9;->Y:Ljava/lang/String;
 
-    move-result v7
+    invoke-static {v1, v2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v7, :cond_11
+    move-result v1
 
-    const-string v7, "onUnreadScrollButtonClicked: message with lastMessageTime > selfReadMark and hasNewMessages, scroll to lastMessageTime"
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v6, v2, v4, v7, v10}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object p1, p1, Lxk9;->o:Lfq9;
 
-    :cond_11
-    :goto_5
-    iget-object v13, v0, Lbq9;->X:Leq9;
+    iget-object v0, v0, Lxk9;->o:Lfq9;
 
-    iput v5, v0, Lbq9;->o:I
+    if-ne p1, v0, :cond_0
 
-    const-wide/16 v16, 0x0
+    const/4 p1, 0x1
 
-    const/16 v19, 0x6
+    return p1
 
-    invoke-static/range {v13 .. v19}, Leq9;->d(Leq9;JJII)V
+    :cond_0
+    const/4 p1, 0x0
 
-    if-ne v1, v3, :cond_18
+    return p1
+.end method
 
-    goto :goto_9
+.method public final m()I
+    .locals 1
 
-    :cond_12
-    iget-object v3, v0, Lbq9;->X:Leq9;
+    iget v0, p0, Lbq9;->w0:I
 
-    iget-object v3, v3, Leq9;->i:Ljava/lang/String;
+    return v0
+.end method
 
-    sget-object v4, Lcuh;->b:Lnxa;
+.method public final n(Ljhe;)Z
+    .locals 4
 
-    if-nez v4, :cond_13
+    iget-wide v0, p0, Lbq9;->x0:J
 
-    goto :goto_6
+    invoke-interface {p1}, Lud8;->getItemId()J
 
-    :cond_13
-    invoke-virtual {v4, v2}, Lnxa;->b(La98;)Z
+    move-result-wide v2
 
-    move-result v5
+    cmp-long p1, v0, v2
 
-    if-eqz v5, :cond_14
+    if-nez p1, :cond_0
 
-    const-string v5, "onUnreadScrollButtonClicked: message with ts=selfReadMark is loaded, scroll to it"
+    const/4 p1, 0x1
 
-    invoke-virtual {v4, v2, v3, v5, v10}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return p1
 
-    :cond_14
-    :goto_6
-    iget-object v2, v0, Lbq9;->X:Leq9;
+    :cond_0
+    const/4 p1, 0x0
 
-    iget-object v2, v2, Leq9;->m:Ljava/util/concurrent/atomic/AtomicReference;
+    return p1
+.end method
 
-    new-instance v3, Lci2;
+.method public final o()Ljava/lang/String;
+    .locals 1
 
-    const/16 v4, 0x9
+    iget-object v0, p0, Lbq9;->v0:Ljava/lang/String;
 
-    invoke-direct {v3, v4}, Lci2;-><init>(I)V
+    return-object v0
+.end method
 
-    invoke-virtual {v2, v3}, Ljava/util/concurrent/atomic/AtomicReference;->updateAndGet(Ljava/util/function/UnaryOperator;)Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget-object v2, v0, Lbq9;->X:Leq9;
+    iget-object v0, p0, Lbq9;->t0:Ljava/lang/CharSequence;
 
-    iget-object v2, v2, Leq9;->p:Lisd;
+    invoke-static {v0}, Lbti;->d(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    iget-wide v3, v7, Lone/me/messages/list/loader/MessageModel;->c:J
+    move-result-object v0
 
-    const/4 v5, 0x0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/4 v6, 0x6
+    const-string v2, "MessageSearchModel(avatar="
 
-    invoke-static {v2, v3, v4, v5, v6}, Lisd;->j(Lisd;JZI)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-object v1
+    iget-object v2, p0, Lbq9;->c:Landroid/net/Uri;
 
-    :cond_15
-    :goto_7
-    iget-object v4, v0, Lbq9;->X:Leq9;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v4, v4, Leq9;->i:Ljava/lang/String;
+    const-string v2, ", messageHighlights="
 
-    sget-object v5, Lcuh;->b:Lnxa;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v5, :cond_16
+    iget-object v2, p0, Lbq9;->d:Ljava/util/List;
 
-    goto :goto_8
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_16
-    invoke-virtual {v5, v2}, Lnxa;->b(La98;)Z
+    const-string v2, ", message="
 
-    move-result v6
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v6, :cond_17
+    iget-object v2, p0, Lbq9;->o:Lxk9;
 
-    const-string v6, "onUnreadScrollButtonClicked: selfReadMark="
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v11, " >= lastMessageTime="
+    const-string v2, ", chat="
 
-    invoke-static {v8, v9, v6, v11}, Lnx1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    iget-object v2, p0, Lbq9;->X:Lnd2;
 
-    invoke-virtual {v6, v14, v15}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v2, ", feedback="
 
-    move-result-object v6
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v2, v4, v6, v10}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v2, p0, Lbq9;->Y:Ljava/lang/String;
 
-    :cond_17
-    :goto_8
-    iget-object v13, v0, Lbq9;->X:Leq9;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput v7, v0, Lbq9;->o:I
+    const-string v2, ", preProcessedText="
 
-    const-wide/16 v16, 0x0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v19, 0x2
+    iget-object v2, p0, Lbq9;->Z:Lofc;
 
-    invoke-static/range {v13 .. v19}, Leq9;->d(Leq9;JJII)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-ne v1, v3, :cond_18
+    const-string v2, ", preProcessedChatTitle="
 
-    :goto_9
-    return-object v3
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_18
-    :goto_a
-    return-object v1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", chatId="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v2, p0, Lbq9;->u0:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v0, ", viewType="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Lbq9;->w0:I
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v0, ", itemId="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    iget-wide v2, p0, Lbq9;->x0:J
+
+    invoke-static {v1, v2, v3, v0}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,125 +1,57 @@
 .class public final Lux6;
-.super Landroid/text/style/RelativeSizeSpan;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljh8;
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lux6;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # instance fields
-.field public final a:F
-
-.field public final b:I
+.field public final a:Lo58;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ldd4;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Ldd4;-><init>(I)V
-
-    sput-object v0, Lux6;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    const v0, 0x3fa66666    # 1.3f
-
-    .line 1
-    invoke-direct {p0, v0}, Lux6;-><init>(F)V
-
-    return-void
-.end method
-
-.method public constructor <init>(F)V
+.method public constructor <init>(Lo58;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0, p1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput p1, p0, Lux6;->a:F
-
-    const/16 p1, 0x8
-
-    .line 4
-    iput p1, p0, Lux6;->b:I
+    iput-object p1, p0, Lux6;->a:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final copy()Lh44;
+.method public final a(Lp6g;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lux6;
+    new-instance v0, Lg62;
 
-    iget v1, p0, Lux6;->a:F
+    invoke-static {p1}, Lo1j;->d(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Lux6;-><init>(F)V
+    move-result-object p1
 
-    return-object v0
-.end method
+    const/4 v1, 0x1
 
-.method public final getType()I
-    .locals 1
+    invoke-direct {v0, v1, p1}, Lg62;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iget v0, p0, Lux6;->b:I
+    invoke-virtual {v0}, Lg62;->o()V
 
-    return v0
-.end method
+    iget-object p1, p0, Lux6;->a:Lo58;
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    move-result-object p1
 
-    const/4 v0, 0x1
+    check-cast p1, Loj8;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+    new-instance v1, Ltx6;
 
-    return-void
-.end method
+    invoke-direct {v1, v0}, Ltx6;-><init>(Lg62;)V
 
-.method public final updateMeasureState(Landroid/text/TextPaint;)V
-    .locals 1
+    invoke-virtual {p1, v1}, Loj8;->a(Lmj8;)V
 
-    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateMeasureState(Landroid/text/TextPaint;)V
+    invoke-virtual {v0}, Lg62;->n()Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
-
-    return-void
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lux6;->a:F
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeFloat(F)V
-
-    return-void
+    return-object p1
 .end method

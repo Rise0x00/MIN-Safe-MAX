@@ -1,91 +1,111 @@
 .class public final Lml7;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+.field public final a:Lo58;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Landroid/content/SharedPreferences;
+
+.field public final c:Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
-    .locals 0
+.method public constructor <init>(Lo58;Landroid/content/Context;)V
+    .locals 1
 
-    iput-object p2, p0, Lml7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lml7;->a:Lo58;
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string p1, "app_crash_prefs"
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lml7;->b:Landroid/content/SharedPreferences;
+
+    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lml7;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 5
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {p0, p1, p2}, Lml7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-wide v0
 
-    move-result-object p1
+    iget-object v2, p0, Lml7;->b:Landroid/content/SharedPreferences;
 
-    check-cast p1, Lml7;
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result-object v2
 
-    invoke-virtual {p1, p2}, Lml7;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v3, "pref_last_crash_time"
 
-    return-object p2
-.end method
+    invoke-interface {v2, v3, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    move-result-object v0
 
-    new-instance v0, Lml7;
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    iget-object v1, p0, Lml7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+    iget-object v0, p0, Lml7;->a:Lo58;
 
-    invoke-direct {v0, p2, v1}, Lml7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    iput-object p1, v0, Lml7;->o:Ljava/lang/Object;
+    move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Lkpf;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    instance-of v1, p2, Ljava/lang/OutOfMemoryError;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-eqz v1, :cond_0
 
-    iget-object p1, p0, Lml7;->o:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    check-cast p1, La5a;
-
-    instance-of v0, p1, Lpf4;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lml7;->X:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
-
-    invoke-static {v0}, Ldci;->b(Lc24;)V
-
-    invoke-static {v0}, Lafi;->a(Lc24;)V
-
-    sget-object v0, Lcl7;->c:Lcl7;
-
-    check-cast p1, Lpf4;
-
-    invoke-virtual {v0, p1}, Ladi;->s0(Lpf4;)V
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lybg;->a:Lybg;
+    const/4 v1, 0x1
 
-    return-object p1
+    :goto_0
+    check-cast v0, Lqkb;
+
+    iget-object v2, v0, Lqkb;->o:Lnre;
+
+    sget-object v3, Lqkb;->p:[Lz28;
+
+    const/4 v4, 0x7
+
+    aget-object v3, v3, v4
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v3, v1}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lml7;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+
+    :cond_1
+    return-void
 .end method

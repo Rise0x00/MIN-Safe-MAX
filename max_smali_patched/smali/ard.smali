@@ -1,70 +1,206 @@
-.class public final Lard;
-.super Logf;
+.class public final synthetic Lard;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lird;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lird;I)V
+    .locals 0
+
+    iput p2, p0, Lard;->a:I
+
+    iput-object p1, p0, Lard;->b:Lird;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 8
 
-    check-cast p1, Lwt3;
+    iget v0, p0, Lard;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lard;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lard;->b:Lird;
 
-    move-result-object p1
+    iget-object v1, v0, Lird;->x:Ly5g;
 
-    check-cast p1, Lard;
+    if-eqz v1, :cond_0
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-object v2, v0, Lird;->y:Lflg;
 
-    invoke-virtual {p1, p2}, Lard;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2, v3}, Lird;->h(Ly5g;Lflg;Z)V
 
-    return-object p1
-.end method
+    return-void
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :cond_0
+    new-instance v0, Ljava/lang/AssertionError;
 
-    new-instance v0, Lard;
+    const-string v1, "surface request is required to retry initialization."
 
-    const/4 v1, 0x2
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    throw v0
 
-    iput-object p1, v0, Lard;->o:Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, Lard;->b:Lird;
 
-    return-object v0
-.end method
+    iget-object v1, v0, Lird;->h:Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    monitor-enter v1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :try_start_0
+    iget-object v2, v0, Lird;->j:Lhrd;
 
-    iget-object p1, p0, Lard;->o:Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-    check-cast p1, Lwt3;
+    move-result v2
 
-    new-instance v0, Lzqd;
+    const/4 v3, 0x1
 
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
-    invoke-direct {v0, p1, v1}, Lzqd;-><init>(Lwt3;Lkotlin/coroutines/Continuation;)V
+    const/4 v5, 0x0
 
-    new-instance p1, Ljld;
+    if-eq v2, v3, :cond_1
 
-    invoke-direct {p1, v0}, Ljld;-><init>(Lej6;)V
+    const/4 v6, 0x2
 
-    return-object p1
+    if-eq v2, v6, :cond_2
+
+    move v6, v4
+
+    move-object v2, v5
+
+    :goto_0
+    move-object v3, v2
+
+    goto :goto_2
+
+    :cond_1
+    move v3, v4
+
+    :cond_2
+    iget-object v2, v0, Lird;->m:Lic0;
+
+    if-nez v2, :cond_5
+
+    iget-boolean v2, v0, Lird;->Y:Z
+
+    if-eqz v2, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    iget v2, v0, Lird;->f0:I
+
+    const/4 v6, 0x3
+
+    if-ne v2, v6, :cond_4
+
+    iget-object v2, v0, Lird;->n:Lic0;
+
+    iput-object v5, v0, Lird;->n:Lic0;
+
+    invoke-virtual {v0}, Lird;->y()V
+
+    sget-object v4, Lird;->l0:Ljava/lang/RuntimeException;
+
+    const/4 v6, 0x4
+
+    move-object v7, v4
+
+    move v4, v3
+
+    move-object v3, v7
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_4
+    iget-object v2, v0, Lird;->E:Lcj5;
+
+    if-eqz v2, :cond_5
+
+    iget-object v2, v0, Lird;->j:Lhrd;
+
+    invoke-virtual {v0, v2}, Lird;->q(Lhrd;)Lic0;
+
+    move-result-object v2
+
+    move v6, v4
+
+    move v4, v3
+
+    move-object v3, v5
+
+    move-object v5, v2
+
+    move-object v2, v3
+
+    goto :goto_2
+
+    :cond_5
+    :goto_1
+    move v6, v4
+
+    move-object v2, v5
+
+    move v4, v3
+
+    goto :goto_0
+
+    :goto_2
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v5, :cond_6
+
+    invoke-virtual {v0, v5, v4}, Lird;->H(Lic0;Z)V
+
+    goto :goto_3
+
+    :cond_6
+    if-eqz v2, :cond_7
+
+    invoke-virtual {v0, v2, v6, v3}, Lird;->j(Lic0;ILjava/lang/Throwable;)V
+
+    :cond_7
+    :goto_3
+    return-void
+
+    :goto_4
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

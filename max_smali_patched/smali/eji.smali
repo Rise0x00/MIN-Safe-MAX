@@ -1,131 +1,204 @@
-.class public final Leji;
-.super Lt6i;
+.class public abstract Leji;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lk9i;
 
 
 # static fields
-.field private static final zzb:Leji;
+.field public static final a:Ljava/lang/reflect/Method;
 
+.field public static final b:Ljava/lang/reflect/Method;
 
-# instance fields
-.field private zzd:I
+.field public static final c:Ljava/lang/reflect/Method;
 
-.field private zze:Ljava/lang/String;
+.field public static final d:Ljava/lang/reflect/Method;
 
-.field private zzf:Ljava/lang/String;
+.field public static e:Ljava/lang/Boolean;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 8
 
-    new-instance v0, Leji;
+    const-class v0, Ljava/lang/String;
 
-    invoke-direct {v0}, Leji;-><init>()V
+    const-string v1, "add"
 
-    sput-object v0, Leji;->zzb:Leji;
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    const-class v1, Leji;
+    const-class v3, Landroid/os/WorkSource;
 
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-    return-void
-.end method
+    const/4 v4, 0x0
 
-.method public constructor <init>()V
-    .locals 1
+    :try_start_0
+    filled-new-array {v2}, [Ljava/lang/Class;
 
-    invoke-direct {p0}, Lt6i;-><init>()V
+    move-result-object v5
 
-    const-string v0, ""
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    iput-object v0, p0, Leji;->zze:Ljava/lang/String;
+    move-result-object v5
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object v0, p0, Leji;->zzf:Ljava/lang/String;
+    goto :goto_0
 
-    return-void
-.end method
+    :catch_0
+    move-object v5, v4
 
+    :goto_0
+    sput-object v5, Leji;->a:Ljava/lang/reflect/Method;
 
-# virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
-    .locals 2
+    :try_start_1
+    filled-new-array {v2, v0}, [Ljava/lang/Class;
 
-    add-int/lit8 p1, p1, -0x1
+    move-result-object v5
 
-    if-eqz p1, :cond_4
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    const/4 p2, 0x2
+    move-result-object v1
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    if-eq p1, p2, :cond_3
+    goto :goto_1
 
-    const/4 p2, 0x3
+    :catch_1
+    move-object v1, v4
 
-    if-eq p1, p2, :cond_2
+    :goto_1
+    sput-object v1, Leji;->b:Ljava/lang/reflect/Method;
 
-    const/4 p2, 0x4
+    :try_start_2
+    const-string v1, "size"
 
-    if-eq p1, p2, :cond_1
+    invoke-virtual {v3, v1, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    const/4 p2, 0x5
+    move-result-object v1
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    if-eq p1, p2, :cond_0
+    goto :goto_2
 
-    const/4 p1, 0x0
+    :catch_2
+    move-object v1, v4
 
-    return-object p1
+    :goto_2
+    sput-object v1, Leji;->c:Ljava/lang/reflect/Method;
+
+    :try_start_3
+    const-string v1, "get"
+
+    filled-new-array {v2}, [Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    const-string v1, "getName"
+
+    filled-new-array {v2}, [Ljava/lang/Class;
+
+    move-result-object v5
+
+    invoke-virtual {v3, v1, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v5, 0x1c
+
+    const-string v6, "WorkSourceUtil"
+
+    if-lt v1, v5, :cond_0
+
+    :try_start_5
+    const-string v1, "createWorkChain"
+
+    invoke-virtual {v3, v1, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_5
+
+    goto :goto_3
+
+    :catch_5
+    move-exception v1
+
+    const-string v7, "Missing WorkChain API createWorkChain"
+
+    invoke-static {v6, v7, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
-    sget-object p1, Leji;->zzb:Leji;
+    :goto_3
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    return-object p1
+    if-lt v1, v5, :cond_1
+
+    :try_start_6
+    const-string v1, "android.os.WorkSource$WorkChain"
+
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    const-string v7, "addNode"
+
+    filled-new-array {v2, v0}, [Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v7, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_6
+
+    goto :goto_4
+
+    :catch_6
+    move-exception v0
+
+    const-string v1, "Missing WorkChain class"
+
+    invoke-static {v6, v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_1
-    new-instance p1, Lmii;
+    :goto_4
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    sget-object p2, Leji;->zzb:Leji;
+    if-lt v0, v5, :cond_2
 
-    invoke-direct {p1, p2}, Lj6i;-><init>(Lt6i;)V
+    :try_start_7
+    const-string v0, "isEmpty"
 
-    return-object p1
+    invoke-virtual {v3, v0, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
+    move-result-object v0
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_7
+
+    const/4 v1, 0x1
+
+    :try_start_8
+    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    :try_end_8
+    .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_8
+
+    goto :goto_5
+
+    :catch_7
     :cond_2
-    new-instance p1, Leji;
+    move-object v0, v4
 
-    invoke-direct {p1}, Leji;-><init>()V
+    :catch_8
+    :goto_5
+    sput-object v0, Leji;->d:Ljava/lang/reflect/Method;
 
-    return-object p1
+    sput-object v4, Leji;->e:Ljava/lang/Boolean;
 
-    :cond_3
-    const-string p1, "zze"
-
-    const-string p2, "zzf"
-
-    const-string v0, "zzd"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Leji;->zzb:Leji;
-
-    new-instance v0, Lfai;
-
-    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001"
-
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,79 +1,95 @@
-.class public final Lbkg;
+.class public final synthetic Lbkg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+.implements Lnq6;
 
 
 # instance fields
-.field public final a:Lru7;
+.field public final synthetic a:I
 
-.field public final b:Lru7;
+.field public final synthetic b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
 
 
 # direct methods
-.method public constructor <init>(Lt5;)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lbkg;->a:I
+
+    iput-object p1, p0, Lbkg;->b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-class v0, Lloa;
-
-    invoke-virtual {p1, v0}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lbkg;->a:Lru7;
-
-    const-class v0, Lml;
-
-    invoke-virtual {p1, v0}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbkg;->b:Lru7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPushTokenGenerated(Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-object p1, p0, Lbkg;->a:Lru7;
+    iget v0, p0, Lbkg;->a:I
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    move-result-object p1
+    iget-object v2, p0, Lbkg;->b:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
 
-    check-cast p1, Lloa;
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {p1}, Lloa;->c()Ltr0;
+    sget-object p1, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->o:[Lz28;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    iget-boolean v0, p1, Ltr0;->a:Z
+    iget-object p1, v2, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->c:Lo58;
 
-    if-eqz v0, :cond_0
-
-    iget-boolean p1, p1, Ltr0;->b:Z
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lbkg;->b:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lml;
+    check-cast p1, Lzjg;
 
-    check-cast p1, Lona;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lona;->r()J
+    new-instance v0, Lyjg;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, p1, v2}, Lyjg;-><init>(Lzjg;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x1
+
+    invoke-static {p1, v2, v0, v3}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+
+    move-result-object v0
+
+    iget-object v2, p1, Lzjg;->c:Lx07;
+
+    sget-object v3, Lzjg;->o:[Lz28;
+
+    const/4 v4, 0x0
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v2, p1, v3, v0}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_0
+    invoke-virtual {v2}, La94;->getOnBackPressedDispatcher()Lv1b;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lv1b;->d()V
 
     :cond_0
-    return-void
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,191 +2,103 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final h:Ljava/util/regex/Pattern;
-
-.field public static final i:Ljava/util/regex/Pattern;
-
-.field public static final j:Ljava/util/regex/Pattern;
+# interfaces
+.implements Ld77;
 
 
 # instance fields
-.field public final a:Lfwc;
+.field public final b:J
 
-.field public final b:Lcwc;
+.field public final c:J
 
-.field public final c:Ljava/util/HashMap;
+.field public final d:Ljava/util/List;
 
-.field public d:J
+.field public final e:Z
 
-.field public e:J
-
-.field public f:Z
-
-.field public g:Ljava/lang/String;
+.field public final f:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, ".*typ (host|prflx|srflx|relay+).*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lc77;->h:Ljava/util/regex/Pattern;
-
-    const-string v0, ".*transport=(tcp|udp).*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lc77;->i:Ljava/util/regex/Pattern;
-
-    const-string v0, ".*(?:tcp|udp) \\d+ (\\S+).*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lc77;->j:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lcwc;Lfwc;)V
-    .locals 5
+.method public constructor <init>(Ld77;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    invoke-interface {p1}, Ld77;->g()J
 
-    iput-boolean v0, p0, Lc77;->f:Z
+    move-result-wide v0
 
-    iput-object p2, p0, Lc77;->a:Lfwc;
+    iput-wide v0, p0, Lc77;->b:J
 
-    iput-object p1, p0, Lc77;->b:Lcwc;
+    invoke-interface {p1}, Ld77;->h()J
 
-    new-instance p1, Ljava/util/HashMap;
+    move-result-wide v0
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    iput-wide v0, p0, Lc77;->c:J
 
-    iput-object p1, p0, Lc77;->c:Ljava/util/HashMap;
+    invoke-interface {p1}, Ld77;->j()Ljava/util/List;
 
-    invoke-static {}, Leth;->values()[Leth;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-static {v0}, Lpi3;->Z(Ljava/lang/Iterable;)Ljava/util/List;
 
-    array-length p2, p1
+    move-result-object v0
 
-    move v1, v0
+    iput-object v0, p0, Lc77;->d:Ljava/util/List;
 
-    :goto_0
-    if-ge v1, p2, :cond_0
+    invoke-interface {p1}, Ld77;->b()Z
 
-    aget-object v2, p1, v1
+    move-result v0
 
-    iget-object v3, p0, Lc77;->c:Ljava/util/HashMap;
+    iput-boolean v0, p0, Lc77;->e:Z
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-interface {p1}, Ld77;->i()J
 
-    move-result-object v4
+    move-result-wide v0
 
-    invoke-virtual {v3, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iput-wide v0, p0, Lc77;->f:J
 
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 6
+.method public final b()Z
+    .locals 1
 
-    iget-wide v0, p0, Lc77;->e:J
+    iget-boolean v0, p0, Lc77;->e:Z
 
-    const-wide/16 v2, 0x0
+    return v0
+.end method
 
-    cmp-long v0, v0, v2
+.method public final g()J
+    .locals 2
 
-    if-eqz v0, :cond_3
+    iget-wide v0, p0, Lc77;->b:J
 
-    iget-boolean v0, p0, Lc77;->f:Z
+    return-wide v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final h()J
+    .locals 2
 
-    goto :goto_2
+    iget-wide v0, p0, Lc77;->c:J
 
-    :cond_0
-    const/4 v0, 0x1
+    return-wide v0
+.end method
 
-    iput-boolean v0, p0, Lc77;->f:Z
+.method public final i()J
+    .locals 2
 
-    new-instance v0, Ljava/util/HashMap;
+    iget-wide v0, p0, Lc77;->f:J
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    return-wide v0
+.end method
 
-    iget-object v1, p0, Lc77;->g:Ljava/lang/String;
+.method public final j()Ljava/util/List;
+    .locals 1
 
-    if-eqz v1, :cond_1
+    iget-object v0, p0, Lc77;->d:Ljava/util/List;
 
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "direct"
-
-    iput-object v1, p0, Lc77;->g:Ljava/lang/String;
-
-    :goto_0
-    const-string v2, ":"
-
-    invoke-static {v1, v2}, Lok7;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    if-eqz p1, :cond_2
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    iget-wide v4, p0, Lc77;->e:J
-
-    sub-long/2addr v2, v4
-
-    goto :goto_1
-
-    :cond_2
-    const-wide/16 v2, -0x1
-
-    :goto_1
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v1, "param"
-
-    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object p1, Lfwc;->COLLECTOR_VIDEO:Ljava/lang/String;
-
-    const-string v1, "callCandidatesApply"
-
-    iget-object v2, p0, Lc77;->a:Lfwc;
-
-    invoke-virtual {v2, p1, v1, v0}, Lfwc;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-
-    :cond_3
-    :goto_2
-    return-void
+    return-object v0
 .end method

@@ -3,105 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfqd;
-.implements Lqob;
+.implements Lu71;
 
 
-# instance fields
-.field public final a:Lru7;
+# static fields
+.field public static final a:Lt71;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 2
-    sget-object v0, Leie;->a:Leie;
-
-    .line 3
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v0
-
-    const-class v1, Lsw8;
-
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v0
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-object v0, p0, Lt71;->a:Lru7;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lru7;)V
-    .locals 0
-
-    .line 1
-    iput-object p1, p0, Lt71;->a:Lru7;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lt5;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lt71;
 
-    .line 7
-    const-class v0, Lk64;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1, v0}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object p1
-
-    .line 8
-    iput-object p1, p0, Lt71;->a:Lru7;
+    sput-object v0, Lt71;->a:Lt71;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(J)Lez5;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lt71;->a:Lru7;
+    const/4 v0, 0x1
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
+    return v0
 
-    check-cast v0, Lu23;
+    :cond_0
+    instance-of p1, p1, Lt71;
 
-    check-cast v0, Lw33;
+    if-nez p1, :cond_1
 
-    invoke-virtual {v0, p1, p2}, Lw33;->N(J)Lj0d;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    return p1
 
-    new-instance v1, Lr13;
+    :cond_1
+    return v0
+.end method
 
-    const/16 v2, 0xd
+.method public final hashCode()I
+    .locals 1
 
-    invoke-direct {v1, v0, v2}, Lr13;-><init>(Lez5;I)V
+    const v0, -0x35b676d9
 
-    new-instance v0, Lax2;
+    return v0
+.end method
 
-    const/4 v2, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {v0, p1, p2, v2}, Lax2;-><init>(JLkotlin/coroutines/Continuation;)V
+    const-string v0, "Finished"
 
-    invoke-static {v1, v0}, Lqs0;->x(Lez5;Lej6;)Lm82;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

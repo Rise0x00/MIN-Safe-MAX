@@ -1,16 +1,19 @@
-.class public abstract Lxkc;
+.class public final Lxkc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static markdown_button_size:I = 0x7f0702a8
+# instance fields
+.field public final synthetic a:Lr5;
 
-.field public static markdown_dot_size:I = 0x7f0702a9
 
-.field public static popup_background_padding:I = 0x7f0703de
+# direct methods
+.method public constructor <init>(Lr5;)V
+    .locals 0
 
-.field public static popup_height:I = 0x7f0703df
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static popup_item_padding:I = 0x7f0703e0
+    iput-object p1, p0, Lxkc;->a:Lr5;
 
-.field public static popup_offset:I = 0x7f0703e2
+    return-void
+.end method

@@ -1,249 +1,330 @@
-.class public abstract Lvb7;
-.super Ljava/util/AbstractCollection;
+.class public final Lvb7;
+.super Ltb7;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/Serializable;
 
+# instance fields
+.field public final X:Lod7;
 
-# static fields
-.field public static final a:[Ljava/lang/Object;
+.field public final synthetic Y:Lv8;
+
+.field public d:J
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lv8;Lod7;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lvb7;->Y:Lv8;
 
-    new-array v0, v0, [Ljava/lang/Object;
+    invoke-direct {p0, p1}, Ltb7;-><init>(Lv8;)V
 
-    sput-object v0, Lvb7;->a:[Ljava/lang/Object;
+    iput-object p2, p0, Lvb7;->X:Lod7;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lvb7;->d:J
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lvb7;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()Lec7;
-.end method
-
-.method public final add(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public abstract b(I[Ljava/lang/Object;)I
-.end method
-
-.method public final clear()V
+.method public final close()V
     .locals 1
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    iget-boolean v0, p0, Ltb7;->b:Z
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    if-eqz v0, :cond_0
 
-    throw v0
-.end method
+    return-void
 
-.method public abstract contains(Ljava/lang/Object;)Z
-.end method
-
-.method public d()[Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public e()I
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public f()I
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public abstract g()Z
-.end method
-
-.method public abstract h()Licg;
-.end method
-
-.method public bridge synthetic iterator()Ljava/util/Iterator;
-    .locals 1
-
-    invoke-virtual {p0}, Lvb7;->h()Licg;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final spliterator()Ljava/util/Spliterator;
-    .locals 1
-
-    const/16 v0, 0x510
-
-    invoke-static {p0, v0}, Ljava/util/Spliterators;->spliterator(Ljava/util/Collection;I)Ljava/util/Spliterator;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 1
-
-    .line 1
-    sget-object v0, Lvb7;->a:[Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lvb7;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 3
-
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    invoke-virtual {p0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result v0
-
-    .line 4
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    if-ge v1, v0, :cond_2
-
-    .line 5
-    invoke-virtual {p0}, Lvb7;->d()[Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 6
-    invoke-virtual {p0}, Lvb7;->f()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lvb7;->e()I
-
-    move-result v2
-
-    .line 7
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object p1
-
-    invoke-static {v1, v0, v2, p1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-
-    .line 8
     :cond_0
-    array-length v1, p1
+    iget-boolean v0, p0, Lvb7;->o:Z
 
-    if-nez v1, :cond_1
+    if-eqz v0, :cond_1
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const/16 v0, 0x64
+
+    :try_start_0
+    invoke-static {p0, v0}, Llbh;->t(Lhjf;I)Z
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    invoke-static {p1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    :catch_0
+    const/4 v0, 0x0
 
-    move-result-object p1
-
-    .line 9
     :goto_0
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+    if-nez v0, :cond_1
 
-    move-result-object p1
+    iget-object v0, p0, Lvb7;->Y:Lv8;
+
+    iget-object v0, v0, Lv8;->d:Ljava/lang/Object;
+
+    check-cast v0, Lyld;
+
+    invoke-virtual {v0}, Lyld;->k()V
+
+    invoke-virtual {p0}, Ltb7;->l()V
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ltb7;->b:Z
+
+    return-void
+.end method
+
+.method public final g(Lxv0;J)J
+    .locals 11
+
+    iget-object v0, p0, Lvb7;->Y:Lv8;
+
+    iget-object v1, v0, Lv8;->e:Ljava/lang/Object;
+
+    check-cast v1, Lfx0;
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, p2, v2
+
+    if-ltz v4, :cond_9
+
+    iget-boolean v4, p0, Ltb7;->b:Z
+
+    if-nez v4, :cond_8
+
+    iget-boolean v4, p0, Lvb7;->o:Z
+
+    const-wide/16 v5, -0x1
+
+    if-nez v4, :cond_0
 
     goto :goto_1
 
-    .line 10
+    :cond_0
+    iget-wide v7, p0, Lvb7;->d:J
+
+    cmp-long v4, v7, v2
+
+    if-eqz v4, :cond_1
+
+    cmp-long v4, v7, v5
+
+    if-nez v4, :cond_5
+
+    :cond_1
+    const-string v4, "expected chunk size and optional extensions but was \""
+
+    cmp-long v7, v7, v5
+
+    if-eqz v7, :cond_2
+
+    invoke-interface {v1}, Lfx0;->i0()Ljava/lang/String;
+
     :cond_2
-    array-length v1, p1
+    :try_start_0
+    invoke-interface {v1}, Lfx0;->w0()J
 
-    if-le v1, v0, :cond_3
+    move-result-wide v7
 
-    const/4 v1, 0x0
+    iput-wide v7, p0, Lvb7;->d:J
 
-    .line 11
-    aput-object v1, p1, v0
+    invoke-interface {v1}, Lfx0;->i0()Ljava/lang/String;
 
-    .line 12
+    move-result-object v1
+
+    invoke-static {v1}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-wide v7, p0, Lvb7;->d:J
+
+    cmp-long v7, v7, v2
+
+    if-ltz v7, :cond_7
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    const/4 v8, 0x0
+
+    if-lez v7, :cond_3
+
+    const-string v7, ";"
+
+    invoke-static {v1, v7, v8}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v7
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v7, :cond_7
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
     :cond_3
-    :goto_1
-    invoke-virtual {p0, v2, p1}, Lvb7;->b(I[Ljava/lang/Object;)I
+    :goto_0
+    iget-wide v9, p0, Lvb7;->d:J
 
-    return-object p1
+    cmp-long v1, v9, v2
+
+    if-nez v1, :cond_4
+
+    iput-boolean v8, p0, Lvb7;->o:Z
+
+    iget-object v1, v0, Lv8;->b:Ljava/lang/Object;
+
+    check-cast v1, Lp52;
+
+    invoke-virtual {v1}, Lp52;->c0()Le57;
+
+    move-result-object v1
+
+    iget-object v2, v0, Lv8;->c:Ljava/lang/Object;
+
+    check-cast v2, Ld1b;
+
+    iget-object v2, v2, Ld1b;->u0:Lq57;
+
+    iget-object v3, p0, Lvb7;->X:Lod7;
+
+    invoke-static {v2, v3, v1}, Lgd7;->b(Lq57;Lod7;Le57;)V
+
+    invoke-virtual {p0}, Ltb7;->l()V
+
+    :cond_4
+    iget-boolean v1, p0, Lvb7;->o:Z
+
+    if-nez v1, :cond_5
+
+    :goto_1
+    return-wide v5
+
+    :cond_5
+    iget-wide v1, p0, Lvb7;->d:J
+
+    invoke-static {p2, p3, v1, v2}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide p2
+
+    invoke-super {p0, p1, p2, p3}, Ltb7;->g(Lxv0;J)J
+
+    move-result-wide p1
+
+    cmp-long p3, p1, v5
+
+    if-eqz p3, :cond_6
+
+    iget-wide v0, p0, Lvb7;->d:J
+
+    sub-long/2addr v0, p1
+
+    iput-wide v0, p0, Lvb7;->d:J
+
+    return-wide p1
+
+    :cond_6
+    iget-object p1, v0, Lv8;->d:Ljava/lang/Object;
+
+    check-cast p1, Lyld;
+
+    invoke-virtual {p1}, Lyld;->k()V
+
+    new-instance p1, Ljava/net/ProtocolException;
+
+    const-string p2, "unexpected end of stream"
+
+    invoke-direct {p1, p2}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Ltb7;->l()V
+
+    throw p1
+
+    :cond_7
+    :try_start_1
+    new-instance p1, Ljava/net/ProtocolException;
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v2, p0, Lvb7;->d:J
+
+    invoke-virtual {p2, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 p3, 0x22
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_2
+    new-instance p2, Ljava/net/ProtocolException;
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_8
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_9
+    const-string p1, "byteCount < 0: "
+
+    invoke-static {p2, p3, p1}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
 .end method

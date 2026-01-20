@@ -1,27 +1,19 @@
 .class public final Lf70;
-.super Ljava/lang/Object;
+.super Lg70;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Z
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(ZLjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lf70;->a:Z
-
-    iput-object p2, p0, Lf70;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lf70;->c:Ljava/lang/String;
+    iput-object p1, p0, Lf70;->a:Ljava/util/ArrayList;
 
     return-void
 .end method

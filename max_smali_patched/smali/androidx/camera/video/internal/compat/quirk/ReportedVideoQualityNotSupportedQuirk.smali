@@ -176,7 +176,7 @@
 
 
 # virtual methods
-.method public final a(Lz02;Ljb0;)Z
+.method public final a(Le42;Lgc0;)Z
     .locals 3
 
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->e()Z
@@ -216,11 +216,11 @@
 
     if-eqz v0, :cond_1
 
-    sget-object p1, Ljb0;->e:Ljb0;
+    sget-object p1, Lgc0;->e:Lgc0;
 
     if-eq p2, p1, :cond_4
 
-    sget-object p1, Ljb0;->f:Ljb0;
+    sget-object p1, Lgc0;->f:Lgc0;
 
     if-ne p2, p1, :cond_5
 
@@ -233,17 +233,17 @@
 
     if-eqz v0, :cond_2
 
-    invoke-interface {p1}, Lz02;->h()I
+    invoke-interface {p1}, Le42;->h()I
 
     move-result p1
 
     if-nez p1, :cond_5
 
-    sget-object p1, Ljb0;->f:Ljb0;
+    sget-object p1, Lgc0;->f:Lgc0;
 
     if-eq p2, p1, :cond_4
 
-    sget-object p1, Ljb0;->e:Ljb0;
+    sget-object p1, Lgc0;->e:Lgc0;
 
     if-ne p2, p1, :cond_5
 
@@ -256,13 +256,13 @@
 
     if-eqz v0, :cond_5
 
-    invoke-interface {p1}, Lz02;->h()I
+    invoke-interface {p1}, Le42;->h()I
 
     move-result p1
 
     if-ne p1, v1, :cond_5
 
-    sget-object p1, Ljb0;->g:Ljb0;
+    sget-object p1, Lgc0;->g:Lgc0;
 
     if-ne p2, p1, :cond_5
 
@@ -270,7 +270,7 @@
 
     :cond_3
     :goto_0
-    sget-object p1, Ljb0;->g:Ljb0;
+    sget-object p1, Lgc0;->g:Lgc0;
 
     if-ne p2, p1, :cond_5
 

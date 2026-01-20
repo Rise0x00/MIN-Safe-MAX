@@ -1,333 +1,368 @@
 .class public final Lws;
-.super Ljava/util/AbstractSet;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Iterator;
+.implements Ljava/util/Map$Entry;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final b:Ljava/lang/Object;
+.field public b:I
+
+.field public c:Z
+
+.field public final synthetic d:Lys;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/Map;)V
+.method public constructor <init>(Lys;)V
     .locals 0
 
-    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lws;->d:Lys;
+
+    iget p1, p1, Ladf;->c:I
+
+    add-int/lit8 p1, p1, -0x1
+
     iput p1, p0, Lws;->a:I
 
-    iput-object p2, p0, Lws;->b:Ljava/lang/Object;
+    const/4 p1, -0x1
 
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>([Lwig;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lws;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lws;->b:Ljava/lang/Object;
+    iput p1, p0, Lws;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public bridge synthetic add(Ljava/lang/Object;)Z
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Lws;->a:I
+    iget-boolean v0, p0, Lws;->c:Z
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_2
 
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-virtual {p0, p1}, Lws;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
+    instance-of v0, p1, Ljava/util/Map$Entry;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lws;->b:Ljava/lang/Object;
+    goto :goto_0
 
-    check-cast v0, Llbi;
+    :cond_0
+    check-cast p1, Ljava/util/Map$Entry;
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v1, p0, Lws;->b:I
+
+    iget-object v2, p0, Lws;->d:Lys;
+
+    invoke-virtual {v2, v1}, Ladf;->f(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Comparable;
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Llbi;->b(Ljava/lang/Comparable;Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lws;->b:I
+
+    invoke-virtual {v2, v0}, Ladf;->i(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
 
     const/4 p1, 0x1
 
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
     return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public clear()V
-    .locals 1
-
-    iget v0, p0, Lws;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/util/AbstractCollection;->clear()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lws;->b:Ljava/lang/Object;
-
-    check-cast v0, Llbi;
-
-    invoke-virtual {v0}, Llbi;->clear()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public contains(Ljava/lang/Object;)Z
-    .locals 3
-
-    iget v0, p0, Lws;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lws;->b:Ljava/lang/Object;
-
-    check-cast v1, Llbi;
-
-    invoke-virtual {v1, v0}, Llbi;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    if-eq v0, p1, :cond_1
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
 
     :cond_1
     :goto_0
-    return v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 3
-
-    iget v0, p0, Lws;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ltbi;
-
-    iget-object v1, p0, Lws;->b:Ljava/lang/Object;
-
-    check-cast v1, Llbi;
-
-    invoke-direct {v0, v1}, Ltbi;-><init>(Llbi;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Llb7;
-
-    iget-object v1, p0, Lws;->b:Ljava/lang/Object;
-
-    check-cast v1, [Lwig;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Llb7;-><init>([Lwig;I)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Lzs;
-
-    iget-object v1, p0, Lws;->b:Ljava/lang/Object;
-
-    check-cast v1, Lbt;
-
-    invoke-direct {v0, v1}, Lzs;-><init>(Lbt;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public remove(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget v0, p0, Lws;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
-
-    move-result p1
+    const/4 p1, 0x0
 
     return p1
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p0, p1}, Lws;->contains(Ljava/lang/Object;)Z
+    const-string v0, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final getKey()Ljava/lang/Object;
+    .locals 2
+
+    iget-boolean v0, p0, Lws;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lws;->d:Lys;
+
+    iget v1, p0, Lws;->b:I
+
+    invoke-virtual {v0, v1}, Ladf;->f(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 2
+
+    iget-boolean v0, p0, Lws;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lws;->d:Lys;
+
+    iget v1, p0, Lws;->b:I
+
+    invoke-virtual {v0, v1}, Ladf;->i(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final hasNext()Z
+    .locals 2
+
+    iget v0, p0, Lws;->b:I
+
+    iget v1, p0, Lws;->a:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-boolean v0, p0, Lws;->c:Z
+
+    if-eqz v0, :cond_2
+
+    iget v0, p0, Lws;->b:I
+
+    iget-object v1, p0, Lws;->d:Lys;
+
+    invoke-virtual {v1, v0}, Ladf;->f(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget v2, p0, Lws;->b:I
+
+    invoke-virtual {v1, v2}, Ladf;->i(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    if-nez v0, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    xor-int/2addr v0, v2
+
+    return v0
+
+    :cond_2
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 2
+
+    invoke-virtual {p0}, Lws;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lws;->b:Ljava/lang/Object;
+    iget v0, p0, Lws;->b:I
 
-    check-cast v0, Llbi;
+    const/4 v1, 0x1
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    add-int/2addr v0, v1
 
-    move-result-object p1
+    iput v0, p0, Lws;->b:I
 
-    invoke-virtual {v0, p1}, Llbi;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-boolean v1, p0, Lws;->c:Z
 
-    const/4 p1, 0x1
-
-    goto :goto_0
+    return-object p0
 
     :cond_0
-    const/4 p1, 0x0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    :goto_0
-    return p1
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    throw v0
 .end method
 
-.method public final size()I
-    .locals 1
+.method public final remove()V
+    .locals 2
+
+    iget-boolean v0, p0, Lws;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lws;->d:Lys;
+
+    iget v1, p0, Lws;->b:I
+
+    invoke-virtual {v0, v1}, Ladf;->g(I)Ljava/lang/Object;
+
+    iget v0, p0, Lws;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lws;->b:I
 
     iget v0, p0, Lws;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    add-int/lit8 v0, v0, -0x1
 
-    iget-object v0, p0, Lws;->b:Ljava/lang/Object;
+    iput v0, p0, Lws;->a:I
 
-    check-cast v0, Llbi;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Llbi;->size()I
+    iput-boolean v0, p0, Lws;->c:Z
 
-    move-result v0
+    return-void
 
-    return v0
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    :pswitch_0
-    iget-object v0, p0, Lws;->b:Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
 
-    check-cast v0, [Lwig;
+    throw v0
+.end method
 
-    array-length v0, v0
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    div-int/lit8 v0, v0, 0x2
+    iget-boolean v0, p0, Lws;->c:Z
 
-    return v0
+    if-eqz v0, :cond_0
 
-    :pswitch_1
-    iget-object v0, p0, Lws;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lws;->d:Lys;
 
-    check-cast v0, Lbt;
+    iget v1, p0, Lws;->b:I
 
-    iget v0, v0, Llpe;->c:I
+    invoke-virtual {v0, v1, p1}, Ladf;->h(ILjava/lang/Object;)Ljava/lang/Object;
 
-    return v0
+    move-result-object p1
 
-    nop
+    return-object p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lws;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Lws;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

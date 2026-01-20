@@ -1,50 +1,87 @@
-.class public abstract Lunc;
+.class public final Lunc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lync;
 
 
-# static fields
-.field public static oneme_folders_chats_picker_toolbar:I = 0x7f0a0687
+# instance fields
+.field public final a:J
 
-.field public static oneme_folders_delete_folder_bottom_sheet_cancel_button:I = 0x7f0a0688
 
-.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f0a0689
+# direct methods
+.method public constructor <init>(J)V
+    .locals 0
 
-.field public static oneme_folders_edit_bottom_sheet_cancel_button:I = 0x7f0a068a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_folders_edit_bottom_sheet_delete_button:I = 0x7f0a068b
+    iput-wide p1, p0, Lunc;->a:J
 
-.field public static oneme_folders_edit_create_button:I = 0x7f0a068c
+    return-void
+.end method
 
-.field public static oneme_folders_edit_delete_button:I = 0x7f0a068d
 
-.field public static oneme_folders_edit_folder_name_field:I = 0x7f0a068e
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static oneme_folders_edit_members_add_button:I = 0x7f0a068f
+    const/4 v0, 0x1
 
-.field public static oneme_folders_edit_members_list:I = 0x7f0a0690
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_folders_edit_save_button:I = 0x7f0a0691
+    return v0
 
-.field public static oneme_folders_edit_screen:I = 0x7f0a0692
+    :cond_0
+    instance-of v1, p1, Lunc;
 
-.field public static oneme_folders_edit_title_input:I = 0x7f0a0693
+    const/4 v2, 0x0
 
-.field public static oneme_folders_edit_toolbar:I = 0x7f0a0694
+    if-nez v1, :cond_1
 
-.field public static oneme_folders_list_all_folder_view_type:I = 0x7f0a0695
+    return v2
 
-.field public static oneme_folders_list_create_folder_view_type:I = 0x7f0a0696
+    :cond_1
+    check-cast p1, Lunc;
 
-.field public static oneme_folders_list_menu_action_change:I = 0x7f0a0697
+    iget-wide v3, p0, Lunc;->a:J
 
-.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f0a0698
+    iget-wide v5, p1, Lunc;->a:J
 
-.field public static oneme_folders_list_recommended_folder_view_type:I = 0x7f0a0699
+    cmp-long p1, v3, v5
 
-.field public static oneme_folders_list_recycler_view:I = 0x7f0a069a
+    if-eqz p1, :cond_2
 
-.field public static oneme_folders_list_screen:I = 0x7f0a069b
+    return v2
 
-.field public static oneme_folders_list_toolbar:I = 0x7f0a069c
+    :cond_2
+    return v0
+.end method
 
-.field public static oneme_folders_list_user_folder_view_type:I = 0x7f0a069d
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lunc;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ChatUpdate(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lunc;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

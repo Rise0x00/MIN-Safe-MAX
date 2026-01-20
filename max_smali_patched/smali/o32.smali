@@ -2,43 +2,88 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldy3;
+
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic a:Ljava/util/concurrent/Executor;
+
+.field public final synthetic b:Lm52;
+
+.field public final synthetic c:Lp32;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
+.method public constructor <init>(Lr78;Ljava/util/concurrent/Executor;Lm52;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_0
+    iput-object p1, p0, Lo32;->c:Lp32;
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    iput-object p2, p0, Lo32;->a:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Lo32;->b:Lm52;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
+
+    check-cast p1, Lqph;
+
+    instance-of v0, p1, Llph;
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lvti;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Lp02;
 
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    const/4 v1, 0x4
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    invoke-direct {v0, v1, p0}, Lp02;-><init>(ILjava/lang/Object;)V
 
-    move-result-object p1
+    iget-object v1, p0, Lo32;->a:Ljava/util/concurrent/Executor;
 
-    iput-object p1, p0, Lo32;->a:Ljava/util/List;
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    return-void
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Lo32;->c:Lp32;
 
-    const-string v0, "Cannot set an empty CaptureStage list."
+    iget-object v1, v0, Lp32;->k:Ljava/util/HashMap;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    throw p1
+    move-result-object v1
+
+    check-cast v1, Lkrd;
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, v0, Lp32;->j:Lkrd;
+
+    if-ne v2, v1, :cond_1
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lp32;->j:Lkrd;
+
+    :cond_1
+    :goto_0
+    iget-object v0, p0, Lo32;->b:Lm52;
+
+    invoke-virtual {v0, p1}, Lm52;->accept(Ljava/lang/Object;)V
+
+    return-void
 .end method

@@ -1,91 +1,126 @@
-.class public abstract Lg1h;
+.class public final Lg1h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf1g;
+
 
 # static fields
-.field public static final a:Lm1h;
+.field public static final b:Lg1h;
 
-.field public static final b:Lb62;
+
+# instance fields
+.field public final a:Ljava/util/List;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lg1h;
 
-    const/16 v1, 0x1d
+    invoke-direct {v0}, Lg1h;-><init>()V
 
-    if-lt v0, v1, :cond_0
+    sput-object v0, Lg1h;->b:Lg1h;
 
-    new-instance v0, Ln1h;
+    return-void
+.end method
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.method public constructor <init>()V
+    .locals 1
 
-    sput-object v0, Lg1h;->a:Lm1h;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 4
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Lg1h;->a:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lse4;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lg1h;->a:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final f(J)I
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p1, p1, v0
+
+    if-gez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_0
+    const/4 p1, -0x1
+
+    return p1
+.end method
+
+.method public final h(I)J
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lm1h;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lg1h;->a:Lm1h;
+    const/4 p1, 0x0
 
     :goto_0
-    new-instance v0, Lb62;
+    invoke-static {p1}, Ly5j;->b(Z)V
 
-    const-string v1, "translationAlpha"
+    const-wide/16 v0, 0x0
 
-    const/16 v2, 0xb
-
-    const-class v3, Ljava/lang/Float;
-
-    invoke-direct {v0, v3, v1, v2}, Lb62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lg1h;->b:Lb62;
-
-    new-instance v0, Lb62;
-
-    const-string v1, "clipBounds"
-
-    const/16 v2, 0xc
-
-    const-class v3, Landroid/graphics/Rect;
-
-    invoke-direct {v0, v3, v1, v2}, Lb62;-><init>(Ljava/lang/Class;Ljava/lang/String;I)V
-
-    return-void
+    return-wide v0
 .end method
 
-.method public static a(Landroid/view/View;IIII)V
-    .locals 6
+.method public final m(J)Ljava/util/List;
+    .locals 2
 
-    sget-object v0, Lg1h;->a:Lm1h;
+    const-wide/16 v0, 0x0
 
-    move-object v1, p0
+    cmp-long p1, p1, v0
 
-    move v2, p1
+    if-ltz p1, :cond_0
 
-    move v3, p2
+    iget-object p1, p0, Lg1h;->a:Ljava/util/List;
 
-    move v4, p3
+    return-object p1
 
-    move v5, p4
+    :cond_0
+    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-virtual/range {v0 .. v5}, Lm1h;->g(Landroid/view/View;IIII)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public static b(Landroid/view/View;I)V
+.method public final s()I
     .locals 1
 
-    sget-object v0, Lg1h;->a:Lm1h;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p0, p1}, Lm1h;->d(Landroid/view/View;I)V
-
-    return-void
+    return v0
 .end method

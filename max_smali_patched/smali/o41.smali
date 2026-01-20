@@ -1,149 +1,168 @@
 .class public final Lo41;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lfz4;
 
 
 # instance fields
-.field public final synthetic X:Ld39;
+.field public final synthetic a:I
 
-.field public o:I
+.field public final b:Lspf;
 
 
 # direct methods
-.method public constructor <init>(Ld39;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(I)V
+    .locals 8
+
+    iput p1, p0, Lo41;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lxk4;
+
+    sget-object p1, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v1
+
+    new-instance v3, Lphg;
+
+    const-string p1, "0.1.1"
+
+    invoke-direct {v3, p1}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v4, Le7d;->ic_statusbar_call_24:I
+
+    new-instance v5, Lphg;
+
+    const-string p1, "\u0412\u0435\u0440\u0441\u0438\u044f SDK \u0417\u0432\u043e\u043d\u043a\u043e\u0432"
+
+    invoke-direct {v5, p1}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x10
+
+    invoke-direct/range {v0 .. v7}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lo41;->b:Lspf;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object p1, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v1
+
+    new-instance v3, Lphg;
+
+    const-string p1, "Test crash"
+
+    invoke-direct {v3, p1}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v5, Lphg;
+
+    const-string p1, "\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0439 \u043a\u0440\u0435\u0448 \u0434\u043b\u044f \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438 \u0432 tracer"
+
+    invoke-direct {v5, p1}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    sget v4, Lf6e;->B:I
+
+    new-instance v0, Lxk4;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x10
+
+    invoke-direct/range {v0 .. v7}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lo41;->b:Lspf;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final e(Lxk4;)V
     .locals 0
-
-    iput-object p1, p0, Lo41;->X:Ld39;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lo41;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lo41;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lo41;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final a()Llpf;
     .locals 1
 
-    new-instance p1, Lo41;
+    iget v0, p0, Lo41;->a:I
 
-    iget-object v0, p0, Lo41;->X:Ld39;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p1, v0, p2}, Lo41;-><init>(Ld39;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lo41;->o:I
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lo41;->X:Ld39;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    invoke-virtual {v2}, Ld39;->C()Ll83;
-
-    move-result-object p1
-
-    check-cast p1, Lztd;
-
-    invoke-virtual {p1}, Lztd;->p()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-static {p1}, Lxaf;->J(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    :cond_2
-    iget-object p1, v2, Ld39;->c:Ljava/lang/Object;
-
-    check-cast p1, Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lnw1;
-
-    iput v1, p0, Lo41;->o:I
-
-    check-cast p1, Lqw1;
-
-    invoke-virtual {p1, p0}, Lqw1;->a(Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_3
+    iget-object v0, p0, Lo41;->b:Lspf;
 
     return-object v0
 
-    :cond_3
-    :goto_0
-    invoke-virtual {v2}, Ld39;->C()Ll83;
+    :pswitch_0
+    iget-object v0, p0, Lo41;->b:Lspf;
 
-    move-result-object p1
+    return-object v0
 
-    check-cast p1, Lztd;
+    nop
 
-    invoke-virtual {p1}, Lztd;->p()Ljava/lang/String;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object p1
+.method public final d(Lxk4;)V
+    .locals 0
 
-    return-object p1
+    iget p1, p0, Lo41;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance p1, Lone/me/devmenu/tools/TestCrash;
+
+    invoke-direct {p1}, Lone/me/devmenu/tools/TestCrash;-><init>()V
+
+    throw p1
+
+    :pswitch_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

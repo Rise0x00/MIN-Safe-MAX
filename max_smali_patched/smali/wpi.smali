@@ -1,60 +1,14 @@
-.class public final Lwpi;
+.class public interface abstract Lwpi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
-
-
-# static fields
-.field public static final a:Lwpi;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lwpi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwpi;->a:Lwpi;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
+.implements Landroid/os/IInterface;
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public abstract p(Lcom/google/android/gms/common/api/Status;La8a;)V
+.end method
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
+.method public abstract r(Lcom/google/android/gms/common/api/Status;Lc8a;)V
 .end method

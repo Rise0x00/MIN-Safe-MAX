@@ -1,122 +1,77 @@
-.class public final Lfge;
-.super Ljava/lang/Object;
+.class public final enum Lfge;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lof4;
 
 
 # static fields
-.field public static final a:Lfge;
+.field public static final enum a:Lfge;
 
-.field public static final b:Lgge;
+.field public static final synthetic b:[Lfge;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
     new-instance v0, Lfge;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "hash"
 
-    sput-object v0, Lfge;->a:Lfge;
+    const/4 v2, 0x0
 
-    sget-object v0, Lgge;->b:Lgge;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lfge;->b:Lgge;
+    new-instance v1, Lfge;
+
+    const-string v2, "app-update-type"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lfge;->a:Lfge;
+
+    new-instance v2, Lfge;
+
+    const-string v3, "has-phone"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Lfge;
+
+    move-result-object v0
+
+    sput-object v0, Lfge;->b:[Lfge;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Lwf4;
+.method public static valueOf(Ljava/lang/String;)Lfge;
     .locals 1
 
-    sget-object v0, Lfge;->b:Lgge;
+    const-class v0, Lfge;
 
-    return-object v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lfge;
+
+    return-object p0
 .end method
 
-.method public final b(Ljava/lang/String;Lrf4;Landroid/os/Bundle;)Lzf4;
-    .locals 10
+.method public static values()[Lfge;
+    .locals 1
 
-    sget-object v0, Lfge;->b:Lgge;
+    sget-object v0, Lfge;->b:[Lfge;
 
-    iget-object v0, v0, Lwf4;->a:Ljava/util/LinkedHashSet;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    check-cast v0, [Lfge;
 
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return-object v1
-
-    :cond_0
-    sget-object v0, Lgge;->b:Lgge;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lgge;->c:Lrf4;
-
-    invoke-virtual {p2, v0}, Lrf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v8, Lh;
-
-    const/16 v0, 0x1c
-
-    invoke-direct {v8, v0}, Lh;-><init>(I)V
-
-    new-instance v2, Lzf4;
-
-    const/16 v9, 0x18
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Lzf4;-><init>(Ljava/lang/String;Lrf4;Landroid/os/Bundle;ILxf4;Lyf4;I)V
-
-    return-object v2
-
-    :cond_1
-    move-object v4, p2
-
-    const-class p1, Lfge;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string p2, "invalid route "
-
-    invoke-static {p2, v4}, Lok7;->h(Ljava/lang/String;Lrf4;)Ljava/lang/String;
-
-    move-result-object p3
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p2, v4}, Lok7;->h(Ljava/lang/String;Lrf4;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v0, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p3, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v1
+    return-object v0
 .end method

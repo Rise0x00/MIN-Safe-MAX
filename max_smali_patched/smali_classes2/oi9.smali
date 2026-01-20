@@ -1,44 +1,63 @@
 .class public final Loi9;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lwi9;
 
 
 # instance fields
-.field public final a:J
+.field public X:Lbtd;
 
-.field public final b:Lo00;
+.field public Y:Lqd8;
+
+.field public Z:Lqd8;
+
+.field public d:Lnd2;
+
+.field public o:Ljm9;
+
+.field public t0:Lqd8;
+
+.field public u0:I
+
+.field public synthetic v0:Ljava/lang/Object;
+
+.field public final synthetic w0:Lzi9;
+
+.field public x0:I
 
 
 # direct methods
-.method public constructor <init>(JLo00;)V
+.method public constructor <init>(Lzi9;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Loi9;->w0:Lzi9;
 
-    iput-wide p1, p0, Loi9;->a:J
-
-    iput-object p3, p0, Loi9;->b:Lo00;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Loi9;->v0:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, Loi9;->x0:I
 
-.method public final j()J
-    .locals 2
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p0, Loi9;->a:J
+    or-int/2addr p1, v0
 
-    return-wide v0
+    iput p1, p0, Loi9;->x0:I
+
+    iget-object p1, p0, Loi9;->w0:Lzi9;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lzi9;->w(Lnd2;Ljm9;Lo84;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

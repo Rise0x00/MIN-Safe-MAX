@@ -1,26 +1,67 @@
-.class public Lru/ok/android/externcalls/sdk/CallUtil;
+.class public final Lru/ok/android/externcalls/sdk/CallUtil;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0008\u00c0\u0002\u0018\u00002\u00020\u0001B\t\u0008\u0002\u00a2\u0006\u0004\u0008\u0002\u0010\u0003J\u0017\u0010\u0007\u001a\u00020\u00062\u0006\u0010\u0005\u001a\u00020\u0004H\u0007\u00a2\u0006\u0004\u0008\u0007\u0010\u0008J\u000f\u0010\n\u001a\u00020\tH\u0007\u00a2\u0006\u0004\u0008\n\u0010\u000bR\u0014\u0010\r\u001a\u00020\u000c8\u0006X\u0087\u0004\u00a2\u0006\u0006\n\u0004\u0008\r\u0010\u000e\u00a8\u0006\u000f"
+    }
+    d2 = {
+        "Lru/ok/android/externcalls/sdk/CallUtil;",
+        "",
+        "<init>",
+        "()V",
+        "Lru/ok/android/externcalls/sdk/ConversationBuilder;",
+        "builder",
+        "Lrk1;",
+        "createCallParams",
+        "(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lrk1;",
+        "Lok1;",
+        "createBitrates",
+        "()Lok1;",
+        "Lbhd;",
+        "LOG_CONFIGURATION",
+        "Lbhd;",
+        "calls-sdk_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
 # static fields
-.field static final LOG_CONFIGURATION:Ldwc;
+.field public static final INSTANCE:Lru/ok/android/externcalls/sdk/CallUtil;
+
+.field public static final LOG_CONFIGURATION:Lbhd;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lru/ok/android/externcalls/sdk/CallUtil$1;
+    new-instance v0, Lru/ok/android/externcalls/sdk/CallUtil;
 
-    invoke-direct {v0}, Lru/ok/android/externcalls/sdk/CallUtil$1;-><init>()V
+    invoke-direct {v0}, Lru/ok/android/externcalls/sdk/CallUtil;-><init>()V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG_CONFIGURATION:Ldwc;
+    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->INSTANCE:Lru/ok/android/externcalls/sdk/CallUtil;
+
+    new-instance v0, Lru/ok/android/externcalls/sdk/CallUtil$LOG_CONFIGURATION$1;
+
+    invoke-direct {v0}, Lru/ok/android/externcalls/sdk/CallUtil$LOG_CONFIGURATION$1;-><init>()V
+
+    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG_CONFIGURATION:Lbhd;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,72 +69,70 @@
     return-void
 .end method
 
-.method public static createBitrates()Loh1;
+.method public static final createBitrates()Lok1;
     .locals 1
 
-    new-instance v0, Loh1;
+    new-instance v0, Lok1;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-object v0
 .end method
 
-.method public static createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lrh1;
+.method public static final createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lrk1;
     .locals 29
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Loh1;
+    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lok1;
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/CallUtil;->createBitrates()Loh1;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/CallUtil;->createBitrates()Lok1;
 
     move-result-object v1
 
     :cond_0
     move-object v3, v1
 
-    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lph1;
+    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lpk1;
 
-    iget-object v2, v1, Lph1;->f:Lqh1;
+    iget-object v2, v1, Lpk1;->f:Lqk1;
 
     if-nez v2, :cond_1
 
-    new-instance v2, Lqh1;
+    new-instance v2, Lqk1;
 
     iget-wide v4, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->mediaReceivingTimeoutMs:J
 
-    invoke-direct {v2, v4, v5}, Lqh1;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Lqk1;-><init>(J)V
 
     :cond_1
     move-object v4, v2
 
-    new-instance v2, Ltz8;
+    new-instance v2, Lzii;
 
-    new-instance v5, Lfs0;
+    new-instance v5, Lbu0;
 
     iget-boolean v6, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isMediaAdaptationFeatureEnabledForP2PCall:Z
 
-    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lxk8;
+    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lfw8;
 
-    invoke-direct {v5, v6, v7}, Lfs0;-><init>(ZLxk8;)V
+    invoke-direct {v5, v6, v7}, Lbu0;-><init>(ZLjava/lang/Object;)V
 
-    new-instance v6, Lfs0;
+    new-instance v6, Lbu0;
 
     iget-boolean v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isMediaAdaptationFeatureEnabledForGroupCall:Z
 
-    iget-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lxk8;
+    iget-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lfw8;
 
-    invoke-direct {v6, v7, v8}, Lfs0;-><init>(ZLxk8;)V
+    invoke-direct {v6, v7, v8}, Lbu0;-><init>(ZLjava/lang/Object;)V
 
-    const/4 v7, 0x6
-
-    invoke-direct {v2, v5, v7, v6}, Ltz8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v5, v6}, Lzii;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     move-object/from16 v21, v2
 
-    new-instance v2, Lrh1;
+    new-instance v2, Lrk1;
 
     iget-boolean v5, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->dnsResolverEnabled:Z
 
@@ -157,13 +196,13 @@
 
     iget-boolean v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isDeviceAudioShareEnabled:Z
 
-    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Llg0;
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Ljh0;
 
     move-object/from16 v28, v0
 
     move/from16 v27, v1
 
-    invoke-direct/range {v2 .. v28}, Lrh1;-><init>(Loh1;Lqh1;ZZZZLjava/util/List;ZZIZZZZ[Ljava/lang/String;[Ljava/lang/String;ZZLtz8;ZLph1;ZZZZLlg0;)V
+    invoke-direct/range {v2 .. v28}, Lrk1;-><init>(Lok1;Lqk1;ZZZZLjava/util/List;ZZIZZZZ[Ljava/lang/String;[Ljava/lang/String;ZZLzii;ZLpk1;ZZZZLjh0;)V
 
     return-object v2
 .end method

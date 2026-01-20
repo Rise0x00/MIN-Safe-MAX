@@ -4,72 +4,40 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:I
 
-.field public final b:Ljava/lang/Object;
+.field public final b:I
 
-.field public final c:Ljava/lang/Object;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:[B
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public synthetic constructor <init>(IIIIII[B)V
     .locals 0
+
+    iput p1, p0, Lzwh;->a:I
+
+    iput p2, p0, Lzwh;->b:I
+
+    iput p3, p0, Lzwh;->c:I
+
+    iput p4, p0, Lzwh;->d:I
+
+    iput p5, p0, Lzwh;->e:I
+
+    iput p6, p0, Lzwh;->f:I
+
+    iput-object p7, p0, Lzwh;->g:[B
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzwh;->a:Ljava/lang/Object;
-
-    iput-object p2, p0, Lzwh;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lzwh;->c:Ljava/lang/Object;
-
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/IllegalArgumentException;
-    .locals 8
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    iget-object v1, p0, Lzwh;->a:Ljava/lang/Object;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lzwh;->b:Ljava/lang/Object;
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v4, p0, Lzwh;->c:Ljava/lang/Object;
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, " and "
-
-    const-string v6, "Multiple entries with same key: "
-
-    const-string v7, "="
-
-    invoke-static {v6, v2, v7, v3, v5}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {v2, v1, v7, v4}, Lsfd;->i(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    return-object v0
 .end method

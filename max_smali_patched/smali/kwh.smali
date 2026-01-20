@@ -1,184 +1,75 @@
-.class public final Lkwh;
-.super Licg;
+.class public final enum Lkwh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/ListIterator;
 
-
-# instance fields
-.field public final b:I
-
-.field public c:I
-
-.field public final d:Lvwh;
+# static fields
+.field public static final synthetic a:[Lkwh;
 
 
 # direct methods
-.method public constructor <init>(Lvwh;I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+    new-instance v0, Lkwh;
 
-    move-result v0
+    const-string v1, "UNKNOWN"
 
-    const/4 v1, 0x2
+    const/4 v2, 0x0
 
-    invoke-direct {p0, v1}, Licg;-><init>(I)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {p2, v0}, Laki;->e(II)V
+    new-instance v1, Lkwh;
 
-    iput v0, p0, Lkwh;->b:I
+    const-string v2, "VISIBLE"
 
-    iput p2, p0, Lkwh;->c:I
+    const/4 v3, 0x1
 
-    iput-object p1, p0, Lkwh;->d:Lvwh;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Lkwh;
+
+    const-string v3, "INVISIBLE"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Lkwh;
+
+    move-result-object v0
+
+    sput-object v0, Lkwh;->a:[Lkwh;
+
+    invoke-static {}, Lkwh;->values()[Lkwh;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final add(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
-.end method
-
-.method public final b(I)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lkwh;
     .locals 1
 
-    iget-object v0, p0, Lkwh;->d:Lvwh;
+    const-class v0, Lkwh;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result-object p1
+    move-result-object p0
 
-    return-object p1
+    check-cast p0, Lkwh;
+
+    return-object p0
 .end method
 
-.method public final hasNext()Z
-    .locals 2
-
-    iget v0, p0, Lkwh;->c:I
-
-    iget v1, p0, Lkwh;->b:I
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hasPrevious()Z
+.method public static values()[Lkwh;
     .locals 1
 
-    iget v0, p0, Lkwh;->c:I
+    sget-object v0, Lkwh;->a:[Lkwh;
 
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    invoke-virtual {p0}, Lkwh;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lkwh;->c:I
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lkwh;->c:I
-
-    invoke-virtual {p0, v0}, Lkwh;->b(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final nextIndex()I
-    .locals 1
-
-    iget v0, p0, Lkwh;->c:I
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lkwh;->hasPrevious()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lkwh;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    iput v0, p0, Lkwh;->c:I
-
-    invoke-virtual {p0, v0}, Lkwh;->b(I)Ljava/lang/Object;
-
-    move-result-object v0
+    check-cast v0, [Lkwh;
 
     return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    iget v0, p0, Lkwh;->c:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    return v0
-.end method
-
-.method public final set(Ljava/lang/Object;)V
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
 .end method

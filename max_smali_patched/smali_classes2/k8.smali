@@ -1,154 +1,136 @@
-.class public final Lk8;
+.class public final synthetic Lk8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:Landroid/content/Intent;
+.field public final synthetic b:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(IILandroid/content/Intent;)V
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
+    iput p2, p0, Lk8;->a:I
+
+    iput-object p1, p0, Lk8;->b:Landroid/view/View;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lk8;->a:I
-
-    iput p2, p0, Lk8;->b:I
-
-    iput-object p3, p0, Lk8;->c:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lk8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lk8;
-
-    iget v1, p0, Lk8;->a:I
-
-    iget v3, p1, Lk8;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lk8;->b:I
-
-    iget v3, p1, Lk8;->b:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lk8;->c:Landroid/content/Intent;
-
-    iget-object p1, p1, Lk8;->c:Landroid/content/Intent;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final run()V
     .locals 3
 
     iget v0, p0, Lk8;->a:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object v0, p0, Lk8;->b:Landroid/view/View;
 
-    const/16 v1, 0x1f
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    mul-int/2addr v0, v1
+    move-result-object v1
 
-    iget v2, p0, Lk8;->b:I
+    const-class v2, Landroid/view/inputmethod/InputMethodManager;
 
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
+    invoke-static {v1, v2}, Lr74;->b(Landroid/content/Context;Ljava/lang/Class;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v1
 
-    iget-object v1, p0, Lk8;->c:Landroid/content/Intent;
+    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
 
-    if-nez v1, :cond_0
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lk8;->b:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "input_method"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lk8;->b:Landroid/view/View;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :pswitch_2
+    const/16 v0, 0x8
+
+    iget-object v1, p0, Lk8;->b:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lk8;->b:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    return-void
 
-    move-result v1
+    :pswitch_4
+    iget-object v0, p0, Lk8;->b:Landroid/view/View;
 
-    :goto_0
-    add-int/2addr v0, v1
+    const/4 v1, 0x0
 
-    return v0
-.end method
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    return-void
 
-    const-string v0, ", resultCode="
+    :pswitch_5
+    iget-object v0, p0, Lk8;->b:Landroid/view/View;
 
-    const-string v1, ", data="
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
-    const-string v2, "ActivityResult(requestCode="
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
 
-    iget v3, p0, Lk8;->a:I
+    return-void
 
-    iget v4, p0, Lk8;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lk8;->c:Landroid/content/Intent;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

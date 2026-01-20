@@ -1,13 +1,10 @@
 .class public final Luo1;
-.super Ljava/lang/Object;
+.super Lcp1;
 .source "SourceFile"
-
-# interfaces
-.implements Lwo1;
 
 
 # static fields
-.field public static final a:Luo1;
+.field public static final D:Luo1;
 
 
 # direct methods
@@ -16,9 +13,9 @@
 
     new-instance v0, Luo1;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcp1;-><init>()V
 
-    sput-object v0, Luo1;->a:Luo1;
+    sput-object v0, Luo1;->D:Luo1;
 
     return-void
 .end method
@@ -50,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x7d43b3c9
+    const v0, -0x6cfea200
 
     return v0
 .end method
@@ -58,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Loading"
+    const-string v0, "RecordStateScreen"
 
     return-object v0
 .end method

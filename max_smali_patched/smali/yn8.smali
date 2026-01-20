@@ -1,31 +1,23 @@
-.class public Lyn8;
-.super Lnp4;
+.class public abstract Lyn8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic e:Lv09;
-
-.field public final synthetic f:Lv09;
+# static fields
+.field public static final a:Ltea;
 
 
 # direct methods
-.method public constructor <init>(Lv09;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lyn8;->f:Lv09;
+    new-instance v0, Ltea;
 
-    iput-object p1, p0, Lyn8;->e:Lv09;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Ltea;-><init>(I)V
 
-    iput-object p1, p0, Lnp4;->d:Ljava/lang/Object;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lnp4;->a:Ljava/lang/Object;
+    sput-object v0, Lyn8;->a:Ltea;
 
     return-void
 .end method

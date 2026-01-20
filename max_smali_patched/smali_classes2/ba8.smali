@@ -1,19 +1,100 @@
-.class public abstract Lba8;
-.super Lda8;
+.class public final Lba8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxa8;
 
-# instance fields
-.field public final c:Lnrf;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lba8;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lba8;
 
 
 # direct methods
-.method public constructor <init>(Lnrf;Ljava/lang/Throwable;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lba8;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lba8;->a:Lba8;
+
+    new-instance v0, Lj58;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+
+    sput-object v0, Lba8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lba8;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x501f9358
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "ContentLevelError"
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lda8;-><init>(Ljava/lang/Throwable;)V
+    const/4 p2, 0x1
 
-    iput-object p1, p0, Lba8;->c:Lnrf;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

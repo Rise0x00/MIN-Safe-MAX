@@ -1,87 +1,147 @@
 .class public final Lg3c;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements La7c;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public final a:Lo58;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lo58;
+
+.field public final c:Lo58;
+
+.field public final d:Lspf;
+
+.field public final e:Lpld;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
-    iput-object p2, p0, Lg3c;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    sget-object v0, Lfnf;->a:Lfnf;
 
-    const/4 p2, 0x2
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    move-result-object v1
+
+    const/16 v2, 0x85
+
+    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const/16 v3, 0xc
+
+    invoke-virtual {v2, v3}, Lr5;->d(I)Ln8g;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v3, 0xf
+
+    invoke-virtual {v0, v3}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, p0, Lg3c;->a:Lo58;
+
+    iput-object v2, p0, Lg3c;->b:Lo58;
+
+    iput-object v0, p0, Lg3c;->c:Lo58;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lg3c;->d:Lspf;
+
+    new-instance v1, Lpld;
+
+    invoke-direct {v1, v0}, Lpld;-><init>(Lmfa;)V
+
+    iput-object v1, p0, Lg3c;->e:Lpld;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lg3c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lg3c;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lg3c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lg3c;
-
-    iget-object v1, p0, Lg3c;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
-
-    invoke-direct {v0, p2, v1}, Lg3c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
-
-    iput-object p1, v0, Lg3c;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Lq6c;)V
     .locals 0
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    return-void
+.end method
 
-    iget-object p1, p0, Lg3c;->o:Ljava/lang/Object;
+.method public final d(J)V
+    .locals 0
 
-    check-cast p1, La5a;
+    return-void
+.end method
 
-    instance-of p1, p1, Lf93;
+.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
+    .locals 4
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lg3c;->c:Lo58;
 
-    iget-object p1, p0, Lg3c;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1}, Lc24;->getRouter()Lyid;
+    move-result-object v0
 
-    move-result-object p1
+    check-cast v0, Lyzb;
 
-    invoke-virtual {p1}, Lyid;->C()Z
+    sget-object v1, Lyzb;->f:[Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lyzb;->c([Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lg3c;->b:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lmbg;
+
+    check-cast v0, Lj9b;
+
+    invoke-virtual {v0}, Lj9b;->b()Lsb4;
+
+    move-result-object v0
+
+    new-instance v1, Lf3c;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Lf3c;-><init>(Lg3c;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x2
+
+    invoke-static {p1, v0, v2, v1, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
     :cond_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

@@ -1,59 +1,91 @@
 .class public final Lac6;
-.super Lp14;
+.super Lx1;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic d:I
 
-.field public final synthetic Y:Lbc6;
-
-.field public Z:I
-
-.field public d:Z
-
-.field public o:Lbc6;
+.field public final o:Ljava/lang/Iterable;
 
 
 # direct methods
-.method public constructor <init>(Lbc6;Lp14;)V
-    .locals 0
+.method public constructor <init>(Lbc6;I)V
+    .locals 1
 
-    iput-object p1, p0, Lac6;->Y:Lbc6;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput v0, p0, Lac6;->d:I
+
+    .line 1
+    iput-object p1, p0, Lac6;->o:Ljava/lang/Iterable;
+
+    const/4 p1, 0x0
+
+    .line 2
+    invoke-direct {p0, p2, p1}, Lx1;-><init>(II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lhk7;I)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lac6;->d:I
+
+    .line 3
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v0
+
+    invoke-direct {p0, v0, p2}, Lx1;-><init>(II)V
+
+    .line 4
+    iput-object p1, p0, Lac6;->o:Ljava/lang/Iterable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a(I)Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lac6;->X:Ljava/lang/Object;
+    iget v0, p0, Lac6;->d:I
 
-    iget p1, p0, Lac6;->Z:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lac6;->o:Ljava/lang/Iterable;
 
-    or-int/2addr p1, v0
+    check-cast v0, Lhk7;
 
-    iput p1, p0, Lac6;->Z:I
-
-    const-wide/16 v1, 0x0
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lac6;->Y:Lbc6;
-
-    const/4 v4, 0x0
-
-    move-object v3, p0
-
-    invoke-virtual/range {v0 .. v5}, Lbc6;->b(JLp14;Ljava/util/List;Z)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lac6;->o:Ljava/lang/Iterable;
+
+    check-cast v0, Lbc6;
+
+    iget-object v0, v0, Lbc6;->a:[Ljava/lang/Iterable;
+
+    aget-object p1, v0, p1
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

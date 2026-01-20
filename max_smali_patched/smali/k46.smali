@@ -1,119 +1,129 @@
-.class public final synthetic Lk46;
+.class public final Lk46;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lex1;
+.implements Lbg0;
 
 
-# instance fields
-.field public final synthetic a:Ll46;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Lqt1;
+# static fields
+.field public static final a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ll46;JLqt1;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iput-object p1, p0, Lk46;->a:Ll46;
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-wide p2, p0, Lk46;->b:J
-
-    iput-object p4, p0, Lk46;->c:Lqt1;
+    sput-object v0, Lk46;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
-    .locals 7
+.method public final a(Z)V
+    .locals 5
 
-    sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
+    sget-object v0, Lm46;->j:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    monitor-enter v0
 
-    move-result-object v0
+    :try_start_0
+    new-instance v1, Ljava/util/ArrayList;
 
-    check-cast v0, Ljava/lang/Integer;
+    sget-object v2, Lm46;->k:Lys;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v2}, Lys;->values()Ljava/util/Collection;
 
-    move-result v0
+    move-result-object v2
 
-    const/4 v1, 0x5
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    move v0, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v2
-
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v4, "enableExternalFlashAeMode: isAeModeExternalFlash = "
-
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    const-string v4, "FocusMeteringControl"
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v4, v1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v2
 
-    iget-object v1, p0, Lk46;->a:Ll46;
+    if-eqz v2, :cond_2
 
-    iget-boolean v1, v1, Ll46;->t:Z
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_1
+    move-result-object v2
 
-    iget-wide v5, p0, Lk46;->b:J
+    check-cast v2, Lm46;
 
-    invoke-static {p1, v5, v6}, Lfx1;->x(Landroid/hardware/camera2/TotalCaptureResult;J)Z
+    iget-object v3, v2, Lm46;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result p1
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    if-eqz p1, :cond_1
+    move-result v3
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    if-eqz v3, :cond_0
 
-    const-string v1, "enableExternalFlashAeMode: session updated with isAeModeExternalFlash = "
+    const-string v3, "FirebaseApp"
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "Notifying background state change listeners."
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v2, v2, Lm46;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move-result-object p1
+    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-static {v4, p1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iget-object v0, p0, Lk46;->c:Lqt1;
-
-    invoke-virtual {v0, p1}, Lqt1;->b(Ljava/lang/Object;)Z
-
-    return v3
+    move-result-object v2
 
     :cond_1
-    return v2
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lj46;
+
+    iget-object v3, v3, Lj46;->a:Lm46;
+
+    if-nez p1, :cond_1
+
+    iget-object v3, v3, Lm46;->h:Llzc;
+
+    invoke-interface {v3}, Llzc;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lsq4;
+
+    invoke-virtual {v3}, Lsq4;->b()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
 .end method

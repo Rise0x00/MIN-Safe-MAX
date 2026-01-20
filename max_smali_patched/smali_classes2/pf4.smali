@@ -1,21 +1,49 @@
 .class public final Lpf4;
-.super La5a;
+.super Landroid/text/style/TypefaceSpan;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final a:Landroid/graphics/Typeface;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>()V
+    .locals 2
+
+    sget-object v0, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v1}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lpf4;->a:Landroid/graphics/Typeface;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final updateDrawState(Landroid/text/TextPaint;)V
     .locals 1
 
-    sget-object v0, Lybg;->a:Lybg;
+    iget-object v0, p0, Lpf4;->a:Landroid/graphics/Typeface;
 
-    invoke-direct {p0, v0}, La5a;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    iput-object p1, p0, Lpf4;->b:Ljava/lang/String;
+    invoke-super {p0, p1}, Landroid/text/style/TypefaceSpan;->updateDrawState(Landroid/text/TextPaint;)V
+
+    return-void
+.end method
+
+.method public final updateMeasureState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget-object v0, p0, Lpf4;->a:Landroid/graphics/Typeface;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    invoke-super {p0, p1}, Landroid/text/style/TypefaceSpan;->updateMeasureState(Landroid/text/TextPaint;)V
 
     return-void
 .end method

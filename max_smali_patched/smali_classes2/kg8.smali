@@ -2,112 +2,47 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lud8;
 
-# instance fields
-.field public a:Lt92;
 
-.field public b:I
+# static fields
+.field public static final a:Lkg8;
 
-.field public c:Lgb9;
-
-.field public d:Lone/me/messages/list/loader/MessageModel;
-
-.field public e:Lywb;
-
-.field public f:Ljava/lang/Object;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkg8;
 
-    sget-object v0, Lna5;->a:Lna5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lkg8;->f:Ljava/lang/Object;
+    sput-object v0, Lkg8;->a:Lkg8;
+
+    sget v0, Ly7b;->s:I
+
+    sput v0, Lkg8;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lqi6;)Llg8;
-    .locals 3
+.method public final getItemId()J
+    .locals 2
 
-    invoke-interface {p1, p0}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide/16 v0, 0x0
 
-    iget-object p1, p0, Lkg8;->a:Lt92;
+    return-wide v0
+.end method
 
-    const-string v0, "Required value was null."
+.method public final m()I
+    .locals 1
 
-    if-eqz p1, :cond_3
+    sget v0, Lkg8;->b:I
 
-    iget v1, p0, Lkg8;->b:I
-
-    iget-object v2, p0, Lkg8;->e:Lywb;
-
-    if-eqz v2, :cond_2
-
-    new-instance v0, Llg8;
-
-    invoke-direct {v0, p1, v2, v1}, Llg8;-><init>(Lt92;Lywb;I)V
-
-    iget-object p1, p0, Lkg8;->c:Lgb9;
-
-    if-eqz p1, :cond_0
-
-    sget-object v1, Llg8;->h:[Les7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    iget-object v1, v0, Llg8;->d:Lgj4;
-
-    iput-object p1, v1, Lgj4;->b:Ljava/lang/Object;
-
-    :cond_0
-    iget-object p1, p0, Lkg8;->d:Lone/me/messages/list/loader/MessageModel;
-
-    if-eqz p1, :cond_1
-
-    sget-object v1, Llg8;->h:[Les7;
-
-    const/4 v2, 0x1
-
-    aget-object v1, v1, v2
-
-    iget-object v1, v0, Llg8;->e:Lgj4;
-
-    iput-object p1, v1, Lgj4;->b:Ljava/lang/Object;
-
-    :cond_1
-    iget-object p1, p0, Lkg8;->f:Ljava/lang/Object;
-
-    sget-object v1, Llg8;->h:[Les7;
-
-    const/4 v2, 0x3
-
-    aget-object v1, v1, v2
-
-    iget-object v1, v0, Llg8;->g:Lgj4;
-
-    iput-object p1, v1, Lgj4;->b:Ljava/lang/Object;
-
-    return-object v0
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return v0
 .end method

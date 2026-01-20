@@ -1,11 +1,3 @@
-.class public interface abstract Ljz6;
-.super Ljava/lang/Object;
+.class public final Ljz6;
+.super Ltsd;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract getId()J
-.end method
-
-.method public abstract getTime()J
-.end method

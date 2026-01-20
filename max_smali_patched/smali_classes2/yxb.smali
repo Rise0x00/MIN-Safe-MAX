@@ -1,138 +1,210 @@
 .class public final Lyxb;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbyb;
 
 
 # instance fields
-.field public final synthetic X:Lzxb;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:J
+.field public final b:Ljfa;
 
-.field public o:I
+.field public final c:Lefa;
 
 
 # direct methods
-.method public constructor <init>(Lzxb;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Ljfa;Lefa;)V
     .locals 0
 
-    iput-object p1, p0, Lyxb;->X:Lzxb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lyxb;->Y:J
+    iput-object p1, p0, Lyxb;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lyxb;->b:Ljfa;
 
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lyxb;->c:Lefa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Lg54;
+    iget-object v0, p0, Lyxb;->a:Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyxb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lyxb;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lyxb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b()Ljfa;
+    .locals 1
+
+    iget-object v0, p0, Lyxb;->b:Ljfa;
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    new-instance p1, Lyxb;
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lyxb;->X:Lzxb;
+    if-ne p0, p1, :cond_0
 
-    iget-wide v1, p0, Lyxb;->Y:J
+    return v0
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lyxb;-><init>(Lzxb;JLkotlin/coroutines/Continuation;)V
+    :cond_0
+    instance-of v1, p1, Lyxb;
 
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lyxb;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-nez v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    check-cast p1, Lyxb;
 
-    iget-object p1, p0, Lyxb;->X:Lzxb;
+    iget-object v1, p0, Lyxb;->a:Ljava/lang/String;
 
-    iget-object v0, p1, Lzxb;->s0:Lake;
+    iget-object v2, p1, Lyxb;->a:Ljava/lang/String;
 
-    sget v2, Lw35;->d:I
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-wide v2, p0, Lyxb;->Y:J
+    move-result v1
 
-    sget-object v4, Lb45;->c:Lb45;
+    if-nez v1, :cond_2
 
-    invoke-static {v2, v3, v4}, Lzyi;->e(JLb45;)J
+    goto :goto_0
 
-    move-result-wide v2
+    :cond_2
+    iget-object v1, p0, Lyxb;->b:Ljfa;
 
-    invoke-static {v0, v2, v3}, Ljf0;->h(Lez5;J)Lb82;
+    iget-object v2, p1, Lyxb;->b:Ljfa;
+
+    invoke-virtual {v1, v2}, Ljfa;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v1, p0, Lyxb;->c:Lefa;
+
+    iget-object p1, p1, Lyxb;->c:Lefa;
+
+    invoke-virtual {v1, p1}, Lefa;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lyxb;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lyxb;->b:Ljfa;
+
+    invoke-virtual {v2}, Ljfa;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v2, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Lyxb;->c:Lefa;
+
+    invoke-virtual {v2}, Lefa;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "TraceId(value="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lyxb;->a:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v2, Lww;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const/16 v3, 0x9
+    const-string v2, "PrecomputedSpans(traceId="
 
-    invoke-direct {v2, v3, p1}, Lww;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iput v1, p0, Lyxb;->o:I
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2, p0}, La82;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v0, ", localProperties="
 
-    move-result-object p1
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Lh54;->a:Lh54;
+    iget-object v0, p0, Lyxb;->b:Ljfa;
 
-    if-ne p1, v0, :cond_2
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", orderOfFirstSpan=1, spans="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lyxb;->c:Lefa;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", isLastSpanFinal=false)"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

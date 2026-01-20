@@ -2,57 +2,34 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqob;
-
 
 # instance fields
-.field public final a:Lru7;
+.field public final a:Landroid/content/Context;
+
+.field public final b:Lef3;
+
+.field public final c:Lfbh;
+
+.field public final d:Lo58;
+
+.field public final e:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lru7;)V
+.method public constructor <init>(Landroid/content/Context;Lef3;Lo58;Lo58;Lfbh;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf59;->a:Lru7;
+    iput-object p1, p0, Lf59;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lf59;->b:Lef3;
+
+    iput-object p5, p0, Lf59;->c:Lfbh;
+
+    iput-object p3, p0, Lf59;->d:Lo58;
+
+    iput-object p4, p0, Lf59;->e:Lo58;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final b(J)Lez5;
-    .locals 3
-
-    iget-object v0, p0, Lf59;->a:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Liz3;
-
-    invoke-virtual {v0, p1, p2}, Liz3;->c(J)Lj0d;
-
-    move-result-object v0
-
-    new-instance v1, Lr13;
-
-    const/16 v2, 0xd
-
-    invoke-direct {v1, v0, v2}, Lr13;-><init>(Lez5;I)V
-
-    new-instance v0, Le59;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, p2, v2}, Le59;-><init>(JLkotlin/coroutines/Continuation;)V
-
-    invoke-static {v1, v0}, Lqs0;->x(Lez5;Lej6;)Lm82;
-
-    move-result-object p1
-
-    return-object p1
 .end method

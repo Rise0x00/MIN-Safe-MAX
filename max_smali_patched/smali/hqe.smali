@@ -1,227 +1,448 @@
 .class public final Lhqe;
-.super Lh24;
+.super Lr0g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Lds;
 
 
 # instance fields
-.field public X:Z
+.field public final a:Le0d;
 
-.field public Y:Landroid/view/ViewGroup;
+.field public b:Z
 
-.field public Z:Lf24;
+.field public c:Lto6;
 
-.field public d:Z
-
-.field public final o:Z
+.field public volatile d:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    .line 1
-    invoke-direct {p0, v0}, Lhqe;-><init>(Z)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Z)V
+.method public constructor <init>(Le0d;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Lh24;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-boolean p1, p0, Lhqe;->d:Z
-
-    const/4 p1, 0x1
-
-    .line 4
-    iput-boolean p1, p0, Lhqe;->o:Z
+    iput-object p1, p0, Lhqe;->a:Le0d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    iget-object v0, p0, Lhqe;->Z:Lf24;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lf24;->n()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lhqe;->Z:Lf24;
-
-    iget-object v1, p0, Lhqe;->Y:Landroid/view/ViewGroup;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    :cond_1
-    iput-object v0, p0, Lhqe;->Y:Landroid/view/ViewGroup;
-
-    return-void
-.end method
-
-.method public final b()Lh24;
-    .locals 2
-
-    new-instance v0, Lhqe;
-
-    iget-boolean v1, p0, Lhqe;->d:Z
-
-    invoke-direct {v0, v1}, Lhqe;-><init>(Z)V
-
-    return-object v0
-.end method
-
-.method public final d()Z
-    .locals 1
+.method public final b()V
+    .locals 3
 
     iget-boolean v0, p0, Lhqe;->d:Z
 
-    return v0
-.end method
-
-.method public final e()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lhqe;->o:Z
-
-    return v0
-.end method
-
-.method public final f(Lh24;Lc24;)V
-    .locals 0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lhqe;->X:Z
-
-    return-void
-.end method
-
-.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLf24;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lhqe;->X:Z
-
     if-eqz v0, :cond_0
 
     return-void
 
     :cond_0
-    if-eqz p2, :cond_2
+    monitor-enter p0
 
-    if-eqz p4, :cond_1
+    :try_start_0
+    iget-boolean v0, p0, Lhqe;->d:Z
 
-    iget-boolean p4, p0, Lhqe;->d:Z
+    if-eqz v0, :cond_1
 
-    if-eqz p4, :cond_2
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
 
     :cond_1
-    invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lhqe;->d:Z
+
+    iget-boolean v1, p0, Lhqe;->b:Z
+
+    if-eqz v1, :cond_3
+
+    iget-object v0, p0, Lhqe;->c:Lto6;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lto6;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lto6;-><init>(IB)V
+
+    iput-object v0, p0, Lhqe;->c:Lto6;
 
     :cond_2
-    if-eqz p3, :cond_3
+    sget-object v1, Lzsa;->a:Lzsa;
 
-    invoke-virtual {p3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0, v1}, Lto6;->g(Ljava/lang/Object;)V
 
-    move-result-object p2
+    monitor-exit p0
 
-    if-nez p2, :cond_3
-
-    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    return-void
 
     :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+    iput-boolean v0, p0, Lhqe;->b:Z
 
-    move-result-object p2
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz p2, :cond_4
+    iget-object v0, p0, Lhqe;->a:Le0d;
 
-    invoke-virtual {p5}, Lf24;->n()V
+    invoke-virtual {v0}, Le0d;->b()V
+
+    return-void
+
+    :goto_0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final c(Lo25;)V
+    .locals 3
+
+    iget-boolean v0, p0, Lhqe;->d:Z
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_3
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lhqe;->d:Z
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-boolean v0, p0, Lhqe;->b:Z
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lhqe;->c:Lto6;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lto6;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lto6;-><init>(IB)V
+
+    iput-object v0, p0, Lhqe;->c:Lto6;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
+    :goto_0
+    new-instance v1, Lwsa;
+
+    invoke-direct {v1, p1}, Lwsa;-><init>(Lo25;)V
+
+    invoke-virtual {v0, v1}, Lto6;->g(Ljava/lang/Object;)V
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_2
+    iput-boolean v1, p0, Lhqe;->b:Z
+
+    const/4 v1, 0x0
+
+    :goto_1
+    monitor-exit p0
+
+    goto :goto_3
+
+    :goto_2
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p1
+
+    :cond_3
+    :goto_3
+    if-eqz v1, :cond_4
+
+    invoke-interface {p1}, Lo25;->dispose()V
 
     return-void
 
     :cond_4
-    iput-object p5, p0, Lhqe;->Z:Lf24;
+    iget-object v0, p0, Lhqe;->a:Le0d;
 
-    iput-object p1, p0, Lhqe;->Y:Landroid/view/ViewGroup;
+    invoke-virtual {v0, p1}, Le0d;->c(Lo25;)V
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    invoke-virtual {p0}, Lhqe;->p()V
 
     return-void
 .end method
 
-.method public final h(Landroid/os/Bundle;)V
+.method public final k(Le0b;)V
     .locals 1
 
-    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
+    iget-object v0, p0, Lhqe;->a:Le0d;
 
-    invoke-virtual {p1, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lhqe;->d:Z
+    invoke-virtual {v0, p1}, Ldxa;->a(Le0b;)V
 
     return-void
 .end method
 
-.method public final i(Landroid/os/Bundle;)V
-    .locals 2
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 4
 
-    const-string v0, "SimpleSwapChangeHandler.removesFromViewOnPush"
+    iget-boolean v0, p0, Lhqe;->d:Z
 
-    iget-boolean v1, p0, Lhqe;->d:Z
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
 
     return-void
-.end method
-
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 1
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object p1, p0, Lhqe;->Z:Lf24;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lf24;->n()V
 
     :cond_0
-    const/4 p1, 0x0
+    monitor-enter p0
 
-    iput-object p1, p0, Lhqe;->Z:Lf24;
+    :try_start_0
+    iget-boolean v0, p0, Lhqe;->d:Z
 
-    iget-object v0, p0, Lhqe;->Y:Landroid/view/ViewGroup;
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    goto :goto_1
 
     :cond_1
-    iput-object p1, p0, Lhqe;->Y:Landroid/view/ViewGroup;
+    iput-boolean v1, p0, Lhqe;->d:Z
+
+    iget-boolean v0, p0, Lhqe;->b:Z
+
+    const/4 v2, 0x0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lhqe;->c:Lto6;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lto6;
+
+    const/4 v1, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v1, v3}, Lto6;-><init>(IB)V
+
+    iput-object v0, p0, Lhqe;->c:Lto6;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_2
+    :goto_0
+    new-instance v1, Lxsa;
+
+    invoke-direct {v1, p1}, Lxsa;-><init>(Ljava/lang/Throwable;)V
+
+    iget-object p1, v0, Lto6;->c:Ljava/lang/Object;
+
+    check-cast p1, [Ljava/lang/Object;
+
+    aput-object v1, p1, v2
+
+    monitor-exit p0
 
     return-void
+
+    :cond_3
+    iput-boolean v1, p0, Lhqe;->b:Z
+
+    move v1, v2
+
+    :goto_1
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_4
+
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_4
+    iget-object v0, p0, Lhqe;->a:Le0d;
+
+    invoke-virtual {v0, p1}, Le0d;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :goto_2
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 0
+.method public final p()V
+    .locals 2
+
+    :goto_0
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lhqe;->c:Lto6;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lhqe;->b:Z
+
+    monitor-exit p0
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lhqe;->c:Lto6;
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0, p0}, Lto6;->G(Lds;)V
+
+    goto :goto_0
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-boolean v0, p0, Lhqe;->d:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lhqe;->d:Z
+
+    if-eqz v0, :cond_1
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :cond_1
+    iget-boolean v0, p0, Lhqe;->b:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lhqe;->c:Lto6;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lto6;
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lto6;-><init>(IB)V
+
+    iput-object v0, p0, Lhqe;->c:Lto6;
+
+    :cond_2
+    invoke-virtual {v0, p1}, Lto6;->g(Ljava/lang/Object;)V
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_3
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lhqe;->b:Z
+
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lhqe;->a:Le0d;
+
+    invoke-virtual {v0, p1}, Le0d;->r(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Lhqe;->p()V
+
+    return-void
+
+    :goto_0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+.end method
+
+.method public final test(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lhqe;->a:Le0d;
+
+    invoke-static {v0, p1}, Lzsa;->b(Le0b;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 .end method

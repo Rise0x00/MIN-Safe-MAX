@@ -1,47 +1,134 @@
-.class public abstract Lov0;
-.super Ljava/lang/Object;
+.class public final Lov0;
+.super Lfl0;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic a:I
+# interfaces
+.implements Lmq0;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljj9;Lxdc;Lyna;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lfl0;-><init>(Ljj9;Lxdc;Lydc;)V
+
+    invoke-interface {p1, p0}, Ljj9;->a(Lij9;)V
+
+    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final e(I)Ljava/lang/Object;
     .locals 4
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    int-to-double v0, p1
 
-    sget-object v1, Lnv0;->a:Lnv0;
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-    const/16 v2, 0x1e
+    div-double/2addr v0, v2
 
-    if-lt v0, v2, :cond_0
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
 
-    invoke-virtual {v1, v2}, Lnv0;->a(I)I
+    move-result-wide v0
+
+    double-to-int p1, v0
+
+    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
+
+    const/4 v1, 0x1
+
+    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final g(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
+
+    return-void
+.end method
+
+.method public final i(I)I
+    .locals 0
+
+    return p1
+.end method
+
+.method public final j(Ljava/lang/Object;)I
+    .locals 0
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final k(I)I
+    .locals 0
+
+    return p1
+.end method
+
+.method public final l(Lmv0;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-super {p0, p1}, Lfl0;->l(Lmv0;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/graphics/Bitmap;
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
     :cond_0
-    if-lt v0, v2, :cond_1
+    return-object p1
+.end method
 
-    const/16 v3, 0x1f
+.method public final n(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {v1, v3}, Lnv0;->a(I)I
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    :cond_1
-    if-lt v0, v2, :cond_2
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v3, 0x21
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isRecycled()Z
 
-    invoke-virtual {v1, v3}, Lnv0;->a(I)I
+    move-result v0
 
-    :cond_2
-    if-lt v0, v2, :cond_3
+    if-nez v0, :cond_0
 
-    const v0, 0xf4240
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->isMutable()Z
 
-    invoke-virtual {v1, v0}, Lnv0;->a(I)I
+    move-result p1
 
-    :cond_3
-    return-void
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
 .end method

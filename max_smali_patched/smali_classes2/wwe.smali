@@ -1,188 +1,128 @@
 .class public final Lwwe;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lt85;
+.field public final synthetic X:Ldxe;
 
-.field public b:I
+.field public final synthetic Y:I
 
-.field public final c:Lr75;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lt85;ILr75;)V
+.method public constructor <init>(Ldxe;ILkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
+    iput-object p1, p0, Lwwe;->X:Ldxe;
 
-    iput-object p1, p0, Lwwe;->a:Lt85;
+    iput p2, p0, Lwwe;->Y:I
 
-    iput p2, p0, Lwwe;->b:I
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lwwe;->c:Lr75;
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lzb4;
 
-    goto :goto_1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v0, p1, Lwwe;
+    invoke-virtual {p0, p1, p2}, Lwwe;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_1
+    move-result-object p1
 
-    goto :goto_0
-
-    :cond_1
     check-cast p1, Lwwe;
 
-    iget-object v0, p0, Lwwe;->a:Lt85;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v1, p1, Lwwe;->a:Lt85;
+    invoke-virtual {p1, p2}, Lwwe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v0
+    return-object p1
+.end method
 
-    if-nez v0, :cond_2
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lwwe;
+
+    iget-object v0, p0, Lwwe;->X:Ldxe;
+
+    iget v1, p0, Lwwe;->Y:I
+
+    invoke-direct {p1, v0, v1, p2}, Lwwe;-><init>(Ldxe;ILkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lwwe;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_2
-    iget v0, p0, Lwwe;->b:I
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iget v1, p1, Lwwe;->b:I
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    if-eq v0, v1, :cond_3
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    throw p1
 
-    :cond_3
-    iget-object v0, p0, Lwwe;->c:Lr75;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p1, Lwwe;->c:Lr75;
+    sget-object p1, Ldxe;->B0:[Lz28;
 
-    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p0, Lwwe;->X:Ldxe;
 
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final getChangingConfigurations()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lwwe;->a:Lt85;
-
-    invoke-virtual {v0}, Lt85;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lwwe;->b:I
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
-
-    move-result v0
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lwwe;->c:Lr75;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    new-instance v0, Lvwe;
-
-    invoke-direct {v0, p0}, Lvwe;-><init>(Lwwe;)V
-
-    return-object v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget v0, p0, Lwwe;->b:I
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "SpriteEmojiDrawableState(location="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lwwe;->a:Lt85;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, ", size="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", paddingHorizontal=0, paddingVertical=0, bitmapResolver="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lwwe;->c:Lr75;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ldxe;->t()Lfbh;
 
     move-result-object v0
 
+    iget v2, p0, Lwwe;->Y:I
+
+    const-string v3, "app.media.load.gif"
+
+    invoke-virtual {v0, v2, v3}, Lx3;->g(ILjava/lang/String;)V
+
+    iput v1, p0, Lwwe;->o:I
+
+    invoke-static {p1, p0}, Ldxe;->s(Ldxe;Lp6g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
     return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

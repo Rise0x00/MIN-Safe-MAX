@@ -1,61 +1,87 @@
 .class public final Lu64;
-.super Lvu3;
+.super Lkk0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lu64;
+# instance fields
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(J)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lkk0;-><init>()V
+
+    .line 2
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lu64;->b:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/util/Collection;)V
+    .locals 0
+
+    .line 5
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
+
+    .line 6
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object p1, p0, Lu64;->b:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/Collection;)V
     .locals 1
 
-    new-instance v0, Lu64;
+    .line 3
+    invoke-direct {p0}, Lkk0;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    .line 4
+    new-instance v0, Ljava/util/ArrayList;
 
-    sput-object v0, Lu64;->a:Lu64;
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object v0, p0, Lu64;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lu64;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x18df6f9d
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const-string v0, "CreateChatButtonClicked"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ContactsUpdateEvent{idList="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lu64;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

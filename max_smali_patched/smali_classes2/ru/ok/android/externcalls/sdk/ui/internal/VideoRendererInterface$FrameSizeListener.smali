@@ -23,7 +23,7 @@
         "",
         "width",
         "height",
-        "Lybg;",
+        "Lb3h;",
         "onFrame",
         "(II)V",
         "calls-sdk_release"

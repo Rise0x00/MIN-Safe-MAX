@@ -2,191 +2,419 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Liu5;
+
+
+# static fields
+.field public static final synthetic i:[Lz28;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lo58;
 
-.field public final b:Ljava/util/HashMap;
+.field public final b:Lo58;
+
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final e:Lo58;
+
+.field public final f:Ljava/lang/Object;
+
+.field public g:Lpl1;
+
+.field public final h:Lx07;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhfa;
 
-    new-instance v0, Ljava/util/HashMap;
+    const-string v1, "pipStateJob"
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    const-string v2, "getPipStateJob()Lkotlinx/coroutines/Job;"
 
-    iput-object v0, p0, Lwt5;->b:Ljava/util/HashMap;
+    const-class v3, Lwt5;
 
-    iput-object p1, p0, Lwt5;->a:Ljava/lang/String;
+    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lctd;->a:Ldtd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lz28;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lwt5;->i:[Lz28;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 1
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;Lo58;)V
+    .locals 0
 
-    invoke-static {p0}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-object p3, p0, Lwt5;->a:Lo58;
 
-    invoke-static {p1}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p4, p0, Lwt5;->b:Lo58;
 
-    move-result-object p1
+    iput-object p1, p0, Lwt5;->c:Lo58;
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-object p2, p0, Lwt5;->d:Lo58;
 
-    move-result v0
+    iput-object p5, p0, Lwt5;->e:Lo58;
 
-    if-nez v0, :cond_1
+    new-instance p1, Ltt5;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 p2, 0x0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {p1, p0, p2}, Ltt5;-><init>(Lwt5;I)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p2, 0x3
 
-    const/16 p1, 0x2f
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p2, p1}, Le8;->b(ILlq6;)Lo58;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    iput-object p1, p0, Lwt5;->f:Ljava/lang/Object;
 
-    move-result p0
+    invoke-static {}, Lhlj;->b()Lx07;
 
-    if-eqz p0, :cond_0
+    move-result-object p1
 
-    goto :goto_0
+    iput-object p1, p0, Lwt5;->h:Lx07;
 
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroid/net/Uri;)Ljava/io/File;
-    .locals 4
+.method public final a(Landroid/app/Activity;Lw4e;)Lpl1;
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;
+    new-instance v0, Lpl1;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Lpl1;-><init>(Landroid/content/Context;)V
 
-    const/16 v1, 0x2f
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->indexOf(II)I
-
-    move-result v1
-
-    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    add-int/2addr v1, v2
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lwt5;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
 
     move-result-object v1
 
-    check-cast v1, Ljava/io/File;
+    iget-object v1, v1, Lzbb;->c:Lzlb;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0, v1}, Lpl1;->setPipTheme(Lzlb;)V
 
-    new-instance p1, Ljava/io/File;
+    sget-object v1, Lml1;->c:Lml1;
 
-    invoke-direct {p1, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lpl1;->setPipMode(Lml1;)V
 
-    :try_start_0
-    invoke-virtual {p1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
+    new-instance v1, Llji;
 
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v1, p0, v0, p1}, Llji;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lpl1;->setApplicationPipDepended(Lnl1;)V
+
+    new-instance p1, Lut5;
+
+    invoke-direct {p1, p2}, Lut5;-><init>(Lw4e;)V
+
+    invoke-virtual {v0, p1}, Lpl1;->setListener(Lcv1;)V
+
+    new-instance p1, Ltt5;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Ltt5;-><init>(Lwt5;I)V
+
+    invoke-virtual {v0, p1}, Lpl1;->setVideoLayoutUpdatesControllerProvider(Llq6;)V
+
+    return-object v0
+.end method
+
+.method public final b()Lm9c;
+    .locals 1
+
+    iget-object v0, p0, Lwt5;->f:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+    check-cast v0, Lm9c;
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    invoke-static {v0, v1}, Lwt5;->a(Ljava/lang/String;Ljava/lang/String;)Z
+.method public final c()V
+    .locals 7
 
-    move-result v0
+    const-string v0, "try to hide local pip"
 
-    if-eqz v0, :cond_0
+    const-string v1, "FakePipController"
 
-    return-object p1
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lwt5;->g:Lpl1;
+
+    if-nez v0, :cond_0
+
+    return-void
 
     :cond_0
-    new-instance p1, Ljava/lang/SecurityException;
+    invoke-static {v0}, Lj4j;->i(Landroid/view/View;)Z
 
-    const-string v0, "Resolved path jumped beyond configured root"
+    move-result v2
 
-    invoke-direct {p1, v0}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+    if-nez v2, :cond_1
 
-    throw p1
+    const-string v0, "local pip in hidden progress"
 
-    :catch_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-static {v1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Failed to resolve canonical path for "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    return-void
 
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget-object v1, p0, Lwt5;->a:Lo58;
 
-    const-string v1, "Unable to find configured root for "
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-static {p1, v1}, Lsfd;->h(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v1
+
+    check-cast v1, Larf;
+
+    iget-object v2, p0, Lwt5;->e:Lo58;
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lqx1;
+
+    check-cast v2, Ldy1;
+
+    invoke-virtual {v2}, Ldy1;->l()Lye4;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lye4;->c:Ljava/lang/String;
+
+    iget-object v3, v1, Larf;->a:Lspf;
+
+    invoke-virtual {v3}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v4
+
+    sget-object v5, Lzqf;->b:Lzqf;
+
+    const/4 v6, 0x0
+
+    if-ne v4, v5, :cond_2
+
+    invoke-virtual {v1, v2, v6}, Larf;->a(Ljava/lang/String;Z)V
+
+    :cond_2
+    sget-object v1, Lzqf;->a:Lzqf;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v3, v2, v1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    new-instance v1, Lia;
+
+    const/16 v2, 0x18
+
+    invoke-direct {v1, p0, v2, v0}, Lia;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    const-wide/16 v2, 0x32
+
+    invoke-static {v0, v6, v2, v3, v1}, Lj4j;->e(Landroid/view/View;ZJLnq6;)V
+
+    return-void
+.end method
+
+.method public final d(Landroid/app/Activity;Lw4e;)V
+    .locals 6
+
+    const-string v0, "FakePipController"
+
+    const-string v1, "start preparing local pip"
+
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    iget-object v1, p0, Lwt5;->g:Lpl1;
+
+    if-eqz v1, :cond_0
+
+    const-string p1, "local pip already prepared"
+
+    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    goto/16 :goto_1
+
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Lwt5;->a(Landroid/app/Activity;Lw4e;)Lpl1;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lwt5;->g:Lpl1;
 
-    throw v0
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
+
+    invoke-virtual {p0}, Lwt5;->b()Lm9c;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lm9c;->o:Lpld;
+
+    iget-object p2, p2, Lpld;->a:Llpf;
+
+    invoke-interface {p2}, Llpf;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lzpb;
+
+    invoke-virtual {p1, p2}, Lpl1;->d(Lzpb;)V
+
+    iget-object p2, p0, Lwt5;->g:Lpl1;
+
+    const/4 v1, 0x0
+
+    if-eqz p2, :cond_1
+
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p2
+
+    if-eqz p2, :cond_1
+
+    invoke-static {p2}, Lkkj;->a(Landroid/content/Context;)Landroid/view/WindowManager;
+
+    move-result-object p2
+
+    goto :goto_0
+
+    :cond_1
+    move-object p2, v1
+
+    :goto_0
+    if-eqz p2, :cond_2
+
+    invoke-virtual {p1}, Lpl1;->getWindowsViewLayoutParams()Landroid/view/WindowManager$LayoutParams;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lwt5;->b:Lo58;
+
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lie1;
+
+    check-cast v3, Lje1;
+
+    iget-object v3, v3, Lje1;->b:Landroid/graphics/PointF;
+
+    new-instance v4, Landroid/graphics/PointF;
+
+    iget v5, v3, Landroid/graphics/PointF;->x:F
+
+    iget v3, v3, Landroid/graphics/PointF;->y:F
+
+    invoke-direct {v4, v5, v3}, Landroid/graphics/PointF;-><init>(FF)V
+
+    iget v3, v4, Landroid/graphics/PointF;->x:F
+
+    float-to-int v3, v3
+
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->x:I
+
+    iget v3, v4, Landroid/graphics/PointF;->y:F
+
+    float-to-int v3, v3
+
+    iput v3, v2, Landroid/view/WindowManager$LayoutParams;->y:I
+
+    invoke-interface {p2, p1, v2}, Landroid/view/ViewManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    :cond_2
+    invoke-virtual {p0}, Lwt5;->b()Lm9c;
+
+    move-result-object p2
+
+    iput-object p1, p2, Lm9c;->c:Lpl1;
+
+    iget-object p1, p0, Lwt5;->c:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpx1;
+
+    iget-object p2, p0, Lwt5;->d:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lmbg;
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->c()Lzp8;
+
+    move-result-object p2
+
+    new-instance v2, Lvt5;
+
+    invoke-direct {v2, p0, v1}, Lvt5;-><init>(Lwt5;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x2
+
+    invoke-static {p1, p2, v1, v2, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lwt5;->h:Lx07;
+
+    sget-object v1, Lwt5;->i:[Lz28;
+
+    const/4 v2, 0x0
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {p2, p0, v1, p1}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :goto_1
+    const-string p2, "can\'t prepare local pip"
+
+    invoke-static {v0, p2, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

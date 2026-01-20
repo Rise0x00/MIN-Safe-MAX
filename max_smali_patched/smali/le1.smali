@@ -1,186 +1,105 @@
 .class public final Lle1;
-.super Ljava/lang/Object;
+.super Lzcf;
 .source "SourceFile"
-
-# interfaces
-.implements Lme1;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Z
-
-.field public final d:Ljava/lang/String;
+.field public final o:Lx07;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Lx07;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-wide p1, p0, Lle1;->a:J
-
-    iput-object p3, p0, Lle1;->b:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lle1;->c:Z
-
-    iput-object p4, p0, Lle1;->d:Ljava/lang/String;
+    iput-object p1, p0, Lle1;->o:Lx07;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lle1;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lle1;
-
-    iget-wide v0, p0, Lle1;->a:J
-
-    iget-wide v2, p1, Lle1;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lle1;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lle1;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lle1;->c:Z
-
-    iget-boolean v1, p1, Lle1;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lle1;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lle1;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
+.method public final I(Ljef;I)V
     .locals 3
 
-    iget-wide v0, p0, Lle1;->a:J
+    instance-of v0, p1, Lke1;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    if-eqz v0, :cond_1
 
-    move-result v0
+    check-cast p1, Lke1;
 
-    const/16 v1, 0x1f
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    move-result-object p2
 
-    iget-object v2, p0, Lle1;->b:Ljava/lang/String;
+    check-cast p2, Lud8;
 
-    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
+    instance-of v0, p2, Lpg1;
 
-    move-result v0
+    if-nez v0, :cond_0
 
-    iget-boolean v2, p0, Lle1;->c:Z
+    return-void
 
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+    :cond_0
+    invoke-virtual {p1, p2}, Lke1;->y(Lud8;)V
 
-    move-result v0
+    iget-object p1, p1, Ltsd;->a:Landroid/view/View;
 
-    iget-object v1, p0, Lle1;->d:Ljava/lang/String;
+    check-cast p1, Lt0f;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    new-instance v0, Lub;
 
-    move-result v1
+    check-cast p2, Lpg1;
 
-    add-int/2addr v1, v0
+    const/4 v1, 0x4
 
-    return v1
+    iget-object v2, p0, Lle1;->o:Lx07;
+
+    invoke-direct {v0, v2, v1, p2}, Lub;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {p1, v0}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lud8;
+
+    invoke-virtual {p1, p2}, Ljef;->y(Lud8;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final bridge synthetic s(Ltsd;I)V
+    .locals 0
 
-    const-string v0, "Exist(serverChatId="
+    check-cast p1, Ljef;
 
-    const-string v1, ", link="
+    invoke-virtual {p0, p1, p2}, Lle1;->I(Ljef;I)V
 
-    iget-wide v2, p0, Lle1;->a:J
+    return-void
+.end method
 
-    iget-object v4, p0, Lle1;->b:Ljava/lang/String;
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+    .locals 2
 
-    invoke-static {v0, v2, v3, v1, v4}, Lok7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance p2, Lke1;
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const-string v1, ", isLinkCall="
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Lt0f;
 
-    iget-boolean v1, p0, Lle1;->c:Z
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p1, v1}, Lt0f;-><init>(Landroid/content/Context;I)V
 
-    const-string v1, ", title="
+    invoke-direct {p2, v0}, Ltsd;-><init>(Landroid/view/View;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lle1;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p2
 .end method

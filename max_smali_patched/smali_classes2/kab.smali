@@ -2,47 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:Ljava/lang/String;
+.field public final synthetic b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public c:Luz;
+.field public final synthetic c:Lai7;
 
-.field public d:Lnab;
+.field public final synthetic d:Landroid/graphics/drawable/Animatable;
 
-.field public e:Z
 
-.field public f:Z
+# direct methods
+.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;Lai7;Landroid/graphics/drawable/Animatable;I)V
+    .locals 0
 
-.field public g:Ljava/util/List;
+    iput p5, p0, Lkab;->a:I
 
-.field public h:Lbq4;
+    iput-object p1, p0, Lkab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    iput-object p3, p0, Lkab;->c:Lai7;
+
+    iput-object p4, p0, Lkab;->d:Landroid/graphics/drawable/Animatable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Llab;
-    .locals 2
+.method public final run()V
+    .locals 3
 
-    iget-object v0, p0, Lkab;->d:Lnab;
+    iget v0, p0, Lkab;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iget v0, v0, Lnab;->a:I
+    iget-object v0, p0, Lkab;->c:Lai7;
 
-    const/4 v1, 0x3
+    iget-object v1, p0, Lkab;->d:Landroid/graphics/drawable/Animatable;
 
-    if-ne v0, v1, :cond_0
+    iget-object v2, p0, Lkab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-    const/4 v0, 0x0
+    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->k(Lai7;Landroid/graphics/drawable/Animatable;)V
 
-    iput-object v0, p0, Lkab;->b:Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
 
-    :cond_0
-    new-instance v0, Llab;
+    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
 
-    invoke-direct {v0, p0}, Llab;-><init>(Lkab;)V
+    return-void
 
-    return-object v0
+    :pswitch_0
+    iget-object v0, p0, Lkab;->c:Lai7;
+
+    iget-object v1, p0, Lkab;->d:Landroid/graphics/drawable/Animatable;
+
+    iget-object v2, p0, Lkab;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-virtual {v2, v0, v1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->k(Lai7;Landroid/graphics/drawable/Animatable;)V
+
+    invoke-virtual {v2}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {v2}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

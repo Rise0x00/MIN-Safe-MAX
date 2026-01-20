@@ -1,138 +1,28 @@
-.class public final Lqi4;
+.class public interface abstract Lqi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ltb4;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final b:Lt2g;
-
-.field public final c:Ljava/lang/Object;
-
-.field public final d:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Loh4;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lqi4;->a:I
-
-    .line 1
-    new-instance v0, Lpk4;
-
-    invoke-direct {v0}, Lpk4;-><init>()V
-
-    .line 2
-    iput-object p2, v0, Lpk4;->b:Ljava/lang/String;
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lqi4;->c:Ljava/lang/Object;
-
-    .line 5
-    iput-object p3, p0, Lqi4;->b:Lt2g;
-
-    .line 6
-    iput-object v0, p0, Lqi4;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lbma;Loh4;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lqi4;->a:I
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    .line 9
-    iput-object p1, p0, Lqi4;->c:Ljava/lang/Object;
-
-    .line 10
-    const-string p1, "ExoPlayer"
-
-    iput-object p1, p0, Lqi4;->d:Ljava/lang/Object;
-
-    .line 11
-    iput-object p2, p0, Lqi4;->b:Lt2g;
-
-    return-void
-.end method
+.implements Lji4;
 
 
 # virtual methods
-.method public final a()Lvb4;
-    .locals 4
+.method public abstract R(Lzi4;)J
+.end method
 
-    iget v0, p0, Lqi4;->a:I
+.method public abstract S(Lxsg;)V
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract close()V
+.end method
 
-    new-instance v0, Ldmf;
+.method public abstract getUri()Landroid/net/Uri;
+.end method
 
-    iget-object v1, p0, Lqi4;->c:Ljava/lang/Object;
+.method public w()Ljava/util/Map;
+    .locals 1
 
-    check-cast v1, Lsz0;
-
-    iget-object v2, p0, Lqi4;->d:Ljava/lang/Object;
-
-    check-cast v2, Ljava/lang/String;
-
-    iget-object v3, p0, Lqi4;->b:Lt2g;
-
-    invoke-direct {v0, v1, v2, v3}, Ldmf;-><init>(Lsz0;Ljava/lang/String;Lt2g;)V
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Loi4;
-
-    iget-object v1, p0, Lqi4;->c:Ljava/lang/Object;
-
-    check-cast v1, Landroid/content/Context;
-
-    iget-object v2, p0, Lqi4;->d:Ljava/lang/Object;
-
-    check-cast v2, Lpk4;
-
-    invoke-virtual {v2}, Lpk4;->a()Lvb4;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Loi4;-><init>(Landroid/content/Context;Lvb4;)V
-
-    iget-object v1, p0, Lqi4;->b:Lt2g;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Loi4;->S(Lt2g;)V
-
-    :cond_0
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

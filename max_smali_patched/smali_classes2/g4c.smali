@@ -1,139 +1,87 @@
 .class public final Lg4c;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lh4c;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p2, p0, Lg4c;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lg4c;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lg4c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lg4c;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lg4c;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lg4c;
-
-    iget-object v1, p0, Lg4c;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    invoke-direct {v0, p2, v1}, Lg4c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;)V
-
-    iput-object p1, v0, Lg4c;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lg4c;->o:Ljava/lang/Object;
-
-    check-cast p1, La5a;
-
-    instance-of v0, p1, Ls3c;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Le5c;->c:Le5c;
-
-    check-cast p1, Ls3c;
-
-    iget-wide v2, p1, Ls3c;->b:J
-
-    invoke-virtual {v0}, Ladi;->p0()Ltf4;
-
-    move-result-object p1
-
-    const-string v0, ":chats?id="
-
-    const-string v4, "&type=local"
-
-    invoke-static {v2, v3, v0, v4}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v1}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lf93;
+    instance-of v1, p1, Lg4c;
 
-    if-eqz v0, :cond_2
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lg4c;->X:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+    if-nez v1, :cond_1
 
-    iget-object v0, p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->v0:Lgye;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v1}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    return v2
 
     :cond_1
-    invoke-static {p1}, Ldci;->b(Lc24;)V
+    check-cast p1, Lg4c;
 
-    invoke-virtual {p1}, Lc24;->getRouter()Lyid;
+    iget-wide v3, p0, Lg4c;->a:J
+
+    iget-wide v5, p1, Lg4c;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lg4c;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Success(requestId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lg4c;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lyid;->B(Lc24;)Z
-
-    goto :goto_0
-
-    :cond_2
-    instance-of v0, p1, Lpf4;
-
-    if-eqz v0, :cond_3
-
-    sget-object v0, Le5c;->c:Le5c;
-
-    check-cast p1, Lpf4;
-
-    invoke-virtual {v0, p1}, Ladi;->s0(Lpf4;)V
-
-    :cond_3
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-object v0
 .end method

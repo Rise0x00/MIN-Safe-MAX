@@ -1,127 +1,90 @@
 .class public final Lb2j;
-.super Lh4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lvwa;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lb2j;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final X:La2j;
-
-.field public final Y:La2j;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public static final a:Lb2j;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lk2j;
+    new-instance v0, Lb2j;
 
-    const/4 v1, 0x3
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lk2j;-><init>(I)V
+    sput-object v0, Lb2j;->a:Lb2j;
 
-    sput-object v0, Lb2j;->CREATOR:Landroid/os/Parcelable$Creator;
+    new-instance v0, Lbri;
 
-    return-void
-.end method
+    const/4 v1, 0x1
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;La2j;La2j;)V
-    .locals 0
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v1, Lpri;
 
-    iput-object p1, p0, Lb2j;->a:Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    iput-object p2, p0, Lb2j;->b:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p3, p0, Lb2j;->c:Ljava/lang/String;
+    const/4 v2, 0x2
 
-    iput-object p4, p0, Lb2j;->d:Ljava/lang/String;
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    iput-object p5, p0, Lb2j;->o:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object p6, p0, Lb2j;->X:La2j;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    iput-object p7, p0, Lb2j;->Y:La2j;
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    const/16 v0, 0x4f45
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    invoke-static {p1, v0}, Luxi;->k(Landroid/os/Parcel;I)I
+    move-result-object p1
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    iget-object v2, p0, Lb2j;->a:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Lb2j;->b:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lb2j;->c:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x4
-
-    iget-object v2, p0, Lb2j;->d:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x5
-
-    iget-object v2, p0, Lb2j;->o:Ljava/lang/String;
-
-    invoke-static {p1, v1, v2}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
-
-    const/4 v1, 0x6
-
-    iget-object v2, p0, Lb2j;->X:La2j;
-
-    invoke-static {p1, v1, v2, p2}, Luxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/4 v1, 0x7
-
-    iget-object v2, p0, Lb2j;->Y:La2j;
-
-    invoke-static {p1, v1, v2, p2}, Luxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {p1, v0}, Luxi;->l(Landroid/os/Parcel;I)V
-
-    return-void
+    throw p1
 .end method

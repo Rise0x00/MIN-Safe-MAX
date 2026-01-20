@@ -1,420 +1,91 @@
 .class public final Lyd8;
-.super Ladi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemSelectedListener;
 
-# static fields
-.field public static final c:Lyd8;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lyd8;
+    iput p1, p0, Lyd8;->a:I
 
-    const/16 v1, 0xb
+    iput-object p2, p0, Lyd8;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Ladi;-><init>(I)V
-
-    sput-object v0, Lyd8;->c:Lyd8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static R0(JLjava/lang/Long;Ljava/lang/Long;)Lpf4;
-    .locals 3
+.method private final a(Landroid/widget/AdapterView;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, ":chats?id="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p0, "&type=local"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p3, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string p1, "&message_id="
-
-    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string p1, "&load_mark="
-
-    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lpf4;
-
-    invoke-direct {p1, p0}, Lpf4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
+    return-void
 .end method
 
-.method public static S0(Ljava/lang/String;Z)Lpf4;
-    .locals 3
+.method private final b(Landroid/widget/AdapterView;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, ":chat-list?message_push="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p0, :cond_0
-
-    const-string p1, "&folder_id="
-
-    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lpf4;
-
-    invoke-direct {p1, p0}, Lpf4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public static V0(Lpf4;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    .locals 2
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lone/me/android/MainActivity;
-
-    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string p1, "CUSTOM_DEEP_LINK"
-
-    invoke-virtual {v0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    sget-object p1, Lyd8;->c:Lyd8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p0, p0, Lpf4;->b:Ljava/lang/String;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "://"
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "/"
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    return-object v0
-.end method
-
-.method public static W0(JLjava/lang/String;)Landroid/net/Uri;
-    .locals 2
-
-    new-instance v0, Lsf4;
-
-    invoke-direct {v0}, Lsf4;-><init>()V
-
-    const-string v1, ":webapp:root"
-
-    iput-object v1, v0, Lsf4;->a:Ljava/lang/String;
-
-    const-string v1, "bot_id"
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0, v1}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string p0, "entry_point"
-
-    const-string p1, "url"
-
-    invoke-virtual {v0, p1, p0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    if-eqz p2, :cond_0
-
-    const-string p0, "start_param"
-
-    invoke-virtual {v0, p2, p0}, Lsf4;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    :cond_0
-    invoke-virtual {v0}, Lsf4;->a()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static X0(JLg4h;Ljava/lang/String;)Lpf4;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p2, p2, Lg4h;->a:Ljava/lang/String;
-
-    const-string v1, ":webapp:root?bot_id="
-
-    const-string v2, "&entry_point="
-
-    invoke-static {v1, p0, p1, v2, p2}, Lo3h;->g(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz p3, :cond_0
-
-    const-string p0, "&start_param="
-
-    invoke-virtual {p0, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Lpf4;
-
-    invoke-direct {p1, p0}, Lpf4;-><init>(Ljava/lang/String;)V
-
-    return-object p1
+    return-void
 .end method
 
 
 # virtual methods
-.method public final T0(Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 5
+.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 0
 
-    if-eqz p2, :cond_2
+    iget p1, p0, Lyd8;->a:I
 
-    const-string v0, "DIGITAL_ID"
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    iget-object p1, p0, Lyd8;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p1, Landroidx/appcompat/widget/e;
 
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "USER_ID"
-
-    invoke-virtual {p2, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v1
-
-    :try_start_0
-    const-string v3, "PHOTO_DATA"
-
-    invoke-virtual {p2, v3}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
-
-    move-result-object p2
-
-    if-eqz p2, :cond_2
-
-    const/4 v3, 0x2
-
-    invoke-static {p2, v3}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const-string v3, "&digitalId="
-
-    const-string v4, "&oid="
-
-    invoke-static {v3, v1, v2, v0, v4}, Lijf;->r(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "&photo="
-
-    invoke-static {v0, v1, p2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lnx1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p2
-
-    const-class v0, Lal5;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "Couldn\'t extract photo for uri "
-
-    const-string v3, ", due to "
-
-    invoke-static {v2, p1, v3, v1}, Lcd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, p2}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_2
-    :goto_0
-    invoke-virtual {p0}, Ladi;->p0()Ltf4;
-
-    move-result-object p2
-
-    new-instance v0, Lvcb;
-
-    const-string v1, "params"
-
-    invoke-direct {v0, v1, p1}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v0}, [Lvcb;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ltki;->b([Lvcb;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    const-string v0, ":external_callback"
-
-    invoke-virtual {p2, v0, p1}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {p1, p3}, Landroidx/appcompat/widget/e;->onItemSelected(I)Z
 
     return-void
-.end method
 
-.method public final U0(JLjava/lang/String;Ljava/lang/String;Z)V
-    .locals 3
+    :pswitch_0
+    const/4 p1, -0x1
 
-    invoke-virtual {p0}, Ladi;->p0()Ltf4;
+    if-eq p3, p1, :cond_0
 
-    move-result-object v0
+    iget-object p1, p0, Lyd8;->b:Ljava/lang/Object;
 
-    const-string v1, ":call-incoming?chat_id="
+    check-cast p1, Lde8;
 
-    const-string v2, "&call_name="
+    iget-object p1, p1, Lde8;->c:Lr95;
 
-    invoke-static {v1, p1, p2, v2, p3}, Lok7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    const-string p2, "&call_avatar="
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "&video_enabled="
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, p5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
+    if-eqz p1, :cond_0
 
     const/4 p2, 0x0
 
-    invoke-virtual {v0, p1, p2}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {p1, p2}, Lr95;->setListSelectionHidden(Z)V
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onNothingSelected(Landroid/widget/AdapterView;)V
+    .locals 0
+
+    iget p1, p0, Lyd8;->a:I
 
     return-void
 .end method

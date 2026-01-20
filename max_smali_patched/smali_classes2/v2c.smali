@@ -1,218 +1,146 @@
-.class public final synthetic Lv2c;
+.class public final Lv2c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyf4;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ln8g;
 
-.field public final synthetic b:J
+.field public final b:Ln8g;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final c:Ln8g;
 
 
 # direct methods
-.method public synthetic constructor <init>(JLandroid/os/Parcelable;I)V
-    .locals 0
-
-    .line 1
-    iput p4, p0, Lv2c;->a:I
-
-    iput-wide p1, p0, Lv2c;->b:J
-
-    iput-object p3, p0, Lv2c;->c:Ljava/lang/Object;
+.method public constructor <init>(Lo58;Landroid/content/Context;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    new-instance v0, Lu2c;
 
-.method public synthetic constructor <init>(Ljava/lang/Enum;JI)V
-    .locals 0
+    const/4 v1, 0x0
 
-    .line 2
-    iput p4, p0, Lv2c;->a:I
+    invoke-direct {v0, p1, p2, v1}, Lu2c;-><init>(Lo58;Landroid/content/Context;I)V
 
-    iput-object p1, p0, Lv2c;->c:Ljava/lang/Object;
+    new-instance v1, Ln8g;
 
-    iput-wide p2, p0, Lv2c;->b:J
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object v1, p0, Lv2c;->a:Ln8g;
+
+    new-instance v0, Lu2c;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, p2, v1}, Lu2c;-><init>(Lo58;Landroid/content/Context;I)V
+
+    new-instance p1, Ln8g;
+
+    invoke-direct {p1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p1, p0, Lv2c;->b:Ln8g;
+
+    new-instance p1, Ll7b;
+
+    const/16 p2, 0x10
+
+    invoke-direct {p1, p2, p0}, Ll7b;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lv2c;->c:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 13
+.method public final a(II)Liyd;
+    .locals 4
 
-    iget v0, p0, Lv2c;->a:I
+    iget-object v0, p0, Lv2c;->b:Ln8g;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lv2c;->c:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Landroid/os/Bundle;
+    check-cast v0, Ljava/lang/Number;
 
-    new-instance v1, Lone/me/stickerspreview/StickerPreviewScreen;
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    const-string v2, "chat_id"
+    move-result v0
 
-    invoke-static {v2, v0}, Lrxi;->d(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+    iget-object v1, p0, Lv2c;->a:Ln8g;
 
-    move-result-object v2
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
 
-    const-wide/16 v3, 0x0
+    move-result-object v1
 
-    if-eqz v2, :cond_0
+    check-cast v1, Ljava/lang/Number;
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-    move-result-wide v5
+    mul-int v1, p2, p1
+
+    mul-int v2, v0, v0
+
+    if-ge v1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-wide v5, v3
+    if-gt p2, v0, :cond_1
+
+    if-gt p1, v0, :cond_1
 
     :goto_0
-    const-string v2, "forward_id"
+    const/4 p1, 0x0
 
-    invoke-static {v2, v0}, Lrxi;->d(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
+    return-object p1
 
     :cond_1
-    iget-wide v7, p0, Lv2c;->b:J
+    if-le p2, p1, :cond_2
 
-    move-wide v9, v5
+    int-to-float v1, v0
 
-    move-wide v11, v7
+    int-to-float p1, p1
 
-    move-wide v6, v3
+    int-to-float p2, p2
 
-    move-wide v4, v9
+    div-float/2addr p1, p2
 
-    move-wide v2, v11
+    mul-float/2addr p1, v1
 
-    invoke-direct/range {v1 .. v7}, Lone/me/stickerspreview/StickerPreviewScreen;-><init>(JJJ)V
+    float-to-int p1, p1
 
-    return-object v1
+    move v3, v0
 
-    :pswitch_0
-    iget-object v0, p0, Lv2c;->c:Ljava/lang/Object;
+    move v0, p1
 
-    check-cast v0, Lq4c;
-
-    new-instance v1, Lone/me/profileedit/ProfileEditScreen;
-
-    iget-wide v2, p0, Lv2c;->b:J
-
-    invoke-direct {v1, v2, v3, v0}, Lone/me/profileedit/ProfileEditScreen;-><init>(JLq4c;)V
-
-    return-object v1
-
-    :pswitch_1
-    iget-object v0, p0, Lv2c;->c:Ljava/lang/Object;
-
-    check-cast v0, Lco2;
-
-    sget-object v1, Lco2;->c:Lco2;
-
-    iget-wide v2, p0, Lv2c;->b:J
-
-    if-ne v0, v1, :cond_2
-
-    new-instance v0, Lone/me/profile/screens/members/ChatAdminsScreen;
-
-    invoke-direct {v0, v2, v3}, Lone/me/profile/screens/members/ChatAdminsScreen;-><init>(J)V
+    move p1, v3
 
     goto :goto_1
 
     :cond_2
-    new-instance v1, Lone/me/profile/screens/members/ChatMembersScreen;
+    int-to-float v1, v0
 
-    invoke-direct {v1, v2, v3, v0}, Lone/me/profile/screens/members/ChatMembersScreen;-><init>(JLco2;)V
+    int-to-float p2, p2
 
-    move-object v0, v1
+    int-to-float p1, p1
+
+    div-float/2addr p2, p1
+
+    mul-float/2addr p2, v1
+
+    float-to-int p1, p2
 
     :goto_1
-    return-object v0
+    new-instance p2, Liyd;
 
-    :pswitch_2
-    iget-object v0, p0, Lv2c;->c:Ljava/lang/Object;
+    invoke-direct {p2, v0, p1}, Liyd;-><init>(II)V
 
-    check-cast v0, La3c;
-
-    sget-object v1, Ly2c;->$EnumSwitchMapping$0:[I
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    aget v1, v1, v2
-
-    const/4 v2, 0x1
-
-    iget-wide v3, p0, Lv2c;->b:J
-
-    if-eq v1, v2, :cond_5
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_4
-
-    const/4 v0, 0x3
-
-    if-ne v1, v0, :cond_3
-
-    sget-object v0, Lybg;->a:Lybg;
-
-    goto :goto_3
-
-    :cond_3
-    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw v0
-
-    :cond_4
-    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
-
-    invoke-direct {v1, v3, v4, v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;-><init>(JLa3c;)V
-
-    :goto_2
-    move-object v0, v1
-
-    goto :goto_3
-
-    :cond_5
-    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
-
-    invoke-direct {v1, v3, v4, v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;-><init>(JLa3c;)V
-
-    goto :goto_2
-
-    :goto_3
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p2
 .end method

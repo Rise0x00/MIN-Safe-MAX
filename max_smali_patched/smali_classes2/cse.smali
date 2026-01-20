@@ -1,80 +1,62 @@
-.class public final Lcse;
-.super Logf;
+.class public final synthetic Lcse;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Li6;
 
 
 # instance fields
-.field public final synthetic X:Ldse;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ldse;
 
 
 # direct methods
-.method public constructor <init>(Ldse;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ldse;I)V
     .locals 0
 
-    iput-object p1, p0, Lcse;->X:Ldse;
+    iput p2, p0, Lcse;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lcse;->b:Ldse;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Lzz;
+    iget v0, p0, Lcse;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lcse;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lcse;->b:Ldse;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ldse;->u()V
 
-    check-cast p1, Lcse;
+    return-void
 
-    sget-object p2, Lybg;->a:Lybg;
+    :pswitch_0
+    iget-object v0, p0, Lcse;->b:Ldse;
 
-    invoke-virtual {p1, p2}, Lcse;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lore;->o()Lteg;
 
-    return-object p2
-.end method
+    move-result-object v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-wide v2, v0, Ldse;->b:J
 
-    new-instance v0, Lcse;
+    invoke-virtual {v1, v2, v3}, Lteg;->c(J)V
 
-    iget-object v1, p0, Lcse;->X:Ldse;
+    return-void
 
-    invoke-direct {v0, v1, p2}, Lcse;-><init>(Ldse;Lkotlin/coroutines/Continuation;)V
+    nop
 
-    iput-object p1, v0, Lcse;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcse;->o:Ljava/lang/Object;
-
-    check-cast p1, Lzz;
-
-    iget-object v0, p0, Lcse;->X:Ldse;
-
-    invoke-static {v0, p1}, Ldse;->x(Ldse;Lzz;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

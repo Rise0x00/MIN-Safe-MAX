@@ -1,104 +1,155 @@
-.class public final synthetic Lxc5;
+.class public final Lxc5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loi6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhm9;
 
-.field public final synthetic b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+.field public final b:Lxg2;
+
+.field public final c:Llfc;
+
+.field public final d:Lcy0;
+
+.field public final e:Lef3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/lists/widgets/EndlessRecyclerView2;I)V
+.method public constructor <init>(Lhm9;Lxg2;Llfc;Lcy0;Lef3;)V
     .locals 0
 
-    iput p2, p0, Lxc5;->a:I
-
-    iput-object p1, p0, Lxc5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxc5;->a:Lhm9;
+
+    iput-object p2, p0, Lxc5;->b:Lxg2;
+
+    iput-object p3, p0, Lxc5;->c:Llfc;
+
+    iput-object p4, p0, Lxc5;->d:Lcy0;
+
+    iput-object p5, p0, Lxc5;->e:Lef3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 3
+.method public final a(JJLjava/lang/String;Ljava/util/List;ILjava/util/List;Z)V
+    .locals 13
 
-    iget v0, p0, Lxc5;->a:I
+    move-wide/from16 v11, p3
 
-    iget-object v1, p0, Lxc5;->b:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget-object v0, p0, Lxc5;->c:Llfc;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0, p1, p2}, Llfc;->d(J)V
 
-    sget-object v0, Lone/me/chats/picker/members/PickerMembersListWidget;->y0:[Les7;
+    iget-object v0, p0, Lxc5;->e:Lef3;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast v0, Lyfe;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lyfe;->j()J
 
-    invoke-static {v0}, Lbp6;->f(Landroid/content/Context;)Le1f;
+    move-result-wide v4
 
-    move-result-object v0
+    new-instance v0, Lwc5;
 
-    return-object v0
+    move-object v1, p0
 
-    :pswitch_0
-    sget v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->h2:I
+    move-wide v2, p1
 
-    const-class v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    move-object/from16 v8, p5
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    move-object/from16 v9, p6
 
-    move-result-object v0
+    move/from16 v10, p7
 
-    invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    move-object/from16 v7, p8
 
-    move-result-object v2
+    move/from16 v6, p9
 
-    invoke-virtual {v1}, Landroid/view/View;->getId()I
+    invoke-direct/range {v0 .. v10}, Lwc5;-><init>(Lxc5;JJZLjava/util/List;Ljava/lang/String;Ljava/util/List;I)V
 
-    move-result v1
+    iget-object v1, p0, Lxc5;->a:Lhm9;
 
-    invoke-virtual {v2, v1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
+    iget-object v4, v1, Lhm9;->a:Lii4;
+
+    iget-object v4, v4, Lii4;->c:Lu2e;
+
+    iget-object v4, v4, Lu2e;->a:Llgb;
+
+    invoke-virtual {v4}, Llgb;->l()Lb2e;
+
+    move-result-object v4
+
+    check-cast v4, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+
+    new-instance v5, Lq1e;
+
+    const/4 v7, 0x1
+
+    invoke-direct {v5, v7, v0}, Lq1e;-><init>(ILlq6;)V
+
+    invoke-virtual {v4, v5}, Lb2e;->u(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lxc5;->b:Lxg2;
+
+    invoke-virtual {v0, v11, v12}, Lxg2;->N(J)Lnd2;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    iget-object v5, v4, Lnd2;->b:Luh2;
+
+    iget-wide v7, v5, Luh2;->j:J
+
+    cmp-long v5, v7, p1
+
+    if-nez v5, :cond_0
+
+    invoke-virtual {v1, p1, p2}, Lhm9;->m(J)Ljm9;
+
+    move-result-object v5
+
+    const/4 v7, 0x1
+
+    invoke-virtual {v0, v11, v12, v5, v7}, Lxg2;->p0(JLjm9;Z)Lnd2;
+
+    :cond_0
+    if-eqz v4, :cond_1
+
+    iget-object v4, v4, Lnd2;->b:Luh2;
+
+    iget-wide v4, v4, Luh2;->M:J
+
+    cmp-long v4, v4, p1
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {v1, p1, p2}, Lhm9;->m(J)Ljm9;
 
     move-result-object v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_1
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0, v11, v12}, Lxg2;->t0(J)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    new-instance v0, Le6h;
 
-    const-string v0, "-"
+    const/4 v5, 0x0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-wide v3, p1
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-wide v1, v11
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct/range {v0 .. v5}, Le6h;-><init>(JJZ)V
 
-    move-result-object v0
+    iget-object v1, p0, Lxc5;->d:Lcy0;
 
-    const-string v1, "."
+    invoke-virtual {v1, v0}, Lcy0;->c(Ljava/lang/Object;)V
 
-    const-string v2, "_"
-
-    invoke-static {v0, v1, v2}, Lfbf;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

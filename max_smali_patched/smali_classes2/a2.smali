@@ -3,166 +3,89 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ltc7;
+.implements Li28;
 
 
 # virtual methods
-.method public bridge synthetic e()Lmb7;
-    .locals 1
+.method public final E(D)V
+    .locals 3
 
-    invoke-virtual {p0}, La2;->s()Lmb7;
+    invoke-static {p1, p2}, Ljava/lang/Double;->isInfinite(D)Z
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
-.end method
+    if-nez v0, :cond_0
 
-.method public bridge synthetic g()Lac7;
-    .locals 1
+    invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
 
-    invoke-virtual {p0}, La2;->l()Lac7;
+    move-result v0
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    return-object v0
-.end method
+    invoke-static {p1, p2}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
 
-.method public bridge synthetic h()Llc7;
-    .locals 1
+    move-result-object p1
 
-    invoke-virtual {p0}, La2;->x()Llc7;
+    invoke-virtual {p0, p1}, La2;->d(Ljava/lang/String;)V
 
-    move-result-object v0
+    return-void
 
-    return-object v0
-.end method
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-.method public l()Lac7;
-    .locals 1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
+    const-string v2, "Numeric value to be finite but was "
 
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    throw v0
-.end method
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-.method public bridge synthetic m()Lwb7;
-    .locals 1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0}, La2;->w()Lwb7;
+    move-result-object p1
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic n()Lrc7;
-    .locals 1
-
-    invoke-virtual {p0}, La2;->q()Lrc7;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic o()Lyb7;
-    .locals 1
-
-    invoke-virtual {p0}, La2;->v()Lyb7;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public bridge synthetic p()Lqb7;
-    .locals 1
-
-    invoke-virtual {p0}, La2;->t()Lqb7;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public q()Lrc7;
-    .locals 1
-
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
-
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
 .end method
 
-.method public bridge synthetic r()Lsb7;
-    .locals 1
+.method public final H(I)V
+    .locals 0
 
-    invoke-virtual {p0}, La2;->u()Lsb7;
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p1
 
-    return-object v0
+    invoke-virtual {p0, p1}, La2;->d(Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public s()Lmb7;
-    .locals 1
-
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
-
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
-
-    throw v0
+.method public abstract d(Ljava/lang/String;)V
 .end method
 
-.method public t()Lqb7;
-    .locals 1
+.method public final l(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
+    invoke-interface {p0, p1}, Li28;->j(Ljava/lang/String;)V
 
-    throw v0
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, La2;->n0()V
+
+    return-void
 .end method
 
-.method public u()Lsb7;
+.method public n0()V
     .locals 1
 
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
+    const-string v0, "null"
 
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
+    invoke-virtual {p0, v0}, La2;->d(Ljava/lang/String;)V
 
-    throw v0
-.end method
-
-.method public v()Lyb7;
-    .locals 1
-
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
-
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
-
-    throw v0
-.end method
-
-.method public w()Lwb7;
-    .locals 1
-
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
-
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
-
-    throw v0
-.end method
-
-.method public x()Llc7;
-    .locals 1
-
-    new-instance v0, Lorg/msgpack/core/MessageTypeCastException;
-
-    invoke-direct {v0}, Lorg/msgpack/core/MessageTypeCastException;-><init>()V
-
-    throw v0
+    return-void
 .end method

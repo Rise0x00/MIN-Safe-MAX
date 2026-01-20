@@ -1,17 +1,11 @@
-.class public abstract Ld88;
+.class public interface abstract Ld88;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# virtual methods
+.method public abstract a()Landroid/app/Activity;
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lovh;->m:Lihd;
-
-    return-void
+.method public abstract b(Landroid/content/Intent;I)V
 .end method

@@ -1,68 +1,115 @@
-.class public final Ldg2;
-.super Lmmf;
+.class public final synthetic Ldg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lyfc;
 
 
 # instance fields
-.field public c:Lu92;
+.field public final synthetic a:Lxg2;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public constructor <init>(Ljf9;)V
+.method public synthetic constructor <init>(Lxg2;ZZ)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldg2;->a:Lxg2;
+
+    iput-boolean p2, p0, Ldg2;->b:Z
+
+    iput-boolean p3, p0, Ldg2;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
-    .locals 1
+.method public final g(Ljava/lang/Comparable;)Z
+    .locals 2
 
-    const-string v0, "chat"
+    check-cast p1, Lnd2;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v0, p1, Lnd2;->b:Luh2;
 
-    move-result p2
+    iget v0, v0, Luh2;->m:I
 
-    if-eqz p2, :cond_0
+    iget-boolean v1, p0, Ldg2;->b:Z
 
-    invoke-static {p1}, Lu92;->a(Ljf9;)Lu92;
+    if-gtz v0, :cond_0
 
-    move-result-object p1
+    if-eqz v1, :cond_4
 
-    iput-object p1, p0, Ldg2;->c:Lu92;
+    invoke-virtual {p1}, Lnd2;->q0()Z
 
-    return-void
+    move-result v0
+
+    if-eqz v0, :cond_4
 
     :cond_0
-    invoke-virtual {p1}, Ljf9;->v()V
+    iget-boolean v0, p0, Ldg2;->c:Z
 
-    return-void
-.end method
+    if-nez v0, :cond_1
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    iget-object v0, p0, Ldg2;->a:Lxg2;
 
-    iget-object v0, p0, Ldg2;->c:Lu92;
+    iget-object v0, v0, Lxg2;->o:Llgc;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, v0, Llgc;->a:Lqi8;
 
-    const-string v2, "{chat="
+    invoke-virtual {p1, v0}, Lnd2;->c0(Lef3;)Z
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_1
 
-    const-string v0, "}"
+    invoke-virtual {p1}, Lnd2;->G()Z
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_4
 
-    move-result-object v0
+    :cond_1
+    invoke-virtual {p1}, Lnd2;->L()Z
 
-    return-object v0
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p1}, Lnd2;->m0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p1}, Lnd2;->p0()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    :cond_2
+    if-eqz v1, :cond_4
+
+    invoke-virtual {p1}, Lnd2;->q0()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    :cond_3
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_4
+    const/4 p1, 0x0
+
+    return p1
 .end method

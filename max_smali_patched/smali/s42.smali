@@ -1,469 +1,312 @@
 .class public final Ls42;
-.super Ljava/lang/Object;
+.super Lnl0;
 .source "SourceFile"
-
-# interfaces
-.implements Ld4g;
 
 
 # instance fields
-.field public final a:Ls9d;
+.field public A0:Lr42;
 
-.field public final b:Landroid/net/ConnectivityManager;
+.field public B0:J
 
-.field public final c:Landroid/content/Context;
+.field public final x0:Lnl4;
 
-.field public final d:Ljava/net/URL;
+.field public final y0:Ldch;
 
-.field public final e:Ld93;
-
-.field public final f:Ld93;
-
-.field public final g:I
+.field public z0:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ld93;Ld93;)V
+.method public constructor <init>()V
     .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x6
 
-    new-instance v0, Lpq7;
+    invoke-direct {p0, v0}, Lnl0;-><init>(I)V
 
-    invoke-direct {v0}, Lpq7;-><init>()V
-
-    sget-object v1, Ll80;->a:Ll80;
-
-    const-class v2, Lfm0;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    const-class v2, Ln90;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    sget-object v1, Lo80;->a:Lo80;
-
-    const-class v2, Lc98;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    const-class v2, Lua0;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    sget-object v1, Lm80;->a:Lm80;
-
-    const-class v2, Li83;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    const-class v2, Lu90;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    sget-object v1, Lk80;->a:Lk80;
-
-    const-class v2, Lsd;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    const-class v2, Lf90;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    sget-object v1, Ln80;->a:Ln80;
-
-    const-class v2, Lw88;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    const-class v2, Lta0;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    sget-object v1, Lp80;->a:Lp80;
-
-    const-class v2, Lx5a;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
-
-    const-class v2, Lxa0;
-
-    invoke-virtual {v0, v2, v1}, Lpq7;->d(Ljava/lang/Class;Lzha;)Lqb5;
+    new-instance v0, Lnl4;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Lpq7;->d:Z
+    invoke-direct {v0, v1}, Lnl4;-><init>(I)V
 
-    new-instance v1, Ls9d;
+    iput-object v0, p0, Ls42;->x0:Lnl4;
 
-    const/16 v2, 0x13
+    new-instance v0, Ldch;
 
-    invoke-direct {v1, v2, v0}, Ls9d;-><init>(ILjava/lang/Object;)V
+    const/4 v1, 0x2
 
-    iput-object v1, p0, Ls42;->a:Ls9d;
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Ls42;->c:Landroid/content/Context;
+    invoke-direct {v0, v1, v2}, Ldch;-><init>(IZ)V
 
-    const-string v0, "connectivity"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/ConnectivityManager;
-
-    iput-object p1, p0, Ls42;->b:Landroid/net/ConnectivityManager;
-
-    sget-object p1, Lpx0;->c:Ljava/lang/String;
-
-    invoke-static {p1}, Ls42;->b(Ljava/lang/String;)Ljava/net/URL;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ls42;->d:Ljava/net/URL;
-
-    iput-object p3, p0, Ls42;->e:Ld93;
-
-    iput-object p2, p0, Ls42;->f:Ld93;
-
-    const p1, 0x1fbd0
-
-    iput p1, p0, Ls42;->g:I
+    iput-object v0, p0, Ls42;->y0:Ldch;
 
     return-void
 .end method
 
-.method public static b(Ljava/lang/String;)Ljava/net/URL;
-    .locals 3
-
-    :try_start_0
-    new-instance v0, Ljava/net/URL;
-
-    invoke-direct {v0, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/lang/IllegalArgumentException;
-
-    const-string v2, "Invalid url: "
-
-    invoke-static {v2, p0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v1, p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
 
 # virtual methods
-.method public final a(Lea0;)Lea0;
-    .locals 6
+.method public final a(ILjava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Ls42;->b:Landroid/net/ConnectivityManager;
+    const/16 v0, 0x8
 
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+    if-ne p1, v0, :cond_0
 
-    move-result-object v0
+    check-cast p2, Lr42;
 
-    invoke-virtual {p1}, Lea0;->c()Lqr9;
-
-    move-result-object p1
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    iget-object v2, p1, Lqr9;->f:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/HashMap;
-
-    const-string v3, "Property \"autoMetadata\" has not been set"
-
-    if-eqz v2, :cond_7
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v4, "sdk-version"
-
-    invoke-virtual {v2, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "model"
-
-    sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v2}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "hardware"
-
-    sget-object v2, Landroid/os/Build;->HARDWARE:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v2}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "device"
-
-    sget-object v2, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v2}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "product"
-
-    sget-object v2, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v2}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "os-uild"
-
-    sget-object v2, Landroid/os/Build;->ID:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v2}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "manufacturer"
-
-    sget-object v2, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v2}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "fingerprint"
-
-    sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
-
-    invoke-virtual {p1, v1, v2}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v4
-
-    invoke-virtual {v1, v4, v5}, Ljava/util/TimeZone;->getOffset(J)I
-
-    move-result v1
-
-    div-int/lit16 v1, v1, 0x3e8
-
-    int-to-long v1, v1
-
-    iget-object v4, p1, Lqr9;->f:Ljava/lang/Object;
-
-    check-cast v4, Ljava/util/HashMap;
-
-    if-eqz v4, :cond_6
-
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "tz-offset"
-
-    invoke-virtual {v4, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v1, -0x1
-
-    if-nez v0, :cond_0
-
-    sget-object v2, Lw5a;->a:Landroid/util/SparseArray;
-
-    move v2, v1
-
-    goto :goto_0
+    iput-object p2, p0, Ls42;->A0:Lr42;
 
     :cond_0
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+    return-void
+.end method
 
-    move-result v2
+.method public final f()Ljava/lang/String;
+    .locals 1
 
-    :goto_0
-    iget-object v4, p1, Lqr9;->f:Ljava/lang/Object;
+    const-string v0, "CameraMotionRenderer"
 
-    check-cast v4, Ljava/util/HashMap;
+    return-object v0
+.end method
 
-    if-eqz v4, :cond_5
+.method public final h()Z
+    .locals 1
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, "net-type"
-
-    invoke-virtual {v4, v5, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    if-nez v0, :cond_2
-
-    sget-object v0, Lv5a;->a:Landroid/util/SparseArray;
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
+    invoke-virtual {p0}, Lnl0;->g()Z
 
     move-result v0
 
-    if-ne v0, v1, :cond_3
+    return v0
+.end method
 
-    sget-object v0, Lv5a;->a:Landroid/util/SparseArray;
+.method public final i()Z
+    .locals 1
 
-    const/16 v0, 0x64
+    const/4 v0, 0x1
 
-    goto :goto_1
+    return v0
+.end method
 
-    :cond_3
-    sget-object v4, Lv5a;->a:Landroid/util/SparseArray;
+.method public final j()V
+    .locals 1
 
-    invoke-virtual {v4, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    iget-object v0, p0, Ls42;->A0:Lr42;
 
-    move-result-object v4
+    if-eqz v0, :cond_0
 
-    check-cast v4, Lv5a;
+    invoke-interface {v0}, Lr42;->c()V
 
-    if-eqz v4, :cond_1
+    :cond_0
+    return-void
+.end method
 
-    :goto_1
-    iget-object v4, p1, Lqr9;->f:Ljava/lang/Object;
+.method public final l(JZ)V
+    .locals 0
 
-    check-cast v4, Ljava/util/HashMap;
+    const-wide/high16 p1, -0x8000000000000000L
 
-    if-eqz v4, :cond_4
+    iput-wide p1, p0, Ls42;->B0:J
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    iget-object p1, p0, Ls42;->A0:Lr42;
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    const-string v3, "mobile-subtype"
+    invoke-interface {p1}, Lr42;->c()V
 
-    invoke-virtual {v4, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+.method public final p([Loj6;JJ)V
+    .locals 0
 
-    move-result-object v0
+    iput-wide p4, p0, Ls42;->z0:J
 
-    invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final t(JJ)V
+    .locals 4
 
-    const-string v3, "country"
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Lnl0;->g()Z
 
-    invoke-virtual {p1, v3, v0}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move-result p3
 
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    if-nez p3, :cond_6
 
-    move-result-object v0
+    iget-wide p3, p0, Ls42;->B0:J
 
-    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+    const-wide/32 v0, 0x186a0
 
-    move-result-object v0
+    add-long/2addr v0, p1
 
-    const-string v3, "locale"
+    cmp-long p3, p3, v0
 
-    invoke-virtual {p1, v3, v0}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
+    if-gez p3, :cond_6
 
-    const-string v0, "phone"
+    iget-object p3, p0, Ls42;->x0:Lnl4;
 
-    iget-object v3, p0, Ls42;->c:Landroid/content/Context;
+    invoke-virtual {p3}, Lnl4;->x()V
 
-    invoke-virtual {v3, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iget-object p4, p0, Lnl0;->b:Lzii;
 
-    move-result-object v0
+    invoke-virtual {p4}, Lzii;->k()V
 
-    check-cast v0, Landroid/telephony/TelephonyManager;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSimOperator()Ljava/lang/String;
+    invoke-virtual {p0, p4, p3, v0}, Lnl0;->q(Lzii;Lnl4;I)I
 
-    move-result-object v0
+    move-result p4
 
-    const-string v4, "mcc_mnc"
+    const/4 v1, -0x4
 
-    invoke-virtual {p1, v4, v0}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne p4, v1, :cond_6
 
-    :try_start_0
-    invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    const/4 p4, 0x4
 
-    move-result-object v0
+    invoke-virtual {p3, p4}, Laz;->g(I)Z
 
-    invoke-virtual {v3}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    move-result v1
 
-    move-result-object v3
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0, v3, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    goto :goto_3
 
-    move-result-object v0
+    :cond_1
+    iget-wide v1, p3, Lnl4;->X:J
 
-    iget v1, v0, Landroid/content/pm/PackageInfo;->versionCode:I
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-wide v1, p0, Ls42;->B0:J
+
+    iget-object v1, p0, Ls42;->A0:Lr42;
+
+    if-eqz v1, :cond_0
+
+    const/high16 v1, -0x80000000
+
+    invoke-virtual {p3, v1}, Laz;->g(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p3}, Lnl4;->A()V
+
+    iget-object p3, p3, Lnl4;->d:Ljava/nio/ByteBuffer;
+
+    sget v1, Lkbh;->a:I
+
+    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v1
+
+    const/16 v2, 0x10
+
+    if-eq v1, v2, :cond_3
+
+    const/4 p3, 0x0
 
     goto :goto_2
 
-    :catch_0
-    move-exception v0
+    :cond_3
+    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
 
-    const-string v2, "CctTransportBackend"
+    move-result-object v1
 
-    const-string v3, "Unable to find version code for package"
+    invoke-virtual {p3}, Ljava/nio/Buffer;->limit()I
 
-    invoke-static {v2, v3, v0}, Ldfi;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;)V
+    move-result v2
 
-    :goto_2
-    invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+    iget-object v3, p0, Ls42;->y0:Ldch;
 
-    move-result-object v0
+    invoke-virtual {v3, v2, v1}, Ldch;->C(I[B)V
 
-    const-string v1, "application_build"
+    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
 
-    invoke-virtual {p1, v1, v0}, Lqr9;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move-result p3
 
-    invoke-virtual {p1}, Lqr9;->c()Lea0;
+    add-int/2addr p3, p4
 
-    move-result-object p1
+    invoke-virtual {v3, p3}, Ldch;->E(I)V
 
-    return-object p1
+    const/4 p3, 0x3
+
+    new-array p4, p3, [F
+
+    :goto_1
+    if-ge v0, p3, :cond_4
+
+    invoke-virtual {v3}, Ldch;->h()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v1
+
+    aput v1, p4, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
 
     :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object p3, p4
 
-    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :goto_2
+    if-nez p3, :cond_5
 
-    throw p1
+    goto :goto_0
 
     :cond_5
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object p4, p0, Ls42;->A0:Lr42;
 
-    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-wide v0, p0, Ls42;->B0:J
 
-    throw p1
+    iget-wide v2, p0, Ls42;->z0:J
+
+    sub-long/2addr v0, v2
+
+    invoke-interface {p4, v0, v1, p3}, Lr42;->b(J[F)V
+
+    goto/16 :goto_0
 
     :cond_6
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :goto_3
+    return-void
+.end method
 
-    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.method public final x(Loj6;)I
+    .locals 1
 
-    throw p1
+    const-string v0, "application/x-camera-motion"
 
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object p1, p1, Loj6;->w0:Ljava/lang/String;
 
-    invoke-direct {p1, v3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    throw p1
+    move-result p1
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x4
+
+    invoke-static {p1, v0, v0}, Lnl0;->b(III)I
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    invoke-static {v0, v0, v0}, Lnl0;->b(III)I
+
+    move-result p1
+
+    return p1
 .end method

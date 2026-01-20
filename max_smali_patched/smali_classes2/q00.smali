@@ -1,22 +1,28 @@
-.class public final synthetic Lq00;
+.class public final Lq00;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljk8;
-.implements Lfj6;
-.implements Lir3;
+.implements Ld76;
 
 
 # instance fields
-.field public final synthetic a:Ls00;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ld76;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls00;)V
+.method public synthetic constructor <init>(Ld76;JI)V
     .locals 0
 
-    iput-object p1, p0, Lq00;->a:Ls00;
+    iput p4, p0, Lq00;->a:I
+
+    iput-object p1, p0, Lq00;->b:Ld76;
+
+    iput-wide p2, p0, Lq00;->c:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,210 +31,156 @@
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 5
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget v0, p0, Lq00;->a:I
 
-    const-string v0, "AttachPreviewDiskCache"
+    packed-switch v0, :pswitch_data_0
 
-    const-string v1, "onError"
+    iget-object v0, p0, Lq00;->b:Ld76;
 
-    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    check-cast v0, Lr83;
 
-    iget-object v0, p0, Lq00;->a:Ls00;
+    new-instance v1, Lo00;
 
-    iget-object v0, v0, Ls00;->a:Lvf5;
+    iget-wide v2, p0, Lq00;->c:J
 
-    new-instance v1, Lru/ok/tamtam/util/HandledException;
+    const/4 v4, 0x0
 
-    invoke-direct {v1, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v1, p1, v2, v3, v4}, Lo00;-><init>(Lf76;JI)V
 
-    check-cast v0, Lyua;
-
-    invoke-virtual {v0, v1}, Lyua;->c(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lq00;->a:Ls00;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v1, p2}, Lr83;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_0
+
+    goto :goto_0
+
     :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
     :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    return-object p1
 
-    move-result v1
+    :pswitch_0
+    new-instance v0, Lo00;
 
-    if-eqz v1, :cond_2
+    iget-wide v1, p0, Lq00;->c:J
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v3, 0x4
 
-    move-result-object v1
+    invoke-direct {v0, p1, v1, v2, v3}, Lo00;-><init>(Lf76;JI)V
 
-    check-cast v1, Ljava/io/File;
+    iget-object p1, p0, Lq00;->b:Ld76;
 
-    invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p1
 
-    const-string v3, ".png"
+    sget-object p2, Lac4;->a:Lac4;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    const/4 v2, 0x0
+    if-ne p1, p2, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const-string v3, "_"
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    :goto_1
+    return-object p1
 
-    move-result-object v2
+    :pswitch_1
+    new-instance v0, Lo00;
+
+    iget-wide v1, p0, Lq00;->c:J
+
+    const/4 v3, 0x3
+
+    invoke-direct {v0, p1, v1, v2, v3}, Lo00;-><init>(Lf76;JI)V
+
+    iget-object p1, p0, Lq00;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_2
+    return-object p1
+
+    :pswitch_2
+    new-instance v0, Lo00;
+
+    iget-wide v1, p0, Lq00;->c:J
+
+    const/4 v3, 0x2
+
+    invoke-direct {v0, p1, v1, v2, v3}, Lo00;-><init>(Lf76;JI)V
+
+    iget-object p1, p0, Lq00;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_3
+    return-object p1
+
+    :pswitch_3
+    new-instance v0, Lo00;
+
+    iget-wide v1, p0, Lq00;->c:J
 
     const/4 v3, 0x1
 
-    aget-object v2, v2, v3
+    invoke-direct {v0, p1, v1, v2, v3}, Lo00;-><init>(Lf76;JI)V
 
-    :goto_1
-    invoke-static {v2}, Lxvc;->d(Ljava/lang/CharSequence;)Z
+    iget-object p1, p0, Lq00;->b:Ld76;
 
-    move-result v3
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-nez v3, :cond_0
+    move-result-object p1
 
-    invoke-static {v1}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    sget-object p2, Lac4;->a:Lac4;
 
-    move-result-object v1
+    if-ne p1, p2, :cond_4
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_2
-    return-object v0
-.end method
-
-.method public f(Lwj8;)V
-    .locals 4
-
-    iget-object v0, p0, Lq00;->a:Ls00;
-
-    iget-object v0, v0, Ls00;->b:Lfu5;
-
-    check-cast v0, Luv5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Luv5;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Luv5;->b(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "previewVideoCache"
-
-    invoke-static {v0, v1}, Luv5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lx0j;->b(Ljava/io/File;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p1}, Lwj8;->f()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p1}, Lwj8;->c()V
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    array-length v1, v0
-
-    if-nez v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v1, Lr00;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Lr00;-><init>(I)V
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    :goto_0
-    array-length v3, v0
-
-    if-ge v2, v3, :cond_2
-
-    const/16 v3, 0xc8
-
-    if-ge v2, v3, :cond_2
-
-    aget-object v3, v0, v2
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lwj8;->f()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p1, v1}, Lwj8;->a(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p1}, Lwj8;->f()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p1}, Lwj8;->c()V
+    goto :goto_4
 
     :cond_4
-    return-void
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_4
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

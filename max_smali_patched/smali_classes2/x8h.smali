@@ -1,21 +1,49 @@
 .class public final Lx8h;
-.super Leq;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lx8h;
+# instance fields
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ld9h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ld9h;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lx8h;
+    iput-object p1, p0, Lx8h;->o:Ld9h;
 
-    invoke-direct {v0}, Leq;-><init>()V
-
-    sput-object v0, Lx8h;->a:Lx8h;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lx8h;->d:Ljava/lang/Object;
+
+    iget p1, p0, Lx8h;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lx8h;->X:I
+
+    iget-object p1, p0, Lx8h;->o:Ld9h;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ld9h;->f(Lod7;Lo84;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,50 +1,89 @@
 .class public final Li16;
-.super Lp14;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final a:Lfb0;
 
-.field public final synthetic Y:Lj16;
-
-.field public d:Lj16;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lfb0;
 
 
 # direct methods
-.method public constructor <init>(Lj16;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lfb0;)V
     .locals 0
 
-    iput-object p1, p0, Li16;->Y:Lj16;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li16;->a:Lfb0;
+
+    iput-object p1, p0, Li16;->b:Lfb0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Li16;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Li16;->X:I
+    const/4 p1, 0x1
 
-    const/high16 v0, -0x80000000
+    return p1
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v0, p1, Li16;
 
-    iput p1, p0, Li16;->X:I
+    if-nez v0, :cond_1
 
-    iget-object p1, p0, Li16;->Y:Lj16;
+    const/4 p1, 0x0
 
-    const/4 v0, 0x0
+    return p1
 
-    invoke-virtual {p1, v0, p0}, Lj16;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Li16;
 
-    move-result-object p1
+    iget-object p1, p1, Li16;->b:Lfb0;
 
-    return-object p1
+    iget-object v0, p0, Li16;->b:Lfb0;
+
+    invoke-virtual {v0, p1}, Lfb0;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Li16;->b:Lfb0;
+
+    invoke-virtual {v0}, Lfb0;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Li16;->b:Lfb0;
+
+    invoke-virtual {v0}, Lfb0;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "FileOutputOptionsInternal"
+
+    const-string v2, "FileOutputOptions"
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,23 +1,73 @@
 .class public final La57;
-.super Ljava/lang/Object;
+.super Lc57;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
-
-.field public final b:F
+# static fields
+.field public static final c:La57;
 
 
 # direct methods
-.method public constructor <init>(FZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, La57;
 
-    iput-boolean p2, p0, La57;->a:Z
+    sget v1, La8b;->t:I
 
-    iput p1, p0, La57;->b:F
+    new-instance v2, Llhg;
+
+    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+
+    sget v1, Lj6e;->M:I
+
+    new-instance v3, Llhg;
+
+    invoke-direct {v3, v1}, Llhg;-><init>(I)V
+
+    invoke-direct {v0, v2, v3}, Lc57;-><init>(Llhg;Llhg;)V
+
+    sput-object v0, La57;->c:La57;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, La57;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x709adf5c
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Connecting"
+
+    return-object v0
 .end method

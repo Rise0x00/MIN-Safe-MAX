@@ -1,122 +1,96 @@
-.class public final Leni;
-.super Landroid/os/Binder;
+.class public final synthetic Leni;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 # interfaces
-.implements Landroid/os/IInterface;
+.implements Lcom/my/tracker/core/EngineCore$EventPacker;
 
 
 # instance fields
-.field public final synthetic c:Lvuh;
+.field public final synthetic X:J
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/my/tracker/applifecycle/o/d;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Ljava/lang/String;
+
+.field public final synthetic o:J
 
 
 # direct methods
-.method public constructor <init>(Lvuh;)V
+.method public synthetic constructor <init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJI)V
     .locals 0
 
-    iput-object p1, p0, Leni;->c:Lvuh;
+    iput p8, p0, Leni;->a:I
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    iput-object p1, p0, Leni;->b:Lcom/my/tracker/applifecycle/o/d;
 
-    const-string p1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverResultCallback"
+    iput-object p2, p0, Leni;->c:Ljava/lang/String;
 
-    invoke-virtual {p0, p0, p1}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    iput-object p3, p0, Leni;->d:Ljava/lang/String;
+
+    iput-wide p4, p0, Leni;->o:J
+
+    iput-wide p6, p0, Leni;->X:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 0
+.method public final invoke(Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    .locals 9
 
-    return-object p0
-.end method
+    iget v0, p0, Leni;->a:I
 
-.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 2
+    packed-switch v0, :pswitch_data_0
 
-    const v0, 0xffffff
+    iget-wide v4, p0, Leni;->o:J
 
-    const/4 v1, 0x0
+    iget-wide v6, p0, Leni;->X:J
 
-    if-le p1, v0, :cond_0
+    iget-object v1, p0, Leni;->b:Lcom/my/tracker/applifecycle/o/d;
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    iget-object v2, p0, Leni;->c:Ljava/lang/String;
 
-    move-result p3
+    iget-object v3, p0, Leni;->d:Ljava/lang/String;
 
-    goto :goto_0
+    move-object v8, p1
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/os/Binder;->getInterfaceDescriptor()Ljava/lang/String;
-
-    move-result-object p3
-
-    invoke-virtual {p2, p3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    move p3, v1
-
-    :goto_0
-    const/4 p4, 0x1
-
-    if-eqz p3, :cond_1
-
-    return p4
-
-    :cond_1
-    if-ne p1, p4, :cond_4
-
-    sget-object p1, Lcom/google/android/gms/common/api/Status;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    sget p3, Lb2i;->a:I
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p3
-
-    const/4 v0, 0x0
-
-    if-nez p3, :cond_2
-
-    move-object p1, v0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static/range {v1 .. v8}, Lcom/my/tracker/applifecycle/o/d;->g(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore$InsertEventTools;)[B
 
     move-result-object p1
 
-    check-cast p1, Landroid/os/Parcelable;
+    return-object p1
 
-    :goto_1
-    check-cast p1, Lcom/google/android/gms/common/api/Status;
+    :pswitch_0
+    move-object v7, p1
 
-    iget-object p2, p0, Leni;->c:Lvuh;
+    iget-wide v3, p0, Leni;->o:J
 
-    iget-object p2, p2, Lvuh;->e:Ljava/lang/Object;
+    iget-wide v5, p0, Leni;->X:J
 
-    check-cast p2, Lsof;
+    iget-object v0, p0, Leni;->b:Lcom/my/tracker/applifecycle/o/d;
 
-    invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->b()Z
+    iget-object v1, p0, Leni;->c:Ljava/lang/String;
 
-    move-result p3
+    iget-object v2, p0, Leni;->d:Ljava/lang/String;
 
-    if-eqz p3, :cond_3
-
-    invoke-virtual {p2, v0}, Lsof;->b(Ljava/lang/Object;)V
-
-    return p4
-
-    :cond_3
-    invoke-static {p1}, Ltei;->a(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/ApiException;
+    invoke-static/range {v0 .. v7}, Lcom/my/tracker/applifecycle/o/d;->d(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJLcom/my/tracker/core/EngineCore$InsertEventTools;)[B
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lsof;->a(Ljava/lang/Exception;)V
+    return-object p1
 
-    return p4
+    nop
 
-    :cond_4
-    return v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

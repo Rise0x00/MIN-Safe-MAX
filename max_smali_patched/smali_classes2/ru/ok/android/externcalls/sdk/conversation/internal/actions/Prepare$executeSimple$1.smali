@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;
-.super Lbu7;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Llq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeSimple()Ljqe;
+    value = Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->executeSimple()Lkef;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lbu7;",
-        "Loi6;"
+        "Ly48;",
+        "Llq6;"
     }
 .end annotation
 
@@ -28,11 +28,11 @@
         "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0005\u001a\u000e\u0012\n\u0012\u0008\u0012\u0004\u0012\u00020\u00020\u00010\u0000H\n\u00a2\u0006\u0004\u0008\u0003\u0010\u0004"
     }
     d2 = {
-        "Ljqe;",
-        "Lp9b;",
+        "Lkef;",
+        "Lcqb;",
         "Lru/ok/android/externcalls/sdk/api/ConversationParams;",
         "invoke",
-        "()Ljqe;",
+        "()Lkef;",
         "<anonymous>"
     }
     k = 0x3
@@ -56,7 +56,7 @@
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lbu7;-><init>(I)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
@@ -67,19 +67,19 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;->invoke()Ljqe;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;->invoke()Lkef;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Ljqe;
+.method public final invoke()Lkef;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljqe;"
+            "Lkef;"
         }
     .end annotation
 
@@ -132,14 +132,14 @@
 
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1;->this$0:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;
 
-    invoke-static {v3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lp34;
+    invoke-static {v3}, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;->access$getCidProvider$p(Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare;)Lma4;
 
     move-result-object v3
 
-    check-cast v3, Lq34;
+    check-cast v3, Lna4;
 
     .line 6
-    iget-object v3, v3, Lq34;->a:Ljava/lang/String;
+    iget-object v3, v3, Lna4;->a:Ljava/lang/String;
 
     goto :goto_0
 
@@ -148,23 +148,23 @@
 
     .line 7
     :goto_0
-    invoke-virtual {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getConversationParams(Ljava/lang/String;ZLjava/lang/String;)Ljqe;
+    invoke-virtual {v0, v1, v2, v3}, Lru/ok/android/externcalls/sdk/api/OkApiServiceInternal;->getConversationParams(Ljava/lang/String;ZLjava/lang/String;)Lkef;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lie;->a()Lgpd;
+    invoke-static {}, Lde;->a()Lpbe;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljqe;->i(Lgpd;)Lbre;
+    invoke-virtual {v0, v1}, Lkef;->i(Lpbe;)Lcff;
 
     move-result-object v0
 
     .line 9
     sget-object v1, Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1$2;->INSTANCE:Lru/ok/android/externcalls/sdk/conversation/internal/actions/Prepare$executeSimple$1$2;
 
-    invoke-virtual {v0, v1}, Ljqe;->h(Lfj6;)Lsqe;
+    invoke-virtual {v0, v1}, Lkef;->h(Lcr6;)Lsef;
 
     move-result-object v0
 
@@ -182,18 +182,18 @@
     if-eqz v0, :cond_3
 
     .line 11
-    new-instance v1, Lp9b;
+    new-instance v1, Lcqb;
 
-    invoke-direct {v1, v0}, Lp9b;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
+    invoke-direct {v1, v0}, Lcqb;-><init>(Lru/ok/android/externcalls/sdk/api/ConversationParams;)V
 
     :cond_3
     if-nez v1, :cond_4
 
     .line 12
-    sget-object v1, Lp9b;->b:Lp9b;
+    sget-object v1, Lcqb;->b:Lcqb;
 
     :cond_4
-    invoke-static {v1}, Ljqe;->g(Ljava/lang/Object;)Lah3;
+    invoke-static {v1}, Lkef;->g(Ljava/lang/Object;)Lrza;
 
     move-result-object v0
 

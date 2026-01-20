@@ -1,48 +1,51 @@
 .class public final Lvx6;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Le0g;
 
 
 # instance fields
-.field public final a:Z
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lxx6;
 
 
 # direct methods
-.method public constructor <init>(Lot7;)V
+.method public constructor <init>(Lxx6;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvx6;->o:Lxx6;
 
-    iget-object p1, p1, Lot7;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x1
-
-    :goto_0
-    iput-boolean p1, p0, Lvx6;->a:Z
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lrw4;
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lxxc;->a:Lrw4;
+    iput-object p1, p0, Lvx6;->d:Ljava/lang/Object;
 
-    return-object v0
+    iget p1, p0, Lvx6;->X:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lvx6;->X:I
+
+    const-wide/16 v0, 0x0
+
+    const/4 p1, 0x0
+
+    iget-object v2, p0, Lvx6;->o:Lxx6;
+
+    invoke-static {v2, v0, v1, p1, p0}, Lxx6;->a(Lxx6;J[JLo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

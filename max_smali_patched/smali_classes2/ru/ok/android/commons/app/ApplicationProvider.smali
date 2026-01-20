@@ -13,7 +13,7 @@
         "Landroid/content/ContentProvider;",
         "<init>",
         "()V",
-        "kfi",
+        "m5j",
         "commons-app_release"
     }
     k = 0x1

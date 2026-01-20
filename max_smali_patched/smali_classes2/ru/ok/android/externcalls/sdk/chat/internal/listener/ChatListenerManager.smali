@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;",
         "listener",
-        "Lybg;",
+        "Lb3h;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/chat/listener/ChatManagerListener;)V",
         "removeListener",

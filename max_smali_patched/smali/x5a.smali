@@ -1,3 +1,3 @@
-.class public abstract Lx5a;
-.super Ljava/lang/Object;
+.class public final Lx5a;
+.super Ljava/lang/UnsatisfiedLinkError;
 .source "SourceFile"

@@ -4,216 +4,138 @@
 
 
 # instance fields
-.field public final a:Lirf;
+.field public final a:Li7f;
 
-.field public final b:Ljava/lang/Integer;
-
-.field public final c:Loi6;
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lirf;Ljava/lang/Integer;Loi6;I)V
-    .locals 0
+.method public constructor <init>(Lcy0;Lmbg;)V
+    .locals 2
 
-    and-int/lit8 p4, p4, 0x2
-
-    if-eqz p4, :cond_0
-
-    const/4 p2, 0x0
-
-    :cond_0
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lz04;->a:Lirf;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lz04;->b:Ljava/lang/Integer;
+    const/4 v1, 0x7
 
-    iput-object p3, p0, Lz04;->c:Loi6;
+    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz04;->a:Li7f;
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->a()Lsb4;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Ld76;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    new-instance v0, Lold;
 
-    goto :goto_1
+    iget-object v1, p0, Lz04;->a:Li7f;
 
-    :cond_0
-    instance-of v0, p1, Lz04;
+    invoke-direct {v0, v1}, Lold;-><init>(Llfa;)V
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lz04;
-
-    iget-object v0, p0, Lz04;->a:Lirf;
-
-    iget-object v1, p1, Lz04;->a:Lirf;
-
-    invoke-virtual {v0, v1}, Lirf;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lz04;->b:Ljava/lang/Integer;
-
-    iget-object v1, p1, Lz04;->b:Ljava/lang/Integer;
-
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lz04;->c:Loi6;
-
-    iget-object p1, p1, Lz04;->c:Loi6;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_4
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final onEvent(Lk2c;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    iget-object v0, p0, Lz04;->a:Lirf;
+    .line 2
+    new-instance p1, Lw04;
 
-    iget v0, v0, Lirf;->c:I
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-direct {p1, p0, v0}, Lw04;-><init>(Lz04;Lkotlin/coroutines/Continuation;)V
 
-    move-result v0
+    const/4 v1, 0x3
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v1, p0, Lz04;->b:Ljava/lang/Integer;
+    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    if-nez v1, :cond_0
+    return-void
+.end method
+
+.method public final onEvent(Lm5h;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
+
+    .line 4
+    new-instance p1, Ly04;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Ly04;-><init>(Lz04;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lrl8;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
+
+    .line 1
+    new-instance p1, Lv04;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, v0}, Lv04;-><init>(Lz04;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v1, 0x3
+
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v0, v0, p1, v1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lu64;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
+
+    .line 3
+    new-instance v0, Lx04;
 
     const/4 v1, 0x0
 
-    goto :goto_0
+    invoke-direct {v0, p0, p1, v1}, Lx04;-><init>(Lz04;Lu64;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/4 p1, 0x3
 
-    move-result v1
+    iget-object v2, p0, Lz04;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    :goto_0
-    add-int/2addr v0, v1
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    sget-object v1, Lunf;->t0:Lunf;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    sget-object v0, Lunf;->C0:Lunf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lz04;->c:Loi6;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContextMenuAction(title="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lz04;->a:Lirf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lz04;->b:Ljava/lang/Integer;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", iconColor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lunf;->t0:Lunf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", titleColor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    sget-object v1, Lunf;->C0:Lunf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", clickAction="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lz04;->c:Loi6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

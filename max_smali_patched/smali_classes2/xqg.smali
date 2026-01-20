@@ -1,168 +1,88 @@
 .class public final Lxqg;
-.super Ladi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lahd;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final a:Lrqg;
 
-.field public final synthetic d:Landroid/view/View;
+.field public final b:Lahd;
 
 
 # direct methods
-.method public constructor <init>(Lfqg;)V
-    .locals 1
+.method public constructor <init>(Lrqg;Lahd;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lxqg;->c:I
+    iput-object p1, p0, Lxqg;->a:Lrqg;
 
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lxqg;->d:Landroid/view/View;
-
-    const/16 p1, 0xc
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Ladi;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lyqg;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lxqg;->c:I
-
-    iput-object p1, p0, Lxqg;->d:Landroid/view/View;
-
-    const/16 p1, 0xc
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Ladi;-><init>(ILjava/lang/Object;)V
+    iput-object p2, p0, Lxqg;->b:Lahd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 4
+.method public final log(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    iget v0, p0, Lxqg;->c:I
+    iget-object v0, p0, Lxqg;->b:Lahd;
 
-    iget-object v1, p0, Lxqg;->d:Landroid/view/View;
+    invoke-interface {v0, p1, p2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
 
-    move-result v0
+    iget-object v0, p0, Lxqg;->b:Lahd;
 
-    if-nez v0, :cond_2
+    invoke-interface {v0, p1, p2, p3}, Lahd;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    check-cast p2, Ljava/lang/Boolean;
+    return-void
+.end method
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
 
-    check-cast p1, Ljava/lang/Boolean;
+    iget-object v0, p0, Lxqg;->b:Lahd;
+
+    invoke-interface {v0, p1, p2, p3}, Lahd;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iget-object p1, p0, Lxqg;->a:Lrqg;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lfqg;
+    :try_start_0
+    iget-object p1, p1, Lrqg;->b:Ln8g;
 
-    iget-object p1, v1, Lfqg;->E0:Landroid/animation/ValueAnimator;
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    move-result-object p1
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->cancel()V
-
-    :cond_0
-    iget p1, v1, Lfqg;->A0:F
+    check-cast p1, Liqg;
 
     const/4 p2, 0x0
 
-    cmpg-float p2, p1, p2
+    invoke-virtual {p1, p2, p3}, Liqg;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Lfqg;->g()F
-
-    move-result p2
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [F
-
-    const/4 v2, 0x0
-
-    aput p1, v0, v2
-
-    const/4 p1, 0x1
-
-    aput p2, v0, p1
-
-    invoke-static {v0}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object p2
-
-    const-wide/16 v2, 0x64
-
-    invoke-virtual {p2, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
-
-    new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
-
-    invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    new-instance v0, Lcqg;
-
-    invoke-direct {v0, v1, p1}, Lcqg;-><init>(Lfqg;I)V
-
-    invoke-virtual {p2, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance v0, Leqg;
-
-    invoke-direct {v0, v1, p1}, Leqg;-><init>(Lfqg;I)V
-
-    invoke-virtual {p2, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-virtual {p2}, Landroid/animation/ValueAnimator;->start()V
-
-    iput-object p2, v1, Lfqg;->E0:Landroid/animation/ValueAnimator;
-
-    :cond_2
-    :goto_0
     return-void
 
-    :pswitch_0
-    invoke-static {p1, p2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :catchall_0
+    move-exception p1
 
-    move-result v0
+    const-string p2, "TracerLiteFacade"
 
-    if-nez v0, :cond_3
+    const-string p3, "Crash report failed"
 
-    check-cast p2, Lepg;
+    invoke-static {p2, p3, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    check-cast p1, Lepg;
-
-    check-cast v1, Lyqg;
-
-    invoke-static {v1}, Lyqg;->i(Lyqg;)V
-
-    :cond_3
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

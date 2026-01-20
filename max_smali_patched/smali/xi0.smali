@@ -1,69 +1,111 @@
-.class public abstract Lxi0;
-.super Lnj0;
+.class public final Lxi0;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic o:Lc54;
+
+
+# direct methods
+.method public constructor <init>(Lc54;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lxi0;->o:Lc54;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final f(Lr0;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p1}, Lr0;->h()Z
+    check-cast p1, Lzb4;
 
-    move-result v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Lr0;->e()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lxi0;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Lq93;
+    check-cast p1, Lxi0;
 
-    if-eqz p1, :cond_1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p1}, Lq93;->Z()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lxi0;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    instance-of v0, v0, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    return-object p1
+.end method
 
-    if-eqz v0, :cond_1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {p1}, Lq93;->Z()Ljava/lang/Object;
+    new-instance p1, Lxi0;
 
-    move-result-object v0
+    iget-object v0, p0, Lxi0;->o:Lc54;
 
-    check-cast v0, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    invoke-direct {p1, v0, p2}, Lxi0;-><init>(Lc54;Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {v0}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
+    return-object p1
+.end method
 
-    move-result-object v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lxi0;->o:Lc54;
+
+    iget v0, p1, Lc54;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p1, Lc54;->c:Lrs3;
 
     goto :goto_0
 
-    :cond_1
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object p1, p1, Lc54;->c:Lrs3;
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object p1, p1, Lc54;->c:Lrs3;
 
     :goto_0
-    :try_start_0
-    invoke-virtual {p0, v0}, Lxi0;->g(Landroid/graphics/Bitmap;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    invoke-static {p1}, Lq93;->P(Lq93;)V
+    move-result-object p1
 
-    return-void
+    check-cast p1, Ljava/lang/Boolean;
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {p1}, Lq93;->P(Lq93;)V
+    move-result p1
 
-    throw v0
-.end method
+    xor-int/lit8 p1, p1, 0x1
 
-.method public abstract g(Landroid/graphics/Bitmap;)V
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

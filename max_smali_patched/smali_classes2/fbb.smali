@@ -1,158 +1,126 @@
 .class public final Lfbb;
-.super Llk0;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic X:Lpbb;
 
-.field public d:Ljava/lang/Object;
+.field public final synthetic Y:Ljava/nio/file/Path;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lpbb;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x1
+    iput-object p1, p0, Lfbb;->X:Lpbb;
 
-    iput v0, p0, Lfbb;->c:I
+    iput-object p2, p0, Lfbb;->Y:Ljava/nio/file/Path;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lfbb;->c:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lfbb;->d:Ljava/lang/Object;
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ley0;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lfbb;->c:I
+    check-cast p1, Lzb4;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lfbb;->d:Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lfbb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lope;
+    move-result-object p1
 
-    if-nez v0, :cond_0
+    check-cast p1, Lfbb;
 
-    new-instance v0, Lope;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const-string v1, "RoundAsCirclePostprocessor#AntiAliased"
+    invoke-virtual {p1, p2}, Lfbb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lope;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    iput-object v0, p0, Lfbb;->d:Ljava/lang/Object;
-
-    :cond_0
-    iget-object v0, p0, Lfbb;->d:Ljava/lang/Object;
-
-    check-cast v0, Lope;
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lope;
-
-    iget-object v1, p0, Lfbb;->d:Ljava/lang/Object;
-
-    check-cast v1, Landroid/net/Uri;
-
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lope;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final c(Landroid/graphics/Bitmap;)V
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lfbb;->c:I
+    new-instance p1, Lfbb;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lfbb;->X:Lpbb;
 
-    const/4 v0, 0x1
+    iget-object v1, p0, Lfbb;->Y:Ljava/nio/file/Path;
 
-    invoke-static {p1, v0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
+    invoke-direct {p1, v0, v1, p2}, Lfbb;-><init>(Lpbb;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
 
-    return-void
+    return-object p1
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lfbb;->d:Ljava/lang/Object;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    check-cast v0, Landroid/net/Uri;
+    iget v0, p0, Lfbb;->o:I
 
-    invoke-static {v0}, Lk0i;->f(Landroid/net/Uri;)Landroid/graphics/Bitmap;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    if-eqz v0, :cond_0
+    if-ne v0, v1, :cond_0
 
-    new-instance v1, Landroid/graphics/Canvas;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v1, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    goto :goto_0
 
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result p1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    int-to-float p1, p1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+    throw p1
 
-    move-result v2
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    int-to-float v2, v2
+    new-instance p1, Lebb;
 
-    div-float/2addr p1, v2
-
-    invoke-virtual {v1, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, v0, v2, v2, p1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    iget-object v3, p0, Lfbb;->Y:Ljava/nio/file/Path;
 
-    :cond_0
-    return-void
+    iget-object v4, p0, Lfbb;->X:Lpbb;
 
-    nop
+    invoke-direct {p1, v3, v4, v0, v2}, Lebb;-><init>(Ljava/nio/file/Path;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput v1, p0, Lfbb;->o:I
+
+    invoke-virtual {v4, p1, p0}, Lpbb;->g(Lnq6;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

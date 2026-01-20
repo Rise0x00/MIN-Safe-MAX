@@ -1,3 +1,3 @@
 .class public abstract Lp5;
-.super Lwci;
+.super Li3j;
 .source "SourceFile"

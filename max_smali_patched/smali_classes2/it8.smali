@@ -1,268 +1,253 @@
 .class public final Lit8;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lgj6;
 
 
 # instance fields
-.field public synthetic X:Landroid/widget/FrameLayout;
+.field public final a:Lcj8;
 
-.field public final synthetic o:I
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Llt8;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:F
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:J
+
+.field public final k:Z
+
+.field public final l:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
+.method public constructor <init>(Lht8;)V
+    .locals 2
 
-    iput p3, p0, Lit8;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v0, p1, Lht8;->a:Lcj8;
+
+    iput-object v0, p0, Lit8;->a:Lcj8;
+
+    iget-wide v0, p1, Lht8;->b:J
+
+    iput-wide v0, p0, Lit8;->b:J
+
+    iget-wide v0, p1, Lht8;->c:J
+
+    iput-wide v0, p0, Lit8;->c:J
+
+    iget-object v0, p1, Lht8;->d:Llt8;
+
+    iput-object v0, p0, Lit8;->d:Llt8;
+
+    iget-object v0, p1, Lht8;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Lit8;->e:Ljava/lang/String;
+
+    iget-object v0, p1, Lht8;->f:Ljava/lang/String;
+
+    iput-object v0, p0, Lit8;->f:Ljava/lang/String;
+
+    iget v0, p1, Lht8;->g:F
+
+    iput v0, p0, Lit8;->g:F
+
+    iget-boolean v0, p1, Lht8;->h:Z
+
+    iput-boolean v0, p0, Lit8;->h:Z
+
+    iget-boolean v0, p1, Lht8;->i:Z
+
+    iput-boolean v0, p0, Lit8;->i:Z
+
+    iget-wide v0, p1, Lht8;->j:J
+
+    iput-wide v0, p0, Lit8;->j:J
+
+    iget-boolean v0, p1, Lht8;->k:Z
+
+    iput-boolean v0, p0, Lit8;->k:Z
+
+    iget-object p1, p1, Lht8;->l:Ljava/lang/String;
+
+    iput-object p1, p0, Lit8;->l:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a()Lht8;
+    .locals 3
 
-    iget v0, p0, Lit8;->o:I
+    new-instance v0, Lht8;
 
-    check-cast p1, Landroid/widget/FrameLayout;
+    iget-object v1, p0, Lit8;->a:Lcj8;
 
-    check-cast p2, Lw5b;
+    invoke-direct {v0, v1}, Lht8;-><init>(Lcj8;)V
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iget-wide v1, p0, Lit8;->b:J
 
-    packed-switch v0, :pswitch_data_0
+    iput-wide v1, v0, Lht8;->b:J
 
-    new-instance p2, Lit8;
+    iget-wide v1, p0, Lit8;->c:J
 
-    const/4 v0, 0x3
+    iput-wide v1, v0, Lht8;->c:J
 
-    const/4 v1, 0x4
+    iget-object v1, p0, Lit8;->d:Llt8;
 
-    invoke-direct {p2, v0, p3, v1}, Lit8;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iput-object v1, v0, Lht8;->d:Llt8;
 
-    iput-object p1, p2, Lit8;->X:Landroid/widget/FrameLayout;
+    iget-object v1, p0, Lit8;->e:Ljava/lang/String;
 
-    sget-object p1, Lybg;->a:Lybg;
+    iput-object v1, v0, Lht8;->e:Ljava/lang/String;
 
-    invoke-virtual {p2, p1}, Lit8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v1, p0, Lit8;->f:Ljava/lang/String;
 
-    return-object p1
+    iput-object v1, v0, Lht8;->f:Ljava/lang/String;
 
-    :pswitch_0
-    new-instance p2, Lit8;
+    iget v1, p0, Lit8;->g:F
 
-    const/4 v0, 0x3
+    iput v1, v0, Lht8;->g:F
 
-    const/4 v1, 0x3
+    iget-boolean v1, p0, Lit8;->h:Z
 
-    invoke-direct {p2, v0, p3, v1}, Lit8;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iput-boolean v1, v0, Lht8;->h:Z
 
-    iput-object p1, p2, Lit8;->X:Landroid/widget/FrameLayout;
+    iget-boolean v1, p0, Lit8;->i:Z
 
-    sget-object p1, Lybg;->a:Lybg;
+    iput-boolean v1, v0, Lht8;->i:Z
 
-    invoke-virtual {p2, p1}, Lit8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-wide v1, p0, Lit8;->j:J
 
-    return-object p1
+    iput-wide v1, v0, Lht8;->j:J
 
-    :pswitch_1
-    new-instance p2, Lit8;
+    iget-boolean v1, p0, Lit8;->k:Z
 
-    const/4 v0, 0x3
+    iput-boolean v1, v0, Lht8;->k:Z
 
-    const/4 v1, 0x2
+    iget-object v1, p0, Lit8;->l:Ljava/lang/String;
 
-    invoke-direct {p2, v0, p3, v1}, Lit8;-><init>(ILkotlin/coroutines/Continuation;I)V
+    iput-object v1, v0, Lht8;->l:Ljava/lang/String;
 
-    iput-object p1, p2, Lit8;->X:Landroid/widget/FrameLayout;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lit8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_2
-    new-instance p2, Lit8;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p2, v0, p3, v1}, Lit8;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lit8;->X:Landroid/widget/FrameLayout;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lit8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_3
-    new-instance p2, Lit8;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, p3, v1}, Lit8;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p2, Lit8;->X:Landroid/widget/FrameLayout;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {p2, p1}, Lit8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget v0, p0, Lit8;->o:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "MarkerData{location="
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Lit8;->X:Landroid/widget/FrameLayout;
+    iget-object v1, p0, Lit8;->a:Lcj8;
 
-    sget-object v0, Ly53;->s0:Lvh4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    const-string v1, ", contactId="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
+    iget-wide v1, p0, Lit8;->b:J
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Lcf0;->l:I
+    const-string v1, ", messageId="
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lybg;->a:Lybg;
+    iget-wide v1, p0, Lit8;->c:J
 
-    return-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :pswitch_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-string v1, ", markerWeight="
 
-    iget-object p1, p0, Lit8;->X:Landroid/widget/FrameLayout;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v0, Ly53;->s0:Lvh4;
+    iget-object v1, p0, Lit8;->d:Llt8;
 
-    invoke-virtual {v0, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", title=\'"
 
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    iget-object v1, p0, Lit8;->e:Ljava/lang/String;
 
-    iget v0, v0, Lcf0;->l:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    const-string v1, "\', address=\'"
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    iget-object v1, p0, Lit8;->f:Ljava/lang/String;
 
-    :pswitch_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lit8;->X:Landroid/widget/FrameLayout;
+    const-string v1, "\', distance="
 
-    sget-object v0, Ly53;->s0:Lvh4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    iget v1, p0, Lit8;->g:F
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lw5b;->a()Lqv2;
+    const-string v1, ", live="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lqv2;->j()Laqh;
+    iget-boolean v1, p0, Lit8;->h:Z
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget-object v0, v0, Laqh;->a:Lzph;
+    const-string v1, ", decoding="
 
-    iget v0, v0, Lzph;->d:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    iget-boolean v1, p0, Lit8;->i:Z
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ", date="
 
-    :pswitch_2
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lit8;->X:Landroid/widget/FrameLayout;
+    iget-wide v1, p0, Lit8;->j:J
 
-    sget-object v0, Ly53;->s0:Lvh4;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    const-string v1, ", active="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
+    iget-boolean v1, p0, Lit8;->k:Z
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget v0, v0, Lcf0;->n:I
+    const-string v1, ", deviceId=\'"
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lybg;->a:Lybg;
+    iget-object v1, p0, Lit8;->l:Ljava/lang/String;
 
-    return-object p1
+    const-string v2, "\'}"
 
-    :pswitch_3
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lit8;->X:Landroid/widget/FrameLayout;
-
-    sget-object v0, Ly53;->s0:Lvh4;
-
-    invoke-virtual {v0, p1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
-
-    move-result-object v0
-
-    iget v0, v0, Lcf0;->m:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

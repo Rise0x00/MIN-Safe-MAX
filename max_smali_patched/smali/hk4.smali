@@ -1,126 +1,59 @@
 .class public final Lhk4;
-.super Ljava/lang/Object;
+.super Lok4;
 .source "SourceFile"
 
 # interfaces
-.implements Lby6;
-.implements Lcy6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lyh3;
-
-.field public final b:Landroid/content/Context;
-
-.field public final c:Lzec;
-
-.field public final d:Ljava/util/Set;
-
-.field public final e:Ljava/util/concurrent/Executor;
+.field public final o:Landroid/view/View$OnClickListener;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/util/Set;Lzec;Ljava/util/concurrent/Executor;)V
-    .locals 2
+.method public constructor <init>(JLandroid/view/View$OnClickListener;)V
+    .locals 0
 
-    new-instance v0, Lyh3;
+    invoke-direct {p0, p1, p2}, Lok4;-><init>(J)V
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1, p2}, Lyh3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lhk4;->a:Lyh3;
-
-    iput-object p3, p0, Lhk4;->d:Ljava/util/Set;
-
-    iput-object p5, p0, Lhk4;->e:Ljava/util/concurrent/Executor;
-
-    iput-object p4, p0, Lhk4;->c:Lzec;
-
-    iput-object p1, p0, Lhk4;->b:Landroid/content/Context;
+    iput-object p3, p0, Lhk4;->o:Landroid/view/View$OnClickListener;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lj1j;
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    iget-object v0, p0, Lhk4;->b:Landroid/content/Context;
-
-    invoke-static {v0}, Lyhg;->a(Landroid/content/Context;)Z
-
-    move-result v0
+    iget-boolean v0, p0, Lok4;->c:Z
 
     if-nez v0, :cond_0
 
-    const-string v0, ""
-
-    invoke-static {v0}, Lby9;->e(Ljava/lang/Object;)Lj1j;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    new-instance v0, Lgk4;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lgk4;-><init>(Lhk4;I)V
-
-    iget-object v1, p0, Lhk4;->e:Ljava/util/concurrent/Executor;
-
-    invoke-static {v0, v1}, Lby9;->c(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lj1j;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Lhk4;->d:Ljava/util/Set;
-
-    invoke-interface {v0}, Ljava/util/Set;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-gtz v0, :cond_0
-
-    invoke-static {v1}, Lby9;->e(Ljava/lang/Object;)Lj1j;
-
     return-void
 
     :cond_0
-    iget-object v0, p0, Lhk4;->b:Landroid/content/Context;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lyhg;->a(Landroid/content/Context;)Z
+    iput-boolean v0, p0, Lok4;->c:Z
 
-    move-result v0
+    iget-object v0, p0, Lhk4;->o:Landroid/view/View$OnClickListener;
 
-    if-nez v0, :cond_1
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    invoke-static {v1}, Lby9;->e(Ljava/lang/Object;)Lj1j;
+    iget-object v0, p0, Lok4;->d:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Ljw3;
 
-    :cond_1
-    new-instance v0, Lgk4;
+    new-instance v1, Lve;
 
-    const/4 v1, 0x0
+    const/16 v2, 0x9
 
-    invoke-direct {v0, p0, v1}, Lgk4;-><init>(Lhk4;I)V
+    invoke-direct {v1, v2, v0}, Lve;-><init>(ILjava/lang/Object;)V
 
-    iget-object v1, p0, Lhk4;->e:Ljava/util/concurrent/Executor;
+    iget-wide v2, p0, Lok4;->b:J
 
-    invoke-static {v0, v1}, Lby9;->c(Ljava/util/concurrent/Callable;Ljava/util/concurrent/Executor;)Lj1j;
+    invoke-virtual {p1, v1, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

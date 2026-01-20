@@ -2,31 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ley0;
+
+# static fields
+.field public static final i:Ljava/lang/ThreadLocal;
 
 
 # instance fields
-.field public final a:Z
+.field public final a:Ladf;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Ljava/util/ArrayList;
+
+.field public final c:Li5;
+
+.field public final d:Lj3;
+
+.field public final e:Ltx4;
+
+.field public f:Z
+
+.field public g:F
+
+.field public h:Lzii;
 
 
 # direct methods
-.method public constructor <init>(IZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Ljava/lang/ThreadLocal;
+
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+
+    sput-object v0, Llg;->i:Ljava/lang/ThreadLocal;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ltx4;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Llg;->a:Z
+    new-instance v0, Ladf;
 
-    const-string p2, "anim://"
+    const/4 v1, 0x0
 
-    invoke-static {p1, p2}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+    invoke-direct {v0, v1}, Ladf;-><init>(I)V
 
-    move-result-object p1
+    iput-object v0, p0, Llg;->a:Ladf;
 
-    iput-object p1, p0, Llg;->b:Ljava/lang/String;
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Llg;->b:Ljava/util/ArrayList;
+
+    new-instance v0, Li5;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2, p0}, Li5;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Llg;->c:Li5;
+
+    new-instance v0, Lj3;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v2, p0}, Lj3;-><init>(ILjava/lang/Object;)V
+
+    iput-object v0, p0, Llg;->d:Lj3;
+
+    iput-boolean v1, p0, Llg;->f:Z
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Llg;->g:F
+
+    iput-object p1, p0, Llg;->e:Ltx4;
 
     return-void
 .end method
@@ -34,97 +87,32 @@
 
 # virtual methods
 .method public final a()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Llg;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-boolean v0, p0, Llg;->a:Z
+    iget-object v0, p0, Llg;->e:Ltx4;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_0
-    if-ne p0, p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    if-eqz p1, :cond_3
-
-    const-class v0, Llg;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-object v0, v0, Ltx4;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Landroid/os/Looper;
 
-    if-nez v0, :cond_2
+    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_2
-    check-cast p1, Llg;
+    if-ne v1, v0, :cond_0
 
-    iget-object v0, p0, Llg;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Llg;->b:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_3
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Llg;->a:Z
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
+    const/4 v0, 0x1
 
     return v0
 
     :cond_0
-    iget-object v0, p0, Llg;->b:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method

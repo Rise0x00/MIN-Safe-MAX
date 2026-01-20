@@ -25,7 +25,7 @@
         "getJsonObjectOrNull",
         "(Ljava/lang/String;)Lorg/json/JSONObject;",
         "json",
-        "Lybg;",
+        "Lb3h;",
         "eraseSecrets",
         "(Lorg/json/JSONObject;)V",
         "jsonArray",

@@ -4,28 +4,40 @@
 
 
 # instance fields
-.field public final a:Lysb;
+.field public final a:[I
 
-.field public final b:Z
+.field public final b:I
 
-.field public final c:J
+.field public final c:I
 
-.field public final d:J
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
 
 
 # direct methods
-.method public constructor <init>(Lysb;ZJJ)V
+.method public constructor <init>(II[IIIII)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgh4;->a:Lysb;
+    iput p1, p0, Lgh4;->b:I
 
-    iput-boolean p2, p0, Lgh4;->b:Z
+    iput-object p3, p0, Lgh4;->a:[I
 
-    iput-wide p3, p0, Lgh4;->c:J
+    iput p2, p0, Lgh4;->c:I
 
-    iput-wide p5, p0, Lgh4;->d:J
+    iput p4, p0, Lgh4;->e:I
+
+    iput p5, p0, Lgh4;->f:I
+
+    iput p6, p0, Lgh4;->g:I
+
+    iput p7, p0, Lgh4;->d:I
 
     return-void
 .end method

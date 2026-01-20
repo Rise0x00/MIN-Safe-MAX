@@ -1,51 +1,85 @@
 .class public final Lq94;
-.super Laj8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lt94;
 
 
 # instance fields
-.field public final r:Landroid/graphics/RectF;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lphe;Landroid/graphics/RectF;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0, p1}, Laj8;-><init>(Lphe;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p2, p0, Lq94;->r:Landroid/graphics/RectF;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lq94;)V
-    .locals 0
-
-    .line 3
-    invoke-direct {p0, p1}, Laj8;-><init>(Laj8;)V
-
-    .line 4
-    iget-object p1, p1, Lq94;->r:Landroid/graphics/RectF;
-
-    iput-object p1, p0, Lq94;->r:Landroid/graphics/RectF;
+    iput p1, p0, Lq94;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lq94;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lq94;
+
+    iget v1, p0, Lq94;->a:I
+
+    iget p1, p1, Lq94;->a:I
+
+    if-eq v1, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 1
 
-    new-instance v0, Lr94;
+    iget v0, p0, Lq94;->a:I
 
-    invoke-direct {v0, p0}, Lbj8;-><init>(Laj8;)V
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    iput-object p0, v0, Lr94;->I0:Lq94;
+    move-result v0
 
-    invoke-virtual {v0}, Lbj8;->invalidateSelf()V
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Seeking(progress="
+
+    const-string v1, ")"
+
+    iget v2, p0, Lq94;->a:I
+
+    invoke-static {v2, v0, v1}, Lkz1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

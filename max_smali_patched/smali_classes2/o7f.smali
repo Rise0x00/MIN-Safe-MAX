@@ -1,110 +1,89 @@
-.class public final Lo7f;
+.class public final synthetic Lo7f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lof4;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lo7f;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:Lp7f;
+.field public final synthetic b:Lq7f;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lq7f;ZI)V
+    .locals 0
 
-    new-instance v0, Lo7f;
+    iput p3, p0, Lo7f;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lo7f;->b:Lq7f;
 
-    sput-object v0, Lo7f;->a:Lo7f;
+    iput-boolean p2, p0, Lo7f;->c:Z
 
-    sget-object v0, Lp7f;->b:Lp7f;
-
-    sput-object v0, Lo7f;->b:Lp7f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lwf4;
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    sget-object v0, Lo7f;->b:Lp7f;
+    iget v0, p0, Lo7f;->a:I
 
-    return-object v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b(Ljava/lang/String;Lrf4;Landroid/os/Bundle;)Lzf4;
-    .locals 9
+    iget-object v0, p0, Lo7f;->b:Lq7f;
 
-    sget-object v0, Lo7f;->b:Lp7f;
+    iget-object v0, v0, Lq7f;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    iget-object v0, v0, Lwf4;->a:Ljava/util/LinkedHashSet;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    iget-boolean v1, p0, Lo7f;->c:Z
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setSpeakerMute(Z)V
 
     :cond_0
-    sget-object v0, Lp7f;->b:Lp7f;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_0
+    iget-object v0, p0, Lo7f;->b:Lq7f;
 
-    sget-object v0, Lp7f;->c:Lrf4;
-
-    invoke-virtual {p2, v0}, Lrf4;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, v0, Lq7f;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
     if-eqz v0, :cond_1
 
-    new-instance v1, Lzf4;
+    iget-boolean v1, p0, Lo7f;->c:Z
 
-    new-instance v7, Lko1;
-
-    const/16 v0, 0xd
-
-    invoke-direct {v7, p3, v0}, Lko1;-><init>(Landroid/os/Bundle;I)V
-
-    const/16 v8, 0x10
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    invoke-direct/range {v1 .. v8}, Lzf4;-><init>(Ljava/lang/String;Lrf4;Landroid/os/Bundle;ILxf4;Lyf4;I)V
-
-    return-object v1
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setMicrophoneMute(Z)V
 
     :cond_1
-    move-object v3, p2
+    return-void
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    :pswitch_1
+    iget-object v0, p0, Lo7f;->b:Lq7f;
 
-    const-string p2, "invalid route "
+    iget-object v0, v0, Lq7f;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    invoke-static {p2, v3}, Lnx1;->h(Ljava/lang/String;Lrf4;)Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    move-result-object p2
+    iget-boolean v1, p0, Lo7f;->c:Z
 
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lorg/webrtc/audio/AudioDeviceModule;->setNoiseSuppressorEnabled(Z)Z
 
-    throw p1
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,63 +1,70 @@
-.class public abstract Lczi;
+.class public final Lczi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lczi;
+
 
 # direct methods
-.method public static a(Landroid/widget/EdgeEffect;)F
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    new-instance v0, Lczi;
 
-    const/16 v1, 0x1f
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-lt v0, v1, :cond_0
+    sput-object v0, Lczi;->a:Lczi;
 
-    invoke-static {p0}, Lo55;->b(Landroid/widget/EdgeEffect;)F
+    new-instance v0, Lbri;
 
-    move-result p0
+    const/4 v1, 0x1
 
-    return p0
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    :cond_0
-    const/4 p0, 0x0
+    const-class v1, Lpri;
 
-    return p0
-.end method
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-.method public static b(Landroid/widget/EdgeEffect;FF)F
-    .locals 2
+    move-result-object v0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    const/4 v2, 0x2
 
-    const/16 v1, 0x1f
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    if-lt v0, v1, :cond_0
+    move-result-object v0
 
-    invoke-static {p0, p1, p2}, Lo55;->c(Landroid/widget/EdgeEffect;FF)F
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    move-result p0
+    move-result-object v0
 
-    return p0
+    const/4 v2, 0x3
 
-    :cond_0
-    invoke-static {p0, p1, p2}, Ln55;->a(Landroid/widget/EdgeEffect;FF)V
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    return p1
-.end method
+    move-result-object v0
 
-.method public static final c(Lvcg;)V
-    .locals 2
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    new-instance v0, Lctd;
+    move-result-object v0
 
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1}, Lctd;-><init>(I)V
-
-    const-class v1, Lof4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

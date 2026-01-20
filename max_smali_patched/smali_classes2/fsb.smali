@@ -2,88 +2,90 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgsb;
-
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Laxd;
+
+.field public final b:Lesb;
+
+.field public final c:Lahd;
+
+.field public final d:Ll52;
+
+.field public final e:Lia;
+
+.field public final f:Lsmi;
+
+.field public volatile g:Lz48;
+
+.field public volatile h:Lpbe;
+
+.field public i:D
+
+.field public j:J
+
+.field public final k:Legc;
+
+.field public l:D
+
+.field public m:D
+
+.field public final n:Lio8;
+
+.field public final o:Lcr0;
+
+.field public final p:Lcr0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Laxd;Lesb;Lahd;Ll52;Lia;Lsmi;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfsb;->a:Ljava/lang/String;
+    iput-object p1, p0, Lfsb;->a:Laxd;
+
+    iput-object p2, p0, Lfsb;->b:Lesb;
+
+    iput-object p3, p0, Lfsb;->c:Lahd;
+
+    iput-object p4, p0, Lfsb;->d:Ll52;
+
+    iput-object p5, p0, Lfsb;->e:Lia;
+
+    iput-object p6, p0, Lfsb;->f:Lsmi;
+
+    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+
+    iput-wide p1, p0, Lfsb;->i:D
+
+    new-instance p1, Legc;
+
+    const/4 p2, 0x7
+
+    invoke-direct {p1, p2}, Legc;-><init>(I)V
+
+    iput-object p1, p0, Lfsb;->k:Legc;
+
+    new-instance p1, Lio8;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lfsb;->n:Lio8;
+
+    new-instance p1, Lcr0;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lcr0;-><init>(I)V
+
+    iput-object p1, p0, Lfsb;->o:Lcr0;
+
+    new-instance p1, Lcr0;
+
+    invoke-direct {p1, p2}, Lcr0;-><init>(I)V
+
+    iput-object p1, p0, Lfsb;->p:Lcr0;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lfsb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lfsb;
-
-    iget-object v1, p0, Lfsb;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lfsb;->a:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lfsb;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "UserPhoto(url="
-
-    const-string v1, ")"
-
-    iget-object v2, p0, Lfsb;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

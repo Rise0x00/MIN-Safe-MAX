@@ -1,26 +1,24 @@
 .class public final Lv3c;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Ld4c;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic o:Lx3c;
 
 
 # direct methods
-.method public constructor <init>(Ld4c;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lx3c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lv3c;->X:Ld4c;
+    iput-object p1, p0, Lv3c;->o:Lx3c;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lvcb;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +38,7 @@
 
     check-cast p1, Lv3c;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lv3c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -48,56 +46,72 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lv3c;
+    new-instance p1, Lv3c;
 
-    iget-object v1, p0, Lv3c;->X:Ld4c;
+    iget-object v0, p0, Lv3c;->o:Lx3c;
 
-    invoke-direct {v0, v1, p2}, Lv3c;-><init>(Ld4c;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lv3c;-><init>(Lx3c;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lv3c;->o:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 7
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lv3c;->o:Ljava/lang/Object;
+    iget-object p1, p0, Lv3c;->o:Lx3c;
 
-    check-cast p1, Lvcb;
+    iget-object v0, p1, Lx3c;->t0:Lcm5;
 
-    iget-object v0, p1, Lvcb;->a:Ljava/lang/Object;
+    new-instance v1, Lk3c;
 
-    check-cast v0, Lt92;
+    iget-object p1, p1, Lx3c;->Y:Lspf;
 
-    iget-object p1, p1, Lvcb;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Lmr3;
+    move-result-object v2
 
-    iget-object v1, p0, Lv3c;->X:Ld4c;
+    check-cast v2, Lp3c;
 
-    iget-boolean v2, v1, Ld4c;->y0:Z
+    iget-object v2, v2, Lp3c;->c:Ljava/lang/Double;
 
-    if-nez v2, :cond_0
+    const-wide/16 v3, 0x0
 
-    iget-object v2, v1, Ld4c;->w0:La1f;
+    if-eqz v2, :cond_0
 
-    const/4 v3, 0x0
+    invoke-virtual {v2}, Ljava/lang/Double;->doubleValue()D
 
-    invoke-static {v1, v0, p1, v3}, Ld4c;->u(Ld4c;Lt92;Lmr3;Z)Lr3c;
+    move-result-wide v5
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v5, v3
+
+    :goto_0
+    invoke-virtual {p1}, Lspf;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v0, 0x0
+    check-cast p1, Lp3c;
 
-    invoke-virtual {v2, v0, p1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object p1, p1, Lp3c;->d:Ljava/lang/Double;
 
-    :cond_0
-    sget-object p1, Lybg;->a:Lybg;
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v3
+
+    :cond_1
+    invoke-direct {v1, v5, v6, v3, v4}, Lk3c;-><init>(DD)V
+
+    invoke-static {v0, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

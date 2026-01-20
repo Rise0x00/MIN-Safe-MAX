@@ -1,74 +1,74 @@
-.class public Lee5;
-.super Landroid/app/DialogFragment;
+.class public final Lee5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lde5;
 
 
 # instance fields
-.field public a:Landroid/app/Dialog;
+.field public a:Ljava/io/File;
 
-.field public b:Landroid/content/DialogInterface$OnCancelListener;
+.field public b:Ljava/io/FileInputStream;
 
-.field public c:Landroid/app/AlertDialog;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
-
-    return-void
-.end method
+.field public c:Ljava/nio/channels/FileChannel;
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
+.method public final close()V
     .locals 1
 
-    iget-object v0, p0, Lee5;->b:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object v0, p0, Lee5;->b:Ljava/io/FileInputStream;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
 
-    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
-
-    :cond_0
     return-void
 .end method
 
-.method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+.method public final f(JLjava/nio/ByteBuffer;)I
     .locals 1
 
-    iget-object p1, p0, Lee5;->a:Landroid/app/Dialog;
+    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0, p3, p1, p2}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;J)I
 
-    const/4 p1, 0x0
+    move-result p1
 
-    invoke-virtual {p0, p1}, Landroid/app/DialogFragment;->setShowsDialog(Z)V
+    return p1
+.end method
 
-    iget-object p1, p0, Lee5;->c:Landroid/app/AlertDialog;
+.method public final isOpen()Z
+    .locals 1
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
 
-    new-instance p1, Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0}, Ljava/nio/channels/spi/AbstractInterruptibleChannel;->isOpen()Z
 
-    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
+    move-result v0
 
-    move-result-object v0
+    return v0
+.end method
 
-    invoke-static {v0}, Lkui;->g(Ljava/lang/Object;)V
+.method public final read(Ljava/nio/ByteBuffer;)I
+    .locals 1
 
-    invoke-direct {p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
 
-    invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->read(Ljava/nio/ByteBuffer;)I
 
-    move-result-object p1
+    move-result p1
 
-    iput-object p1, p0, Lee5;->c:Landroid/app/AlertDialog;
+    return p1
+.end method
 
-    :cond_0
-    iget-object p1, p0, Lee5;->c:Landroid/app/AlertDialog;
+.method public final write(Ljava/nio/ByteBuffer;)I
+    .locals 1
 
-    :cond_1
-    return-object p1
+    iget-object v0, p0, Lee5;->c:Ljava/nio/channels/FileChannel;
+
+    invoke-virtual {v0, p1}, Ljava/nio/channels/FileChannel;->write(Ljava/nio/ByteBuffer;)I
+
+    move-result p1
+
+    return p1
 .end method

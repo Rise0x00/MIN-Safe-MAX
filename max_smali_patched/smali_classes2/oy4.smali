@@ -1,49 +1,21 @@
 .class public final Loy4;
-.super Lp14;
+.super Laq;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lty4;
-
-.field public Y:I
-
-.field public d:Lty4;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Loy4;
 
 
 # direct methods
-.method public constructor <init>(Lty4;Lp14;)V
-    .locals 0
-
-    iput-object p1, p0, Loy4;->X:Lty4;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Loy4;->o:Ljava/lang/Object;
+    new-instance v0, Loy4;
 
-    iget p1, p0, Loy4;->Y:I
+    invoke-direct {v0}, Laq;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Loy4;->a:Loy4;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Loy4;->Y:I
-
-    iget-object p1, p0, Loy4;->X:Lty4;
-
-    invoke-virtual {p1, p0}, Lty4;->e(Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

@@ -1,410 +1,302 @@
-.class public abstract Lqqc;
-.super Ljava/lang/Object;
+.class public final Lqqc;
+.super Lp6g;
+.source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static act_avatar_crop:I = 0x7f0d001c
 
-.field public static act_contact_avatars:I = 0x7f0d001d
+# instance fields
+.field public final synthetic X:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-.field public static act_local_medias:I = 0x7f0d001e
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static act_photo_editor:I = 0x7f0d001f
 
-.field public static act_settings:I = 0x7f0d0020
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/invite/ProfileInviteScreen;)V
+    .locals 0
 
-.field public static act_single_fragment:I = 0x7f0d0021
+    iput-object p2, p0, Lqqc;->X:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-.field public static act_tam_crop_image:I = 0x7f0d0022
+    const/4 p2, 0x2
 
-.field public static act_trim_video:I = 0x7f0d0023
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static actionbar_menu_progress:I = 0x7f0d0024
+    return-void
+.end method
 
-.field public static add_or_block_contact_panel:I = 0x7f0d0025
 
-.field public static call_notification_big:I = 0x7f0d0028
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static call_notification_big_rtl:I = 0x7f0d0029
+    check-cast p1, Lnqc;
 
-.field public static call_notification_small:I = 0x7f0d002a
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static call_notification_small_rtl:I = 0x7f0d002b
+    invoke-virtual {p0, p1, p2}, Lqqc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static chat_msg_search_result_view:I = 0x7f0d002c
+    move-result-object p1
 
-.field public static cl_extra_text_size_view:I = 0x7f0d002d
+    check-cast p1, Lqqc;
 
-.field public static cl_local_media_toolbox:I = 0x7f0d002e
+    sget-object p2, Lb3h;->a:Lb3h;
 
-.field public static cl_media_bar_preview_layout:I = 0x7f0d002f
+    invoke-virtual {p1, p2}, Lqqc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static cl_search_result_panel:I = 0x7f0d0030
+    return-object p2
+.end method
 
-.field public static cl_trim_video:I = 0x7f0d0031
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static dialog_context_menu:I = 0x7f0d0044
+    new-instance v0, Lqqc;
 
-.field public static dialog_input:I = 0x7f0d0045
+    iget-object v1, p0, Lqqc;->X:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-.field public static dialog_progress_horizontal:I = 0x7f0d0046
+    invoke-direct {v0, p2, v1}, Lqqc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/invite/ProfileInviteScreen;)V
 
-.field public static dialog_progress_with_text:I = 0x7f0d0047
+    iput-object p1, v0, Lqqc;->o:Ljava/lang/Object;
 
-.field public static dialog_with_checkbox:I = 0x7f0d0048
+    return-object v0
+.end method
 
-.field public static draft_gif_viewer_fragment:I = 0x7f0d0049
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 19
 
-.field public static fl_chat_multi_picker_call_link_buttons:I = 0x7f0d005d
+    move-object/from16 v0, p0
 
-.field public static fl_empty_search:I = 0x7f0d005e
+    iget-object v1, v0, Lqqc;->o:Ljava/lang/Object;
 
-.field public static frg_live_location_settings:I = 0x7f0d0060
+    check-cast v1, Lnqc;
 
-.field public static frg_local_gif:I = 0x7f0d0061
+    invoke-static/range {p1 .. p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static frg_local_photo:I = 0x7f0d0062
+    instance-of v2, v1, Lmqc;
 
-.field public static frg_local_video:I = 0x7f0d0063
+    sget-object v3, Lb3h;->a:Lb3h;
 
-.field public static frg_location_map:I = 0x7f0d0064
+    iget-object v4, v0, Lqqc;->X:Lone/me/profile/screens/invite/ProfileInviteScreen;
 
-.field public static frg_nearby_contacts:I = 0x7f0d0065
+    if-eqz v2, :cond_1
 
-.field public static frg_settings_base:I = 0x7f0d0066
+    check-cast v1, Lmqc;
 
-.field public static frg_tam_crop_image:I = 0x7f0d0067
+    iget-object v2, v1, Lmqc;->a:Llhg;
 
-.field public static ib_extra_actions_button:I = 0x7f0d0069
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static item_folder_filter:I = 0x7f0d006e
+    move-result-object v5
 
-.field public static item_no_sticker_sets:I = 0x7f0d0070
+    invoke-virtual {v2, v5}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-.field public static item_scheduled_messages_panel:I = 0x7f0d0071
+    move-result-object v2
 
-.field public static layout_contact_location:I = 0x7f0d0074
+    if-nez v2, :cond_0
 
-.field public static layout_frg_call_message_reply:I = 0x7f0d0075
+    goto/16 :goto_2
 
-.field public static layout_member_menu_radio:I = 0x7f0d0077
+    :cond_0
+    new-instance v5, Ldjb;
 
-.field public static layout_message_link:I = 0x7f0d0078
+    invoke-direct {v5, v4}, Ldjb;-><init>(Lone/me/sdk/arch/Widget;)V
 
-.field public static layout_quick_camera_api_view:I = 0x7f0d007a
+    new-instance v4, Lrjb;
 
-.field public static layout_search_view:I = 0x7f0d007c
+    iget v1, v1, Lmqc;->b:I
 
-.field public static layout_send_location:I = 0x7f0d007d
+    invoke-direct {v4, v1}, Lrjb;-><init>(I)V
 
-.field public static ll_call_grid:I = 0x7f0d007e
+    invoke-virtual {v5, v4}, Ldjb;->e(Lvjb;)V
 
-.field public static ll_contact:I = 0x7f0d007f
+    invoke-virtual {v5, v2}, Ldjb;->h(Ljava/lang/CharSequence;)V
 
-.field public static ll_full_renderer:I = 0x7f0d0080
+    invoke-virtual {v5}, Ldjb;->i()Lcjb;
 
-.field public static ll_header_nearby_separetor:I = 0x7f0d0081
+    return-object v3
 
-.field public static ll_hearer_all_contacts:I = 0x7f0d0082
+    :cond_1
+    instance-of v2, v1, Ljqc;
 
-.field public static ll_media_bar_view_create_scroll:I = 0x7f0d0084
+    if-eqz v2, :cond_2
 
-.field public static ll_pinned_msg:I = 0x7f0d0085
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-.field public static ll_pip_indicators:I = 0x7f0d0086
+    move-result-object v2
 
-.field public static ll_server_search_progress:I = 0x7f0d0087
+    check-cast v1, Ljqc;
 
-.field public static ll_stickers_progress:I = 0x7f0d0088
+    iget-object v1, v1, Ljqc;->a:Ljava/lang/String;
 
-.field public static local_media_progress_background:I = 0x7f0d0089
+    invoke-static {v2, v1}, Lnf3;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-.field public static local_media_progressbar:I = 0x7f0d008a
+    return-object v3
 
-.field public static lw_chat_multi_picker_create_chat:I = 0x7f0d008b
+    :cond_2
+    instance-of v2, v1, Llqc;
 
-.field public static member_menu_content:I = 0x7f0d00a7
+    const/4 v5, 0x1
 
-.field public static menu_chat_avatar:I = 0x7f0d00a8
+    const/4 v6, 0x0
 
-.field public static menu_constructor:I = 0x7f0d00a9
+    if-eqz v2, :cond_3
 
-.field public static popup_suggest_name_picker:I = 0x7f0d00f5
+    invoke-static {v5}, Lokj;->a(I)Lx74;
 
-.field public static row_attach_bar__media:I = 0x7f0d0107
+    move-result-object v2
 
-.field public static row_background_select:I = 0x7f0d0108
+    check-cast v1, Llqc;
 
-.field public static row_bot_command:I = 0x7f0d0109
+    iget-object v1, v1, Llqc;->a:Ljava/util/List;
 
-.field public static row_call_member:I = 0x7f0d010a
+    invoke-interface {v2, v1}, Lx74;->o(Ljava/util/Collection;)Lx74;
 
-.field public static row_call_rate_item:I = 0x7f0d010b
+    move-result-object v1
 
-.field public static row_channel_people:I = 0x7f0d010c
+    iget-object v2, v4, Lone/me/profile/screens/invite/ProfileInviteScreen;->o:Ljld;
 
-.field public static row_channels_search_promo:I = 0x7f0d010d
+    sget-object v5, Lone/me/profile/screens/invite/ProfileInviteScreen;->X:[Lz28;
 
-.field public static row_chat_extra_actions:I = 0x7f0d010e
+    aget-object v5, v5, v6
 
-.field public static row_chat_location:I = 0x7f0d010f
+    invoke-interface {v2, v4, v5}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-.field public static row_chat_picker:I = 0x7f0d0110
+    move-result-object v2
 
-.field public static row_chats_folder:I = 0x7f0d0111
+    check-cast v2, Landroid/widget/ImageView;
 
-.field public static row_chats_folder_more:I = 0x7f0d0112
+    invoke-interface {v1, v2}, Lx74;->w(Landroid/view/View;)Lx74;
 
-.field public static row_common_chat:I = 0x7f0d0113
+    move-result-object v1
 
-.field public static row_common_chat_empty:I = 0x7f0d0114
+    invoke-interface {v1}, Lx74;->build()Ly74;
 
-.field public static row_common_chats_title:I = 0x7f0d0115
+    move-result-object v1
 
-.field public static row_constructor:I = 0x7f0d0116
+    invoke-interface {v1, v4}, Ly74;->v(Lone/me/sdk/arch/Widget;)V
 
-.field public static row_contact_avatar_left:I = 0x7f0d0117
+    return-object v3
 
-.field public static row_contact_black_list:I = 0x7f0d0118
+    :cond_3
+    instance-of v2, v1, Lkqc;
 
-.field public static row_contact_call:I = 0x7f0d0119
+    if-eqz v2, :cond_8
 
-.field public static row_contact_divider:I = 0x7f0d011a
+    sget-object v2, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0:[Lz28;
 
-.field public static row_contact_header_alphabet:I = 0x7f0d011b
+    check-cast v1, Lkqc;
 
-.field public static row_contact_header_section_with_dot:I = 0x7f0d011c
+    iget-object v2, v1, Lkqc;->a:Llhg;
 
-.field public static row_contact_location:I = 0x7f0d011d
+    const/4 v7, 0x6
 
-.field public static row_contact_ok_subscribe:I = 0x7f0d011e
+    const/4 v8, 0x0
 
-.field public static row_contact_phonebook:I = 0x7f0d011f
+    invoke-static {v2, v8, v8, v7}, Lqjj;->a(Lqhg;Landroid/os/Bundle;Llce;I)Lbu3;
 
-.field public static row_contact_picker:I = 0x7f0d0120
+    move-result-object v11
 
-.field public static row_contact_promo:I = 0x7f0d0121
+    iget-object v2, v1, Lkqc;->b:Llhg;
 
-.field public static row_contact_promo_all:I = 0x7f0d0122
+    invoke-virtual {v11, v2}, Lbu3;->f(Lqhg;)V
 
-.field public static row_contact_search:I = 0x7f0d0123
+    iget-object v1, v1, Lkqc;->c:Ljava/util/List;
 
-.field public static row_context_menu_action:I = 0x7f0d0124
+    new-instance v9, Ldt2;
 
-.field public static row_context_menu_list_action:I = 0x7f0d0125
+    const/16 v15, 0x8
 
-.field public static row_divider:I = 0x7f0d0126
+    const/16 v16, 0xb
 
-.field public static row_folder:I = 0x7f0d0127
+    const/4 v10, 0x1
 
-.field public static row_folder_chat:I = 0x7f0d0128
+    const-class v12, Lbu3;
 
-.field public static row_folder_chat_button:I = 0x7f0d0129
+    const-string v13, "addButton"
 
-.field public static row_folder_picker:I = 0x7f0d012a
+    const-string v14, "addButton([Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Button;)Lone/me/sdk/bottomsheet/ConfirmationBottomSheet$Builder;"
 
-.field public static row_folder_popup:I = 0x7f0d012b
+    invoke-direct/range {v9 .. v16}, Ldt2;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-.field public static row_gallery_camera:I = 0x7f0d012c
+    new-instance v2, Lh4;
 
-.field public static row_gallery_media:I = 0x7f0d012d
+    const/16 v7, 0xf
 
-.field public static row_gallery_media_check_button_layout:I = 0x7f0d012e
+    invoke-direct {v2, v7, v9}, Lh4;-><init>(ILjava/lang/Object;)V
 
-.field public static row_language:I = 0x7f0d012f
+    invoke-interface {v1, v2}, Ljava/lang/Iterable;->forEach(Ljava/util/function/Consumer;)V
 
-.field public static row_list_extra_action:I = 0x7f0d0130
+    invoke-virtual {v11}, Lbu3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
-.field public static row_live_location_debug_event:I = 0x7f0d0131
+    move-result-object v13
 
-.field public static row_local_media_photo_album:I = 0x7f0d0132
+    invoke-virtual {v13, v4}, Lone/me/sdk/arch/Widget;->setTargetController(La94;)V
 
-.field public static row_log_entry:I = 0x7f0d0133
+    :goto_0
+    invoke-virtual {v4}, La94;->getParentController()La94;
 
-.field public static row_main_setting:I = 0x7f0d0134
+    move-result-object v1
 
-.field public static row_main_setting_checkbox:I = 0x7f0d0135
+    if-eqz v1, :cond_4
 
-.field public static row_main_setting_separator:I = 0x7f0d0136
+    invoke-virtual {v4}, La94;->getParentController()La94;
 
-.field public static row_media_bar_extra_actions:I = 0x7f0d0137
+    move-result-object v4
 
-.field public static row_media_bar_selected:I = 0x7f0d0138
+    goto :goto_0
 
-.field public static row_message_control:I = 0x7f0d0139
+    :cond_4
+    instance-of v1, v4, Lc5e;
 
-.field public static row_message_control__tv:I = 0x7f0d013a
+    if-eqz v1, :cond_5
 
-.field public static row_message_control_with_action:I = 0x7f0d013b
+    check-cast v4, Lc5e;
 
-.field public static row_message_date:I = 0x7f0d013c
+    goto :goto_1
 
-.field public static row_message_new_divider:I = 0x7f0d013d
+    :cond_5
+    move-object v4, v8
 
-.field public static row_participant:I = 0x7f0d013e
+    :goto_1
+    if-eqz v4, :cond_6
 
-.field public static row_phone_picker:I = 0x7f0d013f
+    check-cast v4, Lone/me/android/root/RootController;
 
-.field public static row_profile:I = 0x7f0d0140
+    invoke-virtual {v4}, Lone/me/android/root/RootController;->F0()Lw4e;
 
-.field public static row_profile_contact_name_and_type:I = 0x7f0d0141
+    move-result-object v8
 
-.field public static row_profile_info__descr:I = 0x7f0d0142
+    :cond_6
+    if-eqz v8, :cond_7
 
-.field public static row_profile_info__link:I = 0x7f0d0143
+    new-instance v12, Lz4e;
 
-.field public static row_profile_live_location:I = 0x7f0d0144
+    const/16 v17, 0x0
 
-.field public static row_profile_scheduled_messages:I = 0x7f0d0145
+    const/16 v18, -0x1
 
-.field public static row_profile_setting:I = 0x7f0d0146
+    const/4 v14, 0x0
 
-.field public static row_profile_setting_notifications:I = 0x7f0d0147
+    const/4 v15, 0x0
 
-.field public static row_promo:I = 0x7f0d0148
+    const/16 v16, 0x0
 
-.field public static row_promo_content:I = 0x7f0d0149
+    invoke-direct/range {v12 .. v18}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
 
-.field public static row_search_contact:I = 0x7f0d014a
+    const-string v1, "BottomSheetWidget"
 
-.field public static row_selected_contact:I = 0x7f0d014b
+    invoke-static {v6, v12, v5, v1}, Lt02;->s(ZLz4e;ZLjava/lang/String;)V
 
-.field public static row_setting:I = 0x7f0d014c
+    invoke-virtual {v8, v12}, Lw4e;->H(Lz4e;)V
 
-.field public static row_setting_brightness:I = 0x7f0d014d
+    :cond_7
+    :goto_2
+    return-object v3
 
-.field public static row_setting_checkbox:I = 0x7f0d014e
+    :cond_8
+    new-instance v1, Lkotlin/NoWhenBranchMatchedException;
 
-.field public static row_setting_contact:I = 0x7f0d014f
+    invoke-direct {v1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-.field public static row_setting_header:I = 0x7f0d0150
-
-.field public static row_setting_led:I = 0x7f0d0151
-
-.field public static row_setting_online:I = 0x7f0d0152
-
-.field public static row_setting_progress:I = 0x7f0d0153
-
-.field public static row_setting_text:I = 0x7f0d0154
-
-.field public static row_setting_warning:I = 0x7f0d0155
-
-.field public static row_settings_folder:I = 0x7f0d0156
-
-.field public static row_settings_folders_new_folder:I = 0x7f0d0157
-
-.field public static row_share_preview:I = 0x7f0d0158
-
-.field public static row_sticker_section_footer:I = 0x7f0d0159
-
-.field public static row_sticker_section_header:I = 0x7f0d015a
-
-.field public static row_sticker_set:I = 0x7f0d015b
-
-.field public static row_sticker_set_showcase:I = 0x7f0d015c
-
-.field public static row_suggest:I = 0x7f0d015d
-
-.field public static row_suggests_search_contacts:I = 0x7f0d015e
-
-.field public static row_text_one_line:I = 0x7f0d015f
-
-.field public static secret_mode_view:I = 0x7f0d0161
-
-.field public static toolbar:I = 0x7f0d0169
-
-.field public static toolbar_calls_select_options:I = 0x7f0d016a
-
-.field public static toolbar_chats_select_options:I = 0x7f0d016b
-
-.field public static toolbar_constructor:I = 0x7f0d016c
-
-.field public static toolbar_popup:I = 0x7f0d016d
-
-.field public static toolbar_progress:I = 0x7f0d016e
-
-.field public static toolbar_spinner:I = 0x7f0d016f
-
-.field public static toolbar_with_icon:I = 0x7f0d0170
-
-.field public static unknown_person_view:I = 0x7f0d0171
-
-.field public static view_audio_listen:I = 0x7f0d0172
-
-.field public static view_audio_record:I = 0x7f0d0173
-
-.field public static view_auto_play_video_player:I = 0x7f0d0174
-
-.field public static view_call_controls:I = 0x7f0d0175
-
-.field public static view_call_debug:I = 0x7f0d0176
-
-.field public static view_call_link_created:I = 0x7f0d0177
-
-.field public static view_call_rate_controls:I = 0x7f0d0178
-
-.field public static view_call_renderer:I = 0x7f0d0179
-
-.field public static view_channel_forward:I = 0x7f0d017a
-
-.field public static view_channel_message_status:I = 0x7f0d017b
-
-.field public static view_constructor_video_player:I = 0x7f0d017c
-
-.field public static view_context_menu:I = 0x7f0d017d
-
-.field public static view_failed_call_controls:I = 0x7f0d017e
-
-.field public static view_finished_call_controls:I = 0x7f0d017f
-
-.field public static view_floating_video_trash:I = 0x7f0d0180
-
-.field public static view_full_screen_video_player:I = 0x7f0d0181
-
-.field public static view_incoming_call_controls:I = 0x7f0d0182
-
-.field public static view_list_extra_actions:I = 0x7f0d0183
-
-.field public static view_live_location_panel:I = 0x7f0d0184
-
-.field public static view_media_permissions:I = 0x7f0d0186
-
-.field public static view_message_compose:I = 0x7f0d0187
-
-.field public static view_message_deleted:I = 0x7f0d0188
-
-.field public static view_message_forward:I = 0x7f0d0189
-
-.field public static view_message_link:I = 0x7f0d018a
-
-.field public static view_messages:I = 0x7f0d018b
-
-.field public static view_mini_player:I = 0x7f0d018c
-
-.field public static view_pinned_message:I = 0x7f0d018d
-
-.field public static view_profile_description:I = 0x7f0d018e
-
-.field public static view_profile_top_part:I = 0x7f0d018f
-
-.field public static view_raw_video_player:I = 0x7f0d0190
-
-.field public static view_reply_share_attach:I = 0x7f0d0191
-
-.field public static view_share_preview:I = 0x7f0d0192
-
-.field public static view_small_video_player:I = 0x7f0d0193
-
-.field public static view_stickers:I = 0x7f0d0194
-
-.field public static view_stickers_grid:I = 0x7f0d0195
-
-.field public static view_suggests:I = 0x7f0d0196
-
-.field public static view_top_call_controls:I = 0x7f0d0197
-
-.field public static view_video_player:I = 0x7f0d0198
-
-.field public static view_video_player_controls:I = 0x7f0d0199
-
-.field public static view_video_player_seekbar_preview:I = 0x7f0d019a
+    throw v1
+.end method

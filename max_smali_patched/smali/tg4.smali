@@ -1,68 +1,32 @@
-.class public final synthetic Ltg4;
+.class public interface abstract Ltg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ld38;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lnd;
-
-.field public final synthetic c:La60;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lnd;La60;I)V
+# virtual methods
+.method public C(Lpj6;)Lpj6;
     .locals 0
 
-    iput p3, p0, Ltg4;->a:I
+    return-object p1
+.end method
 
-    iput-object p1, p0, Ltg4;->b:Lnd;
-
-    iput-object p2, p0, Ltg4;->c:La60;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public j(Lsna;)V
+    .locals 0
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Ltg4;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ltg4;->c:La60;
-
-    check-cast p1, Lod;
-
-    iget-object v1, p0, Ltg4;->b:Lnd;
-
-    invoke-interface {p1, v1, v0}, Lod;->V(Lnd;La60;)V
+.method public m(Z)V
+    .locals 0
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ltg4;->c:La60;
-
-    check-cast p1, Lod;
-
-    iget-object v1, p0, Ltg4;->b:Lnd;
-
-    invoke-interface {p1, v1, v0}, Lod;->p0(Lnd;La60;)V
+.method public n()V
+    .locals 0
 
     return-void
+.end method
 
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract t(Ldg8;Lah4;Le9g;I[ILar5;IJZLjava/util/ArrayList;Lfcc;Lysg;Lkcc;)Lug4;
 .end method

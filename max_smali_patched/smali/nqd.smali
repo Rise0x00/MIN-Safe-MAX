@@ -2,207 +2,276 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll97;
-
 
 # instance fields
-.field public final a:Ll97;
+.field public final a:Llhg;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lqhg;
 
-.field public c:Z
+.field public final c:Lmqd;
 
-.field public d:Lky1;
+.field public final d:Lmqd;
+
+.field public final e:Lphg;
+
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(Ll97;)V
+.method public constructor <init>(Llhg;Llhg;Lmqd;Lmqd;Lphg;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnqd;->a:Ll97;
+    iput-object p1, p0, Lnqd;->a:Llhg;
 
-    new-instance p1, Ljava/lang/Object;
+    iput-object p2, p0, Lnqd;->b:Lqhg;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lnqd;->c:Lmqd;
 
-    iput-object p1, p0, Lnqd;->b:Ljava/lang/Object;
+    iput-object p4, p0, Lnqd;->d:Lmqd;
+
+    iput-object p5, p0, Lnqd;->e:Lphg;
+
+    iput-boolean p6, p0, Lnqd;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLky1;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lnqd;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    const/4 v1, 0x1
-
-    :try_start_0
-    iput-boolean v1, p0, Lnqd;->c:Z
-
-    iput-object p3, p0, Lnqd;->d:Lky1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    iget-object p3, p0, Lnqd;->a:Ll97;
-
-    if-eqz p3, :cond_0
-
-    new-instance v0, Lky1;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Lky1;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p3, p1, p2, v0}, Ll97;->a(JLky1;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    const-string p1, "ScreenFlashWrapper"
-
-    const-string p2, "apply: screenFlash is null!"
-
-    invoke-static {p1, p2}, Lafi;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lnqd;->c()V
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit v0
-
-    throw p1
-.end method
-
-.method public final b()V
-    .locals 3
-
-    iget-object v0, p0, Lnqd;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lnqd;->c:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lnqd;->a:Ll97;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ll97;->clear()V
-
-    sget-object v1, Lybg;->a:Lybg;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_2
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-nez v1, :cond_2
-
-    const-string v1, "ScreenFlashWrapper"
-
-    const-string v2, "completePendingScreenFlashClear: screenFlash is null!"
-
-    invoke-static {v1, v2}, Lafi;->c(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    instance-of v0, p1, Lnqd;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
     :cond_1
-    const-string v1, "ScreenFlashWrapper"
+    check-cast p1, Lnqd;
 
-    const-string v2, "completePendingScreenFlashClear: none pending!"
+    iget-object v0, p0, Lnqd;->a:Llhg;
 
-    invoke-static {v1, v2}, Lafi;->g(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p1, Lnqd;->a:Llhg;
+
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
 
     :cond_2
-    :goto_1
-    const/4 v1, 0x0
+    iget-object v0, p0, Lnqd;->b:Lqhg;
 
-    iput-boolean v1, p0, Lnqd;->c:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v1, p1, Lnqd;->b:Lqhg;
 
-    monitor-exit v0
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v0
 
-    :goto_2
-    monitor-exit v0
-
-    throw v1
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lnqd;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lnqd;->d:Lky1;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lky1;->a()V
+    if-nez v0, :cond_3
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v1
+    :cond_3
+    iget-object v0, p0, Lnqd;->c:Lmqd;
 
-    goto :goto_1
+    iget-object v1, p1, Lnqd;->c:Lmqd;
 
-    :cond_0
+    invoke-virtual {v0, v1}, Lmqd;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lnqd;->d:Lmqd;
+
+    iget-object v1, p1, Lnqd;->d:Lmqd;
+
+    invoke-virtual {v0, v1}, Lmqd;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lnqd;->e:Lphg;
+
+    iget-object v1, p1, Lnqd;->e:Lphg;
+
+    invoke-virtual {v0, v1}, Lphg;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-boolean v0, p0, Lnqd;->f:Z
+
+    iget-boolean p1, p1, Lnqd;->f:Z
+
+    if-eq v0, p1, :cond_7
+
     :goto_0
-    const/4 v1, 0x0
+    const/4 p1, 0x0
 
-    iput-object v1, p0, Lnqd;->d:Lky1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return p1
 
-    monitor-exit v0
-
-    return-void
-
+    :cond_7
     :goto_1
-    monitor-exit v0
+    const/4 p1, 0x1
 
-    throw v1
+    return p1
 .end method
 
-.method public final clear()V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    invoke-virtual {p0}, Lnqd;->b()V
+    iget-object v0, p0, Lnqd;->a:Llhg;
 
-    return-void
+    iget v0, v0, Llhg;->c:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnqd;->b:Lqhg;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnqd;->c:Lmqd;
+
+    invoke-virtual {v1}, Lmqd;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Lnqd;->d:Lmqd;
+
+    invoke-virtual {v0}, Lmqd;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lnqd;->e:Lphg;
+
+    invoke-virtual {v1}, Lphg;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean v0, p0, Lnqd;->f:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ExitWithRecordState(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lnqd;->a:Llhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", subtitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnqd;->b:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", negativeButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnqd;->c:Lmqd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", positiveButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnqd;->d:Lmqd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recordTitle="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lnqd;->e:Lphg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", canRemove="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lnqd;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

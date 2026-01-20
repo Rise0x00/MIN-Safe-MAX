@@ -3,74 +3,88 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ly97;
+.implements Lj88;
 
 
 # instance fields
-.field public final a:Lfz1;
+.field public final synthetic a:I
+
+.field public final b:Ll88;
 
 
 # direct methods
-.method public constructor <init>(Lfz1;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgz1;->a:I
+
+    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgz1;->a:Lfz1;
+    .line 6
+    new-instance v0, Ll88;
+
+    invoke-direct {v0, p0}, Ll88;-><init>(Lj88;)V
+
+    iput-object v0, p0, Lgz1;->b:Ll88;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/sdk/arch/Widget;)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lgz1;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    new-instance v0, Ll88;
+
+    invoke-direct {v0, p0}, Ll88;-><init>(Lj88;)V
+
+    iput-object v0, p0, Lgz1;->b:Ll88;
+
+    .line 3
+    new-instance v0, Lk94;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lk94;-><init>(ILjava/lang/Object;)V
+
+    .line 4
+    invoke-virtual {p1, v0}, La94;->addLifecycleListener(Ly84;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final p()Ll88;
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lgz1;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b(Lbh5;)V
-    .locals 1
-
-    iget-object v0, p0, Lgz1;->a:Lfz1;
-
-    invoke-interface {v0, p1}, Lfz1;->b(Lbh5;)V
-
-    return-void
-.end method
-
-.method public final c()Lykf;
-    .locals 1
-
-    iget-object v0, p0, Lgz1;->a:Lfz1;
-
-    invoke-interface {v0}, Lfz1;->c()Lykf;
-
-    move-result-object v0
+    iget-object v0, p0, Lgz1;->b:Ll88;
 
     return-object v0
-.end method
 
-.method public final d()Landroid/graphics/Matrix;
-    .locals 1
-
-    new-instance v0, Landroid/graphics/Matrix;
-
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+    :pswitch_0
+    iget-object v0, p0, Lgz1;->b:Ll88;
 
     return-object v0
-.end method
 
-.method public final getTimestamp()J
-    .locals 2
+    nop
 
-    iget-object v0, p0, Lgz1;->a:Lfz1;
-
-    invoke-interface {v0}, Lfz1;->getTimestamp()J
-
-    move-result-wide v0
-
-    return-wide v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

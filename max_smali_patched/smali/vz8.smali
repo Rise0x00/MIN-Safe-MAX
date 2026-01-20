@@ -1,58 +1,34 @@
-.class public final synthetic Lvz8;
+.class public interface abstract Lvz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyz8;
 
-
-# instance fields
-.field public final synthetic a:Lw7e;
-
-.field public final synthetic b:Z
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:Lgz8;
+# static fields
+.field public static final O:Lv1j;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw7e;ZZLgz8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lv1j;
 
-    iput-object p1, p0, Lvz8;->a:Lw7e;
+    const/16 v1, 0x18
 
-    iput-boolean p2, p0, Lvz8;->b:Z
+    invoke-direct {v0, v1}, Lv1j;-><init>(I)V
 
-    iput-boolean p3, p0, Lvz8;->c:Z
-
-    iput-object p4, p0, Lvz8;->d:Lgz8;
+    sput-object v0, Lvz8;->O:Lv1j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfz8;I)V
-    .locals 7
+.method public abstract a()J
+.end method
 
-    iget-object v0, p0, Lvz8;->d:Lgz8;
+.method public abstract b()J
+.end method
 
-    iget v6, v0, Lgz8;->c:I
-
-    iget-object v3, p0, Lvz8;->a:Lw7e;
-
-    iget-boolean v4, p0, Lvz8;->b:Z
-
-    iget-boolean v5, p0, Lvz8;->c:Z
-
-    move-object v1, p1
-
-    move v2, p2
-
-    invoke-interface/range {v1 .. v6}, Lfz8;->k(ILw7e;ZZI)V
-
-    return-void
+.method public abstract next()Z
 .end method

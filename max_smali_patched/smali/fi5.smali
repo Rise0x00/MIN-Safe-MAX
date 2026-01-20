@@ -2,109 +2,34 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsad;
-
 
 # instance fields
-.field public final a:Li22;
+.field public final synthetic a:I
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Lw48;
-
-.field public final e:I
-
-.field public final f:Leu;
-
-.field public final g:Landroid/media/metrics/LogSessionId;
+.field public final synthetic b:Llh7;
 
 
 # direct methods
-.method public constructor <init>(ZZLw48;ILeu;Landroid/media/metrics/LogSessionId;)V
+.method public synthetic constructor <init>(Llh7;I)V
     .locals 0
 
+    iput p2, p0, Lfi5;->a:I
+
+    iput-object p1, p0, Lfi5;->b:Llh7;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lfi5;->b:Z
-
-    iput-boolean p2, p0, Lfi5;->c:Z
-
-    iput-object p3, p0, Lfi5;->d:Lw48;
-
-    iput p4, p0, Lfi5;->e:I
-
-    iput-object p5, p0, Lfi5;->f:Leu;
-
-    iput-object p6, p0, Lfi5;->g:Landroid/media/metrics/LogSessionId;
-
-    new-instance p1, Li22;
-
-    const/16 p2, 0x11
-
-    invoke-direct {p1, p2}, Li22;-><init>(I)V
-
-    iput-object p1, p0, Lfi5;->a:Li22;
 
     return-void
 .end method
 
+.method private final a(Lb01;)V
+    .locals 0
 
-# virtual methods
-.method public final b(Landroid/os/Handler;Lti5;Lti5;Lti5;Lti5;)[Ltk0;
-    .locals 6
+    return-void
+.end method
 
-    new-instance p1, Ljava/util/ArrayList;
+.method private final b(Lb01;)V
+    .locals 0
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-boolean p2, p0, Lfi5;->b:Z
-
-    iget-object v4, p0, Lfi5;->f:Leu;
-
-    iget-object v1, p0, Lfi5;->d:Lw48;
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Lqh5;
-
-    iget-object p3, p0, Lfi5;->a:Li22;
-
-    iget-object p4, p0, Lfi5;->g:Landroid/media/metrics/LogSessionId;
-
-    invoke-direct {p2, v1, p3, v4, p4}, Lqh5;-><init>(Lw48;Li22;Leu;Landroid/media/metrics/LogSessionId;)V
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    iget-boolean p2, p0, Lfi5;->c:Z
-
-    if-nez p2, :cond_1
-
-    new-instance v0, Lsh5;
-
-    iget-object v3, p0, Lfi5;->a:Li22;
-
-    iget-object v5, p0, Lfi5;->g:Landroid/media/metrics/LogSessionId;
-
-    iget v2, p0, Lfi5;->e:I
-
-    invoke-direct/range {v0 .. v5}, Lsh5;-><init>(Lw48;ILi22;Leu;Landroid/media/metrics/LogSessionId;)V
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    const/4 p2, 0x0
-
-    new-array p2, p2, [Ltk0;
-
-    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, [Ltk0;
-
-    return-object p1
+    return-void
 .end method

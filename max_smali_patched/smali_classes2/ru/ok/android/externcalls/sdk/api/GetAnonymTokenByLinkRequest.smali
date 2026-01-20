@@ -1,9 +1,9 @@
 .class public Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;
-.super Li0;
+.super Lf0;
 .source "SourceFile"
 
 # interfaces
-.implements Lfm;
+.implements Lam;
 
 
 # annotations
@@ -15,17 +15,17 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Li0;",
-        "Lfm;"
+        "Lf0;",
+        "Lam;"
     }
 .end annotation
 
 
 # static fields
-.field private static final PARSER:Lar7;
+.field private static final PARSER:Lq18;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lar7;"
+            "Lq18;"
         }
     .end annotation
 .end field
@@ -41,13 +41,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lvo5;
+    new-instance v0, Ldx5;
 
-    const/16 v1, 0x18
+    const/16 v1, 0xe
 
-    invoke-direct {v0, v1}, Lvo5;-><init>(I)V
+    invoke-direct {v0, v1}, Ldx5;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lar7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lq18;
 
     return-void
 .end method
@@ -78,10 +78,10 @@
     return-void
 .end method
 
-.method public static synthetic b(Lgr7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
+.method public static synthetic b(Lz18;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->lambda$static$0(Lgr7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->lambda$static$0(Lz18;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
 
     move-result-object p0
 
@@ -91,7 +91,9 @@
 .method public static isAuthRequired(Lru/ok/android/api/core/ApiInvocationException;)Z
     .locals 1
 
-    iget p0, p0, Lru/ok/android/api/core/ApiInvocationException;->a:I
+    invoke-virtual {p0}, Lru/ok/android/api/core/ApiInvocationException;->getErrorCode()I
+
+    move-result p0
 
     const/16 v0, 0x1c9
 
@@ -107,7 +109,7 @@
     return p0
 .end method
 
-.method private static synthetic lambda$static$0(Lgr7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
+.method private static synthetic lambda$static$0(Lz18;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -116,20 +118,20 @@
         }
     .end annotation
 
-    invoke-interface {p0}, Lgr7;->p()V
+    invoke-interface {p0}, Lz18;->q()V
 
     const/4 v0, 0x0
 
     move-object v1, v0
 
     :goto_0
-    invoke-interface {p0}, Lgr7;->hasNext()Z
+    invoke-interface {p0}, Lz18;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-interface {p0}, Lgr7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lz18;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -151,26 +153,26 @@
 
     if-nez v2, :cond_0
 
-    invoke-interface {p0}, Lgr7;->v()V
+    invoke-interface {p0}, Lz18;->B()V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Lgr7;->B()Ljava/lang/String;
+    invoke-interface {p0}, Lz18;->P()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {p0}, Lgr7;->B()Ljava/lang/String;
+    invoke-interface {p0}, Lz18;->P()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_2
-    invoke-interface {p0}, Lgr7;->n()V
+    invoke-interface {p0}, Lz18;->n()V
 
     new-instance p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
 
@@ -181,32 +183,32 @@
 
 
 # virtual methods
-.method public bridge synthetic getConfigExtractor()Lbm;
+.method public bridge synthetic getConfigExtractor()Lwl;
     .locals 1
 
-    sget-object v0, Lbm;->f:Ly1j;
+    sget-object v0, Lwl;->f:Lv1j;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lar7;
+.method public bridge synthetic getFailParser()Lq18;
     .locals 1
 
-    sget-object v0, Low3;->a:Low3;
+    sget-object v0, Lvna;->c:Lvna;
 
     return-object v0
 .end method
 
-.method public getOkParser()Lar7;
+.method public getOkParser()Lq18;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lar7;"
+            "Lq18;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lar7;
+    sget-object v0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lq18;
 
     return-object v0
 .end method
@@ -219,18 +221,18 @@
     return v0
 .end method
 
-.method public bridge synthetic getScope()Lum;
+.method public bridge synthetic getScope()Lqm;
     .locals 1
 
-    sget-object v0, Lum;->d:Lum;
+    sget-object v0, Lqm;->d:Lqm;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lvm;
+.method public bridge synthetic getScopeAfter()Lrm;
     .locals 1
 
-    sget-object v0, Lvm;->a:Lvm;
+    sget-object v0, Lrm;->a:Lrm;
 
     return-object v0
 .end method
@@ -240,27 +242,27 @@
 
     const-string v0, "vchat.getAnonymTokenByLink"
 
-    invoke-static {v0}, Ldn;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lzm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public populateParams(Lom;)V
+.method public populateParams(Ljm;)V
     .locals 2
 
     const-string v0, "joinLink"
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->joinLink:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lom;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "anonymName"
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->name:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lom;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Ljm;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

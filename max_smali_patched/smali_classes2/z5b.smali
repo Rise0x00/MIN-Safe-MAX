@@ -1,171 +1,244 @@
 .class public final Lz5b;
-.super Ljava/lang/Thread;
+.super Ld3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public b:Ljava/lang/Object;
+.field public final synthetic d:Lone/me/sdk/uikit/common/button/OneMeButton;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;I)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Lz5b;->a:I
+    iput p2, p0, Lz5b;->c:I
 
-    iput-object p2, p0, Lz5b;->b:Ljava/lang/Object;
+    packed-switch p2, :pswitch_data_0
 
-    const-string p1, "ExoPlayer:SimpleDecoder"
+    iput-object p1, p0, Lz5b;->d:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    const/16 p1, 0xd
 
-    return-void
-.end method
+    sget-object p2, Ly5b;->b:Ly5b;
 
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x0
-
-    iput v0, p0, Lz5b;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Loi6;)V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    iput v0, p0, Lz5b;->a:I
-
-    iput-object p1, p0, Lz5b;->b:Ljava/lang/Object;
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    iget v0, p0, Lz5b;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lz5b;->b:Ljava/lang/Object;
-
-    check-cast v0, Loi6;
-
-    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lz5b;->b:Ljava/lang/Object;
+    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    check-cast v0, Lupe;
+    iput-object p1, p0, Lz5b;->d:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    :goto_0
-    :try_start_0
-    invoke-virtual {v0}, Lupe;->j()Z
+    const/16 p1, 0xd
 
-    move-result v1
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
 
-    if-eqz v1, :cond_0
+    return-void
+
+    :pswitch_1
+    iput-object p1, p0, Lz5b;->d:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/16 p1, 0xd
+
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_2
+    iput-object p1, p0, Lz5b;->d:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/16 p1, 0xd
+
+    sget-object p2, Lv5b;->a:Lv5b;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_3
+    iput-object p1, p0, Lz5b;->d:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/16 p1, 0xd
+
+    sget-object p2, Lx5b;->a:Lx5b;
+
+    invoke-direct {p0, p1, p2}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
+
+    iget v0, p0, Lz5b;->c:I
+
+    iget-object v1, p0, Lz5b;->d:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, v1, Lone/me/sdk/uikit/common/button/OneMeButton;->t0:Ljava/lang/Object;
+
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/view/View;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
+    sget p1, Lw5e;->a:I
+
+    invoke-static {v1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->a(Lone/me/sdk/uikit/common/button/OneMeButton;Z)V
 
     goto :goto_0
 
     :cond_0
-    return-void
+    invoke-interface {v0}, Lo58;->e()Z
 
-    :catch_0
-    move-exception v0
+    move-result p1
 
-    new-instance v1, Ljava/lang/IllegalStateException;
+    if-eqz p1, :cond_1
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    throw v1
+    move-result-object p1
 
-    :pswitch_1
-    iget-object v0, p0, Lz5b;->b:Ljava/lang/Object;
+    check-cast p1, Lhgb;
 
-    check-cast v0, Le8b;
+    const/16 p2, 0x8
 
-    :goto_1
-    :try_start_1
-    invoke-virtual {v0}, Le8b;->g()Z
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
-    move-result v1
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
+    sget p1, Lw5e;->a:I
 
-    if-eqz v1, :cond_1
+    const/4 p1, 0x1
 
-    goto :goto_1
+    invoke-static {v1, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->a(Lone/me/sdk/uikit/common/button/OneMeButton;Z)V
 
-    :catch_1
     :cond_1
-    return-void
+    :goto_0
+    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->C0:[Lz28;
 
-    :pswitch_2
-    iget-object v0, p0, Lz5b;->b:Ljava/lang/Object;
-
-    check-cast v0, Lgqe;
-
-    :goto_2
-    :try_start_2
-    invoke-virtual {v0}, Lgqe;->g()Z
-
-    move-result v1
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
-
-    if-eqz v1, :cond_2
-
-    goto :goto_2
+    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->k()V
 
     :cond_2
     return-void
 
-    :catch_2
-    move-exception v0
+    :pswitch_0
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v1, Ljava/lang/IllegalStateException;
+    move-result v0
 
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
+    if-nez v0, :cond_4
 
-    throw v1
+    check-cast p2, Lzlb;
 
-    :pswitch_3
-    iget-object v0, p0, Lz5b;->b:Ljava/lang/Object;
+    check-cast p1, Lzlb;
 
-    check-cast v0, Lotf;
+    if-nez p2, :cond_3
 
-    if-eqz v0, :cond_3
+    sget-object p1, Lpc3;->t0:Lkme;
 
-    invoke-virtual {p0}, Ljava/lang/Thread;->getPriority()I
+    invoke-virtual {p1, v1}, Lkme;->p(Landroid/view/View;)Lzlb;
 
-    move-result v1
-
-    invoke-interface {v0, v1}, Lotf;->a(I)V
+    move-result-object p2
 
     :cond_3
-    invoke-super {p0}, Ljava/lang/Thread;->run()V
+    invoke-virtual {v1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->onThemeChanged(Lzlb;)V
 
+    :cond_4
     return-void
+
+    :pswitch_1
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    check-cast p2, Lv5b;
+
+    check-cast p1, Lv5b;
+
+    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->C0:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->f()V
+
+    :cond_5
+    return-void
+
+    :pswitch_2
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    check-cast p2, Lx5b;
+
+    check-cast p1, Lx5b;
+
+    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->C0:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->f()V
+
+    :cond_6
+    return-void
+
+    :pswitch_3
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    check-cast p2, Ly5b;
+
+    check-cast p1, Ly5b;
+
+    sget-object p1, Lone/me/sdk/uikit/common/button/OneMeButton;->C0:[Lz28;
+
+    invoke-virtual {v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->k()V
+
+    :cond_7
+    return-void
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

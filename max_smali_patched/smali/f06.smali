@@ -1,52 +1,52 @@
 .class public final Lf06;
-.super Lp14;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loi4;
 
 
 # instance fields
-.field public final synthetic X:Lw01;
-
-.field public Y:Lgz5;
-
-.field public Z:Ljava/util/Iterator;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lw01;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lf06;->X:Lw01;
+    iput p1, p0, Lf06;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Lsi4;
+    .locals 2
 
-    iput-object p1, p0, Lf06;->d:Ljava/lang/Object;
+    iget v0, p0, Lf06;->a:I
 
-    iget p1, p0, Lf06;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Lt5e;
 
-    or-int/2addr p1, v0
+    invoke-direct {v0}, Lt5e;-><init>()V
 
-    iput p1, p0, Lf06;->o:I
+    return-object v0
 
-    iget-object p1, p0, Lf06;->X:Lw01;
+    :pswitch_0
+    new-instance v0, Lh06;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lw01;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lek0;-><init>(Z)V
 
-    move-result-object p1
+    return-object v0
 
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

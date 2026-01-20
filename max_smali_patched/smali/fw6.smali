@@ -1,278 +1,178 @@
 .class public final Lfw6;
-.super Ljava/util/concurrent/AbstractExecutorService;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
 
 
 # instance fields
-.field public final a:Landroid/os/Handler;
+.field public final a:Lo58;
+
+.field public final b:Lo58;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lgw0;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lgw0;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Handler;)V
+.method public constructor <init>(Lo58;Lo58;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lfw6;->a:Landroid/os/Handler;
+    iput-object p1, p0, Lfw6;->a:Lo58;
+
+    iput-object p2, p0, Lfw6;->b:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 0
+.method public final a(Lnd2;Ljava/util/List;)Z
+    .locals 4
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
-    const-class p2, Lfw6;
+    move-result v0
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const/4 v1, 0x0
 
-    move-result-object p2
+    if-eqz v0, :cond_0
 
-    const-string p3, " cannot be shut down. Use Looper.quitSafely()."
-
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 2
-
-    iget-object v0, p0, Lfw6;->a:Landroid/os/Handler;
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, " is shutting down"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+    :cond_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    throw p1
-.end method
+    move-result v2
 
-.method public final isShutdown()Z
-    .locals 1
+    if-eqz v2, :cond_2
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return v0
-.end method
+    move-result-object v2
 
-.method public final isTerminated()Z
-    .locals 1
+    check-cast v2, Ljm9;
 
-    const/4 v0, 0x0
+    iget-object v3, p0, Lfw6;->b:Lo58;
 
-    return v0
-.end method
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
 
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
+    move-result-object v3
 
-    .line 1
-    new-instance v0, Loj4;
+    check-cast v3, Lq47;
 
-    const/4 v1, 0x6
+    invoke-virtual {v3, v2}, Lq47;->a(Ljm9;)Z
 
-    invoke-direct {v0, v1, p1}, Loj4;-><init>(ILjava/lang/Object;)V
+    move-result v2
 
-    .line 2
-    invoke-virtual {p0, v0, p2, p3, p4}, Lfw6;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    if-eqz v2, :cond_1
 
-    move-result-object p1
+    goto :goto_1
 
-    return-object p1
-.end method
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Lfw6;->a:Lo58;
 
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 3
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    .line 3
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    move-result-object v0
 
-    move-result-wide v0
+    check-cast v0, Lef3;
 
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    check-cast v0, Lyfe;
 
-    invoke-virtual {v2, p2, p3, p4}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-virtual {v0}, Lyfe;->s()J
 
-    move-result-wide p2
+    move-result-wide v2
 
-    add-long/2addr p2, v0
+    const/4 v0, 0x1
 
-    .line 4
-    new-instance p4, Lew6;
+    if-eqz p1, :cond_9
 
-    iget-object v0, p0, Lfw6;->a:Landroid/os/Handler;
+    iget-object p1, p1, Lnd2;->b:Luh2;
 
-    invoke-direct {p4, v0, p2, p3, p1}, Lew6;-><init>(Landroid/os/Handler;JLjava/util/concurrent/Callable;)V
-
-    .line 5
-    invoke-virtual {v0, p4, p2, p3}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, v2, v3}, Luh2;->e(J)Z
 
     move-result p1
 
-    if-eqz p1, :cond_0
+    if-ne p1, v0, :cond_9
 
-    return-object p4
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
-    .line 6
-    :cond_0
-    new-instance p1, Ljava/util/concurrent/RejectedExecutionException;
+    move-result p1
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    const/4 v2, 0x2
 
-    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+    if-le p1, v0, :cond_6
 
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
 
-    const-string p3, " is shutting down"
+    move-result p1
 
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_3
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_1
 
-    move-result-object p2
+    :cond_3
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/RejectedExecutionException;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    .line 7
-    new-instance p2, Lhb7;
+    :cond_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    const/4 p3, 0x1
+    move-result p2
 
-    .line 8
-    invoke-direct {p2, p3, p1}, Lib7;-><init>(ILjava/lang/Object;)V
+    if-eqz p2, :cond_5
 
-    return-object p2
-.end method
-
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 0
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-class p2, Lfw6;
-
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p2
 
-    const-string p3, " does not yet support fixed-rate scheduling."
+    check-cast p2, Ljm9;
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v3, p2, Ljm9;->A0:Ljm9;
 
-    move-result-object p2
+    if-eqz v3, :cond_4
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget p2, p2, Ljm9;->y0:I
 
-    throw p1
-.end method
+    if-ne p2, v2, :cond_4
 
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 0
+    return v0
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    :cond_5
+    :goto_1
+    return v1
 
-    const-class p2, Lfw6;
+    :cond_6
+    invoke-static {p2}, Lpi3;->F(Ljava/util/List;)Ljava/lang/Object;
 
-    invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object p2
+    check-cast p1, Ljm9;
 
-    const-string p3, " does not yet support fixed-delay scheduling."
+    if-nez p1, :cond_7
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    goto :goto_2
 
-    move-result-object p2
+    :cond_7
+    iget-object p2, p1, Ljm9;->A0:Ljm9;
 
-    invoke-direct {p1, p2}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-eqz p2, :cond_8
 
-    throw p1
-.end method
+    iget p1, p1, Ljm9;->y0:I
 
-.method public final shutdown()V
-    .locals 3
+    if-ne p1, v2, :cond_8
 
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    return v0
 
-    const-class v1, Lfw6;
+    :cond_8
+    return v1
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, " cannot be shut down. Use Looper.quitSafely()."
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final shutdownNow()Ljava/util/List;
-    .locals 3
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-class v1, Lfw6;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, " cannot be shut down. Use Looper.quitSafely()."
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :cond_9
+    :goto_2
+    return v0
 .end method

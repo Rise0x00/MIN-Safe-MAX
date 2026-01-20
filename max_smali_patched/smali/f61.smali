@@ -1,72 +1,104 @@
 .class public final Lf61;
-.super Lh2h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lh61;
 
+# instance fields
+.field public final a:Landroid/content/Context;
 
-# static fields
-.field public static final c:Lf61;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    new-instance v0, Lf61;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget v1, Lgsc;->call_screen_connection_restored:I
+    iput-object p1, p0, Lf61;->a:Landroid/content/Context;
 
-    const-wide/16 v2, 0x3e8
+    new-instance p1, Lh2;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/16 v0, 0x15
 
-    move-result-object v2
+    invoke-direct {p1, v0, p0}, Lh2;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, v2, v1}, Lh2h;-><init>(Ljava/lang/Long;I)V
+    const/4 v0, 0x3
 
-    sput-object v0, Lf61;->c:Lf61;
+    invoke-static {v0, p1}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf61;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Le61;)Ly61;
+    .locals 6
 
-    const/4 v0, 0x1
+    iget-object v1, p1, Le61;->a:Ljava/lang/Long;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p1, Le61;->f:Ljava/lang/Long;
 
-    return v0
+    iget-object v2, p1, Le61;->g:Ljava/lang/CharSequence;
+
+    const/4 v3, 0x0
+
+    if-eqz v0, :cond_0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Ls7j;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lod0;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lf61;
+    move-object v0, v3
 
-    if-nez p1, :cond_1
+    :goto_0
+    iget-object v2, p1, Le61;->e:Ljava/lang/String;
 
-    const/4 p1, 0x0
+    move-object v4, v3
 
-    return p1
+    new-instance v3, Lve0;
+
+    invoke-direct {v3, v0, v2}, Lve0;-><init>(Lod0;Ljava/lang/String;)V
+
+    iget-object v2, p1, Le61;->c:Ljava/lang/CharSequence;
+
+    iget-boolean v0, p1, Le61;->h:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lf61;->b:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxe0;
+
+    move-object v4, v0
 
     :cond_1
-    return v0
-.end method
+    iget-boolean v5, p1, Le61;->h:Z
 
-.method public final hashCode()I
-    .locals 1
+    new-instance v0, Ly61;
 
-    const v0, 0x426150a3
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Restored"
+    invoke-direct/range {v0 .. v5}, Ly61;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lve0;Lxe0;Z)V
 
     return-object v0
 .end method

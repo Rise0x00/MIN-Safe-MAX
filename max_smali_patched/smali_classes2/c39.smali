@@ -2,136 +2,142 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrrg;
+
 
 # instance fields
-.field public final a:La39;
+.field public a:Lpj6;
 
-.field public final b:Ljava/lang/String;
-
-.field public final synthetic c:I
-
-.field public final synthetic d:Ld39;
-
-.field public final synthetic e:Ljava/lang/Object;
+.field public final b:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(La39;Ld39;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p4, p0, Lc39;->c:I
-
-    iput-object p2, p0, Lc39;->d:Ld39;
-
-    iput-object p3, p0, Lc39;->e:Ljava/lang/Object;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc39;->a:La39;
+    new-instance v0, Lw08;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/16 v1, 0x18
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Lw08;-><init>(I)V
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    new-instance v1, Ln8g;
 
-    move-result-object p1
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
 
-    iput-object p1, p0, Lc39;->b:Ljava/lang/String;
+    iput-object v1, p0, Lc39;->b:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final a(JIIILprg;)V
+    .locals 0
 
-    iget v0, p0, Lc39;->c:I
+    return-void
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public final b(Lwtb;II)V
+    .locals 2
 
-    iget-object v0, p0, Lc39;->d:Ld39;
+    :goto_0
+    if-lez p2, :cond_0
 
-    iget-object v0, v0, Ld39;->b:Ljava/lang/Object;
+    iget-object p3, p0, Lc39;->b:Ln8g;
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {p3}, Ln8g;->getValue()Ljava/lang/Object;
 
-    sget-object v1, Lcuh;->b:Lnxa;
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    check-cast v0, [B
+
+    array-length v0, v0
+
+    invoke-static {p2, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    invoke-virtual {p3}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [B
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, p3, v0}, Lwtb;->h(I[BI)V
+
+    sub-int/2addr p2, v0
 
     goto :goto_0
 
     :cond_0
-    sget-object v2, La98;->d:La98;
+    return-void
+.end method
 
-    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
+.method public final c(Lki4;IZ)I
+    .locals 3
 
-    move-result v3
+    move p3, p2
 
-    if-eqz v3, :cond_1
+    :goto_0
+    if-lez p3, :cond_1
 
-    const-string v3, "executeWithMainLooper.done"
+    iget-object v0, p0, Lc39;->b:Ln8g;
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v1, v2, v0, v3, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v1
+
+    check-cast v1, [B
+
+    array-length v1, v1
+
+    invoke-static {p3, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [B
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v0, v2, v1}, Lki4;->read([BII)I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_0
+
+    sub-int/2addr p3, v0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Lone/me/sdk/media/transformer/impl/MediaInfoRetriever$InvalidMediaTrackException;
+
+    const-string p2, "Unexpected end of track"
+
+    invoke-direct {p1, p2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    :goto_0
-    iget-object v0, p0, Lc39;->e:Ljava/lang/Object;
+    return p2
+.end method
 
-    check-cast v0, Ljava/util/concurrent/CountDownLatch;
+.method public final d(Lpj6;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lc39;->d:Ld39;
-
-    iget-object v0, v0, Ld39;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    sget-object v1, Lcuh;->b:Lnxa;
-
-    if-nez v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v2, La98;->d:La98;
-
-    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    const-string v3, "executeWithDetachableLooper.done, quit loop ..."
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_3
-    :goto_1
-    iget-object v0, p0, Lc39;->e:Ljava/lang/Object;
-
-    check-cast v0, Lvr4;
-
-    iget-object v0, v0, Lvr4;->b:Landroid/os/Looper;
-
-    invoke-virtual {v0}, Landroid/os/Looper;->quitSafely()V
+    iput-object p1, p0, Lc39;->a:Lpj6;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

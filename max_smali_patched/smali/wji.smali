@@ -1,90 +1,33 @@
-.class public final Lwji;
+.class public abstract synthetic Lwji;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
-
 
 # static fields
-.field public static final a:Lwji;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lwji;
+    invoke-static {}, Lto5;->values()[Lto5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lwji;->a:Lwji;
+    array-length v0, v0
 
-    new-instance v0, Lz7i;
+    new-array v0, v0, [I
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    :catch_0
+    sput-object v0, Lwji;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

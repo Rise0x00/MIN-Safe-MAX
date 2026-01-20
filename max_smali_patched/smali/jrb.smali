@@ -1,107 +1,138 @@
-.class public final Ljrb;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public Ljrb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lkrb;
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Loi1;
-
-.field public final synthetic d:Landroid/graphics/RectF;
-
-.field public final synthetic e:Lb6b;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkrb;Landroid/view/View;Loi1;Landroid/graphics/RectF;Lb6b;)V
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Ljrb;->a:Lkrb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljrb;->b:Landroid/view/View;
-
-    iput-object p3, p0, Ljrb;->c:Loi1;
-
-    iput-object p4, p0, Ljrb;->d:Landroid/graphics/RectF;
-
-    iput-object p5, p0, Ljrb;->e:Lb6b;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p1, p0, Ljrb;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+.method public a()Ljava/lang/Object;
+    .locals 2
 
-    iget-object p1, p0, Ljrb;->d:Landroid/graphics/RectF;
+    iget-object v0, p0, Ljrb;->a:Ljava/lang/Object;
 
-    iget-object v0, p0, Ljrb;->a:Lkrb;
+    instance-of v1, v0, Lirb;
 
-    iget-object v1, p0, Ljrb;->b:Landroid/view/View;
+    invoke-static {v1}, Ljkj;->b(Z)V
 
-    iget-object v2, p0, Ljrb;->c:Loi1;
+    check-cast v0, Lirb;
 
-    invoke-static {v0, v1, v2, p1}, Lkrb;->a(Lkrb;Landroid/view/View;Loi1;Landroid/graphics/RectF;)V
+    iget-object v0, v0, Lirb;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    iget-object p1, p0, Ljrb;->e:Lb6b;
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Lb6b;->invoke()Ljava/lang/Object;
+.method public b()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {}, Lkrb;->b()Z
+    iget-object v0, p0, Ljrb;->a:Ljava/lang/Object;
 
-    move-result p1
+    check-cast v0, Lirb;
 
-    if-eqz p1, :cond_0
+    iget-object v0, v0, Lirb;->b:Ljava/lang/String;
 
-    const/4 p1, 0x0
+    return-object v0
+.end method
 
-    const/4 v0, 0x0
+.method public final c()Landroid/view/Surface;
+    .locals 1
 
-    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    invoke-virtual {p0}, Ljrb;->a()Ljava/lang/Object;
 
-    invoke-virtual {v2, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    move-result-object v0
 
-    :cond_0
+    check-cast v0, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->getSurface()Landroid/view/Surface;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public d(J)V
+    .locals 1
+
+    iget-object v0, p0, Ljrb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lirb;
+
+    iput-wide p1, v0, Lirb;->c:J
+
     return-void
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
+.method public e(I)V
+    .locals 0
 
-    iget-object p1, p0, Ljrb;->d:Landroid/graphics/RectF;
+    return-void
+.end method
 
-    iget-object v0, p0, Ljrb;->a:Lkrb;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v1, p0, Ljrb;->b:Landroid/view/View;
+    instance-of v0, p1, Ljrb;
 
-    iget-object v2, p0, Ljrb;->c:Loi1;
-
-    invoke-static {v0, v1, v2, p1}, Lkrb;->a(Lkrb;Landroid/view/View;Loi1;Landroid/graphics/RectF;)V
-
-    iget-object p1, p0, Ljrb;->e:Lb6b;
-
-    invoke-virtual {p1}, Lb6b;->invoke()Ljava/lang/Object;
-
-    invoke-static {}, Lkrb;->b()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
+    if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
-    const/4 v0, 0x0
-
-    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    invoke-virtual {v2, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    return p1
 
     :cond_0
+    check-cast p1, Ljrb;
+
+    iget-object p1, p1, Ljrb;->a:Ljava/lang/Object;
+
+    iget-object v0, p0, Ljrb;->a:Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Ljrb;->a:Ljava/lang/Object;
+
+    check-cast v0, Lirb;
+
+    iput-object p1, v0, Lirb;->b:Ljava/lang/String;
+
     return-void
+.end method
+
+.method public g(J)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Ljrb;->a:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

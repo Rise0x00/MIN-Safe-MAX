@@ -1,19 +1,19 @@
 .class public final Lla0;
-.super Ljava/lang/Object;
+.super Lfn0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lla0;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lla0;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -30,17 +30,19 @@
     return p1
 
     :cond_0
-    instance-of v0, p1, Lla0;
+    instance-of v0, p1, Lfn0;
 
     if-eqz v0, :cond_1
 
+    check-cast p1, Lfn0;
+
     check-cast p1, Lla0;
 
-    iget-object v0, p0, Lla0;->a:Ljava/lang/Object;
+    iget-object p1, p1, Lla0;->a:Ljava/util/ArrayList;
 
-    iget-object p1, p1, Lla0;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lla0;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -55,9 +57,9 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lla0;->a:Ljava/lang/Object;
+    iget-object v0, p0, Lla0;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->hashCode()I
 
     move-result v0
 
@@ -73,11 +75,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Identifier{value="
+    const-string v1, "BatchedLogRequest{logRequests="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lla0;->a:Ljava/lang/Object;
+    iget-object v1, p0, Lla0;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

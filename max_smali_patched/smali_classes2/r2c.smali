@@ -1,171 +1,207 @@
 .class public final Lr2c;
-.super Leq;
+.super Lgl0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lr2c;
+# instance fields
+.field public final synthetic c:I
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(II)V
+    .locals 0
 
-    new-instance v0, Lr2c;
+    iput p2, p0, Lr2c;->c:I
 
-    invoke-direct {v0}, Leq;-><init>()V
+    iput p1, p0, Lr2c;->d:I
 
-    sput-object v0, Lr2c;->a:Lr2c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lru7;
-    .locals 2
+.method public final a(Landroid/graphics/Bitmap;Loac;)Lkg3;
+    .locals 7
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
+    iget p2, p0, Lr2c;->c:I
 
-    move-result-object v0
+    packed-switch p2, :pswitch_data_0
 
-    const-class v1, Lml;
+    new-instance v5, Landroid/graphics/Matrix;
 
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    move-result-object v0
+    iget p2, p0, Lr2c;->d:I
 
-    return-object v0
+    if-lez p2, :cond_0
+
+    int-to-float p2, p2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr v2, v1
+
+    invoke-virtual {v5, p2, v0, v2}, Landroid/graphics/Matrix;->postRotate(FFF)Z
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    const/4 v6, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p1
+
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    new-instance p2, Lu0b;
+
+    const/16 v0, 0x8
+
+    invoke-direct {p2, v0}, Lu0b;-><init>(I)V
+
+    sget-object v0, Lkg3;->X:Lvqj;
+
+    invoke-static {p1, p2, v0}, Lkg3;->C0(Ljava/lang/Object;Lpyd;Ljg3;)Lpo4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    move-object v0, p1
+
+    new-instance v5, Landroid/graphics/Matrix;
+
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
+
+    iget p1, p0, Lr2c;->d:I
+
+    if-lez p1, :cond_1
+
+    int-to-float p1, p1
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p2
+
+    div-int/lit8 p2, p2, 0x2
+
+    int-to-float p2, p2
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-virtual {v5, p1, p2, v1}, Landroid/graphics/Matrix;->postRotate(FFF)Z
+
+    :cond_1
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    const/4 v6, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    new-instance p2, Lu0b;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p2, v0}, Lu0b;-><init>(I)V
+
+    sget-object v0, Lkg3;->X:Lvqj;
+
+    invoke-static {p1, p2, v0}, Lkg3;->C0(Ljava/lang/Object;Lpyd;Ljg3;)Lpo4;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b()Lru7;
+.method public final b()Lb01;
     .locals 2
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
+    iget v0, p0, Lr2c;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lr2c;->d:I
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-class v1, Lu23;
+    new-instance v1, Lddf;
 
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
+    invoke-direct {v1, v0}, Lddf;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    return-object v1
 
-    return-object v0
-.end method
+    :pswitch_0
+    iget v0, p0, Lr2c;->d:I
 
-.method public final c()Lru7;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-class v1, Ll83;
+    new-instance v1, Lddf;
 
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
+    invoke-direct {v1, v0}, Lddf;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    return-object v1
 
-    return-object v0
-.end method
+    nop
 
-.method public final d()Lru7;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v0
-
-    const-class v1, Liz3;
-
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final e()Lru7;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v0
-
-    const-class v1, Ltlf;
-
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final f()Lru7;
-    .locals 2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v0
-
-    const-class v1, Lkq5;
-
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final g()Lpmd;
-    .locals 5
-
-    new-instance v0, Lpmd;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v1
-
-    const-class v2, Lbqd;
-
-    invoke-virtual {v1, v2}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbqd;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v2
-
-    const-class v3, Ltlf;
-
-    invoke-virtual {v2, v3}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ltlf;
-
-    check-cast v2, Lsta;
-
-    invoke-virtual {v2}, Lsta;->b()La54;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v3
-
-    const-class v4, Lgfb;
-
-    invoke-virtual {v3, v4}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lgfb;
-
-    invoke-direct {v0, v1, v2, v3}, Lpmd;-><init>(Lbqd;La54;Lgfb;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

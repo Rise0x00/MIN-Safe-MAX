@@ -1,21 +1,21 @@
-.class public final Lsde;
-.super Leq;
+.class public abstract Lsde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lsde;
+# instance fields
+.field public volatile a:B
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lsde;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Leq;-><init>()V
+    const/4 v0, 0x0
 
-    sput-object v0, Lsde;->a:Lsde;
+    iput-byte v0, p0, Lsde;->a:B
 
     return-void
 .end method

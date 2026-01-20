@@ -9,11 +9,11 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6442
-  versionName: 25.14.2
+  versionCode: 6507
+  versionName: 26.1.0
 doNotCompress:
 - arsc
-- mp3
+- m4a
 - png
 - so
 - webp
@@ -105,14 +105,10 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_reactive.version
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
-- META-INF/services/p0g
-- META-INF/services/rq7
 - META-INF/services/ru.ok.android.onelog.OneLogAppender
+- META-INF/services/tqg
+- META-INF/services/z08
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
-- assets/mlkit_barcode_models/barcode_ssd_mobilenet_v1_dmp25_quant.tflite
-- assets/mlkit_barcode_models/oned_auto_regressor_mobile.tflite
-- assets/mlkit_barcode_models/oned_feature_extractor_mobile.tflite
 - okhttp3/internal/publicsuffix/publicsuffixes.gz
-- tech/kwik/agent15/version.properties
 - tech/kwik/core/version.properties

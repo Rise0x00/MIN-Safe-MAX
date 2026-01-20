@@ -1,53 +1,42 @@
 .class public final Lrgf;
-.super Lp14;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljhf;
-
-.field public Z:I
-
-.field public d:Ljhf;
-
-.field public o:Lseg;
+.field public final synthetic b:Lru/ok/messages/views/widgets/SlideOutLayout;
 
 
 # direct methods
-.method public constructor <init>(Ljhf;Lp14;)V
+.method public constructor <init>(Lru/ok/messages/views/widgets/SlideOutLayout;I)V
     .locals 0
 
-    iput-object p1, p0, Lrgf;->Y:Ljhf;
+    iput-object p1, p0, Lrgf;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lrgf;->a:I
+
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    iput-object p1, p0, Lrgf;->X:Ljava/lang/Object;
+    iget-object p1, p0, Lrgf;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
 
-    iget p1, p0, Lrgf;->Z:I
+    iget-object p1, p1, Lru/ok/messages/views/widgets/SlideOutLayout;->y0:Lsgf;
 
-    const/high16 v0, -0x80000000
+    if-eqz p1, :cond_0
 
-    or-int/2addr p1, v0
+    iget v0, p0, Lrgf;->a:I
 
-    iput p1, p0, Lrgf;->Z:I
+    invoke-interface {p1, v0}, Lsgf;->b(I)V
 
-    iget-object p1, p0, Lrgf;->Y:Ljhf;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Ljhf;->a(Ljhf;Lseg;Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

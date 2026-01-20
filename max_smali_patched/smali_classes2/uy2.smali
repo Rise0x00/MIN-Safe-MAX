@@ -3,76 +3,67 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwy2;
+.implements Lvy2;
 
 
-# static fields
-.field public static final a:Luy2;
+# instance fields
+.field public final a:J
 
-.field public static final b:Lr00;
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IJJLjava/lang/String;)V
+    .locals 3
 
-    new-instance v0, Luy2;
+    and-int/lit8 v0, p1, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v1, 0x0
 
-    sput-object v0, Luy2;->a:Luy2;
+    if-eqz v0, :cond_0
 
-    sget-object v0, Lad2;->H:Lr00;
-
-    sput-object v0, Luy2;->b:Lr00;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    move-wide p2, v1
 
     :cond_0
-    instance-of p1, p1, Luy2;
+    and-int/lit8 v0, p1, 0x2
 
-    if-nez p1, :cond_1
+    if-eqz v0, :cond_1
+
+    move-wide p4, v1
+
+    :cond_1
+    and-int/lit8 v0, p1, 0x4
+
+    if-eqz v0, :cond_2
+
+    const/4 p6, 0x0
+
+    :cond_2
+    and-int/lit8 p1, p1, 0x8
+
+    if-eqz p1, :cond_3
 
     const/4 p1, 0x0
 
-    return p1
+    goto :goto_0
 
-    :cond_1
-    return v0
-.end method
+    :cond_3
+    const/4 p1, 0x1
 
-.method public final getComparator()Ljava/util/Comparator;
-    .locals 1
+    :goto_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Luy2;->b:Lr00;
+    iput-wide p2, p0, Luy2;->a:J
 
-    return-object v0
-.end method
+    iput-wide p4, p0, Luy2;->b:J
 
-.method public final hashCode()I
-    .locals 1
+    iput-object p6, p0, Luy2;->c:Ljava/lang/String;
 
-    const v0, -0xdf5b48b
+    iput-boolean p1, p0, Luy2;->d:Z
 
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "All"
-
-    return-object v0
+    return-void
 .end method

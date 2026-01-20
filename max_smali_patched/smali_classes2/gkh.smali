@@ -1,118 +1,82 @@
 .class public final Lgkh;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ldfh;
+.field public final synthetic X:Ljkh;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ldfh;)V
+.method public constructor <init>(Ljkh;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgkh;->X:Ljkh;
 
-    iput-object p1, p0, Lgkh;->a:Ldfh;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final postEvent(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 7
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lgkh;->a:Ldfh;
+    check-cast p1, Lk00;
 
-    iget-object v1, v0, Ldfh;->F0:Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lcuh;->b:Lnxa;
+    invoke-virtual {p0, p1, p2}, Lgkh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    if-nez v2, :cond_0
+    check-cast p1, Lgkh;
 
-    goto :goto_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :cond_0
-    sget-object v4, La98;->d:La98;
+    invoke-virtual {p1, p2}, Lgkh;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v2, v4}, Lnxa;->b(La98;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    const-string v5, "onJsEvent: "
-
-    const-string v6, " "
-
-    invoke-static {v5, p1, v6, p2}, Lcd0;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v2, v4, v1, v5, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, v0, Ldfh;->I0:Lm76;
-
-    iget-object v1, v0, Lm76;->b:Ljava/lang/Object;
-
-    check-cast v1, Lg54;
-
-    iget-object v2, v0, Lm76;->a:Ljava/lang/Object;
-
-    check-cast v2, Ltlf;
-
-    check-cast v2, Lsta;
-
-    invoke-virtual {v2}, Lsta;->a()La54;
-
-    move-result-object v2
-
-    new-instance v4, Laq7;
-
-    invoke-direct {v4, p1, p2, v0, v3}, Laq7;-><init>(Ljava/lang/String;Ljava/lang/String;Lm76;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x2
-
-    invoke-static {v1, v2, v3, v4, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    return-void
+    return-object p2
 .end method
 
-.method public final resolveShare(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
-    .locals 7
-    .annotation runtime Landroid/webkit/JavascriptInterface;
-    .end annotation
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v1, p0, Lgkh;->a:Ldfh;
+    new-instance v0, Lgkh;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lgkh;->X:Ljkh;
 
-    new-instance v0, Lveh;
+    invoke-direct {v0, v1, p2}, Lgkh;-><init>(Ljkh;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v6, 0x0
+    iput-object p1, v0, Lgkh;->o:Ljava/lang/Object;
 
-    move-object v2, p1
+    return-object v0
+.end method
 
-    move-object v3, p2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    move-object v4, p3
+    iget-object v0, p0, Lgkh;->o:Ljava/lang/Object;
 
-    move-object v5, p4
+    check-cast v0, Lk00;
 
-    invoke-direct/range {v0 .. v6}, Lveh;-><init>(Ldfh;Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 p1, 0x3
+    sget-object p1, Ljkh;->N0:[Lz28;
 
-    const/4 p2, 0x0
+    iget-object p1, p0, Lgkh;->X:Ljkh;
 
-    invoke-static {v1, p2, v0, p1}, Ljzg;->r(Ljzg;Ly44;Lej6;I)Lgye;
+    invoke-virtual {p1, v0}, Ljkh;->C(Lk00;)V
 
-    return-void
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

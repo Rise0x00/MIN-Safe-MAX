@@ -1,23 +1,19 @@
-.class public final Lhhb;
+.class public abstract Lhhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Integer;
+# static fields
+.field public static final a:I
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget v0, Lr9d;->retained_adapter_state:I
 
-    move-result-object p1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhhb;->a:Ljava/lang/Integer;
+    sput v0, Lhhb;->a:I
 
     return-void
 .end method

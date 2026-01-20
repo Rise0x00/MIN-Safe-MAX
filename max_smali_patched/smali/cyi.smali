@@ -1,39 +1,60 @@
-.class public abstract Lcyi;
+.class public final Lcyi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
 
 # static fields
-.field public static a:Z
+.field public static final a:Lcyi;
 
 
 # direct methods
-.method public static final a(Landroid/content/Context;)I
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    new-instance v0, Lcyi;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcyi;->a:Lcyi;
+
+    new-instance v0, Lbri;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+
+    const-class v1, Lpri;
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
     move-result-object v0
 
-    iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    move-result-object v0
 
-    move-result-object p0
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-void
+.end method
 
-    move-result-object p0
 
-    iget p0, p0, Landroid/util/DisplayMetrics;->heightPixels:I
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    move-result p0
+    move-result-object p1
 
-    return p0
+    throw p1
 .end method

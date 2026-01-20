@@ -1,90 +1,213 @@
-.class public final synthetic Lqa;
+.class public final Lqa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final d:Lqa;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/Map;
 
-.field public final synthetic b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
+.field public final b:Ljava/util/Set;
+
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lqa;->a:I
+    new-instance v0, Lqa;
 
-    iput-object p1, p0, Lqa;->b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
+    sget-object v1, Lnh5;->a:Lnh5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v2, 0x0
+
+    sget-object v4, Leh5;->a:Leh5;
+
+    invoke-direct {v0, v4, v1, v2, v3}, Lqa;-><init>(Ljava/util/Map;Ljava/util/Set;J)V
+
+    sput-object v0, Lqa;->d:Lqa;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/Map;Ljava/util/Set;J)V
+    .locals 0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqa;->a:Ljava/util/Map;
+
+    iput-object p2, p0, Lqa;->b:Ljava/util/Set;
+
+    iput-wide p3, p0, Lqa;->c:J
+
+    return-void
+.end method
+
+.method public static a(Lqa;Ljava/util/LinkedHashMap;Lbt;JI)Lqa;
     .locals 1
 
-    iget p1, p0, Lqa;->a:I
+    and-int/lit8 v0, p5, 0x1
 
-    iget-object v0, p0, Lqa;->b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
+    if-eqz v0, :cond_0
 
-    packed-switch p1, :pswitch_data_0
+    iget-object p1, p0, Lqa;->a:Ljava/util/Map;
 
-    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Les7;
+    :cond_0
+    and-int/lit8 v0, p5, 0x2
 
-    invoke-virtual {v0}, Lc24;->getRouter()Lyid;
+    if-eqz v0, :cond_1
 
-    move-result-object p1
+    iget-object p2, p0, Lqa;->b:Ljava/util/Set;
 
-    invoke-virtual {p1, v0}, Lyid;->B(Lc24;)Z
+    :cond_1
+    and-int/lit8 p5, p5, 0x4
 
-    return-void
+    if-eqz p5, :cond_2
 
-    :pswitch_0
-    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Les7;
+    iget-wide p3, p0, Lqa;->c:J
 
-    iget-object p1, v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Lru7;
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    new-instance p0, Lqa;
 
-    move-result-object p1
+    invoke-direct {p0, p1, p2, p3, p4}, Lqa;-><init>(Ljava/util/Map;Ljava/util/Set;J)V
 
-    check-cast p1, Lwa;
+    return-object p0
+.end method
 
-    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lwa;->u(Z)V
-
-    return-void
-
-    :pswitch_1
-    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->Z:[Les7;
-
-    iget-object p1, v0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwa;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lwa;->u(Z)V
+    if-ne p0, p1, :cond_0
 
-    return-void
+    return v0
 
-    nop
+    :cond_0
+    instance-of v1, p1, Lqa;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqa;
+
+    iget-object v1, p0, Lqa;->a:Ljava/util/Map;
+
+    iget-object v3, p1, Lqa;->a:Ljava/util/Map;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lqa;->b:Ljava/util/Set;
+
+    iget-object v3, p1, Lqa;->b:Ljava/util/Set;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-wide v3, p0, Lqa;->c:J
+
+    iget-wide v5, p1, Lqa;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lqa;->a:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lqa;->b:Ljava/util/Set;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-wide v2, p0, Lqa;->c:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AdminWaitingRoomUsers(usersInWaitingRoom="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqa;->a:Ljava/util/Map;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lastNewUsersIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqa;->b:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lastUpdate="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lqa;->c:J
+
+    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

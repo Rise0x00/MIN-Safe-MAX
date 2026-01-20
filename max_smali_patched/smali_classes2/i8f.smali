@@ -1,52 +1,56 @@
 .class public final synthetic Li8f;
-.super Lc9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgj6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# static fields
-.field public static final Z:Li8f;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lm8f;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(Lm8f;I)V
+    .locals 0
 
-    new-instance v0, Li8f;
+    iput p2, p0, Li8f;->a:I
 
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
+    iput-object p1, p0, Li8f;->b:Lm8f;
 
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Lvcb;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lc9;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Li8f;->Z:Li8f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    check-cast p1, Ly3f;
+    iget p1, p0, Li8f;->a:I
 
-    check-cast p2, Ljava/lang/Boolean;
+    packed-switch p1, :pswitch_data_0
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Li8f;->b:Lm8f;
 
-    sget-object p3, Lp8f;->A0:[Les7;
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    new-instance p3, Lvcb;
+    return-void
 
-    invoke-direct {p3, p1, p2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    :pswitch_0
+    iget-object p1, p0, Li8f;->b:Lm8f;
 
-    return-object p3
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

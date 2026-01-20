@@ -1,6 +1,7 @@
-.class public interface abstract Lim5;
-.super Ljava/lang/Object;
+.class public final Lim5;
+.super Lkotlinx/coroutines/internal/ThreadSafeHeap;
 .source "SourceFile"
 
-# interfaces
-.implements Ljavax/inject/Provider;
+
+# instance fields
+.field public b:J

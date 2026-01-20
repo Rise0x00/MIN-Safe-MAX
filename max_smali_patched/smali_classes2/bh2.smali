@@ -1,148 +1,87 @@
-.class public abstract Lbh2;
+.class public final Lbh2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+# instance fields
+.field public final a:J
 
-.field public static b:Ljava/util/concurrent/ExecutorService;
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lah2;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-wide v0, p1, Lah2;->b:J
 
-    sput-object v0, Lbh2;->a:Ljava/lang/Object;
+    iput-wide v0, p0, Lbh2;->a:J
+
+    iget v0, p1, Lah2;->a:I
+
+    iput v0, p0, Lbh2;->b:I
+
+    iget-wide v0, p1, Lah2;->c:J
+
+    iput-wide v0, p0, Lbh2;->c:J
+
+    iget-object p1, p1, Lah2;->d:Ljava/io/Serializable;
+
+    check-cast p1, Ljava/lang/String;
+
+    iput-object p1, p0, Lbh2;->d:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static final a(Lez5;I)Lws0;
-    .locals 7
 
-    sget-object v0, Lu72;->m:Lt72;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget v0, Lt72;->b:I
+    const-string v1, "AdminParticipant{id="
 
-    if-ge p1, v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    iget-wide v1, p0, Lbh2;->a:J
 
-    :cond_0
-    move v0, p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :goto_0
-    sub-int/2addr v0, p1
+    const-string v1, ", permissions="
 
-    instance-of v1, p0, La82;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x1
+    iget v1, p0, Lbh2;->b:I
 
-    if-eqz v1, :cond_5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-object v1, p0
+    const-string v1, ", inviterId="
 
-    check-cast v1, La82;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, La82;->l()Lez5;
+    iget-wide v1, p0, Lbh2;->c:J
 
-    move-result-object v3
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget v4, v1, La82;->c:I
+    const-string v1, ", alias=\'"
 
-    if-eqz v3, :cond_5
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance p0, Lws0;
+    iget-object v1, p0, Lbh2;->d:Ljava/lang/String;
 
-    iget v5, v1, La82;->b:I
+    const-string v2, "\'}"
 
-    const/4 v6, -0x3
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    if-eq v5, v6, :cond_1
-
-    const/4 v6, -0x2
-
-    if-eq v5, v6, :cond_1
-
-    if-eqz v5, :cond_1
-
-    move v0, v5
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v6, 0x0
-
-    if-ne v4, v2, :cond_3
-
-    if-nez v5, :cond_4
-
-    :cond_2
-    move v0, v6
-
-    goto :goto_1
-
-    :cond_3
-    if-nez p1, :cond_2
-
-    move v0, v2
-
-    :cond_4
-    :goto_1
-    iget-object p1, v1, La82;->a:Ly44;
-
-    invoke-direct {p0, v0, v4, p1, v3}, Lws0;-><init>(IILy44;Lez5;)V
-
-    return-object p0
-
-    :cond_5
-    new-instance p1, Lws0;
-
-    sget-object v1, Lha5;->a:Lha5;
-
-    invoke-direct {p1, v0, v2, v1, p0}, Lws0;-><init>(IILy44;Lez5;)V
-
-    return-object p1
-.end method
-
-.method public static b(Lsef;)Lsef;
-    .locals 1
-
-    instance-of v0, p0, Lyef;
-
-    if-nez v0, :cond_2
-
-    instance-of v0, p0, Lxef;
-
-    if-eqz v0, :cond_0
-
-    return-object p0
-
-    :cond_0
-    instance-of v0, p0, Ljava/io/Serializable;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lxef;
-
-    invoke-direct {v0, p0}, Lxef;-><init>(Lsef;)V
+    move-result-object v0
 
     return-object v0
-
-    :cond_1
-    new-instance v0, Lyef;
-
-    invoke-direct {v0, p0}, Lyef;-><init>(Lsef;)V
-
-    return-object v0
-
-    :cond_2
-    return-object p0
 .end method

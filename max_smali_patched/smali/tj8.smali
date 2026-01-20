@@ -1,147 +1,129 @@
-.class public abstract Ltj8;
-.super Ljava/lang/Object;
+.class public final Ltj8;
+.super Lg4;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ltj8;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final X:Z
+
+.field public final a:Z
+
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
+
+.field public final o:Z
+
+
 # direct methods
-.method public static d(Ljava/lang/Object;)Lek8;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-string v0, "item is null"
+    new-instance v0, Leri;
 
-    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    const/16 v1, 0x8
 
-    new-instance v0, Lek8;
+    invoke-direct {v0, v1}, Leri;-><init>(I)V
 
-    invoke-direct {v0, p0}, Lek8;-><init>(Ljava/lang/Object;)V
+    sput-object v0, Ltj8;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    return-object v0
+    return-void
+.end method
+
+.method public constructor <init>(ZZZZZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Ltj8;->a:Z
+
+    iput-boolean p2, p0, Ltj8;->b:Z
+
+    iput-boolean p3, p0, Ltj8;->c:Z
+
+    iput-boolean p4, p0, Ltj8;->d:Z
+
+    iput-boolean p5, p0, Ltj8;->o:Z
+
+    iput-boolean p6, p0, Ltj8;->X:Z
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    new-instance v0, Lsq0;
+    const/16 p2, 0x4f45
 
-    const/4 v1, 0x1
+    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    move-result p2
 
-    invoke-virtual {p0, v0}, Ltj8;->e(Lgk8;)V
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lsq0;->b()Ljava/lang/Object;
+    const/4 v1, 0x4
 
-    move-result-object v0
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    return-object v0
-.end method
+    iget-boolean v0, p0, Ltj8;->a:Z
 
-.method public final c(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    const-string v0, "defaultValue is null"
+    const/4 v0, 0x2
 
-    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    new-instance v0, Lsq0;
+    iget-boolean v0, p0, Ltj8;->b:Z
 
-    const/4 v1, 0x1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+    const/4 v0, 0x3
 
-    invoke-virtual {p0, v0}, Ltj8;->e(Lgk8;)V
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    iget-boolean v0, p0, Ltj8;->c:Z
 
-    move-result-wide v2
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    const-wide/16 v4, 0x0
+    invoke-static {p1, v1, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    cmp-long v2, v2, v4
+    iget-boolean v0, p0, Ltj8;->d:Z
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    :try_start_0
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v0, 0x5
 
-    goto :goto_0
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    :catch_0
-    move-exception p1
+    iget-boolean v0, p0, Ltj8;->o:Z
 
-    iput-boolean v1, v0, Lsq0;->d:Z
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, v0, Lsq0;->c:Lzv4;
+    const/4 v0, 0x6
 
-    if-eqz v0, :cond_0
+    invoke-static {p1, v0, v1}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    invoke-interface {v0}, Lzv4;->dispose()V
+    iget-boolean v0, p0, Ltj8;->X:Z
 
-    :cond_0
-    invoke-static {p1}, Lxf5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object p1
-
-    throw p1
-
-    :cond_1
-    :goto_0
-    iget-object v1, v0, Lsq0;->b:Ljava/lang/Throwable;
-
-    if-nez v1, :cond_3
-
-    iget-object v0, v0, Lsq0;->a:Ljava/lang/Object;
-
-    if-eqz v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
-
-    :cond_3
-    invoke-static {v1}, Lxf5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object p1
-
-    throw p1
-.end method
-
-.method public final e(Lgk8;)V
-    .locals 2
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Ltj8;->f(Lgk8;)V
-    :try_end_0
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lose;->c(Ljava/lang/Throwable;)V
-
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string v1, "subscribeActual failed"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    throw v0
-
-    :catch_0
-    move-exception p1
-
-    throw p1
-.end method
-
-.method public abstract f(Lgk8;)V
 .end method

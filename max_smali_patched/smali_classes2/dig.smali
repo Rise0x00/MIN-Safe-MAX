@@ -1,77 +1,48 @@
-.class public final synthetic Ldig;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+.class public final Ldig;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:Leig;
+.field public final synthetic X:Leig;
 
-.field public final synthetic b:Ls56;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Leig;Ls56;)V
+.method public constructor <init>(Leig;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ldig;->X:Leig;
 
-    iput-object p1, p0, Ldig;->a:Leig;
-
-    iput-object p2, p0, Ldig;->b:Ls56;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p1, p0, Ldig;->a:Leig;
+    iput-object p1, p0, Ldig;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget p1, p0, Ldig;->o:I
 
-    if-nez p2, :cond_0
+    const/high16 v0, -0x80000000
 
-    goto :goto_0
+    or-int/2addr p1, v0
 
-    :cond_0
-    const-string v0, "app.messages.calls.menu.item"
+    iput p1, p0, Ldig;->o:I
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_1
-
-    const/4 p2, 0x1
-
-    iget-object p1, p1, Ly3;->h:Luu7;
-
-    invoke-virtual {p1, v0, p2}, Luu7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result p1
-
-    iget-object p2, p0, Ldig;->b:Ls56;
-
-    iget-object p2, p2, Ls56;->b:Ljava/lang/Object;
-
-    check-cast p2, Lve8;
-
-    iget-object p2, p2, Lve8;->X:La1f;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
+    iget-object p1, p0, Ldig;->X:Leig;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p2, v0, p1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0, p0}, Leig;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

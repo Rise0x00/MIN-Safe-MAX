@@ -1,428 +1,207 @@
 .class public final Lk94;
-.super Ljava/lang/Object;
+.super Ly84;
 .source "SourceFile"
-
-# interfaces
-.implements Lnkf;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Landroidx/viewpager2/widget/ViewPager2;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/viewpager2/widget/ViewPager2;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p2, p0, Lk94;->a:I
+    iput p1, p0, Lk94;->a:I
 
-    iput-object p1, p0, Lk94;->b:Landroidx/viewpager2/widget/ViewPager2;
+    iput-object p2, p0, Lk94;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method private final u(La94;)V
+    .locals 0
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public final a(Lpkf;)V
-    .locals 17
+.method public d(La94;)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget p1, p0, Lk94;->a:I
 
-    move-object/from16 v1, p1
-
-    iget v2, v0, Lk94;->a:I
-
-    packed-switch v2, :pswitch_data_0
-
-    iget v1, v1, Lpkf;->a:I
-
-    const/4 v2, 0x1
-
-    iget-object v3, v0, Lk94;->b:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v3, v1, v2}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
+    packed-switch p1, :pswitch_data_0
 
     return-void
 
     :pswitch_0
-    iget v1, v1, Lpkf;->a:I
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
 
-    iget-object v2, v0, Lk94;->b:Landroidx/viewpager2/widget/ViewPager2;
+    check-cast p1, Ln94;
 
-    invoke-virtual {v2}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
+    iget-object p1, p1, Ln94;->a:Ll88;
 
-    move-result v3
+    sget-object v0, Ln78;->ON_CREATE:Ln78;
 
-    sub-int/2addr v3, v1
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
 
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
+    return-void
 
-    move-result v4
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const/4 v5, 0x1
+.method public g(La94;)V
+    .locals 1
 
-    if-le v4, v5, :cond_f
+    iget p1, p0, Lk94;->a:I
 
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
+    packed-switch p1, :pswitch_data_0
 
-    move-result v4
+    :pswitch_0
+    return-void
 
-    invoke-static {v3}, Ljava/lang/Integer;->signum(I)I
+    :pswitch_1
+    sget-object p1, Lyp8;->a:Lyp8;
 
-    move-result v6
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
-    mul-int/2addr v6, v4
+    move-result-object p1
 
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
+    invoke-virtual {p1}, Lr5;->f()Ljava/lang/Object;
 
-    move-result v3
+    move-result-object p1
 
-    sub-int/2addr v3, v5
+    check-cast p1, Lfl7;
 
-    mul-int/2addr v3, v6
+    if-eqz p1, :cond_0
 
-    iget-object v4, v2, Landroidx/viewpager2/widget/ViewPager2;->A0:Lxm5;
+    iget-object v0, p0, Lk94;->b:Ljava/lang/Object;
 
-    iget-object v6, v4, Lxm5;->b:Lhsd;
+    check-cast v0, Llce;
 
-    iget v7, v6, Lhsd;->f:I
+    iget v0, v0, Llce;->a:I
 
-    const/4 v8, 0x0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-ne v7, v5, :cond_0
+    move-result-object v0
 
-    goto :goto_2
+    invoke-virtual {p1, v0}, Lfl7;->e(Ljava/lang/Integer;)V
 
     :cond_0
-    iput v8, v4, Lxm5;->g:I
+    return-void
 
-    int-to-float v7, v8
+    :pswitch_2
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
 
-    iput v7, v4, Lxm5;->f:F
+    check-cast p1, Ln94;
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    iget-object p1, p1, Ln94;->a:Ll88;
 
-    move-result-wide v9
+    sget-object v0, Ln78;->ON_RESUME:Ln78;
 
-    iput-wide v9, v4, Lxm5;->h:J
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
 
-    iget-object v7, v4, Lxm5;->d:Landroid/view/VelocityTracker;
+    return-void
 
-    if-nez v7, :cond_1
+    :pswitch_3
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
 
-    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
+    check-cast p1, Lgz1;
 
-    move-result-object v7
+    iget-object p1, p1, Lgz1;->b:Ll88;
 
-    iput-object v7, v4, Lxm5;->d:Landroid/view/VelocityTracker;
+    sget-object v0, Ln78;->ON_RESUME:Ln78;
 
-    iget-object v7, v4, Lxm5;->a:Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
 
-    invoke-virtual {v7}, Landroid/view/View;->getContext()Landroid/content/Context;
+    return-void
 
-    move-result-object v7
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
 
-    invoke-static {v7}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+.method public h(La94;)V
+    .locals 1
 
-    move-result-object v7
+    iget p1, p0, Lk94;->a:I
 
-    invoke-virtual {v7}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
+    packed-switch p1, :pswitch_data_0
 
-    move-result v7
+    return-void
 
-    iput v7, v4, Lxm5;->e:I
+    :pswitch_0
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast p1, Lgz1;
 
-    :cond_1
-    invoke-virtual {v7}, Landroid/view/VelocityTracker;->clear()V
+    iget-object p1, p1, Lgz1;->b:Ll88;
 
-    :goto_0
-    const/4 v7, 0x4
+    sget-object v0, Ln78;->ON_CREATE:Ln78;
 
-    iput v7, v6, Lhsd;->e:I
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
 
-    invoke-virtual {v6, v5}, Lhsd;->f(Z)V
+    return-void
 
-    iget v6, v6, Lhsd;->f:I
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    if-nez v6, :cond_2
+.method public j(La94;Landroid/view/View;)V
+    .locals 1
 
-    goto :goto_1
+    iget v0, p0, Lk94;->a:I
 
-    :cond_2
-    iget-object v6, v4, Lxm5;->c:Landroidx/recyclerview/widget/RecyclerView;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v6}, Landroidx/recyclerview/widget/RecyclerView;->E0()V
+    return-void
 
-    :goto_1
-    iget-wide v9, v4, Lxm5;->h:J
+    :pswitch_0
+    iget-object v0, p0, Lk94;->b:Ljava/lang/Object;
 
-    const/4 v15, 0x0
+    check-cast v0, Ln94;
 
-    const/16 v16, 0x0
+    invoke-static {p2, v0}, Lr6j;->k(Landroid/view/View;Lj88;)V
 
-    const/4 v13, 0x0
+    invoke-static {p1}, Lj94;->a(La94;)Z
 
-    const/4 v14, 0x0
+    move-result p1
 
-    move-wide v11, v9
+    if-nez p1, :cond_0
 
-    invoke-static/range {v9 .. v16}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
+    iget-object p1, v0, Ln94;->a:Ll88;
 
-    move-result-object v6
+    sget-object p2, Ln78;->ON_CREATE:Ln78;
 
-    iget-object v4, v4, Lxm5;->d:Landroid/view/VelocityTracker;
+    invoke-virtual {p1, p2}, Ll88;->d(Ln78;)V
 
-    invoke-virtual {v4, v6}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+    :cond_0
+    return-void
 
-    invoke-virtual {v6}, Landroid/view/MotionEvent;->recycle()V
+    :pswitch_1
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
 
-    :goto_2
-    int-to-float v3, v3
+    check-cast p1, Lgz1;
 
-    iget-object v4, v2, Landroidx/viewpager2/widget/ViewPager2;->A0:Lxm5;
+    iget-object p1, p1, Lgz1;->b:Ll88;
 
-    iget-object v6, v4, Lxm5;->b:Lhsd;
+    sget-object p2, Ln78;->ON_START:Ln78;
 
-    iget-boolean v6, v6, Lhsd;->m:Z
-
-    if-nez v6, :cond_3
-
-    goto :goto_8
-
-    :cond_3
-    iget v6, v4, Lxm5;->f:F
-
-    sub-float/2addr v6, v3
-
-    iput v6, v4, Lxm5;->f:F
-
-    iget v3, v4, Lxm5;->g:I
-
-    int-to-float v3, v3
-
-    sub-float/2addr v6, v3
-
-    invoke-static {v6}, Ljava/lang/Math;->round(F)I
-
-    move-result v3
-
-    iget v6, v4, Lxm5;->g:I
-
-    add-int/2addr v6, v3
-
-    iput v6, v4, Lxm5;->g:I
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v11
-
-    iget-object v6, v4, Lxm5;->a:Landroidx/viewpager2/widget/ViewPager2;
-
-    invoke-virtual {v6}, Landroidx/viewpager2/widget/ViewPager2;->getOrientation()I
-
-    move-result v6
-
-    if-nez v6, :cond_4
-
-    move v6, v5
-
-    goto :goto_3
-
-    :cond_4
-    move v6, v8
-
-    :goto_3
-    if-eqz v6, :cond_5
-
-    move v7, v3
-
-    goto :goto_4
-
-    :cond_5
-    move v7, v8
-
-    :goto_4
-    if-eqz v6, :cond_6
-
-    move v3, v8
-
-    :cond_6
-    const/4 v9, 0x0
-
-    if-eqz v6, :cond_7
-
-    iget v10, v4, Lxm5;->f:F
-
-    move v14, v10
-
-    goto :goto_5
-
-    :cond_7
-    move v14, v9
-
-    :goto_5
-    if-eqz v6, :cond_8
-
-    :goto_6
-    move v15, v9
-
-    goto :goto_7
-
-    :cond_8
-    iget v9, v4, Lxm5;->f:F
-
-    goto :goto_6
-
-    :goto_7
-    iget-object v6, v4, Lxm5;->c:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v6, v7, v3}, Landroidx/recyclerview/widget/RecyclerView;->scrollBy(II)V
-
-    iget-wide v9, v4, Lxm5;->h:J
-
-    const/16 v16, 0x0
-
-    const/4 v13, 0x2
-
-    invoke-static/range {v9 .. v16}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
-
-    move-result-object v3
-
-    iget-object v4, v4, Lxm5;->d:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v4, v3}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    invoke-virtual {v3}, Landroid/view/MotionEvent;->recycle()V
-
-    :goto_8
-    iget-object v3, v2, Landroidx/viewpager2/widget/ViewPager2;->A0:Lxm5;
-
-    iget-object v4, v3, Lxm5;->b:Lhsd;
-
-    iget-boolean v6, v4, Lhsd;->m:Z
-
-    if-nez v6, :cond_9
-
-    goto :goto_a
-
-    :cond_9
-    iget v7, v4, Lhsd;->f:I
-
-    if-ne v7, v5, :cond_a
-
-    if-nez v6, :cond_a
-
-    goto :goto_9
-
-    :cond_a
-    iput-boolean v8, v4, Lhsd;->m:Z
-
-    invoke-virtual {v4}, Lhsd;->g()V
-
-    iget-object v6, v4, Lhsd;->g:Lgsd;
-
-    iget v7, v6, Lgsd;->c:I
-
-    if-nez v7, :cond_c
-
-    iget v6, v6, Lgsd;->b:I
-
-    iget v7, v4, Lhsd;->h:I
-
-    if-eq v6, v7, :cond_b
-
-    invoke-virtual {v4, v6}, Lhsd;->c(I)V
-
-    :cond_b
-    invoke-virtual {v4, v8}, Lhsd;->d(I)V
-
-    invoke-virtual {v4}, Lhsd;->e()V
-
-    goto :goto_9
-
-    :cond_c
-    const/4 v6, 0x2
-
-    invoke-virtual {v4, v6}, Lhsd;->d(I)V
-
-    :goto_9
-    iget-object v4, v3, Lxm5;->d:Landroid/view/VelocityTracker;
-
-    iget v6, v3, Lxm5;->e:I
-
-    int-to-float v6, v6
-
-    const/16 v7, 0x3e8
-
-    invoke-virtual {v4, v7, v6}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
-
-    invoke-virtual {v4}, Landroid/view/VelocityTracker;->getXVelocity()F
-
-    move-result v6
-
-    float-to-int v6, v6
-
-    invoke-virtual {v4}, Landroid/view/VelocityTracker;->getYVelocity()F
-
-    move-result v4
-
-    float-to-int v4, v4
-
-    iget-object v7, v3, Lxm5;->c:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v7, v6, v4}, Landroidx/recyclerview/widget/RecyclerView;->O(II)Z
-
-    move-result v4
-
-    if-nez v4, :cond_f
-
-    iget-object v3, v3, Lxm5;->a:Landroidx/viewpager2/widget/ViewPager2;
-
-    iget-object v4, v3, Landroidx/viewpager2/widget/ViewPager2;->x0:Lj0h;
-
-    iget-object v6, v3, Landroidx/viewpager2/widget/ViewPager2;->t0:Lg0h;
-
-    invoke-virtual {v4, v6}, Lj0h;->g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
-
-    move-result-object v4
-
-    if-nez v4, :cond_d
-
-    goto :goto_a
-
-    :cond_d
-    iget-object v6, v3, Landroidx/viewpager2/widget/ViewPager2;->x0:Lj0h;
-
-    iget-object v7, v3, Landroidx/viewpager2/widget/ViewPager2;->t0:Lg0h;
-
-    invoke-virtual {v6, v7, v4}, Lmc4;->b(Landroidx/recyclerview/widget/a;Landroid/view/View;)[I
-
-    move-result-object v4
-
-    aget v6, v4, v8
-
-    if-nez v6, :cond_e
-
-    aget v7, v4, v5
-
-    if-eqz v7, :cond_f
-
-    :cond_e
-    iget-object v3, v3, Landroidx/viewpager2/widget/ViewPager2;->w0:Lk0h;
-
-    aget v4, v4, v5
-
-    invoke-virtual {v3, v6, v4, v8}, Landroidx/recyclerview/widget/RecyclerView;->A0(IIZ)V
-
-    :cond_f
-    :goto_a
-    invoke-virtual {v2, v1, v5}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
+    invoke-virtual {p1, p2}, Ll88;->d(Ln78;)V
 
     return-void
 
@@ -430,6 +209,298 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public k(La94;)V
+    .locals 1
+
+    iget v0, p0, Lk94;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast v0, Lw4e;
+
+    iget-object v0, v0, Lw4e;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    return-void
+
+    :pswitch_2
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lt06;->c:Lt06;
+
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljm4;->d()Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public l(La94;)V
+    .locals 2
+
+    iget p1, p0, Lk94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ln94;
+
+    iget-object v0, p1, Ln94;->a:Ll88;
+
+    iget-object v0, v0, Ll88;->d:Lo78;
+
+    sget-object v1, Lo78;->c:Lo78;
+
+    invoke-virtual {v0, v1}, Lo78;->a(Lo78;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Ln94;->a:Ll88;
+
+    sget-object v0, Ln78;->ON_DESTROY:Ln78;
+
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public n(La94;Landroid/view/View;)V
+    .locals 0
+
+    iget p1, p0, Lk94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ln94;
+
+    iget-object p1, p1, Ln94;->a:Ll88;
+
+    sget-object p2, Ln78;->ON_START:Ln78;
+
+    invoke-virtual {p1, p2}, Ll88;->d(Ln78;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public p(La94;)V
+    .locals 0
+
+    iget p1, p0, Lk94;->a:I
+
+    return-void
+.end method
+
+.method public q(La94;)V
+    .locals 3
+
+    iget v0, p0, Lk94;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast v0, Ln94;
+
+    iget-object v1, v0, Ln94;->a:Ll88;
+
+    iget-object v1, v1, Ll88;->d:Lo78;
+
+    sget-object v2, Lo78;->a:Lo78;
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lg5j;->c(La94;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v1, "preCreateView: recreate lifecycleRegistry for viewLifecycleOwner"
+
+    invoke-static {p1, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance p1, Ll88;
+
+    invoke-direct {p1, v0}, Ll88;-><init>(Lj88;)V
+
+    iput-object p1, v0, Ln94;->a:Ll88;
+
+    :cond_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public r(La94;)V
+    .locals 2
+
+    iget p1, p0, Lk94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lgz1;
+
+    iget-object p1, p1, Lgz1;->b:Ll88;
+
+    iget-object v0, p1, Ll88;->d:Lo78;
+
+    sget-object v1, Lo78;->b:Lo78;
+
+    if-eq v0, v1, :cond_0
+
+    sget-object v0, Ln78;->ON_DESTROY:Ln78;
+
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public s(La94;Landroid/view/View;)V
+    .locals 0
+
+    iget p1, p0, Lk94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ln94;
+
+    iget-object p1, p1, Ln94;->a:Ll88;
+
+    sget-object p2, Ln78;->ON_STOP:Ln78;
+
+    invoke-virtual {p1, p2}, Ll88;->d(Ln78;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lgz1;
+
+    iget-object p1, p1, Lgz1;->b:Ll88;
+
+    sget-object p2, Ln78;->ON_STOP:Ln78;
+
+    invoke-virtual {p1, p2}, Ll88;->d(Ln78;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public t(La94;)V
+    .locals 1
+
+    iget p1, p0, Lk94;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Ln94;
+
+    iget-object p1, p1, Ln94;->a:Ll88;
+
+    sget-object v0, Ln78;->ON_PAUSE:Ln78;
+
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p1, p0, Lk94;->b:Ljava/lang/Object;
+
+    check-cast p1, Lgz1;
+
+    iget-object p1, p1, Lgz1;->b:Ll88;
+
+    sget-object v0, Ln78;->ON_PAUSE:Ln78;
+
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

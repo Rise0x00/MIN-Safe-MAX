@@ -1,373 +1,252 @@
-.class public abstract Lwi;
-.super Landroidx/appcompat/widget/AppCompatEditText;
+.class public final Lwi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lr5e;
 
 
 # instance fields
-.field public t0:Z
+.field public final a:Lzh;
 
-.field public u0:[Lnk;
+.field public final b:Lpc3;
+
+.field public c:Lai4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+.method public constructor <init>(Lzh;Lpc3;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Landroidx/appcompat/widget/AppCompatEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lvi;
+    iput-object p1, p0, Lwi;->a:Lzh;
 
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2, p0}, Lvi;-><init>(ILjava/lang/Object;)V
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x1
-
-    invoke-super {p0, p2, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    iput-object p2, p0, Lwi;->b:Lpc3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getAnimojiEnabled()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lwi;->t0:Z
-
-    return v0
-.end method
-
-.method public final getCachedSpans$animoji_release()[Lnk;
-    .locals 1
-
-    iget-object v0, p0, Lwi;->u0:[Lnk;
-
-    return-object v0
-.end method
-
-.method public final onDetachedFromWindow()V
-    .locals 2
-
-    invoke-super {p0}, Landroidx/appcompat/widget/AppCompatEditText;->onDetachedFromWindow()V
-
-    iget-object v0, p0, Lwi;->u0:[Lnk;
-
-    if-eqz v0, :cond_1
-
-    array-length v1, v0
-
-    if-gtz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    sget-boolean v0, Lbi;->b:Z
-
-    const-string v1, "AnimojiEditText"
-
-    if-eqz v0, :cond_0
-
-    const-string v2, "---> onDraw start"
-
-    invoke-static {v1, v2}, Lbi;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
-
-    if-eqz v0, :cond_1
-
-    const-string p1, "<--- onDraw finish"
-
-    invoke-static {v1, p1}, Lbi;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+.method public final a(Lai4;[BI)V
     .locals 5
 
-    sget-object p2, Lbi;->c:Lak;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    if-eqz p2, :cond_e
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
-    iget-boolean p2, p0, Lwi;->t0:Z
+    move-result-object p1
 
-    if-nez p2, :cond_0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
-    goto/16 :goto_7
+    move-result p3
 
-    :cond_0
-    instance-of p2, p1, Landroid/text/Spannable;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
 
-    const/4 p3, 0x0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
 
-    if-eqz p2, :cond_1
+    const/4 v0, 0x1
 
-    move-object p2, p1
+    if-ne p3, v0, :cond_0
 
-    check-cast p2, Landroid/text/Spannable;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v1
+
+    const v2, 0xffff
+
+    and-int/2addr v1, v2
 
     goto :goto_0
 
-    :cond_1
-    move-object p2, p3
+    :cond_0
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
+
+    move-result v1
 
     :goto_0
-    const-class p4, Lnk;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
-    const/4 v0, 0x0
+    move-result v2
 
-    if-eqz p2, :cond_4
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
-    iget-object v1, p0, Lwi;->u0:[Lnk;
+    move-result-object p1
 
-    if-eqz v1, :cond_3
+    sget-object v3, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
-    array-length v2, v1
+    invoke-virtual {p1, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    if-gtz v2, :cond_2
+    const/4 v3, 0x0
+
+    if-ne p3, v0, :cond_2
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+
+    move-result p3
+
+    div-int/lit8 p3, p3, 0x4
+
+    new-array v0, p3, [F
+
+    :goto_1
+    if-ge v3, p3, :cond_1
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
+
+    move-result v2
+
+    aput v2, v0, v3
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
+    :cond_1
+    new-instance p1, Ldi;
+
+    invoke-direct {p1, v0}, Ldi;-><init>([F)V
+
+    goto :goto_3
+
     :cond_2
-    aget-object p1, v1, v0
+    if-eqz v2, :cond_5
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eq v2, v0, :cond_4
 
-    throw p3
+    const/4 p3, 0x2
+
+    if-eq v2, p3, :cond_3
+
+    new-instance p1, Lhi;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    goto :goto_3
 
     :cond_3
-    :goto_1
-    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
-    move-result v1
+    move-result p3
 
-    invoke-static {p2, p4, v0, v1}, Lngi;->f(Landroid/text/Spannable;Ljava/lang/Class;II)V
+    and-int/lit16 p3, p3, 0xff
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result v0
+
+    and-int/lit16 v0, v0, 0xff
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result p1
+
+    and-int/lit16 p1, p1, 0xff
+
+    invoke-static {p3, v0, p1}, Landroid/graphics/Color;->rgb(III)I
+
+    move-result p1
+
+    new-instance p3, Lfi;
+
+    invoke-direct {p3, p1}, Lfi;-><init>(I)V
+
+    move-object p1, p3
+
+    goto :goto_3
 
     :cond_4
-    :try_start_0
-    invoke-static {}, La85;->a()La85;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, La85;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p2
-
-    const-string v1, "AnimojiEditText"
-
-    const-string v2, "fail to process emojis"
-
-    invoke-static {v1, v2, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :goto_2
-    sget-object p2, Lbi;->c:Lak;
-
-    if-eqz p1, :cond_9
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_5
+    sget-object p1, Lgi;->a:Lgi;
 
     goto :goto_3
 
     :cond_5
-    instance-of v1, p1, Landroid/text/Spannable;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    if-nez v1, :cond_6
+    move-result p3
 
-    goto :goto_3
+    new-array v0, p3, [F
 
-    :cond_6
-    invoke-virtual {p2, p1}, Lak;->a(Ljava/lang/CharSequence;)Ljava/util/List;
+    :goto_2
+    if-ge v3, p3, :cond_6
 
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v2
 
-    invoke-interface {p0}, Lb85;->a()Z
+    and-int/lit16 v2, v2, 0xff
 
-    move-result v3
+    int-to-float v2, v2
 
-    if-eq v3, v2, :cond_7
+    const v4, 0x3b808081
 
-    invoke-interface {p0, v2}, Lb85;->setEmojiCompatEnabled(Z)V
+    mul-float/2addr v2, v4
 
-    :cond_7
-    move-object v2, p1
+    aput v2, v0, v3
 
-    check-cast v2, Landroid/text/Spannable;
+    add-int/lit8 v3, v3, 0x1
 
-    new-instance v3, Ljava/util/ArrayList;
+    goto :goto_2
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    :cond_6
+    new-instance p1, Ldi;
 
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-direct {p1, v0}, Ldi;-><init>([F)V
 
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-nez v4, :cond_8
-
-    invoke-static {v2, v3, p2}, Lnei;->b(Landroid/text/Spannable;Ljava/util/ArrayList;Lak;)V
-
-    invoke-static {p1}, Lnei;->e(Ljava/lang/CharSequence;)V
-
-    goto :goto_3
-
-    :cond_8
-    invoke-static {v1}, Lm65;->g(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
-
-    :cond_9
     :goto_3
-    if-eqz p1, :cond_c
+    new-instance p3, Lyi;
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    const/4 v0, 0x0
 
-    move-result p2
+    invoke-direct {p3, v1, p1, v0}, Lyi;-><init>(ILjava/lang/Object;I)V
 
-    :try_start_1
-    instance-of v1, p1, Landroid/text/Spanned;
+    iget-object p1, p0, Lwi;->b:Lpc3;
 
-    if-eqz v1, :cond_a
+    iget-object p1, p1, Lpc3;->X:Ljava/lang/Object;
 
-    check-cast p1, Landroid/text/Spanned;
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
+
+    iget-object p1, p0, Lwi;->b:Lpc3;
+
+    array-length p2, p2
+
+    iget-object p1, p1, Lpc3;->o:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    iget-object p1, p0, Lwi;->a:Lzh;
+
+    iget-boolean p2, p1, Lzh;->i:Z
+
+    if-nez p2, :cond_7
 
     goto :goto_4
 
-    :cond_a
-    move-object p1, p3
+    :cond_7
+    iget-object p1, p1, Lzh;->h:Lbj;
+
+    iget-boolean p2, p1, Lbj;->p:Z
+
+    if-eqz p2, :cond_8
 
     :goto_4
-    if-eqz p1, :cond_b
-
-    invoke-interface {p1, v0, p2, p4}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_5
-
-    :catchall_1
-    :cond_b
-    move-object p1, p3
-
-    :goto_5
-    check-cast p1, [Lnk;
-
-    goto :goto_6
-
-    :cond_c
-    move-object p1, p3
-
-    :goto_6
-    iput-object p1, p0, Lwi;->u0:[Lnk;
-
-    if-eqz p1, :cond_e
-
-    array-length p2, p1
-
-    if-gtz p2, :cond_d
-
-    goto :goto_7
-
-    :cond_d
-    aget-object p1, p1, v0
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    throw p3
-
-    :cond_e
-    :goto_7
     return-void
-.end method
 
-.method public final setAnimojiEnabled(Z)V
-    .locals 4
+    :cond_8
+    iget-object p2, p1, Lbj;->g:Landroid/os/Handler;
 
-    iget-boolean v0, p0, Lwi;->t0:Z
+    new-instance v0, Lud;
 
-    if-eq v0, p1, :cond_1
+    const/4 v1, 0x2
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatEditText;->getText()Landroid/text/Editable;
+    invoke-direct {v0, p1, v1, p3}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v0, v3, v1, v2}, Lwi;->onTextChanged(Ljava/lang/CharSequence;III)V
-
-    :cond_0
-    iput-boolean p1, p0, Lwi;->t0:Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final setCachedSpans$animoji_release([Lnk;)V
-    .locals 0
-
-    iput-object p1, p0, Lwi;->u0:[Lnk;
-
-    return-void
-.end method
-
-.method public final setLayerType(ILandroid/graphics/Paint;)V
-    .locals 0
-
-    const/4 p1, 0x1
-
-    invoke-super {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method

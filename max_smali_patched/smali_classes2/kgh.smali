@@ -1,23 +1,19 @@
 .class public final Lkgh;
-.super Lup7;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
+.field public a:Ljgh;
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+# virtual methods
+.method public final setPlayer(Lgob;)V
+    .locals 1
 
-    invoke-direct {p0}, Lup7;-><init>()V
+    iget-object v0, p0, Lkgh;->a:Ljgh;
 
-    iput-object p1, p0, Lkgh;->c:Ljava/lang/String;
-
-    iput-object p2, p0, Lkgh;->d:Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljgh;->setPlayer(Lgob;)V
 
     return-void
 .end method

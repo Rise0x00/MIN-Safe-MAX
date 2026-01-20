@@ -1,60 +1,13 @@
 .class public final Lpji;
-.super Ljava/lang/Object;
+.super Lqji;
 .source "SourceFile"
-
-# interfaces
-.implements Lzha;
-
-
-# static fields
-.field public static final a:Lpji;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lpji;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lpji;->a:Lpji;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lne8;
     .locals 0
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 p1, 0x0
 
-    move-result-object p1
-
-    throw p1
+    return-object p1
 .end method

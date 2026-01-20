@@ -1,180 +1,55 @@
-.class public final synthetic Lcq2;
-.super Ljava/lang/Object;
+.class public final Lcq2;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:J
 
-.field public final synthetic b:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Ljq2;
+
+.field public d:Lkf9;
+
+.field public o:Lnd2;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;I)V
+.method public constructor <init>(Ljq2;Lo84;)V
     .locals 0
 
-    iput p2, p0, Lcq2;->a:I
+    iput-object p1, p0, Lcq2;->Z:Ljq2;
 
-    iput-object p1, p0, Lcq2;->b:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 11
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lcq2;->a:I
+    iput-object p1, p0, Lcq2;->Y:Ljava/lang/Object;
 
-    const/4 v1, 0x6
+    iget p1, p0, Lcq2;->t0:I
 
-    iget-object v2, p0, Lcq2;->b:Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;
+    const/high16 v0, -0x80000000
 
-    packed-switch v0, :pswitch_data_0
+    or-int/2addr p1, v0
 
-    sget-object v0, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->X:[Les7;
+    iput p1, p0, Lcq2;->t0:I
 
-    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    iget-object p1, p0, Lcq2;->Z:Ljq2;
 
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/4 v0, 0x0
 
-    move-result-object v3
+    invoke-static {p1, v0, p0}, Ljq2;->t(Ljq2;Lkf9;Lo84;)Ljava/lang/Object;
 
-    const/4 v4, 0x0
+    move-result-object p1
 
-    invoke-direct {v0, v3, v4, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    sget v1, Lzya;->c:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v1, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOverScrollMode(I)V
-
-    iget-object v3, v2, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->c:Lfde;
-
-    invoke-virtual {v0, v3}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lp6d;)V
-
-    new-instance v7, Lg52;
-
-    const/16 v5, 0xa
-
-    invoke-direct {v7, v5, v2}, Lg52;-><init>(ILjava/lang/Object;)V
-
-    new-instance v5, Ldyd;
-
-    sget-object v6, Ly53;->s0:Lvh4;
-
-    invoke-virtual {v6, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
-
-    move-result-object v6
-
-    const/4 v9, 0x0
-
-    const/16 v10, 0x1c
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v5 .. v10}, Ldyd;-><init>(Lw5b;Lbyd;Ll;Lagd;I)V
-
-    invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/RecyclerView;->j(Lv6d;)V
-
-    new-instance v5, Lxz0;
-
-    invoke-direct {v5, v1}, Lxz0;-><init>(I)V
-
-    invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/RecyclerView;->j(Lv6d;)V
-
-    new-instance v1, Lwui;
-
-    new-instance v5, Lma;
-
-    const/4 v6, 0x5
-
-    invoke-direct {v5, v2, v6, v0}, Lma;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2, v5}, Lwui;-><init>(ILjava/lang/Object;)V
-
-    new-instance v2, Lw8f;
-
-    invoke-direct {v2, v0, v3, v1}, Lw8f;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lp6d;Lx8f;)V
-
-    invoke-virtual {v0, v2}, Landroidx/recyclerview/widget/RecyclerView;->j(Lv6d;)V
-
-    new-instance v1, Ldq2;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v4, v3}, Ldq2;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v1, v0}, Ludi;->e(Lgj6;Landroid/view/View;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/notifications/settings/screens/chat/ChatNotificationsSettingsScreen;->X:[Les7;
-
-    new-instance v0, Lv6b;
-
-    invoke-virtual {v2}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2, v1}, Lv6b;-><init>(Landroid/content/Context;I)V
-
-    sget v1, Lzya;->e:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget-object v1, Ln6b;->a:Ln6b;
-
-    invoke-virtual {v0, v1}, Lv6b;->setForm(Ln6b;)V
-
-    sget v1, Lbza;->e:I
-
-    invoke-virtual {v0, v1}, Lv6b;->setTitle(I)V
-
-    new-instance v1, Ld6b;
-
-    new-instance v2, Lfe1;
-
-    const/16 v3, 0x17
-
-    invoke-direct {v2, v3}, Lfe1;-><init>(I)V
-
-    invoke-direct {v1, v2}, Ld6b;-><init>(Lqi6;)V
-
-    invoke-virtual {v0, v1}, Lv6b;->setLeftActions(Lj6b;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

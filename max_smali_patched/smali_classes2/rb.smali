@@ -1,181 +1,230 @@
 .class public final Lrb;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Ldr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Landroidx/recyclerview/widget/RecyclerView;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic Y:Lkxf;
 
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final synthetic o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+.method public synthetic constructor <init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    iput p4, p0, Lrb;->a:I
+    iput p3, p0, Lrb;->o:I
 
-    iput-object p1, p0, Lrb;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lrb;->Y:Lkxf;
 
-    iput-object p2, p0, Lrb;->c:Ljava/lang/Object;
+    const/4 p1, 0x3
 
-    iput-object p3, p0, Lrb;->d:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lrb;->a:I
+    iget v0, p0, Lrb;->o:I
+
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+
+    check-cast p2, Lzlb;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Landroid/view/View;
+    new-instance p2, Lrb;
 
-    iget-object p1, p0, Lrb;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lrb;->Y:Lkxf;
 
-    check-cast p1, Lvug;
+    const/4 v1, 0x4
 
-    invoke-virtual {p1}, Lvug;->dispose()V
+    invoke-direct {p2, v0, p3, v1}, Lrb;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
 
-    iget-object p1, p0, Lrb;->c:Ljava/lang/Object;
+    iput-object p1, p2, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    check-cast p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object p1, p1, Lone/me/chatscreen/videomsg/VideoMessageWidget;->X:Ljava/lang/String;
-
-    sget-object v0, Lcuh;->b:Lnxa;
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, La98;->o:La98;
-
-    invoke-virtual {v0, v1}, Lnxa;->b(La98;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "last updating blur for video message screen after stable position"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, p1, v2, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object p1, p0, Lrb;->d:Ljava/lang/Object;
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {p2, p1}, Lrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lrb;->b:Ljava/lang/Object;
+    new-instance p2, Lrb;
 
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v0, p0, Lrb;->Y:Lkxf;
 
-    iget-object v1, p0, Lrb;->c:Ljava/lang/Object;
+    const/4 v1, 0x3
 
-    check-cast v1, Ly44;
+    invoke-direct {p2, v0, p3, v1}, Lrb;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
 
-    sget-object v2, Lj54;->b:Lj54;
+    iput-object p1, p2, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v3, Le79;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object v4, p0, Lrb;->d:Ljava/lang/Object;
-
-    check-cast v4, Lbph;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, p1, v5, v4}, Le79;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lbph;)V
-
-    invoke-static {v0, v1, v2, v3}, Lkki;->a(Lg54;Ly44;Lj54;Lej6;)Lmp4;
-
-    move-result-object p1
+    invoke-virtual {p2, p1}, Lrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
 
     :pswitch_1
-    iget-object v0, p0, Lrb;->b:Ljava/lang/Object;
+    new-instance p2, Lrb;
 
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v0, p0, Lrb;->Y:Lkxf;
 
-    iget-object v1, p0, Lrb;->c:Ljava/lang/Object;
+    const/4 v1, 0x2
 
-    check-cast v1, Ly44;
+    invoke-direct {p2, v0, p3, v1}, Lrb;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
 
-    sget-object v2, Lj54;->a:Lj54;
+    iput-object p1, p2, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v3, Lc79;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object v4, p0, Lrb;->d:Ljava/lang/Object;
-
-    check-cast v4, Lrob;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, p1, v5, v4}, Lc79;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lrob;)V
-
-    invoke-static {v0, v1, v2, v3}, Lkki;->a(Lg54;Ly44;Lj54;Lej6;)Lmp4;
-
-    move-result-object p1
+    invoke-virtual {p2, p1}, Lrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
 
     :pswitch_2
-    iget-object v0, p0, Lrb;->b:Ljava/lang/Object;
+    new-instance p2, Lrb;
 
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+    iget-object v0, p0, Lrb;->Y:Lkxf;
 
-    iget-object v1, p0, Lrb;->c:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast v1, Ly44;
+    invoke-direct {p2, v0, p3, v1}, Lrb;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
 
-    sget-object v2, Lj54;->a:Lj54;
+    iput-object p1, p2, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v3, Lqb;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object v4, p0, Lrb;->d:Ljava/lang/Object;
-
-    check-cast v4, Lub;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v3, p1, v5, v4}, Lqb;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lub;)V
-
-    invoke-static {v0, v1, v2, v3}, Lkki;->a(Lg54;Ly44;Lj54;Lej6;)Lmp4;
-
-    move-result-object p1
+    invoke-virtual {p2, p1}, Lrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
 
+    :pswitch_3
+    new-instance p2, Lrb;
+
+    iget-object v0, p0, Lrb;->Y:Lkxf;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p2, v0, p3, v1}, Lrb;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p2, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p2, p1}, Lrb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lrb;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrb;->Y:Lkxf;
+
+    invoke-virtual {p1}, Lkxf;->k()V
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrb;->Y:Lkxf;
+
+    invoke-virtual {p1}, Lkxf;->k()V
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_1
+    iget-object v0, p0, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrb;->Y:Lkxf;
+
+    invoke-virtual {p1}, Lkxf;->k()V
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_2
+    iget-object v0, p0, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrb;->Y:Lkxf;
+
+    invoke-virtual {p1}, Lkxf;->k()V
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_3
+    iget-object v0, p0, Lrb;->X:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrb;->Y:Lkxf;
+
+    invoke-virtual {p1}, Lkxf;->k()V
+
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0

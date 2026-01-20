@@ -1,92 +1,149 @@
-.class public final Lq6;
-.super Landroid/app/SharedElementCallback;
+.class public final synthetic Lq6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/graphics/Rect;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+.field public final synthetic b:Llq6;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Landroid/graphics/Rect;)V
+.method public synthetic constructor <init>(ILlq6;)V
     .locals 0
 
-    iput-object p1, p0, Lq6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    iput p1, p0, Lq6;->a:I
 
-    iput-object p2, p0, Lq6;->a:Landroid/graphics/Rect;
+    iput-object p2, p0, Lq6;->b:Llq6;
 
-    invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    if-eqz p2, :cond_0
+    iget p1, p0, Lq6;->a:I
 
-    iget-object p1, p0, Lq6;->a:Landroid/graphics/Rect;
+    iget-object v0, p0, Lq6;->b:Llq6;
 
-    if-eqz p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    move-result-object p2
+    return-void
 
-    invoke-interface {p2}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    :pswitch_0
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    move-result-object p2
+    return-void
 
-    :goto_0
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+    :pswitch_1
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    move-result v0
+    return-void
 
+    :pswitch_2
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_3
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_4
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_5
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_6
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_7
     if-eqz v0, :cond_0
 
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    invoke-static {p1, v0}, Lkbi;->c(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    goto :goto_0
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
-.end method
 
-.method public final onRejectSharedElements(Ljava/util/List;)V
-    .locals 3
+    :pswitch_8
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    iget-object p1, p0, Lq6;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->a1:Landroidx/viewpager2/widget/ViewPager2;
-
-    new-instance v0, Lk3;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Lk3;-><init>(ILjava/lang/Object;)V
-
-    const-wide/16 v1, 0x64
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_0
     return-void
+
+    :pswitch_9
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_a
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_b
+    sget p1, Lone/me/sdk/uikit/common/views/EmptySearchView;->o:I
+
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_c
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_d
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_e
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_f
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

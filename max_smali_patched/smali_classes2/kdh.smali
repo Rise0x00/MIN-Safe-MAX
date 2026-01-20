@@ -1,80 +1,84 @@
 .class public final Lkdh;
-.super Logf;
+.super Lone/me/sdk/richvector/EnhancedVectorDrawable;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Luig;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+.field public final a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljdh;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;ILjdh;)V
+    .locals 1
 
-    iput-object p2, p0, Lkdh;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    const/4 v0, 0x1
 
-    const/4 p2, 0x2
+    if-ne p2, v0, :cond_0
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget v0, Lv5e;->l2:I
+
+    goto :goto_0
+
+    :cond_0
+    sget v0, Lv5e;->m2:I
+
+    :goto_0
+    invoke-direct {p0, p1, v0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    iput p2, p0, Lkdh;->a:I
+
+    iput-object p3, p0, Lkdh;->b:Ljdh;
+
+    sget-object p2, Lpc3;->t0:Lkme;
+
+    invoke-virtual {p2, p1}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lpc3;->j()Lzlb;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lkdh;->onThemeChanged(Lzlb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onThemeChanged(Lzlb;)V
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lkdh;->b:Ljdh;
 
-    invoke-virtual {p0, p1, p2}, Lkdh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-interface {v0, p1}, Ljdh;->l(Lzlb;)J
 
-    move-result-object p1
+    move-result-wide v0
 
-    check-cast p1, Lkdh;
+    const/16 p1, 0x20
 
-    sget-object p2, Lybg;->a:Lybg;
+    shr-long v2, v0, p1
 
-    invoke-virtual {p1, p2}, Lkdh;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    long-to-int p1, v2
 
-    return-object p2
-.end method
+    const-string v2, "mark_path"
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    invoke-static {p0, v2, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
 
-    new-instance v0, Lkdh;
+    const-wide v2, 0xffffffffL
 
-    iget-object v1, p0, Lkdh;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
+    and-long/2addr v0, v2
 
-    invoke-direct {v0, p2, v1}, Lkdh;-><init>(Lkotlin/coroutines/Continuation;Lone/me/webapp/rootscreen/WebAppRootScreen;)V
+    long-to-int p1, v0
 
-    iput-object p1, v0, Lkdh;->o:Ljava/lang/Object;
+    const-string v0, "background_path"
 
-    return-object v0
-.end method
+    invoke-static {p0, v0, p1}, Lroj;->b(Ladh;Ljava/lang/String;I)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkdh;->o:Ljava/lang/Object;
-
-    check-cast p1, Lieh;
-
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->P0:[Les7;
-
-    iget-object v0, p0, Lkdh;->X:Lone/me/webapp/rootscreen/WebAppRootScreen;
-
-    invoke-virtual {v0, p1}, Lone/me/webapp/rootscreen/WebAppRootScreen;->R0(Lieh;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

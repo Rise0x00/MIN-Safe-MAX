@@ -2,98 +2,92 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxa8;
+.implements Lva8;
+
 
 # static fields
-.field public static final g:Lka7;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lra8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public final a:J
 
-.field public b:Ljava/lang/String;
+.field public final b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ljava/lang/String;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lka7;
+    new-instance v0, Lj58;
 
-    const/16 v1, 0xc
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Lka7;-><init>(I)V
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
 
-    sput-object v0, Lra8;->g:Lka7;
+    sput-object v0, Lra8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lra8;->a:J
+
+    iput-object p3, p0, Lra8;->b:Ljava/lang/String;
+
+    iput-object p4, p0, Lra8;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final describeContents()I
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, "LoginResponse{uid=\'"
+    return v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final n()Ljava/lang/String;
+    .locals 1
 
-    iget-object v1, p0, Lra8;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', sessionKey=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lra8;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', secretSessionKey=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lra8;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', authenticationToken=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lra8;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', apiServer=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lra8;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', authenticationHash=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lra8;->f:Ljava/lang/String;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p0, Lra8;->c:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    iget-wide v0, p0, Lra8;->a:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    iget-object p2, p0, Lra8;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lra8;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

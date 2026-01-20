@@ -1,163 +1,133 @@
-.class public final Luq1;
-.super Ljzg;
+.class public final enum Luq1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Ltn1;
+# static fields
+.field public static final synthetic X:[Luq1;
 
-.field public final c:Lmu1;
+.field public static final synthetic Y:Lal5;
 
-.field public final d:Lj0d;
+.field public static final enum a:Luq1;
 
-.field public final o:Lez5;
+.field public static final enum b:Luq1;
+
+.field public static final enum c:Luq1;
+
+.field public static final enum d:Luq1;
+
+.field public static final enum o:Luq1;
 
 
 # direct methods
-.method public constructor <init>(Ltn1;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 9
 
-    sget-object v0, Ldl1;->a:Ldl1;
+    new-instance v0, Luq1;
 
-    invoke-virtual {v0}, Ldl1;->a()Lmu1;
+    const-string v1, "CALL"
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    invoke-static {}, Lcl1;->e()Lru7;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-result-object v1
+    sput-object v0, Luq1;->a:Luq1;
 
-    invoke-direct {p0}, Ljzg;-><init>()V
+    new-instance v1, Luq1;
 
-    iput-object p1, p0, Luq1;->b:Ltn1;
+    const-string v2, "STOP"
 
-    iput-object v0, p0, Luq1;->c:Lmu1;
+    const/4 v3, 0x1
 
-    iget-object v2, p1, Ltn1;->G0:La1f;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v0}, Lmu1;->f()La1f;
+    sput-object v1, Luq1;->b:Luq1;
 
-    move-result-object v3
+    new-instance v2, Luq1;
 
-    new-instance v4, Lsq1;
+    const-string v3, "UPDATE_ACTIVE_NOTIFICATION"
 
-    const/4 v5, 0x0
+    const/4 v4, 0x2
 
-    const/4 v6, 0x0
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v4, p0, v6, v5}, Lsq1;-><init>(Ljzg;Lkotlin/coroutines/Continuation;I)V
+    new-instance v3, Luq1;
 
-    new-instance v5, Li41;
+    const-string v4, "RESTART_FOREGROUND"
 
-    const/4 v7, 0x3
+    const/4 v5, 0x3
 
-    invoke-direct {v5, v2, v3, v4, v7}, Li41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v5}, Lqs0;->l(Lez5;)Lez5;
+    sput-object v3, Luq1;->c:Luq1;
 
-    move-result-object v2
+    new-instance v4, Luq1;
 
-    check-cast v1, Ltif;
+    const-string v5, "UPDATE_INCOMING_NOTIFICATION"
 
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
+    const/4 v6, 0x4
 
-    move-result-object v3
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast v3, Ltlf;
+    new-instance v5, Luq1;
 
-    check-cast v3, Lsta;
+    const-string v6, "RESTART_FOREGROUND_SCREENSHARING"
 
-    invoke-virtual {v3}, Lsta;->a()La54;
+    const/4 v7, 0x5
 
-    move-result-object v3
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v2, v3}, Lqs0;->t(Lez5;Ly44;)Lez5;
+    sput-object v5, Luq1;->d:Luq1;
 
-    move-result-object v2
+    new-instance v6, Luq1;
 
-    invoke-virtual {v0}, Lmu1;->e()Lt0f;
+    const-string v7, "HIDE_INCOMING_NOTIFICATION"
 
-    move-result-object v0
+    const/4 v8, 0x6
 
-    new-instance v3, Lmh0;
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/16 v4, 0x15
+    sput-object v6, Luq1;->o:Luq1;
 
-    invoke-direct {v3, v0, v4}, Lmh0;-><init>(Lez5;I)V
-
-    invoke-static {v3}, Lqs0;->l(Lez5;)Lez5;
+    filled-new-array/range {v0 .. v6}, [Luq1;
 
     move-result-object v0
 
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    sput-object v0, Luq1;->X:[Luq1;
 
-    move-result-object v3
+    new-instance v1, Lal5;
 
-    check-cast v3, Ltlf;
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
 
-    check-cast v3, Lsta;
-
-    invoke-virtual {v3}, Lsta;->a()La54;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Lqs0;->t(Lez5;Ly44;)Lez5;
-
-    move-result-object v0
-
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    sget-object v4, Lqke;->a:Lipd;
-
-    iget-object v5, p0, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v0, v5, v4, v3}, Lqs0;->D(Lez5;Lg54;Lrke;Ljava/lang/Object;)Lj0d;
-
-    move-result-object v0
-
-    iput-object v0, p0, Luq1;->d:Lj0d;
-
-    iget-object p1, p1, Ltn1;->A0:Lj0d;
-
-    new-instance v0, Lpd0;
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x5
-
-    invoke-direct {v0, v3, v6, v4}, Lpd0;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    new-instance v3, Li41;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v3, p1, v2, v0, v4}, Li41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {v3}, Lqs0;->l(Lez5;)Lez5;
-
-    move-result-object p1
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ltlf;
-
-    check-cast v0, Lsta;
-
-    invoke-virtual {v0}, Lsta;->a()La54;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lqs0;->t(Lez5;Ly44;)Lez5;
-
-    move-result-object p1
-
-    iput-object p1, p0, Luq1;->o:Lez5;
+    sput-object v1, Luq1;->Y:Lal5;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Luq1;
+    .locals 1
+
+    const-class v0, Luq1;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Luq1;
+
+    return-object p0
+.end method
+
+.method public static values()[Luq1;
+    .locals 1
+
+    sget-object v0, Luq1;->X:[Luq1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Luq1;
+
+    return-object v0
 .end method

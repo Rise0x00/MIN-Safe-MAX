@@ -6,20 +6,14 @@
 # instance fields
 .field public a:Ljava/util/UUID;
 
-.field public b:Lfb4;
+.field public b:Lyh4;
 
-.field public c:Ljava/util/HashSet;
+.field public c:I
 
-.field public d:Lc9i;
+.field public d:Ljava/util/concurrent/ExecutorService;
 
-.field public e:I
+.field public e:Lbg8;
 
-.field public f:Ljava/util/concurrent/ExecutorService;
+.field public f:Lqji;
 
-.field public g:Lu2c;
-
-.field public h:Liph;
-
-.field public i:Ltoh;
-
-.field public j:Lboh;
+.field public g:Llii;

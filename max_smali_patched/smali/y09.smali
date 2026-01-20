@@ -1,80 +1,60 @@
-.class public final synthetic Ly09;
+.class public final Ly09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lj19;
+.implements Lfqh;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Ld09;
 
-.field public final synthetic b:Lqs8;
+.field public final synthetic b:I
+
+.field public final synthetic c:Lc19;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqs8;I)V
+.method public constructor <init>(Lc19;Ld09;IJ)V
     .locals 0
 
-    iput p2, p0, Ly09;->a:I
-
-    iput-object p1, p0, Ly09;->b:Lqs8;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ly09;->c:Lc19;
+
+    iput-object p2, p0, Ly09;->a:Ld09;
+
+    iput p3, p0, Ly09;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Lzz8;Lgz8;I)Ljava/lang/Object;
-    .locals 0
+.method public final F()V
+    .locals 3
 
-    iget p3, p0, Ly09;->a:I
+    iget-object v0, p0, Ly09;->a:Ld09;
 
-    packed-switch p3, :pswitch_data_0
+    iget v1, p0, Ly09;->b:I
 
-    iget-object p3, p0, Ly09;->b:Lqs8;
+    iget-object v2, p0, Ly09;->c:Lc19;
 
-    invoke-static {p3}, Lec7;->n(Ljava/lang/Object;)Lz8d;
+    invoke-virtual {v2, v0, v1}, Lc19;->N0(Ld09;I)V
 
-    move-result-object p3
+    return-void
+.end method
 
-    invoke-virtual {p1, p2, p3}, Lzz8;->l(Lgz8;Ljava/util/List;)Lv28;
+.method public final a(J)V
+    .locals 3
 
-    move-result-object p1
+    iget-object v0, p0, Ly09;->a:Ld09;
 
-    return-object p1
+    iget v1, p0, Ly09;->b:I
 
-    :pswitch_0
-    iget-object p3, p0, Ly09;->b:Lqs8;
+    iget-object v2, p0, Ly09;->c:Lc19;
 
-    invoke-static {p3}, Lec7;->n(Ljava/lang/Object;)Lz8d;
+    invoke-virtual {v2, v0, v1, p1, p2}, Lc19;->J0(Ld09;IJ)V
 
-    move-result-object p3
-
-    invoke-virtual {p1, p2, p3}, Lzz8;->l(Lgz8;Ljava/util/List;)Lv28;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    iget-object p3, p0, Ly09;->b:Lqs8;
-
-    invoke-static {p3}, Lec7;->n(Ljava/lang/Object;)Lz8d;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p2, p3}, Lzz8;->l(Lgz8;Ljava/util/List;)Lv28;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

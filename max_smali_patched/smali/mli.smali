@@ -1,167 +1,270 @@
-.class public abstract Lmli;
+.class public final Lmli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llli;
+
+
+# instance fields
+.field public a:F
+
+.field public final b:F
+
+.field public final c:F
+
+.field public d:F
+
 
 # direct methods
-.method public static final a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-    .locals 6
+.method public constructor <init>(FF)V
+    .locals 0
 
-    const/16 v0, 0x2000
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [B
+    iput p1, p0, Lmli;->b:F
 
-    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
+    iput p2, p0, Lmli;->c:F
 
-    move-result v1
-
-    const-wide/16 v2, 0x0
-
-    :goto_0
-    if-ltz v1, :cond_0
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p1, v0, v4, v1}, Ljava/io/OutputStream;->write([BII)V
-
-    int-to-long v4, v1
-
-    add-long/2addr v2, v4
-
-    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    return-wide v2
+    return-void
 .end method
 
-.method public static b(Ljava/util/ArrayList;)Ljava/lang/String;
-    .locals 4
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+# virtual methods
+.method public final a()F
+    .locals 1
 
-    move-result-object p0
+    iget v0, p0, Lmli;->b:F
 
-    const/4 v0, 0x0
+    return v0
+.end method
+
+.method public final b()F
+    .locals 1
+
+    iget v0, p0, Lmli;->c:F
+
+    return v0
+.end method
+
+.method public final c()F
+    .locals 1
+
+    iget v0, p0, Lmli;->a:F
+
+    return v0
+.end method
+
+.method public final d()F
+    .locals 1
+
+    iget v0, p0, Lmli;->d:F
+
+    return v0
+.end method
+
+.method public final e(F)V
+    .locals 8
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpl-float v1, p1, v0
+
+    if-gtz v1, :cond_4
 
     const/4 v1, 0x0
 
+    cmpg-float v2, p1, v1
+
+    if-ltz v2, :cond_4
+
+    iput p1, p0, Lmli;->d:F
+
+    cmpl-float v2, p1, v0
+
+    iget v3, p0, Lmli;->b:F
+
+    if-nez v2, :cond_0
+
+    goto :goto_1
+
     :cond_0
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    cmpl-float v1, p1, v1
 
-    move-result v2
+    iget v2, p0, Lmli;->c:F
 
-    if-eqz v2, :cond_4
+    if-nez v1, :cond_1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move v3, v2
 
-    move-result-object v2
-
-    check-cast v2, Lp1g;
-
-    iget-object v2, v2, Lp1g;->a:Lz0g;
-
-    iget-object v2, v2, Lz0g;->g:Lub6;
-
-    iget-object v2, v2, Lub6;->n:Ljava/lang/String;
-
-    invoke-static {v2}, Lcs9;->m(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const-string p0, "video/mp4"
-
-    return-object p0
+    goto :goto_1
 
     :cond_1
-    invoke-static {v2}, Lcs9;->i(Ljava/lang/String;)Z
+    div-float v1, v0, v3
 
-    move-result v3
+    float-to-double v4, v1
 
-    if-eqz v3, :cond_2
+    div-float/2addr v0, v2
 
-    const/4 v0, 0x1
+    float-to-double v0, v0
+
+    sub-double/2addr v4, v0
+
+    float-to-double v6, p1
+
+    mul-double/2addr v4, v6
+
+    add-double/2addr v4, v0
+
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
+
+    div-double/2addr v0, v4
+
+    float-to-double v4, v2
+
+    float-to-double v2, v3
+
+    cmpg-double p1, v0, v4
+
+    if-gez p1, :cond_2
+
+    move-wide v0, v4
 
     goto :goto_0
 
     :cond_2
-    invoke-static {v2}, Lcs9;->k(Ljava/lang/String;)Z
+    cmpl-double p1, v0, v2
 
-    move-result v3
+    if-lez p1, :cond_3
 
-    if-eqz v3, :cond_0
-
-    const-string v3, "image/heic"
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    const-string v1, "image/heif"
-
-    goto :goto_0
+    move-wide v0, v2
 
     :cond_3
-    const-string v3, "image/avif"
+    :goto_0
+    double-to-float v3, v0
 
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_1
+    iput v3, p0, Lmli;->a:F
 
-    move-result v2
+    return-void
 
-    if-eqz v2, :cond_0
+    :cond_4
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-object v1, v3
+    const-string v1, "Requested linearZoom "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not within valid range [0..1]"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final f(F)V
+    .locals 5
+
+    iget v0, p0, Lmli;->b:F
+
+    cmpl-float v1, p1, v0
+
+    iget v2, p0, Lmli;->c:F
+
+    if-gtz v1, :cond_3
+
+    cmpg-float v1, p1, v2
+
+    if-ltz v1, :cond_3
+
+    iput p1, p0, Lmli;->a:F
+
+    cmpl-float v1, v0, v2
+
+    const/4 v3, 0x0
+
+    if-nez v1, :cond_0
 
     goto :goto_0
 
-    :cond_4
-    if-eqz v0, :cond_5
+    :cond_0
+    cmpl-float v1, p1, v0
 
-    const-string p0, "audio/mp4"
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    return-object p0
+    if-nez v1, :cond_1
 
-    :cond_5
-    if-eqz v1, :cond_6
+    move v3, v4
 
-    return-object v1
+    goto :goto_0
 
-    :cond_6
-    const-string p0, "application/mp4"
+    :cond_1
+    cmpl-float v1, p1, v2
 
-    return-object p0
-.end method
+    if-nez v1, :cond_2
 
-.method public static final c(Ljava/io/InputStream;)[B
-    .locals 3
+    goto :goto_0
 
-    new-instance v0, Ljava/io/ByteArrayOutputStream;
+    :cond_2
+    div-float p1, v4, p1
 
-    const/16 v1, 0x2000
+    div-float v0, v4, v0
 
-    invoke-virtual {p0}, Ljava/io/InputStream;->available()I
+    div-float/2addr v4, v2
 
-    move-result v2
+    sub-float/2addr p1, v4
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+    sub-float/2addr v0, v4
 
-    move-result v1
+    div-float v3, p1, v0
 
-    invoke-direct {v0, v1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
+    :goto_0
+    iput v3, p0, Lmli;->d:F
 
-    invoke-static {p0, v0}, Lmli;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
+    return-void
 
-    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    :cond_3
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const-string v3, "Requested zoomRatio "
 
-    return-object p0
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, " is not within valid range ["
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, " , "
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string p1, "]"
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

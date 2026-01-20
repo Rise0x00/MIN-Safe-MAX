@@ -1,59 +1,66 @@
-.class public abstract synthetic Lru8;
+.class public final Lru8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:Landroid/view/View;
+
+.field public final synthetic b:F
+
+.field public final synthetic c:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/view/View;FF)V
+    .locals 0
 
-    invoke-static {}, Lou8;->values()[Lou8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lru8;->a:Landroid/view/View;
 
-    array-length v0, v0
+    iput p2, p0, Lru8;->b:F
 
-    new-array v0, v0, [I
+    iput p3, p0, Lru8;->c:F
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    :catch_0
-    const/4 v2, 0x2
+    return-void
+.end method
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
 
-    :catch_1
-    const/4 v1, 0x3
+    iget p1, p0, Lru8;->b:F
 
-    :try_start_2
-    aput v1, v0, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-object v0, p0, Lru8;->a:Landroid/view/View;
 
-    :catch_2
-    const/4 v2, 0x4
+    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleX(F)V
 
-    :try_start_3
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    iget p1, p0, Lru8;->c:F
 
-    :catch_3
-    sput-object v0, Lru8;->$EnumSwitchMapping$0:[I
+    invoke-virtual {v0, p1}, Landroid/view/View;->setScaleY(F)V
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

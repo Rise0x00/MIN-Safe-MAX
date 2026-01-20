@@ -1,52 +1,43 @@
 .class public final Lls5;
-.super Ljava/lang/Object;
+.super Llm4;
 .source "SourceFile"
 
-# interfaces
-.implements Lub4;
 
+# static fields
+.field public static final b:Lls5;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Lhm4;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p1, p0, Lls5;->a:I
+    new-instance v0, Lls5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lxb4;
-    .locals 2
-
-    iget v0, p0, Lls5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lwjd;
-
-    invoke-direct {v0}, Lwjd;-><init>()V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lns5;
+    sput-object v0, Lls5;->b:Lls5;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Llj0;-><init>(Z)V
+    new-array v1, v1, [Ljava/lang/String;
 
-    return-object v0
+    const-string v2, "params"
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v2
+
+    const/16 v3, 0xc
+
+    const-string v4, ":external_callback"
+
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v0
+
+    sput-object v0, Lls5;->c:Lhm4;
+
+    return-void
 .end method

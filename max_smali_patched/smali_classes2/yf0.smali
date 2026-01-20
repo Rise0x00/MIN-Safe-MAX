@@ -1,53 +1,95 @@
-.class public final Lyf0;
-.super Lp14;
+.class public final enum Lyf0;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic c:[Lyf0;
+
+.field public static final synthetic d:Lal5;
+
+
 # instance fields
-.field public X:Ljava/util/HashSet;
+.field public final a:Ljava/lang/String;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Ljava/util/HashSet;
-
-.field public s0:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lp14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lyf0;->Z:Lru/ok/tamtam/workmanager/BacklogWorker;
+    new-instance v0, Lyf0;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    const-string v2, "Light"
+
+    const-string v3, "LIGHT"
+
+    invoke-direct {v0, v3, v1, v2, v1}, Lyf0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    new-instance v1, Lyf0;
+
+    const/4 v2, 0x1
+
+    const-string v3, "Dark"
+
+    const-string v4, "DARK"
+
+    invoke-direct {v1, v4, v2, v3, v2}, Lyf0;-><init>(Ljava/lang/String;ILjava/lang/String;Z)V
+
+    filled-new-array {v0, v1}, [Lyf0;
+
+    move-result-object v0
+
+    sput-object v0, Lyf0;->c:[Lyf0;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lyf0;->d:Lal5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Z)V
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lyf0;->a:Ljava/lang/String;
+
+    iput-boolean p4, p0, Lyf0;->b:Z
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lyf0;
     .locals 1
 
-    iput-object p1, p0, Lyf0;->Y:Ljava/lang/Object;
+    const-class v0, Lyf0;
 
-    iget p1, p0, Lyf0;->s0:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const/high16 v0, -0x80000000
+    move-result-object p0
 
-    or-int/2addr p1, v0
+    check-cast p0, Lyf0;
 
-    iput p1, p0, Lyf0;->s0:I
+    return-object p0
+.end method
 
-    iget-object p1, p0, Lyf0;->Z:Lru/ok/tamtam/workmanager/BacklogWorker;
+.method public static values()[Lyf0;
+    .locals 1
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->h(Lp14;)Ljava/lang/Object;
+    sget-object v0, Lyf0;->c:[Lyf0;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-object p1
+    move-result-object v0
+
+    check-cast v0, [Lyf0;
+
+    return-object v0
 .end method

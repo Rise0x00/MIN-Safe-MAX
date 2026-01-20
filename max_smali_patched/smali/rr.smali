@@ -1,134 +1,91 @@
-.class public final Lrr;
-.super Logf;
+.class public final synthetic Lrr;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lnr6;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Loq2;
-
-.field public final synthetic Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-.field public o:Loq2;
+.field public final synthetic a:Lbs;
 
 
 # direct methods
-.method public constructor <init>(Loq2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lbs;)V
     .locals 0
 
-    iput-object p1, p0, Lrr;->Y:Loq2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lrr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lrr;->a:Lbs;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lg54;
+    instance-of v0, p1, Lrr;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lrr;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lrr;->getFunctionDelegate()Lgr6;
+
+    move-result-object v0
+
+    check-cast p1, Lnr6;
+
+    invoke-interface {p1}, Lnr6;->getFunctionDelegate()Lgr6;
 
     move-result-object p1
 
-    check-cast p1, Lrr;
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result p1
 
-    invoke-virtual {p1, p2}, Lrr;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
 
-    move-result-object p1
+    :cond_0
+    const/4 p1, 0x0
 
-    return-object p1
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final getFunctionDelegate()Lgr6;
+    .locals 7
 
-    new-instance p1, Lrr;
+    new-instance v0, Lqr6;
 
-    iget-object v0, p0, Lrr;->Y:Loq2;
+    const-string v6, "selectTheme(Lone/me/appearancesettings/multitheme/model/ThemeItem;)V"
 
-    iget-object v1, p0, Lrr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    invoke-direct {p1, v0, v1, p2}, Lrr;-><init>(Loq2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lrr;->X:I
+    const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    const-class v3, Lbs;
 
-    if-ne v0, v1, :cond_0
+    iget-object v4, p0, Lrr;->a:Lbs;
 
-    iget-object v0, p0, Lrr;->o:Loq2;
+    const-string v5, "selectTheme"
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-direct/range {v0 .. v6}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    return-object v0
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+.method public final hashCode()I
+    .locals 1
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {p0}, Lrr;->getFunctionDelegate()Lgr6;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p1
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    move-result v0
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Les7;
-
-    iget-object p1, p0, Lrr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
-
-    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->x0()Les;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lrr;->Y:Loq2;
-
-    iput-object v0, p0, Lrr;->o:Loq2;
-
-    iput v1, p0, Lrr;->X:I
-
-    invoke-virtual {p1, p0}, Les;->w(Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v1, Lh54;->a:Lh54;
-
-    if-ne p1, v1, :cond_2
-
-    return-object v1
-
-    :cond_2
-    :goto_0
-    check-cast p1, Lnq2;
-
-    invoke-virtual {v0, p1}, Loq2;->a(Lnq2;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return v0
 .end method

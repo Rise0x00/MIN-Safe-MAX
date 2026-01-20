@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfm;
+.implements Lam;
 
 
 # annotations
@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lfm;"
+        "Lam;"
     }
 .end annotation
 
@@ -26,36 +26,36 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;",
-        "Lfm;",
+        "Lam;",
         "Ljava/lang/Void;",
         "",
         "apiMethod",
-        "Lat0;",
+        "Lqu0;",
         "items",
         "Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;",
         "logger",
         "<init>",
-        "(Ljava/lang/String;Lat0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V",
+        "(Ljava/lang/String;Lqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V",
         "",
         "shouldPost",
         "()Z",
         "shouldGzip",
         "shouldReport",
         "canRepeat",
-        "Lnr7;",
+        "Li28;",
         "writer",
         "name",
         "value",
         "requireNotEmpty",
-        "Lybg;",
+        "Lb3h;",
         "writeString",
-        "(Lnr7;Ljava/lang/String;Ljava/lang/String;Z)V",
+        "(Li28;Ljava/lang/String;Ljava/lang/String;Z)V",
         "Ljava/lang/String;",
         "getApiMethod",
         "()Ljava/lang/String;",
-        "Lat0;",
+        "Lqu0;",
         "getItems",
-        "()Lat0;",
+        "()Lqu0;",
         "Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;",
         "getLogger",
         "()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;",
@@ -63,17 +63,17 @@
         "getUri",
         "()Landroid/net/Uri;",
         "uri",
-        "Lum;",
+        "Lqm;",
         "getScope",
-        "()Lum;",
+        "()Lqm;",
         "scope",
         "",
         "getPriority",
         "()I",
         "priority",
-        "Lar7;",
+        "Lq18;",
         "getOkParser",
-        "()Lar7;",
+        "()Lq18;",
         "okParser",
         "Companion",
         "calls-sdk-analytics_release"
@@ -115,7 +115,7 @@
 # instance fields
 .field private final apiMethod:Ljava/lang/String;
 
-.field private final items:Lat0;
+.field private final items:Lqu0;
 
 .field private final logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
@@ -128,28 +128,28 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest$Companion;-><init>(Lfi4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->Companion:Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lat0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
+.method public constructor <init>(Ljava/lang/String;Lqu0;Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->apiMethod:Ljava/lang/String;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->items:Lat0;
+    iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->items:Lqu0;
 
     iput-object p3, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
 
     return-void
 .end method
 
-.method public static synthetic writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Lnr7;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
+.method public static synthetic writeString$default(Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;Li28;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -166,7 +166,7 @@
     const/4 p4, 0x0
 
     :cond_0
-    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString(Lnr7;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->writeString(Li28;Ljava/lang/String;Ljava/lang/String;Z)V
 
     return-void
 
@@ -185,9 +185,9 @@
 .method public canRepeat()Z
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->items:Lat0;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->items:Lqu0;
 
-    invoke-virtual {v0}, Lat0;->canRepeat()Z
+    invoke-virtual {v0}, Lqu0;->canRepeat()Z
 
     move-result v0
 
@@ -202,26 +202,26 @@
     return-object v0
 .end method
 
-.method public bridge synthetic getConfigExtractor()Lbm;
+.method public bridge synthetic getConfigExtractor()Lwl;
     .locals 1
 
-    sget-object v0, Lbm;->f:Ly1j;
+    sget-object v0, Lwl;->f:Lv1j;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getFailParser()Lar7;
+.method public bridge synthetic getFailParser()Lq18;
     .locals 1
 
-    sget-object v0, Low3;->a:Low3;
+    sget-object v0, Lvna;->c:Lvna;
 
     return-object v0
 .end method
 
-.method public final getItems()Lat0;
+.method public final getItems()Lqu0;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->items:Lat0;
+    iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->items:Lqu0;
 
     return-object v0
 .end method
@@ -234,12 +234,12 @@
     return-object v0
 .end method
 
-.method public getOkParser()Lar7;
+.method public getOkParser()Lq18;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lar7;"
+            "Lq18;"
         }
     .end annotation
 
@@ -258,18 +258,18 @@
     return v0
 .end method
 
-.method public getScope()Lum;
+.method public getScope()Lqm;
     .locals 1
 
-    sget-object v0, Lum;->c:Lum;
+    sget-object v0, Lqm;->c:Lqm;
 
     return-object v0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lvm;
+.method public bridge synthetic getScopeAfter()Lrm;
     .locals 1
 
-    sget-object v0, Lvm;->a:Lvm;
+    sget-object v0, Lrm;->a:Lrm;
 
     return-object v0
 .end method
@@ -279,7 +279,7 @@
 
     iget-object v0, p0, Lru/ok/android/externcalls/analytics/internal/api/CallAnalyticsApiRequest;->apiMethod:Ljava/lang/String;
 
-    invoke-static {v0}, Ldn;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Lzm;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -326,7 +326,7 @@
     return v0
 .end method
 
-.method public abstract synthetic writeParams(Lnr7;)V
+.method public abstract synthetic writeParams(Li28;)V
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/io/IOException;,
@@ -335,7 +335,7 @@
     .end annotation
 .end method
 
-.method public final writeString(Lnr7;Ljava/lang/String;Ljava/lang/String;Z)V
+.method public final writeString(Li28;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -356,16 +356,16 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1, p2}, Lnr7;->b0(Ljava/lang/String;)Lnr7;
+    invoke-interface {p1, p2}, Li28;->r0(Ljava/lang/String;)Li28;
 
-    invoke-interface {p1, p3}, Lnr7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, p3}, Li28;->j(Ljava/lang/String;)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public bridge synthetic writeSupplyParams(Lnr7;)V
+.method public bridge synthetic writeSupplyParams(Li28;)V
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {

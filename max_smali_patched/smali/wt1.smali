@@ -1,134 +1,88 @@
 .class public final Lwt1;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lru/ok/android/externcalls/sdk/audio/Logger;
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
+    .locals 0
+
+    iput-object p2, p0, Lwt1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .line 1
-    invoke-static {p1, p2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lwt1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lwt1;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lwt1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    .line 2
-    invoke-static {p1, p2, p3}, Lcuh;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    new-instance v0, Lwt1;
 
-    return-void
+    iget-object v1, p0, Lwt1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+
+    invoke-direct {v0, p2, v1}, Lwt1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
+
+    iput-object p1, v0, Lwt1;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lwt1;->o:Ljava/lang/Object;
 
-    .line 2
-    invoke-static {p1, p2, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-void
-.end method
+    check-cast v0, Ljava/lang/Number;
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    .line 1
-    invoke-static {p1, p2, p3}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result p1
 
-    return-void
-.end method
+    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->d:[Lz28;
 
-.method public final i(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+    iget-object v0, p0, Lwt1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->z0()Lqt1;
 
-    .line 1
-    invoke-static {p1, p2, v0}, Lcuh;->j(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-virtual {v0, p1}, Lqt1;->setAddUserCount(I)V
 
-.method public final i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const/4 p3, 0x0
-
-    .line 2
-    invoke-static {p1, p2, p3}, Lcuh;->j(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-
-    return-void
-.end method
-
-.method public final v(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2}, Lcuh;->o(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
-
-    .line 2
-    sget-object v0, Lcuh;->b:Lnxa;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, La98;->c:La98;
-
-    const/4 v4, 0x0
-
-    const/16 v6, 0x8
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v6}, Lnxa;->f(Lnxa;La98;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 2
-    invoke-static {p1, p2, p3}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 3
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {p1, p2}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

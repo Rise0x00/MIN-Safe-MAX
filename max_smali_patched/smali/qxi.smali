@@ -1,117 +1,124 @@
-.class public abstract Lqxi;
-.super Ljava/lang/Object;
+.class public final Lqxi;
+.super Lmwi;
 .source "SourceFile"
 
 
-# direct methods
-.method public static final a(Lwka;)Lpt1;
-    .locals 2
+# instance fields
+.field public final transient c:Lwxi;
 
-    new-instance v0, Lvkd;
+.field public final transient d:[Ljava/lang/Object;
+
+.field public final transient o:I
+
+
+# direct methods
+.method public constructor <init>(Lwxi;[Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+
+    iput-object p1, p0, Lqxi;->c:Lwxi;
+
+    iput-object p2, p0, Lqxi;->d:[Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    iput p1, p0, Lqxi;->o:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(I[Ljava/lang/Object;)I
+    .locals 1
+
+    iget-object v0, p0, Lmwi;->b:Liwi;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Loxi;
+
+    invoke-direct {v0, p0}, Loxi;-><init>(Lqxi;)V
+
+    iput-object v0, p0, Lmwi;->b:Liwi;
+
+    :cond_0
+    invoke-virtual {v0, p1, p2}, Liwi;->a(I[Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Ljava/util/Map$Entry;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lvkd;-><init>(Lwka;Lkotlin/coroutines/Continuation;)V
+    if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lqs0;->c(Lej6;)Lpt1;
+    check-cast p1, Ljava/util/Map$Entry;
 
-    move-result-object p0
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    return-object p0
+    move-result-object v0
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    iget-object v2, p0, Lqxi;->c:Lwxi;
+
+    invoke-virtual {v2, v0}, Lwxi;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    return v1
 .end method
 
-.method public static b(J)Ljava/lang/String;
-    .locals 11
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-object v0, p0, Lmwi;->b:Liwi;
 
-    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    if-nez v0, :cond_0
 
-    move-result-wide p0
+    new-instance v0, Loxi;
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {v0, p0}, Loxi;-><init>(Lqxi;)V
 
-    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/TimeUnit;->toHours(J)J
+    iput-object v0, p0, Lmwi;->b:Liwi;
 
-    move-result-wide v1
+    :cond_0
+    const/4 v1, 0x0
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+    invoke-virtual {v0, v1}, Liwi;->f(I)Lewi;
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    move-result-object v0
 
-    move-result-wide v4
+    return-object v0
+.end method
 
-    sub-long v4, p0, v4
+.method public final size()I
+    .locals 1
 
-    invoke-virtual {v0, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMinutes(J)J
+    iget v0, p0, Lqxi;->o:I
 
-    move-result-wide v4
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v6
-
-    sub-long v6, p0, v6
-
-    sget-object v8, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v8, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v9
-
-    sub-long/2addr v6, v9
-
-    invoke-virtual {v0, v6, v7}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
-
-    move-result-wide v6
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v9
-
-    sub-long/2addr p0, v9
-
-    invoke-virtual {v8, v4, v5}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v8
-
-    sub-long/2addr p0, v8
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v0, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v8
-
-    sub-long/2addr p0, v8
-
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    filled-new-array {v1, v2, v3, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    const-string p1, "%02d:%02d:%02d.%03d"
-
-    invoke-static {v0, p1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method

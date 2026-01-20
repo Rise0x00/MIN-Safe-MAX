@@ -3,158 +3,59 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final Companion:Lyah;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public A:Ljava/lang/Boolean;
 
-.field public final b:Z
+.field public B:Ljava/lang/String;
 
+.field public a:Ljava/lang/Boolean;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public b:Ljava/lang/Long;
 
-    new-instance v0, Lyah;
+.field public c:Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public d:Ljava/lang/String;
 
-    sput-object v0, Lzah;->Companion:Lyah;
+.field public e:Ljava/lang/String;
 
-    return-void
-.end method
+.field public f:Ljava/lang/String;
 
-.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
-    .locals 2
+.field public g:Ljava/lang/String;
 
-    and-int/lit8 v0, p2, 0x3
+.field public h:Ljava/lang/Boolean;
 
-    const/4 v1, 0x3
+.field public i:Ljava/lang/Integer;
 
-    if-ne v1, v0, :cond_0
+.field public j:Ljava/lang/Integer;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public k:Ljava/lang/Integer;
 
-    iput-object p1, p0, Lzah;->a:Ljava/lang/String;
+.field public l:Ljava/lang/Boolean;
 
-    iput-boolean p3, p0, Lzah;->b:Z
+.field public m:Ljava/lang/Boolean;
 
-    return-void
+.field public n:Ljava/lang/Boolean;
 
-    :cond_0
-    sget-object p1, Lxah;->a:Lxah;
+.field public o:I
 
-    invoke-virtual {p1}, Lxah;->d()Lo3e;
+.field public p:I
 
-    move-result-object p1
+.field public q:Lbbh;
 
-    invoke-static {p2, v1, p1}, Lbi3;->b(IILo3e;)V
+.field public r:I
 
-    const/4 p1, 0x0
+.field public s:I
 
-    throw p1
-.end method
+.field public t:Ljava/lang/Boolean;
 
+.field public u:Ljava/lang/Boolean;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.field public v:Ljava/lang/Boolean;
 
-    const/4 v0, 0x1
+.field public w:I
 
-    if-ne p0, p1, :cond_0
+.field public x:Ljava/lang/Boolean;
 
-    return v0
+.field public y:Ljava/lang/Boolean;
 
-    :cond_0
-    instance-of v1, p1, Lzah;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzah;
-
-    iget-object v1, p0, Lzah;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lzah;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lzah;->b:Z
-
-    iget-boolean p1, p1, Lzah;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lzah;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lzah;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppHapticFeedbackSelectionChange(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lzah;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", disableVibrationFallback="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lzah;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public z:Labh;

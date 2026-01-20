@@ -1,60 +1,168 @@
-.class public abstract Lhpc;
-.super Ljava/lang/Object;
+.class public final Lhpc;
+.super Ljpc;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_twofa_action:I = 0x7f0a082f
+# instance fields
+.field public final a:Lqhg;
 
-.field public static oneme_settings_twofa_action_secondary:I = 0x7f0a0830
+.field public final b:Lqhg;
 
-.field public static oneme_settings_twofa_action_wrapper:I = 0x7f0a0831
+.field public final c:Ljava/util/List;
 
-.field public static oneme_settings_twofa_configuration_description_item:I = 0x7f0a0832
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_negative:I = 0x7f0a0833
+# direct methods
+.method public constructor <init>(Lqhg;Lqhg;Ljava/util/List;)V
+    .locals 0
 
-.field public static oneme_settings_twofa_configuration_disable_twofa_positive:I = 0x7f0a0834
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_twofa_configuration_header_item:I = 0x7f0a0835
+    iput-object p1, p0, Lhpc;->a:Lqhg;
 
-.field public static oneme_settings_twofa_configuration_recycler:I = 0x7f0a0836
+    iput-object p2, p0, Lhpc;->b:Lqhg;
 
-.field public static oneme_settings_twofa_configuration_setting_disable_twofa:I = 0x7f0a0837
+    iput-object p3, p0, Lhpc;->c:Ljava/util/List;
 
-.field public static oneme_settings_twofa_configuration_setting_email:I = 0x7f0a0838
+    return-void
+.end method
 
-.field public static oneme_settings_twofa_configuration_setting_item:I = 0x7f0a0839
 
-.field public static oneme_settings_twofa_configuration_setting_password:I = 0x7f0a083a
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static oneme_settings_twofa_configuration_toolbar:I = 0x7f0a083b
+    const/4 v0, 0x1
 
-.field public static oneme_settings_twofa_delete_user_confirmation_action:I = 0x7f0a083c
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_twofa_delete_user_confirmation_skip:I = 0x7f0a083d
+    return v0
 
-.field public static oneme_settings_twofa_empty_email_confirmation_action:I = 0x7f0a083e
+    :cond_0
+    instance-of v1, p1, Lhpc;
 
-.field public static oneme_settings_twofa_empty_email_confirmation_skip:I = 0x7f0a083f
+    const/4 v2, 0x0
 
-.field public static oneme_settings_twofa_forget_password_action:I = 0x7f0a0840
+    if-nez v1, :cond_1
 
-.field public static oneme_settings_twofa_onboarding_content:I = 0x7f0a0841
+    return v2
 
-.field public static oneme_settings_twofa_onboarding_picture:I = 0x7f0a0842
+    :cond_1
+    check-cast p1, Lhpc;
 
-.field public static oneme_settings_twofa_onboarding_picture_background:I = 0x7f0a0843
+    iget-object v1, p0, Lhpc;->a:Lqhg;
 
-.field public static oneme_settings_twofa_onboarding_root:I = 0x7f0a0844
+    iget-object v3, p1, Lhpc;->a:Lqhg;
 
-.field public static oneme_settings_twofa_onboarding_scroll_content:I = 0x7f0a0845
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_twofa_onboarding_subtitle:I = 0x7f0a0846
+    move-result v1
 
-.field public static oneme_settings_twofa_onboarding_title:I = 0x7f0a0847
+    if-nez v1, :cond_2
 
-.field public static oneme_settings_twofa_onboarding_toolbar:I = 0x7f0a0848
+    return v2
 
-.field public static oneme_settings_twofa_verify_email_resend_action:I = 0x7f0a0849
+    :cond_2
+    iget-object v1, p0, Lhpc;->b:Lqhg;
 
-.field public static oneme_settings_twofa_verify_email_resend_timer:I = 0x7f0a084a
+    iget-object v3, p1, Lhpc;->b:Lqhg;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Lhpc;->c:Ljava/util/List;
+
+    iget-object p1, p1, Lhpc;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lhpc;->a:Lqhg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lhpc;->b:Lqhg;
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lhpc;->c:Ljava/util/List;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowConfirmation(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lhpc;->a:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lhpc;->b:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lhpc;->c:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

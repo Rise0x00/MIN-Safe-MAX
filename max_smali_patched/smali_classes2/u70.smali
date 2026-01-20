@@ -1,19 +1,19 @@
 .class public final Lu70;
-.super Lmmf;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:J
+.field public final c:Lt70;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Lt70;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lu70;->c:J
+    iput-object p1, p0, Lu70;->c:Lt70;
 
     return-void
 .end method
@@ -21,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -41,13 +41,15 @@
     :cond_1
     check-cast p1, Lu70;
 
-    iget-wide v3, p0, Lu70;->c:J
+    iget-object v1, p0, Lu70;->c:Lt70;
 
-    iget-wide v5, p1, Lu70;->c:J
+    iget-object p1, p1, Lu70;->c:Lt70;
 
-    cmp-long p1, v3, v5
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p1, :cond_2
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -56,11 +58,11 @@
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-wide v0, p0, Lu70;->c:J
+    iget-object v0, p0, Lu70;->c:Lt70;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
@@ -68,15 +70,49 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 5
 
-    const-string v0, "Response(timestampRemoveProfile="
+    iget-object v0, p0, Lu70;->c:Lt70;
 
-    const-string v1, ")"
+    iget-boolean v1, v0, Lt70;->a:Z
 
-    iget-wide v2, p0, Lu70;->c:J
+    iget-object v2, v0, Lt70;->b:Ljava/lang/String;
 
-    invoke-static {v2, v3, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v0, Lt70;->c:Ljava/lang/String;
+
+    invoke-static {v0}, Lzsi;->h(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Response(enabled="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ",\n                |hint=\'"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\',\n                |email=\'"
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\')\n                |"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lszf;->g(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

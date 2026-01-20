@@ -1,93 +1,96 @@
-.class public abstract Lpld;
-.super Lho7;
+.class public final Lpld;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llpf;
+.implements Lj62;
+.implements Lyr6;
+
+
+# instance fields
+.field public final synthetic a:Llpf;
+
+
+# direct methods
+.method public constructor <init>(Lmfa;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpld;->a:Llpf;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public dequeueWork()Lco7;
-    .locals 4
+.method public final b()Ljava/util/List;
+    .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lpld;->a:Llpf;
 
-    :try_start_0
-    iget-object v1, p0, Lho7;->mJobImpl:Lao7;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Lao7;->b()Lco7;
+    invoke-interface {v0}, Le7f;->b()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
+.end method
 
-    :cond_0
-    iget-object v1, p0, Lho7;->mCompatQueue:Ljava/util/ArrayList;
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 1
 
-    monitor-enter v1
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lpld;->a:Llpf;
 
-    :try_start_1
-    iget-object v2, p0, Lho7;->mCompatQueue:Ljava/util/ArrayList;
+    invoke-interface {v0, p1, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    move-result-object p1
 
-    move-result v2
+    return-object p1
+.end method
 
-    if-lez v2, :cond_1
+.method public final f(Lqb4;II)Ld76;
+    .locals 2
 
-    iget-object v2, p0, Lho7;->mCompatQueue:Ljava/util/ArrayList;
+    sget-object v0, Ltpf;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    const/4 v3, 0x0
+    const/4 v0, 0x2
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+    if-ltz p2, :cond_0
 
-    move-result-object v2
-
-    check-cast v2, Lco7;
-
-    monitor-exit v1
-
-    return-object v2
-
-    :catchall_0
-    move-exception v2
+    if-ge p2, v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    monitor-exit v1
+    :cond_0
+    const/4 v1, -0x2
 
-    return-object v0
+    if-ne p2, v1, :cond_1
 
     :goto_0
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-ne p3, v0, :cond_1
 
-    :try_start_2
-    throw v2
-    :try_end_2
-    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
+    move-object p1, p0
 
-    :catch_0
-    move-exception v1
+    goto :goto_1
 
-    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+    :cond_1
+    invoke-static {p0, p1, p2, p3}, Lj7f;->e(Le7f;Lqb4;II)Ld76;
 
-    return-object v0
+    move-result-object p1
+
+    :goto_1
+    return-object p1
 .end method
 
-.method public onCreate()V
+.method public final getValue()Ljava/lang/Object;
     .locals 1
 
-    invoke-super {p0}, Lho7;->onCreate()V
+    iget-object v0, p0, Lpld;->a:Llpf;
 
-    new-instance v0, Leo7;
+    invoke-interface {v0}, Llpf;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p0}, Leo7;-><init>(Lpld;)V
+    move-result-object v0
 
-    iput-object v0, p0, Lho7;->mJobImpl:Lao7;
-
-    return-void
+    return-object v0
 .end method

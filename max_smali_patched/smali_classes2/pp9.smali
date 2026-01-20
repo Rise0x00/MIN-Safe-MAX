@@ -1,90 +1,127 @@
-.class public final synthetic Lpp9;
+.class public final Lpp9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/UnaryOperator;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:I
-
-.field public final synthetic c:Z
-
-.field public final synthetic d:J
+.field public final b:Lbjd;
 
 
 # direct methods
-.method public synthetic constructor <init>(JIIZ)V
+.method public constructor <init>(JLbjd;)V
     .locals 0
 
-    iput p4, p0, Lpp9;->a:I
-
-    iput p3, p0, Lpp9;->b:I
-
-    iput-boolean p5, p0, Lpp9;->c:Z
-
-    iput-wide p1, p0, Lpp9;->d:J
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lpp9;->a:J
+
+    iput-object p3, p0, Lpp9;->b:Lbjd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Lpp9;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lrp9;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    new-instance v0, Lrp9;
-
-    const-wide/16 v4, 0x0
-
-    const/16 v8, 0x16
-
-    iget v1, p0, Lpp9;->b:I
+    :cond_0
+    instance-of v1, p1, Lpp9;
 
     const/4 v2, 0x0
 
-    iget-boolean v3, p0, Lpp9;->c:Z
+    if-nez v1, :cond_1
 
-    iget-wide v6, p0, Lpp9;->d:J
+    return v2
 
-    invoke-direct/range {v0 .. v8}, Lrp9;-><init>(IZZJJI)V
+    :cond_1
+    check-cast p1, Lpp9;
+
+    iget-wide v3, p0, Lpp9;->a:J
+
+    iget-wide v5, p1, Lpp9;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lpp9;->b:Lbjd;
+
+    iget-object p1, p1, Lpp9;->b:Lbjd;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lpp9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lpp9;->b:Lbjd;
+
+    invoke-virtual {v1}, Lbjd;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MessageReactionEntryData(userId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lpp9;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", reaction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lpp9;->b:Lbjd;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    new-instance v0, Lrp9;
-
-    const-wide/16 v4, 0x0
-
-    const/16 v8, 0x16
-
-    iget v1, p0, Lpp9;->b:I
-
-    const/4 v2, 0x0
-
-    iget-boolean v3, p0, Lpp9;->c:Z
-
-    iget-wide v6, p0, Lpp9;->d:J
-
-    invoke-direct/range {v0 .. v8}, Lrp9;-><init>(IZZJJI)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

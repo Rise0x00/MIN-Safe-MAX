@@ -1,24 +1,26 @@
 .class public final Lxnf;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic o:Landroid/view/View;
+.field public final synthetic X:Lone/me/startconversation/StartConversationScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lxnf;->o:Landroid/view/View;
+    iput-object p2, p0, Lxnf;->X:Lone/me/startconversation/StartConversationScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lgz5;
+    check-cast p1, Lfm4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -38,7 +40,7 @@
 
     check-cast p1, Lxnf;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lxnf;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,45 +48,33 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
-    new-instance p1, Lxnf;
+    new-instance v0, Lxnf;
 
-    iget-object v0, p0, Lxnf;->o:Landroid/view/View;
+    iget-object v1, p0, Lxnf;->X:Lone/me/startconversation/StartConversationScreen;
 
-    invoke-direct {p1, v0, p2}, Lxnf;-><init>(Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lxnf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
 
-    return-object p1
+    iput-object p1, v0, Lxnf;->o:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lxnf;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lxnf;->o:Landroid/view/View;
+    check-cast v0, Lfm4;
 
-    invoke-virtual {p1}, Landroid/view/View;->isInEditMode()Z
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result v0
+    sget-object p1, Llnf;->c:Llnf;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
 
-    sget-object p1, Lon4;->e0:Lon4;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget-object v0, Lvnf;->a0:Ltif;
-
-    invoke-static {p1}, Lri7;->o(Landroid/content/Context;)Lvnf;
-
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

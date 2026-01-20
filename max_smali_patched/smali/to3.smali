@@ -4,204 +4,190 @@
 
 
 # instance fields
-.field public final a:I
+.field public a:Ljava/lang/String;
 
-.field public final b:Lgc9;
+.field public b:I
 
-.field public final c:Lq2e;
+.field public c:I
 
-.field public final d:Lps3;
+.field public d:Ljava/lang/Object;
 
-.field public final e:Lhve;
+.field public e:Ljava/io/Serializable;
 
-.field public final f:Lur4;
+.field public f:Ljava/io/Serializable;
 
-.field public final g:[B
-
-.field public final h:[B
-
-.field public volatile i:I
-
-.field public volatile j:[B
+.field public g:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lq2e;Lps3;Lq98;)V
-    .locals 4
+.method public constructor <init>(Ljava/lang/Class;[Ljava/lang/Class;)V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
+    const/4 v0, 0x0
 
-    iput v0, p0, Lto3;->i:I
+    iput-object v0, p0, Lto3;->a:Ljava/lang/String;
 
-    iput-object p1, p0, Lto3;->c:Lq2e;
+    new-instance v0, Ljava/util/HashSet;
 
-    new-instance p1, Lhve;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lto3;->d:Ljava/lang/Object;
+
+    new-instance v1, Ljava/util/HashSet;
+
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v1, p0, Lto3;->e:Ljava/io/Serializable;
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v1, p3}, Luo3;-><init>(Ljava/lang/Integer;Lq98;)V
+    iput v1, p0, Lto3;->b:I
 
-    iput-object p1, p0, Lto3;->e:Lhve;
+    iput v1, p0, Lto3;->c:I
 
-    iget v1, p1, Luo3;->e:I
+    new-instance v2, Ljava/util/HashSet;
 
-    iput v1, p0, Lto3;->a:I
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    iget-object p1, p1, Luo3;->b:[B
+    iput-object v2, p0, Lto3;->f:Ljava/io/Serializable;
 
-    iput-object p1, p0, Lto3;->g:[B
-
-    iput-object p2, p0, Lto3;->d:Lps3;
-
-    const/16 p1, 0x8
-
-    new-array p2, p1, [B
-
-    iput-object p2, p0, Lto3;->h:[B
-
-    new-instance v1, Ljava/security/SecureRandom;
-
-    invoke-direct {v1}, Ljava/security/SecureRandom;-><init>()V
-
-    invoke-virtual {v1, p2}, Ljava/security/SecureRandom;->nextBytes([B)V
-
-    new-instance v1, Lur4;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1}, Lg2d;->a(Ljava/lang/Class;)Lg2d;
 
     move-result-object p1
 
-    invoke-direct {v1, p1, p3}, Luo3;-><init>(Ljava/lang/Integer;Lq98;)V
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    iput-object p2, v1, Luo3;->b:[B
+    array-length p1, p2
 
-    iget-object p1, v1, Luo3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    :goto_0
+    if-ge v1, p1, :cond_0
 
-    const/4 p3, 0x0
+    aget-object v0, p2, v1
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const-string v2, "Null interface"
 
-    move-result-object v2
+    invoke-static {v0, v2}, Lfkj;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    new-instance v3, Lqo3;
+    iget-object v2, p0, Lto3;->d:Ljava/lang/Object;
 
-    invoke-direct {v3, p3, p2, v0}, Lqo3;-><init>(I[BI)V
+    check-cast v2, Ljava/util/HashSet;
 
-    invoke-virtual {p1, v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lg2d;->a(Ljava/lang/Class;)Lg2d;
 
-    iput-object v1, p0, Lto3;->f:Lur4;
+    move-result-object v0
 
-    new-instance p1, Lgc9;
+    invoke-virtual {v2, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    const/16 p2, 0x8
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-direct {p1, p2}, Lgc9;-><init>(I)V
+    goto :goto_0
 
-    iput-object p1, p0, Lto3;->b:Lgc9;
-
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 7
+.method public a(Lqx4;)V
+    .locals 2
 
-    iget-object v0, p0, Lto3;->e:Lhve;
+    iget-object v0, p1, Lqx4;->a:Lg2d;
 
-    iget-object v1, v0, Luo3;->a:Ljava/util/concurrent/ConcurrentHashMap;
+    iget-object v1, p0, Lto3;->d:Ljava/lang/Object;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
+    check-cast v1, Ljava/util/HashSet;
 
-    move-result-object v2
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
-    invoke-interface {v2}, Ljava/util/Collection;->stream()Ljava/util/stream/Stream;
+    move-result v0
 
-    move-result-object v2
+    if-nez v0, :cond_0
 
-    new-instance v3, Les5;
+    iget-object v0, p0, Lto3;->e:Ljava/io/Serializable;
 
-    const/16 v4, 0x1b
+    check-cast v0, Ljava/util/HashSet;
 
-    invoke-direct {v3, v4}, Les5;-><init>(I)V
-
-    invoke-interface {v2, v3}, Ljava/util/stream/Stream;->max(Ljava/util/Comparator;)Ljava/util/Optional;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/Optional;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    add-int/2addr v2, v3
-
-    new-instance v4, Lqo3;
-
-    iget v5, v0, Luo3;->e:I
-
-    new-array v5, v5, [B
-
-    iget-object v6, v0, Luo3;->d:Ljava/security/SecureRandom;
-
-    invoke-virtual {v6, v5}, Ljava/security/SecureRandom;->nextBytes([B)V
-
-    invoke-direct {v4, v2, v5, v3}, Lqo3;-><init>(I[BI)V
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0}, Luo3;->a()[B
-
-    iget-object v0, p0, Lto3;->b:Lgc9;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Ll8a;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput v2, v0, Ll8a;->a:I
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Ll8a;->b:I
-
-    iput-object v5, v0, Ll8a;->c:[B
-
-    const/16 v1, 0x10
-
-    new-array v1, v1, [B
-
-    iput-object v1, v0, Ll8a;->d:[B
-
-    sget-object v2, Ll8a;->o:Ljava/util/Random;
-
-    invoke-virtual {v2, v1}, Ljava/util/Random;->nextBytes([B)V
-
-    new-instance v1, Lso3;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lso3;-><init>(Lto3;I)V
-
-    iget-object v2, p0, Lto3;->c:Lq2e;
-
-    sget-object v3, Llc5;->d:Llc5;
-
-    invoke-virtual {v2, v0, v3, v1}, Lq2e;->f(Leic;Llc5;Ljava/util/function/Consumer;)V
+    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Components are not allowed to depend on interfaces they themselves provide."
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public b()Luo3;
+    .locals 9
+
+    iget-object v0, p0, Lto3;->g:Ljava/lang/Object;
+
+    check-cast v0, Ljp3;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    new-instance v1, Luo3;
+
+    iget-object v2, p0, Lto3;->a:Ljava/lang/String;
+
+    new-instance v3, Ljava/util/HashSet;
+
+    iget-object v0, p0, Lto3;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/HashSet;
+
+    invoke-direct {v3, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    new-instance v4, Ljava/util/HashSet;
+
+    iget-object v0, p0, Lto3;->e:Ljava/io/Serializable;
+
+    check-cast v0, Ljava/util/HashSet;
+
+    invoke-direct {v4, v0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+
+    iget v5, p0, Lto3;->b:I
+
+    iget v6, p0, Lto3;->c:I
+
+    iget-object v0, p0, Lto3;->g:Ljava/lang/Object;
+
+    move-object v7, v0
+
+    check-cast v7, Ljp3;
+
+    iget-object v0, p0, Lto3;->f:Ljava/io/Serializable;
+
+    move-object v8, v0
+
+    check-cast v8, Ljava/util/HashSet;
+
+    invoke-direct/range {v1 .. v8}, Luo3;-><init>(Ljava/lang/String;Ljava/util/Set;Ljava/util/Set;IILjp3;Ljava/util/Set;)V
+
+    return-object v1
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Missing required property: factory."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

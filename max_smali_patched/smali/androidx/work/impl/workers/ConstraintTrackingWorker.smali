@@ -1,9 +1,9 @@
 .class public final Landroidx/work/impl/workers/ConstraintTrackingWorker;
-.super La38;
+.super Lne8;
 .source "SourceFile"
 
 # interfaces
-.implements Lvnh;
+.implements Lfii;
 
 
 # annotations
@@ -13,8 +13,8 @@
     }
     d2 = {
         "Landroidx/work/impl/workers/ConstraintTrackingWorker;",
-        "La38;",
-        "Lvnh;",
+        "Lne8;",
+        "Lfii;",
         "Landroid/content/Context;",
         "appContext",
         "Landroidx/work/WorkerParameters;",
@@ -34,50 +34,87 @@
 
 
 # instance fields
-.field public final a:Landroidx/work/WorkerParameters;
+.field public final X:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/Object;
+.field public volatile Y:Z
 
-.field public volatile c:Z
+.field public final Z:Lrve;
 
-.field public final d:Lj9e;
+.field public final o:Landroidx/work/WorkerParameters;
 
-.field public o:La38;
+.field public t0:Lne8;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, La38;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
+    invoke-direct {p0, p1, p2}, Lne8;-><init>(Landroid/content/Context;Landroidx/work/WorkerParameters;)V
 
-    iput-object p2, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->a:Landroidx/work/WorkerParameters;
+    iput-object p2, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->o:Landroidx/work/WorkerParameters;
 
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->b:Ljava/lang/Object;
+    iput-object p1, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->X:Ljava/lang/Object;
 
-    new-instance p1, Lj9e;
+    new-instance p1, Lrve;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->d:Lj9e;
+    iput-object p1, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->Z:Lrve;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final b()V
+    .locals 2
+
+    iget-object v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->t0:Lne8;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v1, v0, Lne8;->c:Z
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Lne8;->e()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c()Lrve;
+    .locals 3
+
+    iget-object v0, p0, Lne8;->b:Landroidx/work/WorkerParameters;
+
+    iget-object v0, v0, Landroidx/work/WorkerParameters;->d:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lp02;
+
+    const/16 v2, 0x16
+
+    invoke-direct {v1, v2, p0}, Lp02;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    iget-object v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->Z:Lrve;
+
+    return-object v0
+.end method
+
 .method public final d(Ljava/util/ArrayList;)V
     .locals 4
 
-    invoke-static {}, Luyh;->e()Luyh;
+    invoke-static {}, Lkgi;->g()Lkgi;
 
     move-result-object v0
 
-    sget-object v1, Lzq3;->a:Ljava/lang/String;
+    sget-object v1, Lrx3;->a:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -91,16 +128,16 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, p1}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, p1}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object p1, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->b:Ljava/lang/Object;
+    iget-object p1, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->X:Ljava/lang/Object;
 
     monitor-enter p1
 
     const/4 v0, 0x1
 
     :try_start_0
-    iput-boolean v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->c:Z
+    iput-boolean v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->Y:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -120,43 +157,4 @@
     .locals 0
 
     return-void
-.end method
-
-.method public final onStopped()V
-    .locals 2
-
-    iget-object v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->o:La38;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, La38;->isStopped()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, La38;->stop()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final startWork()Lv28;
-    .locals 3
-
-    invoke-virtual {p0}, La38;->getBackgroundExecutor()Ljava/util/concurrent/Executor;
-
-    move-result-object v0
-
-    new-instance v1, Ljx1;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v1, v2, p0}, Ljx1;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    iget-object v0, p0, Landroidx/work/impl/workers/ConstraintTrackingWorker;->d:Lj9e;
-
-    return-object v0
 .end method

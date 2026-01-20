@@ -1,95 +1,97 @@
-.class public final synthetic Lo91;
+.class public final Lo91;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lq91;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Loz6;
+.field public final a:Ljava/util/Set;
 
 
 # direct methods
-.method public synthetic constructor <init>(Loz6;I)V
+.method public constructor <init>(Ljava/util/Set;)V
     .locals 0
 
-    iput p2, p0, Lo91;->a:I
-
-    iput-object p1, p0, Lo91;->b:Loz6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lo91;->a:Ljava/util/Set;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget v0, p0, Lo91;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    sget-object v0, Ld91;->c:Ld91;
+    return v0
 
-    iget-object v1, p0, Lo91;->b:Loz6;
-
-    check-cast v1, Llz6;
-
-    iget-object v1, v1, Llz6;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ladi;->p0()Ltf4;
-
-    move-result-object v0
-
-    const-string v2, ":call-join-link?link="
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    :cond_0
+    instance-of v1, p1, Lo91;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    if-nez v1, :cond_1
 
-    :goto_0
-    sget-object v0, Lybg;->a:Lybg;
+    return v2
+
+    :cond_1
+    check-cast p1, Lo91;
+
+    iget-object v1, p0, Lo91;->a:Ljava/util/Set;
+
+    iget-object p1, p1, Lo91;->a:Ljava/util/Set;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lo91;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UpdateContacts(contactIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lo91;->a:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Ld91;->c:Ld91;
-
-    iget-object v1, p0, Lo91;->b:Loz6;
-
-    check-cast v1, Lkz6;
-
-    iget-object v1, v1, Lkz6;->e:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ladi;->p0()Ltf4;
-
-    move-result-object v0
-
-    const-string v2, ":call-join-link?link="
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,160 +1,135 @@
 .class public final Lv1h;
-.super Ljava/lang/Object;
+.super Luhc;
 .source "SourceFile"
 
-# interfaces
-.implements Lb12;
 
-
-# instance fields
-.field public final a:Lb12;
-
-.field public final b:Ludd;
-
-.field public final c:Lx1h;
-
-.field public final d:Lw1h;
+# static fields
+.field public static final c:Lv1h;
 
 
 # direct methods
-.method public constructor <init>(Lb12;Lw1h;Lc2d;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lv1h;
 
-    iput-object p1, p0, Lv1h;->a:Lb12;
+    sget-object v1, Lw1h;->a:Lw1h;
 
-    iput-object p2, p0, Lv1h;->d:Lw1h;
+    invoke-direct {v0, v1}, Luhc;-><init>(La38;)V
 
-    new-instance p2, Ludd;
-
-    invoke-interface {p1}, Lb12;->f()Lg02;
-
-    move-result-object v0
-
-    invoke-direct {p2, v0, p3}, Ludd;-><init>(Lg02;Lc2d;)V
-
-    iput-object p2, p0, Lv1h;->b:Ludd;
-
-    new-instance p2, Lx1h;
-
-    invoke-interface {p1}, Lb12;->n()Lz02;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Lx1h;-><init>(Lz02;)V
-
-    iput-object p2, p0, Lv1h;->c:Lx1h;
+    sput-object v0, Lv1h;->c:Lv1h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lghg;)V
-    .locals 1
+.method public final h(Ljava/lang/Object;)I
+    .locals 0
 
-    invoke-static {}, Lbmh;->f()V
+    check-cast p1, Lt1h;
 
-    iget-object v0, p0, Lv1h;->d:Lw1h;
+    iget-object p1, p1, Lt1h;->a:[B
 
-    invoke-virtual {v0, p1}, Lw1h;->b(Lghg;)V
+    array-length p1, p1
+
+    return p1
+.end method
+
+.method public final j(Lqp3;ILjava/lang/Object;)V
+    .locals 2
+
+    check-cast p3, Lu1h;
+
+    iget-object v0, p0, Luhc;->b:Lthc;
+
+    invoke-interface {p1, v0, p2}, Lqp3;->a(Lthc;I)Lkl4;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lkl4;->z()B
+
+    move-result p1
+
+    invoke-static {p3}, Lshc;->c(Lshc;)V
+
+    iget-object p2, p3, Lu1h;->a:[B
+
+    iget v0, p3, Lu1h;->b:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p3, Lu1h;->b:I
+
+    aput-byte p1, p2, v0
 
     return-void
 .end method
 
-.method public final d(Lghg;)V
+.method public final k(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {}, Lbmh;->f()V
+    check-cast p1, Lt1h;
 
-    iget-object v0, p0, Lv1h;->d:Lw1h;
+    iget-object p1, p1, Lt1h;->a:[B
 
-    invoke-virtual {v0, p1}, Lw1h;->d(Lghg;)V
+    new-instance v0, Lu1h;
 
-    return-void
-.end method
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.method public final e()Lfia;
-    .locals 1
+    iput-object p1, v0, Lu1h;->a:[B
 
-    iget-object v0, p0, Lv1h;->a:Lb12;
+    array-length p1, p1
 
-    invoke-interface {v0}, Lb12;->e()Lfia;
+    iput p1, v0, Lu1h;->b:I
 
-    move-result-object v0
+    const/16 p1, 0xa
+
+    invoke-virtual {v0, p1}, Lu1h;->b(I)V
 
     return-object v0
 .end method
 
-.method public final f()Lg02;
-    .locals 1
-
-    iget-object v0, p0, Lv1h;->b:Ludd;
-
-    return-object v0
-.end method
-
-.method public final h(Lghg;)V
-    .locals 1
-
-    invoke-static {}, Lbmh;->f()V
-
-    iget-object v0, p0, Lv1h;->d:Lw1h;
-
-    invoke-virtual {v0, p1}, Lw1h;->h(Lghg;)V
-
-    return-void
-.end method
-
-.method public final j(Ljava/util/ArrayList;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation not supported by VirtualCamera."
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final k(Ljava/util/ArrayList;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation not supported by VirtualCamera."
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final l()Z
-    .locals 1
+.method public final n()Ljava/lang/Object;
+    .locals 2
 
     const/4 v0, 0x0
 
-    return v0
+    new-array v0, v0, [B
+
+    new-instance v1, Lt1h;
+
+    invoke-direct {v1, v0}, Lt1h;-><init>([B)V
+
+    return-object v1
 .end method
 
-.method public final n()Lz02;
-    .locals 1
+.method public final o(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;I)V
+    .locals 3
 
-    iget-object v0, p0, Lv1h;->c:Lx1h;
+    check-cast p2, Lt1h;
 
-    return-object v0
-.end method
+    iget-object p2, p2, Lt1h;->a:[B
 
-.method public final o(Lghg;)V
-    .locals 1
+    const/4 v0, 0x0
 
-    invoke-static {}, Lbmh;->f()V
+    :goto_0
+    if-ge v0, p3, :cond_0
 
-    iget-object v0, p0, Lv1h;->d:Lw1h;
+    iget-object v1, p0, Luhc;->b:Lthc;
 
-    invoke-virtual {v0, p1}, Lw1h;->o(Lghg;)V
+    invoke-virtual {p1, v1, v0}, Lkotlinx/serialization/json/internal/b;->j(Lthc;I)Lkotlinx/serialization/json/internal/b;
 
+    move-result-object v1
+
+    aget-byte v2, p2, v0
+
+    invoke-virtual {v1, v2}, Lkotlinx/serialization/json/internal/b;->d(B)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

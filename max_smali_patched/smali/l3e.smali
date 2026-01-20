@@ -1,48 +1,86 @@
-.class public final synthetic Ll3e;
-.super Ltj6;
+.class public final Ll3e;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
-# interfaces
-.implements Lqi6;
 
+# instance fields
+.field public final synthetic a:Lhp1;
 
-# static fields
-.field public static final a:Ll3e;
+.field public final synthetic b:Z
+
+.field public final synthetic c:Lone/me/android/root/RootController;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lhp1;ZLone/me/android/root/RootController;)V
+    .locals 0
 
-    new-instance v0, Ll3e;
+    iput-object p1, p0, Ll3e;->a:Lhp1;
 
-    const-string v4, "iterator()Ljava/util/Iterator;"
+    iput-boolean p2, p0, Ll3e;->b:Z
 
-    const/4 v5, 0x0
+    iput-object p3, p0, Ll3e;->c:Lone/me/android/root/RootController;
 
-    const/4 v1, 0x1
-
-    const-class v2, Ly2e;
-
-    const-string v3, "iterator"
-
-    invoke-direct/range {v0 .. v5}, Ltj6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Ll3e;->a:Ll3e;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
 
-    check-cast p1, Ly2e;
+    sget-object p1, Lone/me/android/root/RootController;->t0:[Lz28;
 
-    invoke-interface {p1}, Ly2e;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Ll3e;->c:Lone/me/android/root/RootController;
 
-    move-result-object p1
+    iget-boolean v0, p0, Ll3e;->b:Z
 
-    return-object p1
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->E0(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    sget-object p1, Lone/me/android/root/RootController;->t0:[Lz28;
+
+    iget-object p1, p0, Ll3e;->c:Lone/me/android/root/RootController;
+
+    iget-boolean v0, p0, Ll3e;->b:Z
+
+    invoke-virtual {p1, v0}, Lone/me/android/root/RootController;->E0(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 3
+
+    iget-boolean p1, p0, Ll3e;->b:Z
+
+    iget-object v0, p0, Ll3e;->a:Lhp1;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Lhp1;->c(Z)V
+
+    :cond_0
+    sget-object v0, Lone/me/android/root/RootController;->t0:[Lz28;
+
+    iget-object v0, p0, Ll3e;->c:Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->J0()Lda2;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTranslationY(F)V
+
+    invoke-virtual {v0, p1}, Lone/me/android/root/RootController;->L0(Z)V
+
+    return-void
 .end method

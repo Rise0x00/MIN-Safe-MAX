@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lsr1;
+.field public final synthetic b:Lpr1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsr1;I)V
+.method public synthetic constructor <init>(Lpr1;I)V
     .locals 0
 
     iput p2, p0, Lnr1;->a:I
 
-    iput-object p1, p0, Lnr1;->b:Lsr1;
+    iput-object p1, p0, Lnr1;->b:Lpr1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,102 +27,70 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget v0, p0, Lnr1;->a:I
+    iget p1, p0, Lnr1;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lnr1;->b:Lpr1;
 
-    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+    packed-switch p1, :pswitch_data_0
 
-    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
+    iget-object p1, v0, Lpr1;->G0:Lor1;
 
-    sget-object v2, Ly53;->s0:Lvh4;
+    if-eqz p1, :cond_0
 
-    iget-object v3, p0, Lnr1;->b:Lsr1;
+    iget-boolean v0, v0, Lpr1;->H0:Z
 
-    invoke-virtual {v2, v3}, Lvh4;->l(Landroid/view/View;)Lewa;
+    xor-int/lit8 v0, v0, 0x1
 
-    move-result-object v2
+    check-cast p1, Lyn1;
 
-    iget-object v2, v2, Lewa;->c:Lw5b;
+    iget-object p1, p1, Lyn1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-interface {v2}, Lw5b;->b()Lcf0;
+    sget-object v1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
 
-    move-result-object v2
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lsq1;
 
-    iget v2, v2, Lcf0;->f:I
+    move-result-object p1
 
-    const/4 v3, 0x0
+    iget-object p1, p1, Lsq1;->c:Lnx1;
 
-    filled-new-array {v2, v3, v3}, [I
+    iget-object p1, p1, Lnx1;->h:Lmce;
 
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v1
-
-    sget-object v2, Ly53;->s0:Lvh4;
-
-    iget-object v3, p0, Lnr1;->b:Lsr1;
-
-    invoke-virtual {v2, v3}, Lvh4;->l(Landroid/view/View;)Lewa;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lewa;->c:Lw5b;
-
-    invoke-interface {v2}, Lw5b;->b()Lcf0;
-
-    move-result-object v2
-
-    iget v2, v2, Lcf0;->l:I
-
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lnr1;->b:Lsr1;
-
-    iget-object v0, v0, Lsr1;->h1:Loi6;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Loi6;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lapg;
-
-    goto :goto_0
+    invoke-virtual {p1, v0}, Lmce;->a(Z)V
 
     :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object p1, v0, Lpr1;->G0:Lor1;
+
+    if-eqz p1, :cond_1
+
+    check-cast p1, Lyn1;
+
+    iget-object p1, p1, Lyn1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lsq1;
+
+    move-result-object p1
+
     const/4 v0, 0x0
 
-    :goto_0
-    return-object v0
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, v0}, Lsq1;->A(ZLandroid/content/Intent;)V
+
+    :cond_1
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

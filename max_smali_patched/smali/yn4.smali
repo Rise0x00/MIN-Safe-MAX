@@ -1,483 +1,321 @@
 .class public final Lyn4;
-.super Ly1g;
+.super Landroid/media/AudioTrack$StreamEventCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic Y0:I
-
-
 # instance fields
-.field public final J0:I
+.field public final synthetic a:I
 
-.field public final K0:Z
-
-.field public final L0:Z
-
-.field public final M0:Z
-
-.field public final N0:Z
-
-.field public final O0:Z
-
-.field public final P0:Z
-
-.field public final Q0:Z
-
-.field public final R0:Z
-
-.field public final S0:Z
-
-.field public final T0:Z
-
-.field public final U0:Z
-
-.field public final V0:Z
-
-.field public final W0:Landroid/util/SparseArray;
-
-.field public final X0:Landroid/util/SparseBooleanArray;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lao4;
+    iput p1, p0, Lyn4;->a:I
 
-    invoke-direct {v0}, Lao4;-><init>()V
+    iput-object p2, p0, Lyn4;->b:Ljava/lang/Object;
 
-    return-void
-.end method
-
-.method public constructor <init>(Lao4;)V
-    .locals 1
-
-    invoke-direct {p0, p1}, Ly1g;-><init>(Lw1g;)V
-
-    iget-boolean v0, p1, Lao4;->z:Z
-
-    iput-boolean v0, p0, Lyn4;->K0:Z
-
-    iget-boolean v0, p1, Lao4;->A:Z
-
-    iput-boolean v0, p0, Lyn4;->L0:Z
-
-    iget-boolean v0, p1, Lao4;->B:Z
-
-    iput-boolean v0, p0, Lyn4;->M0:Z
-
-    iget-boolean v0, p1, Lao4;->C:Z
-
-    iput-boolean v0, p0, Lyn4;->N0:Z
-
-    iget-boolean v0, p1, Lao4;->D:Z
-
-    iput-boolean v0, p0, Lyn4;->O0:Z
-
-    iget-boolean v0, p1, Lao4;->E:Z
-
-    iput-boolean v0, p0, Lyn4;->P0:Z
-
-    iget-boolean v0, p1, Lao4;->F:Z
-
-    iput-boolean v0, p0, Lyn4;->Q0:Z
-
-    iget-boolean v0, p1, Lao4;->G:Z
-
-    iput-boolean v0, p0, Lyn4;->R0:Z
-
-    iget-boolean v0, p1, Lao4;->H:Z
-
-    iput-boolean v0, p0, Lyn4;->S0:Z
-
-    iget v0, p1, Lao4;->I:I
-
-    iput v0, p0, Lyn4;->J0:I
-
-    iget-boolean v0, p1, Lao4;->J:Z
-
-    iput-boolean v0, p0, Lyn4;->T0:Z
-
-    iget-boolean v0, p1, Lao4;->K:Z
-
-    iput-boolean v0, p0, Lyn4;->U0:Z
-
-    iget-boolean v0, p1, Lao4;->L:Z
-
-    iput-boolean v0, p0, Lyn4;->V0:Z
-
-    iget-object v0, p1, Lao4;->M:Landroid/util/SparseArray;
-
-    iput-object v0, p0, Lyn4;->W0:Landroid/util/SparseArray;
-
-    iget-object p1, p1, Lao4;->N:Landroid/util/SparseBooleanArray;
-
-    iput-object p1, p0, Lyn4;->X0:Landroid/util/SparseBooleanArray;
+    invoke-direct {p0}, Landroid/media/AudioTrack$StreamEventCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 10
+.method public final onDataRequest(Landroid/media/AudioTrack;I)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p2, p0, Lyn4;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p2, :pswitch_data_0
 
-    return v0
+    iget-object p2, p0, Lyn4;->b:Ljava/lang/Object;
 
-    :cond_0
-    const/4 v1, 0x0
+    check-cast p2, Lbg8;
 
-    if-eqz p1, :cond_a
+    iget-object p2, p2, Lbg8;->c:Ljava/lang/Object;
 
-    const-class v2, Lyn4;
+    check-cast p2, Lao4;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p2, p2, Lao4;->w:Landroid/media/AudioTrack;
 
-    move-result-object v3
+    invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    if-eq v2, v3, :cond_1
+    move-result p1
 
-    goto/16 :goto_2
-
-    :cond_1
-    check-cast p1, Lyn4;
-
-    invoke-super {p0, p1}, Ly1g;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->K0:Z
-
-    iget-boolean v3, p1, Lyn4;->K0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->L0:Z
-
-    iget-boolean v3, p1, Lyn4;->L0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->M0:Z
-
-    iget-boolean v3, p1, Lyn4;->M0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->N0:Z
-
-    iget-boolean v3, p1, Lyn4;->N0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->O0:Z
-
-    iget-boolean v3, p1, Lyn4;->O0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->P0:Z
-
-    iget-boolean v3, p1, Lyn4;->P0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->Q0:Z
-
-    iget-boolean v3, p1, Lyn4;->Q0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->R0:Z
-
-    iget-boolean v3, p1, Lyn4;->R0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->S0:Z
-
-    iget-boolean v3, p1, Lyn4;->S0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget v2, p0, Lyn4;->J0:I
-
-    iget v3, p1, Lyn4;->J0:I
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->T0:Z
-
-    iget-boolean v3, p1, Lyn4;->T0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->U0:Z
-
-    iget-boolean v3, p1, Lyn4;->U0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-boolean v2, p0, Lyn4;->V0:Z
-
-    iget-boolean v3, p1, Lyn4;->V0:Z
-
-    if-ne v2, v3, :cond_a
-
-    iget-object v2, p1, Lyn4;->X0:Landroid/util/SparseBooleanArray;
-
-    iget-object v3, p0, Lyn4;->X0:Landroid/util/SparseBooleanArray;
-
-    invoke-virtual {v3}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v4
-
-    invoke-virtual {v2}, Landroid/util/SparseBooleanArray;->size()I
-
-    move-result v5
-
-    if-eq v5, v4, :cond_2
-
-    goto/16 :goto_2
-
-    :cond_2
-    move v5, v1
-
-    :goto_0
-    if-ge v5, v4, :cond_4
-
-    invoke-virtual {v3, v5}, Landroid/util/SparseBooleanArray;->keyAt(I)I
-
-    move-result v6
-
-    invoke-virtual {v2, v6}, Landroid/util/SparseBooleanArray;->indexOfKey(I)I
-
-    move-result v6
-
-    if-gez v6, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    add-int/lit8 v5, v5, 0x1
+    if-nez p1, :cond_0
 
     goto :goto_0
 
-    :cond_4
-    iget-object p1, p1, Lyn4;->W0:Landroid/util/SparseArray;
+    :cond_0
+    iget-object p1, p0, Lyn4;->b:Ljava/lang/Object;
 
-    iget-object v2, p0, Lyn4;->W0:Landroid/util/SparseArray;
+    check-cast p1, Lbg8;
 
-    invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
+    iget-object p1, p1, Lbg8;->c:Ljava/lang/Object;
 
-    move-result v3
+    check-cast p1, Lao4;
 
-    invoke-virtual {p1}, Landroid/util/SparseArray;->size()I
+    iget-object p2, p1, Lao4;->s:Lakj;
 
-    move-result v4
+    if-eqz p2, :cond_1
 
-    if-eq v4, v3, :cond_5
+    iget-boolean p1, p1, Lao4;->U:Z
 
-    goto :goto_2
+    if-eqz p1, :cond_1
 
-    :cond_5
-    move v4, v1
+    iget-object p1, p2, Lakj;->a:Ljava/lang/Object;
 
-    :goto_1
-    if-ge v4, v3, :cond_9
+    check-cast p1, Lf09;
 
-    invoke-virtual {v2, v4}, Landroid/util/SparseArray;->keyAt(I)I
+    iget-object p1, p1, Lm09;->S0:Lhq5;
 
-    move-result v5
+    if-eqz p1, :cond_1
 
-    invoke-virtual {p1, v5}, Landroid/util/SparseArray;->indexOfKey(I)I
+    invoke-virtual {p1}, Lhq5;->a()V
 
-    move-result v5
+    :cond_1
+    :goto_0
+    return-void
 
-    if-ltz v5, :cond_a
+    :pswitch_0
+    iget-object p2, p0, Lyn4;->b:Ljava/lang/Object;
 
-    invoke-virtual {v2, v4}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+    check-cast p2, Llji;
 
-    move-result-object v6
+    iget-object p2, p2, Llji;->c:Ljava/lang/Object;
 
-    check-cast v6, Ljava/util/Map;
+    check-cast p2, Lzn4;
 
-    invoke-virtual {p1, v5}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
+    iget-object p2, p2, Lzn4;->u:Landroid/media/AudioTrack;
 
-    move-result-object v5
+    if-ne p1, p2, :cond_2
 
-    check-cast v5, Ljava/util/Map;
-
-    invoke-interface {v6}, Ljava/util/Map;->size()I
-
-    move-result v7
-
-    invoke-interface {v5}, Ljava/util/Map;->size()I
-
-    move-result v8
-
-    if-eq v8, v7, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    invoke-interface {v6}, Ljava/util/Map;->entrySet()Ljava/util/Set;
-
-    move-result-object v6
-
-    invoke-interface {v6}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_7
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_8
-
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/util/Map$Entry;
-
-    invoke-interface {v7}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Lh1g;
-
-    invoke-interface {v5, v8}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v9
-
-    if-eqz v9, :cond_a
-
-    invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    invoke-interface {v5, v8}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v8
-
-    invoke-static {v7, v8}, Ljig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v7
-
-    if-nez v7, :cond_7
-
-    goto :goto_2
-
-    :cond_8
-    add-int/lit8 v4, v4, 0x1
+    const/4 p1, 0x1
 
     goto :goto_1
 
-    :cond_9
-    return v0
+    :cond_2
+    const/4 p1, 0x0
 
-    :cond_a
-    :goto_2
-    return v1
+    :goto_1
+    invoke-static {p1}, Ly5j;->d(Z)V
+
+    iget-object p1, p0, Lyn4;->b:Ljava/lang/Object;
+
+    check-cast p1, Llji;
+
+    iget-object p1, p1, Llji;->c:Ljava/lang/Object;
+
+    check-cast p1, Lzn4;
+
+    iget-object p2, p1, Lzn4;->r:Li5;
+
+    if-eqz p2, :cond_3
+
+    iget-boolean p1, p1, Lzn4;->U:Z
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p2, Li5;->b:Ljava/lang/Object;
+
+    check-cast p1, Le09;
+
+    iget-object p1, p1, Le09;->Z1:Lgq5;
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p1, Lgq5;->a:Lqq5;
+
+    iget-object p1, p1, Lqq5;->Z:La9g;
+
+    const/4 p2, 0x2
+
+    invoke-virtual {p1, p2}, La9g;->c(I)Z
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public onPresentationEnded(Landroid/media/AudioTrack;)V
+    .locals 1
 
-    invoke-super {p0}, Ly1g;->hashCode()I
+    iget v0, p0, Lyn4;->a:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    const/16 v1, 0x1f
+    invoke-super {p0, p1}, Landroid/media/AudioTrack$StreamEventCallback;->onPresentationEnded(Landroid/media/AudioTrack;)V
 
-    add-int/2addr v0, v1
+    return-void
 
-    mul-int/2addr v0, v1
+    :pswitch_0
+    iget-object v0, p0, Lyn4;->b:Ljava/lang/Object;
 
-    iget-boolean v2, p0, Lyn4;->K0:Z
+    check-cast v0, Lbg8;
 
-    add-int/2addr v0, v2
+    iget-object v0, v0, Lbg8;->c:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    check-cast v0, Lao4;
 
-    iget-boolean v2, p0, Lyn4;->L0:Z
+    iget-object v0, v0, Lao4;->w:Landroid/media/AudioTrack;
 
-    add-int/2addr v0, v2
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    mul-int/2addr v0, v1
+    move-result p1
 
-    iget-boolean v2, p0, Lyn4;->M0:Z
+    if-nez p1, :cond_0
 
-    add-int/2addr v0, v2
+    goto :goto_0
 
-    mul-int/2addr v0, v1
+    :cond_0
+    iget-object p1, p0, Lyn4;->b:Ljava/lang/Object;
 
-    iget-boolean v2, p0, Lyn4;->N0:Z
+    check-cast p1, Lbg8;
 
-    add-int/2addr v0, v2
+    iget-object p1, p1, Lbg8;->c:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    check-cast p1, Lao4;
 
-    iget-boolean v2, p0, Lyn4;->O0:Z
+    const/4 v0, 0x1
 
-    add-int/2addr v0, v2
+    iput-boolean v0, p1, Lao4;->T:Z
 
-    mul-int/2addr v0, v1
+    :goto_0
+    return-void
 
-    iget-boolean v2, p0, Lyn4;->P0:Z
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    add-int/2addr v0, v2
+.method public final onTearDown(Landroid/media/AudioTrack;)V
+    .locals 1
 
-    mul-int/2addr v0, v1
+    iget v0, p0, Lyn4;->a:I
 
-    iget-boolean v2, p0, Lyn4;->Q0:Z
+    packed-switch v0, :pswitch_data_0
 
-    add-int/2addr v0, v2
+    iget-object v0, p0, Lyn4;->b:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    check-cast v0, Lbg8;
 
-    iget-boolean v2, p0, Lyn4;->R0:Z
+    iget-object v0, v0, Lbg8;->c:Ljava/lang/Object;
 
-    add-int/2addr v0, v2
+    check-cast v0, Lao4;
 
-    mul-int/2addr v0, v1
+    iget-object v0, v0, Lao4;->w:Landroid/media/AudioTrack;
 
-    iget-boolean v2, p0, Lyn4;->S0:Z
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    add-int/2addr v0, v2
+    move-result p1
 
-    mul-int/2addr v0, v1
+    if-nez p1, :cond_0
 
-    iget v2, p0, Lyn4;->J0:I
+    goto :goto_0
 
-    add-int/2addr v0, v2
+    :cond_0
+    iget-object p1, p0, Lyn4;->b:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    check-cast p1, Lbg8;
 
-    iget-boolean v2, p0, Lyn4;->T0:Z
+    iget-object p1, p1, Lbg8;->c:Ljava/lang/Object;
 
-    add-int/2addr v0, v2
+    check-cast p1, Lao4;
 
-    mul-int/2addr v0, v1
+    iget-object v0, p1, Lao4;->s:Lakj;
 
-    iget-boolean v2, p0, Lyn4;->U0:Z
+    if-eqz v0, :cond_1
 
-    add-int/2addr v0, v2
+    iget-boolean p1, p1, Lao4;->U:Z
 
-    mul-int/2addr v0, v1
+    if-eqz p1, :cond_1
 
-    iget-boolean v1, p0, Lyn4;->V0:Z
+    iget-object p1, v0, Lakj;->a:Ljava/lang/Object;
 
-    add-int/2addr v0, v1
+    check-cast p1, Lf09;
 
-    return v0
+    iget-object p1, p1, Lm09;->S0:Lhq5;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Lhq5;->a()V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyn4;->b:Ljava/lang/Object;
+
+    check-cast v0, Llji;
+
+    iget-object v0, v0, Llji;->c:Ljava/lang/Object;
+
+    check-cast v0, Lzn4;
+
+    iget-object v0, v0, Lzn4;->u:Landroid/media/AudioTrack;
+
+    if-ne p1, v0, :cond_2
+
+    const/4 p1, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p1, 0x0
+
+    :goto_1
+    invoke-static {p1}, Ly5j;->d(Z)V
+
+    iget-object p1, p0, Lyn4;->b:Ljava/lang/Object;
+
+    check-cast p1, Llji;
+
+    iget-object p1, p1, Llji;->c:Ljava/lang/Object;
+
+    check-cast p1, Lzn4;
+
+    iget-object v0, p1, Lzn4;->r:Li5;
+
+    if-eqz v0, :cond_3
+
+    iget-boolean p1, p1, Lzn4;->U:Z
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, v0, Li5;->b:Ljava/lang/Object;
+
+    check-cast p1, Le09;
+
+    iget-object p1, p1, Le09;->Z1:Lgq5;
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p1, Lgq5;->a:Lqq5;
+
+    iget-object p1, p1, Lqq5;->Z:La9g;
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p1, v0}, La9g;->c(I)Z
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

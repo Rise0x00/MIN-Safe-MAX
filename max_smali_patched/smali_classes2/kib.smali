@@ -1,94 +1,157 @@
-.class public final Lkib;
-.super Logf;
+.class public abstract Lkib;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic X:Lqib;
+.field public static final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
 
 
 # direct methods
-.method public constructor <init>(Lqib;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lkib;->X:Lqib;
+    sget v0, Lcad;->oneme_settings_privacy_black_list_empty_state:I
 
-    const/4 p1, 0x2
+    sput v0, Lkib;->a:I
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget v0, Lcad;->oneme_settings_privacy_black_list_rv:I
+
+    sput v0, Lkib;->b:I
+
+    sget v0, Lcad;->oneme_settings_privacy_black_list_toolbar:I
+
+    sput v0, Lkib;->c:I
+
+    sget v0, Lcad;->oneme_settings_privacy_black_list_unblock_action:I
+
+    sput v0, Lkib;->d:I
+
+    sget v0, Lcad;->oneme_settings_privacy_black_list_unblock_cancel_action:I
+
+    sput v0, Lkib;->e:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_add_chat_button_all:I
+
+    sput v0, Lkib;->f:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I
+
+    sput v0, Lkib;->g:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_call_button_all:I
+
+    sput v0, Lkib;->h:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_call_button_contacts:I
+
+    sput v0, Lkib;->i:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_content_level_access_all:I
+
+    sput v0, Lkib;->j:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_content_level_access_safe:I
+
+    sput v0, Lkib;->k:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I
+
+    sput v0, Lkib;->l:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I
+
+    sput v0, Lkib;->m:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_online_button_contacts:I
+
+    sput v0, Lkib;->n:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_online_button_nobody:I
+
+    sput v0, Lkib;->o:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_online_never_accept_btn:I
+
+    sput v0, Lkib;->p:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I
+
+    sput v0, Lkib;->q:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_search_by_phone_all:I
+
+    sput v0, Lkib;->r:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I
+
+    sput v0, Lkib;->s:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_list:I
+
+    sput v0, Lkib;->t:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_settings_header_vh:I
+
+    sput v0, Lkib;->u:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_settings_item_vh:I
+
+    sput v0, Lkib;->v:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_settings_warning_vh:I
+
+    sput v0, Lkib;->w:I
+
+    sget v0, Lcad;->oneme_settings_privacy_screen_toolbar:I
+
+    sput v0, Lkib;->x:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lrib;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkib;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lkib;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lkib;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lkib;
-
-    iget-object v1, p0, Lkib;->X:Lqib;
-
-    invoke-direct {v0, v1, p2}, Lkib;-><init>(Lqib;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lkib;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkib;->o:Ljava/lang/Object;
-
-    check-cast p1, Lrib;
-
-    sget-object v0, Lrib;->a:Lrib;
-
-    if-ne p1, v0, :cond_0
-
-    const-string p1, "allowed"
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "denied"
-
-    :goto_0
-    iget-object v0, p0, Lkib;->X:Lqib;
-
-    const-string v1, "contacts"
-
-    invoke-static {v0, v1, p1}, Lqib;->a(Lqib;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

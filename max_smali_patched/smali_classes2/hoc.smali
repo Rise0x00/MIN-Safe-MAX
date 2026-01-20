@@ -1,24 +1,63 @@
-.class public abstract Lhoc;
-.super Ljava/lang/Object;
+.class public final Lhoc;
+.super Lie0;
+.source "SourceFile"
 
 
 # static fields
-.field public static pinbars_group_call_bar:I = 0x7f0a08d9
+.field public static final b:Lhoc;
 
-.field public static pinbars_group_call_bar_button:I = 0x7f0a08da
 
-.field public static pinbars_group_call_bar_divider:I = 0x7f0a08db
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public static pinbars_group_call_bar_stack:I = 0x7f0a08dc
+    new-instance v0, Lhoc;
 
-.field public static pinbars_group_call_bar_subtitle:I = 0x7f0a08dd
+    const/16 v1, 0xe
 
-.field public static pinbars_group_call_bar_title:I = 0x7f0a08de
+    invoke-direct {v0, v1}, Lie0;-><init>(I)V
 
-.field public static pinbars_message:I = 0x7f0a08df
+    sput-object v0, Lhoc;->b:Lhoc;
 
-.field public static pinbars_miniplayer:I = 0x7f0a08e0
+    return-void
+.end method
 
-.field public static pinbars_root:I = 0x7f0a08e1
 
-.field public static unknown_contact:I = 0x7f0a0c37
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lhoc;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x1044d8c1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CameraPermission"
+
+    return-object v0
+.end method

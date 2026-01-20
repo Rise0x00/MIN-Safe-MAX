@@ -1,94 +1,48 @@
 .class public final Luy3;
-.super Liqe;
-.source "SourceFile"
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Lvy3;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lvy3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Luy3;->X:Lvy3;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final F(Lty3;)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+    iput-object p1, p0, Luy3;->d:Ljava/lang/Object;
 
-    check-cast v0, Lxua;
+    iget p1, p0, Luy3;->o:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/high16 v0, -0x80000000
 
-    sget v1, Lyjd;->G0:I
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, v1}, Lxua;->setIcon(I)V
+    iput p1, p0, Luy3;->o:I
 
-    sget v1, Lwsa;->p:I
+    iget-object p1, p0, Luy3;->X:Lvy3;
 
-    new-instance v2, Lirf;
+    const/4 v0, 0x0
 
-    invoke-direct {v2, v1}, Lirf;-><init>(I)V
-
-    invoke-virtual {v0, v2}, Lxua;->setTitle(Lnrf;)V
-
-    iget p1, p1, Lty3;->a:I
-
-    new-instance v1, Lirf;
-
-    invoke-direct {v1, p1}, Lirf;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lxua;->setSubtitle(Lnrf;)V
-
-    return-void
-.end method
-
-.method public final G(Ljava/lang/Integer;Loi6;)V
-    .locals 2
-
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
-
-    if-eqz p1, :cond_0
-
-    check-cast v0, Lxua;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Lvy3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v1, Lo6;
-
-    invoke-direct {v1, p2}, Lo6;-><init>(Loi6;)V
-
-    invoke-virtual {v0, p1, v1}, Lxua;->w(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_0
-    check-cast v0, Lxua;
-
-    iget-object p1, v0, Lxua;->I0:Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const/16 p2, 0x8
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public final bridge synthetic z(Li28;)V
-    .locals 0
-
-    check-cast p1, Lty3;
-
-    invoke-virtual {p0, p1}, Luy3;->F(Lty3;)V
-
-    return-void
+    return-object p1
 .end method

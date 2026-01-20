@@ -1,51 +1,87 @@
-.class public abstract Lp98;
+.class public final Lp98;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Z
+# instance fields
+.field public final a:Li7f;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lcy0;Lmbg;)V
     .locals 2
 
-    const-string v0, "tech.kwik.agent15.debug"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iput-object v0, p0, Lp98;->a:Li7f;
 
-    const-string v1, "true"
+    check-cast p2, Lj9b;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p2}, Lj9b;->c()Lzp8;
 
-    move-result v0
+    move-result-object p2
 
-    if-eqz v0, :cond_0
+    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
 
-    const/4 v0, 0x1
+    move-result-object p2
 
-    sput-boolean v0, Lp98;->a:Z
+    iput-object p2, p0, Lp98;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    :cond_0
+    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
+
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)V
-    .locals 1
 
-    sget-boolean v0, Lp98;->a:Z
+# virtual methods
+.method public final onEvent(Ljk0;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    if-eqz v0, :cond_0
+    .line 2
+    new-instance v0, Lo98;
 
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, v1}, Lo98;-><init>(Lp98;Ljk0;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lp98;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    return-void
+.end method
+
+.method public final onEvent(Lm98;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
+
+    .line 1
+    new-instance v0, Ln98;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Ln98;-><init>(Lp98;Lm98;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    iget-object v2, p0, Lp98;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
     return-void
 .end method

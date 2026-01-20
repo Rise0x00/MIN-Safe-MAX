@@ -1,136 +1,121 @@
-.class public final Lmld;
-.super Lnld;
+.class public interface abstract Lmld;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-
-
-# instance fields
-.field public a:Llld;
-
-.field public b:Z
-
-.field public final synthetic c:Lold;
-
-
-# direct methods
-.method public constructor <init>(Lold;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lmld;->c:Lold;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lmld;->b:Z
-
-    return-void
-.end method
+.implements Lmr3;
 
 
 # virtual methods
-.method public final a(Llld;)V
+.method public a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lmld;->a:Llld;
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
 
-    if-ne p1, v0, :cond_1
+    move-result-object v0
 
-    iget-object p1, v0, Llld;->d:Llld;
+    invoke-interface {v0, p1, p2}, Lmr3;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lmld;->a:Llld;
+    move-result-object p1
 
-    if-nez p1, :cond_0
+    return-object p1
+.end method
 
-    const/4 p1, 0x1
+.method public c()Ljava/util/Set;
+    .locals 1
 
-    goto :goto_0
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
 
-    :cond_0
-    const/4 p1, 0x0
+    move-result-object v0
 
-    :goto_0
-    iput-boolean p1, p0, Lmld;->b:Z
+    invoke-interface {v0}, Lmr3;->c()Ljava/util/Set;
 
-    :cond_1
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public d(Lta0;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lmr3;->d(Lta0;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public f(Lwq;)V
+    .locals 1
+
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lmr3;->f(Lwq;)V
+
     return-void
 .end method
 
-.method public final hasNext()Z
-    .locals 3
-
-    iget-boolean v0, p0, Lmld;->b:Z
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lmld;->c:Lold;
-
-    iget-object v0, v0, Lold;->a:Llld;
-
-    if-eqz v0, :cond_0
-
-    return v2
-
-    :cond_0
-    return v1
-
-    :cond_1
-    iget-object v0, p0, Lmld;->a:Llld;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, v0, Llld;->c:Llld;
-
-    if-eqz v0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v1
-.end method
-
-.method public final next()Ljava/lang/Object;
+.method public g(Lta0;)Ljava/util/Set;
     .locals 1
 
-    iget-boolean v0, p0, Lmld;->b:Z
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    const/4 v0, 0x0
+    invoke-interface {v0, p1}, Lmr3;->g(Lta0;)Ljava/util/Set;
 
-    iput-boolean v0, p0, Lmld;->b:Z
+    move-result-object p1
 
-    iget-object v0, p0, Lmld;->c:Lold;
+    return-object p1
+.end method
 
-    iget-object v0, v0, Lold;->a:Llld;
+.method public abstract getConfig()Lmr3;
+.end method
 
-    iput-object v0, p0, Lmld;->a:Llld;
+.method public h(Lta0;Llr3;)Ljava/lang/Object;
+    .locals 1
 
-    goto :goto_1
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
 
-    :cond_0
-    iget-object v0, p0, Lmld;->a:Llld;
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    invoke-interface {v0, p1, p2}, Lmr3;->h(Lta0;Llr3;)Ljava/lang/Object;
 
-    iget-object v0, v0, Llld;->c:Llld;
+    move-result-object p1
 
-    goto :goto_0
+    return-object p1
+.end method
 
-    :cond_1
-    const/4 v0, 0x0
+.method public j(Lta0;)Z
+    .locals 1
 
-    :goto_0
-    iput-object v0, p0, Lmld;->a:Llld;
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
 
-    :goto_1
-    iget-object v0, p0, Lmld;->a:Llld;
+    move-result-object v0
 
-    return-object v0
+    invoke-interface {v0, p1}, Lmr3;->j(Lta0;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public k(Lta0;)Llr3;
+    .locals 1
+
+    invoke-interface {p0}, Lmld;->getConfig()Lmr3;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lmr3;->k(Lta0;)Llr3;
+
+    move-result-object p1
+
+    return-object p1
 .end method

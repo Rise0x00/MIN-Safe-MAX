@@ -1,51 +1,26 @@
 .class public final Lmp0;
-.super Lp14;
+.super Lrz7;
 .source "SourceFile"
+
+# interfaces
+.implements Lqp0;
 
 
 # instance fields
-.field public final synthetic X:Lnp0;
+.field public final c:Ljava/lang/String;
 
-.field public Y:I
-
-.field public d:Lnp0;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lnp0;Lp14;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lmp0;->X:Lnp0;
+    invoke-direct {p0}, Lrz7;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmp0;->c:Ljava/lang/String;
+
+    iput-object p2, p0, Lmp0;->d:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lmp0;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lmp0;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lmp0;->Y:I
-
-    iget-object p1, p0, Lmp0;->X:Lnp0;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lnp0;->b(Lab7;Lp14;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    return-object p1
 .end method

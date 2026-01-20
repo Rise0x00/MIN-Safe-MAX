@@ -1,134 +1,72 @@
 .class public final Lbfc;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/hardware/SensorEventListener;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Ldfc;
+.field public final synthetic o:Lade;
 
 
 # direct methods
-.method public constructor <init>(Ldfc;)V
+.method public constructor <init>(Lade;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbfc;->o:Lade;
 
-    iput-object p1, p0, Lbfc;->a:Ldfc;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lbfc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lbfc;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lbfc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 9
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lbfc;->a:Ldfc;
+    new-instance p1, Lbfc;
 
-    iget-object v1, v0, Ldfc;->f:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lbfc;->o:Lade;
 
-    if-nez v1, :cond_0
+    invoke-direct {p1, v0, p2}, Lbfc;-><init>(Lade;Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_2
+    return-object p1
+.end method
 
-    :cond_0
-    iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v2, 0x0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    aget v1, v1, v2
+    iget-object p1, p0, Lbfc;->o:Lade;
 
-    float-to-double v3, v1
+    invoke-virtual {p1}, Lade;->invoke()Ljava/lang/Object;
 
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p1}, Landroid/hardware/Sensor;->getMaximumRange()F
-
-    move-result p1
-
-    float-to-double v5, p1
-
-    const-wide/high16 v7, 0x4008000000000000L    # 3.0
-
-    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide v5
-
-    cmpg-double p1, v3, v5
-
-    if-gez p1, :cond_1
-
-    const/4 v2, 0x1
-
-    :cond_1
-    iget-boolean p1, v0, Ldfc;->e:Z
-
-    if-ne v2, p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    iput-boolean v2, v0, Ldfc;->e:Z
-
-    if-eqz v2, :cond_3
-
-    iget-object p1, v0, Ldfc;->h:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcfc;
-
-    invoke-interface {v0}, Lcfc;->a()V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object p1, v0, Ldfc;->h:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcfc;
-
-    invoke-interface {v0}, Lcfc;->b()V
-
-    goto :goto_1
-
-    :cond_4
-    :goto_2
-    return-void
+    return-object p1
 .end method

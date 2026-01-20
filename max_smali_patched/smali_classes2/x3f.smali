@@ -1,25 +1,21 @@
 .class public final Lx3f;
-.super Ljava/lang/Object;
+.super Laq;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:J
+# static fields
+.field public static final a:Lx3f;
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public d:J
+    new-instance v0, Lx3f;
 
-.field public e:J
+    invoke-direct {v0}, Laq;-><init>()V
 
-.field public f:J
+    sput-object v0, Lx3f;->a:Lx3f;
 
-.field public g:Ljava/util/ArrayList;
-
-.field public h:Ljava/lang/String;
-
-.field public i:Z
-
-.field public j:I
+    return-void
+.end method

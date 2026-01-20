@@ -1,65 +1,83 @@
-.class public final Lda4;
-.super Ljzd;
+.class public abstract Lda4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/util/Set;
+
+.field public static final b:Ljava/util/Set;
+
+.field public static final c:Ljava/util/Set;
+
+.field public static final d:Ljava/util/Set;
+
+
 # direct methods
-.method public constructor <init>(Lvx0;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lma4;
+    sget-object v0, Lh22;->X:Lh22;
 
-    invoke-direct {v0}, Lma4;-><init>()V
+    sget-object v1, Lh22;->Y:Lh22;
 
-    invoke-direct {p0, p1, v0}, Ljzd;-><init>(Lvx0;Lkdb;)V
+    sget-object v2, Lh22;->d:Lh22;
+
+    sget-object v3, Lh22;->o:Lh22;
+
+    invoke-static {v2, v3, v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lda4;->a:Ljava/util/Set;
+
+    sget-object v0, Li22;->d:Li22;
+
+    sget-object v1, Li22;->a:Li22;
+
+    invoke-static {v0, v1}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lda4;->b:Ljava/util/Set;
+
+    sget-object v0, Lg22;->o:Lg22;
+
+    sget-object v1, Lg22;->d:Lg22;
+
+    sget-object v2, Lg22;->a:Lg22;
+
+    invoke-static {v0, v1, v2}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lda4;->c:Ljava/util/Set;
+
+    invoke-static {v0}, Ljava/util/EnumSet;->copyOf(Ljava/util/Collection;)Ljava/util/EnumSet;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->remove(Ljava/lang/Object;)Z
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+
+    move-result-object v0
+
+    sput-object v0, Lda4;->d:Ljava/util/Set;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lqs8;)Lnzd;
-    .locals 9
-
-    new-instance v0, Lea4;
-
-    iget-object v4, p0, Ljzd;->c:Ljava/util/concurrent/Executor;
-
-    iget-wide v5, p0, Ljzd;->d:J
-
-    iget-wide v7, p0, Ljzd;->e:J
-
-    iget-object v2, p0, Ljzd;->b:Lkdb;
-
-    iget-object v3, p0, Ljzd;->a:Lvx0;
-
-    move-object v1, p1
-
-    invoke-direct/range {v0 .. v8}, Lea4;-><init>(Lqs8;Lkdb;Lvx0;Ljava/util/concurrent/Executor;JJ)V
-
-    return-object v0
-.end method
-
-.method public final b(J)Ljzd;
-    .locals 0
-
-    iput-wide p1, p0, Ljzd;->e:J
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/util/concurrent/ExecutorService;)Ljzd;
-    .locals 0
-
-    iput-object p1, p0, Ljzd;->c:Ljava/util/concurrent/Executor;
-
-    return-object p0
-.end method
-
-.method public final d(J)Ljzd;
-    .locals 0
-
-    iput-wide p1, p0, Ljzd;->d:J
-
-    return-object p0
 .end method

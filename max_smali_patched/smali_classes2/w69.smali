@@ -1,20 +1,63 @@
-.class public interface abstract Lw69;
-.super Ljava/lang/Object;
+.class public final Lw69;
+.super Lie0;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Lw69;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lw69;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lie0;-><init>(I)V
+
+    sput-object v0, Lw69;->b:Lw69;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Ljava/lang/String;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lw69;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
 .end method
 
-.method public abstract b()Lez5;
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x2c33eae1
+
+    return v0
 .end method
 
-.method public abstract c()Z
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract d()Lj0d;
-.end method
+    const-string v0, "Pop"
 
-.method public abstract e()V
+    return-object v0
 .end method

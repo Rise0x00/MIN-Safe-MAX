@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwma;
+.implements Lz1b;
 
 
 # instance fields

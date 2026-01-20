@@ -1,162 +1,112 @@
 .class public final La64;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final synthetic X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-.field public final b:Ljava/util/List;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;)V
+.method public constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, La64;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    iput-object p1, p0, La64;->a:Ljava/util/List;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, La64;->b:Ljava/util/List;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/Set;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, La64;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, La64;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, La64;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, La64;
+
+    iget-object v1, p0, La64;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-direct {v0, v1, p2}, La64;-><init>(Lone/me/sdk/uikit/common/button/OneMeButton;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, La64;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, La64;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/Set;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v0}, Ljava/util/Set;->size()I
+
+    move-result p1
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, La64;->X:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    return v0
+    if-nez p1, :cond_0
 
-    :cond_0
-    const/4 v1, 0x0
+    const/16 p1, 0x8
 
-    if-eqz p1, :cond_5
+    invoke-virtual {v1, p1}, Landroid/view/View;->setVisibility(I)V
 
-    const-class v2, La64;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, La64;
-
-    iget-object v2, p1, La64;->b:Ljava/util/List;
-
-    iget-object p1, p1, La64;->a:Ljava/util/List;
-
-    iget-object v3, p0, La64;->a:Ljava/util/List;
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v3, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    :goto_0
-    return v1
-
-    :cond_3
-    iget-object p1, p0, La64;->b:Ljava/util/List;
-
-    if-eqz p1, :cond_4
-
-    invoke-interface {p1, v2}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    return v0
-
-    :cond_5
-    :goto_1
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, La64;->a:Ljava/util/List;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/util/List;->hashCode()I
-
-    move-result v1
+    invoke-virtual {v1, p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
 
     goto :goto_0
 
     :cond_0
-    move v1, v0
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    sget v2, La8b;->J:I
+
+    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+
+    new-instance v2, Ljava/lang/Integer;
+
+    invoke-direct {v2, p1}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-virtual {v1, v2, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
 
     :goto_0
-    mul-int/lit8 v1, v1, 0x1f
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object v2, p0, La64;->b:Ljava/util/List;
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v2}, Ljava/util/List;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CountryCodeProxiesEntry{countries="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, La64;->a:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", connectionHosts="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, La64;->b:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

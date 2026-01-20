@@ -6,30 +6,48 @@
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:J
-
-.field public final c:J
+.field public final b:Lib0;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;J)V
+.method public constructor <init>(Ljava/lang/String;Lib0;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lqa0;->a:Ljava/lang/String;
+    if-eqz p1, :cond_1
 
-    iput-wide p1, p0, Lqa0;->b:J
+    iput-object p1, p0, Lqa0;->a:Ljava/lang/String;
 
-    iput-wide p4, p0, Lqa0;->c:J
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Lqa0;->b:Lib0;
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null cameraConfigId"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "Null cameraIdString"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -56,21 +74,15 @@
 
     if-eqz v1, :cond_1
 
-    iget-wide v3, p0, Lqa0;->b:J
+    iget-object v1, p0, Lqa0;->b:Lib0;
 
-    iget-wide v5, p1, Lqa0;->b:J
+    iget-object p1, p1, Lqa0;->b:Lib0;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1, p1}, Lib0;->equals(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_1
+    move-result p1
 
-    iget-wide v3, p0, Lqa0;->c:J
-
-    iget-wide v5, p1, Lqa0;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_1
+    if-eqz p1, :cond_1
 
     return v0
 
@@ -79,7 +91,7 @@
 .end method
 
 .method public final hashCode()I
-    .locals 7
+    .locals 2
 
     iget-object v0, p0, Lqa0;->a:Ljava/lang/String;
 
@@ -93,27 +105,11 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v2, p0, Lqa0;->b:J
+    iget-object v1, p0, Lqa0;->b:Lib0;
 
-    const/16 v4, 0x20
+    invoke-virtual {v1}, Lib0;->hashCode()I
 
-    ushr-long v5, v2, v4
-
-    xor-long/2addr v2, v5
-
-    long-to-int v2, v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-wide v1, p0, Lqa0;->c:J
-
-    ushr-long v3, v1, v4
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
+    move-result v1
 
     xor-int/2addr v0, v1
 
@@ -121,11 +117,11 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "InstallationTokenResult{token="
+    const-string v1, "CameraId{cameraIdString="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -133,23 +129,19 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", tokenExpirationTimestamp="
+    const-string v1, ", cameraConfigId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lqa0;->b:J
+    iget-object v1, p0, Lqa0;->b:Lib0;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", tokenCreationTimestamp="
+    const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lqa0;->c:J
-
-    const-string v3, "}"
-
-    invoke-static {v0, v1, v2, v3}, Lok7;->k(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

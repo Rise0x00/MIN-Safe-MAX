@@ -1,122 +1,78 @@
-.class public final synthetic Lgh8;
-.super Ljava/lang/Object;
+.class public final Lgh8;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;I)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    iput p2, p0, Lgh8;->a:I
+    .line 1
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Lgh8;->b:Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
+    iput v0, p0, Lgh8;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x1
+
+    iput v0, p0, Lgh8;->a:I
+
+    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    .line 3
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgh8;->a:I
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
+    .locals 1
 
     iget v0, p0, Lgh8;->a:I
 
-    iget-object v1, p0, Lgh8;->b:Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;
-
     packed-switch v0, :pswitch_data_0
 
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
+    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
-
-    iput p1, v0, Landroid/graphics/RectF;->bottom:F
-
-    invoke-virtual {v1}, Landroid/view/View;->postInvalidate()V
-
-    return-void
+    return-object v0
 
     :pswitch_0
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
+    monitor-enter p0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    monitor-exit p0
 
-    move-result-object p1
+    return-object p0
 
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
-
-    iput p1, v0, Landroid/graphics/RectF;->right:F
-
-    return-void
-
-    :pswitch_1
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
-
-    iput p1, v0, Landroid/graphics/RectF;->left:F
-
-    return-void
-
-    :pswitch_2
-    sget v0, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->t0:I
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object v0, v1, Lru/ok/tamtam/markdown/ui/preview/MarkdownMenuView;->b:Landroid/graphics/RectF;
-
-    iput p1, v0, Landroid/graphics/RectF;->top:F
-
-    return-void
+    nop
 
     :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,212 +1,158 @@
 .class public final Lb0j;
-.super Lt6i;
+.super Luqi;
 .source "SourceFile"
-
-# interfaces
-.implements Lk9i;
-
-
-# static fields
-.field private static final zzb:Lb0j;
 
 
 # instance fields
-.field private zzd:I
+.field public final g:Landroid/os/IBinder;
 
-.field private zze:I
-
-.field private zzf:Ljava/lang/String;
-
-.field private zzg:Ljava/lang/String;
-
-.field private zzh:Ljava/lang/String;
+.field public final synthetic h:Lcom/google/android/gms/common/internal/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/IBinder;Landroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Lb0j;
+    iput-object p1, p0, Lb0j;->h:Lcom/google/android/gms/common/internal/a;
 
-    invoke-direct {v0}, Lb0j;-><init>()V
+    invoke-direct {p0, p1, p2, p4}, Luqi;-><init>(Lcom/google/android/gms/common/internal/a;ILandroid/os/Bundle;)V
 
-    sput-object v0, Lb0j;->zzb:Lb0j;
-
-    const-class v1, Lb0j;
-
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
+    iput-object p3, p0, Lb0j;->g:Landroid/os/IBinder;
 
     return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lt6i;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lb0j;->zzf:Ljava/lang/String;
-
-    iput-object v0, p0, Lb0j;->zzg:Ljava/lang/String;
-
-    iput-object v0, p0, Lb0j;->zzh:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static n()Lb0j;
-    .locals 1
-
-    sget-object v0, Lb0j;->zzb:Lb0j;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
-    .locals 6
+.method public final a(Lyv3;)V
+    .locals 1
 
-    add-int/lit8 p1, p1, -0x1
+    iget-object v0, p0, Lb0j;->h:Lcom/google/android/gms/common/internal/a;
 
-    if-eqz p1, :cond_4
+    iget-object v0, v0, Lcom/google/android/gms/common/internal/a;->z0:Lu4e;
 
-    const/4 p2, 0x2
+    if-eqz v0, :cond_0
 
-    if-eq p1, p2, :cond_3
+    iget-object v0, v0, Lu4e;->b:Ljava/lang/Object;
 
-    const/4 p2, 0x3
+    check-cast v0, Lf07;
 
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    invoke-interface {v0, p1}, Lf07;->i(Lyv3;)V
 
     :cond_0
-    sget-object p1, Lb0j;->zzb:Lb0j;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lmii;
-
-    sget-object p2, Lb0j;->zzb:Lb0j;
-
-    invoke-direct {p1, p2}, Lj6i;-><init>(Lt6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lb0j;
-
-    invoke-direct {p1}, Lb0j;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    sget-object v2, Lwwh;->C:Lwwh;
-
-    const-string v4, "zzg"
-
-    const-string v5, "zzh"
-
-    const-string v0, "zzd"
-
-    const-string v1, "zze"
-
-    const-string v3, "zzf"
-
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lb0j;->zzb:Lb0j;
-
-    new-instance v0, Lfai;
-
-    const-string v1, "\u0004\u0004\u0000\u0001\u0001\u0004\u0004\u0000\u0000\u0000\u0001\u180c\u0000\u0002\u1008\u0001\u0003\u1008\u0002\u0004\u1008\u0003"
-
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final o()Ljava/lang/String;
-    .locals 1
+.method public final b()Z
+    .locals 6
 
-    iget-object v0, p0, Lb0j;->zzf:Ljava/lang/String;
+    const-string v0, "GmsClient"
 
-    return-object v0
-.end method
-
-.method public final p()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lb0j;->zzh:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final q()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lb0j;->zzg:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final r()I
-    .locals 3
-
-    iget v0, p0, Lb0j;->zze:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    const/4 v2, 0x2
-
-    if-eq v0, v1, :cond_2
-
-    if-eq v0, v2, :cond_0
+    iget-object v1, p0, Lb0j;->g:Landroid/os/IBinder;
 
     const/4 v2, 0x0
 
-    goto :goto_0
+    :try_start_0
+    invoke-static {v1}, Ldkj;->g(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Landroid/os/IBinder;->getInterfaceDescriptor()Ljava/lang/String;
+
+    move-result-object v3
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object v4, p0, Lb0j;->h:Lcom/google/android/gms/common/internal/a;
+
+    invoke-virtual {v4}, Lcom/google/android/gms/common/internal/a;->p()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    invoke-virtual {v4}, Lcom/google/android/gms/common/internal/a;->p()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "service descriptor mismatch: "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " vs. "
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v2
 
     :cond_0
-    const/4 v2, 0x3
+    invoke-virtual {v4, v1}, Lcom/google/android/gms/common/internal/a;->l(Landroid/os/IBinder;)Landroid/os/IInterface;
 
-    goto :goto_0
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v1, 0x2
+
+    const/4 v3, 0x4
+
+    invoke-static {v4, v1, v3, v0}, Lcom/google/android/gms/common/internal/a;->u(Lcom/google/android/gms/common/internal/a;IILandroid/os/IInterface;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x3
+
+    invoke-static {v4, v1, v3, v0}, Lcom/google/android/gms/common/internal/a;->u(Lcom/google/android/gms/common/internal/a;IILandroid/os/IInterface;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
 
     :cond_1
-    move v2, v1
+    const/4 v0, 0x0
+
+    iput-object v0, v4, Lcom/google/android/gms/common/internal/a;->D0:Lyv3;
+
+    iget-object v0, v4, Lcom/google/android/gms/common/internal/a;->y0:Ly2e;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, v0, Ly2e;->a:Ljava/lang/Object;
+
+    check-cast v0, Le07;
+
+    invoke-interface {v0}, Le07;->onConnected()V
 
     :cond_2
-    :goto_0
-    if-nez v2, :cond_3
+    const/4 v0, 0x1
 
-    return v1
+    return v0
 
     :cond_3
+    return v2
+
+    :catch_0
+    const-string v1, "service probably died"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
     return v2
 .end method

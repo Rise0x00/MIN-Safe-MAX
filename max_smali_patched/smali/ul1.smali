@@ -1,61 +1,120 @@
 .class public final Lul1;
-.super Lbm1;
+.super Lcsd;
 .source "SourceFile"
 
 
-# static fields
-.field public static final D:Lul1;
+# instance fields
+.field public final a:I
+
+.field public final b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lul1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lbm1;-><init>()V
+    const/16 v0, 0x10
 
-    sput-object v0, Lul1;->D:Lul1;
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lul1;->a:I
+
+    const/16 v0, 0xc
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    iput v0, p0, Lul1;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final g(Landroid/graphics/Rect;Landroid/view/View;Landroidx/recyclerview/widget/RecyclerView;Lpsd;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-static {p2}, Landroidx/recyclerview/widget/RecyclerView;->R(Landroid/view/View;)I
 
-    if-ne p0, p1, :cond_0
+    move-result p2
 
-    return v0
+    invoke-virtual {p3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+
+    move-result-object p3
+
+    instance-of p4, p3, Lrl1;
+
+    if-eqz p4, :cond_0
+
+    check-cast p3, Lrl1;
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lul1;
+    const/4 p3, 0x0
 
-    if-nez p1, :cond_1
+    :goto_0
+    if-nez p3, :cond_1
 
-    const/4 p1, 0x0
-
-    return p1
+    goto :goto_1
 
     :cond_1
-    return v0
-.end method
+    if-ltz p2, :cond_2
 
-.method public final hashCode()I
-    .locals 1
+    invoke-virtual {p3}, Lnd8;->j()I
 
-    const v0, 0x7f1049e7
+    move-result p3
 
-    return v0
-.end method
+    if-ge p2, p3, :cond_2
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget p2, p0, Lul1;->b:I
 
-    const-string v0, "RecordStopDialog"
+    iput p2, p1, Landroid/graphics/Rect;->left:I
 
-    return-object v0
+    iput p2, p1, Landroid/graphics/Rect;->right:I
+
+    iget p2, p0, Lul1;->a:I
+
+    iput p2, p1, Landroid/graphics/Rect;->top:I
+
+    const/4 p2, 0x0
+
+    iput p2, p1, Landroid/graphics/Rect;->bottom:I
+
+    :cond_2
+    :goto_1
+    return-void
 .end method

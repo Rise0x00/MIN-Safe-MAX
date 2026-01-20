@@ -1,103 +1,73 @@
 .class public final Lze5;
-.super Ljava/lang/Object;
+.super Lloj;
 .source "SourceFile"
-
-# interfaces
-.implements Ldcf;
-.implements Lwfc;
 
 
 # instance fields
-.field public final a:Ljava/util/HashMap;
+.field public final synthetic a:Lloj;
 
-.field public b:Ljava/util/ArrayDeque;
-
-.field public final c:Ljava/util/concurrent/Executor;
+.field public final synthetic b:Ljava/util/concurrent/ThreadPoolExecutor;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 1
+.method public constructor <init>(Lloj;Ljava/util/concurrent/ThreadPoolExecutor;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p1, p0, Lze5;->a:Lloj;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lze5;->a:Ljava/util/HashMap;
-
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lze5;->b:Ljava/util/ArrayDeque;
-
-    iput-object p1, p0, Lze5;->c:Ljava/util/concurrent/Executor;
+    iput-object p2, p0, Lze5;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lvo5;)V
-    .locals 4
+.method public final a(Ljava/lang/Throwable;)V
+    .locals 2
 
-    const-class v0, Llb4;
-
-    iget-object v1, p0, Lze5;->c:Ljava/util/concurrent/Executor;
-
-    monitor-enter p0
+    iget-object v0, p0, Lze5;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     :try_start_0
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lze5;->a:Lloj;
 
-    iget-object v2, p0, Lze5;->a:Ljava/util/HashMap;
+    invoke-virtual {v1, p1}, Lloj;->a(Ljava/lang/Throwable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    iget-object v2, p0, Lze5;->a:Ljava/util/HashMap;
-
-    new-instance v3, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    invoke-virtual {v2, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
+    return-void
 
     :catchall_0
     move-exception p1
 
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
-    :cond_0
-    :goto_0
-    iget-object v2, p0, Lze5;->a:Ljava/util/HashMap;
+    throw p1
+.end method
 
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b(Lloe;)V
+    .locals 2
 
-    move-result-object v0
+    iget-object v0, p0, Lze5;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+    :try_start_0
+    iget-object v1, p0, Lze5;->a:Lloj;
 
-    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lloj;->b(Lloe;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit p0
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
     return-void
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/ThreadPoolExecutor;->shutdown()V
 
     throw p1
 .end method

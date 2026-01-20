@@ -1,69 +1,33 @@
 .class public final La9h;
-.super Lwf4;
+.super Laui;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:La9h;
+# virtual methods
+.method public final a()J
+    .locals 2
 
-.field public static final c:Lrf4;
+    const-wide/16 v0, 0x0
 
-.field public static final d:Lrf4;
+    return-wide v0
+.end method
 
-.field public static final e:Lrf4;
+.method public final b()Lle9;
+    .locals 1
 
+    sget-object v0, Lle9;->c:Ljava/util/regex/Pattern;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
+    const-string v0, "application/octet-stream"
 
-    new-instance v0, La9h;
-
-    invoke-direct {v0}, Lwf4;-><init>()V
-
-    sput-object v0, La9h;->b:La9h;
-
-    const-string v1, "bot_id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, ":webapp:root"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
-
-    move-result-object v2
-
-    sput-object v2, La9h;->c:Lrf4;
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    const-string v3, ":settings/webapps"
-
-    invoke-static {v0, v3, v2, v4, v5}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
-
-    move-result-object v2
-
-    sput-object v2, La9h;->d:Lrf4;
-
-    const-string v2, ":settings/webapp"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v2, v1, v4, v5}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    invoke-static {v0}, Lq9j;->c(Ljava/lang/String;)Lle9;
 
     move-result-object v0
 
-    sput-object v0, La9h;->e:Lrf4;
+    return-object v0
+.end method
+
+.method public final f(Lqld;)V
+    .locals 0
 
     return-void
 .end method

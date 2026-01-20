@@ -1,20 +1,49 @@
-.class public interface abstract Lg3e;
-.super Ljava/lang/Object;
+.class public final Lg3e;
+.super Lo84;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Lf1e;
+
+.field public Y:I
+
+.field public d:I
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lf1e;Lo84;)V
+    .locals 0
+
+    iput-object p1, p0, Lg3e;->X:Lf1e;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract e()J
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract i()Z
-.end method
+    iput-object p1, p0, Lg3e;->o:Ljava/lang/Object;
 
-.method public abstract l()J
-.end method
+    iget p1, p0, Lg3e;->Y:I
 
-.method public abstract m(J)V
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract s(Ld58;)Z
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lg3e;->Y:I
+
+    iget-object p1, p0, Lg3e;->X:Lf1e;
+
+    invoke-static {p1, p0}, Lf1e;->l(Lf1e;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

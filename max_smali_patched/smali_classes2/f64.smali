@@ -2,126 +2,135 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La7c;
+
+
+# static fields
+.field public static final synthetic h:[Lz28;
+
 
 # instance fields
-.field public final a:J
+.field public final a:Le9g;
 
-.field public final b:Lxzb;
+.field public final b:Lo58;
+
+.field public final c:Lo58;
+
+.field public d:Lzb4;
+
+.field public final e:Lx07;
+
+.field public final f:Li7f;
+
+.field public final g:Lold;
 
 
 # direct methods
-.method public constructor <init>(JLxzb;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lhfa;
+
+    const-string v1, "collectJob"
+
+    const-string v2, "getCollectJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lf64;
+
+    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lctd;->a:Ldtd;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lz28;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lf64;->h:[Lz28;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lo58;Lo58;Le9g;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lf64;->a:J
+    iput-object p3, p0, Lf64;->a:Le9g;
 
-    iput-object p3, p0, Lf64;->b:Lxzb;
+    iput-object p1, p0, Lf64;->b:Lo58;
+
+    iput-object p2, p0, Lf64;->c:Lo58;
+
+    invoke-static {}, Lhlj;->b()Lx07;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf64;->e:Lx07;
+
+    const p1, 0x7fffffff
+
+    const/4 p2, 0x5
+
+    const/4 p3, 0x0
+
+    invoke-static {p3, p1, p2}, Lj7f;->b(III)Li7f;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf64;->f:Li7f;
+
+    new-instance p2, Lold;
+
+    invoke-direct {p2, p1}, Lold;-><init>(Llfa;)V
+
+    iput-object p2, p0, Lf64;->g:Lold;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()V
+    .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    if-ne p0, p1, :cond_0
+    iput-object v0, p0, Lf64;->d:Lzb4;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lf64;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lf64;
-
-    iget-wide v3, p0, Lf64;->a:J
-
-    iget-wide v5, p1, Lf64;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lf64;->b:Lxzb;
-
-    iget-object p1, p1, Lf64;->b:Lxzb;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final b(Lq6c;)V
+    .locals 1
 
-    iget-wide v0, p0, Lf64;->a:J
+    iget-object v0, p0, Lf64;->a:Le9g;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {v0, p1}, Le9g;->O(Lq6c;)V
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lf64;->b:Lxzb;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final d(J)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lf64;->a:Le9g;
 
-    const-string v1, "CpuState(uptime="
+    invoke-virtual {v0, p1, p2}, Le9g;->N(J)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-wide v1, p0, Lf64;->a:J
+.method public final e(Lkotlinx/coroutines/internal/ContextScope;)V
+    .locals 0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput-object p1, p0, Lf64;->d:Lzb4;
 
-    const-string v1, ", processorInfo="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lf64;->b:Lxzb;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

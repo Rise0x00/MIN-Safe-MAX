@@ -1,64 +1,70 @@
-.class public final Lql6;
+.class public final synthetic Lql6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lwl6;
+.implements Llq6;
 
 
-# static fields
-.field public static final a:Lql6;
+# instance fields
+.field public final synthetic a:Lxl6;
+
+.field public final synthetic b:Lgob;
+
+.field public final synthetic c:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lxl6;Lgob;F)V
+    .locals 0
 
-    new-instance v0, Lql6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lql6;->a:Lxl6;
 
-    sput-object v0, Lql6;->a:Lql6;
+    iput-object p2, p0, Lql6;->b:Lgob;
+
+    iput p3, p0, Lql6;->c:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lql6;->a:Lxl6;
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, v0, Lxl6;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    return v0
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Leob;
+
+    iget-object v2, p0, Lql6;->b:Lgob;
+
+    iget v3, p0, Lql6;->c:F
+
+    invoke-interface {v1, v2, v3}, Leob;->g(Lgob;F)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lql6;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x47609079
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "OnCameraClicked"
+    sget-object v0, Lb3h;->a:Lb3h;
 
     return-object v0
 .end method

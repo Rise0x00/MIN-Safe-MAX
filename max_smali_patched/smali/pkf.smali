@@ -1,38 +1,39 @@
 .class public final Lpkf;
-.super Ljava/lang/Object;
+.super Likf;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpkf;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public b:Landroid/view/View;
 
-.field public c:Lcom/google/android/material/tabs/TabLayout;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public d:Lrkf;
+    new-instance v0, Lhne;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lhne;-><init>(I)V
+
+    sput-object v0, Lpkf;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    iget-object v0, p0, Lpkf;->c:Lcom/google/android/material/tabs/TabLayout;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p0, v1}, Lcom/google/android/material/tabs/TabLayout;->n(Lpkf;Z)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
     return-void
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Tab not attached to a TabLayout"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
 .end method

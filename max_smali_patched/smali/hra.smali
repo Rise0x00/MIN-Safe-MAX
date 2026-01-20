@@ -3,65 +3,59 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static a()Landroid/app/Notification$MediaStyle;
     .locals 1
 
-    sget v0, Ldsc;->call_start_group_call_unavailable:I
+    new-instance v0, Landroid/app/Notification$MediaStyle;
 
-    sput v0, Lhra;->a:I
+    invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
 
-    sget v0, Ldsc;->call_start_new_dialog_action_cancel:I
+    return-object v0
+.end method
 
-    sput v0, Lhra;->b:I
+.method public static b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
+    .locals 0
 
-    sget v0, Ldsc;->call_start_new_dialog_action_continue_audio:I
+    if-eqz p1, :cond_0
 
-    sput v0, Lhra;->c:I
+    invoke-static {p0, p1}, Lhra;->e(Landroid/app/Notification$MediaStyle;[I)V
 
-    sget v0, Ldsc;->call_start_new_dialog_action_continue_video:I
+    :cond_0
+    if-eqz p2, :cond_1
 
-    sput v0, Lhra;->d:I
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getToken()Ljava/lang/Object;
 
-    sget v0, Ldsc;->call_start_new_dialog_subtitle:I
+    move-result-object p1
 
-    sput v0, Lhra;->e:I
+    check-cast p1, Landroid/media/session/MediaSession$Token;
 
-    sget v0, Ldsc;->call_start_new_dialog_title:I
+    invoke-static {p0, p1}, Lhra;->c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
 
-    sput v0, Lhra;->f:I
+    :cond_1
+    return-object p0
+.end method
 
-    sget v0, Ldsc;->call_start_no_network_connection_neutral_button:I
+.method public static c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+    .locals 0
 
-    sput v0, Lhra;->g:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
 
-    sget v0, Ldsc;->call_start_no_network_connection_subtitle:I
+    return-void
+.end method
 
-    sput v0, Lhra;->h:I
+.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
+    .locals 0
 
-    sget v0, Ldsc;->call_start_no_network_connection_title:I
+    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
 
-    sput v0, Lhra;->i:I
+    return-void
+.end method
+
+.method public static varargs e(Landroid/app/Notification$MediaStyle;[I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
 
     return-void
 .end method

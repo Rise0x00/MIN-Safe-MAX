@@ -1,398 +1,260 @@
-.class public abstract Lm15;
-.super Landroid/graphics/drawable/Drawable;
+.class public final Lm15;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
+.implements Ln84;
 
 
 # instance fields
-.field public final a:Landroid/graphics/drawable/Drawable;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic e:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
-    .locals 2
+.method public constructor <init>(Ljava/util/concurrent/Callable;Ln84;Ljava/util/concurrent/Executor;Lkp8;)V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    const/4 v0, 0x1
 
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
+    iput v0, p0, Lm15;->a:I
 
-    if-eqz v0, :cond_0
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lm15;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    iput-object p2, p0, Lm15;->c:Ljava/lang/Object;
 
-    :cond_0
-    iput-object p1, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
+    iput-object p3, p0, Lm15;->d:Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+    iput-object p4, p0, Lm15;->e:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ln15;Lejc;Lbjc;Lzj0;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lm15;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lm15;->e:Ljava/lang/Object;
+
+    iput-object p2, p0, Lm15;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lm15;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Lm15;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 1
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
+    iget v0, p0, Lm15;->a:I
 
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object p1, p0, Lm15;->d:Ljava/lang/Object;
 
-.method public final getChangingConfigurations()I
-    .locals 1
+    check-cast p1, Ljava/util/concurrent/Executor;
 
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lm15;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getChangingConfigurations()I
+    check-cast v0, Ljava/util/concurrent/Callable;
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getCurrent()Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
+    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Ljava/lang/Boolean;
 
-.method public getIntrinsicHeight()I
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    return v0
-.end method
+    const/4 v1, 0x0
 
-.method public getIntrinsicWidth()I
-    .locals 1
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getMinimumHeight()I
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getMinimumWidth()I
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getOpacity()I
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getOpacity()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final getPadding(Landroid/graphics/Rect;)Z
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final getState()[I
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getState()[I
+    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lm15;->c:Ljava/lang/Object;
 
-.method public final getTransparentRegion()Landroid/graphics/Region;
-    .locals 1
+    check-cast v1, Ln84;
 
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getTransparentRegion()Landroid/graphics/Region;
+    invoke-virtual {v0, v1, p1}, Lbolts/Task;->onSuccessTask(Ln84;Ljava/util/concurrent/Executor;)Lbolts/Task;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lm15;->e:Ljava/lang/Object;
 
-.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    check-cast v1, Lkp8;
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
+    iget-object v1, v1, Lkp8;->a:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v1, Lm15;
 
-.method public final isAutoMirrored()Z
-    .locals 1
+    invoke-virtual {v0, v1, p1}, Lbolts/Task;->onSuccessTask(Ln84;Ljava/util/concurrent/Executor;)Lbolts/Task;
 
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isAutoMirrored()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final isStateful()Z
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final jumpToCurrentState()V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
-
-    return-void
-.end method
-
-.method public final onBoundsChange(Landroid/graphics/Rect;)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public final onLevelChange(I)Z
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 0
-
-    invoke-virtual {p0, p2, p3, p4}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
-
-    return-void
-.end method
-
-.method public final setAlpha(I)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    return-void
-.end method
-
-.method public final setAutoMirrored(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setAutoMirrored(Z)V
-
-    return-void
-.end method
-
-.method public final setChangingConfigurations(I)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
-
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
-
-    return-void
-.end method
-
-.method public final setDither(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setDither(Z)V
-
-    return-void
-.end method
-
-.method public final setFilterBitmap(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setFilterBitmap(Z)V
-
-    return-void
-.end method
-
-.method public setHotspot(FF)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p1, p2}, Ly05;->e(Landroid/graphics/drawable/Drawable;FF)V
-
-    return-void
-.end method
-
-.method public setHotspotBounds(IIII)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p1, p2, p3, p4}, Ly05;->f(Landroid/graphics/drawable/Drawable;IIII)V
-
-    return-void
-.end method
-
-.method public setState([I)Z
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final setTint(I)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p1}, Ly05;->g(Landroid/graphics/drawable/Drawable;I)V
-
-    return-void
-.end method
-
-.method public final setTintList(Landroid/content/res/ColorStateList;)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p1}, Ly05;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    return-void
-.end method
-
-.method public final setTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p1}, Ly05;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    return-void
-.end method
-
-.method public setVisible(ZZ)Z
-    .locals 1
-
-    invoke-super {p0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lm15;->a:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
 
-    return p1
+    move-result-object p1
+
+    :goto_0
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lm15;->e:Ljava/lang/Object;
+
+    check-cast v0, Ln15;
+
+    iget-object v0, v0, Ln15;->d:Ljava/lang/Object;
+
+    check-cast v0, Ln15;
+
+    iget-object v1, p0, Lm15;->d:Ljava/lang/Object;
+
+    check-cast v1, Lzj0;
+
+    iget-object v2, p0, Lm15;->b:Ljava/lang/Object;
+
+    check-cast v2, Lejc;
+
+    iget-object v3, p0, Lm15;->c:Ljava/lang/Object;
+
+    check-cast v3, Lbjc;
+
+    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    const-string v6, "DiskCacheProducer"
+
+    if-nez v4, :cond_4
+
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+
+    move-result-object v4
+
+    instance-of v4, v4, Ljava/util/concurrent/CancellationException;
+
+    if-eqz v4, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
 
-    return p1
-.end method
+    move-result v4
 
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 0
+    if-eqz v4, :cond_2
 
-    invoke-virtual {p0, p2}, Landroid/graphics/drawable/Drawable;->unscheduleSelf(Ljava/lang/Runnable;)V
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
 
-    return-void
+    move-result-object p1
+
+    invoke-interface {v2, v3, v6, p1, v5}, Lejc;->d(Lbjc;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
+
+    invoke-virtual {v0, v1, v3}, Ln15;->a(Lzj0;Lbjc;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p1}, Lbolts/Task;->getResult()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lei5;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Lei5;->g0()I
+
+    move-result v0
+
+    const/4 v4, 0x1
+
+    invoke-static {v2, v3, v4, v0}, Ln15;->c(Lejc;Lbjc;ZI)Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-interface {v2, v3, v6, v0}, Lejc;->a(Lbjc;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-interface {v2, v3, v6, v4}, Lejc;->e(Lbjc;Ljava/lang/String;Z)V
+
+    check-cast v3, Lhl0;
+
+    const-string v0, "default"
+
+    const-string v2, "disk"
+
+    invoke-virtual {v3, v2, v0}, Lhl0;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    invoke-virtual {v1, v0}, Lzj0;->i(F)V
+
+    invoke-virtual {v1, v4, p1}, Lzj0;->g(ILjava/lang/Object;)V
+
+    invoke-virtual {p1}, Lei5;->close()V
+
+    goto :goto_2
+
+    :cond_3
+    const/4 p1, 0x0
+
+    invoke-static {v2, v3, p1, p1}, Ln15;->c(Lejc;Lbjc;ZI)Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-interface {v2, v3, v6, p1}, Lejc;->a(Lbjc;Ljava/lang/String;Ljava/util/Map;)V
+
+    invoke-virtual {v0, v1, v3}, Ln15;->a(Lzj0;Lbjc;)V
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    invoke-interface {v2, v3, v6}, Lejc;->k(Lbjc;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lzj0;->c()V
+
+    :goto_2
+    return-object v5
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

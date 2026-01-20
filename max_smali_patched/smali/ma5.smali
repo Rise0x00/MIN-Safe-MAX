@@ -3,113 +3,48 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/ListIterator;
-.implements Ltr7;
+.implements Lmq0;
 
 
-# static fields
-.field public static final a:Lma5;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lma5;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lma5;->a:Lma5;
+# virtual methods
+.method public final a(Lhj9;)V
+    .locals 0
 
     return-void
 .end method
 
+.method public final d(Ljava/lang/Object;)V
+    .locals 0
 
-# virtual methods
-.method public final bridge synthetic add(Ljava/lang/Object;)V
-    .locals 1
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-void
 .end method
 
-.method public final hasNext()Z
-    .locals 1
+.method public final get(I)Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x0
+    int-to-double v0, p1
 
-    return v0
-.end method
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-.method public final hasPrevious()Z
-    .locals 1
+    div-double/2addr v0, v2
 
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Ljava/lang/Math;->ceil(D)D
 
-    return v0
-.end method
+    move-result-wide v0
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    double-to-int p1, v0
 
-    new-instance v0, Ljava/util/NoSuchElementException;
+    sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    const/4 v1, 0x1
 
-    throw v0
-.end method
+    invoke-static {v1, p1, v0}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
-.method public final nextIndex()I
-    .locals 1
+    move-result-object p1
 
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final previous()Ljava/lang/Object;
-    .locals 1
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final previousIndex()I
-    .locals 1
-
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final remove()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "Operation is not supported for read-only collection"
-
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final bridge synthetic set(Ljava/lang/Object;)V
-    .locals 1
-
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    return-object p1
 .end method

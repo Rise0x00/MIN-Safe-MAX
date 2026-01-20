@@ -1,156 +1,72 @@
-.class public final La1h;
+.class public final synthetic La1h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Lnq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Lc1h;
-
-.field public final synthetic d:Landroid/view/ViewTreeObserver;
-
-.field public final synthetic o:Landroid/view/View;
+.field public final synthetic b:Ld1h;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Lc1h;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
+.method public synthetic constructor <init>(Ld1h;I)V
     .locals 0
 
-    iput p5, p0, La1h;->a:I
+    iput p2, p0, La1h;->a:I
 
-    iput-object p1, p0, La1h;->b:Landroid/view/View;
-
-    iput-object p2, p0, La1h;->c:Lc1h;
-
-    iput-object p3, p0, La1h;->d:Landroid/view/ViewTreeObserver;
-
-    iput-object p4, p0, La1h;->o:Landroid/view/View;
+    iput-object p1, p0, La1h;->b:Ld1h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private final a(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 7
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
     iget v0, p0, La1h;->a:I
 
+    check-cast p1, Ljava/lang/CharSequence;
+
     packed-switch v0, :pswitch_data_0
 
-    :pswitch_0
-    return-void
+    iget-object v0, p0, La1h;->b:Ld1h;
 
-    :pswitch_1
-    iget-object v0, p0, La1h;->b:Landroid/view/View;
+    iget-object v0, v0, Ld1h;->x0:Lc1h;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v0
-
-    iget-object v5, p0, La1h;->o:Landroid/view/View;
-
-    iget-object v4, p0, La1h;->d:Landroid/view/ViewTreeObserver;
-
-    iget-object v3, p0, La1h;->c:Lc1h;
-
-    if-nez v0, :cond_0
-
-    invoke-static {v3, v4, v5}, Ld1h;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
-
-    goto :goto_0
+    invoke-interface {v0, p1}, Lc1h;->u(Ljava/lang/CharSequence;)V
 
     :cond_0
-    new-instance v1, La1h;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const/4 v6, 0x2
-
-    move-object v2, p1
-
-    invoke-direct/range {v1 .. v6}, La1h;-><init>(Landroid/view/View;Lc1h;Landroid/view/ViewTreeObserver;Landroid/view/View;I)V
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 2
-
-    iget p1, p0, La1h;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p1, p0, La1h;->b:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    iget-object p1, p0, La1h;->d:Landroid/view/ViewTreeObserver;
-
-    iget-object v0, p0, La1h;->o:Landroid/view/View;
-
-    iget-object v1, p0, La1h;->c:Lc1h;
-
-    invoke-static {v1, p1, v0}, Ld1h;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
-
-    return-void
+    return-object p1
 
     :pswitch_0
-    iget-object p1, p0, La1h;->b:Landroid/view/View;
+    iget-object v0, p0, La1h;->b:Ld1h;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+    iget-object v0, v0, Ld1h;->x0:Lc1h;
 
-    iget-object p1, p0, La1h;->d:Landroid/view/ViewTreeObserver;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, La1h;->o:Landroid/view/View;
+    invoke-interface {v0, p1}, Lc1h;->W(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p0, La1h;->c:Lc1h;
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-static {v1, p1, v0}, Ld1h;->a(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;Landroid/view/ViewTreeObserver;Landroid/view/View;)V
-
-    :pswitch_1
-    return-void
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

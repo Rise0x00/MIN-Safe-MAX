@@ -1,155 +1,52 @@
 .class public final Lt14;
-.super Lvf9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lv14;
 
 
 # instance fields
-.field public I0:Ltr6;
+.field public final b:Lspf;
 
 
-# virtual methods
-.method public final F(Lone/me/messages/list/loader/MessageModel;Ljava/util/List;)V
-    .locals 7
+# direct methods
+.method public constructor <init>()V
+    .locals 3
 
-    iget-object p2, p1, Lone/me/messages/list/loader/MessageModel;->d:Ljava/lang/CharSequence;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p1, Lone/me/messages/list/loader/MessageModel;->K0:I
+    const/4 v0, 0x0
 
-    new-instance v1, Lwf9;
+    const/4 v1, 0x7
 
-    invoke-direct {v1, v0}, Lwf9;-><init>(I)V
+    sget-object v2, Lj14;->d:Lj14;
 
-    iput-object v1, p0, Lvf9;->H0:Lwf9;
-
-    iget-object v0, p1, Lone/me/messages/list/loader/MessageModel;->y0:Ltd9;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lm7d;->a:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    iget-wide v3, v0, Ltd9;->a:J
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v3, v3, v5
-
-    if-lez v3, :cond_0
-
-    new-instance v3, Lyb;
-
-    const/16 v4, 0x17
-
-    invoke-direct {v3, p0, v4, v0}, Lyb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v3}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v2
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :goto_0
-    instance-of v0, p2, Landroid/text/Spannable;
-
-    if-eqz v0, :cond_1
-
-    move-object v1, p2
-
-    check-cast v1, Landroid/text/Spannable;
-
-    :cond_1
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    const-class v3, Lls3;
-
-    const/4 v4, 0x0
-
-    invoke-interface {v1, v4, v0, v3}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+    invoke-static {v2, v0, v1}, Lj14;->a(Lj14;Ljava/util/ArrayList;I)Lj14;
 
     move-result-object v0
 
-    check-cast v0, [Lls3;
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    if-eqz v0, :cond_2
+    move-result-object v0
 
-    array-length v1, v0
-
-    :goto_1
-    if-ge v4, v1, :cond_2
-
-    aget-object v3, v0, v4
-
-    new-instance v5, Lg52;
-
-    const/16 v6, 0x18
-
-    invoke-direct {v5, v6, p0}, Lg52;-><init>(ILjava/lang/Object;)V
-
-    iput-object v5, v3, Lls3;->b:Lg52;
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    move-object v0, v2
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p0, p1, v2}, Lvf9;->G(Lone/me/messages/list/loader/MessageModel;Landroid/view/View;)V
+    iput-object v0, p0, Lt14;->b:Lspf;
 
     return-void
 .end method
 
-.method public final d(Lyd3;)V
-    .locals 2
 
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+# virtual methods
+.method public final a()V
+    .locals 0
 
-    check-cast v0, Landroid/widget/TextView;
-
-    iget-object v1, p1, Lyd3;->g:Lte3;
-
-    iget v1, v1, Lte3;->a:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    instance-of v1, v0, Landroid/graphics/drawable/GradientDrawable;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Landroid/graphics/drawable/GradientDrawable;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object p1, p1, Lyd3;->b:Lpc3;
-
-    iget p1, p1, Lpc3;->g:I
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    :cond_1
     return-void
+.end method
+
+.method public final b()Llpf;
+    .locals 1
+
+    iget-object v0, p0, Lt14;->b:Lspf;
+
+    return-object v0
 .end method

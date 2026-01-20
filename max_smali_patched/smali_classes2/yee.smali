@@ -1,39 +1,69 @@
 .class public final Lyee;
-.super Leq;
+.super Lfnb;
 .source "SourceFile"
 
+# interfaces
+.implements Luja;
 
-# static fields
-.field public static final a:Lyee;
+
+# instance fields
+.field public c:Z
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final onOverScrolled(IIZZ)V
     .locals 1
 
-    new-instance v0, Lyee;
+    if-gtz p2, :cond_0
 
-    invoke-direct {v0}, Leq;-><init>()V
+    if-eqz p4, :cond_0
 
-    sput-object v0, Lyee;->a:Lyee;
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iput-boolean v0, p0, Lyee;->c:Z
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->onOverScrolled(IIZZ)V
 
     return-void
 .end method
 
+.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
+    .locals 3
 
-# virtual methods
-.method public final a()Lru7;
-    .locals 2
+    invoke-super {p0, p1}, Lfnb;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lt5;
+    move-result v0
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    const-class v1, Ltlf;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lt5;->d(Ljava/lang/Class;)Ltif;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    if-eq v1, v2, :cond_1
 
-    return-object v0
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lyee;->c:Z
+
+    return v0
 .end method

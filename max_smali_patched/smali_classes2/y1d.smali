@@ -1,309 +1,316 @@
 .class public final Ly1d;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lad2;
+.field public final synthetic X:Lone/me/qrscanner/QrScannerWidget;
 
-.field public final b:Lqs3;
-
-.field public final c:Lgpd;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lad2;Lqs3;Lgpd;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ly1d;->X:Lone/me/qrscanner/QrScannerWidget;
 
-    iput-object p1, p0, Ly1d;->a:Lad2;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Ly1d;->b:Lqs3;
-
-    iput-object p3, p0, Ly1d;->c:Lgpd;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/List;
-    .locals 7
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Ly1d;->a:Lad2;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    sget-object v1, Lad2;->G:Lr00;
+    invoke-virtual {p0, p1, p2}, Ly1d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v0, v1}, Lad2;->F(Ljava/util/Comparator;)Ljava/util/List;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Ly1d;
 
-    const-string v1, "y1d"
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const-string v2, "getRecentContacts:"
+    invoke-virtual {p1, p2}, Ly1d;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    return-object p2
+.end method
 
-    invoke-static {v0}, Leia;->i(Ljava/lang/Iterable;)Lzg3;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v1
+    new-instance v0, Ly1d;
 
-    new-instance v2, Lw1d;
+    iget-object v1, p0, Ly1d;->X:Lone/me/qrscanner/QrScannerWidget;
 
-    const/4 v3, 0x1
+    invoke-direct {v0, p2, v1}, Ly1d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/qrscanner/QrScannerWidget;)V
 
-    invoke-direct {v2, p0, v3}, Lw1d;-><init>(Ly1d;I)V
-
-    invoke-virtual {v1, v2}, Leia;->g(Lgxb;)Lhia;
-
-    move-result-object v1
-
-    new-instance v2, Les5;
-
-    const/16 v3, 0x14
-
-    invoke-direct {v2, v3}, Les5;-><init>(I)V
-
-    invoke-virtual {v1}, Leia;->s()Liia;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljqe;->n()Leia;
-
-    move-result-object v1
-
-    new-instance v3, Ltr6;
-
-    const/16 v4, 0xf
-
-    invoke-direct {v3, v4, v2}, Ltr6;-><init>(ILjava/lang/Object;)V
-
-    new-instance v2, Lxia;
-
-    const/4 v5, 0x5
-
-    invoke-direct {v2, v1, v3, v5}, Lxia;-><init>(Leia;Lfj6;I)V
-
-    new-instance v1, Lxia;
-
-    const/4 v3, 0x4
-
-    sget-object v5, Lsag;->a:Lf9a;
-
-    invoke-direct {v1, v2, v5, v3}, Lxia;-><init>(Leia;Lfj6;I)V
-
-    new-instance v2, Le2a;
-
-    const/16 v3, 0x1c
-
-    invoke-direct {v2, v3}, Le2a;-><init>(I)V
-
-    const v3, 0x7fffffff
-
-    invoke-virtual {v1, v2, v3}, Leia;->h(Lfj6;I)Leia;
-
-    move-result-object v1
-
-    new-instance v2, Le2a;
-
-    const/16 v5, 0x1a
-
-    invoke-direct {v2, v5}, Le2a;-><init>(I)V
-
-    new-instance v5, Lxia;
-
-    const/4 v6, 0x0
-
-    invoke-direct {v5, v1, v2, v6}, Lxia;-><init>(Leia;Lfj6;I)V
-
-    const/16 v1, 0xa
-
-    int-to-long v1, v1
-
-    invoke-virtual {v5, v1, v2}, Leia;->q(J)Lxka;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Leia;->s()Liia;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljqe;->n()Leia;
-
-    move-result-object v1
-
-    new-instance v2, Lin9;
-
-    invoke-direct {v2, p0, v4, v0}, Lin9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2, v3}, Leia;->h(Lfj6;I)Leia;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Leia;->s()Liia;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljqe;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
+    iput-object p1, v0, Ly1d;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final b()Ljava/util/List;
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object v0, p0, Ly1d;->a:Lad2;
+    iget-object v0, p0, Ly1d;->o:Ljava/lang/Object;
 
-    sget-object v1, Lad2;->G:Lr00;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Lad2;->F(Ljava/util/Comparator;)Ljava/util/List;
+    check-cast v0, Lhja;
 
-    move-result-object v0
+    instance-of p1, v0, Lo1d;
 
-    invoke-static {v0}, Leia;->i(Ljava/lang/Iterable;)Lzg3;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    if-eqz p1, :cond_5
 
-    new-instance v1, Lx1d;
+    iget-object p1, p0, Ly1d;->X:Lone/me/qrscanner/QrScannerWidget;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1}, La94;->getRouter()Lw4e;
 
-    invoke-direct {v1, p0, v2}, Lx1d;-><init>(Ly1d;I)V
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Leia;->g(Lgxb;)Lhia;
+    new-instance v2, Lns;
 
-    move-result-object v0
+    invoke-direct {v2}, Lns;-><init>()V
 
-    new-instance v1, Le2a;
+    invoke-virtual {v2, p1}, Lns;->addLast(Ljava/lang/Object;)V
 
-    const/16 v3, 0x1b
+    :cond_0
+    invoke-virtual {v2}, Lns;->isEmpty()Z
 
-    invoke-direct {v1, v3}, Le2a;-><init>(I)V
+    move-result p1
 
-    new-instance v3, Lxia;
+    if-nez p1, :cond_3
 
-    const/4 v4, 0x5
+    invoke-virtual {v2}, Lns;->removeLast()Ljava/lang/Object;
 
-    invoke-direct {v3, v0, v1, v4}, Lxia;-><init>(Leia;Lfj6;I)V
+    move-result-object p1
 
-    sget-object v0, Lqs3;->r:Ljava/util/EnumSet;
+    check-cast p1, Lw4e;
 
-    sget-object v1, Lqs3;->t:Let;
+    invoke-virtual {p1}, Lw4e;->e()Ljava/util/ArrayList;
 
-    iget-object v5, p0, Ly1d;->b:Lqs3;
+    move-result-object p1
 
-    invoke-virtual {v5, v0, v1}, Lqs3;->j(Ljava/util/Set;Ljava/util/Set;)Ljava/util/List;
+    invoke-static {p1}, Lqi3;->e(Ljava/util/List;)I
 
-    move-result-object v0
+    move-result v3
 
-    invoke-static {v0}, Leia;->i(Ljava/lang/Iterable;)Lzg3;
+    :goto_0
+    const/4 v4, -0x1
 
-    move-result-object v0
+    if-ge v4, v3, :cond_0
 
-    new-instance v1, Lx1d;
+    invoke-virtual {p1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-direct {v1, p0, v4}, Lx1d;-><init>(Ly1d;I)V
+    move-result-object v4
 
-    invoke-virtual {v0, v1}, Leia;->g(Lgxb;)Lhia;
+    check-cast v4, Lz4e;
 
-    move-result-object v0
+    iget-object v4, v4, Lz4e;->a:La94;
 
-    new-instance v1, Lw1d;
+    instance-of v5, v4, Lp1d;
 
-    invoke-direct {v1, p0, v2}, Lw1d;-><init>(Ly1d;I)V
+    if-eqz v5, :cond_1
 
-    invoke-virtual {v0, v1}, Leia;->g(Lgxb;)Lhia;
+    move-object v1, v4
 
-    move-result-object v0
+    goto :goto_2
 
-    new-instance v1, Le2a;
+    :cond_1
+    invoke-virtual {v4}, La94;->getChildRouters()Ljava/util/List;
 
-    const/16 v5, 0x1d
+    move-result-object v4
 
-    invoke-direct {v1, v5}, Le2a;-><init>(I)V
+    new-instance v5, Lq0e;
 
-    new-instance v5, Lxia;
+    invoke-direct {v5, v4}, Lq0e;-><init>(Ljava/util/List;)V
 
-    invoke-direct {v5, v0, v1, v4}, Lxia;-><init>(Leia;Lfj6;I)V
+    invoke-virtual {v5}, Lq0e;->iterator()Ljava/util/Iterator;
 
-    const/4 v0, 0x2
+    move-result-object v4
 
-    new-array v1, v0, [Lwka;
+    :goto_1
+    move-object v5, v4
 
-    aput-object v3, v1, v2
+    check-cast v5, Lp0e;
 
-    const/4 v2, 0x1
+    iget-object v6, v5, Lp0e;->b:Ljava/util/ListIterator;
 
-    aput-object v5, v1, v2
+    invoke-interface {v6}, Ljava/util/ListIterator;->hasPrevious()Z
 
-    new-instance v2, Lzg3;
+    move-result v6
 
-    invoke-direct {v2, v4, v1}, Lzg3;-><init>(ILjava/lang/Object;)V
+    if-eqz v6, :cond_2
 
-    sget-object v1, Lsag;->a:Lf9a;
+    iget-object v5, v5, Lp0e;->b:Ljava/util/ListIterator;
 
-    invoke-virtual {v2, v1, v0}, Leia;->h(Lfj6;I)Leia;
+    invoke-interface {v5}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v5
 
-    invoke-virtual {v0}, Leia;->s()Liia;
+    check-cast v5, Lw4e;
 
-    move-result-object v0
+    invoke-virtual {v2, v5}, Lns;->addLast(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljqe;->n()Leia;
+    goto :goto_1
 
-    move-result-object v0
+    :cond_2
+    add-int/lit8 v3, v3, -0x1
 
-    new-instance v2, Ltr6;
+    goto :goto_0
 
-    const/16 v3, 0xf
+    :cond_3
+    :goto_2
+    check-cast v1, Lp1d;
 
-    sget-object v5, Lxj6;->a:Lxj6;
+    if-eqz v1, :cond_4
 
-    invoke-direct {v2, v3, v5}, Ltr6;-><init>(ILjava/lang/Object;)V
+    check-cast v0, Lo1d;
 
-    new-instance v3, Lxia;
+    iget-object p1, v0, Lo1d;->b:Ldae;
 
-    invoke-direct {v3, v0, v2, v4}, Lxia;-><init>(Leia;Lfj6;I)V
+    invoke-interface {v1, p1}, Lp1d;->x(Ldae;)V
 
-    new-instance v0, Lxia;
+    :cond_4
+    sget-object p1, Ln1d;->c:Ln1d;
 
-    const/4 v2, 0x4
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
 
-    invoke-direct {v0, v3, v1, v2}, Lxia;-><init>(Leia;Lfj6;I)V
+    move-result-object p1
 
-    const/16 v1, 0xa
+    invoke-virtual {p1}, Ljm4;->d()Z
 
-    int-to-long v1, v1
+    goto :goto_4
 
-    invoke-virtual {v0, v1, v2}, Leia;->q(J)Lxka;
+    :cond_5
+    instance-of p1, v0, Lfm4;
 
-    move-result-object v0
+    if-eqz p1, :cond_7
 
-    new-instance v1, Lx1d;
+    sget-object p1, Ln1d;->c:Ln1d;
 
-    const/4 v2, 0x3
+    check-cast v0, Lfm4;
 
-    invoke-direct {v1, v2}, Lx1d;-><init>(I)V
+    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
 
-    new-instance v2, Lxia;
+    iget-object p1, p0, Ly1d;->X:Lone/me/qrscanner/QrScannerWidget;
 
-    invoke-direct {v2, v0, v1, v4}, Lxia;-><init>(Leia;Lfj6;I)V
+    sget-object v0, Lone/me/qrscanner/QrScannerWidget;->G0:[Lz28;
 
-    invoke-virtual {v2}, Leia;->s()Liia;
+    iget-object v0, p1, Lone/me/qrscanner/QrScannerWidget;->u0:Ljld;
 
-    move-result-object v0
+    sget-object v2, Lone/me/qrscanner/QrScannerWidget;->G0:[Lz28;
 
-    invoke-virtual {v0}, Ljqe;->e()Ljava/lang/Object;
+    const/4 v3, 0x3
 
-    move-result-object v0
+    aget-object v2, v2, v3
 
-    check-cast v0, Ljava/util/List;
+    invoke-interface {v0, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p1
+
+    check-cast p1, Lohc;
+
+    invoke-virtual {p1}, Lohc;->getController()Lp32;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_7
+
+    invoke-static {}, Lvti;->a()V
+
+    iget-object v0, p1, Lp32;->g:Lig7;
+
+    iput-object v1, p1, Lp32;->f:Ljava/util/concurrent/ExecutorService;
+
+    iput-object v1, p1, Lp32;->g:Lig7;
+
+    iget-object v2, p1, Lp32;->h:Lng7;
+
+    iget-object v3, v2, Lng7;->q:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_0
+    iget-object v4, v2, Lng7;->p:Lqg7;
+
+    invoke-virtual {v4}, Lqg7;->c()V
+
+    iget-object v5, v4, Lqg7;->C0:Ljava/lang/Object;
+
+    monitor-enter v5
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iput-object v1, v4, Lqg7;->a:Lig7;
+
+    iput-object v1, v4, Lqg7;->Y:Ljava/util/concurrent/Executor;
+
+    monitor-exit v5
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    iget-object v4, v2, Lng7;->r:Lig7;
+
+    if-eqz v4, :cond_6
+
+    const/4 v4, 0x2
+
+    iput v4, v2, Leah;->c:I
+
+    invoke-virtual {v2}, Leah;->r()V
+
+    :cond_6
+    iput-object v1, v2, Lng7;->r:Lig7;
+
+    monitor-exit v3
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {p1, v0, v1}, Lp32;->k(Lig7;Lig7;)V
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_3
+    monitor-exit v5
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    throw p1
+
+    :goto_3
+    monitor-exit v3
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw p1
+
+    :cond_7
+    :goto_4
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

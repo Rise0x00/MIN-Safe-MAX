@@ -1,486 +1,317 @@
 .class public final Ly61;
-.super Ljpe;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lyc5;
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final a:Ljava/lang/Long;
+
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Lve0;
+
+.field public final d:Lxe0;
+
+.field public final e:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;I)V
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lve0;Lxe0;Z)V
     .locals 0
 
-    iput p2, p0, Ly61;->o:I
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ljpe;-><init>(Ljava/util/concurrent/Executor;)V
+    .line 2
+    iput-object p1, p0, Ly61;->a:Ljava/lang/Long;
+
+    .line 3
+    iput-object p2, p0, Ly61;->b:Ljava/lang/CharSequence;
+
+    .line 4
+    iput-object p3, p0, Ly61;->c:Lve0;
+
+    .line 5
+    iput-object p4, p0, Ly61;->d:Lxe0;
+
+    .line 6
+    iput-boolean p5, p0, Ly61;->e:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lve0;ZI)V
+    .locals 8
+
+    and-int/lit8 v0, p5, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object v3, v1
+
+    goto :goto_0
+
+    :cond_0
+    move-object v3, p1
+
+    :goto_0
+    and-int/lit8 p1, p5, 0x2
+
+    if-eqz p1, :cond_1
+
+    move-object v4, v1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v4, p2
+
+    :goto_1
+    and-int/lit8 p1, p5, 0x4
+
+    if-eqz p1, :cond_2
+
+    move-object v5, v1
+
+    goto :goto_2
+
+    :cond_2
+    move-object v5, p3
+
+    :goto_2
+    const/4 v6, 0x0
+
+    move-object v2, p0
+
+    move v7, p4
+
+    .line 7
+    invoke-direct/range {v2 .. v7}, Ly61;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lve0;Lxe0;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public H(Liqe;I)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Ly61;->o:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    invoke-super {p0, p1, p2}, Ljpe;->H(Liqe;I)V
+    return v0
 
-    return-void
+    :cond_0
+    instance-of v1, p1, Ly61;
 
-    :pswitch_0
-    check-cast p1, Lyke;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    move-result-object p2
+    return v2
 
-    check-cast p2, Li28;
+    :cond_1
+    check-cast p1, Ly61;
 
-    check-cast p2, Lxke;
+    iget-object v1, p0, Ly61;->a:Ljava/lang/Long;
 
-    iget-object p1, p1, Lm7d;->a:Landroid/view/View;
+    iget-object v3, p1, Ly61;->a:Ljava/lang/Long;
 
-    check-cast p1, Luke;
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p1, p1, Luke;->d:Lwke;
+    move-result v1
 
-    const/4 p2, 0x1
+    if-nez v1, :cond_2
 
-    iput-boolean p2, p1, Lwke;->c:Z
+    return v2
 
-    iget-object p1, p1, Lwke;->b:Lvke;
+    :cond_2
+    iget-object v1, p0, Ly61;->b:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1}, Lvke;->c()V
+    iget-object v3, p1, Ly61;->b:Ljava/lang/CharSequence;
 
-    return-void
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_1
-    check-cast p1, Lrde;
+    move-result v1
 
-    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
+    if-nez v1, :cond_3
 
-    move-result-object p1
+    return v2
 
-    check-cast p1, Li28;
+    :cond_3
+    iget-object v1, p0, Ly61;->c:Lve0;
 
-    new-instance p1, Ljava/lang/ClassCastException;
+    iget-object v3, p1, Ly61;->c:Lve0;
 
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    throw p1
+    move-result v1
 
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object v1, p0, Ly61;->d:Lxe0;
+
+    iget-object v3, p1, Ly61;->d:Lxe0;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-boolean v1, p0, Ly61;->e:Z
+
+    iget-boolean p1, p1, Ly61;->e:Z
+
+    if-eq v1, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
-.method public d()V
-    .locals 1
-
-    sget-object v0, Lr23;->a:Lr23;
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lb28;->E(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method public f()V
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lb28;->E(Ljava/util/List;)V
+    iget-object v1, p0, Ly61;->a:Ljava/lang/Long;
 
-    return-void
-.end method
+    if-nez v1, :cond_0
 
-.method public l(I)I
-    .locals 1
+    move v1, v0
 
-    iget v0, p0, Ly61;->o:I
+    goto :goto_0
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    :pswitch_0
-    invoke-super {p0, p1}, Ljpe;->l(I)I
+    move-result v1
 
-    move-result p1
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    return p1
+    iget-object v2, p0, Ly61;->b:Ljava/lang/CharSequence;
 
-    :pswitch_1
-    invoke-virtual {p0, p1}, Lb28;->C(I)Ljava/lang/Object;
+    if-nez v2, :cond_1
 
-    move-result-object p1
+    move v2, v0
 
-    check-cast p1, Li28;
+    goto :goto_1
 
-    check-cast p1, Le58;
-
-    sget p1, Le58;->b:I
-
-    return p1
-
-    :pswitch_2
-    invoke-virtual {p0, p1}, Lb28;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Li28;
-
-    check-cast p1, Lva5;
-
-    sget p1, Lva5;->b:I
-
-    return p1
-
-    :pswitch_3
-    invoke-virtual {p0, p1}, Lb28;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Li28;
-
-    check-cast p1, Lu61;
-
-    iget p1, p1, Lu61;->d:I
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_0
-        :pswitch_0
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public r(Lm7d;I)V
-    .locals 1
-
-    iget v0, p0, Ly61;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2}, Ljpe;->r(Lm7d;I)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lyke;
-
-    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Li28;
-
-    check-cast p2, Lxke;
-
-    iget-object p1, p1, Lm7d;->a:Landroid/view/View;
-
-    check-cast p1, Luke;
-
-    iget-object p1, p1, Luke;->d:Lwke;
-
-    const/4 p2, 0x1
-
-    iput-boolean p2, p1, Lwke;->c:Z
-
-    iget-object p1, p1, Lwke;->b:Lvke;
-
-    invoke-virtual {p1}, Lvke;->c()V
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Lrde;
-
-    invoke-virtual {p0, p2}, Lb28;->C(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Li28;
-
-    new-instance p1, Ljava/lang/ClassCastException;
-
-    invoke-direct {p1}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x5
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lm7d;
-    .locals 5
-
-    iget v0, p0, Ly61;->o:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p2, Lyke;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Luke;
-
-    invoke-direct {v0, p1}, Luke;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p2, v0}, Lm7d;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    :pswitch_0
-    new-instance p2, Lrde;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    invoke-direct {p2, v0}, Lm7d;-><init>(Landroid/view/View;)V
-
-    return-object p2
-
-    :pswitch_1
-    new-instance p2, Lg01;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Lmud;
-
-    invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v2, -0x1
-
-    invoke-direct {v1, v2, v2}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v1, Landroid/widget/ProgressBar;
-
-    invoke-direct {v1, p1}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;)V
-
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/16 v2, 0x30
-
-    int-to-float v2, v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v2
-
-    invoke-static {v3}, Lkhi;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v4
-
-    invoke-static {v2}, Lkhi;->c(F)I
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
-    invoke-direct {p1, v3, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    :goto_1
+    add-int/2addr v1, v2
 
-    const/16 v2, 0x11
+    mul-int/lit8 v1, v1, 0x1f
 
-    iput v2, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+    iget-object v2, p0, Ly61;->c:Lve0;
 
-    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    if-nez v2, :cond_2
 
-    sget-object p1, Ly53;->s0:Lvh4;
+    move v2, v0
 
-    invoke-virtual {p1, v1}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    goto :goto_2
 
-    move-result-object p1
+    :cond_2
+    invoke-virtual {v2}, Lve0;->hashCode()I
 
-    invoke-interface {p1}, Lw5b;->getIcon()Le77;
+    move-result v2
 
-    move-result-object p1
+    :goto_2
+    add-int/2addr v1, v2
 
-    iget p1, p1, Le77;->i:I
+    mul-int/lit8 v1, v1, 0x1f
 
-    invoke-static {v1, p1}, Lw1f;->f(Landroid/widget/ProgressBar;I)V
+    iget-object v2, p0, Ly61;->d:Lxe0;
 
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    if-nez v2, :cond_3
 
-    const/16 p1, 0xa
+    goto :goto_3
 
-    invoke-direct {p2, v0, p1}, Lg01;-><init>(Landroid/view/View;I)V
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    return-object p2
+    move-result v0
 
-    :pswitch_2
-    new-instance p2, Lg01;
+    :goto_3
+    add-int/2addr v1, v0
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    mul-int/lit8 v1, v1, 0x1f
 
-    move-result-object p1
+    iget-boolean v0, p0, Ly61;->e:Z
 
-    new-instance v0, Lxua;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    const/4 v1, 0x0
+    move-result v0
 
-    invoke-direct {v0, p1, v1}, Lxua;-><init>(Landroid/content/Context;I)V
+    add-int/2addr v0, v1
 
-    const/16 p1, 0x9
+    return v0
+.end method
 
-    invoke-direct {p2, v0, p1}, Lg01;-><init>(Landroid/view/View;I)V
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    new-instance p1, Landroid/view/ViewGroup$LayoutParams;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, -0x1
+    const-string v1, "CallChatState(chatId="
 
-    invoke-direct {p1, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-object v1, p0, Ly61;->a:Ljava/lang/Long;
 
-    sget p1, Lyjd;->K0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Lxua;->setIcon(I)V
+    const-string v1, ", name="
 
-    sget p1, Lakd;->h0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lirf;
+    iget-object v1, p0, Ly61;->b:Ljava/lang/CharSequence;
 
-    invoke-direct {v1, p1}, Lirf;-><init>(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lxua;->setTitle(Lnrf;)V
+    const-string v1, ", avatar="
 
-    sget p1, Lakd;->f0:I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v1, Lirf;
+    iget-object v1, p0, Ly61;->c:Lve0;
 
-    invoke-direct {v1, p1}, Lirf;-><init>(I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lxua;->setSubtitle(Lnrf;)V
+    const-string v1, ", overlay="
 
-    return-object p2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_3
-    new-instance p2, Lg01;
+    iget-object v1, p0, Ly61;->d:Lxe0;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", isLinkCall="
 
-    new-instance v0, Lone/me/sdk/uikit/common/views/EmptySearchView;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, ")"
 
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/uikit/common/views/EmptySearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iget-boolean v2, p0, Ly61;->e:Z
 
-    const/16 p1, 0x8
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {p2, v0, p1}, Lg01;-><init>(Landroid/view/View;I)V
+    move-result-object v0
 
-    return-object p2
-
-    :pswitch_4
-    new-instance p2, Lg01;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    new-instance v0, Ls23;
-
-    invoke-direct {v0, p1}, Ls23;-><init>(Landroid/content/Context;)V
-
-    const/4 p1, 0x7
-
-    invoke-direct {p2, v0, p1}, Lg01;-><init>(Landroid/view/View;I)V
-
-    return-object p2
-
-    :pswitch_5
-    sget v0, Lhnc;->call_event_view_item:I
-
-    if-ne p2, v0, :cond_0
-
-    new-instance p2, Ldn0;
-
-    new-instance v0, Lv61;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lv61;-><init>(Landroid/content/Context;)V
-
-    invoke-direct {p2, v0}, Ldn0;-><init>(Lv61;)V
-
-    return-object p2
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "Not supported viewType for CallEventsAdapter"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

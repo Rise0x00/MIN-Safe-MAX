@@ -1,430 +1,131 @@
-.class public final synthetic Lgo2;
-.super Lc9;
+.class public final Lgo2;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lqi6;
 
 
 # instance fields
-.field public final synthetic Z:I
+.field public final b:Landroid/content/Intent;
+
+.field public final c:Landroid/net/Uri;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Intent;Landroid/net/Uri;)V
+    .locals 1
 
-    iput p7, p0, Lgo2;->Z:I
+    const/4 v0, 0x4
 
-    move-object p7, p4
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    move-object p4, p3
+    iput-object p1, p0, Lgo2;->b:Landroid/content/Intent;
 
-    move p3, p6
-
-    move-object p6, p7
-
-    move-object p7, p5
-
-    move-object p5, p2
-
-    move p2, p1
-
-    move-object p1, p0
-
-    invoke-direct/range {p1 .. p7}, Lc9;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p2, p0, Lgo2;->c:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lgo2;->Z:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Lun3;
+    return v0
 
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
+    :cond_0
+    instance-of v1, p1, Lgo2;
 
-    check-cast v0, Ltn3;
+    const/4 v2, 0x0
 
-    filled-new-array {p1}, [Lun3;
+    if-nez v1, :cond_1
 
-    move-result-object p1
+    return v2
 
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
+    :cond_1
+    check-cast p1, Lgo2;
 
-    sget-object p1, Lybg;->a:Lybg;
+    iget-object v1, p0, Lgo2;->b:Landroid/content/Intent;
 
-    return-object p1
+    iget-object v3, p1, Lgo2;->b:Landroid/content/Intent;
 
-    :pswitch_0
-    check-cast p1, Lun3;
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
+    move-result v1
 
-    check-cast v0, Ltn3;
+    if-nez v1, :cond_2
 
-    filled-new-array {p1}, [Lun3;
+    return v2
 
-    move-result-object p1
+    :cond_2
+    iget-object v1, p0, Lgo2;->c:Landroid/net/Uri;
 
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
+    iget-object p1, p1, Lgo2;->c:Landroid/net/Uri;
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object p1
+    move-result p1
 
-    :pswitch_1
-    check-cast p1, Lun3;
+    if-nez p1, :cond_3
 
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
+    return v2
 
-    check-cast v0, Ltn3;
+    :cond_3
+    return v0
+.end method
 
-    filled-new-array {p1}, [Lun3;
+.method public final hashCode()I
+    .locals 2
 
-    move-result-object p1
+    iget-object v0, p0, Lgo2;->b:Landroid/content/Intent;
 
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    sget-object p1, Lybg;->a:Lybg;
+    move-result v0
 
-    return-object p1
+    mul-int/lit8 v0, v0, 0x1f
 
-    :pswitch_2
-    check-cast p1, Lun3;
+    iget-object v1, p0, Lgo2;->c:Landroid/net/Uri;
 
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
 
-    check-cast v0, Ltn3;
+    move-result v1
 
-    filled-new-array {p1}, [Lun3;
+    add-int/2addr v1, v0
 
-    move-result-object p1
+    return v1
+.end method
 
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object p1, Lybg;->a:Lybg;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, "OpenFile(intent="
 
-    :pswitch_3
-    check-cast p1, Lun3;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
+    iget-object v1, p0, Lgo2;->b:Landroid/content/Intent;
 
-    check-cast v0, Ltn3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    filled-new-array {p1}, [Lun3;
+    const-string v1, ", uri="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
+    iget-object v1, p0, Lgo2;->c:Landroid/net/Uri;
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    const-string v1, ")"
 
-    :pswitch_4
-    check-cast p1, Lun3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v0, Ltn3;
+    move-result-object v0
 
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_5
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_6
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_7
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_8
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_9
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_a
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_b
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_c
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_d
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_e
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_f
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_10
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_11
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_12
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :pswitch_13
-    check-cast p1, Lun3;
-
-    iget-object v0, p0, Lc9;->a:Ljava/lang/Object;
-
-    check-cast v0, Ltn3;
-
-    filled-new-array {p1}, [Lun3;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ltn3;->a([Lun3;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

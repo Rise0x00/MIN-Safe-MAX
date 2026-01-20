@@ -1,86 +1,35 @@
-.class public final Lldc;
+.class public abstract Lldc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:Z
-
-
 # direct methods
-.method public constructor <init>(IZ)V
+.method public static a(Landroid/graphics/Bitmap;FF)Landroid/view/PointerIcon;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p0, p1, p2}, Landroid/view/PointerIcon;->create(Landroid/graphics/Bitmap;FF)Landroid/view/PointerIcon;
 
-    iput p1, p0, Lldc;->a:I
+    move-result-object p0
 
-    iput-boolean p2, p0, Lldc;->b:Z
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/content/Context;I)Landroid/view/PointerIcon;
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-static {p0, p1}, Landroid/view/PointerIcon;->getSystemIcon(Landroid/content/Context;I)Landroid/view/PointerIcon;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_2
-
-    const-class v0, Lldc;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lldc;
-
-    iget v0, p0, Lldc;->a:I
-
-    iget v1, p1, Lldc;->a:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-boolean v0, p0, Lldc;->b:Z
-
-    iget-boolean p1, p1, Lldc;->b:Z
-
-    if-ne v0, p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x0
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public static c(Landroid/content/res/Resources;I)Landroid/view/PointerIcon;
+    .locals 0
 
-    iget v0, p0, Lldc;->a:I
+    invoke-static {p0, p1}, Landroid/view/PointerIcon;->load(Landroid/content/res/Resources;I)Landroid/view/PointerIcon;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object p0
 
-    iget-boolean v1, p0, Lldc;->b:Z
-
-    add-int/2addr v0, v1
-
-    return v0
+    return-object p0
 .end method

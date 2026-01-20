@@ -1,3 +1,3 @@
-.class public interface abstract Lem;
+.class public final Lem;
 .super Ljava/lang/Object;
 .source "SourceFile"

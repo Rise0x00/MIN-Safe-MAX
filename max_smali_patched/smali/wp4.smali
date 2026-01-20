@@ -1,31 +1,19 @@
 .class public final Lwp4;
-.super Lp14;
+.super Lkme;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
-
-
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final v(Landroid/content/pm/PackageManager;Ljava/lang/String;)[Landroid/content/pm/Signature;
     .locals 1
 
-    iput-object p1, p0, Lwp4;->d:Ljava/lang/Object;
+    const/16 v0, 0x40
 
-    iget p1, p0, Lwp4;->o:I
+    invoke-virtual {p1, p2, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
-    const/high16 v0, -0x80000000
+    move-result-object p1
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lwp4;->o:I
-
-    invoke-static {p0}, Lxxi;->a(Lp14;)V
-
-    sget-object p1, Lh54;->a:Lh54;
+    iget-object p1, p1, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     return-object p1
 .end method

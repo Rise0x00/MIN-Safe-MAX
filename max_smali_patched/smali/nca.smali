@@ -1,55 +1,37 @@
-.class public abstract Lnca;
-.super Ljava/lang/Object;
+.class public final Lnca;
+.super Landroid/os/RemoteCallbackList;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Landroidx/room/MultiInstanceInvalidationService;
+
+
 # direct methods
-.method public static a(Landroid/app/Notification;)Z
+.method public constructor <init>(Landroidx/room/MultiInstanceInvalidationService;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getAllowSystemGeneratedContextualActions()Z
+    iput-object p1, p0, Lnca;->a:Landroidx/room/MultiInstanceInvalidationService;
 
-    move-result p0
+    invoke-direct {p0}, Landroid/os/RemoteCallbackList;-><init>()V
 
-    return p0
+    return-void
 .end method
 
-.method public static b(Landroid/app/Notification;)Landroid/app/Notification$BubbleMetadata;
+
+# virtual methods
+.method public final onCallbackDied(Landroid/os/IInterface;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getBubbleMetadata()Landroid/app/Notification$BubbleMetadata;
+    check-cast p1, Lqe7;
 
-    move-result-object p0
+    iget-object p1, p0, Lnca;->a:Landroidx/room/MultiInstanceInvalidationService;
 
-    return-object p0
-.end method
+    iget-object p1, p1, Landroidx/room/MultiInstanceInvalidationService;->b:Ljava/util/LinkedHashMap;
 
-.method public static c(Landroid/app/RemoteInput;)I
-    .locals 0
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getEditChoicesBeforeSending()I
+    invoke-interface {p1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Landroid/app/Notification;)Landroid/content/LocusId;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification;->getLocusId()Landroid/content/LocusId;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/app/Notification$Action;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->isContextual()Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

@@ -1,68 +1,357 @@
-.class public final Lvhi;
+.class public Lvhi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
-
 
 # static fields
-.field public static final a:Lvhi;
+.field public static final b:Lxhi;
 
-.field public static final b:Lmr5;
+
+# instance fields
+.field public final a:Lxhi;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lvhi;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0x1e
 
-    sput-object v0, Lvhi;->a:Lvhi;
+    if-lt v0, v1, :cond_0
 
-    new-instance v0, Lz7i;
+    new-instance v0, Lohi;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Lohi;-><init>()V
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
+    goto :goto_0
 
-    const-class v1, Lu8i;
+    :cond_0
+    const/16 v1, 0x1d
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
+    if-lt v0, v1, :cond_1
+
+    new-instance v0, Lmhi;
+
+    invoke-direct {v0}, Lmhi;-><init>()V
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v0, Llhi;
+
+    invoke-direct {v0}, Llhi;-><init>()V
+
+    :goto_0
+    invoke-virtual {v0}, Lphi;->b()Lxhi;
 
     move-result-object v0
 
-    new-instance v1, Lmr5;
+    iget-object v0, v0, Lxhi;->a:Lvhi;
 
-    invoke-static {v0}, Lnx1;->p(Ljava/util/HashMap;)Ljava/util/Map;
+    invoke-virtual {v0}, Lvhi;->a()Lxhi;
 
     move-result-object v0
 
-    const-string v2, "format"
+    iget-object v0, v0, Lxhi;->a:Lvhi;
 
-    invoke-direct {v1, v2, v0}, Lmr5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v0}, Lvhi;->b()Lxhi;
 
-    sput-object v1, Lvhi;->b:Lmr5;
+    move-result-object v0
+
+    iget-object v0, v0, Lxhi;->a:Lvhi;
+
+    invoke-virtual {v0}, Lvhi;->c()Lxhi;
+
+    move-result-object v0
+
+    sput-object v0, Lvhi;->b:Lxhi;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxhi;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lvhi;->a:Lxhi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public a()Lxhi;
     .locals 1
 
-    check-cast p1, Lc1j;
+    iget-object v0, p0, Lvhi;->a:Lxhi;
 
-    check-cast p2, Laia;
+    return-object v0
+.end method
 
-    sget-object v0, Lvhi;->b:Lmr5;
+.method public b()Lxhi;
+    .locals 1
 
-    iget-object p1, p1, Lc1j;->a:Lu4i;
+    iget-object v0, p0, Lvhi;->a:Lxhi;
 
-    invoke-interface {p2, v0, p1}, Laia;->a(Lmr5;Ljava/lang/Object;)Laia;
+    return-object v0
+.end method
+
+.method public c()Lxhi;
+    .locals 1
+
+    iget-object v0, p0, Lvhi;->a:Lxhi;
+
+    return-object v0
+.end method
+
+.method public d(Landroid/view/View;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public e()Li25;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lvhi;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lvhi;
+
+    invoke-virtual {p0}, Lvhi;->n()Z
+
+    move-result v1
+
+    invoke-virtual {p1}, Lvhi;->n()Z
+
+    move-result v3
+
+    if-ne v1, v3, :cond_2
+
+    invoke-virtual {p0}, Lvhi;->m()Z
+
+    move-result v1
+
+    invoke-virtual {p1}, Lvhi;->m()Z
+
+    move-result v3
+
+    if-ne v1, v3, :cond_2
+
+    invoke-virtual {p0}, Lvhi;->j()Lcs7;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lvhi;->j()Lcs7;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0}, Lvhi;->h()Lcs7;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lvhi;->h()Lcs7;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0}, Lvhi;->e()Li25;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lvhi;->e()Li25;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
+
+    :cond_2
+    return v2
+.end method
+
+.method public f(I)Lcs7;
+    .locals 0
+
+    sget-object p1, Lcs7;->e:Lcs7;
+
+    return-object p1
+.end method
+
+.method public g()Lcs7;
+    .locals 1
+
+    invoke-virtual {p0}, Lvhi;->j()Lcs7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public h()Lcs7;
+    .locals 1
+
+    sget-object v0, Lcs7;->e:Lcs7;
+
+    return-object v0
+.end method
+
+.method public hashCode()I
+    .locals 5
+
+    invoke-virtual {p0}, Lvhi;->n()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lvhi;->m()Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lvhi;->j()Lcs7;
+
+    move-result-object v2
+
+    invoke-virtual {p0}, Lvhi;->h()Lcs7;
+
+    move-result-object v3
+
+    invoke-virtual {p0}, Lvhi;->e()Li25;
+
+    move-result-object v4
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public i()Lcs7;
+    .locals 1
+
+    invoke-virtual {p0}, Lvhi;->j()Lcs7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public j()Lcs7;
+    .locals 1
+
+    sget-object v0, Lcs7;->e:Lcs7;
+
+    return-object v0
+.end method
+
+.method public k()Lcs7;
+    .locals 1
+
+    invoke-virtual {p0}, Lvhi;->j()Lcs7;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public l(IIII)Lxhi;
+    .locals 0
+
+    sget-object p1, Lvhi;->b:Lxhi;
+
+    return-object p1
+.end method
+
+.method public m()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public n()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public o(I)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public p([Lcs7;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public q(Lxhi;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public r(Lcs7;)V
+    .locals 0
 
     return-void
 .end method

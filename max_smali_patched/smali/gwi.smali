@@ -1,55 +1,137 @@
-.class public abstract Lgwi;
-.super Ljava/lang/Object;
+.class public final Lgwi;
+.super Liwi;
 .source "SourceFile"
 
 
+# instance fields
+.field public final transient c:I
+
+.field public final transient d:I
+
+.field public final synthetic o:Liwi;
+
+
 # direct methods
-.method public static final a(Ljava/lang/Exception;Ljava/lang/String;)Ljava/lang/StackTraceElement;
-    .locals 3
+.method public constructor <init>(Liwi;II)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+    iput-object p1, p0, Lgwi;->o:Liwi;
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    const/4 v0, 0x0
+    iput p2, p0, Lgwi;->c:I
 
-    aget-object p0, p0, v0
+    iput p3, p0, Lgwi;->d:I
 
-    new-instance v0, Ljava/lang/StackTraceElement;
+    return-void
+.end method
 
-    const-string v1, "_COROUTINE."
 
-    invoke-virtual {v1, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+# virtual methods
+.method public final b()I
+    .locals 2
 
-    move-result-object p1
+    iget-object v0, p0, Lgwi;->o:Liwi;
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getFileName()Ljava/lang/String;
+    invoke-virtual {v0}, Lzvi;->c()I
 
-    move-result-object v1
+    move-result v0
 
-    invoke-virtual {p0}, Ljava/lang/StackTraceElement;->getLineNumber()I
+    iget v1, p0, Lgwi;->c:I
 
-    move-result p0
+    add-int/2addr v0, v1
 
-    const-string v2, "_"
+    iget v1, p0, Lgwi;->d:I
 
-    invoke-direct {v0, p1, v2, v1, p0}, Ljava/lang/StackTraceElement;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final c()I
+    .locals 2
+
+    iget-object v0, p0, Lgwi;->o:Liwi;
+
+    invoke-virtual {v0}, Lzvi;->c()I
+
+    move-result v0
+
+    iget v1, p0, Lgwi;->c:I
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final d()[Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lgwi;->o:Liwi;
+
+    invoke-virtual {v0}, Lzvi;->d()[Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public static final b(Lvcg;)V
-    .locals 2
+.method public final e(II)Liwi;
+    .locals 1
 
-    new-instance v0, Lhpa;
+    iget v0, p0, Lgwi;->d:I
 
-    const/16 v1, 0x1d
+    invoke-static {p1, p2, v0}, Lqaj;->d(III)V
 
-    invoke-direct {v0, v1}, Lhpa;-><init>(I)V
+    iget v0, p0, Lgwi;->c:I
 
-    const-class v1, Lof4;
+    add-int/2addr p1, v0
 
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
+    add-int/2addr p2, v0
 
-    return-void
+    iget-object v0, p0, Lgwi;->o:Liwi;
+
+    invoke-virtual {v0, p1, p2}, Liwi;->e(II)Liwi;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lgwi;->d:I
+
+    invoke-static {p1, v0}, Lqaj;->c(II)V
+
+    iget v0, p0, Lgwi;->c:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lgwi;->o:Liwi;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lgwi;->d:I
+
+    return v0
+.end method
+
+.method public final bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lgwi;->e(II)Liwi;
+
+    move-result-object p1
+
+    return-object p1
 .end method

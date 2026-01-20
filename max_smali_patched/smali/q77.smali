@@ -1,273 +1,92 @@
 .class public final Lq77;
-.super Ljava/lang/Object;
+.super Ls77;
 .source "SourceFile"
-
-# interfaces
-.implements Lvb4;
 
 
 # instance fields
-.field public final a:Lvb4;
-
-.field public final b:I
-
-.field public final c:Lhdc;
-
-.field public final d:[B
-
-.field public o:I
+.field public final a:Ljava/lang/CharSequence;
 
 
 # direct methods
-.method public constructor <init>(Lvb4;ILhdc;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
-
-    if-lez p2, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-static {v1}, Lggi;->c(Z)V
-
-    iput-object p1, p0, Lq77;->a:Lvb4;
-
-    iput p2, p0, Lq77;->b:I
-
-    iput-object p3, p0, Lq77;->c:Lhdc;
-
-    new-array p1, v0, [B
-
-    iput-object p1, p0, Lq77;->d:[B
-
-    iput p2, p0, Lq77;->o:I
+    iput-object p1, p0, Lq77;->a:Ljava/lang/CharSequence;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(Ldc4;)J
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    const/4 v0, 0x1
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    throw p1
-.end method
-
-.method public final S(Lt2g;)V
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lq77;->a:Lvb4;
-
-    invoke-interface {v0, p1}, Lvb4;->S(Lt2g;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lq77;->a:Lvb4;
-
-    invoke-interface {v0}, Lvb4;->getUri()Landroid/net/Uri;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final read([BII)I
-    .locals 14
-
-    iget v0, p0, Lq77;->o:I
-
-    iget-object v1, p0, Lq77;->a:Lvb4;
-
-    const/4 v2, -0x1
-
-    if-nez v0, :cond_7
-
-    iget-object v0, p0, Lq77;->d:[B
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x1
-
-    invoke-interface {v1, v0, v3, v4}, Lpb4;->read([BII)I
-
-    move-result v5
-
-    if-ne v5, v2, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    aget-byte v0, v0, v3
+    instance-of v1, p1, Lq77;
 
-    and-int/lit16 v0, v0, 0xff
+    const/4 v2, 0x0
 
-    shl-int/lit8 v0, v0, 0x4
+    if-nez v1, :cond_1
 
-    if-nez v0, :cond_1
-
-    goto :goto_5
-
-    :cond_1
-    new-array v5, v0, [B
-
-    move v6, v0
-
-    :goto_0
-    if-lez v6, :cond_3
-
-    invoke-interface {v1, v5, v3, v6}, Lpb4;->read([BII)I
-
-    move-result v7
-
-    if-ne v7, v2, :cond_2
-
-    :goto_1
     return v2
 
-    :cond_2
-    add-int/2addr v3, v7
+    :cond_1
+    check-cast p1, Lq77;
 
-    sub-int/2addr v6, v7
+    iget-object v1, p0, Lq77;->a:Ljava/lang/CharSequence;
 
-    goto :goto_0
+    iget-object p1, p1, Lq77;->a:Ljava/lang/CharSequence;
 
-    :cond_3
-    :goto_2
-    if-lez v0, :cond_4
-
-    add-int/lit8 v3, v0, -0x1
-
-    aget-byte v3, v5, v3
-
-    if-nez v3, :cond_4
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_2
-
-    :cond_4
-    if-lez v0, :cond_6
-
-    new-instance v3, Lbjg;
-
-    invoke-direct {v3, v0, v5}, Lbjg;-><init>(I[B)V
-
-    iget-object v0, p0, Lq77;->c:Lhdc;
-
-    iget-boolean v5, v0, Lhdc;->x0:Z
-
-    if-nez v5, :cond_5
-
-    iget-wide v5, v0, Lhdc;->t0:J
-
-    :goto_3
-    move-wide v8, v5
-
-    goto :goto_4
-
-    :cond_5
-    iget-object v5, v0, Lhdc;->y0:Lndc;
-
-    invoke-virtual {v5}, Lndc;->h()J
-
-    move-result-wide v5
-
-    iget-wide v7, v0, Lhdc;->t0:J
-
-    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v5
-
-    goto :goto_3
-
-    :goto_4
-    invoke-virtual {v3}, Lbjg;->c()I
-
-    move-result v11
-
-    iget-object v7, v0, Lhdc;->w0:Ldmd;
-
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v7, v11, v3}, Ldmd;->c(ILbjg;)V
-
-    const/4 v12, 0x0
-
-    const/4 v13, 0x0
-
-    const/4 v10, 0x1
-
-    invoke-interface/range {v7 .. v13}, Lm1g;->b(JIIILk1g;)V
-
-    iput-boolean v4, v0, Lhdc;->x0:Z
-
-    :cond_6
-    :goto_5
-    iget v0, p0, Lq77;->b:I
-
-    iput v0, p0, Lq77;->o:I
-
-    :cond_7
-    iget v0, p0, Lq77;->o:I
-
-    move/from16 v3, p3
-
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    move/from16 v3, p2
-
-    invoke-interface {v1, p1, v3, v0}, Lpb4;->read([BII)I
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
-    if-eq p1, v2, :cond_8
+    if-nez p1, :cond_2
 
-    iget v0, p0, Lq77;->o:I
+    return v2
 
-    sub-int/2addr v0, p1
-
-    iput v0, p0, Lq77;->o:I
-
-    :cond_8
-    return p1
+    :cond_2
+    return v0
 .end method
 
-.method public final x()Ljava/util/Map;
+.method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lq77;->a:Lvb4;
+    iget-object v0, p0, Lq77;->a:Ljava/lang/CharSequence;
 
-    invoke-interface {v0}, Lvb4;->x()Ljava/util/Map;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Name(name="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lq77;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

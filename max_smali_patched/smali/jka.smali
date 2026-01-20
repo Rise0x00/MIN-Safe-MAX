@@ -1,19 +1,65 @@
 .class public final Ljka;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Lcx3;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    const-string v0, "NetworkNotRoamingCtrlr"
 
-    iput-object p1, p0, Ljka;->a:Ljava/lang/Object;
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lhji;)Z
+    .locals 1
+
+    iget-object p1, p1, Lhji;->j:Lvx3;
+
+    iget p1, p1, Lvx3;->a:I
+
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final b(Ljava/lang/Object;)Z
+    .locals 1
+
+    check-cast p1, Lkka;
+
+    iget-boolean v0, p1, Lkka;->a:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean p1, p1, Lkka;->d:Z
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
+
+    return p1
 .end method

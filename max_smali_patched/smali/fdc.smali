@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lodc;
+.field public final synthetic b:Lgdc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lodc;I)V
+.method public synthetic constructor <init>(Lgdc;I)V
     .locals 0
 
     iput p2, p0, Lfdc;->a:I
 
-    iput-object p1, p0, Lfdc;->b:Lodc;
+    iput-object p1, p0, Lfdc;->b:Lgdc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,43 +27,78 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
     iget v0, p0, Lfdc;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lfdc;->b:Lodc;
+    iget-object v0, p0, Lfdc;->b:Lgdc;
 
-    iget-boolean v1, v0, Lodc;->Z0:Z
+    iget-object v1, v0, Lgdc;->j:Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
-    iget-object v1, v0, Lodc;->C0:Lvu8;
+    move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v1, [Lxpe;
 
-    invoke-interface {v1, v0}, Le3e;->n(Lg3e;)V
+    invoke-static {v0, v1}, Lrjj;->a(Lxpe;[Lxpe;)I
 
-    :cond_0
-    return-void
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lfdc;->b:Lodc;
+    iget-object v0, p0, Lfdc;->b:Lgdc;
 
-    invoke-virtual {v0}, Lodc;->y()V
+    iget-object v0, v0, Lgdc;->b:Liv6;
 
-    return-void
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lsti;->b(Ljava/util/List;)[Lxpe;
+
+    move-result-object v0
+
+    return-object v0
 
     :pswitch_1
-    iget-object v0, p0, Lfdc;->b:Lodc;
+    iget-object v0, p0, Lfdc;->b:Lgdc;
 
-    const/4 v1, 0x1
+    iget-object v0, v0, Lgdc;->b:Liv6;
 
-    iput-boolean v1, v0, Lodc;->T0:Z
+    if-eqz v0, :cond_1
 
-    return-void
+    invoke-interface {v0}, Liv6;->c()[La38;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_1
+    sget-object v0, Ltti;->a:[La38;
+
+    :goto_1
+    return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

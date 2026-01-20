@@ -1,110 +1,185 @@
 .class public final Ly37;
-.super Lpof;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+.implements Lo25;
 
 
 # instance fields
-.field public final synthetic e:I
+.field public final synthetic a:I
 
-.field public final synthetic f:I
+.field public volatile b:Z
 
-.field public final synthetic g:I
+.field public final c:Ljava/lang/Object;
 
-.field public final synthetic h:Ljava/lang/Object;
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Object;III)V
-    .locals 0
+.method public constructor <init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
+    .locals 1
 
-    iput p5, p0, Ly37;->e:I
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Ly37;->h:Ljava/lang/Object;
+    iput v0, p0, Ly37;->a:I
 
-    iput p3, p0, Ly37;->f:I
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p4, p0, Ly37;->g:I
+    .line 2
+    iput-object p1, p0, Ly37;->c:Ljava/lang/Object;
 
-    const/4 p2, 0x1
+    .line 3
+    iput-object p2, p0, Ly37;->d:Ljava/lang/Object;
 
-    invoke-direct {p0, p1, p2}, Lpof;-><init>(Ljava/lang/String;Z)V
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Runnable;Lnbe;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Ly37;->a:I
+
+    .line 4
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    iput-object p1, p0, Ly37;->c:Ljava/lang/Object;
+
+    .line 6
+    iput-object p2, p0, Ly37;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 5
+.method public final dispose()V
+    .locals 1
 
-    iget v0, p0, Ly37;->e:I
+    iget v0, p0, Ly37;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ly37;->h:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    check-cast v0, Ld47;
+    iput-boolean v0, p0, Ly37;->b:Z
+
+    iget-object v0, p0, Ly37;->d:Ljava/lang/Object;
+
+    check-cast v0, Lnbe;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ly37;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/os/Handler;
+
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ly37;->b:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget v0, p0, Ly37;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Ly37;->b:Z
+
+    return v0
+
+    :pswitch_0
+    iget-boolean v0, p0, Ly37;->b:Z
+
+    return v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Ly37;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Ly37;->b:Z
+
+    if-nez v0, :cond_0
 
     :try_start_0
-    iget v1, p0, Ly37;->f:I
+    iget-object v0, p0, Ly37;->c:Ljava/lang/Object;
 
-    iget v2, p0, Ly37;->g:I
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object v3, v0, Ld47;->G0:Ll47;
-
-    invoke-virtual {v3, v1, v2}, Ll47;->P(II)V
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v1
+    :catchall_0
+    move-exception v0
 
-    const/4 v2, 0x2
+    invoke-virtual {p0}, Ly37;->dispose()V
 
-    invoke-virtual {v0, v2, v2, v1}, Ld47;->c(IILjava/io/IOException;)V
+    invoke-static {v0}, Lknj;->b(Ljava/lang/Throwable;)V
 
+    throw v0
+
+    :cond_0
     :goto_0
-    const-wide/16 v0, -0x1
-
-    return-wide v0
+    return-void
 
     :pswitch_0
-    iget-object v0, p0, Ly37;->h:Ljava/lang/Object;
-
-    check-cast v0, Lnd1;
-
-    iget-object v0, v0, Lnd1;->c:Ljava/lang/Object;
-
-    check-cast v0, Ld47;
-
-    iget v1, p0, Ly37;->f:I
-
-    iget v2, p0, Ly37;->g:I
-
     :try_start_1
-    iget-object v3, v0, Ld47;->G0:Ll47;
+    iget-object v0, p0, Ly37;->d:Ljava/lang/Object;
 
-    const/4 v4, 0x1
+    check-cast v0, Ljava/lang/Runnable;
 
-    invoke-virtual {v3, v1, v2, v4}, Ll47;->y(IIZ)V
+    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     goto :goto_1
 
-    :catch_1
-    move-exception v1
+    :catchall_1
+    move-exception v0
 
-    const/4 v2, 0x2
-
-    invoke-virtual {v0, v2, v2, v1}, Ld47;->c(IILjava/io/IOException;)V
+    invoke-static {v0}, Lknj;->b(Ljava/lang/Throwable;)V
 
     :goto_1
-    const-wide/16 v0, -0x1
+    return-void
 
-    return-wide v0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

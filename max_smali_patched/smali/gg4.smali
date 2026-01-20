@@ -1,175 +1,115 @@
-.class public final synthetic Lgg4;
-.super Ljava/lang/Object;
+.class public final Lgg4;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ld38;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lnd;
+.field public final synthetic Y:Lnq6;
 
-.field public final synthetic c:I
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnd;II)V
+.method public constructor <init>(Lnq6;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p3, p0, Lgg4;->a:I
+    iput-object p1, p0, Lgg4;->Y:Lnq6;
 
-    iput-object p1, p0, Lgg4;->b:Lnd;
+    const/4 p1, 0x2
 
-    iput p2, p0, Lgg4;->c:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lnd;IJ)V
-    .locals 0
-
-    .line 2
-    const/4 p3, 0x2
-
-    iput p3, p0, Lgg4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgg4;->b:Lnd;
-
-    iput p2, p0, Lgg4;->c:I
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lnd;Lqs8;I)V
-    .locals 0
-
-    .line 3
-    const/4 p2, 0x7
-
-    iput p2, p0, Lgg4;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgg4;->b:Lnd;
-
-    iput p3, p0, Lgg4;->c:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lhvb;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lgg4;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lgg4;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lgg4;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget v0, p0, Lgg4;->a:I
+    new-instance v0, Lgg4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lgg4;->Y:Lnq6;
 
-    iget v0, p0, Lgg4;->c:I
+    invoke-direct {v0, v1, p2}, Lgg4;-><init>(Lnq6;Lkotlin/coroutines/Continuation;)V
 
-    check-cast p1, Lod;
+    iput-object p1, v0, Lgg4;->X:Ljava/lang/Object;
 
-    iget-object v1, p0, Lgg4;->b:Lnd;
+    return-object v0
+.end method
 
-    invoke-interface {p1, v1, v0}, Lod;->h0(Lnd;I)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    return-void
+    iget v0, p0, Lgg4;->o:I
 
-    :pswitch_0
-    iget v0, p0, Lgg4;->c:I
+    const/4 v1, 0x1
 
-    check-cast p1, Lod;
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lgg4;->b:Lnd;
+    if-ne v0, v1, :cond_0
 
-    invoke-interface {p1, v1, v0}, Lod;->a0(Lnd;I)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-void
+    return-object p1
 
-    :pswitch_1
-    check-cast p1, Lod;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-object v0, p0, Lgg4;->b:Lnd;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lgg4;->c:I
+    throw p1
 
-    invoke-interface {p1, v0, v1}, Lod;->s0(Lnd;I)V
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-void
+    iget-object p1, p0, Lgg4;->X:Ljava/lang/Object;
 
-    :pswitch_2
-    iget v0, p0, Lgg4;->c:I
+    check-cast p1, Lhvb;
 
-    check-cast p1, Lod;
+    iput v1, p0, Lgg4;->o:I
 
-    iget-object v1, p0, Lgg4;->b:Lnd;
+    iget-object p1, p0, Lgg4;->Y:Lnq6;
 
-    invoke-interface {p1, v1, v0}, Lod;->P(Lnd;I)V
+    invoke-interface {p1, p0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_3
-    iget v0, p0, Lgg4;->c:I
+    sget-object v0, Lac4;->a:Lac4;
 
-    check-cast p1, Lod;
+    if-ne p1, v0, :cond_2
 
-    iget-object v1, p0, Lgg4;->b:Lnd;
+    return-object v0
 
-    invoke-interface {p1, v1, v0}, Lod;->t0(Lnd;I)V
-
-    return-void
-
-    :pswitch_4
-    iget v0, p0, Lgg4;->c:I
-
-    check-cast p1, Lod;
-
-    iget-object v1, p0, Lgg4;->b:Lnd;
-
-    invoke-interface {p1, v1, v0}, Lod;->J(Lnd;I)V
-
-    return-void
-
-    :pswitch_5
-    iget v0, p0, Lgg4;->c:I
-
-    check-cast p1, Lod;
-
-    iget-object v1, p0, Lgg4;->b:Lnd;
-
-    invoke-interface {p1, v1, v0}, Lod;->G(Lnd;I)V
-
-    return-void
-
-    :pswitch_6
-    iget v0, p0, Lgg4;->c:I
-
-    check-cast p1, Lod;
-
-    iget-object v1, p0, Lgg4;->b:Lnd;
-
-    invoke-interface {p1, v1, v0}, Lod;->R0(Lnd;I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    return-object p1
 .end method

@@ -1,57 +1,106 @@
 .class public final Lxy4;
-.super Lp14;
+.super Ljf4;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lt7d;
+# virtual methods
+.method public final F(Lw4e;I)V
+    .locals 7
 
-.field public Y:Lt7d;
+    invoke-virtual {p1}, Lw4e;->n()Z
 
-.field public Z:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+    move-result v0
 
-.field public d:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+    if-eqz v0, :cond_0
 
-.field public o:Ls7d;
+    return-void
 
-.field public synthetic s0:Ljava/lang/Object;
+    :cond_0
+    sget-object v0, Laz4;->a:Ljava/util/List;
 
-.field public final synthetic t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-.field public u0:I
+    move-result-object v1
 
+    check-cast v1, Lzy4;
 
-# direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;Lp14;)V
-    .locals 0
+    iget v1, v1, Lzy4;->a:I
 
-    iput-object p1, p0, Lxy4;->t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+    if-eqz v1, :cond_2
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_1
+
+    new-instance p2, Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;
+
+    invoke-direct {p2}, Lone/me/devmenu/DevMenuFeatureTogglesPageScreen;-><init>()V
+
+    :goto_0
+    move-object v1, p2
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lzy4;
+
+    iget p2, p2, Lzy4;->a:I
+
+    const-string v0, "Unknown tab id: "
+
+    invoke-static {p2, v0}, Lmrf;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance p2, Lone/me/devmenu/DevMenuGeneralPageScreen;
+
+    invoke-direct {p2}, Lone/me/devmenu/DevMenuGeneralPageScreen;-><init>()V
+
+    goto :goto_0
+
+    :goto_1
+    sget-object p2, Lz84;->b:Lz84;
+
+    invoke-virtual {v1, p2}, La94;->setRetainViewMode(Lz84;)V
+
+    new-instance v0, Lz4e;
+
+    const/4 v5, 0x0
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Lz4e;-><init>(La94;Ljava/lang/String;Lf94;Lf94;ZI)V
+
+    invoke-virtual {p1, v0}, Lw4e;->S(Lz4e;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final j()I
     .locals 1
 
-    iput-object p1, p0, Lxy4;->s0:Ljava/lang/Object;
+    sget-object v0, Laz4;->a:Ljava/util/List;
 
-    iget p1, p0, Lxy4;->u0:I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    const/high16 v0, -0x80000000
+    move-result v0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lxy4;->u0:I
-
-    iget-object p1, p0, Lxy4;->t0:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->createForegroundInfo(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

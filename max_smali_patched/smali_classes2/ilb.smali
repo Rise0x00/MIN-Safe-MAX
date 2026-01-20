@@ -1,174 +1,131 @@
-.class public final synthetic Lilb;
-.super Ljava/lang/Object;
+.class public final Lilb;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public A0:Ljava/io/Closeable;
 
-.field public final synthetic b:Lru7;
+.field public B0:Ljava/io/InputStream;
 
-.field public final synthetic c:Landroid/content/Context;
+.field public C0:Ljava/io/Closeable;
+
+.field public D0:Ljava/io/OutputStream;
+
+.field public E0:[B
+
+.field public F0:Ljava/util/Iterator;
+
+.field public G0:Z
+
+.field public H0:J
+
+.field public I0:J
+
+.field public J0:J
+
+.field public K0:J
+
+.field public L0:J
+
+.field public M0:I
+
+.field public N0:I
+
+.field public O0:I
+
+.field public P0:I
+
+.field public Q0:I
+
+.field public R0:I
+
+.field public S0:I
+
+.field public T0:I
+
+.field public U0:I
+
+.field public V0:I
+
+.field public W0:I
+
+.field public X:Ljava/io/File;
+
+.field public synthetic X0:Ljava/lang/Object;
+
+.field public Y:Ljava/io/File;
+
+.field public final synthetic Y0:Lklb;
+
+.field public Z:Ljava/lang/String;
+
+.field public Z0:I
+
+.field public d:Lyyd;
+
+.field public o:Ldlb;
+
+.field public t0:Ljava/lang/Object;
+
+.field public u0:Ljava/lang/Object;
+
+.field public v0:Latd;
+
+.field public w0:Latd;
+
+.field public x0:Ljava/io/File;
+
+.field public y0:Ljava/util/Iterator;
+
+.field public z0:Ljava/io/File;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru7;Landroid/content/Context;I)V
+.method public constructor <init>(Lklb;Lo84;)V
     .locals 0
 
-    iput p3, p0, Lilb;->a:I
+    iput-object p1, p0, Lilb;->Y0:Lklb;
 
-    iput-object p1, p0, Lilb;->b:Lru7;
-
-    iput-object p2, p0, Lilb;->c:Landroid/content/Context;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Lilb;->a:I
+    iput-object p1, p0, Lilb;->X0:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lilb;->Z0:I
 
-    iget-object v0, p0, Lilb;->b:Lru7;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lilb;->Z0:I
 
-    check-cast v0, Lvs4;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v6, 0x0
 
-    iget-object v0, p0, Lilb;->c:Landroid/content/Context;
+    iget-object v0, p0, Lilb;->Y0:Lklb;
 
-    invoke-static {v0}, Lvs4;->i(Landroid/content/Context;)Landroid/util/Size;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+    const/4 v3, 0x0
 
-    move-result v1
+    const/4 v4, 0x0
 
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+    move-object v7, p0
 
-    move-result v0
+    invoke-virtual/range {v0 .. v7}, Lklb;->j(Lyyd;Ldlb;Ljava/io/File;Ljava/io/File;ZLjava/lang/String;Lo84;)Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+    move-result-object p1
 
-    move-result v0
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lilb;->b:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvs4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lilb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lvs4;->i(Landroid/content/Context;)Landroid/util/Size;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    int-to-double v1, v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    int-to-double v3, v0
-
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide v0
-
-    const/high16 v2, 0x40400000    # 3.0f
-
-    float-to-double v2, v2
-
-    div-double/2addr v0, v2
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    float-to-double v2, v2
-
-    mul-double/2addr v0, v2
-
-    double-to-int v0, v0
-
-    const/16 v1, 0x190
-
-    if-ge v0, v1, :cond_0
-
-    move v0, v1
-
-    :cond_0
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Lilb;->b:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvs4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lilb;->c:Landroid/content/Context;
-
-    invoke-static {v0}, Lvs4;->i(Landroid/content/Context;)Landroid/util/Size;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

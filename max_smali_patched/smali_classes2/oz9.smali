@@ -1,41 +1,48 @@
-.class public interface abstract Loz9;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Loz9;
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Lnq7;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lnq7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Loz9;->X:Lnq7;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(JLrs8;)V
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b(JLrs8;)V
-.end method
+    iput-object p1, p0, Loz9;->d:Ljava/lang/Object;
 
-.method public abstract c(JLrs8;JLrs8;)V
-.end method
+    iget p1, p0, Loz9;->o:I
 
-.method public abstract d(JLrs8;)V
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract e(JLrs8;J)V
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract f(JLrs8;)V
-.end method
+    iput p1, p0, Loz9;->o:I
 
-.method public abstract g(JLrs8;)V
-.end method
+    iget-object p1, p0, Loz9;->X:Lnq7;
 
-.method public abstract h(JLrs8;)V
-.end method
+    const/4 v0, 0x0
 
-.method public abstract i(JLrs8;)V
-.end method
+    invoke-virtual {p1, v0, p0}, Lnq7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public abstract j(JLrs8;)V
-.end method
+    move-result-object p1
 
-.method public m()V
-    .locals 0
-
-    return-void
+    return-object p1
 .end method

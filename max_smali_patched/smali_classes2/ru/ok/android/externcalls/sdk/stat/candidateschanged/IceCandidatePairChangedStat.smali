@@ -18,16 +18,16 @@
         "Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;",
         "",
         "Lkotlin/Function0;",
-        "Lm71;",
+        "Lia1;",
         "getEventualStatSender",
         "<init>",
-        "(Loi6;)V",
+        "(Llq6;)V",
         "Lorg/webrtc/CandidatePairChangeEvent;",
         "event",
-        "Lybg;",
+        "Lb3h;",
         "onSelectedCandidatePairChanged",
         "(Lorg/webrtc/CandidatePairChangeEvent;)V",
-        "Loi6;",
+        "Llq6;",
         "Companion",
         "calls-sdk_release"
     }
@@ -56,10 +56,10 @@
 
 
 # instance fields
-.field private final getEventualStatSender:Loi6;
+.field private final getEventualStatSender:Llq6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Loi6;"
+            "Llq6;"
         }
     .end annotation
 .end field
@@ -73,26 +73,26 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat$Companion;-><init>(Lfi4;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat$Companion;-><init>(Lso4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->Companion:Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Loi6;)V
+.method public constructor <init>(Llq6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loi6;",
+            "Llq6;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Loi6;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Llq6;
 
     return-void
 .end method
@@ -152,13 +152,13 @@
 
     invoke-virtual {v0, v1, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Loi6;
+    iget-object p1, p0, Lru/ok/android/externcalls/sdk/stat/candidateschanged/IceCandidatePairChangedStat;->getEventualStatSender:Llq6;
 
-    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lm71;
+    check-cast p1, Lia1;
 
     if-eqz p1, :cond_0
 
@@ -176,7 +176,7 @@
 
     const-string v3, "ice_candidates_changed"
 
-    invoke-static {p1, v3, v0, v1, v2}, Lm71;->a(Lm71;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
+    invoke-static {p1, v3, v0, v1, v2}, Lia1;->a(Lia1;Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;I)V
 
     :cond_0
     return-void

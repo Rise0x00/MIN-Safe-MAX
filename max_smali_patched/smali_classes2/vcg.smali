@@ -1,264 +1,124 @@
-.class public Lvcg;
+.class public final Lvcg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhs0;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Landroid/graphics/Paint;
 
-.field public final b:Lqtd;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/util/HashMap;
-
-.field public final e:Ljava/util/HashMap;
-
-.field public final f:Ljava/util/HashMap;
-
-.field public final g:Ljava/util/HashSet;
-
-.field public final h:Ljava/util/ArrayList;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvcg;->a:Ljava/lang/String;
+    new-instance v0, Landroid/graphics/Paint;
 
-    sget-object p1, Liyi;->a:Lqtd;
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object p1, p0, Lvcg;->b:Lqtd;
+    const/4 v1, 0x1
 
-    new-instance p1, Ljava/util/ArrayList;
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iput-object p1, p0, Lvcg;->c:Ljava/util/ArrayList;
+    iput-object v0, p0, Lvcg;->a:Landroid/graphics/Paint;
 
-    new-instance p1, Ljava/util/HashMap;
+    new-instance v0, Lvef;
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    const/16 v1, 0xa
 
-    iput-object p1, p0, Lvcg;->d:Ljava/util/HashMap;
+    invoke-direct {v0, p1, v1}, Lvef;-><init>(Landroid/content/Context;I)V
 
-    new-instance p1, Ljava/util/HashMap;
+    const/4 p1, 0x2
 
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+    invoke-static {p1, v0}, Le8;->b(ILlq6;)Lo58;
 
-    iput-object p1, p0, Lvcg;->e:Ljava/util/HashMap;
+    move-result-object p1
 
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lvcg;->f:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iput-object p1, p0, Lvcg;->g:Ljava/util/HashSet;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lvcg;->h:Ljava/util/ArrayList;
+    iput-object p1, p0, Lvcg;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lypd;
-    .locals 14
+.method public final D(I)V
+    .locals 1
 
-    const-string v0, "Finish initialization of \""
+    iget-object v0, p0, Lvcg;->a:Landroid/graphics/Paint;
 
-    const-string v1, "Start initialization of scope \""
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    const/4 v2, 0x0
+    return-void
+.end method
 
-    const/4 v3, 0x1
+.method public final Q(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    const/4 v4, 0x2
+    const/4 v0, 0x0
 
-    const/16 v5, 0x22
+    iget-object v1, p0, Lvcg;->a:Landroid/graphics/Paint;
 
-    iget-object v6, p0, Lvcg;->b:Lqtd;
+    invoke-virtual {p1, p2, v0, v0, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    iget-object v8, p0, Lvcg;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    if-eqz v6, :cond_1
+.method public final S(Landroid/graphics/Bitmap;F)V
+    .locals 2
 
-    :try_start_0
-    invoke-static {v4, v4}, Lnx1;->b(II)I
+    iget-object v0, p0, Lvcg;->b:Ljava/lang/Object;
 
-    move-result v7
-
-    if-ltz v7, :cond_0
-
-    move v7, v3
-
-    goto :goto_0
-
-    :cond_0
-    move v7, v2
-
-    :goto_0
-    if-eqz v7, :cond_1
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v6, v1}, Lqtd;->k(Lqtd;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    iget-object v1, p0, Lvcg;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    new-instance v7, Lypd;
-
-    iget-object v9, p0, Lvcg;->c:Ljava/util/ArrayList;
-
-    iget-object v10, p0, Lvcg;->d:Ljava/util/HashMap;
-
-    iget-object v11, p0, Lvcg;->e:Ljava/util/HashMap;
-
-    iget-object v12, p0, Lvcg;->f:Ljava/util/HashMap;
-
-    iget-object v13, p0, Lvcg;->g:Ljava/util/HashSet;
-
-    invoke-direct/range {v7 .. v13}, Lypd;-><init>(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/HashMap;Ljava/util/HashMap;Ljava/util/HashMap;Ljava/util/HashSet;)V
-
-    if-eqz v6, :cond_3
-
-    invoke-static {v4, v4}, Lnx1;->b(II)I
-
-    move-result v1
-
-    if-ltz v1, :cond_2
-
-    move v2, v3
-
-    :cond_2
-    if-eqz v2, :cond_3
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Lqtd;->k(Lqtd;Ljava/lang/String;)V
+    check-cast v0, Lkh7;
 
-    :cond_3
-    return-object v7
+    invoke-static {p2}, Lq7j;->c(F)I
 
-    :cond_4
-    new-instance v0, Lscout/exception/IllegalOverridesException;
+    move-result p2
 
-    invoke-direct {v0, v8, v1}, Lscout/exception/IllegalOverridesException;-><init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    const/4 v1, 0x1
 
-    throw v0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_2
-    new-instance v1, Lscout/exception/ScopeInitializationException;
-
-    invoke-direct {v1, v8, v0}, Lscout/exception/ScopeInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
-
-    throw v1
-.end method
-
-.method public bridge synthetic b(Ljava/lang/Class;Lqi7;)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
+    invoke-virtual {v0, p1, p2, v1}, Lkh7;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     return-void
 .end method
 
-.method public c(Ljava/lang/Class;Lqi7;)V
+.method public final b()V
     .locals 2
 
-    iget-object v0, p0, Lvcg;->e:Ljava/util/HashMap;
+    iget-object v0, p0, Lvcg;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-nez v1, :cond_0
+    check-cast v0, Lkh7;
 
-    new-instance v1, Ljava/util/ArrayList;
+    iget-object v0, v0, Lkh7;->a:Ln8g;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0}, Ln8g;->e()Z
 
-    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result v1
 
-    :cond_0
-    check-cast v1, Ljava/util/List;
+    if-eqz v1, :cond_0
 
-    invoke-interface {v1, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public bridge synthetic d(Ljava/lang/Class;Lqi7;)V
-    .locals 0
+    check-cast v0, Landroid/renderscript/RenderScript;
 
-    invoke-virtual {p0, p1, p2}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    return-void
-.end method
-
-.method public e(Ljava/lang/Class;Lqi7;)V
-    .locals 1
-
-    iget-object v0, p0, Lvcg;->d:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_0
-
-    iget-object p2, p0, Lvcg;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/renderscript/RenderScript;->destroy()V
 
     :cond_0
     return-void

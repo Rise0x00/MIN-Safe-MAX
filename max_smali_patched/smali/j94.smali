@@ -4,109 +4,81 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String;
+.field public static final synthetic a:[Lz28;
 
-.field public static final b:Ljava/lang/String;
-
-.field public static final c:Ljava/lang/String;
-
-.field public static final d:Ljava/lang/String;
-
-.field public static final e:Ljava/lang/String;
+.field public static final b:Lcl4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 6
 
-    sget-object v0, Llig;->a:Ljava/lang/String;
+    new-instance v0, Lhyc;
 
-    const/4 v0, 0x0
+    const/4 v5, 0x1
 
-    const/16 v1, 0x24
+    sget-object v1, Lkw1;->NO_RECEIVER:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    const-class v2, Lj94;
 
-    move-result-object v0
+    const-string v3, "methodRemoveViewReference"
 
-    sput-object v0, Lj94;->a:Ljava/lang/String;
+    const-string v4, "getMethodRemoveViewReference()Ljava/lang/reflect/Method;"
 
-    const/4 v0, 0x1
+    invoke-direct/range {v0 .. v5}, Ljyc;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    sget-object v1, Lctd;->a:Ldtd;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput-object v0, Lj94;->b:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    const/4 v0, 0x2
+    new-array v2, v1, [Lz28;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    const/4 v3, 0x0
 
-    move-result-object v0
+    aput-object v0, v2, v3
 
-    sput-object v0, Lj94;->c:Ljava/lang/String;
+    sput-object v2, Lj94;->a:[Lz28;
 
-    const/4 v0, 0x3
+    const-class v0, Landroid/content/Context;
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lj94;->d:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+    filled-new-array {v0}, [Ljava/lang/Class;
 
     move-result-object v0
 
-    sput-object v0, Lj94;->e:Ljava/lang/String;
+    new-instance v2, Lcl4;
+
+    sget-object v3, Li94;->b:Li94;
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/Class;
+
+    const-string v1, "removeViewReference"
+
+    invoke-direct {v2, v3, v1, v0}, Lcl4;-><init>(Llq6;Ljava/lang/String;[Ljava/lang/Class;)V
+
+    sput-object v2, Lj94;->b:Lcl4;
 
     return-void
 .end method
 
-.method public static a(Landroid/text/Spanned;Ljava/lang/Object;ILandroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 3
+.method public static final a(La94;)Z
+    .locals 0
 
-    new-instance v0, Landroid/os/Bundle;
+    iget-object p0, p0, La94;->viewState:Landroid/os/Bundle;
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    if-eqz p0, :cond_0
 
-    sget-object v1, Lj94;->a:Ljava/lang/String;
+    const/4 p0, 0x1
 
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Lj94;->b:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Lj94;->c:Ljava/lang/String;
-
-    invoke-interface {p0, p1}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
-
-    move-result p0
-
-    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object p0, Lj94;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, p0, p2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    if-eqz p3, :cond_0
-
-    sget-object p0, Lj94;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, p0, p3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+    return p0
 
     :cond_0
-    return-object v0
+    const/4 p0, 0x0
+
+    return p0
 .end method

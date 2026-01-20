@@ -1,295 +1,185 @@
-.class public final enum Ls75;
-.super Ljava/lang/Enum;
+.class public final Ls75;
+.super Landroid/view/View;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Ls75;
-
-.field public static final enum Y:Ls75;
-
-.field public static final synthetic Z:[Ls75;
-
-.field public static final d:Li0e;
-
-.field public static final enum o:Ls75;
-
-.field public static final synthetic s0:Lce5;
+# interfaces
+.implements Luig;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Landroid/graphics/Paint;
 
-.field public final b:Lnrf;
+.field public final b:Landroid/graphics/RectF;
 
-.field public final c:I
+.field public c:F
+
+.field public d:Lzlb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 16
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    new-instance v0, Ls75;
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    sget v1, Lxwa;->l:I
+    new-instance p1, Landroid/graphics/Paint;
 
-    new-instance v4, Lirf;
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    invoke-direct {v4, v1}, Lirf;-><init>(I)V
+    iput-object p1, p0, Ls75;->a:Landroid/graphics/Paint;
 
-    sget v5, Lyjd;->Y1:I
+    new-instance p1, Landroid/graphics/RectF;
 
-    const-string v1, "RECENT"
+    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Ls75;->b:Landroid/graphics/RectF;
 
-    const/4 v3, -0x1
+    sget-object p1, Lpc3;->t0:Lkme;
 
-    invoke-direct/range {v0 .. v5}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
+    invoke-virtual {p1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
-    sput-object v0, Ls75;->o:Ls75;
+    move-result-object p1
 
-    new-instance v1, Ls75;
+    invoke-virtual {p0, p1}, Ls75;->onThemeChanged(Lzlb;)V
 
-    sget v2, Lxwa;->b:I
+    const/4 p1, 0x0
 
-    new-instance v5, Lirf;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
 
-    invoke-direct {v5, v2}, Lirf;-><init>(I)V
+    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
-    sget v6, Lyjd;->T0:I
+    const/4 v0, -0x2
 
-    const-string v2, "CLASSIC"
+    const/16 v1, 0x31
 
-    const/4 v3, 0x1
+    invoke-direct {p1, v0, v0, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    const/4 v4, 0x0
-
-    invoke-direct/range {v1 .. v6}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    sput-object v1, Ls75;->X:Ls75;
-
-    new-instance v2, Ls75;
-
-    sget v3, Lxwa;->e:I
-
-    new-instance v6, Lirf;
-
-    invoke-direct {v6, v3}, Lirf;-><init>(I)V
-
-    sget v7, Lyjd;->T:I
-
-    const-string v3, "GESTURES_AND_PEOPLE"
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    invoke-direct/range {v2 .. v7}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v3, Ls75;
-
-    sget v4, Lxwa;->a:I
-
-    new-instance v7, Lirf;
-
-    invoke-direct {v7, v4}, Lirf;-><init>(I)V
-
-    sget v8, Lvwa;->h:I
-
-    const-string v4, "ANIMALS_AND_PLANTS"
-
-    const/4 v5, 0x3
-
-    const/4 v6, 0x2
-
-    invoke-direct/range {v3 .. v8}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v4, Ls75;
-
-    sget v5, Lxwa;->d:I
-
-    new-instance v8, Lirf;
-
-    invoke-direct {v8, v5}, Lirf;-><init>(I)V
-
-    sget v9, Lvwa;->b:I
-
-    const-string v5, "FOOD_AND_DRINK"
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x3
-
-    invoke-direct/range {v4 .. v9}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v5, Ls75;
-
-    sget v6, Lxwa;->g:I
-
-    new-instance v9, Lirf;
-
-    invoke-direct {v9, v6}, Lirf;-><init>(I)V
-
-    sget v10, Lvwa;->c:I
-
-    const-string v6, "SPORT_AND_ACTIVITY"
-
-    const/4 v7, 0x5
-
-    const/4 v8, 0x4
-
-    invoke-direct/range {v5 .. v10}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v6, Ls75;
-
-    sget v7, Lxwa;->i:I
-
-    new-instance v10, Lirf;
-
-    invoke-direct {v10, v7}, Lirf;-><init>(I)V
-
-    sget v11, Lvwa;->d:I
-
-    const-string v7, "TRAVELS_AND_TRANSPORT"
-
-    const/4 v8, 0x6
-
-    const/4 v9, 0x5
-
-    invoke-direct/range {v6 .. v11}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v7, Ls75;
-
-    sget v8, Lxwa;->f:I
-
-    new-instance v11, Lirf;
-
-    invoke-direct {v11, v8}, Lirf;-><init>(I)V
-
-    sget v12, Lvwa;->g:I
-
-    const-string v8, "OBJECTS"
-
-    const/4 v9, 0x7
-
-    const/4 v10, 0x6
-
-    invoke-direct/range {v7 .. v12}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v8, Ls75;
-
-    sget v9, Lxwa;->h:I
-
-    new-instance v12, Lirf;
-
-    invoke-direct {v12, v9}, Lirf;-><init>(I)V
-
-    sget v13, Lvwa;->j:I
-
-    const-string v9, "SYMBOLS"
-
-    const/16 v10, 0x8
-
-    const/4 v11, 0x7
-
-    invoke-direct/range {v8 .. v13}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v9, Ls75;
-
-    sget v10, Lxwa;->c:I
-
-    new-instance v13, Lirf;
-
-    invoke-direct {v13, v10}, Lirf;-><init>(I)V
-
-    sget v14, Lvwa;->f:I
-
-    const-string v10, "FLAGS"
-
-    const/16 v11, 0x9
-
-    const/16 v12, 0x8
-
-    invoke-direct/range {v9 .. v14}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    new-instance v10, Ls75;
-
-    sget-object v14, Lnrf;->b:Lmrf;
-
-    const/4 v15, 0x0
-
-    const-string v11, "ANIMOJI"
-
-    const/16 v12, 0xa
-
-    const/16 v13, 0x9
-
-    invoke-direct/range {v10 .. v15}, Ls75;-><init>(Ljava/lang/String;IILnrf;I)V
-
-    sput-object v10, Ls75;->Y:Ls75;
-
-    filled-new-array/range {v0 .. v10}, [Ls75;
-
-    move-result-object v0
-
-    sput-object v0, Ls75;->Z:[Ls75;
-
-    new-instance v1, Lce5;
-
-    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ls75;->s0:Lce5;
-
-    new-instance v0, Li0e;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Li0e;-><init>(I)V
-
-    sput-object v0, Ls75;->d:Li0e;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;IILnrf;I)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Ls75;->a:I
-
-    iput-object p4, p0, Ls75;->b:Lnrf;
-
-    iput p5, p0, Ls75;->c:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Ls75;
+# virtual methods
+.method public final getCustomTheme()Lzlb;
     .locals 1
 
-    const-class v0, Ls75;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ls75;
-
-    return-object p0
-.end method
-
-.method public static values()[Ls75;
-    .locals 1
-
-    sget-object v0, Ls75;->Z:[Ls75;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ls75;
+    iget-object v0, p0, Ls75;->d:Lzlb;
 
     return-object v0
+.end method
+
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    iget v0, p0, Ls75;->c:F
+
+    iget-object v1, p0, Ls75;->a:Landroid/graphics/Paint;
+
+    iget-object v2, p0, Ls75;->b:Landroid/graphics/RectF;
+
+    invoke-virtual {p1, v2, v0, v0, v1}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final onMeasure(II)V
+    .locals 2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 p2, 0x42200000    # 40.0f
+
+    mul-float/2addr p1, p2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p2
+
+    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v0, 0x40800000    # 4.0f
+
+    mul-float/2addr p2, v0
+
+    iget-object v0, p0, Ls75;->b:Landroid/graphics/RectF;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, v1, p1, p2}, Landroid/graphics/RectF;->set(FFFF)V
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
+
+    move-result p1
+
+    iput p1, p0, Ls75;->c:F
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
+
+    move-result p1
+
+    float-to-int p1, p1
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
+
+    move-result p2
+
+    float-to-int p2, p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Lzlb;)V
+    .locals 1
+
+    iget-object v0, p0, Ls75;->d:Lzlb;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v0
+
+    :goto_0
+    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
+
+    move-result-object p1
+
+    iget p1, p1, Lwe7;->h:I
+
+    iget-object v0, p0, Ls75;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+.end method
+
+.method public final setCustomTheme(Lzlb;)V
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0, p1}, Ls75;->onThemeChanged(Lzlb;)V
+
+    :cond_0
+    iput-object p1, p0, Ls75;->d:Lzlb;
+
+    return-void
 .end method

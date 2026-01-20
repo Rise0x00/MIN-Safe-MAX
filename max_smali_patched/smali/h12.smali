@@ -2,163 +2,89 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lj22;
+
 
 # instance fields
-.field public final a:Lihd;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final b:Landroid/util/ArrayMap;
+.field public final b:Ll12;
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Lihd;)V
-    .locals 2
+.method public constructor <init>(Ll12;Lwpe;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Landroid/util/ArrayMap;
+    iput-object p1, p0, Lh12;->b:Ll12;
 
-    const/4 v1, 0x4
+    iput-object p2, p0, Lh12;->a:Ljava/util/concurrent/Executor;
 
-    invoke-direct {v0, v1}, Landroid/util/ArrayMap;-><init>(I)V
-
-    iput-object v0, p0, Lh12;->b:Landroid/util/ArrayMap;
-
-    iput-object p1, p0, Lh12;->a:Lihd;
+    iput p3, p0, Lh12;->c:I
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Landroid/os/Handler;)Lh12;
-    .locals 4
 
-    new-instance v0, Lh12;
+# virtual methods
+.method public final a()Lie8;
+    .locals 3
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string v0, "Camera2CapturePipeline"
 
-    const/16 v2, 0x1e
+    const-string v1, "invokePreCapture"
 
-    const/4 v3, 0x0
+    invoke-static {v0, v1}, Lm5j;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-lt v1, v2, :cond_0
+    iget-object v0, p0, Lh12;->b:Ll12;
 
-    new-instance p1, Lk12;
+    iget v1, p0, Lh12;->c:I
 
-    invoke-direct {p1, p0, v3}, Lihd;-><init>(Landroid/content/Context;Ll12;)V
+    invoke-virtual {v0, v1}, Ll12;->a(I)Lie8;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    const/16 v2, 0x1d
+    invoke-static {v0}, Lbs6;->a(Lie8;)Lbs6;
 
-    if-lt v1, v2, :cond_1
+    move-result-object v0
 
-    new-instance p1, Lj12;
+    new-instance v1, Le12;
 
-    invoke-direct {p1, p0, v3}, Lihd;-><init>(Landroid/content/Context;Ll12;)V
+    const/4 v2, 0x1
 
-    goto :goto_0
+    invoke-direct {v1, v2}, Le12;-><init>(I)V
 
-    :cond_1
-    const/16 v2, 0x1c
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-lt v1, v2, :cond_2
+    new-instance v2, Lkp8;
 
-    new-instance p1, Li12;
+    invoke-direct {v2, v1}, Lkp8;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p1, p0, v3}, Lihd;-><init>(Landroid/content/Context;Ll12;)V
+    iget-object v1, p0, Lh12;->a:Ljava/util/concurrent/Executor;
 
-    goto :goto_0
+    invoke-static {v0, v2, v1}, Lnge;->l(Lie8;Lcv;Ljava/util/concurrent/Executor;)Ln92;
 
-    :cond_2
-    new-instance v1, Lihd;
-
-    new-instance v2, Ll12;
-
-    invoke-direct {v2, p1}, Ll12;-><init>(Landroid/os/Handler;)V
-
-    invoke-direct {v1, p0, v2}, Lihd;-><init>(Landroid/content/Context;Ll12;)V
-
-    move-object p1, v1
-
-    :goto_0
-    invoke-direct {v0, p1}, Lh12;-><init>(Lihd;)V
+    move-result-object v0
 
     return-object v0
 .end method
 
+.method public final b()Lie8;
+    .locals 2
 
-# virtual methods
-.method public final b(Ljava/lang/String;)Lwz1;
-    .locals 3
+    new-instance v0, Lv4e;
 
-    iget-object v0, p0, Lh12;->b:Landroid/util/ArrayMap;
+    const/16 v1, 0x17
 
-    monitor-enter v0
+    invoke-direct {v0, v1, p0}, Lv4e;-><init>(ILjava/lang/Object;)V
 
-    :try_start_0
-    iget-object v1, p0, Lh12;->b:Landroid/util/ArrayMap;
+    invoke-static {v0}, Libj;->b(Lrw1;)Ltw1;
 
-    invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object v1
-
-    check-cast v1, Lwz1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v1, :cond_0
-
-    :try_start_1
-    iget-object v1, p0, Lh12;->a:Lihd;
-
-    invoke-virtual {v1, p1}, Lihd;->k(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
-
-    move-result-object v1
-
-    new-instance v2, Lwz1;
-
-    invoke-direct {v2, v1, p1}, Lwz1;-><init>(Landroid/hardware/camera2/CameraCharacteristics;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lh12;->b:Landroid/util/ArrayMap;
-
-    invoke-virtual {v1, p1, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_1
-    .catch Ljava/lang/AssertionError; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    move-object v1, v2
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p1
-
-    :try_start_2
-    new-instance v1, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, p1}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Ljava/lang/String;Ljava/lang/AssertionError;)V
-
-    throw v1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    return-object v1
-
-    :goto_1
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p1
+    return-object v0
 .end method

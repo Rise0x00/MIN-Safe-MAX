@@ -1,105 +1,82 @@
 .class public final Leva;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lkva;
 
-.field public final b:J
-
-.field public final c:J
-
-.field public final synthetic d:Lfva;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lfva;I)V
-    .locals 2
+.method public constructor <init>(Lkva;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iput p2, p0, Leva;->a:I
+    iput-object p1, p0, Leva;->X:Lkva;
 
-    packed-switch p2, :pswitch_data_0
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Leva;->d:Lfva;
-
-    iget-object p1, p1, Lfva;->a:Lyy8;
-
-    iget-wide v0, p1, Lyy8;->d:J
-
-    iput-wide v0, p0, Leva;->b:J
-
-    iget-wide p1, p1, Lyy8;->c:J
-
-    iput-wide p1, p0, Leva;->c:J
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Leva;->d:Lfva;
-
-    iget-object p1, p1, Lfva;->a:Lyy8;
-
-    iget-wide v0, p1, Lyy8;->d:J
-
-    iput-wide v0, p0, Leva;->b:J
-
-    iget-wide p1, p1, Lyy8;->c:J
-
-    iput-wide p1, p0, Leva;->c:J
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/ArrayList;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/List;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Leva;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Leva;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Leva;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Leva;
+
+    iget-object v1, p0, Leva;->X:Lkva;
+
+    invoke-direct {v0, v1, p2}, Leva;-><init>(Lkva;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Leva;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Leva;->a:I
+    iget-object v0, p0, Leva;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Ljava/util/List;
 
-    iget-object v0, p0, Leva;->d:Lfva;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object v0, v0, Lfva;->a:Lyy8;
+    iget-object p1, p0, Leva;->X:Lkva;
 
-    iget-object v0, v0, Lyy8;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lkva;->Z:Lspf;
 
-    check-cast v0, Lqi6;
+    invoke-virtual {p1, v0}, Lspf;->setValue(Ljava/lang/Object;)V
 
-    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Leva;->d:Lfva;
-
-    iget-object v0, v0, Lfva;->a:Lyy8;
-
-    iget-object v0, v0, Lyy8;->o:Ljava/lang/Object;
-
-    check-cast v0, Lqi6;
-
-    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

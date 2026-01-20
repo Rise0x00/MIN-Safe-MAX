@@ -1,251 +1,193 @@
-.class public final synthetic Lhs;
+.class public final Lhs;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/Consumer;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:F
 
-.field public final synthetic b:Ljava/nio/ByteBuffer;
+.field public b:F
+
+.field public c:F
+
+.field public d:F
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/nio/ByteBuffer;)V
+.method public constructor <init>(FFFF)V
     .locals 0
 
-    iput p1, p0, Lhs;->a:I
-
-    iput-object p2, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lhs;->a:F
+
+    iput p2, p0, Lhs;->b:F
+
+    iput p3, p0, Lhs;->c:F
+
+    iput p4, p0, Lhs;->d:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lhs;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    check-cast p1, Likg;
-
-    invoke-virtual {p1}, Likg;->a()[B
-
-    move-result-object p1
-
-    iget-object v0, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x8
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x1
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_1
+    return v0
 
     :cond_0
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    instance-of v1, p1, Lhs;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    check-cast v0, Ljava/lang/Long;
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object v2, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    invoke-static {v0, v1, v2}, Lvbi;->c(JLjava/nio/ByteBuffer;)I
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1, v2}, Lvbi;->c(JLjava/nio/ByteBuffer;)I
+    return v2
 
     :cond_1
-    return-void
+    check-cast p1, Lhs;
 
-    :pswitch_1
-    check-cast p1, Likg;
+    iget v1, p0, Lhs;->a:F
 
-    invoke-virtual {p1}, Likg;->a()[B
+    iget v3, p1, Lhs;->a:F
 
-    move-result-object p1
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-    iget-object v0, p0, Lhs;->b:Ljava/nio/ByteBuffer;
+    move-result v1
 
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
+    if-eqz v1, :cond_2
 
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    check-cast p1, Leic;
-
-    invoke-virtual {p1, v0}, Leic;->f(Ljava/nio/ByteBuffer;)V
-
-    return-void
-
-    :pswitch_3
-    check-cast p1, Lixf;
-
-    iget-byte p1, p1, Lixf;->a:B
-
-    iget-object v0, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    check-cast p1, [B
-
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :pswitch_5
-    check-cast p1, [B
-
-    array-length v0, p1
-
-    const v1, 0xfff0
-
-    if-gt v0, v1, :cond_2
-
-    iget-object v0, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    array-length v2, p1
-
-    int-to-short v2, v2
-
-    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    return-void
+    return v2
 
     :cond_2
-    new-instance p1, Ljava/lang/RuntimeException;
+    iget v1, p0, Lhs;->b:F
 
-    const-string v0, "Certificate size not supported"
+    iget v3, p1, Lhs;->b:F
 
-    invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
 
-    throw p1
+    move-result v1
 
-    :pswitch_6
-    check-cast p1, Ljavax/security/auth/x500/X500Principal;
+    if-eqz v1, :cond_3
 
-    invoke-virtual {p1}, Ljavax/security/auth/x500/X500Principal;->getEncoded()[B
+    return v2
+
+    :cond_3
+    iget v1, p0, Lhs;->c:F
+
+    iget v3, p1, Lhs;->c:F
+
+    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget v1, p0, Lhs;->d:F
+
+    iget p1, p1, Lhs;->d:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lhs;->a:F
+
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lhs;->b:F
+
+    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
+
+    move-result v0
+
+    iget v2, p0, Lhs;->c:F
+
+    invoke-static {v0, v2, v1}, Lob3;->b(IFI)I
+
+    move-result v0
+
+    iget v1, p0, Lhs;->d:F
+
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget v0, p0, Lhs;->a:F
+
+    iget v1, p0, Lhs;->b:F
+
+    iget v2, p0, Lhs;->c:F
+
+    iget v3, p0, Lhs;->d:F
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "ArcFrame(t="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", trimStart="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", trimEnd="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ", rotationDeg="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    int-to-short v0, v0
-
-    iget-object v1, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljavax/security/auth/x500/X500Principal;->getEncoded()[B
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :pswitch_7
-    check-cast p1, Ljava/lang/String;
-
-    const-string v0, "UTF-8"
-
-    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
-
-    move-result-object p1
-
-    array-length v0, p1
-
-    int-to-byte v0, v0
-
-    iget-object v1, p0, Lhs;->b:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v1, p1}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

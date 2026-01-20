@@ -1,69 +1,26 @@
-.class public abstract Lui7;
+.class public interface abstract Lui7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/AutoCloseable;
 
-# static fields
-.field public static final synthetic a:I
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lg0a;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lg0a;-><init>(I)V
-
-    return-void
+# virtual methods
+.method public abstract getFormat()I
 .end method
 
-.method public static final a(III)Lg0a;
-    .locals 2
-
-    new-instance v0, Lg0a;
-
-    invoke-direct {v0}, Lg0a;-><init>()V
-
-    const/16 v1, 0x2000
-
-    invoke-virtual {v0, v1, p0}, Lg0a;->e(II)V
-
-    const/4 p0, 0x4
-
-    invoke-virtual {v0, p0, p1}, Lg0a;->e(II)V
-
-    const/16 p0, 0x4000
-
-    invoke-virtual {v0, p0, p2}, Lg0a;->e(II)V
-
-    return-object v0
+.method public abstract getHeight()I
 .end method
 
-.method public static final b(IIIIIII)Lg0a;
-    .locals 2
+.method public abstract getImageInfo()Lbi7;
+.end method
 
-    new-instance v0, Lg0a;
+.method public abstract getWidth()I
+.end method
 
-    invoke-direct {v0}, Lg0a;-><init>()V
+.method public abstract k0()Landroid/media/Image;
+.end method
 
-    const/16 v1, 0x400
-
-    invoke-virtual {v0, v1, p0}, Lg0a;->e(II)V
-
-    const/16 p0, 0x800
-
-    invoke-virtual {v0, p0, p1}, Lg0a;->e(II)V
-
-    invoke-virtual {v0, p2, p3}, Lg0a;->e(II)V
-
-    invoke-virtual {v0, p4, p5}, Lg0a;->e(II)V
-
-    const/16 p0, 0x80
-
-    invoke-virtual {v0, p0, p6}, Lg0a;->e(II)V
-
-    return-object v0
+.method public abstract v()[Lkp8;
 .end method

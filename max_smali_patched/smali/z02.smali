@@ -1,89 +1,85 @@
-.class public interface abstract Lz02;
-.super Ljava/lang/Object;
+.class public final Lz02;
+.super Lsf9;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Set;
-.end method
+# instance fields
+.field public m:Ldf8;
 
-.method public abstract b()I
-.end method
+.field public final n:Ljava/lang/Object;
 
-.method public abstract c()Z
-.end method
 
-.method public abstract d()Ljava/lang/String;
-.end method
-
-.method public abstract e()Lq38;
-.end method
-
-.method public abstract f(Ljava/util/concurrent/Executor;Lcx1;)V
-.end method
-
-.method public g()Lz02;
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    return-object p0
+    invoke-direct {p0}, Lsf9;-><init>()V
+
+    iput-object p1, p0, Lz02;->n:Ljava/lang/Object;
+
+    return-void
 .end method
 
-.method public abstract h()I
+
+# virtual methods
+.method public final d()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lz02;->m:Ldf8;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lz02;->n:Ljava/lang/Object;
+
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v0}, Ldf8;->d()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public abstract i()Lavf;
+.method public final l(Ldf8;Lf0b;)V
+    .locals 0
+
+    const/4 p0, 0x0
+
+    throw p0
 .end method
 
-.method public j()Lt12;
-    .locals 3
+.method public final m(Lrea;)V
+    .locals 2
 
-    new-instance v0, Ljava/util/LinkedHashSet;
+    iget-object v0, p0, Lz02;->m:Ldf8;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
+    if-eqz v0, :cond_0
 
-    new-instance v1, Ly02;
+    iget-object v1, p0, Lsf9;->l:Lv7e;
 
-    invoke-direct {v1, p0}, Ly02;-><init>(Lz02;)V
+    invoke-virtual {v1, v0}, Lv7e;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    new-instance v1, Lcw7;
+    check-cast v0, Lrf9;
 
-    invoke-interface {p0}, Lz02;->h()I
+    if-eqz v0, :cond_0
 
-    move-result v2
+    iget-object v1, v0, Lrf9;->a:Ldf8;
 
-    invoke-direct {v1, v2}, Lcw7;-><init>(I)V
+    invoke-virtual {v1, v0}, Ldf8;->j(Lf0b;)V
 
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+    :cond_0
+    iput-object p1, p0, Lz02;->m:Ldf8;
 
-    new-instance v1, Lt12;
+    new-instance v0, Ly02;
 
-    invoke-direct {v1, v0}, Lt12;-><init>(Ljava/util/LinkedHashSet;)V
+    const/4 v1, 0x0
 
-    return-object v1
-.end method
+    invoke-direct {v0, v1, p0}, Ly02;-><init>(ILjava/lang/Object;)V
 
-.method public abstract k()Ljava/lang/String;
-.end method
+    invoke-super {p0, p1, v0}, Lsf9;->l(Ldf8;Lf0b;)V
 
-.method public abstract l(I)I
-.end method
-
-.method public abstract m()Z
-.end method
-
-.method public abstract n()Lgc5;
-.end method
-
-.method public abstract o()Lnx6;
-.end method
-
-.method public abstract p(I)Ljava/util/List;
-.end method
-
-.method public abstract q()Lq38;
-.end method
-
-.method public abstract r(Lyy1;)V
+    return-void
 .end method

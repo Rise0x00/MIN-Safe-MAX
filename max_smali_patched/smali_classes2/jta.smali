@@ -1,79 +1,55 @@
 .class public final Ljta;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:I
+.field public final a:Landroid/content/Context;
 
-.field public B0:I
+.field public final b:Lo58;
 
-.field public synthetic C0:Ljava/lang/Object;
-
-.field public final synthetic D0:Lqta;
-
-.field public E0:I
-
-.field public X:Ljava/lang/Object;
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Ljava/lang/Object;
-
-.field public d:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Object;
-
-.field public s0:Ljava/lang/Object;
-
-.field public t0:Ljava/lang/CharSequence;
-
-.field public u0:Lka9;
-
-.field public v0:Z
-
-.field public w0:Z
-
-.field public x0:J
-
-.field public y0:J
-
-.field public z0:I
+.field public c:Ly0e;
 
 
 # direct methods
-.method public constructor <init>(Lqta;Lp14;)V
-    .locals 0
+.method public constructor <init>(Lo58;)V
+    .locals 2
 
-    iput-object p1, p0, Ljta;->D0:Lqta;
+    sget-object v0, Lj3f;->a:Lj3f;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    return-void
-.end method
+    move-result-object v0
 
+    const/16 v1, 0x11
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
-    iput-object p1, p0, Ljta;->C0:Ljava/lang/Object;
+    move-result-object v0
 
-    iget p1, p0, Ljta;->E0:I
+    check-cast v0, Landroid/content/Context;
 
-    const/high16 v0, -0x80000000
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    or-int/2addr p1, v0
+    iput-object v0, p0, Ljta;->a:Landroid/content/Context;
 
-    iput p1, p0, Ljta;->E0:I
+    iput-object p1, p0, Ljta;->b:Lo58;
 
-    iget-object p1, p0, Ljta;->D0:Lqta;
+    sget-object v0, Lw0e;->a:Lw0e;
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Ljta;->c:Ly0e;
 
-    invoke-static {p1, v0, v0, p0}, Lqta;->a(Lqta;Llg8;Lnz;Lp14;)Ljava/lang/Object;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, Lfbh;
+
+    invoke-virtual {p1}, Lfbh;->j()Ly0e;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ljta;->c:Ly0e;
+
+    return-void
 .end method

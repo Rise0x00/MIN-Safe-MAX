@@ -1,188 +1,283 @@
 .class public final Ld5g;
-.super Lx1;
+.super Le5g;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/RunnableFuture;
-.implements Lo1;
 
 
 # instance fields
-.field public volatile Z:Lc5g;
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
-    .locals 1
+.method public constructor <init>(Lw4g;Ljava/lang/String;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Le5g;-><init>(Lw4g;Ljava/lang/String;)V
 
-    new-instance v0, Lc5g;
-
-    invoke-direct {v0, p0, p1}, Lc5g;-><init>(Ld5g;Ljava/util/concurrent/Callable;)V
-
-    iput-object v0, p0, Ld5g;->Z:Lc5g;
+    iput p3, p0, Ld5g;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 6
+.method public final G(ILjava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Lx1;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Le5g;->l()V
 
-    instance-of v1, v0, Lb1;
+    const/16 p1, 0x19
 
-    if-eqz v1, :cond_1
+    const-string p2, "column index out of range"
 
-    check-cast v0, Lb1;
+    invoke-static {p1, p2}, Lonj;->d(ILjava/lang/String;)V
 
-    iget-boolean v0, v0, Lb1;->a:Z
+    const/4 p1, 0x0
 
-    if-eqz v0, :cond_1
+    throw p1
+.end method
 
-    iget-object v0, p0, Ld5g;->Z:Lc5g;
+.method public final a(ID)V
+    .locals 0
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0}, Le5g;->l()V
 
-    sget-object v1, Lc5g;->d:Lt6;
+    const/16 p1, 0x19
 
-    sget-object v2, Lc5g;->c:Lt6;
+    const-string p2, "column index out of range"
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-static {p1, p2}, Lonj;->d(ILjava/lang/String;)V
 
-    move-result-object v3
+    const/4 p1, 0x0
 
-    check-cast v3, Ljava/lang/Runnable;
+    throw p1
+.end method
 
-    instance-of v4, v3, Ljava/lang/Thread;
+.method public final b(IJ)V
+    .locals 0
 
-    if-eqz v4, :cond_1
+    invoke-virtual {p0}, Le5g;->l()V
 
-    new-instance v4, Lek7;
+    const/16 p1, 0x19
 
-    invoke-direct {v4, v0}, Lek7;-><init>(Lc5g;)V
+    const-string p2, "column index out of range"
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-static {p1, p2}, Lonj;->d(ILjava/lang/String;)V
 
-    move-result-object v5
+    const/4 p1, 0x0
 
-    invoke-static {v4, v5}, Lek7;->a(Lek7;Ljava/lang/Thread;)V
+    throw p1
+.end method
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final c(I[B)V
+    .locals 0
 
-    move-result v4
+    invoke-virtual {p0}, Le5g;->l()V
 
-    if-eqz v4, :cond_1
+    const/16 p1, 0x19
 
-    :try_start_0
-    move-object v4, v3
+    const-string p2, "column index out of range"
 
-    check-cast v4, Ljava/lang/Thread;
+    invoke-static {p1, p2}, Lonj;->d(ILjava/lang/String;)V
 
-    invoke-virtual {v4}, Ljava/lang/Thread;->interrupt()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    throw p1
+.end method
 
-    move-result-object v0
+.method public final close()V
+    .locals 1
 
-    check-cast v0, Ljava/lang/Runnable;
+    const/4 v0, 0x1
 
-    if-ne v0, v1, :cond_1
-
-    check-cast v3, Ljava/lang/Thread;
-
-    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v4
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    if-ne v0, v1, :cond_0
-
-    check-cast v3, Ljava/lang/Thread;
-
-    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
-
-    :cond_0
-    throw v4
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ld5g;->Z:Lc5g;
+    iput-boolean v0, p0, Le5g;->c:Z
 
     return-void
 .end method
 
-.method public final i()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Ld5g;->Z:Lc5g;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "task=["
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "]"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    invoke-super {p0}, Lx1;->i()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final isCancelled()Z
+.method public final d0(I)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lx1;->a:Ljava/lang/Object;
+    invoke-virtual {p0}, Le5g;->l()V
 
-    instance-of v0, v0, Lb1;
+    const/16 p1, 0x15
+
+    const-string v0, "no row"
+
+    invoke-static {p1, v0}, Lonj;->d(ILjava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final e(I)V
+    .locals 1
+
+    invoke-virtual {p0}, Le5g;->l()V
+
+    const/16 p1, 0x19
+
+    const-string v0, "column index out of range"
+
+    invoke-static {p1, v0}, Lonj;->d(ILjava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final getBlob(I)[B
+    .locals 1
+
+    invoke-virtual {p0}, Le5g;->l()V
+
+    const/16 p1, 0x15
+
+    const-string v0, "no row"
+
+    invoke-static {p1, v0}, Lonj;->d(ILjava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final getColumnCount()I
+    .locals 1
+
+    invoke-virtual {p0}, Le5g;->l()V
+
+    const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final run()V
+.method public final getColumnName(I)Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Ld5g;->Z:Lc5g;
+    invoke-virtual {p0}, Le5g;->l()V
 
-    if-eqz v0, :cond_0
+    const/16 p1, 0x15
 
-    invoke-virtual {v0}, Lc5g;->run()V
+    const-string v0, "no row"
+
+    invoke-static {p1, v0}, Lonj;->d(ILjava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final getDouble(I)D
+    .locals 1
+
+    invoke-virtual {p0}, Le5g;->l()V
+
+    const/16 p1, 0x15
+
+    const-string v0, "no row"
+
+    invoke-static {p1, v0}, Lonj;->d(ILjava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final getLong(I)J
+    .locals 1
+
+    invoke-virtual {p0}, Le5g;->l()V
+
+    const/16 p1, 0x15
+
+    const-string v0, "no row"
+
+    invoke-static {p1, v0}, Lonj;->d(ILjava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final isNull(I)Z
+    .locals 1
+
+    invoke-virtual {p0}, Le5g;->l()V
+
+    const/16 p1, 0x15
+
+    const-string v0, "no row"
+
+    invoke-static {p1, v0}, Lonj;->d(ILjava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final t0()Z
+    .locals 3
+
+    iget v0, p0, Ld5g;->d:I
+
+    invoke-static {v0}, Lt02;->t(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Le5g;->a:Lw4g;
+
+    if-eqz v0, :cond_4
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_2
+
+    const/4 v2, 0x3
+
+    if-eq v0, v2, :cond_1
+
+    const/4 v2, 0x4
+
+    if-ne v0, v2, :cond_0
+
+    invoke-interface {v1}, Lw4g;->D()V
+
+    goto :goto_0
 
     :cond_0
+    new-instance v0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {v0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    invoke-interface {v1}, Lw4g;->Q()V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {v1}, Lw4g;->u()V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-interface {v1}, Lw4g;->b0()V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-interface {v1}, Lw4g;->N()V
+
+    invoke-interface {v1}, Lw4g;->b0()V
+
+    :goto_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Ld5g;->Z:Lc5g;
-
-    return-void
+    return v0
 .end method

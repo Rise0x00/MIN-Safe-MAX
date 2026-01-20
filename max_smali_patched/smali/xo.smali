@@ -1,99 +1,66 @@
 .class public final Lxo;
-.super Landroid/widget/RatingBar;
+.super Lyl6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lch8;
+.field public final synthetic u0:Lep;
+
+.field public final synthetic v0:Lhp;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 2
+.method public constructor <init>(Lhp;Lhp;Lep;)V
+    .locals 0
 
-    sget v0, Likc;->ratingBarStyle:I
+    iput-object p1, p0, Lxo;->v0:Lhp;
 
-    invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    iput-object p3, p0, Lxo;->u0:Lep;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lftf;->a(Landroid/view/View;Landroid/content/Context;)V
-
-    new-instance p1, Lch8;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, p0}, Lch8;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lxo;->a:Lch8;
-
-    invoke-virtual {p1, p2, v0}, Lch8;->r(Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p2}, Lyl6;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized onMeasure(II)V
+.method public final b()Labf;
     .locals 1
 
-    monitor-enter p0
+    iget-object v0, p0, Lxo;->u0:Lep;
 
-    :try_start_0
-    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
+    return-object v0
+.end method
 
-    iget-object p2, p0, Lxo;->a:Lch8;
+.method public final c()Z
+    .locals 3
 
-    iget-object p2, p2, Lch8;->c:Ljava/lang/Object;
+    iget-object v0, p0, Lxo;->v0:Lhp;
 
-    check-cast p2, Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Lhp;->getInternalPopup()Lgp;
 
-    if-eqz p2, :cond_0
+    move-result-object v1
 
-    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-interface {v1}, Lgp;->a()Z
 
-    move-result p2
+    move-result v1
 
-    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Lhp;->t0:Lgp;
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextDirection()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Landroid/view/View;->getTextAlignment()I
 
     move-result v0
 
-    mul-int/2addr p2, v0
-
-    const/4 v0, 0x0
-
-    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
-
-    move-result p1
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    invoke-interface {v1, v2, v0}, Lgp;->n(II)V
 
     :cond_0
-    :goto_0
-    monitor-exit p0
+    const/4 v0, 0x1
 
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return v0
 .end method

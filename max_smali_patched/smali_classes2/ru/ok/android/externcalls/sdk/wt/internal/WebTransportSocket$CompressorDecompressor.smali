@@ -29,7 +29,7 @@
         "([BII)[B",
         "compressedData",
         "decompress",
-        "Lybg;",
+        "Lb3h;",
         "release",
         "()V",
         "wtsignaling_release"

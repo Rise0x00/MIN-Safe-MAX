@@ -1,61 +1,117 @@
 .class public final Lita;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lnz;
+.field public final a:J
 
-.field public Y:Lc10;
-
-.field public Z:Z
-
-.field public d:Lqta;
-
-.field public o:Lgb9;
-
-.field public synthetic s0:Ljava/lang/Object;
-
-.field public final synthetic t0:Lqta;
-
-.field public u0:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Lqta;Lp14;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Lita;->t0:Lqta;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Lita;->a:J
+
+    iput-wide p3, p0, Lita;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iput-object p1, p0, Lita;->s0:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lita;->u0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lita;
 
-    iput p1, p0, Lita;->u0:I
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    iget-object v1, p0, Lita;->t0:Lqta;
+    :cond_1
+    check-cast p1, Lita;
 
-    invoke-virtual {v1, p1, p1, v0, p0}, Lqta;->b(Lgb9;Lnz;ZLp14;)Ljava/lang/Object;
+    iget-wide v3, p0, Lita;->a:J
 
-    move-result-object p1
+    iget-wide v5, p1, Lita;->a:J
 
-    return-object p1
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Lita;->b:J
+
+    iget-wide v5, p1, Lita;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lita;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lita;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "NotificationReadMarkDb(chatServerId="
+
+    const-string v1, ", mark="
+
+    iget-wide v2, p0, Lita;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lita;->b:J
+
+    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

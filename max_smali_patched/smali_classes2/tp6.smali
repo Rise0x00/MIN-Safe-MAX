@@ -1,61 +1,101 @@
 .class public final Ltp6;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwh7;
 
-# instance fields
-.field public X:J
 
-.field public synthetic Y:Ljava/lang/Object;
+# static fields
+.field public static final a:Ltp6;
 
-.field public final synthetic Z:Lup6;
+.field public static final b:[B
 
-.field public d:Ljava/lang/Object;
+.field public static final c:[B
 
-.field public o:Ljava/lang/String;
-
-.field public s0:I
+.field public static final d:I
 
 
 # direct methods
-.method public constructor <init>(Lup6;Lp14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Ltp6;->Z:Lup6;
+    new-instance v0, Ltp6;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ltp6;->a:Ltp6;
+
+    sget-object v0, Ljd2;->b:Ljava/nio/charset/Charset;
+
+    const-string v1, "<svg"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    invoke-static {v1}, Lpti;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    sput-object v1, Ltp6;->b:[B
+
+    const-string v1, "<?xm"
+
+    invoke-static {v1}, Lpti;->a(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    sput-object v1, Ltp6;->c:[B
+
+    sput v0, Ltp6;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final a(I[B)Lxh7;
+    .locals 1
 
-    iput-object p1, p0, Ltp6;->Y:Ljava/lang/Object;
+    sget-object p1, Ltp6;->b:[B
 
-    iget p1, p0, Ltp6;->s0:I
+    const/4 v0, 0x0
 
-    const/high16 v0, -0x80000000
+    invoke-static {p2, p1, v0}, Lpti;->e([B[BI)Z
 
-    or-int/2addr p1, v0
+    move-result p1
 
-    iput p1, p0, Ltp6;->s0:I
+    if-nez p1, :cond_1
 
-    const/4 v3, 0x0
+    sget-object p1, Ltp6;->c:[B
 
-    const/4 v4, 0x0
+    invoke-static {p2, p1, v0}, Lpti;->e([B[BI)Z
 
-    iget-object v0, p0, Ltp6;->Z:Lup6;
+    move-result p1
 
-    const-wide/16 v1, 0x0
+    if-eqz p1, :cond_0
 
-    move-object v5, p0
+    goto :goto_0
 
-    invoke-virtual/range {v0 .. v5}, Lup6;->a(JLjava/lang/Long;Ljava/lang/String;Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
+    :cond_0
+    sget-object p1, Lxh7;->c:Lxh7;
 
     return-object p1
+
+    :cond_1
+    :goto_0
+    sget-object p1, Le2e;->a:Lxh7;
+
+    return-object p1
+.end method
+
+.method public final b()I
+    .locals 1
+
+    sget v0, Ltp6;->d:I
+
+    return v0
 .end method

@@ -1,97 +1,64 @@
 .class public final Lwn9;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lxn9;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/messages/list/ui/MessagesListWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lwn9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p2, p0, Lwn9;->X:Lone/me/messages/list/ui/MessagesListWidget;
+    new-instance v0, Lwn9;
 
-    const/4 p2, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lwn9;->a:Lwn9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lwn9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lwn9;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lwn9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lwn9;
-
-    iget-object v1, p0, Lwn9;->X:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-direct {v0, p2, v1}, Lwn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    iput-object p1, v0, Lwn9;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwn9;->o:Ljava/lang/Object;
-
-    check-cast p1, Lybg;
-
-    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->d1:[Les7;
-
-    iget-object p1, p0, Lwn9;->X:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->H0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getScrollState()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p1}, Lone/me/messages/list/ui/MessagesListWidget;->A0()Ljlg;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Ljlg;->e(Landroidx/recyclerview/widget/RecyclerView;Z)V
+    return v0
 
     :cond_0
-    sget-object p1, Lybg;->a:Lybg;
+    instance-of p1, p1, Lwn9;
 
-    return-object p1
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x15cdca80
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "DoneWithDisable"
+
+    return-object v0
 .end method

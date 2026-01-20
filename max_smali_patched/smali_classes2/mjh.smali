@@ -1,77 +1,78 @@
-.class public final Lmjh;
+.class public final synthetic Lmjh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgjh;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppsSettingScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpjh;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppsSettingScreen;)V
+.method public synthetic constructor <init>(Lpjh;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lmjh;->a:I
 
-    iput-object p1, p0, Lmjh;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    iput-object p1, p0, Lmjh;->b:Lpjh;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfjh;)V
-    .locals 2
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 1
 
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->o:[Les7;
+    iget v0, p0, Lmjh;->a:I
 
-    iget-object v0, p0, Lmjh;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v0, Lone/me/webapp/settings/WebAppsSettingScreen;->b:Lru7;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    move-result-object p1
 
-    move-result-object v0
+    check-cast p1, Ljava/lang/Float;
 
-    check-cast v0, Lpjh;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result p1
 
-    instance-of v1, p1, Ldjh;
+    iget-object v0, p0, Lmjh;->b:Lpjh;
 
-    if-nez v1, :cond_2
+    iput p1, v0, Lpjh;->B0:F
 
-    instance-of v1, p1, Lcjh;
-
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
     return-void
 
-    :cond_0
-    instance-of v1, p1, Lejh;
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    move-result-object p1
 
-    iget-object v0, v0, Lpjh;->Y:Laf5;
+    check-cast p1, Ljava/lang/Float;
 
-    check-cast p1, Lejh;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    iget-object p1, p1, Lejh;->b:Lpf4;
+    move-result p1
 
-    invoke-static {v0, p1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+    iget-object v0, p0, Lmjh;->b:Lpjh;
+
+    invoke-virtual {v0, p1}, Lpjh;->setProgressForced(F)V
 
     return-void
 
-    :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    nop
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

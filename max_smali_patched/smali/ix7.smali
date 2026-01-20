@@ -1,83 +1,215 @@
-.class public abstract Lix7;
+.class public final Lix7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/Iterator;
 
-# static fields
-.field public static final a:Ljava/util/LinkedHashMap;
+
+# instance fields
+.field public a:Ljava/util/Iterator;
+
+.field public b:Ljava/util/Iterator;
+
+.field public c:Ljava/util/Iterator;
+
+.field public d:Ljava/util/ArrayDeque;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final hasNext()Z
+    .locals 3
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lix7;->b:Ljava/util/Iterator;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sput-object v0, Lix7;->a:Ljava/util/LinkedHashMap;
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
-.end method
+    move-result v0
 
-.method public static final a(Landroid/app/Activity;Z)Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
-    .locals 2
+    if-nez v0, :cond_7
 
-    sget-object v0, Lix7;->a:Ljava/util/LinkedHashMap;
+    :goto_1
+    iget-object v0, p0, Lix7;->c:Ljava/util/Iterator;
 
-    invoke-virtual {v0, p0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    move-result-object v0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    move-result v0
 
     if-nez v0, :cond_1
 
+    goto :goto_2
+
+    :cond_1
+    iget-object v0, p0, Lix7;->c:Ljava/util/Iterator;
+
+    goto :goto_3
+
+    :cond_2
+    :goto_2
+    iget-object v0, p0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Iterator;
+
+    iput-object v0, p0, Lix7;->c:Ljava/util/Iterator;
+
+    goto :goto_1
+
+    :cond_3
     const/4 v0, 0x0
 
-    const-string v1, "LifecycleHandler"
+    :goto_3
+    iput-object v0, p0, Lix7;->c:Ljava/util/Iterator;
 
-    if-eqz p1, :cond_0
+    if-nez v0, :cond_4
 
-    instance-of p1, p0, Landroidx/fragment/app/b;
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_0
+    return v0
 
-    move-object p1, p0
+    :cond_4
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    check-cast p1, Landroidx/fragment/app/b;
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroidx/fragment/app/b;->A()Lff6;
+    check-cast v0, Ljava/util/Iterator;
 
-    move-result-object p1
+    iput-object v0, p0, Lix7;->b:Ljava/util/Iterator;
 
-    invoke-virtual {p1, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
+    instance-of v1, v0, Lix7;
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    instance-of v1, p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    check-cast v0, Lix7;
 
-    if-eqz v1, :cond_1
+    iget-object v1, v0, Lix7;->b:Ljava/util/Iterator;
 
-    check-cast p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+    iput-object v1, p0, Lix7;->b:Ljava/util/Iterator;
 
-    move-object v0, p1
+    iget-object v1, p0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    if-nez v1, :cond_5
+
+    new-instance v1, Ljava/util/ArrayDeque;
+
+    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v1, p0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    :cond_5
+    iget-object v1, p0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    iget-object v2, p0, Lix7;->c:Ljava/util/Iterator;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    if-eqz v1, :cond_6
+
+    :goto_4
+    iget-object v1, v0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    iget-object v1, p0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    iget-object v2, v0, Lix7;->d:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v2}, Ljava/util/ArrayDeque;->removeLast()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/util/Iterator;
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_6
+    iget-object v0, v0, Lix7;->c:Ljava/util/Iterator;
+
+    iput-object v0, p0, Lix7;->c:Ljava/util/Iterator;
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+    :cond_7
+    const/4 v0, 0x1
 
-    move-result-object p1
+    return v0
+.end method
 
-    invoke-virtual {p1, v1}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+.method public final next()Ljava/lang/Object;
+    .locals 1
 
-    :cond_1
-    :goto_0
-    if-eqz v0, :cond_2
+    invoke-virtual {p0}, Lix7;->hasNext()Z
 
-    invoke-virtual {v0, p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->u0(Landroid/app/Activity;)V
+    move-result v0
 
-    :cond_2
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lix7;->b:Ljava/util/Iterator;
+
+    iput-object v0, p0, Lix7;->a:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
     return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    iget-object v0, p0, Lix7;->a:Ljava/util/Iterator;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->remove()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lix7;->a:Ljava/util/Iterator;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "no calls to next() since the last call to remove()"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method

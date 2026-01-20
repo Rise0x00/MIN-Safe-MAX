@@ -1,138 +1,82 @@
 .class public final Lpa2;
-.super Lmmf;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public c:Ljava/util/List;
+.field public final synthetic X:Lsa2;
 
-.field public d:Ljava/util/HashMap;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljf9;)V
+.method public constructor <init>(Lsa2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
+    iput-object p1, p0, Lpa2;->X:Lsa2;
 
-    iget-object p1, p0, Lpa2;->c:Ljava/util/List;
+    const/4 p1, 0x2
 
-    if-nez p1, :cond_0
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    iput-object p1, p0, Lpa2;->c:Ljava/util/List;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lqlc;
 
-    const-string v0, "commands"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const-string v0, "contacts"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ljf9;->v()V
-
-    return-void
-
-    :cond_0
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p0, Lpa2;->d:Ljava/util/HashMap;
-
-    invoke-static {p1}, Le0i;->r(Ljf9;)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_1
-
-    invoke-virtual {p1}, Ljf9;->r0()J
-
-    move-result-wide v1
-
-    invoke-static {p1}, Lgu3;->g(Ljf9;)Lgu3;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lpa2;->d:Ljava/util/HashMap;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-
-    :cond_2
-    new-instance p2, Le9a;
-
-    const/4 v0, 0x7
-
-    invoke-direct {p2, v0}, Le9a;-><init>(I)V
-
-    invoke-static {p1, p2}, Le0i;->w(Ljf9;Lhx9;)Ljava/util/ArrayList;
+    invoke-virtual {p0, p1, p2}, Lpa2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Lpa2;->c:Ljava/util/List;
+    check-cast p1, Lpa2;
 
-    return-void
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lpa2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Lpa2;->c:Ljava/util/List;
+    new-instance v0, Lpa2;
 
-    invoke-static {v0}, Lqyh;->a(Ljava/util/Collection;)I
+    iget-object v1, p0, Lpa2;->X:Lsa2;
 
-    move-result v0
+    invoke-direct {v0, v1, p2}, Lpa2;-><init>(Lsa2;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lpa2;->d:Ljava/util/HashMap;
-
-    invoke-static {v1}, Lqyh;->e(Ljava/util/Map;)I
-
-    move-result v1
-
-    const-string v2, ", contacts="
-
-    const-string v3, "}"
-
-    const-string v4, "{commands="
-
-    invoke-static {v4, v0, v2, v1, v3}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lpa2;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lpa2;->o:Ljava/lang/Object;
+
+    check-cast v0, Lqlc;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpa2;->X:Lsa2;
+
+    iget-object p1, p1, Lsa2;->Z:Lcm5;
+
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

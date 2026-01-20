@@ -1,122 +1,90 @@
-.class public abstract Ltzi;
+.class public final Ltzi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Ltzi;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-nez p0, :cond_0
+    new-instance v0, Ltzi;
 
-    const-string p0, ""
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    sput-object v0, Ltzi;->a:Ltzi;
 
-    :cond_0
-    const/4 v0, 0x1
+    new-instance v0, Lbri;
 
-    if-eq p1, v0, :cond_2
+    const/4 v1, 0x1
 
-    const/4 v0, 0x7
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    if-eq p1, v0, :cond_1
+    const-class v1, Lpri;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v1, "Unknown error code: "
+    const/4 v2, 0x2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x4
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x5
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    const-string v0, "BiometricUtils"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    sget p1, Lfsc;->default_error_msg:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    sget p1, Lfsc;->fingerprint_error_hw_not_present:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    sget p1, Lfsc;->fingerprint_error_no_fingerprints:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    sget p1, Lfsc;->fingerprint_error_user_canceled:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    :pswitch_3
-    sget p1, Lfsc;->fingerprint_error_lockout:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    sget p1, Lfsc;->fingerprint_error_hw_not_available:I
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x9
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public static final b(Lvcg;)V
-    .locals 2
-
-    new-instance v0, Lctd;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lctd;-><init>(I)V
-
-    const-class v1, Lrs4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    return-void
+    throw p1
 .end method

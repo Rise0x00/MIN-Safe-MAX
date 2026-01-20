@@ -1,90 +1,42 @@
-.class public final synthetic Lrg4;
+.class public final Lrg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld38;
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljavax/inject/Provider;
 
-.field public final synthetic b:Lnd;
+.field public Y:Ljavax/inject/Provider;
 
-.field public final synthetic c:I
+.field public a:Ljavax/inject/Provider;
 
-.field public final synthetic d:J
+.field public b:Ls3e;
 
-.field public final synthetic o:J
+.field public c:Ljavax/inject/Provider;
 
+.field public d:Lig5;
 
-# direct methods
-.method public synthetic constructor <init>(Lnd;IJJI)V
-    .locals 0
-
-    iput p7, p0, Lrg4;->a:I
-
-    iput-object p1, p0, Lrg4;->b:Lnd;
-
-    iput p2, p0, Lrg4;->c:I
-
-    iput-wide p3, p0, Lrg4;->d:J
-
-    iput-wide p5, p0, Lrg4;->o:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public o:Ljavax/inject/Provider;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)V
-    .locals 16
+.method public final close()V
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lrg4;->X:Ljavax/inject/Provider;
 
-    iget v1, v0, Lrg4;->a:I
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    packed-switch v1, :pswitch_data_0
+    move-result-object v0
 
-    iget-wide v7, v0, Lrg4;->o:J
+    check-cast v0, Lrm5;
 
-    move-object/from16 v2, p1
+    check-cast v0, Lj7e;
 
-    check-cast v2, Lod;
-
-    iget-object v3, v0, Lrg4;->b:Lnd;
-
-    iget v4, v0, Lrg4;->c:I
-
-    iget-wide v5, v0, Lrg4;->d:J
-
-    invoke-interface/range {v2 .. v8}, Lod;->z0(Lnd;IJJ)V
+    invoke-virtual {v0}, Lj7e;->close()V
 
     return-void
-
-    :pswitch_0
-    iget-wide v14, v0, Lrg4;->o:J
-
-    move-object/from16 v9, p1
-
-    check-cast v9, Lod;
-
-    iget-object v10, v0, Lrg4;->b:Lnd;
-
-    iget v11, v0, Lrg4;->c:I
-
-    iget-wide v12, v0, Lrg4;->d:J
-
-    invoke-interface/range {v9 .. v15}, Lod;->x0(Lnd;IJJ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

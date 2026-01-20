@@ -2,63 +2,72 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpl6;
 
+# instance fields
+.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-# static fields
-.field public static final a:Lml6;
+.field public final b:Ljbc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lml6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    sput-object v0, Lml6;->a:Lml6;
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lml6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v0, Ljbc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljbc;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lml6;->b:Ljbc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Ljava/lang/String;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lml6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    return v0
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lml6;
+
+    new-instance v2, Lip2;
+
+    const/16 v3, 0x15
+
+    invoke-direct {v2, v1, v3, p1}, Lip2;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object v1, p0, Lml6;->b:Ljbc;
+
+    invoke-virtual {v1, v2}, Ljbc;->n(Llq6;)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of p1, p1, Lml6;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x6ebc12d1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ClearSelectionAndScrollUp"
-
-    return-object v0
+    return-void
 .end method

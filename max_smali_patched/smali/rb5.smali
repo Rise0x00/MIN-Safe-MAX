@@ -1,14 +1,19 @@
-.class public interface abstract Lrb5;
+.class public final Lrb5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+# instance fields
+.field public a:F
 
-.method public abstract b()Landroid/media/MediaFormat;
-.end method
+.field public b:F
 
-.method public abstract c()Lavf;
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

@@ -1,102 +1,70 @@
-.class public final Lf02;
+.class public final synthetic Lf02;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lg02;
+.implements Lcv;
+
+
+# instance fields
+.field public final synthetic a:Ll02;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic d:I
+
+
+# direct methods
+.method public synthetic constructor <init>(Ll02;III)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lf02;->a:Ll02;
+
+    iput p2, p0, Lf02;->b:I
+
+    iput p3, p0, Lf02;->c:I
+
+    iput p4, p0, Lf02;->d:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final b(F)Lv28;
-    .locals 0
+.method public final apply(Ljava/lang/Object;)Lie8;
+    .locals 4
 
-    sget-object p1, Lib7;->c:Lib7;
+    check-cast p1, Ljava/lang/Void;
 
-    return-object p1
-.end method
+    iget-object p1, p0, Lf02;->a:Ll02;
 
-.method public final c(Lck3;)V
-    .locals 0
+    iget-object p1, p1, Ll02;->n:Lj40;
 
-    return-void
-.end method
+    new-instance v0, Lh12;
 
-.method public final d(F)Lv28;
-    .locals 0
+    iget v1, p0, Lf02;->b:I
 
-    sget-object p1, Lib7;->c:Lib7;
+    iget v2, p0, Lf02;->c:I
 
-    return-object p1
-.end method
+    iget v3, p0, Lf02;->d:I
 
-.method public final e()Landroid/graphics/Rect;
-    .locals 1
+    invoke-virtual {p1, v1, v2, v3}, Lj40;->f(III)Ll12;
 
-    new-instance v0, Landroid/graphics/Rect;
+    move-result-object v1
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    iget-object p1, p1, Lj40;->g:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast p1, Lwpe;
 
-.method public final f(I)V
-    .locals 0
+    invoke-direct {v0, v1, p1, v2}, Lh12;-><init>(Ll12;Lwpe;I)V
 
-    return-void
-.end method
-
-.method public final h(Lg75;)Lv28;
-    .locals 1
-
-    new-instance p1, Lm46;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lm46;-><init>(Z)V
-
-    invoke-static {p1}, Lyyg;->j(Ljava/lang/Object;)Lib7;
+    invoke-static {v0}, Lnge;->g(Ljava/lang/Object;)Llj7;
 
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public final i(Ljava/util/ArrayList;II)Lv28;
-    .locals 0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    invoke-static {p1}, Lyyg;->j(Ljava/lang/Object;)Lib7;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final j(La7e;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final k(Z)Lv28;
-    .locals 0
-
-    sget-object p1, Lib7;->c:Lib7;
-
-    return-object p1
-.end method
-
-.method public final m()Lck3;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final n()V
-    .locals 0
-
-    return-void
 .end method

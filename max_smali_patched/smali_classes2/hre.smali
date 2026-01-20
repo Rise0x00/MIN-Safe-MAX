@@ -3,137 +3,214 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhub;
+.implements Lfz4;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
+.field public final a:Lru/ok/tamtam/android/prefs/PmsKey;
 
-.field public final b:Lvf5;
+.field public final b:[Ljava/lang/String;
 
-.field public final c:Lvh5;
+.field public final c:Lphg;
 
-.field public final d:Lru7;
+.field public final d:Lo58;
 
-.field public final e:Loub;
+.field public final e:Lo58;
 
-.field public final f:Lru7;
+.field public final f:J
 
-.field public final g:Ljava/lang/String;
+.field public final g:Lspf;
 
-.field public final h:Lru7;
-
-.field public final i:Lscd;
+.field public final h:Lpld;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Lvf5;Lvh5;Lru7;Loub;Lru7;Lru7;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/tamtam/android/prefs/PmsKey;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhre;->a:Landroid/app/Application;
+    iput-object p1, p0, Lhre;->a:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    iput-object p2, p0, Lhre;->b:Lvf5;
+    iput-object v0, p0, Lhre;->b:[Ljava/lang/String;
 
-    iput-object p3, p0, Lhre;->c:Lvh5;
-
-    iput-object p4, p0, Lhre;->d:Lru7;
-
-    iput-object p5, p0, Lhre;->e:Loub;
-
-    iput-object p6, p0, Lhre;->f:Lru7;
-
-    const-class p1, Lhre;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p1
 
-    iput-object p1, p0, Lhre;->g:Ljava/lang/String;
+    new-instance v0, Lphg;
 
-    iput-object p7, p0, Lhre;->h:Lru7;
+    invoke-direct {v0, p1}, Lphg;-><init>(Ljava/lang/CharSequence;)V
 
-    new-instance p1, Lugd;
+    iput-object v0, p0, Lhre;->c:Lphg;
 
-    const/16 p2, 0x11
+    sget-object p1, Lpz4;->a:Lpz4;
 
-    invoke-direct {p1, p2, p0}, Lugd;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
-    new-instance p2, Lscd;
+    move-result-object v0
 
-    invoke-direct {p2, p1}, Lscd;-><init>(Loi6;)V
+    const/16 v1, 0x5e
 
-    iput-object p2, p0, Lhre;->i:Lscd;
+    invoke-virtual {v0, v1}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lhre;->d:Lo58;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object p1
+
+    const/16 v0, 0x5c
+
+    invoke-virtual {p1, v0}, Lr5;->d(I)Ln8g;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lhre;->e:Lo58;
+
+    sget-object p1, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lhre;->f:J
+
+    invoke-virtual {p0}, Lhre;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lhre;->g:Lspf;
+
+    new-instance v0, Lpld;
+
+    invoke-direct {v0, p1}, Lpld;-><init>(Lmfa;)V
+
+    iput-object v0, p0, Lhre;->h:Lpld;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lfvg;)V
-    .locals 2
+.method public final a()Llpf;
+    .locals 1
 
-    iget-object v0, p0, Lhre;->g:Ljava/lang/String;
+    iget-object v0, p0, Lhre;->h:Lpld;
 
-    const-string v1, "Single player handler. Free player"
-
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lfvg;->stop()V
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Lfvg;->b0(Landroid/view/Surface;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public final get()Lfvg;
-    .locals 5
+.method public final c(Lxk4;Ljava/lang/Object;)V
+    .locals 4
 
-    iget-object v0, p0, Lhre;->g:Ljava/lang/String;
+    iget-wide v0, p1, Lxk4;->a:J
 
-    sget-object v1, Lcuh;->b:Lnxa;
+    iget-wide v2, p0, Lhre;->f:J
 
-    if-nez v1, :cond_0
+    invoke-static {v0, v1, v2, v3}, Lly4;->a(JJ)Z
 
-    goto :goto_0
+    move-result p1
 
-    :cond_0
-    sget-object v2, La98;->d:La98;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1, v2}, Lnxa;->b(La98;)Z
+    iget-object p1, p0, Lhre;->d:Lo58;
 
-    move-result v3
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    if-eqz v3, :cond_1
+    move-result-object p1
 
-    iget-object v3, p0, Lhre;->i:Lscd;
+    check-cast p1, Lege;
 
-    invoke-virtual {v3}, Lscd;->e()Z
+    iget-object v0, p0, Lhre;->a:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    move-result v3
-
-    const-string v4, "Single player handler. Player exist: "
-
-    invoke-static {v4, v3}, Lpa9;->f(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v1, v2, v0, v3, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lhre;->i:Lscd;
-
-    invoke-virtual {v0}, Lscd;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lfvg;
+    check-cast p2, Ljava/lang/String;
+
+    invoke-virtual {p1, v0, p2}, Lx3;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lhre;->e()Ljava/util/List;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    iget-object v0, p0, Lhre;->g:Lspf;
+
+    invoke-virtual {v0, p2, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final e()Ljava/util/List;
+    .locals 8
+
+    iget-object v0, p0, Lhre;->e:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lidc;
+
+    iget-object v1, p0, Lhre;->a:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "False"
+
+    iget-object v0, v0, Lx3;->g:Lr58;
+
+    invoke-virtual {v0, v1, v2}, Lr58;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    :cond_0
+    const-string v1, "Server="
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v6, Lphg;
+
+    invoke-direct {v6, v0}, Lphg;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance v1, Lxk4;
+
+    iget-wide v2, p0, Lhre;->f:J
+
+    iget-object v4, p0, Lhre;->c:Lphg;
+
+    const/4 v5, 0x0
+
+    sget-object v7, Lvk4;->a:Lvk4;
+
+    invoke-direct/range {v1 .. v7}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;)V
+
+    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
 
     return-object v0
 .end method

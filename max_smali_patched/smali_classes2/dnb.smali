@@ -1,316 +1,269 @@
 .class public final Ldnb;
-.super Logf;
+.super Landroid/webkit/WebChromeClient;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lfnb;)V
+    .locals 1
 
-    iput-object p1, p0, Ldnb;->X:Lone/me/startconversation/channel/PickSubscribersScreen;
+    const/4 v0, 0x1
 
-    const/4 p1, 0x2
+    iput v0, p0, Ldnb;->a:I
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldnb;->b:Ljava/lang/Object;
+
+    .line 3
+    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lj9i;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ldnb;->a:I
+
+    .line 1
+    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Ldnb;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/Set;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldnb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldnb;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ldnb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public getDefaultVideoPoster()Landroid/graphics/Bitmap;
     .locals 2
 
-    new-instance v0, Ldnb;
+    iget v0, p0, Ldnb;->a:I
 
-    iget-object v1, p0, Ldnb;->X:Lone/me/startconversation/channel/PickSubscribersScreen;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1, p2}, Ldnb;-><init>(Lone/me/startconversation/channel/PickSubscribersScreen;Lkotlin/coroutines/Continuation;)V
+    invoke-super {p0}, Landroid/webkit/WebChromeClient;->getDefaultVideoPoster()Landroid/graphics/Bitmap;
 
-    iput-object p1, v0, Ldnb;->o:Ljava/lang/Object;
+    move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v0, v0, v1}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->eraseColor(I)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public getVideoLoadingProgressView()Landroid/view/View;
+    .locals 4
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Ldnb;->a:I
 
-    iget-object p1, p0, Ldnb;->o:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/util/Set;
+    invoke-super {p0}, Landroid/webkit/WebChromeClient;->getVideoLoadingProgressView()Landroid/view/View;
 
-    invoke-interface {p1}, Ljava/util/Set;->size()I
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lhgb;
+
+    iget-object v1, p0, Ldnb;->b:Ljava/lang/Object;
+
+    check-cast v1, Lfnb;
+
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lhgb;-><init>(Landroid/content/Context;)V
+
+    sget v1, Lt7b;->x:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v2, -0x2
+
+    const/16 v3, 0x11
+
+    invoke-direct {v1, v2, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    sget-object v1, Lufb;->a:Lufb;
+
+    invoke-virtual {v0, v1}, Lhgb;->setAppearance(Lagb;)V
+
+    sget-object v1, Lbgb;->a:Lbgb;
+
+    invoke-virtual {v0, v1}, Lhgb;->setSize(Lfgb;)V
+
+    const/high16 v1, -0x1000000
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onCreateWindow(Landroid/webkit/WebView;ZZLandroid/os/Message;)Z
+    .locals 1
+
+    iget v0, p0, Ldnb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebChromeClient;->onCreateWindow(Landroid/webkit/WebView;ZZLandroid/os/Message;)Z
 
     move-result p1
 
-    iget-object v0, p0, Ldnb;->X:Lone/me/startconversation/channel/PickSubscribersScreen;
+    return p1
 
-    iget-object v1, v0, Lone/me/startconversation/channel/PickSubscribersScreen;->v0:Ltif;
+    :pswitch_0
+    new-instance p2, Lfnb;
 
-    sget-object v2, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Les7;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-virtual {v0}, Lone/me/startconversation/channel/PickSubscribersScreen;->J0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    move-result-object p1
 
-    move-result-object v2
+    const/16 p3, 0xe
 
-    const/16 v3, 0x4e20
+    invoke-direct {p2, p1, p3}, Lfnb;-><init>(Landroid/content/Context;I)V
 
-    const/4 v4, 0x1
+    new-instance p1, Lcnb;
 
-    const/4 v5, 0x0
+    invoke-direct {p1, p0, p2}, Lcnb;-><init>(Ldnb;Lfnb;)V
 
-    const/4 v6, 0x0
+    invoke-virtual {p2, p1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    if-nez p1, :cond_0
+    if-eqz p4, :cond_0
 
-    sget v7, Ll4b;->d:I
-
-    invoke-virtual {v2, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    invoke-virtual {v2, v6, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
-
-    new-instance v7, Lcnb;
-
-    invoke-direct {v7, v0, v5}, Lcnb;-><init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
-
-    invoke-static {v2, v7}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+    iget-object p1, p4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    move-result-object v7
+    :goto_0
+    check-cast p1, Landroid/webkit/WebView$WebViewTransport;
 
-    check-cast v7, Lx4e;
+    invoke-virtual {p1, p2}, Landroid/webkit/WebView$WebViewTransport;->setWebView(Landroid/webkit/WebView;)V
 
-    check-cast v7, Ljud;
+    invoke-virtual {p4}, Landroid/os/Message;->sendToTarget()V
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 p1, 0x1
 
-    sget-object v8, Lru/ok/tamtam/android/prefs/PmsKey;->max-participants:Lru/ok/tamtam/android/prefs/PmsKey;
+    return p1
 
-    int-to-long v9, v3
+    nop
 
-    invoke-virtual {v7, v8, v9, v10}, Ljud;->m(Ljava/lang/Enum;J)J
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-wide v7
+.method public onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
+    .locals 2
 
-    long-to-int v7, v7
+    iget v0, p0, Ldnb;->a:I
 
-    if-le p1, v7, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v2, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebChromeClient;->onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    instance-of v0, p1, Lfnb;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lfnb;
 
     goto :goto_0
 
-    :cond_1
-    sget v7, Lnsa;->N:I
-
-    invoke-virtual {v2, v7}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v7, Ljava/lang/Integer;
-
-    invoke-direct {v7, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    invoke-virtual {v2, v7, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->c(Ljava/lang/Integer;Z)V
-
-    invoke-virtual {v2, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
-
-    new-instance v7, Lcnb;
-
-    invoke-direct {v7, v0, v4}, Lcnb;-><init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
-
-    invoke-static {v2, v7}, Llxi;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    :cond_0
+    move-object p1, v1
 
     :goto_0
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
+    if-nez p1, :cond_1
 
-    move-result-object v2
-
-    check-cast v2, Lx4e;
-
-    check-cast v2, Ljud;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v4, Lru/ok/tamtam/android/prefs/PmsKey;->max-participants:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    int-to-long v7, v3
-
-    invoke-virtual {v2, v4, v7, v8}, Ljud;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v2
-
-    long-to-int v2, v2
-
-    if-le p1, v2, :cond_6
-
-    iget-object p1, v0, Lone/me/startconversation/channel/PickSubscribersScreen;->w0:Lb3b;
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lb3b;->a()V
-
-    :cond_2
-    new-instance p1, Lc3b;
-
-    invoke-direct {p1, v0}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    sget v2, Ll4b;->c:I
-
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lx4e;
-
-    check-cast v1, Ljud;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v1, v4, v7, v8}, Ljud;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v3
-
-    long-to-int v1, v3
-
-    new-instance v3, Ljava/lang/Integer;
-
-    invoke-direct {v3, v1}, Ljava/lang/Integer;-><init>(I)V
-
-    filled-new-array {v3}, [Ljava/lang/Object;
-
-    move-result-object v1
-
-    new-instance v3, Lkrf;
-
-    invoke-static {v1}, Lft;->B([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-direct {v3, v2, v1}, Lkrf;-><init>(ILjava/util/List;)V
-
-    invoke-virtual {p1, v3}, Lc3b;->g(Lnrf;)V
-
-    new-instance v1, Lq3b;
-
-    sget v2, Lyjd;->r1:I
-
-    invoke-direct {v1, v2}, Lq3b;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lc3b;->e(Lu3b;)V
-
-    invoke-virtual {v0}, Lc24;->getView()Landroid/view/View;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    invoke-static {v1}, Ltci;->h(Landroid/view/View;)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
+    const/4 p1, 0x0
 
     goto :goto_1
 
-    :cond_3
-    move v1, v5
+    :cond_1
+    invoke-virtual {p1}, Lfnb;->getFilePathCallback()Landroid/webkit/ValueCallback;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, v1}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
+
+    :cond_2
+    invoke-virtual {p1, p2}, Lfnb;->setFilePathCallback(Landroid/webkit/ValueCallback;)V
+
+    iget-object p1, p0, Ldnb;->b:Ljava/lang/Object;
+
+    check-cast p1, Lj9i;
+
+    iget-object p1, p1, Lj9i;->c1:Lcm5;
+
+    new-instance p2, Lh8i;
+
+    invoke-direct {p2, p3}, Lh8i;-><init>(Landroid/webkit/WebChromeClient$FileChooserParams;)V
+
+    invoke-static {p1, p2}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    const/4 p1, 0x1
 
     :goto_1
-    new-instance v2, Lk3b;
+    return p1
 
-    invoke-virtual {v0}, Lone/me/startconversation/channel/PickSubscribersScreen;->J0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    nop
 
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v3
-
-    if-nez v1, :cond_5
-
-    invoke-virtual {v0}, Lone/me/startconversation/channel/PickSubscribersScreen;->J0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    instance-of v4, v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz v4, :cond_4
-
-    move-object v6, v1
-
-    check-cast v6, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    :cond_4
-    if-eqz v6, :cond_5
-
-    iget v1, v6, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    goto :goto_2
-
-    :cond_5
-    move v1, v5
-
-    :goto_2
-    add-int/2addr v3, v1
-
-    const/4 v1, 0x3
-
-    invoke-direct {v2, v5, v5, v3, v1}, Lk3b;-><init>(IIII)V
-
-    invoke-virtual {p1, v2}, Lc3b;->c(Lk3b;)V
-
-    invoke-virtual {p1}, Lc3b;->i()Lb3b;
-
-    move-result-object p1
-
-    iput-object p1, v0, Lone/me/startconversation/channel/PickSubscribersScreen;->w0:Lb3b;
-
-    :cond_6
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

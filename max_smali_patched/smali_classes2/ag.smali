@@ -2,163 +2,182 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzf;
+
 
 # instance fields
-.field public final a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+.field public a:[I
 
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Landroid/util/ArrayMap;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;Ljava/util/ArrayList;Landroid/util/ArrayMap;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lag;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    const/4 p1, 0x0
 
-    iput-object p2, p0, Lag;->b:Ljava/util/ArrayList;
+    const/4 v0, 0x2
 
-    iput-object p3, p0, Lag;->c:Landroid/util/ArrayMap;
+    const/4 v1, 0x1
+
+    filled-new-array {v1, p1, v0}, [I
+
+    move-result-object p1
+
+    iput-object p1, p0, Lag;->a:[I
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0x8
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Lag;->a:[I
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public a()I
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lag;->a:[I
 
-    if-ne p0, p1, :cond_0
+    iget v1, p0, Lag;->b:I
+
+    aget v2, v0, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    array-length v0, v0
+
+    rem-int/2addr v1, v0
+
+    iput v1, p0, Lag;->b:I
+
+    return v2
+.end method
+
+.method public b()I
+    .locals 2
+
+    iget v0, p0, Lag;->b:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lag;->a:[I
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget v0, v1, v0
 
     return v0
 
     :cond_0
-    instance-of v1, p1, Lag;
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    const/4 v2, 0x0
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lag;
-
-    iget-object v1, p0, Lag;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    iget-object v3, p1, Lag;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lag;->b:Ljava/util/ArrayList;
-
-    iget-object v3, p1, Lag;->b:Ljava/util/ArrayList;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lag;->c:Landroid/util/ArrayMap;
-
-    iget-object p1, p1, Lag;->c:Landroid/util/ArrayMap;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    throw v0
 .end method
 
-.method public final hashCode()I
+.method public c()I
     .locals 2
 
-    iget-object v0, p0, Lag;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iget v0, p0, Lag;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    if-eqz v0, :cond_0
 
-    move-result v0
+    iget-object v1, p0, Lag;->a:[I
 
-    mul-int/lit8 v0, v0, 0x1f
+    add-int/lit8 v0, v0, -0x1
 
-    iget-object v1, p0, Lag;->b:Ljava/util/ArrayList;
+    iput v0, p0, Lag;->b:I
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lag;->c:Landroid/util/ArrayMap;
-
-    invoke-virtual {v0}, Landroid/util/ArrayMap;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
+    aget v0, v1, v0
 
     return v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public d(I)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lag;->b:I
 
-    const-string v1, "ParsedResource(drawable="
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lag;->a:[I
 
-    iget-object v1, p0, Lag;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    add-int/lit8 v0, v0, -0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    aput p1, v1, v0
 
-    const-string v1, ", animators="
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    new-instance p1, Ljava/util/NoSuchElementException;
 
-    iget-object v1, p0, Lag;->b:Ljava/util/ArrayList;
+    invoke-direct {p1}, Ljava/util/NoSuchElementException;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    throw p1
+.end method
 
-    const-string v1, ", targetNameMap="
+.method public e(I)V
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lag;->a:[I
 
-    iget-object v1, p0, Lag;->c:Landroid/util/ArrayMap;
+    array-length v1, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v2, p0, Lag;->b:I
 
-    const-string v1, ")"
+    if-ge v2, v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    mul-int/lit8 v2, v1, 0x2
 
-    move-result-object v0
+    new-array v2, v2, [I
 
-    return-object v0
+    const/4 v3, 0x0
+
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput-object v2, p0, Lag;->a:[I
+
+    move-object v0, v2
+
+    :goto_0
+    iget v1, p0, Lag;->b:I
+
+    add-int/lit8 v2, v1, 0x1
+
+    iput v2, p0, Lag;->b:I
+
+    aput p1, v0, v1
+
+    return-void
 .end method

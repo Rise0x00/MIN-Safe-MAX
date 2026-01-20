@@ -1,274 +1,87 @@
 .class public final Llk3;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lnk3;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lfl3;
-
-.field public final synthetic Z:Ljava/lang/String;
-
-.field public o:Lfl3;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lfl3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Llk3;->Y:Lfl3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Llk3;->Z:Ljava/lang/String;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Llk3;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lg54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Llk3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Llk3;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Llk3;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Llk3;
-
-    iget-object v0, p0, Llk3;->Y:Lfl3;
-
-    iget-object v1, p0, Llk3;->Z:Ljava/lang/String;
-
-    invoke-direct {p1, v0, v1, p2}, Llk3;-><init>(Lfl3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    iget v0, p0, Llk3;->X:I
-
-    sget-object v1, Lybg;->a:Lybg;
-
-    iget-object v2, p0, Llk3;->Z:Ljava/lang/String;
-
-    const/4 v3, 0x3
-
-    const/4 v4, 0x2
-
-    iget-object v5, p0, Llk3;->Y:Lfl3;
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x1
-
-    sget-object v8, Lh54;->a:Lh54;
-
-    if-eqz v0, :cond_4
-
-    if-eq v0, v7, :cond_3
-
-    if-eq v0, v4, :cond_2
-
-    if-eq v0, v3, :cond_1
-
-    if-ne v0, v6, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object v1
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Llk3;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    iget-object v5, p0, Llk3;->o:Lfl3;
+    check-cast p1, Llk3;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-wide v3, p0, Llk3;->a:J
 
-    goto/16 :goto_3
+    iget-wide v5, p1, Llk3;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    goto :goto_2
+.method public final hashCode()I
+    .locals 2
 
-    :cond_3
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-wide v0, p0, Llk3;->a:J
 
-    goto :goto_1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    :cond_4
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    move-result v0
 
-    sget-object p1, Lfl3;->K0:Ljava/lang/String;
+    return v0
+.end method
 
-    invoke-virtual {v5}, Lfl3;->w()Ligd;
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    move-result-object p1
+    const-string v0, "Add(chatId="
 
-    iput v7, p0, Llk3;->X:I
+    const-string v1, ")"
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v2, p0, Llk3;->a:J
 
-    const-string v0, "SELECT options FROM chat_folder WHERE id=? "
-
-    invoke-static {v7, v0}, Lfhd;->c(ILjava/lang/String;)Lfhd;
-
-    move-result-object v0
-
-    if-nez v2, :cond_5
-
-    invoke-virtual {v0, v7}, Lfhd;->S(I)V
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {v0, v7, v2}, Lfhd;->f(ILjava/lang/String;)V
-
-    :goto_0
-    new-instance v9, Landroid/os/CancellationSignal;
-
-    invoke-direct {v9}, Landroid/os/CancellationSignal;-><init>()V
-
-    iget-object v10, p1, Ligd;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    new-instance v11, Lggd;
-
-    const/4 v12, 0x5
-
-    invoke-direct {v11, p1, v0, v12}, Lggd;-><init>(Ligd;Lfhd;I)V
-
-    invoke-static {v10, v9, v11, p0}, Lkwi;->b(Lpgd;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v8, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    :goto_1
-    check-cast p1, [B
-
-    invoke-static {p1}, Lroi;->d([B)Ljava/util/Set;
-
-    move-result-object p1
-
-    sget-object v0, Lb76;->c:Lb76;
-
-    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    sget-object p1, Lfl3;->K0:Ljava/lang/String;
-
-    const-string v0, "try to delete not deleted folder!"
-
-    invoke-static {p1, v0}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_7
-    sget-object p1, Lfl3;->K0:Ljava/lang/String;
-
-    invoke-virtual {v5}, Lfl3;->w()Ligd;
-
-    move-result-object p1
-
-    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput v4, p0, Llk3;->X:I
-
-    iget-object v2, p1, Ligd;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
-
-    new-instance v4, Lagd;
-
-    invoke-direct {v4, p1, v7, v0}, Lagd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v4, p0}, Ljxi;->b(Lpgd;Lqi6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v8, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    :goto_2
-    sget-object p1, Lfl3;->K0:Ljava/lang/String;
-
-    invoke-virtual {v5}, Lfl3;->w()Ligd;
-
-    move-result-object p1
-
-    iput-object v5, p0, Llk3;->o:Lfl3;
-
-    iput v3, p0, Llk3;->X:I
-
-    invoke-virtual {p1, p0}, Ligd;->f(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v8, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    :goto_3
-    check-cast p1, Ljava/util/List;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Llk3;->o:Lfl3;
-
-    iput v6, p0, Llk3;->X:I
-
-    invoke-static {v5, p1, v7, p0}, Lfl3;->H(Lfl3;Ljava/util/List;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v8, :cond_a
-
-    :goto_4
-    return-object v8
-
-    :cond_a
-    return-object v1
+    return-object v0
 .end method

@@ -1,79 +1,58 @@
-.class public final Leg2;
-.super Lrj0;
+.class public final synthetic Leg2;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcy3;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
-
-.field public final c:J
-
-.field public final d:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(IJJLjava/lang/String;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0, p2, p3}, Lrj0;-><init>(J)V
+    iput p1, p0, Leg2;->a:I
 
-    iput-object p6, p0, Leg2;->b:Ljava/lang/String;
-
-    iput-wide p4, p0, Leg2;->c:J
-
-    iput p1, p0, Leg2;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Leg2;->a:I
 
-    const-string v1, "ChatJoinEvent{link=\'"
+    check-cast p1, Lch2;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Leg2;->b:Ljava/lang/String;
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    const/4 v0, 0x0
 
-    const-string v1, "\', chatId="
+    iput-object v0, p1, Lch2;->k0:Lph2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    iget-wide v1, p0, Leg2;->c:J
+    :pswitch_1
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iput-wide v0, p1, Lch2;->M:J
 
-    const-string v1, ", type="
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    nop
 
-    iget v1, p0, Leg2;->d:I
-
-    invoke-static {v1}, Lox1;->y(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-super {p0}, Lrj0;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

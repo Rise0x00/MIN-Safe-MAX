@@ -1,21 +1,45 @@
-.class public abstract Lfoi;
+.class public final Lfoi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+
 # direct methods
-.method public static final a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+.method public constructor <init>()V
     .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    move-result v1
+    const/4 v1, 0x0
 
-    invoke-interface {p0, v0, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    move-result-object p0
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    return-object p0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Lfoi;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object v0, p0, Lfoi;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    new-instance v0, Landroid/util/Size;
+
+    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+
+    return-void
 .end method

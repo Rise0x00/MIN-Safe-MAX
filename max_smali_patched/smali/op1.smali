@@ -3,22 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lsp1;
+.field public final synthetic b:Lsq1;
+
+.field public final synthetic c:Lzv8;
+
+.field public final synthetic d:Lzv8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsp1;I)V
+.method public synthetic constructor <init>(Lsq1;Lzv8;Lzv8;I)V
     .locals 0
 
-    iput p2, p0, Lop1;->a:I
+    iput p4, p0, Lop1;->a:I
 
-    iput-object p1, p0, Lop1;->b:Lsp1;
+    iput-object p1, p0, Lop1;->b:Lsq1;
+
+    iput-object p2, p0, Lop1;->c:Lzv8;
+
+    iput-object p3, p0, Lop1;->d:Lzv8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,77 +36,90 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 8
+    .locals 5
 
     iget v0, p0, Lop1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lop1;->b:Lsp1;
+    iget-object v0, p0, Lop1;->c:Lzv8;
 
-    iget-object v0, v0, Lsp1;->Q0:Lapg;
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    sget-object v3, Lzv8;->b:Lzv8;
+
+    if-ne v0, v3, :cond_0
+
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    iget-object v4, p0, Lop1;->d:Lzv8;
+
+    if-ne v4, v3, :cond_1
+
+    move v1, v2
+
+    :cond_1
+    iget-object v2, p0, Lop1;->b:Lsq1;
+
+    iget-object v2, v2, Lsq1;->c:Lnx1;
+
+    invoke-virtual {v2, v0}, Lnx1;->g(Z)V
+
+    invoke-virtual {v2, v1}, Lnx1;->h(Z)V
+
+    :goto_1
+    sget-object v0, Lb3h;->a:Lb3h;
 
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lop1;->b:Lsp1;
+    iget-object v0, p0, Lop1;->c:Lzv8;
 
-    iget-object v0, v0, Lsp1;->Q0:Lapg;
+    const/4 v1, 0x0
 
-    return-object v0
+    const/4 v2, 0x1
 
-    :pswitch_1
-    new-instance v3, Lrp1;
+    sget-object v3, Lzv8;->b:Lzv8;
 
-    iget-object v0, p0, Lop1;->b:Lsp1;
+    if-ne v0, v3, :cond_2
 
-    invoke-direct {v3, v0}, Lrp1;-><init>(Lsp1;)V
+    move v0, v2
 
-    new-instance v1, Lkg1;
+    goto :goto_2
 
-    new-instance v4, Lop1;
+    :cond_2
+    move v0, v1
 
-    const/4 v2, 0x4
+    :goto_2
+    iget-object v4, p0, Lop1;->d:Lzv8;
 
-    invoke-direct {v4, v0, v2}, Lop1;-><init>(Lsp1;I)V
+    if-ne v4, v3, :cond_3
 
-    new-instance v5, Lop1;
+    move v1, v2
 
-    const/4 v2, 0x0
+    :cond_3
+    iget-object v2, p0, Lop1;->b:Lsq1;
 
-    invoke-direct {v5, v0, v2}, Lop1;-><init>(Lsp1;I)V
+    iget-object v2, v2, Lsq1;->c:Lnx1;
 
-    const/4 v6, 0x0
+    invoke-virtual {v2, v0}, Lnx1;->g(Z)V
 
-    const/16 v7, 0x22
+    invoke-virtual {v2, v1}, Lnx1;->h(Z)V
 
-    sget-object v2, Lhzg;->a:Lhzg;
-
-    invoke-direct/range {v1 .. v7}, Lkg1;-><init>(Lhzg;Lig1;Loi6;Lop1;Lk81;I)V
-
-    return-object v1
-
-    :pswitch_2
-    iget-object v0, p0, Lop1;->b:Lsp1;
-
-    iget-object v0, v0, Lsp1;->Q0:Lapg;
-
-    return-object v0
-
-    :pswitch_3
-    iget-object v0, p0, Lop1;->b:Lsp1;
-
-    iget-object v0, v0, Lsp1;->T0:Llp1;
-
-    return-object v0
+    goto :goto_1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

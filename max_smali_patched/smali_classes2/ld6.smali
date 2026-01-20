@@ -2,144 +2,96 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmd6;
+
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArrayList;
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object v0, p0, Lld6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iput-object p1, p0, Lld6;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lb8b;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object v0, p0, Lld6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lld6;
-
-    invoke-virtual {v1, p1}, Lld6;->a(Lb8b;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    return-void
+    instance-of v1, p1, Lld6;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lld6;
+
+    iget-object v1, p0, Lld6;->a:Ljava/util/List;
+
+    iget-object p1, p1, Lld6;->a:Ljava/util/List;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final b(Lb8b;Ln7b;Lx7b;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, p0, Lld6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v0, p0, Lld6;->a:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result-object v0
+    move-result v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lld6;
-
-    invoke-virtual {v1, p1, p2, p3}, Lld6;->b(Lb8b;Ln7b;Lx7b;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return v0
 .end method
 
-.method public final c(Lb8b;Ln7b;Lx7b;Ljava/io/IOException;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lld6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    const-string v1, "OpenPicker(includes="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lld6;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lld6;
-
-    invoke-virtual {v1, p1, p2, p3, p4}, Lld6;->c(Lb8b;Ln7b;Lx7b;Ljava/io/IOException;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Lb8b;Ln7b;Lx7b;)V
-    .locals 2
-
-    iget-object v0, p0, Lld6;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lld6;
-
-    invoke-virtual {v1, p1, p2, p3}, Lld6;->d(Lb8b;Ln7b;Lx7b;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

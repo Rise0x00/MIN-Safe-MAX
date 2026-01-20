@@ -1,90 +1,162 @@
-.class public abstract Lgpc;
-.super Ljava/lang/Object;
+.class public final Lgpc;
+.super Ljpc;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_storage_item_action_all_cancel:I = 0x7f0a07fc
+# instance fields
+.field public final a:Llhg;
 
-.field public static oneme_settings_storage_item_action_all_clear:I = 0x7f0a07fd
+.field public final b:I
 
-.field public static oneme_settings_storage_item_action_audio_cancel:I = 0x7f0a07fe
+.field public final c:Ls82;
 
-.field public static oneme_settings_storage_item_action_audio_clear:I = 0x7f0a07ff
 
-.field public static oneme_settings_storage_item_action_files_cancel:I = 0x7f0a0800
+# direct methods
+.method public constructor <init>(Llhg;ILs82;)V
+    .locals 0
 
-.field public static oneme_settings_storage_item_action_files_clear:I = 0x7f0a0801
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_storage_item_action_gif_cancel:I = 0x7f0a0802
+    iput-object p1, p0, Lgpc;->a:Llhg;
 
-.field public static oneme_settings_storage_item_action_gif_clear:I = 0x7f0a0803
+    iput p2, p0, Lgpc;->b:I
 
-.field public static oneme_settings_storage_item_action_images_cancel:I = 0x7f0a0804
+    iput-object p3, p0, Lgpc;->c:Ls82;
 
-.field public static oneme_settings_storage_item_action_images_clear:I = 0x7f0a0805
+    return-void
+.end method
 
-.field public static oneme_settings_storage_item_action_music_cancel:I = 0x7f0a0806
 
-.field public static oneme_settings_storage_item_action_music_clear:I = 0x7f0a0807
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public static oneme_settings_storage_item_action_stickers_cancel:I = 0x7f0a0808
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_storage_item_action_stickers_clear:I = 0x7f0a0809
+    goto :goto_1
 
-.field public static oneme_settings_storage_item_action_video_cancel:I = 0x7f0a080a
+    :cond_0
+    instance-of v0, p1, Lgpc;
 
-.field public static oneme_settings_storage_item_action_video_clear:I = 0x7f0a080b
+    if-nez v0, :cond_1
 
-.field public static oneme_settings_storage_item_all_clear_title:I = 0x7f0a080c
+    goto :goto_0
 
-.field public static oneme_settings_storage_item_audio_clear_title:I = 0x7f0a080d
+    :cond_1
+    check-cast p1, Lgpc;
 
-.field public static oneme_settings_storage_item_audio_messages:I = 0x7f0a080e
+    iget-object v0, p0, Lgpc;->a:Llhg;
 
-.field public static oneme_settings_storage_item_clear_cache:I = 0x7f0a080f
+    iget-object v1, p1, Lgpc;->a:Llhg;
 
-.field public static oneme_settings_storage_item_files:I = 0x7f0a0810
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
 
-.field public static oneme_settings_storage_item_files_clear_title:I = 0x7f0a0811
+    move-result v0
 
-.field public static oneme_settings_storage_item_gif:I = 0x7f0a0812
+    if-nez v0, :cond_2
 
-.field public static oneme_settings_storage_item_gif_clear_title:I = 0x7f0a0813
+    goto :goto_0
 
-.field public static oneme_settings_storage_item_images:I = 0x7f0a0814
+    :cond_2
+    iget v0, p0, Lgpc;->b:I
 
-.field public static oneme_settings_storage_item_images_clear_title:I = 0x7f0a0815
+    iget v1, p1, Lgpc;->b:I
 
-.field public static oneme_settings_storage_item_music:I = 0x7f0a0816
+    if-eq v0, v1, :cond_3
 
-.field public static oneme_settings_storage_item_music_clear_title:I = 0x7f0a0817
+    goto :goto_0
 
-.field public static oneme_settings_storage_item_one_month:I = 0x7f0a0818
+    :cond_3
+    iget-object v0, p0, Lgpc;->c:Ls82;
 
-.field public static oneme_settings_storage_item_one_week:I = 0x7f0a0819
+    iget-object p1, p1, Lgpc;->c:Ls82;
 
-.field public static oneme_settings_storage_item_six_month:I = 0x7f0a081a
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-.field public static oneme_settings_storage_item_stickers:I = 0x7f0a081b
+    move-result p1
 
-.field public static oneme_settings_storage_item_stickers_clear_title:I = 0x7f0a081c
+    if-nez p1, :cond_4
 
-.field public static oneme_settings_storage_item_unlimited:I = 0x7f0a081d
+    :goto_0
+    const/4 p1, 0x0
 
-.field public static oneme_settings_storage_item_video:I = 0x7f0a081e
+    return p1
 
-.field public static oneme_settings_storage_item_video_clear_title:I = 0x7f0a081f
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-.field public static oneme_settings_storage_screen_data_section_header:I = 0x7f0a0820
+    return p1
+.end method
 
-.field public static oneme_settings_storage_screen_list:I = 0x7f0a0821
+.method public final hashCode()I
+    .locals 3
 
-.field public static oneme_settings_storage_screen_preserve_media_section:I = 0x7f0a0822
+    iget-object v0, p0, Lgpc;->a:Llhg;
 
-.field public static oneme_settings_storage_screen_settings_button_vh:I = 0x7f0a0823
+    iget v0, v0, Llhg;->c:I
 
-.field public static oneme_settings_storage_screen_settings_header_vh:I = 0x7f0a0824
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-.field public static oneme_settings_storage_screen_settings_item_vh:I = 0x7f0a0825
+    move-result v0
 
-.field public static oneme_settings_storage_screen_toolbar:I = 0x7f0a0826
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lgpc;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lgpc;->c:Ls82;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowCancellableSnackbar(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lgpc;->a:Llhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bottomMargin="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgpc;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cancelAction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lgpc;->c:Ls82;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

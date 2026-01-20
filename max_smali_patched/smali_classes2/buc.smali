@@ -1,74 +1,97 @@
-.class public abstract Lbuc;
+.class public final Lbuc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lduc;
 
 
-# static fields
-.field public static oneme_stickers_settings_empty_favorite_title:I = 0x7f130a69
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
 
-.field public static oneme_stickers_settings_empty_recent_subtitle:I = 0x7f130a6a
 
-.field public static oneme_stickers_settings_empty_recent_title:I = 0x7f130a6b
+# direct methods
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 0
 
-.field public static oneme_stickers_settings_favorite_title:I = 0x7f130a6c
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_stickers_settings_favorite_toolbar_title:I = 0x7f130a6d
+    iput-object p1, p0, Lbuc;->a:Ljava/lang/CharSequence;
 
-.field public static oneme_stickers_settings_menu_copy_link_title:I = 0x7f130a6e
+    return-void
+.end method
 
-.field public static oneme_stickers_settings_menu_copy_set_link_snackbar_title:I = 0x7f130a6f
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_action:I = 0x7f130a70
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_cancel:I = 0x7f130a71
+    const/4 v0, 0x1
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_subtitle:I = 0x7f130a72
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_stickers_settings_menu_delete_set_confirm_title:I = 0x7f130a73
+    return v0
 
-.field public static oneme_stickers_settings_menu_delete_set_snackbar_title:I = 0x7f130a74
+    :cond_0
+    instance-of v1, p1, Lbuc;
 
-.field public static oneme_stickers_settings_menu_delete_set_title:I = 0x7f130a75
+    const/4 v2, 0x0
 
-.field public static oneme_stickers_settings_menu_forward_title:I = 0x7f130a76
+    if-nez v1, :cond_1
 
-.field public static oneme_stickers_settings_menu_share_title:I = 0x7f130a77
+    return v2
 
-.field public static oneme_stickers_settings_recent_title:I = 0x7f130a78
+    :cond_1
+    check-cast p1, Lbuc;
 
-.field public static oneme_stickers_settings_recent_toolbar_title:I = 0x7f130a79
+    iget-object v1, p0, Lbuc;->a:Ljava/lang/CharSequence;
 
-.field public static oneme_stickers_settings_sets_title:I = 0x7f130a7a
+    iget-object p1, p1, Lbuc;->a:Ljava/lang/CharSequence;
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_sticker_title:I = 0x7f130a7b
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_stickers_title:I = 0x7f130a7c
+    move-result p1
 
-.field public static oneme_stickers_settings_stickers_confirm_delete_subtitle:I = 0x7f130a7d
+    if-nez p1, :cond_2
 
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_subtitle:I = 0x7f130a7e
+    return v2
 
-.field public static oneme_stickers_settings_stickers_favorite_confirm_clear_title:I = 0x7f130a7f
+    :cond_2
+    return v0
+.end method
 
-.field public static oneme_stickers_settings_stickers_favorite_delete_all_snackbar:I = 0x7f130a80
+.method public final hashCode()I
+    .locals 1
 
-.field public static oneme_stickers_settings_stickers_favorite_snackbar_from:I = 0x7f130a81
+    iget-object v0, p0, Lbuc;->a:Ljava/lang/CharSequence;
 
-.field public static oneme_stickers_settings_stickers_menu_change_title:I = 0x7f130a82
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_subtitle:I = 0x7f130a83
+    move-result v0
 
-.field public static oneme_stickers_settings_stickers_recent_confirm_clear_title:I = 0x7f130a84
+    return v0
+.end method
 
-.field public static oneme_stickers_settings_stickers_recent_delete_all_snackbar:I = 0x7f130a85
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static oneme_stickers_settings_stickers_recent_menu_clear_title:I = 0x7f130a86
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static oneme_stickers_settings_stickers_recent_snackbar_from:I = 0x7f130a87
+    const-string v1, "SaveError(error="
 
-.field public static oneme_stickers_settings_stickers_snackbar_delete_stickers_title:I = 0x7f130a88
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static oneme_stickers_settings_toolbar_title:I = 0x7f130a89
+    iget-object v1, p0, Lbuc;->a:Ljava/lang/CharSequence;
 
-.field public static oneme_strickers_settings_stickers_multiselect_empty_title:I = 0x7f130a8b
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static oneme_strickers_settings_stickers_multiselect_title:I = 0x7f130a8c
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

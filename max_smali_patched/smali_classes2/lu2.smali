@@ -1,48 +1,68 @@
-.class public final Llu2;
-.super Lp14;
+.class public final synthetic Llu2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lqn1;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
 
 # direct methods
-.method public constructor <init>(Lqn1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;I)V
     .locals 0
 
-    iput-object p1, p0, Llu2;->X:Lqn1;
+    iput p2, p0, Llu2;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llu2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    iput-object p1, p0, Llu2;->d:Ljava/lang/Object;
+    iget p1, p0, Llu2;->a:I
 
-    iget p1, p0, Llu2;->o:I
+    const-string v0, "ru.ok.messages.messages.widgets.ChatMsgSearchResultView"
 
-    const/high16 v0, -0x80000000
+    iget-object v1, p0, Llu2;->b:Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;
 
-    or-int/2addr p1, v0
+    packed-switch p1, :pswitch_data_0
 
-    iput p1, p0, Llu2;->o:I
+    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->L0:I
 
-    iget-object p1, p0, Llu2;->X:Lqn1;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/4 v0, 0x0
+    const-string p1, "Click bottom button"
 
-    invoke-virtual {p1, v0, p0}, Lqn1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result-object p1
+    return-void
 
-    return-object p1
+    :pswitch_0
+    sget p1, Lru/ok/messages/messages/widgets/ChatMsgSearchResultView;->L0:I
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "Click top button"
+
+    invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

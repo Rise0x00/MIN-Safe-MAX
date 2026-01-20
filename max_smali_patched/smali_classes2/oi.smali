@@ -1,21 +1,11 @@
-.class public final Loi;
-.super Lmi;
+.class public interface abstract Loi;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Loi;
+# virtual methods
+.method public abstract a([Ljava/lang/Double;)V
+.end method
 
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Loi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Loi;->b:Loi;
-
-    return-void
+.method public abstract b()V
 .end method

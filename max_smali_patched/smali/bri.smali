@@ -1,131 +1,135 @@
 .class public final Lbri;
-.super Lt6i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lk9i;
-
-
-# static fields
-.field private static final zzb:Lbri;
+.implements Lpri;
 
 
 # instance fields
-.field private zzd:I
-
-.field private zze:Ljava/lang/Object;
+.field public final a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lbri;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lbri;-><init>()V
-
-    sput-object v0, Lbri;->zzb:Lbri;
-
-    const-class v1, Lbri;
-
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lt6i;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lbri;->zzd:I
+    iput p1, p0, Lbri;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
-    .locals 3
+.method public final annotationType()Ljava/lang/Class;
+    .locals 1
 
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lbri;->zzb:Lbri;
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Lmii;
-
-    sget-object p2, Lbri;->zzb:Lbri;
-
-    invoke-direct {p1, p2}, Lj6i;-><init>(Lt6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lbri;
-
-    invoke-direct {p1}, Lbri;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-class p1, Ls2j;
-
-    const-class p2, Le1j;
-
-    const-string v0, "zze"
-
-    const-string v1, "zzd"
-
-    const-class v2, Lhyi;
-
-    filled-new-array {v0, v1, v2, p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lbri;->zzb:Lbri;
-
-    new-instance v0, Lfai;
-
-    const-string v1, "\u0001\u0003\u0001\u0000\u0001\u0003\u0003\u0000\u0000\u0000\u0001<\u0000\u0002<\u0000\u0003<\u0000"
-
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-class v0, Lpri;
 
     return-object v0
+.end method
 
-    :cond_4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lpri;
+
+    if-nez v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    check-cast p1, Lpri;
+
+    check-cast p1, Lbri;
+
+    iget v0, p1, Lbri;->a:I
+
+    iget v1, p0, Lbri;->a:I
+
+    if-ne v1, v0, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lnri;->a:Lnri;
+
+    invoke-virtual {p1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    :goto_0
     const/4 p1, 0x1
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    return p1
 
-    move-result-object p1
+    :cond_2
+    :goto_1
+    const/4 p1, 0x0
 
-    return-object p1
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lbri;->a:I
+
+    const v1, 0xde0d66
+
+    xor-int/2addr v0, v1
+
+    sget-object v1, Lnri;->a:Lnri;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    const v2, 0x79ad669e
+
+    xor-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "@com.google.firebase.encoders.proto.Protobuf(tag="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lbri;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "intEncoding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lnri;->a:Lnri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x29
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

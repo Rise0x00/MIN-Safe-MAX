@@ -1,82 +1,108 @@
 .class public final Lfy7;
-.super Lrk0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lie8;
 
 
 # instance fields
-.field public h:I
+.field public final a:Lrve;
 
-.field public i:I
 
-.field public j:Z
+# direct methods
+.method public constructor <init>(Ltx7;)V
+    .locals 2
 
-.field public k:I
+    new-instance v0, Lrve;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lfy7;->a:Lrve;
+
+    new-instance v0, Ley7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Ley7;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v0}, Lvy7;->invokeOnCompletion(Lnq6;)Lr25;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public final cancel(Z)Z
+    .locals 1
 
-    invoke-super {p0}, Lrk0;->a()V
+    iget-object v0, p0, Lfy7;->a:Lrve;
 
-    iget v0, p0, Lfy7;->k:I
+    invoke-virtual {v0, p1}, Lu1;->cancel(Z)Z
 
-    if-ltz v0, :cond_4
+    move-result p1
 
-    iget v0, p0, Lfy7;->h:I
+    return p1
+.end method
 
-    if-nez v0, :cond_3
+.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    iget v0, p0, Lrk0;->b:I
+    iget-object v0, p0, Lfy7;->a:Lrve;
 
-    if-lez v0, :cond_1
+    invoke-virtual {v0, p1, p2}, Lu1;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    iget v0, p0, Lrk0;->g:I
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Rounded corners without gap are not supported in contiguous indeterminate animation."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lrk0;->c:[I
-
-    array-length v0, v0
-
-    const/4 v1, 0x3
-
-    if-lt v0, v1, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    :goto_1
     return-void
+.end method
 
-    :cond_4
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+.method public final get()Ljava/lang/Object;
+    .locals 1
 
-    const-string v1, "Stop indicator size must be >= 0."
+    .line 1
+    iget-object v0, p0, Lfy7;->a:Lrve;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lu1;->get()Ljava/lang/Object;
 
-    throw v0
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    .line 2
+    iget-object v0, p0, Lfy7;->a:Lrve;
+
+    invoke-virtual {v0, p1, p2, p3}, Lu1;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final isCancelled()Z
+    .locals 1
+
+    iget-object v0, p0, Lfy7;->a:Lrve;
+
+    iget-object v0, v0, Lu1;->a:Ljava/lang/Object;
+
+    instance-of v0, v0, Lz0;
+
+    return v0
+.end method
+
+.method public final isDone()Z
+    .locals 1
+
+    iget-object v0, p0, Lfy7;->a:Lrve;
+
+    invoke-virtual {v0}, Lu1;->isDone()Z
+
+    move-result v0
+
+    return v0
 .end method

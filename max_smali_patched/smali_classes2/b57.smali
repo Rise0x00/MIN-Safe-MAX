@@ -1,138 +1,73 @@
-.class public final synthetic Lb57;
-.super Ljava/lang/Object;
+.class public final Lb57;
+.super Lc57;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ld57;
+# static fields
+.field public static final c:Lb57;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld57;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lb57;->a:I
+    new-instance v0, Lb57;
 
-    iput-object p1, p0, Lb57;->b:Ld57;
+    sget v1, La8b;->t:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v2, Llhg;
+
+    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+
+    sget v1, Lj6e;->L:I
+
+    new-instance v3, Llhg;
+
+    invoke-direct {v3, v1}, Llhg;-><init>(I)V
+
+    invoke-direct {v0, v2, v3}, Lc57;-><init>(Llhg;Llhg;)V
+
+    sput-object v0, Lb57;->c:Lb57;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lb57;->a:I
+    const/4 v0, 0x1
 
-    const-string v1, "onFileDownloadInterrupted"
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x0
-
-    const-string v3, "e57"
-
-    iget-object v4, p0, Lb57;->b:Ld57;
-
-    const/4 v5, 0x0
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, v4, Ld57;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-static {v3, v1, v5}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    instance-of p1, p1, Lb57;
 
-    new-instance v0, Lone/me/sdk/transfer/exceptions/HttpErrorException;
+    if-nez p1, :cond_1
 
-    invoke-direct {v0, v1, v5}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Lf57;)V
+    const/4 p1, 0x0
 
-    iget-object v1, v4, Ld57;->o:Lgla;
-
-    invoke-interface {v1, v0}, Lgla;->onError(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v4, v2}, Ld57;->i(Z)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, v4, Ld57;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
+    return p1
 
     :cond_1
-    const-string v0, "onFileDownloadFailed"
+    return v0
+.end method
 
-    invoke-static {v3, v0, v5}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v1, Lone/me/sdk/transfer/exceptions/HttpErrorException;
+    const v0, 0x545380ea
 
-    invoke-direct {v1, v0, v5}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Lf57;)V
+    return v0
+.end method
 
-    iget-object v0, v4, Ld57;->o:Lgla;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-interface {v0, v1}, Lgla;->onError(Ljava/lang/Throwable;)V
+    const-string v0, "Updating"
 
-    invoke-virtual {v4, v2}, Ld57;->i(Z)V
-
-    :goto_1
-    return-void
-
-    :pswitch_1
-    iget-object v0, v4, Ld57;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-static {v3, v1, v5}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v0, Lone/me/sdk/transfer/exceptions/HttpErrorException;
-
-    const-string v1, "url expired"
-
-    invoke-direct {v0, v1, v5}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Lf57;)V
-
-    iget-object v1, v4, Ld57;->o:Lgla;
-
-    invoke-interface {v1, v0}, Lgla;->onError(Ljava/lang/Throwable;)V
-
-    invoke-virtual {v4, v2}, Ld57;->i(Z)V
-
-    :goto_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

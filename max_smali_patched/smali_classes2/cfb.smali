@@ -1,43 +1,54 @@
-.class public abstract Lcfb;
+.class public final synthetic Lcfb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnKeyListener;
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+
+# instance fields
+.field public final synthetic a:Lefb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lefb;)V
+    .locals 0
 
-    new-instance v0, Lwna;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lwna;-><init>(I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Llci;->i(ILoi6;)Lru7;
-
-    move-result-object v0
-
-    sput-object v0, Lcfb;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lcfb;->a:Lefb;
 
     return-void
 .end method
 
-.method public static final a()Landroid/graphics/Paint;
-    .locals 1
 
-    sget-object v0, Lcfb;->a:Ljava/lang/Object;
+# virtual methods
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 0
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    move-result-object v0
+    move-result p1
 
-    check-cast v0, Landroid/graphics/Paint;
+    const/4 p3, 0x0
 
-    return-object v0
+    if-nez p1, :cond_0
+
+    const/16 p1, 0x43
+
+    if-ne p2, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    move p1, p3
+
+    :goto_0
+    iget-object p2, p0, Lcfb;->a:Lefb;
+
+    iput-boolean p1, p2, Lefb;->o:Z
+
+    return p3
 .end method

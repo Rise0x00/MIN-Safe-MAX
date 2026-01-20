@@ -1,38 +1,48 @@
-.class public final synthetic Lq3;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+.class public final Lq3;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:Ly3;
+.field public final synthetic X:Lr3;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly3;)V
+.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lq3;->X:Lr3;
 
-    iput-object p1, p0, Lq3;->a:Ly3;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p1, p0, Lq3;->a:Ly3;
+    iput-object p1, p0, Lq3;->d:Ljava/lang/Object;
 
-    iget-object p1, p1, Ly3;->f:Lake;
+    iget p1, p0, Lq3;->o:I
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1, p2}, Lake;->h(Ljava/lang/Object;)Z
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lq3;->o:I
+
+    iget-object p1, p0, Lq3;->X:Lr3;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

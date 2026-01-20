@@ -1,36 +1,118 @@
-.class public abstract Lrsc;
-.super Ljava/lang/Object;
+.class public final Lrsc;
+.super Lp6g;
+.source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
-# static fields
-.field public static oneme_fodlers_delete_folder_bottom_sheet_title:I = 0x7f130836
+# instance fields
+.field public final synthetic X:Lysc;
 
-.field public static oneme_folder_list_recommended_folders_section_title:I = 0x7f130837
+.field public o:I
 
-.field public static oneme_folder_list_toolbar_title:I = 0x7f130838
 
-.field public static oneme_folders_delete_folder_bottom_sheet_delete_button:I = 0x7f130839
+# direct methods
+.method public constructor <init>(Lysc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_folders_delete_folder_bottom_sheet_description:I = 0x7f13083a
+    iput-object p1, p0, Lrsc;->X:Lysc;
 
-.field public static oneme_folders_edit_add_chats_button:I = 0x7f13083b
+    const/4 p1, 0x2
 
-.field public static oneme_folders_edit_create_button:I = 0x7f13083c
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_folders_edit_delete_button:I = 0x7f13083d
+    return-void
+.end method
 
-.field public static oneme_folders_edit_name_hint:I = 0x7f13083e
 
-.field public static oneme_folders_edit_toolbar_title_creation:I = 0x7f13083f
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_folders_edit_toolbar_title_edit:I = 0x7f130840
+    check-cast p1, Lzb4;
 
-.field public static oneme_folders_list_create_folder:I = 0x7f130841
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_folders_list_menu_action_change:I = 0x7f130842
+    invoke-virtual {p0, p1, p2}, Lrsc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_folders_list_menu_action_delete_folder:I = 0x7f130843
+    move-result-object p1
 
-.field public static oneme_folders_picker_empty_title:I = 0x7f130844
+    check-cast p1, Lrsc;
 
-.field public static oneme_folders_picker_toolbar_title:I = 0x7f130845
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lrsc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lrsc;
+
+    iget-object v0, p0, Lrsc;->X:Lysc;
+
+    invoke-direct {p1, v0, p2}, Lrsc;-><init>(Lysc;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lrsc;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrsc;->X:Lysc;
+
+    iget-object v0, p1, Lysc;->y0:Lspf;
+
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llsc;
+
+    iput v1, p0, Lrsc;->o:I
+
+    invoke-static {p1, v0, p0}, Lysc;->s(Lysc;Llsc;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+.end method

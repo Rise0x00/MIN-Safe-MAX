@@ -1,1383 +1,805 @@
 .class public final Lmz8;
-.super Landroid/os/Binder;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lu67;
-
-
-# static fields
-.field public static final synthetic d:I
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final c:Ljava/lang/ref/WeakReference;
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lnz8;)V
+.method public synthetic constructor <init>(Le3;Legc;Lx07;Ljava/util/concurrent/Callable;Lieg;)V
     .locals 1
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    const/4 v0, 0x4
 
-    const-string v0, "android.support.v4.media.session.IMediaSession"
+    iput v0, p0, Lmz8;->a:I
 
-    invoke-virtual {p0, p0, v0}, Landroid/os/Binder;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lmz8;->b:Ljava/lang/Object;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput-object p2, p0, Lmz8;->c:Ljava/lang/Object;
 
-    iput-object v0, p0, Lmz8;->c:Ljava/lang/ref/WeakReference;
+    iput-object p3, p0, Lmz8;->X:Ljava/lang/Object;
+
+    iput-object p4, p0, Lmz8;->d:Ljava/lang/Object;
+
+    iput-object p5, p0, Lmz8;->o:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    .locals 0
+
+    .line 2
+    iput p6, p0, Lmz8;->a:I
+
+    iput-object p1, p0, Lmz8;->o:Ljava/lang/Object;
+
+    iput-object p2, p0, Lmz8;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lmz8;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Lmz8;->X:Ljava/lang/Object;
+
+    iput-object p5, p0, Lmz8;->d:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lski;Lpz8;Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lmz8;->a:I
+
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmz8;->o:Ljava/lang/Object;
+
+    iput-object p2, p0, Lmz8;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lmz8;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Lmz8;->d:Ljava/lang/Object;
+
+    iput-object p5, p0, Lmz8;->X:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lr67;)V
-    .locals 2
+.method public final run()V
+    .locals 15
 
-    iget-object v0, p0, Lmz8;->c:Ljava/lang/ref/WeakReference;
+    iget v0, p0, Lmz8;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/4 v1, -0x1
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    check-cast v0, Lnz8;
+    const/4 v3, 0x0
 
-    if-eqz v0, :cond_1
+    packed-switch v0, :pswitch_data_0
 
-    if-nez p1, :cond_0
+    iget-object v0, p0, Lmz8;->b:Ljava/lang/Object;
+
+    check-cast v0, Le3;
+
+    iget-object v1, p0, Lmz8;->c:Ljava/lang/Object;
+
+    check-cast v1, Legc;
+
+    iget-object v3, p0, Lmz8;->X:Ljava/lang/Object;
+
+    check-cast v3, Lx07;
+
+    iget-object v4, p0, Lmz8;->d:Ljava/lang/Object;
+
+    check-cast v4, Ljava/util/concurrent/Callable;
+
+    iget-object v5, p0, Lmz8;->o:Ljava/lang/Object;
+
+    check-cast v5, Lieg;
+
+    iget-object v6, v1, Legc;->b:Ljava/lang/Object;
+
+    check-cast v6, Liqj;
+
+    invoke-virtual {v6}, Liqj;->g()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_0
+
+    invoke-virtual {v3}, Lx07;->n()V
+
+    goto :goto_3
+
+    :cond_0
+    :try_start_0
+    iget-object v6, v0, Le3;->c:Ljava/lang/Object;
+
+    check-cast v6, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v6
+
+    if-nez v6, :cond_1
+
+    move-object v6, v0
+
+    check-cast v6, Locj;
+
+    monitor-enter v6
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    iget-object v7, v6, Locj;->o:Lrej;
+
+    invoke-interface {v7}, Lrej;->f()Z
+
+    move-result v7
+
+    iput-boolean v7, v6, Locj;->t0:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit v6
+
+    iget-object v0, v0, Le3;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    :try_end_2
+    .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    iget-object v1, v0, Lnz8;->f:Landroid/os/RemoteCallbackList;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v1, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
+    goto :goto_2
 
-    invoke-static {}, Landroid/os/Binder;->getCallingPid()I
+    :catch_1
+    move-exception v0
 
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
-
-    iget-object p1, v0, Lnz8;->d:Ljava/lang/Object;
-
-    monitor-enter p1
-
-    :try_start_0
-    monitor-exit p1
-
-    return-void
+    goto :goto_1
 
     :catchall_0
     move-exception v0
 
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_start_3
+    monitor-exit v6
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
+    :try_start_4
     throw v0
 
     :cond_1
     :goto_0
-    return-void
-.end method
+    iget-object v0, v1, Legc;->b:Ljava/lang/Object;
 
-.method public final H(Lr67;)V
-    .locals 5
+    check-cast v0, Liqj;
 
-    iget-object v0, p0, Lmz8;->c:Ljava/lang/ref/WeakReference;
+    invoke-virtual {v0}, Liqj;->g()Z
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v3}, Lx07;->n()V
+
+    goto :goto_3
+
+    :cond_2
+    invoke-interface {v4}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
     move-result-object v0
+    :try_end_4
+    .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    check-cast v0, Lnz8;
+    :try_start_5
+    iget-object v2, v1, Legc;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast v2, Liqj;
 
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {}, Landroid/os/Binder;->getCallingPid()I
-
-    move-result v1
-
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+    invoke-virtual {v2}, Liqj;->g()Z
 
     move-result v2
 
-    new-instance v3, Lm09;
+    if-eqz v2, :cond_3
 
-    const-string v4, "android.media.session.MediaController"
+    invoke-virtual {v3}, Lx07;->n()V
 
-    invoke-direct {v3, v4, v1, v2}, Lm09;-><init>(Ljava/lang/String;II)V
+    goto :goto_3
 
-    iget-object v1, v0, Lnz8;->f:Landroid/os/RemoteCallbackList;
+    :cond_3
+    invoke-virtual {v5, v0}, Lieg;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, p1, v3}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;Ljava/lang/Object;)Z
+    goto :goto_3
 
-    iget-object p1, v0, Lnz8;->d:Ljava/lang/Object;
+    :goto_1
+    new-instance v2, Lcom/google/mlkit/common/MlKitException;
 
-    monitor-enter p1
+    const-string v4, "Internal error has occurred when executing ML Kit tasks"
 
-    :try_start_0
-    monitor-exit p1
+    invoke-direct {v2, v4, v0}, Lcom/google/mlkit/common/MlKitException;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
 
+    throw v2
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+
+    :goto_2
+    iget-object v1, v1, Legc;->b:Ljava/lang/Object;
+
+    check-cast v1, Liqj;
+
+    invoke-virtual {v1}, Liqj;->g()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    invoke-virtual {v3}, Lx07;->n()V
+
+    goto :goto_3
+
+    :cond_4
+    invoke-virtual {v5, v0}, Lieg;->a(Ljava/lang/Exception;)V
+
+    :goto_3
     return-void
 
-    :catchall_0
-    move-exception v0
+    :pswitch_0
+    :try_start_6
+    iget-object v0, p0, Lmz8;->b:Ljava/lang/Object;
 
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast v0, Lrve;
 
-    throw v0
+    iget-object v0, v0, Lu1;->a:Ljava/lang/Object;
 
-    :cond_1
-    :goto_0
-    return-void
-.end method
+    instance-of v0, v0, Lz0;
 
-.method public final asBinder()Landroid/os/IBinder;
-    .locals 0
+    if-nez v0, :cond_6
 
-    return-object p0
-.end method
+    iget-object v0, p0, Lmz8;->c:Ljava/lang/Object;
 
-.method public final getPlaybackState()Lctb;
-    .locals 30
+    check-cast v0, Ljava/util/UUID;
 
-    move-object/from16 v0, p0
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    iget-object v1, v0, Lmz8;->c:Ljava/lang/ref/WeakReference;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-object v1, p0, Lmz8;->o:Ljava/lang/Object;
+
+    check-cast v1, Llii;
+
+    iget-object v1, v1, Llii;->c:Ljji;
+
+    invoke-virtual {v1, v0}, Ljji;->p(Ljava/lang/String;)Lhji;
 
     move-result-object v1
 
-    check-cast v1, Lnz8;
+    if-eqz v1, :cond_5
 
-    if-eqz v1, :cond_7
+    iget-object v2, v1, Lhji;->b:Lnii;
 
-    iget-object v2, v1, Lnz8;->g:Lctb;
+    invoke-virtual {v2}, Lnii;->a()Z
 
-    iget-object v1, v1, Lnz8;->i:Leu8;
+    move-result v2
 
-    if-eqz v2, :cond_6
+    if-nez v2, :cond_5
 
-    iget v3, v2, Lctb;->d:F
+    iget-object v2, p0, Lmz8;->o:Ljava/lang/Object;
 
-    iget-wide v4, v2, Lctb;->Z:J
+    check-cast v2, Llii;
 
-    iget v6, v2, Lctb;->a:I
+    iget-object v2, v2, Llii;->b:Laj6;
 
-    iget-wide v7, v2, Lctb;->b:J
+    iget-object v4, p0, Lmz8;->X:Ljava/lang/Object;
 
-    const-wide/16 v9, -0x1
+    check-cast v4, Lyi6;
 
-    cmp-long v11, v7, v9
+    check-cast v2, Lwic;
 
-    if-nez v11, :cond_0
+    invoke-virtual {v2, v0, v4}, Lwic;->f(Ljava/lang/String;Lyi6;)V
 
-    goto/16 :goto_1
+    iget-object v0, p0, Lmz8;->d:Ljava/lang/Object;
 
-    :cond_0
-    const/4 v11, 0x3
+    check-cast v0, Landroid/content/Context;
 
-    if-eq v6, v11, :cond_1
+    invoke-static {v1}, Lx8j;->a(Lhji;)Lmii;
 
-    const/4 v11, 0x4
+    move-result-object v1
 
-    if-eq v6, v11, :cond_1
+    iget-object v2, p0, Lmz8;->X:Ljava/lang/Object;
 
-    const/4 v11, 0x5
+    check-cast v2, Lyi6;
 
-    if-ne v6, v11, :cond_6
+    invoke-static {v0, v1, v2}, Lu8g;->b(Landroid/content/Context;Lmii;Lyi6;)Landroid/content/Intent;
 
-    :cond_1
-    const-wide/16 v11, 0x0
+    move-result-object v0
 
-    cmp-long v6, v4, v11
+    iget-object v1, p0, Lmz8;->d:Ljava/lang/Object;
 
-    if-lez v6, :cond_6
+    check-cast v1, Landroid/content/Context;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    move-result-wide v24
+    goto :goto_4
 
-    sub-long v4, v24, v4
+    :catchall_1
+    move-exception v0
 
-    long-to-float v4, v4
-
-    mul-float/2addr v3, v4
-
-    float-to-long v3, v3
-
-    add-long/2addr v3, v7
-
-    if-eqz v1, :cond_2
-
-    iget-object v5, v1, Leu8;->a:Landroid/os/Bundle;
-
-    const-string v6, "android.media.metadata.DURATION"
-
-    invoke-virtual {v5, v6}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    invoke-virtual {v1, v6}, Leu8;->a(Ljava/lang/String;)J
-
-    move-result-wide v9
-
-    :cond_2
-    cmp-long v1, v9, v11
-
-    if-ltz v1, :cond_3
-
-    cmp-long v1, v3, v9
-
-    if-lez v1, :cond_3
-
-    move-wide v15, v9
-
-    goto :goto_0
-
-    :cond_3
-    cmp-long v1, v3, v11
-
-    if-gez v1, :cond_4
-
-    move-wide v15, v11
-
-    goto :goto_0
-
-    :cond_4
-    move-wide v15, v3
-
-    :goto_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-wide v3, v2, Lctb;->c:J
-
-    iget-wide v5, v2, Lctb;->o:J
-
-    iget v7, v2, Lctb;->X:I
-
-    iget-object v8, v2, Lctb;->Y:Ljava/lang/CharSequence;
-
-    iget-object v9, v2, Lctb;->s0:Ljava/util/AbstractCollection;
-
-    if-eqz v9, :cond_5
-
-    invoke-virtual {v1, v9}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    goto :goto_5
 
     :cond_5
-    iget-wide v9, v2, Lctb;->t0:J
+    const-string v0, "Calls to setForegroundAsync() must complete before a ListenableWorker signals completion of work by returning an instance of Result."
 
-    iget-object v11, v2, Lctb;->u0:Landroid/os/Bundle;
+    new-instance v1, Ljava/lang/IllegalStateException;
 
-    iget v14, v2, Lctb;->a:I
+    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget v2, v2, Lctb;->d:F
-
-    new-instance v13, Lctb;
-
-    move-object/from16 v26, v1
-
-    move/from16 v19, v2
-
-    move-wide/from16 v17, v3
-
-    move-wide/from16 v20, v5
-
-    move/from16 v22, v7
-
-    move-object/from16 v23, v8
-
-    move-wide/from16 v27, v9
-
-    move-object/from16 v29, v11
-
-    invoke-direct/range {v13 .. v29}, Lctb;-><init>(IJJFJILjava/lang/CharSequence;JLjava/util/ArrayList;JLandroid/os/Bundle;)V
-
-    return-object v13
+    throw v1
 
     :cond_6
-    :goto_1
-    return-object v2
+    :goto_4
+    iget-object v0, p0, Lmz8;->b:Ljava/lang/Object;
 
-    :cond_7
-    const/4 v1, 0x0
+    check-cast v0, Lrve;
 
-    return-object v1
-.end method
+    invoke-virtual {v0, v3}, Lrve;->i(Ljava/lang/Object;)Z
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-.method public final getRepeatMode()I
-    .locals 1
+    goto :goto_6
 
-    iget-object v0, p0, Lmz8;->c:Ljava/lang/ref/WeakReference;
+    :goto_5
+    iget-object v1, p0, Lmz8;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    check-cast v1, Lrve;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Lrve;->j(Ljava/lang/Throwable;)Z
 
-    check-cast v0, Lnz8;
-
-    if-eqz v0, :cond_0
-
-    iget v0, v0, Lnz8;->j:I
-
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final getShuffleMode()I
-    .locals 1
-
-    iget-object v0, p0, Lmz8;->c:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnz8;
-
-    if-eqz v0, :cond_0
-
-    iget v0, v0, Lnz8;->k:I
-
-    return v0
-
-    :cond_0
-    const/4 v0, -0x1
-
-    return v0
-.end method
-
-.method public final isCaptioningEnabled()Z
-    .locals 1
-
-    iget-object v0, p0, Lmz8;->c:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnz8;
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 6
-
-    const v0, 0x5f4e5446
-
-    const/4 v1, 0x1
-
-    const-string v2, "android.support.v4.media.session.IMediaSession"
-
-    if-eq p1, v0, :cond_19
-
-    const-string v0, "android.support.v4.media.session.IMediaControllerCallback"
-
-    iget-object v3, p0, Lmz8;->c:Ljava/lang/ref/WeakReference;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    packed-switch p1, :pswitch_data_0
-
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Llxc;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Llxc;
-
-    :cond_0
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
-
-    :cond_1
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
+    :goto_6
+    return-void
 
     :pswitch_1
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    iget-object v0, p0, Lmz8;->c:Ljava/lang/Object;
 
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    check-cast v0, Landroid/view/View;
 
-    move-result-object p1
+    iget-object v1, p0, Lmz8;->o:Ljava/lang/Object;
 
-    check-cast p1, Lnz8;
+    check-cast v1, Ld7f;
 
-    if-eqz p1, :cond_2
+    iget-object v2, v1, Ld7f;->Z:Ljava/util/ArrayList;
 
-    iget-object p1, p1, Lnz8;->e:Landroid/os/Bundle;
+    iget-object v3, p0, Lmz8;->b:Ljava/lang/Object;
 
-    if-eqz p1, :cond_2
+    check-cast v3, Landroid/view/View;
 
-    new-instance v4, Landroid/os/Bundle;
+    sget-object v4, Lxsh;->a:Ljava/util/WeakHashMap;
 
-    invoke-direct {v4, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+    invoke-static {v3}, Llsh;->k(Landroid/view/View;)Ljava/lang/String;
 
-    :cond_2
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v4
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    if-eqz v4, :cond_3
+    iget-object v1, v1, Ld7f;->t0:Ljava/util/ArrayList;
 
-    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
+    new-instance v4, Lc7f;
 
-    invoke-virtual {v4, p3, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    return v1
+    move-result-object v5
 
-    :cond_3
-    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+    check-cast v5, Landroid/view/ViewGroup;
 
-    return v1
+    invoke-direct {v4, v3, v5}, Lc7f;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
-    :pswitch_2
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
+    invoke-virtual {v3}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    new-instance p1, Ljava/lang/AssertionError;
+    move-result-object v1
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    check-cast v1, Landroid/view/ViewGroup;
 
-    throw p1
+    invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    :pswitch_3
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    move-result v1
 
-    new-instance p1, Ljava/lang/AssertionError;
+    if-nez v1, :cond_7
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    throw p1
+    move-result-object v1
 
-    :pswitch_4
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    iget-object v2, p0, Lmz8;->X:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lmz8;->getShuffleMode()I
+    check-cast v2, Lx6f;
 
-    move-result p1
+    invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v1, 0x4
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, p0, Lmz8;->d:Ljava/lang/Object;
 
-    return v1
+    check-cast v0, Lv40;
 
-    :pswitch_5
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_6
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lmz8;->isCaptioningEnabled()Z
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
-
-    return v1
-
-    :pswitch_7
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_8
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    sget-object p1, Ler8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ler8;
-
-    :cond_4
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_9
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    sget-object p1, Ler8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ler8;
-
-    :cond_5
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_a
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    sget-object p1, Ler8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ler8;
-
-    :cond_6
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_b
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v1
-
-    :pswitch_c
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_d
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
-
-    return v1
-
-    :pswitch_e
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lmz8;->getRepeatMode()I
-
-    move-result p1
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, p1}, Landroid/os/Parcel;->writeInt(I)V
-
-    return v1
-
-    :pswitch_f
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    sget-object p1, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/Uri;
+    invoke-virtual {v0}, Lv40;->e()V
 
     :cond_7
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    return-void
 
-    move-result p1
+    :pswitch_2
+    iget-object v0, p0, Lmz8;->d:Ljava/lang/Object;
 
-    if-eqz p1, :cond_8
+    check-cast v0, Landroid/os/Bundle;
 
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget-object v2, p0, Lmz8;->b:Ljava/lang/Object;
 
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    check-cast v2, Lpz8;
 
-    move-result-object p1
+    iget-object v2, v2, Lpz8;->a:Landroid/os/Messenger;
 
-    check-cast p1, Landroid/os/Bundle;
+    invoke-virtual {v2}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
+
+    move-result-object v2
+
+    iget-object v4, p0, Lmz8;->o:Ljava/lang/Object;
+
+    check-cast v4, Lski;
+
+    iget-object v5, v4, Lski;->b:Ljava/lang/Object;
+
+    check-cast v5, Lcc9;
+
+    iget-object v5, v5, Lcc9;->o:Lys;
+
+    invoke-virtual {v5, v2}, Ladf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Liz8;
+
+    if-nez v2, :cond_8
+
+    const-string v1, "MBServiceCompat"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "sendCustomAction for callback that isn\'t registered action="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lmz8;->c:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", extras="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_7
 
     :cond_8
-    new-instance p1, Ljava/lang/AssertionError;
+    iget-object v4, v4, Lski;->b:Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    check-cast v4, Lcc9;
 
-    throw p1
+    iget-object v5, p0, Lmz8;->X:Ljava/lang/Object;
 
-    :pswitch_10
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    check-cast v5, Landroid/support/v4/os/ResultReceiver;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    iput-object v2, v4, Lcc9;->X:Liz8;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    if-nez v0, :cond_9
 
-    move-result p1
-
-    if-eqz p1, :cond_9
-
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     :cond_9
-    new-instance p1, Ljava/lang/AssertionError;
+    invoke-virtual {v5, v1, v3}, Landroid/support/v4/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    iput-object v3, v4, Lcc9;->X:Liz8;
 
-    throw p1
+    :goto_7
+    return-void
 
-    :pswitch_11
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    :pswitch_3
+    iget-object v0, p0, Lmz8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    check-cast v0, Lpz8;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    iget-object v0, v0, Lpz8;->a:Landroid/os/Messenger;
 
-    move-result p1
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
-    if-eqz p1, :cond_a
+    move-result-object v0
 
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    iget-object v4, p0, Lmz8;->o:Ljava/lang/Object;
 
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    check-cast v4, Lski;
 
-    move-result-object p1
+    iget-object v5, v4, Lski;->b:Ljava/lang/Object;
 
-    check-cast p1, Landroid/os/Bundle;
+    check-cast v5, Lcc9;
+
+    iget-object v5, v5, Lcc9;->o:Lys;
+
+    invoke-virtual {v5, v0}, Ladf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v8, v0
+
+    check-cast v8, Liz8;
+
+    if-nez v8, :cond_a
+
+    const-string v0, "MBServiceCompat"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "addSubscription for callback that isn\'t registered id="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lmz8;->c:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto/16 :goto_9
 
     :cond_a
-    new-instance p1, Ljava/lang/AssertionError;
+    iget-object v0, v8, Liz8;->f:Ljava/util/HashMap;
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    iget-object v4, v4, Lski;->b:Ljava/lang/Object;
 
-    throw p1
+    move-object v6, v4
 
-    :pswitch_12
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    check-cast v6, Lcc9;
 
-    new-instance p1, Ljava/lang/AssertionError;
+    iget-object v4, p0, Lmz8;->c:Ljava/lang/Object;
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    move-object v7, v4
 
-    throw p1
+    check-cast v7, Ljava/lang/String;
 
-    :pswitch_13
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    iget-object v4, p0, Lmz8;->X:Ljava/lang/Object;
 
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    check-cast v4, Landroid/os/IBinder;
 
-    move-result-object p1
+    iget-object v5, p0, Lmz8;->d:Ljava/lang/Object;
 
-    check-cast p1, Lnz8;
+    move-object v10, v5
 
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v10, Landroid/os/Bundle;
 
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    invoke-virtual {v0, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+    move-result-object v5
 
-    return v1
+    check-cast v5, Ljava/util/List;
 
-    :pswitch_14
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    if-nez v5, :cond_b
 
-    new-instance p1, Ljava/lang/AssertionError;
+    new-instance v5, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_15
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_16
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    invoke-virtual {p3, v4}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
-
-    return v1
-
-    :pswitch_17
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lmz8;->getPlaybackState()Lctb;
-
-    move-result-object p1
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    if-eqz p1, :cond_b
-
-    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {p1, p3, v1}, Lctb;->writeToParcel(Landroid/os/Parcel;I)V
-
-    return v1
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     :cond_b
-    invoke-virtual {p3, v5}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    return v1
-
-    :pswitch_18
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_19
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_c
-
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
+    move-result-object v9
 
     :cond_c
-    new-instance p1, Ljava/lang/AssertionError;
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    move-result v11
 
-    throw p1
+    if-eqz v11, :cond_10
 
-    :pswitch_1a
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    move-result-object v11
 
-    move-result p1
+    check-cast v11, Lmtb;
 
-    if-eqz p1, :cond_d
+    iget-object v12, v11, Lmtb;->a:Ljava/lang/Object;
 
-    sget-object p1, Llxc;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-ne v4, v12, :cond_c
 
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    iget-object v11, v11, Lmtb;->b:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v11, Landroid/os/Bundle;
 
-    check-cast p1, Llxc;
+    const-string v12, "android.media.browse.extra.PAGE_SIZE"
+
+    const-string v13, "android.media.browse.extra.PAGE"
+
+    if-ne v10, v11, :cond_d
+
+    goto :goto_9
 
     :cond_d
-    new-instance p1, Ljava/lang/AssertionError;
+    if-nez v10, :cond_e
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    invoke-static {v11}, Lh6j;->h(Ljava/lang/Object;)V
 
-    throw p1
+    invoke-virtual {v11, v13, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    :pswitch_1b
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    move-result v13
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
+    if-ne v13, v1, :cond_c
 
-    new-instance p1, Ljava/lang/AssertionError;
+    invoke-virtual {v11, v12, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    move-result v11
 
-    throw p1
+    if-ne v11, v1, :cond_c
 
-    :pswitch_1c
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_1d
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_1e
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_1f
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_20
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_21
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_22
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_23
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_e
-
-    sget-object p1, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/Uri;
+    goto :goto_9
 
     :cond_e
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    if-nez v11, :cond_f
 
-    move-result p1
+    invoke-virtual {v10, v13, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    if-eqz p1, :cond_f
+    move-result v11
 
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-ne v11, v1, :cond_c
 
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-virtual {v10, v12, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    move-result-object p1
+    move-result v11
 
-    check-cast p1, Landroid/os/Bundle;
+    if-ne v11, v1, :cond_c
+
+    goto :goto_9
 
     :cond_f
-    new-instance p1, Ljava/lang/AssertionError;
+    invoke-virtual {v10, v13, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    move-result v14
 
-    throw p1
+    invoke-virtual {v11, v13, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    :pswitch_24
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    move-result v13
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    if-ne v14, v13, :cond_c
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    invoke-virtual {v10, v12, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    move-result p1
+    move-result v13
 
-    if-eqz p1, :cond_10
+    invoke-virtual {v11, v12, v1}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
 
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result v11
 
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    if-ne v13, v11, :cond_c
 
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
+    goto :goto_9
 
     :cond_10
-    new-instance p1, Ljava/lang/AssertionError;
+    new-instance v1, Lmtb;
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    invoke-direct {v1, v4, v10}, Lmtb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    throw p1
+    invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :pswitch_25
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    invoke-virtual {v0, v7, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    new-instance v5, Lhz8;
 
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+    move-object v9, v7
 
-    move-result p1
+    invoke-direct/range {v5 .. v10}, Lhz8;-><init>(Lcc9;Ljava/lang/Object;Liz8;Ljava/lang/String;Landroid/os/Bundle;)V
 
-    if-eqz p1, :cond_11
+    iput-object v8, v6, Lcc9;->X:Liz8;
 
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
+    if-nez v10, :cond_11
 
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-virtual {v5}, Lhz8;->c()V
 
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
+    goto :goto_8
 
     :cond_11
-    new-instance p1, Ljava/lang/AssertionError;
+    iput v2, v5, Lhz8;->b:I
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    invoke-virtual {v5}, Lhz8;->c()V
 
-    throw p1
+    :goto_8
+    iput-object v3, v6, Lcc9;->X:Liz8;
 
-    :pswitch_26
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
+    iget-boolean v0, v5, Lhz8;->c:Z
 
-    new-instance p1, Ljava/lang/AssertionError;
+    if-eqz v0, :cond_12
 
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
+    iput-object v3, v6, Lcc9;->X:Liz8;
 
-    throw p1
-
-    :pswitch_27
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_28
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_29
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_2a
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_2b
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_2c
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_2d
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_2e
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_2f
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p1
-
-    if-nez p1, :cond_12
-
-    goto :goto_0
+    :goto_9
+    return-void
 
     :cond_12
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object p2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    if-eqz p2, :cond_13
+    const-string v2, "onLoadChildren must call detach() or sendResult() before returning for package="
 
-    instance-of p4, p2, Lr67;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz p4, :cond_13
+    iget-object v2, v8, Liz8;->a:Ljava/lang/String;
 
-    move-object v4, p2
+    const-string v3, " id="
 
-    check-cast v4, Lr67;
+    invoke-static {v1, v2, v3, v7}, Lmrf;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_13
-    new-instance v4, Lq67;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+    throw v0
 
-    iput-object p1, v4, Lq67;->c:Landroid/os/IBinder;
-
-    :goto_0
-    invoke-virtual {p0, v4}, Lmz8;->B(Lr67;)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v1
-
-    :pswitch_30
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
-
-    move-result-object p1
-
-    if-nez p1, :cond_14
-
-    goto :goto_1
-
-    :cond_14
-    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_15
-
-    instance-of p4, p2, Lr67;
-
-    if-eqz p4, :cond_15
-
-    move-object v4, p2
-
-    check-cast v4, Lr67;
-
-    goto :goto_1
-
-    :cond_15
-    new-instance v4, Lq67;
-
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, v4, Lq67;->c:Landroid/os/IBinder;
-
-    :goto_1
-    invoke-virtual {p0, v4}, Lmz8;->H(Lr67;)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
-
-    return v1
-
-    :pswitch_31
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_16
-
-    sget-object p1, Landroid/view/KeyEvent;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/view/KeyEvent;
-
-    :cond_16
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :pswitch_32
-    invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_17
-
-    sget-object p1, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Bundle;
-
-    :cond_17
-    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    if-eqz p1, :cond_18
-
-    sget-object p1, Lrz8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-interface {p1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lrz8;
-
-    :cond_18
-    new-instance p1, Ljava/lang/AssertionError;
-
-    invoke-direct {p1}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p1
-
-    :cond_19
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p3, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    return v1
+    nop
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_32
-        :pswitch_31
-        :pswitch_30
-        :pswitch_2f
-        :pswitch_2e
-        :pswitch_2d
-        :pswitch_2c
-        :pswitch_2b
-        :pswitch_2a
-        :pswitch_29
-        :pswitch_28
-        :pswitch_27
-        :pswitch_26
-        :pswitch_25
-        :pswitch_24
-        :pswitch_23
-        :pswitch_22
-        :pswitch_21
-        :pswitch_20
-        :pswitch_1f
-        :pswitch_1e
-        :pswitch_1d
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
+    .packed-switch 0x0
         :pswitch_3
         :pswitch_2
         :pswitch_1

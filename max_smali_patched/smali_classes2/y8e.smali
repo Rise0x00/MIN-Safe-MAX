@@ -1,66 +1,110 @@
 .class public final Ly8e;
-.super Lmmf;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public c:Ljava/lang/String;
+.field public final synthetic X:Lz8e;
+
+.field public final synthetic o:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(Ljf9;)V
+.method public constructor <init>(Ljava/io/File;Lz8e;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
+    iput-object p1, p0, Ly8e;->o:Ljava/io/File;
+
+    iput-object p2, p0, Ly8e;->X:Lz8e;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lzb4;
 
-    const-string v0, "token"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ljf9;->v()V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ljf9;->u0()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Ly8e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, p0, Ly8e;->c:Ljava/lang/String;
+    check-cast p1, Ly8e;
 
-    return-void
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Ly8e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v0, p0, Ly8e;->c:Ljava/lang/String;
+    new-instance p1, Ly8e;
 
-    invoke-static {v0}, Lxvc;->g(Ljava/lang/CharSequence;)Ljava/lang/String;
+    iget-object v0, p0, Ly8e;->o:Ljava/io/File;
+
+    iget-object v1, p0, Ly8e;->X:Lz8e;
+
+    invoke-direct {p1, v0, v1, p2}, Ly8e;-><init>(Ljava/io/File;Lz8e;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    new-instance p1, Lnre;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iget-object v0, p0, Ly8e;->o:Ljava/io/File;
+
+    iput-object v0, p1, Lnre;->b:Ljava/lang/Object;
+
+    sget-object v0, Landroid/os/Environment;->DIRECTORY_MOVIES:Ljava/lang/String;
+
+    iput-object v0, p1, Lnre;->a:Ljava/lang/Object;
+
+    sget-object v0, Lt5a;->t0:Lt5a;
+
+    iput-object v0, p1, Lnre;->c:Ljava/lang/Object;
+
+    const-string v0, "external_primary"
+
+    invoke-static {v0}, Landroid/provider/MediaStore$Video$Media;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    const-string v1, "{token=\'"
+    iput-object v0, p1, Lnre;->d:Ljava/lang/Object;
 
-    const-string v2, "\'}"
+    iget-object v0, p0, Ly8e;->X:Lz8e;
 
-    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v0, Lz8e;->a:Ljce;
 
-    move-result-object v0
+    invoke-interface {v0}, Ljce;->c()Ljava/lang/String;
 
-    return-object v0
+    move-result-object v1
+
+    invoke-interface {v0, p1, v1}, Ljce;->a(Lkce;Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p1
+
+    return-object p1
 .end method

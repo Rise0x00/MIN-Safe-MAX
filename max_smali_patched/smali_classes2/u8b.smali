@@ -1,96 +1,61 @@
 .class public final Lu8b;
-.super La5a;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:Lun6;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lz8b;
+
+.field public Z:I
+
+.field public d:Lfs8;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lun6;)V
-    .locals 1
+.method public constructor <init>(Lz8b;Lo84;)V
+    .locals 0
 
-    sget-object v0, Lybg;->a:Lybg;
+    iput-object p1, p0, Lu8b;->Y:Lz8b;
 
-    invoke-direct {p0, v0}, La5a;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, Lu8b;->b:Lun6;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lu8b;->X:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lu8b;->Z:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lu8b;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lu8b;->Z:I
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lu8b;->Y:Lz8b;
+
+    const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    move-object v5, p0
 
-    return v2
+    invoke-virtual/range {v0 .. v5}, Lz8b;->f(Lfs8;IIILo84;)Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lu8b;
+    move-result-object p1
 
-    iget-object v1, p0, Lu8b;->b:Lun6;
-
-    iget-object p1, p1, Lu8b;->b:Lun6;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lu8b;->b:Lun6;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OpenExternalMap(geoAttach="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lu8b;->b:Lun6;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

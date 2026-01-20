@@ -3,727 +3,831 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvnh;
-.implements Ldg5;
-
-
-# static fields
-.field public static final t0:Ljava/lang/String;
+.implements Lb60;
 
 
 # instance fields
-.field public final X:Ljava/util/HashMap;
+.field public final b:Z
 
-.field public final Y:Ljava/util/HashSet;
+.field public c:I
 
-.field public final Z:Ld39;
+.field public d:F
 
-.field public final a:Lkoh;
+.field public e:F
 
-.field public final b:Lyof;
+.field public f:Ly50;
 
-.field public final c:Ljava/lang/Object;
+.field public g:Ly50;
 
-.field public d:Lcoh;
+.field public h:Ly50;
 
-.field public final o:Ljava/util/LinkedHashMap;
+.field public i:Ly50;
 
-.field public s0:Landroidx/work/impl/foreground/SystemForegroundService;
+.field public j:Z
+
+.field public k:Lyif;
+
+.field public l:Ljava/nio/ByteBuffer;
+
+.field public m:Ljava/nio/ShortBuffer;
+
+.field public n:Ljava/nio/ByteBuffer;
+
+.field public o:J
+
+.field public p:J
+
+.field public q:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "SystemFgDispatcher"
-
-    invoke-static {v0}, Luyh;->k(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lajf;->t0:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Z)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lajf;->d:F
 
-    iput-object v0, p0, Lajf;->c:Ljava/lang/Object;
+    iput v0, p0, Lajf;->e:F
 
-    invoke-static {p1}, Lkoh;->d(Landroid/content/Context;)Lkoh;
+    sget-object v0, Ly50;->e:Ly50;
 
-    move-result-object p1
+    iput-object v0, p0, Lajf;->f:Ly50;
 
-    iput-object p1, p0, Lajf;->a:Lkoh;
+    iput-object v0, p0, Lajf;->g:Ly50;
 
-    iget-object v0, p1, Lkoh;->d:Lu2c;
+    iput-object v0, p0, Lajf;->h:Ly50;
 
-    iput-object v0, p0, Lajf;->b:Lyof;
+    iput-object v0, p0, Lajf;->i:Ly50;
 
-    const/4 v0, 0x0
+    sget-object v0, Lb60;->a:Ljava/nio/ByteBuffer;
 
-    iput-object v0, p0, Lajf;->d:Lcoh;
+    iput-object v0, p0, Lajf;->l:Ljava/nio/ByteBuffer;
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    move-result-object v1
 
-    iput-object v0, p0, Lajf;->o:Ljava/util/LinkedHashMap;
+    iput-object v1, p0, Lajf;->m:Ljava/nio/ShortBuffer;
 
-    new-instance v0, Ljava/util/HashSet;
+    iput-object v0, p0, Lajf;->n:Ljava/nio/ByteBuffer;
 
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+    const/4 v0, -0x1
 
-    iput-object v0, p0, Lajf;->Y:Ljava/util/HashSet;
+    iput v0, p0, Lajf;->c:I
 
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lajf;->X:Ljava/util/HashMap;
-
-    new-instance v0, Ld39;
-
-    iget-object v1, p1, Lkoh;->j:Le2e;
-
-    invoke-direct {v0, v1, p0}, Ld39;-><init>(Le2e;Lvnh;)V
-
-    iput-object v0, p0, Lajf;->Z:Ld39;
-
-    iget-object p1, p1, Lkoh;->f:Lwzb;
-
-    invoke-virtual {p1, p0}, Lwzb;->b(Ldg5;)V
+    iput-boolean p1, p0, Lajf;->b:Z
 
     return-void
-.end method
-
-.method public static b(Landroid/content/Context;Lcoh;Lcb6;)Landroid/content/Intent;
-    .locals 2
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Landroidx/work/impl/foreground/SystemForegroundService;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string p0, "ACTION_NOTIFY"
-
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p0, "KEY_NOTIFICATION_ID"
-
-    iget v1, p2, Lcb6;->a:I
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string p0, "KEY_FOREGROUND_SERVICE_TYPE"
-
-    iget v1, p2, Lcb6;->b:I
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string p0, "KEY_NOTIFICATION"
-
-    iget-object p2, p2, Lcb6;->c:Landroid/app/Notification;
-
-    invoke-virtual {v0, p0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string p0, "KEY_WORKSPEC_ID"
-
-    iget-object p2, p1, Lcoh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p0, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p0, "KEY_GENERATION"
-
-    iget p1, p1, Lcoh;->b:I
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    return-object v0
-.end method
-
-.method public static c(Landroid/content/Context;Lcoh;Lcb6;)Landroid/content/Intent;
-    .locals 2
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Landroidx/work/impl/foreground/SystemForegroundService;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string p0, "ACTION_START_FOREGROUND"
-
-    invoke-virtual {v0, p0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p0, "KEY_WORKSPEC_ID"
-
-    iget-object v1, p1, Lcoh;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p0, "KEY_GENERATION"
-
-    iget p1, p1, Lcoh;->b:I
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string p0, "KEY_NOTIFICATION_ID"
-
-    iget p1, p2, Lcb6;->a:I
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string p0, "KEY_FOREGROUND_SERVICE_TYPE"
-
-    iget p1, p2, Lcb6;->b:I
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    const-string p0, "KEY_NOTIFICATION"
-
-    iget-object p1, p2, Lcb6;->c:Landroid/app/Notification;
-
-    invoke-virtual {v0, p0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(Lcoh;Z)V
-    .locals 7
+.method public final a()Z
+    .locals 4
 
-    iget-object p2, p0, Lajf;->c:Ljava/lang/Object;
+    iget-boolean v0, p0, Lajf;->q:Z
 
-    monitor-enter p2
+    const/4 v1, 0x0
 
-    :try_start_0
-    iget-object v0, p0, Lajf;->X:Ljava/util/HashMap;
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lajf;->k:Lyif;
 
-    move-result-object v0
+    const/4 v2, 0x1
 
-    check-cast v0, Lzoh;
+    if-eqz v0, :cond_1
 
-    if-eqz v0, :cond_0
+    iget v3, v0, Lyif;->m:I
 
-    iget-object v1, p0, Lajf;->Y:Ljava/util/HashSet;
+    if-ltz v3, :cond_0
 
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    move-result v0
+    move v3, v2
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_2
-
     :cond_0
-    const/4 v0, 0x0
+    move v3, v1
 
     :goto_0
-    if-eqz v0, :cond_1
+    invoke-static {v3}, Lh6j;->g(Z)V
 
-    iget-object v0, p0, Lajf;->Z:Ld39;
+    iget v3, v0, Lyif;->m:I
 
-    iget-object v1, p0, Lajf;->Y:Ljava/util/HashSet;
+    iget v0, v0, Lyif;->b:I
 
-    invoke-virtual {v0, v1}, Ld39;->H(Ljava/util/Collection;)V
+    mul-int/2addr v3, v0
+
+    mul-int/lit8 v3, v3, 0x2
+
+    if-nez v3, :cond_2
 
     :cond_1
-    monitor-exit p2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return v2
 
-    iget-object p2, p0, Lajf;->o:Ljava/util/LinkedHashMap;
+    :cond_2
+    return v1
+.end method
 
-    invoke-interface {p2, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Ljava/nio/ByteBuffer;
+    .locals 8
 
-    move-result-object p2
-
-    check-cast p2, Lcb6;
-
-    iget-object v0, p0, Lajf;->d:Lcoh;
-
-    invoke-virtual {p1, v0}, Lcoh;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Lajf;->k:Lyif;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lajf;->o:Ljava/util/LinkedHashMap;
+    iget v1, v0, Lyif;->b:I
 
-    invoke-interface {v0}, Ljava/util/Map;->size()I
+    iget v2, v0, Lyif;->m:I
 
-    move-result v0
+    const/4 v3, 0x0
 
-    if-lez v0, :cond_3
+    const/4 v4, 0x1
 
-    iget-object v0, p0, Lajf;->o:Ljava/util/LinkedHashMap;
+    if-ltz v2, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+    move v2, v4
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    :cond_0
+    move v2, v3
 
-    move-result-object v0
+    :goto_0
+    invoke-static {v2}, Lh6j;->g(Z)V
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget v2, v0, Lyif;->m:I
 
-    move-result-object v1
+    mul-int/2addr v2, v1
 
-    check-cast v1, Ljava/util/Map$Entry;
+    mul-int/lit8 v2, v2, 0x2
 
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    if-lez v2, :cond_3
 
-    move-result v2
+    iget-object v5, p0, Lajf;->l:Ljava/nio/ByteBuffer;
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v5}, Ljava/nio/Buffer;->capacity()I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result v5
 
-    move-result-object v1
+    if-ge v5, v2, :cond_1
 
-    check-cast v1, Ljava/util/Map$Entry;
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v5
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object v5
+
+    iput-object v5, p0, Lajf;->l:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
+
+    move-result-object v5
+
+    iput-object v5, p0, Lajf;->m:Ljava/nio/ShortBuffer;
 
     goto :goto_1
 
+    :cond_1
+    iget-object v5, p0, Lajf;->l:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v5}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
+
+    iget-object v5, p0, Lajf;->m:Ljava/nio/ShortBuffer;
+
+    invoke-virtual {v5}, Ljava/nio/ShortBuffer;->clear()Ljava/nio/Buffer;
+
+    :goto_1
+    iget-object v5, p0, Lajf;->m:Ljava/nio/ShortBuffer;
+
+    iget v6, v0, Lyif;->m:I
+
+    if-ltz v6, :cond_2
+
+    goto :goto_2
+
     :cond_2
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcoh;
-
-    iput-object v0, p0, Lajf;->d:Lcoh;
-
-    iget-object v0, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcb6;
-
-    iget-object v1, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
-
-    iget v2, v0, Lcb6;->a:I
-
-    iget v3, v0, Lcb6;->b:I
-
-    iget-object v4, v0, Lcb6;->c:Landroid/app/Notification;
-
-    iget-object v5, v1, Landroidx/work/impl/foreground/SystemForegroundService;->b:Landroid/os/Handler;
-
-    new-instance v6, Lbjf;
-
-    invoke-direct {v6, v1, v2, v4, v3}, Lbjf;-><init>(Landroidx/work/impl/foreground/SystemForegroundService;ILandroid/app/Notification;I)V
-
-    invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    iget-object v1, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
-
-    iget v0, v0, Lcb6;->a:I
-
-    iget-object v2, v1, Landroidx/work/impl/foreground/SystemForegroundService;->b:Landroid/os/Handler;
-
-    new-instance v3, Lwk0;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v3, v1, v0, v4}, Lwk0;-><init>(Ljava/lang/Object;II)V
-
-    invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_3
-    iget-object v0, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
-
-    if-eqz p2, :cond_4
-
-    if-eqz v0, :cond_4
-
-    invoke-static {}, Luyh;->e()Luyh;
-
-    move-result-object v1
-
-    sget-object v2, Lajf;->t0:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Removing Notification (id: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, p2, Lcb6;->a:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v4, ", workSpecId: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", notificationType: "
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p1, p2, Lcb6;->b:I
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v1, v2, p1}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget p1, p2, Lcb6;->a:I
-
-    iget-object p2, v0, Landroidx/work/impl/foreground/SystemForegroundService;->b:Landroid/os/Handler;
-
-    new-instance v1, Lwk0;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v0, p1, v2}, Lwk0;-><init>(Ljava/lang/Object;II)V
-
-    invoke-virtual {p2, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_4
-    return-void
+    move v4, v3
 
     :goto_2
-    :try_start_1
-    monitor-exit p2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-static {v4}, Lh6j;->g(Z)V
 
-    throw p1
+    invoke-virtual {v5}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v4
+
+    div-int/2addr v4, v1
+
+    iget v6, v0, Lyif;->m:I
+
+    invoke-static {v4, v6}, Ljava/lang/Math;->min(II)I
+
+    move-result v4
+
+    iget-object v6, v0, Lyif;->l:[S
+
+    mul-int v7, v4, v1
+
+    invoke-virtual {v5, v6, v3, v7}, Ljava/nio/ShortBuffer;->put([SII)Ljava/nio/ShortBuffer;
+
+    iget v5, v0, Lyif;->m:I
+
+    sub-int/2addr v5, v4
+
+    iput v5, v0, Lyif;->m:I
+
+    iget-object v0, v0, Lyif;->l:[S
+
+    mul-int/2addr v5, v1
+
+    invoke-static {v0, v7, v0, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-wide v0, p0, Lajf;->p:J
+
+    int-to-long v3, v2
+
+    add-long/2addr v0, v3
+
+    iput-wide v0, p0, Lajf;->p:J
+
+    iget-object v0, p0, Lajf;->l:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
+
+    iget-object v0, p0, Lajf;->l:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lajf;->n:Ljava/nio/ByteBuffer;
+
+    :cond_3
+    iget-object v0, p0, Lajf;->n:Ljava/nio/ByteBuffer;
+
+    sget-object v1, Lb60;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v1, p0, Lajf;->n:Ljava/nio/ByteBuffer;
+
+    return-object v0
 .end method
 
-.method public final d(Ljava/util/ArrayList;)V
-    .locals 5
+.method public final c(Ljava/nio/ByteBuffer;)V
+    .locals 8
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+    invoke-virtual {p1}, Ljava/nio/Buffer;->hasRemaining()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return-void
 
-    move-result-object p1
+    :cond_0
+    iget-object v0, p0, Lajf;->k:Lyif;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzoh;
-
-    iget-object v1, v0, Lzoh;->a:Ljava/lang/String;
-
-    invoke-static {}, Luyh;->e()Luyh;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Constraints unmet for WorkSpec "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
 
     move-result-object v1
 
-    sget-object v3, Lajf;->t0:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
 
-    invoke-virtual {v2, v3, v1}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v2
 
-    invoke-static {v0}, Lofi;->d(Lzoh;)Lcoh;
+    iget-wide v3, p0, Lajf;->o:J
 
-    move-result-object v0
+    int-to-long v5, v2
 
-    iget-object v1, p0, Lajf;->a:Lkoh;
+    add-long/2addr v3, v5
 
-    iget-object v2, v1, Lkoh;->d:Lu2c;
+    iput-wide v3, p0, Lajf;->o:J
 
-    new-instance v3, Ly8f;
+    invoke-virtual {v1}, Ljava/nio/Buffer;->remaining()I
 
-    new-instance v4, Li0f;
+    move-result v3
 
-    invoke-direct {v4, v0}, Li0f;-><init>(Lcoh;)V
+    iget v4, v0, Lyif;->b:I
 
-    const/4 v0, 0x1
+    div-int/2addr v3, v4
 
-    invoke-direct {v3, v1, v4, v0}, Ly8f;-><init>(Lkoh;Li0f;Z)V
+    mul-int v5, v3, v4
 
-    invoke-interface {v2, v3}, Lyof;->b(Ljava/lang/Runnable;)V
+    mul-int/lit8 v5, v5, 0x2
+
+    iget-object v6, v0, Lyif;->j:[S
+
+    iget v7, v0, Lyif;->k:I
+
+    invoke-virtual {v0, v6, v7, v3}, Lyif;->c([SII)[S
+
+    move-result-object v6
+
+    iput-object v6, v0, Lyif;->j:[S
+
+    iget v7, v0, Lyif;->k:I
+
+    mul-int/2addr v7, v4
+
+    div-int/lit8 v5, v5, 0x2
+
+    invoke-virtual {v1, v6, v7, v5}, Ljava/nio/ShortBuffer;->get([SII)Ljava/nio/ShortBuffer;
+
+    iget v1, v0, Lyif;->k:I
+
+    add-int/2addr v1, v3
+
+    iput v1, v0, Lyif;->k:I
+
+    invoke-virtual {v0}, Lyif;->f()V
+
+    invoke-virtual {p1}, Ljava/nio/Buffer;->position()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    return-void
+.end method
+
+.method public final d()V
+    .locals 11
+
+    iget-object v0, p0, Lajf;->k:Lyif;
+
+    if-eqz v0, :cond_2
+
+    iget v1, v0, Lyif;->k:I
+
+    iget v2, v0, Lyif;->c:F
+
+    iget v3, v0, Lyif;->d:F
+
+    div-float/2addr v2, v3
+
+    float-to-double v4, v2
+
+    iget v2, v0, Lyif;->e:F
+
+    mul-float/2addr v2, v3
+
+    float-to-double v2, v2
+
+    iget v6, v0, Lyif;->r:I
+
+    sub-int v7, v1, v6
+
+    iget v8, v0, Lyif;->m:I
+
+    int-to-double v9, v7
+
+    div-double/2addr v9, v4
+
+    int-to-double v4, v6
+
+    add-double/2addr v9, v4
+
+    iget-wide v4, v0, Lyif;->w:D
+
+    add-double/2addr v9, v4
+
+    iget v4, v0, Lyif;->o:I
+
+    int-to-double v4, v4
+
+    add-double/2addr v9, v4
+
+    div-double/2addr v9, v2
+
+    const-wide/high16 v2, 0x3fe0000000000000L    # 0.5
+
+    add-double/2addr v9, v2
+
+    double-to-int v2, v9
+
+    add-int/2addr v8, v2
+
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, v0, Lyif;->w:D
+
+    iget-object v2, v0, Lyif;->j:[S
+
+    iget v3, v0, Lyif;->h:I
+
+    mul-int/lit8 v3, v3, 0x2
+
+    add-int v4, v3, v1
+
+    invoke-virtual {v0, v2, v1, v4}, Lyif;->c([SII)[S
+
+    move-result-object v2
+
+    iput-object v2, v0, Lyif;->j:[S
+
+    const/4 v2, 0x0
+
+    move v4, v2
+
+    :goto_0
+    iget v5, v0, Lyif;->b:I
+
+    mul-int v6, v3, v5
+
+    if-ge v4, v6, :cond_0
+
+    iget-object v6, v0, Lyif;->j:[S
+
+    mul-int/2addr v5, v1
+
+    add-int/2addr v5, v4
+
+    aput-short v2, v6, v5
+
+    add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
     :cond_0
+    iget v1, v0, Lyif;->k:I
+
+    add-int/2addr v3, v1
+
+    iput v3, v0, Lyif;->k:I
+
+    invoke-virtual {v0}, Lyif;->f()V
+
+    iget v1, v0, Lyif;->m:I
+
+    if-le v1, v8, :cond_1
+
+    invoke-static {v8, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    iput v1, v0, Lyif;->m:I
+
+    :cond_1
+    iput v2, v0, Lyif;->k:I
+
+    iput v2, v0, Lyif;->r:I
+
+    iput v2, v0, Lyif;->o:I
+
+    :cond_2
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lajf;->q:Z
+
     return-void
 .end method
 
-.method public final e(Landroid/content/Intent;)V
-    .locals 8
+.method public final e(Ly50;)Ly50;
+    .locals 3
 
-    const-string v0, "KEY_NOTIFICATION_ID"
+    iget v0, p1, Ly50;->c:I
 
-    const/4 v1, 0x0
+    const/4 v1, 0x2
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    if-ne v0, v1, :cond_1
 
-    move-result v0
+    iget v0, p0, Lajf;->c:I
 
-    const-string v2, "KEY_FOREGROUND_SERVICE_TYPE"
+    const/4 v2, -0x1
 
-    invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+    if-ne v0, v2, :cond_0
 
-    move-result v2
-
-    const-string v3, "KEY_WORKSPEC_ID"
-
-    invoke-virtual {p1, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "KEY_GENERATION"
-
-    invoke-virtual {p1, v4, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v4
-
-    new-instance v5, Lcoh;
-
-    invoke-direct {v5, v3, v4}, Lcoh;-><init>(Ljava/lang/String;I)V
-
-    const-string v4, "KEY_NOTIFICATION"
-
-    invoke-virtual {p1, v4}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/app/Notification;
-
-    invoke-static {}, Luyh;->e()Luyh;
-
-    move-result-object v4
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "Notifying with (id:"
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v7, ", workSpecId: "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", notificationType :"
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v3, ")"
-
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    sget-object v6, Lajf;->t0:Ljava/lang/String;
-
-    invoke-virtual {v4, v6, v3}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz p1, :cond_2
-
-    iget-object v3, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
-
-    if-eqz v3, :cond_2
-
-    new-instance v3, Lcb6;
-
-    invoke-direct {v3, v0, p1, v2}, Lcb6;-><init>(ILandroid/app/Notification;I)V
-
-    iget-object v4, p0, Lajf;->o:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v3, p0, Lajf;->d:Lcoh;
-
-    if-nez v3, :cond_0
-
-    iput-object v5, p0, Lajf;->d:Lcoh;
-
-    iget-object v1, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
-
-    iget-object v3, v1, Landroidx/work/impl/foreground/SystemForegroundService;->b:Landroid/os/Handler;
-
-    new-instance v4, Lbjf;
-
-    invoke-direct {v4, v1, v0, p1, v2}, Lbjf;-><init>(Landroidx/work/impl/foreground/SystemForegroundService;ILandroid/app/Notification;I)V
-
-    invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
+    iget v0, p1, Ly50;->a:I
 
     :cond_0
-    iget-object v3, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
+    iput-object p1, p0, Lajf;->f:Ly50;
 
-    iget-object v5, v3, Landroidx/work/impl/foreground/SystemForegroundService;->b:Landroid/os/Handler;
+    new-instance v2, Ly50;
 
-    new-instance v6, Lop;
+    iget p1, p1, Ly50;->b:I
 
-    const/4 v7, 0x6
+    invoke-direct {v2, v0, p1, v1}, Ly50;-><init>(III)V
 
-    invoke-direct {v6, v3, v0, p1, v7}, Lop;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+    iput-object v2, p0, Lajf;->g:Ly50;
 
-    invoke-virtual {v5, v6}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    const/4 p1, 0x1
 
-    if-eqz v2, :cond_2
+    iput-boolean p1, p0, Lajf;->j:Z
 
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+    return-object v2
 
-    const/16 v0, 0x1d
+    :cond_1
+    new-instance v0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
 
-    if-lt p1, v0, :cond_2
+    invoke-direct {v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ly50;)V
 
-    invoke-virtual {v4}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+    throw v0
+.end method
 
-    move-result-object p1
+.method public final f(J)J
+    .locals 11
 
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-wide v0, p0, Lajf;->p:J
 
-    move-result-object p1
+    const-wide/16 v2, 0x400
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    cmp-long v0, v0, v2
 
-    move-result v0
+    if-ltz v0, :cond_1
 
-    if-eqz v0, :cond_1
+    iget-wide v0, p0, Lajf;->o:J
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v2, p0, Lajf;->k:Lyif;
 
-    move-result-object v0
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v0, Ljava/util/Map$Entry;
+    iget v3, v2, Lyif;->k:I
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    iget v2, v2, Lyif;->b:I
 
-    move-result-object v0
+    mul-int/2addr v3, v2
 
-    check-cast v0, Lcb6;
+    mul-int/lit8 v3, v3, 0x2
 
-    iget v0, v0, Lcb6;->b:I
+    int-to-long v2, v3
 
-    or-int/2addr v1, v0
+    sub-long v8, v0, v2
+
+    iget-object v0, p0, Lajf;->i:Ly50;
+
+    iget v0, v0, Ly50;->a:I
+
+    iget-object v1, p0, Lajf;->h:Ly50;
+
+    iget v1, v1, Ly50;->a:I
+
+    if-ne v0, v1, :cond_0
+
+    iget-wide v6, p0, Lajf;->p:J
+
+    sget-object v10, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+
+    move-wide v4, p1
+
+    invoke-static/range {v4 .. v10}, Lmbh;->e0(JJJLjava/math/RoundingMode;)J
+
+    move-result-wide p1
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v4, p1
+
+    iget-wide p1, p0, Lajf;->p:J
+
+    int-to-long v1, v1
+
+    mul-long v2, p1, v1
+
+    int-to-long p1, v0
+
+    mul-long/2addr v8, p1
+
+    sget-object v6, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+
+    move-wide v0, v4
+
+    move-wide v4, v8
+
+    invoke-static/range {v0 .. v6}, Lmbh;->e0(JJJLjava/math/RoundingMode;)J
+
+    move-result-wide p1
 
     goto :goto_0
 
     :cond_1
-    iget-object p1, p0, Lajf;->d:Lcoh;
+    move-wide v4, p1
 
-    invoke-virtual {v4, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    long-to-double p1, v4
 
-    move-result-object p1
+    iget v0, p0, Lajf;->d:F
 
-    check-cast p1, Lcb6;
+    float-to-double v0, v0
 
-    if-eqz p1, :cond_2
+    div-double/2addr p1, v0
 
-    iget-object v0, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
+    double-to-long p1, p1
 
-    iget v2, p1, Lcb6;->a:I
+    :goto_0
+    return-wide p1
+.end method
 
-    iget-object p1, p1, Lcb6;->c:Landroid/app/Notification;
+.method public final flush()V
+    .locals 10
 
-    iget-object v3, v0, Landroidx/work/impl/foreground/SystemForegroundService;->b:Landroid/os/Handler;
+    invoke-virtual {p0}, Lajf;->isActive()Z
 
-    new-instance v4, Lbjf;
+    move-result v0
 
-    invoke-direct {v4, v0, v2, p1, v1}, Lbjf;-><init>(Landroidx/work/impl/foreground/SystemForegroundService;ILandroid/app/Notification;I)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-eqz v0, :cond_1
 
-    :cond_2
+    iget-object v0, p0, Lajf;->f:Ly50;
+
+    iput-object v0, p0, Lajf;->h:Ly50;
+
+    iget-object v2, p0, Lajf;->g:Ly50;
+
+    iput-object v2, p0, Lajf;->i:Ly50;
+
+    iget-boolean v3, p0, Lajf;->j:Z
+
+    if-eqz v3, :cond_0
+
+    new-instance v4, Lyif;
+
+    iget v7, v0, Ly50;->a:I
+
+    iget v8, v0, Ly50;->b:I
+
+    iget v5, p0, Lajf;->d:F
+
+    iget v6, p0, Lajf;->e:F
+
+    iget v9, v2, Ly50;->a:I
+
+    invoke-direct/range {v4 .. v9}, Lyif;-><init>(FFIII)V
+
+    iput-object v4, p0, Lajf;->k:Lyif;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lajf;->k:Lyif;
+
+    if-eqz v0, :cond_1
+
+    iput v1, v0, Lyif;->k:I
+
+    iput v1, v0, Lyif;->m:I
+
+    iput v1, v0, Lyif;->o:I
+
+    iput v1, v0, Lyif;->p:I
+
+    iput v1, v0, Lyif;->q:I
+
+    iput v1, v0, Lyif;->r:I
+
+    iput v1, v0, Lyif;->s:I
+
+    iput v1, v0, Lyif;->t:I
+
+    iput v1, v0, Lyif;->u:I
+
+    iput v1, v0, Lyif;->v:I
+
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, v0, Lyif;->w:D
+
+    :cond_1
+    :goto_0
+    sget-object v0, Lb60;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lajf;->n:Ljava/nio/ByteBuffer;
+
+    const-wide/16 v2, 0x0
+
+    iput-wide v2, p0, Lajf;->o:J
+
+    iput-wide v2, p0, Lajf;->p:J
+
+    iput-boolean v1, p0, Lajf;->q:Z
+
     return-void
 .end method
 
-.method public final f(Ljava/util/List;)V
-    .locals 0
+.method public final isActive()Z
+    .locals 3
 
-    return-void
+    iget-object v0, p0, Lajf;->g:Ly50;
+
+    iget v0, v0, Ly50;->a:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_1
+
+    iget-boolean v0, p0, Lajf;->b:Z
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lajf;->d:F
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    sub-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    const v2, 0x38d1b717    # 1.0E-4f
+
+    cmpg-float v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    iget v0, p0, Lajf;->e:F
+
+    sub-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    cmpg-float v0, v0, v2
+
+    if-gez v0, :cond_0
+
+    iget-object v0, p0, Lajf;->g:Ly50;
+
+    iget v0, v0, Ly50;->a:I
+
+    iget-object v1, p0, Lajf;->f:Ly50;
+
+    iget v1, v1, Ly50;->a:I
+
+    if-ne v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
-.method public final g()V
-    .locals 2
+.method public final reset()V
+    .locals 3
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Lajf;->d:F
+
+    iput v0, p0, Lajf;->e:F
+
+    sget-object v0, Ly50;->e:Ly50;
+
+    iput-object v0, p0, Lajf;->f:Ly50;
+
+    iput-object v0, p0, Lajf;->g:Ly50;
+
+    iput-object v0, p0, Lajf;->h:Ly50;
+
+    iput-object v0, p0, Lajf;->i:Ly50;
+
+    sget-object v0, Lb60;->a:Ljava/nio/ByteBuffer;
+
+    iput-object v0, p0, Lajf;->l:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asShortBuffer()Ljava/nio/ShortBuffer;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lajf;->m:Ljava/nio/ShortBuffer;
+
+    iput-object v0, p0, Lajf;->n:Ljava/nio/ByteBuffer;
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lajf;->c:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lajf;->s0:Landroidx/work/impl/foreground/SystemForegroundService;
+    iput-boolean v0, p0, Lajf;->j:Z
 
-    iget-object v0, p0, Lajf;->c:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    monitor-enter v0
+    iput-object v1, p0, Lajf;->k:Lyif;
 
-    :try_start_0
-    iget-object v1, p0, Lajf;->Z:Ld39;
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v1}, Ld39;->I()V
+    iput-wide v1, p0, Lajf;->o:J
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-wide v1, p0, Lajf;->p:J
 
-    iget-object v0, p0, Lajf;->a:Lkoh;
-
-    iget-object v0, v0, Lkoh;->f:Lwzb;
-
-    invoke-virtual {v0, p0}, Lwzb;->e(Ldg5;)V
+    iput-boolean v0, p0, Lajf;->q:Z
 
     return-void
-
-    :catchall_0
-    move-exception v1
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
 .end method

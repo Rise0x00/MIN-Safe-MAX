@@ -73,7 +73,7 @@
 
     iget-object v2, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v2, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v2, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     :cond_1
     return-void
@@ -92,7 +92,7 @@
 
     iget-object v3, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v3, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v3, p1, v1, v0}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     move-result v1
 
@@ -273,7 +273,7 @@
 
     iget-object v0, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v0, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v0, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     :cond_4
     iput-object v2, p0, Lone/me/sdk/concurrent/b;->d:Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;
@@ -316,7 +316,7 @@
 
     iget-object v5, p0, Lone/me/sdk/concurrent/b;->o:Lone/me/sdk/concurrent/LinkedTransferQueue34;
 
-    invoke-static {v5, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->e(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
+    invoke-static {v5, v2, v4, v3}, Lone/me/sdk/concurrent/LinkedTransferQueue34;->d(Lone/me/sdk/concurrent/LinkedTransferQueue34;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;Lone/me/sdk/concurrent/LinkedTransferQueue34$Node;)Z
 
     move-result v4
 

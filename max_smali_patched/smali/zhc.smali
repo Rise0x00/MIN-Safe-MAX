@@ -1,86 +1,85 @@
-.class public final synthetic Lzhc;
-.super Ljava/lang/Object;
+.class public final enum Lzhc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/Consumer;
 
+# static fields
+.field public static final enum a:Lzhc;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lzhc;
 
-.field public final synthetic b:Lcic;
+.field public static final enum c:Lzhc;
+
+.field public static final synthetic d:[Lzhc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcic;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p2, p0, Lzhc;->a:I
+    new-instance v0, Lzhc;
 
-    iput-object p1, p0, Lzhc;->b:Lcic;
+    const-string v1, "DEFAULT"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lzhc;->a:Lzhc;
+
+    new-instance v1, Lzhc;
+
+    const-string v2, "VERY_LOW"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lzhc;->b:Lzhc;
+
+    new-instance v2, Lzhc;
+
+    const-string v3, "HIGHEST"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lzhc;->c:Lzhc;
+
+    filled-new-array {v0, v1, v2}, [Lzhc;
+
+    move-result-object v0
+
+    sput-object v0, Lzhc;->d:[Lzhc;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public static valueOf(Ljava/lang/String;)Lzhc;
     .locals 1
 
-    iget v0, p0, Lzhc;->a:I
+    const-class v0, Lzhc;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lzhc;->b:Lcic;
+    move-result-object p0
 
-    check-cast p1, Ljava/lang/Throwable;
+    check-cast p0, Lzhc;
 
-    invoke-virtual {v0, p1}, Lcic;->a(Ljava/lang/Throwable;)V
+    return-object p0
+.end method
 
-    return-void
+.method public static values()[Lzhc;
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lzhc;->b:Lcic;
+    sget-object v0, Lzhc;->d:[Lzhc;
 
-    check-cast p1, Ll6d;
+    invoke-virtual {v0}, [Lzhc;->clone()Ljava/lang/Object;
 
-    iget v0, v0, Lcic;->X:I
+    move-result-object v0
 
-    invoke-virtual {p1, v0}, Ll6d;->d(I)V
+    check-cast v0, [Lzhc;
 
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lzhc;->b:Lcic;
-
-    check-cast p1, Ll6d;
-
-    iget v0, v0, Lcic;->X:I
-
-    invoke-virtual {p1, v0}, Ll6d;->d(I)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lzhc;->b:Lcic;
-
-    check-cast p1, Ll6d;
-
-    iget v0, v0, Lcic;->X:I
-
-    invoke-virtual {p1, v0}, Ll6d;->d(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

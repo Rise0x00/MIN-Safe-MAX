@@ -1,843 +1,1141 @@
-.class public final Laj3;
-.super Lp6d;
+.class public abstract Laj3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final d:Lbj3;
+# static fields
+.field public static final a:Ljava/util/regex/Pattern;
+
+.field public static final b:Ljava/util/regex/Pattern;
+
+.field public static final c:Ljava/util/regex/Pattern;
+
+.field public static final d:Ljava/util/HashMap;
 
 
 # direct methods
-.method public varargs constructor <init>(Lzi3;[Lp6d;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 7
 
-    .line 2
-    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    const-string v0, "^rgb\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$"
 
-    move-result-object p2
-
-    .line 3
-    invoke-direct {p0}, Lp6d;-><init>()V
-
-    .line 4
-    new-instance v0, Lbj3;
-
-    invoke-direct {v0, p0, p1}, Lbj3;-><init>(Laj3;Lzi3;)V
-
-    iput-object v0, p0, Laj3;->d:Lbj3;
-
-    .line 5
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lp6d;
-
-    .line 6
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    .line 7
-    iget-object v1, v0, Lbj3;->d:Ljava/util/ArrayList;
-
-    .line 8
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1, p2}, Lbj3;->a(ILp6d;)Z
-
-    goto :goto_0
-
-    .line 9
-    :cond_0
-    iget-object p1, p0, Laj3;->d:Lbj3;
-
-    .line 10
-    iget p1, p1, Lbj3;->b:I
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p2, 0x0
-
-    .line 11
-    :goto_1
-    invoke-virtual {p0, p2}, Lp6d;->A(Z)V
-
-    return-void
-.end method
-
-.method public varargs constructor <init>([Lp6d;)V
-    .locals 1
-
-    .line 1
-    sget-object v0, Lzi3;->c:Lzi3;
-
-    invoke-direct {p0, v0, p1}, Laj3;-><init>(Lzi3;[Lp6d;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final C()Ljava/util/List;
-    .locals 3
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    iget-object v0, v0, Lbj3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sput-object v0, Laj3;->a:Ljava/util/regex/Pattern;
 
-    move-result v2
+    const-string v0, "^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$"
 
-    if-eqz v2, :cond_1
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result-object v0
+
+    sput-object v0, Laj3;->b:Ljava/util/regex/Pattern;
+
+    const-string v0, "^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d*\\.?\\d*?)\\)$"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Laj3;->c:Ljava/util/regex/Pattern;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Laj3;->d:Ljava/util/HashMap;
+
+    const-string v1, "antiquewhite"
+
+    const v2, -0x51429
+
+    const v3, -0xf0701
+
+    const-string v4, "aliceblue"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v1, -0xff0001
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "aquamarine"
+
+    const v3, -0x80002c
+
+    const-string v4, "aqua"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v2, "beige"
+
+    const v3, -0xa0a24
+
+    const v4, -0xf0001
+
+    const-string v5, "azure"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "black"
+
+    const/high16 v3, -0x1000000
+
+    const/16 v4, -0x1b3c
+
+    const-string v5, "bisque"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "blue"
+
+    const v3, -0xffff01
+
+    const/16 v4, -0x1433
+
+    const-string v5, "blanchedalmond"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "brown"
+
+    const v3, -0x5ad5d6
+
+    const v4, -0x75d41e
+
+    const-string v5, "blueviolet"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "cadetblue"
+
+    const v3, -0xa06160
+
+    const v4, -0x214779
+
+    const-string v5, "burlywood"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "chocolate"
+
+    const v3, -0x2d96e2
+
+    const v4, -0x800100
+
+    const-string v5, "chartreuse"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "cornflowerblue"
+
+    const v3, -0x9b6a13
+
+    const v4, -0x80b0
+
+    const-string v5, "coral"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "crimson"
+
+    const v3, -0x23ebc4
+
+    const/16 v4, -0x724
+
+    const-string v5, "cornsilk"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "darkblue"
+
+    const v3, -0xffff75
+
+    const-string v4, "cyan"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v1, "darkgoldenrod"
+
+    const v2, -0x4779f5
+
+    const v3, -0xff7475
+
+    const-string v4, "darkcyan"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v1, -0x565657
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "darkgreen"
+
+    const v3, -0xff9c00
+
+    const-string v4, "darkgray"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v2, "darkkhaki"
+
+    const v3, -0x424895
+
+    const-string v4, "darkgrey"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v1, "darkolivegreen"
+
+    const v2, -0xaa94d1
+
+    const v3, -0x74ff75
+
+    const-string v4, "darkmagenta"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "darkorchid"
+
+    const v2, -0x66cd34
+
+    const/16 v3, -0x7400
+
+    const-string v4, "darkorange"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "darksalmon"
+
+    const v2, -0x166986
+
+    const/high16 v3, -0x750000
+
+    const-string v4, "darkred"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "darkslateblue"
+
+    const v2, -0xb7c275
+
+    const v3, -0x704371
+
+    const-string v4, "darkseagreen"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v1, -0xd0b0b1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "darkslategray"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "darkslategrey"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v1, -0xff312f
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "darkviolet"
+
+    const v3, -0x6bff2d
+
+    const-string v4, "darkturquoise"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v1, "deepskyblue"
+
+    const v2, -0xff4001
+
+    const v3, -0xeb6d
+
+    const-string v4, "deeppink"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v1, -0x969697
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "dimgray"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "dimgrey"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v1, -0xe16f01
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "firebrick"
+
+    const v3, -0x4dddde
+
+    const-string v4, "dodgerblue"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v1, "forestgreen"
+
+    const v2, -0xdd74de
+
+    const/16 v3, -0x510
+
+    const-string v4, "floralwhite"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v1, -0xff01
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "gainsboro"
+
+    const v3, -0x232324
+
+    const-string v4, "fuchsia"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v2, "gold"
+
+    const/16 v3, -0x2900
+
+    const v4, -0x70701
+
+    const-string v5, "ghostwhite"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v2, -0x255ae0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    check-cast v2, Lj5a;
+    const-string v3, "goldenrod"
 
-    iget-object v2, v2, Lj5a;->c:Lp6d;
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const v2, -0x7f7f80
 
-    goto :goto_0
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_1
-    move-object v0, v1
+    move-result-object v2
 
-    :goto_1
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    const-string v3, "gray"
 
-    move-result-object v0
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
-.end method
+    const-string v3, "greenyellow"
 
-.method public final D(I)Landroid/util/Pair;
-    .locals 4
+    const v4, -0x5200d1
 
-    iget-object v0, p0, Laj3;->d:Lbj3;
+    const v5, -0xff8000
 
-    invoke-virtual {v0, p1}, Lbj3;->f(I)Ld0;
+    const-string v6, "green"
 
-    move-result-object p1
+    invoke-static {v5, v0, v6, v4, v3}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v1, Landroid/util/Pair;
+    const-string v3, "honeydew"
 
-    iget-object v2, p1, Ld0;->c:Ljava/lang/Object;
+    const v4, -0xf0010
 
-    check-cast v2, Lj5a;
+    const-string v5, "grey"
 
-    iget-object v2, v2, Lj5a;->c:Lp6d;
+    invoke-static {v0, v5, v2, v4, v3}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
 
-    iget v3, p1, Ld0;->a:I
+    const-string v2, "indianred"
+
+    const v3, -0x32a3a4
+
+    const v4, -0x964c
+
+    const-string v5, "hotpink"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "ivory"
+
+    const/16 v3, -0x10
+
+    const v4, -0xb4ff7e
+
+    const-string v5, "indigo"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "lavender"
+
+    const v3, -0x191906
+
+    const v4, -0xf1974
+
+    const-string v5, "khaki"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "lawngreen"
+
+    const v3, -0x830400
+
+    const/16 v4, -0xf0b
+
+    const-string v5, "lavenderblush"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "lightblue"
+
+    const v3, -0x52271a
+
+    const/16 v4, -0x533
+
+    const-string v5, "lemonchiffon"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "lightcyan"
+
+    const v3, -0x1f0001
+
+    const v4, -0xf7f80
+
+    const-string v5, "lightcoral"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v2, -0x5052e
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "lightgoldenrodyellow"
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v2, -0x2c2c2d
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "lightgray"
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v3, -0x6f1170
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string v4, "lightgreen"
+
+    invoke-virtual {v0, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "lightgrey"
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "lightsalmon"
+
+    const/16 v3, -0x5f86
+
+    const/16 v4, -0x493f
+
+    const-string v5, "lightpink"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v2, "lightskyblue"
+
+    const v3, -0x783106
+
+    const v4, -0xdf4d56
+
+    const-string v5, "lightseagreen"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v2, -0x887767
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "lightslategray"
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "lightslategrey"
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const v2, -0x4f3b22
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "lightyellow"
+
+    const/16 v4, -0x20
+
+    const-string v5, "lightsteelblue"
+
+    invoke-static {v0, v5, v2, v4, v3}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v2, "limegreen"
+
+    const v3, -0xcd32ce
+
+    const v4, -0xff0100
+
+    const-string v5, "lime"
+
+    invoke-static {v4, v0, v5, v3, v2}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v2, -0x50f1a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const-string v3, "linen"
+
+    invoke-virtual {v0, v3, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "magenta"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v1, "mediumaquamarine"
+
+    const v2, -0x993256
+
+    const/high16 v3, -0x800000    # Float.NEGATIVE_INFINITY
+
+    const-string v4, "maroon"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "mediumorchid"
+
+    const v2, -0x45aa2d
+
+    const v3, -0xffff33
+
+    const-string v4, "mediumblue"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "mediumseagreen"
+
+    const v2, -0xc34c8f
+
+    const v3, -0x6c8f25
+
+    const-string v4, "mediumpurple"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "mediumspringgreen"
+
+    const v2, -0xff0566
+
+    const v3, -0x849712
+
+    const-string v4, "mediumslateblue"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "mediumvioletred"
+
+    const v2, -0x38ea7b
+
+    const v3, -0xb72e34
+
+    const-string v4, "mediumturquoise"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "mintcream"
+
+    const v2, -0xa0006
+
+    const v3, -0xe6e690
+
+    const-string v4, "midnightblue"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "moccasin"
+
+    const/16 v2, -0x1b4b
+
+    const/16 v3, -0x1b1f
+
+    const-string v4, "mistyrose"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "navy"
+
+    const v2, -0xffff80
+
+    const/16 v3, -0x2153
+
+    const-string v4, "navajowhite"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "olive"
+
+    const v2, -0x7f8000
+
+    const v3, -0x20a1a
+
+    const-string v4, "oldlace"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "orange"
+
+    const/16 v2, -0x5b00
+
+    const v3, -0x9471dd
+
+    const-string v4, "olivedrab"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "orchid"
+
+    const v2, -0x258f2a
+
+    const v3, -0xbb00
+
+    const-string v4, "orangered"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "palegreen"
+
+    const v2, -0x670468
+
+    const v3, -0x111756
+
+    const-string v4, "palegoldenrod"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "palevioletred"
+
+    const v2, -0x248f6d
+
+    const v3, -0x501112
+
+    const-string v4, "paleturquoise"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "peachpuff"
+
+    const/16 v2, -0x2547
+
+    const/16 v3, -0x102b
+
+    const-string v4, "papayawhip"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "pink"
+
+    const/16 v2, -0x3f35
+
+    const v3, -0x327ac1
+
+    const-string v4, "peru"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "powderblue"
+
+    const v2, -0x4f1f1a
+
+    const v3, -0x225f23
+
+    const-string v4, "plum"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "rebeccapurple"
+
+    const v2, -0x99cc67
+
+    const v3, -0x7fff80
+
+    const-string v4, "purple"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "rosybrown"
+
+    const v2, -0x437071
+
+    const/high16 v3, -0x10000
+
+    const-string v4, "red"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "saddlebrown"
+
+    const v2, -0x74baed
+
+    const v3, -0xbe961f
+
+    const-string v4, "royalblue"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "sandybrown"
+
+    const v2, -0xb5ba0
+
+    const v3, -0x57f8e
+
+    const-string v4, "salmon"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "seashell"
+
+    const/16 v2, -0xa12
+
+    const v3, -0xd174a9
+
+    const-string v4, "seagreen"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "silver"
+
+    const v2, -0x3f3f40
+
+    const v3, -0x5fadd3
+
+    const-string v4, "sienna"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "slateblue"
+
+    const v2, -0x95a533
+
+    const v3, -0x783115
+
+    const-string v4, "skyblue"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const v1, -0x8f7f70
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "slategray"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "slategrey"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/16 v1, -0x506
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v2, "springgreen"
+
+    const v3, -0xff0081
+
+    const-string v4, "snow"
+
+    invoke-static {v0, v4, v1, v3, v2}, Lob3;->j(Ljava/util/HashMap;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/String;)V
+
+    const-string v1, "tan"
+
+    const v2, -0x2d4b74
+
+    const v3, -0xb97d4c
+
+    const-string v4, "steelblue"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "thistle"
+
+    const v2, -0x274028
+
+    const v3, -0xff7f80
+
+    const-string v4, "teal"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "transparent"
 
     const/4 v2, 0x0
 
-    iput-boolean v2, p1, Ld0;->b:Z
+    const v3, -0x9cb9
 
-    const/4 v2, 0x0
+    const-string v4, "tomato"
 
-    iput-object v2, p1, Ld0;->c:Ljava/lang/Object;
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "violet"
+
+    const v2, -0x117d12
+
+    const v3, -0xbf1f30
+
+    const-string v4, "turquoise"
+
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, "white"
 
     const/4 v2, -0x1
 
-    iput v2, p1, Ld0;->a:I
+    const v3, -0xa214d
 
-    iput-object p1, v0, Lbj3;->h:Ljava/lang/Object;
+    const-string v4, "wheat"
 
-    return-object v1
-.end method
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
 
-.method public final E(Lp6d;)V
-    .locals 5
+    const-string v1, "yellow"
 
-    iget-object v0, p0, Laj3;->d:Lbj3;
+    const/16 v2, -0x100
 
-    iget-object v1, v0, Lbj3;->d:Ljava/util/ArrayList;
+    const v3, -0xa0a0b
 
-    invoke-virtual {v0, p1}, Lbj3;->i(Lp6d;)I
+    const-string v4, "whitesmoke"
 
-    move-result v2
+    invoke-static {v3, v0, v4, v2, v1}, Lob3;->f(ILjava/util/HashMap;Ljava/lang/String;ILjava/lang/String;)V
 
-    const/4 v3, -0x1
+    const v1, -0x6532ce
 
-    if-ne v2, v3, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lj5a;
-
-    invoke-virtual {v0, v3}, Lbj3;->d(Lj5a;)I
-
-    move-result v4
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    iget-object v1, v0, Lbj3;->e:Ljava/lang/Object;
-
-    check-cast v1, Laj3;
-
-    iget v2, v3, Lj5a;->e:I
-
-    iget-object v1, v1, Lp6d;->a:Lq6d;
-
-    invoke-virtual {v1, v4, v2}, Lq6d;->f(II)V
-
-    iget-object v1, v0, Lbj3;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
+    const-string v2, "yellowgreen"
+
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;Z)I
+    .locals 5
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    xor-int/2addr v0, v1
+
+    invoke-static {v0}, Ly5j;->b(Z)V
+
+    const-string v0, " "
+
+    const-string v2, ""
+
+    invoke-virtual {p0, v0, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    const/16 v2, 0x23
+
+    if-ne v0, v2, :cond_2
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    const/16 v0, 0x10
+
+    invoke-static {p1, v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
+
+    move-result-wide v0
+
+    long-to-int p1, v0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x7
+
+    if-ne v0, v1, :cond_0
+
+    const/high16 p0, -0x1000000
+
+    or-int/2addr p0, p1
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p0
+
+    const/16 v0, 0x9
+
+    if-ne p0, v0, :cond_1
+
+    and-int/lit16 p0, p1, 0xff
+
+    shl-int/lit8 p0, p0, 0x18
+
+    ushr-int/lit8 p1, p1, 0x8
+
+    or-int/2addr p0, p1
+
+    return p0
+
     :cond_1
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    move-result v2
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    if-eqz v2, :cond_2
+    throw p0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :cond_2
+    const-string v0, "rgba"
 
-    move-result-object v2
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    check-cast v2, Ljava/lang/ref/WeakReference;
+    move-result v0
 
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    const/4 v2, 0x3
 
-    move-result-object v2
+    const/4 v3, 0x2
 
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
+    const/16 v4, 0xa
 
-    if-eqz v2, :cond_1
+    if-eqz v0, :cond_5
 
-    invoke-virtual {p1, v2}, Lp6d;->u(Landroidx/recyclerview/widget/RecyclerView;)V
+    if-eqz p1, :cond_3
+
+    sget-object v0, Laj3;->c:Ljava/util/regex/Pattern;
 
     goto :goto_0
 
-    :cond_2
-    iget-object p1, v3, Lj5a;->c:Lp6d;
+    :cond_3
+    sget-object v0, Laj3;->b:Ljava/util/regex/Pattern;
 
-    iget-object v1, v3, Lj5a;->f:Lqa5;
+    :goto_0
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    invoke-virtual {p1, v1}, Lp6d;->B(Lr6d;)V
+    move-result-object p0
 
-    iget-object p1, v3, Lj5a;->a:Ly0h;
-
-    invoke-interface {p1}, Ly0h;->dispose()V
-
-    invoke-virtual {v0}, Lbj3;->c()V
-
-    return-void
-.end method
-
-.method public final i(Lp6d;Lm7d;I)I
-    .locals 5
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    iget-object v1, v0, Lbj3;->g:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/util/IdentityHashMap;
-
-    invoke-virtual {v1, p2}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lj5a;
-
-    if-nez v1, :cond_0
-
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_0
-    iget-object v2, v1, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v0, v1}, Lbj3;->d(Lj5a;)I
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
 
-    sub-int/2addr p3, v0
+    if-eqz v0, :cond_7
 
-    invoke-virtual {v2}, Lp6d;->j()I
+    const/4 v0, 0x4
 
-    move-result v0
+    if-eqz p1, :cond_4
 
-    if-ltz p3, :cond_1
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    if-ge p3, v0, :cond_1
+    move-result-object p1
 
-    invoke-virtual {v2, p1, p2, p3}, Lp6d;->i(Lp6d;Lm7d;I)I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result p1
 
-    return p1
+    const/high16 v0, 0x437f0000    # 255.0f
 
-    :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
+    mul-float/2addr p1, v0
 
-    const-string v2, " which is out of bounds for the adapter with size "
-
-    const-string v3, ".Make sure to immediately call notify methods in your adapter when you change the backing dataviewHolder:"
-
-    const-string v4, "Detected inconsistent adapter updates. The local position of the view holder maps to "
-
-    invoke-static {v4, p3, v2, v0, v3}, Lox1;->k(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p3
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p2, "adapter:"
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final j()I
-    .locals 3
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    iget-object v0, v0, Lbj3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lj5a;
-
-    iget v2, v2, Lj5a;->e:I
-
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final k(I)J
-    .locals 4
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    invoke-virtual {v0, p1}, Lbj3;->f(I)Ld0;
-
-    move-result-object p1
-
-    iget-object v1, p1, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj5a;
-
-    iget v2, p1, Ld0;->a:I
-
-    iget-object v3, v1, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v3, v2}, Lp6d;->k(I)J
-
-    move-result-wide v2
-
-    iget-object v1, v1, Lj5a;->b:Lvxe;
-
-    invoke-interface {v1, v2, v3}, Lvxe;->k(J)J
-
-    move-result-wide v1
-
-    const/4 v3, 0x0
-
-    iput-boolean v3, p1, Ld0;->b:Z
-
-    const/4 v3, 0x0
-
-    iput-object v3, p1, Ld0;->c:Ljava/lang/Object;
-
-    const/4 v3, -0x1
-
-    iput v3, p1, Ld0;->a:I
-
-    iput-object p1, v0, Lbj3;->h:Ljava/lang/Object;
-
-    return-wide v1
-.end method
-
-.method public final l(I)I
-    .locals 4
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    invoke-virtual {v0, p1}, Lbj3;->f(I)Ld0;
-
-    move-result-object p1
-
-    iget-object v1, p1, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj5a;
-
-    iget v2, p1, Ld0;->a:I
-
-    iget-object v3, v1, Lj5a;->a:Ly0h;
-
-    iget-object v1, v1, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v1, v2}, Lp6d;->l(I)I
-
-    move-result v1
-
-    invoke-interface {v3, v1}, Ly0h;->y(I)I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, p1, Ld0;->b:Z
-
-    const/4 v2, 0x0
-
-    iput-object v2, p1, Ld0;->c:Ljava/lang/Object;
-
-    const/4 v2, -0x1
-
-    iput v2, p1, Ld0;->a:I
-
-    iput-object p1, v0, Lbj3;->h:Ljava/lang/Object;
-
-    return v1
-.end method
-
-.method public final q(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 4
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    iget-object v1, v0, Lbj3;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, p1, :cond_0
+    float-to-int p1, p1
 
     goto :goto_1
 
-    :cond_1
-    new-instance v2, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, v0, Lbj3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lj5a;
-
-    iget-object v1, v1, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v1, p1}, Lp6d;->q(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-void
-.end method
-
-.method public final r(Lm7d;I)V
-    .locals 3
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    invoke-virtual {v0, p2}, Lbj3;->f(I)Ld0;
-
-    move-result-object p2
-
-    iget-object v1, v0, Lbj3;->g:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/util/IdentityHashMap;
-
-    iget-object v2, p2, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v2, Lj5a;
-
-    invoke-virtual {v1, p1, v2}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v1, p2, Ld0;->c:Ljava/lang/Object;
-
-    check-cast v1, Lj5a;
-
-    iget v2, p2, Ld0;->a:I
-
-    iget-object v1, v1, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v1, p1, v2}, Lp6d;->h(Lm7d;I)V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p2, Ld0;->b:Z
-
-    const/4 p1, 0x0
-
-    iput-object p1, p2, Ld0;->c:Ljava/lang/Object;
-
-    const/4 p1, -0x1
-
-    iput p1, p2, Ld0;->a:I
-
-    iput-object p2, v0, Lbj3;->h:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lm7d;
-    .locals 2
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    iget-object v0, v0, Lbj3;->f:Ljava/lang/Object;
-
-    check-cast v0, Lz0h;
-
-    invoke-interface {v0, p2}, Lz0h;->c(I)Lj5a;
-
-    move-result-object v0
-
-    iget-object v1, v0, Lj5a;->a:Ly0h;
-
-    invoke-interface {v1, p2}, Ly0h;->w(I)I
-
-    move-result p2
-
-    iget-object v0, v0, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v0, p1, p2}, Lp6d;->t(Landroid/view/ViewGroup;I)Lm7d;
+    :cond_4
+    invoke-virtual {p0, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final u(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 5
+    invoke-static {p1, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
-    iget-object v0, p0, Laj3;->d:Lbj3;
+    move-result p1
 
-    iget-object v1, v0, Lbj3;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    :goto_0
-    if-ltz v2, :cond_2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    if-nez v4, :cond_0
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-ne v3, p1, :cond_1
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    goto :goto_2
-
-    :cond_1
     :goto_1
-    add-int/lit8 v2, v2, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_2
-    iget-object v0, v0, Lbj3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_3
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lj5a;
-
-    iget-object v1, v1, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v1, p1}, Lp6d;->u(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    goto :goto_3
-
-    :cond_3
-    return-void
-.end method
-
-.method public final v(Lm7d;)Z
-    .locals 4
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    iget-object v1, v0, Lbj3;->g:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/util/IdentityHashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lj5a;
-
-    if-eqz v2, :cond_0
-
-    iget-object v0, v2, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v0, p1}, Lp6d;->v(Lm7d;)Z
+    invoke-static {v0, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    invoke-virtual {v1, p1}, Ljava/util/IdentityHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    return v0
+    move-result-object v1
 
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {v1, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
-    const-string v3, "Cannot find wrapper for "
+    move-result v1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-object p0
 
-    const-string p1, ", seems like it is not bound by this adapter: "
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v0, v1, p0}, Landroid/graphics/Color;->argb(IIII)I
 
-    move-result-object p1
+    move-result p0
 
-    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return p0
 
-    throw v1
-.end method
+    :cond_5
+    const-string p1, "rgb"
 
-.method public final w(Lm7d;)V
-    .locals 1
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    iget-object v0, p0, Laj3;->d:Lbj3;
+    move-result p1
 
-    invoke-virtual {v0, p1}, Lbj3;->g(Lm7d;)Lj5a;
+    if-eqz p1, :cond_6
 
-    move-result-object v0
+    sget-object p1, Laj3;->a:Ljava/util/regex/Pattern;
 
-    iget-object v0, v0, Lj5a;->c:Lp6d;
+    invoke-virtual {p1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    invoke-virtual {v0, p1}, Lp6d;->w(Lm7d;)V
+    move-result-object p0
 
-    return-void
-.end method
+    invoke-virtual {p0}, Ljava/util/regex/Matcher;->matches()Z
 
-.method public final x(Lm7d;)V
-    .locals 1
+    move-result p1
 
-    iget-object v0, p0, Laj3;->d:Lbj3;
+    if-eqz p1, :cond_7
 
-    invoke-virtual {v0, p1}, Lbj3;->g(Lm7d;)Lj5a;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v0, p1}, Lp6d;->x(Lm7d;)V
-
-    return-void
-.end method
-
-.method public final y(Lm7d;)V
-    .locals 4
-
-    iget-object v0, p0, Laj3;->d:Lbj3;
-
-    iget-object v1, v0, Lbj3;->g:Ljava/io/Serializable;
-
-    check-cast v1, Ljava/util/IdentityHashMap;
-
-    invoke-virtual {v1, p1}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lj5a;
-
-    if-eqz v2, :cond_0
-
-    iget-object v0, v2, Lj5a;->c:Lp6d;
-
-    invoke-virtual {v0, p1}, Lp6d;->y(Lm7d;)V
-
-    invoke-virtual {v1, p1}, Ljava/util/IdentityHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_0
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Cannot find wrapper for "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", seems like it is not bound by this adapter: "
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    throw v1
+    invoke-static {p1, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    invoke-virtual {p0, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    invoke-virtual {p0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+
+    move-result p0
+
+    invoke-static {p1, v0, p0}, Landroid/graphics/Color;->rgb(III)I
+
+    move-result p0
+
+    return p0
+
+    :cond_6
+    sget-object p1, Laj3;->d:Ljava/util/HashMap;
+
+    invoke-static {p0}, Lw5j;->c(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    if-eqz p0, :cond_7
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    return p0
+
+    :cond_7
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
 .end method

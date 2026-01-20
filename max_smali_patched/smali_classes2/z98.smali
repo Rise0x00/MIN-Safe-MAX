@@ -1,19 +1,3 @@
-.class public final Lz98;
-.super Lba8;
+.class public abstract Lz98;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-
-# instance fields
-.field public final d:Z
-
-
-# direct methods
-.method public constructor <init>(Lnrf;Ljava/lang/Throwable;Z)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lba8;-><init>(Lnrf;Ljava/lang/Throwable;)V
-
-    iput-boolean p3, p0, Lz98;->d:Z
-
-    return-void
-.end method

@@ -1,97 +1,67 @@
 .class public final Lkoe;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lloe;
 
 
 # instance fields
-.field public final a:Lfoe;
+.field public X:Lmy0;
+
+.field public Y:Lhy0;
+
+.field public Z:Ljm9;
+
+.field public d:J
+
+.field public o:Ljava/lang/String;
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lloe;
+
+.field public v0:I
 
 
 # direct methods
-.method public constructor <init>(Lfoe;)V
+.method public constructor <init>(Lloe;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkoe;->u0:Lloe;
 
-    iput-object p1, p0, Lkoe;->a:Lfoe;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lkoe;->t0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lkoe;->v0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lkoe;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lkoe;->v0:I
 
-    if-nez v1, :cond_1
+    const/4 v4, 0x0
 
-    return v2
+    const/4 v5, 0x0
 
-    :cond_1
-    check-cast p1, Lkoe;
+    iget-object v0, p0, Lkoe;->u0:Lloe;
 
-    iget-object v1, p0, Lkoe;->a:Lfoe;
+    const-wide/16 v1, 0x0
 
-    iget-object p1, p1, Lkoe;->a:Lfoe;
+    const/4 v3, 0x0
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v6, p0
 
-    move-result p1
+    invoke-virtual/range {v0 .. v6}, Lloe;->k(JLjava/lang/String;Lmy0;Lhy0;Lo84;)Ljava/lang/Object;
 
-    if-nez p1, :cond_2
+    move-result-object p1
 
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lkoe;->a:Lfoe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Replace(command="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkoe;->a:Lfoe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

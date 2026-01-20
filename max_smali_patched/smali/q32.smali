@@ -1,192 +1,86 @@
-.class public final Lq32;
+.class public final synthetic Lq32;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final i:Lv90;
-
-.field public static final j:Lv90;
-
-.field public static final k:Lv90;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public final b:Lu9b;
+.field public final synthetic b:Lq02;
 
-.field public final c:I
-
-.field public final d:Z
-
-.field public final e:Ljava/util/List;
-
-.field public final f:Z
-
-.field public final g:Lykf;
-
-.field public final h:Lfz1;
+.field public final synthetic c:Landroid/hardware/camera2/CameraDevice;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lv90;
-
-    const-string v1, "camerax.core.captureConfig.rotation"
-
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lv90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lq32;->i:Lv90;
-
-    new-instance v0, Lv90;
-
-    const-string v1, "camerax.core.captureConfig.jpegQuality"
-
-    const-class v2, Ljava/lang/Integer;
-
-    invoke-direct {v0, v1, v2, v3}, Lv90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lq32;->j:Lv90;
-
-    new-instance v0, Lv90;
-
-    const-string v1, "camerax.core.captureConfig.resolvedFrameRate"
-
-    const-class v2, Landroid/util/Range;
-
-    invoke-direct {v0, v1, v2, v3}, Lv90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lq32;->k:Lv90;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/ArrayList;Lu9b;IZLjava/util/ArrayList;ZLykf;Lfz1;)V
+.method public synthetic constructor <init>(Lq02;Landroid/hardware/camera2/CameraDevice;I)V
     .locals 0
 
+    iput p3, p0, Lq32;->a:I
+
+    iput-object p1, p0, Lq32;->b:Lq02;
+
+    iput-object p2, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lq32;->a:Ljava/util/ArrayList;
-
-    iput-object p2, p0, Lq32;->b:Lu9b;
-
-    iput p3, p0, Lq32;->c:I
-
-    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lq32;->e:Ljava/util/List;
-
-    iput-boolean p6, p0, Lq32;->f:Z
-
-    iput-object p7, p0, Lq32;->g:Lykf;
-
-    iput-object p8, p0, Lq32;->h:Lfz1;
-
-    iput-boolean p4, p0, Lq32;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final run()V
     .locals 2
 
-    const-string v0, "CAPTURE_CONFIG_ID_KEY"
+    iget v0, p0, Lq32;->a:I
 
-    iget-object v1, p0, Lq32;->g:Lykf;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, v1, Lykf;->a:Landroid/util/ArrayMap;
+    iget-object v0, p0, Lq32;->b:Lq02;
 
-    invoke-virtual {v1, v0}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, v0, Lq02;->b:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
 
-    const/4 v0, -0x1
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onOpened(Landroid/hardware/camera2/CameraDevice;)V
 
-    return v0
+    return-void
 
-    :cond_0
-    check-cast v0, Ljava/lang/Integer;
+    :pswitch_0
+    iget-object v0, p0, Lq32;->b:Lq02;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    iget-object v0, v0, Lq02;->b:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    return v0
-.end method
+    iget-object v1, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
 
-.method public final b()I
-    .locals 3
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
 
-    iget-object v0, p0, Lq32;->b:Lu9b;
+    return-void
 
-    sget-object v1, Ljhg;->q0:Lv90;
+    :pswitch_1
+    iget-object v0, p0, Lq32;->b:Lq02;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lq02;->b:Ljava/lang/Object;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v0, Landroid/hardware/camera2/CameraDevice$StateCallback;
 
-    move-result-object v2
+    iget-object v1, p0, Lq32;->c:Landroid/hardware/camera2/CameraDevice;
 
-    :try_start_0
-    invoke-virtual {v0, v1}, Lu9b;->l(Lv90;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraDevice$StateCallback;->onClosed(Landroid/hardware/camera2/CameraDevice;)V
 
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    return-void
 
-    :catch_0
-    check-cast v2, Ljava/lang/Integer;
+    nop
 
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c()I
-    .locals 3
-
-    iget-object v0, p0, Lq32;->b:Lu9b;
-
-    sget-object v1, Ljhg;->r0:Lv90;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    :try_start_0
-    invoke-virtual {v0, v1}, Lu9b;->l(Lv90;)Ljava/lang/Object;
-
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,100 +1,81 @@
 .class public final Lfj1;
-.super Logf;
+.super Ljef;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+.field public final F0:Lcv1;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final G0:Lfv1;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
+.method public constructor <init>(Landroid/widget/FrameLayout;Lcv1;)V
     .locals 0
 
-    iput-object p2, p0, Lfj1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lfj1;->F0:Lcv1;
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sget p2, Ld8d;->call_opponent:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lfv1;
+
+    iput-object p1, p0, Lfj1;->G0:Lfv1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final y(Lud8;)V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p1, Lsf1;
 
-    invoke-virtual {p0, p1, p2}, Lfj1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Lsf1;->c:Ljava/lang/CharSequence;
 
-    move-result-object p1
+    iget-object v1, p1, Lsf1;->d:Ljava/lang/String;
 
-    check-cast p1, Lfj1;
+    iget-object v2, p0, Lfj1;->G0:Lfv1;
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-virtual {v2, v1, v0}, Lfv1;->F(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p1, p2}, Lfj1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v0, p1, Lsf1;->Z:Z
 
-    return-object p2
-.end method
+    invoke-virtual {v2, v0}, Lfv1;->C(Z)V
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-boolean v0, p1, Lsf1;->X:Z
 
-    new-instance v0, Lfj1;
+    invoke-virtual {v2, v0}, Lfv1;->D(Z)V
 
-    iget-object v1, p0, Lfj1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    iget-object v0, p1, Lsf1;->o:Lve0;
 
-    invoke-direct {v0, p2, v1}, Lfj1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
+    invoke-virtual {v2, v0}, Lfv1;->setAvatar(Lve0;)V
 
-    iput-object p1, v0, Lfj1;->o:Ljava/lang/Object;
+    iget-boolean v0, p1, Lsf1;->v0:Z
 
-    return-object v0
-.end method
+    invoke-virtual {v2, v0}, Lfv1;->setRaiseHand(Z)V
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    iget-object v0, p1, Lsf1;->z0:Lgbh;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-virtual {v2, v0}, Lfv1;->setOpponentVideo(Lgbh;)V
 
-    iget-object p1, p0, Lfj1;->o:Ljava/lang/Object;
+    iget-object v0, p1, Lsf1;->A0:Lhbh;
 
-    check-cast p1, Lnrf;
+    invoke-virtual {v2, v0}, Lfv1;->setButtonAction(Lhbh;)V
 
-    iget-object v0, p0, Lfj1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+    iget-object p1, p1, Lsf1;->a:Lyk1;
 
-    iget-object v1, v0, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->H0:Ld0d;
+    iput-object p1, v2, Lfv1;->i1:Lyk1;
 
-    sget-object v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->L0:[Les7;
+    iget-object p1, p0, Lfj1;->F0:Lcv1;
 
-    const/4 v3, 0x4
+    iput-object p1, v2, Lfv1;->c1:Lcv1;
 
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, v0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lnrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

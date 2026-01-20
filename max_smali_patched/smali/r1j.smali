@@ -3,169 +3,58 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ln1j;
+.implements Lvwa;
 
 
-# instance fields
-.field public final a:Lsu7;
-
-.field public final b:Lsu7;
-
-.field public final c:Lm1j;
+# static fields
+.field public static final a:Lr1j;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lm1j;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lr1j;
 
-    iput-object p2, p0, Lr1j;->c:Lm1j;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget-object p2, Lpx0;->e:Lpx0;
+    sput-object v0, Lr1j;->a:Lr1j;
 
-    invoke-static {p1}, Lj4g;->b(Landroid/content/Context;)V
+    new-instance v0, Lbri;
 
-    invoke-static {}, Lj4g;->a()Lj4g;
+    const/4 v1, 0x1
 
-    move-result-object p1
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    invoke-virtual {p1, p2}, Lj4g;->c(Lhb5;)Lf4g;
+    const-class v1, Lpri;
 
-    move-result-object p1
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    sget-object p2, Lpx0;->d:Ljava/util/Set;
+    move-result-object v0
 
-    new-instance v0, Lkc5;
+    const/4 v2, 0x2
 
-    const-string v1, "json"
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    invoke-direct {v0, v1}, Lkc5;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-interface {p2, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    move-result p2
+    move-result-object v0
 
-    if-eqz p2, :cond_0
-
-    new-instance p2, Lsu7;
-
-    new-instance v0, Lfqi;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1}, Lfqi;-><init>(Lf4g;I)V
-
-    invoke-direct {p2, v0}, Lsu7;-><init>(Lzec;)V
-
-    iput-object p2, p0, Lr1j;->a:Lsu7;
-
-    :cond_0
-    new-instance p2, Lsu7;
-
-    new-instance v0, Lfqi;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lfqi;-><init>(Lf4g;I)V
-
-    invoke-direct {p2, v0}, Lsu7;-><init>(Lzec;)V
-
-    iput-object p2, p0, Lr1j;->b:Lsu7;
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lxg6;)V
-    .locals 6
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Lr1j;->c:Lm1j;
-
-    iget v0, v0, Lm1j;->b:I
-
-    sget-object v1, Lzyb;->b:Lzyb;
-
-    sget-object v2, Lzyb;->a:Lzyb;
-
-    const/4 v3, 0x0
-
-    if-nez v0, :cond_2
-
-    iget-object v4, p0, Lr1j;->a:Lsu7;
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v4}, Lsu7;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lg4g;
-
-    iget v5, p1, Lxg6;->b:I
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {p1, v0}, Lxg6;->b0(I)[B
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    new-instance v0, Lda0;
-
-    invoke-direct {v0, p1, v2, v3}, Lda0;-><init>(Ljava/lang/Object;Lzyb;Lhb0;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1, v0}, Lxg6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Lda0;
-
-    invoke-direct {v0, p1, v1, v3}, Lda0;-><init>(Ljava/lang/Object;Lzyb;Lhb0;)V
-
-    :goto_0
-    invoke-virtual {v4, v0}, Lg4g;->a(Lda0;)V
-
-    :cond_1
-    return-void
-
-    :cond_2
-    iget-object v4, p0, Lr1j;->b:Lsu7;
-
-    invoke-virtual {v4}, Lsu7;->get()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lg4g;
-
-    iget v5, p1, Lxg6;->b:I
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {p1, v0}, Lxg6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Lda0;
-
-    invoke-direct {v0, p1, v2, v3}, Lda0;-><init>(Ljava/lang/Object;Lzyb;Lhb0;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1, v0}, Lxg6;->b0(I)[B
-
-    move-result-object p1
-
-    new-instance v0, Lda0;
-
-    invoke-direct {v0, p1, v1, v3}, Lda0;-><init>(Ljava/lang/Object;Lzyb;Lhb0;)V
-
-    :goto_1
-    invoke-virtual {v4, v0}, Lg4g;->a(Lda0;)V
-
-    return-void
+    throw p1
 .end method

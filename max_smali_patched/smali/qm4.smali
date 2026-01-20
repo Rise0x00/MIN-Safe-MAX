@@ -3,58 +3,34 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfpd;
-
-
-# static fields
-.field public static final f:Ljava/util/logging/Logger;
+.implements Lkotlin/coroutines/Continuation;
 
 
 # instance fields
-.field public final a:Lyn7;
+.field public a:Le28;
 
-.field public final b:Ljava/util/concurrent/Executor;
+.field public b:Lkotlin/coroutines/Continuation;
 
-.field public final c:Lzq9;
-
-.field public final d:Lpf5;
-
-.field public final e:Loif;
+.field public c:Ljava/lang/Object;
 
 
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public final getContext()Lqb4;
     .locals 1
 
-    const-class v0, Lj4g;
+    sget-object v0, Lxg5;->a:Lxg5;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
-
-    move-result-object v0
-
-    sput-object v0, Lqm4;->f:Ljava/util/logging/Logger;
-
-    return-void
+    return-object v0
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lzq9;Lyn7;Lpf5;Loif;)V
-    .locals 0
+.method public final resumeWith(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lqm4;->b:Ljava/util/concurrent/Executor;
+    iput-object v0, p0, Lqm4;->b:Lkotlin/coroutines/Continuation;
 
-    iput-object p2, p0, Lqm4;->c:Lzq9;
-
-    iput-object p3, p0, Lqm4;->a:Lyn7;
-
-    iput-object p4, p0, Lqm4;->d:Lpf5;
-
-    iput-object p5, p0, Lqm4;->e:Loif;
+    iput-object p1, p0, Lqm4;->c:Ljava/lang/Object;
 
     return-void
 .end method

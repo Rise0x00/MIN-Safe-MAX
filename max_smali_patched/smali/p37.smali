@@ -1,138 +1,90 @@
-.class public abstract Lp37;
+.class public final Lp37;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfve;
-
 
 # instance fields
-.field public final a:Lje6;
+.field public a:J
 
 .field public b:Z
 
-.field public final synthetic c:Le9;
+.field public c:I
+
+.field public d:J
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:J
+
+.field public k:J
+
+.field public l:Z
+
+.field public final m:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Le9;)V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 0
+
+    iput-object p1, p0, Lp37;->m:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lp37;->c:Le9;
-
-    new-instance v0, Lje6;
-
-    iget-object p1, p1, Le9;->e:Ljava/lang/Object;
-
-    check-cast p1, Llv0;
-
-    invoke-interface {p1}, Lfve;->m()Lovf;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lje6;-><init>(Lovf;)V
-
-    iput-object v0, p0, Lp37;->a:Lje6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lgu0;J)J
-    .locals 2
+.method public a(I)V
+    .locals 9
 
-    iget-object v0, p0, Lp37;->c:Le9;
+    iget-wide v1, p0, Lp37;->k:J
 
-    :try_start_0
-    iget-object v1, v0, Le9;->e:Ljava/lang/Object;
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    check-cast v1, Llv0;
+    cmp-long v0, v1, v3
 
-    invoke-interface {v1, p1, p2, p3}, Lfve;->b(Lgu0;J)J
+    if-eqz v0, :cond_1
 
-    move-result-wide p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-wide v3, p0, Lp37;->a:J
 
-    return-wide p1
+    iget-wide v5, p0, Lp37;->j:J
 
-    :catch_0
-    move-exception p1
+    cmp-long v0, v3, v5
 
-    iget-object p2, v0, Le9;->d:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    check-cast p2, Ls0d;
-
-    invoke-virtual {p2}, Ls0d;->k()V
-
-    invoke-virtual {p0}, Lp37;->l()V
-
-    throw p1
-.end method
-
-.method public final l()V
-    .locals 5
-
-    iget-object v0, p0, Lp37;->c:Le9;
-
-    iget v1, v0, Le9;->a:I
-
-    const/4 v2, 0x6
-
-    if-ne v1, v2, :cond_0
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    const/4 v3, 0x5
+    move-wide v7, v3
 
-    if-ne v1, v3, :cond_1
+    iget-boolean v3, p0, Lp37;->l:Z
 
-    iget-object v1, p0, Lp37;->a:Lje6;
+    sub-long v4, v7, v5
 
-    iget-object v3, v1, Lje6;->e:Lovf;
+    long-to-int v4, v4
 
-    sget-object v4, Lovf;->d:Lnvf;
+    iget-object v0, p0, Lp37;->m:Ljava/lang/Object;
 
-    iput-object v4, v1, Lje6;->e:Lovf;
+    check-cast v0, Lrrg;
 
-    invoke-virtual {v3}, Lovf;->a()Lovf;
+    const/4 v6, 0x0
 
-    invoke-virtual {v3}, Lovf;->b()Lovf;
+    move v5, p1
 
-    iput v2, v0, Le9;->a:I
-
-    return-void
+    invoke-interface/range {v0 .. v6}, Lrrg;->a(JIIILprg;)V
 
     :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "state: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v0, v0, Le9;->a:I
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final m()Lovf;
-    .locals 1
-
-    iget-object v0, p0, Lp37;->a:Lje6;
-
-    return-object v0
+    :goto_0
+    return-void
 .end method

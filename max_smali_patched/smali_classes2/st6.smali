@@ -2,18 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltt6;
+
 
 # instance fields
-.field public final a:[I
+.field public final a:F
 
 
 # direct methods
-.method public constructor <init>([I)V
+.method public constructor <init>(F)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lst6;->a:[I
+    iput p1, p0, Lst6;->a:F
 
     return-void
 .end method
@@ -41,15 +44,15 @@
     :cond_1
     check-cast p1, Lst6;
 
-    iget-object v1, p0, Lst6;->a:[I
+    iget v1, p0, Lst6;->a:F
 
-    iget-object p1, p1, Lst6;->a:[I
+    iget p1, p1, Lst6;->a:F
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
 
     move-result p1
 
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_2
 
     return v2
 
@@ -60,9 +63,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Lst6;->a:[I
+    iget v0, p0, Lst6;->a:F
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
 
     move-result v0
 
@@ -70,19 +73,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Lst6;->a:[I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    const-string v1, "UpdateCameraTranslation(translationY="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v1, "GradientsLocalColors(promoTextGradient="
+    iget v1, p0, Lst6;->a:F
 
-    const-string v2, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

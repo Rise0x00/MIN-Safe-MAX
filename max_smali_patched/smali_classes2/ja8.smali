@@ -1,75 +1,141 @@
 .class public final Lja8;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxa8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lja8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:Lt7d;
-
-.field public Y:Ll83;
-
-.field public Z:Lo0a;
-
-.field public d:Lma8;
-
-.field public o:Lv98;
-
-.field public s0:J
-
-.field public t0:J
-
-.field public u0:J
-
-.field public v0:J
-
-.field public w0:I
-
-.field public synthetic x0:Ljava/lang/Object;
-
-.field public final synthetic y0:Lma8;
-
-.field public z0:I
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Lma8;Lp14;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lj58;
+
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+
+    sput-object v0, Lja8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    iput-object p1, p0, Lja8;->y0:Lma8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lja8;->a:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final describeContents()I
+    .locals 1
 
-    iput-object p1, p0, Lja8;->x0:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    iget p1, p0, Lja8;->z0:I
+    return v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    or-int/2addr p1, v0
+    const/4 v0, 0x1
 
-    iput p1, p0, Lja8;->z0:I
+    if-ne p0, p1, :cond_0
 
-    const/4 v3, 0x0
+    return v0
 
-    const-wide/16 v4, 0x0
+    :cond_0
+    instance-of v1, p1, Lja8;
 
-    iget-object v0, p0, Lja8;->y0:Lma8;
+    const/4 v2, 0x0
 
-    const-wide/16 v1, 0x0
+    if-nez v1, :cond_1
 
-    move-object v6, p0
+    return v2
 
-    invoke-virtual/range {v0 .. v6}, Lma8;->e(JLv98;JLp14;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lja8;
 
-    move-result-object p1
+    iget-object v1, p0, Lja8;->a:Landroid/net/Uri;
 
-    return-object p1
+    iget-object p1, p1, Lja8;->a:Landroid/net/Uri;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lja8;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenBrowser(uri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lja8;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Lja8;->a:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

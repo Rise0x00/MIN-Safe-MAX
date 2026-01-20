@@ -1,308 +1,91 @@
-.class public final Lrp9;
-.super Ljava/lang/Object;
+.class public final enum Lrp9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+
+# static fields
+.field public static final enum b:Lrp9;
+
+.field public static final synthetic c:[Lrp9;
+
+.field public static final synthetic d:Lal5;
 
 
 # instance fields
 .field public final a:I
 
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:J
-
-.field public final f:J
-
 
 # direct methods
-.method public constructor <init>(IZZJJI)V
+.method static constructor <clinit>()V
     .locals 4
 
-    and-int/lit8 v0, p8, 0x2
+    new-instance v0, Lrp9;
 
-    const/4 v1, 0x0
+    const-string v1, "EMOJI"
 
-    if-eqz v0, :cond_0
+    const/4 v2, 0x0
 
-    move p2, v1
+    invoke-direct {v0, v1, v2, v2}, Lrp9;-><init>(Ljava/lang/String;II)V
 
-    :cond_0
-    and-int/lit8 v0, p8, 0x4
+    sput-object v0, Lrp9;->b:Lrp9;
 
-    if-eqz v0, :cond_1
+    new-instance v1, Lrp9;
 
-    move v0, v1
+    const-string v2, "STICKER"
 
-    goto :goto_0
+    const/4 v3, 0x1
 
-    :cond_1
-    const/4 v0, 0x1
+    invoke-direct {v1, v2, v3, v3}, Lrp9;-><init>(Ljava/lang/String;II)V
 
-    :goto_0
-    and-int/lit8 v2, p8, 0x8
+    filled-new-array {v0, v1}, [Lrp9;
 
-    if-eqz v2, :cond_2
+    move-result-object v0
 
-    move p3, v1
+    sput-object v0, Lrp9;->c:[Lrp9;
 
-    :cond_2
-    and-int/lit8 v1, p8, 0x10
+    new-instance v1, Lal5;
 
-    const-wide/16 v2, 0x0
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
 
-    if-eqz v1, :cond_3
-
-    move-wide p4, v2
-
-    :cond_3
-    and-int/lit8 p8, p8, 0x20
-
-    if-eqz p8, :cond_4
-
-    move-wide p6, v2
-
-    :cond_4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lrp9;->a:I
-
-    iput-boolean p2, p0, Lrp9;->b:Z
-
-    iput-boolean v0, p0, Lrp9;->c:Z
-
-    iput-boolean p3, p0, Lrp9;->d:Z
-
-    iput-wide p4, p0, Lrp9;->e:J
-
-    iput-wide p6, p0, Lrp9;->f:J
+    sput-object v1, Lrp9;->d:Lal5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-ne p0, p1, :cond_0
+    iput p3, p0, Lrp9;->a:I
 
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lrp9;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lrp9;
-
-    iget v0, p0, Lrp9;->a:I
-
-    iget v1, p1, Lrp9;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lrp9;->b:Z
-
-    iget-boolean v1, p1, Lrp9;->b:Z
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-boolean v0, p0, Lrp9;->c:Z
-
-    iget-boolean v1, p1, Lrp9;->c:Z
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lrp9;->d:Z
-
-    iget-boolean v1, p1, Lrp9;->d:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-wide v0, p0, Lrp9;->e:J
-
-    iget-wide v2, p1, Lrp9;->e:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-wide v0, p0, Lrp9;->f:J
-
-    iget-wide v2, p1, Lrp9;->f:J
-
-    cmp-long p1, v0, v2
-
-    if-eqz p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_7
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public static valueOf(Ljava/lang/String;)Lrp9;
+    .locals 1
 
-    iget v0, p0, Lrp9;->a:I
+    const-class v0, Lrp9;
 
-    invoke-static {v0}, Lnx1;->v(I)I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object p0
 
-    const/16 v1, 0x1f
+    check-cast p0, Lrp9;
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lrp9;->b:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lrp9;->c:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lrp9;->d:Z
-
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lrp9;->e:J
-
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Lrp9;->f:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public static values()[Lrp9;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lrp9;->c:[Lrp9;
 
-    const-string v1, "ScrollWork(scrollType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lrp9;->a:I
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "TO_ANCHOR"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "TO_LAST_NEW"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "TO_LAST"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "TO_UNREAD"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", highlight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lrp9;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", instant="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", alignToBottom="
-
-    const-string v2, ", msgId="
-
-    iget-boolean v3, p0, Lrp9;->c:Z
-
-    iget-boolean v4, p0, Lrp9;->d:Z
-
-    invoke-static {v1, v2, v0, v3, v4}, Lnx1;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
-
-    iget-wide v1, p0, Lrp9;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", time="
-
-    const-string v2, ")"
-
-    iget-wide v3, p0, Lrp9;->f:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lm65;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lrp9;
 
     return-object v0
 .end method

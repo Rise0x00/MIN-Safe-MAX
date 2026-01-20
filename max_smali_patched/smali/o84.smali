@@ -1,157 +1,85 @@
-.class public final Lo84;
-.super Ljava/lang/Object;
+.class public abstract Lo84;
+.super Lak0;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/lang/CharSequence;
+.field public final b:Lqb4;
 
-.field public b:Landroid/graphics/Bitmap;
-
-.field public c:Landroid/text/Layout$Alignment;
-
-.field public d:Landroid/text/Layout$Alignment;
-
-.field public e:F
-
-.field public f:I
-
-.field public g:I
-
-.field public h:F
-
-.field public i:I
-
-.field public j:I
-
-.field public k:F
-
-.field public l:F
-
-.field public m:F
-
-.field public n:Z
-
-.field public o:I
-
-.field public p:I
-
-.field public q:F
+.field public transient c:Lkotlin/coroutines/Continuation;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_0
 
+    .line 3
+    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Lqb4;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lo84;->a:Ljava/lang/CharSequence;
+    :goto_0
+    invoke-direct {p0, v0, p1}, Lo84;-><init>(Lqb4;Lkotlin/coroutines/Continuation;)V
 
-    iput-object v0, p0, Lo84;->b:Landroid/graphics/Bitmap;
+    return-void
+.end method
 
-    iput-object v0, p0, Lo84;->c:Landroid/text/Layout$Alignment;
+.method public constructor <init>(Lqb4;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    iput-object v0, p0, Lo84;->d:Landroid/text/Layout$Alignment;
+    .line 1
+    invoke-direct {p0, p2}, Lak0;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    const v0, -0x800001
-
-    iput v0, p0, Lo84;->e:F
-
-    const/high16 v1, -0x80000000
-
-    iput v1, p0, Lo84;->f:I
-
-    iput v1, p0, Lo84;->g:I
-
-    iput v0, p0, Lo84;->h:F
-
-    iput v1, p0, Lo84;->i:I
-
-    iput v1, p0, Lo84;->j:I
-
-    iput v0, p0, Lo84;->k:F
-
-    iput v0, p0, Lo84;->l:F
-
-    iput v0, p0, Lo84;->m:F
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lo84;->n:Z
-
-    const/high16 v0, -0x1000000
-
-    iput v0, p0, Lo84;->o:I
-
-    iput v1, p0, Lo84;->p:I
+    .line 2
+    iput-object p1, p0, Lo84;->b:Lqb4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lq84;
-    .locals 20
+.method public getContext()Lqb4;
+    .locals 1
 
-    move-object/from16 v0, p0
+    iget-object v0, p0, Lo84;->b:Lqb4;
 
-    new-instance v1, Lq84;
+    return-object v0
+.end method
 
-    iget-object v2, v0, Lo84;->a:Ljava/lang/CharSequence;
+.method public o()V
+    .locals 3
 
-    iget-object v3, v0, Lo84;->c:Landroid/text/Layout$Alignment;
+    iget-object v0, p0, Lo84;->c:Lkotlin/coroutines/Continuation;
 
-    iget-object v4, v0, Lo84;->d:Landroid/text/Layout$Alignment;
+    if-eqz v0, :cond_0
 
-    iget-object v5, v0, Lo84;->b:Landroid/graphics/Bitmap;
+    if-eq v0, p0, :cond_0
 
-    iget v6, v0, Lo84;->e:F
+    invoke-virtual {p0}, Lo84;->getContext()Lqb4;
 
-    iget v7, v0, Lo84;->f:I
+    move-result-object v1
 
-    iget v8, v0, Lo84;->g:I
+    sget-object v2, Lrc5;->v0:Lrc5;
 
-    iget v9, v0, Lo84;->h:F
+    invoke-interface {v1, v2}, Lqb4;->get(Lpb4;)Lob4;
 
-    iget v10, v0, Lo84;->i:I
+    move-result-object v1
 
-    iget v11, v0, Lo84;->j:I
+    check-cast v1, Lp84;
 
-    iget v12, v0, Lo84;->k:F
+    invoke-interface {v1, v0}, Lp84;->releaseInterceptedContinuation(Lkotlin/coroutines/Continuation;)V
 
-    iget v13, v0, Lo84;->l:F
+    :cond_0
+    sget-object v0, Lro3;->b:Lro3;
 
-    iget v14, v0, Lo84;->m:F
+    iput-object v0, p0, Lo84;->c:Lkotlin/coroutines/Continuation;
 
-    iget-boolean v15, v0, Lo84;->n:Z
-
-    move-object/from16 v16, v1
-
-    iget v1, v0, Lo84;->o:I
-
-    move/from16 v17, v1
-
-    iget v1, v0, Lo84;->p:I
-
-    move/from16 v18, v1
-
-    iget v1, v0, Lo84;->q:F
-
-    move/from16 v19, v18
-
-    move/from16 v18, v1
-
-    move-object/from16 v1, v16
-
-    move/from16 v16, v17
-
-    move/from16 v17, v19
-
-    invoke-direct/range {v1 .. v18}, Lq84;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIF)V
-
-    move-object/from16 v16, v1
-
-    return-object v16
+    return-void
 .end method

@@ -1,170 +1,186 @@
-.class public final enum Lba7;
-.super Ljava/lang/Enum;
+.class public final Lba7;
+.super Lk8e;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[Lba7;
+# instance fields
+.field public final H:Ljava/util/Map;
+
+.field public I:Ly85;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Lrm4;Lk95;Lto6;Ljava/util/Map;)V
+    .locals 0
 
-    new-instance v0, Lba7;
+    invoke-direct {p0, p1, p2, p3}, Lk8e;-><init>(Lrm4;Lk95;Lto6;)V
 
-    const-string v1, "UNKNOWN"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Lba7;
-
-    const-string v2, "REQUESTED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lba7;
-
-    const-string v3, "INTERMEDIATE_AVAILABLE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lba7;
-
-    const-string v4, "SUCCESS"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Lba7;
-
-    const-string v5, "ERROR"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lba7;
-
-    const-string v6, "EMPTY_EVENT"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Lba7;
-
-    const-string v7, "RELEASED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array/range {v0 .. v6}, [Lba7;
-
-    move-result-object v0
-
-    sput-object v0, Lba7;->a:[Lba7;
-
-    invoke-static {}, Lba7;->values()[Lba7;
+    iput-object p4, p0, Lba7;->H:Ljava/util/Map;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lba7;
-    .locals 1
-
-    const-class v0, Lba7;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lba7;
-
-    return-object p0
-.end method
-
-.method public static values()[Lba7;
-    .locals 1
-
-    sget-object v0, Lba7;->a:[Lba7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lba7;
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final l(Loj6;)Loj6;
+    .locals 10
 
-    sget-object v0, Laa7;->$EnumSwitchMapping$0:[I
+    iget-object v0, p0, Lba7;->I:Ly85;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    if-eqz v0, :cond_0
 
-    move-result v1
-
-    aget v0, v0, v1
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x2
-
-    if-eq v0, v1, :cond_3
-
-    const/4 v1, 0x3
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v1, 0x4
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v1, 0x5
-
-    if-eq v0, v1, :cond_0
-
-    const-string v0, "unknown"
-
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    const-string v0, "released"
+    iget-object v0, p1, Loj6;->z0:Ly85;
 
-    return-object v0
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lba7;->H:Ljava/util/Map;
+
+    iget-object v2, v0, Ly85;->c:Ljava/lang/String;
+
+    invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ly85;
+
+    if-eqz v1, :cond_1
+
+    move-object v0, v1
 
     :cond_1
-    const-string v0, "error"
+    iget-object v1, p1, Loj6;->u0:Ls4a;
 
-    return-object v0
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_2
+
+    :goto_1
+    move-object v1, v2
+
+    goto :goto_6
 
     :cond_2
-    const-string v0, "intermediate_available"
+    iget-object v3, v1, Ls4a;->a:[Lq4a;
 
-    return-object v0
+    array-length v4, v3
+
+    const/4 v5, 0x0
+
+    move v6, v5
+
+    :goto_2
+    const/4 v7, -0x1
+
+    if-ge v6, v4, :cond_4
+
+    aget-object v8, v3, v6
+
+    instance-of v9, v8, Leic;
+
+    if-eqz v9, :cond_3
+
+    check-cast v8, Leic;
+
+    const-string v9, "com.apple.streaming.transportStreamTimestamp"
+
+    iget-object v8, v8, Leic;->b:Ljava/lang/String;
+
+    invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    goto :goto_3
 
     :cond_3
-    const-string v0, "success"
+    add-int/lit8 v6, v6, 0x1
 
-    return-object v0
+    goto :goto_2
 
     :cond_4
-    const-string v0, "requested"
+    move v6, v7
 
-    return-object v0
+    :goto_3
+    if-ne v6, v7, :cond_5
+
+    goto :goto_6
+
+    :cond_5
+    const/4 v1, 0x1
+
+    if-ne v4, v1, :cond_6
+
+    goto :goto_1
+
+    :cond_6
+    add-int/lit8 v1, v4, -0x1
+
+    new-array v1, v1, [Lq4a;
+
+    :goto_4
+    if-ge v5, v4, :cond_9
+
+    if-eq v5, v6, :cond_8
+
+    if-ge v5, v6, :cond_7
+
+    move v2, v5
+
+    goto :goto_5
+
+    :cond_7
+    add-int/lit8 v2, v5, -0x1
+
+    :goto_5
+    aget-object v7, v3, v5
+
+    aput-object v7, v1, v2
+
+    :cond_8
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_9
+    new-instance v2, Ls4a;
+
+    invoke-direct {v2, v1}, Ls4a;-><init>([Lq4a;)V
+
+    goto :goto_1
+
+    :goto_6
+    iget-object v2, p1, Loj6;->z0:Ly85;
+
+    if-ne v0, v2, :cond_a
+
+    iget-object v2, p1, Loj6;->u0:Ls4a;
+
+    if-eq v1, v2, :cond_b
+
+    :cond_a
+    invoke-virtual {p1}, Loj6;->a()Lmj6;
+
+    move-result-object p1
+
+    iput-object v0, p1, Lmj6;->n:Ly85;
+
+    iput-object v1, p1, Lmj6;->i:Ls4a;
+
+    new-instance v0, Loj6;
+
+    invoke-direct {v0, p1}, Loj6;-><init>(Lmj6;)V
+
+    move-object p1, v0
+
+    :cond_b
+    invoke-super {p0, p1}, Lk8e;->l(Loj6;)Loj6;
+
+    move-result-object p1
+
+    return-object p1
 .end method

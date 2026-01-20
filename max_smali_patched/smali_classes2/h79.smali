@@ -1,100 +1,54 @@
-.class public final synthetic Lh79;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lqi6;
+.class public final Lh79;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ldr7;
 
-.field public final synthetic b:Lu7d;
+.field public Y:Lf76;
+
+.field public Z:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+.field public t0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu7d;I)V
+.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lh79;->a:I
+    iput-object p1, p0, Lh79;->X:Ldr7;
 
-    iput-object p1, p0, Lh79;->b:Lu7d;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lh79;->a:I
+    iput-object p1, p0, Lh79;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lh79;->o:I
 
-    iget-object v0, p0, Lh79;->b:Lu7d;
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Landroid/view/Surface;
+    or-int/2addr p1, v0
 
-    iput-object p1, v0, Lu7d;->a:Ljava/lang/Object;
+    iput p1, p0, Lh79;->o:I
 
-    sget-object p1, Lybg;->a:Lybg;
+    iget-object p1, p0, Lh79;->X:Ldr7;
 
-    return-object p1
+    const/4 v0, 0x0
 
-    :pswitch_0
-    check-cast p1, Lmr3;
-
-    iget-object v0, p0, Lh79;->b:Lu7d;
-
-    iget-object v1, v0, Lu7d;->a:Ljava/lang/Object;
-
-    check-cast v1, Lt79;
-
-    new-instance v2, Lbo2;
-
-    invoke-static {p1}, Lug8;->r(Lmr3;)Lgu3;
-
-    move-result-object v3
-
-    iget-object v0, v0, Lu7d;->a:Ljava/lang/Object;
-
-    check-cast v0, Lt79;
-
-    iget-object v0, v0, Lt79;->x0:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxxb;
-
-    invoke-virtual {p1}, Lmr3;->p()J
-
-    move-result-wide v4
-
-    invoke-virtual {v0, v4, v5}, Lxxb;->w(J)Luxb;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lug8;->k(Luxb;)Lvxb;
-
-    move-result-object p1
-
-    const-wide/16 v4, 0x0
-
-    invoke-direct {v2, v3, p1, v4, v5}, Lbo2;-><init>(Lgu3;Lvxb;J)V
-
-    invoke-virtual {v1, v2}, Lt79;->C(Lbo2;)Lv49;
+    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

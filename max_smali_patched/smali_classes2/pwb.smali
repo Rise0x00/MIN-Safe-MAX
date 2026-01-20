@@ -1,189 +1,229 @@
-.class public final Lpwb;
-.super Logf;
+.class public final synthetic Lpwb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic X:Lqwb;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/lang/String;
-
-.field public final synthetic Z:Lb6b;
-
-.field public o:I
+.field public final synthetic b:Lfxb;
 
 
 # direct methods
-.method public constructor <init>(Lqwb;Ljava/lang/String;Lb6b;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lfxb;I)V
     .locals 0
 
-    iput-object p1, p0, Lpwb;->X:Lqwb;
+    iput p2, p0, Lpwb;->a:I
 
-    iput-object p2, p0, Lpwb;->Y:Ljava/lang/String;
+    iput-object p1, p0, Lpwb;->b:Lfxb;
 
-    iput-object p3, p0, Lpwb;->Z:Lb6b;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lpwb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lpwb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lpwb;->b:Lfxb;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lfxb;->r()V
 
-    check-cast p1, Lpwb;
+    iget-object v1, v0, Lfxb;->l:Lxj;
 
-    sget-object p2, Lybg;->a:Lybg;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p1, p2}, Lpwb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lxj;->d()V
 
-    move-result-object p1
+    iget-object v2, v1, Lxj;->a:Lzh;
 
-    return-object p1
-.end method
+    iget-boolean v3, v2, Lzh;->i:Z
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lpwb;
-
-    iget-object v0, p0, Lpwb;->Y:Ljava/lang/String;
-
-    iget-object v1, p0, Lpwb;->Z:Lb6b;
-
-    iget-object v2, p0, Lpwb;->X:Lqwb;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lpwb;-><init>(Lqwb;Ljava/lang/String;Lb6b;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget-object v0, p0, Lpwb;->X:Lqwb;
-
-    iget-object v1, v0, Lqwb;->b:Lru7;
-
-    iget v2, p0, Lpwb;->o:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-nez v3, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v2, v2, Lzh;->g:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    invoke-virtual {v2, v1}, Ljava/util/concurrent/CopyOnWriteArraySet;->remove(Ljava/lang/Object;)Z
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    :goto_0
+    iget-object v1, v0, Lfxb;->n:Lwi;
 
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    if-eqz v1, :cond_3
 
-    move-result-object p1
+    iget-object v2, v1, Lwi;->c:Lai4;
 
-    check-cast p1, Ll83;
+    if-eqz v2, :cond_2
 
-    iget-object v2, p0, Lpwb;->Y:Ljava/lang/String;
-
-    check-cast p1, Le78;
-
-    invoke-virtual {p1, v2}, Le78;->P(Ljava/lang/String;)V
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll83;
-
-    check-cast p1, Lztd;
-
-    invoke-virtual {p1}, Lztd;->s()J
-
-    move-result-wide v1
-
-    const-wide/16 v4, -0x1
-
-    cmp-long p1, v1, v4
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, v0, Lqwb;->d:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lymf;
-
-    check-cast p1, Lanf;
-
-    invoke-virtual {p1}, Lanf;->h()V
+    invoke-virtual {v2, v1}, Lai4;->c(Lr5e;)V
 
     :cond_2
-    iget-object p1, v0, Lqwb;->c:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltlf;
-
-    check-cast p1, Lsta;
-
-    invoke-virtual {p1}, Lsta;->c()Lbe8;
-
-    move-result-object p1
-
-    new-instance v0, Lowb;
-
-    iget-object v1, p0, Lpwb;->Z:Lb6b;
-
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lowb;-><init>(Lb6b;Lkotlin/coroutines/Continuation;)V
-
-    iput v3, p0, Lpwb;->o:I
-
-    invoke-static {p1, v0, p0}, Lkki;->h(Ly44;Lej6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_3
-
-    return-object v0
+    iput-object v2, v1, Lwi;->c:Lai4;
 
     :cond_3
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    iget-object v1, v0, Lfxb;->C:Lahd;
 
-    return-object p1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ": "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Lw6a;->c(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, " was released"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "PCRTCClient"
+
+    invoke-interface {v1, v2, v0}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v1, v0, Lfxb;->S:Ljava/lang/Object;
+
+    if-eqz v1, :cond_4
+
+    invoke-interface {v1, v0}, Lexb;->o(Lfxb;)V
+
+    :cond_4
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v1, v0, Lfxb;->C:Lahd;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "createPeerConnectionFactoryInternal, "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "PCRTCClient"
+
+    invoke-interface {v1, v3, v2}, Lahd;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lfxb;->P:Z
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v1, v0, Lfxb;->S:Ljava/lang/Object;
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1, v0}, Lexb;->b(Lfxb;)V
+
+    :cond_5
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lfxb;->P:Z
+
+    return-void
+
+    :pswitch_4
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lfxb;->d0:Z
+
+    iget-object v1, v0, Lfxb;->S:Ljava/lang/Object;
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1, v0}, Lexb;->c(Lfxb;)V
+
+    :cond_6
+    return-void
+
+    :pswitch_5
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    invoke-virtual {v0}, Lfxb;->r()V
+
+    return-void
+
+    :pswitch_6
+    iget-object v0, p0, Lpwb;->b:Lfxb;
+
+    iget-object v0, v0, Lfxb;->T:Ljava/lang/ref/WeakReference;
+
+    if-nez v0, :cond_7
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_7
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lr11;
+
+    :goto_1
+    if-eqz v0, :cond_8
+
+    invoke-interface {v0}, Lr11;->onIceRestart()V
+
+    :cond_8
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

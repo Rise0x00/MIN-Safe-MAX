@@ -4,76 +4,126 @@
 
 
 # instance fields
-.field public a:J
+.field public final a:Ljava/lang/String;
 
-.field public b:J
+.field public final b:Lqhg;
 
-.field public c:J
 
-.field public d:J
+# direct methods
+.method public constructor <init>(Lqhg;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Llc8;->a:Ljava/lang/String;
+
+    iput-object p1, p0, Llc8;->b:Lqhg;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(JJ)D
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-wide v0, p0, Llc8;->a:J
+    const/4 v0, 0x1
 
-    sub-long v0, p1, v0
+    if-ne p0, p1, :cond_0
 
-    const-wide/16 v2, 0x0
-
-    cmp-long v4, v0, v2
-
-    if-gez v4, :cond_0
-
-    move-wide v0, v2
+    return v0
 
     :cond_0
-    iput-wide v0, p0, Llc8;->c:J
+    instance-of v1, p1, Llc8;
 
-    iget-wide v4, p0, Llc8;->b:J
+    const/4 v2, 0x0
 
-    sub-long v4, p3, v4
+    if-nez v1, :cond_1
 
-    cmp-long v6, v4, v2
-
-    if-gez v6, :cond_1
-
-    move-wide v4, v2
+    return v2
 
     :cond_1
-    iput-wide v4, p0, Llc8;->d:J
+    check-cast p1, Llc8;
 
-    cmp-long v6, v4, v2
+    iget-object v1, p0, Llc8;->a:Ljava/lang/String;
 
-    if-nez v6, :cond_3
+    iget-object v3, p1, Llc8;->a:Ljava/lang/String;
 
-    cmp-long v2, v0, v2
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v2, :cond_2
+    move-result v1
 
-    goto :goto_0
+    if-nez v1, :cond_2
+
+    return v2
 
     :cond_2
-    const-wide/16 v0, 0x0
+    iget-object v1, p0, Llc8;->b:Lqhg;
 
-    goto :goto_1
+    iget-object p1, p1, Llc8;->b:Lqhg;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    return v2
 
     :cond_3
-    :goto_0
-    long-to-double v2, v0
+    return v0
+.end method
 
-    add-long/2addr v4, v0
+.method public final hashCode()I
+    .locals 2
 
-    long-to-double v0, v4
+    iget-object v0, p0, Llc8;->a:Ljava/lang/String;
 
-    div-double v0, v2, v0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    :goto_1
-    iput-wide p1, p0, Llc8;->a:J
+    move-result v0
 
-    iput-wide p3, p0, Llc8;->b:J
+    mul-int/lit8 v0, v0, 0x1f
 
-    return-wide v0
+    iget-object v1, p0, Llc8;->b:Lqhg;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "LinkValidationState(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Llc8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", errorText="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Llc8;->b:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,45 +1,141 @@
-.class public final synthetic Lauh;
-.super Lbec;
+.class public abstract Lauh;
+.super Lxa4;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lauh;
+# instance fields
+.field public a:Lbuh;
+
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lauh;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "getPliSent()J"
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    .line 2
+    iput v0, p0, Lauh;->b:I
 
-    const-class v3, Lrxe;
+    return-void
+.end method
 
-    const-string v4, "pliSent"
+.method public constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lauh;->a:Lauh;
+    const/4 p1, 0x0
+
+    .line 4
+    iput p1, p0, Lauh;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public h(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)Z
+    .locals 0
 
-    check-cast p1, Lrxe;
+    invoke-virtual {p0, p1, p2, p3}, Lauh;->u(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
 
-    iget-wide v0, p1, Lrxe;->m:J
+    iget-object p1, p0, Lauh;->a:Lbuh;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-nez p1, :cond_0
 
-    move-result-object p1
+    new-instance p1, Lbuh;
 
-    return-object p1
+    invoke-direct {p1, p2}, Lbuh;-><init>(Landroid/view/View;)V
+
+    iput-object p1, p0, Lauh;->a:Lbuh;
+
+    :cond_0
+    iget-object p1, p0, Lauh;->a:Lbuh;
+
+    iget-object p2, p1, Lbuh;->a:Landroid/view/View;
+
+    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+
+    move-result p3
+
+    iput p3, p1, Lbuh;->b:I
+
+    invoke-virtual {p2}, Landroid/view/View;->getLeft()I
+
+    move-result p2
+
+    iput p2, p1, Lbuh;->c:I
+
+    iget-object p1, p0, Lauh;->a:Lbuh;
+
+    invoke-virtual {p1}, Lbuh;->a()V
+
+    iget p1, p0, Lauh;->b:I
+
+    if-eqz p1, :cond_1
+
+    iget-object p2, p0, Lauh;->a:Lbuh;
+
+    invoke-virtual {p2, p1}, Lbuh;->b(I)Z
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lauh;->b:I
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final t()I
+    .locals 1
+
+    iget-object v0, p0, Lauh;->a:Lbuh;
+
+    if-eqz v0, :cond_0
+
+    iget v0, v0, Lbuh;->d:I
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public u(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;I)V
+    .locals 0
+
+    invoke-virtual {p1, p2, p3}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;->q(Landroid/view/View;I)V
+
+    return-void
+.end method
+
+.method public v(I)Z
+    .locals 1
+
+    iget-object v0, p0, Lauh;->a:Lbuh;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Lbuh;->b(I)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_0
+    iput p1, p0, Lauh;->b:I
+
+    const/4 p1, 0x0
+
+    return p1
 .end method

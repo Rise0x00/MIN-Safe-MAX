@@ -1,169 +1,165 @@
-.class public abstract Lp62;
+.class public final Lp62;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
-.field public final b:Lg54;
+.field public final b:Ljava/lang/String;
 
-.field public final c:La1f;
+.field public final c:Ljava/lang/String;
 
-.field public final d:La1f;
+.field public final d:Ljava/lang/String;
 
-.field public final e:Lake;
+.field public final e:Ljava/lang/String;
 
-.field public final f:Lake;
+.field public final f:Ljava/lang/String;
 
-.field public final g:Ltif;
+.field public final g:Ljava/lang/String;
 
-.field public final h:La1f;
+.field public final h:Ljava/lang/String;
 
-.field public final i:La1f;
+.field public final i:Ljava/lang/String;
+
+.field public final j:Ljava/lang/String;
+
+.field public final k:Z
+
+.field public final l:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(JLg54;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lp62;->a:J
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p3, p0, Lp62;->b:Lg54;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const/4 p1, 0x0
+    iput-object v0, p0, Lp62;->l:Ljava/util/HashMap;
 
-    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
+    iput-object p1, p0, Lp62;->a:Ljava/lang/String;
 
-    move-result-object p2
+    iput-object p2, p0, Lp62;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lp62;->c:La1f;
+    iput-object p3, p0, Lp62;->c:Ljava/lang/String;
 
-    sget-object p2, Lna5;->a:Lna5;
+    iput-object p4, p0, Lp62;->d:Ljava/lang/String;
 
-    invoke-static {p2}, Lb1f;->a(Ljava/lang/Object;)La1f;
+    iput-object p5, p0, Lp62;->e:Ljava/lang/String;
 
-    move-result-object p2
+    iput-object p6, p0, Lp62;->f:Ljava/lang/String;
 
-    iput-object p2, p0, Lp62;->d:La1f;
+    iput-object p7, p0, Lp62;->g:Ljava/lang/String;
 
-    const/4 p2, 0x0
+    iput-object p8, p0, Lp62;->h:Ljava/lang/String;
 
-    const/4 p3, 0x7
+    iput-object p9, p0, Lp62;->i:Ljava/lang/String;
 
-    invoke-static {p2, p2, p3}, Lbke;->b(III)Lake;
+    iput-object p10, p0, Lp62;->j:Ljava/lang/String;
 
-    move-result-object v0
-
-    iput-object v0, p0, Lp62;->e:Lake;
-
-    invoke-static {p2, p2, p3}, Lbke;->b(III)Lake;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lp62;->f:Lake;
-
-    new-instance p2, Lgk1;
-
-    const/16 p3, 0x17
-
-    invoke-direct {p2, p3}, Lgk1;-><init>(I)V
-
-    new-instance p3, Ltif;
-
-    invoke-direct {p3, p2}, Ltif;-><init>(Loi6;)V
-
-    iput-object p3, p0, Lp62;->g:Ltif;
-
-    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lp62;->h:La1f;
-
-    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lp62;->i:La1f;
+    iput-boolean p11, p0, Lp62;->k:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract b()V
-.end method
-
-.method public c(Lz62;)Ljava/lang/Object;
-    .locals 0
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-.end method
-
-.method public final d(Lo62;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget-object v0, p0, Lp62;->c:La1f;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, p1, Lo62;->a:Lc72;
+    const-string v1, "CandidatePair{name=\'"
 
-    invoke-virtual {v0, v1}, La1f;->setValue(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lp62;->d:La1f;
+    iget-object v1, p0, Lp62;->a:Ljava/lang/String;
 
-    iget-object p1, p1, Lo62;->b:Ljava/util/List;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1}, La1f;->setValue(Ljava/lang/Object;)V
+    const-string v1, "\', localCandidateType=\'"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public e()V
-    .locals 0
+    iget-object v1, p0, Lp62;->b:Ljava/lang/String;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public abstract f()Lez5;
-.end method
+    const-string v1, "\', localAddress=\'"
 
-.method public g(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget-object v1, p0, Lp62;->c:Ljava/lang/String;
 
-.method public h(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "\', remoteCandidateType=\'"
 
-.method public i(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget-object v1, p0, Lp62;->e:Ljava/lang/String;
 
-.method public abstract j(La72;)Ljava/lang/Object;
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public abstract k(Ljava/lang/String;)V
-.end method
+    const-string v1, "\', remoteAddress=\'"
 
-.method public l(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget-object v1, p0, Lp62;->f:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', rtt=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp62;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', transport=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp62;->i:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', channelId=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp62;->j:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', activeConnection="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lp62;->k:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", unknown="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lp62;->l:Ljava/util/HashMap;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

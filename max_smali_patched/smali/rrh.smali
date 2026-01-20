@@ -3,42 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/my/tracker/core/utils/Consumer;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:I
-
-.field public final synthetic d:Z
-
-.field public final synthetic e:Z
-
-.field public final synthetic f:J
-
-.field public final synthetic g:Lcom/my/tracker/core/EngineCore$EventPacker;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;I)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput p9, p0, Lrrh;->a:I
+    iput p1, p0, Lrrh;->a:I
 
-    iput-wide p1, p0, Lrrh;->b:J
-
-    iput p3, p0, Lrrh;->c:I
-
-    iput-boolean p4, p0, Lrrh;->d:Z
-
-    iput-boolean p5, p0, Lrrh;->e:Z
-
-    iput-wide p6, p0, Lrrh;->f:J
-
-    iput-object p8, p0, Lrrh;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+    iput-object p2, p0, Lrrh;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,64 +27,157 @@
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 20
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    move-object/from16 v0, p0
+    iget p1, p0, Lrrh;->a:I
 
-    iget v1, v0, Lrrh;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v1, :pswitch_data_0
+    const/4 v1, 0x1
 
-    iget-object v9, v0, Lrrh;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+    const/4 v2, 0x0
 
-    move-object/from16 v10, p1
+    iget-object v3, p0, Lrrh;->b:Ljava/lang/Object;
 
-    check-cast v10, Lcom/my/tracker/core/EngineCore;
+    packed-switch p1, :pswitch_data_0
 
-    iget-wide v2, v0, Lrrh;->b:J
+    check-cast v3, Lone/me/login/welcome/WelcomeScreen;
 
-    iget v4, v0, Lrrh;->c:I
+    iget-object p1, v3, Lone/me/login/welcome/WelcomeScreen;->o:Ljava/lang/Object;
 
-    iget-boolean v5, v0, Lrrh;->d:Z
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    iget-boolean v6, v0, Lrrh;->e:Z
+    move-result-object p1
 
-    iget-wide v7, v0, Lrrh;->f:J
+    check-cast p1, Lkt7;
 
-    invoke-static/range {v2 .. v10}, Lcom/my/tracker/core/b;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lone/me/login/inputphone/InputPhoneScreen;
+
+    invoke-direct {v0}, Lone/me/login/inputphone/InputPhoneScreen;-><init>()V
+
+    invoke-static {v0, v2, v2}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
+
+    move-result-object v0
+
+    const-string v1, "InputPhoneScreen"
+
+    invoke-virtual {p1, v0, v1}, Lkt7;->b(Lz4e;Ljava/lang/String;)V
 
     return-void
 
     :pswitch_0
-    iget-object v1, v0, Lrrh;->g:Lcom/my/tracker/core/EngineCore$EventPacker;
+    check-cast v3, Lone/me/webapp/rootscreen/WebAppRootScreen;
 
-    move-object/from16 v19, p1
+    sget-object p1, Lone/me/webapp/rootscreen/WebAppRootScreen;->K0:[Lz28;
 
-    check-cast v19, Lcom/my/tracker/core/EngineCore;
+    invoke-virtual {v3}, Lone/me/webapp/rootscreen/WebAppRootScreen;->N0()Lj9i;
 
-    iget-wide v11, v0, Lrrh;->b:J
+    move-result-object p1
 
-    iget v13, v0, Lrrh;->c:I
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v14, v0, Lrrh;->d:Z
+    new-instance v3, Lx8i;
 
-    iget-boolean v15, v0, Lrrh;->e:Z
+    invoke-direct {v3, p1, v2}, Lx8i;-><init>(Lj9i;Lkotlin/coroutines/Continuation;)V
 
-    iget-wide v2, v0, Lrrh;->f:J
+    invoke-static {p1, v2, v3, v1}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
 
-    move-object/from16 v18, v1
+    move-result-object v1
 
-    move-wide/from16 v16, v2
+    iget-object v2, p1, Lj9i;->J0:Lx07;
 
-    invoke-static/range {v11 .. v19}, Lcom/my/tracker/core/a;->b(JIZZJLcom/my/tracker/core/EngineCore$EventPacker;Lcom/my/tracker/core/EngineCore;)V
+    sget-object v3, Lj9i;->r1:[Lz28;
+
+    aget-object v0, v3, v0
+
+    invoke-virtual {v2, p1, v0, v1}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
 
     return-void
 
-    nop
+    :pswitch_1
+    check-cast v3, Lfyh;
+
+    iget-object p1, v3, Lfyh;->c:Leyh;
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Lnpd;
+
+    iget-object p1, p1, Lnpd;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->i1:[Lz28;
+
+    invoke-virtual {p1}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lfpd;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lfpd;->z()Lhe8;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lhe8;->d()V
+
+    :cond_0
+    return-void
+
+    :pswitch_2
+    check-cast v3, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;
+
+    iget-object p1, v3, Lone/me/calls/ui/ui/call/panels/VpnPanelWidget;->b:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Laxh;
+
+    iget-object p1, p1, Laxh;->b:Lnx1;
+
+    sget-object v0, Lnah;->c:Lnah;
+
+    invoke-virtual {p1, v0}, Lnx1;->p(Lnah;)V
+
+    return-void
+
+    :pswitch_3
+    check-cast v3, Lone/me/chatmedia/viewer/VideoWebViewScreen;
+
+    sget-object p1, Lone/me/chatmedia/viewer/VideoWebViewScreen;->J0:[Lz28;
+
+    invoke-virtual {v3}, Lone/me/chatmedia/viewer/VideoWebViewScreen;->R0()Lqrh;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lnrh;
+
+    invoke-direct {v3, p1, v2}, Lnrh;-><init>(Lqrh;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v2, v3, v1}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+
+    move-result-object v1
+
+    iget-object v2, p1, Lqrh;->y0:Lx07;
+
+    sget-object v3, Lqrh;->D0:[Lz28;
+
+    aget-object v0, v3, v0
+
+    invoke-virtual {v2, p1, v0, v1}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

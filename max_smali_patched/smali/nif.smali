@@ -1,8 +1,3 @@
-.class public interface abstract Lnif;
-.super Ljava/lang/Object;
+.class public final Lnif;
+.super Ljava/lang/UnsatisfiedLinkError;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract a()Ljava/lang/Object;
-.end method

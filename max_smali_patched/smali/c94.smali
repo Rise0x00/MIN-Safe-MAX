@@ -1,82 +1,39 @@
 .class public final Lc94;
-.super Lk32;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Lwo0;
+.field public final a:La94;
 
-.field public final o:F
+.field public final b:La94;
+
+.field public final c:Z
+
+.field public final d:Landroid/view/ViewGroup;
+
+.field public final e:Lf94;
+
+.field public final f:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lwo0;F)V
-    .locals 2
+.method public constructor <init>(La94;La94;ZLandroid/view/ViewGroup;Lf94;Ljava/util/ArrayList;)V
+    .locals 0
 
-    const-string v0, "bitmapDescriptor must not be null"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1, v0}, Lkui;->h(Ljava/lang/Object;Ljava/lang/String;)V
+    iput-object p1, p0, Lc94;->a:La94;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lc94;->b:La94;
 
-    cmpg-float v0, p2, v0
+    iput-boolean p3, p0, Lc94;->c:Z
 
-    if-lez v0, :cond_0
+    iput-object p4, p0, Lc94;->d:Landroid/view/ViewGroup;
 
-    const/4 v0, 0x3
+    iput-object p5, p0, Lc94;->e:Lf94;
 
-    invoke-static {p2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    invoke-direct {p0, v0, p1, v1}, Lk32;-><init>(ILwo0;Ljava/lang/Float;)V
-
-    iput-object p1, p0, Lc94;->d:Lwo0;
-
-    iput p2, p0, Lc94;->o:F
+    iput-object p6, p0, Lc94;->f:Ljava/util/ArrayList;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "refWidth must be positive"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lc94;->d:Lwo0;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "[CustomCap: bitmapDescriptor="
-
-    const-string v2, " refWidth="
-
-    invoke-static {v1, v0, v2}, Lnx1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lc94;->o:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

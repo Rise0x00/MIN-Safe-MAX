@@ -1,52 +1,48 @@
 .class public final Louh;
-.super Ljava/lang/Object;
+.super Lhj4;
 .source "SourceFile"
-
-# interfaces
-.implements Livh;
 
 
 # instance fields
-.field public final synthetic a:Landroid/os/Bundle;
-
-.field public final synthetic b:Lnp4;
+.field public final synthetic g:Landroidx/viewpager2/widget/ViewPager2;
 
 
 # direct methods
-.method public constructor <init>(Lnp4;Landroid/os/Bundle;)V
+.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Louh;->g:Landroidx/viewpager2/widget/ViewPager2;
 
-    iput-object p1, p0, Louh;->b:Lnp4;
+    const/4 p1, 0x1
 
-    iput-object p2, p0, Louh;->a:Landroid/os/Bundle;
+    invoke-direct {p0, p1}, Lhj4;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
+.method public final g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Louh;->g:Landroidx/viewpager2/widget/ViewPager2;
 
-    return v0
-.end method
+    iget-object v0, v0, Landroidx/viewpager2/widget/ViewPager2;->B0:Ldu5;
 
-.method public final b()V
-    .locals 2
+    iget-object v0, v0, Ldu5;->b:Lmee;
 
-    iget-object v0, p0, Louh;->b:Lnp4;
+    iget-boolean v0, v0, Lmee;->m:Z
 
-    iget-object v0, v0, Lnp4;->a:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast v0, Lcx7;
+    const/4 p1, 0x0
 
-    iget-object v1, p0, Louh;->a:Landroid/os/Bundle;
+    return-object p1
 
-    invoke-interface {v0, v1}, Lcx7;->q(Landroid/os/Bundle;)V
+    :cond_0
+    invoke-super {p0, p1}, Lhj4;->g(Landroidx/recyclerview/widget/a;)Landroid/view/View;
 
-    return-void
+    move-result-object p1
+
+    return-object p1
 .end method

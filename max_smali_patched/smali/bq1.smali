@@ -1,28 +1,48 @@
-.class public interface abstract Lbq1;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lbq1;
+.super Lo84;
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;
-.implements Lxp1;
-.implements Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener;
+
+# instance fields
+.field public final synthetic X:Lr3;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lbq1;->X:Lr3;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public b(Ljava/lang/String;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Lbq1;->d:Ljava/lang/Object;
 
-.method public onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
-    .locals 0
+    iget p1, p0, Lbq1;->o:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lbq1;->o:I
+
+    iget-object p1, p0, Lbq1;->X:Lr3;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,49 +1,62 @@
 .class public final Lr33;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lg33;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lb2e;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Lo33;
 
-.field public final synthetic o:Lw33;
+.field public final c:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(Lw33;Lp14;)V
-    .locals 0
+.method public constructor <init>(Lb2e;)V
+    .locals 2
 
-    iput-object p1, p0, Lr33;->o:Lw33;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Lh33;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lh33;-><init>(Lb2e;I)V
+
+    new-instance v1, Ln8g;
+
+    invoke-direct {v1, v0}, Ln8g;-><init>(Llq6;)V
+
+    iput-object v1, p0, Lr33;->c:Ln8g;
+
+    iput-object p1, p0, Lr33;->a:Lb2e;
+
+    new-instance p1, Lo33;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0, p0}, Lo33;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lr33;->b:Lo33;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final b()Lza3;
     .locals 1
 
-    iput-object p1, p0, Lr33;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lr33;->c:Ln8g;
 
-    iget p1, p0, Lr33;->X:I
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    move-result-object v0
 
-    or-int/2addr p1, v0
+    check-cast v0, Lza3;
 
-    iput p1, p0, Lr33;->X:I
-
-    iget-object p1, p0, Lr33;->o:Lw33;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lw33;->Q(Ljava/util/Set;Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

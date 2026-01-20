@@ -1,155 +1,248 @@
 .class public final Lms;
-.super Lkf8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static volatile f:Lms;
-
-.field public static final g:Lls;
+# interfaces
+.implements Ljava/util/Collection;
+.implements Lo28;
 
 
 # instance fields
-.field public final e:Lnn4;
+.field public final a:[Ljava/lang/Object;
+
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lls;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lls;-><init>(I)V
-
-    sput-object v0, Lms;->g:Lls;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>([Ljava/lang/Object;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lnn4;
+    iput-object p1, p0, Lms;->a:[Ljava/lang/Object;
 
-    invoke-direct {v0}, Lnn4;-><init>()V
-
-    iput-object v0, p0, Lms;->e:Lnn4;
+    iput-boolean p2, p0, Lms;->b:Z
 
     return-void
-.end method
-
-.method public static b()Lms;
-    .locals 2
-
-    sget-object v0, Lms;->f:Lms;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lms;->f:Lms;
-
-    return-object v0
-
-    :cond_0
-    const-class v0, Lms;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lms;->f:Lms;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lms;
-
-    invoke-direct {v1}, Lms;-><init>()V
-
-    sput-object v1, Lms;->f:Lms;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sget-object v0, Lms;->f:Lms;
-
-    return-object v0
-
-    :goto_1
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v1
 .end method
 
 
 # virtual methods
-.method public final c(Ljava/lang/Runnable;)V
-    .locals 3
+.method public final add(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lms;->e:Lnn4;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v1, v0, Lnn4;->g:Landroid/os/Handler;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    if-nez v1, :cond_1
-
-    iget-object v1, v0, Lnn4;->e:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, v0, Lnn4;->g:Landroid/os/Handler;
-
-    if-nez v2, :cond_0
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lnn4;->b(Landroid/os/Looper;)Landroid/os/Handler;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lnn4;->g:Landroid/os/Handler;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    goto :goto_2
-
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final clear()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "Operation is not supported for read-only collection"
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
+
+    iget-object v0, p0, Lms;->a:[Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Lct;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 3
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
+
+    return v1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
 
     :cond_1
-    :goto_2
-    iget-object v0, v0, Lnn4;->g:Landroid/os/Handler;
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result v0
 
-    return-void
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lms;->a:[Ljava/lang/Object;
+
+    invoke-static {v2, v0}, Lct;->i([Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v1
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget-object v0, p0, Lms;->a:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    new-instance v0, Lb2;
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Lms;->a:[Ljava/lang/Object;
+
+    invoke-direct {v0, v1, v2}, Lb2;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p1, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget-object v0, p0, Lms;->a:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 3
+
+    .line 2
+    iget-object v0, p0, Lms;->a:[Ljava/lang/Object;
+
+    iget-boolean v1, p0, Lms;->b:Z
+
+    const-class v2, [Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    .line 3
+    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    return-object v0
+
+    .line 4
+    :cond_0
+    array-length v1, v0
+
+    invoke-static {v0, v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;ILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1}, Lei4;->e(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

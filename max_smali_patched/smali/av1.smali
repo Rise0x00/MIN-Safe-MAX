@@ -1,120 +1,83 @@
-.class public final Lav1;
-.super Logf;
+.class public final synthetic Lav1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic X:Lev1;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lfv1;
 
 
 # direct methods
-.method public constructor <init>(Lev1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lfv1;I)V
     .locals 0
 
-    iput-object p1, p0, Lav1;->X:Lev1;
+    iput p2, p0, Lav1;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lav1;->b:Lfv1;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    check-cast p1, Lw31;
+    iget p1, p0, Lav1;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lav1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Lav1;->b:Lfv1;
 
-    move-result-object p1
+    iget-object v0, p1, Lfv1;->c1:Lcv1;
 
-    check-cast p1, Lav1;
+    if-eqz v0, :cond_0
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-object p1, p1, Lfv1;->i1:Lyk1;
 
-    invoke-virtual {p1, p2}, Lav1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lcv1;->i(Lyk1;)V
 
-    return-object p2
-.end method
+    :cond_0
+    return-void
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    :pswitch_0
+    iget-object p1, p0, Lav1;->b:Lfv1;
 
-    new-instance v0, Lav1;
+    iget-object p1, p1, Lfv1;->c1:Lcv1;
 
-    iget-object v1, p0, Lav1;->X:Lev1;
+    if-eqz p1, :cond_1
 
-    invoke-direct {v0, v1, p2}, Lav1;-><init>(Lev1;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {p1}, Lcv1;->u()V
 
-    iput-object p1, v0, Lav1;->o:Ljava/lang/Object;
+    :cond_1
+    return-void
 
-    return-object v0
-.end method
+    :pswitch_1
+    iget-object p1, p0, Lav1;->b:Lfv1;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iget-object v0, p1, Lfv1;->c1:Lcv1;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-eqz v0, :cond_2
 
-    iget-object p1, p0, Lav1;->o:Ljava/lang/Object;
+    iget-object p1, p1, Lfv1;->i1:Lyk1;
 
-    check-cast p1, Lw31;
+    invoke-interface {v0, p1}, Lcv1;->l(Lyk1;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_2
+    return-void
 
-    const-string v1, "Chat info was changed chat="
+    nop
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", restart service."
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "CallEngineTag"
-
-    invoke-static {v0, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object p1, Lev1;->b1:[Les7;
-
-    iget-object p1, p0, Lav1;->X:Lev1;
-
-    iget-object v0, p1, Lev1;->D0:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwn1;
-
-    iget-object p1, p1, Lev1;->d:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/app/Application;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lwn1;->d(Landroid/content/Context;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

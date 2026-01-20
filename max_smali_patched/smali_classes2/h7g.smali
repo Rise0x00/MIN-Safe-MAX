@@ -1,152 +1,272 @@
 .class public final Lh7g;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lrkg;
 
-.field public final synthetic b:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:Landroid/widget/ScrollView;
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/uikit/common/button/OneMeButton;Landroid/widget/ScrollView;I)V
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 3
+
+    .line 7
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+
+    .line 8
+    iput-object p1, p0, Lh7g;->b:Ljava/lang/String;
+
+    .line 9
+    iput p2, p0, Lh7g;->c:I
+
+    .line 10
+    iput p3, p0, Lh7g;->d:I
+
+    const/4 v0, 0x1
+
+    .line 11
+    iput v0, p0, Lh7g;->e:I
+
+    .line 12
+    sget-object v1, Lg7g;->$EnumSwitchMapping$0:[I
+
+    invoke-static {v0}, Lt02;->t(I)I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    if-ne v1, v0, :cond_0
+
+    .line 13
+    new-instance v0, Lrkg;
+
+    invoke-direct {v0, p1, p2, p3}, Lrkg;-><init>(Ljava/lang/String;II)V
+
+    .line 14
+    iget-object p1, v0, Lrkg;->h:Ln8g;
+
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lb3h;
+
+    .line 15
+    iput-object v0, p0, Lh7g;->a:Lrkg;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IIILrkg;)V
     .locals 0
 
-    iput p3, p0, Lh7g;->a:I
+    .line 1
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    iput-object p1, p0, Lh7g;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    .line 2
+    iput-object p1, p0, Lh7g;->b:Ljava/lang/String;
 
-    iput-object p2, p0, Lh7g;->c:Landroid/widget/ScrollView;
+    .line 3
+    iput p2, p0, Lh7g;->c:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 4
+    iput p3, p0, Lh7g;->d:I
+
+    .line 5
+    iput p4, p0, Lh7g;->e:I
+
+    .line 6
+    iput-object p5, p0, Lh7g;->a:Lrkg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a()Lh7g;
+    .locals 6
 
-    iget v0, p0, Lh7g;->a:I
+    new-instance v0, Lh7g;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Lh7g;->a:Lrkg;
 
-    iget-object v0, p0, Lh7g;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    new-instance v2, Landroid/graphics/Paint;
 
-    move-result-object v1
+    iget-object v3, v1, Lrkg;->g:Landroid/graphics/Paint;
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-direct {v2, v3}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
 
-    if-eqz v2, :cond_0
+    new-instance v5, Lrkg;
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    iget-object v3, v1, Lrkg;->a:Ljava/lang/String;
 
-    goto :goto_0
+    iget v4, v1, Lrkg;->b:I
+
+    iget v1, v1, Lrkg;->c:I
+
+    invoke-direct {v5, v3, v4, v1}, Lrkg;-><init>(Ljava/lang/String;II)V
+
+    iput-object v2, v5, Lrkg;->g:Landroid/graphics/Paint;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v5, Lrkg;->j:Z
+
+    iget-object v1, p0, Lh7g;->b:Ljava/lang/String;
+
+    iget v2, p0, Lh7g;->c:I
+
+    iget v3, p0, Lh7g;->d:I
+
+    iget v4, p0, Lh7g;->e:I
+
+    invoke-direct/range {v0 .. v5}, Lh7g;-><init>(Ljava/lang/String;IIILrkg;)V
+
+    return-object v0
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    iget-object v0, p0, Lh7g;->a:Lrkg;
+
+    iget-boolean v1, v0, Lrkg;->j:Z
+
+    if-eqz v1, :cond_0
+
+    iget v1, v0, Lrkg;->f:F
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v1, v1, v3, v3}, Landroid/graphics/Canvas;->scale(FFFF)V
+
+    :try_start_0
+    iget-object v0, v0, Lrkg;->g:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    throw v0
 
     :cond_0
-    const/4 v1, 0x0
+    const-class p1, Lrkg;
 
-    :goto_0
-    if-eqz v1, :cond_1
+    invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
+    move-result-object p1
 
-    goto :goto_1
+    const-string v0, "error: cant\' render svg, incorrect data!"
 
-    :cond_1
-    const/4 v1, 0x0
+    invoke-static {p1, v0}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    return-void
+.end method
+
+.method public final getAlpha()I
+    .locals 1
+
+    iget-object v0, p0, Lh7g;->a:Lrkg;
+
+    iget-object v0, v0, Lrkg;->g:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
 
     move-result v0
 
-    add-int/2addr v0, v1
+    return v0
+.end method
 
-    iget-object v1, p0, Lh7g;->c:Landroid/widget/ScrollView;
+.method public final getIntrinsicHeight()I
+    .locals 1
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
+    iget-object v0, p0, Lh7g;->a:Lrkg;
 
-    move-result v2
+    iget v0, v0, Lrkg;->e:I
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
+    return v0
+.end method
 
-    move-result v3
+.method public final getIntrinsicWidth()I
+    .locals 1
 
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
+    iget-object v0, p0, Lh7g;->a:Lrkg;
 
-    move-result v4
+    iget v0, v0, Lrkg;->d:I
 
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+    return v0
+.end method
 
-    return-void
+.method public final getOpacity()I
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lh7g;->b:Lone/me/sdk/uikit/common/button/OneMeButton;
+    const/4 v0, -0x2
 
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    return v0
+.end method
 
-    move-result-object v1
+.method public final bridge synthetic mutate()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    instance-of v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    invoke-virtual {p0}, Lh7g;->a()Lh7g;
 
-    if-eqz v2, :cond_2
+    move-result-object v0
 
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
+    return-object v0
+.end method
 
-    goto :goto_2
+.method public final setAlpha(I)V
+    .locals 1
 
-    :cond_2
-    const/4 v1, 0x0
+    iget-object v0, p0, Lh7g;->a:Lrkg;
 
-    :goto_2
-    if-eqz v1, :cond_3
+    iget-object v0, v0, Lrkg;->g:Landroid/graphics/Paint;
 
-    iget v1, v1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    goto :goto_3
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_3
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lh7g;->c:Landroid/widget/ScrollView;
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v3
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v4
-
-    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     return-void
+.end method
 
-    nop
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lh7g;->a:Lrkg;
+
+    iget-object v0, v0, Lrkg;->g:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
+
+    return-void
 .end method

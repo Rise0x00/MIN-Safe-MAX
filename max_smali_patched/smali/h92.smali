@@ -1,57 +1,59 @@
-.class public abstract Lh92;
+.class public final Lh92;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Iterable;
-.implements Ltr7;
-
 
 # instance fields
-.field public final a:C
+.field public final a:Lsx3;
 
-.field public final b:C
+.field public b:Lsx3;
 
-.field public final c:I
+.field public c:Lsx3;
+
+.field public d:Lsx3;
+
+.field public e:Lsx3;
+
+.field public f:Lsx3;
+
+.field public g:Lsx3;
+
+.field public h:Ljava/util/ArrayList;
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public final l:I
+
+.field public final m:Z
+
+.field public n:Z
+
+.field public o:Z
+
+.field public p:Z
+
+.field public q:Z
 
 
 # direct methods
-.method public constructor <init>(CC)V
+.method public constructor <init>(Lsx3;IZ)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-char p1, p0, Lh92;->a:C
+    const/4 v0, 0x0
 
-    const/4 v0, 0x1
+    iput v0, p0, Lh92;->k:F
 
-    invoke-static {p1, p2, v0}, Llvi;->b(III)I
+    iput-object p1, p0, Lh92;->a:Lsx3;
 
-    move-result p1
+    iput p2, p0, Lh92;->l:I
 
-    int-to-char p1, p1
-
-    iput-char p1, p0, Lh92;->b:C
-
-    iput v0, p0, Lh92;->c:I
+    iput-boolean p3, p0, Lh92;->m:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final iterator()Ljava/util/Iterator;
-    .locals 4
-
-    new-instance v0, Li92;
-
-    iget-char v1, p0, Lh92;->b:C
-
-    iget v2, p0, Lh92;->c:I
-
-    iget-char v3, p0, Lh92;->a:C
-
-    invoke-direct {v0, v3, v1, v2}, Li92;-><init>(CCI)V
-
-    return-object v0
 .end method

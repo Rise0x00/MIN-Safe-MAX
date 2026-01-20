@@ -1,258 +1,260 @@
-.class public final synthetic Lul8;
+.class public final Lul8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lfm8;
 
-.field public final synthetic b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+.field public final b:Lo58;
+
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final e:Lo58;
+
+.field public final f:Lo58;
+
+.field public final g:Lo58;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;Lo58;Lo58;Lfm8;)V
     .locals 0
 
-    iput p2, p0, Lul8;->a:I
-
-    iput-object p1, p0, Lul8;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p7, p0, Lul8;->a:Lfm8;
+
+    iput-object p1, p0, Lul8;->b:Lo58;
+
+    iput-object p2, p0, Lul8;->c:Lo58;
+
+    iput-object p3, p0, Lul8;->d:Lo58;
+
+    iput-object p4, p0, Lul8;->e:Lo58;
+
+    iput-object p5, p0, Lul8;->f:Lo58;
+
+    iput-object p6, p0, Lul8;->g:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final a(Lnbg;[B)V
+    .locals 3
 
-    iget p1, p0, Lul8;->a:I
+    const-string v0, "onLoginFail"
 
-    const/4 v0, 0x1
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-    iget-object v1, p0, Lul8;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    move-result-object v1
 
-    packed-switch p1, :pswitch_data_0
+    const-string v2, "ul8"
 
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lh68;
+    invoke-static {v2, v0, v1}, Lc5j;->g(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, p1, Lh68;->f:Lc1e;
+    const-string v0, "login.blocked"
 
-    iget-object v0, p1, Lc1e;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object v1, p1, Lnbg;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p1}, Lc1e;->n()V
+    move-result v0
 
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lvl8;
+    if-nez v0, :cond_5
 
-    if-eqz p1, :cond_1
+    const-string v0, "login.flood"
 
-    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+    iget-object v1, p1, Lnbg;->b:Ljava/lang/String;
 
-    iget-object v0, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->V0:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    const-string v2, "SELECTED_MEDIA_ALBUM"
+    move-result v0
 
-    invoke-static {v0, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-nez v0, :cond_5
+
+    const-string v0, "login.token"
+
+    iget-object v1, p1, Lnbg;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lj6;->G()V
-
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->c0()V
+    const-string v0, "session.state"
 
-    :cond_1
-    :goto_0
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->R0:Lwl8;
+    iget-object v1, p1, Lnbg;->b:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lp6d;->m()V
-
-    return-void
-
-    :pswitch_0
-    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->a1:I
-
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lh68;
-
-    iget-object v2, p1, Lh68;->f:Lc1e;
-
-    iget v3, v2, Lc1e;->k:I
-
-    const/4 v4, 0x3
-
-    if-ne v3, v4, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v0, v4
-
-    :goto_1
-    invoke-virtual {v2, v0}, Lc1e;->p(I)V
-
-    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->v()V
-
-    iget-object p1, p1, Lh68;->f:Lc1e;
-
-    iget p1, p1, Lc1e;->k:I
-
-    if-ne p1, v4, :cond_3
-
-    sget p1, Lmkd;->C1:I
-
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    goto :goto_2
-
-    :cond_3
-    sget p1, Lmkd;->H1:I
-
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    :goto_2
-    return-void
-
-    :pswitch_1
-    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->a1:I
-
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lh68;
-
-    iget-object v2, p1, Lh68;->f:Lc1e;
-
-    iget v3, v2, Lc1e;->k:I
-
-    const/4 v4, 0x2
-
-    if-ne v3, v4, :cond_4
-
-    move v3, v0
-
-    goto :goto_3
-
-    :cond_4
-    move v3, v4
-
-    :goto_3
-    invoke-virtual {v2, v3}, Lc1e;->p(I)V
-
-    invoke-virtual {v1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->v()V
-
-    iget-object p1, p1, Lh68;->f:Lc1e;
-
-    iget v2, p1, Lc1e;->k:I
-
-    if-ne v2, v4, :cond_6
-
-    invoke-virtual {p1}, Lc1e;->b()I
-
-    move-result p1
-
-    if-le p1, v0, :cond_5
-
-    sget p1, Lmkd;->E1:I
-
-    goto :goto_4
-
-    :cond_5
-    sget p1, Lmkd;->D1:I
-
-    :goto_4
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    goto :goto_5
-
-    :cond_6
-    sget p1, Lmkd;->F1:I
-
-    invoke-virtual {v1, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    :goto_5
-    return-void
-
-    :pswitch_2
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lvl8;
-
-    if-nez p1, :cond_7
-
-    goto :goto_6
-
-    :cond_7
-    iget-boolean p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->W0:Z
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->V0:Lsxb;
-
-    iget-object p1, p1, Lsxb;->b:Lhvb;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v2, 0xc
-
-    int-to-long v2, v2
-
-    invoke-virtual {p1, v0, v2, v3}, Ljud;->m(Ljava/lang/Enum;J)J
-
-    move-result-wide v2
-
-    long-to-int p1, v2
-
-    iget-object v0, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->Q0:Lh68;
-
-    iget-object v0, v0, Lh68;->f:Lc1e;
-
-    invoke-virtual {v0}, Lc1e;->b()I
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-le v0, p1, :cond_8
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object p1, p1, Lnbg;->c:Ljava/lang/String;
 
-    move-result-object v0
+    new-instance p2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const-string v0, "session state error: "
 
-    move-result-object v1
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget v2, Lkkd;->a:I
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, p1, v1}, Lhsf;->p(IILandroid/content/Context;)Ljava/lang/String;
+    const-string p1, " do nothing"
+
+    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    const/4 v1, 0x0
+    invoke-static {v2, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, p1, v1}, Luyh;->j(Landroid/content/Context;Ljava/lang/String;I)V
-
-    goto :goto_6
-
-    :cond_8
-    iget-object p1, v1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:Lvl8;
-
-    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->U()V
-
-    :goto_6
     return-void
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    instance-of v0, p1, Libg;
+
+    if-nez v0, :cond_3
+
+    const-string p2, "proto.state"
+
+    iget-object v0, p1, Lnbg;->b:Ljava/lang/String;
+
+    invoke-virtual {p2, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2
+
+    iget-object p2, p0, Lul8;->d:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lym5;
+
+    new-instance v0, Lru/ok/tamtam/errors/ProtoStateException;
+
+    invoke-direct {v0, p1}, Lru/ok/tamtam/errors/TamErrorException;-><init>(Lnbg;)V
+
+    check-cast p2, Lqab;
+
+    invoke-virtual {p2, v0}, Lqab;->a(Ljava/lang/Throwable;)V
+
+    :cond_2
+    iget-object p1, p0, Lul8;->a:Lfm8;
+
+    sget-object p2, Ldm8;->Y:Ldm8;
+
+    invoke-virtual {p1, p2}, Lfm8;->w(Ldm8;)V
+
+    iget-object p1, p0, Lul8;->g:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltcg;
+
+    invoke-virtual {p1}, Ltcg;->f()V
+
+    return-void
+
+    :cond_3
+    iget-object p1, p0, Lul8;->c:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lv3b;
+
+    invoke-virtual {p1}, Lv3b;->b()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lul8;->e:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxue;
+
+    iget p1, p1, Lxue;->l:I
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_4
+
+    iget-object p1, p0, Lul8;->f:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lam8;
+
+    invoke-virtual {p1, p2}, Lam8;->e([B)V
+
+    :cond_4
+    return-void
+
+    :cond_5
+    :goto_0
+    iget-object p2, p0, Lul8;->a:Lfm8;
+
+    sget-object v0, Ldm8;->X:Ldm8;
+
+    invoke-virtual {p2, v0}, Lfm8;->w(Ldm8;)V
+
+    iget-object p2, p0, Lul8;->b:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Llgc;
+
+    iget-object p2, p2, Llgc;->a:Lqi8;
+
+    iget-object p1, p1, Lnbg;->b:Ljava/lang/String;
+
+    iget-object v0, p2, Lqi8;->m0:Lnre;
+
+    sget-object v1, Lqi8;->Q0:[Lz28;
+
+    const/4 v2, 0x6
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {v0, p2, v1, p1}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lul8;->c:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lv3b;
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Lv3b;->d(Z)V
+
+    return-void
 .end method

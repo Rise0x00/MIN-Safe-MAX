@@ -1,61 +1,132 @@
-.class public final Ljgg;
+.class public final synthetic Ljgg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:I
 
-.field public final b:J
+.field public final synthetic Y:F
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Lrgg;
+
+.field public final synthetic c:Lrhg;
+
+.field public final synthetic d:Ljava/lang/CharSequence;
+
+.field public final synthetic o:Landroid/text/TextPaint;
 
 
 # direct methods
-.method public constructor <init>(Ligg;)V
-    .locals 2
+.method public synthetic constructor <init>(Lrgg;Lrhg;Ljava/lang/CharSequence;Landroid/text/TextPaint;IFI)V
+    .locals 0
+
+    iput p7, p0, Ljgg;->a:I
+
+    iput-object p1, p0, Ljgg;->b:Lrgg;
+
+    iput-object p2, p0, Ljgg;->c:Lrhg;
+
+    iput-object p3, p0, Ljgg;->d:Ljava/lang/CharSequence;
+
+    iput-object p4, p0, Ljgg;->o:Landroid/text/TextPaint;
+
+    iput p5, p0, Ljgg;->X:I
+
+    iput p6, p0, Ljgg;->Y:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget-object v0, p1, Ligg;->a:Ljava/lang/String;
-
-    iput-object v0, p0, Ljgg;->a:Ljava/lang/String;
-
-    iget-wide v0, p1, Ligg;->b:J
-
-    iput-wide v0, p0, Ljgg;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 11
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Ljgg;->a:I
 
-    const-string v1, "UploadResult{token=\'"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Ljgg;->b:Lrgg;
 
-    iget-object v1, p0, Ljgg;->a:Ljava/lang/String;
+    iget-object v1, v0, Lrgg;->b:Ll58;
 
-    invoke-static {v1}, Lxvc;->g(Ljava/lang/CharSequence;)Ljava/lang/String;
+    iget-object v2, p0, Ljgg;->c:Lrhg;
 
-    move-result-object v1
+    iget-boolean v6, v2, Lrhg;->d:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v7, v0, Lrgg;->g:Landroid/text/TextUtils$TruncateAt;
 
-    const-string v1, "\', attachId="
+    invoke-virtual {v0}, Lrgg;->e()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v5
 
-    iget-wide v1, p0, Ljgg;->b:J
+    invoke-virtual {v0}, Lrgg;->d()Z
 
-    const/16 v3, 0x7d
+    move-result v9
 
-    invoke-static {v0, v1, v2, v3}, Lxjb;->l(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    const/16 v10, 0x10
+
+    iget-object v2, p0, Ljgg;->d:Ljava/lang/CharSequence;
+
+    iget-object v3, p0, Ljgg;->o:Landroid/text/TextPaint;
+
+    iget v4, p0, Ljgg;->X:I
+
+    iget v8, p0, Ljgg;->Y:F
+
+    invoke-static/range {v1 .. v10}, Ll58;->a(Ll58;Ljava/lang/CharSequence;Landroid/text/TextPaint;IIZLandroid/text/TextUtils$TruncateAt;FZI)Landroid/text/Layout;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ljgg;->b:Lrgg;
+
+    iget-object v1, v0, Lrgg;->b:Ll58;
+
+    iget-object v2, p0, Ljgg;->c:Lrhg;
+
+    iget-boolean v6, v2, Lrhg;->d:Z
+
+    iget-object v7, v0, Lrgg;->g:Landroid/text/TextUtils$TruncateAt;
+
+    invoke-virtual {v0}, Lrgg;->e()I
+
+    move-result v5
+
+    invoke-virtual {v0}, Lrgg;->d()Z
+
+    move-result v9
+
+    const/16 v10, 0x10
+
+    iget-object v2, p0, Ljgg;->d:Ljava/lang/CharSequence;
+
+    iget-object v3, p0, Ljgg;->o:Landroid/text/TextPaint;
+
+    iget v4, p0, Ljgg;->X:I
+
+    iget v8, p0, Ljgg;->Y:F
+
+    invoke-static/range {v1 .. v10}, Ll58;->a(Ll58;Ljava/lang/CharSequence;Landroid/text/TextPaint;IIZLandroid/text/TextUtils$TruncateAt;FZI)Landroid/text/Layout;
+
+    move-result-object v0
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

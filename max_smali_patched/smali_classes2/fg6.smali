@@ -1,54 +1,111 @@
-.class public abstract Lfg6;
-.super Ljava/lang/Object;
+.class public final Lfg6;
+.super Llm4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lnmf;
+# static fields
+.field public static final b:Lfg6;
 
-.field public final b:Lvf5;
+.field public static final c:Lhm4;
 
-.field public c:I
+.field public static final d:Lhm4;
 
-.field public d:I
+.field public static final e:Lhm4;
 
-.field public e:Lhmg;
+.field public static final f:Lhm4;
+
+.field public static final g:Lhm4;
+
+.field public static final h:Lhm4;
 
 
 # direct methods
-.method public constructor <init>(Lnmf;Lvf5;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfg6;
 
-    iput-object p1, p0, Lfg6;->a:Lnmf;
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    iput-object p2, p0, Lfg6;->b:Lvf5;
+    sput-object v0, Lfg6;->b:Lfg6;
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    new-array v2, v1, [Ljava/lang/String;
 
-# virtual methods
-.method public a(Lhmg;II)V
-    .locals 1
+    const-string v3, ":settings/folder-list"
 
-    iget-object v0, p0, Lfg6;->e:Lhmg;
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/16 v5, 0xe
 
-    move-result v0
+    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    if-eqz v0, :cond_0
+    move-result-object v2
 
-    return-void
+    sput-object v2, Lfg6;->c:Lhm4;
 
-    :cond_0
-    iput-object p1, p0, Lfg6;->e:Lhmg;
+    const-string v2, "id"
 
-    iput p2, p0, Lfg6;->c:I
+    filled-new-array {v2}, [Ljava/lang/String;
 
-    iput p3, p0, Lfg6;->d:I
+    move-result-object v3
+
+    const-string v6, ":settings/folder"
+
+    invoke-static {v0, v6, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v3
+
+    sput-object v3, Lfg6;->d:Lhm4;
+
+    const-string v3, ":settings/folder/edit"
+
+    new-array v6, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v3, v6, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v3
+
+    sput-object v3, Lfg6;->e:Lhm4;
+
+    const-string v3, ":settings/folder/create"
+
+    new-array v6, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v3, v6, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v3
+
+    sput-object v3, Lfg6;->f:Lhm4;
+
+    const-string v3, ":settings/folder/by-chat"
+
+    filled-new-array {v2}, [Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v3, v2, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v2
+
+    sput-object v2, Lfg6;->g:Lhm4;
+
+    const-string v2, ":settings/folder/settings"
+
+    new-array v3, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    const-string v2, ":settings/folder/members-picker"
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    invoke-static {v0, v2, v1, v4, v5}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    move-result-object v0
+
+    sput-object v0, Lfg6;->h:Lhm4;
 
     return-void
 .end method

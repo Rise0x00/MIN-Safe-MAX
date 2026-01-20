@@ -1,26 +1,34 @@
 .class public final Lcw2;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+.field public final synthetic X:Lhw2;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:J
+
+.field public final synthetic Z:Z
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+.method public constructor <init>(Lhw2;JZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lcw2;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    iput-object p1, p0, Lcw2;->X:Lhw2;
 
-    const/4 p2, 0x2
+    iput-wide p2, p0, Lcw2;->Y:J
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p4, p0, Lcw2;->Z:Z
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +38,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lzb4;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lcw2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,105 +48,108 @@
 
     check-cast p1, Lcw2;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lcw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 6
 
     new-instance v0, Lcw2;
 
-    iget-object v1, p0, Lcw2;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    iget-wide v2, p0, Lcw2;->Y:J
 
-    invoke-direct {v0, p2, v1}, Lcw2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)V
+    iget-boolean v4, p0, Lcw2;->Z:Z
 
-    iput-object p1, v0, Lcw2;->o:Ljava/lang/Object;
+    iget-object v1, p0, Lcw2;->X:Lhw2;
+
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lcw2;-><init>(Lhw2;JZLkotlin/coroutines/Continuation;)V
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 10
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lcw2;->o:I
 
-    iget-object p1, p0, Lcw2;->o:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Lhw2;
-
-    iget-object v0, p1, Lhw2;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lhw2;->a:Ljava/lang/String;
+    sget-object v2, Lb3h;->a:Lb3h;
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lxaf;->J(Ljava/lang/CharSequence;)Z
+    if-ne v0, v1, :cond_0
 
-    move-result v0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
-
-    goto :goto_0
+    return-object v2
 
     :cond_0
-    iget-object v1, p1, Lhw2;->b:Ljava/lang/String;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    goto :goto_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
-    :goto_0
-    if-eqz v1, :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {v1}, Lxaf;->J(Ljava/lang/CharSequence;)Z
+    iget-object p1, p0, Lcw2;->X:Lhw2;
 
-    move-result p1
+    invoke-virtual {p1}, Lhw2;->j()Ljava/lang/Long;
 
-    if-eqz p1, :cond_3
+    move-result-object v0
 
-    :cond_2
-    const/4 v1, 0x0
+    if-eqz v0, :cond_2
 
-    :cond_3
-    :goto_1
-    iget-object p1, p0, Lcw2;->X:Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    invoke-static {p1}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;->x0(Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;)Lapa;
+    move-result-wide v6
 
-    move-result-object p1
+    iget-object v0, p1, Lhw2;->n:Ln8g;
 
-    invoke-virtual {p1, v1}, Lapa;->setAvatarUrl(Ljava/lang/String;)V
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    if-eqz v1, :cond_5
+    move-object v3, v0
 
-    invoke-interface {v1}, Ljava/lang/CharSequence;->length()I
+    check-cast v3, Lgx4;
 
-    move-result v1
+    iget-wide v4, p1, Lljc;->a:J
 
-    if-nez v1, :cond_4
+    new-instance p1, Ljava/lang/Long;
 
-    goto :goto_2
+    iget-wide v8, p0, Lcw2;->Y:J
 
-    :cond_4
-    const/4 v1, 0x0
+    invoke-direct {p1, v8, v9}, Ljava/lang/Long;-><init>(J)V
 
-    goto :goto_3
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    :cond_5
-    :goto_2
-    move v1, v0
+    move-result-object v8
 
-    :goto_3
-    xor-int/2addr v0, v1
+    iput v1, p0, Lcw2;->o:I
 
-    invoke-virtual {p1, v0}, Lapa;->setCloseBadgeVisibility(Z)V
+    iget-boolean v9, p0, Lcw2;->Z:Z
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual/range {v3 .. v9}, Lgx4;->a(JJLjava/util/List;Z)V
+
+    sget-object p1, Lac4;->a:Lac4;
+
+    if-ne v2, p1, :cond_2
 
     return-object p1
+
+    :cond_2
+    return-object v2
 .end method

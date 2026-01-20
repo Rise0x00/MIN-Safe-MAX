@@ -1,50 +1,103 @@
-.class public interface abstract Lam5;
+.class public final Lam5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqb4;
+.implements La1g;
+.implements Lg0d;
+
+
+# instance fields
+.field public final a:Ljava/util/HashMap;
+
+.field public b:Ljava/util/ArrayDeque;
+
+.field public final c:Ljava/util/concurrent/Executor;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lam5;->a:Ljava/util/HashMap;
+
+    new-instance v0, Ljava/util/ArrayDeque;
+
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lam5;->b:Ljava/util/ArrayDeque;
+
+    iput-object p1, p0, Lam5;->c:Ljava/util/concurrent/Executor;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract K(IZ)Z
-.end method
+.method public final a(Ldx5;)V
+    .locals 4
 
-.method public abstract P(IZ)Z
-.end method
+    const-class v0, Lei4;
 
-.method public abstract e([BIIZ)Z
-.end method
+    iget-object v1, p0, Lam5;->c:Ljava/util/concurrent/Executor;
 
-.method public abstract getLength()J
-.end method
+    monitor-enter p0
 
-.method public abstract getPosition()J
-.end method
+    :try_start_0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public abstract i(I[BI)V
-.end method
+    iget-object v2, p0, Lam5;->a:Ljava/util/HashMap;
 
-.method public abstract m([BIIZ)Z
-.end method
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-.method public abstract n()J
-.end method
+    move-result v2
 
-.method public abstract q(I)V
-.end method
+    if-nez v2, :cond_0
 
-.method public abstract readFully([BII)V
-.end method
+    iget-object v2, p0, Lam5;->a:Ljava/util/HashMap;
 
-.method public abstract t(I[BI)I
-.end method
+    new-instance v3, Ljava/util/concurrent/ConcurrentHashMap;
 
-.method public abstract v(I)I
-.end method
+    invoke-direct {v3}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-.method public abstract y()V
-.end method
+    invoke-virtual {v2, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public abstract z(I)V
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iget-object v2, p0, Lam5;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

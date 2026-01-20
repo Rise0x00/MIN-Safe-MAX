@@ -1,101 +1,80 @@
 .class public final Ldze;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final synthetic X:Lone/me/settings/devices/SettingsDevicesScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/devices/SettingsDevicesScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Ldze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
 
-    iput-object p1, p0, Ldze;->a:Landroid/net/Uri;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1, p2}, Ldze;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Ldze;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ldze;
 
-    iget-object v1, p0, Ldze;->a:Landroid/net/Uri;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object p1, p1, Ldze;->a:Landroid/net/Uri;
+    invoke-virtual {p1, p2}, Ldze;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p2
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ldze;->a:Landroid/net/Uri;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Ldze;
 
-    const-string v1, "ShowInviteDialog(qrCodeUri="
+    iget-object v1, p0, Ldze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p2, v1}, Ldze;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/devices/SettingsDevicesScreen;)V
 
-    iget-object v1, p0, Ldze;->a:Landroid/net/Uri;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Ldze;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Ldze;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object p1, p0, Ldze;->X:Lone/me/settings/devices/SettingsDevicesScreen;
+
+    iget-object p1, p1, Lone/me/settings/devices/SettingsDevicesScreen;->X:Lrdi;
+
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

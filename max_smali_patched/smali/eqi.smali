@@ -1,80 +1,155 @@
 .class public final Leqi;
-.super Ljava/lang/Object;
+.super Lhpi;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
 
-
-# static fields
-.field public static final a:Leqi;
+# instance fields
+.field public final b:Lieg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Loe8;Lieg;)V
+    .locals 0
 
-    new-instance v0, Leqi;
+    const/4 p1, 0x4
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lhqi;-><init>(I)V
 
-    sput-object v0, Leqi;->a:Leqi;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    iput-object p2, p0, Leqi;->b:Lieg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    new-instance v0, Lcom/google/android/gms/common/api/ApiException;
+
+    invoke-direct {v0, p1}, Lcom/google/android/gms/common/api/ApiException;-><init>(Lcom/google/android/gms/common/api/Status;)V
+
+    iget-object p1, p0, Leqi;->b:Lieg;
+
+    invoke-virtual {p1, v0}, Lieg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Exception;)V
+    .locals 1
+
+    iget-object v0, p0, Leqi;->b:Lieg;
+
+    invoke-virtual {v0, p1}, Lieg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+.end method
+
+.method public final c(Lepi;)V
+    .locals 1
+
+    :try_start_0
+    invoke-virtual {p0, p1}, Leqi;->h(Lepi;)V
+    :try_end_0
+    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p1
+
+    iget-object v0, p0, Leqi;->b:Lieg;
+
+    invoke-virtual {v0, p1}, Lieg;->c(Ljava/lang/Exception;)Z
+
+    return-void
+
+    :catch_1
+    move-exception p1
+
+    invoke-static {p1}, Lhqi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
 
     move-result-object p1
 
+    invoke-virtual {p0, p1}, Leqi;->a(Lcom/google/android/gms/common/api/Status;)V
+
+    return-void
+
+    :catch_2
+    move-exception p1
+
+    invoke-static {p1}, Lhqi;->e(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Leqi;->a(Lcom/google/android/gms/common/api/Status;)V
+
     throw p1
+.end method
+
+.method public final bridge synthetic d(Lvnb;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final f(Lepi;)Z
+    .locals 1
+
+    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lopi;
+
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final g(Lepi;)[Lvx5;
+    .locals 1
+
+    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lopi;
+
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final h(Lepi;)V
+    .locals 1
+
+    iget-object p1, p1, Lepi;->h:Ljava/util/HashMap;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lopi;
+
+    iget-object p1, p0, Leqi;->b:Lieg;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-virtual {p1, v0}, Lieg;->d(Ljava/lang/Object;)V
+
+    return-void
 .end method

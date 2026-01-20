@@ -1,26 +1,28 @@
 .class public final Lf3c;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+.field public X:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Lg3c;
+
+.field public o:Lspf;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
+.method public constructor <init>(Lg3c;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lf3c;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    iput-object p1, p0, Lf3c;->Y:Lg3c;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +32,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lzb4;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lf3c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,65 +42,105 @@
 
     check-cast p1, Lf3c;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lf3c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lf3c;
+    new-instance p1, Lf3c;
 
-    iget-object v1, p0, Lf3c;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    iget-object v0, p0, Lf3c;->Y:Lg3c;
 
-    invoke-direct {v0, p2, v1}, Lf3c;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;)V
+    invoke-direct {p1, v0, p2}, Lf3c;-><init>(Lg3c;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lf3c;->o:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lf3c;->X:I
 
-    iget-object p1, p0, Lf3c;->o:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Li3c;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lf3c;->X:Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+    if-ne v0, v1, :cond_0
 
-    iget-object v1, v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->d:Ld0d;
+    iget-object v0, p0, Lf3c;->o:Lspf;
 
-    sget-object v2, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;->X:[Les7;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v3, 0x0
+    goto :goto_0
 
-    aget-object v2, v2, v3
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-interface {v1, v0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result-object v1
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast v1, Landroid/widget/TextView;
+    throw p1
 
-    iget-object p1, p1, Li3c;->a:Lgrf;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object p1, p0, Lf3c;->Y:Lg3c;
 
-    move-result-object v0
+    iget-object v0, p1, Lg3c;->d:Lspf;
 
-    invoke-virtual {p1, v0}, Lnrf;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    iget-object p1, p1, Lg3c;->a:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    check-cast p1, Lm64;
 
-    sget-object p1, Lybg;->a:Lybg;
+    iput-object v0, p0, Lf3c;->o:Lspf;
+
+    iput v1, p0, Lf3c;->X:I
+
+    invoke-virtual {p1}, Lm64;->e()Ljava/lang/Integer;
+
+    move-result-object p1
+
+    sget-object v2, Lac4;->a:Lac4;
+
+    if-ne p1, v2, :cond_2
+
+    return-object v2
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v1, 0x0
+
+    :goto_1
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-interface {v0, p1}, Lmfa;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

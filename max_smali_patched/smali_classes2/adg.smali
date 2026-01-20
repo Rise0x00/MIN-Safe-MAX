@@ -1,61 +1,108 @@
 .class public final Ladg;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic b:I
+
+
 # instance fields
-.field public X:J
-
-.field public Y:J
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Lgdg;
-
-.field public o:Lm1a;
-
-.field public final synthetic s0:Lgdg;
-
-.field public t0:I
+.field public final a:Lo58;
 
 
 # direct methods
-.method public constructor <init>(Lgdg;Lp14;)V
+.method public constructor <init>(Lo58;)V
     .locals 0
 
-    iput-object p1, p0, Ladg;->s0:Lgdg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ladg;->a:Lo58;
 
     return-void
 .end method
 
+.method public static a(I)Z
+    .locals 1
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Ladg;->Z:Ljava/lang/Object;
+    if-eq p0, v0, :cond_1
 
-    iget p1, p0, Ladg;->t0:I
+    const/4 v0, 0x3
 
-    const/high16 v0, -0x80000000
+    if-ne p0, v0, :cond_0
 
-    or-int/2addr p1, v0
+    goto :goto_0
 
-    iput p1, p0, Ladg;->t0:I
+    :cond_0
+    const/4 p0, 0x0
 
-    const-wide/16 v1, 0x0
+    return p0
 
-    const-wide/16 v3, 0x0
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
-    iget-object v0, p0, Ladg;->s0:Lgdg;
+    return p0
+.end method
 
-    move-object v5, p0
+.method public static b(Ljava/lang/Throwable;)Z
+    .locals 1
 
-    invoke-virtual/range {v0 .. v5}, Lgdg;->c(JJLp14;)Ljava/lang/Object;
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
 
-    move-result-object p1
+    if-eqz v0, :cond_0
 
-    return-object p1
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lnbg;
+
+    iget-object p0, p0, Lnbg;->b:Ljava/lang/String;
+
+    invoke-static {p0}, Lwoj;->a(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static c(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lnbg;
+
+    iget-object p0, p0, Lnbg;->b:Ljava/lang/String;
+
+    const-string v0, "io.exception"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

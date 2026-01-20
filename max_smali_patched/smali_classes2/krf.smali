@@ -1,163 +1,64 @@
 .class public final Lkrf;
-.super Lnrf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Ljrf;
+# interfaces
+.implements Lyia;
 
 
 # instance fields
-.field public final c:I
-
-.field public final d:Ljava/util/List;
+.field public final synthetic a:Llrf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljrf;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkrf;->CREATOR:Ljrf;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/util/List;)V
+.method public constructor <init>(Llrf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lkrf;->c:I
-
-    iput-object p2, p0, Lkrf;->d:Ljava/util/List;
+    iput-object p1, p0, Lkrf;->a:Llrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkrf;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkrf;
-
-    iget v1, p0, Lkrf;->c:I
-
-    iget v3, p1, Lkrf;->c:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lkrf;->d:Ljava/util/List;
-
-    iget-object p1, p1, Lkrf;->d:Ljava/util/List;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onFailed(Ljava/lang/Throwable;)V
     .locals 2
 
-    iget v0, p0, Lkrf;->c:I
+    iget-object v0, p0, Lkrf;->a:Llrf;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v1, v0, Llrf;->f:Ley;
 
-    move-result v0
+    invoke-virtual {v0, v1, p1}, Ltz;->a(Ley;Ljava/lang/Throwable;)V
 
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lkrf;->d:Ljava/util/List;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p1, p0, Lkrf;->a:Llrf;
 
-    const-string v1, "ResourceParams(resId="
+    iget-object p1, p1, Llrf;->c:Ln8g;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p1}, Ln8g;->getValue()Ljava/lang/Object;
 
-    iget v1, p0, Lkrf;->c:I
+    move-result-object p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    check-cast p1, Lyab;
 
-    const-string v1, ", args="
+    invoke-virtual {p1}, Lyab;->c()Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    iget-object v1, p0, Lkrf;->d:Ljava/util/List;
+    new-instance v0, Lxqd;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/16 v1, 0x8
 
-    const-string v1, ")"
+    invoke-direct {v0, p0, p2, p3, v1}, Lxqd;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Lkrf;->c:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object p2, p0, Lkrf;->d:Ljava/util/List;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method

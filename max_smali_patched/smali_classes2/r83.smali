@@ -2,1173 +2,1024 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld76;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ld76;
+
 
 # direct methods
-.method public static final a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-    .locals 2
+.method public synthetic constructor <init>(Ld76;I)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput p2, p0, Lr83;->a:I
 
-    invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
+    iput-object p1, p0, Lr83;->b:Ld76;
 
-    move-result p0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p0, :cond_1
-
-    invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    return v0
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public static final f(Lvcg;)V
-    .locals 2
-
-    new-instance v0, Lctd;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lctd;-><init>(I)V
-
-    const-class v1, Lof4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
-    .locals 4
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 7
 
-    const-string v0, "name"
+    iget v0, p0, Lr83;->a:I
 
-    invoke-static {p0, p1, v0}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    new-instance v0, Lg4a;
 
-    const/4 v1, 0x0
+    const/16 v1, 0xd
 
-    const/4 v2, -0x1
+    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
 
-    if-eq v0, v2, :cond_0
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    invoke-interface {p1, v0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-object v0, v1
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_0
-    const-string v3, "pathData"
-
-    invoke-static {p0, p1, v3}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v3
-
-    if-eq v3, v2, :cond_1
-
-    invoke-interface {p1, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    :cond_1
-    new-instance p1, Lone/me/sdk/richvector/internal/element/ClipPathElement;
-
-    invoke-direct {p1, v0, v1}, Lone/me/sdk/richvector/internal/element/ClipPathElement;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
     return-object p1
-.end method
-
-.method public c(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
-    .locals 19
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    const-string v4, "name"
-
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v4
-
-    const/4 v5, -0x1
-
-    if-eq v4, v5, :cond_0
-
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_0
-    move-object v7, v4
-
-    goto :goto_1
-
-    :cond_0
-    const/4 v4, 0x0
-
-    goto :goto_0
-
-    :goto_1
-    const-string v4, "pivotX"
-
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v4
-
-    if-eq v4, v5, :cond_1
-
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    goto :goto_2
-
-    :cond_1
-    move-object v4, v3
-
-    :goto_2
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
-
-    move-result v8
-
-    const-string v4, "pivotY"
-
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v4
-
-    if-eq v4, v5, :cond_2
-
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    goto :goto_3
-
-    :cond_2
-    move-object v4, v3
-
-    :goto_3
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
-
-    move-result v9
-
-    const-string v4, "rotation"
-
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v4
-
-    if-eq v4, v5, :cond_3
-
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    goto :goto_4
-
-    :cond_3
-    move-object v4, v3
-
-    :goto_4
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
-
-    move-result v10
-
-    const-string v4, "scaleX"
-
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v4
-
-    if-eq v4, v5, :cond_4
-
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    goto :goto_5
-
-    :cond_4
-    move-object v4, v2
-
-    :goto_5
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
-
-    move-result v11
-
-    const-string v4, "scaleY"
-
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v4
-
-    if-eq v4, v5, :cond_5
-
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    :cond_5
-    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
-
-    move-result v12
-
-    const-string v2, "translateX"
-
-    invoke-static {v0, v1, v2}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v2
-
-    if-eq v2, v5, :cond_6
-
-    invoke-interface {v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v2
-
-    goto :goto_6
-
-    :cond_6
-    move-object v2, v3
-
-    :goto_6
-    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
-
-    move-result v13
-
-    const-string v2, "translateY"
-
-    invoke-static {v0, v1, v2}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v2
-
-    if-eq v2, v5, :cond_7
-
-    invoke-interface {v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    :cond_7
-    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
-
-    move-result v14
-
-    new-instance v6, Lone/me/sdk/richvector/internal/element/GroupElement;
-
-    const/16 v17, 0x300
-
-    const/16 v18, 0x0
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    invoke-direct/range {v6 .. v18}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Ljava/lang/String;FFFFFFFLone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/ElementHolder;ILfi4;)V
-
-    return-object v6
-.end method
-
-.method public d(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
-    .locals 23
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    const/high16 v4, 0x3f800000    # 1.0f
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    const-string v5, "name"
-
-    invoke-static {v0, v1, v5}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v5
-
-    const/4 v6, 0x0
-
-    const/4 v7, -0x1
-
-    if-eq v5, v7, :cond_0
-
-    invoke-interface {v1, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    move-object v9, v5
-
-    goto :goto_0
-
-    :cond_0
-    move-object v9, v6
-
-    :goto_0
-    const-string v5, "fillAlpha"
-
-    invoke-static {v0, v1, v5}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v5
-
-    if-eq v5, v7, :cond_1
-
-    invoke-interface {v1, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v5
-
-    goto :goto_1
-
-    :cond_1
-    move-object v5, v4
-
-    :goto_1
-    invoke-virtual {v5}, Ljava/lang/Number;->floatValue()F
-
-    move-result v5
-
-    const/16 v8, 0xff
-
-    int-to-float v10, v8
-
-    mul-float/2addr v5, v10
-
-    float-to-int v5, v5
-
-    invoke-static {v8, v5}, Ljava/lang/Math;->min(II)I
-
-    move-result v5
-
-    const-string v11, "fillColor"
-
-    invoke-static {v0, v1, v11}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v11
-
-    if-eq v11, v7, :cond_2
-
-    invoke-interface {v1, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-static {v11}, Lrzi;->d(Ljava/lang/String;)I
-
-    move-result v11
-
-    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v11
-
-    goto :goto_2
-
-    :cond_2
-    move-object v11, v2
-
-    :goto_2
-    invoke-virtual {v11}, Ljava/lang/Number;->intValue()I
-
-    move-result v11
-
-    sget-object v12, Ldfb;->d:Ldfb;
-
-    iget-object v13, v12, Lkh;->b:Ljava/lang/Object;
-
-    check-cast v13, Ljava/lang/String;
-
-    invoke-static {v0, v1, v13}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v13
-
-    const-string v14, "1"
-
-    const-string v15, "2"
-
-    if-eq v13, v7, :cond_6
-
-    invoke-interface {v1, v13}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/lang/String;->hashCode()I
-
-    move-result v13
-
-    packed-switch v13, :pswitch_data_0
-
-    goto :goto_3
 
     :pswitch_0
-    const-string v13, "3"
+    new-instance v0, Lg4a;
 
-    invoke-virtual {v12, v13}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const/16 v1, 0xb
 
-    move-result v12
+    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
 
-    if-nez v12, :cond_3
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1
+    return-object p1
+
+    :pswitch_1
+    new-instance v0, Lg4a;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_2
+    return-object p1
+
+    :pswitch_2
+    new-instance v0, Lg4a;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_3
 
     goto :goto_3
 
     :cond_3
-    sget-object v12, Landroid/graphics/Path$FillType;->INVERSE_EVEN_ODD:Landroid/graphics/Path$FillType;
-
-    goto :goto_4
-
-    :pswitch_1
-    invoke-virtual {v12, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v12
-
-    if-nez v12, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    sget-object v12, Landroid/graphics/Path$FillType;->INVERSE_WINDING:Landroid/graphics/Path$FillType;
-
-    goto :goto_4
-
-    :pswitch_2
-    invoke-virtual {v12, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v12
-
-    if-nez v12, :cond_5
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_3
-    sget-object v12, Landroid/graphics/Path$FillType;->WINDING:Landroid/graphics/Path$FillType;
+    return-object p1
+
+    :pswitch_3
+    new-instance v0, Lg4a;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_4
 
     goto :goto_4
 
-    :cond_5
-    sget-object v12, Landroid/graphics/Path$FillType;->EVEN_ODD:Landroid/graphics/Path$FillType;
-
-    goto :goto_4
-
-    :cond_6
-    iget-object v12, v12, Lkh;->c:Ljava/lang/Object;
+    :cond_4
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_4
-    check-cast v12, Landroid/graphics/Path$FillType;
+    return-object p1
 
-    const-string v13, "pathData"
+    :pswitch_4
+    new-instance v0, Lg4a;
 
-    invoke-static {v0, v1, v13}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    const/4 v1, 0x4
 
-    move-result v13
+    invoke-direct {v0, p1, v1}, Lg4a;-><init>(Lf76;I)V
 
-    if-eq v13, v7, :cond_7
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    invoke-interface {v1, v13}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v6
+    move-result-object p1
 
-    :cond_7
-    move-object v13, v6
+    sget-object p2, Lac4;->a:Lac4;
 
-    const-string v6, "strokeAlpha"
-
-    invoke-static {v0, v1, v6}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v6
-
-    if-eq v6, v7, :cond_8
-
-    invoke-interface {v1, v6}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v6}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v6
+    if-ne p1, p2, :cond_5
 
     goto :goto_5
 
-    :cond_8
-    move-object v6, v4
+    :cond_5
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_5
-    invoke-virtual {v6}, Ljava/lang/Number;->floatValue()F
+    return-object p1
 
-    move-result v6
+    :pswitch_5
+    new-instance v0, Lnq7;
 
-    mul-float/2addr v6, v10
+    const/16 v1, 0x1d
 
-    float-to-int v6, v6
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
 
-    invoke-static {v8, v6}, Ljava/lang/Math;->min(II)I
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    move-result v6
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const-string v8, "strokeColor"
+    move-result-object p1
 
-    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    sget-object p2, Lac4;->a:Lac4;
 
-    move-result v8
-
-    if-eq v8, v7, :cond_9
-
-    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lrzi;->d(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    :cond_9
-    invoke-virtual {v2}, Ljava/lang/Number;->intValue()I
-
-    move-result v2
-
-    sget-object v8, Lefb;->d:Lefb;
-
-    iget-object v10, v8, Lkh;->b:Ljava/lang/Object;
-
-    check-cast v10, Ljava/lang/String;
-
-    invoke-static {v0, v1, v10}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v10
-
-    if-eq v10, v7, :cond_c
-
-    invoke-interface {v1, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v8, v14}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_a
-
-    sget-object v8, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
+    if-ne p1, p2, :cond_6
 
     goto :goto_6
 
-    :cond_a
-    invoke-static {v8, v15}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_b
-
-    sget-object v8, Landroid/graphics/Paint$Cap;->SQUARE:Landroid/graphics/Paint$Cap;
-
-    goto :goto_6
-
-    :cond_b
-    sget-object v8, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
-
-    goto :goto_6
-
-    :cond_c
-    iget-object v8, v8, Lkh;->c:Ljava/lang/Object;
+    :cond_6
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_6
-    move-object/from16 v16, v8
+    return-object p1
 
-    check-cast v16, Landroid/graphics/Paint$Cap;
+    :pswitch_6
+    new-instance v0, Lnq7;
 
-    sget-object v8, Lffb;->d:Lffb;
+    const/16 v1, 0x1c
 
-    iget-object v10, v8, Lkh;->b:Ljava/lang/Object;
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
 
-    check-cast v10, Ljava/lang/String;
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    invoke-static {v0, v1, v10}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result v10
+    move-result-object p1
 
-    if-eq v10, v7, :cond_f
+    sget-object p2, Lac4;->a:Lac4;
 
-    invoke-interface {v1, v10}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v8, v14}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_d
-
-    sget-object v8, Landroid/graphics/Paint$Join;->ROUND:Landroid/graphics/Paint$Join;
+    if-ne p1, p2, :cond_7
 
     goto :goto_7
 
-    :cond_d
-    invoke-static {v8, v15}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_e
-
-    sget-object v8, Landroid/graphics/Paint$Join;->BEVEL:Landroid/graphics/Paint$Join;
-
-    goto :goto_7
-
-    :cond_e
-    sget-object v8, Landroid/graphics/Paint$Join;->MITER:Landroid/graphics/Paint$Join;
-
-    goto :goto_7
-
-    :cond_f
-    iget-object v8, v8, Lkh;->c:Ljava/lang/Object;
+    :cond_7
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_7
-    move-object/from16 v17, v8
+    return-object p1
 
-    check-cast v17, Landroid/graphics/Paint$Join;
+    :pswitch_7
+    new-instance v0, Lnq7;
 
-    const-string v8, "strokeMiterLimit"
+    const/16 v1, 0x13
 
-    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
 
-    move-result v8
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    if-eq v8, v7, :cond_10
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v8
+    sget-object p2, Lac4;->a:Lac4;
 
-    invoke-static {v8}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v8
-
-    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v8
+    if-ne p1, p2, :cond_8
 
     goto :goto_8
 
-    :cond_10
-    const/high16 v8, 0x40800000    # 4.0f
-
-    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v8
+    :cond_8
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_8
-    invoke-virtual {v8}, Ljava/lang/Number;->floatValue()F
+    return-object p1
 
-    move-result v18
+    :pswitch_8
+    new-instance v0, Lnq7;
 
-    const-string v8, "strokeWidth"
+    const/16 v1, 0x12
 
-    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
 
-    move-result v8
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    if-eq v8, v7, :cond_11
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v8
+    sget-object p2, Lac4;->a:Lac4;
 
-    invoke-static {v8}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v8
-
-    invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v8
+    if-ne p1, p2, :cond_9
 
     goto :goto_9
 
-    :cond_11
-    move-object v8, v3
+    :cond_9
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_9
-    invoke-virtual {v8}, Ljava/lang/Number;->floatValue()F
+    return-object p1
 
-    move-result v19
+    :pswitch_9
+    new-instance v0, Lnq7;
 
-    const-string v8, "trimPathEnd"
+    const/16 v1, 0x11
 
-    invoke-static {v0, v1, v8}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
 
-    move-result v8
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    if-eq v8, v7, :cond_12
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {v1, v8}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    move-result-object p1
 
-    move-result-object v4
+    sget-object p2, Lac4;->a:Lac4;
 
-    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    :cond_12
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
-
-    move-result v20
-
-    const-string v4, "trimPathOffset"
-
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v4
-
-    if-eq v4, v7, :cond_13
-
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
+    if-ne p1, p2, :cond_a
 
     goto :goto_a
 
-    :cond_13
-    move-object v4, v3
+    :cond_a
+    sget-object p1, Lb3h;->a:Lb3h;
 
     :goto_a
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
+    return-object p1
 
-    move-result v21
+    :pswitch_a
+    new-instance v0, Lnq7;
 
-    const-string v4, "trimPathStart"
+    const/16 v1, 0xf
 
-    invoke-static {v0, v1, v4}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
 
-    move-result v4
+    iget-object p1, p0, Lr83;->b:Ld76;
 
-    if-eq v4, v7, :cond_14
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {v1, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_b
+
+    goto :goto_b
+
+    :cond_b
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_b
+    return-object p1
+
+    :pswitch_b
+    new-instance v0, Lnq7;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, p1, v1}, Lnq7;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_c
+
+    goto :goto_c
+
+    :cond_c
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_c
+    return-object p1
+
+    :pswitch_c
+    new-instance v0, Ld83;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_d
+
+    goto :goto_d
+
+    :cond_d
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_d
+    return-object p1
+
+    :pswitch_d
+    new-instance v0, Ld83;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_e
+
+    goto :goto_e
+
+    :cond_e
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_e
+    return-object p1
+
+    :pswitch_e
+    new-instance v0, Ld83;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_f
+
+    goto :goto_f
+
+    :cond_f
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_f
+    return-object p1
+
+    :pswitch_f
+    new-instance v0, Ld83;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_10
+
+    goto :goto_10
+
+    :cond_10
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_10
+    return-object p1
+
+    :pswitch_10
+    new-instance v0, Ld83;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_11
+
+    goto :goto_11
+
+    :cond_11
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_11
+    return-object p1
+
+    :pswitch_11
+    instance-of v0, p2, Lba6;
+
+    if-eqz v0, :cond_12
+
+    move-object v0, p2
+
+    check-cast v0, Lba6;
+
+    iget v1, v0, Lba6;->o:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_12
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lba6;->o:I
+
+    goto :goto_12
+
+    :cond_12
+    new-instance v0, Lba6;
+
+    invoke-direct {v0, p0, p2}, Lba6;-><init>(Lr83;Lkotlin/coroutines/Continuation;)V
+
+    :goto_12
+    iget-object p2, v0, Lba6;->d:Ljava/lang/Object;
+
+    iget v1, v0, Lba6;->o:I
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Lac4;->a:Lac4;
+
+    if-eqz v1, :cond_15
+
+    if-eq v1, v3, :cond_14
+
+    if-ne v1, v2, :cond_13
+
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_14
+
+    :cond_13
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_14
+    iget-object p1, v0, Lba6;->Z:Lbtd;
+
+    iget-object v1, v0, Lba6;->Y:Lf76;
+
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_13
+
+    :cond_15
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    new-instance p2, Lbtd;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Ly86;
+
+    invoke-direct {v1, p2, p1}, Ly86;-><init>(Lbtd;Lf76;)V
+
+    iput-object p1, v0, Lba6;->Y:Lf76;
+
+    iput-object p2, v0, Lba6;->Z:Lbtd;
+
+    iput v3, v0, Lba6;->o:I
+
+    iget-object v3, p0, Lr83;->b:Ld76;
+
+    invoke-interface {v3, v1, v0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+    if-ne v1, v4, :cond_16
 
-    move-result v1
+    goto :goto_15
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :cond_16
+    move-object v1, p1
 
-    move-result-object v3
+    move-object p1, p2
 
-    :cond_14
-    invoke-virtual {v3}, Ljava/lang/Number;->floatValue()F
+    :goto_13
+    iget-object p1, p1, Lbtd;->a:Ljava/lang/Object;
 
-    move-result v22
+    check-cast p1, Ljava/util/ArrayList;
 
-    new-instance v8, Lone/me/sdk/richvector/internal/element/PathElement;
+    if-eqz p1, :cond_17
 
-    move v15, v2
+    const/4 p2, 0x0
 
-    move v10, v5
+    iput-object p2, v0, Lba6;->Y:Lf76;
 
-    move v14, v6
+    iput-object p2, v0, Lba6;->Z:Lbtd;
 
-    invoke-direct/range {v8 .. v22}, Lone/me/sdk/richvector/internal/element/PathElement;-><init>(Ljava/lang/String;IILandroid/graphics/Path$FillType;Ljava/lang/String;IILandroid/graphics/Paint$Cap;Landroid/graphics/Paint$Join;FFFFF)V
+    iput v2, v0, Lba6;->o:I
 
-    return-object v8
+    invoke-interface {v1, p1, v0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_17
+
+    goto :goto_15
+
+    :cond_17
+    :goto_14
+    sget-object v4, Lb3h;->a:Lb3h;
+
+    :goto_15
+    return-object v4
+
+    :pswitch_12
+    new-instance v0, Ld83;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_18
+
+    goto :goto_16
+
+    :cond_18
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_16
+    return-object p1
+
+    :pswitch_13
+    instance-of v0, p2, Ld96;
+
+    if-eqz v0, :cond_19
+
+    move-object v0, p2
+
+    check-cast v0, Ld96;
+
+    iget v1, v0, Ld96;->o:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_19
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Ld96;->o:I
+
+    goto :goto_17
+
+    :cond_19
+    new-instance v0, Ld96;
+
+    invoke-direct {v0, p0, p2}, Ld96;-><init>(Lr83;Lkotlin/coroutines/Continuation;)V
+
+    :goto_17
+    iget-object p2, v0, Ld96;->d:Ljava/lang/Object;
+
+    iget v1, v0, Ld96;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1b
+
+    if-ne v1, v2, :cond_1a
+
+    iget-object p1, v0, Ld96;->Y:Ljava/lang/Object;
+
+    :try_start_0
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Lkotlinx/coroutines/flow/internal/AbortFlowException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_19
+
+    :catch_0
+    move-exception p2
+
+    goto :goto_18
+
+    :cond_1a
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1b
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    new-instance p2, Ljava/lang/Object;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Lzsd;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    :try_start_1
+    iget-object v3, p0, Lr83;->b:Ld76;
+
+    new-instance v4, Lsx;
+
+    const/16 v5, 0x8
+
+    invoke-direct {v4, v1, p1, p2, v5}, Lsx;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iput-object p2, v0, Ld96;->Y:Ljava/lang/Object;
+
+    iput v2, v0, Ld96;->o:I
+
+    invoke-interface {v3, v4, v0}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Lkotlinx/coroutines/flow/internal/AbortFlowException; {:try_start_1 .. :try_end_1} :catch_1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_1c
+
+    goto :goto_1a
+
+    :catch_1
+    move-exception p1
+
+    move-object v6, p2
+
+    move-object p2, p1
+
+    move-object p1, v6
+
+    :goto_18
+    iget-object v0, p2, Lkotlinx/coroutines/flow/internal/AbortFlowException;->a:Ljava/lang/Object;
+
+    if-ne v0, p1, :cond_1d
+
+    :cond_1c
+    :goto_19
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    :goto_1a
+    return-object p2
+
+    :cond_1d
+    throw p2
+
+    :pswitch_14
+    new-instance v0, Lzsd;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Lr3;
+
+    const/16 v2, 0x19
+
+    invoke-direct {v1, v0, p1, v2}, Lr3;-><init>(Ljava/io/Serializable;Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v1, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_1e
+
+    goto :goto_1b
+
+    :cond_1e
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1b
+    return-object p1
+
+    :pswitch_15
+    new-instance v0, Ld83;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_1f
+
+    goto :goto_1c
+
+    :cond_1f
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1c
+    return-object p1
+
+    :pswitch_16
+    new-instance v0, Ld83;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_20
+
+    goto :goto_1d
+
+    :cond_20
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1d
+    return-object p1
+
+    :pswitch_17
+    new-instance v0, Ld83;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_21
+
+    goto :goto_1e
+
+    :cond_21
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1e
+    return-object p1
+
+    :pswitch_18
+    new-instance v0, Ld83;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_22
+
+    goto :goto_1f
+
+    :cond_22
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_1f
+    return-object p1
+
+    :pswitch_19
+    new-instance v0, Ld83;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_23
+
+    goto :goto_20
+
+    :cond_23
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_20
+    return-object p1
+
+    :pswitch_1a
+    new-instance v0, Ld83;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_24
+
+    goto :goto_21
+
+    :cond_24
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_21
+    return-object p1
+
+    :pswitch_1b
+    new-instance v0, Ld83;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_25
+
+    goto :goto_22
+
+    :cond_25
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_22
+    return-object p1
+
+    :pswitch_1c
+    new-instance v0, Ld83;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p1, v1}, Ld83;-><init>(Lf76;I)V
+
+    iget-object p1, p0, Lr83;->b:Ld76;
+
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object p2, Lac4;->a:Lac4;
+
+    if-ne p1, p2, :cond_26
+
+    goto :goto_23
+
+    :cond_26
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    :goto_23
+    return-object p1
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x31
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public e(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
-    .locals 13
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    const-string v1, "viewportWidth"
-
-    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-eq v1, v2, :cond_0
-
-    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_0
-    move-object v1, v0
-
-    :goto_0
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
-
-    move-result v5
-
-    const-string v1, "viewportHeight"
-
-    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v1
-
-    if-eq v1, v2, :cond_1
-
-    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    goto :goto_1
-
-    :cond_1
-    move-object v1, v0
-
-    :goto_1
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
-
-    move-result v6
-
-    const-string v1, "alpha"
-
-    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v1
-
-    if-eq v1, v2, :cond_2
-
-    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    goto :goto_2
-
-    :cond_2
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    :goto_2
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
-
-    move-result v1
-
-    const/16 v3, 0xff
-
-    int-to-float v4, v3
-
-    mul-float/2addr v4, v1
-
-    float-to-int v1, v4
-
-    invoke-static {v3, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v7
-
-    const-string v1, "name"
-
-    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v1
-
-    if-eq v1, v2, :cond_3
-
-    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_3
-    move-object v4, v1
-
-    goto :goto_4
-
-    :cond_3
-    const/4 v1, 0x0
-
-    goto :goto_3
-
-    :goto_4
-    const-string v1, "width"
-
-    invoke-static {p0, p1, v1}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v1
-
-    const/4 v3, 0x3
-
-    const/4 v8, 0x2
-
-    const/4 v9, 0x0
-
-    const-string v10, "dip"
-
-    if-eq v1, v2, :cond_5
-
-    invoke-interface {p1, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_4
-
-    move v11, v3
-
-    goto :goto_5
-
-    :cond_4
-    move v11, v8
-
-    :goto_5
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v12
-
-    sub-int/2addr v12, v11
-
-    invoke-virtual {v1, v9, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    goto :goto_6
-
-    :cond_5
-    move-object v1, v0
-
-    :goto_6
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
-
-    move-result v1
-
-    const-string v11, "height"
-
-    invoke-static {p0, p1, v11}, Lr83;->a(Lr83;Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
-
-    move-result v11
-
-    if-eq v11, v2, :cond_7
-
-    invoke-interface {p1, v11}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v10}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    goto :goto_7
-
-    :cond_6
-    move v3, v8
-
-    :goto_7
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    sub-int/2addr v0, v3
-
-    invoke-virtual {p1, v9, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v0
-
-    :cond_7
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v9
-
-    new-instance v3, Lone/me/sdk/richvector/internal/element/Shape;
-
-    const/16 v11, 0x40
-
-    const/4 v12, 0x0
-
-    const/4 v10, 0x0
-
-    move v8, v1
-
-    invoke-direct/range {v3 .. v12}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILfi4;)V
-
-    return-object v3
 .end method

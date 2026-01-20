@@ -1,43 +1,74 @@
-.class public final Lcl5;
-.super Lwf4;
+.class public Lcl5;
+.super Landroid/app/DialogFragment;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lcl5;
+# instance fields
+.field public a:Landroid/app/Dialog;
 
-.field public static final c:Lrf4;
+.field public b:Landroid/content/DialogInterface$OnCancelListener;
+
+.field public c:Landroid/app/AlertDialog;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lcl5;
+    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
 
-    invoke-direct {v0}, Lwf4;-><init>()V
+    return-void
+.end method
 
-    sput-object v0, Lcl5;->b:Lcl5;
 
-    const/4 v1, 0x0
+# virtual methods
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
-    new-array v1, v1, [Ljava/lang/String;
+    iget-object v0, p0, Lcl5;->b:Landroid/content/DialogInterface$OnCancelListener;
 
-    const-string v2, "params"
+    if-eqz v0, :cond_0
 
-    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
 
-    move-result-object v2
+    :cond_0
+    return-void
+.end method
 
-    const/16 v3, 0xc
+.method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    .locals 1
 
-    const-string v4, ":external_callback"
+    iget-object p1, p0, Lcl5;->a:Landroid/app/Dialog;
 
-    invoke-static {v0, v4, v1, v2, v3}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/app/DialogFragment;->setShowsDialog(Z)V
+
+    iget-object p1, p0, Lcl5;->c:Landroid/app/AlertDialog;
+
+    if-nez p1, :cond_0
+
+    new-instance p1, Landroid/app/AlertDialog$Builder;
+
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    sput-object v0, Lcl5;->c:Lrf4;
+    invoke-static {v0}, Ldkj;->g(Ljava/lang/Object;)V
 
-    return-void
+    invoke-direct {p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcl5;->c:Landroid/app/AlertDialog;
+
+    :cond_0
+    iget-object p1, p0, Lcl5;->c:Landroid/app/AlertDialog;
+
+    :cond_1
+    return-object p1
 .end method

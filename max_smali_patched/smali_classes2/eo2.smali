@@ -1,136 +1,88 @@
-.class public final synthetic Leo2;
-.super Ljava/lang/Object;
+.class public final Leo2;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput p2, p0, Leo2;->a:I
+    const/4 v0, 0x4
 
-    iput-object p1, p0, Leo2;->b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Leo2;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Leo2;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Leo2;->b:Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:[Les7;
+    :cond_0
+    instance-of v1, p1, Leo2;
 
-    new-instance v2, Lp81;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->y0()Lwo2;
+    if-nez v1, :cond_1
 
-    move-result-object v4
+    return v2
 
-    const/4 v8, 0x0
+    :cond_1
+    check-cast p1, Leo2;
 
-    const/16 v9, 0xa
+    iget-object v1, p0, Leo2;->b:Ljava/lang/String;
 
-    const/4 v3, 0x0
+    iget-object p1, p1, Leo2;->b:Ljava/lang/String;
 
-    const-class v5, Lwo2;
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v6, "getMemberListActions"
+    move-result p1
 
-    const-string v7, "getMemberListActions()Lkotlinx/coroutines/flow/Flow;"
+    if-nez p1, :cond_2
 
-    invoke-direct/range {v2 .. v9}, Lp81;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    return v2
 
-    new-instance v3, Lk9;
+    :cond_2
+    return v0
+.end method
 
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->x0()J
+.method public final hashCode()I
+    .locals 1
 
-    move-result-wide v4
+    iget-object v0, p0, Leo2;->b:Ljava/lang/String;
 
-    sget-object v0, Lr2c;->a:Lr2c;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-virtual {v0}, Lr2c;->b()Lru7;
+    move-result v0
 
-    move-result-object v6
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result-object v7
+    const-string v0, "CopyLink(link="
 
-    const-class v8, Lxxb;
+    const-string v1, ")"
 
-    invoke-virtual {v7, v8}, Lt5;->d(Ljava/lang/Class;)Ltif;
+    iget-object v2, p0, Leo2;->b:Ljava/lang/String;
 
-    move-result-object v7
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Lr2c;->c()Lru7;
-
-    move-result-object v8
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v9
-
-    const-class v10, Layb;
-
-    invoke-virtual {v9, v10}, Lt5;->d(Ljava/lang/Class;)Ltif;
-
-    move-result-object v9
-
-    invoke-virtual {v0}, Lr2c;->f()Lru7;
-
-    move-result-object v10
-
-    const/4 v11, 0x1
-
-    invoke-direct/range {v3 .. v11}, Lk9;-><init>(JLru7;Lru7;Lru7;Lru7;Lru7;I)V
-
-    new-instance v0, Le69;
-
-    new-instance v4, Lca2;
-
-    const/4 v5, 0x2
-
-    invoke-direct {v4, v5, v1}, Lca2;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, v4, v3, v2}, Le69;-><init>(Lqi6;Ltl4;Loi6;)V
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Y:[Les7;
-
-    new-instance v0, Lwo2;
-
-    invoke-virtual {v1}, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->x0()J
-
-    move-result-wide v1
-
-    const/16 v3, 0x3c
-
-    invoke-direct {v0, v1, v2, v3}, Lwo2;-><init>(JI)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

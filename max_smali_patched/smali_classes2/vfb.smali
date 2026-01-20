@@ -1,138 +1,61 @@
-.class public final synthetic Lvfb;
-.super Ljava/lang/Object;
+.class public final Lvfb;
+.super Lagb;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lhgb;
-
-.field public final synthetic c:Li5a;
+# static fields
+.field public static final a:Lvfb;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhgb;Li5a;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p3, p0, Lvfb;->a:I
+    new-instance v0, Lvfb;
 
-    iput-object p1, p0, Lvfb;->b:Lhgb;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lvfb;->c:Li5a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lvfb;->a:Lvfb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lvfb;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lvfb;->b:Lhgb;
-
-    iget-object v0, v0, Lhgb;->T:Ljava/lang/ref/WeakReference;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    instance-of p1, p1, Lvfb;
 
-    move-result-object v0
+    if-nez p1, :cond_1
 
-    check-cast v0, Luz0;
+    const/4 p1, 0x0
 
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lvfb;->c:Li5a;
-
-    invoke-interface {v0, v1}, Luz0;->onNegotiationError(Li5a;)V
+    return p1
 
     :cond_1
-    return-void
+    return v0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lvfb;->b:Lhgb;
+.method public final hashCode()I
+    .locals 1
 
-    iget-object v0, v0, Lhgb;->T:Ljava/lang/ref/WeakReference;
+    const v0, 0x4ec2eb76
 
-    if-nez v0, :cond_2
+    return v0
+.end method
 
-    const/4 v0, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    goto :goto_1
+    const-string v0, "Negative"
 
-    :cond_2
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Luz0;
-
-    :goto_1
-    if-eqz v0, :cond_3
-
-    iget-object v1, p0, Lvfb;->c:Li5a;
-
-    invoke-interface {v0, v1}, Luz0;->onNegotiationError(Li5a;)V
-
-    :cond_3
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lvfb;->b:Lhgb;
-
-    iget-object v1, v0, Lhgb;->v:Landroid/os/Handler;
-
-    new-instance v2, Lvfb;
-
-    const/4 v3, 0x3
-
-    iget-object v4, p0, Lvfb;->c:Li5a;
-
-    invoke-direct {v2, v0, v4, v3}, Lvfb;-><init>(Lhgb;Li5a;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lvfb;->b:Lhgb;
-
-    iget-object v1, v0, Lhgb;->v:Landroid/os/Handler;
-
-    new-instance v2, Lvfb;
-
-    const/4 v3, 0x2
-
-    iget-object v4, p0, Lvfb;->c:Li5a;
-
-    invoke-direct {v2, v0, v4, v3}, Lvfb;-><init>(Lhgb;Li5a;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,26 +1,30 @@
 .class public final Lvh9;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic X:Lone/me/members/list/MembersListWidget;
+
+.field public final synthetic Y:Landroid/view/View;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;Landroid/view/View;)V
     .locals 0
 
-    iput-object p2, p0, Lvh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput-object p2, p0, Lvh9;->X:Lone/me/members/list/MembersListWidget;
+
+    iput-object p3, p0, Lvh9;->Y:Landroid/view/View;
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +42,7 @@
 
     check-cast p1, Lvh9;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lvh9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -46,13 +50,15 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lvh9;
 
-    iget-object v1, p0, Lvh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iget-object v1, p0, Lvh9;->X:Lone/me/members/list/MembersListWidget;
 
-    invoke-direct {v0, p2, v1}, Lvh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    iget-object v2, p0, Lvh9;->Y:Landroid/view/View;
+
+    invoke-direct {v0, p2, v1, v2}, Lvh9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;Landroid/view/View;)V
 
     iput-object p1, v0, Lvh9;->o:Ljava/lang/Object;
 
@@ -60,95 +66,96 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    .locals 7
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lvh9;->X:Lone/me/members/list/MembersListWidget;
 
-    iget-object p1, p0, Lvh9;->o:Ljava/lang/Object;
+    iget-object v1, v0, Lone/me/members/list/MembersListWidget;->x0:Lv91;
 
-    check-cast p1, Lxe5;
+    iget-object v2, v0, Lone/me/members/list/MembersListWidget;->v0:Lnf6;
 
-    const/4 v0, 0x0
+    iget-object v3, v0, Lone/me/members/list/MembersListWidget;->u0:Lnf6;
 
-    if-eqz p1, :cond_0
+    iget-object v4, p0, Lvh9;->o:Ljava/lang/Object;
 
-    iget-object p1, p1, Lxe5;->a:Ljava/lang/Object;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    check-cast p1, Lzf9;
+    check-cast v4, Lkh9;
 
-    goto :goto_0
+    iget-boolean p1, v4, Lkh9;->d:Z
 
-    :cond_0
-    move-object p1, v0
+    iget-object v5, v4, Lkh9;->a:Ljava/util/List;
 
-    :goto_0
-    iget-object v1, p0, Lvh9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    iget-object v2, v1, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:La1f;
+    sget-object v6, Ldh5;->a:Ldh5;
 
     if-eqz p1, :cond_1
 
-    iget p1, p1, Lzf9;->a:I
+    invoke-virtual {v3, v6}, Lnd8;->F(Ljava/util/List;)V
+
+    invoke-virtual {v2, v6}, Lnd8;->F(Ljava/util/List;)V
+
+    invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lkh5;->a:Lkh5;
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    :cond_0
+    invoke-virtual {v1, v6}, Lnd8;->F(Ljava/util/List;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object p1, v4, Lkh9;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, p1}, Lnd8;->F(Ljava/util/List;)V
+
+    invoke-virtual {v1, v6}, Lnd8;->F(Ljava/util/List;)V
+
+    iget-object p1, v4, Lkh9;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, p1}, Lnd8;->F(Ljava/util/List;)V
+
+    :goto_0
+    sget-object p1, Lone/me/members/list/MembersListWidget;->D0:[Lz28;
+
+    invoke-virtual {v0}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p1
+
+    iget-object v1, v0, Lone/me/members/list/MembersListWidget;->d:Ljava/lang/Integer;
+
+    if-eqz v1, :cond_2
+
+    const/4 v1, 0x2
 
     goto :goto_1
 
-    :cond_1
-    const/4 p1, 0x0
+    :cond_2
+    const/4 v1, 0x1
 
     :goto_1
-    const/4 v3, 0x2
+    invoke-virtual {p1, v1}, Landroid/view/View;->setOverScrollMode(I)V
 
-    if-ne p1, v3, :cond_2
+    iget-object p1, v0, Lone/me/members/list/MembersListWidget;->t0:Lrdi;
 
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
+    invoke-virtual {p1, v5}, Lnd8;->F(Ljava/util/List;)V
 
-    move-result-object p1
-
-    sget v1, Lyjd;->Y0:I
-
-    invoke-virtual {p1, v1}, Lxc9;->setLeftIcon(I)V
-
-    sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-virtual {v2, v0, p1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
+    invoke-virtual {v0}, Lone/me/members/list/MembersListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
 
     move-result-object p1
 
-    sget-object v3, Llc9;->a:Llc9;
+    iget-boolean v0, v4, Lkh9;->e:Z
 
-    invoke-virtual {p1, v3}, Lxc9;->setEmojiExpandableState(Llc9;)V
+    invoke-virtual {p1, v0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
 
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lxc9;->d:Luc9;
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p1, v3}, Landroid/widget/TextView;->setShowSoftInputOnFocus(Z)V
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
-
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
-
-    move-result-object p1
-
-    sget v1, Lyjd;->U0:I
-
-    invoke-virtual {p1, v1}, Lxc9;->setLeftIcon(I)V
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {v2, v0, p1}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :goto_2
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

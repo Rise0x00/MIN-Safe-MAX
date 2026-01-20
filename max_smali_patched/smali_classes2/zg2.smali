@@ -1,58 +1,68 @@
 .class public final Lzg2;
-.super Ljava/lang/Object;
+.super Licg;
 .source "SourceFile"
-
-# interfaces
-.implements Ly31;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public c:Lod2;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lpq9;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lzg2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onNewMessage(Lle7;)V
-    .locals 2
+.method public final d(Lpq9;Ljava/lang/String;)V
+    .locals 1
 
-    iget-object v0, p0, Lzg2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    const-string v0, "chat"
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-static {p1}, Lod2;->a(Lpq9;)Lod2;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lzg2;->c:Lod2;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lpq9;->B()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Lzg2;->c:Lod2;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "{chat="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ly31;
-
-    invoke-interface {v1, p1}, Ly31;->onNewMessage(Lle7;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

@@ -1,184 +1,51 @@
-.class public final synthetic Lx1a;
-.super Ljava/lang/Object;
+.class public final Lx1a;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lpj6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Le2a;
 
-.field public final synthetic b:Lc2a;
+.field public Y:I
+
+.field public d:J
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc2a;I)V
+.method public constructor <init>(Le2a;Lo84;)V
     .locals 0
 
-    iput p2, p0, Lx1a;->a:I
+    iput-object p1, p0, Lx1a;->X:Le2a;
 
-    iput-object p1, p0, Lx1a;->b:Lc2a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lx1a;->a:I
+    iput-object p1, p0, Lx1a;->o:Ljava/lang/Object;
 
-    check-cast p1, La78;
+    iget p1, p0, Lx1a;->Y:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Lx1a;->b:Lc2a;
+    or-int/2addr p1, v0
 
-    iget-object v0, v0, Lc2a;->t0:Lelb;
+    iput p1, p0, Lx1a;->Y:I
 
-    if-eqz v0, :cond_0
+    iget-object p1, p0, Lx1a;->X:Le2a;
 
-    iget-object v0, v0, Lelb;->b:Landroid/net/Uri;
+    const-wide/16 v0, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-static {p1, v0, v1, p0}, Le2a;->a(Le2a;JLo84;)Ljava/lang/Object;
 
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iput-boolean v0, p1, La78;->l:Z
+    move-result-object p1
 
     return-object p1
-
-    :pswitch_0
-    iget-object v0, p0, Lx1a;->b:Lc2a;
-
-    iget-object v1, v0, Lc2a;->v0:Lc1e;
-
-    iget-object v0, v0, Lc2a;->o:Le68;
-
-    invoke-virtual {v1, v0}, Lc1e;->g(Le68;)I
-
-    move-result v0
-
-    if-gtz v0, :cond_2
-
-    invoke-virtual {v1}, Lc1e;->c()Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const/16 v2, 0x64
-
-    if-ge v1, v2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v1, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    const/4 v1, 0x1
-
-    :goto_2
-    iput-boolean v1, p1, La78;->j:Z
-
-    iput v0, p1, La78;->k:I
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lx1a;->b:Lc2a;
-
-    iget-boolean v0, v0, Lc2a;->A0:Z
-
-    iput-boolean v0, p1, La78;->g:Z
-
-    iput-boolean v0, p1, La78;->h:Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p1, La78;->e:Z
-
-    return-object p1
-
-    :pswitch_2
-    iget-object v0, p0, Lx1a;->b:Lc2a;
-
-    iget-boolean v1, v0, Lc2a;->A0:Z
-
-    iput-boolean v1, p1, La78;->e:Z
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, p1, La78;->g:Z
-
-    iput-boolean v2, p1, La78;->h:Z
-
-    iput-boolean v1, p1, La78;->a:Z
-
-    iget-object v0, v0, Lc2a;->c:Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    invoke-virtual {v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Q()Lru/ok/messages/media/mediabar/FrgLocalMedia;
-
-    move-result-object v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    instance-of v2, v0, Lru/ok/messages/media/mediabar/FrgLocalVideo;
-
-    :goto_3
-    iput-boolean v2, p1, La78;->f:Z
-
-    return-object p1
-
-    :pswitch_3
-    iget-object v0, p0, Lx1a;->b:Lc2a;
-
-    iget-object v0, v0, Lc2a;->t0:Lelb;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, v0, Lelb;->d:Lr65;
-
-    if-eqz v0, :cond_4
-
-    const/4 v0, 0x1
-
-    goto :goto_4
-
-    :cond_4
-    const/4 v0, 0x0
-
-    :goto_4
-    iput-boolean v0, p1, La78;->m:Z
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

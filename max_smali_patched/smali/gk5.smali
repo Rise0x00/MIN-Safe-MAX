@@ -1,476 +1,292 @@
-.class public final Lgk5;
-.super Ljava/lang/Object;
+.class public abstract Lgk5;
+.super Landroid/app/Service;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final b:J
+.field public b:Lcii;
 
-.field public final c:I
+.field public final c:Ljava/lang/Object;
 
-.field public final d:I
+.field public d:I
 
-.field public final e:I
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:I
-
-.field public final i:Llb3;
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final m:Ljava/lang/String;
-
-.field public final n:Ljava/lang/String;
-
-.field public final o:I
-
-.field public final p:Landroidx/media3/transformer/ExportException;
-
-.field public final q:Lec7;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lz8d;JJIIILjava/lang/String;Ljava/lang/String;ILlb3;IIILjava/lang/String;Ljava/lang/String;ILandroidx/media3/transformer/ExportException;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 8
 
-    move-object/from16 v0, p17
+    invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    move/from16 v1, p18
+    new-instance v7, Lpg4;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "Firebase-Messaging-Intent-Handle"
 
-    iput-object p1, p0, Lgk5;->q:Lec7;
+    const/4 v1, 0x2
 
-    iput-wide p2, p0, Lgk5;->a:J
+    invoke-direct {v7, v0, v1}, Lpg4;-><init>(Ljava/lang/String;I)V
 
-    iput-wide p4, p0, Lgk5;->b:J
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    iput p6, p0, Lgk5;->c:I
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iput p7, p0, Lgk5;->d:I
+    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    iput p8, p0, Lgk5;->e:I
+    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    iput-object p9, p0, Lgk5;->f:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iput-object p10, p0, Lgk5;->g:Ljava/lang/String;
+    const-wide/16 v3, 0x3c
 
-    iput p11, p0, Lgk5;->h:I
+    move v2, v1
 
-    iput-object p12, p0, Lgk5;->i:Llb3;
+    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
-    iput p13, p0, Lgk5;->j:I
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
-    move/from16 p2, p14
-
-    iput p2, p0, Lgk5;->k:I
-
-    move/from16 p2, p15
-
-    iput p2, p0, Lgk5;->l:I
-
-    move-object/from16 p2, p16
-
-    iput-object p2, p0, Lgk5;->m:Ljava/lang/String;
-
-    iput-object v0, p0, Lgk5;->n:Ljava/lang/String;
-
-    iput v1, p0, Lgk5;->o:I
-
-    move-object/from16 p2, p19
-
-    iput-object p2, p0, Lgk5;->p:Landroidx/media3/transformer/ExportException;
-
-    const/4 p2, 0x1
-
-    invoke-static {p10, v1, p1, p2}, Lgk5;->a(Ljava/lang/String;ILz8d;I)V
-
-    const/4 p2, 0x2
-
-    invoke-static {v0, v1, p1, p2}, Lgk5;->a(Ljava/lang/String;ILz8d;I)V
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;ILz8d;I)V
-    .locals 2
-
-    if-nez p0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const/4 p0, 0x1
-
-    if-ne p1, p0, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    const/4 p1, 0x0
-
-    invoke-virtual {p2, p1}, Lec7;->m(I)Lc46;
-
-    move-result-object p2
-
-    :goto_0
-    invoke-virtual {p2}, Lb2;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {p2}, Lb2;->next()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/util/concurrent/Executors;->unconfigurableExecutorService(Ljava/util/concurrent/ExecutorService;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
-    check-cast v0, Lfk5;
+    iput-object v0, p0, Lgk5;->a:Ljava/util/concurrent/ExecutorService;
 
-    if-ne p3, p0, :cond_2
+    new-instance v0, Ljava/lang/Object;
 
-    iget-object v0, v0, Lfk5;->d:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    goto :goto_1
+    iput-object v0, p0, Lgk5;->c:Ljava/lang/Object;
 
-    :cond_2
-    iget-object v0, v0, Lfk5;->e:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    :goto_1
-    const/4 v1, 0x2
+    iput v0, p0, Lgk5;->o:I
 
-    if-nez v0, :cond_4
-
-    if-ne p1, p0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move p1, v1
-
-    goto :goto_0
-
-    :cond_4
-    if-ne p1, v1, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move p1, p0
-
-    goto :goto_0
-
-    :cond_6
-    :goto_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(Landroid/content/Intent;)V
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    if-eqz p1, :cond_0
 
-    goto/16 :goto_0
+    invoke-static {p1}, Ljxh;->b(Landroid/content/Intent;)V
 
     :cond_0
-    instance-of v0, p1, Lgk5;
+    iget-object p1, p0, Lgk5;->c:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget v0, p0, Lgk5;->o:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lgk5;->o:I
 
     if-nez v0, :cond_1
 
-    goto/16 :goto_1
-
-    :cond_1
-    check-cast p1, Lgk5;
-
-    iget-object v0, p0, Lgk5;->q:Lec7;
-
-    iget-object v1, p1, Lgk5;->q:Lec7;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-wide v0, p0, Lgk5;->a:J
-
-    iget-wide v2, p1, Lgk5;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    iget-wide v0, p0, Lgk5;->b:J
-
-    iget-wide v2, p1, Lgk5;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_2
-
-    iget v0, p0, Lgk5;->c:I
-
-    iget v1, p1, Lgk5;->c:I
-
-    if-ne v0, v1, :cond_2
-
     iget v0, p0, Lgk5;->d:I
 
-    iget v1, p1, Lgk5;->d:I
+    invoke-virtual {p0, v0}, Landroid/app/Service;->stopSelfResult(I)Z
 
-    if-ne v0, v1, :cond_2
+    goto :goto_0
 
-    iget v0, p0, Lgk5;->e:I
+    :catchall_0
+    move-exception v0
 
-    iget v1, p1, Lgk5;->e:I
+    goto :goto_1
 
-    if-ne v0, v1, :cond_2
+    :cond_1
+    :goto_0
+    monitor-exit p1
 
-    iget-object v0, p0, Lgk5;->f:Ljava/lang/String;
+    return-void
 
-    iget-object v1, p1, Lgk5;->f:Ljava/lang/String;
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    throw v0
+.end method
 
-    move-result v0
+.method public abstract b(Landroid/content/Intent;)V
+.end method
 
-    if-eqz v0, :cond_2
+.method public final declared-synchronized onBind(Landroid/content/Intent;)Landroid/os/IBinder;
+    .locals 1
 
-    iget-object v0, p0, Lgk5;->g:Ljava/lang/String;
+    monitor-enter p0
 
-    iget-object v1, p1, Lgk5;->g:Ljava/lang/String;
+    :try_start_0
+    const-string p1, "EnhancedIntentService"
 
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v0, 0x3
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lgk5;->h:I
-
-    iget v1, p1, Lgk5;->h:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lgk5;->i:Llb3;
-
-    iget-object v1, p1, Lgk5;->i:Llb3;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lgk5;->j:I
-
-    iget v1, p1, Lgk5;->j:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lgk5;->k:I
-
-    iget v1, p1, Lgk5;->k:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lgk5;->l:I
-
-    iget v1, p1, Lgk5;->l:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lgk5;->m:Ljava/lang/String;
-
-    iget-object v1, p1, Lgk5;->m:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lgk5;->n:Ljava/lang/String;
-
-    iget-object v1, p1, Lgk5;->n:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget v0, p0, Lgk5;->o:I
-
-    iget v1, p1, Lgk5;->o:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lgk5;->p:Landroidx/media3/transformer/ExportException;
-
-    iget-object p1, p1, Lgk5;->p:Landroidx/media3/transformer/ExportException;
-
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result p1
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_0
 
+    const-string p1, "EnhancedIntentService"
+
+    const-string v0, "Service received bind request"
+
+    invoke-static {p1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
     :goto_0
-    const/4 p1, 0x1
+    iget-object p1, p0, Lgk5;->b:Lcii;
 
-    return p1
+    if-nez p1, :cond_1
 
-    :cond_2
+    new-instance p1, Lcii;
+
+    new-instance v0, Lkp8;
+
+    invoke-direct {v0, p0}, Lkp8;-><init>(Ljava/lang/Object;)V
+
+    invoke-direct {p1, v0}, Lcii;-><init>(Lkp8;)V
+
+    iput-object p1, p0, Lgk5;->b:Lcii;
+
+    :cond_1
+    iget-object p1, p0, Lgk5;->b:Lcii;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object p1
+
     :goto_1
-    const/4 p1, 0x0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return p1
+    throw p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final onDestroy()V
+    .locals 1
 
-    iget-object v0, p0, Lgk5;->q:Lec7;
+    iget-object v0, p0, Lgk5;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    move-result v0
+    invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
-    mul-int/lit8 v0, v0, 0x1f
+    return-void
+.end method
 
-    iget-wide v1, p0, Lgk5;->a:J
+.method public final onStartCommand(Landroid/content/Intent;II)I
+    .locals 4
 
-    long-to-int v1, v1
+    iget-object p2, p0, Lgk5;->c:Ljava/lang/Object;
 
-    add-int/2addr v0, v1
+    monitor-enter p2
 
-    mul-int/lit8 v0, v0, 0x1f
+    :try_start_0
+    iput p3, p0, Lgk5;->d:I
 
-    iget-wide v1, p0, Lgk5;->b:J
+    iget p3, p0, Lgk5;->o:I
 
-    long-to-int v1, v1
+    add-int/lit8 p3, p3, 0x1
 
-    add-int/2addr v0, v1
+    iput p3, p0, Lgk5;->o:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    monitor-exit p2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget v1, p0, Lgk5;->c:I
+    invoke-static {}, Lnre;->r()Lnre;
 
-    add-int/2addr v0, v1
+    move-result-object p2
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p2, p2, Lnre;->d:Ljava/lang/Object;
 
-    iget v1, p0, Lgk5;->d:I
+    check-cast p2, Ljava/util/ArrayDeque;
 
-    add-int/2addr v0, v1
+    invoke-virtual {p2}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    mul-int/lit8 v0, v0, 0x1f
+    move-result-object p2
 
-    iget v1, p0, Lgk5;->e:I
+    check-cast p2, Landroid/content/Intent;
 
-    add-int/2addr v0, v1
+    const/4 p3, 0x2
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-nez p2, :cond_0
 
-    iget-object v1, p0, Lgk5;->f:Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lgk5;->a(Landroid/content/Intent;)V
 
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    return p3
 
-    move-result v1
+    :cond_0
+    new-instance v0, Lieg;
 
-    add-int/2addr v1, v0
+    invoke-direct {v0}, Lieg;-><init>()V
 
-    mul-int/lit8 v1, v1, 0x1f
+    iget-object v1, p0, Lgk5;->a:Ljava/util/concurrent/ExecutorService;
 
-    iget-object v0, p0, Lgk5;->g:Ljava/lang/String;
+    new-instance v2, Lye5;
 
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    const/4 v3, 0x5
 
-    move-result v0
+    invoke-direct {v2, p0, p2, v0, v3}, Lye5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    add-int/2addr v0, v1
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object p2, v0, Lieg;->a:Liqj;
 
-    iget v1, p0, Lgk5;->h:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lgk5;->i:Llb3;
-
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lgk5;->j:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lgk5;->k:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget v0, p0, Lgk5;->l:I
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lgk5;->m:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    invoke-virtual {p2}, Liqj;->g()Z
 
     move-result v0
 
-    add-int/2addr v0, v1
+    if-eqz v0, :cond_1
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p0, p1}, Lgk5;->a(Landroid/content/Intent;)V
 
-    iget-object v1, p0, Lgk5;->n:Ljava/lang/String;
+    return p3
 
-    invoke-static {v1}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    :cond_1
+    new-instance p3, Lis;
 
-    move-result v1
+    const/4 v0, 0x2
 
-    add-int/2addr v1, v0
+    invoke-direct {p3, v0}, Lis;-><init>(I)V
 
-    mul-int/lit8 v1, v1, 0x1f
+    new-instance v0, Lvt4;
 
-    iget v0, p0, Lgk5;->o:I
+    const/4 v1, 0x5
 
-    add-int/2addr v1, v0
+    invoke-direct {v0, p0, v1, p1}, Lvt4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-virtual {p2, p3, v0}, Liqj;->b(Ljava/util/concurrent/Executor;Lx1b;)Liqj;
 
-    iget-object v0, p0, Lgk5;->p:Landroidx/media3/transformer/ExportException;
+    const/4 p1, 0x3
 
-    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+    return p1
 
-    move-result v0
+    :catchall_0
+    move-exception p1
 
-    add-int/2addr v0, v1
+    :try_start_1
+    monitor-exit p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return v0
+    throw p1
 .end method

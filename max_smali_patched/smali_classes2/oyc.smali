@@ -1,54 +1,69 @@
 .class public final Loyc;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Li28;
 
+# instance fields
+.field public A0:I
 
-# static fields
-.field public static final a:Loyc;
+.field public X:[Ljava/lang/Object;
 
-.field public static final b:I
+.field public Y:Lzsd;
 
-.field public static final c:J
+.field public Z:I
+
+.field public d:Ljava/lang/CharSequence;
+
+.field public o:Ljava/util/ArrayList;
+
+.field public t0:I
+
+.field public u0:I
+
+.field public v0:I
+
+.field public w0:I
+
+.field public x0:I
+
+.field public synthetic y0:Ljava/lang/Object;
+
+.field public final synthetic z0:Ltyc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ltyc;Lo84;)V
+    .locals 0
 
-    new-instance v0, Loyc;
+    iput-object p1, p0, Loyc;->z0:Ltyc;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Loyc;->a:Loyc;
-
-    sget v0, Lckd;->a:I
-
-    sput v0, Loyc;->b:I
-
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
-
-    sput-wide v0, Loyc;->c:J
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    sget-wide v0, Loyc;->c:J
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    sget v0, Loyc;->b:I
+    iput-object p1, p0, Loyc;->y0:Ljava/lang/Object;
 
-    return v0
+    iget p1, p0, Loyc;->A0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Loyc;->A0:I
+
+    iget-object p1, p0, Loyc;->z0:Ltyc;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ltyc;->a(Ljava/lang/CharSequence;Lo84;)Ljava/io/Serializable;
+
+    move-result-object p1
+
+    return-object p1
 .end method

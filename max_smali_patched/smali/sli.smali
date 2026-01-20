@@ -1,205 +1,114 @@
-.class public abstract Lsli;
+.class public final Lsli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static final a(Ley0;)Ljava/util/ArrayList;
-    .locals 4
+# instance fields
+.field public final a:Lb32;
 
-    :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
+.field public final b:Ltli;
+
+.field public c:Z
+
+.field public d:Z
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public g:Lhz8;
+
+.field public h:Lh72;
+
+.field public i:Lnj7;
+
+.field public j:Landroid/media/ImageWriter;
+
+
+# direct methods
+.method public constructor <init>(Lb32;)V
+    .locals 6
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lsli;->c:Z
+
+    iput-boolean v0, p0, Lsli;->d:Z
+
+    iput-boolean v0, p0, Lsli;->e:Z
+
+    iput-boolean v0, p0, Lsli;->f:Z
+
+    iput-object p1, p0, Lsli;->a:Lb32;
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_CAPABILITIES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-virtual {p1, v1}, Lb32;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [I
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    if-eqz p1, :cond_1
 
-    invoke-interface {p0}, Ley0;->a()Z
+    array-length v2, p1
 
-    move-result v1
+    move v3, v0
 
-    if-eqz v1, :cond_0
+    :goto_0
+    if-ge v3, v2, :cond_1
 
-    invoke-interface {p0}, Ley0;->b()Ljava/lang/String;
+    aget v4, p1, v3
 
-    move-result-object p0
+    const/4 v5, 0x4
+
+    if-ne v4, v5, :cond_0
+
+    move p1, v1
+
+    goto :goto_1
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {p0}, Ley0;->b()Ljava/lang/String;
+    :cond_1
+    move p1, v0
 
-    move-result-object p0
+    :goto_1
+    iput-boolean p1, p0, Lsli;->e:Z
 
-    const-string v1, "UTF-8"
+    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/ZslDisablerQuirk;
 
-    invoke-static {v1}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+    sget-object v2, Loz4;->a:Lrz6;
 
-    move-result-object v1
+    invoke-virtual {v2, p1}, Lrz6;->M(Ljava/lang/Class;)Ld4d;
 
-    invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
+    move-result-object p1
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_1
+    if-eqz p1, :cond_2
 
-    :try_start_1
-    const-string v1, "SHA-1"
+    move v0, v1
 
-    invoke-static {v1}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
+    :cond_2
+    iput-boolean v0, p0, Lsli;->f:Z
 
-    move-result-object v1
+    new-instance p1, Ltli;
 
-    array-length v2, p0
+    new-instance v0, Lvoh;
 
-    const/4 v3, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v1, p0, v3, v2}, Ljava/security/MessageDigest;->update([BII)V
+    const/4 v1, 0x3
 
-    invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
+    invoke-direct {p1, v1, v0}, Ltka;-><init>(ILvoh;)V
 
-    move-result-object p0
+    iput-object p1, p0, Lsli;->b:Ltli;
 
-    const/16 v1, 0xb
-
-    invoke-static {p0, v1}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_1
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_0
-    :try_start_2
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object v0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-    :try_end_2
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_1
-
-    :catch_1
-    move-exception p0
-
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-.end method
-
-.method public static final b(I)Ljava/util/ArrayList;
-    .locals 3
-
-    new-instance v0, Laj7;
-
-    const/16 v1, 0x17
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p0, v1, v2}, Lyi7;-><init>(III)V
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {v0, v1}, Lcb3;->k(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {p0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0}, Lyi7;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    move-object v1, v0
-
-    check-cast v1, Lzi7;
-
-    iget-boolean v1, v1, Lzi7;->c:Z
-
-    if-eqz v1, :cond_0
-
-    move-object v1, v0
-
-    check-cast v1, Lzi7;
-
-    invoke-virtual {v1}, Lzi7;->nextInt()I
-
-    move-result v1
-
-    new-instance v2, Louf;
-
-    invoke-direct {v2, v1}, Louf;-><init>(I)V
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    return-object p0
-.end method
-
-.method public static final c(I)Ljava/util/ArrayList;
-    .locals 3
-
-    new-instance v0, Laj7;
-
-    const/16 v1, 0x3b
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, p0, v1, v2}, Lyi7;-><init>(III)V
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {v0, v1}, Lcb3;->k(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {p0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v0}, Lyi7;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    move-object v1, v0
-
-    check-cast v1, Lzi7;
-
-    iget-boolean v1, v1, Lzi7;->c:Z
-
-    if-eqz v1, :cond_0
-
-    move-object v1, v0
-
-    check-cast v1, Lzi7;
-
-    invoke-virtual {v1}, Lzi7;->nextInt()I
-
-    move-result v1
-
-    new-instance v2, Louf;
-
-    invoke-direct {v2, v1}, Louf;-><init>(I)V
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    return-object p0
+    return-void
 .end method

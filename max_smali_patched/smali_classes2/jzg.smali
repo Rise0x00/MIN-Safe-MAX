@@ -1,88 +1,73 @@
-.class public abstract Ljzg;
-.super Ljava/lang/Object;
+.class public final enum Ljzg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lkotlinx/coroutines/internal/ContextScope;
+# static fields
+.field public static final enum a:Ljzg;
+
+.field public static final enum b:Ljzg;
+
+.field public static final synthetic c:[Ljzg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljzg;
 
-    invoke-static {}, Lbw0;->a()Lqef;
+    const-string v1, "START"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Ljzg;->a:Ljzg;
+
+    new-instance v1, Ljzg;
+
+    const-string v2, "FINISH"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ljzg;->b:Ljzg;
+
+    filled-new-array {v0, v1}, [Ljzg;
 
     move-result-object v0
 
-    sget-object v1, Lqv4;->a:Lpm4;
-
-    sget-object v1, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lbe8;
-
-    invoke-virtual {v1}, Lbe8;->getImmediate()Lbe8;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ly44;->plus(Ly44;)Ly44;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+    sput-object v0, Ljzg;->c:[Ljzg;
 
     return-void
 .end method
 
-.method public static r(Ljzg;Ly44;Lej6;I)Lgye;
+.method public static valueOf(Ljava/lang/String;)Ljzg;
     .locals 1
 
-    and-int/lit8 v0, p3, 0x1
+    const-class v0, Ljzg;
 
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lha5;->a:Lha5;
-
-    :cond_0
-    and-int/lit8 p3, p3, 0x2
-
-    if-eqz p3, :cond_1
-
-    sget-object p3, Lj54;->a:Lj54;
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p3, Lj54;->b:Lj54;
-
-    :goto_0
-    iget-object p0, p0, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p0, p1, p3, p2}, Lkki;->d(Lg54;Ly44;Lj54;Lej6;)Lgye;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
+
+    check-cast p0, Ljzg;
 
     return-object p0
 .end method
 
-.method public static s(Laf5;Ljava/lang/Object;)V
-    .locals 0
+.method public static values()[Ljzg;
+    .locals 1
 
-    iget-object p0, p0, Laf5;->b:Lake;
+    sget-object v0, Ljzg;->c:[Ljzg;
 
-    invoke-virtual {p0, p1}, Lake;->h(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
+    check-cast v0, [Ljzg;
 
-# virtual methods
-.method public t()V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

@@ -1,24 +1,28 @@
-.class public final synthetic Lyj1;
+.class public final Lyj1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Ld76;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lbk1;
+.field public final synthetic b:Ld76;
+
+.field public final synthetic c:Lo58;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbk1;I)V
+.method public synthetic constructor <init>(Ld76;Lo58;I)V
     .locals 0
 
-    iput p2, p0, Lyj1;->a:I
+    iput p3, p0, Lyj1;->a:I
 
-    iput-object p1, p0, Lyj1;->b:Lbk1;
+    iput-object p1, p0, Lyj1;->b:Ld76;
+
+    iput-object p2, p0, Lyj1;->c:Lo58;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,100 +31,70 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 3
 
     iget v0, p0, Lyj1;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Lyj1;->b:Lbk1;
+    new-instance v0, Ll51;
 
-    iget-object v0, v0, Lbk1;->e:Lru7;
+    iget-object v1, p0, Lyj1;->c:Lo58;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x2
 
-    move-result-object v0
+    invoke-direct {v0, p1, v1, v2}, Ll51;-><init>(Lf76;Lo58;I)V
 
-    check-cast v0, Lkq5;
+    iget-object p1, p0, Lyj1;->b:Ld76;
 
-    check-cast v0, Luq5;
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p1
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+    sget-object p2, Lac4;->a:Lac4;
 
-    const/4 v2, 0x0
+    if-ne p1, p2, :cond_0
 
-    invoke-virtual {v0, v1, v2}, Lhud;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+    goto :goto_0
 
-    move-result v0
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
+    :goto_0
+    return-object p1
 
     :pswitch_0
-    iget-object v0, p0, Lyj1;->b:Lbk1;
+    new-instance v0, Ll51;
 
-    iget-object v0, v0, Lbk1;->b:Lx4e;
+    iget-object v1, p0, Lyj1;->c:Lo58;
 
-    check-cast v0, Ljud;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0, p1, v1, v2}, Ll51;-><init>(Lf76;Lo58;I)V
 
-    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+    iget-object p1, p0, Lyj1;->b:Ld76;
 
-    const/4 v2, 0x0
+    invoke-interface {p1, v0, p2}, Ld76;->e(Lf76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v2}, Ljud;->j(Ljava/lang/Enum;Z)Z
+    move-result-object p1
 
-    move-result v0
+    sget-object p2, Lac4;->a:Lac4;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-ne p1, p2, :cond_1
 
-    move-result-object v0
+    goto :goto_1
 
-    return-object v0
+    :cond_1
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :pswitch_1
-    iget-object v0, p0, Lyj1;->b:Lbk1;
-
-    iget-object v0, v0, Lbk1;->a:Landroid/content/Context;
-
-    const-string v1, "vibrator"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Vibrator;
-
-    return-object v0
-
-    :pswitch_2
-    iget-object v0, p0, Lyj1;->b:Lbk1;
-
-    iget-object v0, v0, Lbk1;->a:Landroid/content/Context;
-
-    const-string v1, "audio"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/media/AudioManager;
-
-    return-object v0
+    :goto_1
+    return-object p1
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

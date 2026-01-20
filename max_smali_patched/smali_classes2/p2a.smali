@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lu6;
+.implements Ljava/util/function/UnaryOperator;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lq2a;
+.field public final synthetic b:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq2a;I)V
+.method public synthetic constructor <init>(JI)V
     .locals 0
 
-    iput p2, p0, Lp2a;->a:I
+    iput p3, p0, Lp2a;->a:I
 
-    iput-object p1, p0, Lp2a;->b:Lq2a;
+    iput-wide p1, p0, Lp2a;->b:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,42 +27,86 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
     iget v0, p0, Lp2a;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ldk0;
+    check-cast p1, Ljava/util/Set;
 
-    const/16 v1, 0x15
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
 
-    iget-object v1, p0, Lp2a;->b:Lq2a;
-
-    invoke-virtual {v1, v0}, Lf3;->j(Llr3;)V
-
-    return-void
-
-    :pswitch_0
-    new-instance v0, Ldk0;
+    new-instance p1, Ln33;
 
     const/16 v1, 0x14
 
-    invoke-direct {v0, v1}, Ldk0;-><init>(I)V
+    iget-wide v2, p0, Lp2a;->b:J
 
-    iget-object v1, p0, Lp2a;->b:Lq2a;
+    invoke-direct {p1, v2, v3, v1}, Ln33;-><init>(JI)V
 
-    invoke-virtual {v1, v0}, Lf3;->j(Llr3;)V
+    new-instance v1, Lv5;
 
-    return-void
+    const/16 v2, 0xc
 
-    nop
+    invoke-direct {v1, v2, p1}, Lv5;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/Collection;->removeIf(Ljava/util/function/Predicate;)Z
+
+    return-object v0
+
+    :pswitch_0
+    check-cast p1, Lt2a;
+
+    new-instance v0, Lt2a;
+
+    const-wide/16 v5, 0x0
+
+    const/16 v9, 0x1a
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    iget-wide v7, p0, Lp2a;->b:J
+
+    invoke-direct/range {v0 .. v9}, Lt2a;-><init>(IZZZJJI)V
+
+    return-object v0
+
+    :pswitch_1
+    check-cast p1, Lt2a;
+
+    new-instance v0, Lt2a;
+
+    const-wide/16 v7, 0x0
+
+    const/16 v9, 0x2e
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget-wide v5, p0, Lp2a;->b:J
+
+    invoke-direct/range {v0 .. v9}, Lt2a;-><init>(IZZZJJI)V
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

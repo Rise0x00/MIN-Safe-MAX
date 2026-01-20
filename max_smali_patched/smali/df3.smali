@@ -1,59 +1,47 @@
 .class public final Ldf3;
-.super Lef3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic e:I
+
+
 # instance fields
-.field public final d:I
+.field public final a:Lelg;
+
+.field public final b:Ljava/util/List;
+
+.field public final c:Lsz6;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput p1, p0, Ldf3;->d:I
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(II)Lef3;
+.method public constructor <init>(Lelg;Ljava/util/List;Lsz6;Ljava/lang/String;)V
     .locals 0
 
-    return-object p0
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public final b(JJ)Lef3;
-    .locals 0
+    iput-object p1, p0, Ldf3;->a:Lelg;
 
-    return-object p0
-.end method
+    iput-object p2, p0, Ldf3;->b:Ljava/util/List;
 
-.method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lef3;
-    .locals 0
+    iput-object p3, p0, Ldf3;->c:Lsz6;
 
-    return-object p0
-.end method
+    iput-object p4, p0, Ldf3;->d:Ljava/lang/String;
 
-.method public final d(ZZ)Lef3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final e(ZZ)Lef3;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final f()I
-    .locals 1
-
-    iget v0, p0, Ldf3;->d:I
-
-    return v0
+    return-void
 .end method

@@ -17,7 +17,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -29,8 +29,6 @@
 
 .field public final b:I
 
-.field public final c:Ljava/lang/String;
-
 
 # direct methods
 .method public constructor <init>(II)V
@@ -41,10 +39,6 @@
     iput p1, p0, Lru/ok/tamtam/api/SessionSendLimitException;->a:I
 
     iput p2, p0, Lru/ok/tamtam/api/SessionSendLimitException;->b:I
-
-    const-string p1, "ONEME-13309"
-
-    iput-object p1, p0, Lru/ok/tamtam/api/SessionSendLimitException;->c:Ljava/lang/String;
 
     return-void
 .end method
@@ -62,7 +56,7 @@
 
     iget v3, p0, Lru/ok/tamtam/api/SessionSendLimitException;->b:I
 
-    invoke-static {v0, v2, v3, v1}, Lok7;->g(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v3, v1}, Lj27;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

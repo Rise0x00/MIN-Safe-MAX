@@ -1,171 +1,109 @@
 .class public final Lbqi;
-.super Ljava/lang/Object;
+.super Lg4;
 .source "SourceFile"
+
+# interfaces
+.implements Lwzd;
 
 
 # static fields
-.field public static j:Ljzi;
-
-.field public static final k:Lg5i;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbqi;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Ljava/util/List;
 
 .field public final b:Ljava/lang/String;
-
-.field public final c:Lvpi;
-
-.field public final d:Lkke;
-
-.field public final e:Lj1j;
-
-.field public final f:Lj1j;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:I
-
-.field public final i:Ljava/util/HashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    const-string v0, "optional-module-barcode"
+    new-instance v0, Lfph;
 
-    const-string v1, "com.google.android.gms.vision.barcode"
+    const/16 v1, 0xd
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lfph;-><init>(I)V
 
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    aget-object v1, v0, v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    aget-object v1, v0, v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lg5i;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2, v0}, Lg5i;-><init>(I[Ljava/lang/Object;)V
-
-    sput-object v1, Lbqi;->k:Lg5i;
+    sput-object v0, Lbqi;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkke;Lvpi;)V
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashMap;
+    iput-object p2, p0, Lbqi;->a:Ljava/util/List;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    iput-object p1, p0, Lbqi;->b:Ljava/lang/String;
 
-    iput-object v0, p0, Lbqi;->i:Ljava/util/HashMap;
+    return-void
+.end method
 
-    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+# virtual methods
+.method public final a()Lcom/google/android/gms/common/api/Status;
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lbqi;->a:Ljava/lang/String;
-
-    invoke-static {p1}, Lue3;->a(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lbqi;->b:Ljava/lang/String;
-
-    iput-object p2, p0, Lbqi;->d:Lkke;
-
-    iput-object p3, p0, Lbqi;->c:Lvpi;
-
-    invoke-static {}, Luqi;->f()V
-
-    const-string p3, "vision-common"
-
-    iput-object p3, p0, Lbqi;->g:Ljava/lang/String;
-
-    invoke-static {}, Lot7;->A()Lot7;
-
-    move-result-object v0
-
-    new-instance v1, Loj4;
-
-    const/16 v2, 0x11
-
-    invoke-direct {v1, v2, p0}, Loj4;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lot7;->E(Ljava/util/concurrent/Callable;)Lj1j;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lbqi;->e:Lj1j;
-
-    invoke-static {}, Lot7;->A()Lot7;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lypi;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p2, v2}, Lypi;-><init>(Lkke;I)V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v1}, Lot7;->E(Ljava/util/concurrent/Callable;)Lj1j;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lbqi;->f:Lj1j;
-
-    sget-object p2, Lbqi;->k:Lg5i;
-
-    invoke-virtual {p2, p3}, Lg5i;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-object v0, p0, Lbqi;->b:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p2, p3}, Lg5i;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sget-object v0, Lcom/google/android/gms/common/api/Status;->o:Lcom/google/android/gms/common/api/Status;
 
-    move-result-object p2
+    return-object v0
 
-    check-cast p2, Ljava/lang/String;
+    :cond_0
+    sget-object v0, Lcom/google/android/gms/common/api/Status;->t0:Lcom/google/android/gms/common/api/Status;
 
-    const/4 p3, 0x0
+    return-object v0
+.end method
 
-    invoke-static {p1, p2, p3}, Lh55;->d(Landroid/content/Context;Ljava/lang/String;Z)I
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    move-result p1
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    iget-object v0, p0, Lbqi;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, -0x1
+    const/4 v1, 0x1
+
+    invoke-static {p1, v1}, Lsnj;->k(Landroid/os/Parcel;I)I
+
+    move-result v1
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+
+    invoke-static {p1, v1}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     :goto_0
-    iput p1, p0, Lbqi;->h:I
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Lbqi;->b:Ljava/lang/String;
+
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
 
     return-void
 .end method

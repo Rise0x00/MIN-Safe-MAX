@@ -1,135 +1,43 @@
 .class public final Le4;
-.super Ltci;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final c(Lg4;Lc4;Lc4;)Z
+# static fields
+.field public static final c:Le4;
+
+
+# instance fields
+.field public volatile a:Ljava/lang/Thread;
+
+.field public volatile b:Le4;
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    monitor-enter p1
+    new-instance v0, Le4;
 
-    :try_start_0
-    iget-object v0, p1, Lg4;->b:Lc4;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lg4;->b:Lc4;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final d(Lg4;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Lg4;->a:Ljava/lang/Object;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lg4;->a:Ljava/lang/Object;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final e(Lg4;Lf4;Lf4;)Z
-    .locals 1
-
-    monitor-enter p1
-
-    :try_start_0
-    iget-object v0, p1, Lg4;->c:Lf4;
-
-    if-ne v0, p2, :cond_0
-
-    iput-object p3, p1, Lg4;->c:Lf4;
-
-    const/4 p2, 0x1
-
-    monitor-exit p1
-
-    return p2
-
-    :catchall_0
-    move-exception p2
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p2, 0x0
-
-    monitor-exit p1
-
-    return p2
-
-    :goto_0
-    monitor-exit p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p2
-.end method
-
-.method public final s(Lf4;Lf4;)V
-    .locals 0
-
-    iput-object p2, p1, Lf4;->b:Lf4;
+    sput-object v0, Le4;->c:Le4;
 
     return-void
 .end method
 
-.method public final t(Lf4;Ljava/lang/Thread;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p2, p1, Lf4;->a:Ljava/lang/Thread;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v0, Lf4;->X:Lg3j;
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    invoke-virtual {v0, p0, v1}, Lg3j;->h(Le4;Ljava/lang/Thread;)V
 
     return-void
 .end method

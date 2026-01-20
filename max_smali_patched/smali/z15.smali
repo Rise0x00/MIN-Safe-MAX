@@ -2,285 +2,117 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lz15;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public a:I
+.field public a:Z
 
-.field public final b:Ljava/util/UUID;
+.field public b:Z
 
-.field public final c:Ljava/lang/String;
+.field public c:Z
 
-.field public final d:Ljava/lang/String;
-
-.field public final o:[B
+.field public final d:Ljava/util/ArrayDeque;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Ldd4;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Ldd4;-><init>(I)V
-
-    sput-object v0, Lz15;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 5
-
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
-    new-instance v0, Ljava/util/UUID;
+    const/4 v0, 0x1
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    iput-boolean v0, p0, Lz15;->a:Z
 
-    move-result-wide v1
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
 
-    move-result-wide v3
-
-    invoke-direct {v0, v1, v2, v3, v4}, Ljava/util/UUID;-><init>(JJ)V
-
-    iput-object v0, p0, Lz15;->b:Ljava/util/UUID;
-
-    .line 10
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lz15;->c:Ljava/lang/String;
-
-    .line 11
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sget v1, Ljig;->a:I
-
-    iput-object v0, p0, Lz15;->d:Ljava/lang/String;
-
-    .line 12
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
-
-    move-result-object p1
-
-    iput-object p1, p0, Lz15;->o:[B
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;[B)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    iput-object p1, p0, Lz15;->b:Ljava/util/UUID;
-
-    .line 4
-    iput-object p2, p0, Lz15;->c:Ljava/lang/String;
-
-    .line 5
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 6
-    iput-object p3, p0, Lz15;->d:Ljava/lang/String;
-
-    .line 7
-    iput-object p4, p0, Lz15;->o:[B
+    iput-object v0, p0, Lz15;->d:Ljava/util/ArrayDeque;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()V
     .locals 4
 
-    instance-of v0, p1, Lz15;
+    iget-object v0, p0, Lz15;->d:Ljava/util/ArrayDeque;
 
-    const/4 v1, 0x0
+    iget-boolean v1, p0, Lz15;->c:Z
 
-    if-nez v0, :cond_0
+    if-eqz v1, :cond_0
 
-    return v1
+    return-void
 
     :cond_0
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_1
-
-    return v0
-
-    :cond_1
-    check-cast p1, Lz15;
-
-    iget-object v2, p0, Lz15;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lz15;->c:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lz15;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lz15;->d:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lz15;->b:Ljava/util/UUID;
-
-    iget-object v3, p1, Lz15;->b:Ljava/util/UUID;
-
-    invoke-static {v2, v3}, Ljig;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Lz15;->o:[B
-
-    iget-object p1, p1, Lz15;->o:[B
-
-    invoke-static {v2, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lz15;->a:I
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lz15;->b:Ljava/util/UUID;
-
-    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lz15;->c:Ljava/lang/String;
-
-    if-nez v2, :cond_0
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lz15;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lz15;->o:[B
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    iput v1, p0, Lz15;->a:I
+    :try_start_0
+    iput-boolean v1, p0, Lz15;->c:Z
 
     :cond_1
-    iget v0, p0, Lz15;->a:I
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
 
-    return v0
-.end method
+    move-result v3
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    if-nez v3, :cond_5
 
-    iget-object p2, p0, Lz15;->b:Ljava/util/UUID;
+    iget-boolean v3, p0, Lz15;->b:Z
 
-    invoke-virtual {p2}, Ljava/util/UUID;->getMostSignificantBits()J
+    if-nez v3, :cond_3
 
-    move-result-wide v0
+    iget-boolean v3, p0, Lz15;->a:Z
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    if-nez v3, :cond_2
 
-    invoke-virtual {p2}, Ljava/util/UUID;->getLeastSignificantBits()J
+    goto :goto_1
 
-    move-result-wide v0
+    :cond_2
+    move v3, v2
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    goto :goto_2
 
-    iget-object p2, p0, Lz15;->c:Ljava/lang/String;
+    :cond_3
+    :goto_1
+    move v3, v1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    :goto_2
+    if-nez v3, :cond_4
 
-    iget-object p2, p0, Lz15;->d:Ljava/lang/String;
+    goto :goto_3
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    :cond_4
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
 
-    iget-object p2, p0, Lz15;->o:[B
+    move-result-object v3
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeByteArray([B)V
+    check-cast v3, Ljava/lang/Runnable;
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_5
+    :goto_3
+    iput-boolean v2, p0, Lz15;->c:Z
 
     return-void
+
+    :goto_4
+    iput-boolean v2, p0, Lz15;->c:Z
+
+    throw v0
 .end method

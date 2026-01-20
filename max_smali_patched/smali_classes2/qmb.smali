@@ -1,196 +1,103 @@
-.class public final Lqmb;
-.super Logf;
+.class public final enum Lqmb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
+
+# static fields
+.field public static final enum b:Lqmb;
+
+.field public static final enum c:Lqmb;
+
+.field public static final enum d:Lqmb;
+
+.field public static final synthetic o:[Lqmb;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lsmb;
-
-.field public o:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lsmb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Lqmb;->Y:Lsmb;
+    new-instance v0, Lqmb;
 
-    const/4 p1, 0x2
+    const-string v1, "Compact"
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    const/16 v3, 0x18
+
+    invoke-direct {v0, v1, v2, v3}, Lqmb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lqmb;->b:Lqmb;
+
+    new-instance v1, Lqmb;
+
+    const-string v2, "Main"
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v2, v4, v3}, Lqmb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lqmb;->c:Lqmb;
+
+    new-instance v2, Lqmb;
+
+    const/4 v3, 0x2
+
+    const/16 v4, 0x28
+
+    const-string v5, "Chat"
+
+    invoke-direct {v2, v5, v3, v4}, Lqmb;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lqmb;->d:Lqmb;
+
+    filled-new-array {v0, v1, v2}, [Lqmb;
+
+    move-result-object v0
+
+    sput-object v0, Lqmb;->o:[Lqmb;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    check-cast p1, Lvmb;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iput p3, p0, Lqmb;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lqmb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lqmb;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lqmb;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lqmb;
+    .locals 1
 
-    new-instance v0, Lqmb;
+    const-class v0, Lqmb;
 
-    iget-object v1, p0, Lqmb;->Y:Lsmb;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, v1, p2}, Lqmb;-><init>(Lsmb;Lkotlin/coroutines/Continuation;)V
+    move-result-object p0
 
-    iput-object p1, v0, Lqmb;->X:Ljava/lang/Object;
+    check-cast p0, Lqmb;
+
+    return-object p0
+.end method
+
+.method public static values()[Lqmb;
+    .locals 1
+
+    sget-object v0, Lqmb;->o:[Lqmb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lqmb;
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
-
-    iget-object v0, p0, Lqmb;->Y:Lsmb;
-
-    iget-object v1, v0, Lsmb;->g:Lake;
-
-    iget-object v2, v0, Lsmb;->i:Ljava/util/concurrent/atomic/AtomicLong;
-
-    iget v3, p0, Lqmb;->o:I
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    sget-object v6, Lybg;->a:Lybg;
-
-    if-eqz v3, :cond_2
-
-    if-eq v3, v5, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object v6
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object v6
-
-    :cond_2
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lqmb;->X:Ljava/lang/Object;
-
-    check-cast p1, Lvmb;
-
-    instance-of v3, p1, Ltmb;
-
-    sget-object v7, Lh54;->a:Lh54;
-
-    if-eqz v3, :cond_4
-
-    check-cast p1, Ltmb;
-
-    iget-wide v3, p1, Ltmb;->a:J
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v8
-
-    cmp-long p1, v3, v8
-
-    if-eqz p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iput v5, p0, Lqmb;->o:I
-
-    sget-object p1, Lmmb;->a:Lmmb;
-
-    invoke-virtual {v1, p1, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_6
-
-    goto :goto_0
-
-    :cond_4
-    instance-of v3, p1, Lumb;
-
-    if-eqz v3, :cond_7
-
-    check-cast p1, Lumb;
-
-    iget-wide v8, p1, Lumb;->a:J
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v2
-
-    cmp-long p1, v8, v2
-
-    if-eqz p1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    new-instance p1, Lnmb;
-
-    iget-wide v2, v0, Lsmb;->a:J
-
-    invoke-direct {p1, v2, v3}, Lnmb;-><init>(J)V
-
-    iput v4, p0, Lqmb;->o:I
-
-    invoke-virtual {v1, p1, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v7, :cond_6
-
-    :goto_0
-    return-object v7
-
-    :cond_6
-    :goto_1
-    return-object v6
-
-    :cond_7
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

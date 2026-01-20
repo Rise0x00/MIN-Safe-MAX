@@ -1,125 +1,81 @@
 .class public final Lubb;
-.super Lvbb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final d:Ljava/nio/ByteBuffer;
+.field public final a:Lhe4;
+
+.field public final b:Lmbg;
+
+.field public final c:Lfj2;
+
+.field public final d:Lcy0;
+
+.field public final e:Lyah;
+
+.field public final f:Lspf;
+
+.field public final g:Lpld;
+
+.field public volatile h:Lmmf;
 
 
 # direct methods
-.method public constructor <init>([BII)V
-    .locals 1
+.method public constructor <init>(Lhe4;Lmbg;Lfj2;Lcy0;Lyah;)V
+    .locals 0
 
-    shr-int/lit8 v0, p3, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0, p2}, Lvbb;-><init>([BII)V
+    iput-object p1, p0, Lubb;->a:Lhe4;
 
-    invoke-static {p1, p2, p3}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
+    iput-object p2, p0, Lubb;->b:Lmbg;
+
+    iput-object p3, p0, Lubb;->c:Lfj2;
+
+    iput-object p4, p0, Lubb;->d:Lcy0;
+
+    iput-object p5, p0, Lubb;->e:Lyah;
+
+    sget-object p2, Leg6;->b:Leg6;
+
+    invoke-static {p2}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lubb;->f:Lspf;
+
+    new-instance p3, Lpld;
+
+    invoke-direct {p3, p2}, Lpld;-><init>(Lmfa;)V
+
+    iput-object p3, p0, Lubb;->g:Lpld;
+
+    iget-object p1, p1, Lhe4;->w0:Lpld;
+
+    new-instance p2, Lr83;
+
+    const/16 p3, 0x1a
+
+    invoke-direct {p2, p1, p3}, Lr83;-><init>(Ld76;I)V
+
+    invoke-static {p2}, Lgu0;->m(Ld76;)Ld76;
 
     move-result-object p1
 
-    sget-object p2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    new-instance p2, Lqbb;
 
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    const/4 p3, 0x0
 
-    move-result-object p1
+    invoke-direct {p2, p0, p3}, Lqbb;-><init>(Lubb;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, p0, Lubb;->d:Ljava/nio/ByteBuffer;
+    new-instance p3, Lm96;
+
+    const/4 p4, 0x1
+
+    invoke-direct {p3, p1, p2, p4}, Lm96;-><init>(Ld76;Lbr6;I)V
+
+    invoke-static {p3, p5}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(I)S
-    .locals 4
-
-    shl-int/lit8 p1, p1, 0x2
-
-    iget-object v0, p0, Lubb;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result p1
-
-    float-to-double v0, p1
-
-    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
-
-    add-double/2addr v0, v2
-
-    const-wide v2, 0x40dfffe000000000L    # 32767.5
-
-    mul-double/2addr v0, v2
-
-    double-to-int p1, v0
-
-    add-int/lit16 p1, p1, -0x8000
-
-    int-to-short p1, p1
-
-    return p1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PCM float ("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lvbb;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ") {"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-lez v1, :cond_0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lubb;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v3, v2}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    const-string v4, ", "
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    shl-int/lit8 v4, v2, 0x2
-
-    invoke-virtual {v3, v4}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v4
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v1, 0x7d
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

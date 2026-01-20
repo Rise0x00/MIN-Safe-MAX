@@ -1,87 +1,90 @@
-.class public final Lhg2;
+.class public final synthetic Lhg2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcy3;
+
 
 # instance fields
-.field public final a:Lake;
+.field public final synthetic a:I
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic b:Ldh2;
 
 
 # direct methods
-.method public constructor <init>(Liw0;Ltlf;)V
-    .locals 2
+.method public synthetic constructor <init>(Ldh2;I)V
+    .locals 0
+
+    iput p2, p0, Lhg2;->a:I
+
+    iput-object p1, p0, Lhg2;->b:Ldh2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lbke;->b(III)Lake;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lhg2;->a:Lake;
-
-    check-cast p2, Lsta;
-
-    invoke-virtual {p2}, Lsta;->c()Lbe8;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lhg2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Liw0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Leg2;)V
-    .locals 3
-    .annotation runtime Lxbf;
-    .end annotation
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    .line 1
-    new-instance v0, Lfg2;
+    iget v0, p0, Lhg2;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p1, v1}, Lfg2;-><init>(Lhg2;Leg2;Lkotlin/coroutines/Continuation;)V
+    check-cast p1, Lch2;
 
-    const/4 p1, 0x3
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v2, p0, Lhg2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p1}, Lch2;->b()Ljava/util/List;
 
-    invoke-static {v2, v1, v1, v0, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iget-object v1, p0, Lhg2;->b:Ldh2;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v1, p1, Lch2;->C:Ljava/util/ArrayList;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+
+    :cond_0
+    iget-object v1, p1, Lch2;->C:Ljava/util/ArrayList;
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, p1, Lch2;->C:Ljava/util/ArrayList;
+
+    :cond_1
+    iget-object p1, p1, Lch2;->C:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     return-void
-.end method
 
-.method public final onEvent(Lig2;)V
-    .locals 3
-    .annotation runtime Lxbf;
-    .end annotation
+    :pswitch_0
+    iget-object v0, p0, Lhg2;->b:Ldh2;
 
-    .line 2
-    new-instance v0, Lgg2;
+    check-cast p1, Lch2;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, Lgg2;-><init>(Lhg2;Lig2;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p1, 0x3
-
-    iget-object v2, p0, Lhg2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v2, v1, v1, v0, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+    invoke-virtual {p1, v0}, Lch2;->a(Ldh2;)V
 
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

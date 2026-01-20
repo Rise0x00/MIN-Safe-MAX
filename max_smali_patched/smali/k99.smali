@@ -1,97 +1,27 @@
 .class public final Lk99;
-.super Ljava/lang/Object;
+.super Ltsd;
 .source "SourceFile"
-
-# interfaces
-.implements Lfmd;
 
 
 # instance fields
-.field public final a:Lfmd;
-
-.field public final b:J
+.field public final F0:Landroid/widget/TextView;
 
 
 # direct methods
-.method public constructor <init>(Lfmd;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk99;->a:Lfmd;
-
-    iput-wide p2, p0, Lk99;->b:J
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final b()V
+.method public constructor <init>(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lk99;->a:Lfmd;
+    invoke-direct {p0, p1}, Ltsd;-><init>(Landroid/view/View;)V
 
-    invoke-interface {v0}, Lfmd;->b()V
+    sget v0, Lo7d;->mr_cast_header_name:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/TextView;
+
+    iput-object p1, p0, Lk99;->F0:Landroid/widget/TextView;
 
     return-void
-.end method
-
-.method public final d()Z
-    .locals 1
-
-    iget-object v0, p0, Lk99;->a:Lfmd;
-
-    invoke-interface {v0}, Lfmd;->d()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final h(J)I
-    .locals 2
-
-    iget-wide v0, p0, Lk99;->b:J
-
-    sub-long/2addr p1, v0
-
-    iget-object v0, p0, Lk99;->a:Lfmd;
-
-    invoke-interface {v0, p1, p2}, Lfmd;->h(J)I
-
-    move-result p1
-
-    return p1
-.end method
-
-.method public final u(Ltz8;Lze4;I)I
-    .locals 4
-
-    iget-object v0, p0, Lk99;->a:Lfmd;
-
-    invoke-interface {v0, p1, p2, p3}, Lfmd;->u(Ltz8;Lze4;I)I
-
-    move-result p1
-
-    const/4 p3, -0x4
-
-    if-ne p1, p3, :cond_0
-
-    iget-wide v0, p2, Lze4;->X:J
-
-    iget-wide v2, p0, Lk99;->b:J
-
-    add-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v0
-
-    iput-wide v0, p2, Lze4;->X:J
-
-    :cond_0
-    return p1
 .end method

@@ -1,293 +1,202 @@
 .class public final Lxse;
-.super Ljava/lang/Object;
+.super Lore;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic g:[Les7;
-
-
 # instance fields
-.field public final a:Lwse;
+.field public final b:J
 
-.field public final b:Lwse;
-
-.field public final c:Lwse;
-
-.field public d:F
-
-.field public e:I
-
-.field public f:F
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, La1a;
-
-    const-string v1, "from"
-
-    const-string v2, "getFrom$common_release()F"
-
-    const-class v3, Lxse;
-
-    invoke-direct {v0, v3, v1, v2}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lv7d;->a:Lw7d;
-
-    const-string v2, "to"
-
-    const-string v4, "getTo$common_release()F"
-
-    invoke-static {v1, v3, v2, v4}, Lm65;->f(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)La1a;
-
-    move-result-object v1
-
-    new-instance v2, La1a;
-
-    const-string v4, "stepSize"
-
-    const-string v5, "getStepSize$common_release()F"
-
-    invoke-direct {v2, v3, v4, v5}, La1a;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v3, 0x3
-
-    new-array v3, v3, [Les7;
-
-    const/4 v4, 0x0
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v1, v3, v0
-
-    const/4 v0, 0x2
-
-    aput-object v2, v3, v0
-
-    sput-object v3, Lxse;->g:[Les7;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 4
+.method public constructor <init>(Lcr0;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lwse;
+    iget-wide v0, p1, Lcr0;->b:J
 
-    const/4 v1, 0x0
+    iput-wide v0, p0, Lxse;->b:J
 
-    invoke-direct {v0, p0, v1}, Lwse;-><init>(Lxse;I)V
+    iget-wide v0, p1, Lcr0;->c:J
 
-    iput-object v0, p0, Lxse;->a:Lwse;
-
-    new-instance v0, Lwse;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lwse;-><init>(Lxse;I)V
-
-    iput-object v0, p0, Lxse;->b:Lwse;
-
-    new-instance v1, Lwse;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, p0, v2}, Lwse;-><init>(Lxse;I)V
-
-    iput-object v1, p0, Lxse;->c:Lwse;
-
-    invoke-virtual {p0}, Lxse;->a()I
-
-    move-result v1
-
-    iput v1, p0, Lxse;->e:I
-
-    iget v1, p0, Lxse;->d:F
-
-    invoke-virtual {p0}, Lxse;->b()F
-
-    move-result v2
-
-    sub-float/2addr v1, v2
-
-    sget-object v2, Lxse;->g:[Les7;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    iget-object v0, v0, Ladi;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
-
-    move-result v0
-
-    invoke-virtual {p0}, Lxse;->b()F
-
-    move-result v2
-
-    sub-float/2addr v0, v2
-
-    div-float/2addr v1, v0
-
-    const/4 v0, 0x0
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-static {v1, v0, v2}, Liwi;->b(FFF)F
-
-    move-result v0
-
-    iput v0, p0, Lxse;->f:F
+    iput-wide v0, p0, Lxse;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 4
+.method public final t()V
+    .locals 15
 
-    sget-object v0, Lxse;->g:[Les7;
+    const-class v0, Lxse;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    aget-object v2, v0, v1
+    move-result-object v0
 
-    iget-object v2, p0, Lxse;->b:Lwse;
+    iget-wide v1, p0, Lxse;->b:J
 
-    iget-object v2, v2, Ladi;->b:Ljava/lang/Object;
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    check-cast v2, Ljava/lang/Number;
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
+    iget-wide v4, p0, Lxse;->c:J
 
-    move-result v2
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {p0}, Lxse;->b()F
+    move-result-object v6
+
+    sget-object v7, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {v3, v6, v7}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    const-string v6, "process, chatId = %d, botId = %d, suspend = %b"
+
+    invoke-static {v0, v6, v3}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Lore;->h()Lxg2;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v2}, Lxg2;->N(J)Lnd2;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lore;->h()Lxg2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Llg2;
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x1
+
+    invoke-direct {v3, v7, v6}, Llg2;-><init>(ZI)V
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v0, v1, v2, v6, v3}, Lxg2;->s(JZLcy3;)Lnd2;
+
+    invoke-virtual {p0}, Lore;->h()Lxg2;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v2}, Lxg2;->A(J)V
+
+    invoke-virtual {p0}, Lore;->a()Lt2b;
+
+    move-result-object v0
+
+    iget-wide v10, p0, Lxse;->b:J
+
+    invoke-virtual {v0, v10, v11}, Lt2b;->i(J)Z
 
     move-result v3
 
-    sub-float/2addr v2, v3
+    if-nez v3, :cond_1
 
-    const/4 v3, 0x2
+    const-wide/16 v6, 0x0
 
-    aget-object v0, v0, v3
+    goto :goto_0
 
-    iget-object v0, p0, Lxse;->c:Lwse;
+    :cond_1
+    new-instance v7, Ld6g;
 
-    iget-object v0, v0, Ladi;->b:Ljava/lang/Object;
+    invoke-virtual {v0}, Lt2b;->s()Llgc;
 
-    check-cast v0, Ljava/lang/Number;
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+    iget-object v3, v3, Llgc;->a:Lqi8;
 
-    move-result v0
+    invoke-virtual {v3}, Lyfe;->k()J
 
-    div-float/2addr v2, v0
+    move-result-wide v8
 
-    invoke-static {v2}, Lkhi;->c(F)I
+    const/4 v12, 0x1
 
-    move-result v0
+    iget-wide v13, p0, Lxse;->c:J
 
-    add-int/2addr v0, v1
+    invoke-direct/range {v7 .. v14}, Ld6g;-><init>(JJZJ)V
 
-    return v0
-.end method
+    invoke-virtual {v0}, Lt2b;->t()Lhdg;
 
-.method public final b()F
-    .locals 2
+    move-result-object v0
 
-    sget-object v0, Lxse;->g:[Les7;
+    const/16 v3, 0xc
 
-    const/4 v1, 0x0
+    invoke-static {v0, v7, v6, v3}, Lhdg;->c(Lhdg;Lvm;ZI)J
 
-    aget-object v0, v0, v1
+    move-result-wide v6
 
-    iget-object v0, p0, Lxse;->a:Lwse;
+    :goto_0
+    invoke-virtual {p0}, Lore;->q()Lcy0;
 
-    iget-object v0, v0, Ladi;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
+    new-instance v8, Lab3;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result v0
+    move-result-object v3
 
-    return v0
-.end method
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-.method public final c(F)V
-    .locals 5
+    move-result-object v9
 
-    invoke-virtual {p0}, Lxse;->b()F
+    const/4 v13, 0x0
 
-    move-result v0
+    const/16 v14, 0x7c
 
-    sget-object v1, Lxse;->g:[Les7;
+    const/4 v10, 0x1
 
-    const/4 v2, 0x1
+    const/4 v11, 0x0
 
-    aget-object v3, v1, v2
+    const/4 v12, 0x0
 
-    iget-object v3, p0, Lxse;->b:Lwse;
+    invoke-direct/range {v8 .. v14}, Lab3;-><init>(Ljava/util/Collection;ZZLmw4;Lgic;I)V
 
-    iget-object v4, v3, Ladi;->b:Ljava/lang/Object;
+    invoke-virtual {v0, v8}, Lcy0;->c(Ljava/lang/Object;)V
 
-    check-cast v4, Ljava/lang/Number;
+    invoke-virtual {p0}, Lore;->q()Lcy0;
 
-    invoke-virtual {v4}, Ljava/lang/Number;->floatValue()F
+    move-result-object v0
 
-    move-result v4
+    new-instance v3, Lu64;
 
-    invoke-static {p1, v0, v4}, Liwi;->b(FFF)F
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result p1
+    move-result-object v4
 
-    iput p1, p0, Lxse;->d:F
+    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-virtual {p0}, Lxse;->b()F
+    move-result-object v4
 
-    move-result v0
+    invoke-direct {v3, v6, v7, v4}, Lu64;-><init>(JLjava/util/Collection;)V
 
-    sub-float/2addr p1, v0
+    invoke-virtual {v0, v3}, Lcy0;->c(Ljava/lang/Object;)V
 
-    aget-object v0, v1, v2
+    invoke-virtual {p0}, Lore;->q()Lcy0;
 
-    iget-object v0, v3, Ladi;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
+    new-instance v3, Lf6g;
 
-    invoke-virtual {v0}, Ljava/lang/Number;->floatValue()F
+    invoke-direct {v3, v1, v2}, Lf6g;-><init>(J)V
 
-    move-result v0
-
-    invoke-virtual {p0}, Lxse;->b()F
-
-    move-result v1
-
-    sub-float/2addr v0, v1
-
-    div-float/2addr p1, v0
-
-    const/4 v0, 0x0
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-static {p1, v0, v1}, Liwi;->b(FFF)F
-
-    move-result p1
-
-    iput p1, p0, Lxse;->f:F
+    invoke-virtual {v0, v3}, Lcy0;->c(Ljava/lang/Object;)V
 
     return-void
 .end method

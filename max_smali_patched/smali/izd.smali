@@ -1,85 +1,93 @@
 .class public final Lizd;
-.super Lskd;
+.super Ljl6;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic Z:Lxx0;
+.field public final b:Le42;
 
-.field public final synthetic s0:Lec4;
-
-.field public final synthetic t0:Lnzd;
+.field public final c:Le32;
 
 
 # direct methods
-.method public constructor <init>(Lnzd;Lxx0;Lec4;)V
-    .locals 0
+.method public constructor <init>(Le42;Le32;)V
+    .locals 1
 
-    iput-object p1, p0, Lizd;->t0:Lnzd;
+    invoke-direct {p0, p1}, Ljl6;-><init>(Le42;)V
 
-    iput-object p2, p0, Lizd;->Z:Lxx0;
+    iput-object p1, p0, Lizd;->b:Le42;
 
-    iput-object p3, p0, Lizd;->s0:Lec4;
+    iput-object p2, p0, Lizd;->c:Le32;
 
-    invoke-direct {p0}, Lskd;-><init>()V
+    invoke-interface {p2}, Lc32;->E()V
+
+    sget-object p1, Lc32;->k:Lta0;
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-interface {p2, p1, v0}, Lmld;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p1, Lc32;->l:Lta0;
+
+    invoke-interface {p2, p1, v0}, Lmld;->a(Lta0;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Ljava/lang/Object;
-    .locals 5
+.method public final e()Ldf8;
+    .locals 1
 
-    iget-object v0, p0, Lizd;->t0:Lnzd;
+    iget-object v0, p0, Lizd;->b:Le42;
 
-    iget-object v0, v0, Lnzd;->d:Lkdb;
-
-    new-instance v1, Lf2f;
-
-    iget-object v2, p0, Lizd;->Z:Lxx0;
-
-    invoke-direct {v1, v2}, Lf2f;-><init>(Lxb4;)V
-
-    sget-object v3, Lk48;->c:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
-
-    const-wide/16 v3, 0x0
-
-    iput-wide v3, v1, Lf2f;->b:J
-
-    new-instance v3, Lac4;
-
-    iget-object v4, p0, Lizd;->s0:Lec4;
-
-    invoke-direct {v3, v1, v4}, Lac4;-><init>(Lxb4;Lec4;)V
-
-    :try_start_0
-    invoke-virtual {v3}, Lac4;->l()V
-
-    iget-object v1, v2, Lxx0;->s0:Landroid/net/Uri;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v0, v1, v3}, Lkdb;->g(Landroid/net/Uri;Lac4;)Ljava/lang/Object;
+    invoke-interface {v0}, Le42;->e()Ldf8;
 
     move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {v3}, Llig;->g(Ljava/io/Closeable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v0, Lyv5;
 
     return-object v0
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final g()Le42;
+    .locals 1
 
-    invoke-static {v3}, Llig;->g(Ljava/io/Closeable;)V
+    iget-object v0, p0, Lizd;->b:Le42;
 
-    throw v0
+    return-object v0
+.end method
+
+.method public final m()Z
+    .locals 1
+
+    iget-object v0, p0, Lizd;->b:Le42;
+
+    invoke-interface {v0}, Le42;->m()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final q()Ldf8;
+    .locals 1
+
+    iget-object v0, p0, Lizd;->b:Le42;
+
+    invoke-interface {v0}, Le42;->q()Ldf8;
+
+    move-result-object v0
+
+    return-object v0
 .end method

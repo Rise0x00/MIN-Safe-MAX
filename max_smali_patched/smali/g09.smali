@@ -1,100 +1,26 @@
-.class public final Lg09;
+.class public interface abstract Lg09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:Ljava/lang/String;
-
-.field public d:I
-
-.field public e:Landroid/media/VolumeProvider;
-
-.field public final synthetic f:Landroid/os/Handler;
-
-.field public final synthetic g:Lxub;
-
-
-# direct methods
-.method public constructor <init>(IIILjava/lang/String;Landroid/os/Handler;Lxub;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p5, p0, Lg09;->f:Landroid/os/Handler;
-
-    iput-object p6, p0, Lg09;->g:Lxub;
-
-    iput p1, p0, Lg09;->a:I
-
-    iput p2, p0, Lg09;->b:I
-
-    iput p3, p0, Lg09;->d:I
-
-    iput-object p4, p0, Lg09;->c:Ljava/lang/String;
-
-    return-void
+# virtual methods
+.method public abstract a()V
 .end method
 
+.method public abstract d(JIII)V
+.end method
 
-# virtual methods
-.method public final a()Landroid/media/VolumeProvider;
-    .locals 8
+.method public abstract flush()V
+.end method
 
-    iget-object v0, p0, Lg09;->e:Landroid/media/VolumeProvider;
+.method public abstract p(ILle4;JI)V
+.end method
 
-    if-nez v0, :cond_1
+.method public abstract setParameters(Landroid/os/Bundle;)V
+.end method
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+.method public abstract shutdown()V
+.end method
 
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v2, Ln2h;
-
-    iget v6, p0, Lg09;->d:I
-
-    iget-object v7, p0, Lg09;->c:Ljava/lang/String;
-
-    iget v4, p0, Lg09;->a:I
-
-    iget v5, p0, Lg09;->b:I
-
-    move-object v3, p0
-
-    invoke-direct/range {v2 .. v7}, Ln2h;-><init>(Lg09;IIILjava/lang/String;)V
-
-    iput-object v2, v3, Lg09;->e:Landroid/media/VolumeProvider;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v3, p0
-
-    new-instance v0, Lyn1;
-
-    iget v1, v3, Lg09;->b:I
-
-    iget v2, v3, Lg09;->d:I
-
-    iget v4, v3, Lg09;->a:I
-
-    invoke-direct {v0, p0, v4, v1, v2}, Lyn1;-><init>(Lg09;III)V
-
-    iput-object v0, v3, Lg09;->e:Landroid/media/VolumeProvider;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v3, p0
-
-    :goto_0
-    iget-object v0, v3, Lg09;->e:Landroid/media/VolumeProvider;
-
-    return-object v0
+.method public abstract start()V
 .end method

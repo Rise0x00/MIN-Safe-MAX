@@ -2,26 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljj9;
+
+
+# static fields
+.field public static a:Lxna;
+
 
 # direct methods
-.method public static a(Landroid/app/Activity;)Z
-    .locals 1
+.method public static declared-synchronized b()Lxna;
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-class v0, Lxna;
 
-    move-result-object p0
+    monitor-enter v0
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    :try_start_0
+    sget-object v1, Lxna;->a:Lxna;
 
-    move-result-object p0
+    if-nez v1, :cond_0
 
-    const-string v0, "CSPDialogActivity"
+    new-instance v1, Lxna;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    sput-object v1, Lxna;->a:Lxna;
 
-    xor-int/lit8 p0, p0, 0x1
+    goto :goto_0
 
-    return p0
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    sget-object v1, Lxna;->a:Lxna;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v0
+
+    return-object v1
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
+.end method
+
+
+# virtual methods
+.method public final a(Lij9;)V
+    .locals 0
+
+    return-void
 .end method

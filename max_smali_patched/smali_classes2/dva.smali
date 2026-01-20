@@ -1,90 +1,133 @@
-.class public final synthetic Ldva;
-.super Ljava/lang/Object;
+.class public final Ldva;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-.field public final synthetic b:Lfva;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfva;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
     .locals 0
 
-    iput p2, p0, Ldva;->a:I
+    iput-object p2, p0, Ldva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    iput-object p1, p0, Ldva;->b:Lfva;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ldva;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Ldva;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Ldva;->b:Lfva;
+    move-result-object p1
 
-    invoke-virtual {v0}, Lfva;->c()Ljava/util/concurrent/ExecutorService;
+    check-cast p1, Ldva;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Ldva;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ldva;
+
+    iget-object v1, p0, Ldva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
+
+    invoke-direct {v0, p2, v1}, Ldva;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
+
+    iput-object p1, v0, Ldva;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Ldva;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lhja;
+
+    instance-of p1, v0, Lfm4;
+
+    sget-object v1, Lb3h;->a:Lb3h;
+
+    if-eqz p1, :cond_0
+
+    sget-object p1, Lmta;->c:Lmta;
+
+    check-cast v0, Lfm4;
+
+    invoke-virtual {p1, v0}, Ld3;->s0(Lfm4;)V
+
+    return-object v1
+
+    :cond_0
+    instance-of p1, v0, Lyua;
+
+    if-eqz p1, :cond_1
+
+    sget-object p1, Lbt7;->a:Ljava/lang/String;
+
+    iget-object p1, p0, Ldva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    :try_start_0
+    invoke-static {p1}, Lbt7;->d(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :pswitch_0
-    iget-object v0, p0, Ldva;->b:Lfva;
+    move-object v0, v1
 
-    new-instance v1, Ldph;
+    goto :goto_0
 
-    iget-object v2, v0, Lfva;->c:Lqj3;
+    :catchall_0
+    move-exception p1
 
-    new-instance v3, Ldva;
+    new-instance v0, Lszd;
 
-    const/4 v4, 0x0
+    invoke-direct {v0, p1}, Lszd;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-direct {v3, v0, v4}, Ldva;-><init>(Lfva;I)V
+    :goto_0
+    invoke-static {v0}, Luzd;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+    move-result-object p1
 
-    iput-object v2, v1, Ldph;->a:Ljava/lang/Object;
+    if-eqz p1, :cond_1
 
-    iput-object v3, v1, Ldph;->b:Ljava/lang/Object;
+    sget-object v0, Lbt7;->a:Ljava/lang/String;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+    const-string v2, "openNotificationsSettings: failed"
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+    invoke-static {v0, v2, p1}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    iput-object v0, v1, Ldph;->c:Ljava/lang/Object;
-
-    new-instance v0, Lbva;
-
-    invoke-direct {v0, v1}, Lbva;-><init>(Ldph;)V
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Ldva;->b:Lfva;
-
-    iget-object v0, v0, Lfva;->b:Lle;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-object v1
 .end method

@@ -1,54 +1,23 @@
-.class public final synthetic Lw81;
+.class public interface abstract Lw81;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyf4;
-
-
-# instance fields
-.field public final synthetic a:Ljava/lang/Long;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Z
-
-
-# direct methods
-.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw81;->a:Ljava/lang/Long;
-
-    iput-object p2, p0, Lw81;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lw81;->c:Ljava/lang/String;
-
-    iput-boolean p4, p0, Lw81;->d:Z
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public abstract a()I
+.end method
 
-    new-instance v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+.method public abstract b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.end method
 
-    iget-object v1, p0, Lw81;->a:Ljava/lang/Long;
+.method public abstract getContentDescription()Lqhg;
+.end method
 
-    iget-object v2, p0, Lw81;->b:Ljava/lang/String;
+.method public abstract getIcon()I
+.end method
 
-    iget-object v3, p0, Lw81;->c:Ljava/lang/String;
+.method public abstract getId()I
+.end method
 
-    iget-boolean v4, p0, Lw81;->d:Z
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    return-object v0
+.method public abstract getTitle()Lqhg;
 .end method

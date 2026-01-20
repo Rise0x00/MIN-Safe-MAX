@@ -3,8 +3,8 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb9a;
-.implements Ljrd;
+.implements Lpna;
+.implements Lpde;
 
 
 # annotations
@@ -15,8 +15,8 @@
     d2 = {
         "Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;",
         "Lone/me/sdk/arch/Widget;",
-        "Lb9a;",
-        "Ljrd;",
+        "Lpna;",
+        "Lpde;",
         "<init>",
         "()V",
         "calls-ui_release"
@@ -24,7 +24,7 @@
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -32,21 +32,21 @@
 
 
 # static fields
-.field public static final synthetic s0:[Les7;
+.field public static final synthetic t0:[Lz28;
 
 
 # instance fields
 .field public final X:Ljava/lang/Object;
 
-.field public final Y:Ld0d;
+.field public final Y:Ljld;
 
 .field public final Z:Ljava/lang/Object;
 
-.field public final a:Lni7;
+.field public final a:Les7;
 
-.field public final b:Lru7;
+.field public final b:Lo58;
 
-.field public final c:Lj01;
+.field public final c:Lg21;
 
 .field public final d:Ljava/lang/Object;
 
@@ -57,7 +57,7 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Lbec;
+    new-instance v0, Liyc;
 
     const-class v1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
@@ -67,21 +67,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lv7d;->a:Lw7d;
+    sget-object v2, Lctd;->a:Ldtd;
 
     const-string v3, "recycler"
 
     const-string v5, "getRecycler()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lok7;->d(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lbec;
+    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Les7;
+    new-array v2, v2, [Lz28;
 
     aput-object v0, v2, v4
 
@@ -89,7 +89,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Les7;
+    sput-object v2, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->t0:[Lz28;
 
     return-void
 .end method
@@ -103,151 +103,141 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfi4;)V
+    invoke-direct {p0, v0, v1, v2, v0}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
 
-    sget-object v0, Lni7;->f:Lni7;
+    sget-object v0, Les7;->f:Les7;
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->a:Lni7;
+    iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->a:Les7;
 
-    new-instance v0, Lm;
+    new-instance v0, Lj;
 
-    const/16 v1, 0x19
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, v1}, Lm;-><init>(I)V
+    invoke-direct {v0, v1}, Lj;-><init>(I)V
 
-    new-instance v1, Lr;
+    new-instance v1, Lo;
 
     const/16 v3, 0x8
 
-    invoke-direct {v1, v3, v0}, Lr;-><init>(ILoi6;)V
+    invoke-direct {v1, v3, v0}, Lo;-><init>(ILlq6;)V
 
-    const-class v0, Lr11;
+    const-class v0, Lq31;
 
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loi6;)Lru7;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->b:Lru7;
+    iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->b:Lo58;
 
-    new-instance v5, Lj01;
+    new-instance v5, Lg21;
 
-    new-instance v0, Lcye;
+    new-instance v0, Lrz6;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
-    invoke-direct {v0, v1, p0}, Lcye;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lrz6;-><init>(ILjava/lang/Object;)V
 
-    sget-object v1, Ldl1;->a:Ldl1;
+    sget-object v1, Leo1;->a:Leo1;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lt5;
-
-    move-result-object v1
-
-    const-class v3, Lfva;
-
-    invoke-virtual {v1, v3}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1}, Leo1;->b()Lyab;
 
     move-result-object v1
 
-    check-cast v1, Lfva;
-
-    invoke-virtual {v1}, Lfva;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v1}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
 
-    invoke-direct {v5, v0, v1}, Lj01;-><init>(Lcye;Ljava/util/concurrent/ExecutorService;)V
+    invoke-direct {v5, v0, v1}, Lg21;-><init>(Lrz6;Ljava/util/concurrent/ExecutorService;)V
 
-    iput-object v5, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->c:Lj01;
+    iput-object v5, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->c:Lg21;
 
-    new-instance v0, Lh11;
+    new-instance v0, Lf31;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lh11;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
+    invoke-direct {v0, p0, v1}, Lf31;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
 
-    invoke-static {v2, v0}, Llci;->i(ILoi6;)Lru7;
+    invoke-static {v2, v0}, Le8;->b(ILlq6;)Lo58;
 
     move-result-object v0
 
     iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->d:Ljava/lang/Object;
 
-    new-instance v0, Lm;
+    new-instance v0, Lg31;
 
-    const/16 v1, 0x1a
+    invoke-direct {v0, v1}, Lg31;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lm;-><init>(I)V
-
-    invoke-static {v2, v0}, Llci;->i(ILoi6;)Lru7;
+    invoke-static {v2, v0}, Le8;->b(ILlq6;)Lo58;
 
     move-result-object v0
 
     iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->o:Ljava/lang/Object;
 
-    new-instance v0, Lm;
+    new-instance v0, Lg31;
 
-    const/16 v1, 0x1b
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lm;-><init>(I)V
+    invoke-direct {v0, v1}, Lg31;-><init>(I)V
 
-    invoke-static {v2, v0}, Llci;->i(ILoi6;)Lru7;
+    invoke-static {v2, v0}, Le8;->b(ILlq6;)Lo58;
 
     move-result-object v0
 
     iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->X:Ljava/lang/Object;
 
-    sget v0, Lmra;->S:I
+    sget v0, Ly6b;->X:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ld0d;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
 
-    sget v0, Lmra;->R:I
+    sget v0, Ly6b;->W:I
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ld0d;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->Y:Ld0d;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0()Lr11;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
 
     move-result-object v0
 
-    iget-object v0, v0, Lr11;->Z:Lj0d;
+    iput-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->Y:Ljld;
 
-    new-instance v3, Lqr0;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->z0()Lq31;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lq31;->Y:Lpld;
+
+    new-instance v3, Lrx;
 
     const/4 v9, 0x4
 
-    const/4 v10, 0x2
+    const/4 v10, 0x3
 
     const/4 v4, 0x2
 
-    const-class v6, Lj01;
+    const-class v6, Lg21;
 
     const-string v7, "submitList"
 
     const-string v8, "submitList(Ljava/util/List;)V"
 
-    invoke-direct/range {v3 .. v10}, Lqr0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v3 .. v10}, Lrx;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    new-instance v1, Ln16;
+    new-instance v1, Lm96;
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, v0, v3, v4}, Ln16;-><init>(Lez5;Lej6;I)V
+    invoke-direct {v1, v0, v3, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lzw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lw78;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lqs0;->v(Lez5;Lg54;)Lgye;
+    invoke-static {v1, v0}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
-    new-instance v0, Lh11;
+    new-instance v0, Lf31;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lh11;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
+    invoke-direct {v0, p0, v1}, Lf31;-><init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;I)V
 
-    invoke-static {v2, v0}, Llci;->i(ILoi6;)Lru7;
+    invoke-static {v2, v0}, Le8;->b(ILlq6;)Lo58;
 
     move-result-object v0
 
@@ -258,10 +248,10 @@
 
 
 # virtual methods
-.method public final getInsetsConfig()Lni7;
+.method public final getInsetsConfig()Les7;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->a:Lni7;
+    iget-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->a:Les7;
 
     return-object v0
 .end method
@@ -289,7 +279,7 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    new-instance p1, Lv6b;
+    new-instance p1, Lymb;
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -297,9 +287,9 @@
 
     const/4 v1, 0x6
 
-    invoke-direct {p1, p2, v1}, Lv6b;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, p2, v1}, Lymb;-><init>(Landroid/content/Context;I)V
 
-    sget p2, Lmra;->S:I
+    sget p2, Ly6b;->X:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -311,35 +301,35 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p2, Lpra;->z:I
+    sget p2, Lb7b;->z:I
 
-    invoke-virtual {p1, p2}, Lv6b;->setTitle(I)V
+    invoke-virtual {p1, p2}, Lymb;->setTitle(I)V
 
-    sget-object p2, Ln6b;->a:Ln6b;
+    sget-object p2, Lqmb;->b:Lqmb;
 
-    invoke-virtual {p1, p2}, Lv6b;->setForm(Ln6b;)V
+    invoke-virtual {p1, p2}, Lymb;->setForm(Lqmb;)V
 
-    new-instance p2, Ld6b;
+    new-instance p2, Lgmb;
 
-    new-instance v1, Lj11;
+    new-instance v1, Li31;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p0}, Lj11;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Li31;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p2, v1}, Ld6b;-><init>(Lqi6;)V
+    invoke-direct {p2, v1}, Lgmb;-><init>(Lnq6;)V
 
-    invoke-virtual {p1, p2}, Lv6b;->setLeftActions(Lj6b;)V
+    invoke-virtual {p1, p2}, Lymb;->setLeftActions(Lmmb;)V
 
-    sget-object p2, Ly53;->s0:Lvh4;
+    sget-object p2, Lpc3;->t0:Lkme;
 
-    invoke-virtual {p2, p1}, Lvh4;->l(Landroid/view/View;)Lewa;
+    invoke-virtual {p2, p1}, Lkme;->s(Landroid/view/View;)Lzbb;
 
     move-result-object v1
 
-    iget-object v1, v1, Lewa;->c:Lw5b;
+    iget-object v1, v1, Lzbb;->c:Lzlb;
 
-    invoke-virtual {p1, v1}, Lv6b;->setCustomTheme(Lw5b;)V
+    invoke-virtual {p1, v1}, Lymb;->setCustomTheme(Lzlb;)V
 
     new-instance v1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -351,7 +341,7 @@
 
     invoke-direct {v1, v2, v3}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v2, Lmra;->R:I
+    sget v2, Ly6b;->W:I
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setId(I)V
 
@@ -369,47 +359,47 @@
 
     invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
 
-    iget-object p3, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->c:Lj01;
+    iget-object p3, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->c:Lg21;
 
-    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lp6d;)V
+    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
 
-    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lu6d;)V
+    invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lbsd;)V
 
     iget-object p3, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->d:Ljava/lang/Object;
 
-    invoke-interface {p3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p3
 
-    check-cast p3, Ldyd;
+    check-cast p3, Ldke;
 
-    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lv6d;)V
+    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
 
     iget-object p3, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->o:Ljava/lang/Object;
 
-    invoke-interface {p3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p3
 
-    check-cast p3, Lg11;
+    check-cast p3, Le31;
 
-    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lv6d;)V
+    invoke-virtual {v1, p3}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
 
     invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p2, v0}, Lvh4;->l(Landroid/view/View;)Lewa;
+    invoke-virtual {p2, v0}, Lkme;->s(Landroid/view/View;)Lzbb;
 
     move-result-object p1
 
-    iget-object p1, p1, Lewa;->c:Lw5b;
+    iget-object p1, p1, Lzbb;->c:Lzlb;
 
-    invoke-interface {p1}, Lw5b;->b()Lcf0;
+    invoke-interface {p1}, Lzlb;->b()Lxf0;
 
     move-result-object p1
 
-    iget p1, p1, Lcf0;->m:I
+    iget p1, p1, Lxf0;->m:I
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
@@ -421,40 +411,40 @@
 
     iget-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->X:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lhne;
+    check-cast v0, Lxaf;
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lhne;->a()V
+    invoke-static {}, Lxaf;->a()V
 
     :cond_0
     move-object v0, p0
 
     :goto_0
-    invoke-virtual {v0}, Lc24;->getParentController()Lc24;
+    invoke-virtual {v0}, La94;->getParentController()La94;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lc24;->getParentController()Lc24;
+    invoke-virtual {v0}, La94;->getParentController()La94;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    instance-of v1, v0, Lejd;
+    instance-of v1, v0, Lc5e;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_2
 
-    check-cast v0, Lejd;
+    check-cast v0, Lc5e;
 
     goto :goto_1
 
@@ -466,7 +456,7 @@
 
     check-cast v0, Lone/me/android/root/RootController;
 
-    invoke-virtual {v0}, Lone/me/android/root/RootController;->D0()Lyid;
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->F0()Lw4e;
 
     move-result-object v0
 
@@ -480,34 +470,34 @@
 
     iget-object v1, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->Z:Ljava/lang/Object;
 
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Li11;
+    check-cast v1, Lh31;
 
-    invoke-virtual {v0, v1}, Lyid;->L(Lg24;)V
+    invoke-virtual {v0, v1}, Lw4e;->L(Le94;)V
 
     :cond_4
-    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Les7;
+    sget-object v0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->t0:[Lz28;
 
     const/4 v1, 0x1
 
     aget-object v3, v0, v1
 
-    iget-object v4, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->Y:Ld0d;
+    iget-object v4, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->Y:Ljld;
 
-    invoke-interface {v4, p0, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    invoke-interface {v4, p0, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v3, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lp6d;)V
+    invoke-virtual {v3, v2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
 
     aget-object v2, v0, v1
 
-    invoke-interface {v4, p0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    invoke-interface {v4, p0, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -515,17 +505,17 @@
 
     iget-object v3, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->o:Ljava/lang/Object;
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lg11;
+    check-cast v3, Le31;
 
-    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lv6d;)V
+    invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lcsd;)V
 
     aget-object v0, v0, v1
 
-    invoke-interface {v4, p0, v0}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
+    invoke-interface {v4, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -533,236 +523,189 @@
 
     iget-object v1, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->d:Ljava/lang/Object;
 
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ldyd;
+    check-cast v1, Ldke;
 
-    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lv6d;)V
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->p0(Lcsd;)V
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0()Lr11;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->z0()Lq31;
 
     move-result-object v0
 
-    iget-object v1, v0, Lr11;->o:Lru7;
+    iget-object v1, v0, Lq31;->d:Lo58;
 
-    iget-object v2, v0, Lr11;->d:Lru7;
+    iget-object v2, v0, Lq31;->d:Lo58;
 
-    iget-object v3, v0, Lr11;->o:Lru7;
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lpu1;
+    check-cast v1, Lqx1;
 
-    check-cast v1, Lev1;
+    check-cast v1, Ldy1;
 
-    iget-object v1, v1, Lev1;->X0:Ljava/util/LinkedHashSet;
+    iget-object v1, v1, Ldy1;->a1:Ljava/util/LinkedHashSet;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lpu1;
+    check-cast v1, Lqx1;
 
-    check-cast v1, Lev1;
+    check-cast v1, Ldy1;
 
-    invoke-virtual {v1}, Lev1;->s()Z
+    invoke-virtual {v1}, Ldy1;->t()Z
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    goto/16 :goto_4
+    goto/16 :goto_3
 
     :cond_5
-    invoke-virtual {v0}, Lr11;->u()Lk01;
+    invoke-virtual {v0}, Lq31;->s()Lh21;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Lf11;
+    check-cast v1, Ld31;
 
-    iget-object v1, v1, Lf11;->F0:La1f;
+    iget-object v1, v1, Ld31;->G0:Lspf;
 
-    invoke-virtual {v1}, La1f;->getValue()Ljava/lang/Object;
+    invoke-virtual {v1}, Lspf;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lga;
+    check-cast v1, Lca;
 
-    iget-object v0, v0, Lr11;->X:Lru7;
+    iget-object v0, v0, Lq31;->o:Lo58;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lmw1;
+    check-cast v0, Lsz1;
 
-    iget-boolean v4, v1, Lga;->b:Z
+    iget-boolean v3, v1, Lca;->b:Z
 
-    iget-boolean v5, v1, Lga;->c:Z
+    iget-boolean v4, v1, Lca;->c:Z
 
-    iget-boolean v6, v1, Lga;->d:Z
+    iget-boolean v5, v1, Lca;->d:Z
 
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+    iget-boolean v6, v1, Lca;->e:Z
 
-    move-result-object v7
+    iget-boolean v1, v1, Lca;->g:Z
 
-    check-cast v7, Lkq5;
-
-    check-cast v7, Luq5;
-
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v8, Lru/ok/tamtam/android/prefs/PmsKey;->grse:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v7, v8, v9}, Lhud;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_6
-
-    iget-boolean v7, v1, Lga;->e:Z
-
-    goto :goto_3
-
-    :cond_6
-    move v7, v9
-
-    :goto_3
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lkq5;
+    check-cast v2, Lqx1;
 
-    check-cast v2, Luq5;
+    check-cast v2, Ldy1;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2}, Ldy1;->l()Lye4;
 
-    sget-object v8, Lru/ok/tamtam/android/prefs/PmsKey;->gcwre:Lru/ok/tamtam/android/prefs/PmsKey;
+    move-result-object v2
 
-    invoke-virtual {v2, v8, v9}, Lhud;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    iget-boolean v9, v1, Lga;->g:Z
-
-    :cond_7
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lpu1;
-
-    check-cast v1, Lev1;
-
-    invoke-virtual {v1}, Lev1;->l()Lw84;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lw84;->c:Ljava/lang/String;
+    iget-object v2, v2, Lye4;->c:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lsf8;
+    new-instance v7, Llr8;
 
-    invoke-direct {v2}, Lsf8;-><init>()V
+    invoke-direct {v7}, Llr8;-><init>()V
 
-    iget-object v3, v0, Lmw1;->c:Lru7;
+    iget-object v8, v0, Lsz1;->c:Lo58;
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v8}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Llja;
+
+    invoke-virtual {v8}, Llja;->d()Ljava/lang/Integer;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_6
+
+    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
+
+    move-result v8
+
+    const-string v9, "screen"
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v9, v8}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_6
+    const-string v8, "camera"
+
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
-    check-cast v3, Le5a;
+    invoke-virtual {v7, v8, v3}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v3}, Le5a;->d()Ljava/lang/Integer;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_8
-
-    invoke-virtual {v3}, Ljava/lang/Number;->intValue()I
-
-    move-result v3
-
-    const-string v8, "screen"
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v8, v3}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_8
-    const-string v3, "camera"
+    const-string v3, "microphone"
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v3, v4}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, "microphone"
+    const-string v3, "screenshare"
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v3, v4}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, "screenshare"
+    const-string v3, "recording"
 
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "recording"
-
-    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    invoke-virtual {v2, v3, v4}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v3, v4}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v3, "waiting"
 
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-virtual {v2, v3, v4}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v3, v1}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_9
+    if-eqz v2, :cond_7
 
-    const-string v3, "call_id"
+    const-string v1, "call_id"
 
-    invoke-virtual {v2, v3, v1}, Lsf8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v7, v1, v2}, Llr8;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_9
-    invoke-virtual {v2}, Lsf8;->b()Lsf8;
+    :cond_7
+    invoke-virtual {v7}, Llr8;->b()Llr8;
 
     move-result-object v1
 
     const-string v2, "ADMIN_CALL_SETTINGS"
 
-    invoke-virtual {v0, v2, v1}, Lmw1;->c(Ljava/lang/String;Lsf8;)V
+    invoke-virtual {v0, v2, v1}, Lsz1;->b(Ljava/lang/String;Llr8;)V
 
-    :goto_4
-    invoke-super {p0, p1}, Lc24;->onDestroyView(Landroid/view/View;)V
+    :goto_3
+    invoke-super {p0, p1}, La94;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -775,26 +718,26 @@
     move-object p1, p0
 
     :goto_0
-    invoke-virtual {p1}, Lc24;->getParentController()Lc24;
+    invoke-virtual {p1}, La94;->getParentController()La94;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lc24;->getParentController()Lc24;
+    invoke-virtual {p1}, La94;->getParentController()La94;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lejd;
+    instance-of v0, p1, Lc5e;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lejd;
+    check-cast p1, Lc5e;
 
     goto :goto_1
 
@@ -806,7 +749,7 @@
 
     check-cast p1, Lone/me/android/root/RootController;
 
-    invoke-virtual {p1}, Lone/me/android/root/RootController;->D0()Lyid;
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw4e;
 
     move-result-object p1
 
@@ -820,64 +763,64 @@
 
     iget-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->Z:Ljava/lang/Object;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Li11;
+    check-cast v0, Lh31;
 
-    invoke-virtual {p1, v0}, Lyid;->a(Lg24;)V
+    invoke-virtual {p1, v0}, Lw4e;->a(Le94;)V
 
     :cond_3
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->x0()Lr11;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->z0()Lq31;
 
     move-result-object p1
 
-    iget-object p1, p1, Lr11;->s0:Laf5;
+    iget-object p1, p1, Lq31;->Z:Lcm5;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lnx7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lnx7;->p()Lpx7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
 
     move-result-object v0
 
-    sget-object v2, Lpw7;->d:Lpw7;
+    invoke-interface {v0}, Lj88;->p()Ll88;
 
-    invoke-static {p1, v0, v2}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
+    move-result-object v0
+
+    sget-object v2, Lo78;->d:Lo78;
+
+    invoke-static {p1, v0, v2}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
 
     move-result-object p1
 
-    new-instance v0, Lk11;
+    new-instance v0, Lj31;
 
-    invoke-direct {v0, v1, p0}, Lk11;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+    invoke-direct {v0, v1, p0}, Lj31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
 
-    new-instance v1, Ln16;
+    new-instance v1, Lm96;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Ln16;-><init>(Lez5;Lej6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lzw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
     return-void
 .end method
 
-.method public final x0()Lr11;
+.method public final z0()Lq31;
     .locals 1
 
-    iget-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->b:Lru7;
+    iget-object v0, p0, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->b:Lo58;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lr11;
+    check-cast v0, Lq31;
 
     return-object v0
 .end method

@@ -1,31 +1,38 @@
-.class public final Lvp;
-.super Lup;
+.class public abstract Lvp;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Landroidx/appcompat/widget/AppCompatTextView;
-
-
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lvp;->X:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-direct {p0, p1}, Lup;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(IF)V
-    .locals 1
+.method public abstract a(Landroid/text/StaticLayout$Builder;Landroid/widget/TextView;)V
+.end method
 
-    iget-object v0, p0, Lvp;->X:Landroidx/appcompat/widget/AppCompatTextView;
+.method public b(Landroid/widget/TextView;)Z
+    .locals 2
 
-    invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
+    const-string v0, "getHorizontallyScrolling"
 
-    return-void
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    invoke-static {p1, v0, v1}, Lwp;->e(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    return p1
 .end method

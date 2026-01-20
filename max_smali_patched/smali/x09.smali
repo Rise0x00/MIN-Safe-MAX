@@ -1,169 +1,124 @@
-.class public final synthetic Lx09;
+.class public final Lx09;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh19;
-.implements Li19;
+.implements Leqh;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lk19;
-
-.field public final synthetic c:I
+.field public final synthetic b:Lc19;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lk19;II)V
+.method public constructor <init>(Lc19;)V
     .locals 0
 
-    iput p3, p0, Lx09;->a:I
-
-    iput-object p1, p0, Lx09;->b:Lk19;
-
-    iput p2, p0, Lx09;->c:I
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lx09;->b:Lc19;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public e(Lxub;Lgz8;Ljava/util/List;)V
+.method public final a(Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;)V
     .locals 4
 
-    iget v0, p0, Lx09;->a:I
+    iget-object v0, p1, Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;->a:Lpj6;
 
-    packed-switch v0, :pswitch_data_0
+    const/16 v1, 0x1b59
 
-    iget-object v0, p0, Lx09;->b:Lk19;
+    const/4 v2, 0x0
 
-    iget v1, p0, Lx09;->c:I
+    iget-object v3, p0, Lx09;->b:Lc19;
 
-    invoke-virtual {v0, p2, p1, v1}, Lk19;->U(Lgz8;Lxub;I)I
+    invoke-virtual {v3, p1, v0, v2, v1}, Lol0;->d(Ljava/lang/Exception;Lpj6;ZI)Landroidx/media3/exoplayer/ExoPlaybackException;
 
-    move-result p2
+    move-result-object p1
 
-    invoke-virtual {p1, p2, p3}, Lxub;->b(ILjava/util/List;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lx09;->b:Lk19;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {p3}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    iget v2, p0, Lx09;->c:I
-
-    const/4 v3, 0x1
-
-    if-ne v1, v3, :cond_0
-
-    invoke-virtual {v0, p2, p1, v2}, Lk19;->U(Lgz8;Lxub;I)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Lqs8;
-
-    invoke-virtual {p1}, Lxub;->m0()V
-
-    iget-object p1, p1, Lxub;->a:Lzi5;
-
-    add-int/lit8 v0, p2, 0x1
-
-    invoke-static {p3}, Lec7;->n(Ljava/lang/Object;)Lz8d;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3, p2, v0}, Lzi5;->r1(Ljava/util/List;II)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0, p2, p1, v2}, Lk19;->U(Lgz8;Lxub;I)I
-
-    move-result v1
-
-    add-int/2addr v2, v3
-
-    invoke-virtual {v0, p2, p1, v2}, Lk19;->U(Lgz8;Lxub;I)I
-
-    move-result p2
-
-    invoke-virtual {p1, p3, v1, p2}, Lxub;->V(Ljava/util/List;II)V
-
-    :goto_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lx09;->b:Lk19;
-
-    iget v1, p0, Lx09;->c:I
-
-    invoke-virtual {v0, p2, p1, v1}, Lk19;->U(Lgz8;Lxub;I)I
-
-    move-result p2
-
-    invoke-virtual {p1, p2, p3}, Lxub;->b(ILjava/util/List;)V
+    iput-object p1, v3, Lm09;->G1:Landroidx/media3/exoplayer/ExoPlaybackException;
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public i(Lxub;Lgz8;)V
-    .locals 2
+.method public final b()V
+    .locals 3
 
-    iget v0, p0, Lx09;->a:I
+    iget-object v0, p0, Lx09;->b:Lc19;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, v0, Lc19;->g2:Landroid/view/Surface;
 
-    iget-object v0, p0, Lx09;->b:Lk19;
+    if-eqz v1, :cond_0
 
-    iget v1, p0, Lx09;->c:I
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p2, p1, v1}, Lk19;->U(Lgz8;Lxub;I)I
+    const/4 v2, 0x1
 
-    move-result p2
+    invoke-virtual {v0, v1, v2}, Lc19;->O0(II)V
 
-    invoke-virtual {p1, p2}, Lxub;->U(I)V
+    :cond_0
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    iget-object v0, p0, Lx09;->b:Lc19;
+
+    iget-object v0, v0, Lm09;->S0:Lhq5;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lhq5;->a()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final g(Liqh;)V
+    .locals 0
 
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lx09;->b:Lk19;
+.method public final onFirstFrameRendered()V
+    .locals 8
 
-    iget v1, p0, Lx09;->c:I
+    iget-object v0, p0, Lx09;->b:Lc19;
 
-    invoke-virtual {v0, p2, p1, v1}, Lk19;->U(Lgz8;Lxub;I)I
+    iget-object v3, v0, Lc19;->g2:Landroid/view/Surface;
 
-    move-result p2
+    if-eqz v3, :cond_1
 
-    invoke-virtual {p1, p2}, Lxub;->Z(I)V
+    iget-object v2, v0, Lc19;->S1:Lo2b;
 
+    iget-object v1, v2, Lo2b;->b:Ljava/lang/Object;
+
+    move-object v7, v1
+
+    check-cast v7, Landroid/os/Handler;
+
+    if-eqz v7, :cond_0
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    new-instance v1, Lqta;
+
+    const/4 v6, 0x5
+
+    invoke-direct/range {v1 .. v6}, Lqta;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
+
+    invoke-virtual {v7, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lc19;->j2:Z
+
+    :cond_1
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

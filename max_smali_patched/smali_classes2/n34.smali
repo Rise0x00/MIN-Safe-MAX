@@ -1,60 +1,63 @@
-.class public final synthetic Ln34;
-.super Ljava/lang/Object;
+.class public final Ln34;
+.super Ltsd;
 .source "SourceFile"
-
-# interfaces
-.implements Ljr3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final F0:Landroid/widget/ImageView;
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+.field public final G0:Lru/ok/messages/views/widgets/TamAvatarView;
+
+.field public final H0:Landroid/view/View;
+
+.field public I0:Lit8;
+
+.field public final synthetic J0:Lo34;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;I)V
-    .locals 0
-
-    iput p2, p0, Ln34;->a:I
-
-    iput-object p1, p0, Ln34;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public constructor <init>(Lo34;Landroid/view/View;)V
     .locals 1
 
-    iget v0, p0, Ln34;->a:I
+    iput-object p1, p0, Ln34;->J0:Lo34;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {p0, p2}, Ltsd;-><init>(Landroid/view/View;)V
 
-    iget-object v0, p0, Ln34;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
+    sget p1, Lrad;->row_contact_location__static_image:I
 
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->j(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;Ljava/lang/Throwable;)V
+    move-result-object p1
+
+    check-cast p1, Landroid/widget/ImageView;
+
+    iput-object p1, p0, Ln34;->F0:Landroid/widget/ImageView;
+
+    sget p1, Lrad;->row_contact_location__live_image:I
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    check-cast p1, Lru/ok/messages/views/widgets/TamAvatarView;
+
+    iput-object p1, p0, Ln34;->G0:Lru/ok/messages/views/widgets/TamAvatarView;
+
+    sget p1, Lrad;->row_contact_location__indicator:I
+
+    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object p1
+
+    iput-object p1, p0, Ln34;->H0:Landroid/view/View;
+
+    new-instance p1, Lbl0;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, p0}, Lbl0;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p2, p1}, Lnnj;->a(Landroid/view/View;Li6;)V
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Ln34;->b:Lru/ok/android/externcalls/sdk/factory/CreateConfParams;
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
-
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->n(Lru/ok/android/externcalls/sdk/factory/CreateConfParams;Lru/ok/android/externcalls/sdk/Conversation;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

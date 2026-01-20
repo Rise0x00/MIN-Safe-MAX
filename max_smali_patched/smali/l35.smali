@@ -1,64 +1,151 @@
-.class public final synthetic Ll35;
+.class public abstract synthetic Ll35;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llr3;
 
-
-# instance fields
-.field public final synthetic a:Lm35;
-
-.field public final synthetic b:Landroid/graphics/SurfaceTexture;
-
-.field public final synthetic c:Landroid/view/Surface;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lm35;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
 
-    iput-object p1, p0, Ll35;->a:Lm35;
+    move-result-object v0
 
-    iput-object p2, p0, Ll35;->b:Landroid/graphics/SurfaceTexture;
+    array-length v0, v0
 
-    iput-object p3, p0, Ll35;->c:Landroid/view/Surface;
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    sput-object v0, Ll35;->a:[I
 
+    :try_start_0
+    sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 2
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    check-cast p1, Lyb0;
+    move-result v1
 
-    iget-object p1, p0, Ll35;->a:Lm35;
+    const/4 v2, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x0
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll35;->a:[I
 
-    iget-object v1, p0, Ll35;->b:Landroid/graphics/SurfaceTexture;
+    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
 
-    invoke-virtual {v1, v0}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->release()V
+    move-result v1
 
-    iget-object v0, p0, Ll35;->c:Landroid/view/Surface;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0}, Landroid/view/Surface;->release()V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget v0, p1, Lm35;->o:I
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll35;->a:[I
 
-    add-int/lit8 v0, v0, -0x1
+    sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
 
-    iput v0, p1, Lm35;->o:I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    invoke-virtual {p1}, Lm35;->d()V
+    move-result v1
 
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll35;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Ll35;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v0, Ll35;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v0, Ll35;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v0, Ll35;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
 .end method

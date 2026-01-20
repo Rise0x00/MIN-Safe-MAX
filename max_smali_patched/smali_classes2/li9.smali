@@ -1,44 +1,49 @@
 .class public final Lli9;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lwi9;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:Ljji;
 
-.field public final b:Lo00;
+.field public Y:I
+
+.field public d:Ljava/lang/Object;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLo00;)V
+.method public constructor <init>(Ljji;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lli9;->X:Ljji;
 
-    iput-wide p1, p0, Lli9;->a:J
-
-    iput-object p3, p0, Lli9;->b:Lo00;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lli9;->o:Ljava/lang/Object;
 
-    return v0
-.end method
+    iget p1, p0, Lli9;->Y:I
 
-.method public final j()J
-    .locals 2
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p0, Lli9;->a:J
+    or-int/2addr p1, v0
 
-    return-wide v0
+    iput p1, p0, Lli9;->Y:I
+
+    iget-object p1, p0, Lli9;->X:Ljji;
+
+    invoke-static {p1, p0}, Ljji;->e(Ljji;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

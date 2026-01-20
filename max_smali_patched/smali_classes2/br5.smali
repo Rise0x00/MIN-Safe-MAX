@@ -1,115 +1,102 @@
 .class public final Lbr5;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lysg;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lwnb;
 
-.field public final synthetic Y:Ler5;
-
-.field public o:I
+.field public final b:Lhm6;
 
 
 # direct methods
-.method public constructor <init>(Ler5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lwnb;Lhm6;)V
     .locals 0
 
-    iput-object p1, p0, Lbr5;->Y:Ler5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lbr5;->a:Lwnb;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lbr5;->b:Lhm6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Lsi4;Laj4;Z)V
+    .locals 6
 
-    check-cast p1, Lg54;
+    iget-object v2, p2, Laj4;->a:Landroid/net/Uri;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-wide v3, p2, Laj4;->g:J
 
-    invoke-virtual {p0, p1, p2}, Lbr5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lbr5;->b:Lhm6;
 
-    move-result-object p1
+    iget-object v1, p0, Lbr5;->a:Lwnb;
 
-    check-cast p1, Lbr5;
+    move v5, p3
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-virtual/range {v0 .. v5}, Lhm6;->f(Lwnb;Landroid/net/Uri;JZ)V
 
-    invoke-virtual {p1, p2}, Lbr5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final d(Lsi4;Laj4;ZI)V
+    .locals 7
 
-    new-instance v0, Lbr5;
+    iget-object v2, p2, Laj4;->a:Landroid/net/Uri;
 
-    iget-object v1, p0, Lbr5;->Y:Ler5;
+    iget-wide v3, p2, Laj4;->g:J
 
-    invoke-direct {v0, v1, p2}, Lbr5;-><init>(Ler5;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lbr5;->b:Lhm6;
 
-    iput-object p1, v0, Lbr5;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lbr5;->a:Lwnb;
 
-    return-object v0
+    move v5, p3
+
+    move v6, p4
+
+    invoke-virtual/range {v0 .. v6}, Lhm6;->a(Lwnb;Landroid/net/Uri;JZI)V
+
+    return-void
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final h(Lsi4;Laj4;Z)V
+    .locals 6
 
-    iget v0, p0, Lbr5;->o:I
+    iget-object v2, p2, Laj4;->a:Landroid/net/Uri;
 
-    const/4 v1, 0x1
+    iget-wide v3, p2, Laj4;->g:J
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lbr5;->b:Lhm6;
 
-    if-ne v0, v1, :cond_0
+    iget-object v1, p0, Lbr5;->a:Lwnb;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    move v5, p3
 
-    return-object p1
+    invoke-virtual/range {v0 .. v5}, Lhm6;->d(Lwnb;Landroid/net/Uri;JZ)V
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-void
+.end method
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+.method public final i(Lsi4;Laj4;Z)V
+    .locals 6
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v2, p2, Laj4;->a:Landroid/net/Uri;
 
-    throw p1
+    iget-wide v3, p2, Laj4;->g:J
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lbr5;->b:Lhm6;
 
-    iget-object p1, p0, Lbr5;->X:Ljava/lang/Object;
+    iget-object v1, p0, Lbr5;->a:Lwnb;
 
-    check-cast p1, Lg54;
+    move v5, p3
 
-    iput v1, p0, Lbr5;->o:I
+    invoke-virtual/range {v0 .. v5}, Lhm6;->h(Lwnb;Landroid/net/Uri;JZ)V
 
-    iget-object v0, p0, Lbr5;->Y:Ler5;
-
-    invoke-virtual {v0, p1, p0}, Ler5;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    return-void
 .end method

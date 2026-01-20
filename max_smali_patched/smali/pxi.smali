@@ -1,100 +1,80 @@
-.class public abstract Lpxi;
+.class public final Lpxi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lpxi;
+
 
 # direct methods
-.method public static a(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-nez p1, :cond_0
+    new-instance v0, Lpxi;
 
-    const-string p1, "null"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, Lpxi;->a:Lpxi;
 
-    return-void
+    new-instance v0, Lbri;
 
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    const-class v1, Lpri;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-gtz v1, :cond_1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
     move-result-object v0
 
-    const/16 v1, 0x2e
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(I)I
-
-    move-result v1
-
-    if-lez v1, :cond_1
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    :cond_1
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x3
 
-    const/16 v0, 0x7b
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-static {p1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    move-result p1
+    move-result-object v0
 
-    invoke-static {p1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    const/4 v2, 0x4
 
-    move-result-object p1
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public static final b(Ly44;Ljava/lang/Throwable;)V
-    .locals 1
 
-    instance-of v0, p1, Ljava/util/concurrent/CancellationException;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    if-eqz v0, :cond_0
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
-    return-void
+    move-result-object p1
 
-    :cond_0
-    :try_start_0
-    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {p1, v0}, Lwzi;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    invoke-static {p0, p1}, Lhwi;->b(Ly44;Ljava/lang/Throwable;)V
-
-    return-void
+    throw p1
 .end method

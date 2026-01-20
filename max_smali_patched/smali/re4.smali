@@ -1,74 +1,165 @@
 .class public final Lre4;
-.super Lue4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final n(Lib5;)I
-    .locals 0
+# instance fields
+.field public a:Ljava/lang/CharSequence;
 
-    invoke-virtual {p1}, Lib5;->y()I
+.field public b:Landroid/graphics/Bitmap;
 
-    move-result p1
+.field public c:Landroid/text/Layout$Alignment;
 
-    return p1
-.end method
+.field public d:Landroid/text/Layout$Alignment;
 
-.method public final o()Lnc7;
+.field public e:F
+
+.field public f:I
+
+.field public g:I
+
+.field public h:F
+
+.field public i:I
+
+.field public j:I
+
+.field public k:F
+
+.field public l:F
+
+.field public m:F
+
+.field public n:Z
+
+.field public o:I
+
+.field public p:I
+
+.field public q:F
+
+.field public r:I
+
+
+# direct methods
+.method public constructor <init>()V
     .locals 2
 
-    new-instance v0, Lnc7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    iput-object v0, p0, Lre4;->a:Ljava/lang/CharSequence;
 
-    iput v1, v0, Lnc7;->a:I
+    iput-object v0, p0, Lre4;->b:Landroid/graphics/Bitmap;
 
-    iput-boolean v1, v0, Lnc7;->b:Z
+    iput-object v0, p0, Lre4;->c:Landroid/text/Layout$Alignment;
 
-    iput-boolean v1, v0, Lnc7;->c:Z
+    iput-object v0, p0, Lre4;->d:Landroid/text/Layout$Alignment;
 
-    return-object v0
+    const v0, -0x800001
+
+    iput v0, p0, Lre4;->e:F
+
+    const/high16 v1, -0x80000000
+
+    iput v1, p0, Lre4;->f:I
+
+    iput v1, p0, Lre4;->g:I
+
+    iput v0, p0, Lre4;->h:F
+
+    iput v1, p0, Lre4;->i:I
+
+    iput v1, p0, Lre4;->j:I
+
+    iput v0, p0, Lre4;->k:F
+
+    iput v0, p0, Lre4;->l:F
+
+    iput v0, p0, Lre4;->m:F
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lre4;->n:Z
+
+    const/high16 v0, -0x1000000
+
+    iput v0, p0, Lre4;->o:I
+
+    iput v1, p0, Lre4;->p:I
+
+    return-void
 .end method
 
-.method public final declared-synchronized s(Lib5;I)Z
-    .locals 1
 
-    monitor-enter p0
+# virtual methods
+.method public final a()Lte4;
+    .locals 21
 
-    :try_start_0
-    invoke-static {p2}, Lgj0;->b(I)Z
+    move-object/from16 v0, p0
 
-    move-result v0
+    new-instance v1, Lte4;
 
-    if-eqz v0, :cond_0
+    iget-object v2, v0, Lre4;->a:Ljava/lang/CharSequence;
 
-    const/4 p1, 0x0
+    iget-object v3, v0, Lre4;->c:Landroid/text/Layout$Alignment;
 
-    goto :goto_0
+    iget-object v4, v0, Lre4;->d:Landroid/text/Layout$Alignment;
 
-    :cond_0
-    iget-object v0, p0, Lue4;->g:Lmo7;
+    iget-object v5, v0, Lre4;->b:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, p1, p2}, Lmo7;->e(Lib5;I)Z
+    iget v6, v0, Lre4;->e:F
 
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v7, v0, Lre4;->f:I
 
-    :goto_0
-    monitor-exit p0
+    iget v8, v0, Lre4;->g:I
 
-    return p1
+    iget v9, v0, Lre4;->h:F
 
-    :catchall_0
-    move-exception p1
+    iget v10, v0, Lre4;->i:I
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget v11, v0, Lre4;->j:I
 
-    throw p1
+    iget v12, v0, Lre4;->k:F
+
+    iget v13, v0, Lre4;->l:F
+
+    iget v14, v0, Lre4;->m:F
+
+    iget-boolean v15, v0, Lre4;->n:Z
+
+    move-object/from16 v16, v1
+
+    iget v1, v0, Lre4;->o:I
+
+    move/from16 v17, v1
+
+    iget v1, v0, Lre4;->p:I
+
+    move/from16 v18, v1
+
+    iget v1, v0, Lre4;->q:F
+
+    move/from16 v19, v1
+
+    iget v1, v0, Lre4;->r:I
+
+    move/from16 v20, v19
+
+    move/from16 v19, v1
+
+    move-object/from16 v1, v16
+
+    move/from16 v16, v17
+
+    move/from16 v17, v18
+
+    move/from16 v18, v20
+
+    invoke-direct/range {v1 .. v19}, Lte4;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;Landroid/text/Layout$Alignment;Landroid/graphics/Bitmap;FIIFIIFFFZIIFI)V
+
+    move-object/from16 v16, v1
+
+    return-object v16
 .end method

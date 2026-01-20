@@ -1,78 +1,83 @@
 .class public final Liob;
-.super Logf;
+.super Lzs4;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic o:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final e:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput-object p2, p0, Liob;->o:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    invoke-direct {p0, p1}, Lzs4;-><init>(Landroid/content/Context;)V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Liob;->e:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final c(Landroid/content/Context;)Lao4;
+    .locals 3
 
-    check-cast p1, Ljava/util/Set;
+    new-instance v0, Lv40;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, p1}, Lv40;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0, p1, p2}, Liob;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance p1, Latc;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Lb60;
+
+    iget-object v2, p0, Liob;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lb60;
+
+    array-length v2, v1
+
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lb60;
+
+    invoke-direct {p1, v1}, Latc;-><init>([Lb60;)V
+
+    iput-object p1, v0, Lv40;->e:Ljava/lang/Object;
+
+    invoke-virtual {v0}, Lv40;->b()Lao4;
 
     move-result-object p1
-
-    check-cast p1, Liob;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Liob;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Liob;
-
-    iget-object v0, p0, Liob;->o:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    invoke-direct {p1, p2, v0}, Liob;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
 
     return-object p1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final d(Lxp5;Landroid/os/Looper;Ljava/util/ArrayList;)V
+    .locals 3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Lfhg;
 
-    sget-object p1, Lone/me/chats/picker/chats/PickerChatsListWidget;->A0:[Les7;
+    new-instance v1, Limf;
 
-    iget-object p1, p0, Liob;->o:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    const/16 v2, 0x1b
 
-    invoke-virtual {p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->B0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-direct {v1, v2}, Limf;-><init>(I)V
 
-    move-result-object p1
+    invoke-direct {v0, p1, p2, v1}, Lfhg;-><init>(Lxp5;Landroid/os/Looper;Lj1g;)V
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->Y()V
+    const/4 p1, 0x1
 
-    sget-object p1, Lybg;->a:Lybg;
+    iput-boolean p1, v0, Lfhg;->W0:Z
 
-    return-object p1
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
 .end method

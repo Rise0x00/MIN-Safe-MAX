@@ -3,108 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Ldqi;
 
 
-# static fields
-.field public static final a:Lbpi;
+# instance fields
+.field public final synthetic a:Landroid/app/Activity;
+
+.field public final synthetic b:Landroid/os/Bundle;
+
+.field public final synthetic c:Landroid/os/Bundle;
+
+.field public final synthetic d:Lnk0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lnk0;Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
+    .locals 0
 
-    new-instance v0, Lbpi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbpi;->d:Lnk0;
 
-    sput-object v0, Lbpi;->a:Lbpi;
+    iput-object p2, p0, Lbpi;->a:Landroid/app/Activity;
 
-    new-instance v0, Lz7i;
+    iput-object p3, p0, Lbpi;->b:Landroid/os/Bundle;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x6
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x7
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    iput-object p4, p0, Lbpi;->c:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final a()I
+    .locals 1
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    return v0
+.end method
 
-    throw p1
+.method public final b()V
+    .locals 4
+
+    iget-object v0, p0, Lbpi;->d:Lnk0;
+
+    iget-object v0, v0, Lnk0;->a:Ljava/lang/Object;
+
+    check-cast v0, Lz78;
+
+    iget-object v1, p0, Lbpi;->b:Landroid/os/Bundle;
+
+    iget-object v2, p0, Lbpi;->c:Landroid/os/Bundle;
+
+    iget-object v3, p0, Lbpi;->a:Landroid/app/Activity;
+
+    invoke-interface {v0, v3, v1, v2}, Lz78;->j(Landroid/app/Activity;Landroid/os/Bundle;Landroid/os/Bundle;)V
+
+    return-void
 .end method

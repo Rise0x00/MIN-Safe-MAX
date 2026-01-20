@@ -1,55 +1,32 @@
-.class public final synthetic Lgo3;
-.super Ljava/lang/Object;
+.class public final Lgo3;
+.super Lvy7;
 .source "SourceFile"
 
 # interfaces
-.implements Lho3;
-
-
-# instance fields
-.field public final synthetic a:Le2e;
-
-.field public final synthetic b:Lgz8;
+.implements Lfo3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Le2e;Lgz8;Lltb;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lgo3;->a:Le2e;
+    invoke-direct {p0, v0}, Lvy7;-><init>(Z)V
 
-    iput-object p2, p0, Lgo3;->b:Lgz8;
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lvy7;->initParentJob(Lsx7;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()Lv28;
-    .locals 2
+.method public final getOnCancelComplete$kotlinx_coroutines_core()Z
+    .locals 1
 
-    iget-object v0, p0, Lgo3;->a:Le2e;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Le2e;->d:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lzz8;
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lgo3;->b:Lgz8;
-
-    invoke-virtual {v0, v1}, Lzz8;->q(Lgz8;)V
-
-    :cond_0
-    sget-object v0, Ljb7;->b:Ljb7;
-
-    return-object v0
+    return v0
 .end method

@@ -1,68 +1,52 @@
 .class public final Lf6a;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Luf1;
+.super Lo84;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public final synthetic X:Ldr7;
+
+.field public Y:Lf76;
+
+.field public Z:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ldr7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lf6a;->X:Ldr7;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
-
-    iput-object v0, p0, Lf6a;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCallParticipantNetworkStatusChanged(Ljava/util/List;)V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    iput-object p1, p0, Lf6a;->d:Ljava/lang/Object;
 
-    move-result v0
+    iget p1, p0, Lf6a;->o:I
 
-    if-eqz v0, :cond_0
+    const/high16 v0, -0x80000000
 
-    goto :goto_1
+    or-int/2addr p1, v0
 
-    :cond_0
-    iget-object v0, p0, Lf6a;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iput p1, p0, Lf6a;->o:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    iget-object p1, p0, Lf6a;->X:Ldr7;
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1, v0, p0}, Ldr7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Luf1;
-
-    invoke-interface {v1, p1}, Luf1;->onCallParticipantNetworkStatusChanged(Ljava/util/List;)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
+    return-object p1
 .end method

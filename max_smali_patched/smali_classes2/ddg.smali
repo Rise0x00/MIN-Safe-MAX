@@ -1,110 +1,64 @@
-.class public final Lddg;
-.super Logf;
+.class public Lddg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
+
+# static fields
+.field public static final b:Lcdg;
 
 
 # instance fields
-.field public final synthetic X:Lgdg;
-
-.field public final synthetic Y:J
-
-.field public final synthetic Z:Ljava/util/List;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method public constructor <init>(Lgdg;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lddg;->X:Lgdg;
+    new-instance v0, Lcdg;
 
-    iput-wide p2, p0, Lddg;->Y:J
+    invoke-direct {v0}, Lddg;-><init>()V
 
-    iput-object p4, p0, Lddg;->Z:Ljava/util/List;
+    sput-object v0, Lddg;->b:Lcdg;
 
-    const/4 p1, 0x2
+    return-void
+.end method
 
-    invoke-direct {p0, p1, p5}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>()V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    iput-object v0, p0, Lddg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public a(Ljava/lang/Runnable;)V
+    .locals 3
 
-    check-cast p1, Lg54;
+    const/4 v0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lddg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lddg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object p1
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    check-cast p1, Lddg;
+    move-result v0
 
-    sget-object p2, Lybg;->a:Lybg;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, p2}, Lddg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lddg;
-
-    iget-wide v2, p0, Lddg;->Y:J
-
-    iget-object v4, p0, Lddg;->Z:Ljava/util/List;
-
-    iget-object v1, p0, Lddg;->X:Lgdg;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lddg;-><init>(Lgdg;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lddg;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lddg;->o:Ljava/lang/Object;
-
-    check-cast p1, Lg54;
-
-    new-instance v0, Lcdg;
-
-    iget-object v4, p0, Lddg;->Z:Ljava/util/List;
-
-    const/4 v5, 0x0
-
-    iget-object v1, p0, Lddg;->X:Lgdg;
-
-    iget-wide v2, p0, Lddg;->Y:J
-
-    invoke-direct/range {v0 .. v5}, Lcdg;-><init>(Lgdg;JLjava/util/List;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-static {p1, v2, v2, v0, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

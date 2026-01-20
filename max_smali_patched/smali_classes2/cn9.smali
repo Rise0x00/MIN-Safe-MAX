@@ -1,132 +1,120 @@
 .class public final Lcn9;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ldn9;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Li41;
-
-.field public final synthetic Z:Len9;
-
-.field public o:I
+.field public final b:J
 
 
 # direct methods
-.method public constructor <init>(Li41;Lkotlin/coroutines/Continuation;Len9;)V
+.method public constructor <init>(JJ)V
     .locals 0
 
-    iput-object p1, p0, Lcn9;->Y:Li41;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lcn9;->Z:Len9;
+    iput-wide p1, p0, Lcn9;->a:J
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lcn9;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p1, Lgz5;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lcn9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lcn9;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lcn9;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance v0, Lcn9;
-
-    iget-object v1, p0, Lcn9;->Y:Li41;
-
-    iget-object v2, p0, Lcn9;->Z:Len9;
-
-    invoke-direct {v0, v1, p2, v2}, Lcn9;-><init>(Li41;Lkotlin/coroutines/Continuation;Len9;)V
-
-    iput-object p1, v0, Lcn9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lcn9;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    instance-of v1, p1, Lcn9;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    const/4 v2, 0x0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p1
+    return v2
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    check-cast p1, Lcn9;
 
-    iget-object p1, p0, Lcn9;->X:Ljava/lang/Object;
+    iget-wide v3, p0, Lcn9;->a:J
 
-    check-cast p1, Lgz5;
+    iget-wide v5, p1, Lcn9;->a:J
 
-    new-instance v0, Lnb2;
+    cmp-long v1, v3, v5
 
-    iget-object v2, p0, Lcn9;->Z:Len9;
+    if-eqz v1, :cond_2
 
-    const/4 v3, 0x6
-
-    invoke-direct {v0, p1, v2, v3}, Lnb2;-><init>(Lgz5;Ljava/lang/Object;I)V
-
-    iput v1, p0, Lcn9;->o:I
-
-    iget-object p1, p0, Lcn9;->Y:Li41;
-
-    invoke-virtual {p1, v0, p0}, Li41;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    return v2
 
     :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    iget-wide v3, p0, Lcn9;->b:J
 
-    return-object p1
+    iget-wide v5, p1, Lcn9;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Lcn9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lcn9;->b:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ByRange(startTime="
+
+    const-string v1, ", endTime="
+
+    iget-wide v2, p0, Lcn9;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lcn9;->b:J
+
+    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

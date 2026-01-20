@@ -1,83 +1,38 @@
-.class public abstract Lc5e;
+.class public interface abstract Lc5e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public y()La94;
+    .locals 1
 
-.field public static final b:I
+    move-object v0, p0
 
-.field public static final c:I
+    check-cast v0, Lone/me/android/root/RootController;
 
-.field public static final d:I
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->H0()Lw4e;
 
-.field public static final e:I
+    move-result-object v0
 
-.field public static final f:I
+    invoke-virtual {v0}, Lw4e;->e()Ljava/util/ArrayList;
 
+    move-result-object v0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+    invoke-static {v0}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result-object v0
 
-    const/16 v1, 0x1d
+    check-cast v0, Lz4e;
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_0
 
-    if-lt v0, v1, :cond_1
+    iget-object v0, v0, Lz4e;->a:La94;
 
-    const/4 v1, 0x1
-
-    sput v1, Lc5e;->a:I
-
-    const/4 v1, 0x2
-
-    sput v1, Lc5e;->b:I
-
-    const/16 v1, 0x20
-
-    sput v1, Lc5e;->c:I
-
-    const/4 v1, -0x1
-
-    sput v1, Lc5e;->f:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    const/16 v0, 0x40
-
-    sput v0, Lc5e;->d:I
-
-    const/16 v0, 0x80
-
-    sput v0, Lc5e;->e:I
-
-    return-void
+    return-object v0
 
     :cond_0
-    sput v2, Lc5e;->d:I
+    const/4 v0, 0x0
 
-    sput v2, Lc5e;->e:I
-
-    return-void
-
-    :cond_1
-    sput v2, Lc5e;->a:I
-
-    sput v2, Lc5e;->b:I
-
-    sput v2, Lc5e;->c:I
-
-    sput v2, Lc5e;->d:I
-
-    sput v2, Lc5e;->e:I
-
-    sput v2, Lc5e;->f:I
-
-    return-void
+    return-object v0
 .end method

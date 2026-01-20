@@ -1,76 +1,37 @@
-.class public final synthetic Lsu5;
-.super Ljava/lang/Object;
+.class public final Lsu5;
+.super Lj2;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/sdk/richvector/VectorPath;
+.field public final synthetic d:Ltu5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/VectorPath;I)V
+.method public constructor <init>(Ltu5;Lza5;)V
     .locals 0
 
-    iput p2, p0, Lsu5;->a:I
+    iput-object p1, p0, Lsu5;->d:Ltu5;
 
-    iput-object p1, p0, Lsu5;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lj2;-><init>(Lza5;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 1
+.method public final k0()J
+    .locals 2
 
-    iget v0, p0, Lsu5;->a:I
+    sget v0, Ltu5;->n:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lsu5;->d:Ltu5;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p1
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    check-cast p1, Ljava/lang/Integer;
+    move-result-wide v0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, p0, Lsu5;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, p0, Lsu5;->b:Lone/me/sdk/richvector/VectorPath;
-
-    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeAlpha(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

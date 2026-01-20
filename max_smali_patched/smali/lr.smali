@@ -1,98 +1,212 @@
-.class public final synthetic Llr;
-.super Ljava/lang/Object;
+.class public final Llr;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Ldr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Lzlb;
 
-.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public final synthetic Y:Landroid/widget/TextView;
+
+.field public final synthetic Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+.field public synthetic o:Landroid/widget/LinearLayout;
+
+.field public final synthetic t0:Landroid/widget/TextView;
+
+.field public final synthetic u0:Landroid/widget/TextView;
+
+.field public final synthetic v0:Landroid/graphics/drawable/ShapeDrawable;
+
+.field public final synthetic w0:Lwv2;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
+.method public constructor <init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Lwv2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Llr;->a:I
+    iput-object p1, p0, Llr;->Y:Landroid/widget/TextView;
 
-    iput-object p1, p0, Llr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    iput-object p2, p0, Llr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Llr;->t0:Landroid/widget/TextView;
+
+    iput-object p4, p0, Llr;->u0:Landroid/widget/TextView;
+
+    iput-object p5, p0, Llr;->v0:Landroid/graphics/drawable/ShapeDrawable;
+
+    iput-object p6, p0, Llr;->w0:Lwv2;
+
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p7}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Llr;->a:I
+    check-cast p1, Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Llr;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    check-cast p2, Lzlb;
 
-    packed-switch v0, :pswitch_data_0
+    move-object v7, p3
 
-    check-cast p1, Ljava/lang/Integer;
+    check-cast v7, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    new-instance v0, Llr;
 
-    move-result p1
+    iget-object v5, p0, Llr;->v0:Landroid/graphics/drawable/ShapeDrawable;
 
-    iget-object v0, v1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Y:Ljjh;
+    iget-object v6, p0, Llr;->w0:Lwv2;
 
-    invoke-virtual {v0}, Ljjh;->j()I
+    iget-object v1, p0, Llr;->Y:Landroid/widget/TextView;
 
-    move-result v1
+    iget-object v2, p0, Llr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    if-gtz v1, :cond_0
+    iget-object v3, p0, Llr;->t0:Landroid/widget/TextView;
 
-    const/4 p1, 0x0
+    iget-object v4, p0, Llr;->u0:Landroid/widget/TextView;
 
-    goto :goto_0
+    invoke-direct/range {v0 .. v7}, Llr;-><init>(Landroid/widget/TextView;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/graphics/drawable/ShapeDrawable;Lwv2;Lkotlin/coroutines/Continuation;)V
 
-    :cond_0
-    invoke-virtual {v0, p1}, Lb28;->C(I)Ljava/lang/Object;
+    iput-object p1, v0, Llr;->o:Landroid/widget/LinearLayout;
 
-    move-result-object p1
+    iput-object p2, v0, Llr;->X:Lzlb;
 
-    check-cast p1, Li28;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    check-cast p1, Lbtf;
-
-    iget-boolean p1, p1, Lbtf;->a:Z
-
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
+    invoke-virtual {v0, p1}, Llr;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
+.end method
 
-    :pswitch_0
-    check-cast p1, Landroid/view/View;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Les7;
+    iget-object v0, p0, Llr;->o:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->x0()Les;
+    iget-object v1, p0, Llr;->X:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
 
     move-result-object p1
 
-    iget-object p1, p1, Les;->F0:Laf5;
+    iget p1, p1, Lxf0;->k:I
 
-    sget-object v0, Lf93;->b:Lf93;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    invoke-static {p1, v0}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+    invoke-interface {v1}, Lzlb;->getText()Lrfg;
 
-    sget-object p1, Lybg;->a:Lybg;
+    move-result-object p1
+
+    iget p1, p1, Lrfg;->g:I
+
+    iget-object v0, p0, Llr;->Y:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object p1, p0, Llr;->Z:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    iget-object v0, p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->d:Ljld;
+
+    sget-object v2, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:[Lz28;
+
+    const/4 v3, 0x1
+
+    aget-object v2, v2, v3
+
+    invoke-interface {v0, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+
+    move-result-object v2
+
+    iget v2, v2, Lrfg;->e:I
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+
+    move-result-object v0
+
+    iget v0, v0, Lrfg;->g:I
+
+    iget-object v2, p0, Llr;->t0:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-interface {v1}, Lzlb;->getText()Lrfg;
+
+    move-result-object v0
+
+    iget v0, v0, Lrfg;->g:I
+
+    iget-object v2, p0, Llr;->u0:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
+
+    move-result-object v0
+
+    new-instance v2, Lkr;
+
+    iget-object v3, p0, Llr;->w0:Lwv2;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, p1, v4}, Lkr;-><init>(Lwv2;Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x3
+
+    invoke-static {v0, v4, v4, v2, v3}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
+
+    move-result-object v0
+
+    iget v0, v0, Lxf0;->h:I
+
+    iget-object v1, p0, Llr;->v0:Landroid/graphics/drawable/ShapeDrawable;
+
+    invoke-static {v1, v0}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
+
+    invoke-virtual {p1}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->z0()Lbs;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lbs;->y()Lmbg;
+
+    move-result-object v0
+
+    check-cast v0, Lj9b;
+
+    invoke-virtual {v0}, Lj9b;->a()Lsb4;
+
+    move-result-object v0
+
+    new-instance v1, Las;
+
+    invoke-direct {v1, p1, v4}, Las;-><init>(Lbs;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v2, 0x2
+
+    invoke-static {p1, v0, v1, v2}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,147 +1,121 @@
-.class public final Lmka;
+.class public abstract Lmka;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwka;
 
-
-# instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final b:Lhka;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Lhka;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "NetworkStateTracker"
 
-    iput-object p1, p0, Lmka;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-object p2, p0, Lmka;->b:Lhka;
+    move-result-object v0
+
+    sput-object v0, Lmka;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static final a(Landroid/net/ConnectivityManager;)Lkka;
+    .locals 8
 
-# virtual methods
-.method public final a(Lgla;)V
-    .locals 6
-
-    :goto_0
-    iget-object v0, p0, Lmka;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    check-cast v0, Llka;
+    const/4 v1, 0x1
 
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lmka;->b:Lhka;
-
-    invoke-interface {v0}, Lhka;->call()Lkka;
-
-    move-result-object v0
-
-    new-instance v1, Llka;
-
-    iget-object v2, p0, Lmka;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v1, v0, v2}, Llka;-><init>(Lkka;Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    iget-object v2, p0, Lmka;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move-object v0, v1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
+    const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    new-instance v1, Lika;
-
-    invoke-direct {v1, v0, p1}, Lika;-><init>(Llka;Lgla;)V
-
-    invoke-interface {p1, v1}, Lgla;->d(Lzv4;)V
-
-    iget-object p1, v0, Llka;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    :goto_2
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, [Lika;
-
-    sget-object v3, Llka;->Y:[Lika;
-
-    if-ne v2, v3, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    array-length v3, v2
-
-    add-int/lit8 v4, v3, 0x1
-
-    new-array v4, v4, [Lika;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    aput-object v1, v4, v3
-
-    :cond_4
-    invoke-virtual {p1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_0
 
-    :goto_3
-    iget-boolean p1, v1, Lika;->d:Z
+    move v3, v1
 
-    if-eqz p1, :cond_5
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Llka;->a(Lika;)V
+    :cond_0
+    move v3, v2
 
-    return-void
+    :goto_0
+    :try_start_0
+    invoke-static {p0}, Lcka;->a(Landroid/net/ConnectivityManager;)Landroid/net/Network;
 
-    :cond_5
-    iget-object p1, v0, Llka;->a:Lkka;
+    move-result-object v4
 
-    invoke-interface {p1, v1}, Lkka;->d(Lika;)V
+    invoke-static {p0, v4}, Lbka;->a(Landroid/net/ConnectivityManager;Landroid/net/Network;)Landroid/net/NetworkCapabilities;
 
-    return-void
+    move-result-object v4
 
-    :cond_6
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    if-eqz v4, :cond_1
 
-    move-result-object v3
+    const/16 v5, 0x10
 
-    if-eq v3, v2, :cond_4
+    invoke-static {v4, v5}, Lbka;->b(Landroid/net/NetworkCapabilities;I)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v4
 
     goto :goto_2
+
+    :cond_1
+    :goto_1
+    move v4, v2
+
+    goto :goto_3
+
+    :goto_2
+    invoke-static {}, Lkgi;->g()Lkgi;
+
+    move-result-object v5
+
+    sget-object v6, Lmka;->a:Ljava/lang/String;
+
+    const-string v7, "Unable to validate active network"
+
+    invoke-virtual {v5, v6, v7, v4}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :goto_3
+    invoke-virtual {p0}, Landroid/net/ConnectivityManager;->isActiveNetworkMetered()Z
+
+    move-result p0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isRoaming()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    move v1, v2
+
+    :goto_4
+    new-instance v0, Lkka;
+
+    invoke-direct {v0, v3, v4, p0, v1}, Lkka;-><init>(ZZZZ)V
+
+    return-object v0
 .end method

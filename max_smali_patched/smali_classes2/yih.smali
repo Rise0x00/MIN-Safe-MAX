@@ -1,243 +1,192 @@
 .class public final Lyih;
-.super Ljava/lang/Object;
+.super Lgl0;
 .source "SourceFile"
-
-# interfaces
-.implements Lgq7;
 
 
 # instance fields
-.field public final a:Lvq7;
+.field public final c:Lpea;
 
-.field public final b:Lru7;
+.field public final d:Landroid/graphics/Paint;
 
-.field public final c:Ljava/util/Set;
-
-.field public final d:Lfv0;
-
-.field public e:Lo4h;
+.field public final e:Landroid/graphics/Matrix;
 
 
 # direct methods
-.method public constructor <init>(Lvq7;Lru7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyih;->a:Lvq7;
+    new-instance v0, Lpea;
 
-    iput-object p2, p0, Lyih;->b:Lru7;
+    const/4 v1, 0x1
 
-    const-string p1, "unsupported_method_handler"
+    invoke-direct {v0, v1}, Lpea;-><init>(I)V
 
-    invoke-static {p1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+    iput-object v0, p0, Lyih;->c:Lpea;
 
-    move-result-object p1
+    new-instance v0, Landroid/graphics/Paint;
 
-    iput-object p1, p0, Lyih;->c:Ljava/util/Set;
+    invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    const/4 p1, 0x0
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    const/4 p2, 0x7
+    new-instance v1, Landroid/graphics/PorterDuffXfermode;
 
-    invoke-static {p1, p1, p2}, Lboi;->a(III)Lfv0;
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->CLEAR:Landroid/graphics/PorterDuff$Mode;
 
-    move-result-object p1
+    invoke-direct {v1, v2}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
 
-    iput-object p1, p0, Lyih;->d:Lfv0;
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+
+    iput-object v0, p0, Lyih;->d:Landroid/graphics/Paint;
+
+    new-instance v0, Landroid/graphics/Matrix;
+
+    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+
+    iput-object v0, p0, Lyih;->e:Landroid/graphics/Matrix;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 12
+.method public final a(Landroid/graphics/Bitmap;Loac;)Lkg3;
+    .locals 7
 
-    instance-of p1, p3, Lxih;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    if-eqz p1, :cond_0
+    move-result v0
 
-    move-object p1, p3
+    const/4 v1, 0x2
 
-    check-cast p1, Lxih;
+    div-int/2addr v0, v1
 
-    iget v0, p1, Lxih;->Y:I
+    iget-object v2, p0, Lyih;->c:Lpea;
 
-    const/high16 v1, -0x80000000
+    invoke-virtual {v2, v0}, Lpea;->c(I)Ljava/lang/Object;
 
-    and-int v2, v0, v1
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    if-nez v3, :cond_0
 
-    sub-int/2addr v0, v1
+    new-instance v3, Landroid/graphics/Path;
 
-    iput v0, p1, Lxih;->Y:I
+    invoke-direct {v3}, Landroid/graphics/Path;-><init>()V
 
-    goto :goto_0
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    int-to-float v1, v1
+
+    div-float/2addr v4, v1
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    div-float/2addr v5, v1
+
+    int-to-float v1, v0
+
+    sget-object v6, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+
+    invoke-virtual {v3, v4, v5, v1, v6}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
+
+    sget-object v1, Landroid/graphics/Path$FillType;->INVERSE_WINDING:Landroid/graphics/Path$FillType;
+
+    invoke-virtual {v3, v1}, Landroid/graphics/Path;->setFillType(Landroid/graphics/Path$FillType;)V
+
+    invoke-virtual {v2, v0}, Lpea;->a(I)I
+
+    move-result v1
+
+    iget-object v4, v2, Lpea;->b:[I
+
+    aput v0, v4, v1
+
+    iget-object v0, v2, Lpea;->c:[Ljava/lang/Object;
+
+    aput-object v3, v0, v1
 
     :cond_0
-    new-instance p1, Lxih;
+    check-cast v3, Landroid/graphics/Path;
 
-    check-cast p3, Lp14;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
-    invoke-direct {p1, p0, p3}, Lxih;-><init>(Lyih;Lp14;)V
+    move-result v0
 
-    :goto_0
-    iget-object p3, p1, Lxih;->o:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
-    iget v0, p1, Lxih;->Y:I
+    move-result v1
 
-    const/4 v1, 0x1
+    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    if-eqz v0, :cond_2
-
-    if-ne v0, v1, :cond_1
-
-    iget-object p1, p1, Lxih;->d:Lyih;
-
-    invoke-static {p3}, Lgxi;->b(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    invoke-static {p3}, Lgxi;->b(Ljava/lang/Object;)V
-
-    sget-object p3, Lldg;->Companion:Lkdg;
-
-    invoke-virtual {p3}, Lkdg;->serializer()Lfs7;
-
-    move-result-object p3
-
-    iget-object v0, p0, Lyih;->a:Lvq7;
-
-    invoke-virtual {v0, p3, p2}, Liq7;->a(Lfs7;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {p2, v0, v1, v2}, Loac;->c(IILandroid/graphics/Bitmap$Config;)Lkg3;
 
     move-result-object p2
 
-    check-cast p2, Lldg;
+    :try_start_0
+    new-instance v0, Landroid/graphics/Canvas;
 
-    new-instance p3, Lle5;
+    invoke-virtual {p2}, Lkg3;->p0()Ljava/lang/Object;
 
-    iget-object p2, p2, Lldg;->a:Ljava/lang/String;
+    move-result-object v1
 
-    new-instance v2, Lke5;
+    check-cast v1, Landroid/graphics/Bitmap;
 
-    const-string v3, "client.unsupported_method.unsupported_method"
+    invoke-direct {v0, v1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    invoke-direct {v2, v3}, Lke5;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lyih;->e:Landroid/graphics/Matrix;
 
-    invoke-direct {p3, p2, v2}, Lle5;-><init>(Ljava/lang/String;Lke5;)V
+    const/4 v2, 0x0
 
-    new-instance p2, Lvp7;
+    invoke-virtual {v0, p1, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    sget-object v2, Lle5;->Companion:Lhe5;
+    iget-object p1, p0, Lyih;->d:Landroid/graphics/Paint;
 
-    invoke-virtual {v2}, Lhe5;->serializer()Lfs7;
+    invoke-virtual {v0, v3, p1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    move-result-object v2
-
-    invoke-virtual {v0, v2, p3}, Liq7;->b(Lfs7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p3
-
-    const-string v0, "unsupported_method"
-
-    invoke-direct {p2, v0, p3}, Lvp7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object p0, p1, Lxih;->d:Lyih;
-
-    iput v1, p1, Lxih;->Y:I
-
-    iget-object p3, p0, Lyih;->d:Lfv0;
-
-    invoke-interface {p3, p2, p1}, Lb2e;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p2}, Lkg3;->l()Lkg3;
 
     move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sget-object p2, Lh54;->a:Lh54;
-
-    if-ne p1, p2, :cond_3
-
-    return-object p2
-
-    :cond_3
-    move-object p1, p0
-
-    :goto_1
-    iget-object p2, p1, Lyih;->e:Lo4h;
-
-    if-eqz p2, :cond_4
-
-    iget-object p1, p1, Lyih;->b:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v2, p1
-
-    check-cast v2, La8h;
-
-    iget-wide v4, p2, Lo4h;->a:J
-
-    iget-object v6, p2, Lo4h;->b:Ljava/lang/String;
-
-    new-instance v9, Ljava/lang/Integer;
-
-    const/4 p1, 0x0
-
-    invoke-direct {v9, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    new-instance v10, Ljava/lang/Integer;
-
-    invoke-direct {v10, v1}, Ljava/lang/Integer;-><init>(I)V
-
-    const/16 v11, 0x80
-
-    const-string v3, "unsupported_method"
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x1
-
-    invoke-static/range {v2 .. v11}, La8h;->a(La8h;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
-
-    :cond_4
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {p2}, Lkg3;->close()V
 
     return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    throw p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {p2, p1}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v0
 .end method
 
-.method public final b()Lfv0;
-    .locals 1
+.method public final b()Lb01;
+    .locals 2
 
-    iget-object v0, p0, Lyih;->d:Lfv0;
+    new-instance v0, Lddf;
+
+    const-string v1, "CropOutOfCirclePostProcessor"
+
+    invoke-direct {v0, v1}, Lddf;-><init>(Ljava/lang/String;)V
 
     return-object v0
-.end method
-
-.method public final c()Ljava/util/Set;
-    .locals 1
-
-    iget-object v0, p0, Lyih;->c:Ljava/util/Set;
-
-    return-object v0
-.end method
-
-.method public final d(Lo4h;)V
-    .locals 0
-
-    iput-object p1, p0, Lyih;->e:Lo4h;
-
-    return-void
 .end method

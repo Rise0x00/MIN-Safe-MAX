@@ -1,72 +1,99 @@
 .class public final Lra3;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/chats/tab/ChatsTabWidget;
 
-.field public final synthetic b:Lsa3;
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic d:Ljava/lang/Runnable;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsa3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
     .locals 0
 
-    iput p4, p0, Lra3;->a:I
+    iput-object p2, p0, Lra3;->X:Lone/me/chats/tab/ChatsTabWidget;
 
-    iput-object p1, p0, Lra3;->b:Lsa3;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lra3;->c:Landroid/graphics/drawable/Drawable;
-
-    iput-object p3, p0, Lra3;->d:Ljava/lang/Runnable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lra3;->a:I
+    check-cast p1, Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lra3;->c:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1, p2}, Lra3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lra3;->d:Ljava/lang/Runnable;
+    move-result-object p1
 
-    iget-object v2, p0, Lra3;->b:Lsa3;
+    check-cast p1, Lra3;
 
-    invoke-static {v2, v0, v1}, Lsa3;->D(Lsa3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-void
+    invoke-virtual {p1, p2}, Lra3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object v0, p0, Lra3;->c:Landroid/graphics/drawable/Drawable;
+    return-object p2
+.end method
 
-    iget-object v1, p0, Lra3;->d:Ljava/lang/Runnable;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v2, p0, Lra3;->b:Lsa3;
+    new-instance v0, Lra3;
 
-    invoke-static {v2, v0, v1}, Lsa3;->D(Lsa3;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    iget-object v1, p0, Lra3;->X:Lone/me/chats/tab/ChatsTabWidget;
 
-    return-void
+    invoke-direct {v0, p2, v1}, Lra3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
-    nop
+    iput-object p1, v0, Lra3;->o:Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lra3;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lra3;->X:Lone/me/chats/tab/ChatsTabWidget;
+
+    iget-object v1, p1, Lone/me/chats/tab/ChatsTabWidget;->D0:Lwh6;
+
+    invoke-virtual {v1, v0}, Lwh6;->B(Ljava/util/List;)V
+
+    invoke-virtual {p1}, Lone/me/chats/tab/ChatsTabWidget;->B0()Lxg6;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lxg6;->N(Ljava/util/List;)V
+
+    iget-object v0, p1, Lone/me/chats/tab/ChatsTabWidget;->c:Ly74;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Ly74;->dismiss()V
+
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p1, Lone/me/chats/tab/ChatsTabWidget;->c:Ly74;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

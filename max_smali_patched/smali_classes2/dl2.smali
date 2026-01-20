@@ -1,96 +1,108 @@
 .class public final Ldl2;
-.super Logf;
+.super Lqn2;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
-
-# instance fields
-.field public final synthetic o:Ltl2;
-
-
-# direct methods
-.method public constructor <init>(Ltl2;Lkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public final D(Lof9;Lnq6;Lbr6;)V
     .locals 0
 
-    iput-object p1, p0, Ldl2;->o:Ltl2;
+    check-cast p1, Llf9;
 
-    const/4 p1, 0x2
+    invoke-virtual {p0, p1}, Ldl2;->F(Llf9;)V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-super {p0, p1, p2, p3}, Lqn2;->D(Lof9;Lnq6;Lbr6;)V
 
     return-void
 .end method
 
+.method public final F(Llf9;)V
+    .locals 8
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
+
+    check-cast v0, Lon2;
+
+    iget-wide v1, p1, Llf9;->a:J
+
+    long-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    iget-object v1, p1, Llf9;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lon2;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p1, Llf9;->Y:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Lon2;->setLink(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p1, Llf9;->X:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Lon2;->setSubtitle(Ljava/lang/CharSequence;)V
+
+    iget-boolean v1, p1, Llf9;->Z:Z
+
+    if-eqz v1, :cond_0
+
+    iget-object p1, v0, Lon2;->K0:Lj4b;
+
+    const/4 v1, 0x0
+
+    iput-object v1, p1, Lj4b;->L0:Ljava/util/List;
+
+    iget-object p1, p1, Lj4b;->b:Lo85;
+
+    invoke-virtual {p1, v1}, Lo85;->i(Lk85;)V
+
+    iget-object v2, v0, Lon2;->K0:Lj4b;
+
+    iget-object p1, v0, Lon2;->G0:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v3, p1
+
+    check-cast v3, Landroid/graphics/drawable/Drawable;
+
+    new-instance v5, Lbh1;
+
+    const/16 p1, 0x13
+
+    invoke-direct {v5, p1}, Lbh1;-><init>(I)V
+
+    new-instance v6, Lbh1;
+
+    const/16 p1, 0x14
+
+    invoke-direct {v6, p1}, Lbh1;-><init>(I)V
+
+    const/4 v7, 0x6
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v2 .. v7}, Lj4b;->q(Lj4b;Landroid/graphics/drawable/Drawable;Lc4b;Lnq6;Lnq6;I)V
+
+    invoke-virtual {v0}, Lon2;->u()V
+
+    return-void
+
+    :cond_0
+    iget-object p1, p1, Llf9;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Lon2;->setLinkPhoto(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lud8;)V
     .locals 0
 
-    check-cast p1, Lg54;
+    check-cast p1, Llf9;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0, p1}, Ldl2;->F(Llf9;)V
 
-    invoke-virtual {p0, p1, p2}, Ldl2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ldl2;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ldl2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Ldl2;
-
-    iget-object v0, p0, Ldl2;->o:Ltl2;
-
-    invoke-direct {p1, v0, p2}, Ldl2;-><init>(Ltl2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Ltl2;->S0:[Les7;
-
-    iget-object p1, p0, Ldl2;->o:Ltl2;
-
-    invoke-virtual {p1}, Ltl2;->E()Lc3b;
-
-    move-result-object p1
-
-    sget v0, Lxza;->S1:I
-
-    new-instance v1, Lirf;
-
-    invoke-direct {v1, v0}, Lirf;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lc3b;->g(Lnrf;)V
-
-    new-instance v0, Lq3b;
-
-    sget v1, Lyjd;->o:I
-
-    invoke-direct {v0, v1}, Lq3b;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
-
-    invoke-virtual {p1}, Lc3b;->i()Lb3b;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method

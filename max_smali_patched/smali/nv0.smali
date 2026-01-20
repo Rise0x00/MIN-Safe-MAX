@@ -3,31 +3,33 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lnv0;
+# instance fields
+.field public a:Lnv0;
 
+.field public b:I
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public c:Ljava/util/LinkedList;
 
-    new-instance v0, Lnv0;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnv0;->a:Lnv0;
-
-    return-void
-.end method
+.field public d:Lnv0;
 
 
 # virtual methods
-.method public final a(I)I
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Landroid/os/ext/SdkExtensions;->getExtensionVersion(I)I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result p1
+    const-string v1, "LinkedEntry(key: "
 
-    return p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lnv0;->b:I
+
+    const-string v2, ")"
+
+    invoke-static {v0, v1, v2}, Lj27;->k(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

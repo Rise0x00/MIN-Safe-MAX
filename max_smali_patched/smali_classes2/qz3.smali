@@ -2,79 +2,84 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkef;
-
 
 # instance fields
-.field public final a:Lqs3;
-
-.field public final b:Ltlf;
-
-.field public final c:Lndf;
-
-.field public final d:Ltif;
-
-.field public final e:Lm76;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lud2;Lqs3;Ltlf;Lowd;Lgya;Lqxb;Lxxb;Lru7;Lru7;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lqz3;->a:Lqs3;
-
-    iput-object p3, p0, Lqz3;->b:Ltlf;
-
-    new-instance p2, Lndf;
-
-    invoke-direct {p2, p1}, Lndf;-><init>(Ljava/lang/Object;)V
-
-    iput-object p2, p0, Lqz3;->c:Lndf;
-
-    new-instance p1, Li33;
-
-    const/4 p2, 0x3
-
-    invoke-direct {p1, p0, p2, p8}, Li33;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p2, Ltif;
-
-    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
-
-    iput-object p2, p0, Lqz3;->d:Ltif;
-
-    new-instance p3, Lm76;
-
-    move-object p1, p5
-
-    new-instance p5, Luoe;
-
-    const/4 p2, 0x3
-
-    invoke-direct {p5, p4, p2, p1}, Luoe;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    move-object p8, p9
-
-    new-instance p9, Lg52;
-
-    const/16 p1, 0x17
-
-    invoke-direct {p9, p1, p0}, Lg52;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct/range {p3 .. p9}, Lm76;-><init>(Lowd;Luoe;Lqxb;Lxxb;Lru7;Lkdf;)V
-
-    iput-object p3, p0, Lqz3;->e:Lm76;
+    iput-object p1, p0, Lqz3;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final clear()V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lqz3;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lqz3;
+
+    iget-object v0, p0, Lqz3;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lqz3;->a:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqz3;->a:Ljava/lang/String;
+
+    invoke-static {v0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "MenuButton{text=\'"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqz3;->a:Ljava/lang/String;
+
+    const-string v2, "\'}"
+
+    invoke-static {v0, v1, v2}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

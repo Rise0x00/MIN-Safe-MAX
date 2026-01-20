@@ -1,153 +1,98 @@
-.class public final Lto2;
-.super Logf;
+.class public final synthetic Lto2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lwo2;
+.field public final synthetic a:I
 
-.field public final synthetic o:Ljava/util/Set;
+.field public final synthetic b:Luo2;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;Lwo2;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Luo2;I)V
     .locals 0
 
-    iput-object p1, p0, Lto2;->o:Ljava/util/Set;
+    iput p2, p0, Lto2;->a:I
 
-    iput-object p2, p0, Lto2;->X:Lwo2;
+    iput-object p1, p0, Lto2;->b:Luo2;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Lg54;
+    iget v0, p0, Lto2;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lto2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lto2;->b:Luo2;
 
-    move-result-object p1
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    check-cast p1, Lto2;
+    invoke-virtual {v1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result-object v0
 
-    invoke-virtual {p1, p2}, Lto2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Lzlb;->b()Lxf0;
 
-    return-object p2
-.end method
+    move-result-object v0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object v0, v0, Lxf0;->a:Lwf0;
 
-    new-instance p1, Lto2;
+    iget v0, v0, Lwf0;->h:I
 
-    iget-object v0, p0, Lto2;->o:Ljava/util/Set;
+    new-instance v1, Landroid/graphics/drawable/ColorDrawable;
 
-    iget-object v1, p0, Lto2;->X:Lwo2;
+    invoke-direct {v1, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-direct {p1, v0, v1, p2}, Lto2;-><init>(Ljava/util/Set;Lwo2;Lkotlin/coroutines/Continuation;)V
+    return-object v1
 
-    return-object p1
-.end method
+    :pswitch_0
+    sget v0, Lv5e;->Z:I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v2, p0, Lto2;->b:Luo2;
 
-    iget-object p1, p0, Lto2;->X:Lwo2;
+    invoke-virtual {v1, v2}, Lkme;->p(Landroid/view/View;)Lzlb;
 
-    iget-object v0, p1, Lwo2;->w0:Laf5;
+    move-result-object v1
 
-    new-instance v5, Lca2;
+    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
 
-    const/4 v1, 0x3
+    move-result-object v1
 
-    invoke-direct {v5, v1, p1}, Lca2;-><init>(ILjava/lang/Object;)V
+    iget v1, v1, Lwe7;->h:I
 
-    const/16 v6, 0x1e
-
-    iget-object v1, p0, Lto2;->o:Ljava/util/Set;
-
-    const-string v2, ", "
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-static/range {v1 .. v6}, Lab3;->H(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lqi6;I)Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget p1, p1, Lwo2;->v0:I
+    invoke-static {v2, v0}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    invoke-static {p1}, Lnx1;->v(I)I
+    move-result-object v0
 
-    move-result p1
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
-    if-eqz p1, :cond_1
+    move-result-object v0
 
-    const/4 v3, 0x1
+    invoke-static {v0, v1}, Lpti;->f(Landroid/graphics/drawable/Drawable;I)V
 
-    if-ne p1, v3, :cond_0
+    return-object v0
 
-    sget p1, Lxza;->h2:I
+    nop
 
-    new-instance v3, Lirf;
-
-    invoke-direct {v3, p1}, Lirf;-><init>(I)V
-
-    new-instance p1, Lmrf;
-
-    invoke-direct {p1, v2}, Lmrf;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-static {v1, v3, p1}, Ljvi;->b(Ljava/util/Collection;Lnrf;Lmrf;)Lb9c;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    sget p1, Lxza;->g2:I
-
-    new-instance v3, Lirf;
-
-    invoke-direct {v3, p1}, Lirf;-><init>(I)V
-
-    new-instance p1, Lmrf;
-
-    invoke-direct {p1, v2}, Lmrf;-><init>(Ljava/lang/CharSequence;)V
-
-    invoke-static {v1, v3, p1}, Ljvi;->a(Ljava/util/Collection;Lnrf;Lmrf;)Lb9c;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

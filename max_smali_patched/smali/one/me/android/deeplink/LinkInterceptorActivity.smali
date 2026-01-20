@@ -1,5 +1,5 @@
 .class public final Lone/me/android/deeplink/LinkInterceptorActivity;
-.super Lsn;
+.super Lon;
 .source "SourceFile"
 
 
@@ -10,30 +10,26 @@
     }
     d2 = {
         "Lone/me/android/deeplink/LinkInterceptorActivity;",
-        "Lsn;",
+        "Lon;",
         "<init>",
         "()V",
-        "oneme_playGoogleRelease"
+        "oneme_googleRelease"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
 .end annotation
 
 
-# static fields
-.field public static final synthetic J0:I
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lsn;-><init>()V
+    invoke-direct {p0}, Lon;-><init>()V
 
     return-void
 .end method
@@ -49,11 +45,11 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lipd;->a(Ljava/lang/String;)Lfc1;
+    invoke-static {v0}, Lyna;->b(Ljava/lang/String;)Ldf1;
 
     move-result-object v0
 
-    sget-object v1, Lec1;->a:Lec1;
+    sget-object v1, Lcf1;->a:Lcf1;
 
     invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -98,21 +94,21 @@
 .end method
 
 .method public final onCreate(Landroid/os/Bundle;)V
-    .locals 10
+    .locals 9
 
-    sget-object v0, La98;->d:La98;
+    sget-object v1, Lkk8;->d:Lkk8;
 
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x22
 
     const/4 v3, 0x0
 
-    if-lt v1, v2, :cond_0
+    if-lt v0, v2, :cond_0
 
-    invoke-static {p0}, Lop0;->l(Lone/me/android/deeplink/LinkInterceptorActivity;)V
+    invoke-static {p0}, Lpq0;->l(Lone/me/android/deeplink/LinkInterceptorActivity;)V
 
-    invoke-static {p0}, Lop0;->r(Lone/me/android/deeplink/LinkInterceptorActivity;)V
+    invoke-static {p0}, Lpq0;->r(Lone/me/android/deeplink/LinkInterceptorActivity;)V
 
     goto :goto_0
 
@@ -122,353 +118,354 @@
     :goto_0
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
-    move-result-object v1
+    move-result-object v0
 
     const/high16 v2, 0x4000000
 
-    invoke-virtual {v1, v2}, Landroid/view/Window;->clearFlags(I)V
+    invoke-virtual {v0, v2}, Landroid/view/Window;->clearFlags(I)V
 
     const/high16 v2, -0x80000000
 
-    invoke-virtual {v1, v2}, Landroid/view/Window;->addFlags(I)V
+    invoke-virtual {v0, v2}, Landroid/view/Window;->addFlags(I)V
 
-    invoke-virtual {v1, v3}, Landroid/view/Window;->setStatusBarColor(I)V
+    invoke-virtual {v0, v3}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/view/View;->getSystemUiVisibility()I
+    invoke-virtual {v0}, Landroid/view/View;->getSystemUiVisibility()I
 
     move-result v2
 
     or-int/lit16 v2, v2, 0x2000
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->setSystemUiVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setSystemUiVisibility(I)V
 
     invoke-super {p0, p1}, Landroidx/fragment/app/b;->onCreate(Landroid/os/Bundle;)V
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {p0, v1}, Lone/me/android/deeplink/LinkInterceptorActivity;->F(Landroid/content/Intent;)Z
+    invoke-virtual {p0, v0}, Lone/me/android/deeplink/LinkInterceptorActivity;->F(Landroid/content/Intent;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
     return-void
 
     :cond_1
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v2, "link:result"
+    sget-object v0, Lc5j;->a:Ledb;
 
-    const/4 v4, 0x0
+    const-string v4, "LinkInterceptorActivity"
 
-    if-nez v1, :cond_2
+    const/4 v5, 0x0
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    const/16 p1, 0xe
-
-    invoke-static {p0, v4, v4, v4, p1}, Luea;->i(Lsn;Landroid/net/Uri;Lb4b;Lma;I)V
-
-    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
-
-    return-void
-
-    :cond_2
-    sget-object v5, Lcuh;->b:Lnxa;
-
-    const-string v6, "LinkInterceptorActivity"
-
-    if-nez v5, :cond_3
+    if-nez v0, :cond_2
 
     goto :goto_1
 
+    :cond_2
+    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    const-string v6, "before MyTracker.handleDeeplink uri: "
+
+    invoke-static {v2, v6}, Lmrf;->i(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v1, v4, v6, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     :cond_3
-    invoke-virtual {v5, v0}, Lnxa;->b(La98;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    const-string v7, "before MyTracker.handleDeeplink uri: "
-
-    invoke-static {v1, v7}, Lsfd;->h(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v5, v0, v6, v7, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_4
     :goto_1
-    sget-object v5, Lt3a;->a:Lt3a;
+    sget-object v0, Laia;->a:Laia;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v5
+    move-result-object v0
 
     :try_start_0
-    invoke-static {v5}, Lcom/my/tracker/MyTracker;->handleDeeplink(Landroid/content/Intent;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/my/tracker/MyTracker;->handleDeeplink(Landroid/content/Intent;)Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v0
 
-    if-eqz v5, :cond_5
+    if-eqz v0, :cond_4
 
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    move-result v7
+    move-result v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v7, :cond_6
+    if-nez v6, :cond_5
 
-    :cond_5
+    :cond_4
     :goto_2
-    move-object v5, v4
+    move-object v0, v5
 
     goto :goto_3
 
     :catchall_0
-    move-exception v5
+    move-exception v0
 
-    const-string v7, "MyTracker"
+    const-string v6, "MyTracker"
 
-    const-string v8, "fail to handle deep link"
+    const-string v7, "fail to handle deep link"
 
-    invoke-static {v7, v8, v5}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v6, v7, v0}, Lc5j;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    :cond_6
+    :cond_5
     :goto_3
-    sget-object v7, Lcuh;->b:Lnxa;
+    sget-object v6, Lc5j;->a:Ledb;
 
-    if-nez v7, :cond_7
+    if-nez v6, :cond_6
 
     goto :goto_4
 
-    :cond_7
-    invoke-virtual {v7, v0}, Lnxa;->b(La98;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_8
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "after MyTracker.handleDeeplink: "
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v7, v0, v6, v8, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_8
-    :goto_4
-    if-eqz v5, :cond_f
-
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    goto :goto_7
-
-    :cond_9
-    invoke-static {v5}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_e
-
-    invoke-interface {v7}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_a
-
-    goto :goto_6
-
-    :cond_a
-    invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
-
-    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    :cond_b
-    :goto_5
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_c
-
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/String;
-
-    const-string v9, "mt_"
-
-    invoke-static {v8, v9, v3}, Lfbf;->u(Ljava/lang/String;Ljava/lang/String;Z)Z
-
-    move-result v9
-
-    if-nez v9, :cond_b
-
-    invoke-virtual {v0, v8}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v5, v8, v9}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    goto :goto_5
-
-    :cond_c
-    invoke-virtual {v5}, Landroid/net/Uri$Builder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    sget-object v0, Lcuh;->b:Lnxa;
-
-    if-nez v0, :cond_d
-
-    goto :goto_7
-
-    :cond_d
-    sget-object v3, La98;->X:La98;
-
-    invoke-virtual {v0, v3}, Lnxa;->b(La98;)Z
+    :cond_6
+    invoke-virtual {v6, v1}, Ledb;->b(Lkk8;)Z
 
     move-result v7
 
-    if-eqz v7, :cond_f
+    if-eqz v7, :cond_7
 
     new-instance v7, Ljava/lang/StringBuilder;
 
-    const-string v8, "after clear myTrackerLink: "
+    const-string v8, "after MyTracker.handleDeeplink: "
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v0, v3, v6, v7, v4}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v6, v1, v4, v7, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_7
+    :goto_4
+    if-eqz v0, :cond_e
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_8
 
     goto :goto_7
 
-    :cond_e
-    :goto_6
-    const-string v0, "don\'t need clear myTrackerLink"
+    :cond_8
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-static {v6, v0}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v1
 
-    :cond_f
-    :goto_7
-    invoke-static {p0}, Lxni;->a(Landroid/content/Context;)Lm62;
+    invoke-virtual {v1}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_d
+
+    invoke-interface {v6}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_9
+
+    goto :goto_6
+
+    :cond_9
+    invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    sget v3, Lzmc;->root:I
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setId(I)V
+    invoke-interface {v6}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p0, v0}, Lsn;->setContentView(Landroid/view/View;)V
+    move-result-object v6
 
-    invoke-static {p0, v0, p1}, Liui;->a(Lsn;Lm62;Landroid/os/Bundle;)Lyid;
+    :cond_a
+    :goto_5
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_b
+
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    const-string v8, "mt_"
+
+    invoke-static {v7, v8, v3}, Lzzf;->t(Ljava/lang/String;Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    if-nez v8, :cond_a
+
+    invoke-virtual {v1, v7}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v0, v7, v8}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    goto :goto_5
+
+    :cond_b
+    invoke-virtual {v0}, Landroid/net/Uri$Builder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_c
+
+    goto :goto_7
+
+    :cond_c
+    sget-object v3, Lkk8;->X:Lkk8;
+
+    invoke-virtual {v1, v3}, Ledb;->b(Lkk8;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_e
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "after clear myTrackerLink: "
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v3, v4, v6, v5}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_7
+
+    :cond_d
+    :goto_6
+    const-string v1, "don\'t need clear myTrackerLink"
+
+    invoke-static {v4, v1}, Lc5j;->t(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_e
+    :goto_7
+    if-eqz v2, :cond_12
+
+    if-eqz v0, :cond_12
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_f
+
+    goto :goto_9
+
+    :cond_f
+    invoke-static {p0}, Ls18;->a(Landroid/content/Context;)Lda2;
+
+    move-result-object v1
+
+    sget v3, Lv7d;->root:I
+
+    invoke-virtual {v1, v3}, Landroid/view/View;->setId(I)V
+
+    invoke-virtual {p0, v1}, Lon;->setContentView(Landroid/view/View;)V
+
+    invoke-static {p0, v1, p1}, Lmjj;->a(Lon;Lda2;Landroid/os/Bundle;)Lw4e;
 
     move-result-object p1
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    iput v0, p1, Lyid;->e:I
+    iput v1, p1, Lw4e;->e:I
 
-    invoke-virtual {p1, v0}, Lyid;->R(Z)V
+    invoke-virtual {p1, v1}, Lw4e;->R(Z)V
 
-    invoke-virtual {p1}, Lyid;->n()Z
+    invoke-virtual {p1}, Lw4e;->n()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_12
+    if-nez v1, :cond_11
 
-    new-instance v0, Lone/me/android/deeplink/LinkInterceptorWidget;
+    new-instance v1, Lone/me/android/deeplink/LinkInterceptorWidget;
 
-    if-eqz v5, :cond_11
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-static {v5}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    move-result-object v0
 
-    move-result-object v3
-
-    if-nez v3, :cond_10
+    if-nez v0, :cond_10
 
     goto :goto_8
 
     :cond_10
-    move-object v1, v3
+    move-object v2, v0
 
-    :cond_11
     :goto_8
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    const/4 v0, 0x2
 
-    move-result-object v3
+    invoke-direct {v1, v2, v5, v0, v5}, Lone/me/android/deeplink/LinkInterceptorWidget;-><init>(Landroid/net/Uri;Lxa8;ILso4;)V
 
-    invoke-virtual {v3, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v2
-
-    check-cast v2, Lsz7;
-
-    invoke-direct {v0, v1, v2}, Lone/me/android/deeplink/LinkInterceptorWidget;-><init>(Landroid/net/Uri;Lsz7;)V
-
-    invoke-static {v0, v4, v4}, Lmxi;->a(Lc24;Lnh;Lnh;)Lbjd;
+    invoke-static {v1, v5, v5}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
 
     move-result-object v0
 
     const-string v1, "link"
 
-    invoke-virtual {v0, v1}, Lbjd;->d(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lz4e;->e(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lyid;->S(Lbjd;)V
+    invoke-virtual {p1, v0}, Lw4e;->S(Lz4e;)V
+
+    :cond_11
+    invoke-virtual {p1}, Lw4e;->J()V
+
+    return-void
 
     :cond_12
-    invoke-virtual {p1}, Lyid;->J()V
+    :goto_9
+    sget p1, Lone/me/android/MainActivity;->e1:I
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0x1e
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move-object v1, p0
+
+    invoke-static/range {v1 .. v6}, Lrc5;->w(Lon;Landroid/net/Uri;Landroid/net/Uri;Ldkb;Lir7;I)V
+
+    invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 
     return-void
 .end method
@@ -476,7 +473,7 @@
 .method public final onNewIntent(Landroid/content/Intent;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lrh3;->onNewIntent(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Lfp3;->onNewIntent(Landroid/content/Intent;)V
 
     invoke-virtual {p0, p1}, Lone/me/android/deeplink/LinkInterceptorActivity;->F(Landroid/content/Intent;)Z
 

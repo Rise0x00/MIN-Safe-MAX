@@ -1,72 +1,80 @@
-.class public final synthetic Ldgf;
-.super Ljava/lang/Object;
+.class public final Ldgf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Legf;
 
-.field public final synthetic b:Lorg/webrtc/SurfaceTextureHelper;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/SurfaceTextureHelper;I)V
+.method public constructor <init>(Legf;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ldgf;->a:I
+    iput-object p1, p0, Ldgf;->X:Legf;
 
-    iput-object p1, p0, Ldgf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lk00;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldgf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Ldgf;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Ldgf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Ldgf;
+
+    iget-object v1, p0, Ldgf;->X:Legf;
+
+    invoke-direct {v0, v1, p2}, Ldgf;-><init>(Legf;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ldgf;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ldgf;->a:I
+    iget-object v0, p0, Ldgf;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lk00;
 
-    iget-object v0, p0, Ldgf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->g(Lorg/webrtc/SurfaceTextureHelper;)V
+    iget-object p1, p0, Ldgf;->X:Legf;
 
-    return-void
+    invoke-static {p1, v0}, Legf;->y(Legf;Lk00;)V
 
-    :pswitch_0
-    iget-object v0, p0, Ldgf;->b:Lorg/webrtc/SurfaceTextureHelper;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->a(Lorg/webrtc/SurfaceTextureHelper;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ldgf;->b:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->b(Lorg/webrtc/SurfaceTextureHelper;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Ldgf;->b:Lorg/webrtc/SurfaceTextureHelper;
-
-    invoke-static {v0}, Lorg/webrtc/SurfaceTextureHelper;->c(Lorg/webrtc/SurfaceTextureHelper;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

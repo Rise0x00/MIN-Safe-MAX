@@ -1,348 +1,333 @@
-.class public abstract Ldz8;
-.super Ljava/lang/Object;
+.class public final Ldz8;
+.super Landroid/media/browse/MediaBrowser$ConnectionCallback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final synthetic a:Lbg8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lbg8;)V
+    .locals 0
 
-    sget v0, Lqkc;->mr_dynamic_dialog_icon_light:I
+    iput-object p1, p0, Ldz8;->a:Lbg8;
 
-    sput v0, Ldz8;->a:I
+    invoke-direct {p0}, Landroid/media/browse/MediaBrowser$ConnectionCallback;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Z)Landroid/view/ContextThemeWrapper;
-    .locals 1
 
-    if-nez p1, :cond_0
+# virtual methods
+.method public final onConnected()V
+    .locals 12
 
-    sget p1, Likc;->dialogTheme:I
+    iget-object v0, p0, Ldz8;->a:Lbg8;
 
-    goto :goto_0
+    iget-object v1, v0, Lbg8;->b:Ljava/lang/Object;
 
-    :cond_0
-    sget p1, Likc;->alertDialogTheme:I
-
-    :goto_0
-    invoke-static {p0, p1}, Ldz8;->g(Landroid/content/Context;I)I
-
-    move-result p1
-
-    new-instance v0, Landroid/view/ContextThemeWrapper;
-
-    invoke-direct {v0, p0, p1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
-
-    sget p0, Ldkc;->mediaRouteTheme:I
-
-    invoke-static {v0, p0}, Ldz8;->g(Landroid/content/Context;I)I
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    new-instance p0, Landroid/view/ContextThemeWrapper;
-
-    invoke-static {v0}, Ldz8;->e(Landroid/content/Context;)I
-
-    move-result p1
-
-    invoke-direct {p0, v0, p1}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
-
-    return-object p0
-
-    :cond_1
-    return-object v0
-.end method
-
-.method public static b(Landroid/content/Context;)I
-    .locals 5
-
-    sget v0, Likc;->colorPrimary:I
-
-    invoke-static {p0, v0}, Ldz8;->f(Landroid/content/Context;I)I
-
-    move-result p0
-
-    const/4 v0, -0x1
-
-    invoke-static {v0, p0}, Lwb3;->d(II)D
-
-    move-result-wide v1
-
-    const-wide/high16 v3, 0x4008000000000000L    # 3.0
-
-    cmpl-double p0, v1, v3
-
-    if-ltz p0, :cond_0
-
-    return v0
-
-    :cond_0
-    const/high16 p0, -0x22000000
-
-    return p0
-.end method
-
-.method public static c(Landroid/content/Context;)F
-    .locals 3
-
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object p0
-
-    const v1, 0x1010033
+    check-cast v1, Lez8;
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+    const/4 v3, 0x0
 
-    move-result p0
+    if-eqz v1, :cond_4
 
-    if-eqz p0, :cond_0
+    const-string v4, "MediaBrowserCompat"
 
-    invoke-virtual {v0}, Landroid/util/TypedValue;->getFloat()F
+    iget-object v5, v1, Lez8;->d:Lcz8;
 
-    move-result p0
+    iget-object v6, v1, Lez8;->b:Landroid/media/browse/MediaBrowser;
 
-    return p0
+    :try_start_0
+    invoke-virtual {v6}, Landroid/media/browse/MediaBrowser;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v7
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
+
+    if-nez v7, :cond_0
+
+    goto/16 :goto_2
 
     :cond_0
-    const/high16 p0, 0x3f000000    # 0.5f
+    const-string v8, "extra_service_version"
 
-    return p0
+    const/4 v9, 0x0
+
+    invoke-virtual {v7, v8, v9}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    const-string v8, "extra_messenger"
+
+    invoke-virtual {v7, v8}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_1
+
+    new-instance v9, Ldgc;
+
+    iget-object v10, v1, Lez8;->c:Landroid/os/Bundle;
+
+    invoke-direct {v9, v8, v10}, Ldgc;-><init>(Landroid/os/IBinder;Landroid/os/Bundle;)V
+
+    iput-object v9, v1, Lez8;->f:Ldgc;
+
+    new-instance v8, Landroid/os/Messenger;
+
+    invoke-direct {v8, v5}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
+
+    iput-object v8, v1, Lez8;->g:Landroid/os/Messenger;
+
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v10, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v10, v8}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v10, v5, Lcz8;->c:Ljava/lang/Object;
+
+    :try_start_1
+    iget-object v5, v1, Lez8;->a:Landroid/content/Context;
+
+    new-instance v10, Landroid/os/Bundle;
+
+    invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
+
+    const-string v11, "data_package_name"
+
+    invoke-virtual {v5}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v10, v11, v5}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, "data_calling_pid"
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v11
+
+    invoke-virtual {v10, v5, v11}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v5, "data_root_hints"
+
+    iget-object v11, v9, Ldgc;->c:Ljava/lang/Object;
+
+    check-cast v11, Landroid/os/Bundle;
+
+    invoke-virtual {v10, v5, v11}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v5
+
+    const/4 v11, 0x6
+
+    iput v11, v5, Landroid/os/Message;->what:I
+
+    iput v2, v5, Landroid/os/Message;->arg1:I
+
+    invoke-virtual {v5, v10}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iput-object v8, v5, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
+
+    iget-object v8, v9, Ldgc;->b:Ljava/lang/Object;
+
+    check-cast v8, Landroid/os/Messenger;
+
+    invoke-virtual {v8, v5}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    const-string v5, "Remote error registering client messenger."
+
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    :goto_0
+    const-string v4, "extra_session_binder"
+
+    invoke-virtual {v7, v4}, Landroid/os/Bundle;->getBinder(Ljava/lang/String;)Landroid/os/IBinder;
+
+    move-result-object v4
+
+    sget v5, Lra9;->d:I
+
+    if-nez v4, :cond_2
+
+    move-object v5, v3
+
+    goto :goto_1
+
+    :cond_2
+    const-string v5, "android.support.v4.media.session.IMediaSession"
+
+    invoke-interface {v4, v5}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_3
+
+    instance-of v7, v5, Lle7;
+
+    if-eqz v7, :cond_3
+
+    check-cast v5, Lle7;
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v5, Lje7;
+
+    invoke-direct {v5}, Ljava/lang/Object;-><init>()V
+
+    iput-object v4, v5, Lje7;->c:Landroid/os/IBinder;
+
+    :goto_1
+    if-eqz v5, :cond_4
+
+    invoke-virtual {v6}, Landroid/media/browse/MediaBrowser;->getSessionToken()Landroid/media/session/MediaSession$Token;
+
+    move-result-object v4
+
+    new-instance v6, Lya9;
+
+    invoke-direct {v6, v4, v5}, Lya9;-><init>(Landroid/media/session/MediaSession$Token;Lle7;)V
+
+    iput-object v6, v1, Lez8;->h:Lya9;
+
+    goto :goto_2
+
+    :catch_1
+    move-exception v1
+
+    const-string v5, "Unexpected IllegalStateException"
+
+    invoke-static {v4, v5, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_4
+    :goto_2
+    iget-object v0, v0, Lbg8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lk29;
+
+    iget-object v1, v0, Lk29;->j:Lgz8;
+
+    if-eqz v1, :cond_6
+
+    iget-object v1, v1, Lgz8;->a:Lez8;
+
+    iget-object v4, v1, Lez8;->h:Lya9;
+
+    if-nez v4, :cond_5
+
+    iget-object v4, v1, Lez8;->b:Landroid/media/browse/MediaBrowser;
+
+    invoke-virtual {v4}, Landroid/media/browse/MediaBrowser;->getSessionToken()Landroid/media/session/MediaSession$Token;
+
+    move-result-object v4
+
+    new-instance v5, Lya9;
+
+    invoke-direct {v5, v4, v3}, Lya9;-><init>(Landroid/media/session/MediaSession$Token;Lle7;)V
+
+    iput-object v5, v1, Lez8;->h:Lya9;
+
+    :cond_5
+    iget-object v1, v1, Lez8;->h:Lya9;
+
+    iget-object v3, v0, Lk29;->b:Li19;
+
+    new-instance v4, Lu36;
+
+    const/16 v5, 0x16
+
+    invoke-direct {v4, v0, v5, v1}, Lu36;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v3, v4}, Li19;->z(Ljava/lang/Runnable;)V
+
+    iget-object v1, v3, Li19;->o:Landroid/os/Handler;
+
+    new-instance v3, Lh29;
+
+    invoke-direct {v3, v0, v2}, Lh29;-><init>(Lk29;I)V
+
+    const-wide/16 v4, 0x1f4
+
+    invoke-virtual {v1, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    :cond_6
+    return-void
 .end method
 
-.method public static d(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+.method public final onConnectionFailed()V
     .locals 2
 
-    filled-new-array {p1}, [I
+    iget-object v0, p0, Ldz8;->a:Lbg8;
 
-    move-result-object p1
+    iget-object v1, v0, Lbg8;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, v0}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v0
-
-    invoke-static {p0, v0}, Lafi;->e(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {p0}, Ldz8;->h(Landroid/content/Context;)Z
-
-    move-result v1
+    check-cast v1, Lez8;
 
     if-eqz v1, :cond_0
 
-    sget v1, Ldz8;->a:I
-
-    invoke-static {p0, v1}, Ls04;->a(Landroid/content/Context;I)I
-
-    move-result p0
-
-    invoke-static {v0, p0}, Ly05;->g(Landroid/graphics/drawable/Drawable;I)V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :cond_0
-    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
+    iget-object v0, v0, Lbg8;->c:Ljava/lang/Object;
 
-    return-object v0
-.end method
+    check-cast v0, Lk29;
 
-.method public static e(Landroid/content/Context;)I
-    .locals 2
+    iget-object v0, v0, Lk29;->b:Li19;
 
-    invoke-static {p0}, Ldz8;->h(Landroid/content/Context;)Z
-
-    move-result v0
-
-    const/high16 v1, -0x22000000
-
-    if-eqz v0, :cond_1
-
-    invoke-static {p0}, Ldz8;->b(Landroid/content/Context;)I
-
-    move-result p0
-
-    if-ne p0, v1, :cond_0
-
-    sget p0, Lpuc;->Theme_MediaRouter_Light:I
-
-    return p0
-
-    :cond_0
-    sget p0, Lpuc;->Theme_MediaRouter_Light_DarkControlPanel:I
-
-    return p0
-
-    :cond_1
-    invoke-static {p0}, Ldz8;->b(Landroid/content/Context;)I
-
-    move-result p0
-
-    if-ne p0, v1, :cond_2
-
-    sget p0, Lpuc;->Theme_MediaRouter_LightControlPanel:I
-
-    return p0
-
-    :cond_2
-    sget p0, Lpuc;->Theme_MediaRouter:I
-
-    return p0
-.end method
-
-.method public static f(Landroid/content/Context;I)I
-    .locals 3
-
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, p1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    iget p1, v0, Landroid/util/TypedValue;->resourceId:I
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    iget p1, v0, Landroid/util/TypedValue;->resourceId:I
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    iget p0, v0, Landroid/util/TypedValue;->data:I
-
-    return p0
-.end method
-
-.method public static g(Landroid/content/Context;I)I
-    .locals 2
-
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object p0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p0, p1, v0, v1}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    iget p0, v0, Landroid/util/TypedValue;->resourceId:I
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static h(Landroid/content/Context;)Z
-    .locals 3
-
-    new-instance v0, Landroid/util/TypedValue;
-
-    invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
-
-    invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
-
-    move-result-object p0
-
-    sget v1, Likc;->isLightTheme:I
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p0, v1, v0, v2}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    iget p0, v0, Landroid/util/TypedValue;->data:I
-
-    if-eqz p0, :cond_0
-
-    return v2
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
-    .locals 1
-
-    invoke-virtual {p1}, Landroid/widget/ProgressBar;->isIndeterminate()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Li19;->w()V
 
     return-void
+.end method
+
+.method public final onConnectionSuspended()V
+    .locals 4
+
+    iget-object v0, p0, Ldz8;->a:Lbg8;
+
+    iget-object v1, v0, Lbg8;->b:Ljava/lang/Object;
+
+    check-cast v1, Lez8;
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Lez8;->f:Ldgc;
+
+    iput-object v2, v1, Lez8;->g:Landroid/os/Messenger;
+
+    iput-object v2, v1, Lez8;->h:Lya9;
+
+    iget-object v1, v1, Lez8;->d:Lcz8;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v3, v2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v3, v1, Lcz8;->c:Ljava/lang/Object;
 
     :cond_0
-    invoke-static {p0}, Ldz8;->h(Landroid/content/Context;)Z
+    iget-object v0, v0, Lbg8;->c:Ljava/lang/Object;
 
-    move-result v0
+    check-cast v0, Lk29;
 
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Lk29;->b:Li19;
 
-    sget v0, Lqkc;->mr_cast_progressbar_progress_and_thumb_light:I
-
-    goto :goto_0
-
-    :cond_1
-    sget v0, Lqkc;->mr_cast_progressbar_progress_and_thumb_dark:I
-
-    :goto_0
-    invoke-static {p0, v0}, Ls04;->a(Landroid/content/Context;I)I
-
-    move-result p0
-
-    invoke-virtual {p1}, Landroid/widget/ProgressBar;->getIndeterminateDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-virtual {p1, p0, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+    invoke-virtual {v0}, Li19;->w()V
 
     return-void
 .end method

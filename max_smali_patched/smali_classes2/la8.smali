@@ -1,114 +1,77 @@
 .class public final Lla8;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lxa8;
+.implements Lva8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lla8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic X:Lu7d;
-
-.field public final synthetic Y:Ls99;
-
-.field public final synthetic o:Lma8;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lma8;Lu7d;Ls99;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lj58;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+
+    sput-object v0, Lla8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lla8;->o:Lma8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lla8;->X:Lu7d;
-
-    iput-object p3, p0, Lla8;->Y:Ls99;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lla8;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final n()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lla8;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    check-cast p1, Lg54;
+    iget-object p2, p0, Lla8;->a:Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1, p2}, Lla8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lla8;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lla8;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lla8;
-
-    iget-object v0, p0, Lla8;->X:Lu7d;
-
-    iget-object v1, p0, Lla8;->Y:Ls99;
-
-    iget-object v2, p0, Lla8;->o:Lma8;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lla8;-><init>(Lma8;Lu7d;Ls99;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lla8;->o:Lma8;
-
-    iget-object v0, p1, Lma8;->k:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Leb9;
-
-    iget-object v1, p0, Lla8;->X:Lu7d;
-
-    iget-object v1, v1, Lu7d;->a:Ljava/lang/Object;
-
-    check-cast v1, Lgb9;
-
-    iget-object v2, p0, Lla8;->Y:Ls99;
-
-    iget-object v2, v2, Ls99;->Z:Luz;
-
-    iget-object p1, p1, Lma8;->s:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lptd;
-
-    invoke-static {v2, p1}, Lug8;->e(Luz;Lptd;)Ld39;
-
-    move-result-object p1
-
-    invoke-virtual {v0, v1, p1}, Leb9;->s(Lgb9;Ld39;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

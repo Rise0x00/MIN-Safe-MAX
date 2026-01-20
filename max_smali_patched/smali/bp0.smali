@@ -2,165 +2,154 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lihd;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedList;
+.field public final synthetic a:I
 
-.field public b:J
+.field public final b:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroidx/biometric/BiometricFragment;)V
+    .locals 1
 
-    new-instance v0, Lihd;
+    const/4 v0, 0x0
 
-    const-string v1, "StreamingFormatChecker"
+    iput v0, p0, Lbp0;->a:I
 
-    const-string v2, ""
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Lihd;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    .line 2
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    sput-object v0, Lbp0;->c:Lihd;
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lbp0;->b:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Landroidx/biometric/BiometricViewModel;I)V
+    .locals 0
 
+    iput p2, p0, Lbp0;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/LinkedList;
+    .line 4
+    new-instance p2, Ljava/lang/ref/WeakReference;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lbp0;->a:Ljava/util/LinkedList;
-
-    const-wide/16 v0, -0x1
-
-    iput-wide v0, p0, Lbp0;->b:J
+    iput-object p2, p0, Lbp0;->b:Ljava/lang/ref/WeakReference;
 
     return-void
+
+    .line 5
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    new-instance p2, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p2, p0, Lbp0;->b:Ljava/lang/ref/WeakReference;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(Lvg7;)V
-    .locals 8
+.method public final run()V
+    .locals 2
 
-    iget p1, p1, Lvg7;->f:I
+    iget v0, p0, Lbp0;->a:I
 
-    const/4 v0, -0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-eq p1, v0, :cond_0
+    iget-object v0, p0, Lbp0;->b:Ljava/lang/ref/WeakReference;
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->n:Z
 
     :cond_0
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    return-void
 
-    move-result-wide v0
+    :pswitch_0
+    iget-object v0, p0, Lbp0;->b:Ljava/lang/ref/WeakReference;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v1
 
-    iget-object v2, p0, Lbp0;->a:Ljava/util/LinkedList;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v2, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
+    move-result-object v0
 
-    move-result p1
+    check-cast v0, Landroidx/biometric/BiometricViewModel;
 
-    const/4 v3, 0x5
+    const/4 v1, 0x0
 
-    if-le p1, v3, :cond_1
-
-    invoke-virtual {v2}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+    iput-boolean v1, v0, Landroidx/biometric/BiometricViewModel;->m:Z
 
     :cond_1
-    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
+    return-void
 
-    move-result p1
+    :pswitch_1
+    iget-object v0, p0, Lbp0;->b:Ljava/lang/ref/WeakReference;
 
-    if-ne p1, v3, :cond_3
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-virtual {v2}, Ljava/util/LinkedList;->peekFirst()Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object p1
+    if-eqz v1, :cond_2
 
-    check-cast p1, Ljava/lang/Long;
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-static {p1}, Lkui;->g(Ljava/lang/Object;)V
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    check-cast v0, Landroidx/biometric/BiometricFragment;
 
-    move-result-wide v4
-
-    sub-long v4, v0, v4
-
-    const-wide/16 v6, 0x1388
-
-    cmp-long p1, v4, v6
-
-    if-gez p1, :cond_3
-
-    iget-wide v4, p0, Lbp0;->b:J
-
-    const-wide/16 v6, -0x1
-
-    cmp-long p1, v4, v6
-
-    if-eqz p1, :cond_2
-
-    sub-long v4, v0, v4
-
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v6, 0x5
-
-    invoke-virtual {p1, v6, v7}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v6
-
-    cmp-long p1, v4, v6
-
-    if-gez p1, :cond_2
-
-    goto :goto_0
+    invoke-virtual {v0}, Landroidx/biometric/BiometricFragment;->z0()V
 
     :cond_2
-    iput-wide v0, p0, Lbp0;->b:J
-
-    sget-object p1, Lbp0;->c:Lihd;
-
-    iget-object v0, p1, Lihd;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {v0, v3}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const-string v0, "ML Kit has detected that you seem to pass camera frames to the detector as a Bitmap object. This is inefficient. Please use YUV_420_888 format for camera2 API or NV21 format for (legacy) camera API and directly pass down the byte array to ML Kit."
-
-    invoke-virtual {p1, v0}, Lihd;->z(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "StreamingFormatChecker"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    :goto_0
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

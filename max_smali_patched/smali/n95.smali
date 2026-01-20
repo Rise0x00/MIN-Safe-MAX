@@ -1,149 +1,89 @@
-.class public final Ln95;
-.super Lmzi;
+.class public abstract Ln95;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lm95;
+# static fields
+.field public static final a:Ljava/lang/reflect/Method;
+
+.field public static final b:Ljava/lang/reflect/Method;
+
+.field public static final c:Ljava/lang/reflect/Method;
+
+.field public static final d:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Landroid/widget/AdapterView;
 
-    new-instance v0, Lm95;
+    :try_start_0
+    const-class v1, Landroid/widget/AbsListView;
 
-    invoke-direct {v0, p1}, Lm95;-><init>(Landroid/widget/TextView;)V
+    const-string v2, "positionSelector"
 
-    iput-object v0, p0, Ln95;->a:Lm95;
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    return-void
-.end method
+    const-class v4, Landroid/view/View;
 
+    sget-object v5, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-# virtual methods
-.method public final a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
-    .locals 1
+    sget-object v6, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    sget-object v0, La85;->m:La85;
+    filled-new-array {v3, v4, v5, v6, v6}, [Ljava/lang/Class;
 
-    if-eqz v0, :cond_0
+    move-result-object v4
 
-    const/4 v0, 0x1
+    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    const/4 v0, 0x0
+    sput-object v1, Ln95;->a:Ljava/lang/reflect/Method;
 
-    :goto_0
-    if-nez v0, :cond_1
+    const/4 v2, 0x1
 
-    return-object p1
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    :cond_1
-    iget-object v0, p0, Ln95;->a:Lm95;
+    const-string v1, "setSelectedPositionInt"
 
-    invoke-virtual {v0, p1}, Lm95;->a([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+    filled-new-array {v3}, [Ljava/lang/Class;
 
-    move-result-object p1
+    move-result-object v4
 
-    return-object p1
-.end method
+    invoke-virtual {v0, v1, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-.method public final d()Z
-    .locals 1
+    move-result-object v1
 
-    iget-object v0, p0, Ln95;->a:Lm95;
+    sput-object v1, Ln95;->b:Ljava/lang/reflect/Method;
 
-    iget-boolean v0, v0, Lm95;->c:Z
+    invoke-virtual {v1, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    return v0
-.end method
+    const-string v1, "setNextSelectedPositionInt"
 
-.method public final e(Z)V
-    .locals 1
+    filled-new-array {v3}, [Ljava/lang/Class;
 
-    sget-object v0, La85;->m:La85;
+    move-result-object v3
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    goto :goto_0
+    sput-object v0, Ln95;->c:Ljava/lang/reflect/Method;
 
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
 
-    :goto_0
-    if-nez v0, :cond_1
+    sput-boolean v2, Ln95;->d:Z
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
-    :cond_1
-    iget-object v0, p0, Ln95;->a:Lm95;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v0, p1}, Lm95;->e(Z)V
-
-    return-void
-.end method
-
-.method public final f(Z)V
-    .locals 2
-
-    iget-object v0, p0, Ln95;->a:Lm95;
-
-    sget-object v1, La85;->m:La85;
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    if-nez v1, :cond_1
-
-    iput-boolean p1, v0, Lm95;->c:Z
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void
-
-    :cond_1
-    invoke-virtual {v0, p1}, Lm95;->f(Z)V
-
-    return-void
-.end method
-
-.method public final g(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
-    .locals 1
-
-    sget-object v0, La85;->m:La85;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    return-object p1
-
-    :cond_1
-    iget-object v0, p0, Ln95;->a:Lm95;
-
-    invoke-virtual {v0, p1}, Lm95;->g(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
-
-    move-result-object p1
-
-    return-object p1
 .end method

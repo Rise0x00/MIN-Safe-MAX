@@ -1,154 +1,103 @@
-.class public final Lpia;
-.super Lg3;
+.class public final enum Lpia;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum c:Lpia;
+
+.field public static final enum d:Lpia;
+
+.field public static final synthetic o:[Lpia;
+
+
 # instance fields
-.field public final synthetic b:I
+.field public final a:Ljava/lang/String;
 
-.field public final c:Lfj6;
-
-.field public final d:I
-
-.field public final o:I
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Leia;Lfj6;III)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p5, p0, Lpia;->b:I
+    new-instance v0, Lpia;
 
-    packed-switch p5, :pswitch_data_0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p1}, Lg3;-><init>(Lwka;)V
+    const-string v2, "jingle_peerconnection_so"
 
-    iput-object p2, p0, Lpia;->c:Lfj6;
+    const-string v3, "WEBRTC"
 
-    iput p4, p0, Lpia;->o:I
+    invoke-direct {v0, v3, v1, v2}, Lpia;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    const/16 p1, 0x8
+    sput-object v0, Lpia;->c:Lpia;
 
-    invoke-static {p1, p3}, Ljava/lang/Math;->max(II)I
+    new-instance v1, Lpia;
 
-    move-result p1
-
-    iput p1, p0, Lpia;->d:I
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0, p1}, Lg3;-><init>(Lwka;)V
-
-    iput-object p2, p0, Lpia;->c:Lfj6;
-
-    iput p3, p0, Lpia;->d:I
-
-    iput p4, p0, Lpia;->o:I
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public final o(Lgla;)V
-    .locals 7
-
-    iget v0, p0, Lpia;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lg3;->a:Lwka;
-
-    iget-object v1, p0, Lpia;->c:Lfj6;
-
-    invoke-static {v0, p1, v1}, Lrni;->b(Lwka;Lgla;Lfj6;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Lkja;
-
-    iget v3, p0, Lpia;->d:I
-
-    iget v4, p0, Lpia;->o:I
-
-    invoke-direct {v2, p1, v1, v3, v4}, Lkja;-><init>(Lgla;Lfj6;II)V
-
-    invoke-interface {v0, v2}, Lwka;->a(Lgla;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lg3;->a:Lwka;
-
-    iget-object v1, p0, Lpia;->c:Lfj6;
-
-    invoke-static {v0, p1, v1}, Lrni;->b(Lwka;Lgla;Lfj6;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    goto :goto_2
-
-    :cond_1
     const/4 v2, 0x1
 
-    iget v3, p0, Lpia;->d:I
+    const-string v3, "tensorflowlite"
 
-    iget v4, p0, Lpia;->o:I
+    const-string v4, "TENSORFLOW"
 
-    if-ne v4, v2, :cond_2
+    invoke-direct {v1, v4, v2, v3}, Lpia;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance v2, Lv3e;
+    sput-object v1, Lpia;->d:Lpia;
 
-    invoke-direct {v2, p1}, Lv3e;-><init>(Lgla;)V
+    filled-new-array {v0, v1}, [Lpia;
 
-    new-instance p1, Loia;
+    move-result-object v0
 
-    invoke-direct {p1, v2, v1, v3}, Loia;-><init>(Lv3e;Lfj6;I)V
+    sput-object v0, Lpia;->o:[Lpia;
 
-    invoke-interface {v0, p1}, Lwka;->a(Lgla;)V
-
-    goto :goto_2
-
-    :cond_2
-    new-instance v5, Lnia;
-
-    const/4 v6, 0x3
-
-    if-ne v4, v6, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    const/4 v2, 0x0
-
-    :goto_1
-    invoke-direct {v5, p1, v1, v3, v2}, Lnia;-><init>(Lgla;Lfj6;IZ)V
-
-    invoke-interface {v0, v5}, Lwka;->a(Lgla;)V
-
-    :goto_2
     return-void
+.end method
 
-    nop
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lpia;->a:Ljava/lang/String;
+
+    const-string p1, "lib"
+
+    const-string p2, ".so"
+
+    invoke-static {p1, p3, p2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lpia;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lpia;
+    .locals 1
+
+    const-class v0, Lpia;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lpia;
+
+    return-object p0
+.end method
+
+.method public static values()[Lpia;
+    .locals 1
+
+    sget-object v0, Lpia;->o:[Lpia;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lpia;
+
+    return-object v0
 .end method

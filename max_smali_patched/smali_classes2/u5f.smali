@@ -1,23 +1,64 @@
 .class public final Lu5f;
-.super Ladi;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La6f;
 
 
 # static fields
-.field public static final c:Lu5f;
+.field public static final a:Lu5f;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
     new-instance v0, Lu5f;
 
-    const/16 v1, 0xb
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Ladi;-><init>(I)V
-
-    sput-object v0, Lu5f;->c:Lu5f;
+    sput-object v0, Lu5f;->a:Lu5f;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lu5f;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, 0x50cc4ef4
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CancelShare"
+
+    return-object v0
 .end method

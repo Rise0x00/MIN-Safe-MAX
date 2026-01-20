@@ -1,175 +1,290 @@
-.class public Lu9b;
-.super Ljava/lang/Object;
+.class public final Lu9b;
+.super Lyl4;
 .source "SourceFile"
-
-# interfaces
-.implements Lck3;
 
 
 # static fields
-.field public static final b:Les5;
-
-.field public static final c:Lu9b;
+.field public static final synthetic e:[Lz28;
 
 
 # instance fields
-.field public final a:Ljava/util/TreeMap;
+.field public a:Z
+
+.field public final b:Ljava/util/LinkedList;
+
+.field public final c:Lt9b;
+
+.field public d:Li5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
-    new-instance v0, Les5;
+    new-instance v0, Lhfa;
 
-    const/16 v1, 0x11
+    const-string v1, "router"
 
-    invoke-direct {v0, v1}, Les5;-><init>(I)V
+    const-string v2, "getRouter()Lone/me/sdk/arch/rootcontroller/RouterWrapper;"
 
-    sput-object v0, Lu9b;->b:Les5;
+    const-class v3, Lu9b;
 
-    new-instance v1, Lu9b;
+    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v2, Ljava/util/TreeMap;
+    sget-object v1, Lctd;->a:Ldtd;
 
-    invoke-direct {v2, v0}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {v1, v2}, Lu9b;-><init>(Ljava/util/TreeMap;)V
+    const/4 v1, 0x1
 
-    sput-object v1, Lu9b;->c:Lu9b;
+    new-array v1, v1, [Lz28;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lu9b;->e:[Lz28;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/TreeMap;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu9b;->a:Ljava/util/TreeMap;
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lu9b;->a:Z
+
+    new-instance v0, Ljava/util/LinkedList;
+
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object v0, p0, Lu9b;->b:Ljava/util/LinkedList;
+
+    new-instance v0, Lt9b;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Lt9b;-><init>(CI)V
+
+    iput-object v0, p0, Lu9b;->c:Lt9b;
 
     return-void
 .end method
 
-.method public static a(Lck3;)Lu9b;
-    .locals 7
+.method public static d(Lom4;Z)Lz4e;
+    .locals 3
 
-    const-class v0, Lu9b;
+    iget-object v0, p0, Lom4;->f:Lnm4;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lom4;->e:Lmm4;
 
-    move-result-object v1
+    invoke-interface {v0}, Lnm4;->a()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/arch/Widget;
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2, v2}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lom4;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p0}, Lz4e;->e(Ljava/lang/String;)V
+
+    if-eqz p1, :cond_4
+
+    sget-object p0, Lmm4;->c:Lmm4;
+
+    if-eq v1, p0, :cond_4
+
+    iget-object p0, v1, Lmm4;->a:Llq6;
+
+    invoke-interface {p0}, Llq6;->invoke()Ljava/lang/Object;
+
+    move-result-object p0
+
+    instance-of p1, p0, Lf94;
+
+    if-eqz p1, :cond_0
+
+    check-cast p0, Lf94;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, v2
+
+    :goto_0
+    const/4 p1, 0x0
+
+    if-nez p0, :cond_1
+
+    new-instance p0, Lsu8;
+
+    invoke-direct {p0, p1}, Lsu8;-><init>(I)V
+
+    :cond_1
+    invoke-virtual {v0, p0}, Lz4e;->c(Lf94;)V
+
+    iget-object p0, v1, Lmm4;->b:Llq6;
+
+    invoke-interface {p0}, Llq6;->invoke()Ljava/lang/Object;
+
+    move-result-object p0
+
+    instance-of v1, p0, Lf94;
+
+    if-eqz v1, :cond_2
+
+    move-object v2, p0
+
+    check-cast v2, Lf94;
+
+    :cond_2
+    if-nez v2, :cond_3
+
+    new-instance v2, Lsu8;
+
+    invoke-direct {v2, p1}, Lsu8;-><init>(I)V
+
+    :cond_3
+    invoke-virtual {v0, v2}, Lz4e;->a(Lf94;)V
+
+    :cond_4
+    return-object v0
+.end method
+
+.method public static f(Lw4e;Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-virtual {p0}, Lw4e;->e()Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    check-cast p0, Lu9b;
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/util/TreeMap;
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    sget-object v1, Lu9b;->b:Les5;
-
-    invoke-direct {v0, v1}, Ljava/util/TreeMap;-><init>(Ljava/util/Comparator;)V
-
-    invoke-interface {p0}, Lck3;->i()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lv90;
-
-    invoke-interface {p0, v2}, Lck3;->m(Lv90;)Ljava/util/Set;
-
-    move-result-object v3
-
-    new-instance v4, Landroid/util/ArrayMap;
-
-    invoke-direct {v4}, Landroid/util/ArrayMap;-><init>()V
-
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lbk3;
-
-    invoke-interface {p0, v2, v5}, Lck3;->n(Lv90;Lbk3;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v5, v6}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_1
+    move-result-object p0
 
     :cond_1
-    invoke-virtual {v0, v2, v4}, Ljava/util/TreeMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lz4e;
+
+    iget-object v0, v0, Lz4e;->b:Ljava/lang/String;
+
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static h(La94;Lom4;)V
+    .locals 1
+
+    iget-object p1, p1, Lom4;->c:Landroid/os/Bundle;
+
+    instance-of v0, p0, Lone/me/sdk/arch/Widget;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lone/me/sdk/arch/Widget;
 
     goto :goto_0
 
-    :cond_2
-    new-instance p0, Lu9b;
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lu9b;-><init>(Ljava/util/TreeMap;)V
+    :goto_0
+    if-eqz v0, :cond_1
 
-    return-object p0
+    invoke-virtual {v0, p1}, Lone/me/sdk/arch/Widget;->updateArgs(Landroid/os/Bundle;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, La94;->getArgs()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Bundle;->clear()V
+
+    invoke-virtual {p0}, La94;->getArgs()Landroid/os/Bundle;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final c(Lk00;)V
-    .locals 6
+.method public final a()Ljava/util/ArrayList;
+    .locals 4
 
-    new-instance v0, Lv90;
-
-    const-string v1, "camera2.captureRequest.option."
-
-    const-class v2, Ljava/lang/Void;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Lv90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    iget-object v2, p0, Lu9b;->a:Ljava/util/TreeMap;
-
-    invoke-virtual {v2, v0}, Ljava/util/TreeMap;->tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/SortedMap;->entrySet()Ljava/util/Set;
+    check-cast v0, Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->H0()Lw4e;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lw4e;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    const/16 v2, 0xa
+
+    invoke-static {v0, v2}, Lri3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -178,297 +293,340 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Ljava/util/Map$Entry;
+    check-cast v2, Lz4e;
 
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    new-instance v3, Ls9b;
 
-    move-result-object v3
+    invoke-direct {v3, v2}, Ls9b;-><init>(Lz4e;)V
 
-    check-cast v3, Lv90;
-
-    iget-object v3, v3, Lv90;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lv90;
-
-    iget-object v3, p1, Lk00;->b:Ljava/lang/Object;
-
-    check-cast v3, Lcye;
-
-    iget-object v4, p1, Lk00;->c:Ljava/lang/Object;
-
-    check-cast v4, Lck3;
-
-    iget-object v3, v3, Lcye;->b:Ljava/lang/Object;
-
-    check-cast v3, Ly0a;
-
-    invoke-interface {v4, v2}, Lck3;->q(Lv90;)Lbk3;
-
-    move-result-object v5
-
-    invoke-interface {v4, v2}, Lck3;->l(Lv90;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v2, v5, v4}, Ly0a;->f(Lv90;Lbk3;Ljava/lang/Object;)V
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :cond_1
-    :goto_1
-    return-void
+    :cond_0
+    return-object v1
 .end method
 
-.method public final e(Lv90;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()I
+    .locals 2
 
-    :try_start_0
-    invoke-virtual {p0, p1}, Lu9b;->l(Lv90;)Ljava/lang/Object;
+    iget-boolean v0, p0, Lu9b;->a:Z
 
-    move-result-object p1
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_1
 
-    return-object p1
+    iget-object v0, p0, Lu9b;->b:Ljava/util/LinkedList;
 
-    :catch_0
-    return-object p2
-.end method
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-.method public final i()Ljava/util/Set;
-    .locals 1
+    move-result v1
 
-    iget-object v0, p0, Lu9b;->a:Ljava/util/TreeMap;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/util/TreeMap;->keySet()Ljava/util/Set;
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
+    check-cast v0, Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->H0()Lw4e;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lw4e;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    return v0
+
+    :cond_1
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->H0()Lw4e;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lw4e;->a:Lch0;
+
+    iget-object v0, v0, Lch0;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final c(Lom4;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lu9b;->a()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    xor-int/lit8 v0, v0, 0x1
+
+    invoke-static {p1, v0}, Lu9b;->d(Lom4;Z)Lz4e;
+
+    move-result-object p1
+
+    iget-boolean v0, p0, Lu9b;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lu9b;->b:Ljava/util/LinkedList;
+
+    invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/android/root/RootController;
+
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->H0()Lw4e;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lw4e;->S(Lz4e;)V
+
+    iget-object p1, p0, Lu9b;->d:Li5;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p1, Li5;->b:Ljava/lang/Object;
+
+    check-cast p1, Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lwc4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    :cond_1
+    return-void
+.end method
+
+.method public final e()Lc5e;
+    .locals 2
+
+    sget-object v0, Lu9b;->e:[Lz28;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lu9b;->c:Lt9b;
+
+    invoke-virtual {v1, v0}, Lt9b;->C(Lz28;)Lc5e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final l(Lv90;)Ljava/lang/Object;
-    .locals 3
+.method public final g(Llq6;)V
+    .locals 6
 
-    iget-object v0, p0, Lu9b;->a:Ljava/util/TreeMap;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-boolean v0, p0, Lu9b;->a:Z
 
-    move-result-object v0
+    invoke-interface {p1}, Llq6;->invoke()Ljava/lang/Object;
 
-    check-cast v0, Ljava/util/Map;
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lu9b;->a:Z
+
+    iget-object p1, p0, Lu9b;->b:Ljava/util/LinkedList;
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Collections;->min(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbk3;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Option does not exist: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final m(Lv90;)Ljava/util/Set;
-    .locals 1
-
-    iget-object v0, p0, Lu9b;->a:Ljava/util/TreeMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Map;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
-
-    return-object p1
-
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Map;->keySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final n(Lv90;Lbk3;)Ljava/lang/Object;
-    .locals 3
-
-    iget-object v0, p0, Lu9b;->a:Ljava/util/TreeMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Map;
+    check-cast v0, Lone/me/android/root/RootController;
 
-    const-string v1, "Option does not exist: "
+    invoke-virtual {v0}, Lone/me/android/root/RootController;->H0()Lw4e;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    invoke-interface {v0, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lw4e;->e()Ljava/util/ArrayList;
 
-    move-result v2
+    move-result-object v0
 
-    if-eqz v2, :cond_0
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object p1
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    return-object p1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " with priority="
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    move-result-object v2
 
     :cond_1
-    new-instance p2, Ljava/lang/IllegalArgumentException;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result v3
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v3, :cond_2
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object p1
+    move-object v4, v3
 
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast v4, Lz4e;
 
-    throw p2
-.end method
+    iget-object v4, v4, Lz4e;->a:La94;
 
-.method public final p(Lv90;)Z
-    .locals 1
+    check-cast v4, Lone/me/sdk/arch/Widget;
 
-    iget-object v0, p0, Lu9b;->a:Ljava/util/TreeMap;
+    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->isDialog()Z
 
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->containsKey(Ljava/lang/Object;)Z
+    move-result v4
 
-    move-result p1
+    if-nez v4, :cond_1
 
-    return p1
-.end method
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-.method public final q(Lv90;)Lbk3;
-    .locals 3
+    goto :goto_0
 
-    iget-object v0, p0, Lu9b;->a:Ljava/util/TreeMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_2
+    invoke-static {v0, v1}, Lpi3;->Q(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/Map;
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    check-cast v1, Lone/me/android/root/RootController;
+
+    invoke-virtual {v1}, Lone/me/android/root/RootController;->F0()Lw4e;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lw4e;->e()Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_3
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    move-object v5, v4
+
+    check-cast v5, Lz4e;
+
+    iget-object v5, v5, Lz4e;->a:La94;
+
+    check-cast v5, Lone/me/sdk/arch/Widget;
+
+    invoke-virtual {v5}, Lone/me/sdk/arch/Widget;->isDialog()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_4
+    invoke-static {v1, v2}, Lpi3;->Q(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/util/LinkedList;->clear()V
+
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
 
     move-result-object p1
 
-    invoke-static {p1}, Ljava/util/Collections;->min(Ljava/util/Collection;)Ljava/lang/Object;
+    check-cast p1, Lone/me/android/root/RootController;
+
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->F0()Lw4e;
 
     move-result-object p1
 
-    check-cast p1, Lbk3;
+    const/4 v2, 0x0
 
-    return-object p1
+    invoke-virtual {p1, v1, v2}, Lw4e;->Q(Ljava/util/List;Lf94;)V
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Option does not exist: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lu9b;->e()Lc5e;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    check-cast p1, Lone/me/android/root/RootController;
 
-    throw v0
+    invoke-virtual {p1}, Lone/me/android/root/RootController;->H0()Lw4e;
+
+    move-result-object p1
+
+    invoke-static {v0}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lz4e;
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Lz4e;->b()Lf94;
+
+    move-result-object v2
+
+    :cond_5
+    invoke-virtual {p1, v0, v2}, Lw4e;->Q(Ljava/util/List;Lf94;)V
+
+    return-void
 .end method

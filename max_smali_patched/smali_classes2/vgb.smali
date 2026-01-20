@@ -1,150 +1,43 @@
-.class public final Lvgb;
+.class public abstract Lvgb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzgb;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final b:I
 
-.field public final b:Lbt;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lbt;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ld6d;->size_border_radius_new_banner:I
 
-    iput-object p1, p0, Lvgb;->a:Ljava/lang/String;
+    sput v0, Lvgb;->a:I
 
-    iput-object p2, p0, Lvgb;->b:Lbt;
+    sget v0, Ld6d;->spacing_size_2xl:I
+
+    sput v0, Lvgb;->b:I
+
+    sget v0, Ld6d;->spacing_size_2xs:I
+
+    sput v0, Lvgb;->c:I
+
+    sget v0, Ld6d;->spacing_size_m:I
+
+    sput v0, Lvgb;->d:I
+
+    sget v0, Ld6d;->spacing_size_xs:I
+
+    sput v0, Lvgb;->e:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lvgb;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/util/Map;
-    .locals 1
-
-    iget-object v0, p0, Lvgb;->b:Lbt;
-
-    return-object v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lvgb;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lvgb;
-
-    iget-object v0, p0, Lvgb;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lvgb;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lvgb;->b:Lbt;
-
-    iget-object p1, p1, Lvgb;->b:Lbt;
-
-    invoke-virtual {v0, p1}, Llpe;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lvgb;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lvgb;->b:Lbt;
-
-    invoke-virtual {v1}, Llpe;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CancelMetric(traceId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvgb;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", localProperties="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvgb;->b:Lbt;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

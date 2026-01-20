@@ -1,81 +1,77 @@
 .class public final Lhg1;
-.super Liqe;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcv1;
 
 
 # instance fields
-.field public final E0:Lcs1;
-
-.field public final F0:Lfs1;
+.field public final synthetic a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/FrameLayout;Lcs1;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lm7d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lhg1;->E0:Lcs1;
-
-    sget p2, Lhnc;->call_opponent:I
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lfs1;
-
-    iput-object p1, p0, Lhg1;->F0:Lfs1;
+    iput-object p1, p0, Lhg1;->a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final z(Li28;)V
-    .locals 3
+.method public final u()V
+    .locals 11
 
-    check-cast p1, Luc1;
+    sget-object v0, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->B0:[Lz28;
 
-    iget-object v0, p1, Luc1;->c:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lhg1;->a:Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    iget-object v1, p1, Luc1;->d:Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/previewjoinlink/CallJoinLinkPreviewWidget;->D0()Ldg1;
 
-    iget-object v2, p0, Lhg1;->F0:Lfs1;
+    move-result-object v0
 
-    invoke-virtual {v2, v1, v0}, Lfs1;->H(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    iget-object v0, v0, Ldg1;->x0:Lspf;
 
-    iget-boolean v0, p1, Luc1;->Z:Z
+    :cond_0
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v0}, Lfs1;->D(Z)V
+    move-result-object v1
 
-    iget-boolean v0, p1, Luc1;->X:Z
+    move-object v2, v1
 
-    invoke-virtual {v2, v0}, Lfs1;->F(Z)V
+    check-cast v2, Lxf1;
 
-    iget-object v0, p1, Luc1;->o:Lzd0;
+    iget-boolean v3, v2, Lxf1;->d:Z
 
-    invoke-virtual {v2, v0}, Lfs1;->setAvatar(Lzd0;)V
+    xor-int/lit8 v6, v3, 0x1
 
-    iget-boolean v0, p1, Luc1;->u0:Z
+    const/4 v9, 0x0
 
-    invoke-virtual {v2, v0}, Lfs1;->setRaiseHand(Z)V
+    const/16 v10, 0x77
 
-    iget-object v0, p1, Luc1;->y0:Lfig;
+    const/4 v3, 0x0
 
-    invoke-virtual {v2, v0}, Lfs1;->setOpponentVideo(Lfig;)V
+    const/4 v4, 0x0
 
-    iget-object v0, p1, Luc1;->z0:Lgig;
+    const/4 v5, 0x0
 
-    invoke-virtual {v2, v0}, Lfs1;->setButtonAction(Lgig;)V
+    const/4 v7, 0x0
 
-    iget-object p1, p1, Luc1;->a:Lxh1;
+    const/4 v8, 0x0
 
-    iput-object p1, v2, Lfs1;->h1:Lxh1;
+    invoke-static/range {v2 .. v10}, Lxf1;->a(Lxf1;Lve0;Lzv8;Lzv8;ZLqhg;Ljava/util/ArrayList;Lqhg;I)Lxf1;
 
-    iget-object p1, p0, Lhg1;->E0:Lcs1;
+    move-result-object v2
 
-    iput-object p1, v2, Lfs1;->b1:Lcs1;
+    invoke-virtual {v0, v1, v2}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
 
     return-void
 .end method

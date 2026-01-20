@@ -1,106 +1,49 @@
 .class public final Lfu1;
-.super Logf;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lmu1;
+.field public X:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lgu1;
 
 
 # direct methods
-.method public constructor <init>(Lmu1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lgu1;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lfu1;->X:Lmu1;
+    iput-object p1, p0, Lfu1;->o:Lgu1;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lxh1;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfu1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lfu1;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lfu1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lfu1;
-
-    iget-object v1, p0, Lfu1;->X:Lmu1;
-
-    invoke-direct {v0, v1, p2}, Lfu1;-><init>(Lmu1;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lfu1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iput-object p1, p0, Lfu1;->d:Ljava/lang/Object;
 
-    iget-object p1, p0, Lfu1;->o:Ljava/lang/Object;
+    iget p1, p0, Lfu1;->X:I
 
-    check-cast p1, Lxh1;
+    const/high16 v0, -0x80000000
 
-    iget-object v0, p0, Lfu1;->X:Lmu1;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0}, Lmu1;->c()Lw84;
+    iput p1, p0, Lfu1;->X:I
 
-    move-result-object v1
+    iget-object p1, p0, Lfu1;->o:Lgu1;
 
-    iget-boolean v1, v1, Lw84;->i:Z
+    const-wide/16 v0, 0x0
 
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Lmu1;->h(Lxh1;Z)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lmu1;->d()Lpdb;
+    invoke-virtual {p1, v0, v1, p0}, Lgu1;->e(JLo84;)Ljava/lang/Object;
 
     move-result-object p1
-
-    iget-object p1, p1, Lpdb;->a:Lzh1;
-
-    invoke-interface {p1}, Lzh1;->getId()Lxh1;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lmu1;->i(Lxh1;)V
-
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
 
     return-object p1
 .end method

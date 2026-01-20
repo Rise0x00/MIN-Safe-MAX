@@ -1,98 +1,134 @@
 .class public final Lsi8;
-.super Landroidx/recyclerview/widget/LinearLayoutManager;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lajc;
 
 
 # instance fields
-.field public final synthetic E:I
+.field public final synthetic a:I
 
-.field public final synthetic F:Lcom/google/android/material/datepicker/MaterialCalendar;
+.field public final b:Ljava/util/concurrent/Executor;
+
+.field public final c:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/material/datepicker/MaterialCalendar;II)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Landroid/content/ContentResolver;I)V
     .locals 0
 
-    iput-object p1, p0, Lsi8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
+    iput p3, p0, Lsi8;->a:I
 
-    iput p3, p0, Lsi8;->E:I
+    iput-object p1, p0, Lsi8;->b:Ljava/util/concurrent/Executor;
 
-    const/4 p1, 0x0
+    iput-object p2, p0, Lsi8;->c:Landroid/content/ContentResolver;
 
-    invoke-direct {p0, p2, p1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final H0(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 2
+.method public final a(Lzj0;Lbjc;)V
+    .locals 10
 
-    new-instance v0, Lb42;
+    iget v0, p0, Lsi8;->a:I
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    move-object v8, p2
 
-    const/4 v1, 0x3
+    check-cast v8, Lhl0;
 
-    invoke-direct {v0, p1, v1}, Lb42;-><init>(Landroid/content/Context;I)V
+    iget-object v3, v8, Lhl0;->c:Lejc;
 
-    iput p2, v0, Lgy7;->a:I
+    iget-object v7, v8, Lhl0;->a:Lcj7;
 
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/a;->I0(Lgy7;)V
+    const-string v0, "local"
 
-    return-void
-.end method
+    const-string v2, "video"
 
-.method public final K0(Li7d;[I)V
-    .locals 3
+    invoke-virtual {v8, v0, v2}, Lhl0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget p1, p0, Lsi8;->E:I
+    new-instance v0, Lch8;
 
-    const/4 v0, 0x1
+    move-object v5, v3
 
-    const/4 v1, 0x0
+    move-object v6, p2
 
-    iget-object v2, p0, Lsi8;->F:Lcom/google/android/material/datepicker/MaterialCalendar;
+    move-object v1, p0
 
-    if-nez p1, :cond_0
+    move-object v2, p1
 
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    move-object v4, p2
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-direct/range {v0 .. v7}, Lch8;-><init>(Lsi8;Lzj0;Lejc;Lbjc;Lejc;Lbjc;Lcj7;)V
 
-    move-result p1
+    new-instance v2, Lgl4;
 
-    aput p1, p2, v1
+    const/4 v3, 0x5
 
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-direct {v2, v3, v0}, Lgl4;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    invoke-virtual {v8, v2}, Lhl0;->a(Lil0;)V
 
-    move-result p1
+    iget-object v2, p0, Lsi8;->b:Ljava/util/concurrent/Executor;
 
-    aput p1, p2, v0
+    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 
-    :cond_0
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    :pswitch_0
+    move-object v9, p2
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    check-cast v9, Lhl0;
 
-    move-result p1
+    iget-object v3, v9, Lhl0;->c:Lejc;
 
-    aput p1, p2, v1
+    iget-object v7, v9, Lhl0;->a:Lcj7;
 
-    iget-object p1, v2, Lcom/google/android/material/datepicker/MaterialCalendar;->p1:Landroidx/recyclerview/widget/RecyclerView;
+    const-string v0, "local"
 
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+    const-string v2, "thumbnail_bitmap"
 
-    move-result p1
+    invoke-virtual {v9, v0, v2}, Lhl0;->h(Ljava/lang/String;Ljava/lang/String;)V
 
-    aput p1, p2, v0
+    new-instance v8, Landroid/os/CancellationSignal;
+
+    invoke-direct {v8}, Landroid/os/CancellationSignal;-><init>()V
+
+    new-instance v0, Lri8;
+
+    move-object v5, v3
+
+    move-object v6, p2
+
+    move-object v1, p0
+
+    move-object v2, p1
+
+    move-object v4, p2
+
+    invoke-direct/range {v0 .. v8}, Lri8;-><init>(Lsi8;Lzj0;Lejc;Lbjc;Lejc;Lbjc;Lcj7;Landroid/os/CancellationSignal;)V
+
+    new-instance v2, Lgl4;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3, v0}, Lgl4;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v9, v2}, Lhl0;->a(Lil0;)V
+
+    iget-object v2, p0, Lsi8;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

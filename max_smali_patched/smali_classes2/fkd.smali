@@ -1,223 +1,134 @@
-.class public abstract Lfkd;
+.class public final Lfkd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public final synthetic X:J
 
-.field public static final C:I
+.field public final synthetic a:Landroid/view/View;
 
-.field public static final D:I
+.field public final synthetic b:Likd;
 
-.field public static final E:I
+.field public final synthetic c:Landroid/view/View;
 
-.field public static final F:I
+.field public final synthetic d:Lekd;
 
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final synthetic o:Lbjd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Likd;Landroid/view/View;Lekd;Lbjd;J)V
+    .locals 0
 
-    sget v0, Lguc;->attach_description_union:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lfkd;->a:I
+    iput-object p1, p0, Lfkd;->a:Landroid/view/View;
 
-    sget v0, Lguc;->feedback_subject:I
+    iput-object p2, p0, Lfkd;->b:Likd;
 
-    sput v0, Lfkd;->b:I
+    iput-object p3, p0, Lfkd;->c:Landroid/view/View;
 
-    sget v0, Lguc;->feedback_subject_auth:I
+    iput-object p4, p0, Lfkd;->d:Lekd;
 
-    sput v0, Lfkd;->c:I
+    iput-object p5, p0, Lfkd;->o:Lbjd;
 
-    sget v0, Lguc;->feedback_user_info:I
+    iput-wide p6, p0, Lfkd;->X:J
 
-    sput v0, Lfkd;->d:I
+    return-void
+.end method
 
-    sget v0, Lguc;->file_downloading_no_progress:I
 
-    sput v0, Lfkd;->e:I
+# virtual methods
+.method public final run()V
+    .locals 10
 
-    sget v0, Lguc;->file_downloading_progress_media:I
+    iget-object v0, p0, Lfkd;->b:Likd;
 
-    sput v0, Lfkd;->f:I
+    iget-object v1, p0, Lfkd;->c:Landroid/view/View;
 
-    sget v0, Lguc;->file_downloading_progress_photo:I
+    iget-object v0, v0, Likd;->c:Lbz8;
 
-    sput v0, Lfkd;->g:I
+    iget-object v0, v0, Lbz8;->b:Ljava/lang/Object;
 
-    sget v0, Lguc;->file_downloading_progress_single_photo:I
+    check-cast v0, Landroid/view/View;
 
-    sput v0, Lfkd;->h:I
+    const/4 v2, 0x0
 
-    sget v0, Lguc;->file_downloading_progress_single_video:I
+    if-nez v1, :cond_0
 
-    sput v0, Lfkd;->i:I
+    move-object v0, v2
 
-    sget v0, Lguc;->file_downloading_progress_video:I
+    goto :goto_0
 
-    sput v0, Lfkd;->j:I
+    :cond_0
+    invoke-static {v1, v0}, Lhvh;->c(Landroid/view/View;Landroid/view/View;)Landroid/graphics/Rect;
 
-    sget v0, Lguc;->link_context_menu_action_copy_link:I
+    move-result-object v0
 
-    sput v0, Lfkd;->k:I
+    :goto_0
+    if-nez v0, :cond_1
 
-    sget v0, Lguc;->link_context_menu_action_copy_mail_link:I
+    return-void
 
-    sput v0, Lfkd;->l:I
+    :cond_1
+    iget-object v1, p0, Lfkd;->b:Likd;
 
-    sget v0, Lguc;->link_context_menu_action_copy_phone_link:I
+    iget-object v1, v1, Likd;->d:Ljava/lang/String;
 
-    sput v0, Lfkd;->m:I
+    sget-object v3, Lc5j;->a:Ledb;
 
-    sget v0, Lguc;->link_context_menu_action_open_link:I
+    if-nez v3, :cond_2
 
-    sput v0, Lfkd;->n:I
+    goto :goto_1
 
-    sget v0, Lguc;->link_context_menu_action_open_mail_link:I
+    :cond_2
+    sget-object v4, Lkk8;->d:Lkk8;
 
-    sput v0, Lfkd;->o:I
+    invoke-virtual {v3, v4}, Ledb;->b(Lkk8;)Z
 
-    sget v0, Lguc;->link_context_menu_action_open_phone_link:I
+    move-result v5
 
-    sput v0, Lfkd;->p:I
+    if-eqz v5, :cond_3
 
-    sget v0, Lguc;->link_copied:I
+    iget-object v5, p0, Lfkd;->o:Lbjd;
 
-    sput v0, Lfkd;->q:I
+    iget-wide v6, p0, Lfkd;->X:J
 
-    sget v0, Lguc;->mail_copied:I
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    sput v0, Lfkd;->r:I
+    const-string v9, "Play reaction effect without pending, reaction:"
 
-    sget v0, Lguc;->noncontact_presence:I
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sput v0, Lfkd;->s:I
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    sget v0, Lguc;->phone_copied:I
+    const-string v5, ", l:"
 
-    sput v0, Lfkd;->t:I
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v0, Lguc;->reply_quote_content_level_body:I
+    invoke-virtual {v8, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    sput v0, Lfkd;->u:I
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    sget v0, Lguc;->saved_messages_description:I
+    move-result-object v5
 
-    sput v0, Lfkd;->v:I
+    invoke-virtual {v3, v4, v1, v5, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget v0, Lguc;->tt_at:I
+    :cond_3
+    :goto_1
+    iget-object v1, p0, Lfkd;->b:Likd;
 
-    sput v0, Lfkd;->w:I
+    iget-object v2, p0, Lfkd;->d:Lekd;
 
-    sget v0, Lguc;->tt_audio:I
+    iget-object v3, v2, Lekd;->b:Ljava/lang/String;
 
-    sput v0, Lfkd;->x:I
+    iget-wide v4, v2, Lekd;->a:J
 
-    sget v0, Lguc;->tt_contact_name_unknown:I
-
-    sput v0, Lfkd;->y:I
-
-    sget v0, Lguc;->tt_dates_today:I
-
-    sput v0, Lfkd;->z:I
-
-    sget v0, Lguc;->tt_email_invite_subject:I
-
-    sput v0, Lfkd;->A:I
-
-    sget v0, Lguc;->tt_location:I
-
-    sput v0, Lfkd;->B:I
-
-    sget v0, Lguc;->tt_notif_category_group_calls:I
-
-    sput v0, Lfkd;->C:I
-
-    sget v0, Lguc;->tt_notif_category_group_chats:I
-
-    sput v0, Lfkd;->D:I
-
-    sget v0, Lguc;->tt_notif_category_group_other:I
-
-    sput v0, Lfkd;->E:I
-
-    sget v0, Lguc;->tt_of:I
-
-    sput v0, Lfkd;->F:I
-
-    sget v0, Lguc;->tt_sms_invite_text:I
-
-    sput v0, Lfkd;->G:I
-
-    sget v0, Lguc;->tt_you:I
-
-    sput v0, Lfkd;->H:I
-
-    sget v0, Lguc;->tt_you_in_subtitle:I
-
-    sput v0, Lfkd;->I:I
+    invoke-static {v1, v3, v4, v5, v0}, Likd;->c(Likd;Ljava/lang/String;JLandroid/graphics/Rect;)V
 
     return-void
 .end method

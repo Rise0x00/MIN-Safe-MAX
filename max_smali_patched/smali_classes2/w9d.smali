@@ -1,21 +1,18 @@
-.class public final Lw9d;
+.class public abstract Lw9d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# static fields
+.field public static oneme_snackbar_caption_id:I = 0x7f0a083c
 
-    new-instance v0, Lbec;
+.field public static oneme_snackbar_container_id:I = 0x7f0a083d
 
-    sget-object v0, Lv7d;->a:Lw7d;
+.field public static oneme_snackbar_left_icon_id:I = 0x7f0a083e
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static oneme_snackbar_right_button_id:I = 0x7f0a083f
 
-    new-instance v1, Lbec;
+.field public static oneme_snackbar_style_circle:I = 0x7f0a0840
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static oneme_snackbar_style_shine:I = 0x7f0a0841
 
-    return-void
-.end method
+.field public static oneme_snackbar_title_id:I = 0x7f0a0842

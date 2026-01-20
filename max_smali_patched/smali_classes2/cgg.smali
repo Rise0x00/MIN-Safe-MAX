@@ -1,51 +1,68 @@
 .class public final Lcgg;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lq29;
 
 
 # instance fields
-.field public final synthetic X:Lhgg;
+.field public final a:Ljava/lang/String;
 
-.field public Y:I
+.field public final b:Ljava/lang/String;
 
-.field public d:Lhgg;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhgg;Lp14;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcgg;->X:Lhgg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lcgg;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lcgg;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lcgg;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Ljava/lang/String;
     .locals 1
 
-    iput-object p1, p0, Lcgg;->o:Ljava/lang/Object;
+    iget-object v0, p0, Lcgg;->b:Ljava/lang/String;
 
-    iget p1, p0, Lcgg;->Y:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    or-int/2addr p1, v0
+    const-string v0, ", sampleMimeType: "
 
-    iput p1, p0, Lcgg;->Y:I
+    const-string v1, ", language: "
 
-    iget-object p1, p0, Lcgg;->X:Lhgg;
+    const-string v2, "TextFormat(id: "
 
-    const/4 v0, 0x0
+    iget-object v3, p0, Lcgg;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Lhgg;->f(Lx57;Lp14;)Ljava/io/Serializable;
+    iget-object v4, p0, Lcgg;->b:Ljava/lang/String;
 
-    move-result-object p1
+    invoke-static {v2, v3, v0, v4, v1}, Lkz1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object p1
+    move-result-object v0
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lcgg;->c:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

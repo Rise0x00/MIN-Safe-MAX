@@ -1,81 +1,35 @@
-.class public final Llvh;
-.super Lh4;
+.class public abstract Llvh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Llvh;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static a:Z
 
+.field public static b:Ljava/lang/reflect/Method;
 
-# instance fields
-.field public final a:I
-
-.field public final b:Lsvh;
+.field public static final c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lrvg;
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0xf
+    const/16 v1, 0x1b
 
-    invoke-direct {v0, v1}, Lrvg;-><init>(I)V
+    if-lt v0, v1, :cond_0
 
-    sput-object v0, Llvh;->CREATOR:Landroid/os/Parcelable$Creator;
+    const/4 v0, 0x1
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public constructor <init>(ILsvh;)V
-    .locals 0
+    :cond_0
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Llvh;->a:I
-
-    iput-object p2, p0, Llvh;->b:Lsvh;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
-
-    const/16 v0, 0x4f45
-
-    invoke-static {p1, v0}, Luxi;->k(Landroid/os/Parcel;I)I
-
-    move-result v0
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x1
-
-    invoke-static {p1, v2, v1}, Luxi;->m(Landroid/os/Parcel;II)V
-
-    iget v1, p0, Llvh;->a:I
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v1, 0x2
-
-    iget-object v2, p0, Llvh;->b:Lsvh;
-
-    invoke-static {p1, v1, v2, p2}, Luxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {p1, v0}, Luxi;->l(Landroid/os/Parcel;I)V
+    :goto_0
+    sput-boolean v0, Llvh;->c:Z
 
     return-void
 .end method

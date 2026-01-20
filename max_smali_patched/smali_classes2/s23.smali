@@ -1,250 +1,146 @@
-.class public final Ls23;
-.super Landroid/widget/FrameLayout;
+.class public abstract Ls23;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lqsf;
-
-
-# instance fields
-.field public final a:Lm0b;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 5
+.method public static a([B)Lt23;
+    .locals 21
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
 
-    new-instance v0, Lm0b;
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ChatUpdate;-><init>()V
 
-    invoke-direct {v0, p1}, Lm0b;-><init>(Landroid/content/Context;)V
+    move-object/from16 v1, p0
 
-    sget-object p1, Lb0b;->a:Lb0b;
-
-    invoke-virtual {v0, p1}, Lm0b;->setAppearance(Lf0b;)V
-
-    const/16 p1, 0x1c
-
-    int-to-float p1, p1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, p1
-
-    invoke-static {v1}, Lkhi;->c(F)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lw63;->setIndicatorSize(I)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lw63;->setIndicatorDirection(I)V
-
-    const/4 v2, 0x3
-
-    int-to-float v2, v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lkhi;->c(F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lw63;->setTrackThickness(I)V
-
-    const/4 v2, 0x2
-
-    int-to-float v2, v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lkhi;->c(F)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lqk0;->setIndicatorTrackGapSize(I)V
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, p1
-
-    invoke-static {v3}, Lkhi;->c(F)I
-
-    move-result v3
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, p1
-
-    invoke-static {v4}, Lkhi;->c(F)I
-
-    move-result v4
-
-    invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    const/16 v3, 0x11
-
-    iput v3, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iput-object v0, p0, Ls23;->a:Lm0b;
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    const/16 v0, 0xa
-
-    int-to-float v0, v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v0
-
-    invoke-static {v2}, Lkhi;->c(F)I
-
-    move-result v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v3
-
-    invoke-static {v0}, Lkhi;->c(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, v1, v2, v1, v0}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {p1, v1, v2}, Lm65;->c(FFI)I
-
-    move-result p1
-
-    const/4 v1, -0x1
-
-    invoke-direct {v0, v1, p1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final getProgress()Lm0b;
-    .locals 1
-
-    iget-object v0, p0, Ls23;->a:Lm0b;
-
-    return-object v0
-.end method
-
-.method public final onAttachedToWindow()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
-
-    sget-object v0, Ly53;->s0:Lvh4;
-
-    invoke-virtual {v0, p0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    :try_start_0
+    invoke-static {v0, v1}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ls23;->onThemeChanged(Lw5b;)V
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
 
-.method public final onThemeChanged(Lw5b;)V
-    .locals 1
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Ls23;->a:Lm0b;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, p1}, Lm0b;->onThemeChanged(Lw5b;)V
+    new-instance v3, Lz10;
 
-    return-void
+    iget v4, v1, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+
+    iget v5, v1, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v6, v1, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v7, v1, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    const/4 v8, 0x2
+
+    invoke-direct/range {v3 .. v8}, Lz10;-><init>(FFFFI)V
+
+    move-object/from16 v18, v3
+
+    goto :goto_0
+
+    :cond_0
+    move-object/from16 v18, v2
+
+    :goto_0
+    new-instance v4, Lt23;
+
+    iget-wide v5, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->requestId:J
+
+    iget-wide v7, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatId:J
+
+    iget-wide v9, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->chatServerId:J
+
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->descriptionIsNull:Z
+
+    if-eqz v1, :cond_1
+
+    move-object v14, v2
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->description:Ljava/lang/String;
+
+    move-object v14, v1
+
+    :goto_1
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->themeIsNull:Z
+
+    if-eqz v1, :cond_2
+
+    move-object/from16 v16, v2
+
+    goto :goto_2
+
+    :cond_2
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->theme:Ljava/lang/String;
+
+    move-object/from16 v16, v1
+
+    :goto_2
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoTokenIsNull:Z
+
+    if-eqz v1, :cond_3
+
+    move-object/from16 v17, v2
+
+    goto :goto_3
+
+    :cond_3
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->photoToken:Ljava/lang/String;
+
+    move-object/from16 v17, v1
+
+    :goto_3
+    iget-boolean v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageIdIsNull:Z
+
+    if-eqz v1, :cond_4
+
+    :goto_4
+    move-object/from16 v19, v2
+
+    goto :goto_5
+
+    :cond_4
+    iget-wide v1, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->pinMessageId:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    goto :goto_4
+
+    :goto_5
+    iget-boolean v0, v0, Lru/ok/tamtam/nano/Tasks$ChatUpdate;->notifyPin:Z
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v13, 0x0
+
+    const/4 v15, 0x0
+
+    move/from16 v20, v0
+
+    invoke-direct/range {v4 .. v20}, Lt23;-><init>(JJJILjava/lang/String;ZLjava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lz10;Ljava/lang/Long;Z)V
+
+    return-object v4
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

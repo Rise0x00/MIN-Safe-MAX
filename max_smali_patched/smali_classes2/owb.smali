@@ -1,72 +1,86 @@
 .class public final Lowb;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic o:Lb6b;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lb6b;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lowb;->o:Lb6b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lowb;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Lg54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lowb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lowb;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lowb;
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-object v1, p0, Lowb;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, p2}, Lowb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lowb;->a:Ljava/lang/String;
 
-    return-object p2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 1
 
-    new-instance p1, Lowb;
+    iget-object v0, p0, Lowb;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lowb;->o:Lb6b;
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {p1, v0, p2}, Lowb;-><init>(Lb6b;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-string v0, "Peer(id="
 
-    iget-object p1, p0, Lowb;->o:Lb6b;
+    const-string v1, ")"
 
-    invoke-virtual {p1}, Lb6b;->invoke()Ljava/lang/Object;
+    iget-object v2, p0, Lowb;->a:Ljava/lang/String;
 
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    return-object p1
+    move-result-object v0
+
+    return-object v0
 .end method

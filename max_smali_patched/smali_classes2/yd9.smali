@@ -2,173 +2,361 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Cloneable;
-
 
 # instance fields
-.field public a:Ljava/nio/charset/CodingErrorAction;
+.field public final a:Landroid/content/Context;
 
-.field public b:Ljava/nio/charset/CodingErrorAction;
+.field public final b:Ljava/util/ArrayList;
 
-.field public c:I
+.field public c:Ljava/lang/String;
 
 .field public d:I
 
-.field public o:I
+.field public e:I
+
+.field public f:I
+
+.field public g:F
+
+.field public h:F
+
+.field public i:Z
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:Z
+
+.field public n:I
+
+.field public o:Lrz6;
+
+.field public p:J
+
+.field public q:J
+
+.field public r:Z
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyd9;->a:Landroid/content/Context;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lyd9;->b:Ljava/util/ArrayList;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lyd9;->f:I
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    iput v0, p0, Lyd9;->h:F
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lyd9;->l:Z
+
+    iput-boolean v0, p0, Lyd9;->m:Z
+
+    iput p1, p0, Lyd9;->n:I
+
+    const-wide/16 v0, 0x1f4
+
+    iput-wide v0, p0, Lyd9;->p:J
+
+    const-wide/32 v0, 0x493e0
+
+    iput-wide v0, p0, Lyd9;->q:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final clone()Ljava/lang/Object;
-    .locals 2
+.method public final a()Lje9;
+    .locals 8
 
-    new-instance v0, Lyd9;
+    iget-wide v0, p0, Lyd9;->p:J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v2, p0, Lyd9;->c:Ljava/lang/String;
 
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+    const/4 v3, 0x0
 
-    iput-object v1, v0, Lyd9;->a:Ljava/nio/charset/CodingErrorAction;
+    if-eqz v2, :cond_0
 
-    iput-object v1, v0, Lyd9;->b:Ljava/nio/charset/CodingErrorAction;
+    invoke-static {v2}, Lrzf;->d0(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
-    const v1, 0x7fffffff
+    move-result-object v2
 
-    iput v1, v0, Lyd9;->c:I
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    const/16 v1, 0x2000
+    move-result-object v2
 
-    iput v1, v0, Lyd9;->d:I
+    goto :goto_0
 
-    iput v1, v0, Lyd9;->o:I
+    :cond_0
+    move-object v2, v3
 
-    iget-object v1, p0, Lyd9;->a:Ljava/nio/charset/CodingErrorAction;
+    :goto_0
+    iput-object v2, p0, Lyd9;->c:Ljava/lang/String;
 
-    iput-object v1, v0, Lyd9;->a:Ljava/nio/charset/CodingErrorAction;
+    iget-object v2, p0, Lyd9;->b:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lyd9;->b:Ljava/nio/charset/CodingErrorAction;
+    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
-    iput-object v1, v0, Lyd9;->b:Ljava/nio/charset/CodingErrorAction;
+    move-result v4
 
-    iget v1, p0, Lyd9;->c:I
+    if-nez v4, :cond_6
 
-    iput v1, v0, Lyd9;->c:I
+    iget-object v4, p0, Lyd9;->c:Ljava/lang/String;
+
+    if-eqz v4, :cond_6
+
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    if-eqz v4, :cond_6
+
+    iget v4, p0, Lyd9;->g:F
+
+    const/4 v5, 0x0
+
+    cmpg-float v5, v4, v5
+
+    if-ltz v5, :cond_5
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    cmpg-float v5, v5, v4
+
+    if-lez v5, :cond_5
+
+    iget v5, p0, Lyd9;->h:F
+
+    cmpg-float v4, v5, v4
+
+    if-lez v4, :cond_5
+
+    const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
+
+    float-to-double v4, v5
+
+    cmpg-double v4, v6, v4
+
+    if-ltz v4, :cond_5
+
+    iget v4, p0, Lyd9;->d:I
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x1
+
+    if-gtz v4, :cond_1
+
+    move v4, v6
+
+    goto :goto_1
+
+    :cond_1
+    move v4, v5
+
+    :goto_1
+    iget v7, p0, Lyd9;->e:I
+
+    if-gtz v7, :cond_2
+
+    move v5, v6
+
+    :cond_2
+    if-ne v4, v5, :cond_4
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v0, v4
+
+    if-lez v4, :cond_3
+
+    new-instance v3, Lje9;
+
+    new-instance v4, Lyd9;
+
+    iget-object v5, p0, Lyd9;->a:Landroid/content/Context;
+
+    invoke-direct {v4, v5}, Lyd9;-><init>(Landroid/content/Context;)V
+
+    iget-object v5, v4, Lyd9;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {v5, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v2, p0, Lyd9;->c:Ljava/lang/String;
+
+    iput-object v2, v4, Lyd9;->c:Ljava/lang/String;
+
+    iget v2, p0, Lyd9;->d:I
+
+    iput v2, v4, Lyd9;->d:I
+
+    iget v2, p0, Lyd9;->e:I
+
+    iput v2, v4, Lyd9;->e:I
+
+    iget v2, p0, Lyd9;->f:I
+
+    iput v2, v4, Lyd9;->f:I
+
+    iget-boolean v2, p0, Lyd9;->i:Z
+
+    iput-boolean v2, v4, Lyd9;->i:Z
+
+    iget-boolean v2, p0, Lyd9;->j:Z
+
+    iput-boolean v2, v4, Lyd9;->j:Z
+
+    iget-boolean v2, p0, Lyd9;->k:Z
+
+    iput-boolean v2, v4, Lyd9;->k:Z
+
+    iget v2, p0, Lyd9;->h:F
+
+    iput v2, v4, Lyd9;->h:F
+
+    iget v2, p0, Lyd9;->g:F
+
+    iput v2, v4, Lyd9;->g:F
+
+    iget-boolean v2, p0, Lyd9;->l:Z
+
+    iput-boolean v2, v4, Lyd9;->l:Z
+
+    iget-boolean v2, p0, Lyd9;->m:Z
+
+    iput-boolean v2, v4, Lyd9;->m:Z
+
+    iget v2, p0, Lyd9;->n:I
+
+    iput v2, v4, Lyd9;->n:I
+
+    iget-object v2, p0, Lyd9;->o:Lrz6;
+
+    iput-object v2, v4, Lyd9;->o:Lrz6;
+
+    iput-wide v0, v4, Lyd9;->p:J
+
+    iget-wide v0, p0, Lyd9;->q:J
+
+    iput-wide v0, v4, Lyd9;->q:J
+
+    iget-boolean v0, p0, Lyd9;->r:Z
+
+    iput-boolean v0, v4, Lyd9;->r:Z
+
+    invoke-direct {v3, v4}, Lje9;-><init>(Lyd9;)V
+
+    return-object v3
+
+    :cond_3
+    new-instance v2, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
+
+    const-string v4, "Illegal ping delay="
+
+    const-string v5, " ms"
+
+    invoke-static {v0, v1, v4, v5}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+
+    :cond_4
+    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
 
     iget v1, p0, Lyd9;->d:I
 
-    iput v1, v0, Lyd9;->d:I
+    iget v2, p0, Lyd9;->e:I
 
-    return-object v0
-.end method
+    const-string v4, "Illegal requested size="
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    const-string v5, "x"
 
-    instance-of v0, p1, Lyd9;
+    invoke-static {v4, v1, v2, v5}, Lj27;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    goto :goto_0
+    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_0
-    check-cast p1, Lyd9;
+    throw v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :cond_5
+    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
 
-    iget-object v0, p0, Lyd9;->a:Ljava/nio/charset/CodingErrorAction;
+    iget v1, p0, Lyd9;->g:F
 
-    iget-object v1, p1, Lyd9;->a:Ljava/nio/charset/CodingErrorAction;
+    iget v2, p0, Lyd9;->h:F
 
-    if-ne v0, v1, :cond_1
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lyd9;->b:Ljava/nio/charset/CodingErrorAction;
+    const-string v5, "Illegal requested position range=["
 
-    iget-object v1, p1, Lyd9;->b:Ljava/nio/charset/CodingErrorAction;
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lyd9;->c:I
+    const-string v1, ", "
 
-    iget v1, p1, Lyd9;->c:I
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget v0, p0, Lyd9;->o:I
+    const-string v1, "]"
 
-    iget v1, p1, Lyd9;->o:I
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v0, v1, :cond_1
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget v0, p0, Lyd9;->d:I
+    move-result-object v1
 
-    iget p1, p1, Lyd9;->d:I
+    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    if-ne v0, p1, :cond_1
+    throw v0
 
-    const/4 p1, 0x1
+    :cond_6
+    new-instance v0, Lone/me/sdk/media/transformer/impl/IllegalMediaTransformException;
 
-    return p1
+    iget-object v1, p0, Lyd9;->c:Ljava/lang/String;
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    return p1
-.end method
+    const-string v5, "Illegal input/output="
 
-.method public final hashCode()I
-    .locals 3
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lyd9;->a:Ljava/nio/charset/CodingErrorAction;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v2, "/"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v0
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_0
-    move v0, v1
+    invoke-direct {v0, v1, v3}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :goto_0
-    const/16 v2, 0x3e0
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v0, p0, Lyd9;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lyd9;->c:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lyd9;->d:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lyd9;->o:I
-
-    add-int/2addr v2, v0
-
-    return v2
+    throw v0
 .end method

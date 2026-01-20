@@ -1,26 +1,26 @@
 .class public final Llz2;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/search/ChatsListSearchScreen;
+.field public final synthetic X:Ll03;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
+.method public constructor <init>(Ll03;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Llz2;->X:Lone/me/chats/search/ChatsListSearchScreen;
+    iput-object p1, p0, Llz2;->X:Ll03;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, La5a;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,125 +40,85 @@
 
     check-cast p1, Llz2;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Llz2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
-    new-instance v0, Llz2;
+    new-instance p1, Llz2;
 
-    iget-object v1, p0, Llz2;->X:Lone/me/chats/search/ChatsListSearchScreen;
+    iget-object v0, p0, Llz2;->X:Ll03;
 
-    invoke-direct {v0, p2, v1}, Llz2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/search/ChatsListSearchScreen;)V
+    invoke-direct {p1, v0, p2}, Llz2;-><init>(Ll03;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Llz2;->o:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Llz2;->o:I
 
-    iget-object p1, p0, Llz2;->o:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, La5a;
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Llz2;->X:Lone/me/chats/search/ChatsListSearchScreen;
+    if-ne v0, v1, :cond_0
 
-    invoke-static {v0}, Ldci;->b(Lc24;)V
-
-    instance-of v0, p1, Lr8b;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lt23;->c:Lt23;
-
-    check-cast p1, Lr8b;
-
-    iget-object p1, p1, La5a;->a:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    invoke-virtual {v0}, Ladi;->p0()Ltf4;
-
-    move-result-object p1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v4, ":settings/folder/by-chat?id="
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v1}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lzu9;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    if-eqz v0, :cond_1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    sget-object v0, Lt23;->c:Lt23;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    check-cast p1, Lzu9;
+    throw p1
 
-    iget-object p1, p1, La5a;->a:Ljava/lang/Object;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    check-cast p1, Ljava/lang/Number;
+    iget-object p1, p0, Llz2;->X:Ll03;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    iget-object p1, p1, Ll03;->e1:Lpld;
 
-    move-result-wide v2
+    new-instance v0, Lr83;
 
-    invoke-virtual {v0}, Ladi;->p0()Ltf4;
+    const/16 v2, 0xc
+
+    invoke-direct {v0, p1, v2}, Lr83;-><init>(Ld76;I)V
+
+    iput v1, p0, Llz2;->o:I
+
+    invoke-static {v0, p0}, Lgu0;->q(Ld76;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v0, ":profile/change-owner?chat_id="
+    sget-object v0, Lac4;->a:Lac4;
 
-    const-string v4, "&leave_chat=true"
+    if-ne p1, v0, :cond_2
 
-    invoke-static {v2, v3, v0, v4}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0, v1}, Ltf4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    goto :goto_0
-
-    :cond_1
-    instance-of v0, p1, Lpf4;
-
-    if-eqz v0, :cond_2
-
-    sget-object v0, Lt23;->c:Lt23;
-
-    check-cast p1, Lpf4;
-
-    invoke-virtual {v0, p1}, Ladi;->s0(Lpf4;)V
+    return-object v0
 
     :cond_2
     :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    check-cast p1, Lnd2;
+
+    iget-wide v0, p1, Lnd2;->a:J
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
 
     return-object p1
 .end method

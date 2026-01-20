@@ -1,294 +1,89 @@
-.class public Lt89;
-.super Ljava/lang/Object;
+.class public final Lt89;
+.super Landroid/view/animation/Animation;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final synthetic a:I
 
-.field public final b:Li89;
+.field public final synthetic b:I
 
-.field public final c:Z
+.field public final synthetic c:I
 
-.field public final d:I
-
-.field public e:Landroid/view/View;
-
-.field public f:I
-
-.field public g:Z
-
-.field public h:Ly89;
-
-.field public i:Lr89;
-
-.field public j:Landroid/widget/PopupWindow$OnDismissListener;
-
-.field public final k:Ls89;
+.field public final synthetic d:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Li89;Landroid/view/View;ZII)V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/view/View;III)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Lt89;->a:I
 
-    const p6, 0x800003
+    iput p2, p0, Lt89;->b:I
 
-    iput p6, p0, Lt89;->f:I
+    iput p3, p0, Lt89;->c:I
 
-    new-instance p6, Ls89;
+    iput-object p1, p0, Lt89;->d:Landroid/view/View;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p6, v0, p0}, Ls89;-><init>(ILjava/lang/Object;)V
-
-    iput-object p6, p0, Lt89;->k:Ls89;
-
-    iput-object p1, p0, Lt89;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lt89;->b:Li89;
-
-    iput-object p3, p0, Lt89;->e:Landroid/view/View;
-
-    iput-boolean p4, p0, Lt89;->c:Z
-
-    iput p5, p0, Lt89;->d:I
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lr89;
-    .locals 11
-
-    iget-object v0, p0, Lt89;->i:Lr89;
-
-    if-nez v0, :cond_1
-
-    const-string v0, "window"
-
-    iget-object v1, p0, Lt89;->a:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/WindowManager;
-
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object v0
-
-    new-instance v2, Landroid/graphics/Point;
-
-    invoke-direct {v2}, Landroid/graphics/Point;-><init>()V
-
-    invoke-virtual {v0, v2}, Landroid/view/Display;->getRealSize(Landroid/graphics/Point;)V
-
-    iget v0, v2, Landroid/graphics/Point;->x:I
-
-    iget v2, v2, Landroid/graphics/Point;->y:I
-
-    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lklc;->abc_cascading_menus_min_smallest_width:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    if-lt v0, v2, :cond_0
-
-    new-instance v0, Li42;
-
-    iget-object v2, p0, Lt89;->e:Landroid/view/View;
-
-    iget v3, p0, Lt89;->d:I
-
-    iget-boolean v4, p0, Lt89;->c:Z
-
-    invoke-direct {v0, v1, v2, v3, v4}, Li42;-><init>(Landroid/content/Context;Landroid/view/View;IZ)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v5, Ljye;
-
-    iget-object v8, p0, Lt89;->e:Landroid/view/View;
-
-    iget v9, p0, Lt89;->d:I
-
-    iget-boolean v10, p0, Lt89;->c:Z
-
-    iget-object v6, p0, Lt89;->a:Landroid/content/Context;
-
-    iget-object v7, p0, Lt89;->b:Li89;
-
-    invoke-direct/range {v5 .. v10}, Ljye;-><init>(Landroid/content/Context;Li89;Landroid/view/View;IZ)V
-
-    move-object v0, v5
-
-    :goto_0
-    iget-object v1, p0, Lt89;->b:Li89;
-
-    invoke-virtual {v0, v1}, Lr89;->l(Li89;)V
-
-    iget-object v1, p0, Lt89;->k:Ls89;
-
-    invoke-virtual {v0, v1}, Lr89;->r(Landroid/widget/PopupWindow$OnDismissListener;)V
-
-    iget-object v1, p0, Lt89;->e:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Lr89;->n(Landroid/view/View;)V
-
-    iget-object v1, p0, Lt89;->h:Ly89;
-
-    invoke-interface {v0, v1}, Lz89;->e(Ly89;)V
-
-    iget-boolean v1, p0, Lt89;->g:Z
-
-    invoke-virtual {v0, v1}, Lr89;->o(Z)V
-
-    iget v1, p0, Lt89;->f:I
-
-    invoke-virtual {v0, v1}, Lr89;->p(I)V
-
-    iput-object v0, p0, Lt89;->i:Lr89;
-
-    :cond_1
-    iget-object v0, p0, Lt89;->i:Lr89;
-
-    return-object v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    iget-object v0, p0, Lt89;->i:Lr89;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lkne;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public c()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lt89;->i:Lr89;
-
-    iget-object v0, p0, Lt89;->j:Landroid/widget/PopupWindow$OnDismissListener;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Landroid/widget/PopupWindow$OnDismissListener;->onDismiss()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(IIZZ)V
+.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
     .locals 3
 
-    invoke-virtual {p0}, Lt89;->a()Lr89;
+    iget p2, p0, Lt89;->a:I
 
-    move-result-object v0
+    iget-object v0, p0, Lt89;->d:Landroid/view/View;
 
-    invoke-virtual {v0, p4}, Lr89;->s(Z)V
+    iget v1, p0, Lt89;->c:I
 
-    if-eqz p3, :cond_1
+    iget v2, p0, Lt89;->b:I
 
-    iget p3, p0, Lt89;->f:I
+    packed-switch p2, :pswitch_data_0
 
-    iget-object p4, p0, Lt89;->e:Landroid/view/View;
+    sub-int/2addr v2, v1
 
-    invoke-virtual {p4}, Landroid/view/View;->getLayoutDirection()I
+    int-to-float p2, v2
 
-    move-result p4
+    mul-float/2addr p2, p1
 
-    invoke-static {p3, p4}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
+    float-to-int p1, p2
 
-    move-result p3
+    add-int/2addr v1, p1
 
-    and-int/lit8 p3, p3, 0x7
+    sget-boolean p1, Lo99;->e1:Z
 
-    const/4 p4, 0x5
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    if-ne p3, p4, :cond_0
+    move-result-object p1
 
-    iget-object p3, p0, Lt89;->e:Landroid/view/View;
+    iput v1, p1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    invoke-virtual {p3}, Landroid/view/View;->getWidth()I
-
-    move-result p3
-
-    sub-int/2addr p1, p3
-
-    :cond_0
-    invoke-virtual {v0, p1}, Lr89;->q(I)V
-
-    invoke-virtual {v0, p2}, Lr89;->t(I)V
-
-    iget-object p3, p0, Lt89;->a:Landroid/content/Context;
-
-    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 p4, 0x42400000    # 48.0f
-
-    mul-float/2addr p3, p4
-
-    const/high16 p4, 0x40000000    # 2.0f
-
-    div-float/2addr p3, p4
-
-    float-to-int p3, p3
-
-    new-instance p4, Landroid/graphics/Rect;
-
-    sub-int v1, p1, p3
-
-    sub-int v2, p2, p3
-
-    add-int/2addr p1, p3
-
-    add-int/2addr p2, p3
-
-    invoke-direct {p4, v1, v2, p1, p2}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    iput-object p4, v0, Lr89;->a:Landroid/graphics/Rect;
-
-    :cond_1
-    invoke-interface {v0}, Lkne;->g()V
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
+
+    :pswitch_0
+    sub-int p2, v2, v1
+
+    int-to-float p2, p2
+
+    mul-float/2addr p2, p1
+
+    float-to-int p1, p2
+
+    sub-int/2addr v2, p1
+
+    invoke-static {v0, v2}, Landroidx/mediarouter/app/d;->o(Landroid/view/View;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

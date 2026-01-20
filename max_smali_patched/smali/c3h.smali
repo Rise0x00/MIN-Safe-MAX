@@ -2,46 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La38;
+
+
+# static fields
+.field public static final b:Lc3h;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Ltif;
-
-.field public final c:Ltif;
+.field public final synthetic a:Lzwa;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lc3h;
+
+    invoke-direct {v0}, Lc3h;-><init>()V
+
+    sput-object v0, Lc3h;->b:Lc3h;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc3h;->a:Landroid/content/Context;
+    new-instance v0, Lzwa;
 
-    new-instance p1, Lb3h;
+    invoke-direct {v0}, Lzwa;-><init>()V
 
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lb3h;-><init>(Lc3h;I)V
-
-    new-instance v0, Ltif;
-
-    invoke-direct {v0, p1}, Ltif;-><init>(Loi6;)V
-
-    iput-object v0, p0, Lc3h;->b:Ltif;
-
-    new-instance p1, Lb3h;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, p0, v0}, Lb3h;-><init>(Lc3h;I)V
-
-    new-instance v0, Ltif;
-
-    invoke-direct {v0, p1}, Ltif;-><init>(Loi6;)V
-
-    iput-object v0, p0, Lc3h;->c:Ltif;
+    iput-object v0, p0, Lc3h;->a:Lzwa;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 1
+
+    check-cast p2, Lb3h;
+
+    iget-object v0, p0, Lc3h;->a:Lzwa;
+
+    invoke-virtual {v0, p1, p2}, Lzwa;->a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lc3h;->a:Lzwa;
+
+    invoke-virtual {v0, p1}, Lzwa;->b(Lkl4;)Ljava/lang/Object;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+.end method
+
+.method public final d()Lxpe;
+    .locals 1
+
+    iget-object v0, p0, Lc3h;->a:Lzwa;
+
+    invoke-virtual {v0}, Lzwa;->d()Lxpe;
+
+    move-result-object v0
+
+    return-object v0
 .end method

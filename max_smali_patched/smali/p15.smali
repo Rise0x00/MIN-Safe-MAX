@@ -1,95 +1,78 @@
-.class public final Lp15;
+.class public final synthetic Lp15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Lp15;
-
-.field public static final c:Z
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ArrayBlockingQueue;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ls15;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ls15;I)V
+    .locals 0
 
-    new-instance v0, Lp15;
+    iput p2, p0, Lp15;->a:I
 
-    invoke-direct {v0}, Lp15;-><init>()V
-
-    sput-object v0, Lp15;->b:Lp15;
-
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lp15;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
+    iput-object p1, p0, Lp15;->b:Ls15;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
-
-    iput-object v0, p0, Lp15;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lo15;)V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    sget-boolean v0, Lp15;->c:Z
+    iget v0, p0, Lp15;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    goto :goto_1
+    iget-object v0, p0, Lp15;->b:Ls15;
 
-    :cond_0
-    const/4 v0, 0x5
+    iget-object v1, v0, Ls15;->a:Lzmj;
 
-    :goto_0
-    iget-object v1, p0, Lp15;->a:Ljava/util/concurrent/ArrayBlockingQueue;
+    iget-object v0, v0, Ls15;->f:Ll15;
 
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ArrayBlockingQueue;->offer(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    if-lez v0, :cond_1
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ArrayBlockingQueue;->poll()Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lp15;->a:Ljava/util/concurrent/ArrayBlockingQueue;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lzmj;->G(Ll15;)Lu15;
 
     move-result-object v0
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lp15;->b:Ls15;
+
+    iget-object v1, v0, Ls15;->a:Lzmj;
+
+    iget-object v0, v0, Ls15;->e:Ll15;
+
+    invoke-virtual {v1, v0}, Lzmj;->G(Ll15;)Lu15;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Lr15;
+
+    iget-object v1, p0, Lp15;->b:Ls15;
+
+    invoke-direct {v0, v1}, Lr15;-><init>(Ls15;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

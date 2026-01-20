@@ -1,48 +1,126 @@
-.class public final Lan1;
-.super Lp14;
+.class public final synthetic Lan1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lng0;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+.field public final synthetic b:Ldn1;
 
 
 # direct methods
-.method public constructor <init>(Lng0;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ldn1;I)V
     .locals 0
 
-    iput-object p1, p0, Lan1;->X:Lng0;
+    iput p2, p0, Lan1;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lan1;->b:Ldn1;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iput-object p1, p0, Lan1;->d:Ljava/lang/Object;
+    iget v0, p0, Lan1;->a:I
 
-    iget p1, p0, Lan1;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lan1;->b:Ldn1;
 
-    or-int/2addr p1, v0
+    iget-object v0, v0, Ldn1;->e:Lo58;
 
-    iput p1, p0, Lan1;->o:I
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    iget-object p1, p0, Lan1;->X:Lng0;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    check-cast v0, Lwx5;
 
-    invoke-virtual {p1, v0, p0}, Lng0;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast v0, Lpy5;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p1
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->call-custom-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lege;->j(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lan1;->b:Ldn1;
+
+    iget-object v0, v0, Ldn1;->b:Lgre;
+
+    check-cast v0, Lidc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->reconnect-call-ringtone:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lidc;->j(Ljava/lang/Enum;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lan1;->b:Ldn1;
+
+    iget-object v0, v0, Ldn1;->a:Landroid/content/Context;
+
+    const-string v1, "vibrator"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/Vibrator;
+
+    return-object v0
+
+    :pswitch_2
+    iget-object v0, p0, Lan1;->b:Ldn1;
+
+    iget-object v0, v0, Ldn1;->a:Landroid/content/Context;
+
+    const-string v1, "audio"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/media/AudioManager;
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

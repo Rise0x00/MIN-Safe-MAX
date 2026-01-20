@@ -1,21 +1,15 @@
-.class public final Lwo0;
+.class public abstract Lwo0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lb77;
-
-
 # direct methods
-.method public constructor <init>(Lb77;)V
+.method public static a(Landroid/app/KeyguardManager;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1, p2}, Landroid/app/KeyguardManager;->createConfirmDeviceCredentialIntent(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
-    invoke-static {p1}, Lkui;->g(Ljava/lang/Object;)V
+    move-result-object p0
 
-    iput-object p1, p0, Lwo0;->a:Lb77;
-
-    return-void
+    return-object p0
 .end method

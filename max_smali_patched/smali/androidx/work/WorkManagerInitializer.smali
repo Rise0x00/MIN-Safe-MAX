@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leg7;
+.implements Lnp7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Leg7;"
+        "Lnp7;"
     }
 .end annotation
 
@@ -25,7 +25,7 @@
 
     const-string v0, "WrkMgrInitializer"
 
-    invoke-static {v0}, Luyh;->k(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -55,7 +55,7 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 3
 
-    invoke-static {}, Luyh;->e()Luyh;
+    invoke-static {}, Lkgi;->g()Lkgi;
 
     move-result-object v0
 
@@ -63,19 +63,21 @@
 
     const-string v2, "Initializing WorkManager with default configuration."
 
-    invoke-virtual {v0, v1, v2}, Luyh;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lkgi;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lk6a;
+    new-instance v0, Lfpj;
 
-    invoke-direct {v0}, Lk6a;-><init>()V
+    const/4 v1, 0x2
 
-    new-instance v1, Lul3;
+    invoke-direct {v0, v1}, Lfpj;-><init>(I)V
 
-    invoke-direct {v1, v0}, Lul3;-><init>(Lk6a;)V
+    new-instance v1, Lcs3;
 
-    invoke-static {p1, v1}, Lkoh;->e(Landroid/content/Context;Lul3;)V
+    invoke-direct {v1, v0}, Lcs3;-><init>(Lfpj;)V
 
-    invoke-static {p1}, Lkoh;->d(Landroid/content/Context;)Lkoh;
+    invoke-static {p1, v1}, Ltii;->e(Landroid/content/Context;Lcs3;)V
+
+    invoke-static {p1}, Ltii;->d(Landroid/content/Context;)Ltii;
 
     move-result-object p1
 

@@ -2,134 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lgt5;
+.implements Ljava/io/Closeable;
+
 
 # instance fields
-.field public final a:Ls29;
+.field public final a:Lgt5;
 
-.field public final b:J
+.field public final b:Lz29;
 
-.field public final c:Ljava/util/ArrayList;
+.field public final c:Landroid/net/Uri;
 
-.field public volatile d:I
-
-.field public volatile e:I
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final g:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final d:J
 
 
 # direct methods
-.method public constructor <init>(Ls29;)V
-    .locals 2
+.method public constructor <init>(Lgt5;Lz29;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La39;->a:Ls29;
+    iput-object p1, p0, La39;->a:Lgt5;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput-object p2, p0, La39;->b:Lz29;
 
-    move-result-wide v0
+    iget-object p1, p2, Lz29;->a:Lcp4;
 
-    iput-wide v0, p0, La39;->b:J
+    invoke-virtual {p1}, Lcp4;->getUri()Landroid/net/Uri;
 
-    new-instance p1, Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    if-eqz p1, :cond_0
 
-    iput-object p1, p0, La39;->c:Ljava/util/ArrayList;
+    iput-object p1, p0, La39;->c:Landroid/net/Uri;
 
-    const/4 p1, -0x1
+    iget-wide p1, p2, Lz29;->b:J
 
-    iput p1, p0, La39;->d:I
-
-    iput p1, p0, La39;->e:I
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, La39;->f:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, La39;->g:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-wide p1, p0, La39;->d:J
 
     return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Required value was null."
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public final a(Lone/me/sdk/media/transformer/MediaTransformException;)V
+.method public final H(Lkt5;)V
     .locals 1
 
-    iget-object v0, p0, La39;->g:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, La39;->a:Lgt5;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lgt5;->H(Lkt5;)V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 8
+.method public final close()V
+    .locals 0
 
-    iget-object v0, p0, La39;->a:Ls29;
+    invoke-virtual {p0}, La39;->release()V
 
-    iget-object v1, v0, Ls29;->b:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-static {v1}, Lal5;->f(Ljava/util/ArrayList;)Ljava/lang/String;
+.method public final d(JJ)V
+    .locals 1
 
-    move-result-object v1
+    iget-object v0, p0, La39;->a:Lgt5;
 
-    iget-object v2, p0, La39;->c:Ljava/util/ArrayList;
+    invoke-interface {v0, p1, p2, p3, p4}, Lgt5;->d(JJ)V
 
-    invoke-static {v2}, Lal5;->c(Ljava/util/List;)Ljava/lang/String;
+    return-void
+.end method
 
-    move-result-object v2
+.method public final f0(Lit5;Lf7;)I
+    .locals 1
 
-    iget-object v3, v0, Ls29;->c:Ljava/lang/String;
+    iget-object v0, p0, La39;->a:Lgt5;
 
-    const-string v4, "              "
+    invoke-interface {v0, p1, p2}, Lgt5;->f0(Lit5;Lf7;)I
 
-    invoke-static {v0, v4}, Lal5;->e(Ls29;Ljava/lang/String;)Ljava/lang/String;
+    move-result p1
 
-    move-result-object v4
+    return p1
+.end method
 
-    invoke-static {v0}, Lal5;->d(Ls29;)Ljava/lang/String;
+.method public final l(Lit5;)Z
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, La39;->a:Lgt5;
 
-    const-string v5, "\n              }\n              inputMedias={"
+    invoke-interface {v0, p1}, Lgt5;->l(Lit5;)Z
 
-    const-string v6, "\n              }\n              out="
+    move-result p1
 
-    const-string v7, "\n            MediaTransformRequest(\n              in={"
+    return p1
+.end method
 
-    invoke-static {v7, v1, v5, v2, v6}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final release()V
+    .locals 1
 
-    move-result-object v1
+    iget-object v0, p0, La39;->a:Lgt5;
 
-    const-string v2, "\n              anc={"
+    invoke-interface {v0}, Lgt5;->release()V
 
-    const-string v5, "\n              }\n              request={"
+    iget-object v0, p0, La39;->b:Lz29;
 
-    invoke-static {v1, v3, v2, v4, v5}, Lok7;->r(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lz29;->close()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "\n              }\n            )\n        "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lyaf;->h(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

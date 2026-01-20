@@ -1,26 +1,25 @@
-.class public interface abstract Lfv4;
+.class public final Lfv4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;Ljava/lang/String;)Lcs5;
-.end method
+# instance fields
+.field public final a:Ljava/util/ArrayDeque;
 
-.method public abstract b()V
-.end method
+.field public b:Z
 
-.method public abstract c(Lsi4;)J
-.end method
 
-.method public abstract d()Ljava/util/Collection;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.method public abstract e(Ljava/lang/String;Lope;)Lw48;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract f()V
-.end method
+    new-instance v0, Ljava/util/ArrayDeque;
 
-.method public abstract isExternal()Z
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lfv4;->a:Ljava/util/ArrayDeque;
+
+    return-void
 .end method

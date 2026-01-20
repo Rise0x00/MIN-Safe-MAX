@@ -1,100 +1,94 @@
 .class public final Lv54;
-.super Ljava/lang/Object;
+.super Ljef;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lv54;
+# virtual methods
+.method public final D(Lu54;)V
+    .locals 3
 
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-# instance fields
-.field public final a:I
+    check-cast v0, Lpab;
 
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-# direct methods
-.method static constructor <clinit>()V
+    sget v1, Lv5e;->L0:I
+
+    invoke-virtual {v0, v1}, Lpab;->setIcon(I)V
+
+    sget v1, Ll8b;->t:I
+
+    new-instance v2, Llhg;
+
+    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+
+    invoke-virtual {v0, v2}, Lpab;->setTitle(Lqhg;)V
+
+    iget p1, p1, Lu54;->a:I
+
+    new-instance v1, Llhg;
+
+    invoke-direct {v1, p1}, Llhg;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Lpab;->setSubtitle(Lqhg;)V
+
+    return-void
+.end method
+
+.method public final F(Ljava/lang/Integer;Llq6;)V
     .locals 2
 
-    new-instance v0, Lv54;
+    iget-object v0, p0, Ltsd;->a:Landroid/view/View;
 
-    const/4 v1, 0x0
+    if-eqz p1, :cond_0
 
-    invoke-direct {v0, v1}, Lv54;-><init>(I)V
+    check-cast v0, Lpab;
 
-    sput-object v0, Lv54;->b:Lv54;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v1, Lc6;
+
+    invoke-direct {v1, p2}, Lc6;-><init>(Llq6;)V
+
+    invoke-virtual {v0, p1, v1}, Lpab;->f(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
 
     return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lv54;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
 
     :cond_0
-    instance-of v1, p1, Lv54;
+    check-cast v0, Lpab;
 
-    const/4 v2, 0x0
+    iget-object p1, v0, Lpab;->v0:Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    if-nez v1, :cond_1
+    const/4 p2, 0x0
 
-    return v2
+    invoke-virtual {p1, p2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
 
-    :cond_1
-    check-cast p1, Lv54;
+    invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget v1, p0, Lv54;->a:I
+    const/16 p2, 0x8
 
-    iget p1, p1, Lv54;->a:I
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
 
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 1
+.method public final bridge synthetic y(Lud8;)V
+    .locals 0
 
-    iget v0, p0, Lv54;->a:I
+    check-cast p1, Lu54;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {p0, p1}, Lv54;->D(Lu54;)V
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Counter(count="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lv54;->a:I
-
-    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

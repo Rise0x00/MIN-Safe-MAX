@@ -1,18 +1,53 @@
-.class public final synthetic Lf3a;
-.super Ljava/lang/Object;
+.class public final Lf3a;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lh3a;
+
+.field public Z:I
+
+.field public d:Lnd2;
+
+.field public o:Lcw9;
+
+
+# direct methods
+.method public constructor <init>(Lh3a;Lo84;)V
+    .locals 0
+
+    iput-object p1, p0, Lf3a;->Y:Lh3a;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget p1, Lg3a;->t0:I
+    iput-object p1, p0, Lf3a;->X:Ljava/lang/Object;
 
-    const/4 p1, 0x1
+    iget p1, p0, Lf3a;->Z:I
 
-    return p1
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lf3a;->Z:I
+
+    iget-object p1, p0, Lf3a;->Y:Lh3a;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lh3a;->e(Lnd2;Lcw9;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

@@ -1,90 +1,244 @@
-.class public final synthetic Lbm7;
-.super Ljava/lang/Object;
+.class public final Lbm7;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+.field public Y:I
+
+.field public Z:I
+
+.field public o:Lmm7;
+
+.field public t0:I
+
+.field public final synthetic u0:Lmm7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;I)V
+.method public constructor <init>(Lmm7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lbm7;->a:I
+    iput-object p1, p0, Lbm7;->u0:Lmm7;
 
-    iput-object p1, p0, Lbm7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lbm7;->a:I
+    check-cast p1, Lzb4;
 
-    iget-object v1, p0, Lbm7;->b:Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lbm7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->N0:[Les7;
+    move-result-object p1
 
-    new-instance v0, Lhm7;
+    check-cast p1, Lbm7;
 
-    invoke-virtual {v1}, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->N0()Llgc;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result-object v1
+    invoke-virtual {p1, p2}, Lbm7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/16 v2, 0x1e
+    move-result-object p1
 
-    const/4 v3, 0x0
+    return-object p1
+.end method
 
-    invoke-direct {v0, v1, v3, v2}, Lhm7;-><init>(Llgc;II)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lbm7;
+
+    iget-object v0, p0, Lbm7;->u0:Lmm7;
+
+    invoke-direct {p1, v0, p2}, Lbm7;-><init>(Lmm7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lbm7;->t0:I
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    sget-object v3, Lac4;->a:Lac4;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v2, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p0, Lbm7;->Z:I
+
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p1
+
+    goto/16 :goto_3
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    iget v0, p0, Lbm7;->Y:I
+
+    iget v2, p0, Lbm7;->X:I
+
+    iget-object v4, p0, Lbm7;->o:Lmm7;
+
+    :try_start_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object v4, p0, Lbm7;->u0:Lmm7;
+
+    :try_start_2
+    sget-object p1, Lmm7;->E0:Ljava/lang/String;
+
+    iget-object p1, v4, Lmm7;->o:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lyzb;
+
+    invoke-virtual {p1}, Lyzb;->e()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    sget-object p1, Lys6;->a:Lys6;
+
+    iput-object v4, p0, Lbm7;->o:Lmm7;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lbm7;->X:I
+
+    iput v0, p0, Lbm7;->Y:I
+
+    iput v2, p0, Lbm7;->t0:I
+
+    invoke-static {v4, p1, p0}, Lmm7;->a(Lmm7;Lct6;Lp6g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v2, v0
+
+    :goto_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    sget-object v5, Lat6;->a:Lat6;
+
+    const/4 v6, 0x0
+
+    iput-object v6, p0, Lbm7;->o:Lmm7;
+
+    iput v2, p0, Lbm7;->X:I
+
+    iput v0, p0, Lbm7;->Y:I
+
+    iput p1, p0, Lbm7;->Z:I
+
+    iput v1, p0, Lbm7;->t0:I
+
+    invoke-static {v4, v5, p0}, Lmm7;->a(Lmm7;Lct6;Lp6g;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, v3, :cond_4
+
+    :goto_1
+    return-object v3
+
+    :cond_4
+    move-object v7, v0
+
+    move v0, p1
+
+    move-object p1, v7
+
+    :goto_2
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    add-int/2addr v0, p1
+
+    new-instance p1, Ljava/lang/Integer;
+
+    invoke-direct {p1, v0}, Ljava/lang/Integer;-><init>(I)V
+
+    new-instance v0, Ltzd;
+
+    invoke-direct {v0, p1}, Ltzd;-><init>(Ljava/lang/Integer;)V
 
     return-object v0
 
-    :pswitch_0
-    sget-object v0, Lone/me/inviteactions/invitebyqr/InviteByQrBottomSheet;->N0:[Les7;
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    new-instance v0, Lc3b;
+    const-string v0, "storage permissions not granted"
 
-    invoke-direct {v0, v1}, Lc3b;-><init>(Lone/me/sdk/arch/Widget;)V
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    throw p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    move-result-object v1
+    :goto_3
+    new-instance v0, Lrzd;
 
-    sget v2, Lakd;->g:I
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lc3b;->h(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lq3b;
-
-    sget v2, Lyjd;->J:I
-
-    invoke-direct {v1, v2}, Lq3b;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lc3b;->e(Lu3b;)V
+    invoke-direct {v0, p1}, Lrzd;-><init>(Ljava/lang/Throwable;)V
 
     return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

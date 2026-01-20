@@ -1,68 +1,28 @@
-.class public final Lsi4;
+.class public interface abstract Lsi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lcs5;
-
-.field public c:J
-
-.field public d:J
-
-
-# direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p2, p0, Lsi4;->a:Ljava/lang/String;
-
-    new-instance p2, Lcs5;
-
-    invoke-direct {p2, p1}, Lcs5;-><init>(Ljava/io/File;)V
-
-    iput-object p2, p0, Lsi4;->b:Lcs5;
-
-    const-wide/16 p1, -0x1
-
-    iput-wide p1, p0, Lsi4;->c:J
-
-    iput-wide p1, p0, Lsi4;->d:J
-
-    return-void
-.end method
+# interfaces
+.implements Lki4;
 
 
 # virtual methods
-.method public final a()J
-    .locals 4
+.method public abstract G(Laj4;)J
+.end method
 
-    iget-wide v0, p0, Lsi4;->d:J
+.method public abstract H(Lysg;)V
+.end method
 
-    const-wide/16 v2, 0x0
+.method public abstract close()V
+.end method
 
-    cmp-long v0, v0, v2
+.method public abstract getUri()Landroid/net/Uri;
+.end method
 
-    if-gez v0, :cond_0
+.method public w()Ljava/util/Map;
+    .locals 1
 
-    iget-object v0, p0, Lsi4;->b:Lcs5;
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
 
-    iget-object v0, v0, Lcs5;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lsi4;->d:J
-
-    :cond_0
-    iget-wide v0, p0, Lsi4;->d:J
-
-    return-wide v0
+    return-object v0
 .end method

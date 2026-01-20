@@ -1,100 +1,51 @@
 .class public final Lxy7;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
-# interfaces
-.implements Lsz7;
 
+# instance fields
+.field public final synthetic X:Lyy7;
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxy7;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public Y:I
 
-.field public static final a:Lxy7;
+.field public d:Ljava/lang/String;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lyy7;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lxy7;
+    iput-object p1, p0, Lxy7;->X:Lyy7;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxy7;->a:Lxy7;
-
-    new-instance v0, Lmu7;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lmu7;-><init>(I)V
-
-    sput-object v0, Lxy7;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+
+    iput-object p1, p0, Lxy7;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lxy7;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lxy7;->Y:I
+
+    iget-object p1, p0, Lxy7;->X:Lyy7;
 
     const/4 v0, 0x0
 
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Lyy7;->a(Ljava/lang/String;Lo84;)Ljava/lang/Object;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    move-result-object p1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lxy7;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x1269e0f3
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Error"
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p2, 0x1
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
+    return-object p1
 .end method

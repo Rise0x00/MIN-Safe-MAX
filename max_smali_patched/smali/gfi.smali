@@ -3,68 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Ljava/lang/Comparable;
 
 
-# static fields
-.field public static final a:Lgfi;
+# instance fields
+.field public final a:I
+
+.field public final b:Lyei;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(ILyei;)V
+    .locals 0
 
-    new-instance v0, Lgfi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lgfi;->a:I
 
-    sput-object v0, Lgfi;->a:Lgfi;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    iput-object p2, p0, Lgfi;->b:Lyei;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 1
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    check-cast p1, Lgfi;
 
-    move-result-object p1
+    iget v0, p0, Lgfi;->a:I
 
-    throw p1
+    iget p1, p1, Lgfi;->a:I
+
+    invoke-static {v0, p1}, Ljava/lang/Integer;->compare(II)I
+
+    move-result p1
+
+    return p1
 .end method

@@ -1,232 +1,50 @@
 .class public final Lnqg;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public final synthetic X:Lpqg;
-
-.field public final synthetic Y:I
-
-.field public final synthetic Z:I
-
-.field public final synthetic o:Ljava/lang/Object;
+.implements Lsqg;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lpqg;II)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lnqg;->o:Ljava/lang/Object;
-
-    iput-object p3, p0, Lnqg;->X:Lpqg;
-
-    iput p4, p0, Lnqg;->Y:I
-
-    iput p5, p0, Lnqg;->Z:I
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnqg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lnqg;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lnqg;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lnqg;
-
-    iget v4, p0, Lnqg;->Y:I
-
-    iget v5, p0, Lnqg;->Z:I
-
-    iget-object v1, p0, Lnqg;->o:Ljava/lang/Object;
-
-    iget-object v3, p0, Lnqg;->X:Lpqg;
-
-    move-object v2, p2
-
-    invoke-direct/range {v0 .. v5}, Lnqg;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lpqg;II)V
+    const-string v0, "one.video.calls.externcalls"
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
+.method public final b()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-string v0, "xrRYkU895jUPp2YZo1sxmtFadnlX1oHyouadIxpNzAp"
 
-    iget-object p1, p0, Lnqg;->o:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast p1, Landroid/net/Uri;
+.method public final c()Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lnqg;->X:Lpqg;
+    const/4 v0, 0x0
 
-    iget v1, p0, Lnqg;->Z:I
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final d()Ljava/lang/String;
+    .locals 1
 
-    :try_start_0
-    new-instance v3, Landroid/media/MediaMetadataRetriever;
+    const-string v0, "0.1.1"
 
-    invoke-direct {v3}, Landroid/media/MediaMetadataRetriever;-><init>()V
-
-    iget-object v0, v0, Lpqg;->a:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Context;
-
-    invoke-virtual {v3, v0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
-
-    const/16 v0, 0x9
-
-    invoke-virtual {v3, v0}, Landroid/media/MediaMetadataRetriever;->extractMetadata(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v4
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_0
-    const-wide/16 v4, 0x0
-
-    :goto_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v6, 0x0
-
-    :goto_1
-    iget v7, p0, Lnqg;->Y:I
-
-    if-ge v6, v7, :cond_3
-
-    int-to-double v8, v6
-
-    int-to-double v10, v7
-
-    div-double/2addr v8, v10
-
-    long-to-double v10, v4
-
-    mul-double/2addr v8, v10
-
-    const/16 v7, 0x3e8
-
-    int-to-double v10, v7
-
-    mul-double/2addr v8, v10
-
-    double-to-long v7, v8
-
-    const/4 v9, 0x2
-
-    :try_start_1
-    invoke-virtual {v3, v7, v8, v9}, Landroid/media/MediaMetadataRetriever;->getFrameAtTime(JI)Landroid/graphics/Bitmap;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_2
-
-    invoke-static {v7, v1}, Lpqg;->b(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-
-    move-result-object v8
-
-    if-nez v8, :cond_1
-
-    return-object v2
-
-    :cond_1
-    invoke-virtual {v0, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v7}, Landroid/graphics/Bitmap;->isRecycled()Z
-
-    move-result v8
-
-    if-nez v8, :cond_2
-
-    invoke-virtual {v7}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_2
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v3}, Landroid/media/MediaMetadataRetriever;->release()V
-
-    invoke-static {v0}, Lpqg;->a(Ljava/util/List;)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    return-object p1
-
-    :goto_2
-    const-class v1, Lpqg;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "extractFramesFromUri failed for Uri: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1, v0}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v2
+    return-object v0
 .end method

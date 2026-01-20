@@ -1,26 +1,26 @@
 .class public final Lei9;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic X:Ljji;
 
 .field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(Ljji;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lei9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iput-object p1, p0, Lei9;->X:Ljji;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lig9;
+    check-cast p1, Ltf9;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +40,7 @@
 
     check-cast p1, Lei9;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lei9;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,9 +52,9 @@
 
     new-instance v0, Lei9;
 
-    iget-object v1, p0, Lei9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iget-object v1, p0, Lei9;->X:Ljji;
 
-    invoke-direct {v0, p2, v1}, Lei9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    invoke-direct {v0, v1, p2}, Lei9;-><init>(Ljji;Lkotlin/coroutines/Continuation;)V
 
     iput-object p1, v0, Lei9;->o:Ljava/lang/Object;
 
@@ -62,83 +62,61 @@
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lei9;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lei9;->o:Ljava/lang/Object;
+    check-cast v0, Ltf9;
 
-    check-cast p1, Lig9;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    sget-object p1, Ltf9;->a:Ltf9;
 
-    if-eqz p1, :cond_0
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-boolean v1, p1, Lig9;->a:Z
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_0
-
-    move v0, v2
-
-    :cond_0
-    sget-object v1, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0:[Les7;
-
-    iget-object v1, p0, Lei9;->X:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lxc9;->setLeftOuterIconVisible(Z)V
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
-
-    move-result-object v0
-
-    new-instance v2, Lp81;
-
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Leh9;
-
-    move-result-object v4
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x19
-
-    const/4 v3, 0x0
-
-    const-class v5, Leh9;
-
-    const-string v6, "onMiniAppClick"
-
-    const-string v7, "onMiniAppClick$message_write_widget_release()V"
-
-    invoke-direct/range {v2 .. v9}, Lp81;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
-
-    invoke-virtual {v0, v2}, Lxc9;->setLeftOuterIconOnClickListener(Loi6;)V
-
-    invoke-virtual {v1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->B0()Lxc9;
-
-    move-result-object v0
+    move-result p1
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p1, Lig9;->b:Ljava/lang/CharSequence;
+    iget-object p1, p0, Lei9;->X:Ljji;
 
-    goto :goto_0
+    iget-object v0, p1, Ljji;->g:Ljava/lang/Object;
 
-    :cond_1
-    const/4 p1, 0x0
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    :goto_0
-    invoke-virtual {v0, p1}, Lxc9;->setLeftOuterIconText(Ljava/lang/CharSequence;)V
+    const/4 v1, 0x0
 
-    :cond_2
-    sget-object p1, Lybg;->a:Lybg;
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Ljji;->f:Ljava/lang/Object;
+
+    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v1, Lmi9;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lmi9;-><init>(Ljji;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v0, v2, v2, v1, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
+
+    :cond_1
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
 .end method

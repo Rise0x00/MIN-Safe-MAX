@@ -1,30 +1,132 @@
-.class public abstract Lcoc;
-.super Ljava/lang/Object;
+.class public final Lcoc;
+.super Lp6g;
+.source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
-# static fields
-.field public static media_editor_bottom_background_id:I = 0x7f0a04ac
+# instance fields
+.field public final synthetic X:Leoc;
 
-.field public static media_editor_close_id:I = 0x7f0a04ad
+.field public final synthetic Y:Lxpc;
 
-.field public static media_editor_content_id:I = 0x7f0a04ae
+.field public o:I
 
-.field public static media_editor_crop_id:I = 0x7f0a04af
 
-.field public static media_editor_done_id:I = 0x7f0a04b0
+# direct methods
+.method public constructor <init>(Leoc;Lxpc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static media_editor_flip_horizontally_id:I = 0x7f0a04b1
+    iput-object p1, p0, Lcoc;->X:Leoc;
 
-.field public static media_editor_reset_id:I = 0x7f0a04b2
+    iput-object p2, p0, Lcoc;->Y:Lxpc;
 
-.field public static media_editor_rotate_id:I = 0x7f0a04b3
+    const/4 p1, 0x2
 
-.field public static media_picker_album_container_id:I = 0x7f0a04b6
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static media_picker_container_id:I = 0x7f0a04b7
+    return-void
+.end method
 
-.field public static media_picker_content_id:I = 0x7f0a04b8
 
-.field public static media_picker_divider_id:I = 0x7f0a04b9
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static media_picker_toolbar_id:I = 0x7f0a04ba
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcoc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lcoc;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lcoc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance p1, Lcoc;
+
+    iget-object v0, p0, Lcoc;->X:Leoc;
+
+    iget-object v1, p0, Lcoc;->Y:Lxpc;
+
+    invoke-direct {p1, v0, v1, p2}, Lcoc;-><init>(Leoc;Lxpc;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lcoc;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcoc;->X:Leoc;
+
+    iget-object v0, p1, Leoc;->a:Li7f;
+
+    new-instance v2, Lxnc;
+
+    iget-object v3, p0, Lcoc;->Y:Lxpc;
+
+    iget-object v3, v3, Ljk0;->b:Lnbg;
+
+    invoke-static {p1, v3}, Leoc;->a(Leoc;Lnbg;)Lqhg;
+
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3, p1}, Lxnc;-><init>(Ljava/lang/Long;Lqhg;)V
+
+    iput v1, p0, Lcoc;->o:I
+
+    invoke-virtual {v0, v2, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+.end method

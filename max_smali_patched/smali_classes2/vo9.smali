@@ -1,27 +1,20 @@
-.class public final Lvo9;
+.class public interface abstract Lvo9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lru7;
+# virtual methods
+.method public abstract d(Lfv0;)V
+.end method
 
-.field public final b:Lru7;
+.method public abstract m()V
+.end method
 
-.field public final c:Ljava/util/Collection;
+.method public abstract setForwardClickListener(Lbr6;)V
+.end method
 
+.method public abstract setLink(Lpo9;)V
+.end method
 
-# direct methods
-.method public constructor <init>(Lru7;Lru7;Lru7;Ljava/util/List;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Lvo9;->a:Lru7;
-
-    iput-object p3, p0, Lvo9;->b:Lru7;
-
-    iput-object p4, p0, Lvo9;->c:Ljava/util/Collection;
-
-    return-void
+.method public abstract setReplyClickListener(Lbr6;)V
 .end method

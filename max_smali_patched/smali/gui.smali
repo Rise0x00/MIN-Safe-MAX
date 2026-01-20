@@ -1,180 +1,152 @@
-.class public abstract Lgui;
-.super Ljava/lang/Object;
+.class public final Lgui;
+.super Ln2;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/ListIterator;
+
+
+# instance fields
+.field public final synthetic o:Lw2;
 
 
 # direct methods
-.method public static final a(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lw2;)V
     .locals 1
 
-    instance-of v0, p0, Ldh3;
+    .line 1
+    iput-object p1, p0, Lgui;->o:Lw2;
 
-    if-eqz v0, :cond_0
+    const/4 v0, 0x0
 
-    check-cast p0, Ldh3;
+    invoke-direct {p0, p1, v0}, Ln2;-><init>(Lw2;B)V
 
-    iget-object p0, p0, Ldh3;->a:Ljava/lang/Throwable;
-
-    new-instance v0, Lfed;
-
-    invoke-direct {v0, p0}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v0
-
-    :cond_0
-    return-object p0
+    return-void
 .end method
 
-.method public static final b(Ljava/lang/Object;Lqi6;)Ljava/lang/Object;
+.method public constructor <init>(Lw2;I)V
     .locals 1
 
-    invoke-static {p0}, Lhed;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    .line 2
+    iput-object p1, p0, Lgui;->o:Lw2;
+
+    iget-object v0, p1, Lw2;->c:Ljava/util/Collection;
+
+    check-cast v0, Ljava/util/List;
+
+    .line 3
+    invoke-interface {v0, p2}, Ljava/util/List;->listIterator(I)Ljava/util/ListIterator;
+
+    move-result-object p2
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Ln2;-><init>(Lw2;Ljava/util/ListIterator;B)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final add(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-object v0, p0, Lgui;->o:Lw2;
+
+    invoke-virtual {v0}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v2, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v2, Ljava/util/ListIterator;
+
+    invoke-interface {v2, p1}, Ljava/util/ListIterator;->add(Ljava/lang/Object;)V
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lw2;->d()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final hasPrevious()Z
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final nextIndex()I
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->nextIndex()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final previous()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Ln2;->b()V
+
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
+
+    check-cast v0, Ljava/util/ListIterator;
+
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_1
-
-    if-eqz p1, :cond_0
-
-    new-instance v0, Leh3;
-
-    invoke-direct {v0, p0, p1}, Leh3;-><init>(Ljava/lang/Object;Lqi6;)V
-
     return-object v0
-
-    :cond_0
-    return-object p0
-
-    :cond_1
-    new-instance p0, Ldh3;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, v0, p1}, Ldh3;-><init>(Ljava/lang/Throwable;Z)V
-
-    return-object p0
 .end method
 
-.method public static final c(Lvcg;)V
-    .locals 3
+.method public final previousIndex()I
+    .locals 1
 
-    new-instance v0, Ljhb;
+    invoke-virtual {p0}, Ln2;->b()V
 
-    const/4 v1, 0x5
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
 
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
+    check-cast v0, Ljava/util/ListIterator;
 
-    const-class v1, Lvng;
+    invoke-interface {v0}, Ljava/util/ListIterator;->previousIndex()I
 
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
+    move-result v0
 
-    new-instance v0, Ljhb;
+    return v0
+.end method
 
-    const/4 v1, 0x6
+.method public final set(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
+    invoke-virtual {p0}, Ln2;->b()V
 
-    const-class v1, Lhub;
+    iget-object v0, p0, Ln2;->b:Ljava/util/Iterator;
 
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
+    check-cast v0, Ljava/util/ListIterator;
 
-    new-instance v0, Ljhb;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
-
-    const-class v1, Lhre;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Ljhb;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
-
-    const-class v1, Lvh5;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Ljhb;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
-
-    const-class v1, Lqx0;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Ljhb;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
-
-    const-class v1, Lkmg;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lipa;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lipa;-><init>(I)V
-
-    const-class v1, Lvmd;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Ljhb;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
-
-    const-class v1, Loub;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Ljhb;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
-
-    const-class v1, Lzmg;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Ljhb;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Ljhb;-><init>(I)V
-
-    const-class v1, Lcxg;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhpa;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Lhpa;-><init>(I)V
-
-    const-class v1, Lrs4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhpa;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2}, Lhpa;-><init>(I)V
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
+    invoke-interface {v0, p1}, Ljava/util/ListIterator;->set(Ljava/lang/Object;)V
 
     return-void
 .end method

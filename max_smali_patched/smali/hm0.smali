@@ -1,204 +1,122 @@
 .class public final Lhm0;
-.super Ljq3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic f:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxq3;I)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Lhm0;->f:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ljq3;-><init>(Lxq3;)V
+    iput-object p1, p0, Lhm0;->a:Ljava/lang/String;
+
+    iput-object p4, p0, Lhm0;->b:Ljava/lang/String;
+
+    iput p2, p0, Lhm0;->c:I
+
+    iput p3, p0, Lhm0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lzoh;)Z
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lhm0;->f:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p1, Lzoh;->j:Ldr3;
-
-    iget-boolean p1, p1, Ldr3;->e:Z
-
-    return p1
-
-    :pswitch_0
-    iget-object p1, p1, Lzoh;->j:Ldr3;
-
-    iget p1, p1, Ldr3;->a:I
-
-    const/4 v0, 0x3
-
-    if-eq p1, v0, :cond_1
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    const/4 v0, 0x6
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/4 p1, 0x0
+    instance-of v1, p1, Lhm0;
 
-    goto :goto_1
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    check-cast p1, Lhm0;
 
-    :goto_1
-    return p1
+    iget v1, p0, Lhm0;->c:I
 
-    :pswitch_1
-    iget-object p1, p1, Lzoh;->j:Ldr3;
+    iget v3, p1, Lhm0;->c:I
 
-    iget p1, p1, Ldr3;->a:I
+    if-ne v1, v3, :cond_2
 
-    const/4 v0, 0x2
+    iget v1, p0, Lhm0;->d:I
 
-    if-ne p1, v0, :cond_2
+    iget v3, p1, Lhm0;->d:I
 
-    const/4 p1, 0x1
+    if-ne v1, v3, :cond_2
 
-    goto :goto_2
+    iget-object v1, p0, Lhm0;->a:Ljava/lang/String;
+
+    iget-object v3, p1, Lhm0;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lfdj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lhm0;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lhm0;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Lfdj;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    return v0
 
     :cond_2
-    const/4 p1, 0x0
-
-    :goto_2
-    return p1
-
-    :pswitch_2
-    iget-object p1, p1, Lzoh;->j:Ldr3;
-
-    iget-boolean p1, p1, Ldr3;->d:Z
-
-    return p1
-
-    :pswitch_3
-    iget-object p1, p1, Lzoh;->j:Ldr3;
-
-    iget-boolean p1, p1, Ldr3;->b:Z
-
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v2
 .end method
 
-.method public final b(Ljava/lang/Object;)Z
-    .locals 1
+.method public final hashCode()I
+    .locals 4
 
-    iget v0, p0, Lhm0;->f:I
+    iget v0, p0, Lhm0;->c:I
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    iget v1, p0, Lhm0;->d:I
 
-    move-result p1
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :goto_0
-    xor-int/lit8 p1, p1, 0x1
+    move-result-object v1
 
-    return p1
+    iget-object v2, p0, Lhm0;->a:Ljava/lang/String;
 
-    :pswitch_0
-    check-cast p1, Lb6a;
+    iget-object v3, p0, Lhm0;->b:Ljava/lang/String;
 
-    iget-boolean v0, p1, Lb6a;->a:Z
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    move-result-object v0
 
-    iget-boolean p1, p1, Lb6a;->c:Z
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
-    if-eqz p1, :cond_0
+    move-result v0
 
-    goto :goto_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    const/4 p1, 0x1
-
-    :goto_2
-    return p1
-
-    :pswitch_1
-    check-cast p1, Lb6a;
-
-    iget-boolean v0, p1, Lb6a;->a:Z
-
-    if-eqz v0, :cond_3
-
-    iget-boolean p1, p1, Lb6a;->b:Z
-
-    if-nez p1, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    const/4 p1, 0x0
-
-    goto :goto_4
-
-    :cond_3
-    :goto_3
-    const/4 p1, 0x1
-
-    :goto_4
-    return p1
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :pswitch_3
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method

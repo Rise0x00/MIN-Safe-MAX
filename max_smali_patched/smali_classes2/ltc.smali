@@ -1,54 +1,86 @@
-.class public abstract Lltc;
-.super Ljava/lang/Object;
+.class public final Lltc;
+.super Lie0;
+.source "SourceFile"
 
 
-# static fields
-.field public static audio_record_active_call_error_snackbar_title:I = 0x7f130088
+# instance fields
+.field public final b:J
 
-.field public static audio_record_confirm_exit_accept:I = 0x7f13008b
 
-.field public static audio_record_confirm_exit_description:I = 0x7f13008c
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
 
-.field public static audio_record_confirm_exit_title:I = 0x7f13008d
+    const/16 v0, 0x10
 
-.field public static audio_record_error_common:I = 0x7f130090
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-.field public static audio_record_error_limit:I = 0x7f130091
+    iput-wide p1, p0, Lltc;->b:J
 
-.field public static audio_record_error_short:I = 0x7f130092
+    return-void
+.end method
 
-.field public static audio_record_hold_to_start:I = 0x7f130093
 
-.field public static channel_input_hint:I = 0x7f1302c6
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static chat_input_hint:I = 0x7f130321
+    const/4 v0, 0x1
 
-.field public static messagewrite_edit_quote_title:I = 0x7f1306ef
+    if-ne p0, p1, :cond_0
 
-.field public static reply_quote_self:I = 0x7f130c88
+    return v0
 
-.field public static reply_quote_to_somebody:I = 0x7f130c89
+    :cond_0
+    instance-of v1, p1, Lltc;
 
-.field public static video_message_record_error_common:I = 0x7f130e60
+    const/4 v2, 0x0
 
-.field public static video_message_record_error_no_camera:I = 0x7f130e61
+    if-nez v1, :cond_1
 
-.field public static video_record_active_call_error_snackbar_title:I = 0x7f130e6c
+    return v2
 
-.field public static writebar__add_link_button:I = 0x7f130e8f
+    :cond_1
+    check-cast p1, Lltc;
 
-.field public static writebar__add_link_error_has_space:I = 0x7f130e90
+    iget-wide v3, p0, Lltc;->b:J
 
-.field public static writebar__add_link_error_not_valid_link:I = 0x7f130e91
+    iget-wide v5, p1, Lltc;->b:J
 
-.field public static writebar__add_link_error_not_valid_scheme:I = 0x7f130e92
+    cmp-long p1, v3, v5
 
-.field public static writebar__add_link_error_short_link:I = 0x7f130e93
+    if-eqz p1, :cond_2
 
-.field public static writebar__add_link_title:I = 0x7f130e94
+    return v2
 
-.field public static writebar_commands_not_found:I = 0x7f130e95
+    :cond_2
+    return v0
+.end method
 
-.field public static writebar_mentions_not_found:I = 0x7f130e96
+.method public final hashCode()I
+    .locals 2
 
-.field public static writebar_mentions_title:I = 0x7f130e97
+    iget-wide v0, p0, Lltc;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "InviteByLink(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lltc;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

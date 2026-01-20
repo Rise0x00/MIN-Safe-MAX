@@ -1,23 +1,25 @@
-.class public final Lz5e;
-.super Ld6e;
+.class public abstract Lz5e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public g:Lq78;
+# static fields
+.field public static final a:I
 
-.field public h:F
-
-.field public i:J
+.field public static final b:I
 
 
-# virtual methods
-.method public final a()Le6e;
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, La6e;
+    sget v0, Lqad;->one_chat_reactions_expand_view_type:I
 
-    invoke-direct {v0, p0}, La6e;-><init>(Lz5e;)V
+    sput v0, Lz5e;->a:I
 
-    return-object v0
+    sget v0, Lqad;->one_chat_reactions_selection_animoji_view_type:I
+
+    sput v0, Lz5e;->b:I
+
+    return-void
 .end method

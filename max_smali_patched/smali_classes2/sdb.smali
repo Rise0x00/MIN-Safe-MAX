@@ -1,18 +1,37 @@
-.class public final synthetic Lsdb;
+.class public abstract Lsdb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/ui/FrameDecorator;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
 
 
-# virtual methods
-.method public final apply(Lorg/webrtc/VideoFrame;)Lorg/webrtc/VideoFrame;
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;->a(Lorg/webrtc/VideoFrame;)Lorg/webrtc/VideoFrame;
+    sget v0, Lz8d;->members_list_action_view_type:I
 
-    move-result-object p1
+    sput v0, Lsdb;->a:I
 
-    return-object p1
+    sget v0, Lz8d;->members_list_empty_search_view_type:I
+
+    sput v0, Lsdb;->b:I
+
+    sget v0, Lz8d;->members_list_rv:I
+
+    sput v0, Lsdb;->c:I
+
+    sget v0, Lz8d;->members_list_shimmer_view_type:I
+
+    sput v0, Lsdb;->d:I
+
+    return-void
 .end method

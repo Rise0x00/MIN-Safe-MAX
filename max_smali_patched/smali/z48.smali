@@ -1,159 +1,214 @@
 .class public final Lz48;
-.super Lk0a;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
+
+# interfaces
+.implements Le0b;
+.implements Lo25;
 
 
 # instance fields
-.field public final l:La4i;
+.field public final a:Lay3;
 
-.field public m:Lnx7;
+.field public final b:Lay3;
 
-.field public n:La58;
+.field public final c:Li6;
+
+.field public final d:Lkme;
 
 
 # direct methods
-.method public constructor <init>(La4i;)V
-    .locals 1
+.method public constructor <init>(Lay3;Lay3;Li6;)V
+    .locals 0
 
-    invoke-direct {p0}, Lq38;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p1, p0, Lz48;->l:La4i;
+    iput-object p1, p0, Lz48;->a:Lay3;
 
-    iget-object v0, p1, La4i;->a:Lz48;
+    iput-object p2, p0, Lz48;->b:Lay3;
 
-    if-nez v0, :cond_0
+    iput-object p3, p0, Lz48;->c:Li6;
 
-    iput-object p0, p1, La4i;->a:Lz48;
+    sget-object p1, Lhbe;->d:Lkme;
+
+    iput-object p1, p0, Lz48;->d:Lkme;
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "There is already a listener registered"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 2
+.method public final b()V
+    .locals 1
 
-    iget-object v0, p0, Lz48;->l:La4i;
+    invoke-virtual {p0}, Lz48;->e()Z
 
-    const/4 v1, 0x1
+    move-result v0
 
-    iput-boolean v1, v0, La4i;->b:Z
+    if-nez v0, :cond_0
 
-    const/4 v1, 0x0
+    sget-object v0, Ls25;->a:Ls25;
 
-    iput-boolean v1, v0, La4i;->d:Z
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
 
-    iput-boolean v1, v0, La4i;->c:Z
+    :try_start_0
+    iget-object v0, p0, Lz48;->c:Li6;
 
-    iget-object v1, v0, La4i;->i:Ljava/util/concurrent/Semaphore;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->drainPermits()I
-
-    invoke-virtual {v0}, La4i;->a()V
-
-    new-instance v1, Lux;
-
-    invoke-direct {v1, v0}, Lux;-><init>(La4i;)V
-
-    iput-object v1, v0, La4i;->g:Lux;
-
-    invoke-virtual {v0}, La4i;->b()V
+    invoke-interface {v0}, Li6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
-.end method
 
-.method public final h()V
-    .locals 2
+    :catchall_0
+    move-exception v0
 
-    iget-object v0, p0, Lz48;->l:La4i;
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
 
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, La4i;->b:Z
-
-    return-void
-.end method
-
-.method public final j(Lhla;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lq38;->j(Lhla;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lz48;->m:Lnx7;
-
-    iput-object p1, p0, Lz48;->n:La58;
-
-    return-void
-.end method
-
-.method public final l()V
-    .locals 2
-
-    iget-object v0, p0, Lz48;->m:Lnx7;
-
-    iget-object v1, p0, Lz48;->n:La58;
-
-    if-eqz v0, :cond_0
-
-    if-eqz v1, :cond_0
-
-    invoke-super {p0, v1}, Lq38;->j(Lhla;)V
-
-    invoke-virtual {p0, v0, v1}, Lq38;->e(Lnx7;Lhla;)V
+    invoke-static {v0}, Lknj;->b(Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final c(Lo25;)V
+    .locals 1
+
+    invoke-static {p0, p1}, Ls25;->g(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lz48;->d:Lkme;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    invoke-interface {p1}, Lo25;->dispose()V
+
+    invoke-virtual {p0, v0}, Lz48;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 0
+
+    invoke-static {p0}, Ls25;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+.end method
+
+.method public final e()Z
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const/16 v1, 0x40
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v1, "LoaderInfo{"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " #0 : "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lz48;->l:La4i;
-
-    invoke-static {v0, v1}, Lpxi;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
-
-    const-string v1, "}}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    sget-object v1, Ls25;->a:Ls25;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    invoke-virtual {p0}, Lz48;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Ls25;->a:Ls25;
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, Lz48;->b:Lay3;
+
+    invoke-interface {v0, p1}, Lay3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0}, Lz48;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lz48;->a:Lay3;
+
+    invoke-interface {v0, p1}, Lay3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    invoke-virtual {p0, p1}, Lz48;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
 .end method

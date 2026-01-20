@@ -1,52 +1,82 @@
-.class public abstract Lmpc;
-.super Ljava/lang/Object;
+.class public final Lmpc;
+.super Lp6g;
+.source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
-# static fields
-.field public static oneme_stickers_settings_confirm_cancel:I = 0x7f0a0873
+# instance fields
+.field public final synthetic X:Lvpc;
 
-.field public static oneme_stickers_settings_confirm_delete_set_action:I = 0x7f0a0874
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static oneme_stickers_settings_confirm_delete_stickers_action:I = 0x7f0a0875
 
-.field public static oneme_stickers_settings_confirm_favorite_clear_action:I = 0x7f0a0876
+# direct methods
+.method public constructor <init>(Lvpc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_stickers_settings_confirm_recent_clear_action:I = 0x7f0a0877
+    iput-object p1, p0, Lmpc;->X:Lvpc;
 
-.field public static oneme_stickers_settings_content_recycler:I = 0x7f0a0878
+    const/4 p1, 0x2
 
-.field public static oneme_stickers_settings_emoji_suggest_view_type:I = 0x7f0a0879
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_stickers_settings_favorite_view_type:I = 0x7f0a087a
+    return-void
+.end method
 
-.field public static oneme_stickers_settings_menu_copy_link:I = 0x7f0a087b
 
-.field public static oneme_stickers_settings_menu_delete_set:I = 0x7f0a087c
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_stickers_settings_menu_forward:I = 0x7f0a087d
+    check-cast p1, Lhja;
 
-.field public static oneme_stickers_settings_menu_share:I = 0x7f0a087e
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_stickers_settings_recent_view_type:I = 0x7f0a087f
+    invoke-virtual {p0, p1, p2}, Lmpc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_stickers_settings_set_item_drag:I = 0x7f0a0880
+    move-result-object p1
 
-.field public static oneme_stickers_settings_set_item_icon:I = 0x7f0a0881
+    check-cast p1, Lmpc;
 
-.field public static oneme_stickers_settings_set_item_subtitle:I = 0x7f0a0882
+    sget-object p2, Lb3h;->a:Lb3h;
 
-.field public static oneme_stickers_settings_set_item_title:I = 0x7f0a0883
+    invoke-virtual {p1, p2}, Lmpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_stickers_settings_set_view_type:I = 0x7f0a0884
+    return-object p2
+.end method
 
-.field public static oneme_stickers_settings_sets_title_view_type:I = 0x7f0a0885
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-.field public static oneme_stickers_settings_stickers_favorite_menu_clear:I = 0x7f0a0886
+    new-instance v0, Lmpc;
 
-.field public static oneme_stickers_settings_stickers_menu_change:I = 0x7f0a0887
+    iget-object v1, p0, Lmpc;->X:Lvpc;
 
-.field public static oneme_stickers_settings_stickers_multiselect_delete:I = 0x7f0a0888
+    invoke-direct {v0, v1, p2}, Lmpc;-><init>(Lvpc;Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_stickers_settings_stickers_recent_menu_clear:I = 0x7f0a0889
+    iput-object p1, v0, Lmpc;->o:Ljava/lang/Object;
 
-.field public static oneme_stickers_settings_toolbar:I = 0x7f0a088a
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lmpc;->o:Ljava/lang/Object;
+
+    check-cast v0, Lhja;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmpc;->X:Lvpc;
+
+    iget-object p1, p1, Lvpc;->w0:Lcm5;
+
+    invoke-static {p1, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+.end method

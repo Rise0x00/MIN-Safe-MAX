@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/profileedit/ProfileEditScreen;
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/ProfileEditScreen;I)V
+.method public synthetic constructor <init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;I)V
     .locals 0
 
     iput p2, p0, Ly5c;->a:I
 
-    iput-object p1, p0, Ly5c;->b:Lone/me/profileedit/ProfileEditScreen;
+    iput-object p1, p0, Ly5c;->b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,47 +27,53 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget p1, p0, Ly5c;->a:I
+    iget v0, p0, Ly5c;->a:I
 
-    iget-object v0, p0, Ly5c;->b:Lone/me/profileedit/ProfileEditScreen;
+    iget-object v1, p0, Ly5c;->b:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
-    packed-switch p1, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Les7;
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->y0:[Lz28;
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->y0()Lu6c;
+    new-instance v0, Landroidx/viewpager2/widget/ViewPager2;
 
-    move-result-object p1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    invoke-virtual {p1}, Lu6c;->A()V
+    move-result-object v1
 
-    return-void
+    invoke-direct {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;-><init>(Landroid/content/Context;)V
+
+    sget v1, Ly7b;->f:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
+
+    invoke-static {v0}, Lh6j;->j(Landroidx/viewpager2/widget/ViewPager2;)V
+
+    return-object v0
 
     :pswitch_0
-    sget-object p1, Lone/me/profileedit/ProfileEditScreen;->x0:[Les7;
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->y0:[Lz28;
 
-    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->y0()Lu6c;
+    new-instance v0, Lolb;
 
-    move-result-object p1
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget-object p1, p1, Lu6c;->b:Lf65;
+    move-result-object v1
 
-    invoke-virtual {p1}, Lf65;->d()Z
+    const/4 v2, 0x0
 
-    move-result v0
+    invoke-direct {v0, v1, v2}, Lolb;-><init>(Landroid/content/Context;I)V
 
-    if-nez v0, :cond_0
+    sget v1, Ly7b;->g:I
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    :cond_0
-    invoke-virtual {p1}, Lf65;->k()V
+    invoke-virtual {v0, v2}, Lcom/google/android/material/tabs/TabLayout;->setTabMode(I)V
 
-    :goto_0
-    return-void
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

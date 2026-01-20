@@ -1,88 +1,147 @@
 .class public final Lxq1;
-.super Logf;
+.super Landroid/media/VolumeProvider;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
-    .locals 0
+.method public constructor <init>(Lnb9;III)V
+    .locals 1
 
-    iput-object p2, p0, Lxq1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    const/4 v0, 0x1
 
-    const/4 p2, 0x2
+    iput v0, p0, Lxq1;->a:I
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 1
+    iput-object p1, p0, Lxq1;->b:Ljava/lang/Object;
+
+    invoke-direct {p0, p2, p3, p4}, Landroid/media/VolumeProvider;-><init>(III)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lone/me/calls/impl/service/CallServiceImpl;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lxq1;->a:I
+
+    iput-object p1, p0, Lxq1;->b:Ljava/lang/Object;
+
+    const/4 p1, 0x1
+
+    .line 2
+    invoke-direct {p0, p1, v0, v0}, Landroid/media/VolumeProvider;-><init>(III)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAdjustVolume(I)V
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Lxq1;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lxq1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lxq1;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnb9;
+
+    iget-object v1, v0, Lnb9;->f:Landroid/os/Handler;
+
+    iget-object v0, v0, Lnb9;->g:Lxcc;
+
+    new-instance v2, Lmb9;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v0, p1, v3}, Lmb9;-><init>(Lxcc;II)V
+
+    invoke-static {v1, v2}, Lmbh;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "on adjust volume changed: "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lxq1;
+    const-string v0, "CallServiceTag"
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, p2}, Lxq1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Lxq1;->b:Ljava/lang/Object;
 
-    return-object p2
+    check-cast p1, Lone/me/calls/impl/service/CallServiceImpl;
+
+    iget-object p1, p1, Lone/me/calls/impl/service/CallServiceImpl;->X:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpb1;
+
+    invoke-virtual {p1}, Lpb1;->a()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public onSetVolumeTo(I)V
+    .locals 4
 
-    new-instance v0, Lxq1;
+    iget v0, p0, Lxq1;->a:I
 
-    iget-object v1, p0, Lxq1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p2, v1}, Lxq1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;)V
+    invoke-super {p0, p1}, Landroid/media/VolumeProvider;->onSetVolumeTo(I)V
 
-    iput-object p1, v0, Lxq1;->o:Ljava/lang/Object;
+    return-void
 
-    return-object v0
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lxq1;->b:Ljava/lang/Object;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    check-cast v0, Lnb9;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v1, v0, Lnb9;->f:Landroid/os/Handler;
 
-    iget-object p1, p0, Lxq1;->o:Ljava/lang/Object;
+    iget-object v0, v0, Lnb9;->g:Lxcc;
 
-    check-cast p1, Ljava/lang/Number;
+    new-instance v2, Lmb9;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    const/4 v3, 0x0
 
-    move-result p1
+    invoke-direct {v2, v0, p1, v3}, Lmb9;-><init>(Lxcc;II)V
 
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->d:[Les7;
+    invoke-static {v1, v2}, Lmbh;->a0(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Lxq1;->X:Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
+    return-void
 
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->x0()Lrq1;
+    nop
 
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lrq1;->setAddUserCount(I)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

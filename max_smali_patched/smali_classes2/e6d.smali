@@ -1,50 +1,34 @@
-.class public final Le6d;
-.super Ljava/io/InputStream;
-.source "SourceFile"
+.class public abstract Le6d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:Lac4;
+# static fields
+.field public static attach_bar_thumbnail_size:I = 0x7f070054
 
-.field public final b:Ljava/io/ByteArrayOutputStream;
+.field public static flash_close_button_height:I = 0x7f0700ed
 
+.field public static flash_close_button_width:I = 0x7f0700ee
 
-# direct methods
-.method public constructor <init>(Lac4;)V
-    .locals 0
+.field public static flash_close_wrapper_height:I = 0x7f0700ef
 
-    invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
+.field public static flash_close_wrapper_width:I = 0x7f0700f0
 
-    iput-object p1, p0, Le6d;->a:Lac4;
+.field public static full_screen_mode_button_height:I = 0x7f07012a
 
-    new-instance p1, Ljava/io/ByteArrayOutputStream;
+.field public static full_screen_mode_button_width:I = 0x7f07012b
 
-    invoke-direct {p1}, Ljava/io/ByteArrayOutputStream;-><init>()V
+.field public static gallery_album_cover_size:I = 0x7f07012c
 
-    iput-object p1, p0, Le6d;->b:Ljava/io/ByteArrayOutputStream;
+.field public static progress_bar_medium:I = 0x7f070440
 
-    return-void
-.end method
+.field public static quick_camera_button_margin:I = 0x7f070442
 
+.field public static quick_camera_button_margin_bottom:I = 0x7f070443
 
-# virtual methods
-.method public final read()I
-    .locals 2
+.field public static quick_camera_chronometer_text_size:I = 0x7f070444
 
-    iget-object v0, p0, Le6d;->a:Lac4;
+.field public static quick_camera_wrapper_controllers_height:I = 0x7f070445
 
-    invoke-virtual {v0}, Lac4;->read()I
+.field public static quick_camera_wrapper_height:I = 0x7f070446
 
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v1, p0, Le6d;->b:Ljava/io/ByteArrayOutputStream;
-
-    invoke-virtual {v1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
-
-    :cond_0
-    return v0
-.end method
+.field public static quick_camera_wrapper_width:I = 0x7f070447

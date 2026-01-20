@@ -1,8 +1,13 @@
-.class public interface abstract Ldka;
+.class public abstract Ldka;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract e(Lria;)V
+# direct methods
+.method public static final a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/net/ConnectivityManager;->registerDefaultNetworkCallback(Landroid/net/ConnectivityManager$NetworkCallback;)V
+
+    return-void
 .end method

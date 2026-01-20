@@ -1,20 +1,123 @@
-.class public abstract Lepc;
+.class public final synthetic Lepc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lnq6;
 
 
-# static fields
-.field public static oneme_settings_ringtone_section_bottom_vh:I = 0x7f0a07f4
+# instance fields
+.field public final synthetic a:I
 
-.field public static oneme_settings_ringtone_section_custom_add:I = 0x7f0a07f5
+.field public final synthetic b:Lrdi;
 
-.field public static oneme_settings_ringtone_section_default:I = 0x7f0a07f6
 
-.field public static oneme_settings_ringtone_section_header_vh:I = 0x7f0a07f7
+# direct methods
+.method public synthetic constructor <init>(Lrdi;I)V
+    .locals 0
 
-.field public static oneme_settings_ringtone_section_item_vh:I = 0x7f0a07f8
+    iput p2, p0, Lepc;->a:I
 
-.field public static oneme_settings_ringtone_section_system:I = 0x7f0a07f9
+    iput-object p1, p0, Lepc;->b:Lrdi;
 
-.field public static oneme_settings_ringtone_settings_list:I = 0x7f0a07fa
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_ringtone_title:I = 0x7f0a07fb
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lepc;->a:I
+
+    check-cast p1, Ljava/lang/String;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lepc;->b:Lrdi;
+
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lvpc;->b:Lcd5;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1, p1}, Lcd5;->m(ILjava/lang/String;)V
+
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lepc;->b:Lrdi;
+
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lvpc;->b:Lcd5;
+
+    const/high16 v1, 0x20000
+
+    invoke-virtual {v0, v1, p1}, Lcd5;->m(ILjava/lang/String;)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lepc;->b:Lrdi;
+
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lvpc;->b:Lcd5;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p1}, Lcd5;->m(ILjava/lang/String;)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lepc;->b:Lrdi;
+
+    iget-object v0, v0, Lrdi;->X:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/profileedit/ProfileEditScreen;
+
+    invoke-virtual {v0}, Lone/me/profileedit/ProfileEditScreen;->B0()Lvpc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lvpc;->b:Lcd5;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1, p1}, Lcd5;->m(ILjava/lang/String;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

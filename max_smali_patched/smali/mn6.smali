@@ -1,118 +1,49 @@
-.class public abstract Lmn6;
-.super Ltq7;
+.class public final synthetic Lmn6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxq6;
+.implements Lhwd;
 
 
 # instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Lmr7;
+.field public final synthetic a:Lsn6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lsn6;)V
+    .locals 0
 
-    sget-object v0, Lsq7;->s0:Lsq7;
+    iput-object p1, p0, Lmn6;->a:Lsn6;
 
-    iget v0, v0, Lsq7;->b:I
-
-    sget-object v0, Lsq7;->Z:Lsq7;
-
-    iget v0, v0, Lsq7;->b:I
-
-    sget-object v0, Lsq7;->u0:Lsq7;
-
-    iget v0, v0, Lsq7;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o0(Ljava/math/BigDecimal;)Ljava/lang/String;
-    .locals 4
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/16 v0, 0x270f
+    check-cast p1, Ldrg;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lmn6;->a:Lsn6;
 
-    move-result-object v1
-
-    sget-object v2, Lsq7;->t0:Lsq7;
-
-    iget v3, p0, Lmn6;->a:I
-
-    iget v2, v2, Lsq7;->b:I
-
-    and-int/2addr v2, v3
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->scale()I
-
-    move-result v2
-
-    const/16 v3, -0x270f
-
-    if-lt v2, v3, :cond_0
-
-    if-gt v2, v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toPlainString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_0
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p1, v1, v1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "Attempt to write plain `java.math.BigDecimal` (see JsonGenerator.Feature.WRITE_BIGDECIMAL_AS_PLAIN) with illegal scale (%d): needs to be between [-%d, %d]"
-
-    invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ltq7;->d(Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    throw p1
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/math/BigDecimal;->toString()Ljava/lang/String;
-
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-object p1
 .end method
 
-.method public final p0(Lsq7;)Z
+.method public e(JLwtb;)V
     .locals 1
 
-    iget v0, p0, Lmn6;->a:I
+    iget-object v0, p0, Lmn6;->a:Lsn6;
 
-    iget p1, p1, Lsq7;->b:I
+    iget-object v0, v0, Lsn6;->V0:[Lrrg;
 
-    and-int/2addr p1, v0
+    invoke-static {p1, p2, p3, v0}, Ljcj;->a(JLwtb;[Lrrg;)V
 
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
+    return-void
 .end method

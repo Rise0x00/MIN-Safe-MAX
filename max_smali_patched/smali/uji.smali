@@ -1,60 +1,72 @@
 .class public final Luji;
-.super Ljava/lang/Object;
+.super Ly48;
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Llq6;
 
 
-# static fields
-.field public static final a:Luji;
+# instance fields
+.field public final synthetic a:Landroidx/work/WorkRequest;
+
+.field public final synthetic b:Ltii;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Lo2b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Luyb;Ltii;Ljava/lang/String;Lo2b;)V
+    .locals 0
 
-    new-instance v0, Luji;
+    iput-object p1, p0, Luji;->a:Landroidx/work/WorkRequest;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Luji;->b:Ltii;
 
-    sput-object v0, Luji;->a:Luji;
+    iput-object p3, p0, Luji;->c:Ljava/lang/String;
 
-    new-instance v0, Lz7i;
+    iput-object p4, p0, Luji;->d:Lo2b;
 
-    const/4 v1, 0x1
+    const/4 p1, 0x0
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object v0, p0, Luji;->a:Landroidx/work/WorkRequest;
 
-    move-result-object p1
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    throw p1
+    move-result-object v5
+
+    new-instance v1, Lhii;
+
+    sget-object v4, Lto5;->b:Lto5;
+
+    const/4 v6, 0x0
+
+    iget-object v2, p0, Luji;->b:Ltii;
+
+    iget-object v3, p0, Luji;->c:Ljava/lang/String;
+
+    invoke-direct/range {v1 .. v6}, Lhii;-><init>(Ltii;Ljava/lang/String;Lto5;Ljava/util/List;I)V
+
+    new-instance v0, Llk5;
+
+    iget-object v2, p0, Luji;->d:Lo2b;
+
+    invoke-direct {v0, v1, v2}, Llk5;-><init>(Lhii;Lo2b;)V
+
+    invoke-virtual {v0}, Llk5;->run()V
+
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
 .end method

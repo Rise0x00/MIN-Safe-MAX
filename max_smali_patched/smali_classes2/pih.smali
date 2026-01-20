@@ -1,19 +1,19 @@
 .class public final Lpih;
-.super Lup7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Z
+.field public final a:[B
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>([B)V
     .locals 0
 
-    invoke-direct {p0}, Lup7;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lpih;->c:Z
+    iput-object p1, p0, Lpih;->a:[B
 
     return-void
 .end method
@@ -41,11 +41,15 @@
     :cond_1
     check-cast p1, Lpih;
 
-    iget-boolean v1, p0, Lpih;->c:Z
+    iget-object v1, p0, Lpih;->a:[B
 
-    iget-boolean p1, p1, Lpih;->c:Z
+    iget-object p1, p1, Lpih;->a:[B
 
-    if-eq v1, p1, :cond_2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
 
     return v2
 
@@ -56,9 +60,9 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-boolean v0, p0, Lpih;->c:Z
+    iget-object v0, p0, Lpih;->a:[B
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
 
     move-result v0
 
@@ -68,13 +72,17 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "ScreenCaptureBehavior(isEnabled="
+    iget-object v0, p0, Lpih;->a:[B
 
-    const-string v1, ")"
+    invoke-static {v0}, Ljava/util/Arrays;->toString([B)Ljava/lang/String;
 
-    iget-boolean v2, p0, Lpih;->c:Z
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    const-string v1, "FirstFrameReady(frameByteArray="
+
+    const-string v2, ")"
+
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

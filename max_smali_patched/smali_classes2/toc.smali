@@ -1,76 +1,106 @@
-.class public abstract Ltoc;
+.class public final Ltoc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lvoc;
 
 
-# static fields
-.field public static check_button:I = 0x7f0a0299
+# instance fields
+.field public final a:Lqj3;
 
-.field public static check_button_parent:I = 0x7f0a029a
 
-.field public static check_button_view_stub:I = 0x7f0a029b
+# direct methods
+.method public constructor <init>(Lqj3;)V
+    .locals 0
 
-.field public static media_bar_view__iv_constructor:I = 0x7f0a048e
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static media_bar_view__iv_contact:I = 0x7f0a048f
+    iput-object p1, p0, Ltoc;->a:Lqj3;
 
-.field public static media_bar_view__iv_drawing:I = 0x7f0a0490
+    return-void
+.end method
 
-.field public static media_bar_view__iv_file:I = 0x7f0a0491
 
-.field public static media_bar_view__iv_gallery:I = 0x7f0a0492
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static media_bar_view__iv_location:I = 0x7f0a0494
+    const/4 v0, 0x1
 
-.field public static media_bar_view__iv_photo:I = 0x7f0a0495
+    if-ne p0, p1, :cond_0
 
-.field public static media_bar_view__iv_video:I = 0x7f0a0497
+    return v0
 
-.field public static media_bar_view__ll_constructor:I = 0x7f0a0498
+    :cond_0
+    instance-of v1, p1, Ltoc;
 
-.field public static media_bar_view__ll_contact:I = 0x7f0a0499
+    const/4 v2, 0x0
 
-.field public static media_bar_view__ll_drawing:I = 0x7f0a049a
+    if-nez v1, :cond_1
 
-.field public static media_bar_view__ll_file:I = 0x7f0a049b
+    return v2
 
-.field public static media_bar_view__ll_gallery:I = 0x7f0a049c
+    :cond_1
+    check-cast p1, Ltoc;
 
-.field public static media_bar_view__ll_layout_create:I = 0x7f0a049d
+    iget-object v1, p0, Ltoc;->a:Lqj3;
 
-.field public static media_bar_view__ll_location:I = 0x7f0a049e
+    iget-object p1, p1, Ltoc;->a:Lqj3;
 
-.field public static media_bar_view__ll_photo:I = 0x7f0a049f
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static media_bar_view__ll_video:I = 0x7f0a04a0
+    move-result p1
 
-.field public static media_bar_view__tv_constructor:I = 0x7f0a04a1
+    if-nez p1, :cond_2
 
-.field public static media_bar_view__tv_contact:I = 0x7f0a04a2
+    return v2
 
-.field public static media_bar_view__tv_drawing:I = 0x7f0a04a3
+    :cond_2
+    return v0
+.end method
 
-.field public static media_bar_view__tv_file:I = 0x7f0a04a4
+.method public final hashCode()I
+    .locals 1
 
-.field public static media_bar_view__tv_gallery:I = 0x7f0a04a5
+    iget-object v0, p0, Ltoc;->a:Lqj3;
 
-.field public static media_bar_view__tv_location:I = 0x7f0a04a7
+    if-nez v0, :cond_0
 
-.field public static media_bar_view__tv_photo:I = 0x7f0a04a8
+    const/4 v0, 0x0
 
-.field public static media_bar_view__tv_video:I = 0x7f0a04aa
+    return v0
 
-.field public static media_permissions_view_button:I = 0x7f0a04b4
+    :cond_0
+    iget-object v0, v0, Lqj3;->a:Ljava/util/List;
 
-.field public static media_permissions_view_title:I = 0x7f0a04b5
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-.field public static quick_camera_view__cv_camera:I = 0x7f0a09e6
+    move-result v0
 
-.field public static row_media_bar_actions__icon:I = 0x7f0a0a7a
+    return v0
+.end method
 
-.field public static row_media_bar_actions__title:I = 0x7f0a0a7b
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static select_album_content_container:I = 0x7f0a0b21
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static simple_drawee_view:I = 0x7f0a0b9f
+    const-string v1, "LastNamePayload(errorText="
 
-.field public static video_info:I = 0x7f0a0c3f
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ltoc;->a:Lqj3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

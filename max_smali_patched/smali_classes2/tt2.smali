@@ -1,26 +1,30 @@
 .class public final Ltt2;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lvu2;
+.field public final synthetic X:Lut2;
+
+.field public final synthetic Y:Ljava/util/List;
 
 .field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lvu2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lut2;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ltt2;->X:Lvu2;
+    iput-object p1, p0, Ltt2;->X:Lut2;
+
+    iput-object p2, p0, Ltt2;->Y:Ljava/util/List;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +34,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lg54;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +44,7 @@
 
     check-cast p1, Ltt2;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Ltt2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -50,31 +54,33 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 2
 
     new-instance p1, Ltt2;
 
-    iget-object v0, p0, Ltt2;->X:Lvu2;
+    iget-object v0, p0, Ltt2;->X:Lut2;
 
-    invoke-direct {p1, v0, p2}, Ltt2;-><init>(Lvu2;Lkotlin/coroutines/Continuation;)V
+    iget-object v1, p0, Ltt2;->Y:Ljava/util/List;
+
+    invoke-direct {p1, v0, v1, p2}, Ltt2;-><init>(Lut2;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 11
 
     iget v0, p0, Ltt2;->o:I
 
     const/4 v1, 0x1
 
-    sget-object v2, Lybg;->a:Lybg;
+    sget-object v2, Lb3h;->a:Lb3h;
 
     if-eqz v0, :cond_1
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     return-object v2
 
@@ -88,50 +94,54 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Ltt2;->X:Lvu2;
+    iget-object p1, p0, Ltt2;->X:Lut2;
 
-    iget-object v0, p1, Lvu2;->Z0:Lj0d;
-
-    iget-object v0, v0, Lj0d;->a:Lt0f;
-
-    invoke-interface {v0}, Lt0f;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Lut2;->s()Lnd2;
 
     move-result-object v0
 
-    check-cast v0, Lt92;
+    if-nez v0, :cond_2
 
-    if-eqz v0, :cond_2
+    goto :goto_0
 
-    invoke-virtual {v0}, Lt92;->n()Lmr3;
+    :cond_2
+    iget-object v3, p1, Lut2;->Z:Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-interface {v3}, Lo58;->getValue()Ljava/lang/Object;
 
-    if-eqz v0, :cond_2
+    move-result-object v3
 
-    invoke-virtual {v0}, Lmr3;->p()J
+    move-object v4, v3
 
-    move-result-wide v3
+    check-cast v4, Lgx4;
 
-    iget-object p1, p1, Lvu2;->D0:Lru7;
+    iget-wide v5, p1, Lut2;->b:J
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    iget-object v0, v0, Lnd2;->b:Luh2;
 
-    move-result-object p1
+    iget-wide v7, v0, Luh2;->a:J
 
-    check-cast p1, Lvx3;
+    iget-object p1, p1, Lut2;->w0:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v10
 
     iput v1, p0, Ltt2;->o:I
 
-    invoke-virtual {p1, v3, v4}, Lvx3;->a(J)V
+    iget-object v9, p0, Ltt2;->Y:Ljava/util/List;
 
-    sget-object p1, Lh54;->a:Lh54;
+    invoke-virtual/range {v4 .. v10}, Lgx4;->a(JJLjava/util/List;Z)V
 
-    if-ne v2, p1, :cond_2
+    sget-object p1, Lac4;->a:Lac4;
+
+    if-ne v2, p1, :cond_3
 
     return-object p1
 
-    :cond_2
+    :cond_3
+    :goto_0
     return-object v2
 .end method

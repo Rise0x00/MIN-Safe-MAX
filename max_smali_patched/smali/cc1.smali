@@ -1,64 +1,83 @@
-.class public final Lcc1;
+.class public final synthetic Lcc1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lfc1;
+.implements Lnq6;
 
 
-# static fields
-.field public static final a:Lcc1;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ldc1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ldc1;I)V
+    .locals 0
 
-    new-instance v0, Lcc1;
+    iput p2, p0, Lcc1;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcc1;->b:Ldc1;
 
-    sput-object v0, Lcc1;->a:Lcc1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcc1;->a:I
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Lzlb;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of p1, p1, Lcc1;
+    sget-object p1, Lpc3;->t0:Lkme;
 
-    if-nez p1, :cond_1
+    iget-object v0, p0, Lcc1;->b:Ldc1;
+
+    iget-object v0, v0, Ltsd;->a:Landroid/view/View;
+
+    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lzlb;->b()Lxf0;
 
     const/4 p1, 0x0
 
-    return p1
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :cond_1
-    return v0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
+    return-object p1
 
-    const v0, -0x2fe4f2f9
+    :pswitch_0
+    sget-object p1, Lpc3;->t0:Lkme;
 
-    return v0
-.end method
+    iget-object v0, p0, Lcc1;->b:Ldc1;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    iget-object v0, v0, Ltsd;->a:Landroid/view/View;
 
-    const-string v0, "OpenCallIncoming"
+    invoke-virtual {p1, v0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
-    return-object v0
+    move-result-object p1
+
+    invoke-interface {p1}, Lzlb;->getIcon()Lwe7;
+
+    const/4 p1, -0x1
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

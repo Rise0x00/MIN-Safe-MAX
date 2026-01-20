@@ -7,143 +7,148 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:J
 
 .field public final b:J
 
-.field public final c:J
+.field public final c:Lpld;
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 12
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lez4;->a:I
+    sget-object v0, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    iput-wide p2, p0, Lez4;->b:J
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    iput-wide p4, p0, Lez4;->c:J
+    move-result-wide v2
+
+    iput-wide v2, p0, Lez4;->a:J
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
+
+    move-result-wide v9
+
+    iput-wide v9, p0, Lez4;->b:J
+
+    new-instance v1, Lxk4;
+
+    sget v0, Lkdd;->oneme_settings_old_dev_menu:I
+
+    new-instance v4, Llhg;
+
+    invoke-direct {v4, v0}, Llhg;-><init>(I)V
+
+    sget v5, Lv5e;->W:I
+
+    const/16 v8, 0x8
+
+    const/4 v6, 0x0
+
+    sget-object v7, Lvk4;->a:Lvk4;
+
+    invoke-direct/range {v1 .. v8}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;I)V
+
+    new-instance v4, Lxk4;
+
+    sget v0, Lkdd;->oneme_settings_old_logs_menu:I
+
+    move-wide v5, v9
+
+    move-object v10, v7
+
+    new-instance v7, Llhg;
+
+    invoke-direct {v7, v0}, Llhg;-><init>(I)V
+
+    sget v8, Lv5e;->g:I
+
+    const/4 v9, 0x0
+
+    const/16 v11, 0x8
+
+    invoke-direct/range {v4 .. v11}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;I)V
+
+    filled-new-array {v1, v4}, [Lxk4;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lqi3;->h([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v0
+
+    new-instance v1, Lpld;
+
+    invoke-direct {v1, v0}, Lpld;-><init>(Lmfa;)V
+
+    iput-object v1, p0, Lez4;->c:Lpld;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()Llpf;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lez4;->c:Lpld;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lez4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lez4;
-
-    iget v1, p0, Lez4;->a:I
-
-    iget v3, p1, Lez4;->a:I
-
-    if-ne v1, v3, :cond_4
-
-    iget-wide v3, p0, Lez4;->b:J
-
-    iget-wide v5, p1, Lez4;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lez4;->c:J
-
-    iget-wide v5, p1, Lez4;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-eqz p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-
-    :cond_4
-    return v2
+    return-object v0
 .end method
 
-.method public final hashCode()I
-    .locals 4
+.method public final d(Lxk4;)V
+    .locals 5
 
-    iget v0, p0, Lez4;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
+    iget-wide v0, p1, Lxk4;->a:J
 
     iget-wide v2, p0, Lez4;->b:J
 
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+    invoke-static {v0, v1, v2, v3}, Lly4;->a(JJ)Z
 
-    move-result v0
+    move-result p1
 
-    iget-wide v1, p0, Lez4;->c:J
+    const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+    if-eqz p1, :cond_0
 
-    move-result v1
+    sget-object p1, Lwy4;->c:Lwy4;
 
-    add-int/2addr v1, v0
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
 
-    return v1
-.end method
+    move-result-object p1
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    const-string v0, ":settings/dev/logsviewer"
 
-    iget v0, p0, Lez4;->a:I
+    invoke-virtual {p1, v0, v2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    invoke-static {v0}, Lgb6;->a(I)Ljava/lang/String;
+    return-void
 
-    move-result-object v0
+    :cond_0
+    iget-wide v3, p0, Lez4;->a:J
 
-    const-string v1, "Loading(progress="
+    invoke-static {v0, v1, v3, v4}, Lly4;->a(JJ)Z
 
-    const-string v2, ", time="
+    move-result p1
 
-    iget-wide v3, p0, Lez4;->b:J
+    if-eqz p1, :cond_1
 
-    invoke-static {v1, v3, v4, v0, v2}, Lijf;->r(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object p1, Lwy4;->c:Lwy4;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ld3;->p0()Ljm4;
 
-    const-string v1, ", botId="
+    move-result-object p1
 
-    const-string v2, ")"
+    const-string v0, ":settings/dev/showroom"
 
-    iget-wide v3, p0, Lez4;->c:J
+    invoke-virtual {p1, v0, v2}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    invoke-static {v3, v4, v1, v2, v0}, Lm65;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_1
+    return-void
 .end method

@@ -1,60 +1,31 @@
 .class public final Lcqi;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/common/api/internal/BasePendingResult;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
 
-
-# static fields
-.field public static final a:Lcqi;
+# instance fields
+.field public final k:Lcom/google/android/gms/common/api/Status;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lcom/google/android/gms/common/api/Status;)V
+    .locals 1
 
-    new-instance v0, Lcqi;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;-><init>(Lgpi;)V
 
-    sput-object v0, Lcqi;->a:Lcqi;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    iput-object p1, p0, Lcqi;->k:Lcom/google/android/gms/common/api/Status;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final g(Lcom/google/android/gms/common/api/Status;)Lwzd;
     .locals 0
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget-object p1, p0, Lcqi;->k:Lcom/google/android/gms/common/api/Status;
 
-    move-result-object p1
-
-    throw p1
+    return-object p1
 .end method

@@ -1,27 +1,19 @@
 .class public final Le80;
-.super Lmmf;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
 .field public final c:Ljava/lang/String;
 
-.field public final d:I
-
-.field public final o:I
-
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Le80;->c:Ljava/lang/String;
-
-    iput p2, p0, Le80;->d:I
-
-    iput p3, p0, Le80;->o:I
 
     return-void
 .end method
@@ -29,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -51,40 +43,22 @@
 
     iget-object v1, p0, Le80;->c:Ljava/lang/String;
 
-    iget-object v3, p1, Le80;->c:Ljava/lang/String;
+    iget-object p1, p1, Le80;->c:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result p1
 
-    if-nez v1, :cond_2
+    if-nez p1, :cond_2
 
     return v2
 
     :cond_2
-    iget v1, p0, Le80;->d:I
-
-    iget v3, p1, Le80;->d:I
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Le80;->o:I
-
-    iget p1, p1, Le80;->o:I
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 1
 
     iget-object v0, p0, Le80;->c:Ljava/lang/String;
 
@@ -92,49 +66,19 @@
 
     move-result v0
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Le80;->d:I
-
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
-
-    move-result v0
-
-    iget v1, p0, Le80;->o:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 3
 
-    const-string v0, "\',codeLength="
+    const-string v0, "Response(trackId=\'"
 
-    const-string v1, ",blockingDuration="
+    const-string v1, "\')"
 
-    iget v2, p0, Le80;->d:I
+    iget-object v2, p0, Le80;->c:Ljava/lang/String;
 
-    const-string v3, "Response(trackId=\'"
-
-    iget-object v4, p0, Le80;->c:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4, v0, v1}, Lxjb;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")"
-
-    iget v2, p0, Le80;->o:I
-
-    invoke-static {v0, v2, v1}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

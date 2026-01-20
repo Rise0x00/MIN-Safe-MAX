@@ -1,39 +1,62 @@
-.class public final Lhk;
+.class public final synthetic Lhk;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:J
-
-.field public final f:Ljava/util/List;
+.field public final synthetic b:Lqk;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V
+.method public synthetic constructor <init>(Lqk;I)V
     .locals 0
+
+    iput p2, p0, Lhk;->a:I
+
+    iput-object p1, p0, Lhk;->b:Lqk;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lhk;->a:J
-
-    iput-object p3, p0, Lhk;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lhk;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lhk;->d:Ljava/lang/String;
-
-    iput-wide p6, p0, Lhk;->e:J
-
-    iput-object p8, p0, Lhk;->f:Ljava/util/List;
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lhk;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lmk;
+
+    iget-object v1, p0, Lhk;->b:Lqk;
+
+    invoke-direct {v0, v1}, Lmk;-><init>(Lqk;)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lzg5;
+
+    invoke-direct {v0}, Lzg5;-><init>()V
+
+    iget-object v1, p0, Lhk;->b:Lqk;
+
+    iget-object v1, v1, Lqk;->w0:Ltf;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

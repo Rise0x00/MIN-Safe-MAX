@@ -1,97 +1,103 @@
-.class public final enum Lpu8;
-.super Ljava/lang/Enum;
+.class public final synthetic Lpu8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final enum a:Lpu8;
 
-.field public static final enum b:Lpu8;
+# instance fields
+.field public final synthetic X:F
 
-.field public static final enum c:Lpu8;
+.field public final synthetic a:Landroid/animation/ValueAnimator;
 
-.field public static final enum d:Lpu8;
+.field public final synthetic b:Landroid/view/View;
 
-.field public static final synthetic o:[Lpu8;
+.field public final synthetic c:F
+
+.field public final synthetic d:F
+
+.field public final synthetic o:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Landroid/animation/ValueAnimator;Landroid/view/View;Lsu8;FFFF)V
+    .locals 0
 
-    new-instance v0, Lpu8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "UNMUTED"
+    iput-object p1, p0, Lpu8;->a:Landroid/animation/ValueAnimator;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lpu8;->b:Landroid/view/View;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p4, p0, Lpu8;->c:F
 
-    sput-object v0, Lpu8;->a:Lpu8;
+    iput p5, p0, Lpu8;->d:F
 
-    new-instance v1, Lpu8;
+    iput p6, p0, Lpu8;->o:F
 
-    const-string v2, "UNMUTED_BUT_MUTED_ONCE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lpu8;->b:Lpu8;
-
-    new-instance v2, Lpu8;
-
-    const-string v3, "MUTED_PERMANENT"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lpu8;->c:Lpu8;
-
-    new-instance v3, Lpu8;
-
-    const-string v4, "MUTED_PERMANENT_BUT_UNMUTED_ONCE"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lpu8;->d:Lpu8;
-
-    filled-new-array {v0, v1, v2, v3}, [Lpu8;
-
-    move-result-object v0
-
-    sput-object v0, Lpu8;->o:[Lpu8;
+    iput p7, p0, Lpu8;->X:F
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpu8;
-    .locals 1
 
-    const-class v0, Lpu8;
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    sget p1, Lsu8;->x0:I
 
-    move-result-object p0
+    iget-object p1, p0, Lpu8;->a:Landroid/animation/ValueAnimator;
 
-    check-cast p0, Lpu8;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public static values()[Lpu8;
-    .locals 1
+    check-cast p1, Ljava/lang/Float;
 
-    sget-object v0, Lpu8;->o:[Lpu8;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v0
+    iget v0, p0, Lpu8;->o:F
 
-    check-cast v0, [Lpu8;
+    cmpg-float v1, p1, v0
 
-    return-object v0
+    iget v2, p0, Lpu8;->c:F
+
+    if-gez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget v1, p0, Lpu8;->X:F
+
+    cmpl-float v3, p1, v1
+
+    iget v4, p0, Lpu8;->d:F
+
+    if-lez v3, :cond_1
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_1
+    sub-float/2addr p1, v0
+
+    sub-float/2addr v1, v0
+
+    div-float/2addr p1, v1
+
+    invoke-static {v4, v2, p1, v2}, Lpqb;->g(FFFF)F
+
+    move-result v2
+
+    :goto_0
+    iget-object p1, p0, Lpu8;->b:Landroid/view/View;
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
 .end method

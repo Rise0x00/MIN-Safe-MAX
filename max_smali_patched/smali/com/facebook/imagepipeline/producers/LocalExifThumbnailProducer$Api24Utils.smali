@@ -4,5 +4,5 @@
 
 
 # annotations
-.annotation build Lpw4;
+.annotation build Ld35;
 .end annotation

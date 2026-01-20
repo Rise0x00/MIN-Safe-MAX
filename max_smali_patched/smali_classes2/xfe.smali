@@ -1,30 +1,28 @@
 .class public final Lxfe;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lage;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:I
+.field public final synthetic Y:Lyfe;
 
 .field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lage;ILkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lyfe;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lxfe;->X:Lage;
-
-    iput p2, p0, Lxfe;->Y:I
+    iput-object p1, p0, Lxfe;->Y:Lyfe;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,7 +32,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lg54;
+    check-cast p1, Lf76;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -44,7 +42,7 @@
 
     check-cast p1, Lxfe;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lxfe;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -56,33 +54,35 @@
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance p1, Lxfe;
+    new-instance v0, Lxfe;
 
-    iget-object v0, p0, Lxfe;->X:Lage;
+    iget-object v1, p0, Lxfe;->Y:Lyfe;
 
-    iget v1, p0, Lxfe;->Y:I
+    invoke-direct {v0, v1, p2}, Lxfe;-><init>(Lyfe;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {p1, v0, v1, p2}, Lxfe;-><init>(Lage;ILkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lxfe;->X:Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 5
 
-    iget v0, p0, Lxfe;->o:I
+    iget-object v0, p0, Lxfe;->X:Ljava/lang/Object;
 
-    sget-object v1, Lybg;->a:Lybg;
+    check-cast v0, Lf76;
+
+    iget v1, p0, Lxfe;->o:I
 
     const/4 v2, 0x1
 
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_1
 
-    if-ne v0, v2, :cond_0
+    if-ne v1, v2, :cond_0
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-object v1
+    goto :goto_0
 
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
@@ -94,80 +94,37 @@
     throw p1
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    sget-object p1, Lage;->Q0:[Les7;
+    iget-object p1, p0, Lxfe;->Y:Lyfe;
 
-    iget-object p1, p0, Lxfe;->X:Lage;
+    invoke-virtual {p1}, Lyfe;->s()J
 
-    invoke-virtual {p1}, Lage;->x()Latd;
+    move-result-wide v3
 
-    move-result-object v0
+    new-instance p1, Ljava/lang/Long;
 
-    check-cast v0, Leig;
+    invoke-direct {p1, v3, v4}, Ljava/lang/Long;-><init>(J)V
 
-    const-string v3, "ALL"
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Ly3;->h:Luu7;
-
-    const-string v4, "app.privacy.chats.invite"
-
-    invoke-virtual {v0, v4, v3}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lijf;->d(Ljava/lang/String;)I
-
-    move-result v0
-
-    iget v3, p0, Lxfe;->Y:I
-
-    if-ne v0, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lage;->x()Latd;
-
-    move-result-object v0
-
-    invoke-static {v3}, Lijf;->k(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    check-cast v0, Leig;
-
-    invoke-virtual {v0, v4, v5}, Ly3;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lage;->w()Lml;
-
-    move-result-object v0
-
-    new-instance v4, Laig;
-
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
-
-    iput v3, v4, Laig;->o:I
-
-    new-instance v3, Lcig;
-
-    invoke-direct {v3, v4}, Lcig;-><init>(Laig;)V
-
-    invoke-interface {v0, v3}, Lml;->a(Lcig;)J
+    iput-object v1, p0, Lxfe;->X:Ljava/lang/Object;
 
     iput v2, p0, Lxfe;->o:I
 
-    invoke-static {p1, p0}, Lage;->v(Lage;Logf;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v0, Lh54;->a:Lh54;
+    sget-object v0, Lac4;->a:Lac4;
 
-    if-ne p1, v0, :cond_3
+    if-ne p1, v0, :cond_2
 
     return-object v0
 
-    :cond_3
+    :cond_2
     :goto_0
-    return-object v1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

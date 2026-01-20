@@ -3,59 +3,41 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:J
-
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static a(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    sget v0, Lenc;->call_history_info_copy_link:I
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
 
-    int-to-long v0, v0
+    move-result-object p0
 
-    sput-wide v0, Lcra;->a:J
+    return-object p0
+.end method
 
-    sget v0, Lenc;->call_history_info_open_chat_call:I
+.method public static b(Landroid/app/NotificationChannel;)Ljava/lang/String;
+    .locals 0
 
-    int-to-long v0, v0
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getParentChannelId()Ljava/lang/String;
 
-    sput-wide v0, Lcra;->b:J
+    move-result-object p0
 
-    sget v0, Lenc;->call_history_info_recreate:I
+    return-object p0
+.end method
 
-    int-to-long v0, v0
+.method public static c(Landroid/app/NotificationChannel;)Z
+    .locals 0
 
-    sput-wide v0, Lcra;->c:J
+    invoke-virtual {p0}, Landroid/app/NotificationChannel;->isImportantConversation()Z
 
-    sget v0, Lenc;->call_history_info_send_to_chat:I
+    move-result p0
 
-    int-to-long v0, v0
+    return p0
+.end method
 
-    sput-wide v0, Lcra;->d:J
+.method public static d(Landroid/app/NotificationChannel;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    sget v0, Lenc;->call_history_info_share_link:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lcra;->e:J
-
-    sget v0, Lenc;->call_history_info_start_call:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lcra;->f:J
+    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setConversationId(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

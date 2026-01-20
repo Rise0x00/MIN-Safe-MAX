@@ -1,191 +1,184 @@
 .class public final Lari;
-.super Leii;
+.super Le4h;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final b:I
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public c:I
+
+.field public final d:Lhri;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lhri;I)V
+    .locals 2
 
-    iput p1, p0, Lari;->b:I
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
 
-    iput-object p2, p0, Lari;->c:Ljava/lang/Object;
+    move-result v0
 
-    invoke-direct {p0}, Leii;-><init>()V
+    const/4 v1, 0x2
+
+    invoke-direct {p0, v1}, Le4h;-><init>(I)V
+
+    invoke-static {p2, v0}, Lkbj;->g(II)V
+
+    iput v0, p0, Lari;->b:I
+
+    iput p2, p0, Lari;->c:I
+
+    iput-object p1, p0, Lari;->d:Lhri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final a(I)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lari;->b:I
+    iget-object v0, p0, Lari;->d:Lhri;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v0, p0, Lari;->c:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v0, Lrvi;
+    return-object p1
+.end method
 
-    iget-object v0, v0, Lrvi;->b:Ljava/lang/Object;
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
 
-    check-cast v0, Lgyi;
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
 
-    iget-object v1, v0, Lgyi;->b:Lsw4;
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    const-string v2, "unlinkToDeath"
+    throw p1
+.end method
 
-    const/4 v3, 0x0
+.method public final hasNext()Z
+    .locals 2
 
-    new-array v4, v3, [Ljava/lang/Object;
+    iget v0, p0, Lari;->c:I
 
-    invoke-virtual {v1, v2, v4}, Lsw4;->d(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget v1, p0, Lari;->b:I
 
-    iget-object v1, v0, Lgyi;->m:Le8i;
+    if-ge v0, v1, :cond_0
 
-    invoke-interface {v1}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
+    const/4 v0, 0x1
 
-    move-result-object v1
-
-    iget-object v2, v0, Lgyi;->j:Lxki;
-
-    invoke-interface {v1, v2, v3}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Lgyi;->m:Le8i;
-
-    iput-boolean v3, v0, Lgyi;->g:Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lari;->c:Ljava/lang/Object;
-
-    check-cast v0, Lgyi;
-
-    iget-object v0, v0, Lgyi;->f:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lari;->c:Ljava/lang/Object;
-
-    check-cast v1, Lgyi;
-
-    iget-object v1, v1, Lgyi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Lari;->c:Ljava/lang/Object;
-
-    check-cast v1, Lgyi;
-
-    iget-object v1, v1, Lgyi;->k:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    iget-object v1, p0, Lari;->c:Ljava/lang/Object;
-
-    check-cast v1, Lgyi;
-
-    iget-object v1, v1, Lgyi;->b:Lsw4;
-
-    const-string v3, "Leaving the connection open for other ongoing calls."
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-virtual {v1, v3, v2}, Lsw4;->d(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    iget-object v1, p0, Lari;->c:Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    check-cast v1, Lgyi;
+    return v0
+.end method
 
-    iget-object v3, v1, Lgyi;->m:Le8i;
+.method public final hasPrevious()Z
+    .locals 1
 
-    if-eqz v3, :cond_1
+    iget v0, p0, Lari;->c:I
 
-    iget-object v1, v1, Lgyi;->b:Lsw4;
+    if-lez v0, :cond_0
 
-    const-string v3, "Unbind from service."
+    const/4 v0, 0x1
 
-    new-array v4, v2, [Ljava/lang/Object;
+    return v0
 
-    invoke-virtual {v1, v3, v4}, Lsw4;->d(Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lari;->c:Ljava/lang/Object;
+    return v0
+.end method
 
-    check-cast v1, Lgyi;
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v3, v1, Lgyi;->a:Landroid/content/Context;
+    invoke-virtual {p0}, Lari;->hasNext()Z
 
-    iget-object v1, v1, Lgyi;->l:Lrvi;
+    move-result v0
 
-    invoke-virtual {v3, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lari;->c:Ljava/lang/Object;
+    iget v0, p0, Lari;->c:I
 
-    check-cast v1, Lgyi;
+    add-int/lit8 v1, v0, 0x1
 
-    iput-boolean v2, v1, Lgyi;->g:Z
+    iput v1, p0, Lari;->c:I
 
-    const/4 v2, 0x0
+    invoke-virtual {p0, v0}, Lari;->a(I)Ljava/lang/Object;
 
-    iput-object v2, v1, Lgyi;->m:Le8i;
+    move-result-object v0
 
-    iput-object v2, v1, Lgyi;->l:Lrvi;
+    return-object v0
 
-    :cond_1
-    iget-object v1, p0, Lari;->c:Ljava/lang/Object;
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
 
-    check-cast v1, Lgyi;
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    invoke-virtual {v1}, Lgyi;->c()V
+    throw v0
+.end method
 
-    monitor-exit v0
+.method public final nextIndex()I
+    .locals 1
 
-    :goto_0
-    return-void
+    iget v0, p0, Lari;->c:I
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    return v0
+.end method
 
-    throw v1
+.method public final previous()Ljava/lang/Object;
+    .locals 1
 
-    nop
+    invoke-virtual {p0}, Lari;->hasPrevious()Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lari;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lari;->c:I
+
+    invoke-virtual {p0, v0}, Lari;->a(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final previousIndex()I
+    .locals 1
+
+    iget v0, p0, Lari;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p1, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p1
 .end method

@@ -1,413 +1,225 @@
-.class public abstract Loqi;
-.super Ljava/lang/Object;
+.class public final Loqi;
+.super Lg4;
 .source "SourceFile"
 
 
 # static fields
-.field public static a:Lmqi;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Loqi;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Landroid/os/IBinder;
+
+.field public final c:Lyv3;
+
+.field public final d:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method public static final a(Lrf7;Let7;)Lgs9;
-    .locals 30
+.method static constructor <clinit>()V
+    .locals 2
 
-    move-object/from16 v0, p0
+    new-instance v0, Lfph;
 
-    iget-wide v1, v0, Lrf7;->a:J
+    const/16 v1, 0x12
 
-    iget-object v3, v0, Lrf7;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lfph;-><init>(I)V
 
-    iget-object v4, v0, Lrf7;->c:Ljava/lang/String;
+    sput-object v0, Loqi;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
+    return-void
+.end method
 
-    move-result v5
+.method public constructor <init>(ILandroid/os/IBinder;Lyv3;ZZ)V
+    .locals 0
 
-    const/4 v6, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v5, :cond_0
+    iput p1, p0, Loqi;->a:I
 
-    move-object v4, v6
+    iput-object p2, p0, Loqi;->b:Landroid/os/IBinder;
+
+    iput-object p3, p0, Loqi;->c:Lyv3;
+
+    iput-boolean p4, p0, Loqi;->d:Z
+
+    iput-boolean p5, p0, Loqi;->o:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
+
+    if-nez p1, :cond_0
+
+    goto :goto_3
 
     :cond_0
-    iget-object v5, v0, Lrf7;->d:Ljava/lang/String;
+    if-ne p0, p1, :cond_1
 
-    iget-object v7, v0, Lrf7;->q:[Lvf7;
-
-    array-length v8, v7
-
-    if-nez v8, :cond_1
-
-    move-object v7, v6
+    goto :goto_2
 
     :cond_1
-    iget-object v8, v0, Lrf7;->p:Ljava/lang/String;
+    instance-of v0, p1, Loqi;
 
-    invoke-virtual {v8}, Ljava/lang/String;->length()I
+    if-nez v0, :cond_2
 
-    move-result v9
-
-    if-nez v9, :cond_2
-
-    move-object v8, v6
+    goto :goto_3
 
     :cond_2
-    iget-object v9, v0, Lrf7;->e:Ljava/lang/String;
+    check-cast p1, Loqi;
 
-    move-object v11, v6
+    iget-object v0, p0, Loqi;->c:Lyv3;
 
-    move-object v6, v7
+    iget-object v1, p1, Loqi;->c:Lyv3;
 
-    move-object v7, v8
+    invoke-virtual {v0, v1}, Lyv3;->equals(Ljava/lang/Object;)Z
 
-    move-object v8, v9
+    move-result v0
 
-    iget-wide v9, v0, Lrf7;->f:J
+    if-eqz v0, :cond_7
 
-    move-object v12, v11
+    const/4 v0, 0x2
 
-    iget v11, v0, Lrf7;->g:I
+    const-string v1, "com.google.android.gms.common.internal.IAccountAccessor"
 
-    move-object v13, v12
+    const/4 v2, 0x0
 
-    iget v12, v0, Lrf7;->h:I
+    iget-object v3, p0, Loqi;->b:Landroid/os/IBinder;
 
-    move-object v14, v13
+    if-nez v3, :cond_3
 
-    iget-boolean v13, v0, Lrf7;->i:Z
-
-    move-object v15, v14
-
-    iget-boolean v14, v0, Lrf7;->j:Z
-
-    move-object/from16 v16, v15
-
-    iget-boolean v15, v0, Lrf7;->k:Z
-
-    move-wide/from16 v17, v1
-
-    iget-wide v1, v0, Lrf7;->l:J
-
-    move-wide/from16 v19, v1
-
-    iget-wide v1, v0, Lrf7;->m:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v21
-
-    const-wide/16 v22, 0x0
-
-    cmp-long v1, v1, v22
-
-    if-lez v1, :cond_3
+    move-object v4, v2
 
     goto :goto_0
 
     :cond_3
-    move-object/from16 v21, v16
+    sget v4, Ls5;->d:I
 
-    :goto_0
-    iget-wide v1, v0, Lrf7;->r:J
+    invoke-interface {v3, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    move-wide/from16 v22, v1
+    move-result-object v4
 
-    iget-object v1, v0, Lrf7;->n:Ljava/lang/String;
+    instance-of v5, v4, Lae7;
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    if-eqz v5, :cond_4
 
-    move-result v2
+    check-cast v4, Lae7;
 
-    if-nez v2, :cond_4
-
-    move-object/from16 v1, v16
+    goto :goto_0
 
     :cond_4
-    iget-object v2, v0, Lrf7;->o:[B
+    new-instance v4, Leqj;
 
-    move-object/from16 v24, v1
+    invoke-direct {v4, v3, v1, v0}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    array-length v1, v2
+    :goto_0
+    iget-object p1, p1, Loqi;->b:Landroid/os/IBinder;
 
-    if-nez v1, :cond_5
+    if-nez p1, :cond_5
 
     goto :goto_1
 
     :cond_5
-    move-object/from16 v16, v2
+    sget v2, Ls5;->d:I
 
-    :goto_1
-    iget-object v1, v0, Lrf7;->s:Ljava/lang/String;
-
-    move-object/from16 v2, p1
-
-    invoke-virtual {v2, v0}, Let7;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
     move-result-object v2
 
-    check-cast v2, Ljava/lang/CharSequence;
+    instance-of v3, v2, Lae7;
 
-    iget-boolean v0, v0, Lrf7;->t:Z
+    if-eqz v3, :cond_6
 
-    move/from16 v25, v0
+    check-cast v2, Lae7;
 
-    new-instance v0, Lgs9;
-
-    move-object/from16 v26, v21
-
-    move-object/from16 v21, v1
-
-    move-object/from16 v27, v24
-
-    move-object/from16 v24, v2
-
-    move-wide/from16 v1, v17
-
-    move-object/from16 v18, v26
-
-    move-wide/from16 v28, v22
-
-    move-object/from16 v23, v16
-
-    move-wide/from16 v16, v19
-
-    move-wide/from16 v19, v28
-
-    move-object/from16 v22, v27
-
-    invoke-direct/range {v0 .. v25}, Lgs9;-><init>(JLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/String;JIIZZZJLjava/lang/Long;JLjava/lang/CharSequence;Ljava/lang/String;[BLjava/lang/CharSequence;Z)V
-
-    return-object v0
-.end method
-
-.method public static b(Lgr7;)Lorg/json/JSONObject;
-    .locals 3
-
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    invoke-interface {p0}, Lgr7;->p()V
-
-    :goto_0
-    invoke-interface {p0}, Lgr7;->peek()I
-
-    move-result v1
-
-    const/16 v2, 0x7d
-
-    if-eq v1, v2, :cond_0
-
-    invoke-interface {p0}, Lgr7;->name()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v2, Lorg/json/JSONObject;->NULL:Ljava/lang/Object;
-
-    invoke-static {p0, v2}, Loqi;->c(Lgr7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p0}, Lgr7;->n()V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-.end method
-
-.method public static c(Lgr7;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    :try_start_0
-    invoke-interface {p0}, Lgr7;->peek()I
-
-    move-result v0
-
-    const/16 v1, 0x22
-
-    if-eq v0, v1, :cond_8
-
-    const/16 v1, 0x31
-
-    if-eq v0, v1, :cond_5
-
-    const/16 v1, 0x5b
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x62
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x6e
-
-    if-eq v0, v1, :cond_1
-
-    const/16 p1, 0x7b
-
-    if-ne v0, p1, :cond_0
-
-    invoke-static {p0}, Loqi;->b(Lgr7;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-static {v0}, Lru/ok/android/api/json/JsonStateException;->d(I)Lru/ok/android/api/json/JsonStateException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_1
-    invoke-interface {p0}, Lgr7;->v()V
-
-    return-object p1
-
-    :cond_2
-    invoke-interface {p0}, Lgr7;->W()Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    new-instance p1, Lorg/json/JSONArray;
-
-    invoke-direct {p1}, Lorg/json/JSONArray;-><init>()V
-
-    invoke-interface {p0}, Lgr7;->r()V
-
-    :goto_0
-    invoke-interface {p0}, Lgr7;->peek()I
-
-    move-result v0
-
-    const/16 v1, 0x5d
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, Loqi;->c(Lgr7;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    goto :goto_0
-
-    :cond_4
-    invoke-interface {p0}, Lgr7;->q()V
-
-    return-object p1
-
-    :cond_5
-    invoke-interface {p0}, Lgr7;->R()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/16 p1, 0x2e
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
-
-    move-result p1
-
-    if-gez p1, :cond_7
-
-    const/16 p1, 0x65
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
-
-    move-result p1
-
-    if-gez p1, :cond_7
-
-    const/16 p1, 0x45
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->indexOf(I)I
-
-    move-result p1
-
-    if-gez p1, :cond_7
-
-    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide p0
-
-    const-wide/32 v0, -0x80000000
-
-    cmp-long v0, p0, v0
-
-    if-ltz v0, :cond_6
-
-    const-wide/32 v0, 0x7fffffff
-
-    cmp-long v0, p0, v0
-
-    if-gtz v0, :cond_6
-
-    long-to-int p0, p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
+    goto :goto_1
 
     :cond_6
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v2, Leqj;
 
-    move-result-object p0
+    invoke-direct {v2, p1, v1, v0}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    return-object p0
+    :goto_1
+    invoke-static {v4, v2}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    :goto_2
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_7
-    invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+    :goto_3
+    const/4 p1, 0x0
 
-    move-result-wide p0
+    return p1
+.end method
 
-    invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 4
 
-    move-result-object p0
+    const/16 v0, 0x4f45
 
-    return-object p0
+    invoke-static {p1, v0}, Lsnj;->k(Landroid/os/Parcel;I)I
 
-    :cond_8
-    invoke-interface {p0}, Lgr7;->B()Ljava/lang/String;
+    move-result v0
 
-    move-result-object p0
-    :try_end_0
-    .catch Lru/ok/android/api/json/JsonTypeMismatchException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x1
 
-    return-object p0
+    const/4 v2, 0x4
 
-    :catch_0
-    move-exception p0
+    invoke-static {p1, v1, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
 
-    new-instance p1, Ljava/lang/AssertionError;
+    iget v1, p0, Loqi;->a:I
 
-    invoke-direct {p1, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    throw p1
+    const/4 v1, 0x2
+
+    iget-object v3, p0, Loqi;->b:Landroid/os/IBinder;
+
+    invoke-static {p1, v1, v3}, Lsnj;->e(Landroid/os/Parcel;ILandroid/os/IBinder;)V
+
+    const/4 v1, 0x3
+
+    iget-object v3, p0, Loqi;->c:Lyv3;
+
+    invoke-static {p1, v1, v3, p2}, Lsnj;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    invoke-static {p1, v2, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Loqi;->d:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 p2, 0x5
+
+    invoke-static {p1, p2, v2}, Lsnj;->m(Landroid/os/Parcel;II)V
+
+    iget-boolean p2, p0, Loqi;->o:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-static {p1, v0}, Lsnj;->l(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

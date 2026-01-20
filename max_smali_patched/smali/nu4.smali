@@ -3,118 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
-
-
-# static fields
-.field public static volatile b:Lnu4;
-
-.field public static final synthetic c:Lnu4;
-
-.field public static final synthetic d:Lnu4;
+.implements Lux0;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
+
+.field public final b:[I
+
+.field public final c:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lnu4;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lnu4;-><init>(I)V
-
-    sput-object v0, Lnu4;->c:Lnu4;
-
-    new-instance v0, Lnu4;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lnu4;-><init>(I)V
-
-    sput-object v0, Lnu4;->d:Lnu4;
+.method static constructor <clinit>()V
+    .locals 0
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(II[I)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lnu4;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length p1, p3
+
+    invoke-static {p3, p1}, Ljava/util/Arrays;->copyOf([II)[I
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnu4;->b:[I
+
+    iput p2, p0, Lnu4;->c:I
+
+    invoke-static {p1}, Ljava/util/Arrays;->sort([I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lnu4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lnu4;
+
+    iget v2, p0, Lnu4;->a:I
+
+    iget v3, p1, Lnu4;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lnu4;->b:[I
+
+    iget-object v3, p1, Lnu4;->b:[I
+
+    invoke-static {v2, v3}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget v2, p0, Lnu4;->c:I
+
+    iget p1, p1, Lnu4;->c:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
     .locals 2
 
     iget v0, p0, Lnu4;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    iget-object v1, p0, Lnu4;->b:[I
 
-    return-void
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
 
-    :pswitch_0
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    move-result v1
 
-    return-void
+    add-int/2addr v1, v0
 
-    :pswitch_1
-    new-instance v0, Ljava/lang/Thread;
+    mul-int/lit8 v1, v1, 0x1f
 
-    invoke-direct {v0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    iget v0, p0, Lnu4;->c:I
 
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    add-int/2addr v1, v0
 
-    return-void
-
-    :pswitch_2
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_3
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    :pswitch_4
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    :pswitch_5
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v1
 .end method

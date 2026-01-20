@@ -1,45 +1,25 @@
-.class public final Lecb;
+.class public abstract Lecb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lkh;
+# static fields
+.field public static final a:I
 
-.field public final b:Z
-
-.field public final c:Lllf;
-
-.field public volatile d:J
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lkh;ZLllf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lfcd;->oneme_in_app_review_rating_bar_accessibility:I
 
-    iput-object p1, p0, Lecb;->a:Lkh;
+    sput v0, Lecb;->a:I
 
-    iput-boolean p2, p0, Lecb;->b:Z
+    sget v0, Lfcd;->oneme_in_app_review_rating_star_accessibility:I
 
-    iput-object p3, p0, Lecb;->c:Lllf;
-
-    sget p1, Lgs7;->a:I
-
-    sget p1, Lw35;->d:I
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p1
-
-    sget-object p3, Lb45;->c:Lb45;
-
-    invoke-static {p1, p2, p3}, Lzyi;->e(JLb45;)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lecb;->d:J
+    sput v0, Lecb;->b:I
 
     return-void
 .end method

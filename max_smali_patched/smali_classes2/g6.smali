@@ -1,578 +1,98 @@
 .class public final Lg6;
-.super Ljj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcy3;
 
 
 # instance fields
-.field public final synthetic b:I
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic a:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
     .locals 0
 
-    iput p1, p0, Lg6;->b:I
-
-    iput-object p2, p0, Lg6;->c:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lg6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    .locals 6
-
-    iget v0, p0, Lg6;->b:I
-
-    const/4 v1, 0x1
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljrh;
-
-    new-instance p3, Lo2g;
-
-    const/16 v0, 0x16
-
-    invoke-direct {p3, p0, v0, p2}, Lo2g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {p1, p3}, Ltci;->r(Landroid/view/View;Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lzgg;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_1
-    move-object v3, p2
-
-    check-cast v3, Lx97;
-
-    iget-object p2, p0, Lg6;->c:Ljava/lang/Object;
-
-    move-object v1, p2
-
-    check-cast v1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {v1, v3, p3}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->i(Lx97;Landroid/graphics/drawable/Animatable;)V
-
-    invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v1}, Landroid/view/View;->invalidate()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_1
-
-    new-instance v0, Ltua;
-
-    const/4 v5, 0x0
-
-    move-object v2, p1
-
-    move-object v4, p3
-
-    invoke-direct/range {v0 .. v5}, Ltua;-><init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;Lx97;Landroid/graphics/drawable/Animatable;I)V
-
-    invoke-virtual {p2, v0}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
-
-    :cond_1
-    move-object v2, p1
-
-    move-object v4, p3
-
-    new-instance v0, Ltua;
-
-    const/4 v5, 0x1
-
-    invoke-direct/range {v0 .. v5}, Ltua;-><init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;Ljava/lang/String;Lx97;Landroid/graphics/drawable/Animatable;I)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :pswitch_2
-    check-cast p2, Lx97;
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lapa;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_3
-
-    iget-object p2, p1, Lapa;->C0:Loi6;
-
-    if-eqz p2, :cond_2
-
-    invoke-interface {p2}, Loi6;->invoke()Ljava/lang/Object;
-
-    :cond_2
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_4
-
-    new-instance p3, Luoa;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p3, p1, v0}, Luoa;-><init>(Lapa;I)V
-
-    invoke-virtual {p2, p3}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p2, Luoa;
-
-    invoke-direct {p2, p1, v1}, Luoa;-><init>(Lapa;I)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :goto_1
-    return-void
-
-    :pswitch_3
-    check-cast p2, Lx97;
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lmoa;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_4
-    check-cast p2, Lx97;
-
-    if-eqz p2, :cond_5
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/mediapicker/crop/AvatarEditScreen;
-
-    sget-object p3, Lone/me/mediapicker/crop/AvatarEditScreen;->t0:[Les7;
-
-    invoke-virtual {p1}, Lone/me/mediapicker/crop/AvatarEditScreen;->y0()Lyd0;
-
-    move-result-object p1
-
-    invoke-interface {p2}, Lx97;->getWidth()I
-
-    move-result p3
-
-    invoke-interface {p2}, Lx97;->getHeight()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    int-to-float p3, p3
-
-    int-to-float p2, p2
-
-    invoke-static {p3, p2}, Luy5;->a(FF)J
-
-    move-result-wide p2
-
-    iput-wide p2, p1, Lyd0;->o:J
-
-    :cond_5
-    return-void
-
-    :pswitch_5
-    check-cast p2, Lx97;
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/messages/views/ActAvatarCrop;
-
-    new-instance p3, Landroid/graphics/Point;
-
-    invoke-interface {p2}, Lx97;->getWidth()I
-
-    move-result v0
-
-    invoke-interface {p2}, Lx97;->getHeight()I
-
-    move-result p2
-
-    invoke-direct {p3, v0, p2}, Landroid/graphics/Point;-><init>(II)V
-
-    iput-object p3, p1, Lru/ok/messages/views/ActAvatarCrop;->a1:Landroid/graphics/Point;
-
-    iget-object p1, p1, Lru/ok/messages/views/ActAvatarCrop;->Z0:Landroid/widget/ImageView;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setEnabled(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public d(Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final accept(Ljava/lang/Object;)V
     .locals 4
 
-    iget v0, p0, Lg6;->b:I
+    check-cast p1, Lh2d;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lg6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    return-void
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->g1:Ljga;
 
-    :pswitch_0
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p1, Ljrh;
+    invoke-virtual {p1}, Lh2d;->toString()Ljava/lang/String;
 
-    new-instance v0, Lo2g;
+    move-result-object v1
 
-    const/16 v1, 0x17
+    filled-new-array {v1}, [Ljava/lang/Object;
 
-    invoke-direct {v0, p0, v1, p2}, Lo2g;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object v1
 
-    invoke-static {p1, v0}, Ltci;->r(Landroid/view/View;Ljava/lang/Runnable;)V
+    const-string v2, "jga"
 
-    return-void
+    const-string v3, "onQualitySelected: %s"
 
-    :pswitch_1
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
+    invoke-static {v2, v3, v1}, Lc5j;->c(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    check-cast p1, Lzgg;
+    iget-object v1, v0, Ljga;->t0:Lzfh;
 
-    iget-object p1, p1, Lzgg;->c:Lma;
+    invoke-virtual {v1}, Lzfh;->a()Lg20;
 
-    if-eqz p1, :cond_0
+    move-result-object v1
 
-    invoke-virtual {p1, p2}, Lma;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-object p1, v1, Lg20;->c:Lh2d;
 
-    :cond_0
-    return-void
+    new-instance v2, Lzfh;
 
-    :pswitch_2
-    iget-object v0, p0, Lg6;->c:Ljava/lang/Object;
+    invoke-direct {v2, v1}, Lzfh;-><init>(Lg20;)V
 
-    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    iput-object v2, v0, Ljga;->t0:Lzfh;
 
-    iget-object v1, v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->w0:Ljava/lang/String;
+    invoke-virtual {v0}, Ljga;->O0()V
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Lm32;
 
-    const-string v3, "Failed to load image. ID: "
+    const/4 v2, 0x1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2, p1}, Lm32;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljga;->P0(Lmr6;)V
 
-    const-string p1, ". Exception: "
+    new-instance p1, Lega;
 
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x3
 
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {p1, v0, v1}, Lega;-><init>(Ljga;I)V
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljga;->P0(Lmr6;)V
 
-    move-result-object p1
+    iget-object p1, v0, Ljga;->v0:Ldd;
 
-    invoke-static {v1, p1}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, v0, Ljga;->t0:Lzfh;
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    iget-object v0, v0, Lzfh;->a:Lh2d;
 
-    move-result-object p1
+    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/os/Looper;->isCurrentThread()Z
+    move-result-object v0
 
-    move-result p1
+    const-string v1, "VIDEO_UPLOAD_QUALITY_SELECTED"
 
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    new-instance p2, Lsua;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, v1}, Lsua;-><init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
-
-    invoke-virtual {p1, p2}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p1, Lsua;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, v0, p2}, Lsua;-><init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :pswitch_3
-    iget-object v0, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast v0, Lapa;
-
-    iget-object v1, v0, Lapa;->a:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Failed to load image. ID: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1, p2}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {v0}, Landroid/view/View;->postInvalidate()V
+    invoke-virtual {p1, v1, v0}, Ldd;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
-
-    :pswitch_4
-    iget-object v0, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast v0, Lmoa;
-
-    iget-object v0, v0, Lmoa;->c:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Failed to load image. ID: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, ". Exception: "
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v0, p1}, Lcuh;->s(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public e(Ljava/lang/String;)V
-    .locals 2
-
-    iget p1, p0, Lg6;->b:I
-
-    packed-switch p1, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljrh;
-
-    new-instance v0, Lhrh;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p1, v1}, Lhrh;-><init>(Ljrh;I)V
-
-    invoke-static {p1, v0}, Ltci;->r(Landroid/view/View;Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x6
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
-    .locals 2
-
-    iget p1, p0, Lg6;->b:I
-
-    packed-switch p1, :pswitch_data_0
-
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljrh;
-
-    iget-object p2, p1, Ljrh;->z0:Ljava/lang/Runnable;
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    iget-object p2, p1, Ljrh;->z0:Ljava/lang/Runnable;
-
-    invoke-static {p1, p2}, Ltci;->r(Landroid/view/View;Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_2
-    check-cast p2, Lx97;
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/os/Looper;->isCurrentThread()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getHandler()Landroid/os/Handler;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_1
-
-    new-instance v0, Lsua;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p1, v1}, Lsua;-><init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
-
-    invoke-virtual {p2, v0}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p2, Lsua;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p2, p1, v0}, Lsua;-><init>(Lone/me/sdk/uikit/common/views/OneMeDraweeView;I)V
-
-    invoke-virtual {p1, p2}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    :goto_0
-    return-void
-
-    :pswitch_3
-    check-cast p2, Lx97;
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lapa;
-
-    invoke-virtual {p1}, Landroid/view/View;->postInvalidate()V
-
-    return-void
-
-    :pswitch_4
-    check-cast p2, Lx97;
-
-    iget-object p1, p0, Lg6;->c:Ljava/lang/Object;
-
-    check-cast p1, Lmoa;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

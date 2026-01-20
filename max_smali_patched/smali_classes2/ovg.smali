@@ -1,105 +1,159 @@
-.class public final enum Lovg;
-.super Ljava/lang/Enum;
+.class public final Lovg;
+.super Ldaa;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[Lovg;
+# instance fields
+.field public final j:J
+
+.field public final k:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Ljava/lang/String;IIIJJZ)V
+    .locals 11
 
-    new-instance v0, Lovg;
+    move-wide/from16 v7, p5
 
-    const-string v1, "LOWEST"
+    move-wide/from16 v9, p7
 
-    const/4 v2, 0x0
+    new-instance v0, Lbaa;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p2, p1, p3, p4}, Lbaa;-><init>(ILjava/lang/String;II)V
 
-    new-instance v1, Lovg;
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    const-string v2, "HIGHEST"
+    move-result-object v5
 
-    const/4 v3, 0x1
+    const-wide/16 v1, 0x0
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sub-long v3, v9, v7
 
-    new-instance v2, Lovg;
+    move-object v0, p0
 
-    const-string v3, "MAX_QVGA"
+    move/from16 v6, p9
 
-    const/4 v4, 0x2
+    invoke-direct/range {v0 .. v6}, Ldaa;-><init>(JJLjava/util/List;Z)V
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-wide v7, p0, Lovg;->j:J
 
-    new-instance v3, Lovg;
-
-    const-string v4, "MAX_480P"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v4, Lovg;
-
-    const-string v5, "MAX_720P"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lovg;
-
-    const-string v6, "MAX_1080P"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v6, Lovg;
-
-    const-string v7, "MAX_2160P"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array/range {v0 .. v6}, [Lovg;
-
-    move-result-object v0
-
-    sput-object v0, Lovg;->a:[Lovg;
+    iput-wide v9, p0, Lovg;->k:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lovg;
-    .locals 1
 
-    const-class v0, Lovg;
+# virtual methods
+.method public final b()J
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-wide v0, p0, Lovg;->j:J
 
-    move-result-object p0
-
-    check-cast p0, Lovg;
-
-    return-object p0
+    return-wide v0
 .end method
 
-.method public static values()[Lovg;
-    .locals 1
+.method public final c()J
+    .locals 2
 
-    sget-object v0, Lovg;->a:[Lovg;
+    iget-wide v0, p0, Lovg;->k:J
 
-    invoke-virtual {v0}, [Lovg;->clone()Ljava/lang/Object;
+    return-wide v0
+.end method
 
-    move-result-object v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
-    check-cast v0, [Lovg;
+    const/4 v0, 0x1
 
-    return-object v0
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_4
+
+    const-class v2, Lovg;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1}, Ldaa;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    return v1
+
+    :cond_2
+    check-cast p1, Lovg;
+
+    iget-wide v2, p0, Lovg;->j:J
+
+    iget-wide v4, p1, Lovg;->j:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_3
+
+    return v1
+
+    :cond_3
+    iget-wide v2, p0, Lovg;->k:J
+
+    iget-wide v4, p1, Lovg;->k:J
+
+    cmp-long p1, v2, v4
+
+    if-nez p1, :cond_4
+
+    return v0
+
+    :cond_4
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 6
+
+    invoke-super {p0}, Ldaa;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lovg;->j:J
+
+    const/16 v3, 0x20
+
+    ushr-long v4, v1, v3
+
+    xor-long/2addr v1, v4
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-wide v1, p0, Lovg;->k:J
+
+    ushr-long v3, v1, v3
+
+    xor-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method

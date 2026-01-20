@@ -2,248 +2,98 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhy1;
-
-
-# static fields
-.field public static final g:J
-
-.field public static final synthetic h:I
-
 
 # instance fields
-.field public final a:Lfx1;
+.field public final a:Li7f;
 
-.field public final b:I
-
-.field public c:Z
-
-.field public final d:Ljava/util/concurrent/Executor;
-
-.field public final e:Ljava/util/concurrent/ScheduledExecutorService;
-
-.field public final f:Z
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Loy1;->g:J
-
-    return-void
-.end method
-
-.method public constructor <init>(Lfx1;ILn3e;Lfw6;Z)V
-    .locals 1
+.method public constructor <init>(Lo58;Lo58;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Loy1;->c:Z
+    const/4 v1, 0x7
 
-    iput-object p1, p0, Loy1;->a:Lfx1;
+    invoke-static {v0, v0, v1}, Lj7f;->b(III)Li7f;
 
-    iput p2, p0, Loy1;->b:I
+    move-result-object v0
 
-    iput-object p3, p0, Loy1;->d:Ljava/util/concurrent/Executor;
+    iput-object v0, p0, Loy1;->a:Li7f;
 
-    iput-object p4, p0, Loy1;->e:Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
 
-    iput-boolean p5, p0, Loy1;->f:Z
+    move-result-object p2
+
+    check-cast p2, Lmbg;
+
+    check-cast p2, Lj9b;
+
+    invoke-virtual {p2}, Lj9b;->c()Lzp8;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lilj;->a(Lqb4;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Loy1;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lcy0;
+
+    invoke-virtual {p1, p0}, Lcy0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lv28;
-    .locals 4
+.method public final onEvent(Ljk0;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    iget v0, p0, Loy1;->b:I
-
-    invoke-static {v0, p1}, Lz30;->h(ILandroid/hardware/camera2/TotalCaptureResult;)Z
-
-    move-result v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "TorchTask#preCapture: isFlashRequired = "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Camera2CapturePipeline"
-
-    invoke-static {v1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v0, p0, Loy1;->b:I
-
-    invoke-static {v0, p1}, Lz30;->h(ILandroid/hardware/camera2/TotalCaptureResult;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Loy1;->a:Lfx1;
-
-    iget-boolean p1, p1, Lfx1;->r:Z
-
-    if-eqz p1, :cond_0
-
-    const-string p1, "Torch already on, not turn on"
-
-    invoke-static {v1, p1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "Turn on torch"
-
-    invoke-static {v1, p1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Loy1;->c:Z
-
-    new-instance p1, Lny1;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lny1;-><init>(Loy1;I)V
-
-    invoke-static {p1}, Lcmi;->a(Lrt1;)Ltt1;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lek6;->a(Lv28;)Lek6;
-
-    move-result-object p1
-
+    .line 2
     new-instance v0, Lny1;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lny1;-><init>(Loy1;I)V
+    invoke-direct {v0, p0, p1, v1}, Lny1;-><init>(Loy1;Ljk0;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Loy1;->d:Ljava/util/concurrent/Executor;
+    const/4 p1, 0x3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v2, p0, Loy1;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-static {p1, v0, v1}, Lyyg;->r(Lv28;Ldv;Ljava/util/concurrent/Executor;)La62;
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    move-result-object p1
-
-    new-instance v0, Lny1;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p0, v1}, Lny1;-><init>(Loy1;I)V
-
-    iget-object v1, p0, Loy1;->d:Ljava/util/concurrent/Executor;
-
-    invoke-static {p1, v0, v1}, Lyyg;->r(Lv28;Ldv;Ljava/util/concurrent/Executor;)La62;
-
-    move-result-object p1
-
-    new-instance v0, Lzx1;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lzx1;-><init>(I)V
-
-    invoke-static {}, Lcr7;->a()Lnu4;
-
-    move-result-object v1
-
-    new-instance v2, Ls9d;
-
-    const/16 v3, 0x10
-
-    invoke-direct {v2, v3, v0}, Ls9d;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1, v2, v1}, Lyyg;->r(Lv28;Ldv;Ljava/util/concurrent/Executor;)La62;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    :goto_0
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lyyg;->j(Ljava/lang/Object;)Lib7;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final b()Z
-    .locals 1
+.method public final onEvent(Lm71;)V
+    .locals 3
+    .annotation runtime Lu0g;
+    .end annotation
 
-    iget v0, p0, Loy1;->b:I
+    .line 1
+    new-instance v0, Lmy1;
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x1
+    invoke-direct {v0, p0, p1, v1}, Lmy1;-><init>(Loy1;Lm71;Lkotlin/coroutines/Continuation;)V
 
-    return v0
+    const/4 p1, 0x3
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v2, p0, Loy1;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    return v0
-.end method
+    invoke-static {v2, v1, v1, v0, p1}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-.method public final c()V
-    .locals 4
-
-    iget-boolean v0, p0, Loy1;->c:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Loy1;->a:Lfx1;
-
-    iget-object v1, v0, Lfx1;->j:Lszf;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Lszf;->a(Lqt1;Z)V
-
-    const-string v1, "Camera2CapturePipeline"
-
-    const-string v2, "Turning off torch"
-
-    invoke-static {v1, v2}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Loy1;->f:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, v0, Lfx1;->h:Ll46;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v3, v1}, Ll46;->a(ZZ)V
-
-    :cond_0
     return-void
 .end method

@@ -1,34 +1,90 @@
-.class public final synthetic Lwwg;
-.super Ljava/lang/Object;
+.class public final Lwwg;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lorg/webrtc/VideoSink;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Lorg/webrtc/VideoSource;
+.field public final synthetic X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/VideoSource;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lwwg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    iput-object p1, p0, Lwwg;->a:Lorg/webrtc/VideoSource;
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lwwg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lwwg;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lwwg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lwwg;
+
+    iget-object v1, p0, Lwwg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+    invoke-direct {v0, p2, v1}, Lwwg;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
+
+    iput-object p1, v0, Lwwg;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lwwg;->a:Lorg/webrtc/VideoSource;
+    iget-object v0, p0, Lwwg;->o:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lorg/webrtc/VideoSource;->b(Lorg/webrtc/VideoSource;Lorg/webrtc/VideoFrame;)V
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return-void
+    check-cast v0, Lhzg;
+
+    sget-object p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->u0:[Lz28;
+
+    iget-object p1, p0, Lwwg;->X:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+    iget-object p1, p1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->o:Ljava/lang/Object;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ltt7;
+
+    iget-object p1, p1, Ltt7;->a:Lw4e;
+
+    invoke-virtual {p1}, Lw4e;->D()Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

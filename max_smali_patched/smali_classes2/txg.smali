@@ -1,42 +1,15 @@
-.class public interface abstract Ltxg;
-.super Ljava/lang/Object;
+.class public abstract Ltxg;
+.super Lhja;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract c(Z)V
-.end method
-
-.method public getPreviewView()Landroid/view/View;
+# direct methods
+.method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    return-object v0
-.end method
+    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
 
-.method public k()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public abstract n()Z
-.end method
-
-.method public abstract p(Lkxg;Lo00;JZZ)V
-.end method
-
-.method public abstract setVideoClickListener(Lej6;)V
-.end method
-
-.method public abstract setVideoLongClickListener(Lej6;)V
-.end method
-
-.method public abstract t()Z
-.end method
-
-.method public abstract v()V
+    return-void
 .end method

@@ -1,102 +1,73 @@
-.class public final Lz84;
-.super Landroid/database/DataSetObserver;
+.class public final enum Lz84;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum a:Lz84;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public static final enum b:Lz84;
+
+.field public static final synthetic c:[Lz84;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p1, p0, Lz84;->a:I
+    new-instance v0, Lz84;
 
-    iput-object p2, p0, Lz84;->b:Ljava/lang/Object;
+    const-string v1, "RELEASE_DETACH"
 
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lz84;->a:Lz84;
+
+    new-instance v1, Lz84;
+
+    const-string v2, "RETAIN_DETACH"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lz84;->b:Lz84;
+
+    filled-new-array {v0, v1}, [Lz84;
+
+    move-result-object v0
+
+    sput-object v0, Lz84;->c:[Lz84;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lz84;
+    .locals 1
 
-# virtual methods
-.method public final onChanged()V
-    .locals 2
+    const-class v0, Lz84;
 
-    iget v0, p0, Lz84;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lz84;->b:Ljava/lang/Object;
+    check-cast p0, Lz84;
 
-    check-cast v0, Lq28;
-
-    iget-object v1, v0, Lq28;->J0:Lvo;
-
-    invoke-virtual {v1}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Lq28;->g()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lz84;->b:Ljava/lang/Object;
-
-    check-cast v0, Lzdf;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, La94;->a:Z
-
-    invoke-virtual {v0}, Lzdf;->notifyDataSetChanged()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final onInvalidated()V
-    .locals 2
+.method public static values()[Lz84;
+    .locals 1
 
-    iget v0, p0, Lz84;->a:I
+    sget-object v0, Lz84;->c:[Lz84;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, [Lz84;->clone()Ljava/lang/Object;
 
-    iget-object v0, p0, Lz84;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lq28;
+    check-cast v0, [Lz84;
 
-    invoke-virtual {v0}, Lq28;->dismiss()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lz84;->b:Ljava/lang/Object;
-
-    check-cast v0, Lzdf;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, La94;->a:Z
-
-    invoke-virtual {v0}, Lzdf;->notifyDataSetInvalidated()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

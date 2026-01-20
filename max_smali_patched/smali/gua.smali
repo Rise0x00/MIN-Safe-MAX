@@ -1,162 +1,226 @@
 .class public final Lgua;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Let;
+.field public final synthetic Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-.field public final c:Let;
+.field public final synthetic Z:Landroid/net/Uri;
 
-.field public final d:Let;
+.field public o:I
 
-.field public final e:Ltif;
+.field public final synthetic t0:Lddf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lwh4;)V
-    .locals 1
+.method public constructor <init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lddf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgua;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    iput-object p1, p0, Lgua;->a:Landroid/content/Context;
+    iput-object p2, p0, Lgua;->Z:Landroid/net/Uri;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p3, p0, Lgua;->t0:Lddf;
 
-    const-string p1, "ru.oneme.app.chats"
+    const/4 p1, 0x2
 
-    const-string p2, "ru.oneme.app.inapp.2"
-
-    const-string v0, "ru.oneme.app.dialogs"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqfi;->a([Ljava/lang/Object;)Let;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgua;->b:Let;
-
-    const-string p1, "ru.oneme.app.new.incomingCalls."
-
-    const-string p2, "ru.oneme.app.new.activeCalls"
-
-    filled-new-array {p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqfi;->a([Ljava/lang/Object;)Let;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgua;->c:Let;
-
-    const-string p1, "ru.oneme.app.fileUpload"
-
-    const-string p2, "ru.oneme.app.media"
-
-    const-string v0, "ru.oneme.app.misc"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lqfi;->a([Ljava/lang/Object;)Let;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgua;->d:Let;
-
-    new-instance p1, Lim7;
-
-    const/16 p2, 0x1b
-
-    invoke-direct {p1, p2, p0}, Lim7;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ltif;
-
-    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
-
-    iput-object p2, p0, Lgua;->e:Ltif;
+    invoke-direct {p0, p1, p4}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Landroid/app/NotificationChannelGroup;
+    check-cast p1, Lzb4;
 
-    iget-object v1, p0, Lgua;->a:Landroid/content/Context;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p2, p1}, Landroid/app/NotificationChannelGroup;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;)V
-
-    iget-object p1, p0, Lgua;->e:Ltif;
-
-    invoke-virtual {p1}, Ltif;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lgua;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    check-cast p1, Landroid/app/NotificationManager;
+    check-cast p1, Lgua;
 
-    invoke-virtual {p1, v0}, Landroid/app/NotificationManager;->createNotificationChannelGroup(Landroid/app/NotificationChannelGroup;)V
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    return-void
+    invoke-virtual {p1, p2}, Lgua;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 4
 
-    iget-object v0, p0, Lgua;->b:Let;
+    new-instance v0, Lgua;
 
-    invoke-virtual {v0, p1}, Let;->contains(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lgua;->Z:Landroid/net/Uri;
 
-    move-result v0
+    iget-object v2, p0, Lgua;->t0:Lddf;
 
-    if-eqz v0, :cond_0
+    iget-object v3, p0, Lgua;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
 
-    const-string p1, "ru.oneme.app.notifications.group.chats"
+    invoke-direct {v0, v3, v1, v2, p2}, Lgua;-><init>(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lddf;Lkotlin/coroutines/Continuation;)V
 
-    return-object p1
+    iput-object p1, v0, Lgua;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lgua;->X:Ljava/lang/Object;
+
+    check-cast v0, Lzb4;
+
+    iget v1, p0, Lgua;->o:I
+
+    const-string v2, "fetchAndGetCachedFileSync fail"
+
+    iget-object v3, p0, Lgua;->Y:Lone/me/android/notifications/NotificationsImagesProvider;
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x1
+
+    sget-object v6, Lac4;->a:Lac4;
+
+    if-eqz v1, :cond_2
+
+    if-eq v1, v5, :cond_1
+
+    if-ne v1, v4, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_3
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_5
 
     :cond_0
-    iget-object v0, p0, Lgua;->d:Let;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v0, p1}, Let;->contains(Ljava/lang/Object;)Z
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    move-result v0
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
-
-    const-string p1, "ru.oneme.app.notifications.group.other"
-
-    return-object p1
+    throw p1
 
     :cond_1
-    iget-object v0, p0, Lgua;->c:Let;
+    :try_start_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {v0, p1}, Let;->contains(Ljava/lang/Object;)Z
+    goto :goto_1
 
-    move-result p1
+    :catchall_1
+    move-exception p1
 
-    if-eqz p1, :cond_2
+    goto :goto_0
 
-    const-string p1, "ru.oneme.app.notifications.group.calls"
+    :catch_1
+    move-exception p1
 
-    return-object p1
+    goto :goto_6
 
     :cond_2
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgua;->Z:Landroid/net/Uri;
+
+    :try_start_2
+    iput-object v0, p0, Lgua;->X:Ljava/lang/Object;
+
+    iput v5, p0, Lgua;->o:I
+
+    invoke-static {v3, p1, p0}, Lone/me/android/notifications/NotificationsImagesProvider;->b(Lone/me/android/notifications/NotificationsImagesProvider;Landroid/net/Uri;Lgua;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_2
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    if-ne p1, v6, :cond_3
+
+    goto :goto_2
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v2, p1}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_1
+    iget-object p1, p0, Lgua;->t0:Lddf;
+
+    :try_start_3
+    iput-object v0, p0, Lgua;->X:Ljava/lang/Object;
+
+    iput v4, p0, Lgua;->o:I
+
+    invoke-static {v3, v0, p1, p0}, Lone/me/android/notifications/NotificationsImagesProvider;->a(Lone/me/android/notifications/NotificationsImagesProvider;Lzb4;Lddf;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_3
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-ne p1, v6, :cond_4
+
+    :goto_2
+    return-object v6
+
+    :goto_3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0, v2, p1}, Lc5j;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
     const/4 p1, 0x0
 
+    :cond_4
+    :goto_4
     return-object p1
+
+    :goto_5
+    throw p1
+
+    :goto_6
+    throw p1
 .end method

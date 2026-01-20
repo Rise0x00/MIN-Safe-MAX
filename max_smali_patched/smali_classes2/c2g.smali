@@ -1,18 +1,25 @@
-.class public final synthetic Lc2g;
+.class public final Lc2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/LongBinaryOperator;
-
 
 # virtual methods
-.method public final applyAsLong(JJ)J
-    .locals 0
+.method public final serializer()La38;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "La38;"
+        }
+    .end annotation
 
-    invoke-static {p1, p2, p3, p4}, Ljava/lang/Math;->max(JJ)J
+    sget-object v0, Ld2g;->a:Ljava/lang/Object;
 
-    move-result-wide p1
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    return-wide p1
+    move-result-object v0
+
+    check-cast v0, La38;
+
+    return-object v0
 .end method

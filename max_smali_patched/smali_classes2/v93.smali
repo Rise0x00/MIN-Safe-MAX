@@ -1,131 +1,108 @@
 .class public final Lv93;
-.super Landroid/text/style/CharacterStyle;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/text/style/UpdateAppearance;
-.implements Landroid/os/Parcelable;
-.implements Ljh8;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lv93;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lpc3;
 
-.field public final b:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lj8;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Lj8;-><init>(I)V
-
-    sput-object v0, Lv93;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    const/high16 v0, -0x10000
-
-    .line 1
-    invoke-direct {p0, v0}, Lv93;-><init>(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>(Lpc3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+    iput-object p1, p0, Lv93;->X:Lpc3;
 
-    .line 3
-    iput p1, p0, Lv93;->a:I
+    const/4 p1, 0x2
 
-    const/16 p1, 0x9
-
-    .line 4
-    iput p1, p0, Lv93;->b:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 0
-
-    .line 5
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result p1
-
-    invoke-direct {p0, p1}, Lv93;-><init>(I)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final copy()Lh44;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lnd2;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lv93;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lv93;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lv93;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
     new-instance v0, Lv93;
 
-    invoke-direct {v0}, Lv93;-><init>()V
+    iget-object v1, p0, Lv93;->X:Lpc3;
+
+    invoke-direct {v0, v1, p2}, Lv93;-><init>(Lpc3;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lv93;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final describeContents()I
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lv93;->o:Ljava/lang/Object;
 
-    return v0
-.end method
+    check-cast v0, Lnd2;
 
-.method public final getType()I
-    .locals 1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget v0, p0, Lv93;->b:I
+    iget-object p1, p0, Lv93;->X:Lpc3;
 
-    return v0
-.end method
+    iget-object p1, p1, Lpc3;->o:Ljava/lang/Object;
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    check-cast p1, Ljava/util/concurrent/ConcurrentHashMap;
 
-    iget v0, p0, Lv93;->a:I
+    iget-wide v1, v0, Lnd2;->a:J
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+    new-instance v3, Ljava/lang/Long;
 
-    return-void
-.end method
+    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    new-instance v1, Ls93;
 
-    iget p2, p0, Lv93;->a:I
+    const/4 v2, 0x2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {v1, v0, v2}, Ls93;-><init>(Lnd2;I)V
 
-    return-void
+    new-instance v2, Lpi;
+
+    const/16 v4, 0xa
+
+    invoke-direct {v2, v4, v1}, Lpi;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lmfa;
+
+    invoke-interface {p1, v0}, Lmfa;->setValue(Ljava/lang/Object;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

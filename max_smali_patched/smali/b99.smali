@@ -1,8 +1,7 @@
-.class public interface abstract Lb99;
-.super Ljava/lang/Object;
+.class public final Lb99;
+.super Ltsd;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b(Li89;)V
-.end method
+# instance fields
+.field public F0:Landroid/widget/TextView;

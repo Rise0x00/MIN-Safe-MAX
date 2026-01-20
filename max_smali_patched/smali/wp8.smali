@@ -1,152 +1,120 @@
-.class public interface abstract Lwp8;
-.super Ljava/lang/Object;
+.class public final Lwp8;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/android/MainActivity;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lwp8;->X:Lone/me/android/MainActivity;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A(IJLjava/util/List;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lwp8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lwp8;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lwp8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public abstract C(Ljava/util/List;)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lwp8;
+
+    iget-object v0, p0, Lwp8;->X:Lone/me/android/MainActivity;
+
+    invoke-direct {p1, v0, p2}, Lwp8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public abstract D()Lltb;
-.end method
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-.method public abstract E()Ly6e;
-.end method
+    iget v0, p0, Lwp8;->o:I
 
-.method public abstract F()Lec7;
-.end method
+    const/4 v1, 0x1
 
-.method public abstract G(Lotb;)V
-.end method
+    if-eqz v0, :cond_1
 
-.method public abstract H()I
-.end method
+    if-ne v0, v1, :cond_0
 
-.method public abstract I(I)V
-.end method
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.method public abstract J()Landroid/os/Bundle;
-.end method
+    goto :goto_0
 
-.method public abstract K()J
-.end method
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.method public abstract L()I
-.end method
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-.method public abstract M(Ln20;Z)V
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public abstract N(Lotb;)V
-.end method
+    throw p1
 
-.method public abstract O(Lqs8;)V
-.end method
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.method public abstract P(Lx6e;)Lv28;
-.end method
+    iget-object p1, p0, Lwp8;->X:Lone/me/android/MainActivity;
 
-.method public abstract Q()Ldu8;
-.end method
+    iget-object v0, p1, Lfp3;->a:Ll88;
 
-.method public abstract a()F
-.end method
+    new-instance v2, Lvp8;
 
-.method public abstract b(F)V
-.end method
+    const/4 v3, 0x0
 
-.method public abstract c()Lzsb;
-.end method
+    invoke-direct {v2, p1, v3}, Lvp8;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
 
-.method public abstract connect()V
-.end method
+    iput v1, p0, Lwp8;->o:I
 
-.method public abstract d()Z
-.end method
+    sget-object p1, Lo78;->o:Lo78;
 
-.method public abstract e()J
-.end method
+    invoke-static {v0, p1, v2, p0}, Lkmj;->b(Ll88;Lo78;Lbr6;Lp6g;)Ljava/lang/Object;
 
-.method public abstract f()Z
-.end method
+    move-result-object p1
 
-.method public abstract g()J
-.end method
+    sget-object v0, Lac4;->a:Lac4;
 
-.method public abstract getDuration()J
-.end method
+    if-ne p1, v0, :cond_2
 
-.method public abstract getPlaybackState()I
-.end method
+    return-object v0
 
-.method public abstract getRepeatMode()I
-.end method
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-.method public abstract h(Lqs8;J)V
-.end method
-
-.method public abstract i()Z
-.end method
-
-.method public abstract isConnected()Z
-.end method
-
-.method public abstract j()I
-.end method
-
-.method public abstract k()V
-.end method
-
-.method public abstract l()I
-.end method
-
-.method public abstract m()Landroidx/media3/common/PlaybackException;
-.end method
-
-.method public abstract o()J
-.end method
-
-.method public abstract p()Lf2g;
-.end method
-
-.method public abstract pause()V
-.end method
-
-.method public abstract play()V
-.end method
-
-.method public abstract prepare()V
-.end method
-
-.method public abstract r()I
-.end method
-
-.method public abstract release()V
-.end method
-
-.method public abstract s()I
-.end method
-
-.method public abstract seekTo(J)V
-.end method
-
-.method public abstract setPlaybackSpeed(F)V
-.end method
-
-.method public abstract stop()V
-.end method
-
-.method public abstract t()I
-.end method
-
-.method public abstract u()Lmvf;
-.end method
-
-.method public abstract w(Lqs8;)V
-.end method
-
-.method public abstract x()Z
+    return-object p1
 .end method

@@ -3,62 +3,106 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfh0;
+.implements Ljava/lang/Iterable;
+.implements Lo28;
 
 
-# static fields
-.field public static final a:Lch0;
+# instance fields
+.field public final a:Ljava/util/ArrayDeque;
+
+.field public b:Lv4e;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    new-instance v0, Lch0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/ArrayDeque;
 
-    sput-object v0, Lch0;->a:Lch0;
+    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v0, p0, Lch0;->a:Ljava/util/ArrayDeque;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Lz4e;
     .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lch0;->a:Ljava/util/ArrayDeque;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->peek()Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
 
-    :cond_0
-    instance-of p1, p1, Lch0;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x5aec6f58
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ContactsChange"
+    check-cast v0, Lz4e;
 
     return-object v0
+.end method
+
+.method public final b()Lz4e;
+    .locals 2
+
+    iget-object v0, p0, Lch0;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->pop()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lz4e;
+
+    iget-object v1, p0, Lch0;->b:Lv4e;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lv4e;->e()V
+
+    :cond_0
+    iget-object v1, v0, Lz4e;->a:La94;
+
+    invoke-virtual {v1}, La94;->destroy()V
+
+    return-object v0
+.end method
+
+.method public final c()Ljava/util/Iterator;
+    .locals 1
+
+    iget-object v0, p0, Lch0;->a:Ljava/util/ArrayDeque;
+
+    invoke-static {v0}, Lpi3;->S(Ljava/util/Collection;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 3
+
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Lz4e;
+
+    iget-object v1, p0, Lch0;->a:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayDeque;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    new-instance v1, Lb2;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, v0}, Lb2;-><init>(ILjava/lang/Object;)V
+
+    return-object v1
 .end method

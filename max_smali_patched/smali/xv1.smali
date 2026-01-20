@@ -1,267 +1,116 @@
-.class public abstract Lxv1;
+.class public final Lxv1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzv1;
 
-# static fields
-.field public static final a:Ljava/lang/Object;
+
+# instance fields
+.field public final a:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(J)V
+    .locals 0
 
-    new-instance v0, Lgk1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lgk1;-><init>(I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Llci;->i(ILoi6;)Lru7;
-
-    move-result-object v0
-
-    sput-object v0, Lxv1;->a:Ljava/lang/Object;
+    iput-wide p1, p0, Lxv1;->a:J
 
     return-void
 .end method
 
-.method public static final a(Lyid;)Z
-    .locals 10
 
-    sget-object v0, Lxv1;->a:Ljava/lang/Object;
+# virtual methods
+.method public final a()J
+    .locals 2
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    iget-wide v0, p0, Lxv1;->a:J
 
-    move-result-object v1
+    return-wide v0
+.end method
 
-    check-cast v1, Ljava/util/List;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const/4 v0, 0x1
 
-    move-result-object v1
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    instance-of v1, p1, Lxv1;
 
-    move-result v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    move-object v4, v2
-
-    check-cast v4, Ljava/lang/String;
-
-    invoke-virtual {p0, v4}, Lyid;->g(Ljava/lang/String;)Lc24;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_0
+    if-nez v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move-object v2, v3
+    check-cast p1, Lxv1;
+
+    iget-wide v1, p0, Lxv1;->a:J
+
+    iget-wide v3, p1, Lxv1;->a:J
+
+    cmp-long p1, v1, v3
+
+    if-eqz p1, :cond_2
 
     :goto_0
-    check-cast v2, Ljava/lang/String;
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lxv1;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
 
     const/4 v1, 0x1
 
-    const/4 v4, 0x0
+    invoke-static {v1}, Lt02;->t(I)I
 
-    if-nez v2, :cond_7
+    move-result v1
 
-    invoke-virtual {p0}, Lyid;->e()Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_2
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_5
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    move-object v6, v5
-
-    check-cast v6, Lbjd;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/util/List;
-
-    if-eqz v7, :cond_3
-
-    invoke-interface {v7}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-interface {v7}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    :cond_4
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_2
-
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Ljava/lang/String;
-
-    iget-object v9, v6, Lbjd;->b:Ljava/lang/String;
-
-    if-eqz v9, :cond_4
-
-    invoke-static {v9, v8, v4}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v8
-
-    if-ne v8, v1, :cond_4
-
-    goto :goto_2
-
-    :cond_5
-    move-object v5, v3
-
-    :goto_2
-    check-cast v5, Lbjd;
-
-    if-eqz v5, :cond_6
-
-    iget-object v3, v5, Lbjd;->b:Ljava/lang/String;
-
-    :cond_6
-    move-object v2, v3
-
-    :cond_7
-    if-eqz v2, :cond_8
-
-    invoke-virtual {p0, v2}, Lyid;->E(Ljava/lang/String;)V
-
-    :cond_8
-    if-eqz v2, :cond_9
+    add-int/2addr v1, v0
 
     return v1
-
-    :cond_9
-    return v4
 .end method
 
-.method public static final b(Lyid;)Z
-    .locals 7
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const-string v0, ":call-incoming"
+    const-string v0, ", titleEllipsizeMode="
 
-    invoke-virtual {p0, v0}, Lyid;->g(Ljava/lang/String;)Lc24;
+    const-string v1, "END"
 
-    move-result-object v1
+    const-string v2, "None(lastUpdate="
 
-    const/4 v2, 0x0
+    iget-wide v3, p0, Lxv1;->a:J
 
-    if-eqz v1, :cond_0
+    invoke-static {v2, v3, v4, v0, v1}, Lj27;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v1, v0
+    move-result-object v0
 
-    goto :goto_0
+    const-string v1, ")"
 
-    :cond_0
-    move-object v1, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_0
-    const/4 v3, 0x1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v4, 0x0
+    move-result-object v0
 
-    if-nez v1, :cond_4
-
-    invoke-virtual {p0}, Lyid;->e()Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    move-object v6, v5
-
-    check-cast v6, Lbjd;
-
-    iget-object v6, v6, Lbjd;->b:Ljava/lang/String;
-
-    if-eqz v6, :cond_1
-
-    invoke-static {v6, v0, v4}, Lxaf;->v(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v6
-
-    if-ne v6, v3, :cond_1
-
-    goto :goto_1
-
-    :cond_2
-    move-object v5, v2
-
-    :goto_1
-    check-cast v5, Lbjd;
-
-    if-eqz v5, :cond_3
-
-    iget-object v2, v5, Lbjd;->b:Ljava/lang/String;
-
-    :cond_3
-    move-object v1, v2
-
-    :cond_4
-    if-eqz v1, :cond_5
-
-    invoke-virtual {p0, v1}, Lyid;->E(Ljava/lang/String;)V
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    return v3
-
-    :cond_6
-    return v4
+    return-object v0
 .end method

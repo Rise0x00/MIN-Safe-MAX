@@ -1,38 +1,70 @@
-.class public abstract Lgxi;
+.class public final Lgxi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lgxi;
+
 
 # direct methods
-.method public static a(Ljava/lang/Exception;)Ltpe;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    new-instance v0, Ltpe;
+    new-instance v0, Lgxi;
 
-    invoke-direct {v0}, Lr0;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput-object v0, Lgxi;->a:Lgxi;
 
-    const/4 v1, 0x0
+    new-instance v0, Lbri;
 
-    invoke-virtual {v0, p0, v1}, Lr0;->j(Ljava/lang/Throwable;Ljava/util/Map;)Z
+    const/4 v1, 0x1
 
-    return-object v0
-.end method
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-.method public static final b(Ljava/lang/Object;)V
-    .locals 1
+    const-class v1, Lpri;
 
-    instance-of v0, p0, Lfed;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
-    if-nez v0, :cond_0
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
     return-void
+.end method
 
-    :cond_0
-    check-cast p0, Lfed;
 
-    iget-object p0, p0, Lfed;->a:Ljava/lang/Throwable;
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    throw p0
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

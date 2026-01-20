@@ -2,22 +2,23 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmt6;
 
-# instance fields
-.field public final a:[I
 
-.field public final b:[I
+# static fields
+.field public static final a:Ljt6;
 
 
 # direct methods
-.method public constructor <init>([I[I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljt6;
 
-    iput-object p1, p0, Ljt6;->a:[I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Ljt6;->b:[I
+    sput-object v0, Ljt6;->a:Ljt6;
 
     return-void
 .end method
@@ -25,7 +26,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -34,92 +35,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Ljt6;
+    instance-of p1, p1, Ljt6;
 
-    const/4 v2, 0x0
+    if-nez p1, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p1, 0x0
 
-    return v2
+    return p1
 
     :cond_1
-    check-cast p1, Ljt6;
-
-    iget-object v1, p0, Ljt6;->a:[I
-
-    iget-object v3, p1, Ljt6;->a:[I
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ljt6;->b:[I
-
-    iget-object p1, p1, Ljt6;->b:[I
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    return v2
-
-    :cond_3
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Ljt6;->a:[I
+    const v0, -0x6ebc12d1
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Ljt6;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 1
 
-    iget-object v0, p0, Ljt6;->a:[I
-
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Ljt6;->b:[I
-
-    invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ", strokeGradient="
-
-    const-string v3, ")"
-
-    const-string v4, "GradientsEmptyBlockIconWrapperColors(shapeGradient="
-
-    invoke-static {v4, v0, v2, v1, v3}, Lox1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "ClearSelectionAndScrollUp"
 
     return-object v0
 .end method

@@ -1,157 +1,125 @@
 .class public final Lsba;
-.super Lmmf;
+.super Lvm;
 .source "SourceFile"
+
+# interfaces
+.implements Ledg;
 
 
 # instance fields
-.field public c:J
+.field public final d:J
 
-.field public d:Lvxb;
 
-.field public o:J
+# direct methods
+.method public constructor <init>(JJ)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lvm;-><init>(J)V
+
+    iput-wide p3, p0, Lsba;->d:J
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
-    .locals 2
+.method public final g(Licg;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
+.end method
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+.method public final h()Lj2;
+    .locals 12
 
-    move-result v0
+    iget-wide v0, p0, Lsba;->d:J
 
-    const/4 v1, -0x1
+    const-wide/16 v2, 0x0
 
-    sparse-switch v0, :sswitch_data_0
+    cmp-long v0, v0, v2
 
-    goto :goto_0
+    const/16 v1, 0xe
 
-    :sswitch_0
-    const-string v0, "time"
+    if-nez v0, :cond_0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-instance v0, Lk06;
 
-    move-result p2
+    invoke-direct {v0, v2, v3, v1}, Lk06;-><init>(JI)V
 
-    if-nez p2, :cond_0
-
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    const/4 v1, 0x2
+    invoke-virtual {p0}, Lvm;->l()Lxg2;
 
-    goto :goto_0
+    move-result-object v0
 
-    :sswitch_1
-    const-string v0, "userId"
+    iget-wide v4, p0, Lsba;->d:J
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v4, v5}, Lxg2;->N(J)Lnd2;
 
-    move-result p2
+    move-result-object v0
 
-    if-nez p2, :cond_1
+    if-eqz v0, :cond_2
+
+    iget-object v4, v0, Lnd2;->b:Luh2;
+
+    iget-wide v4, v4, Luh2;->a:J
+
+    cmp-long v2, v4, v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {p0}, Lvm;->l()Lxg2;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lxg2;->X(Lnd2;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
 
     goto :goto_0
 
     :cond_1
-    const/4 v1, 0x1
+    new-instance v2, Lk06;
 
-    goto :goto_0
+    iget-object v0, v0, Lnd2;->b:Luh2;
 
-    :sswitch_2
-    const-string v0, "presence"
+    iget-wide v3, v0, Luh2;->a:J
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v2, v3, v4, v1}, Lk06;-><init>(JI)V
 
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
+    return-object v2
 
     :cond_2
-    const/4 v1, 0x0
-
     :goto_0
-    packed-switch v1, :pswitch_data_0
+    sget-object v5, Lc5j;->a:Ledb;
 
-    invoke-virtual {p1}, Ljf9;->v()V
+    if-eqz v5, :cond_3
 
-    return-void
+    sget-object v6, Lkk8;->Y:Lkk8;
 
-    :pswitch_0
-    invoke-virtual {p1}, Ljf9;->r0()J
+    const/4 v10, 0x0
 
-    move-result-wide p1
+    const/16 v11, 0x8
 
-    iput-wide p1, p0, Lsba;->o:J
+    const-string v7, "sba"
 
-    return-void
+    const-string v8, "createRequest: No chat or serverId == 0. return null"
 
-    :pswitch_1
-    invoke-virtual {p1}, Ljf9;->r0()J
+    const/4 v9, 0x0
 
-    move-result-wide p1
+    invoke-static/range {v5 .. v11}, Ledb;->f(Ledb;Lkk8;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
 
-    iput-wide p1, p0, Lsba;->c:J
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lvxb;->a(Ljf9;)Lvxb;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lsba;->d:Lvxb;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x4c186305 -> :sswitch_2
-        -0x31d4d1ba -> :sswitch_1
-        0x3652cd -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 7
-
-    iget-wide v0, p0, Lsba;->c:J
-
-    iget-object v2, p0, Lsba;->d:Lvxb;
-
-    iget-wide v3, p0, Lsba;->o:J
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "{userId="
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, ", presence="
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", time="
-
-    const-string v1, "}"
-
-    invoke-static {v3, v4, v0, v1, v5}, Lm65;->h(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object v0
+    :cond_3
+    const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public final k(Lnbg;)V
+    .locals 0
+
+    return-void
 .end method

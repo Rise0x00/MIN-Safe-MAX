@@ -1,48 +1,101 @@
 .class public final Lyt3;
-.super Lp14;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Ld00;
+.field public final synthetic a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final synthetic b:Lzt3;
 
-.field public o:I
+.field public final synthetic c:Lwt3;
 
 
 # direct methods
-.method public constructor <init>(Ld00;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lzt3;Lwt3;I)V
     .locals 0
 
-    iput-object p1, p0, Lyt3;->X:Ld00;
+    iput p3, p0, Lyt3;->a:I
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lyt3;->b:Lzt3;
+
+    iput-object p2, p0, Lyt3;->c:Lwt3;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Lyt3;->d:Ljava/lang/Object;
+    iget v0, p0, Lyt3;->a:I
 
-    iget p1, p0, Lyt3;->o:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lyt3;->b:Lzt3;
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0}, Lzt3;->K0()V
 
-    iput p1, p0, Lyt3;->o:I
+    invoke-virtual {v0}, Lzt3;->getOnAnimationEnded()Lnq6;
 
-    iget-object p1, p0, Lyt3;->X:Ld00;
+    move-result-object v0
 
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Ld00;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v1, p0, Lyt3;->c:Lwt3;
 
-    move-result-object p1
+    invoke-interface {v0, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    :cond_0
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lyt3;->b:Lzt3;
+
+    invoke-virtual {v0}, Lzt3;->getOnAnimationEnded()Lnq6;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lyt3;->c:Lwt3;
+
+    invoke-interface {v0, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Lyt3;->b:Lzt3;
+
+    invoke-virtual {v0}, Lzt3;->getOnAnimationEnded()Lnq6;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v1, p0, Lyt3;->c:Lwt3;
+
+    invoke-interface {v0, v1}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

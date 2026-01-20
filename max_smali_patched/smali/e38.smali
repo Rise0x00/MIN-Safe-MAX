@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract d(Ljava/lang/Object;Ljy5;)V
+.method public abstract o(Landroid/view/KeyEvent;)Z
 .end method

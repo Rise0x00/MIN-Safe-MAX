@@ -1,301 +1,403 @@
 .class public final Leu8;
-.super Ljava/lang/Object;
+.super Lu4;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Leu8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final c:Lbt;
-
-.field public static final d:[Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
-
-.field public b:Landroid/media/MediaMetadata;
+.field public final synthetic d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lbt;
+    iput p1, p0, Leu8;->d:I
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Llpe;-><init>(I)V
-
-    sput-object v0, Leu8;->c:Lbt;
-
-    const/4 v2, 0x1
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const-string v3, "android.media.metadata.TITLE"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.ARTIST"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-string v3, "android.media.metadata.DURATION"
-
-    invoke-virtual {v0, v3, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.ALBUM"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.AUTHOR"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.WRITER"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.COMPOSER"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.COMPILATION"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.DATE"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.YEAR"
-
-    invoke-virtual {v0, v3, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.GENRE"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.TRACK_NUMBER"
-
-    invoke-virtual {v0, v3, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.NUM_TRACKS"
-
-    invoke-virtual {v0, v3, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.DISC_NUMBER"
-
-    invoke-virtual {v0, v3, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.ALBUM_ARTIST"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v3, 0x2
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const-string v4, "android.media.metadata.ART"
-
-    invoke-virtual {v0, v4, v3}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "android.media.metadata.ART_URI"
-
-    invoke-virtual {v0, v4, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "android.media.metadata.ALBUM_ART"
-
-    invoke-virtual {v0, v4, v3}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "android.media.metadata.ALBUM_ART_URI"
-
-    invoke-virtual {v0, v4, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 v4, 0x3
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    const-string v5, "android.media.metadata.USER_RATING"
-
-    invoke-virtual {v0, v5, v4}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v5, "android.media.metadata.RATING"
-
-    invoke-virtual {v0, v5, v4}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "android.media.metadata.DISPLAY_TITLE"
-
-    invoke-virtual {v0, v4, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "android.media.metadata.DISPLAY_SUBTITLE"
-
-    invoke-virtual {v0, v4, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "android.media.metadata.DISPLAY_DESCRIPTION"
-
-    invoke-virtual {v0, v4, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v4, "android.media.metadata.DISPLAY_ICON"
-
-    invoke-virtual {v0, v4, v3}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.DISPLAY_ICON_URI"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.MEDIA_ID"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.BT_FOLDER_TYPE"
-
-    invoke-virtual {v0, v3, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v3, "android.media.metadata.MEDIA_URI"
-
-    invoke-virtual {v0, v3, v2}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "android.media.metadata.ADVERTISEMENT"
-
-    invoke-virtual {v0, v2, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "android.media.metadata.DOWNLOAD_STATUS"
-
-    invoke-virtual {v0, v2, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v10, "android.media.metadata.DISPLAY_SUBTITLE"
-
-    const-string v11, "android.media.metadata.DISPLAY_DESCRIPTION"
-
-    const-string v3, "android.media.metadata.TITLE"
-
-    const-string v4, "android.media.metadata.ARTIST"
-
-    const-string v5, "android.media.metadata.ALBUM"
-
-    const-string v6, "android.media.metadata.ALBUM_ARTIST"
-
-    const-string v7, "android.media.metadata.WRITER"
-
-    const-string v8, "android.media.metadata.AUTHOR"
-
-    const-string v9, "android.media.metadata.COMPOSER"
-
-    filled-new-array/range {v3 .. v11}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Leu8;->d:[Ljava/lang/String;
-
-    new-instance v0, Lui8;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lui8;-><init>(I)V
-
-    sput-object v0, Leu8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 1
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
-
-    iput-object v0, p0, Leu8;->a:Landroid/os/Bundle;
-
-    .line 3
-    invoke-static {v0}, Ltz8;->o(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    const-class v0, Ltz8;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
-
-    move-result-object p1
-
-    .line 6
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 7
-    iput-object p1, p0, Leu8;->a:Landroid/os/Bundle;
+    invoke-direct {p0}, Lu4;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)J
-    .locals 3
-
-    iget-object v0, p0, Leu8;->a:Landroid/os/Bundle;
-
-    const-wide/16 v1, 0x0
-
-    invoke-virtual {v0, p1, v1, v2}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final describeContents()I
+.method public c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Leu8;->d:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-object p2, p0, Leu8;->a:Landroid/os/Bundle;
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lu4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 
     return-void
+
+    :pswitch_0
+    invoke-super {p0, p1, p2}, Lu4;->c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+
+    check-cast p1, Landroidx/core/widget/NestedScrollView;
+
+    const-class v0, Landroid/widget/ScrollView;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityRecord;->setClassName(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Landroidx/core/widget/NestedScrollView;->getScrollRange()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityRecord;->setScrollable(Z)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityRecord;->setScrollX(I)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityRecord;->setScrollY(I)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result v0
+
+    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityRecord;->setMaxScrollX(I)V
+
+    invoke-virtual {p1}, Landroidx/core/widget/NestedScrollView;->getScrollRange()I
+
+    move-result p1
+
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityRecord;->setMaxScrollY(I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Landroid/view/View;Lg5;)V
+    .locals 2
+
+    iget v0, p0, Leu8;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lu4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    iget-object v1, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    check-cast p1, Landroidx/core/widget/NestedScrollView;
+
+    const-class v0, Landroid/widget/ScrollView;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Lg5;->h(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p1}, Landroidx/core/widget/NestedScrollView;->getScrollRange()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p2, v1}, Lg5;->j(Z)V
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    sget-object v1, Lb5;->g:Lb5;
+
+    invoke-virtual {p2, v1}, Lg5;->b(Lb5;)V
+
+    sget-object v1, Lb5;->k:Lb5;
+
+    invoke-virtual {p2, v1}, Lg5;->b(Lb5;)V
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p1
+
+    if-ge p1, v0, :cond_1
+
+    sget-object p1, Lb5;->f:Lb5;
+
+    invoke-virtual {p2, p1}, Lg5;->b(Lb5;)V
+
+    sget-object p1, Lb5;->l:Lb5;
+
+    invoke-virtual {p2, p1}, Lg5;->b(Lb5;)V
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-object p2, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    iget-object v0, p0, Lu4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    invoke-virtual {v0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCollectionInfo(Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lu4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    iget-object v1, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {v0, p1, v1}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p2, p1}, Lg5;->j(Z)V
+
+    return-void
+
+    :pswitch_2
+    iget-object p2, p2, Lg5;->a:Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    iget-object v0, p0, Lu4;->a:Landroid/view/View$AccessibilityDelegate;
+
+    invoke-virtual {v0, p1, p2}, Landroid/view/View$AccessibilityDelegate;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/view/accessibility/AccessibilityNodeInfo;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p2, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setCollectionInfo(Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public g(Landroid/view/View;ILandroid/os/Bundle;)Z
+    .locals 4
+
+    iget v0, p0, Leu8;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Lu4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p1
+
+    return p1
+
+    :pswitch_0
+    invoke-super {p0, p1, p2, p3}, Lu4;->g(Landroid/view/View;ILandroid/os/Bundle;)Z
+
+    move-result p3
+
+    const/4 v0, 0x1
+
+    if-eqz p3, :cond_0
+
+    goto/16 :goto_1
+
+    :cond_0
+    check-cast p1, Landroidx/core/widget/NestedScrollView;
+
+    invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
+
+    move-result p3
+
+    const/4 v1, 0x0
+
+    if-nez p3, :cond_1
+
+    goto/16 :goto_0
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
+
+    move-result p3
+
+    new-instance v2, Landroid/graphics/Rect;
+
+    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
+
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/graphics/Matrix;->isIdentity()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result p3
+
+    :cond_2
+    const/16 v2, 0x1000
+
+    if-eq p2, v2, :cond_4
+
+    const/16 v2, 0x2000
+
+    if-eq p2, v2, :cond_3
+
+    const v2, 0x1020038
+
+    if-eq p2, v2, :cond_3
+
+    const v2, 0x102003a
+
+    if-eq p2, v2, :cond_4
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result p2
+
+    sub-int/2addr p3, p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result p2
+
+    sub-int/2addr p3, p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p2
+
+    sub-int/2addr p2, p3
+
+    invoke-static {p2, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p3
+
+    if-eq p2, p3, :cond_5
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result p3
+
+    sub-int/2addr v1, p3
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p3
+
+    sub-int/2addr p2, p3
+
+    invoke-virtual {p1, v1, p2, v0}, Landroidx/core/widget/NestedScrollView;->v(IIZ)V
+
+    goto :goto_1
+
+    :cond_4
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result p2
+
+    sub-int/2addr p3, p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result p2
+
+    sub-int/2addr p3, p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p2
+
+    add-int/2addr p2, p3
+
+    invoke-virtual {p1}, Landroidx/core/widget/NestedScrollView;->getScrollRange()I
+
+    move-result p3
+
+    invoke-static {p2, p3}, Ljava/lang/Math;->min(II)I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p3
+
+    if-eq p2, p3, :cond_5
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result p3
+
+    sub-int/2addr v1, p3
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result p3
+
+    sub-int/2addr p2, p3
+
+    invoke-virtual {p1, v1, p2, v0}, Landroidx/core/widget/NestedScrollView;->v(IIZ)V
+
+    goto :goto_1
+
+    :cond_5
+    :goto_0
+    move v0, v1
+
+    :goto_1
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
 .end method

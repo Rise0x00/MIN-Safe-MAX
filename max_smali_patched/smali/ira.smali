@@ -3,17 +3,13 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Action;)Landroid/graphics/drawable/Icon;
+    .locals 0
 
-    sget v0, Lmlc;->ic_warning_56:I
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getIcon()Landroid/graphics/drawable/Icon;
 
-    sput v0, Lira;->a:I
+    move-result-object p0
 
-    return-void
+    return-object p0
 .end method

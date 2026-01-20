@@ -1,133 +1,141 @@
-.class public final Lvei;
-.super Lt6i;
+.class public abstract Lvei;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lk9i;
 
 
 # static fields
-.field private static final zzb:Lvei;
+.field public static a:Z = false
 
+.field public static final b:[B
 
-# instance fields
-.field private zzd:I
+.field public static final c:[B
 
-.field private zze:Ljava/lang/String;
+.field public static final d:[B
 
-.field private zzf:Ljava/lang/String;
+.field public static final e:[B
+
+.field public static final f:[B
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lvei;
-
-    invoke-direct {v0}, Lvei;-><init>()V
-
-    sput-object v0, Lvei;->zzb:Lvei;
-
-    const-class v1, Lvei;
-
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lt6i;-><init>()V
+    const-string v0, "RIFF"
 
-    const-string v0, ""
+    invoke-static {v0}, Lvei;->a(Ljava/lang/String;)[B
 
-    iput-object v0, p0, Lvei;->zze:Ljava/lang/String;
+    move-result-object v0
 
-    iput-object v0, p0, Lvei;->zzf:Ljava/lang/String;
+    sput-object v0, Lvei;->b:[B
+
+    const-string v0, "WEBP"
+
+    invoke-static {v0}, Lvei;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lvei;->c:[B
+
+    const-string v0, "VP8 "
+
+    invoke-static {v0}, Lvei;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lvei;->d:[B
+
+    const-string v0, "VP8L"
+
+    invoke-static {v0}, Lvei;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lvei;->e:[B
+
+    const-string v0, "VP8X"
+
+    invoke-static {v0}, Lvei;->a(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    sput-object v0, Lvei;->f:[B
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
+.method public static a(Ljava/lang/String;)[B
     .locals 2
 
-    add-int/lit8 p1, p1, -0x1
+    :try_start_0
+    const-string v0, "ASCII"
 
-    if-eqz p1, :cond_4
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
 
-    const/4 p2, 0x2
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    if-eq p1, p2, :cond_3
+    return-object p0
 
-    const/4 p2, 0x3
+    :catch_0
+    move-exception p0
 
-    if-eq p1, p2, :cond_2
+    new-instance v0, Ljava/lang/RuntimeException;
 
-    const/4 p2, 0x4
+    const-string v1, "ASCII not found!"
 
-    if-eq p1, p2, :cond_1
+    invoke-direct {v0, v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const/4 p2, 0x5
+    throw v0
+.end method
 
-    if-eq p1, p2, :cond_0
+.method public static b([B[BI)Z
+    .locals 4
 
-    const/4 p1, 0x0
+    const/4 v0, 0x0
 
-    return-object p1
+    if-eqz p1, :cond_3
+
+    array-length v1, p1
+
+    add-int/2addr v1, p2
+
+    array-length v2, p0
+
+    if-le v1, v2, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    sget-object p1, Lvei;->zzb:Lvei;
+    move v1, v0
 
-    return-object p1
+    :goto_0
+    array-length v2, p1
+
+    if-ge v1, v2, :cond_2
+
+    add-int v2, v1, p2
+
+    aget-byte v2, p0, v2
+
+    aget-byte v3, p1, v1
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    new-instance p1, Ljki;
+    add-int/lit8 v1, v1, 0x1
 
-    sget-object p2, Lvei;->zzb:Lvei;
-
-    const/16 v0, 0x12
-
-    invoke-direct {p1, v0, p2}, Ljki;-><init>(ILt6i;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_2
-    new-instance p1, Lvei;
+    const/4 p0, 0x1
 
-    invoke-direct {p1}, Lvei;-><init>()V
-
-    return-object p1
+    return p0
 
     :cond_3
-    const-string p1, "zze"
-
-    const-string p2, "zzf"
-
-    const-string v0, "zzd"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lvei;->zzb:Lvei;
-
-    new-instance v0, Lfai;
-
-    const-string v1, "\u0001\u0002\u0000\u0001\u0001\u0002\u0002\u0000\u0000\u0000\u0001\u1008\u0000\u0002\u1008\u0001"
-
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    :goto_1
+    return v0
 .end method

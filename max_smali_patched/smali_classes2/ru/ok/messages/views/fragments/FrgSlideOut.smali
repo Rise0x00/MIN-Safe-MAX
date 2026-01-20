@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsse;
+.implements Lsgf;
 
 
 # instance fields
@@ -25,29 +25,6 @@
 
 
 # virtual methods
-.method public final B0()Lci6;
-    .locals 1
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lj6;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lj6;
-
-    move-result-object v0
-
-    check-cast v0, Lci6;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public a()Z
     .locals 1
 
@@ -56,10 +33,10 @@
     return v0
 .end method
 
-.method public m(I)V
+.method public b(I)V
     .locals 1
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->u0()Lj6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->r0()Ly5;
 
     move-result-object p1
 
@@ -68,13 +45,13 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->r()Landroidx/fragment/app/b;
 
     move-result-object p1
 
     invoke-virtual {p1}, Landroid/app/Activity;->finish()V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->t()Landroidx/fragment/app/b;
+    invoke-virtual {p0}, Landroidx/fragment/app/a;->r()Landroidx/fragment/app/b;
 
     move-result-object p1
 
@@ -85,10 +62,10 @@
     return-void
 .end method
 
-.method public o()V
+.method public m()V
     .locals 3
 
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->B0()Lci6;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->y0()Lzp6;
 
     move-result-object v0
 
@@ -107,19 +84,19 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y(ZZ)V
+    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/mediabar/ActLocalMedias;->V(ZZ)V
 
     return-void
 .end method
 
-.method public x0(Lj6;)V
+.method public u0(Ly5;)V
     .locals 1
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->j1:Z
 
-    instance-of p1, p1, Lci6;
+    instance-of p1, p1, Lzp6;
 
     if-eqz p1, :cond_0
 
@@ -133,4 +110,27 @@
     invoke-direct {p1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
+
+.method public final y0()Lzp6;
+    .locals 1
+
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->r0()Ly5;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->r0()Ly5;
+
+    move-result-object v0
+
+    check-cast v0, Lzp6;
+
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return-object v0
 .end method

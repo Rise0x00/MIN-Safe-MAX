@@ -1,156 +1,155 @@
 .class public final Lox2;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lgz6;
-
-
-# static fields
-.field public static final f:Ljava/util/List;
+.implements Lbr6;
 
 
 # instance fields
-.field public final b:Ltif;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final c:Ltif;
+.field public final synthetic Y:Lone/me/chatscreen/ChatScreen;
 
-.field public final d:Lr00;
-
-.field public final e:Lr00;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+    .locals 0
 
-    new-instance v0, Lnx2;
+    iput-object p2, p0, Lox2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lox2;->f:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru7;Ltif;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lmx2;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p2, p1, p0, v1}, Lmx2;-><init>(Ltif;Lru7;Lox2;I)V
-
-    new-instance v1, Ltif;
-
-    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
-
-    iput-object v1, p0, Lox2;->b:Ltif;
-
-    new-instance v0, Lmx2;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p2, p1, p0, v1}, Lmx2;-><init>(Ltif;Lru7;Lox2;I)V
-
-    new-instance p1, Ltif;
-
-    invoke-direct {p1, v0}, Ltif;-><init>(Loi6;)V
-
-    iput-object p1, p0, Lox2;->c:Ltif;
-
-    new-instance p1, Lr00;
-
-    const/16 p2, 0xa
-
-    invoke-direct {p1, p2}, Lr00;-><init>(I)V
-
-    iput-object p1, p0, Lox2;->d:Lr00;
-
-    new-instance p1, Lr00;
-
-    const/16 p2, 0xb
-
-    invoke-direct {p1, p2}, Lr00;-><init>(I)V
-
-    iput-object p1, p0, Lox2;->e:Lr00;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lox2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lox2;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lox2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public final c()Ljava/util/Comparator;
-    .locals 1
-
-    iget-object v0, p0, Lox2;->d:Lr00;
-
-    return-object v0
-.end method
-
-.method public final e()Ljava/util/Comparator;
-    .locals 1
-
-    iget-object v0, p0, Lox2;->e:Lr00;
-
-    return-object v0
-.end method
-
-.method public final g()J
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lox2;->b:Ltif;
+    new-instance v0, Lox2;
 
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lox2;->Y:Lone/me/chatscreen/ChatScreen;
 
-    move-result-object v0
+    invoke-direct {v0, p2, v1}, Lox2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final h()J
-    .locals 2
-
-    iget-object v0, p0, Lox2;->c:Ltif;
-
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final j()Ljava/util/List;
-    .locals 1
-
-    sget-object v0, Lox2;->f:Ljava/util/List;
+    iput-object p1, v0, Lox2;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget-object v0, p0, Lox2;->X:Ljava/lang/Object;
+
+    iget v1, p0, Lox2;->o:I
+
+    sget-object v2, Lb3h;->a:Lb3h;
+
+    const/4 v3, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v3, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    return-object v2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lsh2;
+
+    sget-object p1, Lone/me/chatscreen/ChatScreen;->n1:[Lz28;
+
+    iget-object p1, p0, Lox2;->Y:Lone/me/chatscreen/ChatScreen;
+
+    iget-object v1, p1, Lone/me/chatscreen/ChatScreen;->J0:Lo58;
+
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ls3g;
+
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    const/4 v4, 0x0
+
+    iput-object v4, p0, Lox2;->X:Ljava/lang/Object;
+
+    iput v3, p0, Lox2;->o:I
+
+    invoke-virtual {v1}, Ls3g;->s()Lmbg;
+
+    move-result-object v3
+
+    check-cast v3, Lj9b;
+
+    invoke-virtual {v3}, Lj9b;->a()Lsb4;
+
+    move-result-object v3
+
+    new-instance v5, Lp3g;
+
+    invoke-direct {v5, v0, v1, p1, v4}, Lp3g;-><init>(Lsh2;Ls3g;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v3, v5, p0}, Ls9j;->k(Lqb4;Lbr6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p1, v2
+
+    :goto_0
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
+    return-object v2
 .end method

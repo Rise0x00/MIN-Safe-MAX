@@ -1,63 +1,51 @@
 .class public final Lsd2;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic X:Lud2;
 
-.field public final b:Ljava/lang/String;
+.field public Y:I
 
-.field public final c:Ljava/util/List;
+.field public d:Lqd8;
 
-.field public final d:J
-
-.field public final e:Z
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ly7;)V
-    .locals 2
+.method public constructor <init>(Lud2;Lo84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsd2;->X:Lud2;
 
-    iget-object v0, p1, Ly7;->c:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Lsd2;->a:Ljava/lang/String;
-
-    iget-object v0, p1, Ly7;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, p0, Lsd2;->b:Ljava/lang/String;
-
-    iget-object v0, p1, Ly7;->e:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    :goto_0
-    iput-object v0, p0, Lsd2;->c:Ljava/util/List;
-
-    iget-wide v0, p1, Ly7;->a:J
-
-    iput-wide v0, p0, Lsd2;->d:J
-
-    iget-boolean p1, p1, Ly7;->b:Z
-
-    iput-boolean p1, p0, Lsd2;->e:Z
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lsd2;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lsd2;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lsd2;->Y:I
+
+    iget-object p1, p0, Lsd2;->X:Lud2;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, v0, p0}, Lud2;->a(Lqd8;Lmc6;Lnd2;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

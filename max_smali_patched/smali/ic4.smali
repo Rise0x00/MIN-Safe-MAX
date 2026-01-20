@@ -4,60 +4,40 @@
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Lb01;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lkg3;
 
-.field public final c:Leff;
+.field public c:I
 
-.field public final d:Ltr6;
+.field public d:Z
 
-.field public final e:Ljava/util/List;
-
-.field public final f:Z
-
-.field public final g:I
-
-.field public final h:Ljava/util/concurrent/Executor;
-
-.field public final i:Ljava/util/concurrent/Executor;
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:Ljava/util/Set;
+.field public final e:Lski;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Leff;Ltr6;Ljava/util/ArrayList;ZILjava/util/concurrent/Executor;Ljava/util/concurrent/Executor;ZZLjava/util/LinkedHashSet;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method public constructor <init>(Lb01;Lkg3;Lski;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lic4;->a:Landroid/content/Context;
+    iput-object p1, p0, Lic4;->a:Lb01;
 
-    iput-object p2, p0, Lic4;->b:Ljava/lang/String;
+    invoke-static {p2}, Lkg3;->H(Lkg3;)Lkg3;
 
-    iput-object p3, p0, Lic4;->c:Leff;
+    move-result-object p1
 
-    iput-object p4, p0, Lic4;->d:Ltr6;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object p5, p0, Lic4;->e:Ljava/util/List;
+    iput-object p1, p0, Lic4;->b:Lkg3;
 
-    iput-boolean p6, p0, Lic4;->f:Z
+    const/4 p1, 0x0
 
-    iput p7, p0, Lic4;->g:I
+    iput p1, p0, Lic4;->c:I
 
-    iput-object p8, p0, Lic4;->h:Ljava/util/concurrent/Executor;
+    iput-boolean p1, p0, Lic4;->d:Z
 
-    iput-object p9, p0, Lic4;->i:Ljava/util/concurrent/Executor;
-
-    iput-boolean p10, p0, Lic4;->j:Z
-
-    iput-boolean p11, p0, Lic4;->k:Z
-
-    iput-object p12, p0, Lic4;->l:Ljava/util/Set;
+    iput-object p3, p0, Lic4;->e:Lski;
 
     return-void
 .end method

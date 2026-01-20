@@ -1,60 +1,173 @@
-.class public final Lyx3;
-.super Lmmf;
+.class public final synthetic Lyx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lby3;
 
 
 # instance fields
-.field public c:Lgu3;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
-    .locals 1
+# direct methods
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput p1, p0, Lyx3;->a:I
 
-    const-string v0, "contact"
+    iput-object p2, p0, Lyx3;->b:Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ljf9;->v()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lgu3;->g(Ljf9;)Lgu3;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyx3;->c:Lgu3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
 
-    iget-object v0, p0, Lyx3;->c:Lgu3;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 5
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget v0, p0, Lyx3;->a:I
 
-    const-string v2, "{contact="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lyx3;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v0, Lref;
 
-    const-string v0, "}"
+    check-cast p1, Lsk1;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v0, Loef;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Loef;->a(Ljava/lang/Object;)V
 
-    move-result-object v0
+    return-void
 
-    return-object v0
+    :pswitch_0
+    iget-object v0, p0, Lyx3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lnq6;
+
+    check-cast p1, Lsk1;
+
+    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->f(Lnq6;Lsk1;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lyx3;->b:Ljava/lang/Object;
+
+    check-cast v0, Luqf;
+
+    check-cast p1, Lorg/webrtc/PeerConnection;
+
+    new-instance v1, Lgha;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v2, v0}, Lgha;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, v1}, Lorg/webrtc/PeerConnection;->getStats(Lorg/webrtc/RTCStatsCollectorCallback;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lyx3;->b:Ljava/lang/Object;
+
+    check-cast v0, [Lorg/webrtc/IceCandidate;
+
+    check-cast p1, Lorg/webrtc/PeerConnection;
+
+    invoke-virtual {p1, v0}, Lorg/webrtc/PeerConnection;->removeIceCandidates([Lorg/webrtc/IceCandidate;)Z
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lyx3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lys4;
+
+    check-cast p1, Lorg/webrtc/PeerConnection;
+
+    iget-object p1, v0, Lys4;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v1, v0, Lys4;->h:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentHashMap;->keySet()Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    iget-object v3, v0, Lys4;->h:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v3, v2}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lkv1;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v2, v3, v4}, Lys4;->u(Ljava/lang/String;Lkv1;Ljava/util/List;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_1
+
+    :cond_0
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :pswitch_4
+    iget-object p1, p0, Lyx3;->b:Ljava/lang/Object;
+
+    check-cast p1, Ljava/lang/Runnable;
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

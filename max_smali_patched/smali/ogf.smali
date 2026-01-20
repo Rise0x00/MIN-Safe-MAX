@@ -1,57 +1,67 @@
-.class public abstract Logf;
-.super Lp14;
+.class public final Logf;
+.super Lypj;
 .source "SourceFile"
-
-# interfaces
-.implements Lrj6;
 
 
 # instance fields
-.field public final d:I
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(ILkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v0, 0x1
 
-    iput p1, p0, Logf;->d:I
+    iput v0, p0, Logf;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getArity()I
+.method public final b(Landroid/view/View;Landroid/view/ViewGroup;)F
     .locals 1
 
-    iget v0, p0, Logf;->d:I
+    iget v0, p0, Logf;->a:I
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
-    iget-object v0, p0, Lhj0;->a:Lkotlin/coroutines/Continuation;
+    move-result p1
 
-    if-nez v0, :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
-    sget-object v0, Lv7d;->a:Lw7d;
+    move-result p2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    int-to-float p2, p2
 
-    invoke-static {p0}, Lw7d;->a(Lrj6;)Ljava/lang/String;
+    add-float/2addr p1, p2
 
-    move-result-object v0
+    return p1
 
-    return-object v0
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getTranslationY()F
 
-    :cond_0
-    invoke-super {p0}, Lhj0;->toString()Ljava/lang/String;
+    move-result p1
 
-    move-result-object v0
+    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
 
-    return-object v0
+    move-result p2
+
+    int-to-float p2, p2
+
+    sub-float/2addr p1, p2
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

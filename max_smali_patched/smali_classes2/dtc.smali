@@ -1,20 +1,86 @@
-.class public abstract Ldtc;
-.super Ljava/lang/Object;
+.class public final Ldtc;
+.super Lie0;
+.source "SourceFile"
 
 
-# static fields
-.field public static audio_onboarding_intro:I = 0x7f130087
+# instance fields
+.field public final b:J
 
-.field public static pinbars_group_call_bar_button_text:I = 0x7f130b27
 
-.field public static pinbars_group_call_bar_title:I = 0x7f130b28
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
 
-.field public static pinbars_snackbar_unpinned:I = 0x7f130b29
+    const/16 v0, 0x10
 
-.field public static unknown_contact_add_to_contact:I = 0x7f130e3e
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-.field public static unknown_contact_block_contact:I = 0x7f130e3f
+    iput-wide p1, p0, Ldtc;->b:J
 
-.field public static unknown_contact_snackbar_add_contact:I = 0x7f130e40
+    return-void
+.end method
 
-.field public static videomsg_player_type:I = 0x7f130e6e
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldtc;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ldtc;
+
+    iget-wide v3, p0, Ldtc;->b:J
+
+    iget-wide v5, p1, Ldtc;->b:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Ldtc;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "AddToFolder(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Ldtc;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

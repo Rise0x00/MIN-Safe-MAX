@@ -1,156 +1,77 @@
-.class public final Lebh;
-.super Logf;
+.class public final synthetic Lebh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
 
 # instance fields
-.field public final synthetic X:Lgah;
+.field public final synthetic a:Lfbh;
 
-.field public final synthetic Y:Lmbh;
-
-.field public final synthetic Z:Lcbh;
-
-.field public o:I
+.field public final synthetic b:Lgg7;
 
 
 # direct methods
-.method public constructor <init>(Lgah;Lcbh;Lmbh;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lfbh;Lgg7;)V
     .locals 0
 
-    iput-object p1, p0, Lebh;->X:Lgah;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lebh;->Y:Lmbh;
+    iput-object p1, p0, Lebh;->a:Lfbh;
 
-    iput-object p2, p0, Lebh;->Z:Lcbh;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lebh;->b:Lgg7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    .locals 1
 
-    check-cast p1, Lybg;
+    iget-object p1, p0, Lebh;->a:Lfbh;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1, p2}, Lebh;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lebh;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lebh;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lebh;
-
-    iget-object v0, p0, Lebh;->Y:Lmbh;
-
-    iget-object v1, p0, Lebh;->Z:Lcbh;
-
-    iget-object v2, p0, Lebh;->X:Lgah;
-
-    invoke-direct {p1, v2, v1, v0, p2}, Lebh;-><init>(Lgah;Lcbh;Lmbh;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lebh;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-nez p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    const-string v0, "app.messages.calls.menu.item"
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result p2
 
-    throw p1
+    if-eqz p2, :cond_1
+
+    const/4 p2, 0x1
+
+    iget-object p1, p1, Lx3;->g:Lr58;
+
+    invoke-virtual {p1, v0, p2}, Lr58;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    iget-object p2, p0, Lebh;->b:Lgg7;
+
+    iget-object p2, p2, Lgg7;->b:Ljava/lang/Object;
+
+    check-cast p2, Loq8;
+
+    iget-object p2, p2, Loq8;->X:Lspf;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, v0, p1}, Lspf;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    new-instance p1, Lwah;
-
-    iget-object v0, p0, Lebh;->X:Lgah;
-
-    iget-object v0, v0, Lgah;->c:Ljava/lang/String;
-
-    sget-object v2, Lbbh;->b:Lbbh;
-
-    invoke-direct {p1, v0, v2}, Lwah;-><init>(Ljava/lang/String;Lbbh;)V
-
-    iget-object v0, p0, Lebh;->Y:Lmbh;
-
-    iget-object v2, v0, Lmbh;->d:Lfv0;
-
-    new-instance v3, Lvp7;
-
-    iget-object v4, p0, Lebh;->Z:Lcbh;
-
-    iget-object v4, v4, Lcbh;->a:Ljava/lang/String;
-
-    iget-object v0, v0, Lmbh;->a:Liq7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v5, Lwah;->Companion:Lvah;
-
-    invoke-virtual {v5}, Lvah;->serializer()Lfs7;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5, p1}, Liq7;->b(Lfs7;Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v3, v4, p1}, Lvp7;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v1, p0, Lebh;->o:I
-
-    invoke-interface {v2, v3, p0}, Lb2e;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
     :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

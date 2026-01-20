@@ -1,72 +1,51 @@
-.class public abstract Lare;
+.class public final Lare;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqi7;
-
-
-# instance fields
-.field public volatile a:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lp9i;->a:Ljava/lang/Object;
-
-    iput-object v0, p0, Lare;->a:Ljava/lang/Object;
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a(Lt5;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lare;->a:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    sget-object v1, Lp9i;->a:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    if-eq v0, v1, :cond_0
-
-    return-object v0
+    return v0
 
     :cond_0
-    monitor-enter p0
+    instance-of v1, p1, Lare;
 
-    :try_start_0
-    iget-object v0, p0, Lare;->a:Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    if-eq v0, v1, :cond_1
+    const/4 p1, 0x0
 
-    goto :goto_0
+    return p1
 
     :cond_1
-    invoke-virtual {p0, p1}, Lare;->b(Lt5;)Ljava/lang/Object;
+    check-cast p1, Lare;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v0, p0, Lare;->a:Ljava/lang/Object;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return-object v0
-
-    :catchall_0
-    move-exception p1
-
-    monitor-exit p0
-
-    throw p1
+    return v0
 .end method
 
-.method public abstract b(Lt5;)Ljava/lang/Object;
+.method public final hashCode()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Options(isDebugMode=false)"
+
+    return-object v0
 .end method

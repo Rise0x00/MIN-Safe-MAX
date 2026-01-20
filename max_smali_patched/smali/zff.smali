@@ -1,76 +1,53 @@
-.class public final synthetic Lzff;
-.super Ljava/lang/Object;
+.class public final Lzff;
+.super Lkef;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Llr3;
-
-.field public final synthetic c:Landroid/view/Surface;
+.field public final b:Lpbe;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llr3;Landroid/view/Surface;I)V
-    .locals 0
+.method public constructor <init>(JLpbe;)V
+    .locals 1
 
-    iput p3, p0, Lzff;->a:I
-
-    iput-object p1, p0, Lzff;->b:Llr3;
-
-    iput-object p2, p0, Lzff;->c:Landroid/view/Surface;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lzff;->a:J
+
+    iput-object p3, p0, Lzff;->b:Lpbe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final m(Ldff;)V
+    .locals 4
 
-    iget v0, p0, Lzff;->a:I
+    new-instance v0, Lzza;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    new-instance v0, Lyb0;
+    invoke-direct {v0, v1, p1}, Lzza;-><init>(ILjava/lang/Object;)V
 
-    const/4 v1, 0x4
+    invoke-interface {p1, v0}, Ldff;->c(Lo25;)V
 
-    iget-object v2, p0, Lzff;->c:Landroid/view/Surface;
+    iget-wide v1, p0, Lzff;->a:J
 
-    invoke-direct {v0, v1, v2}, Lyb0;-><init>(ILandroid/view/Surface;)V
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v1, p0, Lzff;->b:Llr3;
+    iget-object v3, p0, Lzff;->b:Lpbe;
 
-    invoke-interface {v1, v0}, Llr3;->accept(Ljava/lang/Object;)V
+    invoke-virtual {v3, v0, v1, v2, p1}, Lpbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_0
-    new-instance v0, Lyb0;
-
-    const/4 v1, 0x3
-
-    iget-object v2, p0, Lzff;->c:Landroid/view/Surface;
-
-    invoke-direct {v0, v1, v2}, Lyb0;-><init>(ILandroid/view/Surface;)V
-
-    iget-object v1, p0, Lzff;->b:Llr3;
-
-    invoke-interface {v1, v0}, Llr3;->accept(Ljava/lang/Object;)V
+    invoke-static {v0, p1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

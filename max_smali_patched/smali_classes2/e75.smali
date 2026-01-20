@@ -1,56 +1,62 @@
-.class public final synthetic Le75;
-.super Ljava/lang/Object;
+.class public final Le75;
+.super Licg;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lorg/webrtc/EglThread;
+.field public c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/EglThread;I)V
+.method public constructor <init>(Lpq9;)V
     .locals 0
 
-    iput p2, p0, Le75;->a:I
-
-    iput-object p1, p0, Le75;->b:Lorg/webrtc/EglThread;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final d(Lpq9;Ljava/lang/String;)V
+    .locals 2
 
-    iget v0, p0, Le75;->a:I
+    const-string v0, "time"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Le75;->b:Lorg/webrtc/EglThread;
+    move-result p2
 
-    invoke-static {v0}, Lorg/webrtc/EglThread;->d(Lorg/webrtc/EglThread;)V
+    if-eqz p2, :cond_0
+
+    const-wide/16 v0, 0x0
+
+    invoke-static {p1, v0, v1}, Lcti;->n(Lpq9;J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Le75;->c:J
 
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Le75;->b:Lorg/webrtc/EglThread;
-
-    invoke-static {v0}, Lorg/webrtc/EglThread;->c(Lorg/webrtc/EglThread;)V
+    :cond_0
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
+.end method
 
-    nop
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-wide v0, p0, Le75;->c:J
+
+    const-string v2, "Response{time="
+
+    const-string v3, "}"
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

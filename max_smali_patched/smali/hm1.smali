@@ -1,84 +1,100 @@
-.class public final synthetic Lhm1;
-.super Ljava/lang/Object;
+.class public final Lhm1;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Llm1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Llm1;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
     .locals 0
 
-    iput p3, p0, Lhm1;->a:I
+    iput-object p2, p0, Lhm1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-    iput-object p1, p0, Lhm1;->b:Landroid/content/Context;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lhm1;->c:Llm1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lhm1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lhm1;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lhm1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lhm1;
+
+    iget-object v1, p0, Lhm1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
+
+    invoke-direct {v0, p2, v1}, Lhm1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;)V
+
+    iput-object p1, v0, Lhm1;->o:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    iget v0, p0, Lhm1;->a:I
+    iget-object v0, p0, Lhm1;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lhm1;->b:Landroid/content/Context;
+    check-cast v0, Lqhg;
 
-    iget-object v1, p0, Lhm1;->c:Llm1;
+    iget-object p1, p0, Lhm1;->X:Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;
 
-    invoke-static {v0, v1}, Llm1;->w(Landroid/content/Context;Llm1;)Ljp1;
+    iget-object v1, p1, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->J0:Ljld;
 
-    move-result-object v0
+    sget-object v2, Lone/me/calls/ui/bottomsheet/ratecall/CallRateBottomSheet;->N0:[Lz28;
 
-    return-object v0
+    const/4 v3, 0x4
 
-    :pswitch_0
-    new-instance v0, Lm31;
+    aget-object v2, v2, v3
 
-    iget-object v1, p0, Lhm1;->b:Landroid/content/Context;
+    invoke-interface {v1, p1, v2}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lm31;-><init>(Landroid/content/Context;)V
+    move-result-object v1
 
-    new-instance v1, Lmq3;
+    check-cast v1, Landroid/widget/TextView;
 
-    const/4 v2, -0x1
+    invoke-virtual {p1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    const/4 v3, 0x0
+    move-result-object p1
 
-    invoke-direct {v1, v2, v3}, Lmq3;-><init>(II)V
+    invoke-virtual {v0, p1}, Lqhg;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    move-result-object p1
 
-    const/16 v1, 0x8
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    iget-object v1, p0, Lhm1;->c:Llm1;
-
-    iget-object v1, v1, Llm1;->J0:Lkm1;
-
-    invoke-virtual {v0, v1}, Lm31;->setClickListener(Ll31;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,3 +1,3 @@
-.class public final Lp07;
-.super Lo17;
+.class public interface abstract Lp07;
+.super Ljava/lang/Object;
 .source "SourceFile"

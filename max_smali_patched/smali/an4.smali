@@ -1,385 +1,306 @@
-.class public final Lan4;
-.super Lbwe;
+.class public final synthetic Lan4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpe8;
+.implements Lay3;
+.implements Ljld;
+.implements Lxfc;
+.implements Lcr6;
 
 
 # instance fields
-.field public final c:Lym4;
+.field public final synthetic a:I
 
-.field public d:Landroid/animation/AnimatorSet;
+.field public final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lym4;)V
+.method public synthetic constructor <init>(Lhd;Ljava/lang/String;JJ)V
     .locals 0
+
+    .line 1
+    const/4 p1, 0x0
+
+    iput p1, p0, Lan4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lan4;->c:Lym4;
+    iput-object p2, p0, Lan4;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+
+    .line 2
+    iput p2, p0, Lan4;->a:I
+
+    iput-object p1, p0, Lan4;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)V
-    .locals 2
+.method public E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p1, p0, Lan4;->c:Lym4;
+    check-cast p1, Lorg/webrtc/RTCStats;
 
-    iget-object p1, p1, Ladi;->b:Ljava/lang/Object;
+    invoke-virtual {p1}, Lorg/webrtc/RTCStats;->getMembers()Ljava/util/Map;
 
-    check-cast p1, Lcwe;
+    move-result-object p1
 
-    iget-object v0, p0, Lan4;->d:Landroid/animation/AnimatorSet;
+    iget-object p2, p0, Lan4;->b:Ljava/lang/String;
+
+    invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public accept(Ljava/lang/Object;)V
+    .locals 3
+
+    iget v0, p0, Lan4;->a:I
+
+    iget-object v1, p0, Lan4;->b:Ljava/lang/String;
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lj10;
+
+    iget-object v0, p1, Lj10;->e:Li10;
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p1, p0}, Lcwe;->c(Lbwe;)V
-
-    return-void
+    sget-object v0, Li10;->j:Li10;
 
     :cond_0
-    iget-boolean v1, p1, Lcwe;->g:Z
+    if-eqz v0, :cond_1
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0}, Li10;->a()Lh10;
 
-    sget-object v1, Lcn4;->a:Lcn4;
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcn4;->a(Landroid/animation/AnimatorSet;)V
+    iput-object v1, v0, Lh10;->b:Ljava/lang/String;
+
+    new-instance v1, Li10;
+
+    invoke-direct {v1, v0}, Li10;-><init>(Lh10;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
+    const/4 v1, 0x0
 
     :goto_0
-    const/4 v0, 0x2
+    iput-object v1, p1, Lj10;->e:Li10;
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
+    return-void
 
-    move-result v0
+    :pswitch_0
+    check-cast p1, Lj20;
 
-    if-eqz v0, :cond_3
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :goto_1
+    invoke-virtual {p1}, Lj20;->b()I
 
-    const-string v1, "Animator from operation "
+    move-result v2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ge v0, v2, :cond_4
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v0}, Lj20;->d(I)Li20;
 
-    const-string v1, " has been canceled"
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, v2, Li20;->r:Ljava/lang/String;
 
-    iget-boolean p1, p1, Lcwe;->g:Z
+    invoke-static {v1, v2}, Lr6j;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
-    if-eqz p1, :cond_2
+    move-result v2
 
-    const-string p1, " with seeking."
+    if-eqz v2, :cond_3
+
+    if-ltz v0, :cond_2
+
+    invoke-virtual {p1}, Lj20;->b()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_2
+
+    iget-object v2, p1, Lj20;->a:Ljava/util/List;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :cond_2
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "index < 0 or index >= attaches.size()"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_3
+    :goto_2
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    :cond_2
-    const-string p1, "."
-
-    :goto_1
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 p1, 0x20
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "FragmentManager"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    return-void
-.end method
-
-.method public final b(Landroid/view/ViewGroup;)V
-    .locals 2
-
-    iget-object p1, p0, Lan4;->c:Lym4;
-
-    iget-object p1, p1, Ladi;->b:Ljava/lang/Object;
-
-    check-cast p1, Lcwe;
-
-    iget-object v0, p0, Lan4;->d:Landroid/animation/AnimatorSet;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1, p0}, Lcwe;->c(Lbwe;)V
-
+    :cond_4
     return-void
 
-    :cond_0
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    const/4 v0, 0x2
-
-    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Animator from operation "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, " has started."
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "FragmentManager"
-
-    invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    return-void
-.end method
-
-.method public final c(Lve0;)V
-    .locals 11
-
-    iget-object v0, p0, Lan4;->c:Lym4;
-
-    iget-object v0, v0, Ladi;->b:Ljava/lang/Object;
-
-    check-cast v0, Lcwe;
-
-    iget-object v1, p0, Lan4;->d:Landroid/animation/AnimatorSet;
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0, p0}, Lcwe;->c(Lbwe;)V
-
-    return-void
-
-    :cond_0
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x22
-
-    if-lt v2, v3, :cond_5
-
-    iget-object v2, v0, Lcwe;->c:Landroidx/fragment/app/a;
-
-    iget-boolean v2, v2, Landroidx/fragment/app/a;->w0:Z
-
-    if-eqz v2, :cond_5
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result v3
-
-    const-string v4, "FragmentManager"
-
-    if-eqz v3, :cond_1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v5, "Adding BackProgressCallbacks for Animators to operation "
-
-    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v4, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_1
-    sget-object v3, Lbn4;->a:Lbn4;
-
-    invoke-virtual {v3, v1}, Lbn4;->a(Landroid/animation/AnimatorSet;)J
-
-    move-result-wide v5
-
-    iget p1, p1, Lve0;->c:F
-
-    long-to-float v3, v5
-
-    mul-float/2addr p1, v3
-
-    float-to-long v7, p1
-
-    const-wide/16 v9, 0x0
-
-    cmp-long p1, v7, v9
-
-    const-wide/16 v9, 0x1
-
-    if-nez p1, :cond_2
-
-    move-wide v7, v9
-
-    :cond_2
-    cmp-long p1, v7, v5
-
-    if-nez p1, :cond_3
-
-    sub-long v7, v5, v9
-
-    :cond_3
-    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
+    :pswitch_1
+    check-cast p1, Ljava/lang/Throwable;
 
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v2, "Setting currentPlayTime to "
+    const-string v0, "Can\'t update attach async localId = "
 
-    invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, " for Animator "
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v2, " on operation "
-
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v4, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v0, "hm9"
 
-    :cond_4
-    sget-object p1, Lcn4;->a:Lcn4;
+    invoke-static {v0, p1}, Lc5j;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1, v7, v8}, Lcn4;->b(Landroid/animation/AnimatorSet;J)V
+    return-void
 
-    :cond_5
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lan4;->a:I
+
+    check-cast p1, Lo9h;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p1, Lo9h;->a:Lb2e;
+
+    new-instance v0, Lsn7;
+
+    const/16 v1, 0x8
+
+    iget-object v2, p0, Lan4;->b:Ljava/lang/String;
+
+    invoke-direct {v0, v2, v1}, Lsn7;-><init>(Ljava/lang/String;I)V
+
+    invoke-static {p1, v0}, Lmnj;->a(Lb2e;Lnq6;)Leo3;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object p1, p1, Lo9h;->a:Lb2e;
+
+    new-instance v0, Lsn7;
+
+    const/16 v1, 0xa
+
+    iget-object v2, p0, Lan4;->b:Ljava/lang/String;
+
+    invoke-direct {v0, v2, v1}, Lsn7;-><init>(Ljava/lang/String;I)V
+
+    invoke-static {p1, v0}, Lmnj;->b(Lb2e;Lnq6;)Liv8;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x6
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
+    .locals 1
+
+    check-cast p1, Lep5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "videoDebugListener.onVideoDecoderInitialized decoder = "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lan4;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "ep5"
+
+    invoke-static {v0, p1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 .end method
 
-.method public final d(Landroid/view/ViewGroup;)V
-    .locals 7
+.method public test(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object v0, p0, Lan4;->c:Lym4;
+    check-cast p1, Lf9h;
 
-    invoke-virtual {v0}, Ladi;->B0()Z
+    iget-object p1, p1, Lf9h;->a:Ljava/lang/String;
 
-    move-result v1
+    if-eqz p1, :cond_0
 
-    if-eqz v1, :cond_0
+    iget-object v0, p0, Lan4;->b:Ljava/lang/String;
 
-    move-object v6, p0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_4
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 p1, 0x0
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lym4;->R0(Landroid/content/Context;)Lihd;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v1, Lihd;->b:Ljava/lang/Object;
-
-    check-cast v1, Landroid/animation/AnimatorSet;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    iput-object v1, p0, Lan4;->d:Landroid/animation/AnimatorSet;
-
-    iget-object v0, v0, Ladi;->b:Ljava/lang/Object;
-
-    move-object v5, v0
-
-    check-cast v5, Lcwe;
-
-    iget-object v0, v5, Lcwe;->c:Landroidx/fragment/app/a;
-
-    iget v1, v5, Lcwe;->a:I
-
-    const/4 v2, 0x3
-
-    if-ne v1, v2, :cond_2
-
-    const/4 v1, 0x1
-
-    :goto_1
-    move v4, v1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :goto_2
-    iget-object v3, v0, Landroidx/fragment/app/a;->S0:Landroid/view/View;
-
-    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
-
-    iget-object v0, p0, Lan4;->d:Landroid/animation/AnimatorSet;
-
-    if-eqz v0, :cond_3
-
-    new-instance v1, Lzm4;
-
-    move-object v6, p0
-
-    move-object v2, p1
-
-    invoke-direct/range {v1 .. v6}, Lzm4;-><init>(Landroid/view/ViewGroup;Landroid/view/View;ZLcwe;Lan4;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    goto :goto_3
-
-    :cond_3
-    move-object v6, p0
-
-    :goto_3
-    iget-object p1, v6, Lan4;->d:Landroid/animation/AnimatorSet;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1, v3}, Landroid/animation/AnimatorSet;->setTarget(Ljava/lang/Object;)V
-
-    :cond_4
-    :goto_4
-    return-void
+    return p1
 .end method

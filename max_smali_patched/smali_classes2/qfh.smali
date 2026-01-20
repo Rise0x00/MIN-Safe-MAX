@@ -1,76 +1,96 @@
-.class public final Lqfh;
+.class public interface abstract Lqfh;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lizg;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Loi6;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILoi6;)V
-    .locals 0
-
-    iput p1, p0, Lqfh;->a:I
-
-    iput-object p2, p0, Lqfh;->b:Loi6;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Ljzg;
+.method public abstract a()Landroid/net/Uri;
+.end method
+
+.method public abstract b()J
+.end method
+
+.method public abstract c()J
+.end method
+
+.method public d()Z
+    .locals 2
+
+    invoke-interface {p0}, Lqfh;->a()Landroid/net/Uri;
+
+    move-result-object v0
+
+    sget-object v1, Lmbh;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const-string v1, "file"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_1
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public e(J)Lqfh;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public f()Ldz;
     .locals 1
 
-    iget v0, p0, Lqfh;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lqfh;->b:Loi6;
+.method public abstract g()Z
+.end method
 
-    check-cast v0, Ly8h;
+.method public abstract getContentType()Ljava/lang/String;
+.end method
 
-    invoke-virtual {v0}, Ly8h;->invoke()Ljava/lang/Object;
+.method public abstract getDuration()J
+.end method
 
-    move-result-object v0
+.method public abstract getHeight()I
+.end method
 
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract getType()I
+.end method
 
-    move-result-object p1
+.method public abstract getWidth()I
+.end method
 
-    check-cast p1, Ljzg;
+.method public abstract h()Ljava/lang/String;
+.end method
 
-    return-object p1
+.method public abstract i()J
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lqfh;->b:Loi6;
-
-    check-cast v0, Lui1;
-
-    invoke-virtual {v0}, Lui1;->invoke()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljzg;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract j()J
 .end method

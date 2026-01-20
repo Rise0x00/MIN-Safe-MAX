@@ -1,688 +1,280 @@
-.class public abstract Lruc;
+.class public final Lruc;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
+# interfaces
+.implements Lf76;
 
-# static fields
-.field public static Chat:I = 0x7f14012f
 
-.field public static Chat_Bubble:I = 0x7f140130
+# instance fields
+.field public final synthetic a:I
 
-.field public static Chat_Bubble_Background:I = 0x7f140131
+.field public final synthetic b:Lf76;
 
-.field public static Chat_Bubble_Background_BotButton:I = 0x7f140132
+.field public final synthetic c:Lysd;
 
-.field public static Chat_Bubble_Background_BubbleGradient:I = 0x7f140133
+.field public final synthetic d:Lvuc;
 
-.field public static Chat_Bubble_Background_BubbleOldGradient:I = 0x7f140134
 
-.field public static Chat_Bubble_Background_Focus:I = 0x7f140135
+# direct methods
+.method public synthetic constructor <init>(Lysd;Lf76;Lvuc;I)V
+    .locals 0
 
-.field public static Chat_Bubble_Background_Focus_Regular:I = 0x7f140136
+    iput p4, p0, Lruc;->a:I
 
-.field public static Chat_Bubble_Background_Focus_SingleMedia:I = 0x7f140137
+    iput-object p1, p0, Lruc;->c:Lysd;
 
-.field public static Chat_Bubble_Background_Focus_Transparent:I = 0x7f140138
+    iput-object p3, p0, Lruc;->d:Lvuc;
 
-.field public static Chat_Bubble_Background_Reaction:I = 0x7f140139
+    iput-object p2, p0, Lruc;->b:Lf76;
 
-.field public static Chat_Bubble_Background_SystemAssetGradient:I = 0x7f14013a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static Chat_Bubble_Icon:I = 0x7f14013b
+    return-void
+.end method
 
-.field public static Chat_Bubble_Stroke:I = 0x7f14013c
 
-.field public static Chat_Bubble_Text:I = 0x7f14013d
+# virtual methods
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 7
 
-.field public static Chat_Bubble_Text_Reaction:I = 0x7f14013e
+    iget v0, p0, Lruc;->a:I
 
-.field public static Chat_Common:I = 0x7f14013f
+    packed-switch v0, :pswitch_data_0
 
-.field public static Chat_Common_Action:I = 0x7f140140
+    instance-of v0, p2, Ltuc;
 
-.field public static Chat_Common_Action_Background:I = 0x7f140141
+    if-eqz v0, :cond_0
 
-.field public static Chat_Common_Action_Icon:I = 0x7f140142
+    move-object v0, p2
 
-.field public static Chat_Common_Background:I = 0x7f140143
+    check-cast v0, Ltuc;
 
-.field public static Chat_Common_Background_CapsuleGradient:I = 0x7f140144
+    iget v1, v0, Ltuc;->X:I
 
-.field public static Chat_Common_Background_CapsuleSecondaryGradient:I = 0x7f140145
+    const/high16 v2, -0x80000000
 
-.field public static Chat_Common_Background_ChatBackground:I = 0x7f140146
+    and-int v3, v1, v2
 
-.field public static Chat_Common_Background_FileType:I = 0x7f140147
+    if-eqz v3, :cond_0
 
-.field public static Chat_Common_Background_GlassLightGradient:I = 0x7f140148
+    sub-int/2addr v1, v2
 
-.field public static Chat_Common_Background_Skeleton:I = 0x7f140149
+    iput v1, v0, Ltuc;->X:I
 
-.field public static Chat_Common_Background_Skeleton_BubbleGradientPrimary:I = 0x7f14014a
+    goto :goto_0
 
-.field public static Chat_Common_Background_Skeleton_BubbleGradientSecondary:I = 0x7f14014b
+    :cond_0
+    new-instance v0, Ltuc;
 
-.field public static Chat_Common_Background_Skeleton_StickerPrimary:I = 0x7f14014c
+    invoke-direct {v0, p0, p2}, Ltuc;-><init>(Lruc;Lkotlin/coroutines/Continuation;)V
 
-.field public static Chat_Common_Background_Skeleton_StickerPrimary_BaseGradient:I = 0x7f14014d
+    :goto_0
+    iget-object p2, v0, Ltuc;->o:Ljava/lang/Object;
 
-.field public static Chat_Common_Background_Skeleton_StickerPrimary_TongueGradient:I = 0x7f14014e
+    iget v1, v0, Ltuc;->X:I
 
-.field public static Chat_Common_Background_Skeleton_StickerSecondary:I = 0x7f14014f
+    sget-object v2, Lb3h;->a:Lb3h;
 
-.field public static Chat_Common_Background_Skeleton_StickerSecondary_BaseGradient:I = 0x7f140150
+    iget-object v3, p0, Lruc;->c:Lysd;
 
-.field public static Chat_Common_Background_Skeleton_StickerSecondary_TongueGradient:I = 0x7f140151
+    const/4 v4, 0x2
 
-.field public static Chat_Common_Background_SpaceThemeGradient:I = 0x7f140152
+    const/4 v5, 0x1
 
-.field public static Chat_Common_Background_SystemBubbleGradient:I = 0x7f140153
+    sget-object v6, Lac4;->a:Lac4;
 
-.field public static Chat_Common_Icon:I = 0x7f140154
+    if-eqz v1, :cond_3
 
-.field public static Chat_Common_Shadows:I = 0x7f140155
+    if-eq v1, v5, :cond_2
 
-.field public static Chat_Common_Shadows_Elevation2:I = 0x7f140156
+    if-ne v1, v4, :cond_1
 
-.field public static Chat_Common_Shadows_TopBar:I = 0x7f140157
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static Chat_Common_Shadows_WriteBar:I = 0x7f140158
+    goto :goto_3
 
-.field public static Chat_Common_States:I = 0x7f140159
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.field public static Chat_Common_States_Background:I = 0x7f14015a
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-.field public static Chat_Common_States_Background_Active:I = 0x7f14015b
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.field public static Chat_Common_States_Background_Active_Action:I = 0x7f14015c
+    throw p1
 
-.field public static Chat_Common_States_Background_Disabled:I = 0x7f14015d
+    :cond_2
+    iget-object p1, v0, Ltuc;->d:Ljava/lang/Object;
 
-.field public static Chat_Common_States_Icon:I = 0x7f14015e
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static Chat_Common_States_Icon_Disabled:I = 0x7f14015f
+    goto :goto_1
 
-.field public static Chat_Common_States_Text:I = 0x7f140160
+    :cond_3
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static Chat_Common_States_Text_Disabled:I = 0x7f140161
+    iget-boolean p2, v3, Lysd;->a:Z
 
-.field public static Chat_Common_Stroke:I = 0x7f140162
+    if-nez p2, :cond_5
 
-.field public static Chat_Common_Stroke_Separator:I = 0x7f140163
+    move-object p2, p1
 
-.field public static Chat_Common_Text:I = 0x7f140164
+    check-cast p2, Lnd2;
 
-.field public static Chat_Topbar:I = 0x7f140165
+    iget-object p2, p2, Lnd2;->b:Luh2;
 
-.field public static Chat_Topbar_Background:I = 0x7f140166
+    iget-object p2, p2, Luh2;->p:Lih2;
 
-.field public static Chat_Topbar_Background_Default:I = 0x7f140167
+    if-eqz p2, :cond_5
 
-.field public static Chat_Topbar_Background_Disabled:I = 0x7f140168
+    iget-object v1, p2, Lih2;->e:Ljava/util/List;
 
-.field public static Chat_Topbar_Icon:I = 0x7f140169
+    if-eqz v1, :cond_5
 
-.field public static Chat_Topbar_Icon_Default:I = 0x7f14016a
+    iput-object p1, v0, Ltuc;->d:Ljava/lang/Object;
 
-.field public static Chat_Topbar_Icon_Disabled:I = 0x7f14016b
+    iput v5, v0, Ltuc;->X:I
 
-.field public static Chat_Topbar_Stroke:I = 0x7f14016c
+    iget-object v1, p0, Lruc;->d:Lvuc;
 
-.field public static Chat_Topbar_Stroke_Separator:I = 0x7f14016d
+    invoke-static {v1, p2}, Lvuc;->s(Lvuc;Lih2;)V
 
-.field public static Chat_Topbar_Stroke_Separator_Default:I = 0x7f14016e
+    if-ne v2, v6, :cond_4
 
-.field public static Chat_Topbar_Text:I = 0x7f14016f
+    goto :goto_2
 
-.field public static Chat_Topbar_Text_Default:I = 0x7f140170
+    :cond_4
+    :goto_1
+    iput-boolean v5, v3, Lysd;->a:Z
 
-.field public static Chat_Topbar_Text_Disabled:I = 0x7f140171
+    :cond_5
+    const/4 p2, 0x0
 
-.field public static Chat_Writebar:I = 0x7f140172
+    iput-object p2, v0, Ltuc;->d:Ljava/lang/Object;
 
-.field public static Chat_Writebar_Background:I = 0x7f140173
+    iput v4, v0, Ltuc;->X:I
 
-.field public static Chat_Writebar_Icon:I = 0x7f140174
+    iget-object p2, p0, Lruc;->b:Lf76;
 
-.field public static Chat_Writebar_Stroke:I = 0x7f140175
+    invoke-interface {p2, p1, v0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.field public static Chat_Writebar_Text:I = 0x7f140176
+    move-result-object p1
 
-.field public static Global:I = 0x7f1401a0
+    if-ne p1, v6, :cond_6
 
-.field public static Global_Accent:I = 0x7f1401a1
+    :goto_2
+    move-object v2, v6
 
-.field public static Global_Background:I = 0x7f1401a2
+    :cond_6
+    :goto_3
+    return-object v2
 
-.field public static Global_Background_Accent:I = 0x7f1401a3
+    :pswitch_0
+    instance-of v0, p2, Lquc;
 
-.field public static Global_Background_Local:I = 0x7f1401a4
+    if-eqz v0, :cond_7
 
-.field public static Global_Background_Local_Chips:I = 0x7f1401a5
+    move-object v0, p2
 
-.field public static Global_Background_Local_FileType:I = 0x7f1401a6
+    check-cast v0, Lquc;
 
-.field public static Global_Background_Local_TabBar:I = 0x7f1401a7
+    iget v1, v0, Lquc;->o:I
 
-.field public static Global_Background_Local_TopBar:I = 0x7f1401a8
+    const/high16 v2, -0x80000000
 
-.field public static Global_Gradients:I = 0x7f1401a9
+    and-int v3, v1, v2
 
-.field public static Global_Gradients_BannerDK:I = 0x7f1401aa
+    if-eqz v3, :cond_7
 
-.field public static Global_Gradients_BannerDK_Background:I = 0x7f1401ab
+    sub-int/2addr v1, v2
 
-.field public static Global_Gradients_BannerDK_Background_FantasyGradient:I = 0x7f1401ac
+    iput v1, v0, Lquc;->o:I
 
-.field public static Global_Gradients_BannerDK_Background_IconContainerGradient:I = 0x7f1401ad
+    goto :goto_4
 
-.field public static Global_Gradients_BannerDK_Background_PaleBlueGradient:I = 0x7f1401ae
+    :cond_7
+    new-instance v0, Lquc;
 
-.field public static Global_Gradients_BannerDK_Background_VibrantGradient:I = 0x7f1401af
+    invoke-direct {v0, p0, p2}, Lquc;-><init>(Lruc;Lkotlin/coroutines/Continuation;)V
 
-.field public static Global_Gradients_BannerDK_Stroke:I = 0x7f1401b0
+    :goto_4
+    iget-object p2, v0, Lquc;->d:Ljava/lang/Object;
 
-.field public static Global_Gradients_BannerDK_Stroke_IconContainerGradient:I = 0x7f1401b1
+    iget v1, v0, Lquc;->o:I
 
-.field public static Global_Gradients_ButtonTextPromo:I = 0x7f1401b2
+    const/4 v2, 0x1
 
-.field public static Global_Gradients_ButtonTextPromo_DefaultGradient:I = 0x7f1401b3
+    if-eqz v1, :cond_9
 
-.field public static Global_Gradients_ButtonTextPromo_DisabledGradient:I = 0x7f1401b4
+    if-ne v1, v2, :cond_8
 
-.field public static Global_Gradients_ButtonTextPromo_PressedGradient:I = 0x7f1401b5
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static Global_Gradients_Complex:I = 0x7f1401b6
+    goto :goto_5
 
-.field public static Global_Gradients_Complex_OverlayFloatingGradient:I = 0x7f1401b7
+    :cond_8
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-.field public static Global_Gradients_EmptyBlockIconWrapper:I = 0x7f1401b8
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-.field public static Global_Gradients_EmptyBlockIconWrapper_ShapeGradient:I = 0x7f1401b9
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.field public static Global_Gradients_EmptyBlockIconWrapper_StrokeGradient:I = 0x7f1401ba
+    throw p1
 
-.field public static Global_Gradients_LoadingIcon:I = 0x7f1401bb
+    :cond_9
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static Global_Gradients_LoadingIcon_Contrast:I = 0x7f1401bc
+    iget-object p2, p0, Lruc;->c:Lysd;
 
-.field public static Global_Gradients_LoadingIcon_ContrastStatic:I = 0x7f1401bd
+    iget-boolean v1, p2, Lysd;->a:Z
 
-.field public static Global_Gradients_LoadingIcon_Negative:I = 0x7f1401be
+    if-nez v1, :cond_b
 
-.field public static Global_Gradients_LoadingIcon_NeutralThemed:I = 0x7f1401bf
+    move-object v1, p1
 
-.field public static Global_Gradients_LoadingIcon_Primary:I = 0x7f1401c0
+    check-cast v1, Lnd2;
 
-.field public static Global_Gradients_LoadingIcon_PrimaryStatic:I = 0x7f1401c1
+    iget-object v1, v1, Lnd2;->b:Luh2;
 
-.field public static Global_Gradients_LoadingIcon_Themed:I = 0x7f1401c2
+    iget-object v1, v1, Luh2;->p:Lih2;
 
-.field public static Global_Gradients_Local:I = 0x7f1401c3
+    if-eqz v1, :cond_a
 
-.field public static Global_Gradients_Local_PromoTextGradient:I = 0x7f1401c4
+    iget-object v1, v1, Lih2;->e:Ljava/util/List;
 
-.field public static Global_Gradients_Overlay:I = 0x7f1401c5
+    if-nez v1, :cond_b
 
-.field public static Global_Gradients_Overlay_SurfaceGroundGradient:I = 0x7f1401c6
+    :cond_a
+    iget-object v1, p0, Lruc;->d:Lvuc;
 
-.field public static Global_Gradients_Overlay_SurfacePrimaryGradient:I = 0x7f1401c7
+    invoke-virtual {v1}, Lvuc;->v()V
 
-.field public static Global_Gradients_SkeletonGradient:I = 0x7f1401c8
+    iput-boolean v2, p2, Lysd;->a:Z
 
-.field public static Global_Gradients_SkeletonGradient_Cell:I = 0x7f1401c9
+    :cond_b
+    iput v2, v0, Lquc;->o:I
 
-.field public static Global_Gradients_SkeletonGradient_CellGradient:I = 0x7f1401ca
+    iget-object p2, p0, Lruc;->b:Lf76;
 
-.field public static Global_Gradients_SkeletonGradient_Grid:I = 0x7f1401cb
+    invoke-interface {p2, p1, v0}, Lf76;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.field public static Global_Gradients_SkeletonGradient_GridGradient:I = 0x7f1401cc
+    move-result-object p1
 
-.field public static Global_Icon:I = 0x7f1401cd
+    sget-object p2, Lac4;->a:Lac4;
 
-.field public static Global_Icon_Local:I = 0x7f1401ce
+    if-ne p1, p2, :cond_c
 
-.field public static Global_Icon_Local_Category:I = 0x7f1401cf
+    goto :goto_6
 
-.field public static Global_Icon_Local_Promo:I = 0x7f1401d0
+    :cond_c
+    :goto_5
+    sget-object p2, Lb3h;->a:Lb3h;
 
-.field public static Global_Icon_Local_Tabbar:I = 0x7f1401d1
+    :goto_6
+    return-object p2
 
-.field public static Global_States:I = 0x7f1401d2
-
-.field public static Global_States_Background:I = 0x7f1401d3
-
-.field public static Global_States_Background_Active:I = 0x7f1401d4
-
-.field public static Global_States_Background_Disabled:I = 0x7f1401d5
-
-.field public static Global_States_Icon:I = 0x7f1401d6
-
-.field public static Global_States_Icon_Disabled:I = 0x7f1401d7
-
-.field public static Global_States_Text:I = 0x7f1401d8
-
-.field public static Global_States_Text_Active:I = 0x7f1401d9
-
-.field public static Global_States_Text_Disabled:I = 0x7f1401da
-
-.field public static Global_Stroke:I = 0x7f1401db
-
-.field public static Global_Stroke_Local:I = 0x7f1401dc
-
-.field public static Global_Stroke_Local_Carver:I = 0x7f1401dd
-
-.field public static Global_Stroke_Local_TabBar:I = 0x7f1401de
-
-.field public static Global_Stroke_Local_TopBar:I = 0x7f1401df
-
-.field public static Global_Stroke_Separator:I = 0x7f1401e0
-
-.field public static Global_Text:I = 0x7f1401e1
-
-.field public static Global_Vfx:I = 0x7f1401e2
-
-.field public static Global_Vfx_ButtonIconOverlayPlain:I = 0x7f1401e3
-
-.field public static Global_Vfx_ButtonIconOverlayPlain_Elevation1:I = 0x7f1401e4
-
-.field public static Global_Vfx_ButtonIconOverlayPlain_Elevation2:I = 0x7f1401e5
-
-.field public static Global_Vfx_EmptyBlock:I = 0x7f1401e6
-
-.field public static Global_Vfx_EmptyBlock_Halo:I = 0x7f1401e7
-
-.field public static OneMe:I = 0x7f140207
-
-.field public static OneMe_Theme:I = 0x7f14020a
-
-.field public static OneMe_Theme_Dark:I = 0x7f14020b
-
-.field public static OneMe_Theme_Light:I = 0x7f14020c
-
-.field public static OneMe_Theme_Transparent:I = 0x7f14020d
-
-.field public static Typography:I = 0x7f14042c
-
-.field public static Typography_Accent:I = 0x7f14042d
-
-.field public static Typography_Accent_Header1:I = 0x7f14042e
-
-.field public static Typography_Accent_Title1:I = 0x7f14042f
-
-.field public static Typography_Accent_Title2:I = 0x7f140430
-
-.field public static Typography_Accent_Title3:I = 0x7f140431
-
-.field public static Typography_Accent_Title4:I = 0x7f140432
-
-.field public static Typography_Action1:I = 0x7f140433
-
-.field public static Typography_Action2:I = 0x7f140434
-
-.field public static Typography_Action3:I = 0x7f140435
-
-.field public static Typography_ActionLargeStrong:I = 0x7f140436
-
-.field public static Typography_ActionMediumStrong:I = 0x7f140437
-
-.field public static Typography_BodyLarge:I = 0x7f140438
-
-.field public static Typography_BodyMedium:I = 0x7f140439
-
-.field public static Typography_BodySmall:I = 0x7f14043a
-
-.field public static Typography_Caption1:I = 0x7f14043b
-
-.field public static Typography_Caption1_CAPS:I = 0x7f14043c
-
-.field public static Typography_Caption1_Medium:I = 0x7f14043d
-
-.field public static Typography_Caption2:I = 0x7f14043e
-
-.field public static Typography_Caption2_CAPS:I = 0x7f14043f
-
-.field public static Typography_Caption3:I = 0x7f140440
-
-.field public static Typography_Caption3_CAPS:I = 0x7f140441
-
-.field public static Typography_Chat:I = 0x7f140442
-
-.field public static Typography_Chat_Bubbles:I = 0x7f140443
-
-.field public static Typography_Chat_Bubbles_Body:I = 0x7f140444
-
-.field public static Typography_Chat_Bubbles_Body_Dynamic:I = 0x7f140445
-
-.field public static Typography_Chat_Bubbles_Body_Dynamic_LARGE:I = 0x7f140446
-
-.field public static Typography_Chat_Bubbles_Body_Dynamic_MEDIUM:I = 0x7f140447
-
-.field public static Typography_Chat_Bubbles_Body_Dynamic_XLARGE:I = 0x7f140448
-
-.field public static Typography_Chat_Bubbles_Body_Dynamic_XXLARGE:I = 0x7f140449
-
-.field public static Typography_Chat_Bubbles_Body_Dynamic_XXXLARGE:I = 0x7f14044a
-
-.field public static Typography_Chat_Bubbles_Body_Dynamic_XXXXLARGE:I = 0x7f14044b
-
-.field public static Typography_Chat_Bubbles_Caption:I = 0x7f14044c
-
-.field public static Typography_Chat_Bubbles_Caption3:I = 0x7f14045c
-
-.field public static Typography_Chat_Bubbles_Caption3_Dynamic:I = 0x7f14045d
-
-.field public static Typography_Chat_Bubbles_Caption3_Dynamic_LARGE:I = 0x7f14045e
-
-.field public static Typography_Chat_Bubbles_Caption3_Dynamic_MEDIUM:I = 0x7f14045f
-
-.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XLARGE:I = 0x7f140460
-
-.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XXLARGE:I = 0x7f140461
-
-.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XXXLARGE:I = 0x7f140462
-
-.field public static Typography_Chat_Bubbles_Caption3_Dynamic_XXXXLARGE:I = 0x7f140463
-
-.field public static Typography_Chat_Bubbles_Caption_Dynamic:I = 0x7f14044d
-
-.field public static Typography_Chat_Bubbles_Caption_Dynamic_LARGE:I = 0x7f14044e
-
-.field public static Typography_Chat_Bubbles_Caption_Dynamic_MEDIUM:I = 0x7f14044f
-
-.field public static Typography_Chat_Bubbles_Caption_Dynamic_XLARGE:I = 0x7f140450
-
-.field public static Typography_Chat_Bubbles_Caption_Dynamic_XXLARGE:I = 0x7f140451
-
-.field public static Typography_Chat_Bubbles_Caption_Dynamic_XXXLARGE:I = 0x7f140452
-
-.field public static Typography_Chat_Bubbles_Caption_Dynamic_XXXXLARGE:I = 0x7f140453
-
-.field public static Typography_Chat_Bubbles_Caption_Medium:I = 0x7f140454
-
-.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic:I = 0x7f140455
-
-.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_LARGE:I = 0x7f140456
-
-.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_MEDIUM:I = 0x7f140457
-
-.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XLARGE:I = 0x7f140458
-
-.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XXLARGE:I = 0x7f140459
-
-.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XXXLARGE:I = 0x7f14045a
-
-.field public static Typography_Chat_Bubbles_Caption_Medium_Dynamic_XXXXLARGE:I = 0x7f14045b
-
-.field public static Typography_Chat_Bubbles_Duration:I = 0x7f140464
-
-.field public static Typography_Chat_Bubbles_Emoji:I = 0x7f140465
-
-.field public static Typography_Chat_Bubbles_FileFormat:I = 0x7f140466
-
-.field public static Typography_Chat_Bubbles_Footnote:I = 0x7f140467
-
-.field public static Typography_Chat_Bubbles_Footnote_Dynamic:I = 0x7f140468
-
-.field public static Typography_Chat_Bubbles_Footnote_Dynamic_LARGE:I = 0x7f140469
-
-.field public static Typography_Chat_Bubbles_Footnote_Dynamic_MEDIUM:I = 0x7f14046a
-
-.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XLARGE:I = 0x7f14046b
-
-.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XXLARGE:I = 0x7f14046c
-
-.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XXXLARGE:I = 0x7f14046d
-
-.field public static Typography_Chat_Bubbles_Footnote_Dynamic_XXXXLARGE:I = 0x7f14046e
-
-.field public static Typography_Chat_Bubbles_Name1:I = 0x7f14046f
-
-.field public static Typography_Chat_Bubbles_Name1_Dynamic:I = 0x7f140470
-
-.field public static Typography_Chat_Bubbles_Name1_Dynamic_LARGE:I = 0x7f140471
-
-.field public static Typography_Chat_Bubbles_Name1_Dynamic_MEDIUM:I = 0x7f140472
-
-.field public static Typography_Chat_Bubbles_Name1_Dynamic_XLARGE:I = 0x7f140473
-
-.field public static Typography_Chat_Bubbles_Name1_Dynamic_XXLARGE:I = 0x7f140474
-
-.field public static Typography_Chat_Bubbles_Name1_Dynamic_XXXLARGE:I = 0x7f140475
-
-.field public static Typography_Chat_Bubbles_Name1_Dynamic_XXXXLARGE:I = 0x7f140476
-
-.field public static Typography_Chat_Bubbles_Name2:I = 0x7f140477
-
-.field public static Typography_Chat_Bubbles_Name2_Dynamic:I = 0x7f140478
-
-.field public static Typography_Chat_Bubbles_Name2_Dynamic_LARGE:I = 0x7f140479
-
-.field public static Typography_Chat_Bubbles_Name2_Dynamic_MEDIUM:I = 0x7f14047a
-
-.field public static Typography_Chat_Bubbles_Name2_Dynamic_XLARGE:I = 0x7f14047b
-
-.field public static Typography_Chat_Bubbles_Name2_Dynamic_XXLARGE:I = 0x7f14047c
-
-.field public static Typography_Chat_Bubbles_Name2_Dynamic_XXXLARGE:I = 0x7f14047d
-
-.field public static Typography_Chat_Bubbles_Name2_Dynamic_XXXXLARGE:I = 0x7f14047e
-
-.field public static Typography_Chat_Bubbles_Reaction:I = 0x7f14047f
-
-.field public static Typography_Chat_Bubbles_Time:I = 0x7f140480
-
-.field public static Typography_Chat_Markdown:I = 0x7f140481
-
-.field public static Typography_Chat_Markdown_Bold:I = 0x7f140482
-
-.field public static Typography_Chat_Markdown_Bold_Dynamic:I = 0x7f140483
-
-.field public static Typography_Chat_Markdown_Bold_Dynamic_LARGE:I = 0x7f140484
-
-.field public static Typography_Chat_Markdown_Bold_Dynamic_MEDIUM:I = 0x7f140485
-
-.field public static Typography_Chat_Markdown_Bold_Dynamic_XLARGE:I = 0x7f140486
-
-.field public static Typography_Chat_Markdown_Bold_Dynamic_XXLARGE:I = 0x7f140487
-
-.field public static Typography_Chat_Markdown_Bold_Dynamic_XXXLARGE:I = 0x7f140488
-
-.field public static Typography_Chat_Markdown_Bold_Dynamic_XXXXLARGE:I = 0x7f140489
-
-.field public static Typography_Chat_Markdown_Italic:I = 0x7f14048a
-
-.field public static Typography_Chat_Markdown_Italic_Dynamic:I = 0x7f14048b
-
-.field public static Typography_Chat_Markdown_Italic_Dynamic_LARGE:I = 0x7f14048c
-
-.field public static Typography_Chat_Markdown_Italic_Dynamic_MEDIUM:I = 0x7f14048d
-
-.field public static Typography_Chat_Markdown_Italic_Dynamic_XLARGE:I = 0x7f14048e
-
-.field public static Typography_Chat_Markdown_Italic_Dynamic_XXLARGE:I = 0x7f14048f
-
-.field public static Typography_Chat_Markdown_Italic_Dynamic_XXXLARGE:I = 0x7f140490
-
-.field public static Typography_Chat_Markdown_Italic_Dynamic_XXXXLARGE:I = 0x7f140491
-
-.field public static Typography_Chat_Markdown_Link:I = 0x7f140492
-
-.field public static Typography_Chat_Markdown_Link_Dynamic:I = 0x7f140493
-
-.field public static Typography_Chat_Markdown_Link_Dynamic_LARGE:I = 0x7f140494
-
-.field public static Typography_Chat_Markdown_Link_Dynamic_MEDIUM:I = 0x7f140495
-
-.field public static Typography_Chat_Markdown_Link_Dynamic_XLARGE:I = 0x7f140496
-
-.field public static Typography_Chat_Markdown_Link_Dynamic_XXLARGE:I = 0x7f140497
-
-.field public static Typography_Chat_Markdown_Link_Dynamic_XXXLARGE:I = 0x7f140498
-
-.field public static Typography_Chat_Markdown_Link_Dynamic_XXXXLARGE:I = 0x7f140499
-
-.field public static Typography_Chat_Markdown_Monospace:I = 0x7f14049a
-
-.field public static Typography_Chat_Markdown_Monospace_Dynamic:I = 0x7f14049b
-
-.field public static Typography_Chat_Markdown_Monospace_Dynamic_LARGE:I = 0x7f14049c
-
-.field public static Typography_Chat_Markdown_Monospace_Dynamic_MEDIUM:I = 0x7f14049d
-
-.field public static Typography_Chat_Markdown_Monospace_Dynamic_XLARGE:I = 0x7f14049e
-
-.field public static Typography_Chat_Markdown_Monospace_Dynamic_XXLARGE:I = 0x7f14049f
-
-.field public static Typography_Chat_Markdown_Monospace_Dynamic_XXXLARGE:I = 0x7f1404a0
-
-.field public static Typography_Chat_Markdown_Monospace_Dynamic_XXXXLARGE:I = 0x7f1404a1
-
-.field public static Typography_Chat_Markdown_Normal:I = 0x7f1404a2
-
-.field public static Typography_Chat_Markdown_Normal_Dynamic:I = 0x7f1404a3
-
-.field public static Typography_Chat_Markdown_Normal_Dynamic_LARGE:I = 0x7f1404a4
-
-.field public static Typography_Chat_Markdown_Normal_Dynamic_MEDIUM:I = 0x7f1404a5
-
-.field public static Typography_Chat_Markdown_Normal_Dynamic_XLARGE:I = 0x7f1404a6
-
-.field public static Typography_Chat_Markdown_Normal_Dynamic_XXLARGE:I = 0x7f1404a7
-
-.field public static Typography_Chat_Markdown_Normal_Dynamic_XXXLARGE:I = 0x7f1404a8
-
-.field public static Typography_Chat_Markdown_Normal_Dynamic_XXXXLARGE:I = 0x7f1404a9
-
-.field public static Typography_Chat_Markdown_Red:I = 0x7f1404aa
-
-.field public static Typography_Chat_Markdown_Red_Dynamic:I = 0x7f1404ab
-
-.field public static Typography_Chat_Markdown_Red_Dynamic_LARGE:I = 0x7f1404ac
-
-.field public static Typography_Chat_Markdown_Red_Dynamic_MEDIUM:I = 0x7f1404ad
-
-.field public static Typography_Chat_Markdown_Red_Dynamic_XLARGE:I = 0x7f1404ae
-
-.field public static Typography_Chat_Markdown_Red_Dynamic_XXLARGE:I = 0x7f1404af
-
-.field public static Typography_Chat_Markdown_Red_Dynamic_XXXLARGE:I = 0x7f1404b0
-
-.field public static Typography_Chat_Markdown_Red_Dynamic_XXXXLARGE:I = 0x7f1404b1
-
-.field public static Typography_Chat_Markdown_Strikethrough:I = 0x7f1404b2
-
-.field public static Typography_Chat_Markdown_Strikethrough_Dynamic:I = 0x7f1404b3
-
-.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_LARGE:I = 0x7f1404b4
-
-.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_MEDIUM:I = 0x7f1404b5
-
-.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XLARGE:I = 0x7f1404b6
-
-.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XXLARGE:I = 0x7f1404b7
-
-.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XXXLARGE:I = 0x7f1404b8
-
-.field public static Typography_Chat_Markdown_Strikethrough_Dynamic_XXXXLARGE:I = 0x7f1404b9
-
-.field public static Typography_Chat_Markdown_Title:I = 0x7f1404ba
-
-.field public static Typography_Chat_Markdown_Underlined:I = 0x7f1404bb
-
-.field public static Typography_Chat_Markdown_Underlined_Dynamic:I = 0x7f1404bc
-
-.field public static Typography_Chat_Markdown_Underlined_Dynamic_LARGE:I = 0x7f1404bd
-
-.field public static Typography_Chat_Markdown_Underlined_Dynamic_MEDIUM:I = 0x7f1404be
-
-.field public static Typography_Chat_Markdown_Underlined_Dynamic_XLARGE:I = 0x7f1404bf
-
-.field public static Typography_Chat_Markdown_Underlined_Dynamic_XXLARGE:I = 0x7f1404c0
-
-.field public static Typography_Chat_Markdown_Underlined_Dynamic_XXXLARGE:I = 0x7f1404c1
-
-.field public static Typography_Chat_Markdown_Underlined_Dynamic_XXXXLARGE:I = 0x7f1404c2
-
-.field public static Typography_Footnote:I = 0x7f1404c3
-
-.field public static Typography_Footnote_CAPS:I = 0x7f1404c4
-
-.field public static Typography_Footnote_Dynamic:I = 0x7f1404c5
-
-.field public static Typography_Footnote_Dynamic_LARGE:I = 0x7f1404c6
-
-.field public static Typography_Footnote_Dynamic_MEDIUM:I = 0x7f1404c7
-
-.field public static Typography_Footnote_Dynamic_XLARGE:I = 0x7f1404c8
-
-.field public static Typography_Footnote_Dynamic_XXLARGE:I = 0x7f1404c9
-
-.field public static Typography_Footnote_Dynamic_XXXLARGE:I = 0x7f1404ca
-
-.field public static Typography_Footnote_Dynamic_XXXXLARGE:I = 0x7f1404cb
-
-.field public static Typography_Footnote_Medium:I = 0x7f1404cc
-
-.field public static Typography_Headline1:I = 0x7f1404cd
-
-.field public static Typography_Headline1_Dynamic:I = 0x7f1404ce
-
-.field public static Typography_Headline1_Dynamic_LARGE:I = 0x7f1404cf
-
-.field public static Typography_Headline1_Dynamic_MEDIUM:I = 0x7f1404d0
-
-.field public static Typography_Headline1_Dynamic_XLARGE:I = 0x7f1404d1
-
-.field public static Typography_Headline1_Dynamic_XXLARGE:I = 0x7f1404d2
-
-.field public static Typography_Headline1_Dynamic_XXXLARGE:I = 0x7f1404d3
-
-.field public static Typography_Headline1_Dynamic_XXXXLARGE:I = 0x7f1404d4
-
-.field public static Typography_Headline2:I = 0x7f1404d5
-
-.field public static Typography_HeadlineLarge:I = 0x7f1404d6
-
-.field public static Typography_HeadlineMediumStrong:I = 0x7f1404d7
-
-.field public static Typography_Paragraph:I = 0x7f1404d8
-
-.field public static Typography_Paragraph_Dynamic:I = 0x7f1404d9
-
-.field public static Typography_Paragraph_Dynamic_LARGE:I = 0x7f1404da
-
-.field public static Typography_Paragraph_Dynamic_MEDIUM:I = 0x7f1404db
-
-.field public static Typography_Paragraph_Dynamic_XLARGE:I = 0x7f1404dc
-
-.field public static Typography_Paragraph_Dynamic_XXLARGE:I = 0x7f1404dd
-
-.field public static Typography_Paragraph_Dynamic_XXXLARGE:I = 0x7f1404de
-
-.field public static Typography_Paragraph_Dynamic_XXXXLARGE:I = 0x7f1404df
-
-.field public static Typography_Subaction:I = 0x7f1404e0
-
-.field public static Typography_Subhead:I = 0x7f1404e1
-
-.field public static Typography_Subhead_Medium:I = 0x7f1404e2
-
-.field public static Typography_Text:I = 0x7f1404e3
-
-.field public static Typography_Title1:I = 0x7f1404e4
-
-.field public static Typography_Title2:I = 0x7f1404e5
-
-.field public static Typography_Title2_Regular:I = 0x7f1404e6
-
-.field public static Typography_Title3:I = 0x7f1404e7
-
-.field public static Typography_Title3_Regular:I = 0x7f1404e8
-
-.field public static Typography_TitleLarge:I = 0x7f1404e9
-
-.field public static Typography_TitleLargeStrong:I = 0x7f1404ea
-
-.field public static Typography_TitleSmall:I = 0x7f1404eb
-
-.field public static Typography_TitleSmallStrong:I = 0x7f1404ec
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

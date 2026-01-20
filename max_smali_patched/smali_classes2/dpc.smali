@@ -1,146 +1,326 @@
-.class public abstract Ldpc;
-.super Ljava/lang/Object;
+.class public final Ldpc;
+.super Lp6g;
+.source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static oneme_settings_privacy_black_list_empty_state:I = 0x7f0a07ae
 
-.field public static oneme_settings_privacy_black_list_rv:I = 0x7f0a07af
+# instance fields
+.field public final synthetic X:Lone/me/profileedit/ProfileEditScreen;
 
-.field public static oneme_settings_privacy_black_list_toolbar:I = 0x7f0a07b0
+.field public final synthetic Y:Landroid/view/View;
 
-.field public static oneme_settings_privacy_black_list_unblock_action:I = 0x7f0a07b1
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static oneme_settings_privacy_black_list_unblock_cancel_action:I = 0x7f0a07b2
 
-.field public static oneme_settings_privacy_content_level_access:I = 0x7f0a07b3
+# direct methods
+.method public constructor <init>(Lone/me/profileedit/ProfileEditScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_settings_privacy_enter_pin_code_root:I = 0x7f0a07b4
+    iput-object p1, p0, Ldpc;->X:Lone/me/profileedit/ProfileEditScreen;
 
-.field public static oneme_settings_privacy_info_header:I = 0x7f0a07b5
+    iput-object p2, p0, Ldpc;->Y:Landroid/view/View;
 
-.field public static oneme_settings_privacy_onboarding_content:I = 0x7f0a07b6
+    const/4 p1, 0x2
 
-.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f0a07b7
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_settings_privacy_onboarding_content_title:I = 0x7f0a07b8
+    return-void
+.end method
 
-.field public static oneme_settings_privacy_onboarding_item_1:I = 0x7f0a07b9
 
-.field public static oneme_settings_privacy_onboarding_item_2:I = 0x7f0a07ba
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static oneme_settings_privacy_onboarding_item_3:I = 0x7f0a07bb
+    check-cast p1, Llnc;
 
-.field public static oneme_settings_privacy_onboarding_item_4:I = 0x7f0a07bc
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_settings_privacy_onboarding_lock:I = 0x7f0a07bd
+    invoke-virtual {p0, p1, p2}, Ldpc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static oneme_settings_privacy_onboarding_lock_background:I = 0x7f0a07be
+    move-result-object p1
 
-.field public static oneme_settings_privacy_onboarding_root:I = 0x7f0a07bf
+    check-cast p1, Ldpc;
 
-.field public static oneme_settings_privacy_onboarding_scroll_view:I = 0x7f0a07c0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-.field public static oneme_settings_privacy_onboarding_set_password_button:I = 0x7f0a07c1
+    invoke-virtual {p1, p2}, Ldpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_settings_privacy_onboarding_set_pin_code_button:I = 0x7f0a07c2
+    return-object p2
+.end method
 
-.field public static oneme_settings_privacy_onboarding_toolbar:I = 0x7f0a07c3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-.field public static oneme_settings_privacy_onboarding_top_guideline:I = 0x7f0a07c4
+    new-instance v0, Ldpc;
 
-.field public static oneme_settings_privacy_onboarding_without_code_button:I = 0x7f0a07c5
+    iget-object v1, p0, Ldpc;->X:Lone/me/profileedit/ProfileEditScreen;
 
-.field public static oneme_settings_privacy_pin_code_toolbar:I = 0x7f0a07c6
+    iget-object v2, p0, Ldpc;->Y:Landroid/view/View;
 
-.field public static oneme_settings_privacy_safe_files:I = 0x7f0a07c7
+    invoke-direct {v0, v1, v2, p2}, Ldpc;-><init>(Lone/me/profileedit/ProfileEditScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f0a07c8
+    iput-object p1, v0, Ldpc;->o:Ljava/lang/Object;
 
-.field public static oneme_settings_privacy_screen_black_list:I = 0x7f0a07c9
+    return-object v0
+.end method
 
-.field public static oneme_settings_privacy_screen_blacklist:I = 0x7f0a07ca
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-.field public static oneme_settings_privacy_screen_call_me:I = 0x7f0a07cb
+    iget-object v0, p0, Ldpc;->o:Ljava/lang/Object;
 
-.field public static oneme_settings_privacy_screen_dialog_add_chat_button_all:I = 0x7f0a07cc
+    check-cast v0, Llnc;
 
-.field public static oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I = 0x7f0a07cd
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static oneme_settings_privacy_screen_dialog_call_button_all:I = 0x7f0a07ce
+    iget-object p1, p0, Ldpc;->X:Lone/me/profileedit/ProfileEditScreen;
 
-.field public static oneme_settings_privacy_screen_dialog_call_button_contacts:I = 0x7f0a07cf
+    iget-object v1, p1, Lone/me/profileedit/ProfileEditScreen;->x0:Lro0;
 
-.field public static oneme_settings_privacy_screen_dialog_content_level_access_all:I = 0x7f0a07d0
+    iget-object v2, p1, Lone/me/profileedit/ProfileEditScreen;->u0:Ljld;
 
-.field public static oneme_settings_privacy_screen_dialog_content_level_access_safe:I = 0x7f0a07d1
+    sget-object v3, Lone/me/profileedit/ProfileEditScreen;->y0:[Lz28;
 
-.field public static oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I = 0x7f0a07d2
+    const/4 v4, 0x4
 
-.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f0a07d3
+    aget-object v5, v3, v4
 
-.field public static oneme_settings_privacy_screen_dialog_online_button_contacts:I = 0x7f0a07d4
+    invoke-interface {v2, p1, v5}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-.field public static oneme_settings_privacy_screen_dialog_online_button_nobody:I = 0x7f0a07d5
+    move-result-object v5
 
-.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f0a07d6
+    check-cast v5, Lj4b;
 
-.field public static oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I = 0x7f0a07d7
+    iget-object v6, v0, Llnc;->a:Ljava/lang/String;
 
-.field public static oneme_settings_privacy_screen_dialog_safe_file_no_btn:I = 0x7f0a07d8
+    iget-boolean v7, v0, Llnc;->e:Z
 
-.field public static oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I = 0x7f0a07d9
+    iget-wide v8, v0, Llnc;->b:J
 
-.field public static oneme_settings_privacy_screen_dialog_search_by_phone_all:I = 0x7f0a07da
+    new-instance v10, Ljava/lang/Long;
 
-.field public static oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I = 0x7f0a07db
+    invoke-direct {v10, v8, v9}, Ljava/lang/Long;-><init>(J)V
 
-.field public static oneme_settings_privacy_screen_finished_sessions:I = 0x7f0a07dc
+    iget-object v8, v0, Llnc;->d:Ljava/lang/CharSequence;
 
-.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f0a07dd
+    if-nez v8, :cond_0
 
-.field public static oneme_settings_privacy_screen_how_session:I = 0x7f0a07de
+    const-string v8, ""
 
-.field public static oneme_settings_privacy_screen_list:I = 0x7f0a07df
+    :cond_0
+    invoke-static {v5, v6, v10, v8}, Lj4b;->o(Lj4b;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
 
-.field public static oneme_settings_privacy_screen_online_state_all:I = 0x7f0a07e0
+    aget-object v3, v3, v4
 
-.field public static oneme_settings_privacy_screen_online_state_nobody:I = 0x7f0a07e1
+    invoke-interface {v2, p1, v3}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f0a07e2
+    move-result-object v2
 
-.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f0a07e3
+    check-cast v2, Lj4b;
 
-.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f0a07e4
+    iget-boolean v3, v0, Llnc;->f:Z
 
-.field public static oneme_settings_privacy_screen_settings_header_vh:I = 0x7f0a07e5
+    invoke-virtual {v2, v3}, Lj4b;->setAddBadgeVisibility(Z)V
 
-.field public static oneme_settings_privacy_screen_settings_item_vh:I = 0x7f0a07e6
+    iget v0, v0, Llnc;->g:I
 
-.field public static oneme_settings_privacy_screen_settings_warning_vh:I = 0x7f0a07e7
+    invoke-static {v0}, Lt02;->t(I)I
 
-.field public static oneme_settings_privacy_screen_toolbar:I = 0x7f0a07e8
+    move-result v0
 
-.field public static oneme_settings_privacy_screen_twofa:I = 0x7f0a07e9
+    if-eqz v0, :cond_3
 
-.field public static oneme_settings_privacy_screen_twofa_profile_delete:I = 0x7f0a07ea
+    const/4 v1, 0x1
 
-.field public static oneme_settings_privacy_screen_twofa_warning_item:I = 0x7f0a07eb
+    if-ne v0, v1, :cond_2
 
-.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f0a07ec
+    if-eqz v7, :cond_1
 
-.field public static oneme_settings_privacy_setup_pin_code_description:I = 0x7f0a07ed
+    invoke-virtual {p1}, Lone/me/profileedit/ProfileEditScreen;->A0()Lymb;
 
-.field public static oneme_settings_privacy_setup_pin_code_error:I = 0x7f0a07ee
+    move-result-object v0
 
-.field public static oneme_settings_privacy_setup_pin_code_forgot:I = 0x7f0a07ef
+    new-instance v1, Limb;
 
-.field public static oneme_settings_privacy_setup_pin_code_input:I = 0x7f0a07f0
+    new-instance v2, Lyoc;
 
-.field public static oneme_settings_privacy_setup_pin_code_lock:I = 0x7f0a07f1
+    const/4 v3, 0x4
 
-.field public static oneme_settings_privacy_setup_pin_code_root_view:I = 0x7f0a07f2
+    invoke-direct {v2, p1, v3}, Lyoc;-><init>(Lone/me/profileedit/ProfileEditScreen;I)V
 
-.field public static oneme_settings_privacy_setup_pin_code_title:I = 0x7f0a07f3
+    invoke-direct {v1, v2}, Limb;-><init>(Lnq6;)V
 
-.field public static top_barrier:I = 0x7f0a0c1a
+    invoke-virtual {v0, v1}, Lymb;->setRightActions(Lomb;)V
+
+    goto/16 :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lone/me/profileedit/ProfileEditScreen;->A0()Lymb;
+
+    move-result-object p1
+
+    sget-object v0, Ljmb;->a:Ljmb;
+
+    invoke-virtual {p1, v0}, Lymb;->setRightActions(Lomb;)V
+
+    goto/16 :goto_1
+
+    :cond_2
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p1
+
+    :cond_3
+    invoke-virtual {v1}, Lro0;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, p0, Ldpc;->Y:Landroid/view/View;
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Lro0;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_4
+    invoke-virtual {v1}, Lro0;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    if-eqz v7, :cond_5
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_5
+    const/16 v1, 0x8
+
+    :goto_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    const/16 v1, 0xc
+
+    if-eqz v7, :cond_7
+
+    invoke-virtual {v0}, Landroid/view/View;->isLaidOut()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    invoke-virtual {v0}, Landroid/view/View;->isLayoutRequested()Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    invoke-static {p1}, Lone/me/profileedit/ProfileEditScreen;->z0(Lone/me/profileedit/ProfileEditScreen;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    const/4 v3, 0x2
+
+    invoke-static {v1, v2, v3, v0}, Lhc0;->c(FFII)I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v3
+
+    invoke-virtual {p1, v1, v2, v3, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    goto :goto_1
+
+    :cond_6
+    new-instance v1, Lmv1;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, p1, v2, v0}, Lmv1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+
+    goto :goto_1
+
+    :cond_7
+    invoke-static {p1}, Lone/me/profileedit/ProfileEditScreen;->z0(Lone/me/profileedit/ProfileEditScreen;)Landroidx/recyclerview/widget/RecyclerView;
+
+    move-result-object p1
+
+    int-to-float v0, v1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v1
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v3
+
+    invoke-virtual {p1, v1, v2, v3, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    :goto_1
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+.end method

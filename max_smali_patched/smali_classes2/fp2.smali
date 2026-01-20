@@ -17,90 +17,74 @@
     .end annotation
 .end field
 
-.field public static final b:Low3;
+.field public static final enum a:Lfp2;
 
-.field public static final enum c:Lfp2;
+.field public static final enum b:Lfp2;
 
-.field public static final synthetic d:[Lfp2;
+.field public static final synthetic c:[Lfp2;
 
-
-# instance fields
-.field public final a:Ltif;
+.field public static final synthetic d:Lal5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 6
 
     new-instance v0, Lfp2;
 
-    sget-object v1, Laq4;->d:Lcy9;
-
-    const-string v1, "DEFAULT"
+    const-string v1, "MEDIA"
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lfp2;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lfp2;->c:Lfp2;
+    sput-object v0, Lfp2;->a:Lfp2;
 
     new-instance v1, Lfp2;
 
-    const-string v2, "SCHEDULED_SEND"
+    const-string v2, "FILE"
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3}, Lfp2;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    filled-new-array {v0, v1}, [Lfp2;
+    new-instance v2, Lfp2;
+
+    const-string v3, "LINK"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v3, Lfp2;
+
+    const-string v4, "AUDIO"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lfp2;->b:Lfp2;
+
+    filled-new-array {v0, v1, v2, v3}, [Lfp2;
 
     move-result-object v0
 
-    sput-object v0, Lfp2;->d:[Lfp2;
+    sput-object v0, Lfp2;->c:[Lfp2;
 
-    new-instance v0, Low3;
+    new-instance v1, Lal5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v0, Lfp2;->b:Low3;
+    sput-object v1, Lfp2;->d:Lal5;
 
-    new-instance v0, Lj8;
+    new-instance v0, Lz7;
 
-    const/16 v1, 0x13
+    const/16 v1, 0x12
 
-    invoke-direct {v0, v1}, Lj8;-><init>(I)V
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
 
     sput-object v0, Lfp2;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 1
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance p1, Lhi1;
-
-    const/16 p2, 0xe
-
-    invoke-direct {p1, p2, p0}, Lhi1;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ltif;
-
-    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
-
-    iput-object p2, p0, Lfp2;->a:Ltif;
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p1
-
-    const/4 p2, 0x0
-
-    const/4 v0, 0x3
-
-    invoke-virtual {p1, p2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     return-void
 .end method
@@ -122,7 +106,7 @@
 .method public static values()[Lfp2;
     .locals 1
 
-    sget-object v0, Lfp2;->d:[Lfp2;
+    sget-object v0, Lfp2;->c:[Lfp2;
 
     invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 

@@ -1,221 +1,183 @@
-.class public final Lwh2;
-.super Logf;
+.class public final enum Lwh2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Landroid/os/Parcelable;
+.implements Lsx0;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lwh2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final enum b:Lwh2;
+
+.field public static final synthetic c:[Lwh2;
+
+.field public static final synthetic d:Lal5;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p2, p0, Lwh2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    new-instance v0, Lwh2;
 
-    const/4 p2, 0x2
+    const/4 v1, 0x0
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v2, "local"
+
+    const-string v3, "LOCAL_ID"
+
+    invoke-direct {v0, v3, v1, v2}, Lwh2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lwh2;->b:Lwh2;
+
+    new-instance v1, Lwh2;
+
+    const/4 v2, 0x1
+
+    const-string v3, "server"
+
+    const-string v4, "SERVER_ID"
+
+    invoke-direct {v1, v4, v2, v3}, Lwh2;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    filled-new-array {v0, v1}, [Lwh2;
+
+    move-result-object v0
+
+    sput-object v0, Lwh2;->c:[Lwh2;
+
+    new-instance v1, Lal5;
+
+    invoke-direct {v1, v0}, Lal5;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lwh2;->d:Lal5;
+
+    new-instance v0, Lz7;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Lwh2;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, p1, p2}, Lwh2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lwh2;->a:Ljava/lang/String;
 
-    move-result-object p1
-
-    check-cast p1, Lwh2;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lwh2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
+    return-void
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lwh2;
+    .locals 1
 
-    new-instance v0, Lwh2;
+    const-class v0, Lwh2;
 
-    iget-object v1, p0, Lwh2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-direct {v0, p2, v1}, Lwh2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;)V
+    move-result-object p0
 
-    iput-object p1, v0, Lwh2;->o:Ljava/lang/Object;
+    check-cast p0, Lwh2;
+
+    return-object p0
+.end method
+
+.method public static values()[Lwh2;
+    .locals 1
+
+    sget-object v0, Lwh2;->c:[Lwh2;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lwh2;
 
     return-object v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+
+# virtual methods
+.method public final a(Ljava/lang/String;)Ljava/lang/Object;
     .locals 3
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Lb2;
 
-    iget-object p1, p0, Lwh2;->o:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast p1, Lay4;
+    sget-object v2, Lwh2;->d:Lal5;
 
-    instance-of v0, p1, Lzx4;
+    invoke-direct {v0, v1, v2}, Lb2;-><init>(ILjava/lang/Object;)V
 
-    iget-object v1, p0, Lwh2;->X:Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;
+    :cond_0
+    invoke-virtual {v0}, Lb2;->hasNext()Z
 
-    if-eqz v0, :cond_1
+    move-result v1
 
-    const/4 v0, 0x0
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
+    invoke-virtual {v0}, Lb2;->next()Ljava/lang/Object;
 
-    check-cast p1, Lzx4;
+    move-result-object v1
 
-    iget-object v0, p1, Lzx4;->a:Landroid/net/Uri;
+    check-cast v1, Lwh2;
 
-    iget-object p1, p1, Lzx4;->b:Lux4;
+    iget-object v2, v1, Lwh2;->a:Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v2, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    packed-switch v2, :pswitch_data_0
+    if-eqz v2, :cond_0
 
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
-
-    :pswitch_0
-    if-eqz v0, :cond_2
-
-    sget-object p1, Lgj7;->a:Ljava/lang/String;
-
-    const-string p1, "*/*"
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0, p1}, Lgj7;->g(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_1
-    sget-object v0, Lux4;->o:Lux4;
-
-    if-ne p1, v0, :cond_0
-
-    sget p1, Lpsc;->media_share_dialog_download_gif_success:I
-
-    goto :goto_0
-
-    :cond_0
-    sget p1, Lpsc;->media_share_dialog_download_photo_success:I
-
-    :goto_0
-    sget v0, Lyjd;->A:I
-
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->N0(II)V
-
-    goto :goto_1
-
-    :pswitch_2
-    if-eqz v0, :cond_2
-
-    sget-object p1, Lgj7;->a:Ljava/lang/String;
-
-    const-string p1, "image/*"
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0, p1}, Lgj7;->g(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :pswitch_3
-    sget p1, Lpsc;->media_share_dialog_download_video_success:I
-
-    sget v0, Lyjd;->o:I
-
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->N0(II)V
-
-    goto :goto_1
-
-    :pswitch_4
-    if-eqz v0, :cond_2
-
-    sget-object p1, Lgj7;->a:Ljava/lang/String;
-
-    const-string p1, "video/*"
-
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0, p1}, Lgj7;->g(Landroid/content/Context;Landroid/net/Uri;Ljava/lang/String;)V
-
-    goto :goto_1
+    return-object v1
 
     :cond_1
-    instance-of v0, p1, Lyx4;
+    new-instance p1, Ljava/util/NoSuchElementException;
 
-    if-eqz v0, :cond_4
+    const-string v0, "Collection contains no element matching the predicate."
 
-    check-cast p1, Lyx4;
-
-    iget p1, p1, Lyx4;->a:I
-
-    sget v0, Lyjd;->J:I
-
-    sget-object v2, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->H0:[Les7;
-
-    invoke-virtual {v1, p1, v0}, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->N0(II)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {v1, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->D0(Z)V
-
-    :cond_2
-    :goto_1
-    iget-object p1, v1, Lone/me/dialogs/share/media/ChatMediaDownloadBottomSheet;->E0:Lcq4;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Lcq4;->a()V
-
-    :cond_3
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-
-    :cond_4
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {p1, v0}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
 
     throw p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

@@ -1,189 +1,117 @@
 .class public final Lp7b;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lod;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Lr7b;
+.field public final synthetic X:Lq7b;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lr7b;)V
+.method public constructor <init>(Lq7b;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp7b;->X:Lq7b;
 
-    iput-object p1, p0, Lp7b;->a:Lr7b;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E(Lnd;Ljava/lang/String;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p1, p0, Lp7b;->a:Lr7b;
+    check-cast p1, Lzb4;
 
-    iput-object p2, p1, Lql0;->h:Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
-.end method
-
-.method public final H(Lk48;Lmt8;)V
-    .locals 4
-
-    iget-object v0, p0, Lp7b;->a:Lr7b;
-
-    iget-object v1, v0, Lql0;->l:Lld6;
-
-    iget-object p1, p1, Lk48;->a:Lec4;
-
-    invoke-static {p1}, Lixi;->d(Lec4;)Ln7b;
-
-    move-result-object v2
-
-    sget-object v3, Lgc4;->a:Lyib;
-
-    iget p2, p2, Lmt8;->a:I
-
-    invoke-static {p2}, Lgc4;->a(I)Lx7b;
-
-    move-result-object p2
-
-    invoke-virtual {v1, v0, v2, p2}, Lld6;->b(Lb8b;Ln7b;Lx7b;)V
-
-    iget-object p1, p1, Lec4;->a:Landroid/net/Uri;
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lp7b;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p1
 
-    iput-object p1, v0, Lr7b;->L:Ljava/lang/String;
+    check-cast p1, Lp7b;
 
-    return-void
-.end method
+    sget-object p2, Lb3h;->a:Lb3h;
 
-.method public final K0(Lnd;Ljava/lang/String;)V
-    .locals 0
-
-    iget-object p1, p0, Lp7b;->a:Lr7b;
-
-    iput-object p2, p1, Lql0;->g:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final R(Lk48;Lmt8;)V
-    .locals 3
-
-    iget-object v0, p2, Lmt8;->g:Ljava/lang/Object;
-
-    check-cast v0, Lub6;
-
-    iget v1, p2, Lmt8;->b:I
-
-    const/4 v2, 0x1
-
-    if-eq v1, v2, :cond_1
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    invoke-static {v0}, Laji;->c(Lub6;)Lyng;
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lp7b;->a:Lr7b;
-
-    iget-object v1, v0, Lql0;->l:Lld6;
-
-    iget-object p1, p1, Lk48;->a:Lec4;
-
-    invoke-static {p1}, Lixi;->d(Lec4;)Ln7b;
+    invoke-virtual {p1, p2}, Lp7b;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    sget-object v2, Lgc4;->a:Lyib;
-
-    iget p2, p2, Lmt8;->a:I
-
-    invoke-static {p2}, Lgc4;->a(I)Lx7b;
-
-    move-result-object p2
-
-    invoke-virtual {v1, v0, p1, p2}, Lld6;->d(Lb8b;Ln7b;Lx7b;)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final e0(Lnd;Lk48;Lmt8;Ljava/io/IOException;Z)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object p1, p0, Lp7b;->a:Lr7b;
+    new-instance p1, Lp7b;
 
-    iget-object p5, p1, Lql0;->l:Lld6;
+    iget-object v0, p0, Lp7b;->X:Lq7b;
 
-    iget-object p2, p2, Lk48;->a:Lec4;
+    invoke-direct {p1, v0, p2}, Lp7b;-><init>(Lq7b;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {p2}, Lixi;->d(Lec4;)Ln7b;
-
-    move-result-object p2
-
-    sget-object v0, Lgc4;->a:Lyib;
-
-    iget p3, p3, Lmt8;->a:I
-
-    invoke-static {p3}, Lgc4;->a(I)Lx7b;
-
-    move-result-object p3
-
-    invoke-virtual {p5, p1, p2, p3, p4}, Lld6;->c(Lb8b;Ln7b;Lx7b;Ljava/io/IOException;)V
-
-    return-void
+    return-object p1
 .end method
 
-.method public final o0(Lnd;Ljava/lang/String;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object p1, p0, Lp7b;->a:Lr7b;
+    iget v0, p0, Lp7b;->o:I
 
-    const/4 p2, 0x0
+    const/4 v1, 0x1
 
-    iput-object p2, p1, Lql0;->g:Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    return-void
-.end method
+    if-ne v0, v1, :cond_0
 
-.method public final z(Lnd;Ljava/lang/String;)V
-    .locals 0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lp7b;->a:Lr7b;
+    return-object p1
 
-    const/4 p2, 0x0
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    iput-object p2, p1, Lql0;->h:Ljava/lang/String;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-void
-.end method
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public final z0(Lnd;IJJ)V
-    .locals 0
+    throw p1
 
-    iget-object p1, p0, Lp7b;->a:Lr7b;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p2, p1, Lql0;->l:Lld6;
+    iget-object p1, p0, Lp7b;->X:Lq7b;
 
-    invoke-virtual {p2, p1}, Lld6;->a(Lb8b;)V
+    iget-object v0, p1, Lq7b;->c:Lo58;
 
-    return-void
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lla3;
+
+    iget-wide v2, p1, Lq7b;->b:J
+
+    iput v1, p0, Lp7b;->o:I
+
+    invoke-virtual {v0, v2, v3, p0}, Lla3;->v(JLo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    return-object p1
 .end method

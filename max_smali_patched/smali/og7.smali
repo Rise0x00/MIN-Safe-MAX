@@ -1,72 +1,78 @@
-.class public Log7;
+.class public final synthetic Log7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrw1;
+
 
 # instance fields
-.field public final a:Landroid/hardware/camera2/params/InputConfiguration;
+.field public final synthetic X:Landroid/graphics/Rect;
+
+.field public final synthetic Y:Lig7;
+
+.field public final synthetic a:Lqg7;
+
+.field public final synthetic b:Ljava/util/concurrent/Executor;
+
+.field public final synthetic c:Lui7;
+
+.field public final synthetic d:Landroid/graphics/Matrix;
+
+.field public final synthetic o:Lui7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
+.method public synthetic constructor <init>(Lqg7;Ljava/util/concurrent/Executor;Lui7;Landroid/graphics/Matrix;Lui7;Landroid/graphics/Rect;Lig7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p1, Landroid/hardware/camera2/params/InputConfiguration;
+    iput-object p1, p0, Log7;->a:Lqg7;
 
-    iput-object p1, p0, Log7;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    iput-object p2, p0, Log7;->b:Ljava/util/concurrent/Executor;
+
+    iput-object p3, p0, Log7;->c:Lui7;
+
+    iput-object p4, p0, Log7;->d:Landroid/graphics/Matrix;
+
+    iput-object p5, p0, Log7;->o:Lui7;
+
+    iput-object p6, p0, Log7;->X:Landroid/graphics/Rect;
+
+    iput-object p7, p0, Log7;->Y:Lig7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final l(Lqw1;)Ljava/lang/String;
+    .locals 8
 
-    instance-of v0, p1, Log7;
+    new-instance v0, Lpg7;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Log7;->a:Lqg7;
 
-    const/4 p1, 0x0
+    iget-object v2, p0, Log7;->c:Lui7;
 
-    return p1
+    iget-object v3, p0, Log7;->d:Landroid/graphics/Matrix;
 
-    :cond_0
-    check-cast p1, Log7;
+    iget-object v4, p0, Log7;->o:Lui7;
 
-    iget-object p1, p1, Log7;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    iget-object v5, p0, Log7;->X:Landroid/graphics/Rect;
 
-    iget-object v0, p0, Log7;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    iget-object v6, p0, Log7;->Y:Lig7;
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v7, p1
 
-    move-result p1
+    invoke-direct/range {v0 .. v7}, Lpg7;-><init>(Lqg7;Lui7;Landroid/graphics/Matrix;Lui7;Landroid/graphics/Rect;Lig7;Lqw1;)V
 
-    return p1
-.end method
+    iget-object p1, p0, Log7;->b:Ljava/util/concurrent/Executor;
 
-.method public final hashCode()I
-    .locals 1
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Log7;->a:Landroid/hardware/camera2/params/InputConfiguration;
+    const-string p1, "analyzeImage"
 
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/InputConfiguration;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Log7;->a:Landroid/hardware/camera2/params/InputConfiguration;
-
-    invoke-virtual {v0}, Landroid/hardware/camera2/params/InputConfiguration;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

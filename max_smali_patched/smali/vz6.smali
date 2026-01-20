@@ -1,3 +1,3 @@
-.class public abstract Lvz6;
-.super Ljava/lang/Object;
+.class public final Lvz6;
+.super Lkotlinx/coroutines/internal/LockFreeTaskQueue;
 .source "SourceFile"

@@ -1,171 +1,101 @@
-.class public final Lyx6;
+.class public final synthetic Lyx6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lrs4;
+.implements Lnbf;
 
 
 # instance fields
-.field public final a:Lru7;
+.field public final synthetic a:Ltx4;
 
-.field public final b:Lru7;
+.field public final synthetic b:Lski;
 
-.field public final c:Lru7;
+.field public final synthetic c:Le0a;
 
-.field public final d:Lru7;
-
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public f:Lgye;
-
-.field public final g:Lj0d;
+.field public final synthetic d:Lsmi;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;)V
-    .locals 8
+.method public synthetic constructor <init>(Ltx4;Lski;Le0a;Lsmi;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyx6;->a:Lru7;
+    iput-object p1, p0, Lyx6;->a:Ltx4;
 
-    iput-object p3, p0, Lyx6;->b:Lru7;
+    iput-object p2, p0, Lyx6;->b:Lski;
 
-    iput-object p2, p0, Lyx6;->c:Lru7;
+    iput-object p3, p0, Lyx6;->c:Le0a;
 
-    iput-object p4, p0, Lyx6;->d:Lru7;
-
-    sget-object p1, Lyr4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide v1
-
-    invoke-interface {p3}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltlf;
-
-    check-cast p1, Lsta;
-
-    invoke-virtual {p1}, Lsta;->a()La54;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyx6;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v0, Lke4;
-
-    sget p1, Lmsc;->oneme_settings_dump_heap:I
-
-    new-instance v3, Lirf;
-
-    invoke-direct {v3, p1}, Lirf;-><init>(I)V
-
-    sget v4, Lyjd;->c:I
-
-    const/4 v6, 0x0
-
-    const/16 v7, 0x18
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v0 .. v7}, Lke4;-><init>(JLnrf;ILnrf;Loxi;I)V
-
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lb1f;->a(Ljava/lang/Object;)La1f;
-
-    move-result-object p1
-
-    new-instance p2, Lj0d;
-
-    invoke-direct {p2, p1}, Lj0d;-><init>(Lf1a;)V
-
-    iput-object p2, p0, Lyx6;->g:Lj0d;
+    iput-object p4, p0, Lyx6;->d:Lsmi;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lt0f;
-    .locals 1
+.method public final onResponse(Lorg/json/JSONObject;)V
+    .locals 3
 
-    iget-object v0, p0, Lyx6;->g:Lj0d;
+    iget-object v0, p0, Lyx6;->b:Lski;
 
-    return-object v0
-.end method
+    iget-object v0, v0, Lski;->b:Ljava/lang/Object;
 
-.method public final d(Lke4;)V
-    .locals 4
+    check-cast v0, Lnue;
 
-    iget-object p1, p0, Lyx6;->f:Lgye;
+    const-string v1, "chunk"
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    invoke-virtual {p1}, Lo0;->isActive()Z
+    move-result-object v1
 
-    move-result p1
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x1
+    iget-object v2, p0, Lyx6;->a:Ltx4;
 
-    if-ne p1, v0, :cond_0
+    iget-object v2, v2, Ltx4;->b:Ljava/lang/Object;
 
-    iget-object p1, p0, Lyx6;->d:Lru7;
+    check-cast v2, Lxz0;
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2, v1, v0}, Lxz0;->L(Lorg/json/JSONObject;Lnue;)Lhcf;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/lang/RuntimeException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Can\'t parse chunk "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    check-cast p1, Lc3b;
+    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "\u0414\u0430\u043c\u043f \u043f\u0430\u043c\u044f\u0442\u0438 \u0443\u0436\u0435 \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442, \u043d\u0443\u0436\u043d\u043e \u043d\u0435\u043c\u043d\u043e\u0433\u043e \u043f\u043e\u0434\u043e\u0436\u0434\u0430\u0442\u044c"
+    iget-object p1, p0, Lyx6;->c:Le0a;
 
-    invoke-virtual {p1, v0}, Lc3b;->h(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1}, Lc3b;->i()Lb3b;
+    invoke-virtual {p1, v0}, Le0a;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 
-    :cond_0
-    iget-object p1, p0, Lyx6;->b:Lru7;
+    :cond_1
+    iget-object p1, p0, Lyx6;->d:Lsmi;
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ltlf;
-
-    check-cast p1, Lsta;
-
-    invoke-virtual {p1}, Lsta;->b()La54;
-
-    move-result-object p1
-
-    new-instance v0, Lxx6;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lxx6;-><init>(Lyx6;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v2, 0x2
-
-    iget-object v3, p0, Lyx6;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v3, p1, v1, v0, v2}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyx6;->f:Lgye;
+    invoke-virtual {p1, v0}, Lsmi;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

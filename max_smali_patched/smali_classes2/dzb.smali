@@ -1,25 +1,21 @@
-.class public abstract Ldzb;
-.super Ljava/lang/Object;
+.class public final Ldzb;
+.super Laq;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lxg6;
+.field public static final a:Ldzb;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    new-instance v0, Lxg6;
+    new-instance v0, Ldzb;
 
-    const/16 v1, 0x14
+    invoke-direct {v0}, Laq;-><init>()V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lxg6;-><init>(IB)V
-
-    sput-object v0, Ldzb;->a:Lxg6;
+    sput-object v0, Ldzb;->a:Ldzb;
 
     return-void
 .end method

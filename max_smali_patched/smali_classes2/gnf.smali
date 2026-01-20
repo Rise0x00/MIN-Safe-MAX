@@ -3,129 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Lnm4;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Iterable;
-
-.field public final synthetic b:Lfj6;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/List;Lfj6;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lgnf;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgnf;->a:Ljava/lang/Iterable;
-
-    iput-object p2, p0, Lgnf;->b:Lfj6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 9
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-    iget-object v0, p0, Lgnf;->b:Lfj6;
+    iget v0, p0, Lgnf;->a:I
 
-    iget-object v1, p0, Lgnf;->a:Ljava/lang/Iterable;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    new-instance v0, Lone/me/webview/FaqWebViewWidget;
 
-    move-result-object v1
+    invoke-direct {v0}, Lone/me/webview/FaqWebViewWidget;-><init>()V
 
-    const/4 v2, -0x1
+    return-object v0
 
-    const/4 v3, 0x0
+    :pswitch_0
+    new-instance v0, Lone/me/webapp/settings/WebAppsSettingScreen;
 
-    move v5, v2
+    invoke-direct {v0}, Lone/me/webapp/settings/WebAppsSettingScreen;-><init>()V
 
-    move v6, v5
+    return-object v0
 
-    move v4, v3
+    :pswitch_1
+    new-instance v0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-direct {v0}, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;-><init>()V
 
-    move-result v7
+    return-object v0
 
-    if-eqz v7, :cond_3
+    :pswitch_2
+    new-instance v1, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    :try_start_0
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/4 v5, 0x2
 
-    move-result-object v7
+    const/4 v6, 0x0
 
-    check-cast v7, Ljava/lang/Long;
+    sget-object v2, Lguf;->c:Lguf;
 
-    invoke-interface {v0, p1}, Lfj6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide/16 v3, 0x0
 
-    move-result-object v8
+    invoke-direct/range {v1 .. v6}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lguf;JILso4;)V
 
-    invoke-virtual {v7, v8}, Ljava/lang/Long;->equals(Ljava/lang/Object;)Z
+    return-object v1
 
-    move-result v8
+    :pswitch_3
+    new-instance v2, Lone/me/stickerssettings/stickersscreen/StickersScreen;
 
-    if-eqz v8, :cond_0
+    const/4 v6, 0x2
 
-    move v5, v4
+    const/4 v7, 0x0
 
-    goto :goto_1
+    sget-object v3, Lguf;->b:Lguf;
 
-    :cond_0
-    invoke-interface {v0, p2}, Lfj6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    const-wide/16 v4, 0x0
 
-    move-result-object v8
+    invoke-direct/range {v2 .. v7}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lguf;JILso4;)V
 
-    invoke-virtual {v7, v8}, Ljava/lang/Long;->equals(Ljava/lang/Object;)Z
+    return-object v2
 
-    move-result v7
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :pswitch_4
+    new-instance v0, Lone/me/stickerssettings/StickersSettingsScreen;
 
-    if-eqz v7, :cond_1
+    invoke-direct {v0}, Lone/me/stickerssettings/StickersSettingsScreen;-><init>()V
 
-    move v6, v4
+    return-object v0
 
-    :cond_1
-    :goto_1
-    if-eq v5, v2, :cond_2
+    :pswitch_5
+    new-instance v0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
 
-    if-eq v6, v2, :cond_2
+    const/4 v1, 0x0
 
-    goto :goto_2
+    sget-object v2, Linf;->c:Linf;
 
-    :cond_2
-    add-int/lit8 v4, v4, 0x1
+    invoke-direct {v0, v1, v2}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLinf;)V
 
-    goto :goto_0
+    return-object v0
 
-    :catchall_0
-    move-exception p1
+    :pswitch_6
+    new-instance v0, Lone/me/startconversation/chat/PickChatMembers;
 
-    new-instance p2, Ljava/lang/RuntimeException;
+    invoke-direct {v0}, Lone/me/startconversation/chat/PickChatMembers;-><init>()V
 
-    invoke-direct {p2, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    return-object v0
 
-    throw p2
+    :pswitch_7
+    new-instance v0, Lone/me/startconversation/StartConversationScreen;
 
-    :cond_3
-    :goto_2
-    if-ge v5, v6, :cond_4
+    invoke-direct {v0}, Lone/me/startconversation/StartConversationScreen;-><init>()V
 
-    return v2
+    return-object v0
 
-    :cond_4
-    if-ne v5, v6, :cond_5
-
-    return v3
-
-    :cond_5
-    const/4 p1, 0x1
-
-    return p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

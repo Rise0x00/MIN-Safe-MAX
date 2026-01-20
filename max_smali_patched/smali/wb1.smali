@@ -3,22 +3,20 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfc1;
+.implements Lyb1;
 
 
-# static fields
-.field public static final a:Lwb1;
+# instance fields
+.field public final a:Lm71;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lm71;)V
+    .locals 0
 
-    new-instance v0, Lwb1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lwb1;->a:Lwb1;
+    iput-object p1, p0, Lwb1;->a:Lm71;
 
     return-void
 .end method
@@ -26,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -35,30 +33,65 @@
     return v0
 
     :cond_0
-    instance-of p1, p1, Lwb1;
+    instance-of v1, p1, Lwb1;
 
-    if-nez p1, :cond_1
+    const/4 v2, 0x0
 
-    const/4 p1, 0x0
+    if-nez v1, :cond_1
 
-    return p1
+    return v2
 
     :cond_1
+    check-cast p1, Lwb1;
+
+    iget-object v1, p0, Lwb1;->a:Lm71;
+
+    iget-object p1, p1, Lwb1;->a:Lm71;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x195c98c1
+    iget-object v0, p0, Lwb1;->a:Lm71;
+
+    invoke-virtual {v0}, Lm71;->hashCode()I
+
+    move-result v0
 
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 1
+    .locals 2
 
-    const-string v0, "AcceptCall"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CreateJoinLinkEvent(event="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lwb1;->a:Lm71;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

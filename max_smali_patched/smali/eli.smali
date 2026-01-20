@@ -1,186 +1,88 @@
-.class public abstract Leli;
+.class public final synthetic Leli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrw1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcs4;
+
+.field public final synthetic c:Llb0;
+
 
 # direct methods
-.method public static a(Lmqa;)F
-    .locals 1
+.method public synthetic constructor <init>(Lcs4;Llb0;I)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    iput p3, p0, Leli;->a:I
 
-    move-result p0
+    iput-object p1, p0, Leli;->b:Lcs4;
 
-    if-eqz p0, :cond_2
+    iput-object p2, p0, Leli;->c:Llb0;
 
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x41800000    # 16.0f
-
-    :goto_0
-    mul-float/2addr p0, v0
-
-    return p0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x41400000    # 12.0f
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p0
-
-    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x41200000    # 10.0f
-
-    goto :goto_0
-.end method
-
-.method public static b(Lmqa;)I
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_1
-
-    const/4 v0, 0x2
-
-    if-ne p0, v0, :cond_0
-
-    const/16 p0, 0x34
-
-    int-to-float p0, p0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lkhi;->c(F)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    const/16 p0, 0x28
-
-    int-to-float p0, p0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lkhi;->c(F)I
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    const/16 p0, 0x1c
-
-    int-to-float p0, p0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v0
-
-    invoke-static {p0}, Lkhi;->c(F)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static final c(Lvcg;)V
-    .locals 2
-
-    new-instance v0, Lzr4;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lzr4;-><init>(I)V
-
-    const-class v1, Lof4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final l(Lqw1;)Ljava/lang/String;
+    .locals 5
+
+    iget v0, p0, Leli;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Leli;->b:Lcs4;
+
+    iget-object v1, v0, Lcs4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lwpe;
+
+    new-instance v2, Lfli;
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Leli;->c:Llb0;
+
+    invoke-direct {v2, v0, p1, v4, v3}, Lfli;-><init>(Lcs4;Lqw1;Llb0;I)V
+
+    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
+
+    const-string p1, "setLinearZoom"
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Leli;->b:Lcs4;
+
+    iget-object v1, v0, Lcs4;->c:Ljava/lang/Object;
+
+    check-cast v1, Lwpe;
+
+    new-instance v2, Lfli;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Leli;->c:Llb0;
+
+    invoke-direct {v2, v0, p1, v4, v3}, Lfli;-><init>(Lcs4;Lqw1;Llb0;I)V
+
+    invoke-virtual {v1, v2}, Lwpe;->execute(Ljava/lang/Runnable;)V
+
+    const-string p1, "setZoomRatio"
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

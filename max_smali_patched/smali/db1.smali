@@ -1,73 +1,70 @@
-.class public final enum Ldb1;
-.super Ljava/lang/Enum;
+.class public final synthetic Ldb1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
 
-# static fields
-.field public static final enum a:Ldb1;
 
-.field public static final enum b:Ldb1;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Ldb1;
+.field public final synthetic b:Lfb1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lfb1;I)V
+    .locals 0
 
-    new-instance v0, Ldb1;
+    iput p2, p0, Ldb1;->a:I
 
-    const-string v1, "NONE"
+    iput-object p1, p0, Ldb1;->b:Lfb1;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ldb1;->a:Ldb1;
-
-    new-instance v1, Ldb1;
-
-    const-string v2, "CALL"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ldb1;->b:Ldb1;
-
-    filled-new-array {v0, v1}, [Ldb1;
-
-    move-result-object v0
-
-    sput-object v0, Ldb1;->c:[Ldb1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ldb1;
-    .locals 1
 
-    const-class v0, Ldb1;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Ldb1;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Ldb1;
+    iget-object v0, p0, Ldb1;->b:Lfb1;
 
-    return-object p0
-.end method
-
-.method public static values()[Ldb1;
-    .locals 1
-
-    sget-object v0, Ldb1;->c:[Ldb1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ldb1;
+    iget-object v0, v0, Lfb1;->N0:Landroidx/recyclerview/widget/b;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Ldb1;->b:Lfb1;
+
+    iget-object v0, v0, Lfb1;->P0:Lkih;
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Li27;
+
+    iget-object v1, p0, Ldb1;->b:Lfb1;
+
+    iget-object v2, v1, Lfb1;->J0:Landroidx/viewpager2/widget/ViewPager2;
+
+    iget-object v1, v1, Lfb1;->K0:Ln27;
+
+    invoke-direct {v0, v2, v1}, Li27;-><init>(Landroidx/viewpager2/widget/ViewPager2;Ln27;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

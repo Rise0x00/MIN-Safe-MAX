@@ -1,349 +1,142 @@
-.class public final Lp41;
-.super Landroidx/constraintlayout/widget/ConstraintLayout;
+.class public final synthetic Lp41;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lgm1;
-.implements Lem1;
+.implements Llq6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lt41;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lt41;I)V
+    .locals 0
+
+    iput p2, p0, Lp41;->a:I
+
+    iput-object p1, p0, Lp41;->b:Lt41;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 12
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lp41;->a:I
 
-    goto :goto_1
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    :cond_0
-    new-instance v0, Lht;
+    const/4 v2, 0x0
 
-    const/16 v1, 0x8
+    iget-object v3, p0, Lp41;->b:Lt41;
 
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Llx0;->o:Llx0;
+    iput-object v2, v3, Lt41;->V0:Lmog;
 
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
-
-    move-result-object v0
-
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
-
-    move-result v0
+    iget-object v0, v3, Lt41;->Q0:Ls41;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
+    check-cast v0, Lkp8;
+
+    iget-object v0, v0, Lkp8;->a:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    sget-object v2, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Lz28;
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->A0()Ln51;
 
     move-result-object v0
 
-    check-cast v0, Lgm1;
+    invoke-virtual {v0}, Ln51;->u()Lnx1;
 
-    invoke-interface {v0, p1}, Lgm1;->a(Z)V
+    move-result-object v0
 
-    goto :goto_0
+    iget-object v0, v0, Lnx1;->p:Lspf;
+
+    :cond_0
+    invoke-virtual {v0}, Lspf;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    check-cast v3, Lyu1;
+
+    const-wide/16 v9, 0x0
+
+    const/16 v11, 0xdf
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v3 .. v11}, Lyu1;->a(Lyu1;Lyk1;Lyk1;Lyk1;Llth;Lnah;JI)Lyu1;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lspf;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
 
     :cond_1
-    :goto_1
-    return-void
-.end method
+    return-object v1
 
-.method public final c(Z)V
-    .locals 2
+    :pswitch_0
+    iput-object v2, v3, Lt41;->U0:Lmog;
 
-    new-instance v0, Lht;
+    return-object v1
 
-    const/16 v1, 0x8
+    :pswitch_1
+    sget v0, Ld8d;->call_bottom_control_container:I
 
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Llx0;->X:Llx0;
-
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
+    invoke-static {v3, v0}, Ls5j;->f(Landroid/view/View;I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgm1;
-
-    invoke-interface {v0, p1}, Lgm1;->c(Z)V
+    if-nez v0, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Landroid/graphics/RectF;Z)V
-    .locals 2
-
-    new-instance v0, Lht;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Llx0;->t0:Llx0;
-
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
-
-    move-result-object v0
-
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
+    :cond_2
+    move-object v3, v0
 
     :goto_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
+    return-object v3
 
-    move-result v0
+    :pswitch_2
+    sget-object v0, Lpc3;->t0:Lkme;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lem1;
-
-    invoke-interface {v0, p1, p2}, Lem1;->d(Landroid/graphics/RectF;Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e(Z)V
-    .locals 2
-
-    new-instance v0, Lht;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Llx0;->d:Llx0;
-
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
+    invoke-virtual {v0, v3}, Lkme;->s(Landroid/view/View;)Lzbb;
 
     move-result-object v0
 
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lem1;
-
-    invoke-interface {v0, p1}, Lem1;->e(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Le28;ZJ)V
-    .locals 2
-
-    new-instance v0, Lht;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Llx0;->Y:Llx0;
-
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
-
-    move-result-object v0
-
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lem1;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Lem1;->f(Le28;ZJ)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g(Le28;ZJ)V
-    .locals 2
-
-    new-instance v0, Lht;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Llx0;->Z:Llx0;
-
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
-
-    move-result-object v0
-
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lgm1;
-
-    invoke-interface {v0, p1, p2, p3, p4}, Lgm1;->g(Le28;ZJ)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public getShouldScaleMainOpponent()Z
-    .locals 2
-
-    new-instance v0, Lht;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Llx0;->s0:Llx0;
-
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
-
-    move-result-object v0
-
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
-
-    :cond_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lem1;
-
-    invoke-interface {v0}, Lem1;->getShouldScaleMainOpponent()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final o(Z)V
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance v0, Lht;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lht;-><init>(ILjava/lang/Object;)V
-
-    sget-object v1, Llx0;->c:Llx0;
-
-    invoke-static {v0, v1}, Li3e;->d(Ly2e;Lqi6;)Law5;
-
-    move-result-object v0
-
-    new-instance v1, Lzv5;
-
-    invoke-direct {v1, v0}, Lzv5;-><init>(Law5;)V
-
-    :goto_0
-    invoke-virtual {v1}, Lzv5;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v1}, Lzv5;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lem1;
-
-    invoke-interface {v0, p1}, Lem1;->o(Z)V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
+    iget-object v0, v0, Lzbb;->c:Lzlb;
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

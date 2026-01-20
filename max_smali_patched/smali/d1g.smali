@@ -1,193 +1,136 @@
 .class public final Ld1g;
-.super Ljava/lang/Object;
+.super Li7f;
 .source "SourceFile"
 
+# interfaces
+.implements Llpf;
 
-# instance fields
-.field public final a:Z
 
-.field public final b:Ljava/lang/String;
+# virtual methods
+.method public final getValue()Ljava/lang/Object;
+    .locals 7
 
-.field public final c:Ll1g;
+    monitor-enter p0
 
-.field public final d:I
+    :try_start_0
+    iget-object v0, p0, Li7f;->Z:[Ljava/lang/Object;
 
-.field public final e:[B
+    iget-wide v1, p0, Li7f;->t0:J
 
+    invoke-virtual {p0}, Li7f;->s()J
 
-# direct methods
-.method public constructor <init>(ZLjava/lang/String;I[BII[B)V
-    .locals 4
+    move-result-wide v3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v5, p0, Li7f;->v0:I
 
-    const/4 v0, 0x0
+    int-to-long v5, v5
 
-    const/4 v1, 0x1
+    add-long/2addr v3, v5
 
-    if-nez p3, :cond_0
+    iget-wide v5, p0, Li7f;->t0:J
 
-    move v2, v1
+    sub-long/2addr v3, v5
 
-    goto :goto_0
+    long-to-int v3, v3
 
-    :cond_0
-    move v2, v0
+    int-to-long v3, v3
 
-    :goto_0
-    if-nez p7, :cond_1
+    add-long/2addr v1, v3
 
-    move v3, v1
+    const-wide/16 v3, 0x1
 
-    goto :goto_1
+    sub-long/2addr v1, v3
 
-    :cond_1
-    move v3, v0
+    invoke-static {v0, v1, v2}, Lj7f;->c([Ljava/lang/Object;J)Ljava/lang/Object;
 
-    :goto_1
-    xor-int/2addr v2, v3
+    move-result-object v0
 
-    invoke-static {v2}, Ligi;->c(Z)V
+    check-cast v0, Ljava/lang/Number;
 
-    iput-boolean p1, p0, Ld1g;->a:Z
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    iput-object p2, p0, Ld1g;->b:Ljava/lang/String;
+    move-result v0
 
-    iput p3, p0, Ld1g;->d:I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iput-object p7, p0, Ld1g;->e:[B
+    move-result-object v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance p1, Ll1g;
+    monitor-exit p0
 
-    if-nez p2, :cond_2
+    return-object v0
 
-    goto :goto_4
+    :catchall_0
+    move-exception v0
 
-    :cond_2
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    monitor-exit p0
 
-    move-result p3
+    throw v0
+.end method
 
-    const/4 p7, 0x2
+.method public final z(I)V
+    .locals 7
 
-    const/4 v2, -0x1
+    monitor-enter p0
 
-    sparse-switch p3, :sswitch_data_0
+    :try_start_0
+    iget-object v0, p0, Li7f;->Z:[Ljava/lang/Object;
 
-    :goto_2
-    move v0, v2
+    iget-wide v1, p0, Li7f;->t0:J
 
-    goto :goto_3
+    invoke-virtual {p0}, Li7f;->s()J
 
-    :sswitch_0
-    const-string p3, "cens"
+    move-result-wide v3
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v5, p0, Li7f;->v0:I
 
-    move-result p3
+    int-to-long v5, v5
 
-    if-nez p3, :cond_3
+    add-long/2addr v3, v5
 
-    goto :goto_2
+    iget-wide v5, p0, Li7f;->t0:J
 
-    :cond_3
-    const/4 v0, 0x3
+    sub-long/2addr v3, v5
 
-    goto :goto_3
+    long-to-int v3, v3
 
-    :sswitch_1
-    const-string p3, "cenc"
+    int-to-long v3, v3
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    add-long/2addr v1, v3
 
-    move-result p3
+    const-wide/16 v3, 0x1
 
-    if-nez p3, :cond_4
+    sub-long/2addr v1, v3
 
-    goto :goto_2
+    invoke-static {v0, v1, v2}, Lj7f;->c([Ljava/lang/Object;J)Ljava/lang/Object;
 
-    :cond_4
-    move v0, p7
+    move-result-object v0
 
-    goto :goto_3
+    check-cast v0, Ljava/lang/Number;
 
-    :sswitch_2
-    const-string p3, "cbcs"
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v0
 
-    move-result p3
+    add-int/2addr v0, p1
 
-    if-nez p3, :cond_5
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    goto :goto_2
+    move-result-object p1
 
-    :cond_5
-    move v0, v1
+    invoke-virtual {p0, p1}, Li7f;->h(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_3
-
-    :sswitch_3
-    const-string p3, "cbc1"
-
-    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p3
-
-    if-nez p3, :cond_6
-
-    goto :goto_2
-
-    :cond_6
-    :goto_3
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p3, Ljava/lang/StringBuilder;
-
-    const-string p7, "Unsupported protection scheme type \'"
-
-    invoke-direct {p3, p7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "\'. Assuming AES-CTR crypto mode."
-
-    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    const-string p3, "TrackEncryptionBox"
-
-    invoke-static {p3, p2}, Lpyh;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_4
-
-    :pswitch_0
-    move v1, p7
-
-    :goto_4
-    :pswitch_1
-    invoke-direct {p1, v1, p5, p6, p4}, Ll1g;-><init>(III[B)V
-
-    iput-object p1, p0, Ld1g;->c:Ll1g;
+    monitor-exit p0
 
     return-void
 
-    :sswitch_data_0
-    .sparse-switch
-        0x2e7ccd -> :sswitch_3
-        0x2e7d0f -> :sswitch_2
-        0x2e8997 -> :sswitch_1
-        0x2e89a7 -> :sswitch_0
-    .end sparse-switch
+    :catchall_0
+    move-exception p1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_1
-    .end packed-switch
+    monitor-exit p0
+
+    throw p1
 .end method

@@ -1,94 +1,119 @@
-.class public final synthetic Ljo2;
-.super Ljava/lang/Object;
+.class public final Ljo2;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lqi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:J
 
-.field public final synthetic b:Lone/me/profile/screens/members/ChatMembersScreen;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatMembersScreen;I)V
-    .locals 0
+.method public constructor <init>(JJ)V
+    .locals 1
 
-    iput p2, p0, Ljo2;->a:I
+    const/4 v0, 0x4
 
-    iput-object p1, p0, Ljo2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Ljo2;->b:J
+
+    iput-wide p3, p0, Ljo2;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljo2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljo2;
+
+    iget-wide v3, p0, Ljo2;->b:J
+
+    iget-wide v5, p1, Ljo2;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Ljo2;->c:J
+
+    iget-wide v5, p1, Ljo2;->c:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Ljo2;->a:I
+    iget-wide v0, p0, Ljo2;->b:J
 
-    sget-object v1, Lybg;->a:Lybg;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    iget-object v2, p0, Ljo2;->b:Lone/me/profile/screens/members/ChatMembersScreen;
+    move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    check-cast p1, Landroid/view/View;
+    iget-wide v1, p0, Ljo2;->c:J
 
-    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->z0()Le69;
+    move-result v1
 
-    move-result-object p1
+    add-int/2addr v1, v0
 
-    iget-object p1, p1, Le69;->Y:La1f;
+    return v1
+.end method
 
-    const/4 v0, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    sget-object v2, Lxa5;->a:Lxa5;
+    const-string v0, "OpenMessage(chatId="
 
-    invoke-virtual {p1, v0, v2}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v1, ", messageId="
 
-    return-object v1
+    iget-wide v2, p0, Ljo2;->b:J
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Long;
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
+    const-string v1, ")"
 
-    invoke-virtual {v2}, Lone/me/profile/screens/members/ChatMembersScreen;->y0()Lwo2;
+    iget-wide v2, p0, Ljo2;->c:J
 
-    move-result-object p1
+    invoke-static {v0, v2, v3, v1}, Lva9;->f(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p1}, Lwo2;->v()Le28;
+    move-result-object v0
 
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    check-cast p1, Landroid/view/View;
-
-    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
-
-    invoke-virtual {v2}, Lc24;->getRouter()Lyid;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lyid;->C()Z
-
-    return-object v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,24 +1,53 @@
-.class public abstract Lwtc;
-.super Ljava/lang/Object;
+.class public final Lwtc;
+.super Lo84;
+.source "SourceFile"
 
 
-# static fields
-.field public static share_bottom_button_copy_link:I = 0x7f130cfa
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static share_confirm_cancel:I = 0x7f130cfc
+.field public final synthetic Y:Lxtc;
 
-.field public static share_confirm_close:I = 0x7f130cfd
+.field public Z:I
 
-.field public static share_confirmation_close_title:I = 0x7f130cfe
+.field public d:Ley3;
 
-.field public static share_message_hint:I = 0x7f130d07
+.field public o:Lnd2;
 
-.field public static share_search_hint:I = 0x7f130d09
 
-.field public static share_success_link_send:I = 0x7f130d0a
+# direct methods
+.method public constructor <init>(Lxtc;Lo84;)V
+    .locals 0
 
-.field public static share_toolbar_action_cancel_selection:I = 0x7f130d0c
+    iput-object p1, p0, Lwtc;->Y:Lxtc;
 
-.field public static share_toolbar_action_select:I = 0x7f130d0d
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static share_toolbar_title:I = 0x7f130d0e
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lwtc;->X:Ljava/lang/Object;
+
+    iget p1, p0, Lwtc;->Z:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lwtc;->Z:I
+
+    iget-object p1, p0, Lwtc;->Y:Lxtc;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, v0, p0}, Lxtc;->j(Ljava/lang/Long;Ley3;Lnd2;Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/google/android/material/appbar/AppBarLayout$BaseBehavior<",
-        "Lpn;",
+        "Lln;",
         ">;"
     }
 .end annotation

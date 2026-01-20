@@ -1,144 +1,80 @@
-.class public final synthetic Lcva;
-.super Ljava/lang/Object;
+.class public final Lcva;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-.field public final synthetic b:Lfva;
-
-.field public final synthetic c:Leg5;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfva;Leg5;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
     .locals 0
 
-    iput p3, p0, Lcva;->a:I
+    iput-object p2, p0, Lcva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    iput-object p1, p0, Lcva;->b:Lfva;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lcva;->c:Leg5;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lcva;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lcva;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lcva;->b:Lfva;
+    move-result-object p1
 
-    invoke-virtual {v0}, Lfva;->d()Ljava/util/concurrent/ExecutorService;
+    check-cast p1, Lcva;
 
-    move-result-object v1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object v2, p0, Lcva;->c:Leg5;
+    invoke-virtual {p1, p2}, Lcva;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v2, v2, Leg5;->a:Ljava/lang/String;
+    return-object p2
+.end method
 
-    invoke-virtual {v0, v1, v2}, Lfva;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Lcva;
 
-    return-object v0
+    iget-object v1, p0, Lcva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    :pswitch_0
-    iget-object v0, p0, Lcva;->b:Lfva;
+    invoke-direct {v0, p2, v1}, Lcva;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
 
-    invoke-virtual {v0}, Lfva;->a()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcva;->c:Leg5;
-
-    iget-object v2, v2, Leg5;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lfva;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object v0
+    iput-object p1, v0, Lcva;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lcva;->b:Lfva;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0}, Lfva;->c()Ljava/util/concurrent/ExecutorService;
+    iget-object v0, p0, Lcva;->o:Ljava/lang/Object;
 
-    move-result-object v1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object v2, p0, Lcva;->c:Leg5;
+    check-cast v0, Ljava/util/List;
 
-    iget-object v2, v2, Leg5;->a:Ljava/lang/String;
+    iget-object p1, p0, Lcva;->X:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    invoke-virtual {v0, v1, v2}, Lfva;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
+    iget-object p1, p1, Lone/me/notifications/settings/NotificationsSettingsScreen;->o:Lvua;
 
-    move-result-object v0
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
 
-    return-object v0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    :pswitch_2
-    iget-object v0, p0, Lcva;->b:Lfva;
-
-    invoke-virtual {v0}, Lfva;->b()Lbva;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcva;->c:Leg5;
-
-    iget v3, v2, Leg5;->b:I
-
-    iget v2, v2, Leg5;->g:I
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v4, Ldw5;
-
-    iget-object v1, v1, Lbva;->a:Ldph;
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const-string v5, "OneMeScheduler"
-
-    invoke-virtual {v1, v5, v2}, Ldph;->q(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
-
-    move-result-object v1
-
-    invoke-direct {v4, v3, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    const-class v1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {v1, v4}, Ljava/lang/Class;->cast(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-virtual {v0, v1, v5}, Lfva;->j(Ljava/util/concurrent/ScheduledExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

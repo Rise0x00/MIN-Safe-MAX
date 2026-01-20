@@ -2,612 +2,1465 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lob5;
-
 
 # static fields
-.field public static final E:Landroid/util/Range;
+.field public static final b:Lyof;
+
+.field public static final c:Lpyf;
+
+.field public static d:Ljava/lang/Boolean; = null
+
+.field public static e:Ljava/lang/String; = null
+
+.field public static f:Z = false
+
+.field public static g:I = -0x1
+
+.field public static h:Ljava/lang/Boolean;
+
+.field public static final i:Ljava/lang/ThreadLocal;
+
+.field public static final j:Lay0;
+
+.field public static final k:Lzlf;
+
+.field public static l:Lvjj;
+
+.field public static m:Lwkj;
 
 
 # instance fields
-.field public A:Z
-
-.field public B:Z
-
-.field public C:Ljava/util/concurrent/ScheduledFuture;
-
-.field public D:I
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Z
-
-.field public final d:Landroid/media/MediaFormat;
-
-.field public final e:Landroid/media/MediaCodec;
-
-.field public final f:Llb5;
-
-.field public final g:Ladi;
-
-.field public final h:Ln3e;
-
-.field public final i:Lv28;
-
-.field public final j:Lqt1;
-
-.field public final k:Ljava/util/ArrayDeque;
-
-.field public final l:Ljava/util/ArrayDeque;
-
-.field public final m:Ljava/util/HashSet;
-
-.field public final n:Ljava/util/HashSet;
-
-.field public final o:Ljava/util/ArrayDeque;
-
-.field public final p:Lavf;
-
-.field public final q:Lg93;
-
-.field public r:Lpb5;
-
-.field public s:Ljava/util/concurrent/Executor;
-
-.field public t:Landroid/util/Range;
-
-.field public u:J
-
-.field public v:Z
-
-.field public w:Ljava/lang/Long;
-
-.field public x:Ljava/util/concurrent/ScheduledFuture;
-
-.field public y:Lcc5;
-
-.field public z:Z
+.field public final a:Landroid/content/Context;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    const-wide v0, 0x7fffffffffffffffL
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lfc5;->i:Ljava/lang/ThreadLocal;
 
-    invoke-static {v0, v0}, Landroid/util/Range;->create(Ljava/lang/Comparable;Ljava/lang/Comparable;)Landroid/util/Range;
+    new-instance v0, Lay0;
 
-    move-result-object v0
+    const/16 v1, 0xc
 
-    sput-object v0, Lfc5;->E:Landroid/util/Range;
+    invoke-direct {v0, v1}, Lay0;-><init>(I)V
+
+    sput-object v0, Lfc5;->j:Lay0;
+
+    new-instance v0, Lzlf;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lfc5;->k:Lzlf;
+
+    new-instance v0, Lyof;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lyof;-><init>(I)V
+
+    sput-object v0, Lfc5;->b:Lyof;
+
+    new-instance v0, Lpyf;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lfc5;->c:Lpyf;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lrb5;)V
-    .locals 7
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p1, p0, Lfc5;->a:Landroid/content/Context;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lfc5;->b:Ljava/lang/Object;
+.method public static a(Landroid/content/Context;Ljava/lang/String;)I
+    .locals 6
 
-    new-instance v0, Ljava/util/ArrayDeque;
+    const-string v0, "DynamiteModule"
 
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
+    const-string v1, "Module descriptor id \'"
 
-    iput-object v0, p0, Lfc5;->k:Ljava/util/ArrayDeque;
+    const-string v2, "com.google.android.gms.dynamite.descriptors."
 
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lfc5;->l:Ljava/util/ArrayDeque;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lfc5;->m:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    iput-object v0, p0, Lfc5;->n:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lfc5;->o:Ljava/util/ArrayDeque;
-
-    new-instance v0, Lg93;
-
-    const/16 v1, 0xf
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lg93;-><init>(IB)V
-
-    iput-object v0, p0, Lfc5;->q:Lg93;
-
-    sget-object v0, Lpb5;->q:Lth6;
-
-    iput-object v0, p0, Lfc5;->r:Lpb5;
-
-    invoke-static {}, Lcr7;->a()Lnu4;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lfc5;->s:Ljava/util/concurrent/Executor;
-
-    sget-object v0, Lfc5;->E:Landroid/util/Range;
-
-    iput-object v0, p0, Lfc5;->t:Landroid/util/Range;
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lfc5;->u:J
-
-    iput-boolean v2, p0, Lfc5;->v:Z
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lfc5;->w:Ljava/lang/Long;
-
-    iput-object v0, p0, Lfc5;->x:Ljava/util/concurrent/ScheduledFuture;
-
-    iput-object v0, p0, Lfc5;->y:Lcc5;
-
-    iput-boolean v2, p0, Lfc5;->z:Z
-
-    iput-boolean v2, p0, Lfc5;->A:Z
-
-    iput-boolean v2, p0, Lfc5;->B:Z
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Laa3;->a:Landroid/util/LruCache;
-
-    invoke-interface {p2}, Lrb5;->a()Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v3, 0x0
 
     :try_start_0
-    invoke-static {v0}, Landroid/media/MediaCodec;->createEncoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    move-result-object p0
 
-    iput-object v0, p0, Lfc5;->e:Landroid/media/MediaCodec;
+    invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
 
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->getCodecInfo()Landroid/media/MediaCodecInfo;
+    move-result-object p0
 
-    move-result-object v0
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ln3e;
+    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v1, p1}, Ln3e;-><init>(Ljava/util/concurrent/Executor;)V
+    invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v1, p0, Lfc5;->h:Ln3e;
+    const-string v2, ".ModuleDescriptor"
 
-    invoke-interface {p2}, Lrb5;->b()Landroid/media/MediaFormat;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object p1, p0, Lfc5;->d:Landroid/media/MediaFormat;
+    move-result-object v2
 
-    invoke-interface {p2}, Lrb5;->c()Lavf;
+    invoke-virtual {p0, v2}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
-    move-result-object v1
+    move-result-object p0
 
-    iput-object v1, p0, Lfc5;->p:Lavf;
+    const-string v2, "MODULE_ID"
 
-    instance-of v3, p2, Lh90;
+    invoke-virtual {p0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    const/4 v4, 0x1
+    move-result-object v2
 
-    if-eqz v3, :cond_0
+    const-string v4, "MODULE_VERSION"
 
-    const-string v3, "AudioEncoder"
+    invoke-virtual {p0, v4}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    iput-object v3, p0, Lfc5;->a:Ljava/lang/String;
+    move-result-object p0
 
-    iput-boolean v2, p0, Lfc5;->c:Z
+    const/4 v4, 0x0
 
-    new-instance v2, Lac5;
+    invoke-virtual {v2, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v2, p0}, Lac5;-><init>(Lfc5;)V
+    move-result-object v5
 
-    iput-object v2, p0, Lfc5;->f:Llb5;
+    invoke-static {v5, p1}, Lddj;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v2, Li30;
+    move-result v5
 
-    invoke-interface {p2}, Lrb5;->a()Ljava/lang/String;
+    if-nez v5, :cond_0
 
-    move-result-object p2
+    invoke-virtual {v2, v4}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v2, v0, p2}, Ladi;-><init>(Landroid/media/MediaCodecInfo;Ljava/lang/String;)V
+    move-result-object p0
 
-    iget-object p2, v2, Ladi;->b:Ljava/lang/Object;
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    check-cast p2, Landroid/media/MediaCodecInfo$CodecCapabilities;
+    move-result-object p0
 
-    invoke-virtual {p2}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getAudioCapabilities()Landroid/media/MediaCodecInfo$AudioCapabilities;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v2, p0, Lfc5;->g:Ladi;
+    const-string p0, "\' didn\'t match expected id \'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    return v3
+
+    :catch_0
+    move-exception p0
 
     goto :goto_0
 
     :cond_0
-    instance-of v2, p2, Lfc0;
+    invoke-virtual {p0, v4}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
-    if-eqz v2, :cond_2
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v2, "VideoEncoder"
-
-    iput-object v2, p0, Lfc5;->a:Ljava/lang/String;
-
-    iput-boolean v4, p0, Lfc5;->c:Z
-
-    new-instance v3, Ldc5;
-
-    invoke-direct {v3, p0}, Ldc5;-><init>(Lfc5;)V
-
-    iput-object v3, p0, Lfc5;->f:Llb5;
-
-    new-instance v3, Ling;
-
-    invoke-interface {p2}, Lrb5;->a()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-direct {v3, v0, p2}, Ling;-><init>(Landroid/media/MediaCodecInfo;Ljava/lang/String;)V
-
-    const-string p2, "bitrate"
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaFormat;->containsKey(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1, p2}, Landroid/media/MediaFormat;->getInteger(Ljava/lang/String;)I
-
-    move-result v0
-
-    iget-object v5, v3, Ling;->c:Landroid/media/MediaCodecInfo$VideoCapabilities;
-
-    invoke-virtual {v5}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getBitrateRange()Landroid/util/Range;
-
-    move-result-object v5
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Landroid/util/Range;->clamp(Ljava/lang/Comparable;)Ljava/lang/Comparable;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Integer;
-
-    invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    if-eq v0, v5, :cond_1
-
-    invoke-virtual {p1, p2, v5}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v6, "updated bitrate from "
-
-    invoke-direct {p2, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, " to "
-
-    invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-static {v2, p2}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_1
-    iput-object v3, p0, Lfc5;->g:Ladi;
+    return p0
 
     :goto_0
-    iget-object p2, p0, Lfc5;->a:Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object p0
 
-    const-string v2, "mInputTimebase = "
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string p1, "Failed to load module descriptor class: "
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-static {p2, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p2, p0, Lfc5;->a:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "mMediaFormat = "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p2, p1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :try_start_1
-    invoke-virtual {p0}, Lfc5;->h()V
-    :try_end_1
-    .catch Landroid/media/MediaCodec$CodecException; {:try_start_1 .. :try_end_1} :catch_0
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    new-instance p2, Lju0;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p2, p1, v0}, Lju0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
-
-    invoke-static {p2}, Lcmi;->a(Lrt1;)Ltt1;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lyyg;->m(Lv28;)Lv28;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lfc5;->i:Lv28;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lqt1;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lfc5;->j:Lqt1;
-
-    invoke-virtual {p0, v4}, Lfc5;->i(I)V
-
-    return-void
-
-    :catch_0
-    move-exception p1
-
-    new-instance p2, Landroidx/camera/video/internal/encoder/InvalidConfigException;
-
-    invoke-direct {p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    throw p2
-
-    :cond_2
-    new-instance p1, Landroidx/camera/video/internal/encoder/InvalidConfigException;
-
-    const-string p2, "Unknown encoder config type"
-
-    invoke-direct {p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :catch_1
-    move-exception p1
+    invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
 
-    :catch_2
-    move-exception p1
+    :catch_1
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Local module descriptor class for "
+
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " not found."
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_1
-    new-instance p2, Landroidx/camera/video/internal/encoder/InvalidConfigException;
-
-    invoke-direct {p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
-
-    throw p2
+    return v3
 .end method
 
+.method public static c(Landroid/content/Context;Lec5;Ljava/lang/String;)Lfc5;
+    .locals 22
 
-# virtual methods
-.method public final a()Lv28;
-    .locals 4
+    move-object/from16 v1, p0
 
-    iget v0, p0, Lfc5;->D:I
+    move-object/from16 v2, p1
 
-    invoke-static {v0}, Lnx1;->v(I)I
+    move-object/from16 v3, p2
 
-    move-result v0
+    const-string v0, "No acceptable module "
 
-    packed-switch v0, :pswitch_data_0
+    const-string v4, "VersionPolicy returned invalid code:"
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    const-string v5, "Selected remote version of "
 
-    iget v1, p0, Lfc5;->D:I
+    const-string v6, "Selected remote version of "
 
-    invoke-static {v1}, Lm65;->q(I)Ljava/lang/String;
+    const-string v7, "Considering local module "
 
-    move-result-object v1
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    const-string v2, "Unknown state: "
+    move-result-object v8
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v8, :cond_17
 
-    move-result-object v1
+    sget-object v9, Lfc5;->i:Ljava/lang/ThreadLocal;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v9}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    throw v0
+    move-result-object v10
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    check-cast v10, Llgj;
 
-    const-string v1, "Encoder is released."
+    new-instance v11, Llgj;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lib7;
+    invoke-virtual {v9, v11}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    const/4 v2, 0x1
+    sget-object v12, Lfc5;->j:Lay0;
 
-    invoke-direct {v1, v2, v0}, Lib7;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v12}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    return-object v1
+    move-result-object v13
 
-    :pswitch_1
-    new-instance v0, Ljava/lang/IllegalStateException;
+    check-cast v13, Ljava/lang/Long;
 
-    const-string v1, "Encoder is in error state."
+    invoke-virtual {v13}, Ljava/lang/Long;->longValue()J
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-wide v14
 
-    new-instance v1, Lib7;
+    const-wide/16 v16, 0x0
 
-    const/4 v2, 0x1
+    :try_start_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-direct {v1, v2, v0}, Lib7;-><init>(ILjava/lang/Object;)V
+    move-result-wide v18
 
-    return-object v1
+    move-object/from16 v20, v9
 
-    :pswitch_2
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static/range {v18 .. v19}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    move-result-object v9
 
-    new-instance v1, Lju0;
+    invoke-virtual {v12, v9}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    const/4 v2, 0x3
+    sget-object v9, Lfc5;->k:Lzlf;
 
-    invoke-direct {v1, v0, v2}, Lju0;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+    invoke-interface {v2, v1, v3, v9}, Lec5;->d(Landroid/content/Context;Ljava/lang/String;Ldc5;)Lk80;
 
-    invoke-static {v1}, Lcmi;->a(Lrt1;)Ltt1;
+    move-result-object v9
 
-    move-result-object v1
+    const-string v12, "DynamiteModule"
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_5
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    move-wide/from16 v18, v14
+
+    :try_start_1
+    iget v14, v9, Lk80;->b:I
+
+    iget v15, v9, Lk80;->c:I
+
+    move-object/from16 v21, v0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, ":"
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v7, " and remote module "
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v7, ":"
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lqt1;
+    invoke-static {v12, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, v9, Lk80;->d:I
 
-    iget-object v2, p0, Lfc5;->l:Ljava/util/ArrayDeque;
+    if-eqz v0, :cond_14
 
-    invoke-virtual {v2, v0}, Ljava/util/ArrayDeque;->offer(Ljava/lang/Object;)Z
+    const/4 v7, -0x1
 
-    new-instance v2, Lhn4;
+    if-ne v0, v7, :cond_0
 
-    const/16 v3, 0x12
+    iget v0, v9, Lk80;->b:I
 
-    invoke-direct {v2, p0, v3, v0}, Lhn4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v0, :cond_14
 
-    iget-object v3, p0, Lfc5;->h:Ln3e;
+    move v0, v7
 
-    invoke-virtual {v0, v2, v3}, Lqt1;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    goto :goto_0
 
-    invoke-virtual {p0}, Lfc5;->c()V
+    :catchall_0
+    move-exception v0
 
-    return-object v1
+    goto/16 :goto_c
 
-    :pswitch_3
-    new-instance v0, Ljava/lang/IllegalStateException;
+    :cond_0
+    :goto_0
+    const/4 v12, 0x1
 
-    const-string v1, "Encoder is not started yet."
+    if-ne v0, v12, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget v14, v9, Lk80;->c:I
 
-    new-instance v1, Lib7;
+    if-eqz v14, :cond_14
+
+    :cond_1
+    if-ne v0, v7, :cond_2
+
+    const-string v0, "Selected local version of "
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DynamiteModule"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v0, Lfc5;
+
+    invoke-direct {v0, v8}, Lfc5;-><init>(Landroid/content/Context;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto/16 :goto_a
+
+    :cond_2
+    if-ne v0, v12, :cond_13
+
+    :try_start_2
+    iget v0, v9, Lk80;->c:I
+    :try_end_2
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    const-class v4, Lfc5;
+
+    monitor-enter v4
+    :try_end_3
+    .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    invoke-static {v1}, Lfc5;->g(Landroid/content/Context;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_f
+
+    sget-object v14, Lfc5;->d:Ljava/lang/Boolean;
+
+    monitor-exit v4
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_4
+
+    if-eqz v14, :cond_e
+
+    :try_start_5
+    invoke-virtual {v14}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v4
+
+    const/4 v14, 0x2
+
+    if-eqz v4, :cond_8
+
+    const-string v4, "DynamiteModule"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v6, ", version >= "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    const-class v4, Lfc5;
+
+    monitor-enter v4
+    :try_end_5
+    .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_1
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :try_start_6
+    sget-object v5, Lfc5;->m:Lwkj;
+
+    monitor-exit v4
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    if-eqz v5, :cond_7
+
+    :try_start_7
+    invoke-virtual/range {v20 .. v20}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Llgj;
+
+    if-eqz v4, :cond_6
+
+    iget-object v6, v4, Llgj;->a:Landroid/database/Cursor;
+
+    if-eqz v6, :cond_6
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    iget-object v4, v4, Llgj;->a:Landroid/database/Cursor;
+
+    new-instance v15, Laxa;
+
+    const/4 v12, 0x0
+
+    invoke-direct {v15, v12}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    const-class v12, Lfc5;
+
+    monitor-enter v12
+    :try_end_7
+    .catch Landroid/os/RemoteException; {:try_start_7 .. :try_end_7} :catch_1
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_7 .. :try_end_7} :catch_0
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :try_start_8
+    sget v15, Lfc5;->g:I
+
+    if-lt v15, v14, :cond_3
+
+    const/4 v14, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 v14, 0x0
+
+    :goto_1
+    monitor-exit v12
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
+    if-eqz v14, :cond_4
+
+    :try_start_9
+    const-string v12, "DynamiteModule"
+
+    const-string v14, "Dynamite loader version >= 2, using loadModule2NoCrashUtils"
+
+    invoke-static {v12, v14}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v12, Laxa;
+
+    invoke-direct {v12, v6}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    new-instance v6, Laxa;
+
+    invoke-direct {v6, v4}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v5, v12, v3, v0, v6}, Lwkj;->Z(Laxa;Ljava/lang/String;ILaxa;)Lte7;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    goto/16 :goto_6
+
+    :catch_0
+    move-exception v0
+
+    goto/16 :goto_7
+
+    :catch_1
+    move-exception v0
+
+    goto/16 :goto_8
+
+    :cond_4
+    const-string v12, "DynamiteModule"
+
+    const-string v14, "Dynamite loader version < 2, falling back to loadModule2"
+
+    invoke-static {v12, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v12, Laxa;
+
+    invoke-direct {v12, v6}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    new-instance v6, Laxa;
+
+    invoke-direct {v6, v4}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v5, v12, v3, v0, v6}, Lwkj;->Y(Laxa;Ljava/lang/String;ILaxa;)Lte7;
+
+    move-result-object v0
+
+    :goto_2
+    invoke-static {v0}, Laxa;->Z(Lte7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/content/Context;
+
+    if-eqz v0, :cond_5
+
+    new-instance v4, Lfc5;
+
+    invoke-direct {v4, v0}, Lfc5;-><init>(Landroid/content/Context;)V
+
+    :goto_3
+    move-object v0, v4
+
+    goto/16 :goto_a
+
+    :cond_5
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v4, "Failed to get module context"
+
+    invoke-direct {v0, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_9
+    .catch Landroid/os/RemoteException; {:try_start_9 .. :try_end_9} :catch_1
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_9 .. :try_end_9} :catch_0
+    .catchall {:try_start_9 .. :try_end_9} :catchall_1
+
+    :catchall_2
+    move-exception v0
+
+    :try_start_a
+    monitor-exit v12
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_2
+
+    :try_start_b
+    throw v0
+
+    :cond_6
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v4, "No result cursor"
+
+    invoke-direct {v0, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v4, "DynamiteLoaderV2 was not cached."
+
+    invoke-direct {v0, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_b
+    .catch Landroid/os/RemoteException; {:try_start_b .. :try_end_b} :catch_1
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_b .. :try_end_b} :catch_0
+    .catchall {:try_start_b .. :try_end_b} :catchall_1
+
+    :catchall_3
+    move-exception v0
+
+    :try_start_c
+    monitor-exit v4
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_3
+
+    :try_start_d
+    throw v0
+
+    :cond_8
+    const-string v4, "DynamiteModule"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v5, ", version >= "
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {v1}, Lfc5;->h(Landroid/content/Context;)Lvjj;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_d
+
+    invoke-virtual {v4}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object v5
+
+    const/4 v6, 0x6
+
+    invoke-virtual {v4, v5, v6}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/os/Parcel;->readInt()I
+
+    move-result v6
+
+    invoke-virtual {v5}, Landroid/os/Parcel;->recycle()V
+
+    const/4 v5, 0x3
+
+    if-lt v6, v5, :cond_a
+
+    invoke-virtual/range {v20 .. v20}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Llgj;
+
+    if-eqz v5, :cond_9
+
+    new-instance v6, Laxa;
+
+    invoke-direct {v6, v1}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    iget-object v5, v5, Llgj;->a:Landroid/database/Cursor;
+
+    new-instance v12, Laxa;
+
+    invoke-direct {v12, v5}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v4, v6, v3, v0, v12}, Lvjj;->Z(Laxa;Ljava/lang/String;ILaxa;)Lte7;
+
+    move-result-object v0
+
+    goto :goto_4
+
+    :cond_9
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v4, "No cached result cursor holder"
+
+    invoke-direct {v0, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_a
+    if-ne v6, v14, :cond_b
+
+    const-string v5, "DynamiteModule"
+
+    const-string v6, "IDynamite loader version = 2"
+
+    invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v5, Laxa;
+
+    invoke-direct {v5, v1}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v4, v5, v3, v0}, Lvjj;->a0(Laxa;Ljava/lang/String;I)Lte7;
+
+    move-result-object v0
+
+    goto :goto_4
+
+    :cond_b
+    const-string v5, "DynamiteModule"
+
+    const-string v6, "Dynamite loader version < 2, falling back to createModuleContext"
+
+    invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v5, Laxa;
+
+    invoke-direct {v5, v1}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v4, v5, v3, v0}, Lvjj;->Y(Laxa;Ljava/lang/String;I)Lte7;
+
+    move-result-object v0
+
+    :goto_4
+    invoke-static {v0}, Laxa;->Z(Lte7;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_c
+
+    new-instance v4, Lfc5;
+
+    check-cast v0, Landroid/content/Context;
+
+    invoke-direct {v4, v0}, Lfc5;-><init>(Landroid/content/Context;)V
+
+    goto/16 :goto_3
+
+    :cond_c
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v4, "Failed to load remote module."
+
+    invoke-direct {v0, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_d
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v4, "Failed to create IDynamiteLoader."
+
+    invoke-direct {v0, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_e
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v4, "Failed to determine which loading route to use."
+
+    invoke-direct {v0, v4}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_d
+    .catch Landroid/os/RemoteException; {:try_start_d .. :try_end_d} :catch_1
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_d .. :try_end_d} :catch_0
+    .catchall {:try_start_d .. :try_end_d} :catchall_1
+
+    :catchall_4
+    move-exception v0
+
+    goto :goto_5
+
+    :cond_f
+    :try_start_e
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v5, "Remote loading disabled"
+
+    invoke-direct {v0, v5}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :goto_5
+    monitor-exit v4
+    :try_end_e
+    .catchall {:try_start_e .. :try_end_e} :catchall_4
+
+    :try_start_f
+    throw v0
+    :try_end_f
+    .catch Landroid/os/RemoteException; {:try_start_f .. :try_end_f} :catch_1
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_f .. :try_end_f} :catch_0
+    .catchall {:try_start_f .. :try_end_f} :catchall_1
+
+    :goto_6
+    :try_start_10
+    new-instance v4, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v5, "Failed to load remote module."
+
+    invoke-direct {v4, v5, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v4
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_9
+
+    :goto_7
+    throw v0
+
+    :goto_8
+    new-instance v4, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v5, "Failed to load remote module."
+
+    invoke-direct {v4, v5, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v4
+    :try_end_10
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_10 .. :try_end_10} :catch_2
+    .catchall {:try_start_10 .. :try_end_10} :catchall_0
+
+    :goto_9
+    :try_start_11
+    const-string v4, "DynamiteModule"
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v5
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v12, "Failed to load remote module: "
+
+    invoke-virtual {v6, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget v4, v9, Lk80;->b:I
+
+    if-eqz v4, :cond_12
+
+    new-instance v5, Lr56;
+
+    const/16 v6, 0xe
+
+    invoke-direct {v5, v4, v6}, Lr56;-><init>(II)V
+
+    invoke-interface {v2, v1, v3, v5}, Lec5;->d(Landroid/content/Context;Ljava/lang/String;Ldc5;)Lk80;
+
+    move-result-object v1
+
+    iget v1, v1, Lk80;->d:I
+
+    if-ne v1, v7, :cond_12
+
+    const-string v0, "Selected local version of "
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DynamiteModule"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v0, Lfc5;
+
+    invoke-direct {v0, v8}, Lfc5;-><init>(Landroid/content/Context;)V
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_0
+
+    :goto_a
+    cmp-long v1, v18, v16
+
+    if-nez v1, :cond_10
+
+    sget-object v1, Lfc5;->j:Lay0;
+
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->remove()V
+
+    goto :goto_b
+
+    :cond_10
+    sget-object v1, Lfc5;->j:Lay0;
+
+    invoke-virtual {v1, v13}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :goto_b
+    iget-object v1, v11, Llgj;->a:Landroid/database/Cursor;
+
+    if-eqz v1, :cond_11
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_11
+    sget-object v1, Lfc5;->i:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v1, v10}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    return-object v0
+
+    :cond_12
+    :try_start_12
+    new-instance v1, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v2, "Remote load failed. No local fallback found."
+
+    invoke-direct {v1, v2, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_13
+    new-instance v1, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    :cond_14
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    iget v1, v9, Lk80;->b:I
+
+    iget v2, v9, Lk80;->c:I
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    move-object/from16 v5, v21
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " found. Local version is "
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " and remote version is "
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "."
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_0
+
+    :catchall_5
+    move-exception v0
+
+    move-wide/from16 v18, v14
+
+    :goto_c
+    cmp-long v1, v18, v16
+
+    if-nez v1, :cond_15
+
+    sget-object v1, Lfc5;->j:Lay0;
+
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->remove()V
+
+    goto :goto_d
+
+    :cond_15
+    sget-object v1, Lfc5;->j:Lay0;
+
+    invoke-virtual {v1, v13}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :goto_d
+    iget-object v1, v11, Llgj;->a:Landroid/database/Cursor;
+
+    if-eqz v1, :cond_16
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_16
+    sget-object v1, Lfc5;->i:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v1, v10}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_17
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v1, "null application Context"
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static d(Landroid/content/Context;Ljava/lang/String;Z)I
+    .locals 11
+
+    :try_start_0
+    const-class v1, Lfc5;
+
+    monitor-enter v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    :try_start_1
+    sget-object v0, Lfc5;->d:Ljava/lang/Boolean;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v2, v0}, Lib7;-><init>(ILjava/lang/Object;)V
+    const/4 v3, 0x0
 
-    return-object v1
+    const/4 v4, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    if-nez v0, :cond_9
 
-.method public final b(ILjava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
+    :try_start_2
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    iget v0, p0, Lfc5;->D:I
+    move-result-object v0
 
-    invoke-static {v0}, Lnx1;->v(I)I
+    invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    const-class v5, Lcom/google/android/gms/dynamite/DynamiteModule$DynamiteLoaderClassLoader;
+
+    invoke-virtual {v5}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v5, "sClassLoader"
+
+    invoke-virtual {v0, v5}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/reflect/Field;->getDeclaringClass()Ljava/lang/Class;
+
+    move-result-object v5
+
+    monitor-enter v5
+    :try_end_2
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_2 .. :try_end_2} :catch_4
+    .catch Ljava/lang/IllegalAccessException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_2 .. :try_end_2} :catch_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :try_start_3
+    invoke-virtual {v0, v3}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/ClassLoader;
+
+    invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v7
+
+    if-ne v6, v7, :cond_0
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto/16 :goto_3
+
+    :catchall_0
+    move-exception v0
+
+    goto/16 :goto_4
+
+    :cond_0
+    if-eqz v6, :cond_1
+
+    :try_start_4
+    invoke-static {v6}, Lfc5;->f(Ljava/lang/ClassLoader;)V
+    :try_end_4
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_4 .. :try_end_4} :catch_0
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :catch_0
+    :try_start_5
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    goto/16 :goto_3
+
+    :cond_1
+    invoke-static {p0}, Lfc5;->g(Landroid/content/Context;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_2
+
+    monitor-exit v5
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :try_start_6
+    monitor-exit v1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    return v4
+
+    :catchall_1
+    move-exception v0
+
+    move-object p1, v0
+
+    goto/16 :goto_12
+
+    :cond_2
+    :try_start_7
+    sget-boolean v6, Lfc5;->f:Z
+
+    if-nez v6, :cond_8
+
+    sget-object v6, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-virtual {v6, v3}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_0
+
+    if-eqz v7, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    :try_start_8
+    invoke-static {p0, p1, p2, v2}, Lfc5;->e(Landroid/content/Context;Ljava/lang/String;ZZ)I
+
+    move-result v7
+
+    sget-object v8, Lfc5;->e:Ljava/lang/String;
+
+    if-eqz v8, :cond_7
+
+    invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_4
+
+    goto :goto_1
+
+    :cond_4
+    invoke-static {}, Llti;->s()Ljava/lang/ClassLoader;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    sget v8, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v9, 0x1d
+
+    if-lt v8, v9, :cond_6
+
+    invoke-static {}, Ljt;->f()V
+
+    sget-object v8, Lfc5;->e:Ljava/lang/String;
+
+    invoke-static {v8}, Ldkj;->g(Ljava/lang/Object;)V
+
+    invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v9
+
+    invoke-static {v9, v8}, Ljt;->d(Ljava/lang/ClassLoader;Ljava/lang/String;)Ldalvik/system/DelegateLastClassLoader;
+
+    move-result-object v8
+
+    goto :goto_0
+
+    :cond_6
+    new-instance v8, Lcvi;
+
+    sget-object v9, Lfc5;->e:Ljava/lang/String;
+
+    invoke-static {v9}, Ldkj;->g(Ljava/lang/Object;)V
+
+    invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v10
+
+    invoke-direct {v8, v9, v10}, Ldalvik/system/PathClassLoader;-><init>(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+
+    :goto_0
+    invoke-static {v8}, Lfc5;->f(Ljava/lang/ClassLoader;)V
+
+    invoke-virtual {v0, v3, v8}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    sput-object v6, Lfc5;->d:Ljava/lang/Boolean;
+    :try_end_8
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_8 .. :try_end_8} :catch_1
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    :try_start_9
+    monitor-exit v5
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_0
+
+    :try_start_a
+    monitor-exit v1
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
+
+    return v7
+
+    :cond_7
+    :goto_1
+    :try_start_b
+    monitor-exit v5
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_0
+
+    :try_start_c
+    monitor-exit v1
+    :try_end_c
+    .catchall {:try_start_c .. :try_end_c} :catchall_1
+
+    return v7
+
+    :catch_1
+    :try_start_d
+    invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v3, v6}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    goto :goto_3
+
+    :cond_8
+    :goto_2
+    invoke-static {}, Ljava/lang/ClassLoader;->getSystemClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v3, v6}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    :goto_3
+    monitor-exit v5
+
+    goto :goto_6
+
+    :goto_4
+    monitor-exit v5
+    :try_end_d
+    .catchall {:try_start_d .. :try_end_d} :catchall_0
+
+    :try_start_e
+    throw v0
+    :try_end_e
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_e .. :try_end_e} :catch_4
+    .catch Ljava/lang/IllegalAccessException; {:try_start_e .. :try_end_e} :catch_3
+    .catch Ljava/lang/NoSuchFieldException; {:try_start_e .. :try_end_e} :catch_2
+    .catchall {:try_start_e .. :try_end_e} :catchall_1
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_4
+    move-exception v0
+
+    :goto_5
+    :try_start_f
+    const-string v5, "DynamiteModule"
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "Failed to load module via V2: "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v5, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    :goto_6
+    sput-object v0, Lfc5;->d:Ljava/lang/Boolean;
+
+    :cond_9
+    monitor-exit v1
+    :try_end_f
+    .catchall {:try_start_f .. :try_end_f} :catchall_1
+
+    :try_start_10
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
+    :try_end_10
+    .catchall {:try_start_10 .. :try_end_10} :catchall_2
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_a
 
-    return-void
+    :try_start_11
+    invoke-static {p0, p1, p2, v4}, Lfc5;->e(Landroid/content/Context;Ljava/lang/String;ZZ)I
 
-    :pswitch_0
+    move-result p0
+    :try_end_11
+    .catch Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException; {:try_start_11 .. :try_end_11} :catch_5
+    .catchall {:try_start_11 .. :try_end_11} :catchall_2
+
+    return p0
+
+    :catchall_2
+    move-exception v0
+
+    move-object p1, v0
+
+    goto/16 :goto_13
+
+    :catch_5
+    move-exception v0
+
+    move-object p1, v0
+
+    :try_start_12
+    const-string p2, "DynamiteModule"
+
+    invoke-virtual {p1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p1
+
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Get more than one error: "
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "Failed to retrieve remote module version: "
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, "("
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ")"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -615,925 +1468,1112 @@
 
     move-result-object p1
 
-    iget-object p2, p0, Lfc5;->a:Ljava/lang/String;
+    invoke-static {p2, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p2, p1, p3}, Lafi;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v4
 
-    return-void
+    :cond_a
+    invoke-static {p0}, Lfc5;->h(Landroid/content/Context;)Lvjj;
 
-    :pswitch_1
-    const/16 v0, 0x8
+    move-result-object v5
+    :try_end_12
+    .catchall {:try_start_12 .. :try_end_12} :catchall_2
 
-    invoke-virtual {p0, v0}, Lfc5;->i(I)V
+    if-nez v5, :cond_b
 
-    new-instance v1, Lvb5;
+    goto/16 :goto_10
 
-    const/4 v6, 0x0
-
-    move-object v2, p0
-
-    move v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v1 .. v6}, Lvb5;-><init>(Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {p0, v1}, Lfc5;->l(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_2
-    move-object v2, p0
-
-    move v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-virtual {p0, v3, v4, v5}, Lfc5;->d(ILjava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Lfc5;->h()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c()V
-    .locals 4
-
-    :goto_0
-    iget-object v0, p0, Lfc5;->l:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lfc5;->k:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+    :cond_b
+    :try_start_13
+    invoke-virtual {v5}, Lwoi;->V()Landroid/os/Parcel;
 
     move-result-object v0
 
-    check-cast v0, Lqt1;
+    const/4 v1, 0x6
 
-    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v5, v0, v1}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    invoke-virtual {v1}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    const/4 v0, 0x3
+
+    if-lt v1, v0, :cond_12
+
+    sget-object v0, Lfc5;->i:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Ljava/lang/Integer;
+    check-cast v1, Llgj;
 
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v1, :cond_c
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    iget-object v1, v1, Llgj;->a:Landroid/database/Cursor;
 
-    move-result v1
+    if-eqz v1, :cond_c
 
-    :try_start_0
-    new-instance v2, Lmg7;
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
 
-    iget-object v3, p0, Lfc5;->e:Landroid/media/MediaCodec;
+    move-result v4
 
-    invoke-direct {v2, v3, v1}, Lmg7;-><init>(Landroid/media/MediaCodec;I)V
-    :try_end_0
-    .catch Landroid/media/MediaCodec$CodecException; {:try_start_0 .. :try_end_0} :catch_0
+    goto/16 :goto_10
 
-    invoke-virtual {v0, v2}, Lqt1;->b(Ljava/lang/Object;)Z
+    :catch_6
+    move-exception v0
 
-    move-result v0
+    move-object p1, v0
 
-    if-eqz v0, :cond_0
+    goto/16 :goto_e
 
-    iget-object v0, p0, Lfc5;->m:Ljava/util/HashSet;
+    :cond_c
+    new-instance v6, Laxa;
 
-    invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-direct {v6, p0}, Laxa;-><init>(Ljava/lang/Object;)V
 
-    iget-object v0, v2, Lmg7;->d:Ltt1;
+    sget-object v1, Lfc5;->j:Lay0;
 
-    invoke-static {v0}, Lyyg;->m(Lv28;)Lv28;
+    invoke-virtual {v1}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/Long;
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v9
+
+    move-object v7, p1
+
+    move v8, p2
+
+    invoke-virtual/range {v5 .. v10}, Lvjj;->b0(Laxa;Ljava/lang/String;ZJ)Lte7;
+
+    move-result-object p1
+
+    invoke-static {p1}, Laxa;->Z(Lte7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/database/Cursor;
+    :try_end_13
+    .catch Landroid/os/RemoteException; {:try_start_13 .. :try_end_13} :catch_6
+    .catchall {:try_start_13 .. :try_end_13} :catchall_4
+
+    if-eqz p1, :cond_11
+
+    :try_start_14
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result p2
+
+    if-nez p2, :cond_d
+
+    goto :goto_a
+
+    :cond_d
+    invoke-interface {p1, v4}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result p2
+
+    if-lez p2, :cond_f
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lhn4;
+    check-cast v0, Llgj;
 
-    const/16 v3, 0x10
+    if-eqz v0, :cond_e
 
-    invoke-direct {v1, p0, v3, v2}, Lhn4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    iget-object v1, v0, Llgj;->a:Landroid/database/Cursor;
 
-    iget-object v2, p0, Lfc5;->h:Ln3e;
+    if-nez v1, :cond_e
 
-    invoke-interface {v0, v1, v2}, Lv28;->e(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    iput-object p1, v0, Llgj;->a:Landroid/database/Cursor;
+    :try_end_14
+    .catch Landroid/os/RemoteException; {:try_start_14 .. :try_end_14} :catch_7
+    .catchall {:try_start_14 .. :try_end_14} :catchall_3
 
-    goto :goto_0
+    goto :goto_7
 
-    :cond_0
-    invoke-virtual {v2}, Lmg7;->a()V
+    :cond_e
+    move v2, v4
 
-    goto :goto_0
+    :goto_7
+    if-eqz v2, :cond_f
 
-    :catch_0
+    goto :goto_8
+
+    :cond_f
+    move-object v3, p1
+
+    :goto_8
+    if-eqz v3, :cond_10
+
+    :try_start_15
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+    :try_end_15
+    .catchall {:try_start_15 .. :try_end_15} :catchall_2
+
+    :cond_10
+    :goto_9
+    move v4, p2
+
+    goto/16 :goto_10
+
+    :catchall_3
     move-exception v0
 
-    const/4 v1, 0x1
+    move-object p2, v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    goto :goto_b
 
-    move-result-object v2
+    :catch_7
+    move-exception v0
 
-    invoke-virtual {p0, v1, v2, v0}, Lfc5;->b(ILjava/lang/String;Ljava/lang/Throwable;)V
+    move-object p2, v0
 
-    :cond_1
-    return-void
-.end method
+    goto :goto_c
 
-.method public final d(ILjava/lang/String;Ljava/lang/Throwable;)V
-    .locals 3
+    :cond_11
+    :goto_a
+    :try_start_16
+    const-string p2, "DynamiteModule"
 
-    iget-object v0, p0, Lfc5;->b:Ljava/lang/Object;
+    const-string v0, "Failed to retrieve remote module version."
 
-    monitor-enter v0
+    invoke-static {p2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_16
+    .catch Landroid/os/RemoteException; {:try_start_16 .. :try_end_16} :catch_7
+    .catchall {:try_start_16 .. :try_end_16} :catchall_3
 
-    :try_start_0
-    iget-object v1, p0, Lfc5;->r:Lpb5;
+    if-eqz p1, :cond_14
 
-    iget-object v2, p0, Lfc5;->s:Ljava/util/concurrent/Executor;
+    :try_start_17
+    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+    :try_end_17
+    .catchall {:try_start_17 .. :try_end_17} :catchall_2
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto/16 :goto_10
 
-    :try_start_1
-    new-instance v0, Ld75;
+    :goto_b
+    move-object v3, p1
 
-    invoke-direct {v0, v1, p1, p2, p3}, Ld75;-><init>(Lpb5;ILjava/lang/String;Ljava/lang/Throwable;)V
+    goto/16 :goto_11
 
-    invoke-interface {v2, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
+    :goto_c
+    move-object v3, p1
 
-    return-void
+    goto :goto_f
 
-    :catch_0
-    move-exception p1
+    :cond_12
+    move-object v7, p1
 
-    iget-object p2, p0, Lfc5;->a:Ljava/lang/String;
+    move v8, p2
 
-    const-string p3, "Unable to post to the supplied executor."
+    const/4 p1, 0x2
 
-    invoke-static {p2, p3, p1}, Lafi;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-ne v1, p1, :cond_13
 
-    return-void
+    :try_start_18
+    const-string p1, "DynamiteModule"
 
-    :catchall_0
-    move-exception p1
+    const-string p2, "IDynamite loader version = 2, no high precision latency measurement."
 
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    new-instance p1, Laxa;
+
+    invoke-direct {p1, p0}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v5}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object p2
+
+    invoke-static {p2, p1}, Lfvi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v8}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 p1, 0x5
+
+    invoke-virtual {v5, p2, p1}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    goto :goto_9
+
+    :cond_13
+    const-string p1, "DynamiteModule"
+
+    const-string p2, "IDynamite loader version < 2, falling back to getModuleVersion2"
+
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p1, Laxa;
+
+    invoke-direct {p1, p0}, Laxa;-><init>(Ljava/lang/Object;)V
+
+    invoke-virtual {v5}, Lwoi;->V()Landroid/os/Parcel;
+
+    move-result-object p2
+
+    invoke-static {p2, p1}, Lfvi;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    invoke-virtual {p2, v7}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    invoke-virtual {p2, v8}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {v5, p2, v0}, Lwoi;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+    :try_end_18
+    .catch Landroid/os/RemoteException; {:try_start_18 .. :try_end_18} :catch_6
+    .catchall {:try_start_18 .. :try_end_18} :catchall_4
+
+    goto :goto_9
+
+    :goto_d
+    move-object p2, p1
+
+    goto :goto_11
+
+    :goto_e
+    move-object p2, p1
+
+    :goto_f
+    :try_start_19
+    const-string p1, "DynamiteModule"
+
+    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Failed to retrieve remote module version: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    :try_end_19
+    .catchall {:try_start_19 .. :try_end_19} :catchall_4
+
+    if-eqz v3, :cond_14
+
+    :try_start_1a
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    :cond_14
+    :goto_10
+    return v4
+
+    :catchall_4
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_d
+
+    :goto_11
+    if-eqz v3, :cond_15
+
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    :cond_15
+    throw p2
+    :try_end_1a
+    .catchall {:try_start_1a .. :try_end_1a} :catchall_2
+
+    :goto_12
+    :try_start_1b
+    monitor-exit v1
+    :try_end_1b
+    .catchall {:try_start_1b .. :try_end_1b} :catchall_1
+
+    :try_start_1c
+    throw p1
+    :try_end_1c
+    .catchall {:try_start_1c .. :try_end_1c} :catchall_2
+
+    :goto_13
+    :try_start_1d
+    invoke-static {p0}, Ldkj;->g(Ljava/lang/Object;)V
+    :try_end_1d
+    .catch Ljava/lang/Exception; {:try_start_1d .. :try_end_1d} :catch_8
+
+    goto :goto_14
+
+    :catch_8
+    move-exception v0
+
+    move-object p0, v0
+
+    const-string p2, "CrashUtils"
+
+    const-string v0, "Error adding exception to DropBox!"
+
+    invoke-static {p2, v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :goto_14
     throw p1
 .end method
 
-.method public final e()V
-    .locals 4
-
-    iget-object v0, p0, Lfc5;->q:Lg93;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lg93;->i()J
-
-    move-result-wide v0
-
-    new-instance v2, Lub5;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p0, v0, v1, v3}, Lub5;-><init>(Lfc5;JI)V
-
-    iget-object v0, p0, Lfc5;->h:Ln3e;
-
-    invoke-virtual {v0, v2}, Ln3e;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 6
-
-    iget-boolean v0, p0, Lfc5;->z:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lfc5;->e:Landroid/media/MediaCodec;
-
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lfc5;->z:Z
-
-    :cond_0
-    iget-object v0, p0, Lfc5;->e:Landroid/media/MediaCodec;
-
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
-
-    iget-object v0, p0, Lfc5;->f:Llb5;
-
-    instance-of v1, v0, Ldc5;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    check-cast v0, Ldc5;
-
-    iget-object v1, v0, Ldc5;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v3, v0, Ldc5;->b:Landroid/view/Surface;
-
-    iput-object v2, v0, Ldc5;->b:Landroid/view/Surface;
-
-    new-instance v4, Ljava/util/HashSet;
-
-    iget-object v5, v0, Ldc5;->c:Ljava/util/HashSet;
-
-    invoke-direct {v4, v5}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    iget-object v0, v0, Ldc5;->c:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Landroid/view/Surface;->release()V
-
-    :cond_1
-    invoke-virtual {v4}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/Surface;
-
-    invoke-virtual {v1}, Landroid/view/Surface;->release()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_2
-    const/16 v0, 0x9
-
-    invoke-virtual {p0, v0}, Lfc5;->i(I)V
-
-    iget-object v0, p0, Lfc5;->j:Lqt1;
-
-    invoke-virtual {v0, v2}, Lqt1;->b(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 2
-
-    const-string v0, "request-sync"
+.method public static e(Landroid/content/Context;Ljava/lang/String;ZZ)I
+    .locals 9
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lok7;->e(ILjava/lang/String;)Landroid/os/Bundle;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v1, p0, Lfc5;->e:Landroid/media/MediaCodec;
+    sget-object p0, Lfc5;->j:Lay0;
 
-    invoke-virtual {v1, v0}, Landroid/media/MediaCodec;->setParameters(Landroid/os/Bundle;)V
+    invoke-virtual {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public final h()V
-    .locals 6
+    check-cast p0, Ljava/lang/Long;
 
-    sget-object v0, Lfc5;->E:Landroid/util/Range;
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
-    iput-object v0, p0, Lfc5;->t:Landroid/util/Range;
+    move-result-wide v3
 
-    const-wide/16 v0, 0x0
+    const-string p0, "api_force_staging"
 
-    iput-wide v0, p0, Lfc5;->u:J
+    const-string v0, "api"
 
-    iget-object v0, p0, Lfc5;->o:Ljava/util/ArrayDeque;
+    const/4 v8, 0x1
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
+    if-eq v8, p2, :cond_0
 
-    iget-object v0, p0, Lfc5;->k:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
-
-    iget-object v0, p0, Lfc5;->l:Ljava/util/ArrayDeque;
-
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqt1;
-
-    invoke-virtual {v1}, Lqt1;->c()V
-
-    goto :goto_0
+    move-object p0, v0
 
     :cond_0
-    iget-object v0, p0, Lfc5;->l:Ljava/util/ArrayDeque;
+    new-instance p2, Landroid/net/Uri$Builder;
 
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
+    invoke-direct {p2}, Landroid/net/Uri$Builder;-><init>()V
 
-    iget-object v0, p0, Lfc5;->e:Landroid/media/MediaCodec;
+    const-string v0, "content"
 
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->reset()V
+    invoke-virtual {p2, v0}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    const/4 v0, 0x0
+    move-result-object p2
 
-    iput-boolean v0, p0, Lfc5;->z:Z
+    const-string v0, "com.google.android.gms.chimera"
 
-    iput-boolean v0, p0, Lfc5;->A:Z
+    invoke-virtual {p2, v0}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    iput-boolean v0, p0, Lfc5;->B:Z
+    move-result-object p2
 
-    iput-boolean v0, p0, Lfc5;->v:Z
+    invoke-virtual {p2, p0}, Landroid/net/Uri$Builder;->path(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    iget-object v1, p0, Lfc5;->x:Ljava/util/concurrent/ScheduledFuture;
+    move-result-object p0
 
-    const/4 v2, 0x1
+    invoke-virtual {p0, p1}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    const/4 v3, 0x0
+    move-result-object p0
 
-    if-eqz v1, :cond_1
+    const-string p1, "requestStartTime"
 
-    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    iput-object v3, p0, Lfc5;->x:Ljava/util/concurrent/ScheduledFuture;
+    move-result-object p2
 
-    :cond_1
-    iget-object v1, p0, Lfc5;->C:Ljava/util/concurrent/ScheduledFuture;
+    invoke-virtual {p0, p1, p2}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    if-eqz v1, :cond_2
+    move-result-object p0
 
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    iput-object v3, p0, Lfc5;->C:Ljava/util/concurrent/ScheduledFuture;
-
-    :cond_2
-    iget-object v0, p0, Lfc5;->y:Lcc5;
-
-    if-eqz v0, :cond_3
-
-    iput-boolean v2, v0, Lcc5;->j:Z
-
-    :cond_3
-    new-instance v0, Lcc5;
-
-    invoke-direct {v0, p0}, Lcc5;-><init>(Lfc5;)V
-
-    iput-object v0, p0, Lfc5;->y:Lcc5;
-
-    iget-object v1, p0, Lfc5;->e:Landroid/media/MediaCodec;
-
-    invoke-virtual {v1, v0}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;)V
-
-    iget-object v0, p0, Lfc5;->e:Landroid/media/MediaCodec;
-
-    iget-object v1, p0, Lfc5;->d:Landroid/media/MediaFormat;
-
-    invoke-virtual {v0, v1, v3, v3, v2}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
-
-    iget-object v0, p0, Lfc5;->f:Llb5;
-
-    instance-of v1, v0, Ldc5;
-
-    if-eqz v1, :cond_7
-
-    check-cast v0, Ldc5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-class v1, Landroidx/camera/video/internal/compat/quirk/EncoderNotUsePersistentInputSurfaceQuirk;
-
-    sget-object v2, Lzs4;->a:Lnx6;
-
-    invoke-virtual {v2, v1}, Lnx6;->f(Ljava/lang/Class;)Lgjc;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/camera/video/internal/compat/quirk/EncoderNotUsePersistentInputSurfaceQuirk;
-
-    iget-object v2, v0, Ldc5;->a:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    if-nez v1, :cond_5
-
-    :try_start_0
-    iget-object v1, v0, Ldc5;->b:Landroid/view/Surface;
-
-    if-nez v1, :cond_4
-
-    invoke-static {}, Landroid/media/MediaCodec;->createPersistentInputSurface()Landroid/view/Surface;
+    invoke-virtual {p0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v3
 
-    iput-object v3, v0, Ldc5;->b:Landroid/view/Surface;
+    const/4 v6, 0x0
 
-    goto :goto_1
+    const/4 v7, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-virtual/range {v2 .. v7}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    if-eqz p0, :cond_a
+
+    :try_start_1
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_a
+
+    const/4 p1, 0x0
+
+    invoke-interface {p0, p1}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result p2
+
+    if-lez p2, :cond_6
+
+    const-class v2, Lfc5;
+
+    monitor-enter v2
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    const/4 v0, 0x2
+
+    :try_start_2
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lfc5;->e:Ljava/lang/String;
+
+    const-string v0, "loaderVersion"
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_1
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    sput v0, Lfc5;->g:I
+
+    goto :goto_0
 
     :catchall_0
     move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_5
+
+    :cond_1
+    :goto_0
+    const-string v0, "disableStandaloneDynamiteLoader2"
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-ltz v0, :cond_3
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    move v0, v8
+
+    goto :goto_1
+
+    :cond_2
+    move v0, p1
+
+    :goto_1
+    sput-boolean v0, Lfc5;->f:Z
+
+    goto :goto_2
+
+    :cond_3
+    move v0, p1
+
+    :goto_2
+    monitor-exit v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    sget-object v2, Lfc5;->i:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v2}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Llgj;
+
+    if-eqz v2, :cond_4
+
+    iget-object v3, v2, Llgj;->a:Landroid/database/Cursor;
+
+    if-nez v3, :cond_4
+
+    iput-object p0, v2, Llgj;->a:Landroid/database/Cursor;
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     goto :goto_3
 
     :cond_4
-    :goto_1
-    iget-object v1, v0, Ldc5;->X:Lfc5;
-
-    iget-object v1, v1, Lfc5;->e:Landroid/media/MediaCodec;
-
-    iget-object v4, v0, Ldc5;->b:Landroid/view/Surface;
-
-    invoke-virtual {v1, v4}, Landroid/media/MediaCodec;->setInputSurface(Landroid/view/Surface;)V
-
-    goto :goto_2
-
-    :cond_5
-    iget-object v1, v0, Ldc5;->b:Landroid/view/Surface;
-
-    if-eqz v1, :cond_6
-
-    iget-object v3, v0, Ldc5;->c:Ljava/util/HashSet;
-
-    invoke-virtual {v3, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    :cond_6
-    iget-object v1, v0, Ldc5;->X:Lfc5;
-
-    iget-object v1, v1, Lfc5;->e:Landroid/media/MediaCodec;
-
-    invoke-virtual {v1}, Landroid/media/MediaCodec;->createInputSurface()Landroid/view/Surface;
-
-    move-result-object v3
-
-    iput-object v3, v0, Ldc5;->b:Landroid/view/Surface;
-
-    :goto_2
-    iget-object v1, v0, Ldc5;->d:Llng;
-
-    iget-object v4, v0, Ldc5;->o:Ljava/util/concurrent/Executor;
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v3, :cond_7
-
-    if-eqz v1, :cond_7
-
-    if-eqz v4, :cond_7
-
-    :try_start_1
-    new-instance v2, Lhn4;
-
-    const/16 v5, 0x1a
-
-    invoke-direct {v2, v1, v5, v3}, Lhn4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {v4, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_1 .. :try_end_1} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v1
-
-    iget-object v0, v0, Ldc5;->X:Lfc5;
-
-    iget-object v0, v0, Lfc5;->a:Ljava/lang/String;
-
-    const-string v2, "Unable to post to the supplied executor."
-
-    invoke-static {v0, v2, v1}, Lafi;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+    move v8, p1
 
     :goto_3
-    :try_start_2
-    monitor-exit v2
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    if-eqz v8, :cond_5
 
-    throw v0
+    :goto_4
+    move p1, v0
+
+    goto :goto_6
+
+    :cond_5
+    move-object v1, p0
+
+    goto :goto_4
+
+    :goto_5
+    :try_start_4
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    throw p1
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    :catchall_1
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_8
+
+    :catch_0
+    move-exception v0
+
+    move-object p1, v0
+
+    goto :goto_9
+
+    :cond_6
+    move-object v1, p0
+
+    :goto_6
+    if-eqz p3, :cond_8
+
+    if-nez p1, :cond_7
+
+    goto :goto_7
 
     :cond_7
-    return-void
+    :try_start_6
+    new-instance p0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string p1, "forcing fallback to container DynamiteLoader impl"
+
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw p0
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    :catchall_2
+    move-exception v0
+
+    move-object p0, v0
+
+    goto :goto_b
+
+    :catch_1
+    move-exception v0
+
+    move-object p0, v0
+
+    goto :goto_a
+
+    :cond_8
+    :goto_7
+    if-eqz v1, :cond_9
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_9
+    return p2
+
+    :cond_a
+    :try_start_7
+    const-string p1, "DynamiteModule"
+
+    const-string p2, "Failed to retrieve remote module version."
+
+    invoke-static {p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance p1, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string p2, "Failed to connect to dynamite module ContentResolver."
+
+    invoke-direct {p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw p1
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :goto_8
+    move-object v1, p0
+
+    move-object p0, p1
+
+    goto :goto_b
+
+    :goto_9
+    move-object v1, p0
+
+    move-object p0, p1
+
+    :goto_a
+    :try_start_8
+    nop
+
+    instance-of p1, p0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    if-eqz p1, :cond_b
+
+    throw p0
+
+    :cond_b
+    new-instance p1, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v0, "V2 version check failed: "
+
+    invoke-virtual {p3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw p1
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_2
+
+    :goto_b
+    if-eqz v1, :cond_c
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_c
+    throw p0
 .end method
 
-.method public final i(I)V
-    .locals 2
+.method public static f(Ljava/lang/ClassLoader;)V
+    .locals 3
 
-    iget v0, p0, Lfc5;->D:I
+    const-string v0, "com.google.android.gms.dynamite.IDynamiteLoaderV2"
 
-    if-ne v0, p1, :cond_0
+    :try_start_0
+    const-string v1, "com.google.android.gms.dynamiteloader.DynamiteLoaderV2"
 
-    return-void
+    invoke-virtual {p0, v1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    move-result-object p0
 
-    const-string v1, "Transitioning encoder internal state: "
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    iget v1, p0, Lfc5;->D:I
+    move-result-object p0
 
-    invoke-static {v1}, Lm65;->q(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast p0, Landroid/os/IBinder;
 
-    const-string v1, " --> "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p1}, Lm65;->q(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lfc5;->a:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput p1, p0, Lfc5;->D:I
-
-    return-void
-.end method
-
-.method public final j()V
-    .locals 7
-
-    iget-object v0, p0, Lfc5;->a:Ljava/lang/String;
-
-    const-string v1, "signalCodecStop"
-
-    invoke-static {v0, v1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lfc5;->f:Llb5;
-
-    instance-of v1, v0, Lac5;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lac5;
-
-    invoke-virtual {v0, v2}, Lac5;->a(Z)V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p0, Lfc5;->m:Ljava/util/HashSet;
-
-    invoke-virtual {v1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lmg7;
-
-    iget-object v2, v2, Lmg7;->d:Ltt1;
-
-    invoke-static {v2}, Lyyg;->m(Lv28;)Lv28;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    if-nez p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lyyg;->q(Ljava/util/ArrayList;)Lh28;
+    invoke-interface {p0, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    move-result-object v0
+    move-result-object v1
 
-    new-instance v1, Lsb5;
+    instance-of v2, v1, Lwkj;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lwkj;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Lwkj;
 
     const/4 v2, 0x2
 
-    invoke-direct {v1, p0, v2}, Lsb5;-><init>(Lfc5;I)V
+    invoke-direct {v1, p0, v0, v2}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    iget-object v2, p0, Lfc5;->h:Ln3e;
-
-    invoke-virtual {v0, v1, v2}, Lh28;->e(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    return-void
-
-    :cond_1
-    instance-of v0, v0, Ldc5;
-
-    if-eqz v0, :cond_4
-
-    const/4 v0, 0x1
-
-    :try_start_0
-    const-class v1, Landroidx/camera/video/internal/compat/quirk/SignalEosOutputBufferNotComeQuirk;
-
-    sget-object v3, Lzs4;->a:Lnx6;
-
-    invoke-virtual {v3, v1}, Lnx6;->f(Ljava/lang/Class;)Lgjc;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_3
-
-    iget-object v1, p0, Lfc5;->y:Lcc5;
-
-    iget-object v3, p0, Lfc5;->h:Ln3e;
-
-    iget-object v4, p0, Lfc5;->C:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v4, :cond_2
-
-    invoke-interface {v4, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_2
-    invoke-static {}, Lcr7;->d()Lfw6;
-
-    move-result-object v2
-
-    new-instance v4, Lhn4;
-
-    const/16 v5, 0x11
-
-    invoke-direct {v4, v3, v5, v1}, Lhn4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v5, 0x3e8
-
-    invoke-virtual {v2, v4, v5, v6, v1}, Lfw6;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lfc5;->C:Ljava/util/concurrent/ScheduledFuture;
-
-    :cond_3
-    iget-object v1, p0, Lfc5;->e:Landroid/media/MediaCodec;
-
-    invoke-virtual {v1}, Landroid/media/MediaCodec;->signalEndOfInputStream()V
-
-    iput-boolean v0, p0, Lfc5;->B:Z
+    :goto_0
+    sput-object v1, Lfc5;->m:Lwkj;
     :try_end_0
-    .catch Landroid/media/MediaCodec$CodecException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-void
 
     :catch_0
-    move-exception v1
+    move-exception p0
 
-    invoke-virtual {v1}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    new-instance v0, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
 
-    move-result-object v2
+    const-string v1, "Failed to instantiate dynamite loader"
 
-    invoke-virtual {p0, v0, v2, v1}, Lfc5;->b(ILjava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :cond_4
-    return-void
+    throw v0
 .end method
 
-.method public final k()V
-    .locals 4
-
-    iget-object v0, p0, Lfc5;->q:Lg93;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lg93;->i()J
-
-    move-result-wide v0
-
-    new-instance v2, Lub5;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, p0, v0, v1, v3}, Lub5;-><init>(Lfc5;JI)V
-
-    iget-object v0, p0, Lfc5;->h:Ln3e;
-
-    invoke-virtual {v0, v2}, Ln3e;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final l(Ljava/lang/Runnable;)V
+.method public static g(Landroid/content/Context;)Z
     .locals 6
 
-    const-string v0, "stopMediaCodec"
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    iget-object v1, p0, Lfc5;->a:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
 
-    new-instance v0, Ljava/util/ArrayList;
+    move-result v1
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v2, 0x1
 
-    iget-object v2, p0, Lfc5;->n:Ljava/util/HashSet;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    return v2
 
-    move-result-object v3
+    :cond_0
+    sget-object v1, Lfc5;->h:Ljava/lang/Boolean;
 
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v0
 
-    if-eqz v4, :cond_0
+    if-eqz v0, :cond_1
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return v2
 
-    move-result-object v4
+    :cond_1
+    sget-object v0, Lfc5;->h:Ljava/lang/Boolean;
 
-    check-cast v4, Lgb5;
+    const-string v1, "DynamiteModule"
 
-    iget-object v4, v4, Lgb5;->o:Ltt1;
+    const/4 v3, 0x0
 
-    invoke-static {v4}, Lyyg;->m(Lv28;)Lv28;
+    if-nez v0, :cond_3
 
-    move-result-object v4
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v0
+
+    const-string v4, "com.google.android.gms.chimera"
+
+    invoke-virtual {v0, v4, v3}, Landroid/content/pm/PackageManager;->resolveContentProvider(Ljava/lang/String;I)Landroid/content/pm/ProviderInfo;
+
+    move-result-object v0
+
+    sget-object v4, Ld07;->b:Ld07;
+
+    const v5, 0x989680
+
+    invoke-virtual {v4, p0, v5}, Ld07;->c(Landroid/content/Context;I)I
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    if-eqz v0, :cond_2
+
+    const-string p0, "com.google.android.gms"
+
+    iget-object v4, v0, Landroid/content/pm/ProviderInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    move v3, v2
+
+    :cond_2
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    sput-object p0, Lfc5;->h:Ljava/lang/Boolean;
+
+    if-eqz v3, :cond_3
+
+    iget-object p0, v0, Landroid/content/pm/ProviderInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
+
+    if-eqz p0, :cond_3
+
+    iget p0, p0, Landroid/content/pm/ApplicationInfo;->flags:I
+
+    and-int/lit16 p0, p0, 0x81
+
+    if-nez p0, :cond_3
+
+    const-string p0, "Non-system-image GmsCore APK, forcing V1"
+
+    invoke-static {v1, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    sput-boolean v2, Lfc5;->f:Z
+
+    :cond_3
+    if-nez v3, :cond_4
+
+    const-string p0, "Invalid GmsCore APK, remote loading disabled."
+
+    invoke-static {v1, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_4
+    return v3
+.end method
+
+.method public static h(Landroid/content/Context;)Lvjj;
+    .locals 6
+
+    const-string v0, "Failed to load IDynamiteLoader from GmsCore: "
+
+    const-class v1, Lfc5;
+
+    monitor-enter v1
+
+    :try_start_0
+    sget-object v2, Lfc5;->l:Lvjj;
+
+    if-eqz v2, :cond_0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v2
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :try_start_1
+    const-string v3, "com.google.android.gms"
+
+    const/4 v4, 0x3
+
+    invoke-virtual {p0, v3, v4}, Landroid/content/Context;->createPackageContext(Ljava/lang/String;I)Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object p0
+
+    const-string v3, "com.google.android.gms.chimera.container.DynamiteLoaderImpl"
+
+    invoke-virtual {p0, v3}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/IBinder;
+
+    if-nez p0, :cond_1
+
+    move-object v3, v2
 
     goto :goto_0
 
-    :cond_0
-    iget-object v3, p0, Lfc5;->m:Ljava/util/HashSet;
+    :cond_1
+    const-string v3, "com.google.android.gms.dynamite.IDynamiteLoader"
 
-    invoke-virtual {v3}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0, v3}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
 
-    move-result-object v4
+    move-result-object v3
 
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    instance-of v4, v3, Lvjj;
 
-    move-result v5
+    if-eqz v4, :cond_2
 
-    if-eqz v5, :cond_1
+    check-cast v3, Lvjj;
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v5
-
-    check-cast v5, Lmg7;
-
-    iget-object v5, v5, Lmg7;->d:Ltt1;
-
-    invoke-static {v5}, Lyyg;->m(Lv28;)Lv28;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :catch_0
+    move-exception p0
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
+    :cond_2
+    new-instance v3, Lvjj;
 
-    move-result v4
+    const-string v4, "com.google.android.gms.dynamite.IDynamiteLoader"
 
-    if-nez v4, :cond_2
+    const/4 v5, 0x2
+
+    invoke-direct {v3, p0, v4, v5}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    :goto_0
+    if-eqz v3, :cond_3
+
+    sput-object v3, Lfc5;->l:Lvjj;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    monitor-exit v1
+
+    return-object v3
+
+    :goto_1
+    const-string v3, "DynamiteModule"
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p0
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v5, "Waiting for resources to return. encoded data = "
+    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2}, Ljava/util/HashSet;->size()I
-
-    move-result v2
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ", input buffers = "
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/util/HashSet;->size()I
-
-    move-result v2
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object p0
 
-    invoke-static {v1, v2}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_2
-    invoke-static {v0}, Lyyg;->q(Ljava/util/ArrayList;)Lh28;
+    :cond_3
+    monitor-exit v1
 
-    move-result-object v1
+    return-object v2
 
-    new-instance v2, Ld75;
+    :goto_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    const/4 v3, 0x3
+    throw p0
+.end method
 
-    invoke-direct {v2, p0, v0, p1, v3}, Ld75;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    iget-object p1, p0, Lfc5;->h:Ln3e;
+# virtual methods
+.method public final b(Ljava/lang/String;)Landroid/os/IBinder;
+    .locals 3
 
-    invoke-virtual {v1, v2, p1}, Lh28;->e(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    :try_start_0
+    iget-object v0, p0, Lfc5;->a:Landroid/content/Context;
 
-    return-void
+    invoke-virtual {v0}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/IBinder;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
+    :goto_0
+    new-instance v1, Lcom/google/android/gms/dynamite/DynamiteModule$LoadingException;
+
+    const-string v2, "Failed to instantiate module class: "
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

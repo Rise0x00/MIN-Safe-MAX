@@ -1,43 +1,73 @@
-.class public abstract synthetic Lya2;
-.super Ljava/lang/Object;
+.class public final Lya2;
+.super Lg4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lya2;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Lqh8;
+
+.field public final b:Landroid/net/Uri;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    invoke-static {}, Ld72;->values()[Ld72;
+    new-instance v0, Lz7;
 
-    move-result-object v0
+    const/16 v1, 0xc
 
-    array-length v0, v0
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
 
-    new-array v0, v0, [I
+    sput-object v0, Lya2;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    const/4 v2, 0x0
+.method public constructor <init>(Lqh8;Landroid/net/Uri;)V
+    .locals 0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :catch_0
-    const/4 v2, 0x2
+    iput-object p1, p0, Lya2;->a:Lqh8;
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput-object p2, p0, Lya2;->b:Landroid/net/Uri;
 
-    :catch_1
-    sput-object v0, Lya2;->$EnumSwitchMapping$0:[I
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object v0, p0, Lya2;->a:Lqh8;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    iget-object v0, p0, Lya2;->b:Landroid/net/Uri;
+
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     return-void
 .end method

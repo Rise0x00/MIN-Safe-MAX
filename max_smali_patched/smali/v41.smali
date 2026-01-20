@@ -1,142 +1,106 @@
-.class public final synthetic Lv41;
+.class public final Lv41;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Lb51;
 
 
-# instance fields
-.field public final synthetic X:Lqu1;
+# static fields
+.field public static final a:Lv41;
 
-.field public final synthetic Y:Lyw0;
+.field public static final b:I
 
-.field public final synthetic a:Lhq1;
+.field public static final c:I
 
-.field public final synthetic b:Lorg/json/JSONObject;
+.field public static final d:I
 
-.field public final synthetic c:J
-
-.field public final synthetic d:Lwye;
-
-.field public final synthetic o:Ly41;
+.field public static final e:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhq1;Lorg/json/JSONObject;JLwye;Ly41;Lqu1;Lyw0;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lv41;
 
-    iput-object p1, p0, Lv41;->a:Lhq1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lv41;->b:Lorg/json/JSONObject;
+    sput-object v0, Lv41;->a:Lv41;
 
-    iput-wide p3, p0, Lv41;->c:J
+    const/16 v0, 0x36
 
-    iput-object p5, p0, Lv41;->d:Lwye;
+    int-to-float v0, v0
 
-    iput-object p6, p0, Lv41;->o:Ly41;
+    invoke-static {v0}, Liwd;->f(F)I
 
-    iput-object p7, p0, Lv41;->X:Lqu1;
+    move-result v0
 
-    iput-object p8, p0, Lv41;->Y:Lyw0;
+    sput v0, Lv41;->b:I
+
+    const/16 v0, 0x1c
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lv41;->c:I
+
+    const/4 v0, 0x1
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lv41;->d:I
+
+    const/4 v0, 0x6
+
+    int-to-float v0, v0
+
+    invoke-static {v0}, Liwd;->f(F)I
+
+    move-result v0
+
+    sput v0, Lv41;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a()I
+    .locals 1
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+    sget v0, Lv41;->c:I
 
-    iget-object v0, p0, Lv41;->a:Lhq1;
+    return v0
+.end method
 
-    iget-wide v0, v0, Lhq1;->a:J
+.method public final b()I
+    .locals 1
 
-    invoke-static {v0, v1}, Lwdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    sget v0, Lv41;->d:I
 
-    move-result-object v0
+    return v0
+.end method
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
+.method public final c()I
+    .locals 1
 
-    move-result-object p1
+    sget v0, Lv41;->b:I
 
-    iget-object v0, p0, Lv41;->b:Lorg/json/JSONObject;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+.method public final d()I
+    .locals 1
 
-    move-result-object v0
+    sget v0, Lv41;->e:I
 
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->setPayload(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->setWatchTogetherEnabledForAll(Z)Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
-
-    move-result-object p1
-
-    iget-wide v0, p0, Lv41;->c:J
-
-    invoke-static {v0, v1}, Lwdb;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
-
-    iget-object v0, p0, Lv41;->d:Lwye;
-
-    iget-boolean v0, v0, Lwye;->b:Z
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setStartWithVideo(Z)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
-
-    iget-object v0, p0, Lv41;->o:Ly41;
-
-    iget-object v0, v0, Ly41;->b:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwv1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
-
-    iget-object v0, p0, Lv41;->X:Lqu1;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
-
-    iget-object v0, p0, Lv41;->Y:Lyw0;
-
-    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lqi6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;
-
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/factory/StartCallParams$Builder;->build()Lru/ok/android/externcalls/sdk/factory/StartCallParams;
-
-    move-result-object p1
-
-    return-object p1
+    return v0
 .end method

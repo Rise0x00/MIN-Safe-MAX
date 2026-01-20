@@ -1,362 +1,624 @@
-.class public abstract Lov4;
-.super Lqof;
+.class public final Lov4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public resumeMode:I
+.field public a:I
+
+.field public b:J
+
+.field public c:Ljava/lang/Object;
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
 .method public constructor <init>(I)V
-    .locals 3
+    .locals 6
 
-    const-wide/16 v0, 0x0
+    packed-switch p1, :pswitch_data_0
 
-    sget-object v2, Lkpf;->g:Lvx5;
+    .line 1
+    new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-direct {p0, v0, v1, v2}, Lqof;-><init>(JLuof;)V
+    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    iput p1, p0, Lov4;->resumeMode:I
+    const/4 v3, 0x0
+
+    const-wide/16 v4, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lov4;-><init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILuc9;J)V
+
+    return-void
+
+    :pswitch_0
+    move-object v0, p0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    new-instance p1, Lehf;
+
+    invoke-direct {p1}, Lehf;-><init>()V
+
+    iput-object p1, v0, Lov4;->c:Ljava/lang/Object;
+
+    .line 4
+    sget-object p1, Lt8g;->a:Lt8g;
+
+    iput-object p1, v0, Lov4;->d:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(IJLpj6;Ljava/util/List;)V
+    .locals 0
+
+    .line 10
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 11
+    iput p1, p0, Lov4;->a:I
+
+    .line 12
+    iput-object p4, p0, Lov4;->c:Ljava/lang/Object;
+
+    .line 13
+    iput-object p5, p0, Lov4;->d:Ljava/lang/Object;
+
+    .line 14
+    iput-wide p2, p0, Lov4;->b:J
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILuc9;J)V
+    .locals 0
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-object p1, p0, Lov4;->d:Ljava/lang/Object;
+
+    .line 7
+    iput p2, p0, Lov4;->a:I
+
+    .line 8
+    iput-object p3, p0, Lov4;->c:Ljava/lang/Object;
+
+    .line 9
+    iput-wide p4, p0, Lov4;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract cancelCompletedResult$kotlinx_coroutines_core(Ljava/lang/Object;Ljava/lang/Throwable;)V
+.method public a(J)J
+    .locals 3
+
+    invoke-static {p1, p2}, Lkbh;->K(J)J
+
+    move-result-wide p1
+
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long v2, p1, v0
+
+    if-nez v2, :cond_0
+
+    return-wide v0
+
+    :cond_0
+    iget-wide v0, p0, Lov4;->b:J
+
+    add-long/2addr v0, p1
+
+    return-wide v0
 .end method
 
-.method public abstract getDelegate$kotlinx_coroutines_core()Lkotlin/coroutines/Continuation;
+.method public b(ILoj6;ILjava/lang/Object;J)V
+    .locals 10
+
+    new-instance v0, Le59;
+
+    move-wide v1, p5
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v6
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v1, 0x1
+
+    move v2, p1
+
+    move-object v3, p2
+
+    move v4, p3
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v9}, Le59;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
+
+    invoke-virtual {p0, v0}, Lov4;->c(Le59;)V
+
+    return-void
 .end method
 
-.method public getExceptionalResult$kotlinx_coroutines_core(Ljava/lang/Object;)Ljava/lang/Throwable;
-    .locals 2
+.method public c(Le59;)V
+    .locals 5
 
-    instance-of v0, p1, Ldh3;
+    iget-object v0, p0, Lov4;->d:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    check-cast p1, Ldh3;
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbd9;
+
+    iget-object v2, v1, Lbd9;->b:Ldd9;
+
+    iget-object v1, v1, Lbd9;->a:Landroid/os/Handler;
+
+    new-instance v3, Lye5;
+
+    const/16 v4, 0x14
+
+    invoke-direct {v3, p0, v2, p1, v4}, Lye5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {v1, v3}, Lkbh;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
     goto :goto_0
 
     :cond_0
-    move-object p1, v1
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Ldh3;->a:Ljava/lang/Throwable;
-
-    return-object p1
-
-    :cond_1
-    return-object v1
+    return-void
 .end method
 
-.method public getSuccessfulResult$kotlinx_coroutines_core(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/lang/Object;",
-            ")TT;"
-        }
-    .end annotation
+.method public d(Lnf8;IILoj6;ILjava/lang/Object;JJ)V
+    .locals 10
 
-    return-object p1
-.end method
+    new-instance v0, Le59;
 
-.method public final handleFatalException$kotlinx_coroutines_core(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-    .locals 2
+    move-wide/from16 v1, p7
 
-    if-nez p1, :cond_0
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
 
-    if-nez p2, :cond_0
+    move-result-wide v6
+
+    move-wide/from16 v1, p9
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v8
+
+    move v1, p2
+
+    move v2, p3
+
+    move-object v3, p4
+
+    move v4, p5
+
+    move-object/from16 v5, p6
+
+    invoke-direct/range {v0 .. v9}, Le59;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
+
+    invoke-virtual {p0, p1, v0}, Lov4;->e(Lnf8;Le59;)V
 
     return-void
+.end method
 
-    :cond_0
-    if-eqz p1, :cond_1
+.method public e(Lnf8;Le59;)V
+    .locals 8
 
-    if-eqz p2, :cond_1
+    iget-object v0, p0, Lov4;->d:Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Lwzi;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    :cond_1
-    if-nez p1, :cond_2
-
-    move-object p1, p2
-
-    :cond_2
-    new-instance p2, Lm54;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Fatal exception in coroutines machinery for "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ". Please read KDoc to \'handleFatalException\' method and report this incident to maintainers"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-direct {p2, v0, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p0}, Lov4;->getDelegate$kotlinx_coroutines_core()Lkotlin/coroutines/Continuation;
+    move-result v1
 
-    move-result-object p1
+    if-eqz v1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/coroutines/Continuation;->getContext()Ly44;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v1
 
-    invoke-static {p1, p2}, Lhwi;->b(Ly44;Ljava/lang/Throwable;)V
+    check-cast v1, Lbd9;
+
+    iget-object v4, v1, Lbd9;->b:Ldd9;
+
+    iget-object v1, v1, Lbd9;->a:Landroid/os/Handler;
+
+    new-instance v2, Lzc9;
+
+    const/4 v7, 0x2
+
+    move-object v3, p0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    invoke-direct/range {v2 .. v7}, Lzc9;-><init>(Lov4;Ldd9;Lnf8;Le59;I)V
+
+    invoke-static {v1, v2}, Lkbh;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public f(Lnf8;IILoj6;ILjava/lang/Object;JJ)V
+    .locals 10
+
+    new-instance v0, Le59;
+
+    move-wide/from16 v1, p7
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v6
+
+    move-wide/from16 v1, p9
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v8
+
+    move v1, p2
+
+    move v2, p3
+
+    move-object v3, p4
+
+    move v4, p5
+
+    move-object/from16 v5, p6
+
+    invoke-direct/range {v0 .. v9}, Le59;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
+
+    invoke-virtual {p0, p1, v0}, Lov4;->g(Lnf8;Le59;)V
 
     return-void
 .end method
 
-.method public final run()V
+.method public g(Lnf8;Le59;)V
+    .locals 8
+
+    iget-object v0, p0, Lov4;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbd9;
+
+    iget-object v4, v1, Lbd9;->b:Ldd9;
+
+    iget-object v1, v1, Lbd9;->a:Landroid/os/Handler;
+
+    new-instance v2, Lzc9;
+
+    const/4 v7, 0x1
+
+    move-object v3, p0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    invoke-direct/range {v2 .. v7}, Lzc9;-><init>(Lov4;Ldd9;Lnf8;Le59;I)V
+
+    invoke-static {v1, v2}, Lkbh;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public h(Lnf8;IILoj6;ILjava/lang/Object;JJLjava/io/IOException;Z)V
+    .locals 10
+
+    new-instance v0, Le59;
+
+    move-wide/from16 v1, p7
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v6
+
+    move-wide/from16 v1, p9
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v8
+
+    move v1, p2
+
+    move v2, p3
+
+    move-object v3, p4
+
+    move v4, p5
+
+    move-object/from16 v5, p6
+
+    invoke-direct/range {v0 .. v9}, Le59;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
+
+    move-object/from16 p2, p11
+
+    move/from16 p3, p12
+
+    invoke-virtual {p0, p1, v0, p2, p3}, Lov4;->j(Lnf8;Le59;Ljava/io/IOException;Z)V
+
+    return-void
+.end method
+
+.method public i(Lnf8;ILjava/io/IOException;Z)V
     .locals 13
 
-    sget-object v0, Lybg;->a:Lybg;
+    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
 
-    iget-object v1, p0, Lqof;->taskContext:Luof;
+    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
 
-    :try_start_0
-    invoke-virtual {p0}, Lov4;->getDelegate$kotlinx_coroutines_core()Lkotlin/coroutines/Continuation;
+    const/4 v3, -0x1
 
-    move-result-object v2
+    const/4 v4, 0x0
 
-    check-cast v2, Lkotlinx/coroutines/internal/DispatchedContinuation;
-
-    iget-object v3, v2, Lkotlinx/coroutines/internal/DispatchedContinuation;->continuation:Lkotlin/coroutines/Continuation;
-
-    iget-object v2, v2, Lkotlinx/coroutines/internal/DispatchedContinuation;->countOrElement:Ljava/lang/Object;
-
-    invoke-interface {v3}, Lkotlin/coroutines/Continuation;->getContext()Ly44;
-
-    move-result-object v4
-
-    invoke-static {v4, v2}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Ly44;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    sget-object v5, Lkotlinx/coroutines/internal/ThreadContextKt;->NO_THREAD_ELEMENTS:Lkotlinx/coroutines/internal/Symbol;
+    const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    if-eq v2, v5, :cond_0
+    move-object v0, p0
 
-    invoke-static {v3, v4, v2}, Lfwi;->c(Lkotlin/coroutines/Continuation;Ly44;Ljava/lang/Object;)Ltbg;
+    move-object v1, p1
 
-    move-result-object v5
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move v2, p2
 
-    goto :goto_0
+    move-object/from16 v11, p3
 
-    :catchall_0
-    move-exception v2
+    move/from16 v12, p4
 
-    goto/16 :goto_6
+    invoke-virtual/range {v0 .. v12}, Lov4;->h(Lnf8;IILoj6;ILjava/lang/Object;JJLjava/io/IOException;Z)V
 
-    :cond_0
-    move-object v5, v6
-
-    :goto_0
-    :try_start_1
-    invoke-interface {v3}, Lkotlin/coroutines/Continuation;->getContext()Ly44;
-
-    move-result-object v7
-
-    invoke-virtual {p0}, Lov4;->takeState$kotlinx_coroutines_core()Ljava/lang/Object;
-
-    move-result-object v8
-
-    invoke-virtual {p0, v8}, Lov4;->getExceptionalResult$kotlinx_coroutines_core(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v9
-
-    if-nez v9, :cond_3
-
-    iget v10, p0, Lov4;->resumeMode:I
-
-    const/4 v11, 0x1
-
-    if-eq v10, v11, :cond_2
-
-    const/4 v12, 0x2
-
-    if-ne v10, v12, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v11, 0x0
-
-    :cond_2
-    :goto_1
-    if-eqz v11, :cond_3
-
-    sget-object v10, Lg93;->t0:Lg93;
-
-    invoke-interface {v7, v10}, Ly44;->get(Lx44;)Lw44;
-
-    move-result-object v7
-
-    check-cast v7, Lwn7;
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v3
-
-    goto :goto_5
-
-    :cond_3
-    move-object v7, v6
-
-    :goto_2
-    if-eqz v7, :cond_4
-
-    invoke-interface {v7}, Lwn7;->isActive()Z
-
-    move-result v10
-
-    if-nez v10, :cond_4
-
-    invoke-interface {v7}, Lwn7;->getCancellationException()Ljava/util/concurrent/CancellationException;
-
-    move-result-object v7
-
-    invoke-virtual {p0, v8, v7}, Lov4;->cancelCompletedResult$kotlinx_coroutines_core(Ljava/lang/Object;Ljava/lang/Throwable;)V
-
-    new-instance v8, Lfed;
-
-    invoke-direct {v8, v7}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {v3, v8}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_4
-    if-eqz v9, :cond_5
-
-    new-instance v7, Lfed;
-
-    invoke-direct {v7, v9}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-interface {v3, v7}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {p0, v8}, Lov4;->getSuccessfulResult$kotlinx_coroutines_core(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    invoke-interface {v3, v7}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :goto_3
-    if-eqz v5, :cond_6
-
-    :try_start_2
-    invoke-virtual {v5}, Ltbg;->D()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_7
-
-    :cond_6
-    invoke-static {v4, v2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Ly44;Ljava/lang/Object;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_7
-    :try_start_3
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
-
-    goto :goto_4
-
-    :catchall_2
-    move-exception v0
-
-    new-instance v1, Lfed;
-
-    invoke-direct {v1, v0}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    :goto_4
-    invoke-static {v0}, Lhed;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v6, v0}, Lov4;->handleFatalException$kotlinx_coroutines_core(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    goto :goto_8
-
-    :goto_5
-    if-eqz v5, :cond_8
-
-    :try_start_4
-    invoke-virtual {v5}, Ltbg;->D()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_9
-
-    :cond_8
-    invoke-static {v4, v2}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Ly44;Ljava/lang/Object;)V
-
-    :cond_9
-    throw v3
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :goto_6
-    :try_start_5
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_3
-
-    goto :goto_7
-
-    :catchall_3
-    move-exception v0
-
-    new-instance v1, Lfed;
-
-    invoke-direct {v1, v0}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    move-object v0, v1
-
-    :goto_7
-    invoke-static {v0}, Lhed;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v2, v0}, Lov4;->handleFatalException$kotlinx_coroutines_core(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    :goto_8
     return-void
 .end method
 
-.method public abstract takeState$kotlinx_coroutines_core()Ljava/lang/Object;
+.method public j(Lnf8;Le59;Ljava/io/IOException;Z)V
+    .locals 10
+
+    iget-object v0, p0, Lov4;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbd9;
+
+    iget-object v4, v1, Lbd9;->b:Ldd9;
+
+    iget-object v1, v1, Lbd9;->a:Landroid/os/Handler;
+
+    new-instance v2, Low4;
+
+    const/4 v9, 0x1
+
+    move-object v3, p0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    move-object v7, p3
+
+    move v8, p4
+
+    invoke-direct/range {v2 .. v9}, Low4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/io/IOException;ZI)V
+
+    invoke-static {v1, v2}, Lkbh;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public k(Lnf8;IILoj6;ILjava/lang/Object;JJ)V
+    .locals 10
+
+    new-instance v0, Le59;
+
+    move-wide/from16 v1, p7
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v6
+
+    move-wide/from16 v1, p9
+
+    invoke-virtual {p0, v1, v2}, Lov4;->a(J)J
+
+    move-result-wide v8
+
+    move v1, p2
+
+    move v2, p3
+
+    move-object v3, p4
+
+    move v4, p5
+
+    move-object/from16 v5, p6
+
+    invoke-direct/range {v0 .. v9}, Le59;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
+
+    invoke-virtual {p0, p1, v0}, Lov4;->l(Lnf8;Le59;)V
+
+    return-void
+.end method
+
+.method public l(Lnf8;Le59;)V
+    .locals 8
+
+    iget-object v0, p0, Lov4;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbd9;
+
+    iget-object v4, v1, Lbd9;->b:Ldd9;
+
+    iget-object v1, v1, Lbd9;->a:Landroid/os/Handler;
+
+    new-instance v2, Lzc9;
+
+    const/4 v7, 0x0
+
+    move-object v3, p0
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    invoke-direct/range {v2 .. v7}, Lzc9;-><init>(Lov4;Ldd9;Lnf8;Le59;I)V
+
+    invoke-static {v1, v2}, Lkbh;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public m(Le59;)V
+    .locals 8
+
+    iget-object v0, p0, Lov4;->c:Ljava/lang/Object;
+
+    move-object v4, v0
+
+    check-cast v4, Luc9;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Lov4;->d:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lbd9;
+
+    iget-object v3, v1, Lbd9;->b:Ldd9;
+
+    iget-object v7, v1, Lbd9;->a:Landroid/os/Handler;
+
+    new-instance v1, Ln22;
+
+    const/16 v6, 0xd
+
+    move-object v2, p0
+
+    move-object v5, p1
+
+    invoke-direct/range {v1 .. v6}, Ln22;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-static {v7, v1}, Lkbh;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

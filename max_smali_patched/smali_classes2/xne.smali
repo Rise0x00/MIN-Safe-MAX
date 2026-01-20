@@ -1,182 +1,109 @@
-.class public final synthetic Lxne;
-.super Ljava/lang/Object;
+.class public final enum Lxne;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final synthetic X:[Lxne;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum a:Lxne;
 
-.field public final synthetic b:Lboe;
+.field public static final enum b:Lxne;
 
-.field public final synthetic c:Lyne;
+.field public static final enum c:Lxne;
 
-.field public final synthetic d:Lorg/json/JSONObject;
+.field public static final enum d:Lxne;
+
+.field public static final enum o:Lxne;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lboe;Lyne;Lorg/json/JSONObject;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p4, p0, Lxne;->a:I
+    new-instance v0, Lxne;
 
-    iput-object p1, p0, Lxne;->b:Lboe;
+    const-string v1, "UNKNOWN"
 
-    iput-object p2, p0, Lxne;->c:Lyne;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lxne;->d:Lorg/json/JSONObject;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lxne;->a:Lxne;
+
+    new-instance v1, Lxne;
+
+    const-string v2, "INITIAL"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lxne;->b:Lxne;
+
+    new-instance v2, Lxne;
+
+    const-string v3, "MANUAL"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lxne;->c:Lxne;
+
+    new-instance v3, Lxne;
+
+    const-string v4, "ADAPTIVE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lxne;->d:Lxne;
+
+    new-instance v4, Lxne;
+
+    const-string v5, "TRICK_PLAY"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lxne;->o:Lxne;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lxne;
+
+    move-result-object v0
+
+    sput-object v0, Lxne;->X:[Lxne;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lxne;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 7
+    const-class v0, Lxne;
 
-    iget v0, p0, Lxne;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object v0, p0, Lxne;->c:Lyne;
+    check-cast p0, Lxne;
 
-    const-string v1, "OKSignaling"
+    return-object p0
+.end method
 
-    iget-object v2, p0, Lxne;->b:Lboe;
+.method public static values()[Lxne;
+    .locals 1
 
-    iget-object v3, v2, Lboe;->b:Lcwc;
+    sget-object v0, Lxne;->X:[Lxne;
 
-    const-string v4, "<!> ignoring "
-
-    :try_start_0
-    instance-of v5, v0, Ljsh;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    iget-object v6, p0, Lxne;->d:Lorg/json/JSONObject;
-
-    if-eqz v5, :cond_0
-
-    :try_start_1
-    check-cast v0, Ljsh;
-
-    invoke-virtual {v0, v6}, Ljsh;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_1
-
-    :cond_0
-    iget-boolean v2, v2, Lboe;->q:Z
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0, v6}, Lyne;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v3, v1, v0}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    check-cast v0, [Lxne;
 
-    goto :goto_1
-
-    :goto_0
-    const-string v2, "signaling.response"
-
-    invoke-interface {v3, v1, v2, v0}, Lcwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lxne;->c:Lyne;
-
-    const-string v1, "OKSignaling"
-
-    iget-object v2, p0, Lxne;->b:Lboe;
-
-    iget-object v3, v2, Lboe;->b:Lcwc;
-
-    const-string v4, "<!> ignoring "
-
-    :try_start_2
-    instance-of v5, v0, Ljsh;
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-
-    iget-object v6, p0, Lxne;->d:Lorg/json/JSONObject;
-
-    if-eqz v5, :cond_2
-
-    :try_start_3
-    check-cast v0, Ljsh;
-
-    invoke-virtual {v0, v6}, Ljsh;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_3
-
-    :cond_2
-    iget-boolean v2, v2, Lboe;->q:Z
-
-    if-eqz v2, :cond_3
-
-    invoke-interface {v0, v6}, Lyne;->onResponse(Lorg/json/JSONObject;)V
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_3
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v3, v1, v0}, Lcwc;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
-
-    goto :goto_3
-
-    :goto_2
-    const-string v2, "signaling.response"
-
-    invoke-interface {v3, v1, v2, v0}, Lcwc;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

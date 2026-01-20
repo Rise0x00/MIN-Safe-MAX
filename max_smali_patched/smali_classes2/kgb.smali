@@ -1,109 +1,68 @@
 .class public final Lkgb;
-.super Ljava/lang/Object;
+.super Lso;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:I
+# interfaces
+.implements Luig;
 
 
-# direct methods
-.method public constructor <init>(II)V
+# virtual methods
+.method public final b(ZLzlb;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_0
 
-    iput p1, p0, Lkgb;->a:I
+    invoke-interface {p2}, Lzlb;->getIcon()Lwe7;
 
-    iput p2, p0, Lkgb;->b:I
+    move-result-object p1
+
+    iget p1, p1, Lwe7;->k:I
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p2}, Lzlb;->i()Lb0g;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lb0g;->b:Lh0g;
+
+    iget p1, p1, Lh0g;->b:I
+
+    :goto_0
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
 
     return-void
 .end method
 
+.method public final onThemeChanged(Lzlb;)V
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkgb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkgb;
-
-    iget v1, p0, Lkgb;->a:I
-
-    iget v3, p1, Lkgb;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lkgb;->b:I
-
-    iget p1, p1, Lkgb;->b:I
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lkgb;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p0, v0, p1}, Lkgb;->b(ZLzlb;)V
 
-    iget v1, p0, Lkgb;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public setChecked(Z)V
+    .locals 1
 
-    const-string v0, ", bitrate="
+    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    const-string v1, ")"
+    sget-object v0, Lpc3;->t0:Lkme;
 
-    const-string v2, "Bitrate(dimension="
-
-    iget v3, p0, Lkgb;->a:I
-
-    iget v4, p0, Lkgb;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
 
     move-result-object v0
 
-    return-object v0
+    invoke-virtual {p0, p1, v0}, Lkgb;->b(ZLzlb;)V
+
+    return-void
 .end method

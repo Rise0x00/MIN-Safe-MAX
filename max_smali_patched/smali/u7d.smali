@@ -1,24 +1,10 @@
-.class public final Lu7d;
+.class public abstract Lu7d;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
-# instance fields
-.field public a:Ljava/lang/Object;
+# static fields
+.field public static about_app_simple_cell_view_type:I = 0x7f0a0051
 
+.field public static about_app_version:I = 0x7f0a0052
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lu7d;->a:Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
+.field public static send_report_view_type:I = 0x7f0a0b20

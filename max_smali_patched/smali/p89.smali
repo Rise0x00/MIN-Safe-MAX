@@ -3,62 +3,120 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/MenuItem$OnActionExpandListener;
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field public final a:Landroid/view/MenuItem$OnActionExpandListener;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lq89;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lq89;Landroid/view/MenuItem$OnActionExpandListener;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    iput p1, p0, Lp89;->a:I
+
+    iput-object p2, p0, Lp89;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lp89;->b:Lq89;
+    return-void
+.end method
 
-    iput-object p2, p0, Lp89;->a:Landroid/view/MenuItem$OnActionExpandListener;
+.method private final a(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/view/animation/Animation;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
     .locals 1
 
-    iget-object v0, p0, Lp89;->b:Lq89;
+    iget p1, p0, Lp89;->a:I
 
-    invoke-virtual {v0, p1}, Lkh;->O(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p1
+    iget-object p1, p0, Lp89;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lp89;->a:Landroid/view/MenuItem$OnActionExpandListener;
+    check-cast p1, Lm99;
 
-    invoke-interface {v0, p1}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionCollapse(Landroid/view/MenuItem;)Z
+    iget-object p1, p1, Lm99;->x0:Lo99;
 
-    move-result p1
+    const/4 v0, 0x0
 
-    return p1
+    iput-boolean v0, p1, Lo99;->J0:Z
+
+    invoke-virtual {p1}, Lo99;->o()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lp89;->b:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/mediarouter/app/d;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroidx/mediarouter/app/d;->j(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onMenuItemActionExpand(Landroid/view/MenuItem;)Z
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
+
+    iget p1, p0, Lp89;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
     .locals 1
 
-    iget-object v0, p0, Lp89;->b:Lq89;
+    iget p1, p0, Lp89;->a:I
 
-    invoke-virtual {v0, p1}, Lkh;->O(Landroid/view/MenuItem;)Landroid/view/MenuItem;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p1
+    iget-object p1, p0, Lp89;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lp89;->a:Landroid/view/MenuItem$OnActionExpandListener;
+    check-cast p1, Lm99;
 
-    invoke-interface {v0, p1}, Landroid/view/MenuItem$OnActionExpandListener;->onMenuItemActionExpand(Landroid/view/MenuItem;)Z
+    iget-object p1, p1, Lm99;->x0:Lo99;
 
-    move-result p1
+    const/4 v0, 0x1
 
-    return p1
+    iput-boolean v0, p1, Lo99;->J0:Z
+
+    :pswitch_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

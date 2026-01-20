@@ -1,147 +1,100 @@
-.class public final enum Lqgb;
-.super Ljava/lang/Enum;
+.class public final synthetic Lqgb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lqgb;
-
-.field public static final enum Y:Lqgb;
-
-.field public static final synthetic Z:[Lqgb;
-
-.field public static final enum b:Lqgb;
-
-.field public static final enum c:Lqgb;
-
-.field public static final enum d:Lqgb;
-
-.field public static final enum o:Lqgb;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lrgb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
-
-    new-instance v0, Lqgb;
-
-    const/4 v1, 0x0
-
-    const-string v2, "app_init"
-
-    const-string v3, "APP_INIT"
-
-    invoke-direct {v0, v3, v1, v2}, Lqgb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Lqgb;->b:Lqgb;
-
-    new-instance v1, Lqgb;
-
-    const/4 v2, 0x1
-
-    const-string v3, "open_chats_to_render"
-
-    const-string v4, "EVENT_OPEN_CHATS"
-
-    invoke-direct {v1, v4, v2, v3}, Lqgb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Lqgb;->c:Lqgb;
-
-    new-instance v2, Lqgb;
-
-    const/4 v3, 0x2
-
-    const-string v4, "open_chat_to_render"
-
-    const-string v5, "EVENT_OPEN_CHAT"
-
-    invoke-direct {v2, v5, v3, v4}, Lqgb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v2, Lqgb;->d:Lqgb;
-
-    new-instance v3, Lqgb;
-
-    const/4 v4, 0x3
-
-    const-string v5, "call_init"
-
-    const-string v6, "EVENT_CALL_INIT"
-
-    invoke-direct {v3, v6, v4, v5}, Lqgb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v3, Lqgb;->o:Lqgb;
-
-    new-instance v4, Lqgb;
-
-    const/4 v5, 0x4
-
-    const-string v6, "open_call_screen_to_render"
-
-    const-string v7, "EVENT_OPEN_CALL_SCREEN"
-
-    invoke-direct {v4, v7, v5, v6}, Lqgb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v4, Lqgb;->X:Lqgb;
-
-    new-instance v5, Lqgb;
-
-    const/4 v6, 0x5
-
-    const-string v7, "incoming_call_processing_init"
-
-    const-string v8, "EVENT_INCOMING_CALL_PROCESSING_INIT"
-
-    invoke-direct {v5, v8, v6, v7}, Lqgb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lqgb;->Y:Lqgb;
-
-    filled-new-array/range {v0 .. v5}, [Lqgb;
-
-    move-result-object v0
-
-    sput-object v0, Lqgb;->Z:[Lqgb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+.method public synthetic constructor <init>(Lrgb;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p2, p0, Lqgb;->a:I
 
-    iput-object p3, p0, Lqgb;->a:Ljava/lang/String;
+    iput-object p1, p0, Lqgb;->b:Lrgb;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lqgb;
-    .locals 1
 
-    const-class v0, Lqgb;
+# virtual methods
+.method public final run()V
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lqgb;->a:I
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lqgb;
+    iget-object v0, p0, Lqgb;->b:Lrgb;
 
-    return-object p0
-.end method
+    iget-object v1, v0, Lrgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.method public static values()[Lqgb;
-    .locals 1
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    sget-object v0, Lqgb;->Z:[Lqgb;
+    move-result v1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    move-result-object v0
+    goto :goto_0
 
-    check-cast v0, [Lqgb;
+    :cond_0
+    iget-object v1, v0, Lrgb;->b:Ljava/util/concurrent/ExecutorService;
 
-    return-object v0
+    new-instance v2, Lri;
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, v3, v0, v4}, Lri;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lqgb;->b:Lrgb;
+
+    iget-object v1, v0, Lrgb;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v1, v0, Lrgb;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v2, Lri;
+
+    const/16 v3, 0xa
+
+    const/4 v4, 0x1
+
+    invoke-direct {v2, v3, v0, v4}, Lri;-><init>(ILjava/lang/Object;Z)V
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

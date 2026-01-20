@@ -1,99 +1,102 @@
-.class public final La97;
-.super Lrd6;
+.class public abstract La97;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic d:I
+.field public final X:Lz85;
 
-.field public final o:Ljava/lang/Object;
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ly87;
+
+.field public final c:J
+
+.field public final d:I
+
+.field public final o:J
+
+.field public final t0:J
+
+.field public final u0:J
+
+.field public final v0:Z
 
 
 # direct methods
-.method public constructor <init>(Lsa7;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ly87;JIJLz85;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, La97;->d:I
+    iput-object p1, p0, La97;->a:Ljava/lang/String;
 
-    .line 1
-    invoke-direct {p0, p1}, Lrd6;-><init>(Lsa7;)V
+    iput-object p2, p0, La97;->b:Ly87;
 
-    .line 2
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-wide p3, p0, La97;->c:J
 
-    const/4 v0, 0x0
+    iput p5, p0, La97;->d:I
 
-    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+    iput-wide p6, p0, La97;->o:J
 
-    iput-object p1, p0, La97;->o:Ljava/lang/Object;
+    iput-object p8, p0, La97;->X:Lz85;
 
-    return-void
-.end method
+    iput-object p9, p0, La97;->Y:Ljava/lang/String;
 
-.method public constructor <init>(Lsa7;Lb97;)V
-    .locals 1
+    iput-object p10, p0, La97;->Z:Ljava/lang/String;
 
-    const/4 v0, 0x0
+    iput-wide p11, p0, La97;->t0:J
 
-    iput v0, p0, La97;->d:I
+    iput-wide p13, p0, La97;->u0:J
 
-    .line 3
-    invoke-direct {p0, p1}, Lrd6;-><init>(Lsa7;)V
-
-    .line 4
-    new-instance p1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object p1, p0, La97;->o:Ljava/lang/Object;
-
-    .line 5
-    new-instance p1, Lz87;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2, p0}, Lz87;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1}, Lrd6;->c(Lqd6;)V
+    iput-boolean p15, p0, La97;->v0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public close()V
-    .locals 2
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 4
 
-    iget v0, p0, La97;->d:I
+    check-cast p1, Ljava/lang/Long;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    invoke-super {p0}, Lrd6;->close()V
+    move-result-wide v0
 
-    return-void
+    iget-wide v2, p0, La97;->o:J
 
-    :pswitch_0
-    iget-object v0, p0, La97;->o:Ljava/lang/Object;
+    cmp-long v0, v2, v0
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    if-lez v0, :cond_0
 
-    const/4 v1, 0x1
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Lrd6;->close()V
+    return p1
 
     :cond_0
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    move-result-wide v0
+
+    cmp-long p1, v2, v0
+
+    if-gez p1, :cond_1
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x0
+
+    return p1
 .end method

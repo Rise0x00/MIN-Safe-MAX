@@ -1,91 +1,63 @@
 .class public final Lmpg;
-.super Ljava/lang/Object;
+.super Lnpg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final g:Ljava/util/List;
-
-
 # instance fields
-.field public final a:I
+.field public final synthetic b:I
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:Ljava/util/concurrent/Executor;
-
-.field public final e:Lesg;
-
-.field public final f:La3a;
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(JI)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput p3, p0, Lmpg;->b:I
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    packed-switch p3, :pswitch_data_0
 
-    move-result-object v0
+    sget-object p3, Llpg;->b:Llpg;
 
-    const/4 v1, 0x2
+    invoke-direct {p0, p3}, Lnpg;-><init>(Llpg;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const/4 v2, 0x3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v3, 0x7
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    filled-new-array {v0, v1, v2, v3}, [Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lmpg;->g:Ljava/util/List;
+    iput-wide p1, p0, Lmpg;->c:J
 
     return-void
-.end method
 
-.method public constructor <init>(Ljava/util/concurrent/Executor;Lesg;La3a;)V
-    .locals 2
+    :pswitch_0
+    sget-object p3, Llpg;->o:Llpg;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p3}, Lnpg;-><init>(Llpg;)V
 
-    sget-object v0, Lmpg;->g:Ljava/util/List;
-
-    const/4 v1, 0x3
-
-    invoke-static {v1, v0}, Lhf8;->b(ILjava/util/Collection;)V
-
-    iput v1, p0, Lmpg;->a:I
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lmpg;->b:I
-
-    iput v0, p0, Lmpg;->c:I
-
-    iput-object p1, p0, Lmpg;->d:Ljava/util/concurrent/Executor;
-
-    iput-object p2, p0, Lmpg;->e:Lesg;
-
-    iput-object p3, p0, Lmpg;->f:La3a;
+    iput-wide p1, p0, Lmpg;->c:J
 
     return-void
+
+    :pswitch_1
+    sget-object p3, Llpg;->d:Llpg;
+
+    invoke-direct {p0, p3}, Lnpg;-><init>(Llpg;)V
+
+    iput-wide p1, p0, Lmpg;->c:J
+
+    return-void
+
+    :pswitch_2
+    sget-object p3, Llpg;->c:Llpg;
+
+    invoke-direct {p0, p3}, Lnpg;-><init>(Llpg;)V
+
+    iput-wide p1, p0, Lmpg;->c:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

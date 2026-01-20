@@ -1,98 +1,97 @@
-.class public final Lo7c;
-.super Lmd0;
+.class public final enum Lo7c;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final b:Lkrf;
+# static fields
+.field public static final enum a:Lo7c;
+
+.field public static final enum b:Lo7c;
+
+.field public static final enum c:Lo7c;
+
+.field public static final enum d:Lo7c;
+
+.field public static final synthetic o:[Lo7c;
 
 
 # direct methods
-.method public constructor <init>(Lkrf;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/16 v0, 0xe
+    new-instance v0, Lo7c;
 
-    invoke-direct {p0, v0}, Lmd0;-><init>(I)V
+    const-string v1, "CHATS"
 
-    iput-object p1, p0, Lo7c;->b:Lkrf;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lo7c;->a:Lo7c;
+
+    new-instance v1, Lo7c;
+
+    const-string v2, "CHAT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lo7c;->b:Lo7c;
+
+    new-instance v2, Lo7c;
+
+    const-string v3, "SCHEDULED_CHAT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lo7c;->c:Lo7c;
+
+    new-instance v3, Lo7c;
+
+    const-string v4, "OTHER"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lo7c;->d:Lo7c;
+
+    filled-new-array {v0, v1, v2, v3}, [Lo7c;
+
+    move-result-object v0
+
+    sput-object v0, Lo7c;->o:[Lo7c;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public static valueOf(Ljava/lang/String;)Lo7c;
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    const-class v0, Lo7c;
 
-    goto :goto_1
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :cond_0
-    instance-of v0, p1, Lo7c;
+    move-result-object p0
 
-    if-nez v0, :cond_1
+    check-cast p0, Lo7c;
 
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lo7c;
-
-    iget-object v0, p0, Lo7c;->b:Lkrf;
-
-    iget-object p1, p1, Lo7c;->b:Lkrf;
-
-    invoke-virtual {v0, p1}, Lkrf;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
+    return-object p0
 .end method
 
-.method public final hashCode()I
+.method public static values()[Lo7c;
     .locals 1
 
-    iget-object v0, p0, Lo7c;->b:Lkrf;
+    sget-object v0, Lo7c;->o:[Lo7c;
 
-    invoke-virtual {v0}, Lkrf;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ShareLink(link="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lo7c;->b:Lkrf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lo7c;
 
     return-object v0
 .end method

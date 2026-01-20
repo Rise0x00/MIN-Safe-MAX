@@ -1,44 +1,23 @@
 .class public final Llzd;
-.super Ljava/lang/Object;
+.super Lhja;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:Lec4;
+# static fields
+.field public static final b:Llzd;
 
 
 # direct methods
-.method public constructor <init>(JLec4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Llzd;
 
-    iput-wide p1, p0, Llzd;->a:J
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    iput-object p3, p0, Llzd;->b:Lec4;
+    invoke-direct {v0, v1}, Lhja;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Llzd;->b:Llzd;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
-
-    check-cast p1, Llzd;
-
-    iget-wide v0, p0, Llzd;->a:J
-
-    iget-wide v2, p1, Llzd;->a:J
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Long;->compare(JJ)I
-
-    move-result p1
-
-    return p1
 .end method

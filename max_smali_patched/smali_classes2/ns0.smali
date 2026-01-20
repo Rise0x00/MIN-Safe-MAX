@@ -1,136 +1,103 @@
-.class public final synthetic Lns0;
-.super Ljava/lang/Object;
+.class public final Lns0;
+.super Landroid/text/style/StyleSpan;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Ldt8;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/bottomsheet/BottomSheetWidget;I)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lns0;->a:I
+    iput p1, p0, Lns0;->a:I
 
-    iput-object p1, p0, Lns0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Landroid/text/style/StyleSpan;-><init>(I)V
+
+    const/4 p1, 0x2
+
+    iput p1, p0, Lns0;->b:I
 
     return-void
+
+    :pswitch_0
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1}, Landroid/text/style/StyleSpan;-><init>(I)V
+
+    const/4 p1, 0x3
+
+    iput p1, p0, Lns0;->b:I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final copy()Ldb4;
+    .locals 2
 
     iget v0, p0, Lns0;->a:I
 
-    sget-object v1, Lybg;->a:Lybg;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    new-instance v0, Lns0;
 
-    const/4 v3, 0x0
+    const/4 v1, 0x1
 
-    iget-object v4, p0, Lns0;->b:Lone/me/sdk/bottomsheet/BottomSheetWidget;
+    invoke-direct {v0, v1}, Lns0;-><init>(I)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Lns0;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lns0;-><init>(I)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getType()I
+    .locals 1
+
+    iget v0, p0, Lns0;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->x0:Landroid/view/View;
+    iget v0, p0, Lns0;->b:I
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->requestFocus()Z
-
-    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Los;
-
-    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Les7;
-
-    aget-object v2, v6, v2
-
-    invoke-virtual {v5, v4}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {v0}, Ldci;->e(Landroid/view/View;)V
-
-    :cond_0
-    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->x0:Landroid/view/View;
-
-    return-object v1
+    return v0
 
     :pswitch_0
-    sget-object v0, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Les7;
+    iget v0, p0, Lns0;->b:I
 
-    invoke-virtual {v4}, Lc24;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
-
-    sget v3, Lct7;->a:I
-
-    sget v3, Lct7;->c:I
-
-    invoke-static {v3}, Lct7;->b(I)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v4}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->L0()Z
-
-    move-result v3
-
-    iget-object v5, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:Los;
-
-    sget-object v6, Lone/me/sdk/bottomsheet/BottomSheetWidget;->A0:[Les7;
-
-    aget-object v2, v6, v2
-
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v5, v4, v2}, Los;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-static {v0}, Ldci;->d(Landroid/view/View;)V
-
-    :cond_1
-    move-object v3, v0
-
-    :cond_2
-    iput-object v3, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->x0:Landroid/view/View;
-
-    return-object v1
+    return v0
 
     nop
 

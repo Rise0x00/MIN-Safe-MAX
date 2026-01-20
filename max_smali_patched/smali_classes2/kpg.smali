@@ -1,109 +1,119 @@
-.class public final Lkpg;
-.super Ljava/lang/Object;
+.class public final enum Lkpg;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final enum a:Lkpg;
 
-.field public final b:Z
+.field public static final enum b:Lkpg;
+
+.field public static final enum c:Lkpg;
+
+.field public static final synthetic d:[Lkpg;
 
 
 # direct methods
-.method public constructor <init>(ZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lkpg;
 
-    iput-boolean p1, p0, Lkpg;->a:Z
+    const-string v1, "DUMMY"
 
-    iput-boolean p2, p0, Lkpg;->b:Z
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkpg;->a:Lkpg;
+
+    new-instance v1, Lkpg;
+
+    const-string v2, "DIRECT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lkpg;->b:Lkpg;
+
+    new-instance v2, Lkpg;
+
+    const-string v3, "SERVER"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lkpg;->c:Lkpg;
+
+    filled-new-array {v0, v1, v2}, [Lkpg;
+
+    move-result-object v0
+
+    sput-object v0, Lkpg;->d:[Lkpg;
 
     return-void
 .end method
 
+.method public static final a(Ljava/lang/String;)Lkpg;
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    const-string v0, "DIRECT"
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkpg;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkpg;
-
-    iget-boolean v1, p0, Lkpg;->a:Z
-
-    iget-boolean v3, p1, Lkpg;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lkpg;->b:Z
-
-    iget-boolean p1, p1, Lkpg;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lkpg;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    if-eqz v0, :cond_0
 
-    iget-boolean v1, p0, Lkpg;->b:Z
+    sget-object p0, Lkpg;->b:Lkpg;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    return-object p0
 
-    move-result v1
+    :cond_0
+    const-string v0, "SERVER"
 
-    add-int/2addr v1, v0
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    return v1
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    sget-object p0, Lkpg;->c:Lkpg;
+
+    return-object p0
+
+    :cond_1
+    sget-object p0, Lkpg;->a:Lkpg;
+
+    return-object p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public static valueOf(Ljava/lang/String;)Lkpg;
+    .locals 1
 
-    const-string v0, ", isEnabled="
+    const-class v0, Lkpg;
 
-    const-string v1, ")"
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    const-string v2, "TorchState(isAvailable="
+    move-result-object p0
 
-    iget-boolean v3, p0, Lkpg;->a:Z
+    check-cast p0, Lkpg;
 
-    iget-boolean v4, p0, Lkpg;->b:Z
+    return-object p0
+.end method
 
-    invoke-static {v2, v3, v0, v4, v1}, Lcd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+.method public static values()[Lkpg;
+    .locals 1
+
+    sget-object v0, Lkpg;->d:[Lkpg;
+
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, [Lkpg;
 
     return-object v0
 .end method

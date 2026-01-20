@@ -4,62 +4,49 @@
 
 
 # instance fields
-.field public final a:J
+.field public volatile a:J
 
-.field public final b:J
+.field public volatile b:J
 
-.field public final c:J
+.field public volatile c:I
 
+.field public volatile d:J
 
-# direct methods
-.method public constructor <init>(JJJ)V
-    .locals 0
+.field public volatile e:J
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public volatile f:I
 
-    iput-wide p1, p0, Lqlf;->a:J
+.field public volatile g:J
 
-    iput-wide p3, p0, Lqlf;->b:J
+.field public volatile h:J
 
-    iput-wide p5, p0, Lqlf;->c:J
-
-    return-void
-.end method
+.field public volatile i:I
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final a(J)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-wide/16 v0, 0x0
 
-    const-string v1, "RawContact{tamtamContactId="
+    cmp-long v0, p1, v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ltz v0, :cond_0
 
-    iget-wide v1, p0, Lqlf;->a:J
+    iput-wide p1, p0, Lqlf;->d:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-wide v0, p0, Lqlf;->e:J
 
-    const-string v1, ", rawContactId="
+    add-long/2addr v0, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-wide v0, p0, Lqlf;->e:J
 
-    iget-wide v1, p0, Lqlf;->b:J
+    iget p1, p0, Lqlf;->f:I
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    add-int/lit8 p1, p1, 0x1
 
-    const-string v1, ", contactId="
+    iput p1, p0, Lqlf;->f:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lqlf;->c:J
-
-    const/16 v3, 0x7d
-
-    invoke-static {v0, v1, v2, v3}, Lxjb;->l(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :cond_0
+    return-void
 .end method

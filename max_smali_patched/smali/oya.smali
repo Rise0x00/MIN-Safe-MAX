@@ -1,119 +1,114 @@
 .class public final Loya;
-.super Logf;
+.super Lf3;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lrya;
+.field public final synthetic b:I
 
-.field public final synthetic Y:Lt92;
-
-.field public o:I
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lrya;Lt92;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lsza;Ljava/lang/Object;I)V
     .locals 0
 
-    iput-object p1, p0, Loya;->X:Lrya;
+    iput p3, p0, Loya;->b:I
 
-    iput-object p2, p0, Loya;->Y:Lt92;
+    invoke-direct {p0, p1}, Lf3;-><init>(Lsza;)V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Loya;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final k(Le0b;)V
+    .locals 4
 
-    check-cast p1, Lg54;
+    iget v0, p0, Loya;->b:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x3
 
-    invoke-virtual {p0, p1, p2}, Loya;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v2, p0, Lf3;->a:Lsza;
 
-    move-result-object p1
+    iget-object v3, p0, Loya;->c:Ljava/lang/Object;
 
-    check-cast p1, Loya;
+    packed-switch v0, :pswitch_data_0
 
-    sget-object p2, Lybg;->a:Lybg;
+    :try_start_0
+    check-cast v3, Lrr6;
 
-    invoke-virtual {p1, p2}, Loya;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3}, Lrr6;->get()Ljava/lang/Object;
 
-    move-result-object p1
+    move-result-object v0
 
-    return-object p1
-.end method
+    sget-object v3, Lan5;->a:Lzm5;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    check-cast v0, Ljava/util/Collection;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-instance p1, Loya;
+    new-instance v3, Lmo3;
 
-    iget-object v0, p0, Loya;->X:Lrya;
+    invoke-direct {v3, p1, v1, v0}, Lmo3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    iget-object v1, p0, Loya;->Y:Lt92;
+    invoke-interface {v2, v3}, Lsza;->a(Le0b;)V
 
-    invoke-direct {p1, v0, v1, p2}, Loya;-><init>(Lrya;Lt92;Lkotlin/coroutines/Continuation;)V
+    goto :goto_0
 
-    return-object p1
-.end method
+    :catchall_0
+    move-exception v0
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
 
-    iget v0, p0, Loya;->o:I
+    invoke-static {v0, p1}, Lyg5;->b(Ljava/lang/Throwable;Le0b;)V
 
-    const/4 v1, 0x1
+    :goto_0
+    return-void
 
-    if-eqz v0, :cond_1
+    :pswitch_0
+    new-instance v0, Lfxa;
 
-    if-ne v0, v1, :cond_0
+    check-cast v3, Lseg;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 v1, 0x4
 
-    return-object p1
+    invoke-direct {v0, p1, v3, v1}, Lfxa;-><init>(Ljava/lang/Object;Lxfc;I)V
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    invoke-interface {v2, v0}, Lsza;->a(Le0b;)V
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    return-void
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_1
+    new-instance v0, Lfxa;
 
-    throw p1
+    check-cast v3, Lu4e;
 
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-direct {v0, p1, v3, v1}, Lfxa;-><init>(Ljava/lang/Object;Lxfc;I)V
 
-    iget-object p1, p0, Loya;->X:Lrya;
+    invoke-interface {v2, v0}, Lsza;->a(Le0b;)V
 
-    invoke-virtual {p1}, Lrya;->a()Lbca;
+    return-void
 
-    move-result-object p1
+    :pswitch_2
+    new-instance v0, Lnya;
 
-    iput v1, p0, Loya;->o:I
+    check-cast v3, Loga;
 
-    iget-object v0, p0, Loya;->Y:Lt92;
+    invoke-direct {v0, p1, v3}, Lnya;-><init>(Le0b;Loga;)V
 
-    invoke-virtual {p1, v0, p0}, Lbca;->f(Lt92;Lp14;)Ljava/lang/Object;
+    invoke-interface {v2, v0}, Lsza;->a(Le0b;)V
 
-    move-result-object p1
+    return-void
 
-    sget-object v0, Lh54;->a:Lh54;
+    nop
 
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

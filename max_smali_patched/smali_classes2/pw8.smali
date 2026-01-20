@@ -1,86 +1,64 @@
 .class public final Lpw8;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lxw8;
 
 
-# instance fields
-.field public final synthetic X:Lrw8;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lpw8;
 
 
 # direct methods
-.method public constructor <init>(Lrw8;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lpw8;->X:Lrw8;
+    new-instance v0, Lpw8;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lpw8;->a:Lpw8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lbtg;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lpw8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of p1, p1, Lpw8;
 
-    check-cast p1, Lpw8;
+    if-nez p1, :cond_1
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Lpw8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
 
-    return-object p2
+    :cond_1
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance v0, Lpw8;
+    const v0, 0x8c5b203
 
-    iget-object v1, p0, Lpw8;->X:Lrw8;
+    return v0
+.end method
 
-    invoke-direct {v0, v1, p2}, Lpw8;-><init>(Lrw8;Lkotlin/coroutines/Continuation;)V
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, v0, Lpw8;->o:Ljava/lang/Object;
+    const-string v0, "Show"
 
     return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpw8;->o:Ljava/lang/Object;
-
-    check-cast p1, Lbtg;
-
-    iget-wide v0, p1, Lbtg;->b:J
-
-    new-instance p1, Ljava/lang/Long;
-
-    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
-
-    iget-object v0, p0, Lpw8;->X:Lrw8;
-
-    invoke-static {v0, p1}, Lrw8;->a(Lrw8;Ljava/lang/Long;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

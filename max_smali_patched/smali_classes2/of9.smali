@@ -1,57 +1,64 @@
-.class public final Lof9;
+.class public abstract Lof9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Lkeg;
-
-.field public final b:Lp2f;
-
-
-# direct methods
-.method public constructor <init>(Lkeg;Lp2f;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lof9;->a:Lkeg;
-
-    iput-object p2, p0, Lof9;->b:Lp2f;
-
-    return-void
-.end method
+# interfaces
+.implements Lud8;
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final h(Lud8;)Z
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    instance-of v0, p1, Lof9;
 
-    const-string v1, "MessageUploadState{upload="
+    if-nez v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
 
-    iget-object v1, p0, Lof9;->a:Lkeg;
+    :cond_0
+    invoke-virtual {p0}, Lof9;->j()J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    const-string v1, ", sticker="
+    check-cast p1, Lof9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lof9;->j()J
 
-    iget-object v1, p0, Lof9;->b:Lp2f;
+    move-result-wide v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    cmp-long v0, v0, v2
 
-    const/16 v1, 0x7d
+    if-nez v0, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lof9;->i()J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v0
+    invoke-virtual {p1}, Lof9;->i()J
 
-    return-object v0
+    move-result-wide v2
+
+    cmp-long p1, v0, v2
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public abstract i()J
+.end method
+
+.method public abstract j()J
+.end method
+
+.method public abstract l()Z
 .end method

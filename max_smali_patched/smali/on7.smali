@@ -1,58 +1,64 @@
-.class public final Lon7;
-.super Licg;
+.class public final synthetic Lon7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final b:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public c:Z
+.field public final synthetic b:Lpn7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+.method public synthetic constructor <init>(Lpn7;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lon7;->a:I
 
-    invoke-direct {p0, v0}, Licg;-><init>(I)V
+    iput-object p1, p0, Lon7;->b:Lpn7;
 
-    iput-object p1, p0, Lon7;->b:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-boolean v0, p0, Lon7;->c:Z
+    iget p1, p0, Lon7;->a:I
 
-    xor-int/lit8 v0, v0, 0x1
+    packed-switch p1, :pswitch_data_0
 
-    return v0
-.end method
+    iget-object p1, p0, Lon7;->b:Lpn7;
 
-.method public final next()Ljava/lang/Object;
-    .locals 1
+    iget-object p1, p1, Lpn7;->B0:Li7f;
 
-    iget-boolean v0, p0, Lon7;->c:Z
+    sget-object v0, Lp94;->a:Lp94;
 
-    if-nez v0, :cond_0
+    invoke-virtual {p1, v0}, Li7f;->h(Ljava/lang/Object;)Z
 
-    const/4 v0, 0x1
+    return-void
 
-    iput-boolean v0, p0, Lon7;->c:Z
+    :pswitch_0
+    iget-object p1, p0, Lon7;->b:Lpn7;
 
-    iget-object v0, p0, Lon7;->b:Ljava/lang/Object;
+    iget-object p1, p1, Lpn7;->B0:Li7f;
 
-    return-object v0
+    sget-object v0, Lo94;->a:Lo94;
 
-    :cond_0
-    new-instance v0, Ljava/util/NoSuchElementException;
+    invoke-virtual {p1, v0}, Li7f;->h(Ljava/lang/Object;)Z
 
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+    return-void
 
-    throw v0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

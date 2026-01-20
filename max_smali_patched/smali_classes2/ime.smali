@@ -1,186 +1,116 @@
-.class public final Lime;
+.class public final synthetic Lime;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lkme;
+.implements Llq6;
 
 
 # instance fields
-.field public final a:D
+.field public final synthetic a:I
 
-.field public final b:D
-
-.field public final c:Ljava/lang/Float;
+.field public final synthetic b:Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(DDLjava/lang/Float;)V
+.method public synthetic constructor <init>(Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;I)V
     .locals 0
 
+    iput p2, p0, Lime;->a:I
+
+    iput-object p1, p0, Lime;->b:Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lime;->a:D
-
-    iput-wide p3, p0, Lime;->b:D
-
-    iput-object p5, p0, Lime;->c:Ljava/lang/Float;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 5
 
-    const/4 v0, 0x1
+    iget v0, p0, Lime;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lime;->b:Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Lime;
+    sget-object v0, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;->D0:Lkme;
 
-    if-nez v1, :cond_1
+    new-instance v0, Lpab;
 
-    goto :goto_0
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    :cond_1
-    check-cast p1, Lime;
+    move-result-object v1
 
-    iget-wide v1, p0, Lime;->a:D
+    invoke-direct {v0, v1}, Lpab;-><init>(Landroid/content/Context;)V
 
-    iget-wide v3, p1, Lime;->a:D
+    sget v1, Lv5e;->R0:I
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Double;->compare(DD)I
+    invoke-virtual {v0, v1}, Lpab;->setIcon(I)V
 
-    move-result v1
+    sget v1, Lled;->oneme_countries_empty_view_title:I
 
-    if-eqz v1, :cond_2
+    new-instance v2, Llhg;
 
-    goto :goto_0
+    invoke-direct {v2, v1}, Llhg;-><init>(I)V
 
-    :cond_2
-    iget-wide v1, p0, Lime;->b:D
+    invoke-virtual {v0, v2}, Lpab;->setTitle(Lqhg;)V
 
-    iget-wide v3, p1, Lime;->b:D
+    const/16 v1, 0x11
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Double;->compare(DD)I
+    invoke-virtual {v0, v1}, Lpab;->setTitleGravity(I)V
 
-    move-result v1
+    sget v1, Lled;->oneme_countries_empty_view_subtitle:I
 
-    if-eqz v1, :cond_3
+    new-instance v2, Llhg;
 
-    goto :goto_0
+    invoke-direct {v2, v1}, Llhg;-><init>(I)V
 
-    :cond_3
-    iget-object v1, p0, Lime;->c:Ljava/lang/Float;
+    invoke-virtual {v0, v2}, Lpab;->setSubtitle(Lqhg;)V
 
-    iget-object p1, p1, Lime;->c:Ljava/lang/Float;
+    sget v1, Lugb;->P:I
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lpab;->setBackgroundShineDrawable(I)V
 
-    move-result p1
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    if-nez p1, :cond_4
+    const/4 v2, -0x1
 
-    :goto_0
-    const/4 p1, 0x0
+    invoke-direct {v1, v2, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    return p1
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lime;->a:D
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lime;->b:D
-
-    invoke-static {v1, v2}, Ljava/lang/Double;->hashCode(D)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lime;->c:Ljava/lang/Float;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MoveCamera(lat="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lime;->a:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", lon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lime;->b:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v1, ", zoom="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lime;->c:Ljava/lang/Float;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", animate=true)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     return-object v0
+
+    :pswitch_0
+    new-instance v0, Lmme;
+
+    iget-object v2, v1, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;->x0:Lls;
+
+    sget-object v3, Lone/me/sdk/phoneutils/countriesdialog/SelectCountryBottomSheet;->E0:[Lz28;
+
+    const/4 v4, 0x0
+
+    aget-object v3, v3, v4
+
+    invoke-virtual {v2, v1}, Lls;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, [Lr9b;
+
+    invoke-static {v1}, Lct;->C([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lmme;-><init>(Ljava/util/List;)V
+
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

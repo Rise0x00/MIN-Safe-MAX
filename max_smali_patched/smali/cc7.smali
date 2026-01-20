@@ -1,90 +1,113 @@
 .class public final Lcc7;
-.super Li2;
+.super Lfeg;
 .source "SourceFile"
-
-# interfaces
-.implements Lfc7;
 
 
 # instance fields
-.field public final a:Lh3;
+.field public final synthetic e:I
 
-.field public final b:I
+.field public final synthetic f:I
 
-.field public final c:I
+.field public final synthetic g:I
+
+.field public final synthetic h:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lh3;II)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Object;III)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p5, p0, Lcc7;->e:I
 
-    iput-object p1, p0, Lcc7;->a:Lh3;
+    iput-object p2, p0, Lcc7;->h:Ljava/lang/Object;
 
-    iput p2, p0, Lcc7;->b:I
+    iput p3, p0, Lcc7;->f:I
 
-    invoke-virtual {p1}, Lk0;->getSize()I
+    iput p4, p0, Lcc7;->g:I
 
-    move-result p1
+    const/4 p2, 0x1
 
-    invoke-static {p2, p3, p1}, Lwdi;->c(III)V
-
-    sub-int/2addr p3, p2
-
-    iput p3, p0, Lcc7;->c:I
+    invoke-direct {p0, p1, p2}, Lfeg;-><init>(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get(I)Ljava/lang/Object;
-    .locals 1
+.method public final a()J
+    .locals 5
 
-    iget v0, p0, Lcc7;->c:I
+    iget v0, p0, Lcc7;->e:I
 
-    invoke-static {p1, v0}, Lwdi;->a(II)V
+    packed-switch v0, :pswitch_data_0
 
-    iget v0, p0, Lcc7;->b:I
+    iget-object v0, p0, Lcc7;->h:Ljava/lang/Object;
 
-    add-int/2addr v0, p1
+    check-cast v0, Lhc7;
 
-    iget-object p1, p0, Lcc7;->a:Lh3;
+    :try_start_0
+    iget v1, p0, Lcc7;->f:I
 
-    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget v2, p0, Lcc7;->g:I
 
-    move-result-object p1
+    iget-object v3, v0, Lhc7;->H0:Lpc7;
 
-    return-object p1
-.end method
+    invoke-virtual {v3, v1, v2}, Lpc7;->p0(II)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-.method public final getSize()I
-    .locals 1
+    goto :goto_0
 
-    iget v0, p0, Lcc7;->c:I
+    :catch_0
+    move-exception v1
 
-    return v0
-.end method
+    const/4 v2, 0x2
 
-.method public final subList(II)Ljava/util/List;
-    .locals 2
+    invoke-virtual {v0, v2, v2, v1}, Lhc7;->d(IILjava/io/IOException;)V
 
-    iget v0, p0, Lcc7;->c:I
+    :goto_0
+    const-wide/16 v0, -0x1
 
-    invoke-static {p1, p2, v0}, Lwdi;->c(III)V
+    return-wide v0
 
-    new-instance v0, Lcc7;
+    :pswitch_0
+    iget-object v0, p0, Lcc7;->h:Ljava/lang/Object;
 
-    iget v1, p0, Lcc7;->b:I
+    check-cast v0, Lfx2;
 
-    add-int/2addr p1, v1
+    iget-object v0, v0, Lfx2;->c:Ljava/lang/Object;
 
-    add-int/2addr v1, p2
+    check-cast v0, Lhc7;
 
-    iget-object p2, p0, Lcc7;->a:Lh3;
+    iget v1, p0, Lcc7;->f:I
 
-    invoke-direct {v0, p2, p1, v1}, Lcc7;-><init>(Lh3;II)V
+    iget v2, p0, Lcc7;->g:I
 
-    return-object v0
+    :try_start_1
+    iget-object v3, v0, Lhc7;->H0:Lpc7;
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v1, v2, v4}, Lpc7;->g0(IIZ)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v1
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v2, v2, v1}, Lhc7;->d(IILjava/io/IOException;)V
+
+    :goto_1
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

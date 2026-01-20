@@ -1,11 +1,21 @@
-.class public interface abstract Lez1;
-.super Ljava/lang/Object;
+.class public final Lez1;
+.super Laq;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lv28;
-.end method
+# static fields
+.field public static final a:Lez1;
 
-.method public abstract b()Lv28;
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lez1;
+
+    invoke-direct {v0}, Laq;-><init>()V
+
+    sput-object v0, Lez1;->a:Lez1;
+
+    return-void
 .end method

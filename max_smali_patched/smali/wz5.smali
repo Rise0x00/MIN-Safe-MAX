@@ -1,152 +1,64 @@
 .class public final Lwz5;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lpx7;
-
-.field public final synthetic Z:Lpw7;
-
-.field public o:I
-
-.field public final synthetic s0:Lez5;
+.field public final a:Ljava/io/File;
 
 
 # direct methods
-.method public constructor <init>(Lpx7;Lpw7;Lez5;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    iput-object p1, p0, Lwz5;->Y:Lpx7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lwz5;->Z:Lpw7;
-
-    iput-object p3, p0, Lwz5;->s0:Lez5;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lwz5;->a:Ljava/io/File;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lf0c;
+    if-eqz p1, :cond_1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    instance-of v0, p1, Lwz5;
 
-    invoke-virtual {p0, p1, p2}, Lwz5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lwz5;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lwz5;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 4
-
-    new-instance v0, Lwz5;
-
-    iget-object v1, p0, Lwz5;->Z:Lpw7;
-
-    iget-object v2, p0, Lwz5;->s0:Lez5;
-
-    iget-object v3, p0, Lwz5;->Y:Lpx7;
-
-    invoke-direct {v0, v3, v1, v2, p2}, Lwz5;-><init>(Lpx7;Lpw7;Lez5;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lwz5;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lwz5;->o:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    iget-object v0, p0, Lwz5;->X:Ljava/lang/Object;
-
-    check-cast v0, Lf0c;
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    check-cast p1, Lwz5;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p1, p1, Lwz5;->a:Ljava/io/File;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lwz5;->a:Ljava/io/File;
 
-    throw p1
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lwz5;->X:Ljava/lang/Object;
-
-    move-object v0, p1
-
-    check-cast v0, Lf0c;
-
-    new-instance p1, Lvz5;
-
-    iget-object v3, p0, Lwz5;->s0:Lez5;
-
-    invoke-direct {p1, v3, v0, v1}, Lvz5;-><init>(Lez5;Lf0c;Lkotlin/coroutines/Continuation;)V
-
-    iput-object v0, p0, Lwz5;->X:Ljava/lang/Object;
-
-    iput v2, p0, Lwz5;->o:I
-
-    iget-object v2, p0, Lwz5;->Y:Lpx7;
-
-    iget-object v3, p0, Lwz5;->Z:Lpw7;
-
-    invoke-static {v2, v3, p1, p0}, Lbxi;->b(Lpx7;Lpw7;Lej6;Logf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v2, Lh54;->a:Lh54;
-
-    if-ne p1, v2, :cond_2
-
-    return-object v2
-
-    :cond_2
     :goto_0
-    check-cast v0, Lc0c;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0, v1}, Lc0c;->D(Ljava/lang/Throwable;)Z
+    return p1
+.end method
 
-    sget-object p1, Lybg;->a:Lybg;
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    iget-object v0, p0, Lwz5;->a:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->hashCode()I
+
+    move-result v0
+
+    return v0
 .end method

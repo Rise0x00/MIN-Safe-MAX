@@ -1,124 +1,97 @@
-.class public final Lmp8;
-.super Ljava/lang/Object;
+.class public final synthetic Lmp8;
+.super Lhyc;
 .source "SourceFile"
-
-# interfaces
-.implements Lrwg;
 
 
 # instance fields
-.field public final synthetic b:Lrp8;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lrp8;)V
+.method public synthetic constructor <init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lmp8;->a:I
 
-    iput-object p1, p0, Lmp8;->b:Lrp8;
+    move-object p2, p4
+
+    move-object p4, p5
+
+    move-object p5, p6
+
+    move p6, p1
+
+    move-object p1, p0
+
+    invoke-direct/range {p1 .. p6}, Ljyc;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;)V
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 2
 
-    iget-object v0, p1, Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;->a:Lub6;
+    iget v0, p0, Lmp8;->a:I
 
-    const/16 v1, 0x1b59
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lkw1;->receiver:Ljava/lang/Object;
 
-    iget-object v3, p0, Lmp8;->b:Lrp8;
+    check-cast v0, Lckd;
 
-    invoke-virtual {v3, p1, v0, v2, v1}, Ltk0;->d(Ljava/lang/Exception;Lub6;ZI)Landroidx/media3/exoplayer/ExoPlaybackException;
+    iget-object v0, v0, Lckd;->d:Lovf;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lnd8;->j()I
 
-    iput-object p1, v3, Lap8;->F1:Landroidx/media3/exoplayer/ExoPlaybackException;
+    move-result v0
 
-    return-void
-.end method
+    const/16 v1, 0x8
 
-.method public final b()V
-    .locals 3
+    if-le v0, v1, :cond_0
 
-    iget-object v0, p0, Lmp8;->b:Lrp8;
+    const/4 v0, 0x1
 
-    iget-object v1, v0, Lrp8;->f2:Landroid/view/Surface;
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lrp8;->O0(II)V
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public final c()V
-    .locals 1
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    iget-object v0, p0, Lmp8;->b:Lrp8;
+    move-result-object v0
 
-    iget-object v0, v0, Lap8;->R0:Ldj5;
+    return-object v0
 
-    if-eqz v0, :cond_0
+    :pswitch_0
+    iget-object v0, p0, Lkw1;->receiver:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ldj5;->a()V
+    check-cast v0, Lh3b;
 
-    :cond_0
-    return-void
-.end method
+    iget-object v0, v0, Lh3b;->a:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-.method public final g(Lvwg;)V
-    .locals 0
+    return-object v0
 
-    return-void
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lkw1;->receiver:Ljava/lang/Object;
 
-.method public final onFirstFrameRendered()V
-    .locals 8
+    check-cast v0, Lone/me/android/MainActivity;
 
-    iget-object v0, p0, Lmp8;->b:Lrp8;
+    sget v1, Lone/me/android/MainActivity;->e1:I
 
-    iget-object v3, v0, Lrp8;->f2:Landroid/view/Surface;
+    invoke-virtual {v0}, Lone/me/android/MainActivity;->Q()Lc5e;
 
-    if-eqz v3, :cond_1
+    move-result-object v0
 
-    iget-object v2, v0, Lrp8;->R1:Leld;
+    return-object v0
 
-    iget-object v1, v2, Leld;->b:Ljava/lang/Object;
+    nop
 
-    move-object v7, v1
-
-    check-cast v7, Landroid/os/Handler;
-
-    if-eqz v7, :cond_0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v4
-
-    new-instance v1, Lwf2;
-
-    const/4 v6, 0x7
-
-    invoke-direct/range {v1 .. v6}, Lwf2;-><init>(Ljava/lang/Object;Ljava/lang/Object;JI)V
-
-    invoke-virtual {v7, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lrp8;->i2:Z
-
-    :cond_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

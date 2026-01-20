@@ -1,158 +1,87 @@
 .class public final Li91;
-.super Li94;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lq91;
 
 
 # instance fields
-.field public final v0:Ljava/lang/String;
-
-.field public w0:Ljava/util/List;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    invoke-direct {p0, p1}, Li94;-><init>(Lone/me/sdk/arch/Widget;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-class p1, Li91;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Li91;->v0:Ljava/lang/String;
-
-    sget-object p1, Lna5;->a:Lna5;
-
-    iput-object p1, p0, Li91;->w0:Ljava/util/List;
+    iput-wide p1, p0, Li91;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E(Lyid;I)V
-    .locals 8
-
-    invoke-virtual {p1}, Lyid;->n()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Li91;->w0:Ljava/util/List;
-
-    invoke-interface {v0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lba1;
-
-    iget-object p2, p2, Lba1;->c:Laa1;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p2
-
-    if-eqz p2, :cond_2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    if-ne p2, v0, :cond_1
+    if-ne p0, p1, :cond_0
 
-    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lopd;
+    return v0
 
-    sget-object v0, Laa1;->c:Laa1;
+    :cond_0
+    instance-of v1, p1, Li91;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v2, 0x0
 
-    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
+    if-nez v1, :cond_1
 
-    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Laa1;)V
-
-    :goto_0
-    move-object v2, p2
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    check-cast p1, Li91;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    iget-wide v3, p0, Li91;->a:J
 
-    throw p1
+    iget-wide v5, p1, Li91;->a:J
+
+    cmp-long p1, v3, v5
+
+    if-eqz p1, :cond_2
+
+    return v2
 
     :cond_2
-    sget-object p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;->u0:Lopd;
-
-    sget-object v0, Laa1;->b:Laa1;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p2, Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    invoke-direct {p2, v0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Laa1;)V
-
-    goto :goto_0
-
-    :goto_1
-    sget-object p2, Lb24;->b:Lb24;
-
-    invoke-virtual {v2, p2}, Lc24;->setRetainViewMode(Lb24;)V
-
-    new-instance v1, Lbjd;
-
-    const/4 v6, 0x0
-
-    const/4 v7, -0x1
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v1 .. v7}, Lbjd;-><init>(Lc24;Ljava/lang/String;Lh24;Lh24;ZI)V
-
-    invoke-virtual {p1, v1}, Lyid;->S(Lbjd;)V
-
-    return-void
+    return v0
 .end method
 
-.method public final J(Ldjd;)V
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-wide v0, p0, Li91;->a:J
 
-    iput-object v0, p1, Ldjd;->F0:Lyid;
-
-    invoke-super {p0, p1}, Li94;->J(Ldjd;)V
-
-    return-void
-.end method
-
-.method public final j()I
-    .locals 1
-
-    iget-object v0, p0, Li91;->w0:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final bridge synthetic y(Lm7d;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    check-cast p1, Ldjd;
+    const-string v0, "Error(requestId="
 
-    invoke-virtual {p0, p1}, Li91;->J(Ldjd;)V
+    const-string v1, ")"
 
-    return-void
+    iget-wide v2, p0, Li91;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

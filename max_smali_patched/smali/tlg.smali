@@ -1,149 +1,203 @@
-.class public final Ltlg;
+.class public Ltlg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ldia;
+
+# static fields
+.field public static final d:Lslg;
 
 
 # instance fields
-.field public a:Lg02;
+.field public a:Z
 
-.field public b:Z
+.field public b:J
+
+.field public c:J
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lslg;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ltlg;->d:Lslg;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
+.method public a()Ltlg;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Ltlg;->a:Z
+
+    return-object p0
+.end method
+
+.method public b()Ltlg;
     .locals 2
 
-    check-cast p1, Ljava/lang/Boolean;
+    const-wide/16 v0, 0x0
 
-    invoke-static {}, Lbmh;->t()Z
+    iput-wide v0, p0, Ltlg;->c:J
+
+    return-object p0
+.end method
+
+.method public c()J
+    .locals 2
+
+    iget-boolean v0, p0, Ltlg;->a:Z
+
+    if-eqz v0, :cond_0
+
+    iget-wide v0, p0, Ltlg;->b:J
+
+    return-wide v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "No deadline"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public d(J)Ltlg;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ltlg;->a:Z
+
+    iput-wide p1, p0, Ltlg;->b:J
+
+    return-object p0
+.end method
+
+.method public e()Z
+    .locals 1
+
+    iget-boolean v0, p0, Ltlg;->a:Z
+
+    return v0
+.end method
+
+.method public f()V
+    .locals 4
+
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     move-result v0
 
-    const-string v1, "SourceStreamRequirementObserver can be updated from main thread only"
+    if-nez v0, :cond_2
 
-    invoke-static {v1, v0}, Loui;->f(Ljava/lang/String;Z)V
+    iget-boolean v0, p0, Ltlg;->a:Z
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Ljava/lang/Boolean;->equals(Ljava/lang/Object;)Z
+    iget-wide v0, p0, Ltlg;->b:J
 
-    move-result p1
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    iget-boolean v0, p0, Ltlg;->b:Z
+    move-result-wide v2
 
-    if-ne v0, p1, :cond_0
+    sub-long/2addr v0, v2
 
-    return-void
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    iput-boolean p1, p0, Ltlg;->b:Z
+    new-instance v0, Ljava/io/InterruptedIOException;
 
-    iget-object v0, p0, Ltlg;->a:Lg02;
+    const-string v1, "deadline reached"
 
-    if-eqz v0, :cond_2
+    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
 
-    if-eqz p1, :cond_1
-
-    invoke-interface {v0}, Lg02;->o()V
-
-    return-void
+    throw v0
 
     :cond_1
-    invoke-interface {v0}, Lg02;->a()V
-
+    :goto_0
     return-void
 
     :cond_2
-    const-string p1, "VideoCapture"
-
-    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
-
-    invoke-static {p1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 3
-
-    invoke-static {}, Lbmh;->t()Z
-
-    move-result v0
-
-    const-string v1, "SourceStreamRequirementObserver can be closed from main thread only"
-
-    invoke-static {v1, v0}, Loui;->f(Ljava/lang/String;Z)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SourceStreamRequirementObserver#close: mIsSourceStreamRequired = "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Ltlg;->b:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    const-string v1, "VideoCapture"
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    invoke-static {v1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v0, Ljava/io/InterruptedIOException;
 
-    iget-object v0, p0, Ltlg;->a:Lg02;
+    const-string v1, "interrupted"
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/io/InterruptedIOException;-><init>(Ljava/lang/String;)V
 
-    const-string v0, "SourceStreamRequirementObserver#close: Already closed!"
-
-    invoke-static {v1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    iget-boolean v2, p0, Ltlg;->b:Z
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v2, 0x0
-
-    iput-boolean v2, p0, Ltlg;->b:Z
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Lg02;->a()V
-
-    goto :goto_0
-
-    :cond_2
-    const-string v0, "SourceStreamRequirementObserver#isSourceStreamRequired: Received new data despite being closed already"
-
-    invoke-static {v1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ltlg;->a:Lg02;
-
-    return-void
+    throw v0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
+.method public g(JLjava/util/concurrent/TimeUnit;)Ltlg;
     .locals 2
 
-    const-string v0, "VideoCapture"
+    const-wide/16 v0, 0x0
 
-    const-string v1, "SourceStreamRequirementObserver#onError"
+    cmp-long v0, p1, v0
 
-    invoke-static {v0, v1, p1}, Lafi;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-ltz v0, :cond_0
 
-    return-void
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Ltlg;->c:J
+
+    return-object p0
+
+    :cond_1
+    const-string p3, "timeout < 0: "
+
+    invoke-static {p1, p2, p3}, Lpqb;->j(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+.end method
+
+.method public h()J
+    .locals 2
+
+    iget-wide v0, p0, Ltlg;->c:J
+
+    return-wide v0
 .end method

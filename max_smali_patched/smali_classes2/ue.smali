@@ -1,112 +1,185 @@
-.class public final synthetic Lue;
-.super Ljava/lang/Object;
+.class public final Lue;
+.super Lfk5;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/Object;
 
-.field public final synthetic b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+.field public final d:Ljava/lang/Object;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
-    iput p2, p0, Lue;->a:I
+    new-instance v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    iput-object p1, p0, Lue;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    sget v1, Lv5e;->c0:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p1, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p0, v0}, Lfk5;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+
+    new-instance p1, Lte;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Lte;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, p1}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lue;->d:Ljava/lang/Object;
+
+    new-instance p1, Lte;
+
+    const/4 v2, 0x1
+
+    invoke-direct {p1, v0, v2}, Lte;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {v1, p1}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lue;->o:Ljava/lang/Object;
+
+    new-instance p1, Lte;
+
+    const/4 v2, 0x2
+
+    invoke-direct {p1, v0, v2}, Lte;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;I)V
+
+    invoke-static {v1, p1}, Le8;->b(ILlq6;)Lo58;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lue;->X:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final c(I)V
+    .locals 1
+
+    iget-object v0, p0, Lue;->d:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_0
+    iget-object v0, p0, Lue;->o:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_1
+    iget-object v0, p0, Lue;->X:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lone/me/sdk/richvector/VectorPath;
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
+
+    :cond_2
+    iget-object p1, p0, Lfk5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    invoke-virtual {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
+
+    return-void
+.end method
+
+.method public final d(II)V
     .locals 2
 
-    iget v0, p0, Lue;->a:I
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {p1, v0}, Ldjj;->b(IF)I
 
-    iget-object v0, p0, Lue;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    move-result v0
 
-    const-string v1, "circleR"
+    shr-int/lit8 p1, p1, 0x18
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    and-int/lit16 p1, p1, 0xff
 
-    move-result-object v0
+    int-to-float p1, p1
 
-    return-object v0
+    const/high16 v1, 0x437f0000    # 255.0f
 
-    :pswitch_0
-    iget-object v0, p0, Lue;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    div-float/2addr p1, v1
 
-    const-string v1, "circleM"
+    invoke-static {p2, p1, v0}, Ljj3;->c(IFI)I
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    move-result p1
 
-    move-result-object v0
+    iget-object p2, p0, Lue;->d:Ljava/lang/Object;
 
-    return-object v0
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
 
-    :pswitch_1
-    iget-object v0, p0, Lue;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    move-result-object p2
 
-    const-string v1, "circleL"
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    if-eqz p2, :cond_0
 
-    move-result-object v0
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
-    return-object v0
+    :cond_0
+    iget-object p2, p0, Lue;->o:Ljava/lang/Object;
 
-    :pswitch_2
-    iget-object v0, p0, Lue;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
 
-    const-string v1, "minutes"
+    move-result-object p2
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
 
-    move-result-object v0
+    if-eqz p2, :cond_1
 
-    return-object v0
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
-    :pswitch_3
-    iget-object v0, p0, Lue;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    :cond_1
+    iget-object p2, p0, Lue;->X:Ljava/lang/Object;
 
-    const-string v1, "hours"
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    move-result-object p2
 
-    move-result-object v0
+    check-cast p2, Lone/me/sdk/richvector/VectorPath;
 
-    return-object v0
+    if-eqz p2, :cond_2
 
-    :pswitch_4
-    iget-object v0, p0, Lue;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    invoke-interface {p2, p1}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
 
-    const-string v1, "circle"
+    :cond_2
+    iget-object p1, p0, Lfk5;->b:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    invoke-virtual {p1}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->invalidatePath()V
 
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

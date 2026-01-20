@@ -1,19 +1,17 @@
-.class public final Ll08;
-.super Ljzg;
+.class public interface abstract annotation Ll08;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
-# instance fields
-.field public final b:Lru7;
+
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
 
-# direct methods
-.method public constructor <init>(Lru7;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljzg;-><init>()V
-
-    iput-object p1, p0, Ll08;->b:Lru7;
-
-    return-void
+# virtual methods
+.method public abstract discriminator()Ljava/lang/String;
 .end method

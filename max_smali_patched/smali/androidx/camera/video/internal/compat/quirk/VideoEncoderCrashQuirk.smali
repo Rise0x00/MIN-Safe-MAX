@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public final a(Lz02;Ljb0;)Z
+.method public final a(Le42;Lgc0;)Z
     .locals 3
 
     const-string v0, "positivo"
@@ -42,13 +42,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Lz02;->h()I
+    invoke-interface {p1}, Le42;->h()I
 
     move-result p1
 
     if-nez p1, :cond_0
 
-    sget-object p1, Ljb0;->d:Ljb0;
+    sget-object p1, Lgc0;->d:Lgc0;
 
     if-ne p2, p1, :cond_0
 

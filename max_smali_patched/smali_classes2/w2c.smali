@@ -1,48 +1,50 @@
-.class public final synthetic Lw2c;
-.super Ljava/lang/Object;
+.class public final Lw2c;
+.super Licg;
 .source "SourceFile"
-
-# interfaces
-.implements Lyf4;
 
 
 # instance fields
-.field public final synthetic a:J
-
-.field public final synthetic b:La3c;
-
-.field public final synthetic c:Z
+.field public c:Ljava/lang/String;
 
 
-# direct methods
-.method public synthetic constructor <init>(JLa3c;Z)V
-    .locals 0
+# virtual methods
+.method public final d(Lpq9;Ljava/lang/String;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "url"
 
-    iput-wide p1, p0, Lw2c;->a:J
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iput-object p3, p0, Lw2c;->b:La3c;
+    move-result p2
 
-    iput-boolean p4, p0, Lw2c;->c:Z
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p1}, Lpq9;->O0()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lw2c;->c:Ljava/lang/String;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lpq9;->B()V
 
     return-void
 .end method
 
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+    iget-object v0, p0, Lw2c;->c:Ljava/lang/String;
 
-    new-instance v0, Lone/me/profile/ProfileScreen;
+    const-string v1, "{url=\'"
 
-    iget-wide v1, p0, Lw2c;->a:J
+    const-string v2, "\'}"
 
-    iget-object v3, p0, Lw2c;->b:La3c;
+    invoke-static {v1, v0, v2}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    iget-boolean v4, p0, Lw2c;->c:Z
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lone/me/profile/ProfileScreen;-><init>(JLa3c;Z)V
+    move-result-object v0
 
     return-object v0
 .end method

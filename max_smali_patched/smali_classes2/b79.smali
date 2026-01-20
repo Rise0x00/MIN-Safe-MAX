@@ -1,30 +1,26 @@
 .class public final Lb79;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lbph;
+.field public final synthetic X:Lone/me/mediapicker/MediaPickerScreen;
 
-.field public final synthetic Y:Ljava/lang/String;
-
-.field public o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lbph;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lb79;->X:Lbph;
+    iput-object p2, p0, Lb79;->X:Lone/me/mediapicker/MediaPickerScreen;
 
-    iput-object p2, p0, Lb79;->Y:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -34,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lg54;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lb79;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -44,105 +38,121 @@
 
     check-cast p1, Lb79;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lb79;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance p1, Lb79;
+    new-instance v0, Lb79;
 
-    iget-object v0, p0, Lb79;->X:Lbph;
+    iget-object v1, p0, Lb79;->X:Lone/me/mediapicker/MediaPickerScreen;
 
-    iget-object v1, p0, Lb79;->Y:Ljava/lang/String;
+    invoke-direct {v0, p2, v1}, Lb79;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
 
-    invoke-direct {p1, v0, v1, p2}, Lb79;-><init>(Lbph;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lb79;->o:Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 4
 
-    iget v0, p0, Lb79;->o:I
+    iget-object v0, p0, Lb79;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_1
+    check-cast v0, Ltt6;
 
-    if-ne v0, v1, :cond_0
+    instance-of p1, v0, Lpt6;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-eqz p1, :cond_2
+
+    sget-object p1, Lone/me/mediapicker/MediaPickerScreen;->C0:[Lz28;
+
+    iget-object p1, p0, Lb79;->X:Lone/me/mediapicker/MediaPickerScreen;
+
+    invoke-virtual {p1}, Lone/me/mediapicker/MediaPickerScreen;->C0()Li79;
+
+    move-result-object p1
+
+    check-cast v0, Lpt6;
+
+    iget-object v0, v0, Lpt6;->c:Lwh8;
+
+    iget-object v1, p1, Li79;->b:Lft6;
+
+    iget-boolean v1, v1, Lft6;->u0:Z
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p1, Li79;->v0:Lmmf;
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ll0;->isActive()Z
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v1, p1, Li79;->o:Lo58;
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-interface {v1}, Lo58;->getValue()Ljava/lang/Object;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    throw p1
+    check-cast v1, Lmbg;
+
+    check-cast v1, Lj9b;
+
+    invoke-virtual {v1}, Lj9b;->b()Lsb4;
+
+    move-result-object v1
+
+    new-instance v2, Lg79;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, v0, v3}, Lg79;-><init>(Li79;Lwh8;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v0, 0x2
+
+    invoke-static {p1, v1, v2, v0}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+
+    move-result-object v0
+
+    iput-object v0, p1, Li79;->v0:Lmmf;
+
+    goto :goto_0
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object p1, p1, Li79;->w0:Lcm5;
 
-    iget-object p1, p0, Lb79;->X:Lbph;
+    new-instance v1, Lx69;
 
-    iget-object v0, p1, Lbph;->i:Ljava/lang/Object;
+    iget-object v0, v0, Lwh8;->b:Landroid/net/Uri;
 
-    check-cast v0, La1f;
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    new-instance v2, Lr13;
+    move-result-object v0
 
-    const/16 v3, 0x14
+    invoke-direct {v1, v0}, Lx69;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v0, v3}, Lr13;-><init>(Lez5;I)V
-
-    iget-object v0, p1, Lbph;->h:Ljava/lang/Object;
-
-    check-cast v0, La1f;
-
-    new-instance v3, Ltg1;
-
-    iget-object v4, p0, Lb79;->Y:Ljava/lang/String;
-
-    const/4 v5, 0x3
-
-    const/4 v6, 0x0
-
-    invoke-direct {v3, p1, v4, v6, v5}, Ltg1;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    new-instance v4, Li41;
-
-    invoke-direct {v4, v2, v0, v3, v5}, Li41;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    new-instance v0, Lz69;
-
-    invoke-direct {v0, p1, v6}, Lz69;-><init>(Lbph;Lkotlin/coroutines/Continuation;)V
-
-    iput v1, p0, Lb79;->o:I
-
-    invoke-static {v4, v0, p0}, Lqs0;->g(Lez5;Lej6;Logf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
+    invoke-static {p1, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
     :cond_2
     :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

@@ -1,398 +1,291 @@
-.class public final Lloa;
+.class public abstract Lloa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lx5;
+.field public final a:Lzb4;
 
-.field public final b:Lru7;
+.field public final b:Lo58;
 
-.field public final c:Lru7;
+.field public c:Lmmf;
 
-.field public final d:Lru7;
+.field public d:Lx6a;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;Lx5;Lru7;)V
+.method public constructor <init>(Lzb4;Lo58;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lloa;->a:Lx5;
+    iput-object p1, p0, Lloa;->a:Lzb4;
 
-    iput-object p1, p0, Lloa;->b:Lru7;
-
-    iput-object p2, p0, Lloa;->c:Lru7;
-
-    iput-object p4, p0, Lloa;->d:Lru7;
+    iput-object p2, p0, Lloa;->b:Lo58;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lz5;
-    .locals 1
+.method public final a()V
+    .locals 2
 
-    iget-object v0, p0, Lloa;->c:Lru7;
+    iget-object v0, p0, Lloa;->c:Lmmf;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lz5;
-
-    return-object v0
-.end method
-
-.method public final b()Lqxb;
-    .locals 1
-
-    iget-object v0, p0, Lloa;->b:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lqxb;
-
-    return-object v0
-.end method
-
-.method public final c()Ltr0;
-    .locals 4
-
-    invoke-virtual {p0}, Lloa;->d()Z
-
-    move-result v0
-
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
-
-    move-result-object v1
-
-    check-cast v1, Lsxb;
-
-    iget-object v1, v1, Lsxb;->d:Lz70;
-
-    iget-object v1, v1, Ly3;->h:Luu7;
-
-    const-string v2, "auth.account.external"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Luu7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    new-instance v2, Ltr0;
+    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
+
+    invoke-virtual {v0, v1}, Lvy7;->cancel(Ljava/util/concurrent/CancellationException;)V
+
+    :cond_0
+    iput-object v1, p0, Lloa;->c:Lmmf;
+
+    move-object v0, p0
+
+    check-cast v0, Ljoa;
+
+    iget-object v1, v0, Ljoa;->f:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_0
+    iget-object v0, v0, Ljoa;->e:Lvea;
+
+    invoke-virtual {v0}, Lvea;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw v0
+.end method
+
+.method public final b()J
+    .locals 5
+
+    sget v0, Lta5;->d:I
+
+    iget-object v0, p0, Lloa;->b:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Llgc;
+
+    iget-object v0, v0, Llgc;->b:Lidc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Lru/ok/tamtam/android/prefs/PmsKey;->non-contact-collection-interval:Lru/ok/tamtam/android/prefs/PmsKey;
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-wide/16 v3, 0xa
+
+    invoke-virtual {v2, v3, v4}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v1, v2, v3}, Lidc;->m(Ljava/lang/Enum;J)J
+
+    move-result-wide v0
+
+    sget-object v2, Lza5;->c:Lza5;
+
+    invoke-static {v0, v1, v2}, Laoj;->h(JLza5;)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final c(Lvea;Lo84;)Ljava/lang/Object;
+    .locals 9
+
+    sget-object v0, Lb3h;->a:Lb3h;
+
+    instance-of v1, p2, Lkoa;
 
     if-eqz v1, :cond_0
 
-    const/4 v3, 0x1
+    move-object v1, p2
 
-    :cond_0
-    invoke-direct {v2, v0, v3}, Ltr0;-><init>(ZZ)V
+    check-cast v1, Lkoa;
 
-    return-object v2
-.end method
+    iget v2, v1, Lkoa;->X:I
 
-.method public final d()Z
-    .locals 4
+    const/high16 v3, -0x80000000
 
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
+    and-int v4, v2, v3
 
-    move-result-object v0
+    if-eqz v4, :cond_0
 
-    check-cast v0, Lsxb;
+    sub-int/2addr v2, v3
 
-    iget-object v0, v0, Lsxb;->a:Le78;
-
-    invoke-virtual {v0}, Lztd;->s()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
-
-    move-result-object v0
-
-    check-cast v0, Lsxb;
-
-    iget-object v0, v0, Lsxb;->d:Lz70;
-
-    const/4 v1, 0x0
-
-    iget-object v0, v0, Ly3;->h:Luu7;
-
-    const-string v2, "auth.token"
-
-    invoke-virtual {v0, v2, v1}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    iput v2, v1, Lkoa;->X:I
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x1
+    new-instance v1, Lkoa;
 
-    return v0
+    invoke-direct {v1, p0, p2}, Lkoa;-><init>(Lloa;Lo84;)V
+
+    :goto_0
+    iget-object p2, v1, Lkoa;->d:Ljava/lang/Object;
+
+    sget-object v2, Lac4;->a:Lac4;
+
+    iget v3, v1, Lkoa;->X:I
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x1
+
+    if-eqz v3, :cond_2
+
+    if-ne v3, v5, :cond_1
+
+    :try_start_0
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object v0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_4
 
     :cond_1
-    :goto_0
-    invoke-virtual {p0}, Lloa;->a()Lz5;
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v0}, Lz5;->a()Landroid/accounts/Account;
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lz5;->a:Lx5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    throw p1
 
     :cond_2
-    const/4 v0, 0x0
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
 
-    return v0
-.end method
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.method public final e()Z
-    .locals 3
+    move-result-object p2
 
-    invoke-virtual {p0}, Lloa;->d()Z
+    invoke-virtual {p2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p2
 
-    const/4 v1, 0x0
+    sget-object v3, Lc5j;->a:Ledb;
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
-
-    move-result-object v0
-
-    check-cast v0, Lsxb;
-
-    iget-object v0, v0, Lsxb;->d:Lz70;
-
-    const-string v2, "auth.account.external"
-
-    iget-object v0, v0, Ly3;->h:Luu7;
-
-    invoke-virtual {v0, v2, v1}, Luu7;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final f()Ljava/lang/String;
-    .locals 4
-
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
-
-    move-result-object v0
-
-    check-cast v0, Lsxb;
-
-    iget-object v0, v0, Lsxb;->a:Le78;
-
-    invoke-virtual {v0}, Lztd;->s()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
-
-    move-result-object v0
-
-    check-cast v0, Lsxb;
-
-    iget-object v0, v0, Lsxb;->d:Lz70;
-
-    iget-object v0, v0, Ly3;->h:Luu7;
-
-    const-string v2, "auth.token"
-
-    invoke-virtual {v0, v2, v1}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    if-nez v3, :cond_3
 
     goto :goto_1
 
-    :cond_0
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
+    :cond_3
+    sget-object v6, Lkk8;->d:Lkk8;
 
-    move-result-object v0
+    invoke-virtual {v3, v6}, Ledb;->b(Lkk8;)Z
 
-    check-cast v0, Lsxb;
+    move-result v7
 
-    iget-object v0, v0, Lsxb;->d:Lz70;
+    if-eqz v7, :cond_4
 
-    iget-object v0, v0, Ly3;->h:Luu7;
+    const/16 v7, 0x1f
 
-    invoke-virtual {v0, v2, v1}, Luu7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v7}, Lvea;->k(Lvea;I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v7
 
-    if-eqz v0, :cond_2
+    const-string v8, "request ids "
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v8, v7}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v2
+    move-result-object v7
 
-    if-nez v2, :cond_1
+    invoke-virtual {v3, v6, p2, v7, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    goto :goto_0
+    :cond_4
+    :goto_1
+    invoke-virtual {p1}, Lvea;->i()Z
 
-    :cond_1
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    :try_start_1
+    iget-object p2, p0, Lloa;->d:Lx6a;
+
+    if-eqz p2, :cond_6
+
+    iput v5, v1, Lkoa;->X:I
+
+    invoke-virtual {p2, p1, v1}, Lx6a;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-ne p1, v2, :cond_6
+
+    return-object v2
+
+    :goto_2
+    invoke-virtual {p0}, Lloa;->a()V
+
+    instance-of p1, p1, Ljava/util/concurrent/CancellationException;
+
+    if-eqz p1, :cond_7
+
+    :cond_6
+    :goto_3
     return-object v0
 
-    :cond_2
-    :goto_0
-    invoke-virtual {p0}, Lloa;->a()Lz5;
+    :cond_7
+    move-object p1, p0
 
-    move-result-object v0
+    check-cast p1, Ljoa;
 
-    invoke-virtual {v0}, Lz5;->a()Landroid/accounts/Account;
+    invoke-virtual {p1}, Lloa;->a()V
 
-    iget-object v0, v0, Lz5;->a:Lx5;
+    iget-object p2, p1, Lloa;->a:Lzb4;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v1, Lioa;
 
-    :cond_3
-    :goto_1
-    return-object v1
-.end method
+    invoke-direct {v1, p1, v4}, Lioa;-><init>(Ljoa;Lkotlin/coroutines/Continuation;)V
 
-.method public final g(Z)V
-    .locals 4
+    const/4 v2, 0x3
 
-    const-string v0, "loa"
+    invoke-static {p2, v4, v4, v1, v2}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
-    const-string v1, "removeAccount"
+    move-result-object p2
 
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p2, p1, Lloa;->c:Lmmf;
 
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
+    return-object v0
 
-    move-result-object v0
-
-    check-cast v0, Lsxb;
-
-    iget-object v0, v0, Lsxb;->d:Lz70;
-
-    invoke-virtual {v0}, Lz70;->c()V
-
-    invoke-virtual {p0}, Lloa;->a()Lz5;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lz5;->b()V
-
-    if-eqz p1, :cond_0
-
-    sget p1, Lu5e;->d:I
-
-    iget-object p1, p0, Lloa;->d:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Llph;
-
-    invoke-virtual {p0}, Lloa;->e()Z
-
-    move-result v0
-
-    sget v1, Lw35;->d:I
-
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v1
-
-    sget-object v3, Lb45;->b:Lb45;
-
-    invoke-static {v1, v2, v3}, Lzyi;->e(JLb45;)J
-
-    move-result-wide v1
-
-    sput-wide v1, Lu5e;->c:J
-
-    new-instance v1, Lu5e;
-
-    invoke-direct {v1, v0}, Lu5e;-><init>(Z)V
-
-    invoke-virtual {p1, v1}, Llph;->b(Le5e;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final h(Ljava/lang/String;Z)V
-    .locals 2
-
-    invoke-virtual {p0}, Lloa;->b()Lqxb;
-
-    move-result-object v0
-
-    check-cast v0, Lsxb;
-
-    iget-object v0, v0, Lsxb;->d:Lz70;
-
-    invoke-virtual {p0}, Lloa;->a()Lz5;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lz5;->a()Landroid/accounts/Account;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, p1, p2}, Lz70;->k(Landroid/accounts/Account;Ljava/lang/String;Z)V
-
-    invoke-virtual {p0}, Lloa;->a()Lz5;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
+    :goto_4
+    throw p1
 .end method

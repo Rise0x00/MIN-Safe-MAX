@@ -1,83 +1,68 @@
-.class public final synthetic Lf91;
-.super Ljava/lang/Object;
+.class public final Lf91;
+.super Llwh;
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Lh91;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lg91;
+# static fields
+.field public static final c:Lf91;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg91;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p2, p0, Lf91;->a:I
+    new-instance v0, Lf91;
 
-    iput-object p1, p0, Lf91;->b:Lg91;
+    sget v1, Ledd;->call_screen_bad_connection:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2, v1}, Llwh;-><init>(Ljava/lang/Long;I)V
+
+    sput-object v0, Lf91;->c:Lf91;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lf91;->a:I
+    const/4 v0, 0x1
 
-    check-cast p1, Lw5b;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    sget-object p1, Ly53;->s0:Lvh4;
+    :cond_0
+    instance-of p1, p1, Lf91;
 
-    iget-object v0, p0, Lf91;->b:Lg91;
-
-    iget-object v0, v0, Lm7d;->a:Landroid/view/View;
-
-    invoke-virtual {p1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lw5b;->b()Lcf0;
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
-    :goto_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return p1
 
-    move-result-object p1
+    :cond_1
+    return v0
+.end method
 
-    return-object p1
+.method public final hashCode()I
+    .locals 1
 
-    :pswitch_0
-    sget-object p1, Ly53;->s0:Lvh4;
+    const v0, 0x13d36bde
 
-    iget-object v0, p0, Lf91;->b:Lg91;
+    return v0
+.end method
 
-    iget-object v0, v0, Lm7d;->a:Landroid/view/View;
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-virtual {p1, v0}, Lvh4;->i(Landroid/view/View;)Lw5b;
+    const-string v0, "Degraded"
 
-    move-result-object p1
-
-    invoke-interface {p1}, Lw5b;->getIcon()Le77;
-
-    const/4 p1, -0x1
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

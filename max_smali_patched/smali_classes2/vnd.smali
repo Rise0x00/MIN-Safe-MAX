@@ -1,6 +1,9 @@
 .class public final Lvnd;
-.super Lwnd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwnd;
 
 
 # static fields
@@ -47,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x7a48e5f1
+    const v0, 0x726dbab4
 
     return v0
 .end method
@@ -55,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Timeout"
+    const-string v0, "OutOfMemory"
 
     return-object v0
 .end method

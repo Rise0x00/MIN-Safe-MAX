@@ -3,209 +3,68 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final e:Lsrb;
-
-
 # instance fields
-.field public final a:F
+.field public final a:Landroid/graphics/drawable/BitmapDrawable;
 
-.field public final b:F
+.field public b:F
 
-.field public final c:F
+.field public final c:Landroid/graphics/Rect;
 
-.field public final d:F
+.field public d:Landroid/view/animation/Interpolator;
+
+.field public e:J
+
+.field public final f:Landroid/graphics/Rect;
+
+.field public g:I
+
+.field public h:F
+
+.field public i:J
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:Lws8;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/Rect;)V
     .locals 2
-
-    new-instance v0, Lsrb;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, v1, v1, v1}, Lsrb;-><init>(FFFF)V
-
-    sput-object v0, Lsrb;->e:Lsrb;
-
-    return-void
-.end method
-
-.method public constructor <init>(FFFF)V
-    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lsrb;->a:F
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    iput p2, p0, Lsrb;->b:F
+    iput v0, p0, Lsrb;->b:F
 
-    iput p3, p0, Lsrb;->c:F
+    iput v0, p0, Lsrb;->h:F
 
-    iput p4, p0, Lsrb;->d:F
+    iput-object p1, p0, Lsrb;->a:Landroid/graphics/drawable/BitmapDrawable;
 
-    return-void
-.end method
+    iput-object p2, p0, Lsrb;->f:Landroid/graphics/Rect;
 
+    new-instance v0, Landroid/graphics/Rect;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {v0, p2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    const/4 v0, 0x1
+    iput-object v0, p0, Lsrb;->c:Landroid/graphics/Rect;
 
-    if-ne p0, p1, :cond_0
+    if-eqz p1, :cond_0
 
-    return v0
+    iget p2, p0, Lsrb;->b:F
+
+    const/high16 v1, 0x437f0000    # 255.0f
+
+    mul-float/2addr p2, v1
+
+    float-to-int p2, p2
+
+    invoke-virtual {p1, p2}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     :cond_0
-    instance-of v1, p1, Lsrb;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lsrb;
-
-    iget v1, p0, Lsrb;->a:F
-
-    iget v3, p1, Lsrb;->a:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lsrb;->b:F
-
-    iget v3, p1, Lsrb;->b:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lsrb;->c:F
-
-    iget v3, p1, Lsrb;->c:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget v1, p0, Lsrb;->d:F
-
-    iget p1, p1, Lsrb;->d:F
-
-    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lsrb;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lsrb;->b:F
-
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Lsrb;->c:F
-
-    invoke-static {v0, v2, v1}, Lmb3;->b(IFI)I
-
-    move-result v0
-
-    iget v1, p0, Lsrb;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PipBounds(maxLeftOffset="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lsrb;->a:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxRightOffset="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lsrb;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxTopOffset="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lsrb;->c:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxBottomOffset="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lsrb;->d:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

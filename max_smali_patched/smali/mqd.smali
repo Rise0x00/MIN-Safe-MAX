@@ -1,280 +1,160 @@
 .class public final Lmqd;
-.super Landroid/view/View;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Lk02;
+.field public final a:J
 
-.field public b:Landroid/view/Window;
+.field public final b:Llhg;
 
-.field public c:Llqd;
+.field public final c:Lx5b;
 
 
 # direct methods
-.method public static synthetic a(Lmqd;)F
+.method public constructor <init>(JLlhg;Lx5b;)V
     .locals 0
 
-    invoke-direct {p0}, Lmqd;->getBrightness()F
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-wide p1, p0, Lmqd;->a:J
 
-    return p0
-.end method
+    iput-object p3, p0, Lmqd;->b:Llhg;
 
-.method public static synthetic b(Lmqd;F)V
-    .locals 0
+    iput-object p4, p0, Lmqd;->c:Lx5b;
 
-    invoke-direct {p0, p1}, Lmqd;->setBrightness(F)V
-
-    return-void
-.end method
-
-.method private getBrightness()F
-    .locals 2
-
-    iget-object v0, p0, Lmqd;->b:Landroid/view/Window;
-
-    if-nez v0, :cond_0
-
-    const-string v0, "ScreenFlashView"
-
-    const-string v1, "setBrightness: mScreenFlashWindow is null!"
-
-    invoke-static {v0, v1}, Lafi;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/high16 v0, 0x7fc00000    # Float.NaN
-
-    return v0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    return v0
-.end method
-
-.method private setBrightness(F)V
-    .locals 3
-
-    iget-object v0, p0, Lmqd;->b:Landroid/view/Window;
-
-    const-string v1, "ScreenFlashView"
-
-    if-nez v0, :cond_0
-
-    const-string p1, "setBrightness: mScreenFlashWindow is null!"
-
-    invoke-static {v1, p1}, Lafi;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Ljava/lang/Float;->isNaN(F)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const-string p1, "setBrightness: value is NaN!"
-
-    invoke-static {v1, p1}, Lafi;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lmqd;->b:Landroid/view/Window;
-
-    invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
-
-    move-result-object v0
-
-    iput p1, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    iget-object p1, p0, Lmqd;->b:Landroid/view/Window;
-
-    invoke-virtual {p1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Brightness set to "
-
-    invoke-direct {p1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v0, v0, Landroid/view/WindowManager$LayoutParams;->screenBrightness:F
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private setScreenFlashUiInfo(Ll97;)V
-    .locals 4
-
-    iget-object v0, p0, Lmqd;->a:Lk02;
-
-    if-nez v0, :cond_0
-
-    const-string p1, "ScreenFlashView"
-
-    const-string v0, "setScreenFlashUiInfo: mCameraController is null!"
-
-    invoke-static {p1, v0}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_0
-    new-instance v1, Lkqd;
-
-    sget-object v2, Ljqd;->b:Ljqd;
-
-    invoke-direct {v1, v2, p1}, Lkqd;-><init>(Ljqd;Ll97;)V
-
-    invoke-virtual {v0}, Lk02;->g()Lkqd;
-
-    move-result-object p1
-
-    iget-object v3, v0, Lk02;->F:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {v0}, Lk02;->g()Lkqd;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, p1}, Lkqd;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    invoke-virtual {v0}, Lk02;->v()V
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public getScreenFlash()Ll97;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lmqd;->c:Llqd;
+    if-ne p0, p1, :cond_0
 
-    return-object v0
-.end method
-
-.method public getVisibilityRampUpAnimationDurationMillis()J
-    .locals 2
-
-    const-wide/16 v0, 0x3e8
-
-    return-wide v0
-.end method
-
-.method public setController(Lk02;)V
-    .locals 1
-
-    invoke-static {}, Lbmh;->f()V
-
-    iget-object v0, p0, Lmqd;->a:Lk02;
-
-    if-eqz v0, :cond_0
-
-    if-eq v0, p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lmqd;->setScreenFlashUiInfo(Ll97;)V
+    goto :goto_1
 
     :cond_0
-    iput-object p1, p0, Lmqd;->a:Lk02;
+    instance-of v0, p1, Lmqd;
 
-    if-nez p1, :cond_1
+    if-nez v0, :cond_1
 
-    return-void
+    goto :goto_0
 
     :cond_1
-    invoke-static {}, Lbmh;->f()V
+    check-cast p1, Lmqd;
 
-    iget-object p1, p1, Lk02;->e:Lm97;
+    iget-wide v0, p0, Lmqd;->a:J
 
-    invoke-virtual {p1}, Lm97;->H()I
+    iget-wide v2, p1, Lmqd;->a:J
 
-    move-result p1
+    cmp-long v0, v0, v2
 
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_3
-
-    iget-object p1, p0, Lmqd;->b:Landroid/view/Window;
-
-    if-eqz p1, :cond_2
+    if-eqz v0, :cond_2
 
     goto :goto_0
 
     :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lmqd;->b:Llhg;
 
-    const-string v0, "No window set despite setting FLASH_MODE_SCREEN in CameraController"
+    iget-object v1, p1, Lmqd;->b:Llhg;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Llhg;->equals(Ljava/lang/Object;)Z
 
-    throw p1
+    move-result v0
 
-    :cond_3
-    :goto_0
-    invoke-virtual {p0}, Lmqd;->getScreenFlash()Ll97;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lmqd;->setScreenFlashUiInfo(Ll97;)V
-
-    return-void
-.end method
-
-.method public setScreenFlashWindow(Landroid/view/Window;)V
-    .locals 1
-
-    invoke-static {}, Lbmh;->f()V
-
-    iget-object v0, p0, Lmqd;->b:Landroid/view/Window;
-
-    if-eq v0, p1, :cond_1
-
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x0
+    if-nez v0, :cond_3
 
     goto :goto_0
 
-    :cond_0
-    new-instance v0, Llqd;
+    :cond_3
+    iget-object v0, p0, Lmqd;->c:Lx5b;
 
-    invoke-direct {v0, p0}, Llqd;-><init>(Lmqd;)V
+    iget-object p1, p1, Lmqd;->c:Lx5b;
+
+    if-eq v0, p1, :cond_4
 
     :goto_0
-    iput-object v0, p0, Lmqd;->c:Llqd;
+    const/4 p1, 0x0
 
-    :cond_1
-    iput-object p1, p0, Lmqd;->b:Landroid/view/Window;
+    return p1
 
-    invoke-virtual {p0}, Lmqd;->getScreenFlash()Ll97;
+    :cond_4
+    :goto_1
+    const/4 p1, 0x1
 
-    move-result-object p1
+    return p1
+.end method
 
-    invoke-direct {p0, p1}, Lmqd;->setScreenFlashUiInfo(Ll97;)V
+.method public final hashCode()I
+    .locals 3
 
-    return-void
+    iget-wide v0, p0, Lmqd;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmqd;->b:Llhg;
+
+    iget v2, v2, Llhg;->c:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v1, p0, Lmqd;->c:Lx5b;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ButtonState(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lmqd;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", textSource="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmqd;->b:Llhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mode="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmqd;->c:Lx5b;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

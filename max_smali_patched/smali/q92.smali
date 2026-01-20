@@ -1,41 +1,86 @@
-.class public abstract Lq92;
-.super Ljava/lang/Object;
+.class public final Lq92;
+.super Lvtg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/nio/charset/Charset;
+# instance fields
+.field public a:Z
 
-.field public static final b:Ljava/nio/charset/Charset;
-
-.field public static final c:Ljava/nio/charset/Charset;
-
-.field public static final d:Ljava/nio/charset/Charset;
+.field public final b:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/view/ViewGroup;)V
     .locals 1
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->US_ASCII:Ljava/nio/charset/Charset;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lq92;->a:Ljava/nio/charset/Charset;
+    const/4 v0, 0x0
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->ISO_8859_1:Ljava/nio/charset/Charset;
+    iput-boolean v0, p0, Lq92;->a:Z
 
-    sput-object v0, Lq92;->b:Ljava/nio/charset/Charset;
+    iput-object p1, p0, Lq92;->b:Landroid/view/ViewGroup;
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+    return-void
+.end method
 
-    sput-object v0, Lq92;->c:Ljava/nio/charset/Charset;
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_16BE:Ljava/nio/charset/Charset;
+# virtual methods
+.method public final b()V
+    .locals 2
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_16LE:Ljava/nio/charset/Charset;
+    iget-object v0, p0, Lq92;->b:Landroid/view/ViewGroup;
 
-    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_16:Ljava/nio/charset/Charset;
+    const/4 v1, 0x0
 
-    sput-object v0, Lq92;->d:Ljava/nio/charset/Charset;
+    invoke-static {v0, v1}, Lw5j;->b(Landroid/view/ViewGroup;Z)V
+
+    return-void
+.end method
+
+.method public final c(Lstg;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lq92;->a:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lq92;->b:Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lw5j;->b(Landroid/view/ViewGroup;Z)V
+
+    :cond_0
+    invoke-virtual {p1, p0}, Lstg;->D(Lrtg;)Lstg;
+
+    return-void
+.end method
+
+.method public final f()V
+    .locals 2
+
+    iget-object v0, p0, Lq92;->b:Landroid/view/ViewGroup;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lw5j;->b(Landroid/view/ViewGroup;Z)V
+
+    return-void
+.end method
+
+.method public final h(Lstg;)V
+    .locals 1
+
+    iget-object p1, p0, Lq92;->b:Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0}, Lw5j;->b(Landroid/view/ViewGroup;Z)V
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lq92;->a:Z
 
     return-void
 .end method

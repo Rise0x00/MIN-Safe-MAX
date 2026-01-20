@@ -1,281 +1,335 @@
 .class public final Ldj3;
-.super Ljava/lang/Object;
+.super Lwrd;
 .source "SourceFile"
-
-# interfaces
-.implements Limg;
 
 
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final X:I
 
-.field public final b:J
+.field public final Y:I
 
-.field public final c:J
+.field public Z:I
 
-.field public final d:J
+.field public final d:I
 
-.field public final e:Landroid/net/Uri;
+.field public o:[I
 
-.field public final f:Ljava/lang/String;
+.field public final t0:I
 
-.field public final g:I
-
-.field public final h:I
+.field public u0:Lfj3;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/List;)V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lwrd;-><init>()V
 
-    iput-object p3, p0, Ldj3;->a:Ljava/util/List;
+    const/high16 v0, -0x10000
 
-    iput-wide p1, p0, Ldj3;->b:J
+    filled-new-array {v0}, [I
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-object v0, p0, Ldj3;->o:[I
 
-    move-result-object v1
+    const/4 v0, -0x1
 
-    check-cast v1, Lcj3;
+    iput v0, p0, Ldj3;->Z:I
 
-    invoke-virtual {v1}, Lcj3;->toString()Ljava/lang/String;
+    iput p2, p0, Ldj3;->d:I
 
-    move-result-object v1
+    const/4 p2, 0x6
 
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-static {p1, p2}, Lj4j;->d(Landroid/content/Context;I)I
 
-    move-result v1
+    move-result p2
 
-    int-to-long v1, v1
+    iput p2, p0, Ldj3;->X:I
 
-    iput-wide v1, p0, Ldj3;->c:J
+    const/16 p2, 0x20
 
-    iput-wide p1, p0, Ldj3;->d:J
+    invoke-static {p1, p2}, Lj4j;->d(Landroid/content/Context;I)I
 
-    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+    move-result p2
 
-    iput-object p1, p0, Ldj3;->e:Landroid/net/Uri;
+    iput p2, p0, Ldj3;->Y:I
 
-    const-string p1, "video/mp4"
+    const/4 p2, 0x2
 
-    iput-object p1, p0, Ldj3;->f:Ljava/lang/String;
+    invoke-static {p1, p2}, Lj4j;->d(Landroid/content/Context;I)I
 
-    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p1
-
-    check-cast p1, Lcj3;
-
-    iget p1, p1, Lcj3;->b:I
-
-    iput p1, p0, Ldj3;->g:I
-
-    invoke-interface {p3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcj3;
-
-    iget p1, p1, Lcj3;->c:I
-
-    iput p1, p0, Ldj3;->h:I
+    iput p1, p0, Ldj3;->t0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Landroid/net/Uri;
+.method public final j()I
     .locals 1
 
-    iget-object v0, p0, Ldj3;->e:Landroid/net/Uri;
+    iget-object v0, p0, Ldj3;->o:[I
 
-    return-object v0
-.end method
-
-.method public final b()J
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public final c()J
-    .locals 2
-
-    iget-wide v0, p0, Ldj3;->d:J
-
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
+    array-length v0, v0
 
     return v0
+.end method
+
+.method public final s(Ltsd;I)V
+    .locals 1
+
+    check-cast p1, Lhj3;
+
+    iget-object v0, p0, Ldj3;->o:[I
+
+    aget p2, v0, p2
+
+    iget-object v0, p1, Lhj3;->F0:Lej3;
+
+    invoke-virtual {v0, p2}, Lej3;->setColor(I)V
+
+    iget-object p1, p1, Ltsd;->a:Landroid/view/View;
+
+    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/view/ViewPropertyAnimator;->cancel()V
+
+    const/high16 p2, 0x3f800000    # 1.0f
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleX(F)V
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setScaleY(F)V
+
+    return-void
+.end method
+
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+    .locals 8
+
+    iget p2, p0, Ldj3;->Z:I
+
+    iget v0, p0, Ldj3;->Y:I
+
+    iget v1, p0, Ldj3;->d:I
+
+    iget v2, p0, Ldj3;->X:I
+
+    const/4 v3, -0x1
+
+    if-ne p2, v3, :cond_1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v4
+
+    sub-int/2addr p2, v4
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingRight()I
+
+    move-result v4
+
+    :goto_0
+    sub-int/2addr p2, v4
+
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Ldj3;
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
 
-    if-nez v1, :cond_1
+    move-result p2
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v4
+
+    sub-int/2addr p2, v4
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingBottom()I
+
+    move-result v4
 
     goto :goto_0
 
+    :goto_1
+    mul-int/lit8 v4, v2, 0x2
+
+    add-int/2addr v4, v0
+
+    int-to-float v4, v4
+
+    int-to-float p2, p2
+
+    div-float v5, p2, v4
+
+    float-to-int v6, v5
+
+    int-to-float v6, v6
+
+    const/high16 v7, 0x3f000000    # 0.5f
+
+    add-float/2addr v6, v7
+
+    sub-float v6, v5, v6
+
+    sub-float/2addr v5, v6
+
+    div-float/2addr p2, v5
+
+    sub-float/2addr p2, v4
+
+    const/high16 v4, 0x40000000    # 2.0f
+
+    div-float/2addr p2, v4
+
+    float-to-int p2, p2
+
+    iput p2, p0, Ldj3;->Z:I
+
     :cond_1
-    check-cast p1, Ldj3;
+    new-instance p2, Landroid/widget/FrameLayout;
 
-    iget-object v1, p0, Ldj3;->a:Ljava/util/List;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-object v2, p1, Ldj3;->a:Ljava/util/List;
+    move-result-object v4
 
-    invoke-static {v1, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {p2, v4}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    move-result v1
+    new-instance v4, Lesd;
+
+    const/4 v5, -0x2
+
+    invoke-direct {v4, v5, v5}, Lesd;-><init>(II)V
+
+    invoke-virtual {p2, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v4, 0x0
+
+    invoke-virtual {p2, v4}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
 
     if-nez v1, :cond_2
 
-    goto :goto_0
+    iget v1, p0, Ldj3;->Z:I
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {p2, v1, v2, v1, v2}, Landroid/view/View;->setPadding(IIII)V
+
+    goto :goto_2
 
     :cond_2
-    iget-wide v1, p0, Ldj3;->b:J
+    iget v1, p0, Ldj3;->Z:I
 
-    iget-wide v3, p1, Ldj3;->b:J
+    add-int/2addr v1, v2
 
-    cmp-long p1, v1, v3
+    invoke-virtual {p2, v2, v1, v2, v1}, Landroid/view/View;->setPadding(IIII)V
 
-    if-eqz p1, :cond_3
+    :goto_2
+    new-instance v1, Lej3;
 
-    :goto_0
-    const/4 p1, 0x0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return p1
+    move-result-object p1
 
-    :cond_3
-    return v0
-.end method
+    invoke-direct {v1, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-.method public final g()Z
-    .locals 1
+    invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    const/4 v0, 0x0
+    move-result-object p1
 
-    return v0
-.end method
+    const/4 v2, 0x2
 
-.method public final getContentType()Ljava/lang/String;
-    .locals 1
+    invoke-static {p1, v2}, Lj4j;->d(Landroid/content/Context;I)I
 
-    iget-object v0, p0, Ldj3;->f:Ljava/lang/String;
+    move-result p1
 
-    return-object v0
-.end method
+    iput p1, v1, Lej3;->c:I
 
-.method public final getDuration()J
-    .locals 2
+    new-instance p1, Landroid/graphics/Paint;
 
-    iget-wide v0, p0, Ldj3;->b:J
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    return-wide v0
-.end method
+    iput-object p1, v1, Lej3;->a:Landroid/graphics/Paint;
 
-.method public final getHeight()I
-    .locals 1
+    const/high16 v2, -0x10000
 
-    iget v0, p0, Ldj3;->h:I
+    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    return v0
-.end method
+    iget-object p1, v1, Lej3;->a:Landroid/graphics/Paint;
 
-.method public final getWidth()I
-    .locals 1
+    sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    iget v0, p0, Ldj3;->g:I
+    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    return v0
-.end method
+    iget-object p1, v1, Lej3;->a:Landroid/graphics/Paint;
 
-.method public final h()J
-    .locals 2
+    const/4 v5, 0x1
 
-    const-wide/16 v0, 0x0
+    invoke-virtual {p1, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    return-wide v0
-.end method
+    iget-object p1, v1, Lej3;->a:Landroid/graphics/Paint;
 
-.method public final hashCode()I
-    .locals 4
+    invoke-virtual {p1, v5}, Landroid/graphics/Paint;->setDither(Z)V
 
-    iget-object v0, p0, Ldj3;->a:Ljava/util/List;
+    new-instance p1, Landroid/graphics/Paint;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
 
-    move-result v0
+    iput-object p1, v1, Lej3;->b:Landroid/graphics/Paint;
 
-    const/16 v1, 0x1f
+    invoke-virtual {p1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    mul-int/2addr v0, v1
+    iget-object p1, v1, Lej3;->b:Landroid/graphics/Paint;
 
-    iget-wide v2, p0, Ldj3;->b:J
+    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+    iget-object p1, v1, Lej3;->b:Landroid/graphics/Paint;
 
-    move-result v0
+    invoke-virtual {p1, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    const/4 v1, 0x1
+    iget-object p1, v1, Lej3;->b:Landroid/graphics/Paint;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {p1, v5}, Landroid/graphics/Paint;->setDither(Z)V
 
-    move-result v1
+    invoke-virtual {v1, v4}, Landroid/view/View;->setClipToOutline(Z)V
 
-    add-int/2addr v1, v0
+    new-instance p1, Lub3;
 
-    return v1
-.end method
+    const/4 v2, 0x1
 
-.method public final i()J
-    .locals 2
+    invoke-direct {p1, v1, v2}, Lub3;-><init>(Landroid/view/View;I)V
 
-    iget-wide v0, p0, Ldj3;->c:J
+    invoke-virtual {v1, p1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    return-wide v0
-.end method
+    new-instance p1, Lesd;
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    invoke-direct {p1, v0, v0}, Lesd;-><init>(II)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    const-string v1, "ConcatenatedMp4VideoContent(items="
+    iget p1, p0, Ldj3;->t0:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    int-to-float p1, p1
 
-    iget-object v1, p0, Ldj3;->a:Ljava/util/List;
+    invoke-virtual {v1, p1}, Landroid/view/View;->setElevation(F)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    const-string v1, ", duration="
+    new-instance p1, Lhj3;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Ldj3;->u0:Lfj3;
 
-    iget-wide v1, p0, Ldj3;->b:J
+    invoke-direct {p1, p2, v1, v0}, Lhj3;-><init>(Landroid/widget/FrameLayout;Lej3;Lfj3;)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isMute=true)"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

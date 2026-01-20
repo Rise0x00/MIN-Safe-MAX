@@ -1,97 +1,75 @@
-.class public final enum Llqa;
-.super Ljava/lang/Enum;
+.class public final Llqa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final enum a:Llqa;
+.field public static final synthetic c:[Lz28;
 
-.field public static final enum b:Llqa;
+.field public static final d:Ljava/lang/String;
 
-.field public static final enum c:Llqa;
 
-.field public static final enum d:Llqa;
+# instance fields
+.field public final a:Lj35;
 
-.field public static final synthetic o:[Llqa;
+.field public final b:Lj35;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Llqa;
+    new-instance v0, Liyc;
 
-    const-string v1, "PRIMARY"
+    const-class v1, Llqa;
 
-    const/4 v2, 0x0
+    const-string v2, "chats"
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v3, "getChats()Lru/ok/tamtam/chats/ChatController;"
 
-    sput-object v0, Llqa;->a:Llqa;
+    const/4 v4, 0x0
 
-    new-instance v1, Llqa;
+    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const-string v2, "SECONDARY"
+    sget-object v2, Lctd;->a:Ldtd;
 
-    const/4 v3, 0x1
+    const-string v3, "messages"
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v5, "getMessages()Lru/ok/tamtam/messages/MessageController;"
 
-    sput-object v1, Llqa;->b:Llqa;
+    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
 
-    new-instance v2, Llqa;
+    move-result-object v2
 
-    const-string v3, "TERTIARY"
+    const/4 v3, 0x2
 
-    const/4 v4, 0x2
+    new-array v3, v3, [Lz28;
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    aput-object v0, v3, v4
 
-    sput-object v2, Llqa;->c:Llqa;
+    const/4 v0, 0x1
 
-    new-instance v3, Llqa;
+    aput-object v2, v3, v0
 
-    const-string v4, "LINK"
+    sput-object v3, Llqa;->c:[Lz28;
 
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Llqa;->d:Llqa;
-
-    filled-new-array {v0, v1, v2, v3}, [Llqa;
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Llqa;->o:[Llqa;
+    sput-object v0, Llqa;->d:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Llqa;
-    .locals 1
+.method public constructor <init>(Lj35;Lj35;)V
+    .locals 0
 
-    const-class v0, Llqa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Llqa;->a:Lj35;
 
-    move-result-object p0
+    iput-object p2, p0, Llqa;->b:Lj35;
 
-    check-cast p0, Llqa;
-
-    return-object p0
-.end method
-
-.method public static values()[Llqa;
-    .locals 1
-
-    sget-object v0, Llqa;->o:[Llqa;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Llqa;
-
-    return-object v0
+    return-void
 .end method

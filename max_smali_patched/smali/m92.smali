@@ -1,39 +1,56 @@
-.class public final Lm92;
+.class public final synthetic Lm92;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnhh;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final b:Lm92;
-
-.field public final c:I
+.field public final synthetic b:Laz6;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lm92;)V
+.method public synthetic constructor <init>(Laz6;I)V
     .locals 0
+
+    iput p2, p0, Lm92;->a:I
+
+    iput-object p1, p0, Lm92;->b:Laz6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm92;->a:Ljava/lang/String;
+    return-void
+.end method
 
-    iput-object p2, p0, Lm92;->b:Lm92;
 
-    const/4 p1, 0x1
+# virtual methods
+.method public final run()V
+    .locals 1
 
-    if-nez p2, :cond_0
+    iget v0, p0, Lm92;->a:I
 
-    goto :goto_0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    iget p2, p2, Lm92;->c:I
+    iget-object v0, p0, Lm92;->b:Laz6;
 
-    add-int/2addr p1, p2
-
-    :goto_0
-    iput p1, p0, Lm92;->c:I
+    invoke-interface {v0}, Laz6;->c()V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lm92;->b:Laz6;
+
+    invoke-interface {v0}, Laz6;->flush()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

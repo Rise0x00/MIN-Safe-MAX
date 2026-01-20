@@ -1,54 +1,49 @@
 .class public final Lasb;
-.super Ly0;
+.super Ly48;
 .source "SourceFile"
+
+# interfaces
+.implements Ldr6;
 
 
 # instance fields
-.field public final m:Lma7;
-
-.field public final n:Lsp3;
+.field public final synthetic a:Lbsb;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lsp3;Lma7;)V
+.method public constructor <init>(Lbsb;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Ly0;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Lasb;->a:Lbsb;
 
-    iput-object p3, p0, Lasb;->m:Lma7;
+    const/4 p1, 0x3
 
-    iput-object p2, p0, Lasb;->n:Lsp3;
+    invoke-direct {p0, p1}, Ly48;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Landroid/net/Uri;)V
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    if-nez p1, :cond_0
+    check-cast p1, La94;
 
-    const/4 p1, 0x0
+    check-cast p2, Lf94;
 
-    iput-object p1, p0, Ly0;->b:Lab7;
+    check-cast p3, Lg94;
 
-    return-void
+    iget-object v0, p0, Lasb;->a:Lbsb;
+
+    iget-object v1, v0, Lbsb;->a:Ll88;
+
+    if-eqz v1, :cond_0
+
+    invoke-static {v0, p1, p1, p2, p3}, Lbsb;->a(Lbsb;La94;La94;Lf94;Lg94;)V
 
     :cond_0
-    invoke-static {p1}, Lbb7;->d(Landroid/net/Uri;)Lbb7;
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    move-result-object p1
-
-    sget-object v0, Lzhd;->d:Lzhd;
-
-    iput-object v0, p1, Lbb7;->e:Lzhd;
-
-    invoke-virtual {p1}, Lbb7;->a()Lab7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ly0;->b:Lab7;
-
-    return-void
+    return-object p1
 .end method

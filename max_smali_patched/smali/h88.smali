@@ -1,129 +1,73 @@
 .class public final Lh88;
-.super Lh4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lh88;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lj88;
+.implements Landroid/view/View$OnAttachStateChangeListener;
 
 
 # instance fields
-.field public final X:Z
-
-.field public final a:Z
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final o:Z
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqwh;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lqwh;-><init>(I)V
-
-    sput-object v0, Lh88;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZZZZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lh88;->a:Z
-
-    iput-boolean p2, p0, Lh88;->b:Z
-
-    iput-boolean p3, p0, Lh88;->c:Z
-
-    iput-boolean p4, p0, Lh88;->d:Z
-
-    iput-boolean p5, p0, Lh88;->o:Z
-
-    iput-boolean p6, p0, Lh88;->X:Z
-
-    return-void
-.end method
+.field public a:Ll88;
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 1
 
-    const/16 p2, 0x4f45
+    iget-object p1, p0, Lh88;->a:Ll88;
 
-    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
+    iget-object p1, p1, Ll88;->d:Lo78;
 
-    move-result p2
+    sget-object v0, Lo78;->a:Lo78;
 
-    const/4 v0, 0x1
+    if-ne p1, v0, :cond_0
 
-    const/4 v1, 0x4
+    new-instance p1, Ll88;
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    invoke-direct {p1, p0}, Ll88;-><init>(Lj88;)V
 
-    iget-boolean v0, p0, Lh88;->a:Z
+    iput-object p1, p0, Lh88;->a:Ll88;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_0
+    iget-object p1, p0, Lh88;->a:Ll88;
 
-    const/4 v0, 0x2
+    sget-object v0, Ln78;->ON_START:Ln78;
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Lh88;->b:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x3
-
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Lh88;->c:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {p1, v1, v1}, Luxi;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Lh88;->d:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x5
-
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Lh88;->o:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x6
-
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
-
-    iget-boolean v0, p0, Lh88;->X:Z
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
 
     return-void
+.end method
+
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
+
+    iget-object p1, p0, Lh88;->a:Ll88;
+
+    iget-object p1, p1, Ll88;->d:Lo78;
+
+    sget-object v0, Lo78;->c:Lo78;
+
+    invoke-virtual {p1, v0}, Lo78;->a(Lo78;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lh88;->a:Ll88;
+
+    sget-object v0, Ln78;->ON_DESTROY:Ln78;
+
+    invoke-virtual {p1, v0}, Ll88;->d(Ln78;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final p()Ll88;
+    .locals 1
+
+    iget-object v0, p0, Lh88;->a:Ll88;
+
+    return-object v0
 .end method

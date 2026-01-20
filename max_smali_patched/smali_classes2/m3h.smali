@@ -2,21 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnjd;
-
 
 # instance fields
-.field public final a:Lmv9;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lmv9;)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm3h;->a:Lmv9;
+    iput-wide p1, p0, Lm3h;->a:J
 
     return-void
 .end method
@@ -24,7 +21,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -44,15 +41,13 @@
     :cond_1
     check-cast p1, Lm3h;
 
-    iget-object v1, p0, Lm3h;->a:Lmv9;
+    iget-wide v3, p0, Lm3h;->a:J
 
-    iget-object p1, p1, Lm3h;->a:Lmv9;
+    iget-wide v5, p1, Lm3h;->a:J
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p1, v3, v5
 
-    move-result p1
-
-    if-nez p1, :cond_2
+    if-eqz p1, :cond_2
 
     return v2
 
@@ -61,13 +56,11 @@
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lm3h;->a:Lmv9;
+    iget-wide v0, p0, Lm3h;->a:J
 
-    iget-object v0, v0, Lmv9;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
@@ -75,23 +68,15 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WatchTogetherUpdateNotification(updates="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lm3h;->a:Lmv9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v0, "UnknownContactState(contactId="
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p0, Lm3h;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lcbh;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

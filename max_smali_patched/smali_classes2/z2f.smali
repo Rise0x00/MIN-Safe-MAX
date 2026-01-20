@@ -1,568 +1,165 @@
-.class public final synthetic Lz2f;
-.super Ljava/lang/Object;
+.class public final Lz2f;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lfj6;
-.implements Lir3;
-.implements Lgxb;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lf3f;
+
+.field public final synthetic Y:Z
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lf3f;ZLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 1
-    iput p1, p0, Lz2f;->a:I
+    iput-object p1, p0, Lz2f;->X:Lf3f;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Lz2f;->Y:Z
 
-    return-void
-.end method
+    const/4 p1, 0x2
 
-.method public synthetic constructor <init>(Lo4f;)V
-    .locals 0
-
-    .line 2
-    const/16 p1, 0xb
-
-    iput p1, p0, Lz2f;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lz2f;->a:I
+    check-cast p1, Lzb4;
 
-    const-string v1, "nef"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v2, "hnf"
+    invoke-virtual {p0, p1, p2}, Lz2f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-string v3, "a3f"
+    move-result-object p1
 
-    sparse-switch v0, :sswitch_data_0
+    check-cast p1, Lz2f;
 
-    check-cast p1, Ljava/lang/Integer;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const-string p1, "lnf"
+    invoke-virtual {p1, p2}, Lz2f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v0, "retryWhenTamHttpError: connected"
+    move-result-object p1
 
-    invoke-static {p1, v0}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :sswitch_0
-    check-cast p1, Ljava/lang/Integer;
-
-    const-string p1, "retryWhenCommonErrorObs: connected"
-
-    invoke-static {v2, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :sswitch_1
-    check-cast p1, Ljava/lang/Integer;
-
-    const-string p1, "retryWhenCommonError: connected"
-
-    invoke-static {v2, p1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :sswitch_2
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "loadBotCommands: exception"
-
-    invoke-static {v1, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :sswitch_3
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "Got error during handling event"
-
-    invoke-static {v1, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :sswitch_4
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "o4f"
-
-    const-string v1, "clear: repository clear failed"
-
-    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :sswitch_5
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "c3f"
-
-    const-string v1, "createSticker: failed"
-
-    invoke-static {v0, v1, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :sswitch_6
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "clear: failed to clear repository"
-
-    invoke-static {v3, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :sswitch_7
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "load: failed"
-
-    invoke-static {v3, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :sswitch_8
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "Can\'t update recents"
-
-    invoke-static {v3, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :sswitch_9
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "onStickersLoadedFromNetwork: write to stickers db failed"
-
-    invoke-static {v3, v0, p1}, Lcuh;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x2 -> :sswitch_9
-        0x5 -> :sswitch_8
-        0x6 -> :sswitch_7
-        0x7 -> :sswitch_6
-        0xa -> :sswitch_5
-        0xc -> :sswitch_4
-        0x17 -> :sswitch_3
-        0x18 -> :sswitch_2
-        0x19 -> :sswitch_1
-        0x1b -> :sswitch_0
-    .end sparse-switch
+    return-object p1
 .end method
 
-.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget v0, p0, Lz2f;->a:I
+    new-instance p1, Lz2f;
 
-    sget-object v1, Lyj8;->a:Lyj8;
+    iget-object v0, p0, Lz2f;->X:Lf3f;
 
-    const/4 v2, 0x0
+    iget-boolean v1, p0, Lz2f;->Y:Z
 
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    check-cast p1, Leia;
-
-    new-instance v0, Ljnf;
-
-    invoke-direct {v0, v2}, Ljnf;-><init>(I)V
-
-    const v1, 0x7fffffff
-
-    invoke-virtual {p1, v0, v1}, Leia;->h(Lfj6;I)Leia;
-
-    move-result-object p1
+    invoke-direct {p1, v0, v1, p2}, Lz2f;-><init>(Lf3f;ZLkotlin/coroutines/Continuation;)V
 
     return-object p1
+.end method
 
-    :pswitch_1
-    check-cast p1, Ld4f;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Le4f;
+    iget v0, p0, Lz2f;->o:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    iget-wide v1, p1, Ld4f;->a:J
-
-    iput-wide v1, v0, Le4f;->a:J
-
-    iget-object v1, p1, Ld4f;->b:Ljava/lang/String;
-
-    iput-object v1, v0, Le4f;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Ld4f;->c:Ljava/lang/String;
-
-    iput-object v1, v0, Le4f;->c:Ljava/lang/String;
-
-    iget-wide v1, p1, Ld4f;->d:J
-
-    iput-wide v1, v0, Le4f;->d:J
-
-    iget-wide v1, p1, Ld4f;->e:J
-
-    iput-wide v1, v0, Le4f;->e:J
-
-    iget-wide v1, p1, Ld4f;->f:J
-
-    iput-wide v1, v0, Le4f;->f:J
-
-    iget-object v1, p1, Ld4f;->g:Ljava/lang/String;
-
-    iput-object v1, v0, Le4f;->g:Ljava/lang/String;
-
-    iget-object v1, p1, Ld4f;->h:Ljava/util/List;
-
-    iput-object v1, v0, Le4f;->h:Ljava/util/List;
-
-    iget-boolean p1, p1, Ld4f;->i:Z
-
-    iput-boolean p1, v0, Le4f;->i:Z
-
-    return-object v0
-
-    :pswitch_2
-    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
-
-    invoke-virtual {p1}, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;->Q()Lp4f;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_3
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Ltj8;->d(Ljava/lang/Object;)Lek8;
-
-    move-result-object v1
-
-    :goto_0
-    return-object v1
-
-    :pswitch_4
-    check-cast p1, Le4f;
-
-    iget-wide v0, p1, Le4f;->a:J
-
-    new-instance v2, Lw3f;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    iput-wide v0, v2, Lw3f;->a:J
-
-    iget-object v0, p1, Le4f;->b:Ljava/lang/String;
-
-    iput-object v0, v2, Lw3f;->b:Ljava/lang/String;
-
-    iget-object v0, p1, Le4f;->c:Ljava/lang/String;
-
-    iput-object v0, v2, Lw3f;->c:Ljava/lang/String;
-
-    iget-wide v0, p1, Le4f;->d:J
-
-    iput-wide v0, v2, Lw3f;->d:J
-
-    iget-wide v0, p1, Le4f;->e:J
-
-    iput-wide v0, v2, Lw3f;->e:J
-
-    iget-wide v0, p1, Le4f;->f:J
-
-    iput-wide v0, v2, Lw3f;->f:J
-
-    iget-object v0, p1, Le4f;->g:Ljava/lang/String;
-
-    iput-object v0, v2, Lw3f;->g:Ljava/lang/String;
-
-    iget-object v0, p1, Le4f;->h:Ljava/util/List;
-
-    iput-object v0, v2, Lw3f;->h:Ljava/util/List;
-
-    iget-boolean p1, p1, Le4f;->i:Z
-
-    iput-boolean p1, v2, Lw3f;->i:Z
-
-    new-instance p1, Ld4f;
-
-    invoke-direct {p1, v2}, Ld4f;-><init>(Lw3f;)V
-
-    return-object p1
-
-    :pswitch_5
-    check-cast p1, Ljava/util/List;
-
-    invoke-static {p1}, Leia;->i(Ljava/lang/Iterable;)Lzg3;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_6
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v0
+    const/4 v2, 0x1
 
     if-eqz v0, :cond_1
 
-    goto :goto_1
+    if-ne v0, v2, :cond_0
 
-    :cond_1
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object p1
-
-    check-cast p1, Ld4f;
-
-    invoke-static {p1}, Ltj8;->d(Ljava/lang/Object;)Lek8;
-
-    move-result-object v1
-
-    :goto_1
     return-object v1
 
-    :pswitch_7
-    check-cast p1, Lp4f;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    new-instance v0, Loj4;
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0xe
+    throw p1
 
-    invoke-direct {v0, v1, p1}, Loj4;-><init>(ILjava/lang/Object;)V
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    new-instance p1, Lmg3;
+    sget-object p1, Lf3f;->Q0:[Lz28;
 
-    const/4 v1, 0x2
+    iget-object p1, p0, Lz2f;->X:Lf3f;
 
-    invoke-direct {p1, v1, v0}, Lmg3;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {p1}, Lf3f;->w()Lfbh;
 
-    return-object p1
+    move-result-object v0
 
-    :pswitch_8
-    check-cast p1, Ly3f;
+    iget-object v0, v0, Lx3;->g:Lr58;
 
-    iget-wide v0, p1, Ly3f;->a:J
+    const-string v3, "app.privacy.online.show"
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_9
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    invoke-virtual {v0, v3, v2}, Lr58;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    iget-boolean v4, p0, Lz2f;->Y:Z
 
-    goto :goto_2
-
-    :cond_2
-    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ld4f;
-
-    invoke-static {p1}, Ltj8;->d(Ljava/lang/Object;)Lek8;
-
-    move-result-object v1
-
-    :goto_2
-    return-object v1
-
-    :pswitch_a
-    check-cast p1, Llu;
-
-    iget-object p1, p1, Llu;->d:Ljava/util/List;
-
-    return-object p1
-
-    :pswitch_b
-    check-cast p1, Lz3f;
-
-    invoke-static {p1}, Lo4f;->H(Lz3f;)Ld4f;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_c
-    check-cast p1, Lq2f;
-
-    invoke-static {p1}, Lug8;->p(Lq2f;)Lp2f;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_d
-    check-cast p1, Lb3f;
-
-    iget-object p1, p1, Lb3f;->c:Lq2f;
-
-    return-object p1
-
-    :pswitch_e
-    check-cast p1, Lv3f;
-
-    iget-wide v0, p1, Lv3f;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_f
-    check-cast p1, Ljava/util/List;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_3
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lq2f;
-
-    invoke-static {v1}, Lug8;->p(Lq2f;)Lp2f;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_3
-    return-object v0
-
-    :pswitch_10
-    check-cast p1, Llu;
-
-    iget-object p1, p1, Llu;->c:Ljava/util/List;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_10
-        :pswitch_f
-        :pswitch_0
-        :pswitch_0
-        :pswitch_e
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_0
-        :pswitch_b
-        :pswitch_0
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public test(Ljava/lang/Object;)Z
-    .locals 1
-
-    iget v0, p0, Lz2f;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {p1}, Lhnf;->a(I)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast p1, Lu1d;
-
-    iget-object p1, p1, Lu1d;->a:Li2d;
-
-    sget-object v0, Li2d;->d:Li2d;
-
-    if-ne p1, v0, :cond_0
-
-    const/4 p1, 0x1
+    if-ne v0, v4, :cond_2
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
+    :cond_2
+    invoke-virtual {p1}, Lf3f;->w()Lfbh;
 
+    move-result-object v0
+
+    invoke-virtual {v0, v3, v4}, Lx3;->f(Ljava/lang/String;Z)V
+
+    invoke-virtual {p1}, Lf3f;->v()Lt2b;
+
+    move-result-object v0
+
+    new-instance v3, Lzah;
+
+    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
+
+    xor-int/2addr v4, v2
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    iput-object v4, v3, Lzah;->h:Ljava/lang/Boolean;
+
+    new-instance v4, Ldbh;
+
+    invoke-direct {v4, v3}, Ldbh;-><init>(Lzah;)V
+
+    invoke-virtual {v0, v4}, Lt2b;->n(Ldbh;)J
+
+    iput v2, p0, Lz2f;->o:I
+
+    invoke-static {p1, p0}, Lf3f;->u(Lf3f;Lp6g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_3
+
+    return-object v0
+
+    :cond_3
     :goto_0
-    return p1
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
+    return-object v1
 .end method

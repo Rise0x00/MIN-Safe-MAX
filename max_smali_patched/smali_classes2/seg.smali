@@ -1,197 +1,132 @@
-.class public final Lseg;
+.class public final synthetic Lseg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcr6;
+.implements Lxfc;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Lteg;
 
-.field public final b:J
-
-.field public final c:I
-
-.field public final d:Ljava/lang/String;
+.field public final synthetic b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(IJLjava/lang/String;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lteg;Ljava/util/List;)V
     .locals 0
 
+    iput-object p1, p0, Lseg;->a:Lteg;
+
+    iput-object p2, p0, Lseg;->b:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p4, p0, Lseg;->a:Ljava/lang/String;
-
-    iput-wide p2, p0, Lseg;->b:J
-
-    iput p1, p0, Lseg;->c:I
-
-    iput-object p5, p0, Lseg;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ljava/lang/Boolean;
 
-    goto :goto_1
+    iget-object v0, p0, Lseg;->a:Lteg;
 
-    :cond_0
-    instance-of v0, p1, Lseg;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lseg;
-
-    iget-object v0, p0, Lseg;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lseg;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-wide v0, p0, Lseg;->b:J
-
-    iget-wide v2, p1, Lseg;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lseg;->c:I
-
-    iget v1, p1, Lseg;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lseg;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lseg;->d:Ljava/lang/String;
-
-    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p1
 
-    if-nez p1, :cond_5
+    if-nez p1, :cond_0
 
-    :goto_0
-    const/4 p1, 0x0
+    sget-object p1, Lho3;->a:Lho3;
 
-    return p1
-
-    :cond_5
-    :goto_1
-    const/4 p1, 0x1
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lseg;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lseg;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
-
-    move-result v0
-
-    iget v2, p0, Lseg;->c:I
-
-    invoke-static {v2, v0, v1}, Lxjb;->k(III)I
-
-    move-result v0
-
-    iget-object v1, p0, Lseg;->d:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    invoke-static {}, Lcuh;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lseg;->a:Ljava/lang/String;
-
-    goto :goto_0
+    return-object p1
 
     :cond_0
-    const-string v0, "*****"
+    iget-object p1, v0, Lteg;->c:Le0d;
 
-    :goto_0
-    const-string v1, "\', attachLocalId=\'"
+    new-instance v1, Lseg;
 
-    const-string v2, "\', lastModified="
+    iget-object v2, p0, Lseg;->b:Ljava/util/List;
 
-    const-string v3, "UploadData{path=\'"
+    invoke-direct {v1, v0, v2}, Lseg;-><init>(Lteg;Ljava/util/List;)V
 
-    iget-object v4, p0, Lseg;->d:Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v3, v0, v1, v4, v2}, Lox1;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Loya;
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    iget-wide v1, p0, Lseg;->b:J
+    invoke-direct {v0, p1, v1, v2}, Loya;-><init>(Lsza;Ljava/lang/Object;I)V
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    new-instance p1, Lvya;
 
-    const-string v1, ", uploadType="
+    invoke-direct {p1, v0}, Lvya;-><init>(Loya;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    iget v1, p0, Lseg;->c:I
+.method public test(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-static {v1}, Lijf;->A(I)Ljava/lang/String;
+    check-cast p1, Ljava/lang/Boolean;
 
-    move-result-object v1
+    iget-object p1, p0, Lseg;->a:Lteg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, "}"
+    new-instance v0, Lsa4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v1, 0xb
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v2, p0, Lseg;->b:Ljava/util/List;
 
-    move-result-object v0
+    invoke-direct {v0, p1, v1, v2}, Lsa4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return-object v0
+    new-instance p1, Lrza;
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, v1, v0}, Lrza;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Ltj2;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1, v2}, Ltj2;-><init>(ILjava/util/List;)V
+
+    new-instance v1, Lqef;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p1, v0, v2}, Lqef;-><init>(Lkef;Lay3;I)V
+
+    new-instance p1, Letf;
+
+    const/16 v0, 0xf
+
+    invoke-direct {p1, v0}, Letf;-><init>(I)V
+
+    invoke-virtual {v1, p1}, Lkef;->h(Lcr6;)Lsef;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lkef;->e()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    return p1
 .end method

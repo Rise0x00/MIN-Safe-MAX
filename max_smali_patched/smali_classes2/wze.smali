@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements La0f;
+.implements Lyze;
 
 
 # static fields
@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x39e343cd
+    const v0, 0x589f1ca
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "RequestStoragePermissions"
+    const-string v0, "Alert"
 
     return-object v0
 .end method

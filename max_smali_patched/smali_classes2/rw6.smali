@@ -1,153 +1,198 @@
-.class public final enum Lrw6;
-.super Ljava/lang/Enum;
+.class public final Lrw6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lrw6;
+# instance fields
+.field public final a:Lo58;
 
-.field public static final synthetic Y:[Lrw6;
-
-.field public static final enum a:Lrw6;
-
-.field public static final enum b:Lrw6;
-
-.field public static final enum c:Lrw6;
-
-.field public static final enum d:Lrw6;
-
-.field public static final enum o:Lrw6;
+.field public final b:Lo58;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 12
+.method public constructor <init>(Lo58;Lo58;)V
+    .locals 0
 
-    new-instance v0, Lrw6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "TIMEOUT"
+    iput-object p1, p0, Lrw6;->a:Lo58;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lrw6;->a:Lrw6;
-
-    new-instance v1, Lrw6;
-
-    const-string v2, "BUSY"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lrw6;->b:Lrw6;
-
-    new-instance v2, Lrw6;
-
-    const-string v3, "MISSED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Lrw6;
-
-    const-string v4, "REJECTED"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lrw6;->c:Lrw6;
-
-    new-instance v4, Lrw6;
-
-    const-string v5, "FAILED"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v5, Lrw6;
-
-    const-string v6, "HUNGUP"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lrw6;->d:Lrw6;
-
-    new-instance v6, Lrw6;
-
-    const-string v7, "CANCELED"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lrw6;->o:Lrw6;
-
-    new-instance v7, Lrw6;
-
-    const-string v8, "CALL_TIMEOUT"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v8, Lrw6;
-
-    const-string v9, "REMOVED"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v9, Lrw6;
-
-    const-string v10, "OBSOLETE_CLIENT"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Lrw6;->X:Lrw6;
-
-    filled-new-array/range {v0 .. v9}, [Lrw6;
-
-    move-result-object v0
-
-    sput-object v0, Lrw6;->Y:[Lrw6;
+    iput-object p2, p0, Lrw6;->b:Lo58;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lrw6;
-    .locals 1
 
-    const-class v0, Lrw6;
+# virtual methods
+.method public final a(Ljava/lang/String;Lo84;)Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    instance-of v0, p2, Lqw6;
 
-    move-result-object p0
+    if-eqz v0, :cond_0
 
-    check-cast p0, Lrw6;
+    move-object v0, p2
 
-    return-object p0
-.end method
+    check-cast v0, Lqw6;
 
-.method public static values()[Lrw6;
-    .locals 1
+    iget v1, v0, Lqw6;->Y:I
 
-    sget-object v0, Lrw6;->Y:[Lrw6;
+    const/high16 v2, -0x80000000
 
-    invoke-virtual {v0}, [Lrw6;->clone()Ljava/lang/Object;
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lqw6;->Y:I
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v0, Lqw6;
+
+    invoke-direct {v0, p0, p2}, Lqw6;-><init>(Lrw6;Lo84;)V
+
+    :goto_0
+    iget-object p2, v0, Lqw6;->o:Ljava/lang/Object;
+
+    iget v1, v0, Lqw6;->Y:I
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x1
+
+    sget-object v4, Lac4;->a:Lac4;
+
+    if-eqz v1, :cond_3
+
+    if-eq v1, v3, :cond_2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object p1, v0, Lqw6;->d:Lc14;
+
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {p2}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p2, p0, Lrw6;->b:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lm8b;
+
+    iput v3, v0, Lqw6;->Y:I
+
+    iget-object p2, p2, Lm8b;->a:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lhdg;
+
+    new-instance v1, Lhj2;
+
+    sget-object v3, Lwob;->X0:Lwob;
+
+    const/16 v5, 0x15
+
+    invoke-direct {v1, v3, v5}, Lhj2;-><init>(Lwob;I)V
+
+    const-string v3, "phone"
+
+    invoke-virtual {v1, v3, p1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p2, v1, v0}, Lhdg;->d(Lj2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    if-ne p2, v4, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    check-cast p2, Le14;
+
+    iget-object p1, p2, Le14;->c:Lc14;
+
+    if-nez p1, :cond_5
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_5
+    iget-object p2, p0, Lrw6;->a:Lo58;
+
+    invoke-interface {p2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lm64;
+
+    iget-wide v5, p1, Lc14;->a:J
+
+    new-instance v1, Ljava/lang/Long;
+
+    invoke-direct {v1, v5, v6}, Ljava/lang/Long;-><init>(J)V
+
+    invoke-static {v1}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v1
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v3
+
+    iput-object p1, v0, Lqw6;->d:Lc14;
+
+    iput v2, v0, Lqw6;->Y:I
+
+    iget-object p2, p2, Lm64;->a:Lmz3;
+
+    invoke-static {v1}, Lpi3;->a0(Ljava/util/Collection;)[J
 
     move-result-object v0
 
-    check-cast v0, [Lrw6;
+    invoke-virtual {p2, v3, v0}, Lmz3;->q(Ljava/util/List;[J)V
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    if-ne p2, v4, :cond_6
+
+    :goto_2
+    return-object v4
+
+    :cond_6
+    :goto_3
+    iget-wide p1, p1, Lc14;->a:J
+
+    new-instance v0, Ljava/lang/Long;
+
+    invoke-direct {v0, p1, p2}, Ljava/lang/Long;-><init>(J)V
 
     return-object v0
 .end method

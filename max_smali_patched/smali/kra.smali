@@ -3,35 +3,13 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$Action;)I
+    .locals 0
 
-    sget v0, Lesc;->call_share_message_failed_create_p2p_invite_link:I
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getSemanticAction()I
 
-    sput v0, Lkra;->a:I
+    move-result p0
 
-    sget v0, Lesc;->call_share_picker_confirm_p2p_invite_cancel:I
-
-    sput v0, Lkra;->b:I
-
-    sget v0, Lesc;->call_share_picker_confirm_p2p_invite_retry:I
-
-    sput v0, Lkra;->c:I
-
-    sget v0, Lesc;->call_share_search_hint:I
-
-    sput v0, Lkra;->d:I
-
-    return-void
+    return p0
 .end method

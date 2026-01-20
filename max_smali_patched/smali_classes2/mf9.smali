@@ -1,96 +1,486 @@
 .class public final Lmf9;
-.super Ljava/lang/Object;
+.super Lof9;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lru7;
+.field public final X:Ljava/lang/Long;
 
-.field public final b:Lru7;
+.field public final Y:Ljava/lang/String;
 
-.field public final c:Lru7;
+.field public final Z:Z
 
-.field public final d:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final a:J
 
-.field public final e:Ltif;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:Landroid/net/Uri;
+
+.field public final o:I
+
+.field public final t0:Landroid/net/Uri;
+
+.field public final u0:Z
+
+.field public final v0:Z
+
+.field public final w0:I
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;Lru7;Lru7;)V
+.method public constructor <init>(JJJLandroid/net/Uri;ILjava/lang/Long;Ljava/lang/String;ZLandroid/net/Uri;ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmf9;->a:Lru7;
+    iput-wide p1, p0, Lmf9;->a:J
 
-    iput-object p2, p0, Lmf9;->b:Lru7;
+    iput-wide p3, p0, Lmf9;->b:J
 
-    iput-object p4, p0, Lmf9;->c:Lru7;
+    iput-wide p5, p0, Lmf9;->c:J
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p7, p0, Lmf9;->d:Landroid/net/Uri;
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    iput p8, p0, Lmf9;->o:I
 
-    iput-object p1, p0, Lmf9;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p9, p0, Lmf9;->X:Ljava/lang/Long;
 
-    new-instance p1, Lpz;
+    iput-object p10, p0, Lmf9;->Y:Ljava/lang/String;
 
-    const/16 p2, 0x14
+    iput-boolean p11, p0, Lmf9;->Z:Z
 
-    invoke-direct {p1, p3, p2}, Lpz;-><init>(Lru7;I)V
+    iput-object p12, p0, Lmf9;->t0:Landroid/net/Uri;
 
-    new-instance p2, Ltif;
+    iput-boolean p13, p0, Lmf9;->u0:Z
 
-    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
+    iput-boolean p14, p0, Lmf9;->v0:Z
 
-    iput-object p2, p0, Lmf9;->e:Ltif;
+    sget p1, Le9d;->profile_media_view_type_photo_video:I
+
+    iput p1, p0, Lmf9;->w0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    const-class v0, Lmf9;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    goto/16 :goto_1
 
-    move-result-object v0
+    :cond_0
+    instance-of v0, p1, Lmf9;
 
-    const-string v1, "try to restore uploads"
+    if-nez v0, :cond_1
 
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+    goto/16 :goto_0
 
-    const/4 v0, 0x0
+    :cond_1
+    check-cast p1, Lmf9;
 
-    const/4 v1, 0x1
+    iget-wide v0, p0, Lmf9;->a:J
 
-    iget-object v2, p0, Lmf9;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-wide v2, p1, Lmf9;->a:J
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Lmf9;->b:J
+
+    iget-wide v2, p1, Lmf9;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-wide v0, p0, Lmf9;->c:J
+
+    iget-wide v2, p1, Lmf9;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lmf9;->d:Landroid/net/Uri;
+
+    iget-object v1, p1, Lmf9;->d:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_5
 
-    iget-object v0, p0, Lmf9;->e:Ltif;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+    :cond_5
+    iget v0, p0, Lmf9;->o:I
+
+    iget v1, p1, Lmf9;->o:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lmf9;->X:Ljava/lang/Long;
+
+    iget-object v1, p1, Lmf9;->X:Ljava/lang/Long;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-object v0, p0, Lmf9;->Y:Ljava/lang/String;
+
+    iget-object v1, p1, Lmf9;->Y:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-boolean v0, p0, Lmf9;->Z:Z
+
+    iget-boolean v1, p1, Lmf9;->Z:Z
+
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget-object v0, p0, Lmf9;->t0:Landroid/net/Uri;
+
+    iget-object v1, p1, Lmf9;->t0:Landroid/net/Uri;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    iget-boolean v0, p0, Lmf9;->u0:Z
+
+    iget-boolean v1, p1, Lmf9;->u0:Z
+
+    if-eq v0, v1, :cond_b
+
+    goto :goto_0
+
+    :cond_b
+    iget-boolean v0, p0, Lmf9;->v0:Z
+
+    iget-boolean p1, p1, Lmf9;->v0:Z
+
+    if-eq v0, p1, :cond_c
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_c
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lmf9;->a:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lmf9;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lmf9;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lmf9;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lmf9;->d:Landroid/net/Uri;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Landroid/net/Uri;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget v3, p0, Lmf9;->o:I
+
+    invoke-static {v3, v0, v1}, Lpqb;->i(III)I
+
+    move-result v0
+
+    iget-object v3, p0, Lmf9;->X:Ljava/lang/Long;
+
+    if-nez v3, :cond_1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object v3, p0, Lmf9;->Y:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3}, Lxi4;->e(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-boolean v3, p0, Lmf9;->Z:Z
+
+    invoke-static {v0, v1, v3}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lmf9;->t0:Landroid/net/Uri;
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v3}, Landroid/net/Uri;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmf9;->u0:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lmf9;->v0:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Lmf9;->c:J
+
+    return-wide v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lmf9;->b:J
+
+    return-wide v0
+.end method
+
+.method public final l()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lmf9;->v0:Z
+
+    return v0
+.end method
+
+.method public final m()I
+    .locals 1
+
+    iget v0, p0, Lmf9;->w0:I
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "PhotoVideo(itemId="
+
+    const-string v1, ", messageId="
+
+    iget-wide v2, p0, Lmf9;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
+    iget-wide v1, p0, Lmf9;->b:J
 
-    new-instance v1, Lh96;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x13
+    const-string v1, ", attachId="
 
-    invoke-direct {v1, v2, p0}, Lh96;-><init>(ILjava/lang/Object;)V
+    const-string v2, ", previewUri="
 
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    iget-wide v3, p0, Lmf9;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Lmf9;->d:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Lmf9;->o:I
+
+    if-eq v2, v1, :cond_2
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
 
     :cond_0
-    return-void
+    const-string v1, "GIF"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "VIDEO"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "PHOTO"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", duration="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmf9;->X:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachLocalId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmf9;->Y:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isInCollage="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lmf9;->Z:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lowResUri="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lmf9;->t0:Landroid/net/Uri;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isAutoloadDisabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isContentLevel="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lmf9;->u0:Z
+
+    iget-boolean v4, p0, Lmf9;->v0:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

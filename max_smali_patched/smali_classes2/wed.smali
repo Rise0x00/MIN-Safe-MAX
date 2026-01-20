@@ -1,55 +1,24 @@
 .class public abstract Lwed;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lqi7;
 
 
-# instance fields
-.field public a:Ljava/lang/ref/SoftReference;
+# static fields
+.field public static share_bottom_button_copy_link:I = 0x7f130d2a
 
+.field public static share_confirm_cancel:I = 0x7f130d2c
 
-# virtual methods
-.method public final a(Lt5;)Ljava/lang/Object;
-    .locals 2
+.field public static share_confirm_close:I = 0x7f130d2d
 
-    iget-object v0, p0, Lwed;->a:Ljava/lang/ref/SoftReference;
+.field public static share_confirmation_close_title:I = 0x7f130d2e
 
-    const/4 v1, 0x0
+.field public static share_message_hint:I = 0x7f130d37
 
-    if-eqz v0, :cond_0
+.field public static share_search_hint:I = 0x7f130d39
 
-    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
+.field public static share_success_link_send:I = 0x7f130d3a
 
-    move-result-object v0
+.field public static share_toolbar_action_cancel_selection:I = 0x7f130d3c
 
-    goto :goto_0
+.field public static share_toolbar_action_select:I = 0x7f130d3d
 
-    :cond_0
-    move-object v0, v1
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {p0, p1}, Lwed;->b(Lt5;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    new-instance v1, Ljava/lang/ref/SoftReference;
-
-    invoke-direct {v1, p1}, Ljava/lang/ref/SoftReference;-><init>(Ljava/lang/Object;)V
-
-    :cond_2
-    iput-object v1, p0, Lwed;->a:Ljava/lang/ref/SoftReference;
-
-    return-object p1
-.end method
-
-.method public abstract b(Lt5;)Ljava/lang/Object;
-.end method
+.field public static share_toolbar_title:I = 0x7f130d3e

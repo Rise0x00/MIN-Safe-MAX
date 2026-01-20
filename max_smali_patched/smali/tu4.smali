@@ -1,84 +1,43 @@
-.class public final Ltu4;
+.class public abstract Ltu4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln1g;
-
 
 # instance fields
-.field public final a:[B
+.field public final a:I
+
+.field public final b:Ljrg;
+
+.field public final c:I
+
+.field public final d:Loj6;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(ILjrg;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x1000
+    iput p1, p0, Ltu4;->a:I
 
-    new-array v0, v0, [B
+    iput-object p2, p0, Ltu4;->b:Ljrg;
 
-    iput-object v0, p0, Ltu4;->a:[B
+    iput p3, p0, Ltu4;->c:I
+
+    iget-object p1, p2, Ljrg;->c:[Loj6;
+
+    aget-object p1, p1, p3
+
+    iput-object p1, p0, Ltu4;->d:Loj6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JIIILl1g;)V
-    .locals 0
-
-    return-void
+.method public abstract a()I
 .end method
 
-.method public final b(Lhdb;II)V
-    .locals 0
-
-    invoke-virtual {p1, p2}, Lhdb;->K(I)V
-
-    return-void
-.end method
-
-.method public final c(Lqb4;IZ)I
-    .locals 2
-
-    iget-object v0, p0, Ltu4;->a:[B
-
-    array-length v1, v0
-
-    invoke-static {v1, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result p2
-
-    const/4 v1, 0x0
-
-    invoke-interface {p1, v0, v1, p2}, Lqb4;->read([BII)I
-
-    move-result p1
-
-    const/4 p2, -0x1
-
-    if-ne p1, p2, :cond_1
-
-    if-eqz p3, :cond_0
-
-    return p2
-
-    :cond_0
-    new-instance p1, Ljava/io/EOFException;
-
-    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
-
-    throw p1
-
-    :cond_1
-    return p1
-.end method
-
-.method public final d(Lub6;)V
-    .locals 0
-
-    return-void
+.method public abstract b(Ltu4;)Z
 .end method

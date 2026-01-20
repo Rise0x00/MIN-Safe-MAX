@@ -1,122 +1,75 @@
-.class public abstract Llgc;
+.class public final Llgc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lqi8;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Lidc;
+
+.field public final c:Lfbh;
+
+.field public final d:Ln80;
+
+.field public final e:Lpy5;
+
+.field public final f:Lqkb;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public constructor <init>(Lqi8;Lidc;Lfbh;Ln80;Lpy5;Lqkb;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Llgc;->a:J
+    iput-object p1, p0, Llgc;->a:Lqi8;
 
-    iput-object p3, p0, Llgc;->b:Ljava/lang/String;
+    iput-object p2, p0, Llgc;->b:Lidc;
+
+    iput-object p3, p0, Llgc;->c:Lfbh;
+
+    iput-object p4, p0, Llgc;->d:Ln80;
+
+    iput-object p5, p0, Llgc;->e:Lpy5;
+
+    iput-object p6, p0, Llgc;->f:Lqkb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Llgc;->a:Lqi8;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Lqi8;->c()V
 
-    return v0
+    iget-object v0, p0, Llgc;->b:Lidc;
 
-    :cond_0
-    instance-of v1, p1, Llgc;
+    invoke-virtual {v0}, Lx3;->c()V
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lidc;->h:Lgr5;
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0}, Lx3;->c()V
 
-    return v2
+    iget-object v0, p0, Llgc;->c:Lfbh;
 
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lx3;->c()V
 
-    move-result-object v1
+    iget-object v0, p0, Llgc;->d:Ln80;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0}, Lx3;->c()V
 
-    move-result-object v3
+    iget-object v0, p0, Llgc;->e:Lpy5;
 
-    if-eq v1, v3, :cond_2
+    invoke-virtual {v0}, Lx3;->c()V
 
-    return v2
+    iget-object v0, p0, Llgc;->f:Lqkb;
 
-    :cond_2
-    check-cast p1, Llgc;
+    invoke-virtual {v0}, Lx3;->c()V
 
-    iget-wide v3, p1, Llgc;->a:J
-
-    iget-wide v5, p0, Llgc;->a:J
-
-    cmp-long v1, v5, v3
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Llgc;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Llgc;->b:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lv7d;->a(Ljava/lang/Class;)La73;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, La73;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Llgc;->a:J
-
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Llgc;->b:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
+    return-void
 .end method

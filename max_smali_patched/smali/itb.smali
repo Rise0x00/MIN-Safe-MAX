@@ -1,27 +1,15 @@
-.class public final Litb;
+.class public abstract Litb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
-
-.field public final b:I
-
-.field public final c:J
-
-
 # direct methods
-.method public constructor <init>(IJJ)V
+.method public static a(Landroid/graphics/Paint;Ljava/lang/String;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->hasGlyph(Ljava/lang/String;)Z
 
-    iput-wide p2, p0, Litb;->a:J
+    move-result p0
 
-    iput p1, p0, Litb;->b:I
-
-    iput-wide p4, p0, Litb;->c:J
-
-    return-void
+    return p0
 .end method

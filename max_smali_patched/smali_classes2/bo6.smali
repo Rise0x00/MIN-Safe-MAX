@@ -1,64 +1,54 @@
-.class public final Lbo6;
-.super Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;
+.class public abstract Lbo6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Lco6;
+.field public final a:Ljcg;
+
+.field public final b:Lym5;
+
+.field public c:I
+
+.field public d:I
+
+.field public e:Lpfh;
 
 
 # direct methods
-.method public constructor <init>(Lco6;)V
+.method public constructor <init>(Ljcg;Lym5;)V
     .locals 0
 
-    iput-object p1, p0, Lbo6;->a:Lco6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/view/ScaleGestureDetector$SimpleOnScaleGestureListener;-><init>()V
+    iput-object p1, p0, Lbo6;->a:Ljcg;
+
+    iput-object p2, p0, Lbo6;->b:Lym5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onScale(Landroid/view/ScaleGestureDetector;)Z
-    .locals 6
+.method public a(Lpfh;II)V
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
+    iget-object v0, p0, Lbo6;->e:Lpfh;
+
+    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    iget-object v1, p0, Lbo6;->a:Lco6;
+    if-eqz v0, :cond_0
 
-    iget v2, v1, Lco6;->P0:F
-
-    iget v3, v1, Lco6;->Q0:F
-
-    iget-object v4, v1, Ly2g;->t0:Landroid/graphics/Matrix;
-
-    const/4 v5, 0x0
-
-    cmpl-float v5, v0, v5
-
-    if-eqz v5, :cond_0
-
-    invoke-virtual {v4, v0, v0, v2, v3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
-
-    invoke-virtual {v1, v4}, Ly2g;->setImageMatrix(Landroid/graphics/Matrix;)V
+    return-void
 
     :cond_0
-    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
+    iput-object p1, p0, Lbo6;->e:Lpfh;
 
-    move-result v0
+    iput p2, p0, Lbo6;->c:I
 
-    iput v0, v1, Lco6;->R0:F
+    iput p3, p0, Lbo6;->d:I
 
-    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusY()F
-
-    move-result p1
-
-    iput p1, v1, Lco6;->S0:F
-
-    const/4 p1, 0x1
-
-    return p1
+    return-void
 .end method

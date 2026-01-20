@@ -1,63 +1,79 @@
 .class public final Lzb6;
-.super Lp14;
+.super Lpa6;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lbc6;
+.field public final b:Lpbe;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lbc6;
-
-.field public d:Z
-
-.field public o:Z
-
-.field public s0:I
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lbc6;Lp14;)V
-    .locals 0
+.method public constructor <init>(JLpbe;)V
+    .locals 1
 
-    iput-object p1, p0, Lzb6;->Z:Lbc6;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lzb6;->c:J
+
+    iput-object p3, p0, Lzb6;->b:Lpbe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.method public final f(Lxb6;)V
+    .locals 4
 
-    iput-object p1, p0, Lzb6;->Y:Ljava/lang/Object;
+    new-instance v0, Lyb6;
 
-    iget p1, p0, Lzb6;->s0:I
+    invoke-direct {v0, p1}, Lyb6;-><init>(Lz0g;)V
 
-    const/high16 v0, -0x80000000
+    invoke-interface {p1, v0}, Lz0g;->d(Lb1g;)V
 
-    or-int/2addr p1, v0
+    iget-wide v1, p0, Lzb6;->c:J
 
-    iput p1, p0, Lzb6;->s0:I
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v3, 0x0
+    iget-object v3, p0, Lzb6;->b:Lpbe;
 
-    const/4 v4, 0x0
-
-    iget-object v0, p0, Lzb6;->Z:Lbc6;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Lbc6;->a(Lgb9;Ljava/lang/Long;ZZLp14;)Ljava/lang/Object;
+    invoke-virtual {v3, v0, v1, v2, p1}, Lpbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
 
     move-result-object p1
 
-    return-object p1
+    :cond_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Ls25;->a:Ls25;
+
+    if-ne v0, v1, :cond_2
+
+    invoke-interface {p1}, Lo25;->dispose()V
+
+    :cond_2
+    :goto_0
+    return-void
 .end method

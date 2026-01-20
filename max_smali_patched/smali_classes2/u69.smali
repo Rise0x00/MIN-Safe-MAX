@@ -1,175 +1,59 @@
 .class public final Lu69;
-.super Logf;
+.super Ld3;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
-
-# instance fields
-.field public final synthetic X:J
-
-.field public final synthetic Y:Landroid/view/View;
-
-.field public final synthetic o:Lone/me/members/list/MembersListWidget;
+# static fields
+.field public static final c:Lu69;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lu69;->o:Lone/me/members/list/MembersListWidget;
+    new-instance v0, Lu69;
 
-    iput-wide p2, p0, Lu69;->X:J
+    const/16 v1, 0xc
 
-    iput-object p4, p0, Lu69;->Y:Landroid/view/View;
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p5}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lu69;->c:Lu69;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final L0(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
-    check-cast p1, Lg54;
+    invoke-virtual {p0}, Ld3;->p0()Ljm4;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    invoke-virtual {p0, p1, p2}, Lu69;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v1, Lktb;
+
+    const-string v2, "image_uri"
+
+    invoke-direct {v1, v2, p1}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance p1, Lktb;
+
+    const-string v2, "file_path"
+
+    invoke-direct {p1, v2, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v1, p1}, [Lktb;
 
     move-result-object p1
 
-    check-cast p1, Lu69;
+    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Lu69;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p2, ":media-picker/edit/avatar"
 
-    return-object p2
-.end method
+    invoke-virtual {v0, p2, p1}, Ljm4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 6
-
-    new-instance v0, Lu69;
-
-    iget-wide v2, p0, Lu69;->X:J
-
-    iget-object v4, p0, Lu69;->Y:Landroid/view/View;
-
-    iget-object v1, p0, Lu69;->o:Lone/me/members/list/MembersListWidget;
-
-    move-object v5, p2
-
-    invoke-direct/range {v0 .. v5}, Lu69;-><init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Les7;
-
-    iget-object p1, p0, Lu69;->o:Lone/me/members/list/MembersListWidget;
-
-    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->z0()Le69;
-
-    move-result-object v0
-
-    iget-object v0, v0, Le69;->b:Lqi6;
-
-    iget-wide v1, p0, Lu69;->X:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->x0()Ls59;
-
-    move-result-object v3
-
-    iget-boolean v3, v3, Ls59;->c:Z
-
-    sget-object v4, Lybg;->a:Lybg;
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v3, Ljava/lang/Long;
-
-    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
-
-    iget-object v1, p1, Lone/me/members/list/MembersListWidget;->Y:Los;
-
-    sget-object v2, Lone/me/members/list/MembersListWidget;->C0:[Les7;
-
-    const/4 v5, 0x2
-
-    aget-object v2, v2, v5
-
-    invoke-virtual {v1, p1, v3}, Los;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
-
-    invoke-static {v5}, Llvi;->a(I)Lx04;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Lx04;->e(Ljava/util/Collection;)Lx04;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lu69;->Y:Landroid/view/View;
-
-    invoke-interface {v0, v1}, Lx04;->j(Landroid/view/View;)Lx04;
-
-    move-result-object v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41400000    # 12.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-interface {v0, v1}, Lx04;->g(F)Lx04;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lx04;->build()Ly04;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ly04;->t(Lone/me/sdk/arch/Widget;)V
-
-    :cond_1
-    :goto_0
-    return-object v4
+    return-void
 .end method

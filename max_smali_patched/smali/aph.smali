@@ -1,105 +1,141 @@
 .class public final Laph;
-.super Lf3;
+.super Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic d:I
+.field public final D0:[I
+
+.field public E0:Lgeh;
+
+.field public F0:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpgd;I)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput p2, p0, Laph;->d:I
+    invoke-direct {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, p1}, Lf3;-><init>(Lpgd;)V
+    const/4 p1, 0x2
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Laph;->D0:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()Ljava/lang/String;
+.method public final l(Lgeh;F)V
     .locals 1
 
-    iget v0, p0, Laph;->d:I
+    iget-object v0, p0, Laph;->E0:Lgeh;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1, v0}, Lgeh;->equals(Ljava/lang/Object;)Z
 
-    const-string v0, "DELETE FROM worktag WHERE work_spec_id=?"
+    move-result v0
 
-    return-object v0
+    if-eqz v0, :cond_0
 
-    :pswitch_0
-    const-string v0, "UPDATE workspec SET run_attempt_count=0 WHERE id=?"
+    iget v0, p0, Laph;->F0:F
 
-    return-object v0
+    cmpg-float v0, p2, v0
 
-    :pswitch_1
-    const-string v0, "UPDATE workspec SET run_attempt_count=run_attempt_count+1 WHERE id=?"
+    if-nez v0, :cond_0
 
-    return-object v0
+    const/4 v0, 0x0
 
-    :pswitch_2
-    const-string v0, "UPDATE workspec SET last_enqueue_time=? WHERE id=?"
+    goto :goto_0
 
-    return-object v0
+    :cond_0
+    const/4 v0, 0x1
 
-    :pswitch_3
-    const-string v0, "UPDATE workspec SET output=? WHERE id=?"
+    :goto_0
+    iput-object p1, p0, Laph;->E0:Lgeh;
 
-    return-object v0
+    iput p2, p0, Laph;->F0:F
 
-    :pswitch_4
-    const-string v0, "UPDATE workspec SET period_count=period_count+1 WHERE id=?"
+    if-eqz v0, :cond_1
 
-    return-object v0
+    iget-object p2, p1, Lgeh;->b:Landroid/net/Uri;
 
-    :pswitch_5
-    const-string v0, "UPDATE workspec SET state=? WHERE id=?"
+    invoke-static {p2}, Lcj7;->a(Landroid/net/Uri;)Lcj7;
 
-    return-object v0
+    move-result-object p2
 
-    :pswitch_6
-    const-string v0, "DELETE FROM workspec WHERE id=?"
+    iget-object p1, p1, Lgeh;->h:Landroid/net/Uri;
 
-    return-object v0
+    invoke-static {p1}, Lcj7;->a(Landroid/net/Uri;)Lcj7;
 
-    :pswitch_7
-    const-string v0, "UPDATE workspec SET generation=generation+1 WHERE id=?"
+    move-result-object p1
 
-    return-object v0
+    invoke-virtual {p0, p2, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->j(Lcj7;Lcj7;)V
 
-    :pswitch_8
-    const-string v0, "DELETE FROM workspec WHERE state IN (2, 3, 5) AND (SELECT COUNT(*)=0 FROM dependency WHERE     prerequisite_id=id AND     work_spec_id NOT IN         (SELECT id FROM workspec WHERE state IN (2, 3, 5)))"
+    :cond_1
+    return-void
+.end method
 
-    return-object v0
+.method public final onMeasure(II)V
+    .locals 4
 
-    :pswitch_9
-    const-string v0, "UPDATE workspec SET schedule_requested_at=-1 WHERE state NOT IN (2, 3, 5)"
+    iget-object v0, p0, Laph;->E0:Lgeh;
 
-    return-object v0
+    if-eqz v0, :cond_1
 
-    :pswitch_a
-    const-string v0, "UPDATE workspec SET schedule_requested_at=? WHERE id=?"
+    iget v1, v0, Lgeh;->d:I
 
-    return-object v0
+    iget v0, v0, Lgeh;->c:I
 
-    nop
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result v2
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    if-eq v2, v3, :cond_1
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result p1
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result p2
+
+    iget v2, p0, Laph;->F0:F
+
+    const/high16 v3, 0x42b40000    # 90.0f
+
+    cmpg-float v2, v2, v3
+
+    iget-object v3, p0, Laph;->D0:[I
+
+    if-nez v2, :cond_0
+
+    invoke-static {p2, p1, v0, v1, v3}, Lj6j;->d(IIII[I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {p1, p2, v0, v1, v3}, Lj6j;->d(IIII[I)V
+
+    :goto_0
+    const/4 p1, 0x0
+
+    aget p1, v3, p1
+
+    const/4 p2, 0x1
+
+    aget p2, v3, p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+
+    :cond_1
+    invoke-super {p0, p1, p2}, Lq85;->onMeasure(II)V
+
+    return-void
 .end method

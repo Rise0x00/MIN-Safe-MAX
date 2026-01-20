@@ -1,108 +1,369 @@
 .class public final Llw2;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Low2;
 
 
 # instance fields
-.field public final synthetic X:Landroid/graphics/RectF;
+.field public final a:Z
 
-.field public final synthetic Y:Landroid/graphics/Rect;
+.field public final b:I
 
-.field public final synthetic o:Lpw2;
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljava/lang/Object;
+
+.field public final e:Z
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
 
 
 # direct methods
-.method public constructor <init>(Lpw2;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(ZILjava/util/List;Ljava/util/List;ZZZZ)V
     .locals 0
 
-    iput-object p1, p0, Llw2;->o:Lpw2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Llw2;->X:Landroid/graphics/RectF;
+    iput-boolean p1, p0, Llw2;->a:Z
 
-    iput-object p3, p0, Llw2;->Y:Landroid/graphics/Rect;
+    iput p2, p0, Llw2;->b:I
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Llw2;->c:Ljava/util/List;
 
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Llw2;->d:Ljava/lang/Object;
+
+    iput-boolean p5, p0, Llw2;->e:Z
+
+    iput-boolean p6, p0, Llw2;->f:Z
+
+    iput-boolean p7, p0, Llw2;->g:Z
+
+    iput-boolean p8, p0, Llw2;->h:Z
 
     return-void
 .end method
 
+.method public static a(Llw2;ZILjava/util/List;ZI)Llw2;
+    .locals 9
+
+    and-int/lit8 v0, p5, 0x1
+
+    if-eqz v0, :cond_0
+
+    iget-boolean p1, p0, Llw2;->a:Z
+
+    :cond_0
+    move v1, p1
+
+    and-int/lit8 p1, p5, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget p2, p0, Llw2;->b:I
+
+    :cond_1
+    move v2, p2
+
+    and-int/lit8 p1, p5, 0x4
+
+    if-eqz p1, :cond_2
+
+    iget-object p3, p0, Llw2;->c:Ljava/util/List;
+
+    :cond_2
+    move-object v3, p3
+
+    iget-object v4, p0, Llw2;->d:Ljava/lang/Object;
+
+    and-int/lit8 p1, p5, 0x10
+
+    if-eqz p1, :cond_3
+
+    iget-boolean p1, p0, Llw2;->e:Z
+
+    :goto_0
+    move v5, p1
+
+    goto :goto_1
+
+    :cond_3
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    and-int/lit8 p1, p5, 0x20
+
+    if-eqz p1, :cond_4
+
+    iget-boolean p4, p0, Llw2;->f:Z
+
+    :cond_4
+    move v6, p4
+
+    iget-boolean v7, p0, Llw2;->g:Z
+
+    iget-boolean v8, p0, Llw2;->h:Z
+
+    new-instance v0, Llw2;
+
+    invoke-direct/range {v0 .. v8}, Llw2;-><init>(ZILjava/util/List;Ljava/util/List;ZZZZ)V
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lg54;
+    if-ne p0, p1, :cond_0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    invoke-virtual {p0, p1, p2}, Llw2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :cond_0
+    instance-of v0, p1, Llw2;
 
-    move-result-object p1
+    if-nez v0, :cond_1
 
+    goto :goto_0
+
+    :cond_1
     check-cast p1, Llw2;
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-boolean v0, p0, Llw2;->a:Z
 
-    invoke-virtual {p1, p2}, Llw2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v1, p1, Llw2;->a:Z
 
-    return-object p2
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Llw2;->b:I
+
+    iget v1, p1, Llw2;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Llw2;->c:Ljava/util/List;
+
+    iget-object v1, p1, Llw2;->c:Ljava/util/List;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Llw2;->d:Ljava/lang/Object;
+
+    iget-object v1, p1, Llw2;->d:Ljava/lang/Object;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v0, p0, Llw2;->e:Z
+
+    iget-boolean v1, p1, Llw2;->e:Z
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget-boolean v0, p0, Llw2;->f:Z
+
+    iget-boolean v1, p1, Llw2;->f:Z
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget-boolean v0, p0, Llw2;->g:Z
+
+    iget-boolean v1, p1, Llw2;->g:Z
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget-boolean v0, p0, Llw2;->h:Z
+
+    iget-boolean p1, p1, Llw2;->h:Z
+
+    if-eq v0, p1, :cond_9
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_9
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 3
 
-    new-instance p1, Llw2;
+    iget-boolean v0, p0, Llw2;->a:Z
 
-    iget-object v0, p0, Llw2;->X:Landroid/graphics/RectF;
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    iget-object v1, p0, Llw2;->Y:Landroid/graphics/Rect;
+    move-result v0
 
-    iget-object v2, p0, Llw2;->o:Lpw2;
+    const/16 v1, 0x1f
 
-    invoke-direct {p1, v2, v0, v1, p2}, Llw2;-><init>(Lpw2;Landroid/graphics/RectF;Landroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
+    mul-int/2addr v0, v1
 
-    return-object p1
+    iget v2, p0, Llw2;->b:I
+
+    invoke-static {v2, v0, v1}, Lmrf;->d(III)I
+
+    move-result v0
+
+    iget-object v2, p0, Llw2;->c:Ljava/util/List;
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Llw2;->d:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Llw2;->e:Z
+
+    invoke-static {v2, v1, v0}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llw2;->f:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Llw2;->g:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Llw2;->h:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Llw2;->o:Lpw2;
+    const-string v1, "Content(areReactionsEnabled="
 
-    sget-object v0, Lpw2;->I0:[Les7;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lpw2;->v()Luv5;
+    iget-boolean v1, p0, Llw2;->a:Z
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Llw2;->o:Lpw2;
+    const-string v1, ", count="
 
-    iget-object v0, v0, Lpw2;->F0:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Luv5;->p(Ljava/lang/String;)Ljava/io/File;
+    iget v1, p0, Llw2;->b:I
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    const-string v1, ", addedReactions="
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Llw2;->o:Lpw2;
+    iget-object v1, p0, Llw2;->c:Ljava/util/List;
 
-    iget-object v1, p0, Llw2;->X:Landroid/graphics/RectF;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Llw2;->Y:Landroid/graphics/Rect;
+    const-string v1, ", reactions="
 
-    invoke-virtual {v0, p1, v1, v2}, Lpw2;->w(Ljava/lang/String;Landroid/graphics/RectF;Landroid/graphics/Rect;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object p1, Lybg;->a:Lybg;
+    iget-object v1, p0, Llw2;->d:Ljava/lang/Object;
 
-    return-object p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", showDefaultButton="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", showSaveButton="
+
+    const-string v2, ", showReactionsLoading="
+
+    iget-boolean v3, p0, Llw2;->e:Z
+
+    iget-boolean v4, p0, Llw2;->f:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+
+    const-string v1, ", showReactions="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Llw2;->g:Z
+
+    iget-boolean v4, p0, Llw2;->h:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

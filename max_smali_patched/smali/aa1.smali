@@ -1,99 +1,48 @@
-.class public final enum Laa1;
-.super Ljava/lang/Enum;
-.source "SourceFile"
-
-
-# static fields
-.field public static final enum b:Laa1;
-
-.field public static final enum c:Laa1;
-
-.field public static final synthetic d:[Laa1;
-
-.field public static final synthetic o:Lce5;
+.class public final Laa1;
+.super Lo84;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic X:Lpx;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Laa1;
-
-    const/4 v1, 0x0
-
-    sget v2, Lbsc;->call_history_call_tab_all:I
-
-    const-string v3, "ALL"
-
-    invoke-direct {v0, v3, v1, v2}, Laa1;-><init>(Ljava/lang/String;II)V
-
-    sput-object v0, Laa1;->b:Laa1;
-
-    new-instance v1, Laa1;
-
-    const/4 v2, 0x1
-
-    sget v3, Lbsc;->call_history_call_tab_missing:I
-
-    const-string v4, "MISSING"
-
-    invoke-direct {v1, v4, v2, v3}, Laa1;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Laa1;->c:Laa1;
-
-    filled-new-array {v0, v1}, [Laa1;
-
-    move-result-object v0
-
-    sput-object v0, Laa1;->d:[Laa1;
-
-    new-instance v1, Lce5;
-
-    invoke-direct {v1, v0}, Lce5;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Laa1;->o:Lce5;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
+.method public constructor <init>(Lpx;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Laa1;->X:Lpx;
 
-    iput p3, p0, Laa1;->a:I
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Laa1;
+
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const-class v0, Laa1;
+    iput-object p1, p0, Laa1;->d:Ljava/lang/Object;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget p1, p0, Laa1;->o:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Laa1;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Laa1;->o:I
 
-.method public static values()[Laa1;
-    .locals 1
+    iget-object p1, p0, Laa1;->X:Lpx;
 
-    sget-object v0, Laa1;->d:[Laa1;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lpx;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, [Laa1;
-
-    return-object v0
+    return-object p1
 .end method

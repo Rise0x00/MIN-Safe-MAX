@@ -1,33 +1,52 @@
-.class public final Ln9a;
+.class public abstract Ln9a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# static fields
+.field public static final a:F
 
-.field public b:Z
 
-.field public c:Z
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public d:Z
+    const/4 v0, 0x0
 
-.field public e:I
+    invoke-static {v0}, Ln9a;->a(F)V
 
-.field public f:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    const/high16 v0, 0x3f800000    # 1.0f
 
-.field public g:Ljava/lang/String;
+    invoke-static {v0}, Ln9a;->a(F)V
 
-.field public h:I
+    sput v0, Ln9a;->a:F
 
-.field public i:I
+    return-void
+.end method
 
-.field public j:I
+.method public static a(F)V
+    .locals 1
 
-.field public k:I
+    const/4 v0, 0x0
 
-.field public l:I
+    cmpg-float v0, v0, p0
 
-.field public m:Z
+    if-gtz v0, :cond_0
 
-.field public n:Lyoa;
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpg-float p0, p0, v0
+
+    if-gtz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Gain must be in range of 0f and 1f"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method

@@ -1,22 +1,22 @@
 .class public Lru/ok/messages/media/trim/ActTrimVideo;
-.super Lj6;
+.super Ly5;
 .source "SourceFile"
 
 # interfaces
-.implements Ldw8;
+.implements Ll79;
 
 
 # instance fields
-.field public T0:Lq29;
+.field public T0:Lwd9;
 
-.field public U0:Lm68;
+.field public U0:Lyh8;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lj6;-><init>()V
+    invoke-direct {p0}, Ly5;-><init>()V
 
     return-void
 .end method
@@ -31,110 +31,60 @@
     return-object v0
 .end method
 
-.method public final a()Lm68;
-    .locals 11
+.method public final a()Lyh8;
+    .locals 4
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
-    iget-object v0, p0, Lj6;->J0:Lch8;
+    iget-object v0, p0, Ly5;->K0:Lo2b;
 
-    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lo2b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lri3;
+    check-cast v0, Liq3;
 
-    check-cast v0, Lusa;
+    check-cast v0, Lj8b;
 
-    invoke-virtual {v0}, Lusa;->h()Lew8;
+    invoke-virtual {v0}, Lj8b;->j()Lm79;
 
-    move-result-object v4
+    move-result-object v0
 
-    iget-object v0, v4, Lew8;->b:Ljava/util/HashMap;
+    new-instance v1, Lp50;
 
-    sget-object v2, Lfw8;->c:Lfw8;
-
-    invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lm68;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lm68;->c()V
+    const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    iput-object v3, v1, Lm68;->g:Lbw8;
+    invoke-direct {v1, v2, v3, v3}, Lp50;-><init>(ZZZ)V
+
+    sget-object v2, Ln79;->c:Ln79;
+
+    invoke-virtual {v0, v2, v1}, Lm79;->m(Ln79;Lp50;)Lyh8;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
     :cond_0
-    iget-object v1, v4, Lew8;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lzh5;
-
-    if-nez v3, :cond_1
-
-    new-instance v5, Lzh5;
-
-    iget-object v6, v4, Lew8;->d:Landroid/content/Context;
-
-    iget-object v7, v4, Lew8;->e:Lvf5;
-
-    iget-object v8, v4, Lew8;->k:Luh5;
-
-    iget-object v9, v4, Lew8;->i:Lnv7;
-
-    iget-object v3, v4, Lew8;->f:Lsxb;
-
-    iget-object v10, v3, Lsxb;->a:Le78;
-
-    invoke-direct/range {v5 .. v10}, Lzh5;-><init>(Landroid/content/Context;Lvf5;Luh5;Lnv7;Le78;)V
-
-    invoke-virtual {v1, v2, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-object v3, v5
-
-    :cond_1
-    new-instance v1, Lm68;
-
-    iget-object v5, v4, Lew8;->d:Landroid/content/Context;
-
-    const/high16 v6, 0x3f800000    # 1.0f
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v1 .. v8}, Lm68;-><init>(Lfw8;Lzh5;Lew8;Landroid/content/Context;FZZ)V
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-object v1, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
-
-    :cond_2
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
     return-object v0
 .end method
 
-.method public final f()Lvnf;
+.method public final f()Lldg;
     .locals 1
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->T0:Lq29;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->T0:Lwd9;
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lq29;->e0:Lq29;
+    sget-object v0, Lwd9;->e0:Lwd9;
 
-    iput-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->T0:Lq29;
+    iput-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->T0:Lwd9;
 
     :cond_0
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->T0:Lq29;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->T0:Lwd9;
 
     return-object v0
 .end method
@@ -142,15 +92,15 @@
 .method public final onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 4
 
-    invoke-super {p0, p1}, Lsn;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Lon;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    new-instance p1, Lk3;
+    new-instance p1, Lj3;
 
     const/4 v0, 0x3
 
-    invoke-direct {p1, v0, p0}, Lk3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lj3;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {}, Lie;->a()Lgpd;
+    invoke-static {}, Lde;->a()Lpbe;
 
     move-result-object v0
 
@@ -158,7 +108,7 @@
 
     const-wide/16 v2, 0x12c
 
-    invoke-virtual {v0, p1, v2, v3, v1}, Lgpd;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lzv4;
+    invoke-virtual {v0, p1, v2, v3, v1}, Lpbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
 
     return-void
 .end method
@@ -166,7 +116,7 @@
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 12
 
-    invoke-super {p0, p1}, Lj6;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Ly5;->onCreate(Landroid/os/Bundle;)V
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -182,26 +132,26 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lx4;->t(Landroid/view/WindowManager$LayoutParams;)V
+    invoke-static {v0}, Lw4;->v(Landroid/view/WindowManager$LayoutParams;)V
 
     :cond_0
-    invoke-virtual {p0}, Lru/ok/messages/media/trim/ActTrimVideo;->a()Lm68;
+    invoke-virtual {p0}, Lru/ok/messages/media/trim/ActTrimVideo;->a()Lyh8;
 
     move-result-object v0
 
-    iput-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iput-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
-    sget v0, Lqqc;->act_trim_video:I
+    sget v0, Lobd;->act_trim_video:I
 
-    invoke-virtual {p0, v0}, Lj6;->setContentView(I)V
+    invoke-virtual {p0, v0}, Ly5;->setContentView(I)V
 
-    invoke-virtual {p0}, Lru/ok/messages/media/trim/ActTrimVideo;->f()Lvnf;
+    invoke-virtual {p0}, Lru/ok/messages/media/trim/ActTrimVideo;->f()Lldg;
 
     move-result-object v0
 
-    iget v0, v0, Lvnf;->L:I
+    iget v0, v0, Lldg;->L:I
 
-    invoke-virtual {p0, v0}, Lj6;->M(I)V
+    invoke-virtual {p0, v0}, Ly5;->L(I)V
 
     if-nez p1, :cond_2
 
@@ -257,7 +207,7 @@
 
     if-nez v6, :cond_1
 
-    invoke-static {p0, p1}, Llci;->e(Landroid/content/Context;Landroid/net/Uri;)J
+    invoke-static {p0, p1}, Lm5j;->h(Landroid/content/Context;Landroid/net/Uri;)J
 
     move-result-wide v8
 
@@ -278,26 +228,26 @@
 
     invoke-direct {p1}, Lru/ok/messages/media/trim/FrgTrimVideo;-><init>()V
 
-    invoke-virtual {p1, v6}, Landroidx/fragment/app/a;->n0(Landroid/os/Bundle;)V
+    invoke-virtual {p1, v6}, Landroidx/fragment/app/a;->k0(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->A()Lff6;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->A()Lcn6;
 
     move-result-object v0
 
-    sget v1, Ltpc;->act_trim_video__container:I
+    sget v1, Lrad;->act_trim_video__container:I
 
     const-string v2, "ru.ok.messages.media.trim.FrgTrimVideo"
 
-    invoke-static {v0, v1, p1, v2}, Lxt7;->a(Lff6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
+    invoke-static {v0, v1, p1, v2}, Lu48;->a(Lcn6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
 
     return-void
 
     :cond_2
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
     const-string v1, "MediaPlayerController.Volume"
 
-    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lyh8;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -305,11 +255,11 @@
 
     move-result v1
 
-    iput v1, v0, Lm68;->h:F
+    iput v1, v0, Lyh8;->h:F
 
     const-string v1, "MediaPlayerController.Looping"
 
-    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lyh8;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -317,11 +267,11 @@
 
     move-result v1
 
-    iput-boolean v1, v0, Lm68;->i:Z
+    iput-boolean v1, v0, Lyh8;->i:Z
 
     const-string v1, "MediaPlayerController.PlayWhenReady"
 
-    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lyh8;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -329,7 +279,7 @@
 
     move-result p1
 
-    iput-boolean p1, v0, Lm68;->j:Z
+    iput-boolean p1, v0, Lyh8;->j:Z
 
     return-void
 .end method
@@ -337,27 +287,27 @@
 .method public final onDestroy()V
     .locals 2
 
-    invoke-super {p0}, Lj6;->onDestroy()V
+    invoke-super {p0}, Ly5;->onDestroy()V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lj6;->J0:Lch8;
+    iget-object v0, p0, Ly5;->K0:Lo2b;
 
-    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lo2b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lri3;
+    check-cast v0, Liq3;
 
-    check-cast v0, Lusa;
+    check-cast v0, Lj8b;
 
-    invoke-virtual {v0}, Lusa;->h()Lew8;
+    invoke-virtual {v0}, Lj8b;->j()Lm79;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v1, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
-    invoke-virtual {v0, v1}, Lew8;->p(Lm68;)V
+    invoke-virtual {v0, v1}, Lm79;->q(Lyh8;)V
 
     :cond_0
     return-void
@@ -366,27 +316,27 @@
 .method public final onPause()V
     .locals 2
 
-    invoke-super {p0}, Lj6;->onPause()V
+    invoke-super {p0}, Ly5;->onPause()V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lj6;->J0:Lch8;
+    iget-object v0, p0, Ly5;->K0:Lo2b;
 
-    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lo2b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lri3;
+    check-cast v0, Liq3;
 
-    check-cast v0, Lusa;
+    check-cast v0, Lj8b;
 
-    invoke-virtual {v0}, Lusa;->h()Lew8;
+    invoke-virtual {v0}, Lj8b;->j()Lm79;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v1, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
-    invoke-virtual {v0, v1}, Lew8;->l(Lm68;)V
+    invoke-virtual {v0, v1}, Lm79;->n(Lyh8;)V
 
     :cond_0
     return-void
@@ -395,27 +345,27 @@
 .method public final onResume()V
     .locals 2
 
-    invoke-super {p0}, Lj6;->onResume()V
+    invoke-super {p0}, Ly5;->onResume()V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lj6;->J0:Lch8;
+    iget-object v0, p0, Ly5;->K0:Lo2b;
 
-    iget-object v0, v0, Lch8;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lo2b;->b:Ljava/lang/Object;
 
-    check-cast v0, Lri3;
+    check-cast v0, Liq3;
 
-    check-cast v0, Lusa;
+    check-cast v0, Lj8b;
 
-    invoke-virtual {v0}, Lusa;->h()Lew8;
+    invoke-virtual {v0}, Lj8b;->j()Lm79;
 
     move-result-object v0
 
-    iget-object v1, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v1, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
-    invoke-virtual {v0, v1}, Lew8;->k(Lm68;)V
+    invoke-virtual {v0, v1}, Lm79;->k(Lyh8;)V
 
     :cond_0
     return-void
@@ -424,39 +374,39 @@
 .method public final onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 3
 
-    invoke-super {p0, p1}, Lj6;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Ly5;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lm68;
+    iget-object v0, p0, Lru/ok/messages/media/trim/ActTrimVideo;->U0:Lyh8;
 
     if-eqz v0, :cond_0
 
     const-string v1, "MediaPlayerController.Volume"
 
-    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lyh8;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget v2, v0, Lm68;->h:F
+    iget v2, v0, Lyh8;->h:F
 
     invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putFloat(Ljava/lang/String;F)V
 
     const-string v1, "MediaPlayerController.Looping"
 
-    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lyh8;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-boolean v2, v0, Lm68;->i:Z
+    iget-boolean v2, v0, Lyh8;->i:Z
 
     invoke-virtual {p1, v1, v2}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v1, "MediaPlayerController.PlayWhenReady"
 
-    invoke-virtual {v0, v1}, Lm68;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lyh8;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-boolean v0, v0, Lm68;->j:Z
+    iget-boolean v0, v0, Lyh8;->j:Z
 
     invoke-virtual {p1, v1, v0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 

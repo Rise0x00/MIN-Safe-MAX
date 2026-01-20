@@ -1,146 +1,31 @@
-.class public abstract Lffi;
+.class public final Lffi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static a:Lypd;
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static b:Z
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/util/Set;
 
 
 # direct methods
-.method public static a(I)I
-    .locals 3
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eq p0, v0, :cond_8
+    iput p2, p0, Lffi;->b:I
 
-    const/4 v1, 0x2
+    iput-object p1, p0, Lffi;->a:Ljava/lang/String;
 
-    if-eq p0, v1, :cond_7
+    iput-object p3, p0, Lffi;->c:Ljava/lang/String;
 
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_6
-
-    const/16 v1, 0x8
-
-    if-eq p0, v1, :cond_5
-
-    const/16 v2, 0x10
-
-    if-eq p0, v2, :cond_4
-
-    const/16 v0, 0x20
-
-    if-eq p0, v0, :cond_3
-
-    const/16 v0, 0x40
-
-    if-eq p0, v0, :cond_2
-
-    const/16 v0, 0x80
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x100
-
-    if-ne p0, v0, :cond_0
-
-    return v1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "type needs to be >= FIRST and <= LAST, type="
-
-    invoke-static {p0, v1}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_1
-    const/4 p0, 0x7
-
-    return p0
-
-    :cond_2
-    const/4 p0, 0x6
-
-    return p0
-
-    :cond_3
-    const/4 p0, 0x5
-
-    return p0
-
-    :cond_4
-    return v0
-
-    :cond_5
-    const/4 p0, 0x3
-
-    return p0
-
-    :cond_6
-    return v1
-
-    :cond_7
-    return v0
-
-    :cond_8
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static final b(Lvcg;)V
-    .locals 2
-
-    new-instance v0, Lzr4;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1}, Lzr4;-><init>(I)V
-
-    const-class v1, Lof4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->c(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhv7;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lhv7;-><init>(I)V
-
-    const-class v1, Lzq5;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhv7;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lhv7;-><init>(I)V
-
-    const-class v1, Ls70;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhv7;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Lhv7;-><init>(I)V
-
-    const-class v1, Lua8;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
+    iput-object p4, p0, Lffi;->d:Ljava/util/Set;
 
     return-void
 .end method

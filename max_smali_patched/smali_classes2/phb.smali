@@ -1,54 +1,55 @@
-.class public final Lphb;
+.class public abstract Lphb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Le0g;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Z
+.field public static final b:I
 
-.field public final b:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
 
 
 # direct methods
-.method public constructor <init>(Lgj;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lw9d;->oneme_snackbar_caption_id:I
 
-    iget-object v0, p1, Lgj;->c:Ljava/lang/Object;
+    sput v0, Lphb;->a:I
 
-    check-cast v0, Ljava/lang/Boolean;
+    sget v0, Lw9d;->oneme_snackbar_container_id:I
 
-    if-eqz v0, :cond_0
+    sput v0, Lphb;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    sget v0, Lw9d;->oneme_snackbar_left_icon_id:I
 
-    move-result v0
+    sput v0, Lphb;->c:I
 
-    goto :goto_0
+    sget v0, Lw9d;->oneme_snackbar_right_button_id:I
 
-    :cond_0
-    const/4 v0, 0x0
+    sput v0, Lphb;->d:I
 
-    :goto_0
-    iput-boolean v0, p0, Lphb;->a:Z
+    sget v0, Lw9d;->oneme_snackbar_style_circle:I
 
-    iget p1, p1, Lgj;->b:I
+    sput v0, Lphb;->e:I
 
-    iput p1, p0, Lphb;->b:I
+    sget v0, Lw9d;->oneme_snackbar_style_shine:I
+
+    sput v0, Lphb;->f:I
+
+    sget v0, Lw9d;->oneme_snackbar_title_id:I
+
+    sput v0, Lphb;->g:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lrw4;
-    .locals 1
-
-    sget-object v0, Lhfd;->a:Lrw4;
-
-    return-object v0
 .end method

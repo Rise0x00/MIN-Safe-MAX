@@ -1,15 +1,31 @@
-.class public abstract Lrp;
-.super Ljava/lang/Object;
+.class public final Lrp;
+.super Lqp;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic o:Landroidx/appcompat/widget/AppCompatTextView;
+
+
 # direct methods
-.method public static a(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
     .locals 0
 
-    invoke-static {p0, p1, p2}, Landroid/graphics/Typeface;->create(Landroid/graphics/Typeface;IZ)Landroid/graphics/Typeface;
+    iput-object p1, p0, Lrp;->o:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move-result-object p0
+    invoke-direct {p0, p1}, Lqp;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
 
-    return-object p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final g(IF)V
+    .locals 1
+
+    iget-object v0, p0, Lrp;->o:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-static {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
+
+    return-void
 .end method

@@ -1,84 +1,49 @@
 .class public final Lut6;
-.super Ljava/lang/Object;
+.super Lnth;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final b:Llq6;
+
+.field public final c:Lcm5;
+
+.field public final d:Lcm5;
+
+.field public final o:Lspf;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lut6;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public constructor <init>(Llq6;)V
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {p0}, Lnth;-><init>()V
 
-    goto :goto_1
+    iput-object p1, p0, Lut6;->b:Llq6;
 
-    :cond_0
-    instance-of v0, p1, Lut6;
+    new-instance p1, Lcm5;
 
-    if-nez v0, :cond_1
+    const/4 v0, 0x0
 
-    goto :goto_0
+    invoke-direct {p1, v0}, Lcm5;-><init>(I)V
 
-    :cond_1
-    check-cast p1, Lut6;
+    iput-object p1, p0, Lut6;->c:Lcm5;
 
-    iget v0, p0, Lut6;->a:I
+    new-instance p1, Lcm5;
 
-    iget p1, p1, Lut6;->a:I
+    invoke-direct {p1, v0}, Lcm5;-><init>(I)V
 
-    if-eq v0, p1, :cond_2
+    iput-object p1, p0, Lut6;->d:Lcm5;
 
-    :goto_0
     const/4 p1, 0x0
 
-    return p1
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
+    iput-object p1, p0, Lut6;->o:Lspf;
 
-    iget v0, p0, Lut6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "GradientsSkeletonGradientCellColors(staticBackground="
-
-    const-string v1, ")"
-
-    iget v2, p0, Lut6;->a:I
-
-    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

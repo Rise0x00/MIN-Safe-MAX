@@ -1,88 +1,81 @@
-.class public final synthetic Lso3;
+.class public Lso3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/function/Consumer;
+
+# static fields
+.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
 
 # instance fields
-.field public final synthetic a:I
+.field private volatile synthetic _handled$volatile:I
 
-.field public final synthetic b:Lto3;
+.field public final a:Ljava/lang/Throwable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lto3;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    const-class v0, Lso3;
+
+    const-string v1, "_handled$volatile"
+
+    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    move-result-object v0
+
+    sput-object v0, Lso3;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Throwable;Z)V
     .locals 0
 
-    iput p2, p0, Lso3;->a:I
-
-    iput-object p1, p0, Lso3;->b:Lto3;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lso3;->a:Ljava/lang/Throwable;
+
+    iput p2, p0, Lso3;->_handled$volatile:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget v0, p0, Lso3;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    check-cast p1, Ljava/lang/Integer;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lso3;->b:Lto3;
+    move-result-object v1
 
-    iget-object v1, v0, Lto3;->c:Lq2e;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    new-instance v2, Lped;
+    move-result-object v1
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result p1
+    const/16 v1, 0x5b
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iput p1, v2, Lped;->a:I
+    iget-object v1, p0, Lso3;->a:Ljava/lang/Throwable;
 
-    new-instance p1, Lso3;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    const/16 v1, 0x5d
 
-    invoke-direct {p1, v0, v3}, Lso3;-><init>(Lto3;I)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    sget-object v0, Llc5;->d:Llc5;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, v2, v0, p1}, Lq2e;->f(Leic;Llc5;Ljava/util/function/Consumer;)V
+    move-result-object v0
 
-    return-void
-
-    :pswitch_0
-    check-cast p1, Leic;
-
-    iget-object v0, p0, Lso3;->b:Lto3;
-
-    iget-object v1, v0, Lto3;->c:Lq2e;
-
-    new-instance v2, Lso3;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v0, v3}, Lso3;-><init>(Lto3;I)V
-
-    sget-object v0, Llc5;->d:Llc5;
-
-    invoke-virtual {v1, p1, v0, v2}, Lq2e;->f(Leic;Llc5;Ljava/util/function/Consumer;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

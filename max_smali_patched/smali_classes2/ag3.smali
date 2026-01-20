@@ -1,21 +1,23 @@
 .class public final Lag3;
-.super Ljava/lang/Object;
+.super Lhja;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Lag3;
+.field public static final b:Lag3;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lag3;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    sput-object v0, Lag3;->a:Lag3;
+    invoke-direct {v0, v1}, Lhja;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lag3;->b:Lag3;
 
     return-void
 .end method
@@ -47,7 +49,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x6e6b21b6
+    const v0, -0x1193edd2
 
     return v0
 .end method
@@ -55,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ShowReportSuccessSnackbar"
+    const-string v0, "Close"
 
     return-object v0
 .end method

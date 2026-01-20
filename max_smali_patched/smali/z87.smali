@@ -1,126 +1,102 @@
-.class public final synthetic Lz87;
+.class public abstract Lz87;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqd6;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ly85;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final Y:Ljava/lang/String;
+
+.field public final Z:Ljava/lang/String;
+
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lx87;
+
+.field public final c:J
+
+.field public final d:I
+
+.field public final o:J
+
+.field public final t0:J
+
+.field public final u0:J
+
+.field public final v0:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Ljava/lang/String;Lx87;JIJLy85;Ljava/lang/String;Ljava/lang/String;JJZ)V
     .locals 0
 
-    iput p1, p0, Lz87;->a:I
-
-    iput-object p2, p0, Lz87;->b:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz87;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lz87;->b:Lx87;
+
+    iput-wide p3, p0, Lz87;->c:J
+
+    iput p5, p0, Lz87;->d:I
+
+    iput-wide p6, p0, Lz87;->o:J
+
+    iput-object p8, p0, Lz87;->X:Ly85;
+
+    iput-object p9, p0, Lz87;->Y:Ljava/lang/String;
+
+    iput-object p10, p0, Lz87;->Z:Ljava/lang/String;
+
+    iput-wide p11, p0, Lz87;->t0:J
+
+    iput-wide p13, p0, Lz87;->u0:J
+
+    iput-boolean p15, p0, Lz87;->v0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lrd6;)V
+.method public final compareTo(Ljava/lang/Object;)I
     .locals 4
 
-    iget v0, p0, Lz87;->a:I
+    check-cast p1, Ljava/lang/Long;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    iget-object v0, p0, Lz87;->b:Ljava/lang/Object;
+    move-result-wide v0
 
-    check-cast v0, Lvn8;
+    iget-wide v2, p0, Lz87;->o:J
 
-    iget-object v1, v0, Lvn8;->a:Ljava/lang/Object;
+    cmp-long v0, v2, v0
 
-    monitor-enter v1
+    if-lez v0, :cond_0
 
-    :try_start_0
-    iget v2, v0, Lvn8;->b:I
+    const/4 p1, 0x1
 
-    add-int/lit8 v2, v2, -0x1
-
-    iput v2, v0, Lvn8;->b:I
-
-    iget-boolean v3, v0, Lvn8;->c:Z
-
-    if-eqz v3, :cond_0
-
-    if-nez v2, :cond_0
-
-    invoke-virtual {v0}, Lvn8;->close()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    return p1
 
     :cond_0
-    :goto_0
-    iget-object v0, v0, Lvn8;->X:Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    check-cast v0, Lqd6;
+    move-result-wide v0
 
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    cmp-long p1, v2, v0
 
-    if-eqz v0, :cond_1
+    if-gez p1, :cond_1
 
-    invoke-interface {v0, p1}, Lqd6;->a(Lrd6;)V
+    const/4 p1, -0x1
+
+    return p1
 
     :cond_1
-    return-void
+    const/4 p1, 0x0
 
-    :goto_1
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-
-    :pswitch_0
-    iget-object p1, p0, Lz87;->b:Ljava/lang/Object;
-
-    check-cast p1, La97;
-
-    iget-object p1, p1, La97;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lb97;
-
-    if-eqz p1, :cond_2
-
-    iget-object v0, p1, Lb97;->D0:Ljava/util/concurrent/Executor;
-
-    new-instance v1, Lh96;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2, p1}, Lh96;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

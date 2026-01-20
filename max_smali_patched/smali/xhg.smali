@@ -1,47 +1,39 @@
-.class public final Lxhg;
-.super Lp14;
+.class public abstract Lxhg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public final synthetic o:Leld;
-
-
 # direct methods
-.method public constructor <init>(Leld;Lp14;)V
+.method public static a(Landroid/text/PrecomputedText;)Ljava/lang/CharSequence;
     .locals 0
 
-    iput-object p1, p0, Lxhg;->o:Leld;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+    return-object p0
 .end method
 
+.method public static b(Landroid/icu/text/DecimalFormatSymbols;)[Ljava/lang/String;
+    .locals 0
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {p0}, Landroid/icu/text/DecimalFormatSymbols;->getDigitStrings()[Ljava/lang/String;
 
-    iput-object p1, p0, Lxhg;->d:Ljava/lang/Object;
+    move-result-object p0
 
-    iget p1, p0, Lxhg;->X:I
+    return-object p0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public static c(Landroid/widget/TextView;)Landroid/text/PrecomputedText$Params;
+    .locals 0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Landroid/widget/TextView;->getTextMetricsParams()Landroid/text/PrecomputedText$Params;
 
-    iput p1, p0, Lxhg;->X:I
+    move-result-object p0
 
-    iget-object p1, p0, Lxhg;->o:Leld;
+    return-object p0
+.end method
 
-    invoke-virtual {p1, p0}, Leld;->g(Lp14;)Ljava/lang/Comparable;
+.method public static d(Landroid/widget/TextView;I)V
+    .locals 0
 
-    move-result-object p1
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFirstBaselineToTopHeight(I)V
 
-    return-object p1
+    return-void
 .end method

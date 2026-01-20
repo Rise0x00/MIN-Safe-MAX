@@ -1,69 +1,35 @@
-.class public abstract Luh4;
+.class public interface abstract Luh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Landroid/util/SparseIntArray;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Landroid/util/SparseIntArray;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Landroid/util/SparseIntArray;-><init>(I)V
-
-    sput-object v0, Luh4;->a:Landroid/util/SparseIntArray;
-
-    return-void
+# virtual methods
+.method public abstract B()J
 .end method
 
-.method public static final a()Lrvb;
-    .locals 5
+.method public abstract C(J)J
+.end method
 
-    new-instance v0, Lrvb;
+.method public abstract D(JJ)J
+.end method
 
-    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+.method public abstract a(J)J
+.end method
 
-    move-result-object v1
+.method public abstract d(JJ)J
+.end method
 
-    invoke-virtual {v1}, Ljava/lang/Runtime;->maxMemory()J
+.method public abstract g(JJ)J
+.end method
 
-    move-result-wide v1
+.method public abstract j(JJ)J
+.end method
 
-    const-wide/32 v3, 0x7fffffff
+.method public abstract k(J)Lthd;
+.end method
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(JJ)J
+.method public abstract u(JJ)J
+.end method
 
-    move-result-wide v1
-
-    long-to-int v1, v1
-
-    const/high16 v2, 0x1000000
-
-    if-le v1, v2, :cond_0
-
-    div-int/lit8 v1, v1, 0x4
-
-    mul-int/lit8 v1, v1, 0x3
-
-    goto :goto_0
-
-    :cond_0
-    div-int/lit8 v1, v1, 0x2
-
-    :goto_0
-    sget-object v2, Luh4;->a:Landroid/util/SparseIntArray;
-
-    const/4 v3, -0x1
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v4, v1, v2, v3}, Lrvb;-><init>(IILandroid/util/SparseIntArray;I)V
-
-    return-object v0
+.method public abstract z()Z
 .end method

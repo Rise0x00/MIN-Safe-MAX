@@ -1,125 +1,243 @@
-.class public final Lfn1;
-.super Logf;
+.class public final synthetic Lfn1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic X:Ltn1;
+.field public final synthetic X:Lfp1;
 
-.field public final synthetic Y:I
+.field public final synthetic a:Landroid/animation/ObjectAnimator;
 
-.field public final synthetic Z:Landroid/os/Bundle;
+.field public final synthetic b:Lhn1;
 
-.field public o:I
+.field public final synthetic c:Z
+
+.field public final synthetic d:Landroid/view/View;
+
+.field public final synthetic o:Landroid/graphics/PointF;
 
 
 # direct methods
-.method public constructor <init>(Ltn1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Landroid/animation/ObjectAnimator;Lhn1;ZLandroid/view/View;Landroid/graphics/PointF;Lfp1;)V
     .locals 0
 
-    iput-object p1, p0, Lfn1;->X:Ltn1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Lfn1;->Y:I
+    iput-object p1, p0, Lfn1;->a:Landroid/animation/ObjectAnimator;
 
-    iput-object p3, p0, Lfn1;->Z:Landroid/os/Bundle;
+    iput-object p2, p0, Lfn1;->b:Lhn1;
 
-    const/4 p1, 0x2
+    iput-boolean p3, p0, Lfn1;->c:Z
 
-    invoke-direct {p0, p1, p4}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p4, p0, Lfn1;->d:Landroid/view/View;
+
+    iput-object p5, p0, Lfn1;->o:Landroid/graphics/PointF;
+
+    iput-object p6, p0, Lfn1;->X:Lfp1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 10
 
-    check-cast p1, Lg54;
+    iget-object p1, p0, Lfn1;->b:Lhn1;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Lhn1;->w0:Lo58;
 
-    invoke-virtual {p0, p1, p2}, Lfn1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget v1, Lhn1;->x0:I
 
-    move-result-object p1
+    iget-wide v1, p1, Lih;->d:J
 
-    check-cast p1, Lfn1;
+    iget-object p1, p0, Lfn1;->a:Landroid/animation/ObjectAnimator;
 
-    sget-object p2, Lybg;->a:Lybg;
+    invoke-virtual {p1, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    invoke-virtual {p1, p2}, Lfn1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v1, p0, Lfn1;->c:Z
 
-    move-result-object p1
+    const/4 v2, 0x1
 
-    return-object p1
-.end method
+    if-eqz v1, :cond_0
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    new-instance p1, Lfn1;
+    move-result p1
 
-    iget v0, p0, Lfn1;->Y:I
-
-    iget-object v1, p0, Lfn1;->Z:Landroid/os/Bundle;
-
-    iget-object v2, p0, Lfn1;->X:Ltn1;
-
-    invoke-direct {p1, v2, v0, v1, p2}, Lfn1;-><init>(Ltn1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lfn1;->o:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    int-to-float v3, v2
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result p1
 
-    throw p1
+    sub-float p1, v3, p1
+
+    :goto_0
+    iget-object v3, p0, Lfn1;->d:Landroid/view/View;
+
+    invoke-virtual {v3}, Landroid/view/View;->getWidth()I
+
+    move-result v4
+
+    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    iget-object v6, p0, Lfn1;->o:Landroid/graphics/PointF;
+
+    iget v7, v6, Landroid/graphics/PointF;->x:F
+
+    int-to-float v2, v2
+
+    sub-float/2addr v2, p1
+
+    mul-float v8, v7, v2
+
+    iget v9, v6, Landroid/graphics/PointF;->y:F
+
+    mul-float/2addr v9, v2
+
+    invoke-static {v7, v8}, Ljava/lang/Math;->min(FF)F
+
+    move-result v2
+
+    iget v7, v6, Landroid/graphics/PointF;->y:F
+
+    invoke-static {v7, v9}, Ljava/lang/Math;->min(FF)F
+
+    move-result v7
+
+    int-to-float v4, v4
+
+    mul-float/2addr v4, p1
+
+    int-to-float v5, v5
+
+    mul-float/2addr v5, p1
+
+    iget p1, v6, Landroid/graphics/PointF;->x:F
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lie1;
+
+    check-cast v8, Lje1;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v8, Lo9c;->a:Lq9c;
+
+    iget v8, v8, Lq9c;->b:I
+
+    int-to-float v8, v8
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v9
+
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v8, v9
+
+    invoke-static {v8}, Lq7j;->c(F)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    add-float/2addr p1, v8
+
+    invoke-static {p1, v4}, Ljava/lang/Math;->max(FF)F
+
+    move-result p1
+
+    iget v4, v6, Landroid/graphics/PointF;->y:F
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lie1;
+
+    check-cast v0, Lje1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v0, Lo9c;->a:Lq9c;
+
+    iget v0, v0, Lq9c;->a:I
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v6
+
+    invoke-static {v0}, Lq7j;->c(F)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    add-float/2addr v4, v0
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    new-instance v4, Landroid/graphics/RectF;
+
+    invoke-direct {v4, v2, v7, p1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iget-object p1, p0, Lfn1;->X:Lfp1;
+
+    if-eqz p1, :cond_1
+
+    invoke-interface {p1, v4, v1}, Lfp1;->d(Landroid/graphics/RectF;Z)V
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    new-instance p1, Landroid/graphics/Rect;
 
-    iget-object p1, p0, Lfn1;->X:Ltn1;
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iget-object p1, p1, Ltn1;->Z:Lhr1;
+    invoke-virtual {v4, p1}, Landroid/graphics/RectF;->roundOut(Landroid/graphics/Rect;)V
 
-    iput v1, p0, Lfn1;->o:I
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    iget v0, p0, Lfn1;->Y:I
+    move-result-object v0
 
-    iget-object v1, p0, Lfn1;->Z:Landroid/os/Bundle;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    invoke-virtual {p1, v0, v1, p0}, Lhr1;->c(ILandroid/os/Bundle;Lp14;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    sget-object v0, Lh54;->a:Lh54;
+    const/high16 v1, 0x41a00000    # 20.0f
 
-    if-ne p1, v0, :cond_2
+    mul-float/2addr v0, v1
 
-    return-object v0
+    invoke-static {v3, p1, v0}, Lcth;->c(Landroid/view/View;Landroid/graphics/Rect;F)V
 
-    :cond_2
-    return-object p1
+    return-void
 .end method

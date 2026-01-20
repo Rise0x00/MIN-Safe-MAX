@@ -1,152 +1,133 @@
-.class public final synthetic Ljch;
+.class public final Ljch;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lln6;
 
+# instance fields
+.field public final a:[I
 
-# static fields
-.field public static final a:Ljch;
-
-.field private static final descriptor:Lo3e;
+.field public final b:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>([IF)V
+    .locals 0
 
-    new-instance v0, Ljch;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljch;->a:[I
 
-    sput-object v0, Ljch;->a:Ljch;
-
-    new-instance v1, Lfvb;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenLinkRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lfvb;-><init>(Ljava/lang/String;Lln6;I)V
-
-    const-string v0, "url"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lfvb;->k(Ljava/lang/String;Z)V
-
-    sput-object v1, Ljch;->descriptor:Lo3e;
+    iput p2, p0, Ljch;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Le9;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object v0, Ljch;->descriptor:Lo3e;
-
-    invoke-virtual {p1, v0}, Le9;->k(Lo3e;)Le9;
-
-    move-result-object p1
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move v4, v1
-
-    move v5, v2
-
-    :goto_0
-    if-eqz v4, :cond_2
-
-    invoke-virtual {p1, v0}, Le9;->q(Lo3e;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_1
-
-    if-nez v6, :cond_0
-
-    invoke-virtual {p1, v0, v2}, Le9;->w(Lo3e;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    move v5, v1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p1, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p1, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p1
-
-    :cond_1
-    move v4, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, v0}, Le9;->z(Lo3e;)V
-
-    new-instance p1, Llch;
-
-    invoke-direct {p1, v5, v3}, Llch;-><init>(ILjava/lang/String;)V
-
-    return-object p1
-.end method
-
-.method public final b(Lf24;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Llch;
-
-    sget-object v0, Ljch;->descriptor:Lo3e;
-
-    invoke-virtual {p1, v0}, Lf24;->b(Lo3e;)Lf24;
-
-    move-result-object p1
-
-    iget-object p2, p2, Llch;->a:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1, p2}, Lf24;->l(Lo3e;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lf24;->m()V
-
-    return-void
-.end method
-
-.method public final c()[Lfs7;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lfs7;
+    if-ne p0, p1, :cond_0
 
-    sget-object v1, Ltaf;->a:Ltaf;
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljch;
 
     const/4 v2, 0x0
 
-    aput-object v1, v0, v2
+    if-nez v1, :cond_1
 
-    return-object v0
+    return v2
+
+    :cond_1
+    check-cast p1, Ljch;
+
+    iget-object v1, p0, Ljch;->a:[I
+
+    iget-object v3, p1, Ljch;->a:[I
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget v1, p0, Ljch;->b:F
+
+    iget p1, p1, Ljch;->b:F
+
+    invoke-static {v1, p1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final d()Lo3e;
-    .locals 1
+.method public final hashCode()I
+    .locals 2
 
-    sget-object v0, Ljch;->descriptor:Lo3e;
+    iget-object v0, p0, Ljch;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Ljch;->b:F
+
+    invoke-static {v1}, Ljava/lang/Float;->hashCode(F)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Ljch;->a:[I
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Gradient(colors="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", angle="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v0, p0, Ljch;->b:F
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

@@ -3,79 +3,54 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static b:Lywa;
 
-.field public final b:Lru7;
+
+# instance fields
+.field public a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lru7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lywa;->a:Landroid/content/Context;
+    .line 3
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p2, p0, Lywa;->b:Lru7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lywa;->a:Ljava/lang/Object;
+
+    .line 4
+    new-instance v0, Landroid/os/Handler;
+
+    .line 5
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    new-instance v2, Lhif;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3, p0}, Lhif;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-# virtual methods
-.method public final a(J)V
-    .locals 2
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ":chats?id="
-
-    const-string v1, "&type=local"
-
-    invoke-static {p1, p2, v0, v1}, Lo3h;->f(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Lywa;->b:Lru7;
-
-    invoke-interface {p2}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lkm;
-
-    check-cast p2, Lz18;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Lsxi;->a(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object p1
-
-    sget p2, Lone/me/android/deeplink/NewWidgetActivity;->U0:I
-
-    new-instance p2, Landroid/content/Intent;
-
-    const-class v0, Lone/me/android/deeplink/NewWidgetActivity;
-
-    iget-object v1, p0, Lywa;->a:Landroid/content/Context;
-
-    invoke-direct {p2, v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v0, "deep_link"
-
-    invoke-virtual {p2, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string p1, "snackbar"
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const/high16 p1, 0x10000000
-
-    invoke-virtual {p2, p1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
-
-    invoke-virtual {v1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    iput-object p1, p0, Lywa;->a:Ljava/lang/Object;
 
     return-void
 .end method

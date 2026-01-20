@@ -1,166 +1,253 @@
-.class public final Luz4;
+.class public abstract Luz4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Luz4;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Ldd4;
+    const-string v0, "DiagnosticsWrkr"
 
-    const/4 v1, 0x4
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ldd4;-><init>(I)V
+    move-result-object v0
 
-    sput-object v0, Luz4;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Luz4;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 6
+.method public static final a(Lzii;Llji;Le9g;Ljava/util/ArrayList;)Ljava/lang/String;
+    .locals 17
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-wide v0
+    const-string v1, "\n Id \t Class Name\t Job Id\t State\t Unique Name\t Tags\t"
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-wide v2
+    invoke-virtual/range {p3 .. p3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v1
 
-    const-wide/16 v4, 0x0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    cmp-long p1, v2, v4
+    move-result v2
 
-    if-gez p1, :cond_1
+    if-eqz v2, :cond_4
 
-    const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    cmp-long p1, v2, v4
+    move-result-object v2
 
-    if-nez p1, :cond_0
+    check-cast v2, Lhji;
 
-    goto :goto_0
+    invoke-static {v2}, Lx8j;->a(Lhji;)Lmii;
+
+    move-result-object v3
+
+    iget-object v4, v2, Lhji;->a:Ljava/lang/String;
+
+    move-object/from16 v5, p2
+
+    invoke-virtual {v5, v3}, Le9g;->H(Lmii;)Lc9g;
+
+    move-result-object v3
+
+    const/4 v6, 0x0
+
+    if-eqz v3, :cond_0
+
+    iget v3, v3, Lc9g;->c:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    :goto_1
+    move-object/from16 v7, p0
+
+    goto :goto_2
 
     :cond_0
-    const/4 p1, 0x0
+    move-object v3, v6
 
     goto :goto_1
 
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
+    :goto_2
+    iget-object v8, v7, Lzii;->a:Ljava/lang/Object;
 
-    :goto_1
-    invoke-static {p1}, Ligi;->c(Z)V
+    check-cast v8, Landroidx/work/impl/WorkDatabase_Impl;
 
-    iput-wide v0, p0, Luz4;->a:J
+    sget-object v9, Lz2e;->t0:Ljava/util/TreeMap;
 
-    iput-wide v2, p0, Luz4;->b:J
+    const/4 v9, 0x1
 
-    return-void
-.end method
+    const-string v10, "SELECT name FROM workname WHERE work_spec_id=?"
 
+    invoke-static {v9, v10}, Ltmj;->a(ILjava/lang/String;)Lz2e;
 
-# virtual methods
-.method public final describeContents()I
-    .locals 1
+    move-result-object v10
 
-    const/4 v0, 0x0
+    if-nez v4, :cond_1
 
-    return v0
-.end method
+    invoke-virtual {v10, v9}, Lz2e;->e(I)V
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
-
-    instance-of v0, p1, Luz4;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    check-cast p1, Luz4;
-
-    iget-wide v2, p0, Luz4;->a:J
-
-    iget-wide v4, p1, Luz4;->a:J
-
-    cmp-long v0, v2, v4
-
-    if-nez v0, :cond_1
-
-    iget-wide v2, p0, Luz4;->b:J
-
-    iget-wide v4, p1, Luz4;->b:J
-
-    cmp-long p1, v2, v4
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    return p1
+    goto :goto_3
 
     :cond_1
-    return v1
-.end method
+    invoke-virtual {v10, v9, v4}, Lz2e;->i(ILjava/lang/String;)V
 
-.method public final hashCode()I
-    .locals 3
+    :goto_3
+    invoke-virtual {v8}, Lb2e;->b()V
 
-    iget-wide v0, p0, Luz4;->a:J
+    const/4 v9, 0x0
 
-    long-to-int v0, v0
+    invoke-static {v8, v10, v9}, Lulj;->g(Lb2e;La5g;Z)Landroid/database/Cursor;
 
-    mul-int/lit16 v0, v0, 0x3c1
+    move-result-object v8
 
-    iget-wide v1, p0, Luz4;->b:J
+    :try_start_0
+    new-instance v11, Ljava/util/ArrayList;
 
-    long-to-int v1, v1
+    invoke-interface {v8}, Landroid/database/Cursor;->getCount()I
 
-    add-int/2addr v0, v1
+    move-result v12
 
-    return v0
-.end method
+    invoke-direct {v11, v12}, Ljava/util/ArrayList;-><init>(I)V
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+    :goto_4
+    invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
 
-    iget-wide v0, p0, Luz4;->a:J
+    move-result v12
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    if-eqz v12, :cond_3
 
-    iget-wide v0, p0, Luz4;->b:J
+    invoke-interface {v8, v9}, Landroid/database/Cursor;->isNull(I)Z
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    move-result v12
 
-    return-void
+    if-eqz v12, :cond_2
+
+    move-object v12, v6
+
+    goto :goto_5
+
+    :cond_2
+    invoke-interface {v8, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v12
+
+    :goto_5
+    invoke-virtual {v11, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_4
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_6
+
+    :cond_3
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v10}, Lz2e;->H()V
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x3e
+
+    const-string v12, ","
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    invoke-static/range {v11 .. v16}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+
+    move-result-object v6
+
+    move-object/from16 v9, p1
+
+    invoke-virtual {v9, v4}, Llji;->j(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object v10
+
+    const/16 v15, 0x3e
+
+    const-string v11, ","
+
+    const/4 v12, 0x0
+
+    invoke-static/range {v10 .. v15}, Lpi3;->K(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lnq6;I)Ljava/lang/String;
+
+    move-result-object v8
+
+    const-string v10, "\n"
+
+    const-string v11, "\t "
+
+    invoke-static {v10, v4, v11}, Lt02;->l(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v10, v2, Lhji;->c:Ljava/lang/String;
+
+    invoke-virtual {v4, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v2, Lhji;->b:Lnii;
+
+    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x9
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto/16 :goto_0
+
+    :goto_6
+    invoke-interface {v8}, Landroid/database/Cursor;->close()V
+
+    invoke-virtual {v10}, Lz2e;->H()V
+
+    throw v0
+
+    :cond_4
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,23 +1,14 @@
-.class public abstract Lpp;
+.class public interface abstract Lpp;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Ljava/lang/String;)Landroid/os/LocaleList;
-    .locals 0
-
-    invoke-static {p0}, Landroid/os/LocaleList;->forLanguageTags(Ljava/lang/String;)Landroid/os/LocaleList;
-
-    move-result-object p0
-
-    return-object p0
+# virtual methods
+.method public abstract e(I)V
 .end method
 
-.method public static b(Landroid/widget/TextView;Landroid/os/LocaleList;)V
-    .locals 0
+.method public abstract f(I)V
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextLocales(Landroid/os/LocaleList;)V
-
-    return-void
+.method public abstract g(IF)V
 .end method

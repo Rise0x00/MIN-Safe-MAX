@@ -1,195 +1,141 @@
-.class public final Lvaa;
-.super Lmmf;
+.class public abstract Lvaa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ld1a;
-
-.field public final c:J
-
-.field public final d:Lx0a;
-
-.field public final o:Ljava/util/List;
-
-
 # direct methods
-.method public constructor <init>(JLx0a;Ljava/util/List;Ld1a;)V
-    .locals 0
+.method public static a([B)Lwaa;
+    .locals 21
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;
 
-    iput-wide p1, p0, Lvaa;->c:J
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$MsgEdit;-><init>()V
 
-    iput-object p3, p0, Lvaa;->d:Lx0a;
+    move-object/from16 v1, p0
 
-    iput-object p4, p0, Lvaa;->o:Ljava/util/List;
-
-    iput-object p5, p0, Lvaa;->X:Ld1a;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvaa;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvaa;
-
-    iget-wide v3, p0, Lvaa;->c:J
-
-    iget-wide v5, p1, Lvaa;->c:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lvaa;->d:Lx0a;
-
-    iget-object v3, p1, Lvaa;->d:Lx0a;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lvaa;->o:Ljava/util/List;
-
-    iget-object v3, p1, Lvaa;->o:Ljava/util/List;
-
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lvaa;->X:Ld1a;
-
-    iget-object p1, p1, Lvaa;->X:Ld1a;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lvaa;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lvaa;->d:Lx0a;
-
-    invoke-virtual {v2}, Lx0a;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lvaa;->o:Ljava/util/List;
-
-    invoke-static {v0, v2, v1}, Lijf;->n(Ljava/util/List;II)I
-
-    move-result v0
-
-    iget-object v1, p0, Lvaa;->X:Ld1a;
-
-    invoke-virtual {v1}, Ld1a;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Response(folderSync="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lvaa;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", folders="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvaa;->d:Lx0a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", foldersOrder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvaa;->o:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allFilterExcludeFolders="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lvaa;->X:Ld1a;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_start_0
+    invoke-static {v0, v1}, Lbp9;->mergeFrom(Lbp9;[B)Lbp9;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldAttaches:Lru/ok/tamtam/nano/Protos$Attaches;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    invoke-static {v1}, Lru/ok/tamtam/nano/a;->e(Lru/ok/tamtam/nano/Protos$Attaches;)Lk20;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lk20;->a:Ljava/util/List;
+
+    move-object/from16 v17, v1
+
+    goto :goto_0
+
+    :cond_0
+    move-object/from16 v17, v2
+
+    :goto_0
+    iget-object v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldElements:Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Lru/ok/tamtam/nano/Protos$MessageElements;->elements:[Lru/ok/tamtam/nano/Protos$MessageElement;
+
+    invoke-static {v1}, Lum9;->a([Lru/ok/tamtam/nano/Protos$MessageElement;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    :cond_1
+    move-object/from16 v18, v2
+
+    new-instance v3, Lwaa;
+
+    iget-wide v4, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->requestId:J
+
+    iget-wide v6, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatId:J
+
+    iget-wide v8, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageId:J
+
+    iget-wide v10, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->chatServerId:J
+
+    iget-wide v12, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->messageServerId:J
+
+    iget-object v14, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->text:Ljava/lang/String;
+
+    iget-object v15, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldText:Ljava/lang/String;
+
+    iget v1, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->oldStatus:I
+
+    const/4 v2, 0x4
+
+    invoke-static {v2}, Lt02;->w(I)[I
+
+    move-result-object v2
+
+    move-object/from16 p0, v3
+
+    array-length v3, v2
+
+    const/16 v16, 0x0
+
+    move-object/from16 v19, v2
+
+    :goto_1
+    move/from16 v2, v16
+
+    if-ge v2, v3, :cond_3
+
+    aget v16, v19, v2
+
+    move/from16 v20, v2
+
+    invoke-static/range {v16 .. v16}, Lva9;->c(I)I
+
+    move-result v2
+
+    if-ne v2, v1, :cond_2
+
+    iget-boolean v0, v0, Lru/ok/tamtam/nano/Tasks$MsgEdit;->editAttaches:Z
+
+    move-object/from16 v3, p0
+
+    move/from16 v19, v0
+
+    invoke-direct/range {v3 .. v19}, Lwaa;-><init>(JJJJJLjava/lang/String;Ljava/lang/String;ILjava/util/List;Ljava/util/List;Z)V
+
+    move-object v2, v3
+
+    return-object v2
+
+    :cond_2
+    move-object/from16 v2, p0
+
+    add-int/lit8 v16, v20, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    const-string v1, "Array contains no element matching the predicate."
+
+    invoke-direct {v0, v1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

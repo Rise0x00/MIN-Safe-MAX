@@ -1,78 +1,41 @@
-.class public final synthetic Lzlb;
+.class public interface abstract Lzlb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/location/map/pick/PickLocationScreen;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lone/me/location/map/pick/PickLocationScreen;I)V
-    .locals 0
-
-    iput p2, p0, Lzlb;->a:I
-
-    iput-object p1, p0, Lzlb;->b:Lone/me/location/map/pick/PickLocationScreen;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public abstract a()Ln13;
+.end method
 
-    iget p1, p0, Lzlb;->a:I
+.method public abstract b()Lxf0;
+.end method
 
-    iget-object v0, p0, Lzlb;->b:Lone/me/location/map/pick/PickLocationScreen;
+.method public abstract c()Leqf;
+.end method
 
-    packed-switch p1, :pswitch_data_0
+.method public abstract d()Ll17;
+.end method
 
-    sget-object p1, Lone/me/location/map/pick/PickLocationScreen;->v0:[Les7;
+.method public abstract e()Lr4;
+.end method
 
-    invoke-virtual {v0}, Lone/me/location/map/pick/PickLocationScreen;->z0()Llmb;
+.method public abstract f(I)I
+.end method
 
-    move-result-object p1
+.method public abstract g()Lzdh;
+.end method
 
-    iget-object v0, p1, Ljzg;->a:Lkotlinx/coroutines/internal/ContextScope;
+.method public abstract getIcon()Lwe7;
+.end method
 
-    new-instance v1, Ljmb;
+.method public abstract getName()Ljava/lang/String;
+.end method
 
-    const/4 v2, 0x0
+.method public abstract getText()Lrfg;
+.end method
 
-    invoke-direct {v1, p1, v2}, Ljmb;-><init>(Llmb;Lkotlin/coroutines/Continuation;)V
+.method public abstract h()Lcj3;
+.end method
 
-    const/4 p1, 0x3
-
-    invoke-static {v0, v2, v2, v1, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/location/map/pick/PickLocationScreen;->v0:[Les7;
-
-    invoke-virtual {v0}, Lone/me/location/map/pick/PickLocationScreen;->z0()Llmb;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0, v0}, Llmb;->u(ZZ)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract i()Lb0g;
 .end method

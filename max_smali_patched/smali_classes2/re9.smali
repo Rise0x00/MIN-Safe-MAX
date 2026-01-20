@@ -1,55 +1,64 @@
 .class public final Lre9;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lue9;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lte9;
-
-.field public Z:I
-
-.field public d:Lte9;
-
-.field public o:Lhyc;
+# static fields
+.field public static final a:Lre9;
 
 
 # direct methods
-.method public constructor <init>(Lte9;Lp14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lre9;->Y:Lte9;
+    new-instance v0, Lre9;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lre9;->a:Lre9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lre9;->X:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lre9;->Z:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p1, p1, Lre9;
 
-    iput p1, p0, Lre9;->Z:I
-
-    const-wide/16 v0, 0x0
+    if-nez p1, :cond_1
 
     const/4 p1, 0x0
 
-    iget-object v2, p0, Lre9;->Y:Lte9;
+    return p1
 
-    invoke-virtual {v2, v0, v1, p1, p0}, Lte9;->d(JLhyc;Lp14;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 1
 
-    return-object p1
+    const v0, -0x78451a1f
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "CloseAndScrollChat"
+
+    return-object v0
 .end method

@@ -1,13 +1,10 @@
 .class public final Lvo1;
-.super Ljava/lang/Object;
+.super Lcp1;
 .source "SourceFile"
-
-# interfaces
-.implements Lwo1;
 
 
 # static fields
-.field public static final a:Lvo1;
+.field public static final D:Lvo1;
 
 
 # direct methods
@@ -16,9 +13,9 @@
 
     new-instance v0, Lvo1;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcp1;-><init>()V
 
-    sput-object v0, Lvo1;->a:Lvo1;
+    sput-object v0, Lvo1;->D:Lvo1;
 
     return-void
 .end method
@@ -50,7 +47,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, -0x42ba2470
+    const v0, 0x7f1049e7
 
     return v0
 .end method
@@ -58,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "Show"
+    const-string v0, "RecordStopDialog"
 
     return-object v0
 .end method

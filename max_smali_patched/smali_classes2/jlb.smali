@@ -1,146 +1,51 @@
 .class public final Ljlb;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ltif;
+.field public final synthetic X:Lklb;
 
-.field public final b:Ltif;
+.field public Y:I
 
-.field public final c:Ltif;
+.field public d:Ljava/util/Iterator;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lru7;)V
-    .locals 2
+.method public constructor <init>(Lklb;Lo84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljlb;->X:Lklb;
 
-    new-instance v0, Lilb;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p2, p1, v1}, Lilb;-><init>(Lru7;Landroid/content/Context;I)V
-
-    new-instance v1, Ltif;
-
-    invoke-direct {v1, v0}, Ltif;-><init>(Loi6;)V
-
-    iput-object v1, p0, Ljlb;->a:Ltif;
-
-    new-instance v0, Lilb;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p2, p1, v1}, Lilb;-><init>(Lru7;Landroid/content/Context;I)V
-
-    new-instance p1, Ltif;
-
-    invoke-direct {p1, v0}, Ltif;-><init>(Loi6;)V
-
-    iput-object p1, p0, Ljlb;->b:Ltif;
-
-    new-instance p1, Ly4b;
-
-    const/16 p2, 0x8
-
-    invoke-direct {p1, p2, p0}, Ly4b;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Ltif;
-
-    invoke-direct {p2, p1}, Ltif;-><init>(Loi6;)V
-
-    iput-object p2, p0, Ljlb;->c:Ltif;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)Lwcd;
-    .locals 4
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Ljlb;->b:Ltif;
+    iput-object p1, p0, Ljlb;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ltif;->getValue()Ljava/lang/Object;
+    iget p1, p0, Ljlb;->Y:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    check-cast v0, Ljava/lang/Number;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    iput p1, p0, Ljlb;->Y:I
 
-    move-result v0
+    iget-object p1, p0, Ljlb;->X:Lklb;
 
-    iget-object v1, p0, Ljlb;->a:Ltif;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, v0, p0}, Lklb;->m(Ldlb;Ljava/io/File;Lo84;)Ljava/lang/Object;
 
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    mul-int v1, p2, p1
-
-    mul-int v2, v0, v0
-
-    if-ge v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-gt p2, v0, :cond_1
-
-    if-gt p1, v0, :cond_1
-
-    :goto_0
-    const/4 p1, 0x0
+    move-result-object p1
 
     return-object p1
-
-    :cond_1
-    if-le p2, p1, :cond_2
-
-    int-to-float v1, v0
-
-    int-to-float p1, p1
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    mul-float/2addr p1, v1
-
-    float-to-int p1, p1
-
-    move v3, v0
-
-    move v0, p1
-
-    move p1, v3
-
-    goto :goto_1
-
-    :cond_2
-    int-to-float v1, v0
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    mul-float/2addr p2, v1
-
-    float-to-int p1, p2
-
-    :goto_1
-    new-instance p2, Lwcd;
-
-    invoke-direct {p2, v0, p1}, Lwcd;-><init>(II)V
-
-    return-object p2
 .end method

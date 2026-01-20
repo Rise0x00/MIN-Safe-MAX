@@ -1,140 +1,26 @@
-.class public final Lr8d;
-.super Logf;
-.source "SourceFile"
-
-# interfaces
-.implements Lej6;
+.class public abstract Lr8d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+# static fields
+.field public static fake_in_app_review_bottom_sheet_rate_view:I = 0x7f0a035b
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static fake_in_app_review_bottom_sheet_rate_view_icon:I = 0x7f0a035c
 
+.field public static fake_in_app_review_bottom_sheet_rate_view_not_now_btn:I = 0x7f0a035d
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
-    .locals 0
+.field public static fake_in_app_review_bottom_sheet_rate_view_rating_bar:I = 0x7f0a035e
 
-    iput-object p2, p0, Lr8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
+.field public static fake_in_app_review_bottom_sheet_rate_view_send_btn:I = 0x7f0a035f
 
-    const/4 p2, 0x2
+.field public static fake_in_app_review_bottom_sheet_rate_view_subtitle:I = 0x7f0a0360
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static fake_in_app_review_bottom_sheet_rate_view_title:I = 0x7f0a0361
 
-    return-void
-.end method
+.field public static fake_in_app_review_bottom_sheet_thank_view:I = 0x7f0a0362
 
+.field public static fake_in_app_review_bottom_sheet_thank_view_close_btn:I = 0x7f0a0363
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static fake_in_app_review_bottom_sheet_thank_view_icon:I = 0x7f0a0364
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lr8d;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lr8d;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lr8d;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lr8d;
-
-    iget-object v1, p0, Lr8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
-
-    invoke-direct {v0, p2, v1}, Lr8d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;)V
-
-    iput-object p1, v0, Lr8d;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lr8d;->o:Ljava/lang/Object;
-
-    check-cast p1, Lx0e;
-
-    iget-object p1, p1, Lx0e;->a:Lw0e;
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    :goto_0
-    instance-of p1, p1, Lu0e;
-
-    iget-object v2, p0, Lr8d;->X:Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;
-
-    iget-object v3, v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->v0:Ld0d;
-
-    sget-object v4, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->D0:[Les7;
-
-    const/4 v5, 0x6
-
-    aget-object v5, v4, v5
-
-    invoke-interface {v3, v2, v5}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/TextView;
-
-    if-eqz v1, :cond_2
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget p1, Lwsc;->oneme_registration_neuro_avatars_change_photo:I
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    sget p1, Lwsc;->oneme_registration_neuro_avatars_choose_photo:I
-
-    :goto_2
-    invoke-virtual {v3, p1}, Landroid/widget/TextView;->setText(I)V
-
-    iget-object p1, v2, Lone/me/login/neuroavatars/RegistrationNeuroAvatarsScreen;->s0:Ld0d;
-
-    const/4 v3, 0x3
-
-    aget-object v3, v4, v3
-
-    invoke-interface {p1, v2, v3}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Luf;
-
-    iput-boolean v0, p1, Luf;->c:Z
-
-    invoke-virtual {p1, v1}, Luf;->setEnabled(Z)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
-.end method
+.field public static fake_in_app_review_bottom_sheet_thank_view_title:I = 0x7f0a0365

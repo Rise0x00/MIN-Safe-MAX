@@ -1,64 +1,61 @@
 .class public final Lja3;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lma3;
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+.field public final synthetic Z:Lla3;
+
+.field public d:J
+
+.field public o:Ljava/util/Set;
+
+.field public t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lma3;Landroid/graphics/drawable/Drawable;I)V
+.method public constructor <init>(Lla3;Lo84;)V
     .locals 0
 
-    iput p3, p0, Lja3;->a:I
+    iput-object p1, p0, Lja3;->Z:Lla3;
 
-    iput-object p1, p0, Lja3;->b:Lma3;
-
-    iput-object p2, p0, Lja3;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lja3;->a:I
+    iput-object p1, p0, Lja3;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lja3;->t0:I
 
-    iget-object v0, p0, Lja3;->b:Lma3;
+    const/high16 v0, -0x80000000
 
-    iget-object v1, p0, Lja3;->c:Landroid/graphics/drawable/Drawable;
+    or-int/2addr p1, v0
 
-    invoke-static {v0, v1}, Lma3;->z(Lma3;Landroid/graphics/drawable/Drawable;)V
+    iput p1, p0, Lja3;->t0:I
 
-    return-void
+    const/4 v3, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lja3;->b:Lma3;
+    const/4 v4, 0x0
 
-    iget-object v1, p0, Lja3;->c:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lja3;->Z:Lla3;
 
-    invoke-static {v0, v1}, Lma3;->x(Lma3;Landroid/graphics/drawable/Drawable;)V
+    const-wide/16 v1, 0x0
 
-    return-void
+    move-object v5, p0
 
-    nop
+    invoke-virtual/range {v0 .. v5}, Lla3;->x(JLjava/util/Set;ILo84;)Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    return-object p1
 .end method

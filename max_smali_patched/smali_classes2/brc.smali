@@ -1,70 +1,175 @@
-.class public abstract Lbrc;
-.super Ljava/lang/Object;
+.class public final Lbrc;
+.super Lp6g;
+.source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
-# static fields
-.field public static auth_call_code_hint:I = 0x7f110000
+# instance fields
+.field public final synthetic X:Lhrc;
 
-.field public static auth_call_description:I = 0x7f110001
+.field public o:I
 
-.field public static call_dialog_participants:I = 0x7f110002
 
-.field public static call_dialog_participants_when_join:I = 0x7f110003
+# direct methods
+.method public constructor <init>(Lhrc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static call_history_dlg_delete:I = 0x7f110004
+    iput-object p1, p0, Lbrc;->X:Lhrc;
 
-.field public static delete_favorite_sticker_question:I = 0x7f11000d
+    const/4 p1, 0x2
 
-.field public static delete_recent_sticker_question:I = 0x7f11000e
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static field_length_exceeded_error:I = 0x7f110011
+    return-void
+.end method
 
-.field public static folder_filtered_title_bot_plural:I = 0x7f110012
 
-.field public static folder_filtered_title_channel_plural:I = 0x7f110013
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static folder_filtered_title_chat_plural:I = 0x7f110014
+    check-cast p1, Lzb4;
 
-.field public static folder_filtered_title_contact_plural:I = 0x7f110015
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static folder_filtered_title_not_contact_plural:I = 0x7f110016
+    invoke-virtual {p0, p1, p2}, Lbrc;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static inactive_ttl:I = 0x7f110018
+    move-result-object p1
 
-.field public static max_attach_count_error:I = 0x7f11001a
+    check-cast p1, Lbrc;
 
-.field public static max_favorite_sticker_sets_count_reached:I = 0x7f11001b
+    sget-object p2, Lb3h;->a:Lb3h;
 
-.field public static max_favorite_stickers_count_reached:I = 0x7f11001c
+    invoke-virtual {p1, p2}, Lbrc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static max_message_length_error:I = 0x7f11001d
+    move-result-object p1
 
-.field public static menu_copy_success:I = 0x7f11001e
+    return-object p1
+.end method
 
-.field public static message_compose_forward_or_share__forwarded_messages:I = 0x7f11001f
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static mutual_friends:I = 0x7f110021
+    new-instance p1, Lbrc;
 
-.field public static n_contacts:I = 0x7f110022
+    iget-object v0, p0, Lbrc;->X:Lhrc;
 
-.field public static phone_weight:I = 0x7f11002f
+    invoke-direct {p1, v0, p2}, Lbrc;-><init>(Lhrc;Lkotlin/coroutines/Continuation;)V
 
-.field public static pin_lock_wrong_code_with_attempts:I = 0x7f110034
+    return-object p1
+.end method
 
-.field public static question_delete_messages:I = 0x7f11003c
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-.field public static results_more:I = 0x7f11003d
+    iget-object v0, p0, Lbrc;->X:Lhrc;
 
-.field public static selected_messages:I = 0x7f11003e
+    iget-wide v1, v0, Lhrc;->b:J
 
-.field public static sticker_removed_from_favorites:I = 0x7f11003f
+    iget v3, p0, Lbrc;->o:I
 
-.field public static sticker_removed_from_recents:I = 0x7f110040
+    const/4 v4, 0x1
 
-.field public static sticker_set_description:I = 0x7f110041
+    if-eqz v3, :cond_1
 
-.field public static sticker_set_description_with_author:I = 0x7f110042
+    if-ne v3, v4, :cond_0
 
-.field public static to_chats:I = 0x7f110043
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.field public static you_sent_messages:I = 0x7f110073
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, v0, Lhrc;->v0:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lgy6;
+
+    new-instance v3, Lz0d;
+
+    sget-object v5, Lpc3;->t0:Lkme;
+
+    iget-object v6, v0, Lhrc;->c:Lo58;
+
+    invoke-interface {v6}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/content/Context;
+
+    invoke-virtual {v5, v6}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lpc3;->j()Lzlb;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lzlb;->getName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-direct {v3, v1, v2, v5}, Lb1d;-><init>(JLjava/lang/String;)V
+
+    iput v4, p0, Lbrc;->o:I
+
+    const/4 v5, 0x0
+
+    invoke-virtual {p1, v3, v4, v5, p0}, Lgy6;->b(Lb1d;ZILp6g;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v3, Lac4;->a:Lac4;
+
+    if-ne p1, v3, :cond_2
+
+    return-object v3
+
+    :cond_2
+    :goto_0
+    check-cast p1, Ls0d;
+
+    sget-object v3, Lb3h;->a:Lb3h;
+
+    if-eqz p1, :cond_3
+
+    iget-object p1, p1, Ls0d;->b:Landroid/graphics/Bitmap;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result p1
+
+    iget-object v0, v0, Lhrc;->F0:Lcm5;
+
+    sget-object v4, Lbtc;->c:Lbtc;
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v4, "chat"
+
+    invoke-static {v1, v2, v4, p1}, Lbtc;->R0(JLjava/lang/String;I)Lfm4;
+
+    move-result-object p1
+
+    invoke-static {v0, p1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    :cond_3
+    return-object v3
+.end method

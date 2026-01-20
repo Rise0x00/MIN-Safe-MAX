@@ -3,175 +3,110 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgla;
-.implements Lzv4;
+.implements Ljava/util/Comparator;
+
+
+# static fields
+.field public static final b:Lcja;
+
+.field public static final c:Lcja;
 
 
 # instance fields
-.field public final a:Lgla;
-
-.field public final b:Z
-
-.field public c:Lzv4;
-
-.field public d:J
-
-.field public o:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lgla;Z)V
+.method static synthetic constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcja;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcja;-><init>(I)V
+
+    sput-object v0, Lcja;->b:Lcja;
+
+    new-instance v0, Lcja;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lcja;-><init>(I)V
+
+    sput-object v0, Lcja;->c:Lcja;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lcja;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lcja;->a:Lgla;
-
-    iput-boolean p2, p0, Lcja;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;)V
-    .locals 4
-
-    iget-boolean v0, p0, Lcja;->o:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-wide v0, p0, Lcja;->d:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    if-nez v2, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcja;->o:Z
-
-    iget-object v0, p0, Lcja;->c:Lzv4;
-
-    invoke-interface {v0}, Lzv4;->dispose()V
-
-    iget-object v0, p0, Lcja;->a:Lgla;
-
-    invoke-interface {v0, p1}, Lgla;->b(Ljava/lang/Object;)V
-
-    invoke-interface {v0}, Lgla;->c()V
-
-    return-void
-
-    :cond_1
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lcja;->d:J
-
-    return-void
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-boolean v0, p0, Lcja;->o:Z
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcja;->o:Z
-
-    iget-boolean v0, p0, Lcja;->b:Z
-
-    iget-object v1, p0, Lcja;->a:Lgla;
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    invoke-interface {v1, v0}, Lgla;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-interface {v1}, Lgla;->c()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final d(Lzv4;)V
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    iget-object v0, p0, Lcja;->c:Lzv4;
+    iget v0, p0, Lcja;->a:I
 
-    invoke-static {v0, p1}, Ldw4;->i(Lzv4;Lzv4;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    check-cast p1, Ljava/lang/Comparable;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Ljava/lang/Comparable;
 
-    iput-object p1, p0, Lcja;->c:Lzv4;
+    invoke-interface {p2, p1}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
 
-    iget-object p1, p0, Lcja;->a:Lgla;
+    move-result p1
 
-    invoke-interface {p1, p0}, Lgla;->d(Lzv4;)V
+    return p1
 
-    :cond_0
-    return-void
+    :pswitch_0
+    check-cast p1, Ljava/lang/Comparable;
+
+    check-cast p2, Ljava/lang/Comparable;
+
+    invoke-interface {p1, p2}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
+
+    move-result p1
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final dispose()V
+.method public final reversed()Ljava/util/Comparator;
     .locals 1
 
-    iget-object v0, p0, Lcja;->c:Lzv4;
+    iget v0, p0, Lcja;->a:I
 
-    invoke-interface {v0}, Lzv4;->dispose()V
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    sget-object v0, Lcja;->b:Lcja;
 
-.method public final f()Z
-    .locals 1
+    return-object v0
 
-    iget-object v0, p0, Lcja;->c:Lzv4;
+    :pswitch_0
+    sget-object v0, Lcja;->c:Lcja;
 
-    invoke-interface {v0}, Lzv4;->f()Z
+    return-object v0
 
-    move-result v0
+    nop
 
-    return v0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lcja;->o:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lrxi;->a(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcja;->o:Z
-
-    iget-object v0, p0, Lcja;->a:Lgla;
-
-    invoke-interface {v0, p1}, Lgla;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

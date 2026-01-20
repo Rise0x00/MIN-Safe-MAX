@@ -1,77 +1,100 @@
 .class public final Lep2;
-.super Lrj0;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
+.field public final synthetic X:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-.field public final c:Ljava/util/List;
-
-.field public final d:J
-
-.field public final o:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/util/List;JI)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaTabWidget;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lrj0;-><init>(J)V
+    iput-object p2, p0, Lep2;->X:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    iput-object p3, p0, Lep2;->b:Ljava/lang/String;
+    const/4 p2, 0x2
 
-    iput-object p4, p0, Lep2;->c:Ljava/util/List;
-
-    iput-wide p5, p0, Lep2;->d:J
-
-    iput p7, p0, Lep2;->o:I
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const-string v1, "ChatMessageSearchResultEvent{query=\'"
+    invoke-virtual {p0, p1, p2}, Lep2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object p1
 
-    iget-object v1, p0, Lep2;->b:Ljava/lang/String;
+    check-cast p1, Lep2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    const-string v1, "\', results="
+    invoke-virtual {p1, p2}, Lep2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p2
+.end method
 
-    iget-object v1, p0, Lep2;->c:Ljava/util/List;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    new-instance v0, Lep2;
 
-    const-string v1, ", marker="
+    iget-object v1, p0, Lep2;->X:Lone/me/profile/screens/media/ChatMediaTabWidget;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p2, v1}, Lep2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaTabWidget;)V
 
-    iget-wide v1, p0, Lep2;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", total="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lep2;->o:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lcd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lep2;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget-object v0, p0, Lep2;->o:Ljava/lang/Object;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    check-cast v0, Lbp2;
+
+    sget-object p1, Lone/me/profile/screens/media/ChatMediaTabWidget;->x0:[Lz28;
+
+    iget-object p1, p0, Lep2;->X:Lone/me/profile/screens/media/ChatMediaTabWidget;
+
+    iget-object p1, p1, Lone/me/profile/screens/media/ChatMediaTabWidget;->X:Lro0;
+
+    sget-object v1, Lone/me/profile/screens/media/ChatMediaTabWidget;->x0:[Lz28;
+
+    const/4 v2, 0x0
+
+    aget-object v1, v1, v2
+
+    invoke-virtual {p1}, Lro0;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lymb;
+
+    iget-object v1, v0, Lbp2;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v1}, Lymb;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v0, v0, Lbp2;->a:Lpmb;
+
+    invoke-virtual {p1, v0}, Lymb;->setAvatar(Lpmb;)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

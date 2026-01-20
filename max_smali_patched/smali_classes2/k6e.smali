@@ -1,109 +1,49 @@
-.class public final Lk6e;
-.super Lc6e;
+.class public abstract Lk6e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public x0:Lihd;
+# static fields
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
 
 
-# virtual methods
-.method public final y(Lt92;J)J
-    .locals 7
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    iget-object v0, p0, Lk6e;->x0:Lihd;
+    sget v0, Ltfd;->TamTamTheme_Base_Dark:I
 
-    const/4 v1, 0x0
+    sput v0, Lk6e;->a:I
 
-    sget-object v2, Lyt5;->a:Lyt5;
+    sget v0, Ltfd;->TamTamTheme_Base_PopupNotification:I
 
-    if-eqz v0, :cond_0
+    sput v0, Lk6e;->b:I
 
-    iget-object v3, v0, Lihd;->a:Ljava/lang/Object;
+    sget v0, Ltfd;->Theme_Transparent:I
 
-    check-cast v3, Ljava/util/concurrent/CountDownLatch;
+    sput v0, Lk6e;->c:I
 
-    const-wide/16 v4, 0x1f40
+    sget v0, Ltfd;->Theme_Transparent_DarkMenuOverflow:I
 
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sput v0, Lk6e;->d:I
 
-    invoke-virtual {v3, v4, v5, v6}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+    sget v0, Ltfd;->Theme_Transparent_WhiteMenuOverflow:I
 
-    iget-object v0, v0, Lihd;->b:Ljava/lang/Object;
+    sput v0, Lk6e;->e:I
 
-    check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
+    sget v0, Ltfd;->Theme_Transparent_WhiteMenuOverflow_NoCaps:I
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    sput v0, Lk6e;->f:I
 
-    move-result-object v0
-
-    check-cast v0, Lzt5;
-
-    if-nez v0, :cond_1
-
-    move-object v0, v2
-
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v1
-
-    :cond_1
-    :goto_0
-    invoke-static {v0, v2}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-super {p0, p1, p2, p3}, Lc6e;->y(Lt92;J)J
-
-    move-result-wide p1
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {p0}, Le5e;->n()Leb9;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p2, p3}, Leb9;->m(J)Lgb9;
-
-    move-result-object p1
-
-    const-wide/16 p2, 0x0
-
-    if-nez p1, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v0, Lv10;->d:Lv10;
-
-    invoke-virtual {p1, v0}, Lgb9;->d(Lv10;)Lz10;
-
-    move-result-object v0
-
-    if-nez v0, :cond_4
-
-    :goto_1
-    return-wide p2
-
-    :cond_4
-    invoke-virtual {p0}, Le5e;->m()Leb9;
-
-    move-result-object v2
-
-    iget-object v0, v0, Lz10;->r:Ljava/lang/String;
-
-    sget-object v3, Ls10;->d:Ls10;
-
-    invoke-virtual {v2, p1, v0, v3}, Leb9;->q(Lgb9;Ljava/lang/String;Ls10;)V
-
-    move-wide p1, p2
-
-    :goto_2
-    iput-object v1, p0, Lk6e;->x0:Lihd;
-
-    return-wide p1
+    return-void
 .end method

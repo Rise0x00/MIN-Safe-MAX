@@ -1,78 +1,59 @@
 .class public final Lob8;
-.super Logf;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public synthetic o:Ljava/lang/Object;
+.field public X:Landroid/net/Uri;
+
+.field public Y:Landroid/net/Uri;
+
+.field public Z:J
+
+.field public d:Lfjc;
+
+.field public o:Ljd8;
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Ltb8;
+
+.field public v0:I
+
+
+# direct methods
+.method public constructor <init>(Ltb8;Lo84;)V
+    .locals 0
+
+    iput-object p1, p0, Lob8;->u0:Ltb8;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    check-cast p1, Ljava/io/File;
+    iput-object p1, p0, Lob8;->t0:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lob8;->v0:I
 
-    invoke-virtual {p0, p1, p2}, Lob8;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/high16 v0, -0x80000000
 
-    move-result-object p1
+    or-int/2addr p1, v0
 
-    check-cast p1, Lob8;
+    iput p1, p0, Lob8;->v0:I
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-object p1, p0, Lob8;->u0:Ltb8;
 
-    invoke-virtual {p1, p2}, Lob8;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, v0, p0}, Ltb8;->l(Lfjc;Ljd8;Landroid/net/Uri;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 
     return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lob8;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lob8;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lob8;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/io/File;
-
-    new-instance v0, Leld;
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Leld;-><init>(Ljava/lang/String;)V
-
-    new-instance p1, Lblf;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1}, Lblf;-><init>(Leld;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v0, Ljld;
-
-    invoke-direct {v0, p1}, Ljld;-><init>(Lej6;)V
-
-    return-object v0
 .end method

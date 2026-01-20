@@ -1,138 +1,123 @@
-.class public final Ltr4;
+.class public abstract synthetic Ltr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ltr4;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Ltr4;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Ltr4;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    const-class v2, Ltr4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ltr4;
-
-    iget-object v2, p0, Ltr4;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Ltr4;->a:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ltr4;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Ltr4;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ltr4;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Ltr4;->c:Ljava/lang/String;
-
-    invoke-static {v2, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
+.method static constructor <clinit>()V
     .locals 3
 
-    iget-object v0, p0, Ltr4;->a:Ljava/lang/String;
+    invoke-static {}, Ln78;->values()[Ln78;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    move-result-object v0
 
-    move-result v0
+    array-length v0, v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    new-array v0, v0, [I
 
-    const/4 v1, 0x0
+    :try_start_0
+    sget-object v1, Ln78;->ON_CREATE:Ln78;
 
-    iget-object v2, p0, Ltr4;->b:Ljava/lang/String;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Ltr4;->c:Ljava/lang/String;
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
     move-result v1
 
-    :cond_1
-    add-int/2addr v0, v1
+    const/4 v2, 0x1
 
-    return v0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    :try_start_1
+    sget-object v1, Ln78;->ON_START:Ln78;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Ln78;->ON_RESUME:Ln78;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v1, Ln78;->ON_PAUSE:Ln78;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v1, Ln78;->ON_STOP:Ln78;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v1, Ln78;->ON_DESTROY:Ln78;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v1, Ln78;->ON_ANY:Ln78;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    sput-object v0, Ltr4;->$EnumSwitchMapping$0:[I
+
+    return-void
 .end method

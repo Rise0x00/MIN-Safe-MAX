@@ -3,174 +3,143 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public transient a:Luti;
+
+.field public transient b:Lo2;
+
+
 # direct methods
-.method public static a(Ljava/lang/String;Z)V
+.method public constructor <init>()V
     .locals 0
 
-    if-eqz p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
-.method public static b(Z)V
-    .locals 0
 
-    if-eqz p0, :cond_0
+# virtual methods
+.method public final a()Ljava/util/Map;
+    .locals 4
 
-    return-void
+    iget-object v0, p0, Loui;->b:Lo2;
+
+    if-nez v0, :cond_0
+
+    move-object v0, p0
+
+    check-cast v0, Lqui;
+
+    new-instance v1, Lo2;
+
+    iget-object v2, v0, Lqui;->c:Lnm3;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v0, v2, v3}, Lo2;-><init>(Ljava/io/Serializable;Ljava/util/Map;I)V
+
+    iput-object v1, p0, Loui;->b:Lo2;
+
+    return-object v1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
+    return-object v0
 .end method
 
-.method public static c(ILjava/lang/String;II)V
+.method public final b()Ljava/util/Set;
     .locals 3
 
-    const-string v0, ", "
+    iget-object v0, p0, Loui;->a:Luti;
 
-    const-string v1, " is out of range of ["
+    if-nez v0, :cond_0
 
-    if-lt p0, p2, :cond_1
+    move-object v0, p0
 
-    if-gt p0, p3, :cond_0
+    check-cast v0, Lqui;
 
-    return-void
+    new-instance v1, Luti;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-object v2, v0, Lqui;->c:Lnm3;
 
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
+    invoke-direct {v1, v0, v2}, Luti;-><init>(Lqui;Ljava/util/Map;)V
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iput-object v1, p0, Loui;->a:Luti;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, "] (too high)"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, "] (too low)"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static d(I)V
-    .locals 0
-
-    if-ltz p0, :cond_0
-
-    return-void
+    return-object v1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
+    return-object v0
 .end method
 
-.method public static e(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 0
-
-    if-eqz p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static f(Ljava/lang/String;Z)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public static g(Landroidx/constraintlayout/widget/ConstraintLayout;)Lwq3;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance v0, Lwq3;
+    if-ne p1, p0, :cond_0
 
-    invoke-direct {v0}, Lwq3;-><init>()V
+    const/4 p1, 0x1
 
-    invoke-virtual {v0, p0}, Lwq3;->c(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Loui;
+
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    check-cast p1, Loui;
+
+    invoke-virtual {p0}, Loui;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Loui;->a()Ljava/util/Map;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    invoke-virtual {p0}, Loui;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    check-cast v0, Lo2;
+
+    iget-object v0, v0, Lo2;->b:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    invoke-virtual {p0}, Loui;->a()Ljava/util/Map;
+
+    move-result-object v0
+
+    check-cast v0, Lo2;
+
+    iget-object v0, v0, Lo2;->b:Ljava/util/Map;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method

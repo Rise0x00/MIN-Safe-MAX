@@ -1,118 +1,96 @@
-.class public final Lkv4;
+.class public final synthetic Lkv4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnhh;
+
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
 
-.field public b:Z
-
-.field public c:Z
-
-.field public final d:Ljava/util/ArrayDeque;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lkv4;->a:I
+
+    iput-object p2, p0, Lkv4;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lkv4;->a:Z
-
-    new-instance v0, Ljava/util/ArrayDeque;
-
-    invoke-direct {v0}, Ljava/util/ArrayDeque;-><init>()V
-
-    iput-object v0, p0, Lkv4;->d:Ljava/util/ArrayDeque;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final run()V
+    .locals 1
 
-    iget-object v0, p0, Lkv4;->d:Ljava/util/ArrayDeque;
+    iget v0, p0, Lkv4;->a:I
 
-    iget-boolean v1, p0, Lkv4;->c:Z
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v1, :cond_0
+    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
 
-    return-void
+    check-cast v0, Le3;
 
-    :cond_0
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    :try_start_0
-    iput-boolean v1, p0, Lkv4;->c:Z
-
-    :cond_1
-    :goto_0
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
-
-    move-result v3
-
-    if-nez v3, :cond_5
-
-    iget-boolean v3, p0, Lkv4;->b:Z
-
-    if-nez v3, :cond_3
-
-    iget-boolean v3, p0, Lkv4;->a:Z
-
-    if-nez v3, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v3, v2
-
-    goto :goto_2
-
-    :cond_3
-    :goto_1
-    move v3, v1
-
-    :goto_2
-    if-nez v3, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {v0}, Ljava/util/ArrayDeque;->poll()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Runnable;
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_4
-
-    :cond_5
-    :goto_3
-    iput-boolean v2, p0, Lkv4;->c:Z
+    invoke-virtual {v0}, Le3;->f()V
 
     return-void
 
-    :goto_4
-    iput-boolean v2, p0, Lkv4;->c:Z
+    :pswitch_0
+    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
 
-    throw v0
+    check-cast v0, Lfsg;
+
+    invoke-virtual {v0}, Lfsg;->o()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lmfg;
+
+    iget-object v0, v0, Lmfg;->d:Lfsg;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lfsg;->Y()V
+
+    invoke-static {}, Lzk4;->a()V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lv36;
+
+    invoke-virtual {v0}, Lv36;->flush()V
+
+    return-void
+
+    :pswitch_3
+    iget-object v0, p0, Lkv4;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

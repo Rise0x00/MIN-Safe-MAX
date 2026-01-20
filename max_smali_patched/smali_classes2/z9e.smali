@@ -1,102 +1,61 @@
 .class public final Lz9e;
-.super Logf;
+.super Ldae;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
-
-# instance fields
-.field public final synthetic X:Landroid/graphics/RectF;
-
-.field public final synthetic o:Lgae;
+# static fields
+.field public static final a:Lz9e;
 
 
 # direct methods
-.method public constructor <init>(Lgae;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lz9e;->o:Lgae;
+    new-instance v0, Lz9e;
 
-    iput-object p2, p0, Lz9e;->X:Landroid/graphics/RectF;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-object v0, Lz9e;->a:Lz9e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, Lg54;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lz9e;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of p1, p1, Lz9e;
 
-    check-cast p1, Lz9e;
+    if-nez p1, :cond_1
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, p2}, Lz9e;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    return p1
 
-    return-object p2
+    :cond_1
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public final hashCode()I
+    .locals 1
 
-    new-instance p1, Lz9e;
+    const v0, 0x24fddde1
 
-    iget-object v0, p0, Lz9e;->o:Lgae;
-
-    iget-object v1, p0, Lz9e;->X:Landroid/graphics/RectF;
-
-    invoke-direct {p1, v0, v1, p2}, Lz9e;-><init>(Lgae;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
+    return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-string v0, "Cancelled"
 
-    sget-object p1, Lgae;->L0:[Les7;
-
-    iget-object p1, p0, Lz9e;->o:Lgae;
-
-    invoke-virtual {p1}, Lgae;->x()Luv5;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lgae;->G0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Luv5;->p(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lz9e;->X:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, v0, v1}, Lgae;->A(Ljava/lang/String;Landroid/graphics/RectF;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-object v0
 .end method

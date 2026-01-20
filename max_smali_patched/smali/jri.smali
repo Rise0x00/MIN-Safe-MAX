@@ -1,50 +1,126 @@
 .class public final Ljri;
-.super Ljava/lang/Object;
+.super Lcpi;
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Lpsi;
 
 
-# static fields
-.field public static final a:Ljri;
+# instance fields
+.field public final synthetic d:I
+
+.field public final synthetic e:Lb2b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lb2b;I)V
+    .locals 0
 
-    new-instance v0, Ljri;
+    iput p2, p0, Ljri;->d:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljri;->e:Lb2b;
 
-    sput-object v0, Ljri;->a:Ljri;
+    const-string p1, "com.google.android.gms.maps.internal.IOnMapReadyCallback"
 
-    new-instance v0, Lz7i;
+    const/4 p2, 0x6
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, p2}, Lcpi;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final O(Ly1j;)V
+    .locals 1
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Ljri;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lq07;
+
+    invoke-direct {v0, p1}, Lq07;-><init>(Ly1j;)V
+
+    iget-object p1, p0, Ljri;->e:Lb2b;
+
+    invoke-interface {p1, v0}, Lb2b;->U(Lq07;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lq07;
+
+    invoke-direct {v0, p1}, Lq07;-><init>(Ly1j;)V
+
+    iget-object p1, p0, Ljri;->e:Lb2b;
+
+    invoke-interface {p1, v0}, Lb2b;->U(Lq07;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_2
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object p1
 
-    throw p1
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "com.google.android.gms.maps.internal.IGoogleMapDelegate"
+
+    invoke-interface {p1, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Ly1j;
+
+    if-eqz v3, :cond_1
+
+    move-object p1, v2
+
+    check-cast p1, Ly1j;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Ly1j;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, p1, v1, v3}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object p1, v2
+
+    :goto_0
+    invoke-static {p2}, Lvui;->b(Landroid/os/Parcel;)V
+
+    invoke-interface {p0, p1}, Lpsi;->O(Ly1j;)V
+
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    return v0
+
+    :cond_2
+    const/4 p1, 0x0
+
+    return p1
 .end method

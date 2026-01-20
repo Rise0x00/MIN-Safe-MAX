@@ -1,117 +1,92 @@
-.class public abstract Lyji;
+.class public final synthetic Lyji;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lnq6;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
+
+.field public final synthetic c:I
+
 
 # direct methods
-.method public static final a(Llp0;Landroid/content/Context;I)Landroid/graphics/Bitmap;
-    .locals 3
+.method public synthetic constructor <init>(ILandroidx/work/impl/model/WorkersQueueDao_Impl;)V
+    .locals 1
 
-    invoke-static {p1, p2}, Lr04;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    .line 1
+    const/4 v0, 0x0
 
-    move-result-object p1
+    iput v0, p0, Lyji;->a:I
 
-    if-eqz p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    iput p1, p0, Lyji;->c:I
 
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v0
-
-    mul-int/2addr v0, p2
-
-    mul-int/lit8 v0, v0, 0x4
-
-    invoke-interface {p0, v0}, Lpvb;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/graphics/Bitmap;
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v0
-
-    sget-object v1, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {p0, p2, v0, v1}, Landroid/graphics/Bitmap;->reconfigure(IILandroid/graphics/Bitmap$Config;)V
-
-    new-instance p2, Landroid/graphics/Canvas;
-
-    invoke-direct {p2, p0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p2}, Landroid/graphics/Canvas;->getWidth()I
-
-    move-result v0
-
-    invoke-virtual {p2}, Landroid/graphics/Canvas;->getHeight()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v2, v2, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    invoke-virtual {p1, p2}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Required value was null."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public static final b(Lvcg;)V
-    .locals 2
-
-    new-instance v0, Lhv7;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1}, Lhv7;-><init>(I)V
-
-    const-class v1, Lp59;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
-
-    new-instance v0, Lhv7;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1}, Lhv7;-><init>(I)V
-
-    const-class v1, Ltl4;
-
-    invoke-virtual {p0, v1, v0}, Lvcg;->e(Ljava/lang/Class;Lqi7;)V
+    iput-object p2, p0, Lyji;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
     return-void
 .end method
 
-.method public static c(B)Z
+.method public synthetic constructor <init>(Landroidx/work/impl/model/WorkersQueueDao_Impl;I)V
     .locals 1
 
-    const/16 v0, -0x41
+    .line 2
+    const/4 v0, 0x1
 
-    if-le p0, v0, :cond_0
+    iput v0, p0, Lyji;->a:I
 
-    const/4 p0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p0
+    iput-object p1, p0, Lyji;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
 
-    :cond_0
-    const/4 p0, 0x0
+    iput p2, p0, Lyji;->c:I
 
-    return p0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lyji;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Lyji;->c:I
+
+    check-cast p1, Lf7e;
+
+    iget-object v1, p0, Lyji;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
+
+    invoke-static {v1, v0, p1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->j(Landroidx/work/impl/model/WorkersQueueDao_Impl;ILf7e;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lyji;->b:Landroidx/work/impl/model/WorkersQueueDao_Impl;
+
+    check-cast p1, Lf7e;
+
+    iget v1, p0, Lyji;->c:I
+
+    invoke-static {v0, v1, p1}, Landroidx/work/impl/model/WorkersQueueDao_Impl;->e(Landroidx/work/impl/model/WorkersQueueDao_Impl;ILf7e;)Ljava/util/List;
+
+    move-result-object p1
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

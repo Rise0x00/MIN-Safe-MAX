@@ -1,64 +1,73 @@
-.class public final Lnhb;
+.class public abstract Lnhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgk9;
-
 
 # static fields
-.field public static final a:Lnhb;
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lnhb;
+    sget v0, Ljed;->permissions_allow_access:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lnhb;->a:I
 
-    sput-object v0, Lnhb;->a:Lnhb;
+    sget v0, Ljed;->permissions_audio_denied_title:I
+
+    sput v0, Lnhb;->b:I
+
+    sget v0, Ljed;->permissions_audio_request_denied:I
+
+    sput v0, Lnhb;->c:I
+
+    sget v0, Ljed;->permissions_audio_title:I
+
+    sput v0, Lnhb;->d:I
+
+    sget v0, Ljed;->permissions_dialog_no:I
+
+    sput v0, Lnhb;->e:I
+
+    sget v0, Ljed;->permissions_dialog_open_setting:I
+
+    sput v0, Lnhb;->f:I
+
+    sget v0, Ljed;->permissions_dialog_yes:I
+
+    sput v0, Lnhb;->g:I
+
+    sget v0, Ljed;->permissions_video_message_request:I
+
+    sput v0, Lnhb;->h:I
+
+    sget v0, Ljed;->permissions_video_message_request_only_camera_title:I
+
+    sput v0, Lnhb;->i:I
+
+    sget v0, Ljed;->permissions_video_message_request_title:I
+
+    sput v0, Lnhb;->j:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Lnhb;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, 0x3e66b1b7
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "PerformHaptic"
-
-    return-object v0
 .end method

@@ -22,17 +22,17 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lzpd;",
+        "Lhce;",
         "scopeId",
         "",
         "chatId",
-        "(Ljava/lang/String;JLfi4;)V",
+        "(Ljava/lang/String;JLso4;)V",
         "profile_release"
     }
     k = 0x1
     mv = {
         0x2,
-        0x0,
+        0x2,
         0x0
     }
     xi = 0x30
@@ -40,34 +40,34 @@
 
 
 # static fields
-.field public static final synthetic t0:[Les7;
+.field public static final synthetic u0:[Lz28;
 
 
 # instance fields
-.field public X:Llyf;
+.field public X:Lnog;
 
-.field public Y:Lw8f;
+.field public Y:Lkxf;
 
 .field public final Z:Ljava/util/concurrent/ExecutorService;
 
-.field public final a:Los;
+.field public final a:Lls;
 
-.field public final b:Lru7;
+.field public final b:Lo58;
 
-.field public final c:Lru7;
+.field public final c:Lo58;
 
-.field public final d:Ld0d;
+.field public final d:Ljld;
 
-.field public final o:Ld0d;
+.field public final o:Ljld;
 
-.field public final s0:Ljjh;
+.field public final t0:Lrdi;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 7
 
-    new-instance v0, Lbec;
+    new-instance v0, Liyc;
 
     const-class v1, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
 
@@ -77,29 +77,29 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Lv7d;->a:Lw7d;
+    sget-object v2, Lctd;->a:Ldtd;
 
     const-string v3, "recyclerView"
 
     const-string v5, "getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lok7;->d(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lbec;
+    invoke-static {v2, v1, v3, v5, v4}, Lj27;->e(Ldtd;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Liyc;
 
     move-result-object v2
 
-    new-instance v3, Lbec;
+    new-instance v3, Liyc;
 
     const-string v5, "emptySearchView"
 
     const-string v6, "getEmptySearchView()Lone/me/sdk/uikit/common/views/EmptySearchView;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Liyc;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Les7;
+    new-array v1, v1, [Lz28;
 
     aput-object v0, v1, v4
 
@@ -111,7 +111,7 @@
 
     aput-object v3, v1, v0
 
-    sput-object v1, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:[Les7;
+    sput-object v1, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->u0:[Lz28;
 
     return-void
 .end method
@@ -126,26 +126,26 @@
     const/4 v2, 0x0
 
     .line 8
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILfi4;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILso4;)V
 
     .line 9
-    new-instance v0, Los;
+    new-instance v0, Lls;
 
     const-class v1, Ljava/lang/Long;
 
     const-string v3, "profile:add_admins_from_contacts:chat_id"
 
-    invoke-direct {v0, v1, v3}, Los;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lls;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 10
-    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->a:Los;
+    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->a:Lls;
 
     .line 11
     const-string v0, "arg_scope_id"
 
-    const-class v1, Lzpd;
+    const-class v1, Lhce;
 
-    invoke-static {p1, v0, v1}, Lrki;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p1, v0, v1}, Ly9j;->b(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -153,95 +153,95 @@
 
     check-cast p1, Landroid/os/Parcelable;
 
-    check-cast p1, Lzpd;
+    check-cast p1, Lhce;
 
     .line 12
-    iget-object p1, p1, Lzpd;->a:Ljava/lang/String;
+    iget-object p1, p1, Lhce;->a:Ljava/lang/String;
 
     .line 13
-    const-class v0, Le69;
+    const-class v0, Ljh9;
 
     .line 14
-    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Loi6;)Lru7;
+    invoke-virtual {p0, p1, v0, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Llq6;)Lo58;
 
     move-result-object p1
 
     .line 15
-    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->b:Lru7;
+    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->b:Lo58;
 
     .line 16
-    new-instance p1, Ln6;
+    new-instance p1, Lh2;
 
-    const/4 v0, 0x6
+    const/4 v0, 0x7
 
-    invoke-direct {p1, v0, p0}, Ln6;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lh2;-><init>(ILjava/lang/Object;)V
 
     .line 17
-    new-instance v0, Lr;
+    new-instance v0, Lo;
 
     const/4 v1, 0x5
 
-    invoke-direct {v0, v1, p1}, Lr;-><init>(ILoi6;)V
+    invoke-direct {v0, v1, p1}, Lo;-><init>(ILlq6;)V
 
-    const-class p1, Lec;
+    const-class p1, Lac;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Loi6;)Lru7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Llq6;)Lo58;
 
     move-result-object p1
 
     .line 18
-    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->c:Lru7;
+    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->c:Lo58;
 
     .line 19
-    sget p1, Lvza;->b:I
+    sget p1, Lqfb;->d:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ld0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->d:Ld0d;
+    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->d:Ljld;
 
     .line 20
-    sget p1, Lvza;->a:I
+    sget p1, Lqfb;->c:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ld0d;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Ljld;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->o:Ld0d;
+    iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->o:Ljld;
 
     .line 21
-    sget-object p1, Lr2c;->a:Lr2c;
+    sget-object p1, Lslc;->a:Lslc;
 
     .line 22
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lt5;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object p1
+
+    const/16 v0, 0x4e
 
     .line 23
-    const-class v0, Lfva;
-
-    invoke-virtual {p1, v0}, Lt5;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lr5;->c(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lfva;
+    check-cast p1, Lyab;
 
     .line 24
-    invoke-virtual {p1}, Lfva;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p1}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
 
     iput-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Z:Ljava/util/concurrent/ExecutorService;
 
     .line 25
-    new-instance v0, Ljjh;
+    new-instance v0, Lrdi;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, p1, v1}, Ljjh;-><init>(Ljava/lang/Object;Ljava/util/concurrent/ExecutorService;I)V
+    invoke-direct {v0, p0, p1, v1}, Lrdi;-><init>(Ljava/lang/Object;Ljava/util/concurrent/ExecutorService;I)V
 
-    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->s0:Ljjh;
+    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:Lrdi;
 
     return-void
 
@@ -256,7 +256,7 @@
     const-string v1, " in bundle"
 
     .line 27
-    invoke-static {v0, p1, v1}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -272,20 +272,20 @@
     throw v0
 .end method
 
-.method public constructor <init>(Ljava/lang/String;JLfi4;)V
+.method public constructor <init>(Ljava/lang/String;JLso4;)V
     .locals 1
 
     .line 1
-    new-instance p4, Lzpd;
+    new-instance p4, Lhce;
 
-    invoke-direct {p4, p1}, Lzpd;-><init>(Ljava/lang/String;)V
+    invoke-direct {p4, p1}, Lhce;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Lvcb;
+    new-instance p1, Lktb;
 
     const-string v0, "arg_scope_id"
 
-    invoke-direct {p1, v0, p4}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -293,19 +293,19 @@
     move-result-object p2
 
     .line 4
-    new-instance p3, Lvcb;
+    new-instance p3, Lktb;
 
     const-string p4, "profile:add_admins_from_contacts:chat_id"
 
-    invoke-direct {p3, p4, p2}, Lvcb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p3, p4, p2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 5
-    filled-new-array {p1, p3}, [Lvcb;
+    filled-new-array {p1, p3}, [Lktb;
 
     move-result-object p1
 
     .line 6
-    invoke-static {p1}, Ltki;->b([Lvcb;)Landroid/os/Bundle;
+    invoke-static {p1}, Laaj;->c([Lktb;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -317,6 +317,26 @@
 
 
 # virtual methods
+.method public final A0()Landroidx/recyclerview/widget/RecyclerView;
+    .locals 2
+
+    sget-object v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->u0:[Lz28;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->d:Ljld;
+
+    invoke-interface {v1, p0, v0}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    return-object v0
+.end method
+
 .method public final onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
@@ -338,15 +358,15 @@
 
     invoke-direct {p2, p3, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget p3, Lvza;->b:I
+    sget p3, Lqfb;->d:I
 
     invoke-virtual {p2, p3}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lu6d;)V
+    invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lbsd;)V
 
-    iget-object p3, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->s0:Ljjh;
+    iget-object p3, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:Lrdi;
 
-    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lp6d;)V
+    invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lwrd;)V
 
     new-instance p3, Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -360,13 +380,13 @@
 
     invoke-virtual {p2, p3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
-    invoke-static {p2}, Lvwi;->b(Landroidx/recyclerview/widget/RecyclerView;)Llyf;
+    invoke-static {p2}, Lgmj;->b(Landroidx/recyclerview/widget/RecyclerView;)Lnog;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->X:Llyf;
+    iput-object v1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->X:Lnog;
 
-    invoke-virtual {p0, p2}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->x0(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {p0, p2}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->z0(Landroidx/recyclerview/widget/RecyclerView;)V
 
     invoke-virtual {p1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -378,7 +398,7 @@
 
     invoke-direct {p2, v1, v0}, Lone/me/sdk/uikit/common/views/EmptySearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v0, Lvza;->a:I
+    sget v0, Lqfb;->c:I
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setId(I)V
 
@@ -386,11 +406,11 @@
 
     invoke-virtual {p2, v0}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    sget v0, Lakd;->g0:I
+    sget v0, Lx5e;->o0:I
 
     invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/views/EmptySearchView;->setTitle(I)V
 
-    sget v0, Lakd;->f0:I
+    sget v0, Lx5e;->n0:I
 
     invoke-virtual {p2, v0}, Lone/me/sdk/uikit/common/views/EmptySearchView;->setDescription(I)V
 
@@ -404,24 +424,24 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 2
 
-    iget-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->X:Llyf;
+    iget-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->X:Lnog;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->y0()Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {p0}, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->A0()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
+    invoke-virtual {v0, v1}, Lyw7;->b(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->X:Llyf;
+    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->X:Lnog;
 
-    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lw8f;
+    iput-object v0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lkxf;
 
-    invoke-super {p0, p1}, Lc24;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, La94;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -429,143 +449,123 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    iget-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->c:Lru7;
+    iget-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->c:Lo58;
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lec;
-
-    iget-object p1, p1, Lec;->Z:Lt3;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lnx7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lnx7;->p()Lpx7;
-
-    move-result-object v0
-
-    sget-object v1, Lpw7;->d:Lpw7;
-
-    invoke-static {p1, v0, v1}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lwb;
+    check-cast p1, Lac;
+
+    iget-object p1, p1, Lac;->Z:Ls3;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lj88;->p()Ll88;
+
+    move-result-object v0
+
+    sget-object v1, Lo78;->d:Lo78;
+
+    invoke-static {p1, v0, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
+
+    move-result-object p1
+
+    new-instance v0, Lsb;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0}, Lwb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
+    invoke-direct {v0, v2, p0}, Lsb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
 
-    new-instance v3, Ln16;
+    new-instance v3, Lm96;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, p1, v0, v4}, Ln16;-><init>(Lez5;Lej6;I)V
+    invoke-direct {v3, p1, v0, v4}, Lm96;-><init>(Ld76;Lbr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lzw7;
-
-    move-result-object p1
-
-    invoke-static {v3, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
-
-    iget-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->b:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
 
     move-result-object p1
 
-    check-cast p1, Le69;
+    invoke-static {v3, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
-    iget-object p1, p1, Le69;->t0:Lj0d;
+    iget-object p1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->b:Lo58;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lnx7;
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljh9;
+
+    iget-object p1, p1, Ljh9;->u0:Lpld;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lj88;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lnx7;->p()Lpx7;
+    invoke-interface {v0}, Lj88;->p()Ll88;
 
     move-result-object v0
 
-    invoke-static {p1, v0, v1}, Lpr0;->b(Lez5;Lpx7;Lpw7;)Lpt1;
+    invoke-static {p1, v0, v1}, Lmt0;->b(Ld76;Ll88;Lo78;)Lpw1;
 
     move-result-object p1
 
-    new-instance v0, Lxb;
+    new-instance v0, Ltb;
 
-    invoke-direct {v0, v2, p0}, Lxb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
+    invoke-direct {v0, v2, p0}, Ltb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
 
-    new-instance v1, Ln16;
+    new-instance v1, Lm96;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Ln16;-><init>(Lez5;Lej6;I)V
+    invoke-direct {v1, p1, v0, v2}, Lm96;-><init>(Ld76;Lbr6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lzw7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lw78;
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+    invoke-static {v1, p1}, Lgu0;->x(Ld76;Lzb4;)Lmmf;
 
     return-void
 .end method
 
-.method public final x0(Landroidx/recyclerview/widget/RecyclerView;)V
+.method public final z0(Landroidx/recyclerview/widget/RecyclerView;)V
     .locals 4
 
-    new-instance v0, Lwui;
+    new-instance v0, Lig5;
 
-    new-instance v1, Ll;
+    new-instance v1, Li;
 
-    const/4 v2, 0x7
+    const/16 v2, 0x9
 
-    invoke-direct {v1, v2, p0}, Ll;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Li;-><init>(ILjava/lang/Object;)V
 
     const/16 v2, 0x14
 
-    invoke-direct {v0, v2, v1}, Lwui;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v2, v1}, Lig5;-><init>(ILjava/lang/Object;)V
 
-    new-instance v1, Lw8f;
+    new-instance v1, Lkxf;
 
-    iget-object v2, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->s0:Ljjh;
+    iget-object v2, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:Lrdi;
 
-    invoke-direct {v1, p1, v2, v0}, Lw8f;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lp6d;Lx8f;)V
+    invoke-direct {v1, p1, v2, v0}, Lkxf;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lwrd;Llxf;)V
 
-    iput-object v1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lw8f;
+    iput-object v1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->Y:Lkxf;
 
-    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lv6d;)V
+    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->j(Lcsd;)V
 
-    new-instance v0, Lvb;
+    new-instance v0, Lrb;
 
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lvb;-><init>(Lw8f;Lkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, v1, v2, v3}, Lrb;-><init>(Lkxf;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-static {v0, p1}, Ludi;->e(Lgj6;Landroid/view/View;)V
+    invoke-static {v0, p1}, Lp6j;->b(Ldr6;Landroid/view/View;)V
 
     return-void
-.end method
-
-.method public final y0()Landroidx/recyclerview/widget/RecyclerView;
-    .locals 2
-
-    sget-object v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:[Les7;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->d:Ld0d;
-
-    invoke-interface {v1, p0, v0}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
-
-    return-object v0
 .end method

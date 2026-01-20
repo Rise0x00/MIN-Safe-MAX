@@ -1,38 +1,37 @@
-.class public interface abstract Lr98;
-.super Ljava/lang/Object;
+.class public final Lr98;
+.super Llm4;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/io/IOException;)V
-.end method
+# static fields
+.field public static final b:Lr98;
 
-.method public abstract c(Ljava/lang/String;Ljava/lang/String;)V
-.end method
 
-.method public abstract d(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 5
 
-.method public abstract e(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    new-instance v0, Lr98;
 
-.method public abstract e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-.end method
+    invoke-direct {v0}, Llm4;-><init>()V
 
-.method public abstract f(Ljava/lang/Exception;Ljava/lang/String;)V
-.end method
+    sput-object v0, Lr98;->b:Lr98;
 
-.method public abstract h(I)Z
-.end method
+    const/4 v1, 0x0
 
-.method public abstract i(I)V
-.end method
+    new-array v1, v1, [Ljava/lang/String;
 
-.method public abstract v(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    const-string v2, "link"
 
-.method public abstract w(Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    invoke-static {v2}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
 
-.method public abstract w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result-object v2
+
+    const/16 v3, 0xc
+
+    const-string v4, ":link-intercept"
+
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
+
+    return-void
 .end method

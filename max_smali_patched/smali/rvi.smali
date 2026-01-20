@@ -1,168 +1,194 @@
 .class public final Lrvi;
-.super Ljava/lang/Object;
+.super Lx2;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/content/ServiceConnection;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public c:I
+
+.field public final synthetic d:Lnm3;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Lnm3;I)V
+    .locals 2
 
-    iput p1, p0, Lrvi;->a:I
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lrvi;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0, v1}, Lx2;-><init>(ZI)V
+
+    iput-object p1, p0, Lrvi;->d:Lnm3;
+
+    sget-object v0, Lnm3;->w0:Ljava/lang/Object;
+
+    invoke-virtual {p1}, Lnm3;->m()[Ljava/lang/Object;
+
+    move-result-object p1
+
+    aget-object p1, p1, p2
+
+    iput-object p1, p0, Lrvi;->b:Ljava/lang/Object;
+
+    iput p2, p0, Lrvi;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 3
+.method public final a()V
+    .locals 4
 
-    iget v0, p0, Lrvi;->a:I
+    iget v0, p0, Lrvi;->c:I
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, -0x1
 
-    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lrvi;->b:Ljava/lang/Object;
 
-    check-cast v0, Lv1j;
+    iget-object v3, p0, Lrvi;->d:Lnm3;
 
-    iget-object v1, v0, Lv1j;->b:Lobe;
+    if-eq v0, v1, :cond_1
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-virtual {v3}, Lnm3;->size()I
 
-    move-result-object p1
+    move-result v1
 
-    const-string v2, "ServiceConnectionImpl.onServiceConnected(%s)"
+    if-ge v0, v1, :cond_1
 
-    invoke-virtual {v1, v2, p1}, Lobe;->b(Ljava/lang/String;[Ljava/lang/Object;)V
+    iget v0, p0, Lrvi;->c:I
 
-    new-instance p1, Lfyi;
+    invoke-virtual {v3}, Lnm3;->m()[Ljava/lang/Object;
 
-    invoke-direct {p1, p0, p2}, Lfyi;-><init>(Lrvi;Landroid/os/IBinder;)V
+    move-result-object v1
 
-    invoke-virtual {v0}, Lv1j;->a()Landroid/os/Handler;
+    aget-object v0, v1, v0
 
-    move-result-object p2
+    invoke-static {v2, v0}, Loaj;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    move-result v0
 
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
+    :cond_1
+    :goto_0
+    sget-object v0, Lnm3;->w0:Ljava/lang/Object;
 
-    check-cast v0, Lgyi;
+    invoke-virtual {v3, v2}, Lnm3;->s(Ljava/lang/Object;)I
 
-    iget-object v1, v0, Lgyi;->b:Lsw4;
+    move-result v0
 
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v2, "ServiceConnectionImpl.onServiceConnected(%s)"
-
-    invoke-virtual {v1, v2, p1}, Lsw4;->d(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance p1, Ld8i;
-
-    invoke-direct {p1, p0, p2}, Ld8i;-><init>(Lrvi;Landroid/os/IBinder;)V
-
-    invoke-virtual {v0}, Lgyi;->a()Landroid/os/Handler;
-
-    move-result-object p2
-
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    iput v0, p0, Lrvi;->c:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+.method public final getKey()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
     .locals 3
 
-    iget v0, p0, Lrvi;->a:I
+    iget-object v0, p0, Lrvi;->d:Lnm3;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Lnm3;->o()Ljava/util/Map;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
 
     iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
 
-    check-cast v0, Lv1j;
-
-    iget-object v1, v0, Lv1j;->b:Lobe;
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
-
-    invoke-virtual {v1, v2, p1}, Lobe;->b(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance p1, Lyvi;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, p0}, Lyvi;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0}, Lv1j;->a()Landroid/os/Handler;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    return-object v0
 
-    return-void
+    :cond_0
+    invoke-virtual {p0}, Lrvi;->a()V
 
-    :pswitch_0
-    iget-object v0, p0, Lrvi;->b:Ljava/lang/Object;
+    iget v1, p0, Lrvi;->c:I
 
-    check-cast v0, Lgyi;
+    const/4 v2, -0x1
 
-    iget-object v1, v0, Lgyi;->b:Lsw4;
+    if-ne v1, v2, :cond_1
 
-    filled-new-array {p1}, [Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    return-object v0
 
-    const-string v2, "ServiceConnectionImpl.onServiceDisconnected(%s)"
-
-    invoke-virtual {v1, v2, p1}, Lsw4;->d(Ljava/lang/String;[Ljava/lang/Object;)V
-
-    new-instance p1, Lari;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, v1, p0}, Lari;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0}, Lgyi;->a()Landroid/os/Handler;
+    :cond_1
+    invoke-virtual {v0}, Lnm3;->n()[Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    aget-object v0, v0, v1
 
-    return-void
+    return-object v0
+.end method
 
-    nop
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v0, p0, Lrvi;->d:Lnm3;
+
+    invoke-virtual {v0}, Lnm3;->o()Ljava/util/Map;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lrvi;->b:Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    invoke-virtual {p0}, Lrvi;->a()V
+
+    iget v1, p0, Lrvi;->c:I
+
+    const/4 v3, -0x1
+
+    if-ne v1, v3, :cond_1
+
+    invoke-virtual {v0, v2, p1}, Lnm3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_1
+    invoke-virtual {v0}, Lnm3;->n()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    aget-object v1, v2, v1
+
+    iget v2, p0, Lrvi;->c:I
+
+    invoke-virtual {v0}, Lnm3;->n()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aput-object p1, v0, v2
+
+    return-object v1
 .end method

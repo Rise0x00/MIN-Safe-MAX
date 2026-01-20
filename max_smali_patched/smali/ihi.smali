@@ -1,71 +1,76 @@
-.class public final Lihi;
+.class public abstract Lihi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Long;
+.field public final a:I
 
-.field public final b:Lfhi;
+.field public b:F
 
-.field public final c:Lsgi;
+.field public final c:Landroid/view/animation/Interpolator;
 
-.field public final d:Ljava/lang/Integer;
-
-.field public final e:Ljava/lang/Integer;
-
-.field public final f:Ljava/lang/Integer;
-
-.field public final g:Ljava/lang/Integer;
+.field public final d:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzh3;)V
-    .locals 1
+.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lzh3;->a:Ljava/lang/Object;
+    iput p1, p0, Lihi;->a:I
 
-    check-cast v0, Ljava/lang/Long;
+    iput-object p2, p0, Lihi;->c:Landroid/view/animation/Interpolator;
 
-    iput-object v0, p0, Lihi;->a:Ljava/lang/Long;
+    iput-wide p3, p0, Lihi;->d:J
 
-    iget-object v0, p1, Lzh3;->b:Ljava/lang/Object;
+    return-void
+.end method
 
-    check-cast v0, Lfhi;
 
-    iput-object v0, p0, Lihi;->b:Lfhi;
+# virtual methods
+.method public a()J
+    .locals 2
 
-    iget-object v0, p1, Lzh3;->c:Ljava/lang/Object;
+    iget-wide v0, p0, Lihi;->d:J
 
-    check-cast v0, Lsgi;
+    return-wide v0
+.end method
 
-    iput-object v0, p0, Lihi;->c:Lsgi;
+.method public b()F
+    .locals 2
 
-    iget-object v0, p1, Lzh3;->d:Ljava/lang/Object;
+    iget-object v0, p0, Lihi;->c:Landroid/view/animation/Interpolator;
 
-    check-cast v0, Ljava/lang/Integer;
+    if-eqz v0, :cond_0
 
-    iput-object v0, p0, Lihi;->d:Ljava/lang/Integer;
+    iget v1, p0, Lihi;->b:F
 
-    iget-object v0, p1, Lzh3;->o:Ljava/lang/Object;
+    invoke-interface {v0, v1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
 
-    check-cast v0, Ljava/lang/Integer;
+    move-result v0
 
-    iput-object v0, p0, Lihi;->e:Ljava/lang/Integer;
+    return v0
 
-    iget-object v0, p1, Lzh3;->X:Ljava/lang/Object;
+    :cond_0
+    iget v0, p0, Lihi;->b:F
 
-    check-cast v0, Ljava/lang/Integer;
+    return v0
+.end method
 
-    iput-object v0, p0, Lihi;->f:Ljava/lang/Integer;
+.method public c()I
+    .locals 1
 
-    iget-object p1, p1, Lzh3;->Y:Ljava/lang/Object;
+    iget v0, p0, Lihi;->a:I
 
-    check-cast p1, Ljava/lang/Integer;
+    return v0
+.end method
 
-    iput-object p1, p0, Lihi;->g:Ljava/lang/Integer;
+.method public d(F)V
+    .locals 0
+
+    iput p1, p0, Lihi;->b:F
 
     return-void
 .end method

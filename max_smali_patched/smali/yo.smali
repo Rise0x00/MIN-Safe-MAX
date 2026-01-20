@@ -1,127 +1,349 @@
-.class public abstract Lyo;
+.class public final Lyo;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a(Landroid/view/DragEvent;Landroid/widget/TextView;Landroid/app/Activity;)Z
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+    iput p1, p0, Lyo;->a:I
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getX()F
+    iput-object p2, p0, Lyo;->b:Ljava/lang/Object;
 
-    move-result p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getY()F
+    return-void
+.end method
 
-    move-result v0
 
-    invoke-virtual {p1, p2, v0}, Landroid/widget/TextView;->getOffsetForPosition(FF)I
+# virtual methods
+.method public final onGlobalLayout()V
+    .locals 10
 
-    move-result p2
+    iget v0, p0, Lyo;->a:I
 
-    invoke-virtual {p1}, Landroid/widget/TextView;->beginBatchEdit()V
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    iget-object v0, p0, Lyo;->b:Ljava/lang/Object;
+
+    check-cast v0, Lpmf;
+
+    iget-object v1, v0, Lpmf;->Z:Lck9;
+
+    invoke-virtual {v0}, Lpmf;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-boolean v2, v1, Lde8;->J0:Z
+
+    if-nez v2, :cond_2
+
+    iget-object v2, v0, Lpmf;->x0:Landroid/view/View;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Landroid/view/View;->isShown()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Lde8;->h()V
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Lpmf;->dismiss()V
+
+    :cond_2
+    :goto_1
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lyo;->b:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/mediarouter/app/d;
+
+    iget-object v1, v0, Landroidx/mediarouter/app/d;->O0:Landroidx/mediarouter/app/OverlayListView;
+
+    invoke-virtual {v1}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    iget-object v1, v0, Landroidx/mediarouter/app/d;->R0:Ljava/util/HashSet;
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Ljava/util/HashSet;->size()I
+
+    move-result v1
+
+    if-eqz v1, :cond_5
+
+    new-instance v1, Lp89;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v3, v0}, Lp89;-><init>(ILjava/lang/Object;)V
+
+    iget-object v3, v0, Landroidx/mediarouter/app/d;->O0:Landroidx/mediarouter/app/OverlayListView;
+
+    invoke-virtual {v3}, Landroid/widget/AdapterView;->getFirstVisiblePosition()I
+
+    move-result v3
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :goto_2
+    iget-object v6, v0, Landroidx/mediarouter/app/d;->O0:Landroidx/mediarouter/app/OverlayListView;
+
+    invoke-virtual {v6}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v6
+
+    if-ge v4, v6, :cond_6
+
+    iget-object v6, v0, Landroidx/mediarouter/app/d;->O0:Landroidx/mediarouter/app/OverlayListView;
+
+    invoke-virtual {v6, v4}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v6
+
+    add-int v7, v3, v4
+
+    iget-object v8, v0, Landroidx/mediarouter/app/d;->P0:Landroidx/mediarouter/app/c;
+
+    invoke-virtual {v8, v7}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lba9;
+
+    iget-object v8, v0, Landroidx/mediarouter/app/d;->R0:Ljava/util/HashSet;
+
+    invoke-virtual {v8, v7}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_4
+
+    new-instance v7, Landroid/view/animation/AlphaAnimation;
+
+    const/4 v8, 0x0
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    invoke-direct {v7, v8, v9}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
+
+    iget v8, v0, Landroidx/mediarouter/app/d;->s1:I
+
+    int-to-long v8, v8
+
+    invoke-virtual {v7, v8, v9}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    invoke-virtual {v7, v2}, Landroid/view/animation/Animation;->setFillEnabled(Z)V
+
+    invoke-virtual {v7, v2}, Landroid/view/animation/Animation;->setFillAfter(Z)V
+
+    if-nez v5, :cond_3
+
+    invoke-virtual {v7, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
+
+    move v5, v2
+
+    :cond_3
+    invoke-virtual {v6}, Landroid/view/View;->clearAnimation()V
+
+    invoke-virtual {v6, v7}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    :cond_4
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_2
+
+    :cond_5
+    invoke-virtual {v0, v2}, Landroidx/mediarouter/app/d;->j(Z)V
+
+    :cond_6
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lyo;->b:Ljava/lang/Object;
+
+    check-cast v0, Lv72;
+
+    iget-object v1, v0, Lv72;->Z:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Lv72;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-lez v2, :cond_9
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lu72;
+
+    iget-object v2, v2, Lu72;->a:Lck9;
+
+    iget-boolean v2, v2, Lde8;->J0:Z
+
+    if-nez v2, :cond_9
+
+    iget-object v2, v0, Lv72;->z0:Landroid/view/View;
+
+    if-eqz v2, :cond_8
+
+    invoke-virtual {v2}, Landroid/view/View;->isShown()Z
+
+    move-result v2
+
+    if-nez v2, :cond_7
+
+    goto :goto_4
+
+    :cond_7
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    check-cast v0, Landroid/text/Spannable;
+    :goto_3
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v0, p2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+    move-result v1
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+    if-eqz v1, :cond_9
 
-    move-result-object p0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result-object v1
 
-    const/16 v0, 0x1f
+    check-cast v1, Lu72;
 
-    const/4 v1, 0x3
+    iget-object v1, v1, Lu72;->a:Lck9;
 
-    if-lt p2, v0, :cond_0
+    invoke-virtual {v1}, Lde8;->h()V
 
-    new-instance p2, Ltr6;
+    goto :goto_3
 
-    invoke-direct {p2, p0, v1}, Ltr6;-><init>(Landroid/content/ClipData;I)V
+    :cond_8
+    :goto_4
+    invoke-virtual {v0}, Lv72;->dismiss()V
 
-    goto :goto_0
+    :cond_9
+    return-void
 
-    :cond_0
-    new-instance p2, Lc04;
+    :pswitch_2
+    iget-object v0, p0, Lyo;->b:Ljava/lang/Object;
 
-    invoke-direct {p2}, Lc04;-><init>()V
+    check-cast v0, Lep;
 
-    iput-object p0, p2, Lc04;->b:Landroid/content/ClipData;
+    iget-object v1, v0, Lep;->R0:Lhp;
 
-    iput v1, p2, Lc04;->c:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_0
-    invoke-interface {p2}, Lb04;->build()Le04;
+    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
 
-    move-result-object p0
+    move-result v2
 
-    invoke-static {p1, p0}, Ltyg;->j(Landroid/view/View;Le04;)Le04;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v2, :cond_a
 
-    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
+    iget-object v2, v0, Lep;->P0:Landroid/graphics/Rect;
 
-    const/4 p0, 0x1
+    invoke-virtual {v1, v2}, Landroid/view/View;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
-    return p0
+    move-result v1
 
-    :catchall_0
-    move-exception p0
+    if-eqz v1, :cond_a
 
-    invoke-virtual {p1}, Landroid/widget/TextView;->endBatchEdit()V
+    invoke-virtual {v0}, Lep;->s()V
 
-    throw p0
-.end method
+    invoke-virtual {v0}, Lde8;->h()V
 
-.method public static b(Landroid/view/DragEvent;Landroid/view/View;Landroid/app/Activity;)Z
-    .locals 2
+    goto :goto_5
 
-    invoke-virtual {p2, p0}, Landroid/app/Activity;->requestDragAndDropPermissions(Landroid/view/DragEvent;)Landroid/view/DragAndDropPermissions;
+    :cond_a
+    invoke-virtual {v0}, Lde8;->dismiss()V
 
-    invoke-virtual {p0}, Landroid/view/DragEvent;->getClipData()Landroid/content/ClipData;
+    :goto_5
+    return-void
 
-    move-result-object p0
+    :pswitch_3
+    iget-object v0, p0, Lyo;->b:Ljava/lang/Object;
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+    check-cast v0, Lhp;
 
-    const/16 v0, 0x1f
+    invoke-virtual {v0}, Lhp;->getInternalPopup()Lgp;
 
-    const/4 v1, 0x3
+    move-result-object v1
 
-    if-lt p2, v0, :cond_0
+    invoke-interface {v1}, Lgp;->a()Z
 
-    new-instance p2, Ltr6;
+    move-result v1
 
-    invoke-direct {p2, p0, v1}, Ltr6;-><init>(Landroid/content/ClipData;I)V
+    if-nez v1, :cond_b
 
-    goto :goto_0
+    iget-object v1, v0, Lhp;->t0:Lgp;
 
-    :cond_0
-    new-instance p2, Lc04;
+    invoke-virtual {v0}, Landroid/view/View;->getTextDirection()I
 
-    invoke-direct {p2}, Lc04;-><init>()V
+    move-result v2
 
-    iput-object p0, p2, Lc04;->b:Landroid/content/ClipData;
+    invoke-virtual {v0}, Landroid/view/View;->getTextAlignment()I
 
-    iput v1, p2, Lc04;->c:I
+    move-result v3
 
-    :goto_0
-    invoke-interface {p2}, Lb04;->build()Le04;
+    invoke-interface {v1, v2, v3}, Lgp;->n(II)V
 
-    move-result-object p0
+    :cond_b
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    invoke-static {p1, p0}, Ltyg;->j(Landroid/view/View;Le04;)Le04;
+    move-result-object v0
 
-    const/4 p0, 0x1
+    if-eqz v0, :cond_c
 
-    return p0
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    :cond_c
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

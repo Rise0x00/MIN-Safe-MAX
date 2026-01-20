@@ -4,34 +4,48 @@
 
 
 # instance fields
-.field public a:Z
+.field public a:Ls0;
 
-.field public b:Z
+.field public final b:F
 
-.field public c:I
+.field public c:Z
 
-.field public d:I
+.field public d:Z
 
-.field public e:I
+.field public e:J
 
-.field public f:I
+.field public f:F
 
-.field public g:Z
+.field public g:F
 
-.field public h:Z
 
-.field public i:Z
+# direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 0
 
-.field public j:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public k:I
+    invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
-.field public l:I
+    move-result-object p1
 
-.field public m:I
+    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
-.field public n:I
+    move-result p1
 
-.field public o:I
+    int-to-float p1, p1
 
-.field public p:Ljava/lang/Object;
+    iput p1, p0, Lvv6;->b:F
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lvv6;->a:Ls0;
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lvv6;->c:Z
+
+    iput-boolean p1, p0, Lvv6;->d:Z
+
+    return-void
+.end method

@@ -2,58 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltt6;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
 
-    const/4 v0, 0x1
+# instance fields
+.field public final a:I
 
-    if-ne p0, p1, :cond_0
 
-    return v0
+# direct methods
+.method public constructor <init>(I)V
+    .locals 0
 
-    :cond_0
-    instance-of v1, p1, Lqt6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v1, :cond_1
+    iput p1, p0, Lqt6;->a:I
 
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    check-cast p1, Lqt6;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const v0, -0xf2f2f3
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "GradientsLoadingIconPrimaryStaticColors(filled=-15921907, transparent=-15921907)"
-
-    return-object v0
+    return-void
 .end method

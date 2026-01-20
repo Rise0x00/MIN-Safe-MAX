@@ -2,150 +2,178 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ls2c;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:J
+.field public final X:Z
 
-.field public final b:Ljava/lang/CharSequence;
+.field public final Y:Z
 
-.field public final c:Lmrf;
+.field public final a:Z
 
-.field public final d:Ljava/lang/String;
+.field public final b:Z
 
-.field public final e:J
+.field public final c:Z
 
-.field public final f:Ljava/lang/CharSequence;
+.field public final d:Z
+
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/CharSequence;Lmrf;Ljava/lang/String;JLjava/lang/CharSequence;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lxjb;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lxjb;-><init>(I)V
+
+    sput-object v0, Ls2c;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(ZZZZZZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ls2c;->a:J
+    iput-boolean p1, p0, Ls2c;->a:Z
 
-    iput-object p3, p0, Ls2c;->b:Ljava/lang/CharSequence;
+    iput-boolean p2, p0, Ls2c;->b:Z
 
-    iput-object p4, p0, Ls2c;->c:Lmrf;
+    iput-boolean p3, p0, Ls2c;->c:Z
 
-    iput-object p5, p0, Ls2c;->d:Ljava/lang/String;
+    iput-boolean p4, p0, Ls2c;->d:Z
 
-    iput-wide p6, p0, Ls2c;->e:J
+    iput-boolean p5, p0, Ls2c;->o:Z
 
-    iput-object p8, p0, Ls2c;->f:Ljava/lang/CharSequence;
+    iput-boolean p6, p0, Ls2c;->X:Z
+
+    iput-boolean p7, p0, Ls2c;->Y:Z
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
+    const/4 v0, 0x1
+
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Ls2c;
+    instance-of v1, p1, Ls2c;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Ls2c;
 
-    iget-wide v0, p0, Ls2c;->a:J
+    iget-boolean v1, p0, Ls2c;->a:Z
 
-    iget-wide v2, p1, Ls2c;->a:J
+    iget-boolean v3, p1, Ls2c;->a:Z
 
-    cmp-long v0, v0, v2
+    if-eq v1, v3, :cond_2
 
-    if-eqz v0, :cond_2
-
-    goto :goto_0
+    return v2
 
     :cond_2
-    iget-object v0, p0, Ls2c;->b:Ljava/lang/CharSequence;
+    iget-boolean v1, p0, Ls2c;->b:Z
 
-    iget-object v1, p1, Ls2c;->b:Ljava/lang/CharSequence;
+    iget-boolean v3, p1, Ls2c;->b:Z
 
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v1, v3, :cond_3
 
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
+    return v2
 
     :cond_3
-    iget-object v0, p0, Ls2c;->c:Lmrf;
+    iget-boolean v1, p0, Ls2c;->c:Z
 
-    iget-object v1, p1, Ls2c;->c:Lmrf;
+    iget-boolean v3, p1, Ls2c;->c:Z
 
-    invoke-virtual {v0, v1}, Lmrf;->equals(Ljava/lang/Object;)Z
+    if-eq v1, v3, :cond_4
 
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
+    return v2
 
     :cond_4
-    iget-object v0, p0, Ls2c;->d:Ljava/lang/String;
+    iget-boolean v1, p0, Ls2c;->d:Z
 
-    iget-object v1, p1, Ls2c;->d:Ljava/lang/String;
+    iget-boolean v3, p1, Ls2c;->d:Z
 
-    invoke-static {v0, v1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v1, v3, :cond_5
 
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    goto :goto_0
+    return v2
 
     :cond_5
-    iget-wide v0, p0, Ls2c;->e:J
+    iget-boolean v1, p0, Ls2c;->o:Z
 
-    iget-wide v2, p1, Ls2c;->e:J
+    iget-boolean v3, p1, Ls2c;->o:Z
 
-    cmp-long v0, v0, v2
+    if-eq v1, v3, :cond_6
 
-    if-eqz v0, :cond_6
-
-    goto :goto_0
+    return v2
 
     :cond_6
-    iget-object v0, p0, Ls2c;->f:Ljava/lang/CharSequence;
+    iget-boolean v1, p0, Ls2c;->X:Z
 
-    iget-object p1, p1, Ls2c;->f:Ljava/lang/CharSequence;
+    iget-boolean v3, p1, Ls2c;->X:Z
 
-    invoke-static {v0, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v1, v3, :cond_7
 
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return v2
 
     :cond_7
-    :goto_1
-    const/4 p1, 0x1
+    iget-boolean v1, p0, Ls2c;->Y:Z
 
-    return p1
+    iget-boolean p1, p1, Ls2c;->Y:Z
+
+    if-eq v1, p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 4
+    .locals 3
 
-    iget-wide v0, p0, Ls2c;->a:J
+    iget-boolean v0, p0, Ls2c;->a:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v0
 
@@ -153,55 +181,39 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Ls2c;->b:Ljava/lang/CharSequence;
+    iget-boolean v2, p0, Ls2c;->b:Z
 
-    invoke-static {v2, v0, v1}, Lm65;->e(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-object v2, p0, Ls2c;->c:Lmrf;
-
-    invoke-virtual {v2}, Lmrf;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    const/4 v0, 0x0
-
-    iget-object v3, p0, Ls2c;->d:Ljava/lang/String;
-
-    if-nez v3, :cond_0
-
-    move v3, v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    :goto_0
-    add-int/2addr v2, v3
-
-    mul-int/2addr v2, v1
-
-    invoke-static {v2, v1, v0}, Lo3h;->d(IIZ)I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 
-    iget-wide v2, p0, Ls2c;->e:J
+    iget-boolean v2, p0, Ls2c;->c:Z
 
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
     move-result v0
 
-    iget-object v1, p0, Ls2c;->f:Ljava/lang/CharSequence;
+    iget-boolean v2, p0, Ls2c;->d:Z
 
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ls2c;->o:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v2, p0, Ls2c;->X:Z
+
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Ls2c;->Y:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result v1
 
@@ -213,59 +225,81 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, ", undoVisible="
 
-    const-string v1, "ProfileContactCellItem(id="
+    const-string v1, ", clearVisible="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "PhotoEditorViewState(redoVisible="
 
-    iget-wide v1, p0, Ls2c;->a:J
+    iget-boolean v3, p0, Ls2c;->a:Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-boolean v4, p0, Ls2c;->b:Z
 
-    const-string v1, ", title="
+    invoke-static {v2, v3, v0, v4, v1}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    iget-object v1, p0, Ls2c;->b:Ljava/lang/CharSequence;
+    const-string v1, ", drawStickerVisible="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v2, ", drawStickerEnabled="
 
-    const-string v1, ", subtitle="
+    iget-boolean v3, p0, Ls2c;->c:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v4, p0, Ls2c;->d:Z
 
-    iget-object v1, p0, Ls2c;->c:Lmrf;
+    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, ", doneEnabled="
 
-    const-string v1, ", avatarUrl="
+    const-string v2, ", isRegularSending="
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v3, p0, Ls2c;->o:Z
 
-    iget-object v1, p0, Ls2c;->d:Ljava/lang/String;
+    iget-boolean v4, p0, Ls2c;->X:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isOnline=false, avatarSourceId="
-
-    const-string v2, ", abbreviation="
-
-    iget-wide v3, p0, Ls2c;->e:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget-object v1, p0, Ls2c;->f:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, v0, v3, v4}, Lt02;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
 
     const-string v1, ")"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean v2, p0, Ls2c;->Y:Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v2, v1}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-boolean p2, p0, Ls2c;->a:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ls2c;->b:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ls2c;->c:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ls2c;->d:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ls2c;->o:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ls2c;->X:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-boolean p2, p0, Ls2c;->Y:Z
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

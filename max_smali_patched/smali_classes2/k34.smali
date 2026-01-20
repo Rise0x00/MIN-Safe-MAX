@@ -1,60 +1,48 @@
-.class public final synthetic Lk34;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljr3;
+.class public final Lk34;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ld83;
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;I)V
+.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lk34;->a:I
+    iput-object p1, p0, Lk34;->X:Ld83;
 
-    iput-object p1, p0, Lk34;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lk34;->a:I
+    iput-object p1, p0, Lk34;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lk34;->o:I
 
-    iget-object v0, p0, Lk34;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Ljava/lang/Throwable;
+    or-int/2addr p1, v0
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->h(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Ljava/lang/Throwable;)V
+    iput p1, p0, Lk34;->o:I
 
-    return-void
+    iget-object p1, p0, Lk34;->X:Ld83;
 
-    :pswitch_0
-    iget-object v0, p0, Lk34;->b:Lru/ok/android/externcalls/sdk/factory/JoinCallParams;
+    const/4 v0, 0x0
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/Conversation;
+    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lru/ok/android/externcalls/sdk/ConversationFactory;->p(Lru/ok/android/externcalls/sdk/factory/JoinCallParams;Lru/ok/android/externcalls/sdk/Conversation;)V
+    move-result-object p1
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

@@ -1,40 +1,48 @@
-.class public abstract Lusc;
-.super Ljava/lang/Object;
+.class public final Lusc;
+.super Lo84;
 
 
-# static fields
-.field public static oneme_media_keyboard_emoji_animals_and_plants:I = 0x7f1308a3
+# instance fields
+.field public final synthetic X:Ltsc;
 
-.field public static oneme_media_keyboard_emoji_classic:I = 0x7f1308a4
+.field public synthetic d:Ljava/lang/Object;
 
-.field public static oneme_media_keyboard_emoji_flags:I = 0x7f1308a5
+.field public o:I
 
-.field public static oneme_media_keyboard_emoji_food_and_drink:I = 0x7f1308a6
 
-.field public static oneme_media_keyboard_emoji_gestures_and_people:I = 0x7f1308a7
+# direct methods
+.method public constructor <init>(Ltsc;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static oneme_media_keyboard_emoji_objects:I = 0x7f1308a8
+    iput-object p1, p0, Lusc;->X:Ltsc;
 
-.field public static oneme_media_keyboard_emoji_sport_and_activity:I = 0x7f1308a9
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static oneme_media_keyboard_emoji_symbols:I = 0x7f1308aa
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_emoji_travels_and_transport:I = 0x7f1308ab
 
-.field public static oneme_media_keyboard_favorite:I = 0x7f1308ac
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static oneme_media_keyboard_popular:I = 0x7f1308ad
+    iput-object p1, p0, Lusc;->d:Ljava/lang/Object;
 
-.field public static oneme_media_keyboard_recent:I = 0x7f1308ae
+    iget p1, p0, Lusc;->o:I
 
-.field public static oneme_media_keyboard_recent_clear_action:I = 0x7f1308af
+    const/high16 v0, -0x80000000
 
-.field public static oneme_media_keyboard_recent_clear_cancel:I = 0x7f1308b0
+    or-int/2addr p1, v0
 
-.field public static oneme_media_keyboard_recent_clear_title:I = 0x7f1308b1
+    iput p1, p0, Lusc;->o:I
 
-.field public static oneme_media_keyboard_tab_emoji:I = 0x7f1308b2
+    iget-object p1, p0, Lusc;->X:Ltsc;
 
-.field public static oneme_media_keyboard_tab_gifs:I = 0x7f1308b3
+    const/4 v0, 0x0
 
-.field public static oneme_media_keyboard_tab_stickers:I = 0x7f1308b4
+    invoke-virtual {p1, v0, p0}, Ltsc;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+.end method

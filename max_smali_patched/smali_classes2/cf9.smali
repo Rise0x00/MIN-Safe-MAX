@@ -2,52 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldf9;
+
 
 # static fields
-.field public static final synthetic b:[Les7;
-
-
-# instance fields
-.field public final a:Ltw4;
+.field public static final a:Lcf9;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Lbec;
+    new-instance v0, Lcf9;
 
-    const-class v1, Lcf9;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "prefs"
-
-    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v1, Lv7d;->a:Lw7d;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Les7;
-
-    aput-object v0, v1, v4
-
-    sput-object v1, Lcf9;->b:[Les7;
+    sput-object v0, Lcf9;->a:Lcf9;
 
     return-void
 .end method
 
-.method public constructor <init>(Ltw4;)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput-object p1, p0, Lcf9;->a:Ltw4;
+    const/4 v0, 0x1
 
-    return-void
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p1, p1, Lcf9;
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x73235df3
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "Money"
+
+    return-object v0
 .end method

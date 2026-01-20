@@ -1,79 +1,129 @@
 .class public final Lraa;
-.super Ljava/lang/Object;
+.super Licg;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic d:[Les7;
-
-.field public static final e:Ljava/lang/String;
-
-
 # instance fields
-.field public final a:Lvf5;
+.field public final c:J
 
-.field public final b:Ltw4;
-
-.field public final c:Ltw4;
+.field public final d:Ljava/util/LinkedHashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lbec;
-
-    const-class v1, Lraa;
-
-    const-string v2, "db"
-
-    const-string v3, "getDb()Lru/ok/tamtam/Database;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lbec;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Lv7d;->a:Lw7d;
-
-    const-string v3, "phonebook"
-
-    const-string v5, "getPhonebook()Lru/ok/tamtam/services/Phonebook;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lok7;->d(Lw7d;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lbec;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Les7;
-
-    aput-object v0, v3, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v3, v0
-
-    sput-object v3, Lraa;->d:[Les7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lraa;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lvf5;Ltw4;Ltw4;)V
+.method public constructor <init>(JLjava/util/LinkedHashSet;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lraa;->a:Lvf5;
+    iput-wide p1, p0, Lraa;->c:J
 
-    iput-object p2, p0, Lraa;->b:Ltw4;
-
-    iput-object p3, p0, Lraa;->c:Ltw4;
+    iput-object p3, p0, Lraa;->d:Ljava/util/LinkedHashSet;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lraa;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lraa;
+
+    iget-wide v0, p0, Lraa;->c:J
+
+    iget-wide v2, p1, Lraa;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lraa;->d:Ljava/util/LinkedHashSet;
+
+    iget-object p1, p1, Lraa;->d:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_3
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lraa;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lraa;->d:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response(chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lraa;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageIds="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lraa;->d:Ljava/util/LinkedHashSet;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

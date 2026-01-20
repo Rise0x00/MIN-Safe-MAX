@@ -1,86 +1,323 @@
 .class public abstract Lyzf;
-.super Ljava/lang/Object;
+.super Lxzf;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public static final j(Ljava/lang/String;)V
+    .locals 3
 
-    const-class v0, Ljava/lang/String;
+    new-instance v0, Ljava/lang/NumberFormatException;
 
-    const-class v1, Landroid/os/Trace;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    const-string v2, "Invalid number format: \'"
 
-    const/16 v3, 0x1d
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-ge v2, v3, :cond_0
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :try_start_0
-    const-string v2, "TRACE_TAG_APP"
+    const/16 p0, 0x27
 
-    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static k(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 10
+
+    const/16 v0, 0xa
+
+    invoke-static {v0}, Lndj;->a(I)V
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    const/16 v4, 0x30
+
+    invoke-static {v3, v4}, Le1j;->b(II)I
+
+    move-result v4
+
+    const v5, -0x7fffffff
+
+    if-gez v4, :cond_4
+
+    const/4 v4, 0x1
+
+    if-ne v1, v4, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    const/16 v6, 0x2b
+
+    if-eq v3, v6, :cond_3
+
+    const/16 v5, 0x2d
+
+    if-eq v3, v5, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/high16 v5, -0x80000000
+
+    move v3, v4
+
+    goto :goto_0
+
+    :cond_3
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_4
+    move v3, v2
+
+    move v4, v3
+
+    :goto_0
+    const v6, -0x38e38e3
+
+    move v7, v6
+
+    :goto_1
+    if-ge v4, v1, :cond_9
+
+    invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
+
+    move-result v8
+
+    invoke-static {v8, v0}, Ljava/lang/Character;->digit(II)I
+
+    move-result v8
+
+    if-gez v8, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    if-ge v2, v7, :cond_6
+
+    if-ne v7, v6, :cond_7
+
+    div-int/lit8 v7, v5, 0xa
+
+    if-ge v2, v7, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    mul-int/lit8 v2, v2, 0xa
+
+    add-int v9, v5, v8
+
+    if-ge v2, v9, :cond_8
+
+    :cond_7
+    :goto_2
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_8
+    sub-int/2addr v2, v8
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_9
+    if-eqz v3, :cond_a
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_a
+    neg-int p0, v2
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static l(Ljava/lang/String;)Ljava/lang/Long;
+    .locals 19
+
+    move-object/from16 v0, p0
+
+    const/16 v1, 0xa
+
+    invoke-static {v1}, Lndj;->a(I)V
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_2
+
+    :cond_0
     const/4 v3, 0x0
 
-    invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->getLong(Ljava/lang/Object;)J
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
 
-    const-string v2, "isTagEnabled"
+    move-result v4
 
-    sget-object v3, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
+    const/16 v5, 0x30
 
-    filled-new-array {v3}, [Ljava/lang/Class;
+    invoke-static {v4, v5}, Le1j;->b(II)I
 
-    move-result-object v4
+    move-result v5
 
-    invoke-virtual {v1, v2, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-string v2, "asyncTraceBegin"
+    if-gez v5, :cond_4
 
-    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    const/4 v5, 0x1
 
-    filled-new-array {v3, v0, v4}, [Ljava/lang/Class;
+    if-ne v2, v5, :cond_1
 
-    move-result-object v5
+    goto :goto_2
 
-    invoke-virtual {v1, v2, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :cond_1
+    const/16 v8, 0x2b
 
-    const-string v2, "asyncTraceEnd"
+    if-eq v4, v8, :cond_3
 
-    filled-new-array {v3, v0, v4}, [Ljava/lang/Class;
+    const/16 v3, 0x2d
 
-    move-result-object v5
+    if-eq v4, v3, :cond_2
 
-    invoke-virtual {v1, v2, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    goto :goto_2
 
-    const-string v2, "traceCounter"
+    :cond_2
+    const-wide/high16 v6, -0x8000000000000000L
 
-    filled-new-array {v3, v0, v4}, [Ljava/lang/Class;
+    move v3, v5
+
+    goto :goto_0
+
+    :cond_3
+    move/from16 v18, v5
+
+    move v5, v3
+
+    move/from16 v3, v18
+
+    goto :goto_0
+
+    :cond_4
+    move v5, v3
+
+    :goto_0
+    const-wide v8, -0x38e38e38e38e38eL    # -2.772000429909333E291
+
+    const-wide/16 v10, 0x0
+
+    move-wide v12, v8
+
+    :goto_1
+    if-ge v3, v2, :cond_9
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->charAt(I)C
+
+    move-result v4
+
+    invoke-static {v4, v1}, Ljava/lang/Character;->digit(II)I
+
+    move-result v4
+
+    if-gez v4, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    cmp-long v14, v10, v12
+
+    if-gez v14, :cond_6
+
+    cmp-long v12, v12, v8
+
+    if-nez v12, :cond_7
+
+    int-to-long v12, v1
+
+    div-long v12, v6, v12
+
+    cmp-long v14, v10, v12
+
+    if-gez v14, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    int-to-long v14, v1
+
+    mul-long/2addr v10, v14
+
+    int-to-long v14, v4
+
+    add-long v16, v6, v14
+
+    cmp-long v4, v10, v16
+
+    if-gez v4, :cond_8
+
+    :cond_7
+    :goto_2
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_8
+    sub-long/2addr v10, v14
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_9
+    if-eqz v5, :cond_a
+
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
 
-    return-void
+    :cond_a
+    neg-long v0, v10
 
-    :catch_0
-    move-exception v0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v1, "TraceCompat"
+    move-result-object v0
 
-    const-string v2, "Unable to initialize via reflection."
-
-    invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

@@ -1,33 +1,31 @@
-.class public final Lt18;
-.super Lx18;
+.class public abstract Lt18;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Ljava/lang/String;
+# static fields
+.field public static final a:Lsna;
 
-.field public final o:Landroid/net/Uri;
+.field public static final b:Ls18;
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Ljava/lang/String;)V
-    .locals 9
+.method static constructor <clinit>()V
+    .locals 2
 
-    const-wide/16 v5, 0x0
+    new-instance v0, Lsna;
 
-    const-wide/16 v7, 0x0
+    const/16 v1, 0x17
 
-    const-wide/16 v1, 0x0
+    invoke-direct {v0, v1}, Lsna;-><init>(I)V
 
-    const-wide/16 v3, 0x0
+    sput-object v0, Lt18;->a:Lsna;
 
-    move-object v0, p0
+    new-instance v0, Ls18;
 
-    invoke-direct/range {v0 .. v8}, Lx18;-><init>(JJJJ)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, v0, Lt18;->o:Landroid/net/Uri;
-
-    iput-object p2, v0, Lt18;->X:Ljava/lang/String;
+    sput-object v0, Lt18;->b:Ls18;
 
     return-void
 .end method

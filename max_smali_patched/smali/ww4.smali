@@ -1,291 +1,352 @@
-.class public abstract Lww4;
+.class public final synthetic Lww4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcx4;
+.implements Lh8g;
+.implements Lcom/my/tracker/core/EngineCore$EventPacker;
 
-# static fields
-.field public static final synthetic a:I
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:J
+
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lbx4;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;I)V
+    .locals 0
 
-    const-wide/high16 v0, 0x4000000000000000L    # 2.0
+    .line 1
+    iput p6, p0, Lww4;->a:I
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
+    iput-object p1, p0, Lww4;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lww4;->o:Ljava/lang/Object;
+
+    iput-wide p3, p0, Lww4;->c:J
+
+    iput-object p5, p0, Lww4;->d:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(D)Z
-    .locals 2
+.method public synthetic constructor <init>(Lcom/my/tracker/applifecycle/o/d;JLjava/lang/String;Lcom/my/tracker/applifecycle/o/e$a;)V
+    .locals 1
 
-    invoke-static {p0, p1}, Lpyi;->b(D)Z
+    .line 3
+    const/4 v0, 0x3
 
-    move-result v0
+    iput v0, p0, Lww4;->a:I
 
-    if-eqz v0, :cond_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
+    iput-object p1, p0, Lww4;->b:Ljava/lang/Object;
 
-    cmpl-double v0, p0, v0
+    iput-wide p2, p0, Lww4;->c:J
 
-    if-eqz v0, :cond_0
+    iput-object p4, p0, Lww4;->o:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lpyi;->a(D)J
+    iput-object p5, p0, Lww4;->d:Ljava/lang/Object;
 
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->numberOfTrailingZeros(J)I
-
-    move-result v0
-
-    rsub-int/lit8 v0, v0, 0x34
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
-
-    move-result p0
-
-    if-gt v0, p0, :cond_1
-
-    :cond_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public static b(D)Z
-    .locals 4
+.method public synthetic constructor <init>(Lm9h;Ljava/lang/Iterable;Lcd0;J)V
+    .locals 1
 
-    const-wide/16 v0, 0x0
+    .line 2
+    const/4 v0, 0x2
 
-    cmpl-double v0, p0, v0
+    iput v0, p0, Lww4;->a:I
 
-    const/4 v1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-lez v0, :cond_0
+    iput-object p1, p0, Lww4;->b:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lpyi;->b(D)Z
+    iput-object p2, p0, Lww4;->o:Ljava/lang/Object;
 
-    move-result v0
+    iput-object p3, p0, Lww4;->d:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    iput-wide p4, p0, Lww4;->c:J
 
-    invoke-static {p0, p1}, Lpyi;->a(D)J
-
-    move-result-wide p0
-
-    const-wide/16 v2, 0x1
-
-    sub-long v2, p0, v2
-
-    and-long/2addr p0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p0, p0, v2
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    return v1
+    return-void
 .end method
 
-.method public static c(D)I
-    .locals 6
 
-    sget-object v0, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
+# virtual methods
+.method public a()Ljava/lang/Object;
+    .locals 10
 
-    const-wide/16 v1, 0x0
+    iget-object v0, p0, Lww4;->b:Ljava/lang/Object;
 
-    cmpl-double v1, p0, v1
+    check-cast v0, Lm9h;
 
-    const/4 v2, 0x0
+    iget-object v1, p0, Lww4;->o:Ljava/lang/Object;
 
-    const/4 v3, 0x1
+    check-cast v1, Ljava/lang/Iterable;
 
-    if-lez v1, :cond_0
+    iget-object v2, p0, Lww4;->d:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lpyi;->b(D)Z
+    check-cast v2, Lcd0;
 
-    move-result v1
+    iget-object v3, v0, Lm9h;->c:Lrm5;
 
-    if-eqz v1, :cond_0
+    check-cast v3, Lj7e;
 
-    move v1, v3
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    goto :goto_0
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    :cond_0
-    move v1, v2
+    move-result-object v4
 
-    :goto_0
-    if-eqz v1, :cond_7
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
-
-    move-result v1
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->getExponent(D)I
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v4
 
-    const/16 v5, -0x3fe
+    const/4 v5, 0x0
 
-    if-lt v4, v5, :cond_6
-
-    sget-object v4, Lvw4;->a:[I
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v0
-
-    aget v0, v4, v0
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance p0, Ljava/lang/AssertionError;
-
-    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p0
-
-    :pswitch_0
-    invoke-static {p0, p1}, Ljava/lang/Double;->doubleToRawLongBits(D)J
-
-    move-result-wide p0
-
-    const-wide v4, 0xfffffffffffffL
-
-    and-long/2addr p0, v4
-
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
-
-    or-long/2addr p0, v4
-
-    invoke-static {p0, p1}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    move-result-wide p0
-
-    mul-double/2addr p0, p0
-
-    const-wide/high16 v4, 0x4000000000000000L    # 2.0
-
-    cmpl-double p0, p0, v4
-
-    if-lez p0, :cond_3
-
-    move v2, v3
-
-    goto :goto_2
-
-    :pswitch_1
-    if-ltz v1, :cond_1
-
-    move v2, v3
-
-    :cond_1
-    invoke-static {p0, p1}, Lww4;->b(D)Z
-
-    move-result p0
-
-    :goto_1
-    xor-int/2addr p0, v3
-
-    and-int/2addr v2, p0
-
-    goto :goto_2
-
-    :pswitch_2
-    if-gez v1, :cond_2
-
-    move v2, v3
-
-    :cond_2
-    invoke-static {p0, p1}, Lww4;->b(D)Z
-
-    move-result p0
+    if-nez v4, :cond_0
 
     goto :goto_1
 
-    :pswitch_3
-    invoke-static {p0, p1}, Lww4;->b(D)Z
+    :cond_0
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    move-result p0
+    const-string v6, "UPDATE events SET num_attempts = num_attempts + 1 WHERE _id in "
 
-    xor-int/lit8 v2, p0, 0x1
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1}, Lj7e;->z0(Ljava/lang/Iterable;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v4, "SELECT COUNT(*), transport_name FROM events WHERE num_attempts >= 16 GROUP BY transport_name"
+
+    invoke-virtual {v3}, Lj7e;->l()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+
+    :try_start_0
+    invoke-virtual {v6, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+
+    invoke-virtual {v6, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const/4 v4, 0x0
+
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v4
+
+    const/4 v7, 0x1
+
+    invoke-interface {v1, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    int-to-long v8, v4
+
+    sget-object v4, Lik8;->X:Lik8;
+
+    invoke-virtual {v3, v8, v9, v4, v7}, Lj7e;->g0(JLik8;Ljava/lang/String;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    const-string v1, "DELETE FROM events WHERE num_attempts >= 16"
+
+    invoke-virtual {v6, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    :goto_1
+    iget-object v0, v0, Lm9h;->g:Lxf3;
+
+    invoke-interface {v0}, Lxf3;->getTime()J
+
+    move-result-wide v0
+
+    iget-wide v6, p0, Lww4;->c:J
+
+    add-long/2addr v0, v6
+
+    new-instance v4, Lg02;
+
+    const/16 v6, 0xb
+
+    invoke-direct {v4, v0, v1, v2, v6}, Lg02;-><init>(JLjava/lang/Object;I)V
+
+    invoke-virtual {v3, v4}, Lj7e;->H(Lh7e;)Ljava/lang/Object;
+
+    return-object v5
+
+    :catchall_0
+    move-exception v0
 
     goto :goto_2
 
-    :pswitch_4
-    invoke-static {p0, p1}, Lww4;->b(D)Z
+    :catchall_1
+    move-exception v0
 
-    move-result p0
+    :try_start_3
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    if-eqz p0, :cond_5
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    :cond_3
     :goto_2
-    :pswitch_5
-    if-eqz v2, :cond_4
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    add-int/2addr v1, v3
+    throw v0
+.end method
 
-    :cond_4
-    return v1
+.method public b(Lski;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 6
 
-    :cond_5
-    new-instance p0, Ljava/lang/ArithmeticException;
+    iget v0, p0, Lww4;->a:I
 
-    const-string p1, "mode was UNNECESSARY, but rounding was necessary"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p0, p1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lww4;->b:Ljava/lang/Object;
 
-    throw p0
+    check-cast v0, Lbx4;
 
-    :cond_6
-    const-wide/high16 v0, 0x4330000000000000L    # 4.503599627370496E15
+    iget-object v1, p0, Lww4;->o:Ljava/lang/Object;
 
-    mul-double/2addr p0, v0
+    check-cast v1, Ljava/util/concurrent/Callable;
 
-    invoke-static {p0, p1}, Lww4;->c(D)I
+    iget-object v2, p0, Lww4;->d:Ljava/lang/Object;
 
-    move-result p0
+    check-cast v2, Ljava/util/concurrent/TimeUnit;
 
-    add-int/lit8 p0, p0, -0x34
+    iget-object v3, v0, Lbx4;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
-    return p0
+    new-instance v4, Lbx0;
 
-    :cond_7
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    const/4 v5, 0x1
 
-    const-string p1, "x must be positive and finite"
+    invoke-direct {v4, v0, v1, p1, v5}, Lbx0;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-wide v0, p0, Lww4;->c:J
 
-    throw p0
+    invoke-interface {v3, v4, v0, v1, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lww4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lbx4;
+
+    iget-object v1, p0, Lww4;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Runnable;
+
+    iget-object v2, p0, Lww4;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/TimeUnit;
+
+    iget-object v3, v0, Lbx4;->b:Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v4, Lzw4;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v0, v1, p1, v5}, Lzw4;-><init>(Lbx4;Ljava/lang/Runnable;Lski;I)V
+
+    iget-wide v0, p0, Lww4;->c:J
+
+    invoke-interface {v3, v4, v0, v1, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p1
+
+    return-object p1
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_4
-        :pswitch_5
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public invoke(Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+    .locals 7
+
+    iget-object v0, p0, Lww4;->b:Ljava/lang/Object;
+
+    move-object v1, v0
+
+    check-cast v1, Lcom/my/tracker/applifecycle/o/d;
+
+    iget-object v0, p0, Lww4;->o:Ljava/lang/Object;
+
+    move-object v4, v0
+
+    check-cast v4, Ljava/lang/String;
+
+    iget-object v0, p0, Lww4;->d:Ljava/lang/Object;
+
+    move-object v5, v0
+
+    check-cast v5, Lcom/my/tracker/applifecycle/o/e$a;
+
+    iget-wide v2, p0, Lww4;->c:J
+
+    move-object v6, p1
+
+    invoke-static/range {v1 .. v6}, Lcom/my/tracker/applifecycle/o/d;->a(Lcom/my/tracker/applifecycle/o/d;JLjava/lang/String;Lcom/my/tracker/applifecycle/o/e$a;Lcom/my/tracker/core/EngineCore$InsertEventTools;)[B
+
+    move-result-object p1
+
+    return-object p1
 .end method

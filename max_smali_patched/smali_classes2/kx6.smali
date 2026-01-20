@@ -1,73 +1,57 @@
 .class public final Lkx6;
-.super Lmx6;
+.super Lo84;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lkx6;
+# instance fields
+.field public final synthetic X:Llx6;
+
+.field public Y:I
+
+.field public d:Llx6;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Llx6;Lo84;)V
+    .locals 0
 
-    new-instance v0, Lkx6;
+    iput-object p1, p0, Lkx6;->X:Llx6;
 
-    sget v1, Lnsa;->p:I
-
-    new-instance v2, Lirf;
-
-    invoke-direct {v2, v1}, Lirf;-><init>(I)V
-
-    sget v1, Lmkd;->N:I
-
-    new-instance v3, Lirf;
-
-    invoke-direct {v3, v1}, Lirf;-><init>(I)V
-
-    invoke-direct {v0, v2, v3}, Lmx6;-><init>(Lirf;Lirf;)V
-
-    sput-object v0, Lkx6;->c:Lkx6;
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lkx6;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lkx6;->Y:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p1, p1, Lkx6;
+    or-int/2addr p1, v0
 
-    if-nez p1, :cond_1
+    iput p1, p0, Lkx6;->Y:I
 
-    const/4 p1, 0x0
+    const-wide/16 v3, 0x0
 
-    return p1
+    const/4 v5, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v0, p0, Lkx6;->X:Llx6;
 
-.method public final hashCode()I
-    .locals 1
+    const-wide/16 v1, 0x0
 
-    const v0, 0x709adf5c
+    move-object v6, p0
 
-    return v0
-.end method
+    invoke-virtual/range {v0 .. v6}, Llx6;->a(JJLjava/lang/Integer;Lo84;)Ljava/lang/Object;
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    move-result-object p1
 
-    const-string v0, "Connecting"
-
-    return-object v0
+    return-object p1
 .end method

@@ -1,70 +1,59 @@
-.class public final Lbki;
+.class public abstract synthetic Lbki;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
-
 
 # static fields
-.field public static final a:Lbki;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lbki;
+    invoke-static {}, Lto5;->values()[Lto5;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Lbki;->a:Lbki;
+    array-length v0, v0
 
-    new-instance v0, Lz7i;
+    new-array v0, v0, [I
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
+    const/4 v2, 0x0
 
-    const-class v1, Lu8i;
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
+    :catch_0
     const/4 v2, 0x2
 
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    move-result-object v0
+    :catch_1
+    const/4 v1, 0x3
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    move-result-object v0
+    :catch_2
+    const/4 v2, 0x4
 
-    const/4 v2, 0x3
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    :catch_3
+    sput-object v0, Lbki;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
-
-    move-result-object p1
-
-    throw p1
 .end method

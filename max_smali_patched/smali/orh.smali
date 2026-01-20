@@ -1,80 +1,49 @@
-.class public final synthetic Lorh;
-.super Ljava/lang/Object;
+.class public final Lorh;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/my/tracker/core/utils/Consumer;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lqrh;
 
-.field public final synthetic b:Lcom/my/tracker/core/a;
+.field public Y:I
+
+.field public d:Ljm9;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/my/tracker/core/a;I)V
+.method public constructor <init>(Lqrh;Lo84;)V
     .locals 0
 
-    iput p2, p0, Lorh;->a:I
+    iput-object p1, p0, Lorh;->X:Lqrh;
 
-    iput-object p1, p0, Lorh;->b:Lcom/my/tracker/core/a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lorh;->a:I
+    iput-object p1, p0, Lorh;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lorh;->Y:I
 
-    iget-object v0, p0, Lorh;->b:Lcom/my/tracker/core/a;
+    const/high16 v0, -0x80000000
 
-    check-cast p1, Ljava/lang/Boolean;
+    or-int/2addr p1, v0
 
-    invoke-virtual {v0, p1}, Lcom/my/tracker/core/a;->b(Ljava/lang/Boolean;)V
+    iput p1, p0, Lorh;->Y:I
 
-    return-void
+    iget-object p1, p0, Lorh;->X:Lqrh;
 
-    :pswitch_0
-    iget-object v0, p0, Lorh;->b:Lcom/my/tracker/core/a;
+    invoke-static {p1, p0}, Lqrh;->s(Lqrh;Lo84;)Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->h(Lcom/my/tracker/core/a;Ljava/lang/Boolean;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lorh;->b:Lcom/my/tracker/core/a;
-
-    check-cast p1, Lcom/my/tracker/core/UserInfoState;
-
-    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->e(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;)V
-
-    return-void
-
-    :pswitch_2
-    iget-object v0, p0, Lorh;->b:Lcom/my/tracker/core/a;
-
-    check-cast p1, Lcom/my/tracker/core/UserInfoState;
-
-    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->d(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

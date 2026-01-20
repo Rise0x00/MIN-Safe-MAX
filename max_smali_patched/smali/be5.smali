@@ -2,6 +2,19 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/List;
-.implements Ltr7;
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public abstract e(IJ)V
+.end method
+
+.method public abstract f(Lwtb;)V
+.end method
+
+.method public abstract h(Z)V
+.end method
+
+.method public abstract i(Lkt5;Lcwg;)V
+.end method

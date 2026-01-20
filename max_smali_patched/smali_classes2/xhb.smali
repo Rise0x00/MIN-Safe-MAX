@@ -1,82 +1,45 @@
-.class public final Lxhb;
+.class public final synthetic Lxhb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
+
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:Loab;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public synthetic constructor <init>(Loab;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lxhb;->a:Z
+    iput-object p1, p0, Lxhb;->a:Loab;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 0
 
-    const/4 v0, 0x1
+    const/4 p1, 0x3
 
-    if-ne p0, p1, :cond_0
+    if-ne p2, p1, :cond_0
 
-    return v0
+    iget-object p1, p0, Lxhb;->a:Loab;
+
+    invoke-static {p1}, Lg3j;->f(Landroid/view/View;)V
+
+    const/4 p1, 0x1
+
+    return p1
 
     :cond_0
-    instance-of v1, p1, Lxhb;
+    const/4 p1, 0x0
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxhb;
-
-    iget-boolean v1, p0, Lxhb;->a:Z
-
-    iget-boolean p1, p1, Lxhb;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lxhb;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ContactsPermissionChange(isGranted="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lxhb;->a:Z
-
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return p1
 .end method

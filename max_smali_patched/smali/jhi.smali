@@ -2,69 +2,41 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
 
-
-# static fields
-.field public static final a:Ljhi;
+# instance fields
+.field public a:Lihi;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
+    .locals 2
 
-    new-instance v0, Ljhi;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    sput-object v0, Ljhi;->a:Ljhi;
+    const/16 v1, 0x1e
 
-    new-instance v0, Lz7i;
+    if-lt v0, v1, :cond_0
 
-    const/4 v1, 0x1
+    new-instance v0, Lhhi;
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    invoke-static {p1, p2, p3, p4}, Llsb;->l(ILandroid/view/animation/Interpolator;J)Landroid/view/WindowInsetsAnimation;
 
     move-result-object p1
 
-    throw p1
+    invoke-direct {v0, p1}, Lhhi;-><init>(Landroid/view/WindowInsetsAnimation;)V
+
+    iput-object v0, p0, Ljhi;->a:Lihi;
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lfhi;
+
+    invoke-direct {v0, p1, p2, p3, p4}, Lihi;-><init>(ILandroid/view/animation/Interpolator;J)V
+
+    iput-object v0, p0, Ljhi;->a:Lihi;
+
+    return-void
 .end method

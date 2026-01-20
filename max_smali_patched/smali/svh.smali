@@ -1,101 +1,55 @@
 .class public final Lsvh;
-.super Lh4;
+.super Lrvh;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lsvh;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Landroid/accounts/Account;
-
-.field public final c:I
-
-.field public final d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lrvg;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1}, Lrvg;-><init>(I)V
-
-    sput-object v0, Lsvh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILandroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
+# virtual methods
+.method public final c(Landroid/view/View;)F
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1}, Lrvd;->a(Landroid/view/View;)F
 
-    iput p1, p0, Lsvh;->a:I
+    move-result p1
 
-    iput-object p2, p0, Lsvh;->b:Landroid/accounts/Account;
+    return p1
+.end method
 
-    iput p3, p0, Lsvh;->c:I
+.method public final k(Landroid/view/View;F)V
+    .locals 0
 
-    iput-object p4, p0, Lsvh;->d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
+    invoke-static {p1, p2}, Lrvd;->u(Landroid/view/View;F)V
 
     return-void
 .end method
 
+.method public final l(Landroid/view/View;I)V
+    .locals 0
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
+    invoke-static {p1, p2}, Lnvh;->m(Landroid/view/View;I)V
 
-    const/16 v0, 0x4f45
+    return-void
+.end method
 
-    invoke-static {p1, v0}, Luxi;->k(Landroid/os/Parcel;I)I
+.method public final n(Landroid/view/View;IIII)V
+    .locals 0
 
-    move-result v0
+    invoke-static {p1, p2, p3, p4, p5}, Lnvh;->n(Landroid/view/View;IIII)V
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    const/4 v2, 0x4
+.method public final o(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 0
 
-    invoke-static {p1, v1, v2}, Luxi;->m(Landroid/os/Parcel;II)V
+    invoke-static {p1, p2}, Lnvh;->s(Landroid/view/View;Landroid/graphics/Matrix;)V
 
-    iget v1, p0, Lsvh;->a:I
+    return-void
+.end method
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+.method public final p(Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 0
 
-    const/4 v1, 0x2
-
-    iget-object v3, p0, Lsvh;->b:Landroid/accounts/Account;
-
-    invoke-static {p1, v1, v3, p2}, Luxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    const/4 v1, 0x3
-
-    invoke-static {p1, v1, v2}, Luxi;->m(Landroid/os/Parcel;II)V
-
-    iget v1, p0, Lsvh;->c:I
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v1, p0, Lsvh;->d:Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
-
-    invoke-static {p1, v2, v1, p2}, Luxi;->f(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
-
-    invoke-static {p1, v0}, Luxi;->l(Landroid/os/Parcel;I)V
+    invoke-static {p1, p2}, Lnvh;->v(Landroid/view/View;Landroid/graphics/Matrix;)V
 
     return-void
 .end method

@@ -1,14 +1,11 @@
-.class public abstract Ly75;
+.class public interface abstract Ly75;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public h(Ljava/lang/Throwable;)V
-    .locals 0
-
-    return-void
+.method public abstract e(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 .end method
 
-.method public abstract i()V
+.method public abstract j()Landroid/graphics/drawable/Drawable;
 .end method

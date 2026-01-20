@@ -1,151 +1,199 @@
 .class public final Lyxh;
-.super Lh4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lyxh;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lhke;
 
 
 # instance fields
-.field public final X:I
-
-.field public final Y:Z
-
-.field public final Z:Ljava/lang/String;
-
-.field public final a:I
+.field public final a:Lxxh;
 
 .field public final b:I
 
-.field public final c:I
+.field public final c:J
 
-.field public final d:I
+.field public final d:J
 
-.field public final o:I
+.field public final e:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqwh;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1}, Lqwh;-><init>(I)V
-
-    sput-object v0, Lyxh;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(IIIIIIZLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Lxxh;IJJ)V
+    .locals 6
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lyxh;->a:I
+    iput-object p1, p0, Lyxh;->a:Lxxh;
 
     iput p2, p0, Lyxh;->b:I
 
-    iput p3, p0, Lyxh;->c:I
+    iput-wide p3, p0, Lyxh;->c:J
 
-    iput p4, p0, Lyxh;->d:I
+    sub-long/2addr p5, p3
 
-    iput p5, p0, Lyxh;->o:I
+    iget p3, p1, Lxxh;->c:I
 
-    iput p6, p0, Lyxh;->X:I
+    int-to-long p3, p3
 
-    iput-boolean p7, p0, Lyxh;->Y:Z
+    div-long/2addr p5, p3
 
-    iput-object p8, p0, Lyxh;->Z:Ljava/lang/String;
+    iput-wide p5, p0, Lyxh;->d:J
+
+    int-to-long p2, p2
+
+    mul-long v0, p5, p2
+
+    iget p1, p1, Lxxh;->b:I
+
+    int-to-long v4, p1
+
+    const-wide/32 v2, 0xf4240
+
+    invoke-static/range {v0 .. v5}, Lkbh;->H(JJJ)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lyxh;->e:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
+.method public final c()Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x4
+    return v0
+.end method
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+.method public final e(J)Lfke;
+    .locals 23
 
-    iget v0, p0, Lyxh;->a:I
+    move-object/from16 v0, p0
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v1, v0, Lyxh;->a:Lxxh;
 
-    const/4 v0, 0x2
+    iget v2, v1, Lxxh;->b:I
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    int-to-long v2, v2
 
-    iget v0, p0, Lyxh;->b:I
+    mul-long v2, v2, p1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget v4, v0, Lyxh;->b:I
 
-    const/4 v0, 0x3
+    int-to-long v5, v4
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    const-wide/32 v7, 0xf4240
 
-    iget v0, p0, Lyxh;->c:I
+    mul-long/2addr v5, v7
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    div-long v7, v2, v5
 
-    invoke-static {p1, v1, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    iget-wide v2, v0, Lyxh;->d:J
 
-    iget v0, p0, Lyxh;->d:I
+    const-wide/16 v5, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    sub-long v11, v2, v5
 
-    const/4 v0, 0x5
+    const-wide/16 v9, 0x0
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    invoke-static/range {v7 .. v12}, Lkbh;->j(JJJ)J
 
-    iget v0, p0, Lyxh;->o:I
+    move-result-wide v2
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget v7, v1, Lxxh;->c:I
 
-    const/4 v0, 0x6
+    int-to-long v8, v7
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    mul-long/2addr v8, v2
 
-    iget v0, p0, Lyxh;->X:I
+    iget-wide v13, v0, Lyxh;->c:J
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    add-long/2addr v8, v13
 
-    const/4 v0, 0x7
+    move-wide v15, v5
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    int-to-long v5, v4
 
-    iget-boolean v0, p0, Lyxh;->Y:Z
+    mul-long v17, v2, v5
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget v5, v1, Lxxh;->b:I
 
-    const/16 v0, 0x8
+    int-to-long v5, v5
 
-    iget-object v1, p0, Lyxh;->Z:Ljava/lang/String;
+    const-wide/32 v19, 0xf4240
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    move-wide/from16 v21, v5
 
-    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
+    invoke-static/range {v17 .. v22}, Lkbh;->H(JJJ)J
 
-    return-void
+    move-result-wide v5
+
+    new-instance v10, Llke;
+
+    invoke-direct {v10, v5, v6, v8, v9}, Llke;-><init>(JJ)V
+
+    cmp-long v5, v5, p1
+
+    if-gez v5, :cond_1
+
+    cmp-long v5, v2, v11
+
+    if-nez v5, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    add-long/2addr v2, v15
+
+    int-to-long v5, v7
+
+    mul-long/2addr v5, v2
+
+    add-long/2addr v5, v13
+
+    int-to-long v7, v4
+
+    mul-long v11, v2, v7
+
+    iget v1, v1, Lxxh;->b:I
+
+    int-to-long v1, v1
+
+    const-wide/32 v13, 0xf4240
+
+    move-wide v15, v1
+
+    invoke-static/range {v11 .. v16}, Lkbh;->H(JJJ)J
+
+    move-result-wide v1
+
+    new-instance v3, Llke;
+
+    invoke-direct {v3, v1, v2, v5, v6}, Llke;-><init>(JJ)V
+
+    new-instance v1, Lfke;
+
+    invoke-direct {v1, v10, v3}, Lfke;-><init>(Llke;Llke;)V
+
+    return-object v1
+
+    :cond_1
+    :goto_0
+    new-instance v1, Lfke;
+
+    invoke-direct {v1, v10, v10}, Lfke;-><init>(Llke;Llke;)V
+
+    return-object v1
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lyxh;->e:J
+
+    return-wide v0
 .end method

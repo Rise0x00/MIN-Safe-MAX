@@ -1,55 +1,108 @@
 .class public final Lz20;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroid/content/ContentResolver;
-
-.field public final b:Landroid/net/Uri;
-
-.field public final synthetic c:La30;
+.field public final a:Ly20;
 
 
 # direct methods
-.method public constructor <init>(La30;Landroid/os/Handler;Landroid/content/ContentResolver;Landroid/net/Uri;)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Landroid/util/SparseIntArray;
+
+    invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
+
+    const/4 v1, 0x5
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x6
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/4 v1, 0x7
+
+    invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0x9
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    const/16 v1, 0xa
+
+    invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ly20;)V
     .locals 0
 
-    iput-object p1, p0, Lz20;->c:La30;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
-
-    iput-object p3, p0, Lz20;->a:Landroid/content/ContentResolver;
-
-    iput-object p4, p0, Lz20;->b:Landroid/net/Uri;
+    iput-object p1, p0, Lz20;->a:Ly20;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onChange(Z)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p1, p0, Lz20;->c:La30;
+    instance-of v0, p1, Lz20;
 
-    iget-object v0, p1, La30;->b:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    check-cast v0, Landroid/content/Context;
+    const/4 p1, 0x0
 
-    iget-object v1, p1, La30;->j:Ljava/lang/Object;
+    return p1
 
-    check-cast v1, Ln20;
+    :cond_0
+    check-cast p1, Lz20;
 
-    iget-object v2, p1, La30;->i:Ljava/lang/Object;
+    iget-object v0, p0, Lz20;->a:Ly20;
 
-    check-cast v2, Lvhd;
+    iget-object p1, p1, Lz20;->a:Ly20;
 
-    invoke-static {v0, v1, v2}, Lx20;->b(Landroid/content/Context;Ln20;Lvhd;)Lx20;
+    invoke-virtual {v0, p1}, Ly20;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lz20;->a:Ly20;
+
+    invoke-virtual {v0}, Ly20;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lz20;->a:Ly20;
+
+    invoke-virtual {v0}, Ly20;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, La30;->a(Lx20;)V
-
-    return-void
+    return-object v0
 .end method

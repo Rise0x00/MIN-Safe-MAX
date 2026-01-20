@@ -1,23 +1,27 @@
-.class public interface abstract Lu72;
+.class public final Lu72;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lb2e;
-.implements Le1d;
 
+# instance fields
+.field public final a:Lck9;
 
-# static fields
-.field public static final m:Lt72;
+.field public final b:Lnj9;
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lck9;Lnj9;I)V
+    .locals 0
 
-    sget-object v0, Lt72;->a:Lt72;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lu72;->m:Lt72;
+    iput-object p1, p0, Lu72;->a:Lck9;
+
+    iput-object p2, p0, Lu72;->b:Lnj9;
+
+    iput p3, p0, Lu72;->c:I
 
     return-void
 .end method

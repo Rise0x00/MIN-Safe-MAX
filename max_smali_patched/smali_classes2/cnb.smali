@@ -1,179 +1,474 @@
-.class public final synthetic Lcnb;
-.super Ljava/lang/Object;
+.class public final Lcnb;
+.super Landroid/webkit/WebViewClient;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final synthetic d:I
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
-    .locals 0
+.method public constructor <init>(Ldnb;Lfnb;)V
+    .locals 1
 
-    iput p2, p0, Lcnb;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lcnb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    iput v0, p0, Lcnb;->a:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcnb;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lcnb;->c:Ljava/lang/Object;
+
+    .line 6
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Liei;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcnb;->a:I
+
+    .line 1
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lcnb;->b:Ljava/lang/Object;
+
+    .line 3
+    new-instance p1, La3b;
+
+    const/16 v0, 0x14
+
+    invoke-direct {p1, v0}, La3b;-><init>(I)V
+
+    .line 4
+    new-instance v0, Ln8g;
+
+    invoke-direct {v0, p1}, Ln8g;-><init>(Llq6;)V
+
+    .line 5
+    iput-object v0, p0, Lcnb;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method public onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 9
 
-    iget p1, p0, Lcnb;->a:I
+    iget v0, p0, Lcnb;->a:I
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lcnb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    packed-switch p1, :pswitch_data_0
+    return-void
 
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Les7;
+    :pswitch_0
+    if-eqz p1, :cond_6
 
-    invoke-virtual {v1}, Lone/me/startconversation/channel/PickSubscribersScreen;->J0()Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v0, p0, Lcnb;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast v0, Ln8g;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {p1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+    move-result-object v0
 
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lonb;
+    check-cast v0, Loid;
 
-    move-result-object p1
-
-    iget-object p1, p1, Lonb;->c:Lnpb;
-
-    check-cast p1, Lsmb;
-
-    iget-object v2, v1, Lone/me/startconversation/channel/PickSubscribersScreen;->t0:Los;
-
-    sget-object v3, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Les7;
-
-    const/4 v4, 0x0
-
-    aget-object v3, v3, v4
-
-    invoke-virtual {v2, v1}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    check-cast v1, [J
+    sget v2, Lknb;->a:I
 
-    iget-object v2, p1, Lsmb;->d:Lru7;
+    iget-object v3, v0, Loid;->b:Ljava/lang/ThreadLocal;
 
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+    iget-object v0, v0, Loid;->a:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, [B
+
+    if-nez v4, :cond_0
+
+    const/high16 v4, 0x10000
+
+    new-array v4, v4, [B
+
+    invoke-virtual {v0, v4}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :cond_0
+    :try_start_0
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    invoke-virtual {v3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lu23;
+    check-cast v2, [B
 
-    iget-wide v5, p1, Lsmb;->a:J
+    if-nez v2, :cond_1
 
-    check-cast v2, Lw33;
+    const/16 v2, 0x1000
 
-    invoke-virtual {v2, v5, v6}, Lw33;->N(J)Lj0d;
+    new-array v2, v2, [B
 
-    move-result-object v2
+    invoke-virtual {v3, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v2, v2, Lj0d;->a:Lt0f;
+    goto :goto_0
 
-    invoke-interface {v2}, Lt0f;->getValue()Ljava/lang/Object;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v2
+    goto :goto_4
 
-    check-cast v2, Lt92;
+    :cond_1
+    :goto_0
+    const/4 v3, 0x0
 
-    if-nez v2, :cond_0
+    move v5, v3
+
+    :cond_2
+    :goto_1
+    :try_start_1
+    array-length v6, v2
+
+    invoke-virtual {v1, v2, v3, v6}, Ljava/io/InputStream;->read([BII)I
+
+    move-result v6
+
+    if-ltz v6, :cond_4
+
+    array-length v7, v4
+
+    add-int v8, v5, v6
+
+    if-ge v7, v8, :cond_3
+
+    array-length v7, v4
+
+    mul-int/lit8 v7, v7, 0x2
+
+    new-array v7, v7, [B
+
+    invoke-static {v4, v3, v7, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual {v0, v7}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    move-object v4, v7
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :cond_3
+    :goto_2
+    if-lez v6, :cond_2
+
+    invoke-static {v2, v3, v4, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move v5, v8
+
+    goto :goto_1
+
+    :cond_4
+    :try_start_2
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+
+    new-instance v0, Ljava/lang/String;
+
+    sget-object v1, Ljd2;->a:Ljava/nio/charset/Charset;
+
+    invoke-direct {v0, v4, v3, v5, v1}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_5
+
+    :goto_3
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    :catchall_2
+    move-exception v2
+
+    :try_start_4
+    invoke-static {v1, v0}, Lyij;->b(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :goto_4
+    new-instance v1, Lszd;
+
+    invoke-direct {v1, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_5
+    nop
+
+    instance-of v1, v0, Lszd;
+
+    if-eqz v1, :cond_5
+
+    const/4 v0, 0x0
+
+    :cond_5
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_6
+
+    new-instance v1, Lgnb;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lgnb;-><init>(I)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String;Landroid/webkit/ValueCallback;)V
+
+    :cond_6
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 1
+
+    iget v0, p0, Lcnb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lcnb;->b:Ljava/lang/Object;
+
+    check-cast p1, Liei;
+
+    invoke-interface {p1}, Liei;->i()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    .locals 1
+
+    iget v0, p0, Lcnb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lcnb;->b:Ljava/lang/Object;
+
+    check-cast p1, Liei;
+
+    invoke-interface {p1, p2}, Liei;->m(Ljava/lang/String;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+    .locals 1
+
+    iget v0, p0, Lcnb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+
+    return-void
+
+    :pswitch_0
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->isForMainFrame()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcnb;->b:Ljava/lang/Object;
+
+    check-cast v0, Liei;
+
+    invoke-interface {v0}, Liei;->j()V
+
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    .locals 1
+
+    iget v0, p0, Lcnb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lcnb;->b:Ljava/lang/Object;
+
+    check-cast p1, Liei;
+
+    invoke-interface {p1}, Liei;->e()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_0
+
+    invoke-virtual {p2}, Landroid/webkit/SslErrorHandler;->proceed()V
 
     goto :goto_0
 
     :cond_0
-    iget-object v3, p1, Lsmb;->f:Lru7;
-
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lwo3;
-
-    invoke-interface {v3}, Lwo3;->f()Z
-
-    iget-object v3, p1, Lsmb;->k:Lg54;
-
-    if-eqz v3, :cond_1
-
-    iget-object v5, p1, Lsmb;->c:Lru7;
-
-    invoke-interface {v5}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ltlf;
-
-    check-cast v5, Lsta;
-
-    invoke-virtual {v5}, Lsta;->b()La54;
-
-    move-result-object v5
-
-    new-instance v6, Lpmb;
-
-    invoke-direct {v6, p1, v2, v1, v0}, Lpmb;-><init>(Lsmb;Lt92;[JLkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x2
-
-    invoke-static {v3, v5, v0, v6, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    move-result-object v0
-
-    :cond_1
-    iget-object v1, p1, Lsmb;->j:Lpqe;
-
-    sget-object v2, Lsmb;->l:[Les7;
-
-    aget-object v2, v2, v4
-
-    invoke-virtual {v1, p1, v2, v0}, Lpqe;->O(Ljava/lang/Object;Les7;Ljava/lang/Object;)V
+    invoke-interface {p1}, Liei;->j()V
 
     :goto_0
     return-void
 
-    :pswitch_0
-    sget-object p1, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Les7;
+    nop
 
-    invoke-virtual {v1}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Lonb;
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+    .locals 2
+
+    iget v0, p0, Lcnb;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcnb;->b:Ljava/lang/Object;
+
+    check-cast v0, Liei;
+
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Liei;->l(Landroid/net/Uri;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+
+    move-result p1
+
+    :goto_0
+    return p1
+
+    :pswitch_0
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
 
     move-result-object p1
 
-    iget-object p1, p1, Lonb;->c:Lnpb;
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    check-cast p1, Lsmb;
+    move-result-object p1
 
-    iget-object v1, p1, Lsmb;->k:Lg54;
+    iget-object p2, p0, Lcnb;->b:Ljava/lang/Object;
 
-    if-eqz v1, :cond_2
+    check-cast p2, Ldnb;
 
-    new-instance v2, Lrmb;
+    iget-object p2, p2, Ldnb;->b:Ljava/lang/Object;
 
-    invoke-direct {v2, p1, v0}, Lrmb;-><init>(Lsmb;Lkotlin/coroutines/Continuation;)V
+    check-cast p2, Lj9i;
 
-    const/4 p1, 0x3
+    iget-object p2, p2, Lj9i;->c1:Lcm5;
 
-    invoke-static {v1, v0, v0, v2, p1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+    new-instance v0, Lz7i;
 
-    :cond_2
-    return-void
+    invoke-direct {v0, p1}, Lz7i;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p2, v0}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcnb;->c:Ljava/lang/Object;
+
+    check-cast p1, Lfnb;
+
+    invoke-virtual {p1}, Landroid/webkit/WebView;->destroy()V
+
+    const/4 p1, 0x1
+
+    return p1
 
     nop
 

@@ -1,66 +1,56 @@
-.class public abstract Lxmi;
+.class public final synthetic Lxmi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/my/tracker/core/utils/Consumer;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Ljava/lang/String;
+
 
 # direct methods
-.method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public synthetic constructor <init>(IJLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    if-eq p0, p1, :cond_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p0, :cond_0
+    iput p1, p0, Lxmi;->a:I
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iput-wide p2, p0, Lxmi;->b:J
 
-    move-result p0
+    iput-object p4, p0, Lxmi;->c:Ljava/lang/String;
 
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public static b(Lej6;Ljava/lang/Object;Lo0;)V
-    .locals 1
-
-    :try_start_0
-    invoke-static {p0, p1, p2}, Ls9i;->a(Lej6;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ls9i;->b(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    const/4 v0, 0x0
-
-    invoke-static {p0, p1, v0}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lqi6;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-object p5, p0, Lxmi;->d:Ljava/lang/String;
 
     return-void
+.end method
 
-    :catchall_0
-    move-exception p0
 
-    new-instance p1, Lfed;
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 6
 
-    invoke-direct {p1, p0}, Lfed;-><init>(Ljava/lang/Throwable;)V
+    iget-object v4, p0, Lxmi;->d:Ljava/lang/String;
 
-    invoke-interface {p2, p1}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
+    move-object v5, p1
 
-    throw p0
+    check-cast v5, Landroid/content/SharedPreferences$Editor;
+
+    iget v0, p0, Lxmi;->a:I
+
+    iget-wide v1, p0, Lxmi;->b:J
+
+    iget-object v3, p0, Lxmi;->c:Ljava/lang/String;
+
+    invoke-static/range {v0 .. v5}, Lcom/my/tracker/applifecycle/o/c;->b(IJLjava/lang/String;Ljava/lang/String;Landroid/content/SharedPreferences$Editor;)V
+
+    return-void
 .end method

@@ -1,27 +1,64 @@
 .class public final Lj56;
-.super Liqe;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# virtual methods
-.method public final E()V
-    .locals 2
 
-    iget-object v0, p0, Lm7d;->a:Landroid/view/View;
+# instance fields
+.field public final synthetic a:I
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final synthetic b:Landroid/view/View;
 
-    const/4 v1, 0x0
+.field public final synthetic c:Ljava/lang/Runnable;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+# direct methods
+.method public synthetic constructor <init>(Landroid/view/View;Ljava/lang/Runnable;I)V
+    .locals 0
+
+    iput p3, p0, Lj56;->a:I
+
+    iput-object p1, p0, Lj56;->b:Landroid/view/View;
+
+    iput-object p2, p0, Lj56;->c:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final bridge synthetic z(Li28;)V
-    .locals 0
 
-    check-cast p1, Li56;
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget v0, p0, Lj56;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lj56;->b:Landroid/view/View;
+
+    iget-object v1, p0, Lj56;->c:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lj56;->b:Landroid/view/View;
+
+    iget-object v1, p0, Lj56;->c:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,135 +1,117 @@
 .class public final Lws3;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lz10;
+.field public final synthetic X:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/util/List;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lz10;Ljava/lang/String;Ljava/util/ArrayList;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/confirm/ConfirmPhoneScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lws3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    iput-object p1, p0, Lws3;->a:Lz10;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lws3;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lws3;->c:Ljava/util/List;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Lws3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Lws3;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
+    move-result-object p1
 
     check-cast p1, Lws3;
 
-    iget-object v1, p1, Lws3;->b:Ljava/lang/String;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object p1, p1, Lws3;->a:Lz10;
+    invoke-virtual {p1, p2}, Lws3;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v3, p0, Lws3;->b:Ljava/lang/String;
-
-    invoke-static {v3, v1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lws3;->a:Lz10;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lws3;->c:Ljava/util/List;
-
-    invoke-static {v1, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
+    return-object p2
 .end method
 
-.method public final hashCode()I
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    iget-object v0, p0, Lws3;->b:Ljava/lang/String;
+    new-instance v0, Lws3;
 
-    iget-object v1, p0, Lws3;->a:Lz10;
+    iget-object v1, p0, Lws3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    invoke-direct {v0, p2, v1}, Lws3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/confirm/ConfirmPhoneScreen;)V
 
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StartMessage{media=\'"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lws3;->a:Lz10;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\'text=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lws3;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\'elements=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lws3;->c:Ljava/util/List;
-
-    const-string v2, "\'}"
-
-    invoke-static {v0, v1, v2}, Lnx1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    iput-object p1, v0, Lws3;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lws3;->o:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/login/confirm/ConfirmPhoneScreen;->C0:[Lz28;
+
+    iget-object p1, p0, Lws3;->X:Lone/me/login/confirm/ConfirmPhoneScreen;
+
+    iget-object v1, p1, Lone/me/login/confirm/ConfirmPhoneScreen;->B0:Lx07;
+
+    sget-object v2, Lone/me/login/confirm/ConfirmPhoneScreen;->C0:[Lz28;
+
+    const/4 v3, 0x7
+
+    aget-object v2, v2, v3
+
+    invoke-virtual {v1, p1, v2}, Lx07;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lsx7;
+
+    sget-object v2, Lb3h;->a:Lb3h;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Lsx7;->isActive()Z
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    if-ne v1, v3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, p1, Lone/me/login/confirm/ConfirmPhoneScreen;->A0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    if-eqz v1, :cond_1
+
+    :goto_0
+    return-object v2
+
+    :cond_1
+    invoke-virtual {p1, v0}, Lone/me/login/confirm/ConfirmPhoneScreen;->F0(Ljava/lang/String;)V
+
+    return-object v2
 .end method

@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;",
         "listener",
-        "Lybg;",
+        "Lb3h;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/urlsharing/external/UrlSharingListener;)V",
         "removeListener",

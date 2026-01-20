@@ -1,86 +1,128 @@
 .class public final Lmob;
-.super Logf;
+.super Lyu4;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/chats/PickerChatsTabWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final l:Lkob;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lkob;Lul4;)V
+    .locals 4
 
-    iput-object p1, p0, Lmob;->X:Lone/me/chats/picker/chats/PickerChatsTabWidget;
+    invoke-static {}, Lqi3;->c()Lqd8;
 
-    const/4 p1, 0x2
+    move-result-object v0
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-boolean v1, p3, Lul4;->b:Z
+
+    if-eqz v1, :cond_0
+
+    const-string v1, "video/av01"
+
+    invoke-virtual {v0, v1}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    iget-boolean v1, p3, Lul4;->a:Z
+
+    if-eqz v1, :cond_1
+
+    const-string v1, "video/x-vnd.on2.vp9"
+
+    invoke-virtual {v0, v1}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    const-string v1, "video/avc"
+
+    invoke-virtual {v0, v1}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v0}, Lqi3;->b(Ljava/util/List;)Lqd8;
+
+    move-result-object v0
+
+    invoke-static {}, Lqi3;->c()Lqd8;
+
+    move-result-object v1
+
+    iget-boolean p3, p3, Lul4;->c:Z
+
+    if-eqz p3, :cond_2
+
+    const-string p3, "audio/opus"
+
+    invoke-virtual {v1, p3}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    const-string p3, "audio/mp4a-latm"
+
+    invoke-virtual {v1, p3}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    const-string p3, "audio/mp4"
+
+    invoke-virtual {v1, p3}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v1}, Lqi3;->b(Ljava/util/List;)Lqd8;
+
+    move-result-object p3
+
+    new-instance v1, Lju4;
+
+    invoke-direct {v1}, Lju4;-><init>()V
+
+    const/4 v2, 0x0
+
+    new-array v3, v2, [Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Lqd8;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/String;
+
+    array-length v3, v0
+
+    invoke-static {v0, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ljava/lang/String;
+
+    invoke-static {v0}, Lhk7;->k([Ljava/lang/Object;)Lhud;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lbsg;->m:Lhk7;
+
+    new-array v0, v2, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Lqd8;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Ljava/lang/String;
+
+    array-length v0, p3
+
+    invoke-static {p3, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-static {p3}, Lhk7;->k([Ljava/lang/Object;)Lhud;
+
+    move-result-object p3
+
+    iput-object p3, v1, Lbsg;->t:Lhk7;
+
+    new-instance p3, Llu4;
+
+    invoke-direct {p3, v1}, Llu4;-><init>(Lju4;)V
+
+    invoke-direct {p0, p1, p3, p2}, Lyu4;-><init>(Landroid/content/Context;Ldsg;Lq57;)V
+
+    iput-object p2, p0, Lmob;->l:Lkob;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmob;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lmob;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lmob;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmob;
-
-    iget-object v1, p0, Lmob;->X:Lone/me/chats/picker/chats/PickerChatsTabWidget;
-
-    invoke-direct {v0, v1, p2}, Lmob;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lmob;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmob;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lmob;->X:Lone/me/chats/picker/chats/PickerChatsTabWidget;
-
-    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->t0:Lba6;
-
-    invoke-virtual {v1, p1}, Lba6;->f(Ljava/util/List;)V
-
-    iget-object v0, v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->v0:Lb96;
-
-    invoke-virtual {v0, p1}, Lb96;->M(Ljava/util/List;)V
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
 .end method

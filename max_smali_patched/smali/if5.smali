@@ -1,198 +1,148 @@
-.class public abstract Lif5;
-.super La54;
+.class public final Lif5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic d:I
+# interfaces
+.implements Landroid/text/InputFilter;
 
 
 # instance fields
-.field public a:J
+.field public final a:Landroid/widget/TextView;
 
-.field public b:Z
+.field public b:Lgf5;
 
-.field public c:Lqs;
+
+# direct methods
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lif5;->a:Landroid/widget/TextView;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final P(Z)V
-    .locals 4
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 6
 
-    iget-wide v0, p0, Lif5;->a:J
+    iget-object v0, p0, Lif5;->a:Landroid/widget/TextView;
 
-    if-eqz p1, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
 
-    const-wide v2, 0x100000000L
+    move-result v1
 
-    goto :goto_0
+    if-eqz v1, :cond_0
+
+    goto :goto_2
 
     :cond_0
-    const-wide/16 v2, 0x1
+    invoke-static {}, Lve5;->a()Lve5;
 
-    :goto_0
-    add-long/2addr v2, v0
+    move-result-object v1
 
-    iput-wide v2, p0, Lif5;->a:J
+    invoke-virtual {v1}, Lve5;->b()I
 
-    if-nez p1, :cond_1
+    move-result v1
 
-    const/4 p1, 0x1
+    if-eqz v1, :cond_5
 
-    iput-boolean p1, p0, Lif5;->b:Z
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_1
+
+    const/4 p2, 0x3
+
+    if-eq v1, p2, :cond_5
+
+    goto :goto_2
 
     :cond_1
-    return-void
-.end method
+    if-nez p6, :cond_2
 
-.method public final Q()Z
-    .locals 4
+    if-nez p5, :cond_2
 
-    iget-wide v0, p0, Lif5;->a:J
+    invoke-interface {p4}, Ljava/lang/CharSequence;->length()I
 
-    const-wide v2, 0x100000000L
+    move-result p4
 
-    cmp-long v0, v0, v2
+    if-nez p4, :cond_2
 
-    if-ltz v0, :cond_0
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    const/4 v0, 0x1
+    move-result-object p4
 
-    return v0
+    if-ne p1, p4, :cond_2
 
-    :cond_0
-    const/4 v0, 0x0
+    goto :goto_2
 
-    return v0
-.end method
+    :cond_2
+    if-eqz p1, :cond_4
 
-.method public abstract Z()J
-.end method
+    if-nez p2, :cond_3
 
-.method public final d(Z)V
-    .locals 4
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
-    iget-wide v0, p0, Lif5;->a:J
+    move-result p4
 
-    if-eqz p1, :cond_0
-
-    const-wide v2, 0x100000000L
-
-    goto :goto_0
-
-    :cond_0
-    const-wide/16 v2, 0x1
+    if-ne p3, p4, :cond_3
 
     :goto_0
-    sub-long/2addr v0, v2
-
-    iput-wide v0, p0, Lif5;->a:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_1
+    move-object v3, p1
 
     goto :goto_1
 
-    :cond_1
-    iget-boolean p1, p0, Lif5;->b:Z
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Lif5;->shutdown()V
-
-    :cond_2
-    :goto_1
-    return-void
-.end method
-
-.method public final h0()Z
-    .locals 3
-
-    iget-object v0, p0, Lif5;->c:Lqs;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    return v1
-
-    :cond_0
-    invoke-virtual {v0}, Lqs;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lqs;->removeFirst()Ljava/lang/Object;
-
-    move-result-object v0
-
-    :goto_0
-    check-cast v0, Lov4;
-
-    if-nez v0, :cond_2
-
-    return v1
-
-    :cond_2
-    invoke-virtual {v0}, Lov4;->run()V
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public i0(JLff5;)V
-    .locals 1
-
-    sget-object v0, Lwj4;->Z:Lwj4;
-
-    invoke-virtual {v0, p1, p2, p3}, Lhf5;->n0(JLff5;)V
-
-    return-void
-.end method
-
-.method public final limitedParallelism(ILjava/lang/String;)La54;
-    .locals 0
-
-    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
-
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(La54;Ljava/lang/String;)La54;
+    :cond_3
+    invoke-interface {p1, p2, p3}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object p1
 
+    goto :goto_0
+
+    :goto_1
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object v0
+
+    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
+
+    move-result v2
+
+    const v4, 0x7fffffff
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x0
+
+    invoke-virtual/range {v0 .. v5}, Lve5;->e(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    :cond_4
+    :goto_2
     return-object p1
-.end method
 
-.method public abstract shutdown()V
-.end method
+    :cond_5
+    invoke-static {}, Lve5;->a()Lve5;
 
-.method public final w(Lov4;)V
-    .locals 1
+    move-result-object p2
 
-    iget-object v0, p0, Lif5;->c:Lqs;
+    iget-object p3, p0, Lif5;->b:Lgf5;
 
-    if-nez v0, :cond_0
+    if-nez p3, :cond_6
 
-    new-instance v0, Lqs;
+    new-instance p3, Lgf5;
 
-    invoke-direct {v0}, Lqs;-><init>()V
+    invoke-direct {p3, v0, p0}, Lgf5;-><init>(Landroid/widget/TextView;Lif5;)V
 
-    iput-object v0, p0, Lif5;->c:Lqs;
+    iput-object p3, p0, Lif5;->b:Lgf5;
 
-    :cond_0
-    invoke-virtual {v0, p1}, Lqs;->addLast(Ljava/lang/Object;)V
+    :cond_6
+    iget-object p3, p0, Lif5;->b:Lgf5;
 
-    return-void
-.end method
+    invoke-virtual {p2, p3}, Lve5;->g(Lte5;)V
 
-.method public abstract y()Ljava/lang/Thread;
+    return-object p1
 .end method

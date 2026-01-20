@@ -1,129 +1,41 @@
 .class public final Lqui;
-.super Lt6i;
+.super Loui;
 .source "SourceFile"
 
 # interfaces
-.implements Lk9i;
-
-
-# static fields
-.field private static final zzb:Lqui;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field private zzd:Lf7i;
-
-.field private zze:Lf7i;
+.field public final transient c:Lnm3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lqui;
-
-    invoke-direct {v0}, Lqui;-><init>()V
-
-    sput-object v0, Lqui;->zzb:Lqui;
-
-    const-class v1, Lqui;
-
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Lt6i;-><init>()V
-
-    sget-object v0, Lcai;->d:Lcai;
-
-    iput-object v0, p0, Lqui;->zzd:Lf7i;
-
-    iput-object v0, p0, Lqui;->zze:Lf7i;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
     .locals 2
 
-    add-int/lit8 p1, p1, -0x1
+    new-instance v0, Lnm3;
 
-    if-eqz p1, :cond_4
+    const/4 v1, 0x1
 
-    const/4 p2, 0x2
+    invoke-direct {v0, v1}, Lnm3;-><init>(I)V
 
-    if-eq p1, p2, :cond_3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x3
+    invoke-virtual {v0}, Lnm3;->isEmpty()Z
 
-    if-eq p1, p2, :cond_2
+    move-result v1
 
-    const/4 p2, 0x4
+    if-eqz v1, :cond_0
 
-    if-eq p1, p2, :cond_1
+    iput-object v0, p0, Lqui;->c:Lnm3;
 
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    return-void
 
     :cond_0
-    sget-object p1, Lqui;->zzb:Lqui;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    return-object p1
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    :cond_1
-    new-instance p1, Lmii;
-
-    sget-object p2, Lqui;->zzb:Lqui;
-
-    invoke-direct {p1, p2}, Lj6i;-><init>(Lt6i;)V
-
-    return-object p1
-
-    :cond_2
-    new-instance p1, Lqui;
-
-    invoke-direct {p1}, Lqui;-><init>()V
-
-    return-object p1
-
-    :cond_3
-    const-string p1, "zzd"
-
-    const-string p2, "zze"
-
-    const-class v0, Lbri;
-
-    filled-new-array {p1, v0, p2, v0}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lqui;->zzb:Lqui;
-
-    new-instance v0, Lfai;
-
-    const-string v1, "\u0004\u0002\u0000\u0000\u0001\u0002\u0002\u0000\u0002\u0000\u0001\u001b\u0002\u001b"
-
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    return-object v0
-
-    :cond_4
-    const/4 p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
-
-    move-result-object p1
-
-    return-object p1
+    throw v0
 .end method

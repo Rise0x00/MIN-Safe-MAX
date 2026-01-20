@@ -1,437 +1,319 @@
 .class public final Lne9;
-.super Ljava/lang/Object;
+.super Landroid/widget/LinearLayout;
 .source "SourceFile"
+
+# interfaces
+.implements Luig;
 
 
 # instance fields
-.field public final a:I
+.field public a:Lnq6;
 
-.field public final b:Lru7;
+.field public final b:Landroid/view/View;
 
-.field public final c:Lru7;
-
-.field public final d:Landroid/content/Context;
-
-.field public final e:Z
+.field public final c:Landroid/widget/LinearLayout;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lru7;Lru7;Lts4;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput p5, p0, Lne9;->a:I
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lne9;->b:Lru7;
+    invoke-direct {p0, p1, v0, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object p3, p0, Lne9;->c:Lru7;
+    new-instance v0, Landroid/view/View;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    invoke-direct {v0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    move-result-object p1
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    iput-object p1, p0, Lne9;->d:Landroid/content/Context;
+    const/4 v2, 0x1
 
-    invoke-virtual {p4}, Lts4;->b()Lxs4;
+    int-to-float v3, v2
 
-    move-result-object p1
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
 
-    sget-object p2, Lxs4;->d:Lxs4;
+    move-result-object v4
 
-    invoke-virtual {p1, p2}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v4
+
+    invoke-static {v3}, Lq7j;->c(F)I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    invoke-direct {v1, v4, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iput-object v0, p0, Lne9;->b:Landroid/view/View;
+
+    new-instance v1, Landroid/widget/LinearLayout;
+
+    invoke-direct {v1, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    const/16 p1, 0xc
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, p1
+
+    invoke-static {v3}, Lq7j;->c(F)I
+
+    move-result v3
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v4
+
+    invoke-static {p1}, Lq7j;->c(F)I
 
     move-result p1
 
-    if-ltz p1, :cond_0
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
 
-    const/4 p1, 0x1
+    move-result v4
 
-    goto :goto_0
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
 
-    :cond_0
-    const/4 p1, 0x0
+    move-result v5
 
-    :goto_0
-    iput-boolean p1, p0, Lne9;->e:Z
+    invoke-virtual {v1, v3, v4, p1, v5}, Landroid/view/View;->setPadding(IIII)V
+
+    iput-object v1, p0, Lne9;->c:Landroid/widget/LinearLayout;
+
+    invoke-virtual {p0, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    sget-object p1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {p1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lzlb;->i()Lb0g;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lb0g;->b:Lh0g;
+
+    iget p1, p1, Lh0g;->c:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a([B)Lme9;
-    .locals 11
-
-    sget-object v0, Lru/ok/tamtam/nano/b;->a:[B
-
-    :try_start_0
-    invoke-static {p1}, Lru/ok/tamtam/nano/Protos$MessageReactions;->parseFrom([B)Lru/ok/tamtam/nano/Protos$MessageReactions;
-
-    move-result-object p1
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v1, p1, Lru/ok/tamtam/nano/Protos$MessageReactions;->reactions:[Lru/ok/tamtam/nano/Protos$MessageReactionWithCount;
-
-    array-length v1, v1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    const-string v3, "Unknown reactionType = "
-
-    sget-object v4, Liyc;->d:Lce5;
-
-    const/4 v5, 0x0
-
-    if-ge v2, v1, :cond_3
-
-    iget-object v6, p1, Lru/ok/tamtam/nano/Protos$MessageReactions;->reactions:[Lru/ok/tamtam/nano/Protos$MessageReactionWithCount;
-
-    aget-object v6, v6, v2
-
-    iget-object v6, v6, Lru/ok/tamtam/nano/Protos$MessageReactionWithCount;->reaction:Lru/ok/tamtam/nano/Protos$ReactionData;
-
-    new-instance v7, Lhyc;
-
-    iget v8, v6, Lru/ok/tamtam/nano/Protos$ReactionData;->type:I
-
-    invoke-virtual {v4}, Li2;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_0
-    move-object v9, v4
-
-    check-cast v9, Lf2;
-
-    invoke-virtual {v9}, Lf2;->hasNext()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_1
-
-    invoke-virtual {v9}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v9
-
-    move-object v10, v9
-
-    check-cast v10, Liyc;
-
-    iget v10, v10, Liyc;->a:I
-
-    if-ne v10, v8, :cond_0
-
-    move-object v5, v9
-
-    :cond_1
-    check-cast v5, Liyc;
-
-    if-eqz v5, :cond_2
-
-    iget-object v3, v6, Lru/ok/tamtam/nano/Protos$ReactionData;->reaction:Ljava/lang/String;
-
-    invoke-virtual {p0, v3}, Lne9;->b(Ljava/lang/String;)Lzxc;
-
-    move-result-object v3
-
-    invoke-direct {v7, v5, v3}, Lhyc;-><init>(Liyc;Lzxc;)V
-
-    new-instance v3, Lle9;
-
-    iget-object v4, p1, Lru/ok/tamtam/nano/Protos$MessageReactions;->reactions:[Lru/ok/tamtam/nano/Protos$MessageReactionWithCount;
-
-    aget-object v4, v4, v2
-
-    iget v4, v4, Lru/ok/tamtam/nano/Protos$MessageReactionWithCount;->count:I
-
-    invoke-direct {v3, v7, v4}, Lle9;-><init>(Lhyc;I)V
-
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {v8, v3}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    new-instance v1, Lme9;
-
-    iget v2, p1, Lru/ok/tamtam/nano/Protos$MessageReactions;->totalCount:I
-
-    iget-object v6, p1, Lru/ok/tamtam/nano/Protos$MessageReactions;->yourReaction:Lru/ok/tamtam/nano/Protos$ReactionData;
-
-    if-nez v6, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    new-instance v7, Lhyc;
-
-    iget v6, v6, Lru/ok/tamtam/nano/Protos$ReactionData;->type:I
-
-    invoke-virtual {v4}, Li2;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_5
-    move-object v8, v4
-
-    check-cast v8, Lf2;
-
-    invoke-virtual {v8}, Lf2;->hasNext()Z
-
-    move-result v9
-
-    if-eqz v9, :cond_6
-
-    invoke-virtual {v8}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v8
-
-    move-object v9, v8
-
-    check-cast v9, Liyc;
-
-    iget v9, v9, Liyc;->a:I
-
-    if-ne v9, v6, :cond_5
-
-    move-object v5, v8
-
-    :cond_6
-    check-cast v5, Liyc;
-
-    if-eqz v5, :cond_7
-
-    iget-object p1, p1, Lru/ok/tamtam/nano/Protos$MessageReactions;->yourReaction:Lru/ok/tamtam/nano/Protos$ReactionData;
-
-    iget-object p1, p1, Lru/ok/tamtam/nano/Protos$ReactionData;->reaction:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lne9;->b(Ljava/lang/String;)Lzxc;
-
-    move-result-object p1
-
-    invoke-direct {v7, v5, p1}, Lhyc;-><init>(Liyc;Lzxc;)V
-
-    move-object v5, v7
-
-    :goto_1
-    invoke-direct {v1, v0, v2, v5}, Lme9;-><init>(Ljava/util/List;ILhyc;)V
-
-    return-object v1
-
-    :cond_7
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {v6, v3}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :catch_0
-    move-exception p1
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+.method public final getOnClickListener()Lnq6;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lnq6;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lne9;->a:Lnq6;
+
+    return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;)Lzxc;
+.method public final onThemeChanged(Lzlb;)V
+    .locals 1
+
+    sget-object p1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object v0
+
+    invoke-static {v0, p0}, Lpc3;->g(Lpc3;Landroid/view/ViewGroup;)V
+
+    invoke-virtual {p1, p0}, Lkme;->p(Landroid/view/View;)Lzlb;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lzlb;->i()Lb0g;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lb0g;->b:Lh0g;
+
+    iget p1, p1, Lh0g;->c:I
+
+    iget-object v0, p0, Lne9;->b:Landroid/view/View;
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    return-void
+.end method
+
+.method public final setOnClickListener(Lnq6;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lnq6;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lne9;->a:Lnq6;
+
+    return-void
+.end method
+
+.method public final setSelected(Ldf9;)V
     .locals 3
 
-    iget-object v0, p0, Lne9;->d:Landroid/content/Context;
+    new-instance v0, Lb2;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const/16 v1, 0x9
 
-    move-result-object v0
+    iget-object v2, p0, Lne9;->c:Landroid/widget/LinearLayout;
 
-    iget v1, p0, Lne9;->a:I
+    invoke-direct {v0, v1, v2}, Lb2;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v0
+    move-result v1
 
-    new-instance v1, Lzxc;
+    if-eqz v1, :cond_2
 
-    iget-object v2, p0, Lne9;->b:Lru7;
-
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lw85;
-
-    invoke-interface {v2, v0, p1}, Lw85;->b(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-direct {v1, p1}, Lzxc;-><init>(Ljava/lang/CharSequence;)V
-
-    return-object v1
-.end method
-
-.method public final c(Lje9;)Lme9;
-    .locals 6
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_2
-
-    iget-object v1, p1, Lje9;->a:Ljava/util/ArrayList;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    const/16 v3, 0xa
-
-    invoke-static {v1, v3}, Lcb3;->k(Ljava/lang/Iterable;I)I
-
-    move-result v3
-
-    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v1, Landroid/view/View;
 
-    move-result v3
+    instance-of v2, v1, Lme9;
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast v1, Lme9;
 
-    move-result-object v3
-
-    check-cast v3, Lge9;
-
-    new-instance v4, Lle9;
-
-    iget-object v5, v3, Lge9;->a:Lfe9;
-
-    invoke-virtual {p0, v5}, Lne9;->d(Lfe9;)Lhyc;
-
-    move-result-object v5
-
-    iget v3, v3, Lge9;->b:I
-
-    invoke-direct {v4, v5, v3}, Lle9;-><init>(Lhyc;I)V
-
-    invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    iget v1, p1, Lje9;->b:I
-
-    iget-object p1, p1, Lje9;->c:Lfe9;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0, p1}, Lne9;->d(Lfe9;)Lhyc;
-
-    move-result-object v0
+    goto :goto_1
 
     :cond_1
-    new-instance p1, Lme9;
+    const/4 v1, 0x0
 
-    invoke-direct {p1, v2, v1, v0}, Lme9;-><init>(Ljava/util/List;ILhyc;)V
+    :goto_1
+    if-eqz v1, :cond_0
 
-    return-object p1
+    invoke-virtual {v1}, Lme9;->getState()Ldf9;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lme9;->setIsSelected(Z)V
+
+    goto :goto_0
 
     :cond_2
-    return-object v0
+    return-void
 .end method
 
-.method public final d(Lfe9;)Lhyc;
+.method public final setState(Ljava/util/List;)V
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "+",
+            "Ldf9;",
+            ">;)V"
+        }
+    .end annotation
 
-    new-instance v0, Lhyc;
+    iget-object v0, p0, Lne9;->c:Landroid/widget/LinearLayout;
 
-    iget-object v1, p1, Lfe9;->a:Lke9;
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    iget v1, v1, Lke9;->a:I
-
-    new-instance v2, Lf2;
-
-    const/4 v3, 0x0
-
-    sget-object v4, Liyc;->d:Lce5;
-
-    invoke-direct {v2, v3, v4}, Lf2;-><init>(ILjava/lang/Object;)V
-
-    :cond_0
-    invoke-virtual {v2}, Lf2;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v2}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v4, v3
-
-    check-cast v4, Liyc;
-
-    iget v4, v4, Liyc;->a:I
-
-    if-ne v4, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v3, 0x0
-
-    :goto_0
-    check-cast v3, Liyc;
-
-    if-eqz v3, :cond_2
-
-    iget-object p1, p1, Lfe9;->b:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Lne9;->b(Ljava/lang/String;)Lzxc;
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    invoke-direct {v0, v3, p1}, Lhyc;-><init>(Liyc;Lzxc;)V
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object v0
+    move-result v1
 
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalArgumentException;
+    if-eqz v1, :cond_0
 
-    const-string v0, "Unknown reactionType = "
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lok7;->f(ILjava/lang/String;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Ldf9;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    new-instance v2, Lme9;
 
-    throw p1
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Lme9;-><init>(Landroid/content/Context;)V
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Lme9;->setIsSelected(Z)V
+
+    invoke-virtual {v2, v1}, Lme9;->setState(Ldf9;)V
+
+    new-instance v3, Ltk6;
+
+    const/16 v4, 0xc
+
+    invoke-direct {v3, p0, v4, v1}, Ltk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v2, v3}, Ljmj;->d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
 .end method

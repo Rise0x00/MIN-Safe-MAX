@@ -1,68 +1,138 @@
-.class public abstract Lcpc;
-.super Ljava/lang/Object;
+.class public final Lcpc;
+.super Lp6g;
+.source "SourceFile"
+
+# interfaces
+.implements Ldr6;
 
 
-# static fields
-.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a078e
+# instance fields
+.field public synthetic X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a078f
+.field public synthetic Y:Lzlb;
 
-.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a0790
+.field public final synthetic o:I
 
-.field public static oneme_settings_media_gif_always:I = 0x7f0a0791
 
-.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a0792
+# direct methods
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-.field public static oneme_settings_media_gif_wifi:I = 0x7f0a0793
+    iput p3, p0, Lcpc;->o:I
 
-.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a0794
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static oneme_settings_media_item_gif:I = 0x7f0a0795
+    return-void
+.end method
 
-.field public static oneme_settings_media_item_gif_available:I = 0x7f0a0796
 
-.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a0797
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-.field public static oneme_settings_media_item_photo:I = 0x7f0a0798
+    iget v0, p0, Lcpc;->o:I
 
-.field public static oneme_settings_media_item_playlist_enabled:I = 0x7f0a0799
+    check-cast p1, Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public static oneme_settings_media_item_video:I = 0x7f0a079a
+    check-cast p2, Lzlb;
 
-.field public static oneme_settings_media_item_video_caching:I = 0x7f0a079b
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-.field public static oneme_settings_media_item_video_messages:I = 0x7f0a079c
+    packed-switch v0, :pswitch_data_0
 
-.field public static oneme_settings_media_item_video_quality:I = 0x7f0a079d
+    new-instance v0, Lcpc;
 
-.field public static oneme_settings_media_photo_always:I = 0x7f0a079e
+    const/4 v1, 0x3
 
-.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a079f
+    const/4 v2, 0x1
 
-.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07a0
+    invoke-direct {v0, v1, p3, v2}, Lcpc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-.field public static oneme_settings_media_quality_1080:I = 0x7f0a07a1
+    iput-object p1, v0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public static oneme_settings_media_quality_480:I = 0x7f0a07a2
+    iput-object p2, v0, Lcpc;->Y:Lzlb;
 
-.field public static oneme_settings_media_quality_720:I = 0x7f0a07a3
+    sget-object p1, Lb3h;->a:Lb3h;
 
-.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07a4
+    invoke-virtual {v0, p1}, Lcpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07a5
+    return-object p1
 
-.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07a6
+    :pswitch_0
+    new-instance v0, Lcpc;
 
-.field public static oneme_settings_media_screen_list:I = 0x7f0a07a7
+    const/4 v1, 0x3
 
-.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07a8
+    const/4 v2, 0x0
 
-.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07a9
+    invoke-direct {v0, v1, p3, v2}, Lcpc;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07aa
+    iput-object p1, v0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
 
-.field public static oneme_settings_media_video_messages_always:I = 0x7f0a07ab
+    iput-object p2, v0, Lcpc;->Y:Lzlb;
 
-.field public static oneme_settings_media_video_messages_dont_load:I = 0x7f0a07ac
+    sget-object p1, Lb3h;->a:Lb3h;
 
-.field public static oneme_settings_media_video_messages_wifi:I = 0x7f0a07ad
+    invoke-virtual {v0, p1}, Lcpc;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lcpc;->o:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v1, p0, Lcpc;->Y:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->k:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    :pswitch_0
+    iget-object v0, p0, Lcpc;->X:Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+
+    iget-object v1, p0, Lcpc;->Y:Lzlb;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    invoke-interface {v1}, Lzlb;->b()Lxf0;
+
+    move-result-object p1
+
+    iget p1, p1, Lxf0;->k:I
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

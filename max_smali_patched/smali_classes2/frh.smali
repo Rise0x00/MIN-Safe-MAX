@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/Matrix;)V
+.method public abstract s(Z)Lbrh;
 .end method

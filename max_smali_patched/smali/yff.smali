@@ -1,114 +1,63 @@
-.class public final synthetic Lyff;
-.super Ljava/lang/Object;
+.class public final Lyff;
+.super Lkef;
 .source "SourceFile"
-
-# interfaces
-.implements Lrt1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lsef;
 
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final b:J
 
-.field public final synthetic c:Ljava/lang/String;
+.field public final c:Lpbe;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Lsef;JLpbe;)V
+    .locals 1
 
-    iput p3, p0, Lyff;->a:I
-
-    iput-object p1, p0, Lyff;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p2, p0, Lyff;->c:Ljava/lang/String;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyff;->a:Lsef;
+
+    iput-wide p2, p0, Lyff;->b:J
+
+    iput-object p4, p0, Lyff;->c:Lpbe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B(Lqt1;)Ljava/lang/String;
-    .locals 1
+.method public final m(Ldff;)V
+    .locals 5
 
-    iget v0, p0, Lyff;->a:I
+    new-instance v0, Lqxa;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    iget-object v0, p0, Lyff;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-wide v2, p0, Lyff;->b:J
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-direct {v0, p1, v2, v3}, Lqxa;-><init>(Ldff;J)V
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    invoke-interface {p1, v0}, Ldff;->c(Lo25;)V
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object p1, v0, Lqxa;->d:Ljava/lang/Object;
 
-    iget-object v0, p0, Lyff;->c:Ljava/lang/String;
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lyff;->c:Lpbe;
 
-    const-string v0, "-Surface"
+    invoke-virtual {v4, v0, v2, v3, v1}, Lpbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v1}, Ls25;->d(Ljava/util/concurrent/atomic/AtomicReference;Lo25;)Z
 
-    move-result-object p1
+    iget-object p1, p0, Lyff;->a:Lsef;
 
-    return-object p1
+    invoke-virtual {p1, v0}, Lkef;->l(Ldff;)V
 
-    :pswitch_0
-    iget-object v0, p0, Lyff;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v0, p0, Lyff;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "-status"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_1
-    iget-object v0, p0, Lyff;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v0, p0, Lyff;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "-cancellation"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -2,115 +2,176 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw81;
+
 
 # instance fields
-.field public final a:Lru7;
+.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-.field public final b:Lru7;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Llhg;
+
+.field public final f:Llhg;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;)V
-    .locals 0
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lt81;->a:Lru7;
+    iput-object p1, p0, Lt81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    iput-object p2, p0, Lt81;->b:Lru7;
+    sget p1, Ly6b;->K:I
+
+    iput p1, p0, Lt81;->b:I
+
+    sget p1, Lx6b;->l0:I
+
+    iput p1, p0, Lt81;->c:I
+
+    sget p1, Lx6b;->x0:I
+
+    iput p1, p0, Lt81;->d:I
+
+    sget p1, Lb7b;->D2:I
+
+    new-instance v0, Llhg;
+
+    invoke-direct {v0, p1}, Llhg;-><init>(I)V
+
+    iput-object v0, p0, Lt81;->e:Llhg;
+
+    iput-object v0, p0, Lt81;->f:Llhg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 6
+.method public final a()I
+    .locals 1
 
-    const-string v0, "HandleSilenceMode"
+    iget v0, p0, Lt81;->c:I
 
-    const-string v1, "try mute ringtones"
+    return v0
+.end method
 
-    invoke-static {v0, v1}, Lcuh;->f(Ljava/lang/String;Ljava/lang/String;)V
+.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    .locals 1
 
-    iget-object v0, p0, Lt81;->b:Lru7;
+    iget-object v0, p0, Lt81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast v0, Lmfd;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lmfd;->a()Lbk1;
+    if-ne p0, p1, :cond_0
 
-    move-result-object v0
-
-    sget-object v1, La98;->d:La98;
-
-    iget-object v2, v0, Lbk1;->i:Landroid/media/MediaPlayer;
-
-    const/4 v3, 0x0
-
-    const-string v4, "RingtoneManagerTag"
-
-    if-nez v2, :cond_3
-
-    iget-object v2, v0, Lbk1;->g:Ltif;
-
-    invoke-virtual {v2}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/os/Vibrator;
-
-    if-eqz v2, :cond_0
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    sget-object v0, Lcuh;->b:Lnxa;
+    instance-of v1, p1, Lt81;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
-    invoke-virtual {v0, v1}, Lnxa;->b(La98;)Z
+    check-cast p1, Lt81;
 
-    move-result v2
+    iget-object v1, p0, Lt81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    if-eqz v2, :cond_2
+    iget-object p1, p1, Lt81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    const-string v2, " mute already set"
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, v4, v2, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
 
     :cond_2
-    :goto_0
-    return-void
+    return v0
+.end method
 
-    :cond_3
-    :goto_1
-    sget-object v2, Lcuh;->b:Lnxa;
+.method public final getContentDescription()Lqhg;
+    .locals 1
 
-    if-nez v2, :cond_4
+    iget-object v0, p0, Lt81;->f:Llhg;
 
-    goto :goto_2
+    return-object v0
+.end method
 
-    :cond_4
-    invoke-virtual {v2, v1}, Lnxa;->b(La98;)Z
+.method public final getIcon()I
+    .locals 1
 
-    move-result v5
+    iget v0, p0, Lt81;->d:I
 
-    if-eqz v5, :cond_5
+    return v0
+.end method
 
-    const-string v5, " set mute"
+.method public final getId()I
+    .locals 1
 
-    invoke-virtual {v2, v1, v4, v5, v3}, Lnxa;->c(La98;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget v0, p0, Lt81;->b:I
 
-    :cond_5
-    :goto_2
-    invoke-virtual {v0}, Lbk1;->e()V
+    return v0
+.end method
 
-    return-void
+.method public final getTitle()Lqhg;
+    .locals 1
+
+    iget-object v0, p0, Lt81;->e:Llhg;
+
+    return-object v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lt81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Speakerphone(device="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lt81;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

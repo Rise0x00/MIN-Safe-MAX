@@ -1,114 +1,109 @@
-.class public abstract Llxi;
-.super Ljava/lang/Object;
+.class public final Llxi;
+.super Liwi;
 .source "SourceFile"
 
 
+# static fields
+.field public static final o:Llxi;
+
+
+# instance fields
+.field public final transient c:[Ljava/lang/Object;
+
+.field public final transient d:I
+
+
 # direct methods
-.method public static final a(Lyid;Ljava/lang/String;Lone/me/sdk/arch/Widget;)Lone/me/sdk/arch/Widget;
+.method static constructor <clinit>()V
     .locals 3
 
-    iget-object p0, p0, Lyid;->a:Leg0;
+    new-instance v0, Llxi;
 
-    invoke-virtual {p0}, Leg0;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x0
 
-    move-result-object p0
+    new-array v2, v1, [Ljava/lang/Object;
 
-    :cond_0
-    move-object v0, p0
+    invoke-direct {v0, v1, v2}, Llxi;-><init>(I[Ljava/lang/Object;)V
 
-    check-cast v0, Lf2;
+    sput-object v0, Llxi;->o:Llxi;
 
-    invoke-virtual {v0}, Lf2;->hasNext()Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v0}, Lf2;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lbjd;
-
-    iget-object v0, v0, Lbjd;->a:Lc24;
-
-    instance-of v1, v0, Lone/me/sdk/arch/Widget;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lone/me/sdk/arch/Widget;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v0, v2
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, p1, p2}, Lone/me/sdk/arch/Widget;->findWidget-qk3jasM$arch_release(Ljava/lang/String;Lone/me/sdk/arch/Widget;)Lone/me/sdk/arch/Widget;
-
-    move-result-object v2
-
-    :cond_2
-    if-eqz v2, :cond_0
-
-    if-eq v2, p2, :cond_0
-
-    :cond_3
-    return-object v2
+    return-void
 .end method
 
-.method public static final b(Lyid;)Lc24;
+.method public constructor <init>(I[Ljava/lang/Object;)V
     .locals 0
 
-    iget-object p0, p0, Lyid;->a:Leg0;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-virtual {p0}, Leg0;->a()Lbjd;
+    iput-object p2, p0, Llxi;->c:[Ljava/lang/Object;
 
-    move-result-object p0
+    iput p1, p0, Llxi;->d:I
 
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lbjd;->a:Lc24;
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method
 
-.method public static final c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+
+# virtual methods
+.method public final a(I[Ljava/lang/Object;)I
+    .locals 3
+
+    iget-object v0, p0, Llxi;->c:[Ljava/lang/Object;
+
+    const/4 v1, 0x0
+
+    iget v2, p0, Llxi;->d:I
+
+    invoke-static {v0, v1, p2, p1, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/2addr p1, v2
+
+    return p1
+.end method
+
+.method public final b()I
     .locals 1
 
-    if-eqz p3, :cond_0
+    iget v0, p0, Llxi;->d:I
 
-    new-instance v0, Lnd4;
-
-    invoke-direct {v0, p1, p2, p3}, Lnd4;-><init>(JLandroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
+    return v0
 .end method
 
-.method public static synthetic d(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-    .locals 2
+.method public final c()I
+    .locals 1
 
-    const-wide/16 v0, 0x12c
+    const/4 v0, 0x0
 
-    invoke-static {p0, v0, v1, p1}, Llxi;->c(Landroid/view/View;JLandroid/view/View$OnClickListener;)V
+    return v0
+.end method
 
-    return-void
+.method public final d()[Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Llxi;->c:[Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Llxi;->d:I
+
+    invoke-static {p1, v0}, Lqaj;->c(II)V
+
+    iget-object v0, p0, Llxi;->c:[Ljava/lang/Object;
+
+    aget-object p1, v0, p1
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Llxi;->d:I
+
+    return v0
 .end method

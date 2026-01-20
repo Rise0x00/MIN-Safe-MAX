@@ -1,121 +1,86 @@
-.class public final Lmk5;
+.class public final synthetic Lmk5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
+
 
 # instance fields
-.field public final a:B
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final synthetic b:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
 
 # direct methods
-.method public constructor <init>(IB)V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;I)V
+    .locals 0
+
+    iput p2, p0, Lmk5;->a:I
+
+    iput-object p1, p0, Lmk5;->b:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-ltz p1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    iput-byte p2, p0, Lmk5;->a:B
-
-    iput p1, p0, Lmk5;->b:I
-
     return-void
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string p2, "length must be >= 0"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke()Ljava/lang/Object;
     .locals 3
 
-    instance-of v0, p1, Lmk5;
+    iget v0, p0, Lmk5;->a:I
 
-    const/4 v1, 0x0
+    sget-object v1, Lb3h;->a:Lb3h;
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lmk5;->b:Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;
 
-    check-cast p1, Lmk5;
+    packed-switch v0, :pswitch_data_0
 
-    iget-byte v0, p0, Lmk5;->a:B
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->o:[Lz28;
 
-    iget-byte v2, p1, Lmk5;->a:B
+    iget-object v0, v2, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->c:Lo58;
 
-    if-ne v0, v2, :cond_0
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    iget v0, p0, Lmk5;->b:I
+    move-result-object v0
 
-    iget p1, p1, Lmk5;->b:I
+    check-cast v0, Lsk5;
 
-    if-ne v0, p1, :cond_0
+    iget-boolean v2, v0, Lsk5;->t0:Z
 
-    const/4 p1, 0x1
+    if-nez v2, :cond_0
 
-    return p1
+    iget-object v0, v0, Lsk5;->Y:Lcm5;
+
+    invoke-static {v0, v1}, Lnth;->q(Lcm5;Ljava/lang/Object;)V
 
     :cond_0
-    return v1
-.end method
+    return-object v1
 
-.method public final hashCode()I
-    .locals 2
+    :pswitch_0
+    sget-object v0, Lone/me/settings/privacy/ui/pincode/EnterPinCodeScreen;->o:[Lz28;
 
-    iget-byte v0, p0, Lmk5;->a:B
-
-    add-int/lit8 v0, v0, 0x1f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lmk5;->b:I
-
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-byte v0, p0, Lmk5;->a:B
-
-    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    invoke-virtual {v2}, La94;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    iget v1, p0, Lmk5;->b:I
+    invoke-static {v0}, Lg3j;->f(Landroid/view/View;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    invoke-virtual {v2}, La94;->getOnBackPressedDispatcher()Lv1b;
 
     move-result-object v0
 
-    const-string v1, "ExtensionTypeHeader(type:%d, length:%,d)"
+    if-eqz v0, :cond_1
 
-    invoke-static {v1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0}, Lv1b;->d()V
 
-    move-result-object v0
+    :cond_1
+    return-object v1
 
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

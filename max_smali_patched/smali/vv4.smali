@@ -1,150 +1,126 @@
-.class public final Lvv4;
+.class public final synthetic Lvv4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lrw1;
+
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+.field public final synthetic a:I
 
-.field public final b:I
-
-.field public final c:I
+.field public final synthetic b:Lwv4;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;II)V
+.method public synthetic constructor <init>(Lwv4;I)V
     .locals 0
 
+    iput p2, p0, Lvv4;->a:I
+
+    iput-object p1, p0, Lvv4;->b:Lwv4;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lvv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    iput p2, p0, Lvv4;->b:I
-
-    iput p3, p0, Lvv4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final l(Lqw1;)Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Lvv4;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lvv4;->b:Lwv4;
 
-    :cond_0
-    instance-of v1, p1, Lvv4;
+    iget-object v1, v0, Lwv4;->a:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    monitor-enter v1
 
-    if-nez v1, :cond_1
+    :try_start_0
+    iput-object p1, v0, Lwv4;->f:Lqw1;
 
-    return v2
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :cond_1
-    check-cast p1, Lvv4;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lvv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+    const-string v1, "DeferrableSurface-close("
 
-    iget-object v3, p1, Lvv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    const-string v0, ")"
 
-    if-nez v1, :cond_2
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return v2
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_2
-    iget v1, p0, Lvv4;->b:I
+    move-result-object p1
 
-    iget v3, p1, Lvv4;->b:I
+    return-object p1
 
-    if-eq v1, v3, :cond_3
+    :catchall_0
+    move-exception p1
 
-    return v2
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_3
-    iget v1, p0, Lvv4;->c:I
+    throw p1
 
-    iget p1, p1, Lvv4;->c:I
+    :pswitch_0
+    iget-object v0, p0, Lvv4;->b:Lwv4;
 
-    if-eq v1, p1, :cond_4
+    iget-object v1, v0, Lwv4;->a:Ljava/lang/Object;
 
-    return v2
+    monitor-enter v1
 
-    :cond_4
-    return v0
-.end method
+    :try_start_2
+    iput-object p1, v0, Lwv4;->d:Lqw1;
 
-.method public final hashCode()I
-    .locals 3
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    iget-object v0, p0, Lvv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;->hashCode()I
+    const-string v1, "DeferrableSurface-termination("
 
-    move-result v0
+    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0x1f
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    mul-int/2addr v0, v1
+    const-string v0, ")"
 
-    iget v2, p0, Lvv4;->b:I
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v0, v1}, Lijf;->m(III)I
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v0
+    move-result-object p1
 
-    iget v1, p0, Lvv4;->c:I
+    return-object p1
 
-    invoke-static {v1}, Ljava/lang/Integer;->hashCode(I)I
+    :catchall_1
+    move-exception p1
 
-    move-result v1
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    add-int/2addr v1, v0
+    throw p1
 
-    return v1
-.end method
+    nop
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "DisplayLayout(track="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lvv4;->a:Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", w="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lvv4;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", h="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    iget v2, p0, Lvv4;->c:I
-
-    invoke-static {v0, v2, v1}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

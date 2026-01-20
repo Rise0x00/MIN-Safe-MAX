@@ -1,129 +1,54 @@
 .class public final Lq6c;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lu6c;
+.field public final a:J
 
-.field public final synthetic o:Landroid/content/Intent;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;Lu6c;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IIJ)V
     .locals 0
 
-    iput-object p1, p0, Lq6c;->o:Landroid/content/Intent;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lq6c;->X:Lu6c;
+    iput-wide p3, p0, Lq6c;->a:J
 
-    const/4 p1, 0x2
+    iput p1, p0, Lq6c;->b:I
 
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p2, p0, Lq6c;->c:I
 
-    return-void
-.end method
+    sget-object p1, Lp6c;->$EnumSwitchMapping$0:[I
 
+    invoke-static {p2}, Lt02;->t(I)I
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move-result p2
 
-    check-cast p1, Lg54;
+    aget p1, p1, p2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p2, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lq6c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-eq p1, p2, :cond_0
 
-    move-result-object p1
+    const/4 p3, 0x2
 
-    check-cast p1, Lq6c;
+    if-eq p1, p3, :cond_0
 
-    sget-object p2, Lybg;->a:Lybg;
+    const/4 p3, 0x3
 
-    invoke-virtual {p1, p2}, Lq6c;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq p1, p3, :cond_0
 
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lq6c;
-
-    iget-object v0, p0, Lq6c;->o:Landroid/content/Intent;
-
-    iget-object v1, p0, Lq6c;->X:Lu6c;
-
-    invoke-direct {p1, v0, v1, p2}, Lq6c;-><init>(Landroid/content/Intent;Lu6c;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lq6c;->o:Landroid/content/Intent;
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
+    const/4 p2, 0x0
 
     :cond_0
-    const-class v0, Landroid/graphics/RectF;
+    iput-boolean p2, p0, Lq6c;->d:Z
 
-    const-string v1, "ru.ok.tamtam.extra.CROPPED_RECT"
-
-    invoke-static {p1, v1, v0}, Lh9i;->b(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/os/Parcelable;
-
-    :goto_0
-    check-cast p1, Landroid/graphics/RectF;
-
-    sget-object v0, Lybg;->a:Lybg;
-
-    if-nez p1, :cond_1
-
-    return-object v0
-
-    :cond_1
-    sget-object v1, Lu6c;->A0:[Les7;
-
-    iget-object v1, p0, Lq6c;->X:Lu6c;
-
-    invoke-virtual {v1}, Lu6c;->v()Luv5;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lu6c;->z0:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Luv5;->p(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2, p1}, Lu6c;->w(Ljava/lang/String;Landroid/graphics/RectF;)V
-
-    return-object v0
+    return-void
 .end method

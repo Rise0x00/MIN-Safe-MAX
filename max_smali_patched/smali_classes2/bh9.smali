@@ -1,48 +1,45 @@
 .class public final Lbh9;
-.super Lp14;
+.super Laq;
+.source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lgh7;
-
-.field public synthetic d:Ljava/lang/Object;
-
-.field public o:I
+# static fields
+.field public static final a:Lbh9;
 
 
 # direct methods
-.method public constructor <init>(Lgh7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lbh9;->X:Lgh7;
+    new-instance v0, Lbh9;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Laq;-><init>()V
+
+    sput-object v0, Lbh9;->a:Lbh9;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a()Ljava/util/concurrent/ExecutorService;
+    .locals 2
 
-    iput-object p1, p0, Lbh9;->d:Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lr5;
 
-    iget p1, p0, Lbh9;->o:I
+    move-result-object v0
 
-    const/high16 v0, -0x80000000
+    const/16 v1, 0x4e
 
-    or-int/2addr p1, v0
+    invoke-virtual {v0, v1}, Lr5;->c(I)Ljava/lang/Object;
 
-    iput p1, p0, Lbh9;->o:I
+    move-result-object v0
 
-    iget-object p1, p0, Lbh9;->X:Lgh7;
+    check-cast v0, Lyab;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Lyab;->a()Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {p1, v0, p0}, Lgh7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
-
-    return-object p1
+    return-object v0
 .end method

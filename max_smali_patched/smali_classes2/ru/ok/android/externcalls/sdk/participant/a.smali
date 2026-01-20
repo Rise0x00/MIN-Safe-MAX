@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lyne;
+.implements Lnbf;
 
 
 # instance fields

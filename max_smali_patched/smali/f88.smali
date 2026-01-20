@@ -1,97 +1,83 @@
-.class public final Lf88;
-.super Lh4;
+.class public abstract Lf88;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lf88;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:Ljava/util/List;
-
-.field public final b:Z
-
-.field public final c:Z
+.field public static final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lqwh;
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    const/4 v1, 0x6
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    invoke-direct {v0, v1}, Lqwh;-><init>(I)V
-
-    sput-object v0, Lf88;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lf88;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/ArrayList;ZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lf88;->a:Ljava/util/List;
-
-    iput-boolean p2, p0, Lf88;->b:Z
-
-    iput-boolean p3, p0, Lf88;->c:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public static final a(Landroid/app/Activity;Z)Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
     .locals 2
 
-    const/16 p2, 0x4f45
+    sget-object v0, Lf88;->a:Ljava/util/LinkedHashMap;
 
-    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
+    invoke-virtual {v0, p0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p2
+    move-result-object v0
 
-    const/4 v0, 0x1
+    check-cast v0, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    iget-object v1, p0, Lf88;->a:Ljava/util/List;
+    if-nez v0, :cond_1
 
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    const-string v1, "LifecycleHandler"
 
-    invoke-static {p1, v1, v0}, Luxi;->j(Landroid/os/Parcel;Ljava/util/List;I)V
+    if-eqz p1, :cond_0
 
-    const/4 v0, 0x2
+    instance-of p1, p0, Landroidx/fragment/app/b;
 
-    const/4 v1, 0x4
+    if-eqz p1, :cond_0
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    move-object p1, p0
 
-    iget-boolean v0, p0, Lf88;->b:Z
+    check-cast p1, Landroidx/fragment/app/b;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p1}, Landroidx/fragment/app/b;->A()Lcn6;
 
-    const/4 v0, 0x3
+    move-result-object p1
 
-    invoke-static {p1, v0, v1}, Luxi;->m(Landroid/os/Parcel;II)V
+    invoke-virtual {p1, v1}, Landroidx/fragment/app/c;->D(Ljava/lang/String;)Landroidx/fragment/app/a;
 
-    iget-boolean v0, p0, Lf88;->c:Z
+    move-result-object p1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    instance-of v1, p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
 
-    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
+    if-eqz v1, :cond_1
 
-    return-void
+    check-cast p1, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;
+
+    move-object v0, p1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+
+    :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0, p0}, Lcom/bluelinelabs/conductor/internal/AndroidXLifecycleHandlerImpl;->r0(Landroid/app/Activity;)V
+
+    :cond_2
+    return-object v0
 .end method

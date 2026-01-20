@@ -1,21 +1,14 @@
-.class public abstract Lojg;
+.class public interface abstract Lojg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lob4;
+
 
 # virtual methods
-.method public a()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+.method public abstract restoreThreadContext(Lqb4;Ljava/lang/Object;)V
 .end method
 
-.method public b([I)Z
-    .locals 0
-
-    const/4 p1, 0x0
-
-    return p1
+.method public abstract updateThreadContext(Lqb4;)Ljava/lang/Object;
 .end method

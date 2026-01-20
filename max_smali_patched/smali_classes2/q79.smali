@@ -1,118 +1,69 @@
 .class public final Lq79;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lrda;
 
 
 # instance fields
-.field public final synthetic X:Lt79;
-
-.field public final synthetic Y:Lt92;
-
-.field public o:I
+.field public final synthetic a:Ly79;
 
 
 # direct methods
-.method public constructor <init>(Lt79;Lt92;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ly79;)V
     .locals 0
 
-    iput-object p1, p0, Lq79;->X:Lt79;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lq79;->Y:Lt92;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lq79;->a:Ly79;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lq79;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lq79;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lq79;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final q(J)V
     .locals 2
 
-    new-instance p1, Lq79;
+    iget-object p1, p0, Lq79;->a:Ly79;
 
-    iget-object v0, p0, Lq79;->X:Lt79;
+    iget-object p2, p1, Ly79;->a:Ltda;
 
-    iget-object v1, p0, Lq79;->Y:Lt92;
+    check-cast p2, Ljea;
 
-    invoke-direct {p1, v0, v1, p2}, Lq79;-><init>(Lt79;Lt92;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p2}, Ljea;->l()Lsda;
 
-    return-object p1
-.end method
+    move-result-object p2
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    const/4 v0, 0x0
 
-    iget v0, p0, Lq79;->o:I
+    if-eqz p2, :cond_0
 
-    const/4 v1, 0x1
+    iget-object p2, p2, Lsda;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    const-string v1, "MediaMetadata.Extra.MESSAGE_ID"
 
-    if-ne v0, v1, :cond_0
+    invoke-interface {p2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    move-result-object p2
 
     goto :goto_0
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-object p2, v0
 
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    instance-of v1, p2, Ljava/lang/Long;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_1
 
-    throw p1
+    move-object v0, p2
+
+    check-cast v0, Ljava/lang/Long;
 
     :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    invoke-static {p1, v0}, Ly79;->a(Ly79;Ljava/lang/Long;)V
 
-    iput v1, p0, Lq79;->o:I
-
-    iget-object p1, p0, Lq79;->X:Lt79;
-
-    iget-object v0, p0, Lq79;->Y:Lt92;
-
-    invoke-static {p1, v0, p0}, Lt79;->v(Lt79;Lt92;Lp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

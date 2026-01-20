@@ -2,53 +2,73 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnAttachStateChangeListener;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Lone/me/rlottie/RLottieImageView;
 
-.field public final b:Lcwc;
+.field public final synthetic b:Lnjd;
 
-.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
+.field public final synthetic c:Lone/me/rlottie/RLottieDrawable;
 
-.field public final d:Ljava/util/concurrent/ConcurrentHashMap;
+.field public final synthetic d:Lljd;
+
+.field public final synthetic o:Lmjd;
 
 
 # direct methods
-.method public constructor <init>(Lcwc;)V
-    .locals 3
+.method public constructor <init>(Lone/me/rlottie/RLottieImageView;Lnjd;Lone/me/rlottie/RLottieDrawable;Lljd;Lmjd;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object p1, p0, Lkjd;->a:Lone/me/rlottie/RLottieImageView;
 
-    const-wide/16 v1, 0x1
+    iput-object p2, p0, Lkjd;->b:Lnjd;
 
-    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
+    iput-object p3, p0, Lkjd;->c:Lone/me/rlottie/RLottieDrawable;
 
-    iput-object v0, p0, Lkjd;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object p4, p0, Lkjd;->d:Lljd;
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object v0, p0, Lkjd;->d:Ljava/util/concurrent/ConcurrentHashMap;
-
-    if-eqz p1, :cond_0
-
-    const-string v0, "RtcCommands"
-
-    iput-object v0, p0, Lkjd;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lkjd;->b:Lcwc;
+    iput-object p5, p0, Lkjd;->o:Lmjd;
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    const-string v0, "Illegal \'logger\' value: null"
+# virtual methods
+.method public final onViewAttachedToWindow(Landroid/view/View;)V
+    .locals 0
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    throw p1
+.method public final onViewDetachedFromWindow(Landroid/view/View;)V
+    .locals 1
+
+    iget-object p1, p0, Lkjd;->a:Lone/me/rlottie/RLottieImageView;
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
+
+    iget-object p1, p0, Lkjd;->b:Lnjd;
+
+    iget-object p1, p1, Lnjd;->a:Ljava/lang/String;
+
+    const-string v0, "onDetach"
+
+    invoke-static {p1, v0}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p1, p0, Lkjd;->d:Lljd;
+
+    iget-object v0, p0, Lkjd;->c:Lone/me/rlottie/RLottieDrawable;
+
+    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeDrawableLoadListener(Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;)V
+
+    iget-object p1, p0, Lkjd;->o:Lmjd;
+
+    invoke-virtual {v0, p1}, Lone/me/rlottie/RLottieDrawable;->removeOnAllFramesRenderedListener(Lone/me/rlottie/RLottieDrawable$OnAllFramesRenderedListener;)V
+
+    return-void
 .end method

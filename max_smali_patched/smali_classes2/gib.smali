@@ -1,144 +1,199 @@
-.class public final Lgib;
-.super Logf;
+.class public abstract Lgib;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgj6;
 
+# static fields
+.field public static final A:I
 
-# instance fields
-.field public synthetic X:Landroidx/appcompat/widget/AppCompatImageView;
+.field public static final B:I
 
-.field public synthetic Y:Lw5b;
+.field public static final C:I
 
-.field public final synthetic o:I
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
-
-    iput p3, p0, Lgib;->o:I
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    iget v0, p0, Lgib;->o:I
-
-    check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
-
-    check-cast p2, Lw5b;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lgib;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, p3, v2}, Lgib;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lgib;->X:Landroidx/appcompat/widget/AppCompatImageView;
-
-    iput-object p2, v0, Lgib;->Y:Lw5b;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {v0, p1}, Lgib;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance v0, Lgib;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, p3, v2}, Lgib;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, v0, Lgib;->X:Landroidx/appcompat/widget/AppCompatImageView;
-
-    iput-object p2, v0, Lgib;->Y:Lw5b;
-
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-virtual {v0, p1}, Lgib;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lgib;->o:I
+    sget v0, Laad;->oneme_settings_media_auto_play_video_always:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lgib;->a:I
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    sget v0, Laad;->oneme_settings_media_auto_play_video_disable:I
 
-    iget-object p1, p0, Lgib;->X:Landroidx/appcompat/widget/AppCompatImageView;
+    sput v0, Lgib;->b:I
 
-    iget-object v0, p0, Lgib;->Y:Lw5b;
+    sget v0, Laad;->oneme_settings_media_auto_play_video_wifi:I
 
-    invoke-interface {v0}, Lw5b;->getIcon()Le77;
+    sput v0, Lgib;->c:I
 
-    move-result-object v0
+    sget v0, Laad;->oneme_settings_media_gif_always:I
 
-    iget v0, v0, Le77;->j:I
+    sput v0, Lgib;->d:I
 
-    invoke-static {v0}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+    sget v0, Laad;->oneme_settings_media_gif_dont_load:I
 
-    move-result-object v0
+    sput v0, Lgib;->e:I
 
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageTintList(Landroid/content/res/ColorStateList;)V
+    sget v0, Laad;->oneme_settings_media_gif_wifi:I
 
-    sget-object p1, Lybg;->a:Lybg;
+    sput v0, Lgib;->f:I
 
-    return-object p1
+    sget v0, Laad;->oneme_settings_media_item_animoji_enabled:I
 
-    :pswitch_0
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    sput v0, Lgib;->g:I
 
-    iget-object p1, p0, Lgib;->X:Landroidx/appcompat/widget/AppCompatImageView;
+    sget v0, Laad;->oneme_settings_media_item_gif:I
 
-    iget-object v0, p0, Lgib;->Y:Lw5b;
+    sput v0, Lgib;->h:I
 
-    invoke-interface {v0}, Lw5b;->b()Lcf0;
+    sget v0, Laad;->oneme_settings_media_item_gif_available:I
 
-    move-result-object v0
+    sput v0, Lgib;->i:I
 
-    iget-object v0, v0, Lcf0;->a:Lbf0;
+    sget v0, Laad;->oneme_settings_media_item_load_in_roaming:I
 
-    iget v0, v0, Lbf0;->n:I
+    sput v0, Lgib;->j:I
 
-    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setColorFilter(I)V
+    sget v0, Laad;->oneme_settings_media_item_photo:I
 
-    sget-object p1, Lybg;->a:Lybg;
+    sput v0, Lgib;->k:I
 
-    return-object p1
+    sget v0, Laad;->oneme_settings_media_item_playlist_enabled:I
 
-    nop
+    sput v0, Lgib;->l:I
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    sget v0, Laad;->oneme_settings_media_item_video:I
+
+    sput v0, Lgib;->m:I
+
+    sget v0, Laad;->oneme_settings_media_item_video_caching:I
+
+    sput v0, Lgib;->n:I
+
+    sget v0, Laad;->oneme_settings_media_item_video_messages:I
+
+    sput v0, Lgib;->o:I
+
+    sget v0, Laad;->oneme_settings_media_item_video_quality:I
+
+    sput v0, Lgib;->p:I
+
+    sget v0, Laad;->oneme_settings_media_photo_always:I
+
+    sput v0, Lgib;->q:I
+
+    sget v0, Laad;->oneme_settings_media_photo_dont_load:I
+
+    sput v0, Lgib;->r:I
+
+    sget v0, Laad;->oneme_settings_media_photo_wifi:I
+
+    sput v0, Lgib;->s:I
+
+    sget v0, Laad;->oneme_settings_media_quality_1080:I
+
+    sput v0, Lgib;->t:I
+
+    sget v0, Laad;->oneme_settings_media_quality_480:I
+
+    sput v0, Lgib;->u:I
+
+    sget v0, Laad;->oneme_settings_media_quality_720:I
+
+    sput v0, Lgib;->v:I
+
+    sget v0, Laad;->oneme_settings_media_screen_autoplaying_section_header:I
+
+    sput v0, Lgib;->w:I
+
+    sget v0, Laad;->oneme_settings_media_screen_datapressing_section_header:I
+
+    sput v0, Lgib;->x:I
+
+    sget v0, Laad;->oneme_settings_media_screen_list:I
+
+    sput v0, Lgib;->y:I
+
+    sget v0, Laad;->oneme_settings_media_screen_settings_header_vh:I
+
+    sput v0, Lgib;->z:I
+
+    sget v0, Laad;->oneme_settings_media_screen_settings_item_vh:I
+
+    sput v0, Lgib;->A:I
+
+    sget v0, Laad;->oneme_settings_media_screen_toolbar:I
+
+    sput v0, Lgib;->B:I
+
+    sget v0, Laad;->oneme_settings_media_video_messages_always:I
+
+    sput v0, Lgib;->C:I
+
+    sget v0, Laad;->oneme_settings_media_video_messages_dont_load:I
+
+    sput v0, Lgib;->D:I
+
+    sget v0, Laad;->oneme_settings_media_video_messages_wifi:I
+
+    sput v0, Lgib;->E:I
+
+    return-void
 .end method

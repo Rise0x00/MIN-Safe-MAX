@@ -3,18 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lrt1;
+.implements Ljava/util/concurrent/RejectedExecutionHandler;
 
 
 # instance fields
-.field public final synthetic a:Ly32;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly32;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lw32;->a:Ly32;
+    iput p1, p0, Lw32;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,101 +23,51 @@
 
 
 # virtual methods
-.method public B(Lqt1;)Ljava/lang/String;
-    .locals 5
+.method public final rejectedExecution(Ljava/lang/Runnable;Ljava/util/concurrent/ThreadPoolExecutor;)V
+    .locals 1
 
-    iget-object v0, p0, Lw32;->a:Ly32;
+    iget v0, p0, Lw32;->a:I
 
-    const-string v1, "Release[session="
-
-    iget-object v2, v0, Ly32;->a:Ljava/lang/Object;
-
-    monitor-enter v2
+    packed-switch v0, :pswitch_data_0
 
     :try_start_0
-    iget-object v3, v0, Ly32;->k:Lqt1;
+    invoke-virtual {p2}, Ljava/util/concurrent/ThreadPoolExecutor;->getQueue()Ljava/util/concurrent/BlockingQueue;
 
-    if-nez v3, :cond_0
+    move-result-object p2
 
-    const/4 v3, 0x1
+    invoke-interface {p2, p1}, Ljava/util/concurrent/BlockingQueue;->put(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_0
-    const/4 v3, 0x0
-
-    :goto_0
-    const-string v4, "Release completer expected to be null"
-
-    invoke-static {v4, v3}, Loui;->f(Ljava/lang/String;Z)V
-
-    iput-object p1, v0, Ly32;->k:Lqt1;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "]"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    monitor-exit v2
-
-    return-object p1
-
-    :catchall_0
+    :catch_0
     move-exception p1
 
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    throw p1
-.end method
+    move-result-object p2
 
-.method public a()V
-    .locals 4
+    invoke-virtual {p2}, Ljava/lang/Thread;->interrupt()V
 
-    iget-object v0, p0, Lw32;->a:Ly32;
+    invoke-virtual {p1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    iget-object v1, v0, Ly32;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget v2, v0, Ly32;->i:I
-
-    const/4 v3, 0x5
-
-    if-ne v2, v3, :cond_0
-
-    iget-object v2, v0, Ly32;->f:Le7e;
-
-    invoke-virtual {v0, v2}, Ly32;->k(Le7e;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
     :goto_0
-    monitor-exit v1
+    return-void
+
+    :pswitch_0
+    const-string p1, "CameraExecutor"
+
+    const-string p2, "A rejected execution occurred in CameraExecutor!"
+
+    invoke-static {p1, p2}, Lm5j;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    nop
 
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

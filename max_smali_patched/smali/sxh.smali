@@ -1,10 +1,14 @@
-.class public abstract Lsxh;
-.super Lhuh;
+.class public interface abstract Lsxh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luxh;
 
+# virtual methods
+.method public abstract a(J)V
+.end method
 
-# static fields
-.field public static final synthetic d:I
+.method public abstract b(IJ)V
+.end method
+
+.method public abstract d(Lht5;J)Z
+.end method

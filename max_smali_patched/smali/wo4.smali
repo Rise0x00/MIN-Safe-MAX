@@ -1,74 +1,61 @@
-.class public final synthetic Lwo4;
-.super Ljava/lang/Object;
+.class public final Lwo4;
+.super Luk0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lcp4;
-
-.field public final synthetic c:Ljava/lang/InterruptedException;
+.field public final o:Lvo4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcp4;Ljava/lang/InterruptedException;I)V
-    .locals 0
+.method public constructor <init>(Lvo4;JJ)V
+    .locals 6
 
-    iput p3, p0, Lwo4;->a:I
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lwo4;->b:Lcp4;
+    move-object v0, p0
 
-    iput-object p2, p0, Lwo4;->c:Ljava/lang/InterruptedException;
+    move-wide v2, p2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-wide v4, p4
+
+    invoke-direct/range {v0 .. v5}, Luk0;-><init>(IJJ)V
+
+    iput-object p1, v0, Lwo4;->o:Lvo4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a()J
     .locals 3
 
-    iget v0, p0, Lwo4;->a:I
+    invoke-virtual {p0}, Luk0;->c()V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lwo4;->o:Lvo4;
 
-    iget-object v0, p0, Lwo4;->b:Lcp4;
+    iget-wide v1, p0, Luk0;->d:J
 
-    iget-object v0, v0, Lcp4;->h:Lgog;
+    invoke-virtual {v0, v1, v2}, Lvo4;->i(J)J
 
-    new-instance v1, Landroidx/media3/common/VideoFrameProcessingException;
+    move-result-wide v0
 
-    iget-object v2, p0, Lwo4;->c:Ljava/lang/InterruptedException;
+    return-wide v0
+.end method
 
-    invoke-direct {v1, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+.method public final b()J
+    .locals 3
 
-    invoke-interface {v0, v1}, Lgog;->a(Landroidx/media3/common/VideoFrameProcessingException;)V
+    invoke-virtual {p0}, Luk0;->c()V
 
-    return-void
+    iget-object v0, p0, Lwo4;->o:Lvo4;
 
-    :pswitch_0
-    iget-object v0, p0, Lwo4;->b:Lcp4;
+    iget-wide v1, p0, Luk0;->d:J
 
-    iget-object v0, v0, Lcp4;->h:Lgog;
+    invoke-virtual {v0, v1, v2}, Lvo4;->g(J)J
 
-    iget-object v1, p0, Lwo4;->c:Ljava/lang/InterruptedException;
+    move-result-wide v0
 
-    invoke-static {v1}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lgog;->a(Landroidx/media3/common/VideoFrameProcessingException;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

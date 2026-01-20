@@ -1,85 +1,39 @@
 .class public final Lhfh;
-.super Ljava/lang/Object;
+.super Lkk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lefh;
 
 
 # instance fields
-.field public final a:Z
+.field public final X:Z
+
+.field public final Y:Lm38;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(JJJJJZLm38;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lkk0;-><init>(J)V
 
-    iput-boolean p1, p0, Lhfh;->a:Z
+    iput-wide p3, p0, Lhfh;->b:J
+
+    iput-wide p5, p0, Lhfh;->c:J
+
+    iput-wide p7, p0, Lhfh;->d:J
+
+    iput-wide p9, p0, Lhfh;->o:J
+
+    iput-boolean p11, p0, Lhfh;->X:Z
+
+    iput-object p12, p0, Lhfh;->Y:Lm38;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhfh;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhfh;
-
-    iget-boolean v1, p0, Lhfh;->a:Z
-
-    iget-boolean p1, p1, Lhfh;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lhfh;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "ShowWebView(showBackButton="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Lhfh;->a:Z
-
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

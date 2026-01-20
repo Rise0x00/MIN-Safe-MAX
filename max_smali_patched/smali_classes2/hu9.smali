@@ -1,46 +1,16 @@
-.class public final Lhu9;
-.super Landroid/text/style/TypefaceSpan;
+.class public interface abstract Lhu9;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljh8;
-
-
-# instance fields
-.field public final a:I
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const-string v0, "monospace"
-
-    invoke-direct {p0, v0}, Landroid/text/style/TypefaceSpan;-><init>(Ljava/lang/String;)V
-
-    const/4 v0, 0x5
-
-    iput v0, p0, Lhu9;->a:I
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final copy()Lh44;
+.method public a()Z
     .locals 1
 
-    new-instance v0, Lhu9;
-
-    invoke-direct {v0}, Lhu9;-><init>()V
-
-    return-object v0
-.end method
-
-.method public final getType()I
-    .locals 1
-
-    iget v0, p0, Lhu9;->a:I
+    const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public abstract j()J
 .end method

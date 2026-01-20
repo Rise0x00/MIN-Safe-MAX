@@ -1,124 +1,85 @@
 .class public final Lvhc;
-.super Ljava/lang/Object;
+.super Lwhc;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lqs8;
+# static fields
+.field public static final b:Lvhc;
 
-.field public final b:J
+.field public static final c:Lvhc;
 
-.field public final c:J
+.field public static final d:Lvhc;
+
+.field public static final e:Lvhc;
+
+.field public static final f:Lvhc;
+
+.field public static final g:Lvhc;
+
+.field public static final h:Lvhc;
+
+.field public static final i:Lvhc;
+
+.field public static final j:Lvhc;
 
 
 # direct methods
-.method public constructor <init>(Lqs8;JJ)V
-    .locals 0
+.method static synthetic constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lvhc;
 
-    iput-object p1, p0, Lvhc;->a:Lqs8;
+    invoke-direct {v0}, Lqoj;-><init>()V
 
-    iput-wide p2, p0, Lvhc;->b:J
+    sput-object v0, Lvhc;->b:Lvhc;
 
-    iput-wide p4, p0, Lvhc;->c:J
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->c:Lvhc;
+
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->d:Lvhc;
+
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->e:Lvhc;
+
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->f:Lvhc;
+
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->g:Lvhc;
+
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->h:Lvhc;
+
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->i:Lvhc;
+
+    new-instance v0, Lvhc;
+
+    invoke-direct {v0}, Lqoj;-><init>()V
+
+    sput-object v0, Lvhc;->j:Lvhc;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvhc;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvhc;
-
-    iget-wide v3, p0, Lvhc;->b:J
-
-    iget-wide v5, p1, Lvhc;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lvhc;->a:Lqs8;
-
-    iget-object v3, p1, Lvhc;->a:Lqs8;
-
-    invoke-virtual {v1, v3}, Lqs8;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-wide v3, p0, Lvhc;->c:J
-
-    iget-wide v5, p1, Lvhc;->c:J
-
-    cmp-long p1, v3, v5
-
-    if-nez p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    iget-wide v0, p0, Lvhc;->b:J
-
-    const/16 v2, 0x20
-
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
-
-    const/16 v1, 0xd9
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lvhc;->a:Lqs8;
-
-    invoke-virtual {v0}, Lqs8;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v3, p0, Lvhc;->c:J
-
-    ushr-long v1, v3, v2
-
-    xor-long/2addr v1, v3
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    return v0
 .end method

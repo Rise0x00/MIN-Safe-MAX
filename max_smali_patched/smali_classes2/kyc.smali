@@ -3,59 +3,154 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lone/me/rlottie/RLottieDrawable$DrawableLoadListener;
+.implements Landroid/animation/TypeEvaluator;
 
 
 # instance fields
-.field public a:Z
-
-.field public final synthetic b:Lnyc;
-
-.field public final synthetic c:Lone/me/rlottie/RLottieImageView;
+.field public a:[Lfwb;
 
 
 # direct methods
-.method public constructor <init>(Lnyc;Lone/me/rlottie/RLottieImageView;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkyc;->b:Lnyc;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lkyc;->c:Lone/me/rlottie/RLottieImageView;
+    iput-object v0, p0, Lkyc;->a:[Lfwb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLoaded(Lone/me/rlottie/RLottieDrawable;)V
-    .locals 2
+.method public final evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    iget-object p1, p0, Lkyc;->b:Lnyc;
+    check-cast p2, [Lfwb;
 
-    iget-object p1, p1, Lnyc;->a:Ljava/lang/String;
+    check-cast p3, [Lfwb;
 
-    iget-boolean v0, p0, Lkyc;->a:Z
+    invoke-static {p2, p3}, Lejj;->a([Lfwb;[Lfwb;)Z
 
-    const-string v1, "Reaction effect. OnLoaded, called:"
+    move-result v0
 
-    invoke-static {v1, p1, v0}, Lok7;->q(Ljava/lang/String;Ljava/lang/String;Z)V
+    if-eqz v0, :cond_6
 
-    iget-boolean p1, p0, Lkyc;->a:Z
+    iget-object v0, p0, Lkyc;->a:[Lfwb;
 
-    if-eqz p1, :cond_0
+    invoke-static {v0, p2}, Lejj;->a([Lfwb;[Lfwb;)Z
 
-    return-void
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    if-eqz p2, :cond_0
+
+    invoke-static {p2}, Lejj;->e([Lfwb;)[Lfwb;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :cond_0
-    const/4 p1, 0x1
+    const/4 v0, 0x0
 
-    iput-boolean p1, p0, Lkyc;->a:Z
+    :goto_0
+    iput-object v0, p0, Lkyc;->a:[Lfwb;
 
-    iget-object p1, p0, Lkyc;->c:Lone/me/rlottie/RLottieImageView;
+    :cond_1
+    iget-object v0, p0, Lkyc;->a:[Lfwb;
 
-    invoke-virtual {p1}, Lone/me/rlottie/RLottieImageView;->playAnimation()V
+    const-string v1, "Required value was null."
 
-    return-void
+    if-eqz v0, :cond_5
+
+    if-eqz p2, :cond_4
+
+    array-length v1, p2
+
+    const/4 v2, 0x0
+
+    :goto_1
+    if-ge v2, v1, :cond_3
+
+    if-eqz p3, :cond_2
+
+    aget-object v3, v0, v2
+
+    aget-object v4, p2, v2
+
+    aget-object v5, p3, v2
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-char v6, v4, Lfwb;->a:C
+
+    iput-char v6, v3, Lfwb;->a:C
+
+    const/4 v6, 0x0
+
+    :goto_2
+    iget-object v7, v4, Lfwb;->b:[F
+
+    array-length v8, v7
+
+    if-ge v6, v8, :cond_2
+
+    iget-object v8, v3, Lfwb;->b:[F
+
+    aget v7, v7, v6
+
+    const/high16 v9, 0x3f800000    # 1.0f
+
+    sub-float/2addr v9, p1
+
+    mul-float/2addr v9, v7
+
+    iget-object v7, v5, Lfwb;->b:[F
+
+    aget v7, v7, v6
+
+    mul-float/2addr v7, p1
+
+    add-float/2addr v7, v9
+
+    aput v7, v8, v6
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
+
+    :cond_3
+    return-object v0
+
+    :cond_4
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p1, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_6
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "Can\'t interpolate between two incompatible pathData"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

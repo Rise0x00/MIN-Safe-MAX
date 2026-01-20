@@ -1,96 +1,74 @@
 .class public final Lk55;
-.super Llk5;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public a:Ljava/lang/Long;
+.field public final synthetic o:Lo55;
+
+
+# direct methods
+.method public constructor <init>(Lo55;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lk55;->o:Lo55;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()[B
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lk55;->a:Ljava/lang/Long;
+    check-cast p1, Lzb4;
 
-    if-nez v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x0
+    invoke-virtual {p0, p1, p2}, Lk55;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    const/4 v1, 0x4
+    check-cast p1, Lk55;
 
-    :goto_0
-    add-int/lit8 v2, v1, 0x4
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
+    invoke-virtual {p1, p2}, Lk55;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p1
 
-    sget-object v3, Lfxf;->Y:Lfxf;
-
-    iget-short v3, v3, Lfxf;->a:S
-
-    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    int-to-short v1, v1
-
-    invoke-virtual {v2, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    long-to-int v0, v0
-
-    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lk55;->a:Ljava/lang/Long;
+    new-instance p1, Lk55;
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lk55;->o:Lo55;
 
-    const-string v0, "(empty)"
+    invoke-direct {p1, v0, p2}, Lk55;-><init>(Lo55;Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_0
+    return-object p1
+.end method
 
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v2, "["
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lk55;->o:Lo55;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lo55;->k()Ljava/io/File;
 
-    const-string v0, "]"
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    const-string v1, "EarlyDataExtension "
-
-    invoke-static {v1, v0}, Lox1;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

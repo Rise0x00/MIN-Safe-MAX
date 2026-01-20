@@ -1,103 +1,248 @@
 .class public final Lwqb;
-.super Ljava/lang/Object;
+.super Lnth;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic Z:[Lz28;
+
+
 # instance fields
-.field public final a:Lt0f;
+.field public final X:Lpld;
 
-.field public final b:Ltlf;
+.field public final Y:Lx07;
 
-.field public final c:Ltw2;
+.field public final b:Lo58;
 
-.field public final d:Lg54;
+.field public final c:Lo58;
 
-.field public final e:Lru7;
+.field public final d:Lo58;
 
-.field public final f:Lru7;
-
-.field public g:Lgye;
-
-.field public final h:La1f;
+.field public final o:Lspf;
 
 
 # direct methods
-.method public constructor <init>(Lt0f;Ltlf;Lru7;Ltw2;Lru7;Lkotlinx/coroutines/internal/ContextScope;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lhfa;
 
-    iput-object p1, p0, Lwqb;->a:Lt0f;
+    const-string v1, "changePushNewUserJob"
 
-    iput-object p2, p0, Lwqb;->b:Ltlf;
-
-    iput-object p4, p0, Lwqb;->c:Ltw2;
-
-    iput-object p6, p0, Lwqb;->d:Lg54;
-
-    iput-object p5, p0, Lwqb;->e:Lru7;
-
-    iput-object p3, p0, Lwqb;->f:Lru7;
-
-    const/4 p3, 0x0
-
-    invoke-static {p3}, Lb1f;->a(Ljava/lang/Object;)La1f;
-
-    move-result-object p3
-
-    iput-object p3, p0, Lwqb;->h:La1f;
-
-    new-instance p3, Lr13;
-
-    const/16 p4, 0xd
-
-    invoke-direct {p3, p1, p4}, Lr13;-><init>(Lez5;I)V
-
-    new-instance p1, Lbj0;
-
-    const/16 p4, 0x1b
-
-    invoke-direct {p1, p4}, Lbj0;-><init>(I)V
-
-    invoke-static {p3, p1}, Lqs0;->k(Lez5;Lej6;)Liw4;
-
-    move-result-object p1
-
-    new-instance v0, Lsqb;
-
-    const/4 v6, 0x4
-
-    const/4 v7, 0x0
-
-    const/4 v1, 0x2
+    const-string v2, "getChangePushNewUserJob()Lkotlinx/coroutines/Job;"
 
     const-class v3, Lwqb;
 
-    const-string v4, "updatePinnedMessage"
+    invoke-direct {v0, v3, v1, v2}, Lhfa;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v5, "updatePinnedMessage(Lru/ok/tamtam/chats/Chat;)V"
+    sget-object v1, Lctd;->a:Ldtd;
 
-    move-object v2, p0
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct/range {v0 .. v7}, Lsqb;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    const/4 v1, 0x1
 
-    new-instance p3, Ln16;
+    new-array v1, v1, [Lz28;
 
-    const/4 p4, 0x1
+    const/4 v2, 0x0
 
-    invoke-direct {p3, p1, v0, p4}, Ln16;-><init>(Lez5;Lej6;I)V
+    aput-object v0, v1, v2
 
-    check-cast p2, Lsta;
+    sput-object v1, Lwqb;->Z:[Lz28;
 
-    invoke-virtual {p2}, Lsta;->a()La54;
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 4
+
+    sget-object v0, Lwua;->a:Lwua;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v1
+
+    const/16 v2, 0x59
+
+    invoke-virtual {v1, v2}, Lr5;->d(I)Ln8g;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const/16 v3, 0x46
+
+    invoke-virtual {v2, v3}, Lr5;->d(I)Ln8g;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v0
+
+    const/16 v3, 0xc
+
+    invoke-virtual {v0, v3}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lnth;-><init>()V
+
+    iput-object v2, p0, Lwqb;->b:Lo58;
+
+    iput-object v1, p0, Lwqb;->c:Lo58;
+
+    iput-object v0, p0, Lwqb;->d:Lo58;
+
+    sget-object v0, Ldh5;->a:Ldh5;
+
+    invoke-static {v0}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lwqb;->o:Lspf;
+
+    new-instance v1, Lpld;
+
+    invoke-direct {v1, v0}, Lpld;-><init>(Lmfa;)V
+
+    iput-object v1, p0, Lwqb;->X:Lpld;
+
+    invoke-static {}, Lhlj;->b()Lx07;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lwqb;->Y:Lx07;
+
+    invoke-virtual {p0}, Lwqb;->s()Lqd8;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lspf;->setValue(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final s()Lqd8;
+    .locals 17
+
+    invoke-static {}, Lqi3;->c()Lqd8;
+
+    move-result-object v0
+
+    move-object/from16 v1, p0
+
+    iget-object v2, v1, Lwqb;->c:Lo58;
+
+    invoke-interface {v2}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lfbh;
+
+    iget-object v2, v2, Lx3;->g:Lr58;
+
+    const-string v3, "app.notification.show.new.users"
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v3, v4}, Lr58;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    new-instance v5, Lv0f;
+
+    sget v3, Lueb;->u:I
+
+    int-to-long v6, v3
+
+    sget v3, Lweb;->r:I
+
+    new-instance v9, Llhg;
+
+    invoke-direct {v9, v3}, Llhg;-><init>(I)V
+
+    new-instance v13, Le0f;
+
+    invoke-direct {v13, v2, v4}, Le0f;-><init>(ZZ)V
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x1b8
+
+    const/4 v8, 0x0
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x0
+
+    invoke-direct/range {v5 .. v16}, Lv0f;-><init>(JILqhg;Li0f;Lqhg;Ly58;Lg0f;Lwze;Lqhg;I)V
+
+    invoke-virtual {v0, v5}, Lqd8;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v0}, Lqi3;->b(Ljava/util/List;)Lqd8;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final t(J)V
+    .locals 2
+
+    sget v0, Lueb;->u:I
+
+    int-to-long v0, v0
+
+    cmp-long p1, p1, v0
+
+    if-nez p1, :cond_0
+
+    iget-object p1, p0, Lwqb;->d:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-static {p3, p1}, Lqs0;->t(Lez5;Ly44;)Lez5;
+    check-cast p1, Lmbg;
+
+    check-cast p1, Lj9b;
+
+    invoke-virtual {p1}, Lj9b;->b()Lsb4;
 
     move-result-object p1
 
-    invoke-static {p1, p6}, Lqs0;->v(Lez5;Lg54;)Lgye;
+    new-instance p2, Lvqb;
 
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p0, v0}, Lvqb;-><init>(Lwqb;Lkotlin/coroutines/Continuation;)V
+
+    iget-object v0, p0, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    sget-object v1, Lcc4;->b:Lcc4;
+
+    invoke-static {v0, p1, v1, p2}, Ls9j;->f(Lzb4;Lqb4;Lcc4;Lbr6;)Lmmf;
+
+    move-result-object p1
+
+    sget-object p2, Lwqb;->Z:[Lz28;
+
+    const/4 v0, 0x0
+
+    aget-object p2, p2, v0
+
+    iget-object v0, p0, Lwqb;->Y:Lx07;
+
+    invoke-virtual {v0, p0, p2, p1}, Lx07;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    :cond_0
     return-void
 .end method

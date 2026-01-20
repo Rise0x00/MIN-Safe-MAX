@@ -1,153 +1,55 @@
-.class public final synthetic Lj30;
-.super Ljava/lang/Object;
+.class public final Lj30;
+.super Landroid/database/ContentObserver;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/ContentResolver;
 
-.field public final synthetic b:Ljava/lang/Runnable;
+.field public final b:Landroid/net/Uri;
+
+.field public final synthetic c:Lk30;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
+.method public constructor <init>(Lk30;Landroid/os/Handler;Landroid/content/ContentResolver;Landroid/net/Uri;)V
     .locals 0
 
-    iput p2, p0, Lj30;->a:I
+    iput-object p1, p0, Lj30;->c:Lk30;
 
-    iput-object p1, p0, Lj30;->b:Ljava/lang/Runnable;
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lj30;->a:Landroid/content/ContentResolver;
+
+    iput-object p4, p0, Lj30;->b:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final onChange(Z)V
+    .locals 3
 
-    iget v0, p0, Lj30;->a:I
+    iget-object p1, p0, Lj30;->c:Lk30;
 
-    const-string v1, "failed to execute fresco task"
+    iget-object v0, p1, Lk30;->b:Ljava/lang/Object;
 
-    const-string v2, "Fresco"
+    check-cast v0, Landroid/content/Context;
 
-    iget-object v3, p0, Lj30;->b:Ljava/lang/Runnable;
+    iget-object v1, p1, Lk30;->j:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v1, Lx20;
 
-    invoke-static {v3}, Lcom/my/tracker/core/o/g;->d(Ljava/lang/Runnable;)V
+    iget-object v2, p1, Lk30;->i:Ljava/lang/Object;
 
-    return-void
+    check-cast v2, La4a;
 
-    :pswitch_0
-    invoke-static {v3}, Lw0g;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0, v1, v2}, Lh30;->b(Landroid/content/Context;Lx20;La4a;)Lh30;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_1
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
-
-    invoke-static {v3}, Lne;->d(Ljava/lang/Runnable;)V
+    invoke-virtual {p1, v0}, Lk30;->a(Lh30;)V
 
     return-void
-
-    :pswitch_2
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
-
-    invoke-static {v3}, Lne;->d(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :pswitch_3
-    :try_start_0
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    return-void
-
-    :catch_1
-    move-exception v0
-
-    throw v0
-
-    :pswitch_4
-    :try_start_1
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_1
-    return-void
-
-    :catch_3
-    move-exception v0
-
-    throw v0
-
-    :pswitch_5
-    :try_start_2
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_5
-    .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_4
-
-    goto :goto_2
-
-    :catch_4
-    move-exception v0
-
-    invoke-static {v2, v1, v0}, Lcuh;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
-
-    :catch_5
-    move-exception v0
-
-    throw v0
-
-    :pswitch_6
-    const/16 v0, -0x10
-
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,50 +1,71 @@
-.class public abstract Lvkc;
-.super Ljava/lang/Object;
+.class public final Lvkc;
+.super Lnth;
+.source "SourceFile"
 
 
-# static fields
-.field public static onechat_react_add_tension:I = 0x7f0703c0
+# instance fields
+.field public volatile X:I
 
-.field public static onechat_react_animation_drawable_size:I = 0x7f0703c1
+.field public final Y:Lcm5;
 
-.field public static onechat_react_badge_corners_radius:I = 0x7f0703c2
+.field public final b:Lakc;
 
-.field public static onechat_react_bubble_width_tension:I = 0x7f0703c3
+.field public final c:Ljava/lang/String;
 
-.field public static onechat_react_change_tension:I = 0x7f0703c4
+.field public final d:Lo58;
 
-.field public static onechat_react_counter_padding:I = 0x7f0703c5
+.field public final o:Lo58;
 
-.field public static onechat_react_default_small_height_fallback:I = 0x7f0703c6
 
-.field public static onechat_react_default_small_width_fallback:I = 0x7f0703c7
+# direct methods
+.method public constructor <init>(Lakc;Lo58;Lo58;)V
+    .locals 0
 
-.field public static onechat_react_move_tension:I = 0x7f0703c8
+    invoke-direct {p0}, Lnth;-><init>()V
 
-.field public static onechat_react_next_change_delay_coef:I = 0x7f0703c9
+    iput-object p1, p0, Lvkc;->b:Lakc;
 
-.field public static onechat_react_next_move_delay_coef:I = 0x7f0703ca
+    const-class p1, Lvkc;
 
-.field public static onechat_react_panel_corner_radius:I = 0x7f0703cb
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-.field public static onechat_react_panel_popup_side_margin:I = 0x7f0703cc
+    move-result-object p1
 
-.field public static onechat_react_panel_selected_text_size:I = 0x7f0703cd
+    iput-object p1, p0, Lvkc;->c:Ljava/lang/String;
 
-.field public static onechat_react_panel_side_margin:I = 0x7f0703ce
+    iput-object p2, p0, Lvkc;->d:Lo58;
 
-.field public static onechat_react_panel_size:I = 0x7f0703cf
+    iput-object p3, p0, Lvkc;->o:Lo58;
 
-.field public static onechat_react_panel_text_size:I = 0x7f0703d0
+    new-instance p1, Lcm5;
 
-.field public static onechat_react_panel_vertical_margin:I = 0x7f0703d1
+    const/4 p2, 0x0
 
-.field public static onechat_react_scale_1_step:I = 0x7f0703d2
+    invoke-direct {p1, p2}, Lcm5;-><init>(I)V
 
-.field public static onechat_react_scale_2_step:I = 0x7f0703d3
+    iput-object p1, p0, Lvkc;->Y:Lcm5;
 
-.field public static onechat_react_scale_3_step:I = 0x7f0703d4
+    invoke-interface {p3}, Lo58;->getValue()Ljava/lang/Object;
 
-.field public static onechat_react_side_margin:I = 0x7f0703d5
+    move-result-object p1
 
-.field public static onechat_react_text_size_small:I = 0x7f0703d6
+    check-cast p1, Lmbg;
+
+    check-cast p1, Lj9b;
+
+    invoke-virtual {p1}, Lj9b;->b()Lsb4;
+
+    move-result-object p1
+
+    new-instance p2, Lmkc;
+
+    const/4 p3, 0x0
+
+    invoke-direct {p2, p0, p3}, Lmkc;-><init>(Lvkc;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p3, 0x2
+
+    invoke-static {p0, p1, p2, p3}, Lnth;->n(Lnth;Lqb4;Lbr6;I)Lmmf;
+
+    return-void
+.end method

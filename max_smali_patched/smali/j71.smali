@@ -1,67 +1,183 @@
 .class public final Lj71;
-.super Lfl4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic t:Lk71;
+.field public final a:Lru/ok/android/externcalls/sdk/Conversation;
+
+.field public final b:Lgbj;
+
+.field public final c:Z
+
+.field public final d:Z
 
 
 # direct methods
-.method public constructor <init>(Lk71;)V
-    .locals 2
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation;Lgbj;ZZ)V
+    .locals 0
 
-    iput-object p1, p0, Lj71;->t:Lk71;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lfl4;-><init>()V
+    iput-object p1, p0, Lj71;->a:Lru/ok/android/externcalls/sdk/Conversation;
 
-    const-wide/16 v0, 0x12c
+    iput-object p2, p0, Lj71;->b:Lgbj;
 
-    iput-wide v0, p0, Lu6d;->d:J
+    iput-boolean p3, p0, Lj71;->c:Z
 
-    iput-wide v0, p0, Lu6d;->c:J
-
-    iput-wide v0, p0, Lu6d;->f:J
-
-    iput-wide v0, p0, Lu6d;->e:J
+    iput-boolean p4, p0, Lj71;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final m()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lj71;->t:Lk71;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Lk71;->a:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, -0x2
-
-    iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
+    goto :goto_1
 
     :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
+    instance-of v0, p1, Lj71;
 
-    const-string v1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    if-nez v0, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    goto :goto_0
 
     :cond_1
-    return-void
+    check-cast p1, Lj71;
+
+    iget-object v0, p0, Lj71;->a:Lru/ok/android/externcalls/sdk/Conversation;
+
+    iget-object v1, p1, Lj71;->a:Lru/ok/android/externcalls/sdk/Conversation;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lj71;->b:Lgbj;
+
+    iget-object v1, p1, Lj71;->b:Lgbj;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lj71;->c:Z
+
+    iget-boolean v1, p1, Lj71;->c:Z
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-boolean v0, p0, Lj71;->d:Z
+
+    iget-boolean p1, p1, Lj71;->d:Z
+
+    if-eq v0, p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lj71;->a:Lru/ok/android/externcalls/sdk/Conversation;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lj71;->b:Lgbj;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Lj71;->c:Z
+
+    invoke-static {v2, v1, v0}, Lcbh;->j(IIZ)I
+
+    move-result v0
+
+    iget-boolean v1, p0, Lj71;->d:Z
+
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Result(conversation="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lj71;->a:Lru/ok/android/externcalls/sdk/Conversation;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callTarget="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lj71;->b:Lgbj;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isNewCall="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isIncoming="
+
+    const-string v2, ")"
+
+    iget-boolean v3, p0, Lj71;->c:Z
+
+    iget-boolean v4, p0, Lj71;->d:Z
+
+    invoke-static {v1, v2, v0, v3, v4}, Lhc0;->g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

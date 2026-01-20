@@ -1,73 +1,68 @@
 .class public final Lka8;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxa8;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lka8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic A0:Lma8;
-
-.field public B0:I
-
-.field public X:Lt92;
-
-.field public Y:Lrd2;
-
-.field public Z:Lr99;
-
-.field public d:Lma8;
-
-.field public o:Ljava/util/Iterator;
-
-.field public s0:Lr99;
-
-.field public t0:Ljava/util/Iterator;
-
-.field public u0:Ls99;
-
-.field public v0:Lu7d;
-
-.field public w0:Lu7d;
-
-.field public x0:I
-
-.field public y0:I
-
-.field public synthetic z0:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lma8;Lp14;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lj58;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lj58;-><init>(I)V
+
+    sput-object v0, Lka8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lka8;->A0:Lma8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lka8;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 1
-
-    iput-object p1, p0, Lka8;->z0:Ljava/lang/Object;
-
-    iget p1, p0, Lka8;->B0:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lka8;->B0:I
-
-    iget-object p1, p0, Lka8;->A0:Lma8;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lma8;->f(Ljava/util/Map;Lp14;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    return-object p1
+    iget-object p2, p0, Lka8;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

@@ -1,135 +1,91 @@
-.class public final Ly6a;
-.super Logf;
+.class public abstract synthetic Ly6a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-# instance fields
-.field public final synthetic X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p2, p0, Ly6a;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ly6a;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Ly6a;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Ly6a;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Ly6a;
-
-    iget-object v1, p0, Ly6a;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    invoke-direct {v0, p2, v1}, Ly6a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;)V
-
-    iput-object p1, v0, Ly6a;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ly6a;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Ly6a;->X:Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    iget-object v1, v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->L0:Ld0d;
-
-    sget-object v2, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->M0:[Les7;
-
-    const/4 v3, 0x4
-
-    aget-object v2, v2, v3
-
-    invoke-interface {v1, v0, v2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ly7a;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result v2
-
-    const/16 v3, 0x8
-
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_0
-
-    move v2, v4
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v3
-
-    :goto_0
-    invoke-virtual {v1, v2}, Ly7a;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->N0()Ll5b;
-
-    move-result-object v1
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    move v3, v4
-
-    :cond_1
-    invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->H0:Li9a;
-
-    invoke-virtual {v0}, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->N0()Ll5b;
+    invoke-static {}, Le10;->values()[Le10;
 
     move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    array-length v0, v0
 
-    invoke-static {v0, p1}, Li9a;->c(Ll5b;Ljava/util/List;)V
+    new-array v0, v0, [I
 
-    sget-object p1, Lybg;->a:Lybg;
+    const/4 v1, 0x1
 
-    return-object p1
+    :try_start_0
+    sget-object v2, Le10;->b:Le10;
+
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v2, 0x2
+
+    :try_start_1
+    sget-object v3, Le10;->b:Le10;
+
+    const/16 v3, 0x8
+
+    aput v2, v0, v3
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v3, 0x3
+
+    const/16 v4, 0xa
+
+    :try_start_2
+    sget-object v5, Le10;->b:Le10;
+
+    aput v3, v0, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Ly6a;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Le20;->values()[Le20;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_3
+    aput v1, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    const/4 v1, 0x7
+
+    :try_start_4
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    aput v3, v0, v4
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    sput-object v0, Ly6a;->$EnumSwitchMapping$1:[I
+
+    return-void
 .end method

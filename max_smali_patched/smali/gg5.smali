@@ -1,323 +1,219 @@
 .class public final Lgg5;
-.super Lfg5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvp4;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+.field public X:Z
+
+.field public final a:Landroid/widget/EditText;
+
+.field public final b:Z
+
+.field public c:Lfg5;
+
+.field public d:I
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/EditText;Z)V
+    .locals 1
 
-    invoke-direct {p0}, La54;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
+    const v0, 0x7fffffff
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/ConcurrentKt;->removeFutureOnCancel(Ljava/util/concurrent/Executor;)Z
+    iput v0, p0, Lgg5;->d:I
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lgg5;->o:I
+
+    iput-object p1, p0, Lgg5;->a:Landroid/widget/EditText;
+
+    iput-boolean p2, p0, Lgg5;->b:Z
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lgg5;->X:Z
+
+    return-void
+.end method
+
+.method public static a(Landroid/widget/EditText;I)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_2
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/text/Selection;->getSelectionStart(Ljava/lang/CharSequence;)I
+
+    move-result p1
+
+    invoke-static {p0}, Landroid/text/Selection;->getSelectionEnd(Ljava/lang/CharSequence;)I
+
+    move-result v0
+
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Lve5;->f(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    if-ltz p1, :cond_0
+
+    if-ltz v0, :cond_0
+
+    invoke-static {p0, p1, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
+
+    return-void
+
+    :cond_0
+    if-ltz p1, :cond_1
+
+    invoke-static {p0, p1}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    return-void
+
+    :cond_1
+    if-ltz v0, :cond_2
+
+    invoke-static {p0, v0}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;I)V
+
+    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 2
-
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
-
-    instance-of v1, v0, Ljava/util/concurrent/ExecutorService;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Ljava/util/concurrent/ExecutorService;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final delay(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final afterTextChanged(Landroid/text/Editable;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lvxi;->a(Lvp4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
+    return-void
 .end method
 
-.method public final dispatch(Ly44;Ljava/lang/Runnable;)V
-    .locals 3
-
-    :try_start_0
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
-
-    invoke-interface {v0, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/util/concurrent/CancellationException;
-
-    const-string v2, "The task was rejected"
-
-    invoke-direct {v1, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    sget-object v0, Lg93;->t0:Lg93;
-
-    invoke-interface {p1, v0}, Ly44;->get(Lx44;)Lw44;
-
-    move-result-object v0
-
-    check-cast v0, Lwn7;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, v1}, Lwn7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_0
-    sget-object v0, Lqv4;->c:Lyk4;
-
-    invoke-virtual {v0, p1, p2}, Lyk4;->dispatch(Ly44;Ljava/lang/Runnable;)V
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 7
 
-    instance-of v0, p1, Lgg5;
+    iget-object v0, p0, Lgg5;->a:Landroid/widget/EditText;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->isInEditMode()Z
 
-    check-cast p1, Lgg5;
+    move-result v1
 
-    iget-object p1, p1, Lgg5;->a:Ljava/util/concurrent/Executor;
+    if-nez v1, :cond_5
 
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
+    iget-boolean v1, p0, Lgg5;->X:Z
 
-    if-ne p1, v0, :cond_0
+    if-eqz v1, :cond_5
 
-    const/4 p1, 0x1
+    iget-boolean v1, p0, Lgg5;->b:Z
 
-    return p1
+    if-nez v1, :cond_1
 
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
-
-    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final invokeOnTimeout(JLjava/lang/Runnable;Ly44;)Lcw4;
-    .locals 4
-
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
-
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    const/4 v2, 0x0
+    sget-object v1, Lve5;->k:Lve5;
 
     if-eqz v1, :cond_0
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
     goto :goto_0
 
     :cond_0
-    move-object v0, v2
+    return-void
 
+    :cond_1
     :goto_0
-    if-eqz v0, :cond_1
+    if-gt p3, p4, :cond_5
 
-    :try_start_0
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    instance-of p3, p1, Landroid/text/Spannable;
 
-    invoke-interface {v0, p3, p1, p2, v1}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    if-eqz p3, :cond_5
 
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object p3
+
+    invoke-virtual {p3}, Lve5;->b()I
+
+    move-result p3
+
+    if-eqz p3, :cond_3
+
+    const/4 v1, 0x1
+
+    if-eq p3, v1, :cond_2
+
+    const/4 p1, 0x3
+
+    if-eq p3, p1, :cond_3
 
     goto :goto_1
 
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/util/concurrent/CancellationException;
-
-    const-string v3, "The task was rejected"
-
-    invoke-direct {v1, v3}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    sget-object v0, Lg93;->t0:Lg93;
-
-    invoke-interface {p4, v0}, Ly44;->get(Lx44;)Lw44;
-
-    move-result-object v0
-
-    check-cast v0, Lwn7;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, v1}, Lwn7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    :goto_1
-    if-eqz v2, :cond_2
-
-    new-instance p1, Lbw4;
-
-    invoke-direct {p1, v2}, Lbw4;-><init>(Ljava/util/concurrent/ScheduledFuture;)V
-
-    return-object p1
-
     :cond_2
-    sget-object v0, Lwj4;->Z:Lwj4;
+    move-object v4, p1
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lwj4;->invokeOnTimeout(JLjava/lang/Runnable;Ly44;)Lcw4;
+    check-cast v4, Landroid/text/Spannable;
+
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object v1
+
+    add-int v3, p2, p4
+
+    iget v5, p0, Lgg5;->d:I
+
+    iget v6, p0, Lgg5;->o:I
+
+    move v2, p2
+
+    invoke-virtual/range {v1 .. v6}, Lve5;->e(IILjava/lang/CharSequence;II)Ljava/lang/CharSequence;
+
+    return-void
+
+    :cond_3
+    invoke-static {}, Lve5;->a()Lve5;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    iget-object p2, p0, Lgg5;->c:Lfg5;
 
-.method public final scheduleResumeAfterDelay(JLx22;)V
-    .locals 5
+    if-nez p2, :cond_4
 
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
+    new-instance p2, Lfg5;
 
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-direct {p2, v0}, Lfg5;-><init>(Landroid/widget/EditText;)V
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lgg5;->c:Lfg5;
 
-    if-eqz v1, :cond_0
+    :cond_4
+    iget-object p2, p0, Lgg5;->c:Lfg5;
 
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+    invoke-virtual {p1, p2}, Lve5;->g(Lte5;)V
 
-    goto :goto_0
-
-    :cond_0
-    move-object v0, v2
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    new-instance v1, Llk6;
-
-    const/16 v3, 0x16
-
-    invoke-direct {v1, p0, v3, p3}, Llk6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Ly44;
-
-    move-result-object v3
-
-    :try_start_0
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {v0, v1, p1, p2, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/util/concurrent/CancellationException;
-
-    const-string v4, "The task was rejected"
-
-    invoke-direct {v1, v4}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    sget-object v0, Lg93;->t0:Lg93;
-
-    invoke-interface {v3, v0}, Ly44;->get(Lx44;)Lw44;
-
-    move-result-object v0
-
-    check-cast v0, Lwn7;
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, v1}, Lwn7;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
+    :cond_5
     :goto_1
-    if-eqz v2, :cond_2
-
-    new-instance p1, Ll22;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2, v2}, Ll22;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p3, p1}, Lvmi;->c(Lx22;Lm22;)V
-
     return-void
-
-    :cond_2
-    sget-object v0, Lwj4;->Z:Lwj4;
-
-    invoke-virtual {v0, p1, p2, p3}, Lhf5;->scheduleResumeAfterDelay(JLx22;)V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final w()Ljava/util/concurrent/Executor;
-    .locals 1
-
-    iget-object v0, p0, Lgg5;->a:Ljava/util/concurrent/Executor;
-
-    return-object v0
 .end method

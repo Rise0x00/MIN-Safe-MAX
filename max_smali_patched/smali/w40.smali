@@ -1,198 +1,196 @@
-.class public final Lw40;
+.class public abstract Lw40;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcfc;
 
+# static fields
+.field public static a:Landroid/media/AudioManager;
 
-# instance fields
-.field public final synthetic a:Ly40;
+.field public static final b:[Lkotlin/coroutines/Continuation;
 
 
 # direct methods
-.method public constructor <init>(Ly40;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lw40;->a:Ly40;
+    new-array v0, v0, [Lkotlin/coroutines/Continuation;
+
+    sput-object v0, Lw40;->b:[Lkotlin/coroutines/Continuation;
 
     return-void
+.end method
+
+.method public static a(Landroid/text/SpannableStringBuilder;Ljava/lang/Object;II)V
+    .locals 6
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-interface {p0, p2, p3, v0}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    const/16 v3, 0x21
+
+    if-ge v2, v1, :cond_1
+
+    aget-object v4, v0, v2
+
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v5
+
+    if-ne v5, p2, :cond_0
+
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v5
+
+    if-ne v5, p3, :cond_0
+
+    invoke-interface {p0, v4}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v5
+
+    if-ne v5, v3, :cond_0
+
+    invoke-interface {p0, v4}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-interface {p0, p1, p2, p3, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
+
+    return-void
+.end method
+
+.method public static declared-synchronized b(Landroid/content/Context;)Landroid/media/AudioManager;
+    .locals 5
+
+    const-class v0, Lw40;
+
+    monitor-enter v0
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    const/4 v1, 0x0
+
+    sput-object v1, Lw40;->a:Landroid/media/AudioManager;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    sget-object v1, Lw40;->a:Landroid/media/AudioManager;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_1
+
+    monitor-exit v0
+
+    return-object v1
+
+    :cond_1
+    :try_start_1
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v1, Lkr3;
+
+    invoke-direct {v1}, Lkr3;-><init>()V
+
+    invoke-static {}, Leg0;->e()Ljava/util/concurrent/Executor;
+
+    move-result-object v2
+
+    new-instance v3, Lud;
+
+    const/4 v4, 0x6
+
+    invoke-direct {v3, p0, v4, v1}, Lud;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    invoke-virtual {v1}, Lkr3;->b()V
+
+    sget-object p0, Lw40;->a:Landroid/media/AudioManager;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :cond_3
+    :goto_1
+    :try_start_2
+    const-string v1, "audio"
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/media/AudioManager;
+
+    sput-object p0, Lw40;->a:Landroid/media/AudioManager;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v0
+
+    return-object p0
+
+    :goto_2
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 10
-
-    iget-object v0, p0, Lw40;->a:Ly40;
-
-    iget-object v1, v0, Ly40;->a:Lmz9;
-
-    invoke-static {v0}, Ly40;->c(Ly40;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-void
-
-    :cond_0
-    move-object v2, v1
-
-    check-cast v2, Lc0a;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Ln20;
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x1
-
-    move v8, v5
-
-    move v9, v5
-
-    invoke-direct/range {v3 .. v9}, Ln20;-><init>(IIIIIZ)V
-
-    iget-object v2, v2, Lc0a;->w0:Lxp8;
-
-    const/4 v4, 0x0
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v2, v3, v4}, Lxp8;->B(Ln20;Z)V
-
-    :cond_1
-    iget-object v0, v0, Ly40;->b:Ldfc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    iget-object v0, v0, Ldfc;->f:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-array v3, v4, [Ljava/lang/Object;
-
-    const-string v4, "ProximityHelperTag"
-
-    invoke-static {v4, v0, v2, v3}, Lcuh;->i(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_2
-    :goto_0
-    move-object v0, v1
-
-    check-cast v0, Lc0a;
-
-    iget-object v0, v0, Lc0a;->D0:Lj0d;
-
-    iget-object v0, v0, Lj0d;->a:Lt0f;
-
-    invoke-interface {v0}, Lt0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x3e8
-
-    sub-long/2addr v2, v4
-
-    check-cast v1, Lc0a;
-
-    iget-object v0, v1, Lc0a;->Z:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v4, Lyz9;
-
-    const/4 v5, 0x0
-
-    invoke-direct {v4, v2, v3, v1, v5}, Lyz9;-><init>(JLc0a;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {v0, v5, v5, v4, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
-
-    return-void
+.method public abstract c(Ljava/lang/Object;)F
 .end method
 
-.method public final b()V
-    .locals 10
-
-    iget-object v0, p0, Lw40;->a:Ly40;
-
-    iget-object v1, v0, Ly40;->a:Lmz9;
-
-    invoke-static {v0}, Ly40;->c(Ly40;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    return-void
-
-    :cond_0
-    move-object v2, v1
-
-    check-cast v2, Lc0a;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Ln20;
-
-    const/4 v4, 0x1
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x1
-
-    move v8, v5
-
-    move v9, v5
-
-    invoke-direct/range {v3 .. v9}, Ln20;-><init>(IIIIIZ)V
-
-    iget-object v2, v2, Lc0a;->w0:Lxp8;
-
-    if-eqz v2, :cond_1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, v3, v4}, Lxp8;->B(Ln20;Z)V
-
-    :cond_1
-    iget-object v0, v0, Ly40;->b:Ldfc;
-
-    invoke-virtual {v0}, Ldfc;->c()V
-
-    check-cast v1, Lc0a;
-
-    invoke-virtual {v1}, Lc0a;->o()V
-
-    return-void
+.method public abstract d(Ljava/lang/Object;F)V
 .end method

@@ -1,127 +1,128 @@
-.class public final Llu1;
-.super Logf;
+.class public final synthetic Llu1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Llq6;
 
 
 # instance fields
-.field public final synthetic X:Lmu1;
+.field public final synthetic a:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Lsu1;
 
 
 # direct methods
-.method public constructor <init>(Lmu1;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lsu1;I)V
     .locals 0
 
-    iput-object p1, p0, Llu1;->X:Lmu1;
+    iput p2, p0, Llu1;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Llu1;->b:Lsu1;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    check-cast p1, Lphg;
+    iget v0, p0, Llu1;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Llu1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 
-    move-result-object p1
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    check-cast p1, Llu1;
+    sget-object v2, Lpc3;->t0:Lkme;
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-object v3, p0, Llu1;->b:Lsu1;
 
-    invoke-virtual {p1, p2}, Llu1;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Llu1;
-
-    iget-object v1, p0, Llu1;->X:Lmu1;
-
-    invoke-direct {v0, v1, p2}, Llu1;-><init>(Lmu1;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Llu1;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Llu1;->o:Ljava/lang/Object;
-
-    check-cast p1, Lphg;
-
-    sget-object v0, Lphg;->a:Lphg;
-
-    iget-object v1, p0, Llu1;->X:Lmu1;
-
-    if-ne p1, v0, :cond_0
-
-    invoke-virtual {v1}, Lmu1;->b()La1f;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, La1f;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lw84;
-
-    iget-object v2, v1, Lmu1;->n:Lru7;
-
-    invoke-interface {v2}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Lkme;->s(Landroid/view/View;)Lzbb;
 
     move-result-object v2
 
-    move-object v3, v2
+    iget-object v2, v2, Lzbb;->c:Lzlb;
 
-    check-cast v3, Lmw1;
+    invoke-interface {v2}, Lzlb;->b()Lxf0;
 
-    iget-object v5, v0, Lw84;->c:Ljava/lang/String;
+    move-result-object v2
 
-    iget-boolean v10, v0, Lw84;->i:Z
+    iget v2, v2, Lxf0;->f:I
 
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v3, 0x0
 
-    const/4 v11, 0x0
+    filled-new-array {v2, v3, v3}, [I
 
-    const/16 v12, 0x178
+    move-result-object v2
 
-    const-string v4, "BAD_CONNECTION_ALERT"
+    invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
-    const-string v6, "VPN"
+    return-object v0
 
-    const/4 v7, 0x0
+    :pswitch_0
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    const/4 v8, 0x0
+    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
 
-    const/4 v9, 0x0
+    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    invoke-static/range {v3 .. v12}, Lmw1;->d(Lmw1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZLiw1;I)V
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v1
+
+    sget-object v2, Lpc3;->t0:Lkme;
+
+    iget-object v3, p0, Llu1;->b:Lsu1;
+
+    invoke-virtual {v2, v3}, Lkme;->s(Landroid/view/View;)Lzbb;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lzbb;->c:Lzlb;
+
+    invoke-interface {v2}, Lzlb;->b()Lxf0;
+
+    move-result-object v2
+
+    iget v2, v2, Lxf0;->l:I
+
+    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+
+    return-object v0
+
+    :pswitch_1
+    iget-object v0, p0, Llu1;->b:Lsu1;
+
+    iget-object v0, v0, Lsu1;->l1:Llq6;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkih;
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v1, p1}, Lmu1;->n(Lphg;)V
+    const/4 v0, 0x0
 
-    sget-object p1, Lybg;->a:Lybg;
+    :goto_0
+    return-object v0
 
-    return-object p1
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

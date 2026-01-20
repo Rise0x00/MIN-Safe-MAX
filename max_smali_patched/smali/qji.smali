@@ -3,178 +3,168 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Ljava/lang/String;
+
+
 # direct methods
-.method public static n(I)I
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    packed-switch p0, :pswitch_data_0
+    const-string v0, "WorkerFactory"
 
-    const/4 p0, 0x0
+    invoke-static {v0}, Lkgi;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    return p0
+    move-result-object v0
 
-    :pswitch_0
-    const/16 p0, 0xe
+    sput-object v0, Lqji;->a:Ljava/lang/String;
 
-    return p0
-
-    :pswitch_1
-    const/16 p0, 0xd
-
-    return p0
-
-    :pswitch_2
-    const/16 p0, 0xc
-
-    return p0
-
-    :pswitch_3
-    const/16 p0, 0xb
-
-    return p0
-
-    :pswitch_4
-    const/16 p0, 0xa
-
-    return p0
-
-    :pswitch_5
-    const/16 p0, 0x9
-
-    return p0
-
-    :pswitch_6
-    const/16 p0, 0x8
-
-    return p0
-
-    :pswitch_7
-    const/4 p0, 0x7
-
-    return p0
-
-    :pswitch_8
-    const/4 p0, 0x6
-
-    return p0
-
-    :pswitch_9
-    const/4 p0, 0x5
-
-    return p0
-
-    :pswitch_a
-    const/4 p0, 0x4
-
-    return p0
-
-    :pswitch_b
-    const/4 p0, 0x3
-
-    return p0
-
-    :pswitch_c
-    const/4 p0, 0x2
-
-    return p0
-
-    :pswitch_d
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 0
-
-    return-void
+.method public abstract a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lne8;
 .end method
 
-.method public b()V
-    .locals 0
+.method public final b(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lne8;
+    .locals 6
 
-    return-void
-.end method
+    sget-object v0, Lqji;->a:Ljava/lang/String;
 
-.method public c(Leo0;)V
-    .locals 0
+    invoke-virtual {p0, p1, p2, p3}, Lqji;->a(Landroid/content/Context;Ljava/lang/String;Landroidx/work/WorkerParameters;)Lne8;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public d()V
-    .locals 0
+    if-nez v1, :cond_0
 
-    return-void
-.end method
+    :try_start_0
+    invoke-static {p2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-.method public e()V
-    .locals 0
+    move-result-object v2
 
-    return-void
-.end method
+    const-class v3, Lne8;
 
-.method public f()V
-    .locals 0
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
 
-    return-void
-.end method
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public g()V
-    .locals 0
+    goto :goto_0
 
-    return-void
-.end method
+    :catchall_0
+    move-exception v2
 
-.method public abstract h(Lvy8;)V
-.end method
+    invoke-static {}, Lkgi;->g()Lkgi;
 
-.method public i()V
-    .locals 0
+    move-result-object v3
 
-    return-void
-.end method
+    new-instance v4, Ljava/lang/StringBuilder;
 
-.method public j(Lvy8;)V
-    .locals 0
+    const-string v5, "Invalid class: "
 
-    return-void
-.end method
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public k()V
-    .locals 0
+    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public l(Lvy8;)V
-    .locals 0
+    move-result-object v4
 
-    return-void
-.end method
+    invoke-virtual {v3, v0, v4, v2}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-.method public m()V
-    .locals 0
+    const/4 v2, 0x0
 
-    return-void
+    :goto_0
+    if-eqz v2, :cond_0
+
+    :try_start_1
+    const-class v3, Landroid/content/Context;
+
+    const-class v4, Landroidx/work/WorkerParameters;
+
+    filled-new-array {v3, v4}, [Ljava/lang/Class;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v2
+
+    filled-new-array {p1, p3}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lne8;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v1, p1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {}, Lkgi;->g()Lkgi;
+
+    move-result-object p3
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Could not instantiate "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p3, v0, v2, p1}, Lkgi;->f(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_1
+    if-eqz v1, :cond_2
+
+    iget-boolean p1, v1, Lne8;->d:Z
+
+    if-nez p1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p3, ") returned an instance of a ListenableWorker ("
+
+    const-string v0, ") which has already been invoked. createWorker() must always return a new instance of a ListenableWorker."
+
+    const-string v1, "WorkerFactory ("
+
+    invoke-static {v1, p1, p3, p2, v0}, Lkz1;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance p2, Ljava/lang/IllegalStateException;
+
+    invoke-direct {p2, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p2
+
+    :cond_2
+    :goto_2
+    return-object v1
 .end method

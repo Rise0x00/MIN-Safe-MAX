@@ -1,105 +1,221 @@
-.class public final Loti;
-.super Lh4;
+.class public abstract Loti;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Loti;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:Ljava/lang/String;
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public o:Ljava/lang/String;
+.field public static final a:[[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 6
 
-    new-instance v0, Lrvg;
+    const v0, -0xb74a
 
-    const/16 v1, 0x1a
+    const/16 v1, -0x75cb
 
-    invoke-direct {v0, v1}, Lrvg;-><init>(I)V
+    filled-new-array {v0, v1}, [I
 
-    sput-object v0, Loti;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result-object v0
+
+    const/16 v1, -0x36c3
+
+    const/16 v2, -0x7cd6
+
+    filled-new-array {v1, v2}, [I
+
+    move-result-object v1
+
+    const v2, -0xeb1e2b
+
+    const v3, -0xfc38de
+
+    filled-new-array {v2, v3}, [I
+
+    move-result-object v2
+
+    const v3, -0xf7280d
+
+    const v4, -0xac6701
+
+    filled-new-array {v3, v4}, [I
+
+    move-result-object v3
+
+    const v4, -0x406801
+
+    const v5, -0xad9101
+
+    filled-new-array {v4, v5}, [I
+
+    move-result-object v4
+
+    filled-new-array {v0, v1, v2, v3, v4}, [[I
+
+    move-result-object v0
+
+    sput-object v0, Loti;->a:[[I
 
     return-void
 .end method
 
+.method public static a(Ljava/io/InputStream;)Lxh7;
+    .locals 5
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+    sget-object v0, Lyh7;->d:Ljava/lang/Object;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lyh7;
+
+    iget v1, v0, Lyh7;->a:I
+
+    new-array v2, v1, [B
+
+    invoke-virtual {p0}, Ljava/io/InputStream;->markSupported()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    :try_start_0
+    invoke-virtual {p0, v1}, Ljava/io/InputStream;->mark(I)V
+
+    invoke-static {p0, v2, v1}, Lqaj;->b(Ljava/io/InputStream;[BI)I
+
+    move-result v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
+
+    throw v0
+
+    :cond_0
+    invoke-static {p0, v2, v1}, Lqaj;->b(Ljava/io/InputStream;[BI)I
+
+    move-result v1
+
+    :goto_0
+    iget-object p0, v0, Lyh7;->c:Lir4;
+
+    invoke-virtual {p0, v1, v2}, Lir4;->a(I[B)Lxh7;
+
+    move-result-object p0
+
+    sget-object v3, Ljr4;->m:Lxh7;
+
+    invoke-virtual {p0, v3}, Lxh7;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    sget-object v4, Lxh7;->c:Lxh7;
+
+    if-eqz v3, :cond_1
+
+    move-object p0, v4
+
+    :cond_1
+    if-eq p0, v4, :cond_2
+
+    return-object p0
+
+    :cond_2
+    iget-object p0, v0, Lyh7;->b:Ljava/util/ArrayList;
+
+    if-eqz p0, :cond_4
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_3
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lwh7;
+
+    invoke-interface {v0, v1, v2}, Lwh7;->a(I[B)Lxh7;
+
+    move-result-object v0
+
+    if-eq v0, v4, :cond_3
+
+    return-object v0
+
+    :cond_4
+    return-object v4
+.end method
+
+.method public static final b(Lr4h;)V
     .locals 2
 
-    const/16 p2, 0x4f45
+    new-instance v0, Lffe;
 
-    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
+    const/16 v1, 0x12
 
-    move-result p2
+    invoke-direct {v0, v1}, Lffe;-><init>(I)V
 
-    const/4 v0, 0x2
+    const/16 v1, 0x7a
 
-    iget-object v1, p0, Loti;->a:Ljava/lang/String;
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    new-instance v0, Lenf;
 
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
-    iget-object v1, p0, Loti;->b:Ljava/lang/String;
+    invoke-direct {v0, v1}, Lenf;-><init>(I)V
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/16 v1, 0x26f
 
-    const/4 v0, 0x4
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    iget-object v1, p0, Loti;->c:Ljava/lang/String;
+    new-instance v0, Lenf;
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/4 v1, 0x4
 
-    const/4 v0, 0x5
+    invoke-direct {v0, v1}, Lenf;-><init>(I)V
 
-    iget-object v1, p0, Loti;->d:Ljava/lang/String;
+    const/16 v1, 0x270
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    const/4 v0, 0x6
+    new-instance v0, Lenf;
 
-    iget-object v1, p0, Loti;->o:Ljava/lang/String;
+    const/4 v1, 0x5
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-direct {v0, v1}, Lenf;-><init>(I)V
 
-    const/4 v0, 0x7
+    const/16 v1, 0x271
 
-    iget-object v1, p0, Loti;->X:Ljava/lang/String;
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    new-instance v0, Llge;
 
-    const/16 v0, 0x8
+    const/16 v1, 0x16
 
-    iget-object v1, p0, Loti;->Y:Ljava/lang/String;
+    invoke-direct {v0, v1}, Llge;-><init>(I)V
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/16 v1, 0x272
 
-    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
+    invoke-virtual {p0, v1, v0}, Lr4h;->e(ILhs7;)V
 
     return-void
 .end method

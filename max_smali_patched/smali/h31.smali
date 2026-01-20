@@ -1,129 +1,65 @@
 .class public final Lh31;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Le94;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
     .locals 0
 
-    iput-object p2, p0, Lh31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lh31;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(La94;La94;Z)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    return-void
+.end method
 
-    invoke-virtual {p0, p1, p2}, Lh31;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b(La94;La94;Z)V
+    .locals 0
+
+    if-eqz p3, :cond_0
+
+    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->t0:[Lz28;
+
+    iget-object p1, p0, Lh31;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->z0()Lq31;
 
     move-result-object p1
 
-    check-cast p1, Lh31;
+    invoke-virtual {p1}, Lq31;->s()Lh21;
 
-    sget-object p2, Lybg;->a:Lybg;
+    move-result-object p2
 
-    invoke-virtual {p1, p2}, Lh31;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p2
-.end method
+    check-cast p2, Ld31;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    iget-object p2, p2, Ld31;->G0:Lspf;
 
-    new-instance v0, Lh31;
+    invoke-virtual {p2}, Lspf;->getValue()Ljava/lang/Object;
 
-    iget-object v1, p0, Lh31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+    move-result-object p2
 
-    invoke-direct {v0, p2, v1}, Lh31;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;)V
+    check-cast p2, Lca;
 
-    iput-object p1, v0, Lh31;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lh31;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iget-object v0, p0, Lh31;->X:Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Les7;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->x0()Ls21;
-
-    move-result-object v1
-
-    iget-object v2, v1, Ls21;->S0:Lkyf;
-
-    iget-object v3, v1, Ls21;->L0:Ljid;
-
-    sget p1, Lpra;->e2:I
-
-    new-instance v4, Lirf;
-
-    invoke-direct {v4, p1}, Lirf;-><init>(I)V
-
-    new-instance v5, Lo21;
-
-    const/4 p1, 0x3
-
-    invoke-direct {v5, v1, p1}, Lo21;-><init>(Ls21;I)V
-
-    const/4 v6, 0x0
-
-    invoke-virtual/range {v1 .. v6}, Ls21;->w(Lkyf;Ljid;Lirf;Loi6;Ljava/lang/Integer;)Lkyf;
-
-    move-result-object p1
-
-    iput-object p1, v1, Ls21;->S0:Lkyf;
-
-    goto :goto_0
+    invoke-virtual {p1, p2}, Lq31;->t(Lca;)V
 
     :cond_0
-    sget-object p1, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->Z:[Les7;
-
-    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->x0()Ls21;
-
-    move-result-object p1
-
-    iget-object p1, p1, Ls21;->S0:Lkyf;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1}, Lkyf;->a()V
-
-    :cond_1
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

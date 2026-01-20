@@ -1,110 +1,85 @@
 .class public final Lvw7;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
-
-
-# instance fields
-.field public final synthetic X:Ln16;
-
-.field public o:I
-
-
-# direct methods
-.method public constructor <init>(Ln16;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lvw7;->X:Ln16;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Ljava/util/Comparator;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvw7;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lvw7;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lvw7;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lvw7;
-
-    iget-object v0, p0, Lvw7;->X:Ln16;
-
-    invoke-direct {p1, v0, p2}, Lvw7;-><init>(Ln16;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
-    iget v0, p0, Lvw7;->o:I
+    check-cast p1, Luw7;
 
-    const/4 v1, 0x1
+    check-cast p2, Luw7;
+
+    iget v0, p1, Luw7;->b:I
+
+    if-nez v0, :cond_0
+
+    iget v0, p2, Luw7;->b:I
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, -0x1
+
+    return p1
+
+    :cond_0
+    iget v0, p1, Luw7;->b:I
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    iget v0, p2, Luw7;->b:I
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    if-nez v0, :cond_1
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_1
+    iget v0, p2, Luw7;->c:I
+
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    if-eqz v0, :cond_2
+
+    iget v0, p2, Luw7;->d:I
+
+    int-to-float v0, v0
+
+    iget p2, p2, Luw7;->c:I
+
+    int-to-float p2, p2
+
+    div-float/2addr v0, p2
 
     goto :goto_0
 
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iput v1, p0, Lvw7;->o:I
-
-    iget-object p1, p0, Lvw7;->X:Ln16;
-
-    invoke-static {p1, p0}, Lqs0;->f(Lez5;Logf;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
     :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    move v0, v1
 
-    return-object p1
+    :goto_0
+    iget p2, p1, Luw7;->c:I
+
+    if-eqz p2, :cond_3
+
+    iget p2, p1, Luw7;->d:I
+
+    int-to-float p2, p2
+
+    iget p1, p1, Luw7;->c:I
+
+    int-to-float p1, p1
+
+    div-float v1, p2, p1
+
+    :cond_3
+    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
+
+    move-result p1
+
+    return p1
 .end method

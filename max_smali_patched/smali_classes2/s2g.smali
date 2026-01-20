@@ -1,39 +1,25 @@
-.class public final Ls2g;
+.class public abstract Ls2g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lt5;
+# static fields
+.field public static final a:I
 
-.field public final synthetic b:Ltlf;
-
-.field public final synthetic c:Ltif;
-
-.field public final synthetic d:Lru7;
-
-.field public final synthetic e:Lru7;
-
-.field public final synthetic f:Lr2g;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(Lt5;Ltlf;Ltif;Lru7;Lru7;Lr2g;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ly7b;->c:I
 
-    iput-object p1, p0, Ls2g;->a:Lt5;
+    sput v0, Ls2g;->a:I
 
-    iput-object p2, p0, Ls2g;->b:Ltlf;
+    sget v0, Ly7b;->d:I
 
-    iput-object p3, p0, Ls2g;->c:Ltif;
-
-    iput-object p4, p0, Ls2g;->d:Lru7;
-
-    iput-object p5, p0, Ls2g;->e:Lru7;
-
-    iput-object p6, p0, Ls2g;->f:Lr2g;
+    sput v0, Ls2g;->b:I
 
     return-void
 .end method

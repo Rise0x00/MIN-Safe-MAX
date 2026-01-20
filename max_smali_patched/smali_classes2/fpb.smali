@@ -1,82 +1,96 @@
 .class public final Lfpb;
-.super Logf;
+.super Lhja;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lrv6;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Lrv6;)V
+    .locals 1
 
-    iput-object p1, p0, Lfpb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    sget-object v0, Lb3h;->a:Lb3h;
 
-    const/4 p1, 0x2
+    invoke-direct {p0, v0}, Lhja;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lfpb;->b:Lrv6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lfpb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p1
+    :cond_0
+    instance-of v1, p1, Lfpb;
 
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
     check-cast p1, Lfpb;
 
-    sget-object p2, Lybg;->a:Lybg;
+    iget-object v1, p0, Lfpb;->b:Lrv6;
 
-    invoke-virtual {p1, p2}, Lfpb;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lfpb;->b:Lrv6;
 
-    return-object p2
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lfpb;
-
-    iget-object v1, p0, Lfpb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
-
-    invoke-direct {v0, v1, p2}, Lfpb;-><init>(Lone/me/chats/picker/members/PickerMembersListWidget;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lfpb;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lfpb;->b:Lrv6;
 
-    iget-object p1, p0, Lfpb;->o:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p1, Ljava/util/List;
+    move-result v0
 
-    iget-object v0, p0, Lfpb;->X:Lone/me/chats/picker/members/PickerMembersListWidget;
+    return v0
+.end method
 
-    iget-object v0, v0, Lone/me/chats/picker/members/PickerMembersListWidget;->Z:Linb;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p1, Lybg;->a:Lybg;
+    const-string v1, "OpenExternalMap(geoAttach="
 
-    return-object p1
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lfpb;->b:Lrv6;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

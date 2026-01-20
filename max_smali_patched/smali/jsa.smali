@@ -3,17 +3,13 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static a(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
     .locals 1
 
-    sget v0, Lerc;->forward_snackbar_messages_sent:I
+    new-instance v0, Landroid/app/Notification$Action$Builder;
 
-    sput v0, Ljsa;->a:I
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    return-void
+    return-object v0
 .end method

@@ -1,149 +1,321 @@
-.class public abstract Lmd0;
-.super La5a;
+.class public final Lmd0;
+.super Ld3;
 .source "SourceFile"
 
 
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
+# instance fields
+.field public final synthetic c:I
 
-    packed-switch p1, :pswitch_data_0
+.field public final synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lnd0;Lzlb;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lmd0;->c:I
+
+    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    iput-object p1, p0, Lmd0;->d:Ljava/lang/Object;
+
+    iput-object p2, p0, Lmd0;->o:Ljava/lang/Object;
+
+    const/16 p1, 0xd
+
+    .line 1
+    invoke-direct {p0, p1, v0}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lru/ok/utils/widgets/BadgeCountView;Landroid/content/Context;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lmd0;->c:I
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iput-object p1, p0, Lmd0;->d:Ljava/lang/Object;
+
+    iput-object p2, p0, Lmd0;->o:Ljava/lang/Object;
+
+    const/16 p1, 0xd
+
+    .line 2
+    invoke-direct {p0, p1, v0}, Ld3;-><init>(ILjava/lang/Object;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 6
+
+    iget v0, p0, Lmd0;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p2, Ljava/lang/Number;
+
+    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+
+    move-result p2
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    iget-object p1, p0, Lmd0;->d:Ljava/lang/Object;
+
+    check-cast p1, Lru/ok/utils/widgets/BadgeCountView;
+
+    invoke-virtual {p1}, Lru/ok/utils/widgets/BadgeCountView;->getManageVisibility()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    if-lez p2, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x8
+
+    :goto_0
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    if-ltz p2, :cond_9
+
+    invoke-virtual {p1}, Lru/ok/utils/widgets/BadgeCountView;->getNeedPlusIndicator()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lmd0;->o:Ljava/lang/Object;
+
+    check-cast v0, Landroid/content/Context;
+
+    sget v2, Lifd;->folder_new_messages_max_exceeded:I
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    filled-new-array {v3}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget v0, p1, Lru/ok/utils/widgets/BadgeCountView;->z0:I
+
+    const/16 v2, 0x14
+
+    const/16 v3, 0xa
+
+    if-ge p2, v3, :cond_3
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0, v1, v1}, Llkg;->b(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_3
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    int-to-float v4, v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v5
+
+    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v4, v5
+
+    invoke-static {v4}, Lq7j;->c(F)I
+
+    move-result v4
+
+    invoke-static {v0, v1, v1, v4}, Llkg;->c(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)Landroid/graphics/drawable/GradientDrawable;
+
+    move-result-object v0
+
+    :goto_2
+    const/16 v4, 0xc
+
+    const/4 v5, 0x1
+
+    if-gt v5, p2, :cond_4
+
+    if-ge p2, v3, :cond_4
+
+    new-instance v1, Lqh0;
+
+    invoke-direct {v1, v0, v2, v4}, Lqh0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
+
+    goto :goto_3
+
+    :cond_4
+    const/16 v2, 0x64
+
+    if-gt v3, p2, :cond_5
+
+    if-ge p2, v2, :cond_5
+
+    new-instance v1, Lqh0;
+
+    const/16 p2, 0x16
+
+    invoke-direct {v1, v0, p2, v4}, Lqh0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
+
+    goto :goto_3
+
+    :cond_5
+    const/16 v3, 0x3e8
+
+    if-gt v2, p2, :cond_6
+
+    if-ge p2, v3, :cond_6
+
+    new-instance v1, Lqh0;
+
+    const/16 p2, 0x1a
+
+    invoke-direct {v1, v0, p2, v4}, Lqh0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
+
+    goto :goto_3
+
+    :cond_6
+    if-gt v3, p2, :cond_7
+
+    const/16 v2, 0x2710
+
+    if-ge p2, v2, :cond_7
+
+    new-instance v1, Lqh0;
+
+    const/16 p2, 0x1f
+
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v0, p2, v2}, Lqh0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
+
+    :cond_7
+    :goto_3
+    invoke-static {p1, v1}, Lru/ok/utils/widgets/BadgeCountView;->i(Lru/ok/utils/widgets/BadgeCountView;Lqh0;)V
+
+    goto :goto_4
+
+    :cond_8
+    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_9
+    :goto_4
+    return-void
 
     :pswitch_0
-    sget-object p1, Lybg;->a:Lybg;
+    iget-object v0, p0, Lmd0;->o:Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
+    check-cast v0, Lzlb;
 
-    return-void
+    iget-object v1, p0, Lmd0;->d:Ljava/lang/Object;
 
-    :pswitch_1
-    sget-object p1, Lybg;->a:Lybg;
+    check-cast v1, Lnd0;
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
+    invoke-static {p1, p2}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-void
+    move-result v2
 
-    :pswitch_2
-    sget-object p1, Lybg;->a:Lybg;
+    if-nez v2, :cond_b
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
+    check-cast p2, Ljava/lang/Boolean;
 
-    return-void
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    :pswitch_3
-    sget-object p1, Lybg;->a:Lybg;
+    move-result p2
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
+    check-cast p1, Ljava/lang/Boolean;
 
-    return-void
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_4
-    sget-object p1, Lybg;->a:Lybg;
+    if-eqz p2, :cond_a
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
+    invoke-interface {v0}, Lzlb;->getText()Lrfg;
 
-    return-void
+    const/4 p1, -0x1
 
-    :pswitch_5
-    sget-object p1, Lybg;->a:Lybg;
+    goto :goto_5
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
+    :cond_a
+    invoke-interface {v0}, Lzlb;->getText()Lrfg;
 
-    return-void
+    move-result-object p1
 
-    :pswitch_6
-    sget-object p1, Lybg;->a:Lybg;
+    iget p1, p1, Lrfg;->e:I
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
+    :goto_5
+    iput p1, v1, Lnd0;->w0:I
 
-    return-void
+    invoke-virtual {v1}, Lnd0;->b()V
 
-    :pswitch_7
-    sget-object p1, Lybg;->a:Lybg;
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_8
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_9
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_a
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_b
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_c
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_d
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_e
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_f
-    sget-object p1, Lybg;->a:Lybg;
-
-    invoke-direct {p0, p1}, La5a;-><init>(Ljava/lang/Object;)V
-
+    :cond_b
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_f
-        :pswitch_e
+    .packed-switch 0x0
         :pswitch_0
-        :pswitch_d
-        :pswitch_0
-        :pswitch_c
-        :pswitch_0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_0
-        :pswitch_0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
     .end packed-switch
 .end method

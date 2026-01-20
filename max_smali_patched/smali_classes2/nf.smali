@@ -1,266 +1,107 @@
-.class public abstract Lnf;
-.super Ls1f;
+.class public final Lnf;
+.super Llf;
 .source "SourceFile"
 
 
-# instance fields
-.field public final j:I
-
-.field public k:I
-
-
-# direct methods
-.method public constructor <init>(Landroid/view/View;Lni7;Lqi6;I)V
-    .locals 0
-
-    and-int/lit8 p4, p4, 0x10
-
-    if-eqz p4, :cond_0
-
-    const/4 p3, 0x0
-
-    :cond_0
-    invoke-direct {p0, p1, p2, p3}, Ls1f;-><init>(Landroid/view/View;Lni7;Lqi6;)V
-
-    const/16 p2, 0x8
-
-    iput p2, p0, Lnf;->j:I
-
-    const/4 p2, -0x1
-
-    iput p2, p0, Lnf;->k:I
-
-    new-instance p2, Lmf;
-
-    invoke-direct {p2, p0}, Lmf;-><init>(Lnf;)V
-
-    invoke-static {p1, p2}, Ltyg;->p(Landroid/view/View;Lc92;)V
-
-    return-void
-.end method
-
-.method public static final f(Lnf;Lonh;)Lonh;
-    .locals 4
-
-    iget v0, p0, Ls1f;->f:I
-
-    if-nez v0, :cond_0
-
-    return-object p1
-
-    :cond_0
-    iget-object v0, p1, Lonh;->a:Lmnh;
-
-    const/4 v1, 0x7
-
-    invoke-virtual {v0, v1}, Lmnh;->f(I)Lli7;
-
-    move-result-object v0
-
-    iget v2, v0, Lli7;->d:I
-
-    iget v3, p0, Ls1f;->f:I
-
-    if-le v2, v3, :cond_1
-
-    return-object p1
-
-    :cond_1
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0x1e
-
-    if-lt v2, v3, :cond_2
-
-    new-instance v2, Lfnh;
-
-    invoke-direct {v2, p1}, Lfnh;-><init>(Lonh;)V
-
-    goto :goto_0
-
-    :cond_2
-    const/16 v3, 0x1d
-
-    if-lt v2, v3, :cond_3
-
-    new-instance v2, Ldnh;
-
-    invoke-direct {v2, p1}, Ldnh;-><init>(Lonh;)V
-
-    goto :goto_0
-
-    :cond_3
-    new-instance v2, Lcnh;
-
-    invoke-direct {v2, p1}, Lcnh;-><init>(Lonh;)V
-
-    :goto_0
-    iget p1, v0, Lli7;->a:I
-
-    iget v3, v0, Lli7;->b:I
-
-    iget v0, v0, Lli7;->c:I
-
-    iget p0, p0, Ls1f;->f:I
-
-    invoke-static {p1, v3, v0, p0}, Lli7;->b(IIII)Lli7;
-
-    move-result-object p0
-
-    invoke-virtual {v2, v1, p0}, Lgnh;->c(ILli7;)V
-
-    invoke-virtual {v2}, Lgnh;->b()Lonh;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-
 # virtual methods
-.method public final b(Lonh;Lds0;)V
-    .locals 3
+.method public final h(Lxhi;)Lxhi;
+    .locals 6
 
-    iget-object p1, p1, Lonh;->a:Lmnh;
+    iget-object v0, p1, Lxhi;->a:Lvhi;
 
-    iget v0, p0, Ls1f;->d:I
+    iget v1, p0, Llf;->j:I
 
-    invoke-virtual {p1, v0}, Lmnh;->f(I)Lli7;
+    invoke-virtual {v0, v1}, Lvhi;->f(I)Lcs7;
+
+    move-result-object v1
+
+    iget v2, p0, Llqf;->d:I
+
+    invoke-virtual {v0, v2}, Lvhi;->f(I)Lcs7;
 
     move-result-object v0
 
-    iget v1, p0, Lnf;->j:I
+    iget v2, v1, Lcs7;->a:I
 
-    invoke-virtual {p1, v1}, Lmnh;->f(I)Lli7;
+    iget v3, v0, Lcs7;->a:I
 
-    move-result-object v2
+    sub-int/2addr v2, v3
 
-    invoke-virtual {p1, v1}, Lmnh;->o(I)Z
+    iget v3, v1, Lcs7;->b:I
 
-    move-result p1
+    iget v4, v0, Lcs7;->b:I
 
-    if-eqz p1, :cond_0
+    sub-int/2addr v3, v4
 
-    move-object v0, v2
+    iget v4, v1, Lcs7;->c:I
 
-    :cond_0
-    invoke-virtual {p0, v0, p2}, Ls1f;->a(Lli7;Lds0;)V
+    iget v5, v0, Lcs7;->c:I
 
-    return-void
+    sub-int/2addr v4, v5
+
+    iget v1, v1, Lcs7;->d:I
+
+    iget v0, v0, Lcs7;->d:I
+
+    sub-int/2addr v1, v0
+
+    invoke-static {v2, v3, v4, v1}, Lcs7;->b(IIII)Lcs7;
+
+    move-result-object v0
+
+    iget v1, v0, Lcs7;->a:I
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    iget v3, v0, Lcs7;->b:I
+
+    invoke-static {v3, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v3
+
+    iget v4, v0, Lcs7;->c:I
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v4
+
+    iget v0, v0, Lcs7;->d:I
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    invoke-static {v1, v3, v4, v0}, Lcs7;->b(IIII)Lcs7;
+
+    move-result-object v0
+
+    iget v1, v0, Lcs7;->b:I
+
+    iget v0, v0, Lcs7;->d:I
+
+    sub-int/2addr v1, v0
+
+    int-to-float v0, v1
+
+    iget-object v1, p0, Llqf;->a:Landroid/view/View;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-object p1
 .end method
 
-.method public final c(Lonh;)V
+.method public final i()V
     .locals 2
 
-    iget v0, p0, Lnf;->k:I
+    iget-object v0, p0, Llqf;->a:Landroid/view/View;
 
-    const/4 v1, -0x1
+    const/4 v1, 0x0
 
-    if-ne v0, v1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_1
-
-    new-instance v0, Lfnh;
-
-    invoke-direct {v0, p1}, Lfnh;-><init>(Lonh;)V
-
-    goto :goto_0
-
-    :cond_1
-    const/16 v1, 0x1d
-
-    if-lt v0, v1, :cond_2
-
-    new-instance v0, Ldnh;
-
-    invoke-direct {v0, p1}, Ldnh;-><init>(Lonh;)V
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v0, Lcnh;
-
-    invoke-direct {v0, p1}, Lcnh;-><init>(Lonh;)V
-
-    :goto_0
-    sget-object p1, Lli7;->e:Lli7;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1, p1}, Lgnh;->c(ILli7;)V
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v0, v1, p1}, Lgnh;->i(IZ)V
-
-    invoke-virtual {v0}, Lgnh;->b()Lonh;
-
-    move-result-object p1
-
-    :goto_1
-    invoke-super {p0, p1}, Ls1f;->c(Lonh;)V
-
-    return-void
-.end method
-
-.method public final d(Lonh;)Lonh;
-    .locals 0
-
-    return-object p1
-.end method
-
-.method public final e()V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Ls1f;->g:Z
-
-    iget-object v1, p0, Ls1f;->a:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    sget-object v0, Ltyg;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {v1}, Lfyg;->c(Landroid/view/View;)V
-
-    return-void
-
-    :cond_0
-    new-instance v2, Llf;
-
-    invoke-direct {v2, v1, v0}, Llf;-><init>(Landroid/view/View;I)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
-
-    return-void
-.end method
-
-.method public g(Lonh;Leld;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract h(Lonh;)Lonh;
-.end method
-
-.method public abstract i()V
-.end method
-
-.method public j()V
-    .locals 0
+    invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
 .end method

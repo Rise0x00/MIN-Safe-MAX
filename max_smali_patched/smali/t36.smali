@@ -1,39 +1,72 @@
-.class public final Lt36;
-.super La1;
+.class public final synthetic Lt36;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final c:Z
+.field public final synthetic a:I
+
+.field public final synthetic b:Lv36;
+
+.field public final synthetic c:J
 
 
 # direct methods
-.method public constructor <init>(La1;)V
+.method public synthetic constructor <init>(Lv36;JI)V
     .locals 0
 
-    invoke-direct {p0, p1}, La1;-><init>(Lr26;)V
+    iput p4, p0, Lt36;->a:I
 
-    const/4 p1, 0x1
+    iput-object p1, p0, Lt36;->b:Lv36;
 
-    iput-boolean p1, p0, Lt36;->c:Z
+    iput-wide p2, p0, Lt36;->c:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lz36;)V
-    .locals 2
+.method public final run()V
+    .locals 4
 
-    new-instance v0, Ls36;
+    iget v0, p0, Lt36;->a:I
 
-    iget-boolean v1, p0, Lt36;->c:Z
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p1, v1}, Ls36;-><init>(Lccf;Z)V
+    iget-object v0, p0, Lt36;->b:Lv36;
 
-    iget-object p1, p0, La1;->b:Lr26;
+    iget-object v0, v0, Lv36;->j:Lqhh;
 
-    invoke-virtual {p1, v0}, Lr26;->d(Lz36;)V
+    const/4 v1, 0x1
+
+    iget-wide v2, p0, Lt36;->c:J
+
+    invoke-interface {v0, v2, v3, v1}, Lqhh;->p(JZ)V
 
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lt36;->b:Lv36;
+
+    iget-object v0, v0, Lv36;->j:Lqhh;
+
+    const/4 v1, 0x0
+
+    iget-wide v2, p0, Lt36;->c:J
+
+    invoke-interface {v0, v2, v3, v1}, Lqhh;->p(JZ)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

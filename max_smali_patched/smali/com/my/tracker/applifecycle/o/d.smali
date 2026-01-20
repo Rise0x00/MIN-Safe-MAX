@@ -15,7 +15,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ltsh;
+    new-instance v0, Lvoh;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
@@ -204,9 +204,9 @@
     .line 3
     iget-object v0, p0, Lcom/my/tracker/applifecycle/o/d;->a:Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;
 
-    new-instance v1, Lush;
+    new-instance v1, Lfni;
 
-    invoke-direct {v1, p0}, Lush;-><init>(Lcom/my/tracker/applifecycle/o/d;)V
+    invoke-direct {v1, p0}, Lfni;-><init>(Lcom/my/tracker/applifecycle/o/d;)V
 
     invoke-interface {v0, v1}, Lcom/my/tracker/core/handlers/MyTrackerActivityHandler;->setActionTrackLaunch(Lcom/my/tracker/core/utils/BiConsumer;)V
 
@@ -252,7 +252,7 @@
     .locals 9
 
     .line 9
-    new-instance v8, Ljq4;
+    new-instance v8, Lww4;
 
     move-object v1, p0
 
@@ -264,7 +264,7 @@
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v5}, Ljq4;-><init>(Lcom/my/tracker/applifecycle/o/d;JLjava/lang/String;Lcom/my/tracker/applifecycle/o/e$a;)V
+    invoke-direct/range {v0 .. v5}, Lww4;-><init>(Lcom/my/tracker/applifecycle/o/d;JLjava/lang/String;Lcom/my/tracker/applifecycle/o/e$a;)V
 
     const/4 v4, 0x1
 
@@ -287,11 +287,11 @@
     .locals 9
 
     .line 15
-    new-instance v8, Lrmf;
+    new-instance v8, Lahg;
 
-    const/16 v0, 0x14
+    const/16 v0, 0x11
 
-    invoke-direct {v8, p0, v0, p4}, Lrmf;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v8, p0, v0, p4}, Lahg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     const/4 v4, 0x1
 
@@ -314,11 +314,11 @@
     .locals 9
 
     .line 13
-    new-instance v8, Llng;
+    new-instance v8, Lslh;
 
-    const/4 v0, 0x3
+    const/4 v0, 0x2
 
-    invoke-direct {v8, p0, p4, p5, v0}, Llng;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v8, p0, p4, p5, v0}, Lslh;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     const/4 v4, 0x1
 
@@ -341,7 +341,7 @@
     .locals 9
 
     .line 11
-    new-instance v8, Lwl;
+    new-instance v8, Lrl;
 
     move-object v1, p0
 
@@ -357,7 +357,7 @@
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v6}, Lwl;-><init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lrl;-><init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v4, 0x1
 
@@ -400,7 +400,7 @@
     move-result-wide v7
 
     .line 18
-    new-instance v9, Lssh;
+    new-instance v9, Leni;
 
     const/16 v17, 0x0
 
@@ -414,7 +414,7 @@
 
     move-wide/from16 v15, p6
 
-    invoke-direct/range {v9 .. v17}, Lssh;-><init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJI)V
+    invoke-direct/range {v9 .. v17}, Leni;-><init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJI)V
 
     const/4 v5, 0x1
 
@@ -444,7 +444,7 @@
     move-result-wide v7
 
     .line 28
-    new-instance v9, Lssh;
+    new-instance v9, Leni;
 
     const/16 v17, 0x1
 
@@ -458,7 +458,7 @@
 
     move-wide/from16 v15, p6
 
-    invoke-direct/range {v9 .. v17}, Lssh;-><init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJI)V
+    invoke-direct/range {v9 .. v17}, Leni;-><init>(Lcom/my/tracker/applifecycle/o/d;Ljava/lang/String;Ljava/lang/String;JJI)V
 
     const/4 v5, 0x1
 

@@ -1,105 +1,64 @@
 .class public final Lr94;
-.super Lbj8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lt94;
 
 
 # static fields
-.field public static final synthetic J0:I
+.field public static final a:Lr94;
 
 
-# instance fields
-.field public I0:Lq94;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lr94;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lr94;->a:Lr94;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final f(Landroid/graphics/Canvas;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget-object v0, p0, Lr94;->I0:Lq94;
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lq94;->r:Landroid/graphics/RectF;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v0}, Landroid/graphics/RectF;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-super {p0, p1}, Lbj8;->f(Landroid/graphics/Canvas;)V
-
-    return-void
+    return v0
 
     :cond_0
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    instance-of p1, p1, Lr94;
 
-    iget-object v0, p0, Lr94;->I0:Lq94;
+    if-nez p1, :cond_1
 
-    iget-object v0, v0, Lq94;->r:Landroid/graphics/RectF;
+    const/4 p1, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipOutRect(Landroid/graphics/RectF;)Z
-
-    invoke-super {p0, p1}, Lbj8;->f(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    return-void
-.end method
-
-.method public final mutate()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
-    new-instance v0, Lq94;
-
-    iget-object v1, p0, Lr94;->I0:Lq94;
-
-    invoke-direct {v0, v1}, Lq94;-><init>(Lq94;)V
-
-    iput-object v0, p0, Lr94;->I0:Lq94;
-
-    return-object p0
-.end method
-
-.method public final q(FFFF)V
-    .locals 2
-
-    iget-object v0, p0, Lr94;->I0:Lq94;
-
-    iget-object v0, v0, Lq94;->r:Landroid/graphics/RectF;
-
-    iget v1, v0, Landroid/graphics/RectF;->left:F
-
-    cmpl-float v1, p1, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->top:F
-
-    cmpl-float v1, p2, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->right:F
-
-    cmpl-float v1, p3, v1
-
-    if-nez v1, :cond_1
-
-    iget v1, v0, Landroid/graphics/RectF;->bottom:F
-
-    cmpl-float v1, p4, v1
-
-    if-eqz v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
+    return p1
 
     :cond_1
-    :goto_0
-    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/graphics/RectF;->set(FFFF)V
+    return v0
+.end method
 
-    invoke-virtual {p0}, Lbj8;->invalidateSelf()V
+.method public final hashCode()I
+    .locals 1
 
-    return-void
+    const v0, 0xd8bf9f2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "StartSeekPlayerProgress"
+
+    return-object v0
 .end method

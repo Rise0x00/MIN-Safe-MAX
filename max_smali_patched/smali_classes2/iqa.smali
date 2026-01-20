@@ -1,106 +1,160 @@
-.class public final synthetic Liqa;
-.super Ljava/lang/Object;
+.class public final Liqa;
+.super Licg;
 .source "SourceFile"
-
-# interfaces
-.implements Loi6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Lod2;
 
-.field public final synthetic b:Landroid/content/Context;
+.field public final d:[J
 
-.field public final synthetic c:Lone/me/sdk/uikit/common/button/OneMeButton;
+.field public final o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Lone/me/sdk/uikit/common/button/OneMeButton;I)V
+.method public constructor <init>(Lod2;[JZ)V
     .locals 0
 
-    iput p3, p0, Liqa;->a:I
-
-    iput-object p1, p0, Liqa;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Liqa;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liqa;->c:Lod2;
+
+    iput-object p2, p0, Liqa;->d:[J
+
+    iput-boolean p3, p0, Liqa;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Liqa;->a:I
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Liqa;->c:Lone/me/sdk/uikit/common/button/OneMeButton;
+    if-ne p0, p1, :cond_0
 
-    iget-object v2, p0, Liqa;->b:Landroid/content/Context;
+    return v0
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    instance-of v1, p1, Liqa;
 
-    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->A0:[Les7;
+    const/4 v2, 0x0
 
-    new-instance v0, Lyta;
+    if-nez v1, :cond_1
 
-    invoke-direct {v0, v2}, Lyta;-><init>(Landroid/content/Context;)V
+    return v2
 
-    sget v2, Lzjd;->f:I
+    :cond_1
+    check-cast p1, Liqa;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
+    iget-boolean v1, p1, Liqa;->o:Z
 
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->b(I)I
+    iget-boolean v3, p0, Liqa;->o:Z
 
-    move-result v2
+    if-eq v3, v1, :cond_2
 
-    invoke-virtual {v1, v0, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Liqa;->c:Lod2;
+
+    iget-object v3, p1, Liqa;->c:Lod2;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Liqa;->d:[J
+
+    iget-object p1, p1, Liqa;->d:[J
+
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([J[J)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-boolean v0, p0, Liqa;->o:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Liqa;->c:Lod2;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v0, p0, Liqa;->d:[J
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([J)I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    iget-object v0, p0, Liqa;->d:[J
+
+    invoke-static {v0}, Ljava/util/Arrays;->toString([J)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Response(chat="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Liqa;->c:Lod2;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v2, ", messageIds="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", isTtl="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    iget-boolean v2, p0, Liqa;->o:Z
+
+    invoke-static {v1, v2, v0}, Lt02;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/uikit/common/button/OneMeButton;->A0:[Les7;
-
-    new-instance v0, Lm0b;
-
-    invoke-direct {v0, v2}, Lm0b;-><init>(Landroid/content/Context;)V
-
-    sget v2, Lzjd;->h:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setId(I)V
-
-    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 v3, -0x2
-
-    invoke-direct {v2, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v2, Lmt7;
-
-    const/16 v3, 0xc
-
-    invoke-direct {v2, v3, v0, v1}, Lmt7;-><init>(ILandroid/view/View;Ljava/lang/Object;)V
-
-    invoke-static {v0, v2}, Li7b;->a(Landroid/view/View;Ljava/lang/Runnable;)Li7b;
-
-    invoke-virtual {v1}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-static {v1, v0, v2}, Ltci;->a(Landroid/view/ViewGroup;Landroid/view/View;Ljava/lang/Integer;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

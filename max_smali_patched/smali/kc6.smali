@@ -1,68 +1,19 @@
-.class public final synthetic Lkc6;
+.class public final Lkc6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Loi6;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lpc6;
+.field public final a:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lpc6;I)V
+.method public constructor <init>(Z)V
     .locals 0
-
-    iput p2, p0, Lkc6;->a:I
-
-    iput-object p1, p0, Lkc6;->b:Lpc6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput-boolean p1, p0, Lkc6;->a:Z
+
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lkc6;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lkc6;->b:Lpc6;
-
-    iget-object v0, v0, Lpc6;->f:Landroid/content/Context;
-
-    sget v1, Lyjd;->G1:I
-
-    invoke-static {v0, v1}, Ljvi;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lkc6;->b:Lpc6;
-
-    iget-object v0, v0, Lpc6;->f:Landroid/content/Context;
-
-    sget v1, Lyjd;->F1:I
-
-    invoke-static {v0, v1}, Ljvi;->c(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

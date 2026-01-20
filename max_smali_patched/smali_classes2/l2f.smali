@@ -1,70 +1,84 @@
-.class public abstract Ll2f;
-.super Ljava/lang/Object;
+.class public final Ll2f;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static a([B)Lv88;
-    .locals 10
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
+    .locals 0
 
-    :try_start_0
-    new-instance v0, Lru/ok/tamtam/nano/Protos$LogEvent;
+    iput-object p2, p0, Ll2f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$LogEvent;-><init>()V
+    const/4 p2, 0x2
 
-    invoke-static {v0, p0}, Lud9;->mergeFrom(Lud9;[B)Lud9;
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    move-result-object p0
+    return-void
+.end method
 
-    check-cast p0, Lru/ok/tamtam/nano/Protos$LogEvent;
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->time:J
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v7, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->type:Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v8, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->event:Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Ll2f;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->params:[B
+    move-result-object p1
 
-    if-eqz v0, :cond_0
+    check-cast p1, Ll2f;
 
-    invoke-static {v0}, Le0i;->a([B)Ljava/lang/Object;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    move-result-object v0
+    invoke-virtual {p1, p2}, Ll2f;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v0, Ljava/util/Map;
+    return-object p2
+.end method
 
-    :goto_0
-    move-object v9, v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    goto :goto_1
+    new-instance v0, Ll2f;
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v1, p0, Ll2f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
 
-    goto :goto_0
+    invoke-direct {v0, p2, v1}, Ll2f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/privacy/ui/SettingsPrivacyScreen;)V
 
-    :goto_1
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->userId:J
-
-    iget-wide v5, p0, Lru/ok/tamtam/nano/Protos$LogEvent;->sessionId:J
-
-    new-instance v0, Lv88;
-
-    invoke-direct/range {v0 .. v9}, Lv88;-><init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    iput-object p1, v0, Ll2f;->o:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :catch_0
-    move-exception v0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    move-object p0, v0
+    iget-object v0, p0, Ll2f;->o:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    check-cast v0, Ljava/lang/String;
 
-    throw v0
+    new-instance p1, Ldjb;
+
+    iget-object v1, p0, Ll2f;->X:Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+
+    invoke-direct {p1, v1}, Ldjb;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    invoke-virtual {p1, v0}, Ldjb;->h(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

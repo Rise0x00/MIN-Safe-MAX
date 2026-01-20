@@ -1,81 +1,58 @@
 .class public final Lrpg;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lqpg;
 
 
 # instance fields
-.field public final synthetic o:Lxpg;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Lxpg;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lrpg;->o:Lxpg;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lrpg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Lmpg;)V
+    .locals 2
 
-    check-cast p1, Lg54;
+    iget-object v0, p0, Lrpg;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p0, p1, p2}, Lrpg;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
 
-    move-result-object p1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    check-cast p1, Lrpg;
+    move-result v1
 
-    sget-object p2, Lybg;->a:Lybg;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, p2}, Lrpg;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return-object p2
-.end method
+    move-result-object v1
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    check-cast v1, Lqpg;
 
-    new-instance p1, Lrpg;
+    invoke-interface {v1, p1}, Lqpg;->a(Lmpg;)V
 
-    iget-object v0, p0, Lrpg;->o:Lxpg;
-
-    invoke-direct {p1, v0, p2}, Lrpg;-><init>(Lxpg;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lrpg;->o:Lxpg;
-
-    invoke-static {p1}, Lxpg;->a(Lxpg;)Lyrg;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lyrg;->f:Lfvg;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Lfvg;->stop()V
+    goto :goto_0
 
     :cond_0
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

@@ -1,108 +1,190 @@
-.class public abstract Lksc;
-.super Ljava/lang/Object;
+.class public final Lksc;
+.super Lzcf;
+.source "SourceFile"
 
 
-# static fields
-.field public static audio_record_click_to_cancel:I = 0x7f13008a
+# instance fields
+.field public final o:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-.field public static audio_record_swipe_to_cancel:I = 0x7f13009b
 
-.field public static chat_screen__leave_chat_action:I = 0x7f13035e
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;)V
+    .locals 0
 
-.field public static chat_screen__leave_chat_title:I = 0x7f13035f
+    invoke-direct {p0, p1}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
 
-.field public static chat_screen__remove_chat_action:I = 0x7f130360
+    iput-object p2, p0, Lksc;->o:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-.field public static chat_screen__remove_chat_title:I = 0x7f130361
+    return-void
+.end method
 
-.field public static chat_screen__search_result_down_button_accessibility:I = 0x7f130362
 
-.field public static chat_screen__search_result_not_found:I = 0x7f130363
+# virtual methods
+.method public final bridge synthetic I(Ljef;I)V
+    .locals 0
 
-.field public static chat_screen__search_result_success:I = 0x7f130364
+    check-cast p1, Lkpc;
 
-.field public static chat_screen__search_result_up_button_accessibility:I = 0x7f130365
+    invoke-virtual {p0, p1, p2}, Lksc;->K(Lkpc;I)V
 
-.field public static chat_screen__start_chat_with_bot:I = 0x7f130366
+    return-void
+.end method
 
-.field public static chat_screen_channel_search_hint:I = 0x7f13037e
+.method public final K(Lkpc;I)V
+    .locals 9
 
-.field public static chat_screen_error_restricted_send_message_action:I = 0x7f13038b
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
 
-.field public static chat_screen_error_restricted_send_message_cancel:I = 0x7f13038c
+    move-result-object p2
 
-.field public static chat_screen_error_restricted_send_message_desc:I = 0x7f13038d
+    check-cast p2, Lud8;
 
-.field public static chat_screen_error_restricted_send_message_title:I = 0x7f13038e
+    check-cast p2, Lfoc;
 
-.field public static chat_screen_file_too_big_caption:I = 0x7f13038f
+    invoke-virtual {p1, p2}, Ljef;->y(Lud8;)V
 
-.field public static chat_screen_file_too_big_title:I = 0x7f130390
+    instance-of p2, p2, Ls6;
 
-.field public static chat_screen_join_channel:I = 0x7f130397
+    if-eqz p2, :cond_1
 
-.field public static chat_screen_join_chat:I = 0x7f130398
+    instance-of p2, p1, Lr6;
 
-.field public static chat_screen_leave_chat:I = 0x7f130399
+    if-eqz p2, :cond_0
 
-.field public static chat_screen_remove_chat:I = 0x7f1303b3
+    check-cast p1, Lr6;
 
-.field public static chat_screen_search_hint:I = 0x7f1303ba
+    goto :goto_0
 
-.field public static chat_screen_status_mute_chat:I = 0x7f1303bd
+    :cond_0
+    const/4 p1, 0x0
 
-.field public static chat_screen_status_subscribe_chat:I = 0x7f1303be
+    :goto_0
+    if-eqz p1, :cond_1
 
-.field public static chat_screen_status_unmute_chat:I = 0x7f1303bf
+    new-instance v0, Ldw9;
 
-.field public static chat_screen_unblock_contact:I = 0x7f1303c1
+    const/4 v6, 0x0
 
-.field public static media_bar_recent:I = 0x7f13062f
+    const/16 v7, 0xc
 
-.field public static media_bar_restricted_media_action:I = 0x7f130630
+    const/4 v1, 0x2
 
-.field public static media_bar_restricted_media_subtitle:I = 0x7f130631
+    iget-object v2, p0, Lksc;->o:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-.field public static media_bar_restricted_media_title:I = 0x7f130632
+    const-class v3, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-.field public static media_type_picker__close_dialog__accept:I = 0x7f130676
+    const-string v4, "onChecked"
 
-.field public static media_type_picker__close_dialog__title:I = 0x7f130677
+    const-string v5, "onChecked(JZ)V"
 
-.field public static media_type_picker__contact:I = 0x7f130678
+    invoke-direct/range {v0 .. v7}, Ldw9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-.field public static media_type_picker__file:I = 0x7f130679
+    new-instance v1, Le0a;
 
-.field public static media_type_picker__file_dialog__from_file_manager:I = 0x7f13067a
+    const/4 v7, 0x0
 
-.field public static media_type_picker__file_dialog__from_gallery:I = 0x7f13067b
+    const/16 v8, 0x9
 
-.field public static media_type_picker__file_dialog__title:I = 0x7f13067c
+    const/4 v2, 0x1
 
-.field public static media_type_picker__gallery:I = 0x7f13067d
+    iget-object v3, p0, Lksc;->o:Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-.field public static media_type_picker__input_hint:I = 0x7f13067e
+    const-class v4, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
 
-.field public static media_type_picker__money:I = 0x7f13067f
+    const-string v5, "onDisabledClick"
 
-.field public static media_type_picker__permissions_dialog__button:I = 0x7f130680
+    const-string v6, "onDisabledClick(J)V"
 
-.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f130681
+    invoke-direct/range {v1 .. v8}, Le0a;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f130682
+    iget-object p1, p1, Ltsd;->a:Landroid/view/View;
 
-.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f130683
+    check-cast p1, Lt0f;
 
-.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f130684
+    new-instance p2, Ltx4;
 
-.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f130685
+    invoke-direct {p2, v0, v1}, Ltx4;-><init>(Lbr6;Lnq6;)V
 
-.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f130686
+    invoke-virtual {p1, p2}, Lt0f;->setOnSwitchListener(Lp0f;)V
 
-.field public static media_type_picker__permissions_dialog__title:I = 0x7f130687
+    :cond_1
+    return-void
+.end method
 
-.field public static media_type_picker__place:I = 0x7f130688
+.method public final l(I)I
+    .locals 0
 
-.field public static media_type_picker__snack_file:I = 0x7f130689
+    invoke-virtual {p0, p1}, Lnd8;->D(I)Ljava/lang/Object;
 
-.field public static media_type_picker__snack_media:I = 0x7f13068a
+    move-result-object p1
+
+    check-cast p1, Lud8;
+
+    check-cast p1, Lfoc;
+
+    invoke-interface {p1}, Lud8;->m()I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final bridge synthetic s(Ltsd;I)V
+    .locals 0
+
+    check-cast p1, Lkpc;
+
+    invoke-virtual {p0, p1, p2}, Lksc;->K(Lkpc;I)V
+
+    return-void
+.end method
+
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+    .locals 2
+
+    const v0, 0x1fffffff
+
+    and-int/2addr v0, p2
+
+    const/16 v1, 0x400
+
+    if-ne v0, v1, :cond_0
+
+    new-instance p2, Lr6;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Lr6;-><init>(Landroid/content/Context;)V
+
+    return-object p2
+
+    :cond_0
+    const/16 v1, 0x800
+
+    if-ne v0, v1, :cond_1
+
+    new-instance p2, Laac;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {p2, p1}, Laac;-><init>(Landroid/content/Context;)V
+
+    return-object p2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "unknown item viewType: "
+
+    invoke-static {p2, v0}, Lmrf;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

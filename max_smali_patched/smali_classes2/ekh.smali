@@ -1,39 +1,104 @@
 .class public final Lekh;
-.super Lwf4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
-# static fields
-.field public static final b:Lekh;
 
-.field public static final c:Lrf4;
+# instance fields
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lekh;
+    iput p1, p0, Lekh;->a:I
 
-    invoke-direct {v0}, Lwf4;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lekh;->b:Lekh;
+    return-void
+.end method
 
-    const/4 v1, 0x0
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
 
-    new-array v1, v1, [Ljava/lang/String;
+    return-void
+.end method
 
-    const/4 v2, 0x0
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
 
-    const/4 v3, 0x2
+    return-void
+.end method
 
-    const-string v4, ":webview/faq"
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-static {v0, v4, v1, v2, v3}, Lwf4;->a(Lwf4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lrf4;
+    return-void
+.end method
 
-    move-result-object v0
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
 
-    sput-object v0, Lekh;->c:Lrf4;
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lekh;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lekh;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lekh;->a:I
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    iget p1, p0, Lekh;->a:I
 
     return-void
 .end method

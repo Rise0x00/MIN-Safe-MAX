@@ -1,152 +1,116 @@
-.class public abstract Luph;
-.super Lji3;
+.class public final synthetic Luph;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final k:Lck0;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lo2b;
+
+.field public final synthetic c:Lml4;
 
 
 # direct methods
-.method public constructor <init>(Lck0;)V
+.method public synthetic constructor <init>(Lo2b;Lml4;I)V
     .locals 0
 
-    invoke-direct {p0}, Lji3;-><init>()V
+    iput p3, p0, Luph;->a:I
 
-    iput-object p1, p0, Luph;->k:Lck0;
+    iput-object p1, p0, Luph;->b:Lo2b;
+
+    iput-object p2, p0, Luph;->c:Lml4;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A(Lo19;)Lo19;
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    return-object p1
-.end method
+    iget v0, p0, Luph;->a:I
 
-.method public abstract B(Lmvf;)V
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final C()V
-    .locals 2
+    iget-object v0, p0, Luph;->b:Lo2b;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Luph;->c:Lml4;
 
-    iget-object v1, p0, Luph;->k:Lck0;
+    monitor-enter v1
 
-    invoke-virtual {p0, v0, v1}, Lji3;->z(Ljava/lang/Object;Lck0;)V
+    monitor-exit v1
 
-    return-void
-.end method
+    iget-object v0, v0, Lo2b;->c:Ljava/lang/Object;
 
-.method public D()V
-    .locals 0
+    check-cast v0, Lxp5;
 
-    invoke-virtual {p0}, Luph;->C()V
+    sget-object v2, Lmbh;->a:Ljava/lang/String;
 
-    return-void
-.end method
+    iget-object v0, v0, Lxp5;->a:Ldq5;
 
-.method public final h()Lmvf;
-    .locals 1
+    iget-object v0, v0, Ldq5;->E0:Lon4;
 
-    iget-object v0, p0, Luph;->k:Lck0;
+    iget-object v2, v0, Lon4;->d:Le40;
 
-    invoke-virtual {v0}, Lck0;->h()Lmvf;
+    iget-object v2, v2, Le40;->e:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast v2, Lvc9;
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v2}, Lon4;->E(Lvc9;)Lid;
 
-.method public final i()Lqs8;
-    .locals 1
+    move-result-object v2
 
-    iget-object v0, p0, Luph;->k:Lck0;
+    new-instance v3, Lwq;
 
-    invoke-virtual {v0}, Lck0;->i()Lqs8;
+    const/16 v4, 0x17
 
-    move-result-object v0
+    invoke-direct {v3, v2, v4, v1}, Lwq;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return-object v0
-.end method
+    const/16 v1, 0x3fc
 
-.method public final j()Z
-    .locals 1
-
-    iget-object v0, p0, Luph;->k:Lck0;
-
-    invoke-virtual {v0}, Lck0;->j()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final m(Lu2g;)V
-    .locals 0
-
-    iput-object p1, p0, Lji3;->j:Lu2g;
-
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Llig;->n(Landroid/os/Handler$Callback;)Landroid/os/Handler;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lji3;->i:Landroid/os/Handler;
-
-    invoke-virtual {p0}, Luph;->D()V
+    invoke-virtual {v0, v2, v1, v3}, Lon4;->I(Lid;ILqe8;)V
 
     return-void
-.end method
 
-.method public t(Lqs8;)V
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Luph;->b:Lo2b;
 
-    iget-object v0, p0, Luph;->k:Lck0;
+    iget-object v1, p0, Luph;->c:Lml4;
 
-    invoke-virtual {v0, p1}, Lck0;->t(Lqs8;)V
+    iget-object v0, v0, Lo2b;->c:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Lxp5;
 
-.method public final v(Ljava/lang/Object;Lo19;)Lo19;
-    .locals 0
+    sget-object v2, Lmbh;->a:Ljava/lang/String;
 
-    check-cast p1, Ljava/lang/Void;
+    iget-object v0, v0, Lxp5;->a:Ldq5;
 
-    invoke-virtual {p0, p2}, Luph;->A(Lo19;)Lo19;
+    iget-object v0, v0, Ldq5;->E0:Lon4;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lon4;->H()Lid;
 
-    return-object p1
-.end method
+    move-result-object v2
 
-.method public final w(Ljava/lang/Object;JLo19;)J
-    .locals 0
+    new-instance v3, Lcn4;
 
-    check-cast p1, Ljava/lang/Void;
+    const/4 v4, 0x2
 
-    return-wide p2
-.end method
+    invoke-direct {v3, v2, v1, v4}, Lcn4;-><init>(Lid;Lml4;I)V
 
-.method public final x(ILjava/lang/Object;)I
-    .locals 0
+    const/16 v1, 0x3f7
 
-    check-cast p2, Ljava/lang/Void;
-
-    return p1
-.end method
-
-.method public final y(Ljava/lang/Object;Lck0;Lmvf;)V
-    .locals 0
-
-    check-cast p1, Ljava/lang/Void;
-
-    invoke-virtual {p0, p3}, Luph;->B(Lmvf;)V
+    invoke-virtual {v0, v2, v1, v3}, Lon4;->I(Lid;ILqe8;)V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

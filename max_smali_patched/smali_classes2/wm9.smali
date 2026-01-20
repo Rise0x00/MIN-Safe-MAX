@@ -1,57 +1,97 @@
 .class public final Lwm9;
-.super Lp14;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lz10;
+.field public final a:Ltm9;
 
-.field public Y:Lt92;
+.field public b:I
 
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public d:Len9;
-
-.field public o:Lgb9;
-
-.field public final synthetic s0:Len9;
-
-.field public t0:I
+.field public c:Lhc8;
 
 
 # direct methods
-.method public constructor <init>(Len9;Lp14;)V
+.method public constructor <init>(Ltm9;I)V
     .locals 0
 
-    iput-object p1, p0, Lwm9;->s0:Len9;
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lwm9;->a:Ltm9;
+
+    iput p2, p0, Lwm9;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 8
 
-    iput-object p1, p0, Lwm9;->Z:Ljava/lang/Object;
+    iget-object v0, p0, Lwm9;->c:Lhc8;
 
-    iget p1, p0, Lwm9;->t0:I
+    if-eqz v0, :cond_2
 
-    const/high16 v0, -0x80000000
+    iget-object v0, v0, Lhc8;->a:Lic8;
 
-    or-int/2addr p1, v0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    iput p1, p0, Lwm9;->t0:I
+    move-result-wide v1
 
-    iget-object p1, p0, Lwm9;->s0:Len9;
+    sget-object v3, Lic8;->d:Lf7;
 
+    iget-wide v4, v3, Lf7;->a:J
+
+    sub-long v4, v1, v4
+
+    const-wide/16 v6, 0x12c
+
+    cmp-long v4, v4, v6
+
+    if-lez v4, :cond_2
+
+    iput-wide v1, v3, Lf7;->a:J
+
+    iget-object v0, v0, Lic8;->a:Lfc8;
+
+    if-nez v0, :cond_1
+
+    instance-of v0, p1, Lfc8;
+
+    if-eqz v0, :cond_0
+
+    move-object v0, p1
+
+    check-cast v0, Lfc8;
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-static {p1, v0, p0}, Len9;->x(Len9;Lgb9;Lp14;)Ljava/lang/Object;
+    :cond_1
+    :goto_0
+    if-eqz v0, :cond_2
 
-    move-result-object p1
+    iget-object p1, p0, Lwm9;->a:Ltm9;
 
-    return-object p1
+    invoke-interface {v0, p1}, Lfc8;->a(Ltm9;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 1
+
+    iget v0, p0, Lwm9;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setUnderlineText(Z)V
+
+    return-void
 .end method

@@ -3,21 +3,17 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Led7;
-
-.field public static b:Ldd7;
+# instance fields
+.field public final a:Lrd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lrd;)V
+    .locals 0
 
-    new-instance v0, Led7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Led7;->a:Led7;
+    iput-object p1, p0, Led7;->a:Lrd;
 
     return-void
 .end method

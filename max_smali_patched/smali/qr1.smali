@@ -1,29 +1,23 @@
-.class public interface abstract Lqr1;
-.super Ljava/lang/Object;
+.class public final Lqr1;
+.super Ld3;
 .source "SourceFile"
 
 
-# virtual methods
-.method public n(Lxh1;)V
-    .locals 0
+# static fields
+.field public static final c:Lqr1;
 
-    return-void
-.end method
 
-.method public o()V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Lqr1;
 
-.method public p(Lxh1;Landroid/graphics/Point;)V
-    .locals 0
+    const/16 v1, 0xc
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ld3;-><init>(I)V
 
-.method public q()V
-    .locals 0
+    sput-object v0, Lqr1;->c:Lqr1;
 
     return-void
 .end method

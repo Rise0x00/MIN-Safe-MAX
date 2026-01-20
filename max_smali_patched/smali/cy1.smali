@@ -1,92 +1,102 @@
 .class public final Lcy1;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lez1;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/Executor;
-
-.field public final b:Lgy1;
-
-.field public final c:I
+.field public final synthetic o:Ldy1;
 
 
 # direct methods
-.method public constructor <init>(Lgy1;Ln3e;I)V
+.method public constructor <init>(Ldy1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcy1;->o:Ldy1;
 
-    iput-object p1, p0, Lcy1;->b:Lgy1;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lcy1;->a:Ljava/util/concurrent/Executor;
-
-    iput p3, p0, Lcy1;->c:I
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lv28;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const-string v0, "Camera2CapturePipeline"
+    check-cast p1, Leub;
 
-    const-string v1, "invokePreCapture"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0, v1}, Lafi;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lcy1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lcy1;->b:Lgy1;
+    move-result-object p1
 
-    iget v1, p0, Lcy1;->c:I
+    check-cast p1, Lcy1;
 
-    invoke-virtual {v0, v1}, Lgy1;->a(I)Lv28;
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lcy1;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
+.end method
+
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lcy1;
+
+    iget-object v0, p0, Lcy1;->o:Ldy1;
+
+    invoke-direct {p1, v0, p2}, Lcy1;-><init>(Ldy1;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcy1;->o:Ldy1;
+
+    invoke-virtual {p1}, Ldy1;->p()Lsz1;
 
     move-result-object v0
 
-    invoke-static {v0}, Lek6;->a(Lv28;)Lek6;
+    invoke-virtual {p1}, Ldy1;->k()Lye4;
 
-    move-result-object v0
+    move-result-object v1
 
-    new-instance v1, Lzx1;
+    iget-object v2, v1, Lye4;->c:Ljava/lang/String;
 
-    const/4 v2, 0x1
+    invoke-virtual {p1}, Ldy1;->k()Lye4;
 
-    invoke-direct {v1, v2}, Lzx1;-><init>(I)V
+    move-result-object p1
+
+    iget-boolean v7, p1, Lye4;->i:Z
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Ls9d;
+    const/4 v6, 0x0
 
-    const/16 v3, 0x10
+    const/16 v8, 0x78
 
-    invoke-direct {v2, v3, v1}, Ls9d;-><init>(ILjava/lang/Object;)V
+    const-string v1, "BAD_CONNECTION_ALERT"
 
-    iget-object v1, p0, Lcy1;->a:Ljava/util/concurrent/Executor;
+    const-string v3, "BAD_NETWORK"
 
-    invoke-static {v0, v2, v1}, Lyyg;->r(Lv28;Ldv;Ljava/util/concurrent/Executor;)La62;
+    const/4 v4, 0x0
 
-    move-result-object v0
+    const/4 v5, 0x0
 
-    return-object v0
-.end method
+    invoke-static/range {v0 .. v8}, Lsz1;->d(Lsz1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
 
-.method public final b()Lv28;
-    .locals 2
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    new-instance v0, Lxid;
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v1, p0}, Lxid;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0}, Lcmi;->a(Lrt1;)Ltt1;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p1
 .end method

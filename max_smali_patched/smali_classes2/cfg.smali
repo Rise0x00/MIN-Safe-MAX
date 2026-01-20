@@ -2,232 +2,398 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ltu3;
+
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/net/Socket;
 
-.field public final b:Ljava/lang/String;
+.field public final b:Llu3;
 
-.field public final c:Ljava/lang/String;
+.field public final c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field public final d:J
+.field public final d:Ln8g;
 
-.field public final e:J
-
-.field public final f:Ljava/lang/String;
+.field public final o:Ln8g;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;JJLjava/lang/String;)V
+.method public constructor <init>(Ljava/net/Socket;Llu3;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lcfg;->a:J
+    iput-object p1, p0, Lcfg;->a:Ljava/net/Socket;
 
-    iput-object p3, p0, Lcfg;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcfg;->b:Llu3;
 
-    iput-object p4, p0, Lcfg;->c:Ljava/lang/String;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-wide p5, p0, Lcfg;->d:J
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    iput-wide p7, p0, Lcfg;->e:J
+    iput-object p1, p0, Lcfg;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p9, p0, Lcfg;->f:Ljava/lang/String;
+    new-instance p1, Lbfg;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lbfg;-><init>(Lcfg;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lcfg;->d:Ln8g;
+
+    new-instance p1, Lbfg;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lbfg;-><init>(Lcfg;I)V
+
+    new-instance p2, Ln8g;
+
+    invoke-direct {p2, p1}, Ln8g;-><init>(Llq6;)V
+
+    iput-object p2, p0, Lcfg;->o:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final a()Llu3;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcfg;->b:Llu3;
 
-    if-ne p0, p1, :cond_0
+    return-object v0
+.end method
 
-    return v0
+.method public final b([B)V
+    .locals 3
 
-    :cond_0
-    instance-of v1, p1, Lcfg;
+    iget-object v0, p0, Lcfg;->d:Ln8g;
+
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/io/DataOutputStream;
+
+    const/4 v1, 0x0
+
+    array-length v2, p1
+
+    invoke-virtual {v0, p1, v1, v2}, Ljava/io/DataOutputStream;->write([BII)V
+
+    return-void
+.end method
+
+.method public final close()Z
+    .locals 10
+
+    sget-object v0, Lkk8;->X:Lkk8;
+
+    sget-object v1, Lc5j;->a:Ledb;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    const-string v3, "close, "
 
-    return v2
+    const-string v4, "TcpConnection"
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v5, Lkk8;->c:Lkk8;
+
+    invoke-virtual {v1, v5}, Ledb;->b(Lkk8;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v1, v5, v4, v6, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    check-cast p1, Lcfg;
+    :goto_0
+    iget-object v1, p0, Lcfg;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iget-wide v3, p0, Lcfg;->a:J
+    const/4 v5, 0x0
 
-    iget-wide v5, p1, Lcfg;->a:J
+    const/4 v6, 0x1
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v1, v5, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    if-eqz v1, :cond_2
+    move-result v1
 
-    return v2
+    const-string v7, " is unexpectedly NOT closed"
 
-    :cond_2
-    iget-object v1, p0, Lcfg;->b:Ljava/lang/String;
+    if-nez v1, :cond_4
 
-    iget-object v3, p1, Lcfg;->b:Ljava/lang/String;
+    iget-object v1, p0, Lcfg;->a:Ljava/net/Socket;
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/net/Socket;->isClosed()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
-    return v2
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v1, v0}, Ledb;->b(Lkk8;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    iget-object v6, p0, Lcfg;->a:Ljava/net/Socket;
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v0, v4, v3, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_3
-    iget-object v1, p0, Lcfg;->c:Ljava/lang/String;
+    :goto_1
+    return v5
 
-    iget-object v3, p1, Lcfg;->c:Ljava/lang/String;
+    :cond_4
+    iget-object v1, p0, Lcfg;->a:Ljava/net/Socket;
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
     move-result v1
 
-    if-nez v1, :cond_4
+    invoke-static {v1}, Landroid/net/TrafficStats;->setThreadStatsTag(I)V
 
-    return v2
+    :try_start_0
+    iget-object v1, p0, Lcfg;->a:Ljava/net/Socket;
 
-    :cond_4
-    iget-wide v3, p0, Lcfg;->d:J
+    invoke-virtual {v1}, Ljava/net/Socket;->close()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-wide v5, p1, Lcfg;->d:J
+    goto :goto_2
 
-    cmp-long v1, v3, v5
+    :catch_0
+    move-exception v1
+
+    iget-object v5, p0, Lcfg;->a:Ljava/net/Socket;
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    const-string v9, "failed to close "
+
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5, v1}, Lc5j;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    iget-object v1, p0, Lcfg;->d:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->e()Z
+
+    move-result v1
 
     if-eqz v1, :cond_5
 
-    return v2
+    :try_start_1
+    iget-object v1, p0, Lcfg;->d:Ln8g;
 
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/DataOutputStream;
+
+    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
     :cond_5
-    iget-wide v3, p0, Lcfg;->e:J
+    iget-object v1, p0, Lcfg;->o:Ln8g;
 
-    iget-wide v5, p1, Lcfg;->e:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lcfg;->f:Ljava/lang/String;
-
-    iget-object p1, p1, Lcfg;->f:Ljava/lang/String;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lcfg;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lcfg;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lcfg;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lmb3;->c(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lcfg;->d:J
-
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
-
-    move-result v0
-
-    iget-wide v2, p0, Lcfg;->e:J
-
-    invoke-static {v0, v1, v2, v3}, Lo3h;->c(IIJ)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcfg;->f:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1}, Ln8g;->e()Z
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-eqz v1, :cond_6
 
-    return v1
+    :try_start_2
+    iget-object v1, p0, Lcfg;->o:Ln8g;
+
+    invoke-virtual {v1}, Ln8g;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/DataInputStream;
+
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :cond_6
+    invoke-static {}, Landroid/net/TrafficStats;->clearThreadStatsTag()V
+
+    iget-object v1, p0, Lcfg;->a:Ljava/net/Socket;
+
+    invoke-virtual {v1}, Ljava/net/Socket;->isClosed()Z
+
+    move-result v1
+
+    if-nez v1, :cond_8
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    invoke-virtual {v1, v0}, Ledb;->b(Lkk8;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_8
+
+    iget-object v5, p0, Lcfg;->a:Ljava/net/Socket;
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v0, v4, v3, v2}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_8
+    :goto_3
+    return v6
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final m([B)V
+    .locals 3
 
-    const-string v0, "Input(requestId="
+    iget-object v0, p0, Lcfg;->o:Ln8g;
 
-    const-string v1, ", externalUrl="
-
-    iget-wide v2, p0, Lcfg;->a:J
-
-    iget-object v4, p0, Lcfg;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lok7;->n(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, ", attachLocalId="
+    check-cast v0, Ljava/io/DataInputStream;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lcfg;->c:Ljava/lang/String;
+    array-length v2, p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1, v1, v2}, Ljava/io/DataInputStream;->readFully([BII)V
 
-    const-string v1, ", messageId="
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final p(I[BI)I
+    .locals 1
 
-    iget-wide v1, p0, Lcfg;->d:J
+    iget-object v0, p0, Lcfg;->o:Ln8g;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    const-string v1, ", chatId="
+    move-result-object v0
 
-    const-string v2, ", stickerId="
+    check-cast v0, Ljava/io/DataInputStream;
 
-    iget-wide v3, p0, Lcfg;->e:J
+    invoke-virtual {v0, p2, p1, p3}, Ljava/io/DataInputStream;->read([BII)I
 
-    invoke-static {v3, v4, v1, v2, v0}, Lnx1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    move-result p1
+
+    return p1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 7
+
+    iget-object v0, p0, Lcfg;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    iget-object v1, p0, Lcfg;->a:Ljava/net/Socket;
+
+    invoke-virtual {v1}, Ljava/net/Socket;->isClosed()Z
+
+    move-result v2
+
+    iget-object v3, p0, Lcfg;->b:Llu3;
+
+    invoke-virtual {v3}, Llu3;->a()Lmu3;
+
+    move-result-object v3
+
+    const-string v4, "TcpConnection(isClosed="
+
+    const-string v5, "/"
+
+    const-string v6, "|"
+
+    invoke-static {v4, v0, v5, v2, v6}, Lj27;->p(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 
-    iget-object v2, p0, Lcfg;->f:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2, v1}, Lok7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

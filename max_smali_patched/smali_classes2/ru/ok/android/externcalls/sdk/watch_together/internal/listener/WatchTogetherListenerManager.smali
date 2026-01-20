@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/watch_together/listener/WatchTogetherListener;",
         "listener",
-        "Lybg;",
+        "Lb3h;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/watch_together/listener/WatchTogetherListener;)V",
         "removeListener",

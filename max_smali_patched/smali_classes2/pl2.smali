@@ -1,96 +1,58 @@
 .class public final Lpl2;
-.super Logf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lg61;
 
 
 # instance fields
-.field public final synthetic o:Ltl2;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public constructor <init>(Ltl2;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lpl2;->o:Ltl2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lpl2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lg54;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lpl2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lpl2;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lpl2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lpl2;
-
-    iget-object v0, p0, Lpl2;->o:Ltl2;
-
-    invoke-direct {p1, v0, p2}, Lpl2;-><init>(Ltl2;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onNewMessage(Lqm7;)V
     .locals 2
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Lpl2;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    sget-object p1, Ltl2;->S0:[Les7;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    iget-object p1, p0, Lpl2;->o:Ltl2;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ltl2;->E()Lc3b;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v1
 
-    sget v0, Lmkd;->F:I
+    if-eqz v1, :cond_0
 
-    new-instance v1, Lirf;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-direct {v1, v0}, Lirf;-><init>(I)V
+    move-result-object v1
 
-    invoke-virtual {p1, v1}, Lc3b;->g(Lnrf;)V
+    check-cast v1, Lg61;
 
-    new-instance v0, Lq3b;
+    invoke-interface {v1, p1}, Lg61;->onNewMessage(Lqm7;)V
 
-    sget v1, Lyjd;->J:I
+    goto :goto_0
 
-    invoke-direct {v0, v1}, Lq3b;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
-
-    invoke-virtual {p1}, Lc3b;->i()Lb3b;
-
-    move-result-object p1
-
-    return-object p1
+    :cond_0
+    return-void
 .end method

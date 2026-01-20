@@ -1,126 +1,155 @@
 .class public final Ljs;
-.super Lpue;
+.super Luli;
 .source "SourceFile"
 
-# interfaces
-.implements Lf6d;
+
+# static fields
+.field public static volatile c:Ljs;
+
+.field public static final d:Lis;
 
 
 # instance fields
-.field public final a:I
-
-.field public b:Lru4;
+.field public final b:Lzt4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;I)V
+.method static constructor <clinit>()V
     .locals 2
+
+    new-instance v0, Lis;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lis;-><init>(I)V
+
+    sput-object v0, Ljs;->d:Lis;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Ljs;->a:I
+    new-instance v0, Lzt4;
 
-    new-instance v0, Lru4;
+    invoke-direct {v0}, Lzt4;-><init>()V
 
-    new-instance v1, Ljava/io/File;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object p1
-
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
-
-    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v0, v1, p2}, Lru4;-><init>(Ljava/io/File;I)V
-
-    iput-object v0, p0, Ljs;->b:Lru4;
+    iput-object v0, p0, Ljs;->b:Lzt4;
 
     return-void
+.end method
+
+.method public static c()Ljs;
+    .locals 2
+
+    sget-object v0, Ljs;->c:Ljs;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Ljs;->c:Ljs;
+
+    return-object v0
+
+    :cond_0
+    const-class v0, Ljs;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Ljs;->c:Ljs;
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Ljs;
+
+    invoke-direct {v1}, Ljs;-><init>()V
+
+    sput-object v1, Ljs;->c:Ljs;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    sget-object v0, Ljs;->c:Ljs;
+
+    return-object v0
+
+    :goto_1
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v1
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;)Lpue;
-    .locals 2
+.method public final d(Ljava/lang/Runnable;)V
+    .locals 3
 
-    new-instance v0, Lru4;
+    iget-object v0, p0, Ljs;->b:Lzt4;
 
-    new-instance v1, Ljava/io/File;
+    iget-object v1, v0, Lzt4;->d:Landroid/os/Handler;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+    if-nez v1, :cond_1
 
-    move-result-object p1
+    iget-object v1, v0, Lzt4;->b:Ljava/lang/Object;
 
-    iget-object p1, p1, Landroid/content/pm/ApplicationInfo;->nativeLibraryDir:Ljava/lang/String;
+    monitor-enter v1
 
-    invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    :try_start_0
+    iget-object v2, v0, Lzt4;->d:Landroid/os/Handler;
 
-    iget p1, p0, Ljs;->a:I
+    if-nez v2, :cond_0
 
-    or-int/lit8 p1, p1, 0x1
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    invoke-direct {v0, v1, p1}, Lru4;-><init>(Ljava/io/File;I)V
+    move-result-object v2
 
-    iput-object v0, p0, Ljs;->b:Lru4;
+    invoke-static {v2}, Lzt4;->c(Landroid/os/Looper;)Landroid/os/Handler;
 
-    return-object p0
-.end method
+    move-result-object v2
 
-.method public final b()Ljava/lang/String;
-    .locals 0
+    iput-object v2, v0, Lzt4;->d:Landroid/os/Handler;
 
-    const/4 p0, 0x0
+    goto :goto_0
 
-    throw p0
-.end method
+    :catchall_0
+    move-exception p1
 
-.method public final c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
-    .locals 1
+    goto :goto_1
 
-    iget-object v0, p0, Ljs;->b:Lru4;
+    :cond_0
+    :goto_0
+    monitor-exit v1
 
-    invoke-virtual {v0, p1, p2, p3}, Lru4;->c(Ljava/lang/String;ILandroid/os/StrictMode$ThreadPolicy;)I
+    goto :goto_2
 
-    move-result p1
+    :goto_1
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p1
-.end method
+    throw p1
 
-.method public final d(I)V
-    .locals 0
+    :cond_1
+    :goto_2
+    iget-object v0, v0, Lzt4;->d:Landroid/os/Handler;
 
-    iget-object p1, p0, Ljs;->b:Lru4;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ApplicationSoSource["
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ljs;->b:Lru4;
-
-    invoke-virtual {v1}, Lru4;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "]"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

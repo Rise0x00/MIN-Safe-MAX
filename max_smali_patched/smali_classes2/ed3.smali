@@ -1,132 +1,74 @@
-.class public final Led3;
-.super Logf;
+.class public final synthetic Led3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Ljava/util/function/ToLongFunction;
 
 
 # instance fields
-.field public final synthetic X:Lgd3;
-
-.field public final synthetic Y:Lme7;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lgd3;Lme7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Led3;->X:Lgd3;
+    iput p1, p0, Led3;->a:I
 
-    iput-object p2, p0, Led3;->Y:Lme7;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final applyAsLong(Ljava/lang/Object;)J
+    .locals 2
 
-    check-cast p1, Lg54;
+    iget v0, p0, Led3;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Led3;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    sget-object v0, Lo3b;->a:Lo3b;
 
-    move-result-object p1
+    sget-object v1, Lone/me/android/OneMeApplication;->Y:Lc3b;
 
-    check-cast p1, Led3;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Led3;->n(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lo3b;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
-.end method
+    check-cast p1, Ljava/lang/Number;
 
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
 
-    new-instance v0, Led3;
+    move-result-wide v0
 
-    iget-object v1, p0, Led3;->X:Lgd3;
+    return-wide v0
 
-    iget-object v2, p0, Led3;->Y:Lme7;
+    :pswitch_0
+    check-cast p1, Ljava/util/Map$Entry;
 
-    invoke-direct {v0, v1, v2, p2}, Led3;-><init>(Lgd3;Lme7;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Led3;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Led3;->o:Ljava/lang/Object;
-
-    check-cast p1, Lg54;
-
-    iget-object p1, p0, Led3;->X:Lgd3;
-
-    iget-object v0, p0, Led3;->Y:Lme7;
-
-    :try_start_0
-    iget-object p1, p1, Lgd3;->d:Lru7;
-
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ld68;
+    check-cast p1, Lxoa;
 
-    iget-wide v0, v0, Lme7;->c:J
+    iget-wide v0, p1, Lxoa;->a:J
 
-    const/4 v2, 0x0
+    return-wide v0
 
-    invoke-virtual {p1, v0, v1, v2}, Ld68;->a(JZ)Lah3;
+    :pswitch_1
+    check-cast p1, Lmh2;
 
-    move-result-object p1
+    iget-wide v0, p1, Lmh2;->a:J
 
-    invoke-virtual {p1}, Ljqe;->e()Ljava/lang/Object;
+    return-wide v0
 
-    move-result-object p1
-
-    check-cast p1, Lr99;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    new-instance v0, Lfed;
-
-    invoke-direct {v0, p1}, Lfed;-><init>(Ljava/lang/Throwable;)V
-
-    move-object p1, v0
-
-    :goto_0
-    nop
-
-    instance-of v0, p1, Lfed;
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    :cond_0
-    return-object p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,49 +1,30 @@
 .class public final Lu33;
-.super Lp14;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lw33;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/Set;
 
-.field public synthetic d:Ljava/lang/Object;
+.field public final b:Z
 
-.field public final synthetic o:Lw33;
+.field public final c:Ljava/util/Set;
 
 
 # direct methods
-.method public constructor <init>(Lw33;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/Set;ZLjava/util/Set;)V
     .locals 0
 
-    iput-object p1, p0, Lu33;->o:Lw33;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lu33;->a:Ljava/util/Set;
+
+    iput-boolean p2, p0, Lu33;->b:Z
+
+    iput-object p3, p0, Lu33;->c:Ljava/util/Set;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Lu33;->d:Ljava/lang/Object;
-
-    iget p1, p0, Lu33;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lu33;->X:I
-
-    iget-object p1, p0, Lu33;->o:Lw33;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lw33;->T(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

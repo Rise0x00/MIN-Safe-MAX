@@ -1,61 +1,40 @@
-.class public abstract Lvp3;
+.class public final synthetic Lvp3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lxc9;
+
+
+# instance fields
+.field public final synthetic a:Laq3;
+
+.field public final synthetic b:Ljava/lang/Object;
+
 
 # direct methods
-.method public static a()Z
-    .locals 4
+.method public synthetic constructor <init>(Laq3;Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {}, Lorg/conscrypt/Conscrypt;->version()Lorg/conscrypt/Conscrypt$Version;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lvp3;->a:Laq3;
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    iput-object p2, p0, Lvp3;->b:Ljava/lang/Object;
 
-    move-result v1
+    return-void
+.end method
 
-    const/4 v2, 0x2
 
-    const/4 v3, 0x1
+# virtual methods
+.method public final a(Lxk0;Lrlg;)V
+    .locals 2
 
-    if-eq v1, v2, :cond_0
+    iget-object v0, p0, Lvp3;->a:Laq3;
 
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->major()I
+    iget-object v1, p0, Lvp3;->b:Ljava/lang/Object;
 
-    move-result v0
+    invoke-virtual {v0, v1, p1, p2}, Laq3;->y(Ljava/lang/Object;Lxk0;Lrlg;)V
 
-    if-le v0, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v1
-
-    if-eq v1, v3, :cond_1
-
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->minor()I
-
-    move-result v0
-
-    if-le v0, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lorg/conscrypt/Conscrypt$Version;->patch()I
-
-    move-result v0
-
-    if-ltz v0, :cond_2
-
-    :goto_0
-    return v3
-
-    :cond_2
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method

@@ -1,156 +1,63 @@
-.class public final synthetic Lb60;
+.class public interface abstract Lb60;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ld60;
-
-.field public final synthetic c:Z
+# static fields
+.field public static final a:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ld60;ZI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lb60;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lb60;->b:Ld60;
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
-    iput-boolean p2, p0, Lb60;->c:Z
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    sput-object v0, Lb60;->a:Ljava/nio/ByteBuffer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public abstract a()Z
+.end method
 
-    iget v0, p0, Lb60;->a:I
+.method public abstract b()Ljava/nio/ByteBuffer;
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public abstract c(Ljava/nio/ByteBuffer;)V
+.end method
 
-    iget-object v0, p0, Lb60;->b:Ld60;
+.method public abstract d()V
+.end method
 
-    iget v1, v0, Ld60;->g:I
+.method public abstract e(Ly50;)Ly50;
+.end method
 
-    invoke-static {v1}, Lnx1;->v(I)I
+.method public f(J)J
+    .locals 0
 
-    move-result v1
+    return-wide p1
+.end method
 
-    const/4 v2, 0x2
+.method public abstract flush()V
+.end method
 
-    if-eqz v1, :cond_1
+.method public abstract isActive()Z
+.end method
 
-    const/4 v3, 0x1
-
-    if-eq v1, v3, :cond_1
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/AssertionError;
-
-    const-string v1, "AudioSource is released"
-
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :cond_1
-    iget-boolean v1, v0, Ld60;->r:Z
-
-    iget-boolean v3, p0, Lb60;->c:Z
-
-    if-ne v1, v3, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iput-boolean v3, v0, Ld60;->r:Z
-
-    iget v1, v0, Ld60;->g:I
-
-    if-ne v1, v2, :cond_3
-
-    invoke-virtual {v0}, Ld60;->a()V
-
-    :cond_3
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lb60;->b:Ld60;
-
-    iget v1, v0, Ld60;->g:I
-
-    invoke-static {v1}, Lnx1;->v(I)I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-eqz v1, :cond_5
-
-    if-eq v1, v2, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    new-instance v0, Ljava/lang/AssertionError;
-
-    const-string v1, "AudioSource is released"
-
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :cond_5
-    iget-object v1, v0, Ld60;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    iget-object v1, v0, Ld60;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    invoke-virtual {v0, v2}, Ld60;->d(I)V
-
-    iget-object v1, v0, Ld60;->a:Ln3e;
-
-    new-instance v2, Lb60;
-
-    const/4 v3, 0x1
-
-    iget-boolean v4, p0, Lb60;->c:Z
-
-    invoke-direct {v2, v0, v4, v3}, Lb60;-><init>(Ld60;ZI)V
-
-    invoke-virtual {v1, v2}, Ln3e;->execute(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Ld60;->f()V
-
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public abstract reset()V
 .end method

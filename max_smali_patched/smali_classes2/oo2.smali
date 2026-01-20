@@ -1,225 +1,272 @@
 .class public final Loo2;
-.super Lmmf;
+.super Lie0;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:Lu92;
+.field public final b:J
 
-.field public d:Ls99;
+.field public final c:J
 
-.field public o:Ljava/util/List;
+.field public final d:Ljava/lang/String;
+
+.field public final e:J
+
+.field public final f:Ljava/lang/String;
+
+.field public final g:J
+
+.field public final h:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljf9;)V
-    .locals 0
+.method public constructor <init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;J)V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lmmf;-><init>(Ljf9;)V
+    const/4 v0, 0x4
 
-    iget-object p1, p0, Loo2;->o:Ljava/util/List;
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    if-nez p1, :cond_0
+    iput-wide p1, p0, Loo2;->b:J
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iput-wide p3, p0, Loo2;->c:J
 
-    iput-object p1, p0, Loo2;->o:Ljava/util/List;
+    iput-object p5, p0, Loo2;->d:Ljava/lang/String;
 
-    :cond_0
+    iput-wide p6, p0, Loo2;->e:J
+
+    iput-object p8, p0, Loo2;->f:Ljava/lang/String;
+
+    iput-wide p10, p0, Loo2;->g:J
+
+    iput-object p9, p0, Loo2;->h:Ljava/lang/String;
+
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Ljf9;Ljava/lang/String;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Loo2;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Loo2;
+
+    iget-wide v3, p0, Loo2;->b:J
+
+    iget-wide v5, p1, Loo2;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-wide v3, p0, Loo2;->c:J
+
+    iget-wide v5, p1, Loo2;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Loo2;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Loo2;->d:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Loo2;->e:J
+
+    iget-wide v5, p1, Loo2;->e:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Loo2;->f:Ljava/lang/String;
+
+    iget-object v3, p1, Loo2;->f:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-wide v3, p0, Loo2;->g:J
+
+    iget-wide v5, p1, Loo2;->g:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_7
+
+    return v2
+
+    :cond_7
+    iget-object v1, p0, Loo2;->h:Ljava/lang/String;
+
+    iget-object p1, p1, Loo2;->h:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    return v2
+
+    :cond_8
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 4
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-wide v0, p0, Loo2;->b:J
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    const/4 v1, 0x0
+    const/16 v1, 0x1f
 
-    const/4 v2, -0x1
+    mul-int/2addr v0, v1
 
-    sparse-switch v0, :sswitch_data_0
+    iget-wide v2, p0, Loo2;->c:J
 
-    goto :goto_0
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
-    :sswitch_0
-    const-string v0, "message"
+    move-result v0
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v2, p0, Loo2;->d:Ljava/lang/String;
 
-    move-result p2
+    if-nez v2, :cond_0
 
-    if-nez p2, :cond_0
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x2
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "chat"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "deletedMessageIds"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move v2, v1
+    move-result v2
 
     :goto_0
-    packed-switch v2, :pswitch_data_0
+    add-int/2addr v0, v2
 
-    invoke-virtual {p1}, Ljf9;->v()V
+    mul-int/2addr v0, v1
 
-    return-void
+    iget-wide v2, p0, Loo2;->e:J
 
-    :pswitch_0
-    invoke-static {p1}, Lcki;->b(Ljf9;)Ls99;
-
-    move-result-object p1
-
-    iput-object p1, p0, Loo2;->d:Ls99;
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lu92;->a(Ljf9;)Lu92;
-
-    move-result-object p1
-
-    iput-object p1, p0, Loo2;->c:Lu92;
-
-    return-void
-
-    :pswitch_2
-    invoke-virtual {p1}, Ljf9;->w()Lec9;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lec9;->a()I
-
-    move-result p2
-
-    const/4 v0, 0x7
-
-    if-ne p2, v0, :cond_3
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {p1}, Ljf9;->n0()I
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
     move-result v0
 
-    :goto_1
-    if-ge v1, v0, :cond_4
+    iget-object v2, p0, Loo2;->f:Ljava/lang/String;
 
-    const-wide/16 v2, 0x0
+    invoke-static {v0, v1, v2}, Lxi4;->e(IILjava/lang/String;)I
 
-    invoke-static {p1, v2, v3}, Le0i;->q(Ljf9;J)J
+    move-result v0
 
-    move-result-wide v2
+    iget-wide v2, p0, Loo2;->g:J
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, v1, v2, v3}, Lcbh;->i(IIJ)I
 
-    move-result-object v2
+    move-result v0
 
-    invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Loo2;->h:Ljava/lang/String;
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    goto :goto_1
+    move-result v1
 
-    :cond_3
-    invoke-virtual {p1}, Ljf9;->v()V
+    add-int/2addr v1, v0
 
-    const/4 p2, 0x0
-
-    :cond_4
-    iput-object p2, p0, Loo2;->o:Ljava/util/List;
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x223131d6 -> :sswitch_2
-        0x2e9358 -> :sswitch_1
-        0x38eb0007 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    iget-object v0, p0, Loo2;->c:Lu92;
+    const-string v0, "ShowFileDownloadWarningBottomSheet(chatId="
 
-    iget-object v1, p0, Loo2;->d:Ls99;
+    const-string v1, ", messageId="
 
-    iget-object v2, p0, Loo2;->o:Ljava/util/List;
+    iget-wide v2, p0, Loo2;->b:J
 
-    invoke-static {v2}, Lqyh;->a(Ljava/util/Collection;)I
+    invoke-static {v2, v3, v0, v1}, Lt02;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v2
+    move-result-object v0
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string v1, ", attachLocalId="
 
-    const-string v4, "{chat="
+    iget-wide v2, p0, Loo2;->c:J
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v4, p0, Loo2;->d:Ljava/lang/String;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v2, v3, v1, v4, v0}, Lxi4;->o(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    const-string v0, ", message="
+    const-string v1, ", fileId="
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, ", fileName="
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-wide v3, p0, Loo2;->e:J
 
-    const-string v0, ", deletedMessageIds="
+    invoke-static {v3, v4, v1, v2, v0}, Lt02;->p(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Loo2;->f:Ljava/lang/String;
 
-    const-string v0, "}"
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v2, v0}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    const-string v1, ", fileSize="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Loo2;->g:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fileUrl="
+
+    const-string v2, ")"
+
+    iget-object v3, p0, Loo2;->h:Ljava/lang/String;
+
+    invoke-static {v0, v1, v3, v2}, Lmrf;->l(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

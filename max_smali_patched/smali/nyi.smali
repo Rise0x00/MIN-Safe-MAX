@@ -1,148 +1,235 @@
-.class public abstract Lnyi;
-.super Ljava/lang/Object;
+.class public final Lnyi;
+.super Lwoi;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/SdpObserver;
 
+# virtual methods
+.method public final Y()Lfti;
+    .locals 5
 
-# direct methods
-.method public static final a(Ly22;Lkotlin/coroutines/Continuation;Z)V
-    .locals 3
+    const/4 v0, 0x4
 
-    sget-object v0, Ly22;->d:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ly22;->getExceptionalResult$kotlinx_coroutines_core(Ljava/lang/Object;)Ljava/lang/Throwable;
+    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    invoke-virtual {p0, v1, v0}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    new-instance p0, Lfed;
+    move-result-object v0
 
-    invoke-direct {p0, v1}, Lfed;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0, v0}, Ly22;->getSuccessfulResult$kotlinx_coroutines_core(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v2, "com.google.android.gms.maps.internal.ICameraUpdateFactoryDelegate"
 
-    move-result-object p0
+    invoke-interface {v1, v2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v3
+
+    instance-of v4, v3, Lfti;
+
+    if-eqz v4, :cond_1
+
+    move-object v1, v3
+
+    check-cast v1, Lfti;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, Lfti;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v3, v1, v2, v4}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object v1, v3
 
     :goto_0
-    if-eqz p2, :cond_6
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    check-cast p1, Lkotlinx/coroutines/internal/DispatchedContinuation;
+    return-object v1
+.end method
 
-    iget-object p2, p1, Lkotlinx/coroutines/internal/DispatchedContinuation;->continuation:Lkotlin/coroutines/Continuation;
+.method public final Z(Laxa;)Lnaj;
+    .locals 4
 
-    iget-object v0, p1, Lkotlinx/coroutines/internal/DispatchedContinuation;->countOrElement:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lkotlin/coroutines/Continuation;->getContext()Ly44;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lkotlinx/coroutines/internal/ThreadContextKt;->updateThreadContext(Ly44;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
 
     move-result-object v0
 
-    sget-object v2, Lkotlinx/coroutines/internal/ThreadContextKt;->NO_THREAD_ELEMENTS:Lkotlinx/coroutines/internal/Symbol;
+    invoke-static {v0, p1}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    if-eq v0, v2, :cond_1
+    const/4 p1, 0x2
 
-    invoke-static {p2, v1, v0}, Lfwi;->c(Lkotlin/coroutines/Continuation;Ly44;Ljava/lang/Object;)Ltbg;
+    invoke-virtual {p0, v0, p1}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    move-result-object p2
+    move-result-object p1
 
-    goto :goto_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "com.google.android.gms.maps.internal.IMapFragmentDelegate"
+
+    invoke-interface {v0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Lnaj;
+
+    if-eqz v3, :cond_1
+
+    move-object v0, v2
+
+    check-cast v0, Lnaj;
+
+    goto :goto_0
 
     :cond_1
-    const/4 p2, 0x0
+    new-instance v2, Lnaj;
 
-    :goto_1
-    :try_start_0
-    iget-object p1, p1, Lkotlinx/coroutines/internal/DispatchedContinuation;->continuation:Lkotlin/coroutines/Continuation;
+    const/4 v3, 0x3
 
-    invoke-interface {p1, p0}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {v2, v0, v1, v3}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
 
-    if-eqz p2, :cond_3
+    move-object v0, v2
 
-    invoke-virtual {p2}, Ltbg;->D()Z
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
 
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    return-void
-
-    :cond_3
-    :goto_2
-    invoke-static {v1, v0}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Ly44;Ljava/lang/Object;)V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    if-eqz p2, :cond_4
-
-    invoke-virtual {p2}, Ltbg;->D()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    :cond_4
-    invoke-static {v1, v0}, Lkotlinx/coroutines/internal/ThreadContextKt;->restoreThreadContext(Ly44;Ljava/lang/Object;)V
-
-    :cond_5
-    throw p0
-
-    :cond_6
-    invoke-interface {p1, p0}, Lkotlin/coroutines/Continuation;->resumeWith(Ljava/lang/Object;)V
-
-    return-void
+    return-object v0
 .end method
 
+.method public final a0(Laxa;)Ltcj;
+    .locals 4
 
-# virtual methods
-.method public onCreateFailure(Ljava/lang/String;)V
-    .locals 1
+    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    move-result-object v0
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lvui;->d(Landroid/os/Parcel;Landroid/os/IInterface;)V
 
-    throw v0
+    const/4 p1, 0x0
+
+    invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    const/4 p1, 0x3
+
+    invoke-virtual {p0, v0, p1}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "com.google.android.gms.maps.internal.IMapViewDelegate"
+
+    invoke-interface {v0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v2
+
+    instance-of v3, v2, Ltcj;
+
+    if-eqz v3, :cond_1
+
+    move-object v0, v2
+
+    check-cast v0, Ltcj;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Ltcj;
+
+    const/4 v3, 0x3
+
+    invoke-direct {v2, v0, v1, v3}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object v0, v2
+
+    :goto_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->recycle()V
+
+    return-object v0
 .end method
 
-.method public onCreateSuccess(Lorg/webrtc/SessionDescription;)V
-    .locals 0
+.method public final b0()Llaj;
+    .locals 5
 
-    return-void
-.end method
+    const/4 v0, 0x5
 
-.method public onSetFailure(Ljava/lang/String;)V
-    .locals 1
+    invoke-virtual {p0}, Lwoi;->V()Landroid/os/Parcel;
 
-    new-instance v0, Ljava/lang/RuntimeException;
+    move-result-object v1
 
-    invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, v1, v0}, Lwoi;->U(Landroid/os/Parcel;I)Landroid/os/Parcel;
 
-    throw v0
-.end method
+    move-result-object v0
 
-.method public onSetSuccess()V
-    .locals 0
+    invoke-virtual {v0}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    return-void
+    move-result-object v1
+
+    sget v2, Lf8j;->d:I
+
+    if-nez v1, :cond_0
+
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v2, "com.google.android.gms.maps.model.internal.IBitmapDescriptorFactoryDelegate"
+
+    invoke-interface {v1, v2}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v3
+
+    instance-of v4, v3, Llaj;
+
+    if-eqz v4, :cond_1
+
+    move-object v1, v3
+
+    check-cast v1, Llaj;
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v3, Ld6j;
+
+    const/4 v4, 0x3
+
+    invoke-direct {v3, v1, v2, v4}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    move-object v1, v3
+
+    :goto_0
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    return-object v1
 .end method

@@ -4,117 +4,36 @@
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:Lj1j;
 
-.field public final b:I
+.field public final b:Ljava/lang/Integer;
+
+.field public final c:Lckj;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public synthetic constructor <init>(Latc;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lm1j;->a:Ljava/lang/String;
+    iget-object v0, p1, Latc;->b:Ljava/lang/Object;
 
-    iput p2, p0, Lm1j;->b:I
+    check-cast v0, Lj1j;
+
+    iput-object v0, p0, Lm1j;->a:Lj1j;
+
+    iget-object v0, p1, Latc;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    iput-object v0, p0, Lm1j;->b:Ljava/lang/Integer;
+
+    iget-object p1, p1, Latc;->d:Ljava/lang/Object;
+
+    check-cast p1, Lckj;
+
+    iput-object p1, p0, Lm1j;->c:Lckj;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p1, p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lm1j;
-
-    if-eqz v0, :cond_1
-
-    check-cast p1, Lm1j;
-
-    iget-object v0, p0, Lm1j;->a:Ljava/lang/String;
-
-    iget-object v1, p1, Lm1j;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget v0, p0, Lm1j;->b:I
-
-    iget p1, p1, Lm1j;->b:I
-
-    if-ne v0, p1, :cond_1
-
-    :goto_0
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lm1j;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const v1, 0xf4243
-
-    xor-int/2addr v0, v1
-
-    mul-int/2addr v0, v1
-
-    xor-int/lit16 v0, v0, 0x4cf
-
-    mul-int/2addr v0, v1
-
-    iget v1, p0, Lm1j;->b:I
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "MLKitLoggingOptions{libraryName="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lm1j;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", enableFirelog=true, firelogEventType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lm1j;->b:I
-
-    const-string v2, "}"
-
-    invoke-static {v0, v1, v2}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -1,74 +1,120 @@
 .class public final Lqf2;
-.super Lkh;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:Lrf2;
+
+.field public final synthetic Y:Ljava/lang/String;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(JJIJIJZLjava/lang/String;Laq4;)V
-    .locals 1
+.method public constructor <init>(Lrf2;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Lo8b;->a1:Lo8b;
+    iput-object p1, p0, Lqf2;->X:Lrf2;
 
-    invoke-direct {p0, v0}, Lkh;-><init>(Lo8b;)V
+    iput-object p2, p0, Lqf2;->Y:Ljava/lang/String;
 
-    const-string v0, "chatId"
+    const/4 p1, 0x2
 
-    invoke-virtual {p0, p1, p2, v0}, Lkh;->u(JLjava/lang/String;)V
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    const-string p1, "from"
+    return-void
+.end method
 
-    invoke-virtual {p0, p3, p4, p1}, Lkh;->u(JLjava/lang/String;)V
 
-    const-string p1, "forward"
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0, p5, p1}, Lkh;->j(ILjava/lang/String;)V
+    check-cast p1, Lzb4;
 
-    const-string p1, "forwardTime"
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0, p6, p7, p1}, Lkh;->u(JLjava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lqf2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-string p1, "backward"
+    move-result-object p1
 
-    invoke-virtual {p0, p8, p1}, Lkh;->j(ILjava/lang/String;)V
+    check-cast p1, Lqf2;
 
-    const-string p1, "backwardTime"
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p0, p9, p10, p1}, Lkh;->u(JLjava/lang/String;)V
+    invoke-virtual {p1, p2}, Lqf2;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string p1, "getChat"
+    move-result-object p1
 
-    const/4 p2, 0x0
+    return-object p1
+.end method
 
-    invoke-virtual {p0, p1, p2}, Lkh;->i(Ljava/lang/String;Z)V
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const-string p1, "getMessages"
+    new-instance p1, Lqf2;
 
-    invoke-virtual {p0, p1, p11}, Lkh;->i(Ljava/lang/String;Z)V
+    iget-object v0, p0, Lqf2;->X:Lrf2;
 
-    if-eqz p12, :cond_1
+    iget-object v1, p0, Lqf2;->Y:Ljava/lang/String;
 
-    invoke-virtual {p12}, Ljava/lang/String;->length()I
+    invoke-direct {p1, v0, v1, p2}, Lqf2;-><init>(Lrf2;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    move-result p1
+    return-object p1
+.end method
 
-    if-nez p1, :cond_0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lqf2;->o:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    const-string p1, "chatAccessToken"
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p0, p1, p12}, Lkh;->x(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 
     :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lqf2;->X:Lrf2;
+
+    iget-object p1, p1, Lrf2;->u:Li7f;
+
+    iput v1, p0, Lqf2;->o:I
+
+    iget-object v0, p0, Lqf2;->Y:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, p0}, Li7f;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
     :goto_0
-    const-string p1, "itemType"
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    invoke-virtual {p13}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p1, p2}, Lkh;->x(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object p1
 .end method

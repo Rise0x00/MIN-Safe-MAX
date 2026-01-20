@@ -1,73 +1,122 @@
-.class public final enum Luj7;
-.super Ljava/lang/Enum;
+.class public final Luj7;
+.super Lv1;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum a:Luj7;
-
-.field public static final enum b:Luj7;
-
-.field public static final synthetic c:[Luj7;
+# interfaces
+.implements Ltj7;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Luj7;
-
-    const-string v1, "AUTH"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Luj7;->a:Luj7;
-
-    new-instance v1, Luj7;
-
-    const-string v2, "SETTINGS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Luj7;->b:Luj7;
-
-    filled-new-array {v0, v1}, [Luj7;
-
-    move-result-object v0
-
-    sput-object v0, Luj7;->c:[Luj7;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Luj7;
+# virtual methods
+.method public final b()I
     .locals 1
 
-    const-class v0, Luj7;
+    const/4 v0, 0x6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    return v0
+.end method
 
-    move-result-object p0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p0, Luj7;
+    if-ne p0, p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    instance-of v0, p1, Lxbh;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lxbh;
+
+    move-object v0, p1
+
+    check-cast v0, Lw1;
+
+    invoke-interface {v0}, Lxbh;->b()I
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/4 v1, 0x6
+
+    if-ne v0, v1, :cond_3
+
+    instance-of v0, p1, Luj7;
+
+    iget-object v1, p0, Lv1;->a:[B
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Luj7;
+
+    iget-object p1, p1, Lv1;->a:[B
+
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_2
+    invoke-interface {p1}, Lxbh;->o()Ltj7;
+
+    move-result-object p1
+
+    check-cast p1, Lv1;
+
+    iget-object p1, p1, Lv1;->a:[B
+
+    array-length v0, p1
+
+    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result p1
+
+    return p1
+
+    :cond_3
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_4
+    const/4 p1, 0x0
+
+    throw p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lv1;->a:[B
+
+    invoke-static {v0}, Ljava/util/Arrays;->hashCode([B)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final o()Ltj7;
+    .locals 0
 
     return-object p0
 .end method
 
-.method public static values()[Luj7;
-    .locals 1
+.method public final s()Ltj7;
+    .locals 0
 
-    sget-object v0, Luj7;->c:[Luj7;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Luj7;
-
-    return-object v0
+    return-object p0
 .end method

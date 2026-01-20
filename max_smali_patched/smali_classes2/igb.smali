@@ -1,63 +1,67 @@
-.class public final Ligb;
+.class public abstract Ligb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final a:I
 
-.field public final b:Z
+.field public static final b:I
 
-.field public final c:Ljava/lang/String;
+.field public static final c:I
 
-.field public final d:Ljava/lang/String;
+.field public static final d:I
 
-.field public final e:Ljava/lang/Integer;
+.field public static final e:I
 
-.field public final f:Z
+.field public static final f:I
 
-.field public final g:Z
+.field public static final g:I
 
-.field public final h:Z
+.field public static final h:I
 
-.field public final i:Z
-
-.field public final j:Z
-
-.field public final k:Z
-
-.field public final l:Ljava/lang/String;
+.field public static final i:I
 
 
 # direct methods
-.method public constructor <init>(ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ZZZZZZLjava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lh9d;->qrscanner_allow_permission:I
 
-    iput-boolean p1, p0, Ligb;->a:Z
+    sput v0, Ligb;->a:I
 
-    iput-boolean p2, p0, Ligb;->b:Z
+    sget v0, Lh9d;->qrscanner_blackout_view:I
 
-    iput-object p3, p0, Ligb;->c:Ljava/lang/String;
+    sput v0, Ligb;->b:I
 
-    iput-object p4, p0, Ligb;->d:Ljava/lang/String;
+    sget v0, Lh9d;->qrscanner_camera_preview:I
 
-    iput-object p5, p0, Ligb;->e:Ljava/lang/Integer;
+    sput v0, Ligb;->c:I
 
-    iput-boolean p6, p0, Ligb;->f:Z
+    sget v0, Lh9d;->qrscanner_gallery_button_image:I
 
-    iput-boolean p7, p0, Ligb;->g:Z
+    sput v0, Ligb;->d:I
 
-    iput-boolean p8, p0, Ligb;->h:Z
+    sget v0, Lh9d;->qrscanner_hint_view:I
 
-    iput-boolean p9, p0, Ligb;->i:Z
+    sput v0, Ligb;->e:I
 
-    iput-boolean p10, p0, Ligb;->j:Z
+    sget v0, Lh9d;->qrscanner_not_allow_permission:I
 
-    iput-boolean p11, p0, Ligb;->k:Z
+    sput v0, Ligb;->f:I
 
-    iput-object p12, p0, Ligb;->l:Ljava/lang/String;
+    sget v0, Lh9d;->qrscanner_overlay_view:I
+
+    sput v0, Ligb;->g:I
+
+    sget v0, Lh9d;->qrscanner_toolbar:I
+
+    sput v0, Ligb;->h:I
+
+    sget v0, Lh9d;->qrscanner_torch_button_image:I
+
+    sput v0, Ligb;->i:I
 
     return-void
 .end method

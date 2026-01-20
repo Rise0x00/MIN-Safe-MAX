@@ -1,61 +1,31 @@
 .class public final Liw4;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lez5;
 
 
 # instance fields
-.field public final a:Lez5;
+.field public synthetic d:Ljava/lang/Object;
 
-.field public final b:Lej6;
-
-
-# direct methods
-.method public constructor <init>(Lez5;Lej6;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Liw4;->a:Lez5;
-
-    iput-object p2, p0, Liw4;->b:Lej6;
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lu7d;
+    iput-object p1, p0, Liw4;->d:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget p1, p0, Liw4;->o:I
 
-    sget-object v1, Lmha;->a:Lkotlinx/coroutines/internal/Symbol;
+    const/high16 v0, -0x80000000
 
-    iput-object v1, v0, Lu7d;->a:Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    new-instance v1, Ld40;
+    iput p1, p0, Liw4;->o:I
 
-    invoke-direct {v1, p0, v0, p1}, Ld40;-><init>(Liw4;Lu7d;Lgz5;)V
+    invoke-static {p0}, Lumj;->a(Lo84;)V
 
-    iget-object p1, p0, Liw4;->a:Lez5;
-
-    invoke-interface {p1, v1, p2}, Lez5;->d(Lgz5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p2, Lh54;->a:Lh54;
-
-    if-ne p1, p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lac4;->a:Lac4;
 
     return-object p1
 .end method

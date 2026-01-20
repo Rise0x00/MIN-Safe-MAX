@@ -1,429 +1,296 @@
 .class public final Lun1;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lhj7;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic X:Lone/me/calls/ui/ui/call/CallScreen;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lun1;->X:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iput-boolean p1, p0, Lun1;->a:Z
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lt0d;)Lldd;
-    .locals 13
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p1, Lt0d;->h:Ljava/lang/Object;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Le2e;
+    invoke-virtual {p0, p1, p2}, Lun1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p1, p1, Lt0d;->i:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast p1, Lxbd;
+    check-cast p1, Lun1;
 
-    iget-object v1, p1, Lxbd;->e:Lb1i;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {p1, p2}, Lun1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide v2
+    return-object p2
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iget-object v4, v0, Le2e;->b:Ljava/lang/Object;
+    new-instance v0, Lun1;
 
-    check-cast v4, Lo0d;
+    iget-object v1, p0, Lun1;->X:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iget-object v5, v0, Le2e;->a:Ljava/lang/Object;
+    invoke-direct {v0, p2, v1}, Lun1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/ui/call/CallScreen;)V
 
-    check-cast v5, Ls0d;
+    iput-object p1, v0, Lun1;->o:Ljava/lang/Object;
 
-    iget-object v6, v0, Le2e;->d:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    check-cast v6, Lbg5;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    :try_start_0
-    invoke-interface {v6, p1}, Lbg5;->g(Lxbd;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+    iget-object v0, p0, Lun1;->X:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iget-object v7, p1, Lxbd;->c:Ljava/lang/String;
+    iget-object v1, v0, Lone/me/calls/ui/ui/call/CallScreen;->F0:Ljld;
 
-    invoke-static {v7}, Ljzh;->e(Ljava/lang/String;)Z
+    iget-object v2, p0, Lun1;->o:Ljava/lang/Object;
 
-    move-result v7
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    const/4 v8, 0x1
+    check-cast v2, Lu71;
 
-    const/4 v9, 0x0
+    sget-object p1, Lt71;->a:Lt71;
 
-    const/4 v10, 0x0
+    invoke-static {v2, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v7, :cond_3
+    move-result p1
 
-    if-eqz v1, :cond_3
+    const/4 v3, 0x0
 
-    const-string v7, "Expect"
+    if-eqz p1, :cond_0
 
-    iget-object v11, p1, Lxbd;->d:Lox6;
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
 
-    invoke-virtual {v11, v7}, Lox6;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v3}, Lone/me/calls/ui/ui/call/CallScreen;->D0(Z)V
 
-    move-result-object v7
+    goto/16 :goto_1
 
-    const-string v11, "100-continue"
+    :cond_0
+    instance-of p1, v2, Ls71;
 
-    invoke-virtual {v11, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    if-eqz p1, :cond_7
 
-    move-result v7
+    check-cast v2, Ls71;
 
-    if-eqz v7, :cond_0
+    iget-object p1, v2, Ls71;->a:Lov1;
 
-    :try_start_1
-    invoke-interface {v6}, Lbg5;->h()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    sget-object v2, Lone/me/calls/ui/ui/call/CallScreen;->P0:Lv1j;
 
-    invoke-virtual {v0, v8}, Le2e;->E(Z)Lkdd;
+    iget-object v2, v0, Lone/me/calls/ui/ui/call/CallScreen;->D0:Ljld;
 
-    move-result-object v7
+    sget-object v4, Lone/me/calls/ui/ui/call/CallScreen;->Q0:[Lz28;
+
+    const/4 v5, 0x6
+
+    aget-object v5, v4, v5
+
+    invoke-interface {v2, v0, v5}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lmp1;
+
+    invoke-virtual {v2, p1}, Lmp1;->z(Lov1;)V
+
+    iget-boolean p1, p1, Lov1;->g:Z
+
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lrb3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lrb3;->a:Lw4e;
+
+    invoke-static {p1}, Lvmj;->b(Lw4e;)La94;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
 
     goto :goto_0
 
-    :catch_0
-    move-exception p1
-
-    invoke-virtual {v0, p1}, Le2e;->I(Ljava/io/IOException;)V
-
-    throw p1
-
-    :cond_0
-    move-object v7, v10
+    :cond_1
+    move-object p1, v2
 
     :goto_0
-    if-nez v7, :cond_1
+    if-eqz p1, :cond_6
 
-    iget-object v4, p1, Lxbd;->e:Lb1i;
+    invoke-virtual {p1}, La94;->getRouter()Lw4e;
 
-    invoke-virtual {v4}, Lb1i;->c()J
+    move-result-object v0
 
-    move-result-wide v11
+    invoke-virtual {v0, p1}, Lw4e;->B(La94;)Z
 
-    invoke-interface {v6, p1, v11, v12}, Lbg5;->c(Lxbd;J)Ljse;
+    iget-object v0, p1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->a:Lwq;
 
-    move-result-object v4
+    if-eqz v0, :cond_2
 
-    new-instance v8, Lzf5;
+    iget-object v1, v0, Lwq;->b:Ljava/lang/Object;
 
-    invoke-direct {v8, v0, v4, v11, v12}, Lzf5;-><init>(Le2e;Ljse;J)V
+    check-cast v1, Lone/me/calls/ui/ui/call/CallScreen;
 
-    new-instance v4, Lk0d;
+    iget-object v0, v0, Lwq;->c:Ljava/lang/Object;
 
-    invoke-direct {v4, v8}, Lk0d;-><init>(Ljse;)V
+    check-cast v0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
 
-    invoke-virtual {v1, v4}, Lb1i;->i(Lkv0;)V
+    invoke-virtual {v1}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Lca4;
 
-    invoke-virtual {v4}, Lk0d;->close()V
+    move-result-object v3
 
-    goto :goto_1
+    iget-object v3, v3, Lca4;->a:Ljava/util/LinkedHashSet;
 
-    :cond_1
-    invoke-virtual {v4, v0, v8, v9, v10}, Lo0d;->i(Le2e;ZZLjava/io/IOException;)Ljava/io/IOException;
+    invoke-interface {v3, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v1, v5, Ls0d;->f:Ld47;
+    invoke-virtual {v1}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lrb3;
 
-    if-eqz v1, :cond_2
+    move-result-object v0
 
-    goto :goto_1
+    invoke-virtual {v0}, Lrb3;->a()V
 
     :cond_2
-    invoke-interface {v6}, Lbg5;->f()Ls0d;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ls0d;->k()V
+    iput-object v2, p1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->a:Lwq;
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v4, v0, v8, v9, v10}, Lo0d;->i(Le2e;ZZLjava/io/IOException;)Ljava/io/IOException;
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lrb3;
 
-    move-object v7, v10
+    move-result-object p1
 
-    :goto_1
-    :try_start_2
-    invoke-interface {v6}, Lbg5;->b()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+    iget-object p1, p1, Lrb3;->a:Lw4e;
 
-    if-nez v7, :cond_4
+    invoke-static {p1}, Lvmj;->b(Lw4e;)La94;
 
-    invoke-virtual {v0, v9}, Le2e;->E(Z)Lkdd;
+    move-result-object p1
 
-    move-result-object v7
+    if-eqz p1, :cond_5
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lrb3;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lrb3;->a:Lw4e;
+
+    invoke-static {p1}, Lvmj;->b(Lw4e;)La94;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
+
+    if-eqz v1, :cond_4
+
+    move-object v2, p1
+
+    check-cast v2, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
 
     :cond_4
-    iput-object p1, v7, Lkdd;->a:Lxbd;
+    if-eqz v2, :cond_6
 
-    iget-object v1, v5, Ls0d;->d:Lkw6;
+    invoke-virtual {v0, v2}, Lone/me/calls/ui/ui/call/CallScreen;->B0(Lone/me/calls/ui/ui/call/panels/CallEventsWidget;)V
 
-    iput-object v1, v7, Lkdd;->e:Lkw6;
-
-    iput-wide v2, v7, Lkdd;->k:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v11
-
-    iput-wide v11, v7, Lkdd;->l:J
-
-    invoke-virtual {v7}, Lkdd;->a()Lldd;
-
-    move-result-object v1
-
-    iget v4, v1, Lldd;->d:I
-
-    const/16 v7, 0x64
-
-    if-ne v4, v7, :cond_5
-
-    invoke-virtual {v0, v9}, Le2e;->E(Z)Lkdd;
-
-    move-result-object v1
-
-    iput-object p1, v1, Lkdd;->a:Lxbd;
-
-    iget-object p1, v5, Ls0d;->d:Lkw6;
-
-    iput-object p1, v1, Lkdd;->e:Lkw6;
-
-    iput-wide v2, v1, Lkdd;->k:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    iput-wide v2, v1, Lkdd;->l:J
-
-    invoke-virtual {v1}, Lkdd;->a()Lldd;
-
-    move-result-object v1
-
-    iget v4, v1, Lldd;->d:I
+    goto :goto_1
 
     :cond_5
-    iget-boolean p1, p0, Lun1;->a:Z
+    const/16 p1, 0x8
 
-    if-eqz p1, :cond_6
+    aget-object v5, v4, p1
 
-    const/16 p1, 0x65
+    invoke-interface {v1, v0, v5}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
-    if-ne v4, p1, :cond_6
+    move-result-object v5
 
-    invoke-virtual {v1}, Lldd;->w()Lkdd;
+    check-cast v5, Landroid/widget/FrameLayout;
 
-    move-result-object p1
+    invoke-virtual {v5, v3}, Landroid/view/View;->setVisibility(I)V
 
-    sget-object v0, Lkig;->c:Lmdd;
+    aget-object p1, v4, p1
 
-    iput-object v0, p1, Lkdd;->g:Lndd;
-
-    invoke-virtual {p1}, Lkdd;->a()Lldd;
+    invoke-interface {v1, v0, p1}, Ljld;->E(Ljava/lang/Object;Lz28;)Ljava/lang/Object;
 
     move-result-object p1
 
-    goto :goto_3
+    check-cast p1, Landroid/widget/FrameLayout;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationY(F)V
+
+    invoke-virtual {v0}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lrb3;
+
+    move-result-object p1
+
+    iget-object v1, p1, Lrb3;->a:Lw4e;
+
+    invoke-virtual {p1}, Lrb3;->b()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v4, "call_events_widget_tag"
+
+    invoke-static {p1, v4}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_6
+
+    invoke-virtual {v1, v3}, Lw4e;->R(Z)V
+
+    new-instance p1, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
+
+    iget-object v3, v0, Lone/me/calls/ui/ui/call/CallScreen;->t0:Ljava/lang/String;
+
+    invoke-direct {p1, v3, v2}, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;-><init>(Ljava/lang/String;Lso4;)V
+
+    invoke-virtual {v0, p1}, Lone/me/calls/ui/ui/call/CallScreen;->B0(Lone/me/calls/ui/ui/call/panels/CallEventsWidget;)V
+
+    invoke-static {p1, v2, v2}, Lwmj;->a(La94;Lih;Lih;)Lz4e;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v4}, Lz4e;->e(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Lw4e;->S(Lz4e;)V
 
     :cond_6
-    invoke-virtual {v1}, Lldd;->w()Lkdd;
+    :goto_1
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    move-result-object p1
-
-    :try_start_3
-    const-string v2, "Content-Type"
-
-    iget-object v3, v1, Lldd;->X:Lox6;
-
-    invoke-virtual {v3, v2}, Lox6;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_7
-
-    goto :goto_2
-
-    :cond_7
-    move-object v2, v10
-
-    :goto_2
-    invoke-interface {v6, v1}, Lbg5;->d(Lldd;)J
-
-    move-result-wide v7
-
-    invoke-interface {v6, v1}, Lbg5;->a(Lldd;)Lfve;
-
-    move-result-object v1
-
-    new-instance v3, Lag5;
-
-    invoke-direct {v3, v0, v1, v7, v8}, Lag5;-><init>(Le2e;Lfve;J)V
-
-    new-instance v1, Lu0d;
-
-    new-instance v5, Ll0d;
-
-    invoke-direct {v5, v3}, Ll0d;-><init>(Lfve;)V
-
-    invoke-direct {v1, v2, v7, v8, v5}, Lu0d;-><init>(Ljava/lang/String;JLl0d;)V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
-
-    iput-object v1, p1, Lkdd;->g:Lndd;
-
-    invoke-virtual {p1}, Lkdd;->a()Lldd;
-
-    move-result-object p1
-
-    :goto_3
-    iget-object v0, p1, Lldd;->Y:Lndd;
-
-    iget-object v1, p1, Lldd;->a:Lxbd;
-
-    iget-object v1, v1, Lxbd;->d:Lox6;
-
-    const-string v2, "Connection"
-
-    invoke-virtual {v1, v2}, Lox6;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "close"
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_9
-
-    iget-object v1, p1, Lldd;->X:Lox6;
-
-    invoke-virtual {v1, v2}, Lox6;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_8
-
-    goto :goto_4
-
-    :cond_8
-    move-object v1, v10
-
-    :goto_4
-    invoke-virtual {v3, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    :cond_9
-    invoke-interface {v6}, Lbg5;->f()Ls0d;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ls0d;->k()V
-
-    :cond_a
-    const/16 v1, 0xcc
-
-    if-eq v4, v1, :cond_b
-
-    const/16 v1, 0xcd
-
-    if-ne v4, v1, :cond_e
-
-    :cond_b
-    if-eqz v0, :cond_c
-
-    invoke-virtual {v0}, Lndd;->w()J
-
-    move-result-wide v1
-
-    goto :goto_5
-
-    :cond_c
-    const-wide/16 v1, -0x1
-
-    :goto_5
-    const-wide/16 v5, 0x0
-
-    cmp-long v1, v1, v5
-
-    if-lez v1, :cond_e
-
-    new-instance p1, Ljava/net/ProtocolException;
-
-    const-string v1, "HTTP "
-
-    const-string v2, " had non-zero Content-Length: "
-
-    invoke-static {v4, v1, v2}, Lok7;->m(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_d
-
-    invoke-virtual {v0}, Lndd;->w()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v10
-
-    :cond_d
-    invoke-virtual {v1, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/net/ProtocolException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_e
     return-object p1
 
-    :catch_1
-    move-exception p1
+    :cond_7
+    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-virtual {v0, p1}, Le2e;->I(Ljava/io/IOException;)V
-
-    throw p1
-
-    :catch_2
-    move-exception p1
-
-    invoke-virtual {v0, p1}, Le2e;->I(Ljava/io/IOException;)V
-
-    throw p1
-
-    :catch_3
-    move-exception p1
-
-    invoke-virtual {v0, p1}, Le2e;->I(Ljava/io/IOException;)V
+    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p1
 .end method

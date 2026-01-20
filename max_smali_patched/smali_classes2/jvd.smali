@@ -1,34 +1,21 @@
-.class public abstract Ljvd;
+.class public final Ljvd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Li28;
-
-
-# instance fields
-.field public final a:I
-
-.field public final b:Ljava/util/List;
-
 
 # direct methods
-.method public constructor <init>(ILjava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Liyc;
 
-    iput p1, p0, Ljvd;->a:I
+    sget-object v0, Lctd;->a:Ldtd;
 
-    iput-object p2, p0, Ljvd;->b:Ljava/util/List;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Liyc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract l(Ljvd;)Z
-.end method
-
-.method public abstract n(Ljvd;)Z
 .end method

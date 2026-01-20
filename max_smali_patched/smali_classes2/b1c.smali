@@ -1,102 +1,224 @@
 .class public final Lb1c;
-.super Li94;
+.super Licg;
 .source "SourceFile"
 
 
 # instance fields
-.field public v0:Ljava/util/List;
+.field public X:I
+
+.field public c:Ljava/lang/String;
+
+.field public d:Lc14;
+
+.field public o:Ljava/lang/Long;
+
+
+# direct methods
+.method public constructor <init>(Lpq9;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Licg;-><init>(Lpq9;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final E(Lyid;I)V
-    .locals 7
+.method public final d(Lpq9;Ljava/lang/String;)V
+    .locals 2
 
-    iget-object v0, p0, Lb1c;->v0:Ljava/util/List;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p2, v0}, Lab3;->D(ILjava/util/List;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lp0c;
-
-    if-nez p2, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance v1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
-
-    invoke-direct {v1, p2}, Lone/me/profile/screens/avatars/ProfileAvatarWidget;-><init>(Lp0c;)V
-
-    new-instance v0, Lbjd;
-
-    const/4 v5, 0x0
-
-    const/4 v6, -0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lbjd;-><init>(Lc24;Ljava/lang/String;Lh24;Lh24;ZI)V
-
-    invoke-virtual {p1, v0}, Lyid;->S(Lbjd;)V
-
-    return-void
-.end method
-
-.method public final j()I
-    .locals 1
-
-    iget-object v0, p0, Lb1c;->v0:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    return v0
-.end method
+    const/4 v1, -0x1
 
-.method public final k(I)J
-    .locals 2
+    sparse-switch v0, :sswitch_data_0
 
-    iget-object v0, p0, Lb1c;->v0:Ljava/util/List;
+    goto :goto_0
 
-    invoke-static {p1, v0}, Lab3;->D(ILjava/util/List;)Ljava/lang/Object;
+    :sswitch_0
+    const-string v0, "tokenType"
 
-    move-result-object p1
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    check-cast p1, Lp0c;
+    move-result p2
 
-    if-eqz p1, :cond_0
-
-    iget-wide v0, p1, Lp0c;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
+    if-nez p2, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/4 v1, 0x3
+
+    goto :goto_0
+
+    :sswitch_1
+    const-string v0, "token"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x2
+
+    goto :goto_0
+
+    :sswitch_2
+    const-string v0, "phone"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :sswitch_3
+    const-string v0, "profile"
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v1, 0x0
 
     :goto_0
-    if-eqz p1, :cond_1
+    packed-switch v1, :pswitch_data_0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p1}, Lpq9;->B()V
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lpqb;->v(Ljava/lang/String;)I
 
     move-result p1
 
-    goto :goto_1
+    iput p1, p0, Lb1c;->X:I
 
-    :cond_1
-    const/4 p1, 0x0
+    return-void
 
-    :goto_1
-    int-to-long v0, p1
+    :pswitch_1
+    invoke-static {p1}, Lcti;->q(Lpq9;)Ljava/lang/String;
 
-    return-wide v0
+    move-result-object p1
+
+    iput-object p1, p0, Lb1c;->c:Ljava/lang/String;
+
+    return-void
+
+    :pswitch_2
+    const-wide/16 v0, 0x0
+
+    invoke-static {p1, v0, v1}, Lcti;->n(Lpq9;J)J
+
+    move-result-wide p1
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb1c;->o:Ljava/lang/Long;
+
+    return-void
+
+    :pswitch_3
+    invoke-static {p1}, Lc14;->g(Lpq9;)Lc14;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lb1c;->d:Lc14;
+
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        -0x12717657 -> :sswitch_3
+        0x65b3d6e -> :sswitch_2
+        0x696b9f9 -> :sswitch_1
+        0x86f18d3 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    iget-object v0, p0, Lb1c;->c:Ljava/lang/String;
+
+    iget-object v1, p0, Lb1c;->d:Lc14;
+
+    iget-object v2, p0, Lb1c;->o:Ljava/lang/Long;
+
+    iget v3, p0, Lb1c;->X:I
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "{token=\'"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "\', profile="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", phone="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", tokenType="
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Lpqb;->s(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, "}"
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

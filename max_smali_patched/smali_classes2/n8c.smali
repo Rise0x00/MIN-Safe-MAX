@@ -1,79 +1,137 @@
 .class public final Ln8c;
-.super Lq8c;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ln8c;
+# instance fields
+.field public final a:Lo58;
+
+.field public final b:Lo58;
+
+.field public final c:Lo58;
+
+.field public final d:Lo58;
+
+.field public final e:Ln8g;
+
+.field public volatile f:Lo25;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lo58;Lo58;Lo58;Lo58;Ln8g;)V
+    .locals 0
 
-    new-instance v0, Ln8c;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ln8c;->a:Lo58;
 
-    sput-object v0, Ln8c;->a:Ln8c;
+    iput-object p2, p0, Ln8c;->b:Lo58;
+
+    iput-object p3, p0, Ln8c;->c:Lo58;
+
+    iput-object p4, p0, Ln8c;->d:Lo58;
+
+    iput-object p5, p0, Ln8c;->e:Ln8g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()V
+    .locals 5
 
-    const/4 v0, 0x1
+    const-string v0, "n8c"
 
-    if-ne p0, p1, :cond_0
+    const-string v1, "schedulePing"
 
-    return v0
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Ln8c;->f:Lo25;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lo25;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Ln8c;->f:Lo25;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lo25;->dispose()V
 
     :cond_0
-    instance-of p1, p1, Ln8c;
+    iget-object v0, p0, Ln8c;->e:Ln8g;
 
-    if-nez p1, :cond_1
+    invoke-virtual {v0}, Ln8g;->getValue()Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    move-result-object v0
 
-    return p1
+    check-cast v0, Lpbe;
 
-    :cond_1
-    return v0
+    invoke-virtual {v0}, Lpbe;->a()Lnbe;
+
+    move-result-object v0
+
+    new-instance v1, Lk9b;
+
+    const/4 v2, 0x6
+
+    invoke-direct {v1, v2, p0}, Lk9b;-><init>(ILjava/lang/Object;)V
+
+    const-wide/16 v2, 0x7148
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lnbe;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lo25;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ln8c;->f:Lo25;
+
+    return-void
 .end method
 
-.method public final getItemId()J
+.method public final b()V
     .locals 2
 
-    const/16 v0, 0x200
+    const-string v0, "n8c"
 
-    int-to-long v0, v0
+    const-string v1, "startInteractivePings"
 
-    return-wide v0
-.end method
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v0, p0, Ln8c;->c:Lo58;
 
-    const v0, 0x563d9696
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
 
-    return v0
-.end method
+    move-result-object v0
 
-.method public final m()I
-    .locals 1
+    check-cast v0, Lv3b;
 
-    const/16 v0, 0x200
+    invoke-virtual {v0}, Lv3b;->b()Z
 
-    return v0
-.end method
+    move-result v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+    if-eqz v0, :cond_0
 
-    const-string v0, "Empty"
+    iget-object v0, p0, Ln8c;->a:Lo58;
 
-    return-object v0
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lt2b;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lt2b;->A(Z)J
+
+    :cond_0
+    invoke-virtual {p0}, Ln8c;->a()V
+
+    return-void
 .end method

@@ -1,21 +1,19 @@
 .class public final Lvm7;
-.super Ls8a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public c:J
+.field public final a:Lum7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
-    .locals 2
+.method public constructor <init>(Lum7;)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Ls8a;-><init>(Ljava/util/concurrent/ThreadFactory;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lvm7;->c:J
+    iput-object p1, p0, Lvm7;->a:Lum7;
 
     return-void
 .end method

@@ -1,23 +1,11 @@
-.class public final Lir6;
+.class public interface abstract Lir6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/util/Collection;
-
-.field public final b:Lmbb;
+# interfaces
+.implements Lgr6;
 
 
-# direct methods
-.method public constructor <init>(Le28;Lmbb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lir6;->a:Ljava/util/Collection;
-
-    iput-object p2, p0, Lir6;->b:Lmbb;
-
-    return-void
+# virtual methods
+.method public abstract k(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Lha6;)Ljava/lang/Object;
 .end method

@@ -1,80 +1,153 @@
 .class public final Lqpi;
-.super Ljava/lang/Object;
+.super Lxj7;
 .source "SourceFile"
 
-# interfaces
-.implements Lzha;
 
+# instance fields
+.field public final synthetic d:I
 
-# static fields
-.field public static final a:Lqpi;
+.field public e:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lqpi;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput v0, p0, Lqpi;->d:I
 
-    sput-object v0, Lqpi;->a:Lqpi;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lz7i;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    iput-object v0, p0, Lxj7;->c:[Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
+    const/4 v0, 0x0
 
-    const-class v1, Lu8i;
+    iput-boolean v0, p0, Lxj7;->a:Z
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
+    iput v0, p0, Lxj7;->b:I
 
-    move-result-object v0
+    return-void
+.end method
 
-    const/4 v2, 0x2
+.method public constructor <init>(Ldu0;[Lvx5;ZI)V
+    .locals 1
 
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iput v0, p0, Lqpi;->d:I
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
+    .line 2
+    iput-object p1, p0, Lqpi;->e:Ljava/lang/Object;
 
-    move-result-object v0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x3
+    iput-object p2, p0, Lxj7;->c:[Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
+    const/4 p1, 0x0
 
-    move-result-object v0
+    if-eqz p2, :cond_0
 
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
+    if-eqz p3, :cond_0
 
-    move-result-object v0
+    const/4 p1, 0x1
 
-    const/4 v2, 0x4
+    :cond_0
+    iput-boolean p1, p0, Lxj7;->a:Z
 
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    iput p4, p0, Lxj7;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final f(Lhl;Lieg;)V
+    .locals 3
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lqpi;->d:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lc6j;
+
+    iput-object p2, p0, Lqpi;->e:Ljava/lang/Object;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
 
     move-result-object p1
 
+    check-cast p1, Le0j;
+
+    new-instance p2, Lpcj;
+
+    invoke-direct {p2, p0}, Lpcj;-><init>(Lqpi;)V
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const-string v1, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverApiService"
+
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    sget v1, Levi;->a:I
+
+    invoke-virtual {v0, p2}, Landroid/os/Parcel;->writeStrongBinder(Landroid/os/IBinder;)V
+
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object p2
+
+    :try_start_0
+    iget-object p1, p1, Le0j;->c:Landroid/os/IBinder;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v1, v0, p2, v2}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readException()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->recycle()V
+
     throw p1
+
+    :pswitch_0
+    iget-object v0, p0, Lqpi;->e:Ljava/lang/Object;
+
+    check-cast v0, Ldu0;
+
+    iget-object v0, v0, Ldu0;->d:Ljava/lang/Object;
+
+    check-cast v0, Lqud;
+
+    invoke-interface {v0, p1, p2}, Lqud;->accept(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

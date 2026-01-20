@@ -1,49 +1,85 @@
-.class public final Lsib;
-.super Lp14;
+.class public abstract Lsib;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:I
 
-.field public synthetic d:Ljava/lang/Object;
+.field public static final b:I
 
-.field public final synthetic o:Ltib;
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
 
 
 # direct methods
-.method public constructor <init>(Ltib;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lsib;->o:Ltib;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lsib;->d:Ljava/lang/Object;
+    sget v0, Lsed;->oneme_settings_ringtone_custom_section_add:I
 
-    iget p1, p0, Lsib;->X:I
+    sput v0, Lsib;->a:I
 
-    const/high16 v0, -0x80000000
+    sget v0, Lsed;->oneme_settings_ringtone_custom_section_bottom:I
 
-    or-int/2addr p1, v0
+    sput v0, Lsib;->b:I
 
-    iput p1, p0, Lsib;->X:I
+    sget v0, Lsed;->oneme_settings_ringtone_custom_section_bottom_full:I
 
-    iget-object p1, p0, Lsib;->o:Ltib;
+    sput v0, Lsib;->c:I
 
-    const/4 v0, 0x0
+    sget v0, Lsed;->oneme_settings_ringtone_custom_section_header:I
 
-    invoke-static {p1, v0, p0}, Ltib;->k(Ltib;Lgz5;Lkotlin/coroutines/Continuation;)V
+    sput v0, Lsib;->d:I
 
-    sget-object p1, Lh54;->a:Lh54;
+    sget v0, Lsed;->oneme_settings_ringtone_custom_section_wrong_duration:I
 
-    return-object p1
+    sput v0, Lsib;->e:I
+
+    sget v0, Lsed;->oneme_settings_ringtone_custom_section_wrong_format:I
+
+    sput v0, Lsib;->f:I
+
+    sget v0, Lsed;->oneme_settings_ringtone_custom_section_wrong_size:I
+
+    sput v0, Lsib;->g:I
+
+    sget v0, Lsed;->oneme_settings_ringtone_default_section:I
+
+    sput v0, Lsib;->h:I
+
+    sget v0, Lsed;->oneme_settings_ringtone_low_volume_level:I
+
+    sput v0, Lsib;->i:I
+
+    sget v0, Lsed;->oneme_settings_ringtone_system_section:I
+
+    sput v0, Lsib;->j:I
+
+    sget v0, Lsed;->oneme_settings_ringtone_system_title:I
+
+    sput v0, Lsib;->k:I
+
+    sget v0, Lsed;->oneme_settings_ringtone_title:I
+
+    sput v0, Lsib;->l:I
+
+    return-void
 .end method

@@ -1,159 +1,226 @@
 .class public final Le51;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lf51;
+.implements Lfr6;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Z
 
-.field public final b:Z
+.field public synthetic Y:Z
 
-.field public final c:Z
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>(JZZ)V
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Le51;->o:I
 
-    iput-wide p1, p0, Le51;->a:J
-
-    iput-boolean p3, p0, Le51;->b:Z
-
-    iput-boolean p4, p0, Le51;->c:Z
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-boolean v0, p0, Le51;->b:Z
+    iget v0, p0, Le51;->o:I
 
-    return v0
-.end method
+    check-cast p1, Ljava/lang/Boolean;
 
-.method public final b()Z
-    .locals 1
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget-boolean v0, p0, Le51;->c:Z
+    move-result p1
 
-    return v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    check-cast p2, Lrr9;
 
-    const/4 v0, 0x1
+    check-cast p3, Ljava/lang/Boolean;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return v0
+    move-result p3
 
-    :cond_0
-    instance-of v1, p1, Le51;
+    check-cast p4, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Le51;
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v1, p4, v2}, Le51;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-boolean p1, v0, Le51;->X:Z
+
+    iput-object p2, v0, Le51;->Z:Ljava/lang/Object;
+
+    iput-boolean p3, v0, Le51;->Y:Z
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    invoke-virtual {v0, p1}, Le51;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_0
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    check-cast p3, Lca;
+
+    check-cast p4, Lkotlin/coroutines/Continuation;
+
+    new-instance v0, Le51;
+
+    const/4 v1, 0x4
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, v1, p4, v2}, Le51;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    return v2
+    iput-boolean p1, v0, Le51;->X:Z
 
-    :cond_1
-    check-cast p1, Le51;
+    iput-boolean p2, v0, Le51;->Y:Z
 
-    iget-wide v3, p0, Le51;->a:J
+    iput-object p3, v0, Le51;->Z:Ljava/lang/Object;
 
-    iget-wide v5, p1, Le51;->a:J
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    cmp-long v1, v3, v5
+    invoke-virtual {v0, p1}, Le51;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v1, :cond_2
+    move-result-object p1
 
-    return v2
+    return-object p1
 
-    :cond_2
-    iget-boolean v1, p0, Le51;->b:Z
+    nop
 
-    iget-boolean v3, p1, Le51;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean v1, p0, Le51;->c:Z
-
-    iget-boolean p1, p1, Le51;->c:Z
-
-    if-eq v1, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget-wide v0, p0, Le51;->a:J
+    iget v0, p0, Le51;->o:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-boolean v0, p0, Le51;->X:Z
 
-    const/16 v1, 0x1f
+    iget-object v1, p0, Le51;->Z:Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    check-cast v1, Lrr9;
 
-    iget-boolean v2, p0, Le51;->b:Z
+    iget-boolean v2, p0, Le51;->Y:Z
 
-    invoke-static {v0, v1, v2}, Lo3h;->d(IIZ)I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result v0
+    const/4 p1, 0x0
 
-    iget-boolean v1, p0, Le51;->c:Z
+    const/4 v3, 0x1
 
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
+    if-eqz v1, :cond_1
+
+    iget-object v1, v1, Lrr9;->b:Landroid/view/MotionEvent;
+
+    invoke-virtual {v1}, Landroid/view/MotionEvent;->getAction()I
+
+    move-result v4
+
+    const/4 v5, 0x3
+
+    if-eq v4, v5, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
-    add-int/2addr v1, v0
+    if-ne v1, v3, :cond_0
 
-    return v1
-.end method
+    goto :goto_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+    :cond_0
+    move v1, p1
 
-    const-string v0, "User(userId="
+    goto :goto_1
 
-    const-string v1, ", isVideoEnabled="
+    :cond_1
+    :goto_0
+    move v1, v3
 
-    iget-wide v2, p0, Le51;->a:J
+    :goto_1
+    if-nez v0, :cond_2
 
-    iget-boolean v4, p0, Le51;->b:Z
+    if-nez v2, :cond_2
 
-    invoke-static {v2, v3, v0, v1, v4}, Lcd0;->j(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_2
 
-    move-result-object v0
+    move p1, v3
 
-    const-string v1, ", isAudioEnabled="
+    :cond_2
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const-string v2, ")"
+    move-result-object p1
 
-    iget-boolean v3, p0, Le51;->c:Z
+    return-object p1
 
-    invoke-static {v0, v1, v3, v2}, Lpa9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    :pswitch_0
+    iget-boolean v0, p0, Le51;->X:Z
 
-    move-result-object v0
+    iget-boolean v1, p0, Le51;->Y:Z
 
-    return-object v0
+    iget-object v2, p0, Le51;->Z:Ljava/lang/Object;
+
+    check-cast v2, Lca;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-boolean p1, v2, Lca;->a:Z
+
+    const/4 v3, 0x0
+
+    if-nez p1, :cond_3
+
+    iget-boolean p1, v2, Lca;->c:Z
+
+    if-nez p1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    if-eqz v0, :cond_4
+
+    if-eqz v1, :cond_4
+
+    const/4 v3, 0x1
+
+    :cond_4
+    :goto_2
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

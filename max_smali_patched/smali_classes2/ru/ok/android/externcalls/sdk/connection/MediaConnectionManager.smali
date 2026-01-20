@@ -13,7 +13,7 @@
         "",
         "Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener;",
         "listener",
-        "Lybg;",
+        "Lb3h;",
         "addListener",
         "(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener;)V",
         "removeListener",

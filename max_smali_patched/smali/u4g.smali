@@ -1,47 +1,53 @@
-.class public final Lu4g;
-.super Ls4g;
+.class public interface abstract Lu4g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final d:Ldjb;
-
-
-# direct methods
-.method public constructor <init>(Ldjb;)V
-    .locals 0
-
-    invoke-direct {p0}, Ls4g;-><init>()V
-
-    iput-object p1, p0, Lu4g;->d:Ldjb;
-
-    return-void
-.end method
+# interfaces
+.implements Landroid/view/MenuItem;
 
 
 # virtual methods
-.method public final next()Ljava/lang/Object;
-    .locals 4
+.method public abstract a(Le7;)Lu4g;
+.end method
 
-    iget v0, p0, Ls4g;->c:I
+.method public abstract e()Le7;
+.end method
 
-    add-int/lit8 v1, v0, 0x2
+.method public abstract getAlphabeticModifiers()I
+.end method
 
-    iput v1, p0, Ls4g;->c:I
+.method public abstract getContentDescription()Ljava/lang/CharSequence;
+.end method
 
-    new-instance v1, Lp0a;
+.method public abstract getIconTintList()Landroid/content/res/ColorStateList;
+.end method
 
-    iget-object v2, p0, Ls4g;->a:[Ljava/lang/Object;
+.method public abstract getIconTintMode()Landroid/graphics/PorterDuff$Mode;
+.end method
 
-    aget-object v3, v2, v0
+.method public abstract getNumericModifiers()I
+.end method
 
-    add-int/lit8 v0, v0, 0x1
+.method public abstract getTooltipText()Ljava/lang/CharSequence;
+.end method
 
-    aget-object v0, v2, v0
+.method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
+.end method
 
-    iget-object v2, p0, Lu4g;->d:Ldjb;
+.method public abstract setContentDescription(Ljava/lang/CharSequence;)Lu4g;
+.end method
 
-    invoke-direct {v1, v2, v3, v0}, Lp0a;-><init>(Ldjb;Ljava/lang/Object;Ljava/lang/Object;)V
+.method public abstract setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
+.end method
 
-    return-object v1
+.method public abstract setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setNumericShortcut(CI)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setShortcut(CCII)Landroid/view/MenuItem;
+.end method
+
+.method public abstract setTooltipText(Ljava/lang/CharSequence;)Lu4g;
 .end method

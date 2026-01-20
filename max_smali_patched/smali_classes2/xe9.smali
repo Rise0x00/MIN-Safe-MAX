@@ -1,122 +1,115 @@
 .class public final Lxe9;
-.super Ljava/lang/Object;
+.super Lnth;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:I
+.field public final X:Lcm5;
 
-.field public final b:I
+.field public final Y:Lo58;
+
+.field public final Z:Lo58;
+
+.field public final b:Lve9;
+
+.field public final c:J
+
+.field public final d:Landroid/content/Context;
+
+.field public final o:Lspf;
+
+.field public final t0:Lo58;
+
+.field public final u0:Lo58;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lxe9;->a:I
-
-    iput p2, p0, Lxe9;->b:I
-
-    return-void
-.end method
-
-.method public static a(Ljf9;)Lxe9;
-    .locals 6
-
-    invoke-static {p0}, Le0i;->r(Ljf9;)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    move v3, v2
-
-    :goto_0
-    if-ge v1, v0, :cond_3
-
-    invoke-virtual {p0}, Ljf9;->u0()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v5, "views"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_2
-
-    const-string v5, "forwards"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {p0}, Ljf9;->v()V
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Ljf9;->q0()I
-
-    move-result v3
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0}, Ljf9;->q0()I
-
-    move-result v2
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p0, Lxe9;
-
-    invoke-direct {p0, v2, v3}, Lxe9;-><init>(II)V
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
+.method public constructor <init>(Lve9;J)V
     .locals 5
 
-    const-string v0, ", forwards="
+    sget-object v0, Ley2;->a:Ley2;
 
-    const-string v1, "}"
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
-    const-string v2, "{views="
+    move-result-object v1
 
-    iget v3, p0, Lxe9;->a:I
+    const/16 v2, 0x11
 
-    iget v4, p0, Lxe9;->b:I
+    invoke-virtual {v1, v2}, Lr5;->c(I)Ljava/lang/Object;
 
-    invoke-static {v2, v3, v0, v4, v1}, Lox1;->h(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    move-result-object v1
+
+    check-cast v1, Landroid/content/Context;
+
+    sget-object v2, Ldy2;->a:Lo58;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v2
+
+    const/16 v3, 0x34
+
+    invoke-virtual {v2, v3}, Lr5;->d(I)Ln8g;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
+
+    move-result-object v3
+
+    const/16 v4, 0x77
+
+    invoke-virtual {v3, v4}, Lr5;->d(I)Ln8g;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lr5;
 
     move-result-object v0
 
-    return-object v0
+    const/16 v4, 0xc
+
+    invoke-virtual {v0, v4}, Lr5;->d(I)Ln8g;
+
+    move-result-object v0
+
+    invoke-static {}, Ldy2;->a()Lo58;
+
+    move-result-object v4
+
+    invoke-direct {p0}, Lnth;-><init>()V
+
+    iput-object p1, p0, Lxe9;->b:Lve9;
+
+    iput-wide p2, p0, Lxe9;->c:J
+
+    iput-object v1, p0, Lxe9;->d:Landroid/content/Context;
+
+    new-instance p1, Lef9;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxe9;->o:Lspf;
+
+    new-instance p1, Lcm5;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lcm5;-><init>(I)V
+
+    iput-object p1, p0, Lxe9;->X:Lcm5;
+
+    iput-object v2, p0, Lxe9;->Y:Lo58;
+
+    iput-object v3, p0, Lxe9;->Z:Lo58;
+
+    iput-object v0, p0, Lxe9;->t0:Lo58;
+
+    iput-object v4, p0, Lxe9;->u0:Lo58;
+
+    return-void
 .end method

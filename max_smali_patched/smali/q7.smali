@@ -3,51 +3,43 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ljava/lang/Object;
+# direct methods
+.method public static a(Landroid/app/Activity;)V
+    .locals 0
 
-.field public b:Z
+    invoke-virtual {p0}, Landroid/app/Activity;->finishAfterTransition()V
 
-
-# virtual methods
-.method public abstract a()V
+    return-void
 .end method
 
-.method public abstract b()Landroid/view/View;
+.method public static b(Landroid/app/Activity;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->postponeEnterTransition()V
+
+    return-void
 .end method
 
-.method public abstract c()Li89;
+.method public static c(Landroid/app/Activity;Landroid/app/SharedElementCallback;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setEnterSharedElementCallback(Landroid/app/SharedElementCallback;)V
+
+    return-void
 .end method
 
-.method public abstract d()Landroid/view/MenuInflater;
+.method public static d(Landroid/app/Activity;Landroid/app/SharedElementCallback;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/app/Activity;->setExitSharedElementCallback(Landroid/app/SharedElementCallback;)V
+
+    return-void
 .end method
 
-.method public abstract e()Ljava/lang/CharSequence;
-.end method
+.method public static e(Landroid/app/Activity;)V
+    .locals 0
 
-.method public abstract f()Ljava/lang/CharSequence;
-.end method
+    invoke-virtual {p0}, Landroid/app/Activity;->startPostponedEnterTransition()V
 
-.method public abstract g()V
-.end method
-
-.method public abstract i()Z
-.end method
-
-.method public abstract j(Landroid/view/View;)V
-.end method
-
-.method public abstract k(I)V
-.end method
-
-.method public abstract l(Ljava/lang/CharSequence;)V
-.end method
-
-.method public abstract m(I)V
-.end method
-
-.method public abstract n(Ljava/lang/CharSequence;)V
-.end method
-
-.method public abstract o(Z)V
+    return-void
 .end method

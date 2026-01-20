@@ -1,184 +1,60 @@
-.class public abstract Lpzi;
+.class public final Lpzi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lpzi;
+
 
 # direct methods
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    new-instance v0, Lpzi;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
+    sput-object v0, Lpzi;->a:Lpzi;
 
-    move-result-object v0
+    new-instance v0, Lbri;
 
-    invoke-virtual {p0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
 
-    invoke-virtual {v1}, Landroid/net/Uri$Builder;->clearQuery()Landroid/net/Uri$Builder;
+    const-class v1, Lpri;
 
-    move-result-object v1
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v2, 0x2
 
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    const-string v3, "token"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const-string v3, "<HIDDEN>"
-
-    invoke-virtual {v1, v2, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
-
-    const-string v0, "conversation"
-
-    const-string v1, "endpoint"
-
-    const-string v2, "joinLink"
-
-    :try_start_0
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v4
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const-string v5, "<HIDDEN>"
-
-    if-eqz v4, :cond_0
-
-    :try_start_1
-    invoke-virtual {v3, v2, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    :cond_0
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v3, v0}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-virtual {v0, v2, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    :cond_1
-    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v3, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
 
     move-result-object v0
 
-    invoke-static {v0}, Lpzi;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
 
-    move-result-object v0
-
-    invoke-virtual {v3, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    :cond_2
-    invoke-virtual {v3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-
-    :catch_0
-    return-object p0
-.end method
-
-.method public static final c(Lxjg;Ljava/lang/String;I)V
-    .locals 0
-
-    invoke-interface {p0, p1}, Lxjg;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1, p2}, Lone/me/sdk/richvector/VectorPath;->setFillColor(I)V
-
-    invoke-interface {p0}, Lxjg;->invalidatePath()V
-
-    :cond_0
     return-void
 .end method
 
-.method public static final d(Lxjg;Ljava/lang/String;I)V
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 0
 
-    invoke-interface {p0, p1}, Lxjg;->findPath(Ljava/lang/String;)Lone/me/sdk/richvector/VectorPath;
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
 
     move-result-object p1
 
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1, p2}, Lone/me/sdk/richvector/VectorPath;->setStrokeColor(I)V
-
-    invoke-interface {p0}, Lxjg;->invalidatePath()V
-
-    :cond_0
-    return-void
+    throw p1
 .end method

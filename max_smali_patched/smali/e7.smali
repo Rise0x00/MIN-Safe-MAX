@@ -1,135 +1,87 @@
-.class public final Le7;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Le7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lzv4;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/content/Context;
+
+.field public b:Lig5;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    iput p1, p0, Le7;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    iput-object p1, p0, Le7;->a:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispose()V
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget v1, p0, Le7;->a:I
-
-    packed-switch v1, :pswitch_data_0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-
-    goto :goto_0
-
-    :pswitch_0
-    check-cast v0, Lu6;
-
-    :try_start_0
-    invoke-interface {v0}, Lu6;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lxf5;->d(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
-
-    move-result-object v0
-
-    throw v0
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f()Z
+.method public a()Z
     .locals 1
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public abstract b()Z
+.end method
+
+.method public abstract c()Landroid/view/View;
+.end method
+
+.method public d(Lrj9;)Landroid/view/View;
+    .locals 0
+
+    invoke-virtual {p0}, Le7;->c()Landroid/view/View;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public f(Lp0g;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract g()Z
+.end method
+
+.method public h(Lig5;)V
     .locals 2
 
-    iget v0, p0, Le7;->a:I
+    iget-object v0, p0, Le7;->b:Lig5;
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz v0, :cond_0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "RunnableDisposable(disposed="
+    const-string v1, "setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Le7;->f()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-    const-string v1, ")"
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " instance while it is still in use somewhere else?"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -137,45 +89,12 @@
 
     move-result-object v0
 
-    return-object v0
+    const-string v1, "ActionProvider(support)"
 
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v1, "ActionDisposable(disposed="
+    :cond_0
+    iput-object p1, p0, Le7;->b:Lig5;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Le7;->f()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

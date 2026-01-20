@@ -1,134 +1,42 @@
-.class public final Lg7d;
+.class public abstract Lg7d;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# static fields
+.field public static ic_call_answer:I = 0x7f080530
 
-.field public b:I
+.field public static ic_call_answer_low:I = 0x7f080531
 
-.field public c:I
+.field public static ic_call_answer_video:I = 0x7f080532
 
-.field public d:I
+.field public static ic_call_answer_video_low:I = 0x7f080533
 
-.field public e:Landroid/view/animation/Interpolator;
+.field public static ic_call_decline:I = 0x7f080535
 
-.field public f:Z
+.field public static ic_call_decline_low:I = 0x7f080536
 
-.field public g:I
+.field public static notification_action_background:I = 0x7f0808c2
 
+.field public static notification_bg:I = 0x7f0808c3
 
-# virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 6
+.field public static notification_bg_low:I = 0x7f0808c4
 
-    iget v0, p0, Lg7d;->d:I
+.field public static notification_bg_low_normal:I = 0x7f0808c5
 
-    const/4 v1, 0x0
+.field public static notification_bg_low_pressed:I = 0x7f0808c6
 
-    if-ltz v0, :cond_0
+.field public static notification_bg_normal:I = 0x7f0808c7
 
-    const/4 v2, -0x1
+.field public static notification_bg_normal_pressed:I = 0x7f0808c8
 
-    iput v2, p0, Lg7d;->d:I
+.field public static notification_icon_background:I = 0x7f0808c9
 
-    invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->a0(I)V
+.field public static notification_oversize_large_icon_bg:I = 0x7f0808cc
 
-    iput-boolean v1, p0, Lg7d;->f:Z
+.field public static notification_template_icon_bg:I = 0x7f0808cd
 
-    return-void
+.field public static notification_template_icon_low_bg:I = 0x7f0808ce
 
-    :cond_0
-    iget-boolean v0, p0, Lg7d;->f:Z
+.field public static notification_tile_bg:I = 0x7f0808cf
 
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lg7d;->e:Landroid/view/animation/Interpolator;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_2
-
-    iget v3, p0, Lg7d;->c:I
-
-    if-lt v3, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "If you provide an interpolator, you must set a positive duration"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_2
-    :goto_0
-    iget v3, p0, Lg7d;->c:I
-
-    if-lt v3, v2, :cond_4
-
-    iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView;->o1:Ll7d;
-
-    iget v4, p0, Lg7d;->a:I
-
-    iget v5, p0, Lg7d;->b:I
-
-    invoke-virtual {p1, v4, v5, v3, v0}, Ll7d;->c(IIILandroid/view/animation/Interpolator;)V
-
-    iget p1, p0, Lg7d;->g:I
-
-    add-int/2addr p1, v2
-
-    iput p1, p0, Lg7d;->g:I
-
-    const/16 v0, 0xa
-
-    if-le p1, v0, :cond_3
-
-    const-string p1, "RecyclerView"
-
-    const-string v0, "Smooth Scroll action is being updated too frequently. Make sure you are not changing it unless necessary"
-
-    invoke-static {p1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_3
-    iput-boolean v1, p0, Lg7d;->f:Z
-
-    return-void
-
-    :cond_4
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "Scroll duration must be a positive number"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_5
-    iput v1, p0, Lg7d;->g:I
-
-    return-void
-.end method
-
-.method public final b(IIILandroid/view/animation/BaseInterpolator;)V
-    .locals 0
-
-    iput p1, p0, Lg7d;->a:I
-
-    iput p2, p0, Lg7d;->b:I
-
-    iput p3, p0, Lg7d;->c:I
-
-    iput-object p4, p0, Lg7d;->e:Landroid/view/animation/Interpolator;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lg7d;->f:Z
-
-    return-void
-.end method
+.field public static notify_panel_notification_icon_bg:I = 0x7f0808d0

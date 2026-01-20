@@ -1,6 +1,7 @@
-.class public interface abstract Lxc1;
+.class public final Lxc1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Li28;
+
+# instance fields
+.field public a:Ljava/util/List;

@@ -4,62 +4,32 @@
 
 
 # direct methods
-.method public static a(Ljava/security/Signature;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
-
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljava/security/Signature;)V
-
-    return-object v0
-.end method
-
-.method public static b(Ljavax/crypto/Cipher;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
-
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljavax/crypto/Cipher;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljavax/crypto/Mac;)Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-    .locals 1
-
-    new-instance v0, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;
-
-    invoke-direct {v0, p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;-><init>(Ljavax/crypto/Mac;)V
-
-    return-object v0
-.end method
-
-.method public static d(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Cipher;
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Context;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getCipher()Ljavax/crypto/Cipher;
+    invoke-virtual {p0, p1}, Landroid/content/Context;->createAttributionContext(Ljava/lang/String;)Landroid/content/Context;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static e(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljavax/crypto/Mac;
+.method public static b(Landroid/content/Context;)Ljava/lang/String;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getMac()Ljavax/crypto/Mac;
+    invoke-virtual {p0}, Landroid/content/Context;->getAttributionTag()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static f(Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;)Ljava/security/Signature;
-    .locals 0
+.method public static c(Landroid/view/inputmethod/EditorInfo;Ljava/lang/CharSequence;)V
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/hardware/biometrics/BiometricPrompt$CryptoObject;->getSignature()Ljava/security/Signature;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    invoke-virtual {p0, p1, v0}, Landroid/view/inputmethod/EditorInfo;->setInitialSurroundingSubText(Ljava/lang/CharSequence;I)V
 
-    return-object p0
+    return-void
 .end method

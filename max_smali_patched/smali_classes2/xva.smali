@@ -1,22 +1,23 @@
 .class public final Lxva;
-.super Lp14;
+.super Lo84;
+.source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lfp9;
+.field public X:I
 
 .field public synthetic d:Ljava/lang/Object;
 
-.field public o:I
+.field public final synthetic o:Lyva;
 
 
 # direct methods
-.method public constructor <init>(Lfp9;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lyva;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lxva;->X:Lfp9;
+    iput-object p1, p0, Lxva;->o:Lyva;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -28,19 +29,19 @@
 
     iput-object p1, p0, Lxva;->d:Ljava/lang/Object;
 
-    iget p1, p0, Lxva;->o:I
+    iget p1, p0, Lxva;->X:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lxva;->o:I
+    iput p1, p0, Lxva;->X:I
 
-    iget-object p1, p0, Lxva;->X:Lfp9;
+    iget-object p1, p0, Lxva;->o:Lyva;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lfp9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lyva;->d(Lyva;Ljava/util/ArrayList;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

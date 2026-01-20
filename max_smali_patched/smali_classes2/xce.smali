@@ -1,157 +1,198 @@
 .class public final Lxce;
-.super Lade;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lxce;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:Z
-
-.field public final b:Z
+.field public final a:Ljava/util/HashSet;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    new-instance v0, Lzvd;
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    const/4 v1, 0x7
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-direct {v0, v1}, Lzvd;-><init>(I)V
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lxce;->CREATOR:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Lxce;->a:Ljava/util/HashSet;
 
-    return-void
-.end method
+    new-instance v0, Landroid/content/IntentFilter;
 
-.method public constructor <init>(ZZ)V
-    .locals 0
+    invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "android.intent.action.SCREEN_ON"
 
-    iput-boolean p1, p0, Lxce;->a:Z
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    iput-boolean p2, p0, Lxce;->b:Z
+    const-string v1, "android.intent.action.SCREEN_OFF"
+
+    invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lxce;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lxce;
-
-    iget-boolean v1, p0, Lxce;->a:Z
-
-    iget-boolean v3, p1, Lxce;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lxce;->b:Z
-
-    iget-boolean p1, p1, Lxce;->b:Z
-
-    if-eq v1, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-boolean v0, p0, Lxce;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean v1, p0, Lxce;->b:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 5
 
-    const-string v0, ", isEnabled="
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const-string v1, ")"
+    move-result-object p1
 
-    const-string v2, "Radio(isChecked="
+    const-string v0, "android.intent.action.SCREEN_OFF"
 
-    iget-boolean v3, p0, Lxce;->a:Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-boolean v4, p0, Lxce;->b:Z
+    move-result p1
 
-    invoke-static {v2, v3, v0, v4, v1}, Lcd0;->g(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    const-string v0, "iwh"
 
-    move-result-object v0
+    if-eqz p1, :cond_1
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lxce;->a:Ljava/util/HashSet;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
-    iget-boolean p2, p0, Lxce;->a:Z
+    move-result-object p1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_0
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-boolean p2, p0, Lxce;->b:Z
+    move-result p2
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    if-eqz p2, :cond_5
 
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Liwh;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "onScreenOff"
+
+    invoke-static {v0, v1}, Lc5j;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v1, p2, Liwh;->l:Z
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p2, Liwh;->l:Z
+
+    iget-boolean v1, p2, Liwh;->k:Z
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p2}, Liwh;->a()V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string p2, "android.intent.action.SCREEN_ON"
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p1, p0, Lxce;->a:Ljava/util/HashSet;
+
+    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_2
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Liwh;
+
+    sget-object v1, Lc5j;->a:Ledb;
+
+    if-nez v1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v2, Lkk8;->d:Lkk8;
+
+    invoke-virtual {v1, v2}, Ledb;->b(Lkk8;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "onScreenOn, isAppVisible="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v4, p2, Liwh;->k:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v4, ", isScreenOn="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v4, p2, Liwh;->l:Z
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v2, v0, v3, v4}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    iget-boolean v1, p2, Liwh;->l:Z
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p2, Liwh;->l:Z
+
+    iget-boolean v1, p2, Liwh;->k:Z
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p2}, Liwh;->b()V
+
+    goto :goto_1
+
+    :cond_5
     return-void
 .end method

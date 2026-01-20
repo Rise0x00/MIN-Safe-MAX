@@ -1,82 +1,69 @@
-.class public final La6b;
-.super Ljava/lang/Object;
+.class public final enum La6b;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
+# static fields
+.field public static final enum a:La6b;
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-.field public final c:I
-
-.field public final d:Lotf;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static final synthetic b:[La6b;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Thread$UncaughtExceptionHandler;ILotf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, La6b;
 
-    iput-object p1, p0, La6b;->a:Ljava/lang/String;
+    const-string v1, "IDLE"
 
-    iput-object p2, p0, La6b;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+    const/4 v2, 0x0
 
-    iput p3, p0, La6b;->c:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p4, p0, La6b;->d:Lotf;
+    sput-object v0, La6b;->a:La6b;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v1, La6b;
 
-    const/4 p2, 0x1
+    const-string v2, "LOADING"
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+    const/4 v3, 0x1
 
-    iput-object p1, p0, La6b;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1}, [La6b;
+
+    move-result-object v0
+
+    sput-object v0, La6b;->b:[La6b;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)La6b;
+    .locals 1
 
-# virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 3
+    const-class v0, La6b;
 
-    iget-object v0, p0, La6b;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    move-result-object p0
 
-    move-result v0
+    check-cast p0, La6b;
 
-    const-string v1, "-"
+    return-object p0
+.end method
 
-    iget-object v2, p0, La6b;->a:Ljava/lang/String;
+.method public static values()[La6b;
+    .locals 1
 
-    invoke-static {v0, v2, v1}, Lcd0;->d(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    sget-object v0, La6b;->b:[La6b;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Lz5b;
+    check-cast v0, [La6b;
 
-    invoke-direct {v1, p1, v0}, Lz5b;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    iget-object p1, p0, La6b;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
-
-    iget p1, p0, La6b;->c:I
-
-    invoke-virtual {v1, p1}, Ljava/lang/Thread;->setPriority(I)V
-
-    iget-object p1, p0, La6b;->d:Lotf;
-
-    iput-object p1, v1, Lz5b;->b:Ljava/lang/Object;
-
-    return-object v1
+    return-object v0
 .end method

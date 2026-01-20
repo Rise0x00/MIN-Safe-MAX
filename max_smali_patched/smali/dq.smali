@@ -1,234 +1,369 @@
-.class public Ldq;
-.super Ljava/lang/Object;
+.class public final Ldq;
+.super Lupj;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:[Ljava/lang/Class;
-
-.field public static final c:[I
-
-.field public static final d:[I
-
-.field public static final e:[I
-
-.field public static final f:[I
-
-.field public static final g:[Ljava/lang/String;
-
-.field public static final h:Llpe;
-
-
 # instance fields
-.field public final a:[Ljava/lang/Object;
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    const-class v0, Landroid/content/Context;
+    iput p1, p0, Ldq;->a:I
 
-    const-class v1, Landroid/util/AttributeSet;
-
-    filled-new-array {v0, v1}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    sput-object v0, Ldq;->b:[Ljava/lang/Class;
-
-    const v0, 0x101026f
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ldq;->c:[I
-
-    const v0, 0x1010580
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ldq;->d:[I
-
-    const v0, 0x101057c
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ldq;->e:[I
-
-    const v0, 0x1010574
-
-    filled-new-array {v0}, [I
-
-    move-result-object v0
-
-    sput-object v0, Ldq;->f:[I
-
-    const-string v0, "android.view."
-
-    const-string v1, "android.webkit."
-
-    const-string v2, "android.widget."
-
-    filled-new-array {v2, v0, v1}, [Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ldq;->g:[Ljava/lang/String;
-
-    new-instance v0, Llpe;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Llpe;-><init>(I)V
-
-    sput-object v0, Ldq;->h:Llpe;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public static e(Ldch;)Lmm5;
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ldch;->n()Ljava/lang/String;
 
-    const/4 v0, 0x2
+    move-result-object v1
 
-    new-array v0, v0, [Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-object v0, p0, Ldq;->a:[Ljava/lang/Object;
+    invoke-virtual {p0}, Ldch;->n()Ljava/lang/String;
 
-    return-void
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p0}, Ldch;->m()J
+
+    move-result-wide v3
+
+    invoke-virtual {p0}, Ldch;->m()J
+
+    move-result-wide v5
+
+    iget-object v0, p0, Ldch;->a:[B
+
+    iget v7, p0, Ldch;->b:I
+
+    iget p0, p0, Ldch;->c:I
+
+    invoke-static {v0, v7, p0}, Ljava/util/Arrays;->copyOfRange([BII)[B
+
+    move-result-object v7
+
+    new-instance v0, Lmm5;
+
+    invoke-direct/range {v0 .. v7}, Lmm5;-><init>(Ljava/lang/String;Ljava/lang/String;JJ[B)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Landroid/util/AttributeSet;)Ltn;
-    .locals 2
+.method public final b(Lx4a;Ljava/nio/ByteBuffer;)Ls4a;
+    .locals 17
 
-    new-instance v0, Ltn;
+    move-object/from16 v0, p0
 
-    sget v1, Likc;->autoCompleteTextViewStyle:I
+    iget v1, v0, Ldq;->a:I
 
-    invoke-direct {v0, p1, p2, v1}, Ltn;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    const/4 v2, 0x0
 
-    return-object v0
-.end method
+    packed-switch v1, :pswitch_data_0
 
-.method public b(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatButton;
-    .locals 1
+    new-instance v1, Ls4a;
 
-    new-instance v0, Landroidx/appcompat/widget/AppCompatButton;
+    new-instance v3, Ldch;
 
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->array()[B
 
-    return-object v0
-.end method
+    move-result-object v4
 
-.method public c(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatCheckBox;
-    .locals 1
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/Buffer;->limit()I
 
-    new-instance v0, Landroidx/appcompat/widget/AppCompatCheckBox;
+    move-result v5
 
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatCheckBox;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v3, v5, v4}, Ldch;-><init>(I[B)V
 
-    return-object v0
-.end method
+    invoke-static {v3}, Ldq;->e(Ldch;)Lmm5;
 
-.method public d(Landroid/content/Context;Landroid/util/AttributeSet;)Lwo;
-    .locals 1
+    move-result-object v3
 
-    new-instance v0, Lwo;
+    const/4 v4, 0x1
 
-    invoke-direct {v0, p1, p2}, Lwo;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    new-array v4, v4, [Lq4a;
 
-    return-object v0
-.end method
+    aput-object v3, v4, v2
 
-.method public e(Landroid/content/Context;Landroid/util/AttributeSet;)Landroidx/appcompat/widget/AppCompatTextView;
-    .locals 1
+    invoke-direct {v1, v4}, Ls4a;-><init>([Lq4a;)V
 
-    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
+    return-object v1
 
-    invoke-direct {v0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    :pswitch_0
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->get()B
 
-    return-object v0
-.end method
+    move-result v1
 
-.method public final f(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/view/View;
-    .locals 2
+    const/16 v3, 0x74
 
-    sget-object v0, Ldq;->h:Llpe;
+    if-ne v1, v3, :cond_8
 
-    invoke-virtual {v0, p2}, Llpe;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v1, Lp82;
 
-    move-result-object v1
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/ByteBuffer;->array()[B
 
-    check-cast v1, Ljava/lang/reflect/Constructor;
+    move-result-object v3
 
-    if-nez v1, :cond_1
+    invoke-virtual/range {p2 .. p2}, Ljava/nio/Buffer;->limit()I
 
-    if-eqz p3, :cond_0
+    move-result v5
 
-    :try_start_0
-    invoke-virtual {p3, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v6, 0x2
 
-    move-result-object p3
+    invoke-direct {v1, v3, v5, v6, v2}, Lp82;-><init>([BIIB)V
 
-    goto :goto_0
+    const/16 v3, 0xc
 
-    :cond_0
-    move-object p3, p2
+    invoke-virtual {v1, v3}, Lp82;->t(I)V
+
+    invoke-virtual {v1, v3}, Lp82;->i(I)I
+
+    move-result v5
+
+    invoke-virtual {v1}, Lp82;->f()I
+
+    move-result v7
+
+    add-int/2addr v7, v5
+
+    const/4 v5, 0x4
+
+    sub-int/2addr v7, v5
+
+    const/16 v8, 0x2c
+
+    invoke-virtual {v1, v8}, Lp82;->t(I)V
+
+    invoke-virtual {v1, v3}, Lp82;->i(I)I
+
+    move-result v8
+
+    invoke-virtual {v1, v8}, Lp82;->u(I)V
+
+    const/16 v8, 0x10
+
+    invoke-virtual {v1, v8}, Lp82;->t(I)V
+
+    new-instance v9, Ljava/util/ArrayList;
+
+    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
     :goto_0
-    invoke-virtual {p1}, Landroid/content/Context;->getClassLoader()Ljava/lang/ClassLoader;
+    invoke-virtual {v1}, Lp82;->f()I
 
-    move-result-object p1
+    move-result v10
 
-    const/4 v1, 0x0
+    if-ge v10, v7, :cond_6
 
-    invoke-static {p3, v1, p1}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    const/16 v10, 0x30
 
-    move-result-object p1
+    invoke-virtual {v1, v10}, Lp82;->t(I)V
 
-    const-class p3, Landroid/view/View;
+    const/16 v10, 0x8
 
-    invoke-virtual {p1, p3}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
+    invoke-virtual {v1, v10}, Lp82;->i(I)I
 
-    move-result-object p1
+    move-result v11
 
-    sget-object p3, Ldq;->b:[Ljava/lang/Class;
+    invoke-virtual {v1, v5}, Lp82;->t(I)V
 
-    invoke-virtual {p1, p3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-virtual {v1, v3}, Lp82;->i(I)I
 
-    move-result-object v1
+    move-result v12
 
-    invoke-virtual {v0, p2, v1}, Llpe;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lp82;->f()I
+
+    move-result v13
+
+    add-int/2addr v13, v12
+
+    const/4 v12, 0x0
+
+    const/4 v14, 0x0
+
+    :goto_1
+    invoke-virtual {v1}, Lp82;->f()I
+
+    move-result v15
+
+    if-ge v15, v13, :cond_3
+
+    invoke-virtual {v1, v10}, Lp82;->i(I)I
+
+    move-result v15
+
+    invoke-virtual {v1, v10}, Lp82;->i(I)I
+
+    move-result v2
+
+    invoke-virtual {v1}, Lp82;->f()I
+
+    move-result v16
+
+    add-int v3, v16, v2
+
+    if-ne v15, v6, :cond_1
+
+    invoke-virtual {v1, v8}, Lp82;->i(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v10}, Lp82;->t(I)V
+
+    const/4 v15, 0x3
+
+    if-ne v2, v15, :cond_2
+
+    :goto_2
+    invoke-virtual {v1}, Lp82;->f()I
+
+    move-result v2
+
+    if-ge v2, v3, :cond_2
+
+    invoke-virtual {v1, v10}, Lp82;->i(I)I
+
+    move-result v2
+
+    sget-object v12, Lkd2;->a:Ljava/nio/charset/Charset;
+
+    new-array v15, v2, [B
+
+    invoke-virtual {v1, v2, v15}, Lp82;->l(I[B)V
+
+    new-instance v2, Ljava/lang/String;
+
+    invoke-direct {v2, v15, v12}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+
+    invoke-virtual {v1, v10}, Lp82;->i(I)I
+
+    move-result v12
+
+    const/4 v15, 0x0
+
+    :goto_3
+    if-ge v15, v12, :cond_0
+
+    invoke-virtual {v1, v10}, Lp82;->i(I)I
+
+    move-result v4
+
+    invoke-virtual {v1, v4}, Lp82;->u(I)V
+
+    add-int/lit8 v15, v15, 0x1
+
+    goto :goto_3
+
+    :cond_0
+    move-object v12, v2
+
+    goto :goto_2
 
     :cond_1
-    const/4 p1, 0x1
+    const/16 v4, 0x15
 
-    invoke-virtual {v1, p1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    if-ne v15, v4, :cond_2
 
-    iget-object p1, p0, Ldq;->a:[Ljava/lang/Object;
+    sget-object v4, Lkd2;->a:Ljava/nio/charset/Charset;
 
-    invoke-virtual {v1, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    new-array v14, v2, [B
 
-    move-result-object p1
+    invoke-virtual {v1, v2, v14}, Lp82;->l(I[B)V
 
-    check-cast p1, Landroid/view/View;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v2, Ljava/lang/String;
 
-    return-object p1
+    invoke-direct {v2, v14, v4}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
 
-    :catch_0
-    const/4 p1, 0x0
+    move-object v14, v2
 
-    return-object p1
+    :cond_2
+    mul-int/lit8 v3, v3, 0x8
+
+    invoke-virtual {v1, v3}, Lp82;->q(I)V
+
+    const/4 v2, 0x0
+
+    const/16 v3, 0xc
+
+    goto :goto_1
+
+    :cond_3
+    mul-int/lit8 v13, v13, 0x8
+
+    invoke-virtual {v1, v13}, Lp82;->q(I)V
+
+    if-eqz v12, :cond_5
+
+    if-eqz v14, :cond_5
+
+    new-instance v2, Lbq;
+
+    invoke-virtual {v14}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v12, v14}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    goto :goto_4
+
+    :cond_4
+    new-instance v3, Ljava/lang/String;
+
+    invoke-direct {v3, v12}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    :goto_4
+    invoke-direct {v2, v11, v3}, Lbq;-><init>(ILjava/lang/String;)V
+
+    invoke-virtual {v9, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    const/4 v2, 0x0
+
+    const/16 v3, 0xc
+
+    goto/16 :goto_0
+
+    :cond_6
+    invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    goto :goto_5
+
+    :cond_7
+    new-instance v4, Ls4a;
+
+    invoke-direct {v4, v9}, Ls4a;-><init>(Ljava/util/List;)V
+
+    goto :goto_6
+
+    :cond_8
+    :goto_5
+    const/4 v4, 0x0
+
+    :goto_6
+    return-object v4
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

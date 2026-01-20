@@ -1,54 +1,20 @@
-.class public final Lwja;
-.super Ljg3;
+.class public interface abstract Lwja;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lak6;
-
-
-# instance fields
-.field public final a:Lcka;
-
-
-# direct methods
-.method public constructor <init>(Lcka;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwja;->a:Lcka;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final b()Leia;
-    .locals 3
-
-    new-instance v0, Lzia;
-
-    iget-object v1, p0, Lwja;->a:Lcka;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Lzia;-><init>(Lwka;I)V
-
-    return-object v0
+.method public abstract i(Landroid/view/View;IIIII)V
 .end method
 
-.method public final i(Ltg3;)V
-    .locals 2
+.method public abstract j(Landroid/view/View;Landroid/view/View;II)Z
+.end method
 
-    new-instance v0, Lhk8;
+.method public abstract k(Landroid/view/View;Landroid/view/View;II)V
+.end method
 
-    const/4 v1, 0x1
+.method public abstract l(Landroid/view/View;I)V
+.end method
 
-    invoke-direct {v0, v1, p1}, Lhk8;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, p0, Lwja;->a:Lcka;
-
-    invoke-virtual {p1, v0}, Leia;->a(Lgla;)V
-
-    return-void
+.method public abstract m(Landroid/view/View;II[II)V
 .end method

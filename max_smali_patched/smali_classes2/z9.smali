@@ -1,2194 +1,718 @@
-.class public Lz9;
-.super Lewb;
+.class public final Lz9;
+.super Landroid/widget/EditText;
 .source "SourceFile"
+
+# interfaces
+.implements Luig;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lone/me/sdk/arch/Widget;
+.field public final b:Landroid/text/TextPaint;
+
+.field public c:F
+
+.field public d:I
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 7
 
-    iput p2, p0, Lz9;->a:I
+    invoke-direct {p0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    return-void
-.end method
+    sget v1, Lpfb;->v1:I
 
-.method private final o(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz9;->a:Ljava/lang/String;
+
+    new-instance v3, Landroid/text/TextPaint;
+
+    invoke-direct {v3}, Landroid/text/TextPaint;-><init>()V
+
+    sget-object v1, Lq23;->f:Lrhg;
+
+    const/4 v5, 0x0
+
+    const/16 v6, 0xc
+
+    const/4 v4, 0x0
+
+    move-object v2, p1
+
+    invoke-static/range {v1 .. v6}, Lrhg;->c(Lrhg;Landroid/content/Context;Landroid/text/TextPaint;Landroid/util/DisplayMetrics;Lub5;I)V
+
+    sget-object p1, Lpc3;->t0:Lkme;
+
+    invoke-virtual {p1, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lpc3;->j()Lzlb;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lzlb;->a()Ln13;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ln13;->k()Lmki;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lmki;->d:Lpki;
+
+    iget v0, v0, Lpki;->c:I
+
+    invoke-virtual {v3, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v3, v0}, Landroid/graphics/Paint;->setLetterSpacing(F)V
+
+    iput-object v3, p0, Lz9;->b:Landroid/text/TextPaint;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setIncludeFontPadding(Z)V
+
+    new-instance v1, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v3, Landroid/graphics/drawable/shapes/RectShape;
+
+    invoke-direct {v3}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
+
+    invoke-direct {v1, v3}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v2}, Lkme;->n(Landroid/content/Context;)Lpc3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lpc3;->j()Lzlb;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
+
+    move-result-object p1
+
+    iget p1, p1, Lrfg;->j:I
+
+    invoke-virtual {v3, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    const/4 p1, 0x2
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v2
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicWidth(I)V
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLineHeight()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Landroid/graphics/drawable/ShapeDrawable;->setIntrinsicHeight(I)V
+
+    invoke-static {p0, v1}, Lcti;->u(Landroid/widget/EditText;Landroid/graphics/drawable/Drawable;)V
+
+    new-instance p1, Lx9;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setCustomSelectionActionModeCallback(Landroid/view/ActionMode$Callback;)V
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setLongClickable(Z)V
+
+    new-instance p1, Lhf5;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    filled-new-array {p1}, [Lhf5;
+
+    move-result-object p1
+
+    check-cast p1, [Landroid/text/InputFilter;
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
+
+    const/16 p1, 0x30
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setGravity(I)V
+
+    const/16 p1, 0xc
+
+    int-to-float p1, p1
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p1, v1
+
+    invoke-static {p1}, Lq7j;->c(F)I
+
+    move-result p1
+
+    invoke-virtual {p0, p1, p1, p1, p1}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-static {p0}, Lyth;->a(Landroid/widget/TextView;)Lzth;
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setShowSoftInputOnFocus(Z)V
+
+    new-instance p1, Lk3;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, p0}, Lk3;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 3
+.method public final getEmojiBeforeCursor()Ljava/lang/CharSequence;
+    .locals 16
 
-    iget v0, p0, Lz9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_0
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_1
-    iget-object v0, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    iget-object v0, v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->D0:Lru7;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
-
-    check-cast v0, Lvs4;
-
-    invoke-virtual {v0}, Lvs4;->j()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_2
-    iget-object v0, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    iget-object v1, v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Lbzc;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, v1, Lbzc;->c:Lw6f;
-
-    invoke-virtual {v1}, Lb28;->j()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    if-le v1, v2, :cond_0
-
-    invoke-virtual {p0}, Lz9;->c()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lz9;->c()I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :pswitch_3
-    const/4 v0, 0x0
-
-    return v0
-
-    :pswitch_4
-    invoke-virtual {p0}, Lz9;->c()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_5
-    invoke-virtual {p0}, Lz9;->c()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public c()I
-    .locals 7
-
-    iget v0, p0, Lz9;->a:I
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Lz9;->e()I
-
-    move-result v0
-
-    div-int/lit8 v1, v0, 0x2
-
-    check-cast v3, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    sget-object v4, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->O0()Lhef;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lhef;->E0:Lj0d;
-
-    iget-object v4, v4, Lj0d;->a:Lt0f;
-
-    invoke-interface {v4}, Lt0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ltdf;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->O0()Lhef;
-
-    move-result-object v5
-
-    iget-object v6, v5, Lhef;->H0:La1f;
-
-    invoke-virtual {v6}, La1f;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Ljava/lang/CharSequence;
-
-    iget-object v5, v5, Lhef;->I0:La1f;
-
-    invoke-virtual {v5}, La1f;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ljava/lang/Number;
-
-    invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
-
-    if-eqz v6, :cond_4
-
-    invoke-static {v6}, Lxaf;->J(Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    if-eqz v4, :cond_1
-
-    iget-object v2, v4, Ltdf;->b:Ljava/util/ArrayList;
-
-    :cond_1
-    if-eqz v2, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/16 v2, 0x14
-
-    int-to-float v2, v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v2, v4, v0}, Lm65;->o(FFI)I
-
-    move-result v0
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lcd5;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v2
-
-    sub-int/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_3
-    :goto_0
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->M0()Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    const/16 v1, 0x30
-
-    int-to-float v1, v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Lm65;->o(FFI)I
-
-    move-result v0
-
-    :cond_4
-    :goto_1
-    return v0
-
-    :pswitch_0
-    return v1
-
-    :pswitch_1
-    check-cast v3, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    invoke-virtual {v3}, Lc24;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    goto :goto_2
-
-    :cond_5
-    invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
-
-    :goto_2
-    iget-object v1, v3, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->B0:Los;
-
-    sget-object v2, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->M0:[Les7;
-
-    const/4 v4, 0x1
-
-    aget-object v2, v2, v4
-
-    invoke-virtual {v1, v3}, Los;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_2
-    check-cast v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Les7;
-
-    invoke-virtual {v3}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0()Z
-
-    move-result v0
 
     if-eqz v0, :cond_a
 
-    const/16 v0, 0x15e
-
-    int-to-float v0, v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v4
-
-    invoke-static {v0}, Lkhi;->c(F)I
-
-    move-result v0
-
-    iget-object v4, v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v4, :cond_6
-
-    const-wide/high16 v5, -0x8000000000000000L
-
-    invoke-virtual {v4, v5, v6}, Landroidx/recyclerview/widget/RecyclerView;->N(J)Lm7d;
-
-    move-result-object v2
-
-    :cond_6
-    if-eqz v2, :cond_7
-
-    iget-object v2, v2, Lm7d;->a:Landroid/view/View;
-
-    if-eqz v2, :cond_7
-
-    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v2
-
-    goto :goto_3
-
-    :cond_7
-    move v2, v1
-
-    :goto_3
-    const/16 v4, 0x78
-
-    int-to-float v4, v4
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v4, v5, v2}, Lm65;->c(FFI)I
-
-    move-result v2
-
-    iget-object v4, v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v4, :cond_8
-
-    invoke-virtual {v4}, Landroid/view/View;->getPaddingBottom()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getSelectionEnd()I
 
     move-result v1
 
-    :cond_8
-    add-int/2addr v2, v1
+    if-gtz v1, :cond_0
 
-    if-ge v2, v0, :cond_9
-
-    goto :goto_6
-
-    :cond_9
-    move v0, v2
-
-    goto :goto_6
-
-    :cond_a
-    iget-object v0, v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0:Landroid/view/ViewGroup;
-
-    if-eqz v0, :cond_b
-
-    :goto_4
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    goto :goto_5
-
-    :cond_b
-    invoke-virtual {p0}, Lz9;->f()Landroid/view/View;
-
-    move-result-object v0
-
-    goto :goto_4
-
-    :goto_5
-    iget v1, v3, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:I
-
-    add-int/2addr v0, v1
-
-    invoke-virtual {v3}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0()Landroid/view/ViewGroup;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :goto_6
-    sget v1, Lct7;->a:I
-
-    sget v1, Lct7;->c:I
-
-    invoke-static {v1}, Lct7;->b(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_c
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->requireView()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    sub-int/2addr v1, v0
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lct7;->a(Landroid/content/Context;)I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    goto :goto_7
-
-    :cond_c
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->requireView()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    sub-int v0, v1, v0
-
-    :goto_7
-    return v0
-
-    :pswitch_3
-    check-cast v3, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v3}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    const/16 v1, 0x195
-
-    int-to-float v1, v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    invoke-static {v1, v2, v0}, Lm65;->o(FFI)I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_4
-    check-cast v3, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    sget-object v0, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->Z:Lvh4;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->requireView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    invoke-virtual {v3}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_5
-    check-cast v3, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
-
-    sget-object v0, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->A0:[Les7;
-
-    invoke-virtual {v3}, Lone/me/sdk/arch/Widget;->requireView()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lz9;->f()Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public d()Landroid/view/View;
-    .locals 2
-
-    iget v0, p0, Lz9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lewb;->d()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->C0()Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e()I
-    .locals 3
-
-    iget v0, p0, Lz9;->a:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v2, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
-
-    invoke-virtual {v2}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    check-cast v2, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
-
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
-
-    invoke-virtual {v2}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->x0()Lt0e;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    neg-int v0, v0
-
-    return v0
-
-    :pswitch_1
-    check-cast v2, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    invoke-virtual {v2}, Lc24;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
+    goto/16 :goto_5
 
     :cond_0
-    return v1
-
-    :pswitch_2
-    check-cast v2, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    invoke-virtual {v2}, Lc24;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-virtual/range {p0 .. p0}, Landroid/widget/TextView;->getSelectionEnd()I
 
     move-result v1
-
-    :cond_1
-    return v1
-
-    :pswitch_3
-    check-cast v2, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v2}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    return v0
-
-    :pswitch_4
-    check-cast v2, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    invoke-virtual {v2}, Lc24;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    :cond_2
-    return v1
-
-    :pswitch_5
-    check-cast v2, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
-
-    invoke-virtual {v2}, Lc24;->getView()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v1
-
-    :cond_3
-    return v1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f()Landroid/view/View;
-    .locals 2
-
-    iget v0, p0, Lz9;->a:I
-
-    iget-object v1, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_0
-    check-cast v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
-
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->x0()Lt0e;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_1
-    check-cast v1, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->M0:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_2
-    check-cast v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_3
-    check-cast v1, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_4
-    check-cast v1, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_5
-    check-cast v1, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
-
-    sget-object v0, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->A0:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->A0()Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public g(Liwb;Liwb;)Liwb;
-    .locals 5
-
-    iget v0, p0, Lz9;->a:I
-
-    iget-object v1, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    sget-object v2, Liwb;->a:Liwb;
-
-    packed-switch v0, :pswitch_data_0
-
-    return-object p2
-
-    :pswitch_0
-    if-ne p2, v2, :cond_0
-
-    check-cast v1, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->M0:[Les7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_0
-    return-object p2
-
-    :pswitch_1
-    if-ne p2, v2, :cond_1
-
-    check-cast v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    sget-object p1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Les7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :cond_1
-    return-object p2
-
-    :pswitch_2
-    check-cast v1, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v0, Liwb;->c:Liwb;
-
-    if-ne p2, v0, :cond_2
-
-    sget-object v3, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lsm8;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lsm8;->B0:Lj0d;
-
-    iget-object v3, v3, Lj0d;->a:Lt0f;
-
-    invoke-interface {v3}, Lt0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    sget-object v4, Lvyb;->b:Lvyb;
-
-    if-ne v3, v4, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    if-ne p1, v0, :cond_3
-
-    sget-object v0, Liwb;->b:Liwb;
-
-    if-ne p2, v0, :cond_3
-
-    sget v0, Lct7;->a:I
-
-    sget v0, Lct7;->c:I
-
-    invoke-static {v0}, Lct7;->b(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->G0()Lyid;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lyid;->n()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-eq p2, v2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lsm8;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lsm8;->y()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    :goto_0
-    move-object p1, p2
-
-    :cond_5
-    :goto_1
-    if-ne p1, v2, :cond_6
-
-    sget-object p2, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lsm8;
-
-    move-result-object p2
-
-    iget-object p2, p2, Lsm8;->x0:Laf5;
-
-    sget-object v0, Lbm8;->a:Lbm8;
-
-    invoke-static {p2, v0}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    :cond_6
-    return-object p1
-
-    :pswitch_3
-    if-ne p2, v2, :cond_7
-
-    check-cast v1, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->C0()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    :cond_7
-    move-object p1, p2
-
-    :cond_8
-    return-object p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h()V
-    .locals 4
-
-    iget v0, p0, Lz9;->a:I
-
-    iget-object v1, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    invoke-virtual {v1}, Lc24;->getRouter()Lyid;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lyid;->B(Lc24;)Z
-
-    return-void
-
-    :pswitch_0
-    check-cast v1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
-
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Lc0e;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lc0e;->d:Laf5;
-
-    sget-object v1, Luzd;->a:Luzd;
-
-    invoke-static {v0, v1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v1, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->M0:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0()V
-
-    return-void
-
-    :pswitch_2
-    check-cast v1, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0()V
-
-    return-void
-
-    :pswitch_3
-    check-cast v1, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->A0()V
-
-    invoke-virtual {v1}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lsm8;
-
-    move-result-object v0
-
-    iget-object v2, v0, Lsm8;->u0:Lfv0;
-
-    sget-object v3, Lel8;->a:Lel8;
-
-    invoke-interface {v2, v3}, Lb2e;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, v0, Lsm8;->x0:Laf5;
-
-    sget-object v2, Lam8;->a:Lam8;
-
-    invoke-static {v0, v2}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    iget-object v0, v1, Lone/me/chatscreen/mediabar/MediaBarWidget;->b1:Lone/me/chatscreen/ChatScreen;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, v0, Lone/me/chatscreen/ChatScreen;->d:Li78;
-
-    invoke-virtual {v0}, Li78;->a()V
-
-    :cond_0
-    return-void
-
-    :pswitch_4
-    check-cast v1, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0()V
-
-    return-void
-
-    :pswitch_5
-    check-cast v1, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;
-
-    sget-object v0, Lone/me/sdk/messagewrite/markdown/AddLinkBottomSheet;->A0:[Les7;
-
-    invoke-virtual {v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->H0()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public i()V
-    .locals 2
-
-    iget v0, p0, Lz9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lsm8;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lsm8;->x0:Laf5;
-
-    sget-object v1, Lbm8;->a:Lbm8;
-
-    invoke-static {v0, v1}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public j()Z
-    .locals 2
-
-    iget v0, p0, Lz9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lewb;->j()Z
-
-    move-result v0
-
-    return v0
-
-    :pswitch_0
-    iget-object v0, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Lsm8;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lsm8;->y()Z
-
-    move-result v0
-
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public k()V
-    .locals 2
-
-    iget v0, p0, Lz9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    invoke-virtual {v0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->B0()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public l(Liwb;)V
-    .locals 10
-
-    iget v0, p0, Lz9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    check-cast v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    iget-object v1, v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->w0:Ld0d;
-
-    sget-object v2, Liwb;->c:Liwb;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    if-ne p1, v2, :cond_0
-
-    move p1, v3
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v4
-
-    :goto_0
-    sget-object v2, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->K0()Landroid/widget/FrameLayout;
-
-    move-result-object v2
-
-    const/16 v5, 0x8
-
-    if-eqz p1, :cond_1
-
-    move v6, v4
-
-    goto :goto_1
-
-    :cond_1
-    move v6, v5
-
-    :goto_1
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->L0()Landroid/widget/FrameLayout;
-
-    move-result-object v2
-
-    if-nez p1, :cond_2
-
-    move v6, v4
-
-    goto :goto_2
-
-    :cond_2
-    move v6, v5
-
-    :goto_2
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lcd5;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v6
-
-    const-string v7, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    if-eqz v6, :cond_7
-
-    check-cast v6, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz p1, :cond_3
-
-    int-to-float v8, v4
-
-    :goto_3
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v9
-
-    invoke-static {v8}, Lkhi;->c(F)I
-
-    move-result v8
-
-    goto :goto_4
-
-    :cond_3
-    const/16 v8, 0x14
-
-    int-to-float v8, v8
-
-    goto :goto_3
-
-    :goto_4
-    iput v8, v6, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {v2, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-virtual {v0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->M0()Landroidx/appcompat/widget/AppCompatTextView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v6
-
-    if-eqz v6, :cond_6
-
-    check-cast v6, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz p1, :cond_4
-
-    int-to-float v4, v4
-
-    :goto_5
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v4}, Lkhi;->c(F)I
-
-    move-result v4
-
-    goto :goto_6
-
-    :cond_4
-    int-to-float v4, v5
-
-    goto :goto_5
-
-    :goto_6
-    iput v4, v6, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {v2, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    if-eqz p1, :cond_5
-
-    sget-object p1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
-
-    aget-object p1, p1, v3
-
-    invoke-interface {v1, v0, p1}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v1, 0x0
-
-    mul-float/2addr v0, v1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance v1, Lv44;
-
-    invoke-direct {v1, v0}, Lv44;-><init>(F)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    goto :goto_7
-
-    :cond_5
-    sget-object p1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
-
-    aget-object p1, p1, v3
-
-    invoke-interface {v1, v0, p1}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/constraintlayout/widget/ConstraintLayout;
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v1, 0x41a00000    # 20.0f
-
-    mul-float/2addr v0, v1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance v1, Lv44;
-
-    invoke-direct {v1, v0}, Lv44;-><init>(F)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    :goto_7
-    return-void
-
-    :cond_6
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v7}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_7
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v7}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :pswitch_data_0
-    .packed-switch 0x6
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public m(I)V
-    .locals 11
-
-    iget v0, p0, Lz9;->a:I
-
-    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    const/high16 v3, 0x3f800000    # 1.0f
-
-    iget-object v4, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    check-cast v4, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
-
-    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
-
-    invoke-virtual {v4}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Lc0e;
+    invoke-interface {v0, v2, v1}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lz9;->f()Landroid/view/View;
+    instance-of v1, v0, Landroid/text/Spanned;
 
-    move-result-object v1
+    if-eqz v1, :cond_9
 
-    invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v1
 
-    add-int/2addr v1, p1
+    if-nez v1, :cond_1
 
-    iget-object p1, v0, Lc0e;->d:Laf5;
+    goto/16 :goto_3
 
-    new-instance v0, Lszd;
+    :cond_1
+    move-object v1, v0
 
-    invoke-direct {v0, v1}, Lszd;-><init>(I)V
+    check-cast v1, Landroid/text/Spanned;
 
-    invoke-static {p1, v0}, Ljzg;->s(Laf5;Ljava/lang/Object;)V
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
-    :pswitch_1
-    return-void
+    move-result v3
 
-    :pswitch_2
-    check-cast v4, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
+    const-class v4, Lsjf;
 
-    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->c1:[Les7;
+    invoke-interface {v1, v2, v3, v4}, Landroid/text/Spanned;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
-    invoke-virtual {v4}, Lc24;->isAttached()Z
+    move-result-object v3
+
+    array-length v4, v3
+
+    if-nez v4, :cond_2
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto/16 :goto_4
+
+    :cond_2
+    new-instance v4, Lbt;
+
+    array-length v5, v3
+
+    mul-int/lit8 v5, v5, 0x2
+
+    add-int/lit8 v5, v5, 0x2
+
+    invoke-direct {v4, v5}, Lbt;-><init>(I)V
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lbt;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Lbt;->add(Ljava/lang/Object;)Z
+
+    array-length v5, v3
+
+    move v6, v2
+
+    :goto_0
+    if-ge v6, v5, :cond_4
+
+    aget-object v7, v3, v6
+
+    invoke-interface {v1, v7}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v8
+
+    invoke-interface {v1, v7}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v7
+
+    const/4 v9, -0x1
+
+    if-eq v8, v9, :cond_3
+
+    if-eq v7, v9, :cond_3
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-virtual {v4, v8}, Lbt;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    invoke-virtual {v4, v7}, Lbt;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_0
+
+    :cond_4
+    invoke-static {v4}, Lpi3;->T(Ljava/lang/Iterable;)Ljava/util/List;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v4}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    add-int/lit8 v6, v6, -0x1
+
+    move v7, v2
+
+    :goto_1
+    if-ge v7, v6, :cond_8
+
+    invoke-interface {v4, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Ljava/lang/Number;
+
+    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
+
+    move-result v8
+
+    add-int/lit8 v7, v7, 0x1
+
+    invoke-interface {v4, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v9
+
+    check-cast v9, Ljava/lang/Number;
+
+    invoke-virtual {v9}, Ljava/lang/Number;->intValue()I
+
+    move-result v9
+
+    if-ge v8, v9, :cond_7
+
+    invoke-interface {v0, v8, v9}, Ljava/lang/CharSequence;->subSequence(II)Ljava/lang/CharSequence;
+
+    move-result-object v10
+
+    new-instance v11, Landroid/text/SpannableStringBuilder;
+
+    invoke-direct {v11, v10}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
+
+    array-length v10, v3
+
+    move v12, v2
+
+    :goto_2
+    if-ge v12, v10, :cond_6
+
+    aget-object v13, v3, v12
+
+    invoke-interface {v1, v13}, Landroid/text/Spanned;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v14
+
+    invoke-interface {v1, v13}, Landroid/text/Spanned;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v15
+
+    invoke-interface {v1, v13}, Landroid/text/Spanned;->getSpanFlags(Ljava/lang/Object;)I
+
+    move-result v2
+
+    if-ge v14, v9, :cond_5
+
+    if-le v15, v8, :cond_5
+
+    invoke-static {v14, v8}, Ljava/lang/Math;->max(II)I
+
+    move-result v14
+
+    sub-int/2addr v14, v8
+
+    invoke-static {v15, v9}, Ljava/lang/Math;->min(II)I
+
+    move-result v15
+
+    sub-int/2addr v15, v8
+
+    if-ltz v14, :cond_5
+
+    if-ge v14, v15, :cond_5
+
+    invoke-virtual {v11, v13, v14, v15, v2}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
+
+    :cond_5
+    add-int/lit8 v12, v12, 0x1
+
+    const/4 v2, 0x0
+
+    goto :goto_2
+
+    :cond_6
+    invoke-interface {v5, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_7
+    const/4 v2, 0x0
+
+    goto :goto_1
+
+    :cond_8
+    move-object v0, v5
+
+    goto :goto_4
+
+    :cond_9
+    :goto_3
+    sget-object v0, Ldh5;->a:Ldh5;
+
+    :goto_4
+    invoke-static {v0}, Lpi3;->N(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/CharSequence;
+
+    return-object v0
+
+    :cond_a
+    :goto_5
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 4
+
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+
+    iget v0, p0, Lz9;->o:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lz9;->c:F
+
+    cmpl-float v0, v0, v1
+
+    if-ltz v0, :cond_3
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLineCount()I
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-lez v0, :cond_3
 
-    invoke-virtual {v4}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->Q0()Z
+    invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    goto/16 :goto_2
-
-    :cond_0
-    int-to-float p1, p1
-
-    const/16 v0, 0x4c
-
-    int-to-float v0, v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v5
-
-    invoke-static {v0}, Lkhi;->c(F)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    div-float/2addr p1, v0
-
-    invoke-static {p1, v2, v3}, Liwi;->b(FFF)F
-
-    move-result p1
-
-    cmpg-float v0, p1, v3
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {v4}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0()Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    :cond_1
-    sget v0, Lu0b;->c:I
-
-    invoke-virtual {v4, v0}, Lone/me/sdk/arch/Widget;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lv6b;
-
-    if-eqz v0, :cond_5
-
-    int-to-float v1, v1
-
-    sub-float/2addr v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    mul-float/2addr v1, v0
-
-    float-to-int v0, v1
-
-    iget-object v1, v4, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Landroidx/recyclerview/widget/RecyclerView;
-
-    const-string v2, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams"
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_2
-
-    check-cast v3, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    iput v0, v3, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
     goto :goto_0
 
-    :cond_2
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    :goto_0
-    invoke-virtual {v4}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0()Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    check-cast v1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    iget v2, v4, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->b1:I
-
-    int-to-float v2, v2
-
-    mul-float/2addr v2, p1
-
-    float-to-int v2, v2
-
-    iput v2, v1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p1, Ljava/lang/NullPointerException;
-
-    invoke-direct {p1, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_5
-    :goto_1
-    iget-object v0, v4, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:Lcs0;
-
-    const/high16 v1, 0x41a00000    # 20.0f
-
-    mul-float/2addr v1, p1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    iput v1, v0, Lcs0;->b:F
-
-    invoke-virtual {v4}, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->O0()Landroid/view/ViewGroup;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidateOutline()V
-
-    iget-object v0, v4, Lone/me/sdk/bottomsheet/BottomSheetWidget;->w0:Lw05;
-
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->setAlpha(F)V
-
-    :cond_6
-    :goto_2
-    return-void
-
-    :pswitch_3
-    check-cast v4, Lone/me/chatscreen/mediabar/MediaBarWidget;
-
-    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    int-to-float v0, p1
-
-    const/16 v5, 0x30
-
-    int-to-float v5, v5
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v6
-
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v5, v6
-
-    invoke-static {v5}, Lkhi;->c(F)I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    div-float v5, v0, v5
-
-    invoke-static {v5, v2, v3}, Liwi;->b(FFF)F
-
-    move-result v2
-
-    invoke-virtual {v4}, Lone/me/sdk/arch/Widget;->requireView()Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->getRootWindowInsets()Landroid/view/WindowInsets;
-
-    move-result-object v3
-
-    const/4 v5, 0x0
-
-    if-eqz v3, :cond_7
-
-    const/4 v6, 0x0
-
-    invoke-static {v6, v3}, Lonh;->h(Landroid/view/View;Landroid/view/WindowInsets;)Lonh;
-
-    move-result-object v3
-
-    const/4 v6, 0x7
-
-    iget-object v3, v3, Lonh;->a:Lmnh;
-
-    invoke-virtual {v3, v6}, Lmnh;->f(I)Lli7;
-
-    move-result-object v3
-
-    iget v3, v3, Lli7;->b:I
-
-    goto :goto_3
-
-    :cond_7
-    move v3, v5
-
-    :goto_3
-    iget-object v6, v4, Lone/me/chatscreen/mediabar/MediaBarWidget;->v0:Lrn0;
-
-    sget-object v7, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
-
-    const/4 v8, 0x5
-
-    aget-object v8, v7, v8
-
-    invoke-virtual {v6}, Lrn0;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Landroid/widget/FrameLayout;
-
-    invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v6
-
-    sub-int/2addr v3, v6
-
-    sub-int/2addr v3, p1
-
-    if-gez v3, :cond_8
-
-    move v3, v5
-
-    :cond_8
-    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/view/View;->getPaddingLeft()I
-
-    move-result v8
-
-    invoke-virtual {v6}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v9
-
-    invoke-virtual {v6}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v10
-
-    invoke-virtual {v6, v8, v3, v9, v10}, Landroid/view/View;->setPadding(IIII)V
-
-    iget-object v3, v4, Lone/me/chatscreen/mediabar/MediaBarWidget;->K0:Lcs0;
-
-    const/high16 v6, 0x41400000    # 12.0f
-
-    mul-float/2addr v6, v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v8
-
-    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v8
-
-    iput v6, v3, Lcs0;->b:F
-
-    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0()Landroid/widget/LinearLayout;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->invalidateOutline()V
-
-    iget-object v3, v4, Lone/me/chatscreen/mediabar/MediaBarWidget;->u0:Lrn0;
-
-    const/4 v6, 0x4
-
-    aget-object v6, v7, v6
-
-    invoke-virtual {v3}, Lrn0;->getValue()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Landroid/widget/FrameLayout;
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/MediaBarWidget;->L0()Lv6b;
-
-    move-result-object v2
-
-    if-gtz p1, :cond_9
-
-    goto :goto_4
-
-    :cond_9
-    move v1, v5
-
-    :goto_4
-    invoke-virtual {v2, v1}, Lv6b;->setShowDropdown(Z)V
-
-    iput v0, v4, Lone/me/chatscreen/mediabar/MediaBarWidget;->E0:F
-
-    invoke-static {v4}, Lone/me/chatscreen/mediabar/MediaBarWidget;->z0(Lone/me/chatscreen/mediabar/MediaBarWidget;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public n(Liwb;FF)Z
-    .locals 5
-
-    iget v0, p0, Lz9;->a:I
-
-    const/4 v1, -0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lz9;->b:Lone/me/sdk/arch/Widget;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1, p2, p3}, Lewb;->n(Liwb;FF)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    check-cast v4, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
-
-    sget-object p1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0:[Les7;
-
-    invoke-virtual {v4}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lcd5;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    move v2, v3
-
     :cond_0
-    return v2
-
-    :pswitch_1
-    check-cast v4, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
-
-    sget-object p1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->X:[Les7;
-
-    invoke-virtual {v4}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->x0()Lt0e;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->canScrollVertically(I)Z
-
-    move-result p1
-
-    :goto_0
-    xor-int/2addr p1, v3
-
-    return p1
-
-    :pswitch_2
-    check-cast v4, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;
-
-    iget-object p1, v4, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->K0:Ld0d;
-
-    sget-object p2, Lone/me/login/neuroavatars/NeuroAvatarPickerBottomSheet;->M0:[Les7;
-
-    const/4 p3, 0x3
-
-    aget-object p2, p2, p3
-
-    invoke-interface {p1, v4, p2}, Ld0d;->E(Ljava/lang/Object;Les7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->canScrollVertically(I)Z
-
-    move-result p1
-
-    goto :goto_0
-
-    :pswitch_3
-    check-cast v4, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;
-
-    iget-object p1, v4, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->S0:Lbzc;
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Lbzc;->d:Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->canScrollVertically(I)Z
-
-    move-result p1
+    const/4 v0, 0x0
 
     goto :goto_1
 
     :cond_1
-    move p1, v2
+    :goto_0
+    move v0, v1
 
     :goto_1
-    iget-object p2, v4, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->R0:Landroidx/recyclerview/widget/RecyclerView;
+    if-nez v0, :cond_2
 
-    if-eqz p2, :cond_2
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
 
-    invoke-virtual {p2, v1}, Landroid/view/View;->canScrollVertically(I)Z
+    move-result v0
 
-    move-result p2
+    mul-int/lit8 v0, v0, 0x2
 
     goto :goto_2
 
     :cond_2
-    move p2, v2
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v0
 
     :goto_2
-    if-nez p2, :cond_3
+    int-to-float v0, v0
 
-    if-nez p1, :cond_3
+    iget v2, p0, Lz9;->d:I
 
-    move v2, v3
+    int-to-float v2, v2
 
-    :cond_3
-    return v2
+    add-float/2addr v0, v2
 
-    :pswitch_4
-    check-cast v4, Lone/me/chatscreen/mediabar/MediaBarWidget;
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLineCount()I
 
-    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Les7;
+    move-result v2
 
-    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/MediaBarWidget;->D0()Ld02;
+    sub-int/2addr v2, v1
 
-    move-result-object p1
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLineHeight()I
 
-    iget-boolean p1, p1, Ld02;->y0:Z
+    move-result v1
 
-    if-eqz p1, :cond_4
+    mul-int/2addr v1, v2
 
-    goto :goto_8
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
 
-    :cond_4
-    iget-object p1, v4, Lone/me/chatscreen/mediabar/MediaBarWidget;->t0:Lb3b;
+    move-result v2
 
-    if-eqz p1, :cond_6
+    add-int/2addr v2, v1
 
-    iget-object p1, p1, Lb3b;->a:Ll40;
+    int-to-float v1, v2
 
-    iget-object p1, p1, Ll40;->e:Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
-    check-cast p1, Ldif;
+    move-result-object v2
 
-    if-nez p1, :cond_5
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
 
-    goto :goto_3
+    move-result-object v2
 
-    :cond_5
-    sget-object v0, Ld1h;->a:Landroid/graphics/Rect;
+    iget v2, v2, Landroid/graphics/Paint$FontMetrics;->top:F
 
-    invoke-static {v0, p1}, Ld1h;->d(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    float-to-int p1, p2
-
-    float-to-int p2, p3
-
-    invoke-virtual {v0, p1, p2}, Landroid/graphics/Rect;->contains(II)Z
-
-    move-result p1
+    :goto_3
+    sub-float/2addr v1, v2
 
     goto :goto_4
 
-    :cond_6
-    :goto_3
-    move p1, v2
+    :cond_3
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingLeft()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLineCount()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getLineHeight()I
+
+    move-result v2
+
+    mul-int/2addr v2, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Paint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/graphics/Paint$FontMetrics;->top:F
+
+    goto :goto_3
 
     :goto_4
-    if-eqz p1, :cond_7
+    iget-object v2, p0, Lz9;->a:Ljava/lang/String;
 
-    goto :goto_8
+    iget-object v3, p0, Lz9;->b:Landroid/text/TextPaint;
 
-    :cond_7
-    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/MediaBarWidget;->K0()Lm62;
+    invoke-virtual {p1, v2, v0, v1, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    return-void
+.end method
+
+.method public final onSaveInstanceState()Landroid/os/Parcelable;
+    .locals 1
+
+    invoke-super {p0}, Landroid/view/View;->onSaveInstanceState()Landroid/os/Parcelable;
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final onThemeChanged(Lzlb;)V
+    .locals 2
+
+    invoke-interface {p1}, Lzlb;->a()Ln13;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ln13;->k()Lmki;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lmki;->d:Lpki;
+
+    iget v0, v0, Lpki;->c:I
+
+    iget-object v1, p0, Lz9;->b:Landroid/text/TextPaint;
+
+    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-static {p0}, Lcti;->c(Landroid/widget/TextView;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    if-eqz v1, :cond_0
+
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Lzlb;->getText()Lrfg;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+    iget p1, p1, Lrfg;->j:I
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
+    .locals 1
+
+    instance-of v0, p1, Landroid/graphics/drawable/Animatable;
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result p1
 
-    if-nez p1, :cond_8
+    if-eqz p1, :cond_0
 
-    move p1, v3
+    goto :goto_0
 
-    goto :goto_5
-
-    :cond_8
-    move p1, v2
-
-    :goto_5
-    if-eqz p1, :cond_9
-
-    goto :goto_8
-
-    :cond_9
-    invoke-virtual {v4}, Lone/me/chatscreen/mediabar/MediaBarWidget;->J0()La53;
-
-    move-result-object p1
-
-    iget-object p1, p1, La53;->a:Lyid;
-
-    invoke-static {p1}, Llxi;->b(Lyid;)Lc24;
-
-    move-result-object p1
-
-    instance-of p2, p1, Lone/me/sdk/gallery/MediaGalleryWidget;
-
-    if-eqz p2, :cond_a
-
-    check-cast p1, Lone/me/sdk/gallery/MediaGalleryWidget;
-
-    goto :goto_6
-
-    :cond_a
+    :cond_0
     const/4 p1, 0x0
 
-    :goto_6
-    if-eqz p1, :cond_b
+    return p1
 
-    invoke-virtual {p1}, Lone/me/sdk/gallery/MediaGalleryWidget;->x0()Lcd5;
+    :cond_1
+    :goto_0
+    const/4 p1, 0x1
 
-    move-result-object p1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->canScrollVertically(I)Z
-
-    move-result p1
-
-    goto :goto_7
-
-    :cond_b
-    move p1, v2
-
-    :goto_7
-    if-nez p1, :cond_c
-
-    move v2, v3
-
-    :cond_c
-    :goto_8
-    return v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p1
 .end method

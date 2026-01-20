@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpkg;
+.implements Ltdh;
 
 
 # static fields

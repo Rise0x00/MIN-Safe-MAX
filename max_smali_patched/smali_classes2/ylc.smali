@@ -1,54 +1,68 @@
-.class public abstract Lylc;
+.class public final synthetic Lylc;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lnm4;
 
 
-# static fields
-.field public static emoji_sprite_0:I = 0x7f08036f
+# instance fields
+.field public final synthetic a:I
 
-.field public static emoji_sprite_1:I = 0x7f080370
+.field public final synthetic b:J
 
-.field public static emoji_sprite_10:I = 0x7f080371
+.field public final synthetic c:Z
 
-.field public static emoji_sprite_11:I = 0x7f080372
 
-.field public static emoji_sprite_12:I = 0x7f080373
+# direct methods
+.method public synthetic constructor <init>(IJZ)V
+    .locals 0
 
-.field public static emoji_sprite_13:I = 0x7f080374
+    iput p1, p0, Lylc;->a:I
 
-.field public static emoji_sprite_14:I = 0x7f080375
+    iput-wide p2, p0, Lylc;->b:J
 
-.field public static emoji_sprite_15:I = 0x7f080376
+    iput-boolean p4, p0, Lylc;->c:Z
 
-.field public static emoji_sprite_16:I = 0x7f080377
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static emoji_sprite_17:I = 0x7f080378
+    return-void
+.end method
 
-.field public static emoji_sprite_18:I = 0x7f080379
 
-.field public static emoji_sprite_19:I = 0x7f08037a
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-.field public static emoji_sprite_2:I = 0x7f08037b
+    iget v0, p0, Lylc;->a:I
 
-.field public static emoji_sprite_20:I = 0x7f08037c
+    packed-switch v0, :pswitch_data_0
 
-.field public static emoji_sprite_21:I = 0x7f08037d
+    new-instance v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
 
-.field public static emoji_sprite_22:I = 0x7f08037e
+    iget-wide v1, p0, Lylc;->b:J
 
-.field public static emoji_sprite_23:I = 0x7f08037f
+    iget-boolean v3, p0, Lylc;->c:Z
 
-.field public static emoji_sprite_24:I = 0x7f080380
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;-><init>(JZ)V
 
-.field public static emoji_sprite_3:I = 0x7f080381
+    return-object v0
 
-.field public static emoji_sprite_4:I = 0x7f080382
+    :pswitch_0
+    new-instance v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;
 
-.field public static emoji_sprite_5:I = 0x7f080383
+    iget-wide v1, p0, Lylc;->b:J
 
-.field public static emoji_sprite_6:I = 0x7f080384
+    iget-boolean v3, p0, Lylc;->c:Z
 
-.field public static emoji_sprite_7:I = 0x7f080385
+    invoke-direct {v0, v1, v2, v3}, Lone/me/profile/screens/addmembers/AddChatMembersScreen;-><init>(JZ)V
 
-.field public static emoji_sprite_8:I = 0x7f080386
+    return-object v0
 
-.field public static emoji_sprite_9:I = 0x7f080387
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

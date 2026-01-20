@@ -1,68 +1,48 @@
-.class public final synthetic Luwf;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.class public final Luwf;
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lyve;
 
-.field public final synthetic b:Ljava/util/List;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/util/List;)V
+.method public constructor <init>(Lyve;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Luwf;->a:I
+    iput-object p1, p0, Luwf;->X:Lyve;
 
-    iput-object p2, p0, Luwf;->b:Ljava/util/List;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Luwf;->a:I
+    iput-object p1, p0, Luwf;->d:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Luwf;->o:I
 
-    check-cast p1, Llk5;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Luwf;->o:I
+
+    iget-object p1, p0, Luwf;->X:Lyve;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lyve;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p0, Luwf;->b:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_0
-    iget-object v0, p0, Luwf;->b:Ljava/util/List;
-
-    check-cast p1, Ljxf;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    return p1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

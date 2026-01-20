@@ -1,53 +1,73 @@
-.class public final Luac;
-.super Lp14;
+.class public abstract Luac;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lxac;
-
-.field public Z:I
-
-.field public d:Lxac;
-
-.field public o:J
+# static fields
+.field public static final a:Le0c;
 
 
 # direct methods
-.method public constructor <init>(Lxac;Lp14;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput-object p1, p0, Luac;->Y:Lxac;
+    new-instance v0, Lktb;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    sget-object v2, Lbob;->a:Lbob;
+
+    invoke-direct {v0, v1, v2}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v1, Lktb;
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    sget-object v3, Lbob;->b:Lbob;
+
+    invoke-direct {v1, v2, v3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v2, Lktb;
+
+    const/4 v3, 0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    sget-object v4, Lbob;->c:Lbob;
+
+    invoke-direct {v2, v3, v4}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    new-instance v3, Lktb;
+
+    const/4 v4, 0x3
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    sget-object v5, Lbob;->d:Lbob;
+
+    invoke-direct {v3, v4, v5}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {v0, v1, v2, v3}, [Lktb;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lkpj;->b([Lktb;)Le0c;
+
+    move-result-object v0
+
+    sput-object v0, Luac;->a:Le0c;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iput-object p1, p0, Luac;->X:Ljava/lang/Object;
-
-    iget p1, p0, Luac;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Luac;->Z:I
-
-    iget-object p1, p0, Luac;->Y:Lxac;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lxac;->a(JLp14;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    return-object p1
 .end method

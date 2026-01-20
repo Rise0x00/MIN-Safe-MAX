@@ -1,21 +1,35 @@
-.class public abstract Lwi7;
+.class public interface abstract Lwi7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# virtual methods
+.method public abstract b()Lui7;
+.end method
 
+.method public abstract close()V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public abstract d()I
+.end method
 
-    new-instance v0, Lh0a;
+.method public abstract f()V
+.end method
 
-    const/4 v1, 0x0
+.method public abstract getHeight()I
+.end method
 
-    invoke-direct {v0, v1}, Lh0a;-><init>(I)V
+.method public abstract getSurface()Landroid/view/Surface;
+.end method
 
-    return-void
+.method public abstract getWidth()I
+.end method
+
+.method public abstract i(Lvi7;Ljava/util/concurrent/Executor;)V
+.end method
+
+.method public abstract m()I
+.end method
+
+.method public abstract o()Lui7;
 .end method

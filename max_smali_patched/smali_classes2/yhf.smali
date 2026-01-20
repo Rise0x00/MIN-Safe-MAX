@@ -1,221 +1,166 @@
 .class public final Lyhf;
-.super Landroid/widget/FrameLayout;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lgif;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:Lhif;
+.field public X:I
+
+.field public final synthetic Y:Ljava/util/ArrayList;
+
+.field public final synthetic Z:Llq6;
+
+.field public o:Llq6;
+
+.field public final synthetic t0:Lnq6;
+
+.field public final synthetic u0:J
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Ljava/util/ArrayList;Llq6;Lnq6;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Lyhf;->Y:Ljava/util/ArrayList;
 
-    new-instance p1, Lhif;
+    iput-object p2, p0, Lyhf;->Z:Llq6;
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lyhf;->t0:Lnq6;
 
-    iput-object p1, p0, Lyhf;->a:Lhif;
+    iput-wide p4, p0, Lyhf;->u0:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p6}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    check-cast p1, Lzb4;
 
-    const/4 p1, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return p1
+    invoke-virtual {p0, p1, p2}, Lyhf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lyhf;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lyhf;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public getOnRequestInterceptTouchEvent()Loi6;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Loi6;"
-        }
-    .end annotation
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 7
 
-    iget-object v0, p0, Lyhf;->a:Lhif;
+    new-instance v0, Lyhf;
 
-    iget-object v0, v0, Lhif;->b:Loi6;
+    iget-object v3, p0, Lyhf;->t0:Lnq6;
+
+    iget-wide v4, p0, Lyhf;->u0:J
+
+    iget-object v1, p0, Lyhf;->Y:Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lyhf;->Z:Llq6;
+
+    move-object v6, p2
+
+    invoke-direct/range {v0 .. v6}, Lyhf;-><init>(Ljava/util/ArrayList;Llq6;Lnq6;JLkotlin/coroutines/Continuation;)V
 
     return-object v0
 .end method
 
-.method public getOnTouch()Lqi6;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lqi6;"
-        }
-    .end annotation
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lyhf;->a:Lhif;
+    iget v0, p0, Lyhf;->X:I
 
-    iget-object v0, v0, Lhif;->a:Lqi6;
+    const/4 v1, 0x1
 
-    return-object v0
-.end method
+    if-eqz v0, :cond_1
 
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
+    if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lyhf;->a:Lhif;
+    iget-object v0, p0, Lyhf;->o:Llq6;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Lhif;->a:Lqi6;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
     goto :goto_1
 
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
     :cond_1
-    return v1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    iget-object p1, p0, Lyhf;->Y:Ljava/util/ArrayList;
 
-    return p1
-.end method
+    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
+    move-result-object p1
 
-    iget-object v0, p0, Lyhf;->a:Lhif;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Lhif;->a:Lqi6;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
+    if-eqz v0, :cond_2
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Leq7;
+
+    iget-object v2, p0, Lyhf;->t0:Lnq6;
+
+    invoke-interface {v2, v0}, Lnq6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
     goto :goto_0
 
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return v1
-
     :cond_2
+    iget-object v0, p0, Lyhf;->Z:Llq6;
+
+    iput-object v0, p0, Lyhf;->o:Llq6;
+
+    iput v1, p0, Lyhf;->X:I
+
+    iget-wide v1, p0, Lyhf;->u0:J
+
+    invoke-static {v1, v2, p0}, Lumj;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v1, Lac4;->a:Lac4;
+
+    if-ne p1, v1, :cond_3
+
+    return-object v1
+
+    :cond_3
     :goto_1
-    const/4 p1, 0x1
+    invoke-interface {v0}, Llq6;->invoke()Ljava/lang/Object;
 
-    return p1
-.end method
+    sget-object p1, Lb3h;->a:Lb3h;
 
-.method public final requestDisallowInterceptTouchEvent(Z)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
-
-    iget-object p1, p0, Lyhf;->a:Lhif;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p1, p1, Lhif;->b:Loi6;
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Loi6;->invoke()Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public setOnRequestInterceptTouchEvent(Loi6;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Loi6;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lyhf;->a:Lhif;
-
-    iput-object p1, v0, Lhif;->b:Loi6;
-
-    return-void
-.end method
-
-.method public setOnTouch(Lqi6;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lqi6;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lyhf;->a:Lhif;
-
-    iput-object p1, v0, Lhif;->a:Lqi6;
-
-    return-void
+    return-object p1
 .end method

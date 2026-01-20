@@ -1,455 +1,220 @@
-.class public abstract Lrx7;
-.super Ljava/lang/Object;
+.class public final Lrx7;
+.super Lmac;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/util/HashMap;
-
-.field public static final b:Ljava/util/HashMap;
+.field public static final c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 5
 
-    new-instance v0, Ljava/util/HashMap;
+    const-string v0, "java.specification.version"
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    invoke-static {v0}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    sput-object v0, Lrx7;->a:Ljava/util/HashMap;
+    move-result-object v0
 
-    new-instance v0, Ljava/util/HashMap;
+    const/4 v1, 0x0
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    if-eqz v0, :cond_0
 
-    sput-object v0, Lrx7;->b:Ljava/util/HashMap;
+    invoke-static {v0}, Lyzf;->k(Ljava/lang/String;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v1
+
+    :goto_0
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    const/16 v1, 0x9
+
+    if-lt v0, v1, :cond_2
+
+    :goto_1
+    move v2, v3
+
+    goto :goto_2
+
+    :cond_1
+    :try_start_0
+    const-class v0, Ljavax/net/ssl/SSLSocket;
+
+    const-string v4, "getApplicationProtocol"
+
+    invoke-virtual {v0, v4, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    :cond_2
+    :goto_2
+    sput-boolean v2, Lrx7;->c:Z
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/reflect/Constructor;Ljx7;)V
-    .locals 0
 
-    :try_start_0
-    filled-new-array {p1}, [Ljava/lang/Object;
+# virtual methods
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 4
 
-    move-result-object p1
+    invoke-virtual {p1}, Ljavax/net/ssl/SSLSocket;->getSSLParameters()Ljavax/net/ssl/SSLParameters;
 
-    invoke-virtual {p0, p1}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p2
 
-    new-instance p0, Ljava/lang/ClassCastException;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    throw p0
-    :try_end_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/InstantiationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-interface {p3}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    :catch_0
-    move-exception p0
+    move-result-object p3
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    :cond_0
+    :goto_0
+    invoke-interface {p3}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    move-result v1
 
-    throw p1
+    if-eqz v1, :cond_1
 
-    :catch_1
-    move-exception p0
+    invoke-interface {p3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    move-result-object v1
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    move-object v2, v1
 
-    throw p1
+    check-cast v2, Lyyc;
 
-    :catch_2
-    move-exception p0
+    sget-object v3, Lyyc;->b:Lyyc;
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    if-eq v2, v3, :cond_0
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p3, Ljava/util/ArrayList;
+
+    const/16 v1, 0xa
+
+    invoke-static {v0, v1}, Lri3;->n(Ljava/lang/Iterable;I)I
+
+    move-result v1
+
+    invoke-direct {p3, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lyyc;
+
+    iget-object v1, v1, Lyyc;->a:Ljava/lang/String;
+
+    invoke-virtual {p3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v0, 0x0
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    invoke-virtual {p3, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_3
+
+    check-cast p3, [Ljava/lang/String;
+
+    invoke-static {p2, p3}, La85;->t(Ljavax/net/ssl/SSLParameters;[Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljavax/net/ssl/SSLSocket;->setSSLParameters(Ljavax/net/ssl/SSLParameters;)V
+
+    return-void
+
+    :cond_3
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p1
 .end method
 
-.method public static b(Ljava/lang/Class;)I
-    .locals 13
-
-    sget-object v0, Lrx7;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    if-nez v1, :cond_1
-
-    goto/16 :goto_b
-
-    :cond_1
-    const/4 v1, 0x0
+.method public final f(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 1
 
     :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+    invoke-static {p1}, La85;->l(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object p1
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
-
-    move-result-object v4
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3}, Ljava/lang/Package;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    goto :goto_0
-
-    :cond_2
-    const-string v3, ""
-
-    :goto_0
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_3
+    if-nez p1, :cond_0
 
     goto :goto_1
 
-    :cond_3
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
 
-    move-result v5
+    move-result v0
 
-    add-int/2addr v5, v2
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v4
+    :cond_1
+    const-string v0, ""
 
-    :goto_1
-    const-string v5, "."
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v6, "_"
-
-    invoke-static {v4, v5, v6}, Lfbf;->t(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "_LifecycleAdapter"
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/16 v3, 0x2e
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    :goto_2
-    invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v3
-
-    filled-new-array {p0}, [Ljava/lang/Class;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/reflect/AccessibleObject;->isAccessible()Z
-
-    move-result v4
-
-    if-nez v4, :cond_5
-
-    invoke-virtual {v3, v2}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    move-result v0
     :try_end_0
-    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/UnsupportedOperationException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_3
+    if-eqz v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    :goto_0
+    return-object p1
 
     :catch_0
-    move-exception p0
+    :goto_1
+    const/4 p1, 0x0
 
-    new-instance v0, Ljava/lang/RuntimeException;
-
-    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
-
-    :catch_1
-    move-object v3, v1
-
-    :cond_5
-    :goto_3
-    const/4 v4, 0x2
-
-    sget-object v5, Lrx7;->b:Ljava/util/HashMap;
-
-    if-eqz v3, :cond_6
-
-    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-virtual {v5, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :goto_4
-    move v2, v4
-
-    goto/16 :goto_b
-
-    :cond_6
-    sget-object v3, Ld73;->c:Ld73;
-
-    iget-object v6, v3, Ld73;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v6, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v7
-
-    check-cast v7, Ljava/lang/Boolean;
-
-    const/4 v8, 0x0
-
-    if-eqz v7, :cond_7
-
-    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v3
-
-    goto :goto_6
-
-    :cond_7
-    :try_start_1
-    invoke-virtual {p0}, Ljava/lang/Class;->getDeclaredMethods()[Ljava/lang/reflect/Method;
-
-    move-result-object v7
-    :try_end_1
-    .catch Ljava/lang/NoClassDefFoundError; {:try_start_1 .. :try_end_1} :catch_2
-
-    array-length v9, v7
-
-    move v10, v8
-
-    :goto_5
-    if-ge v10, v9, :cond_9
-
-    aget-object v11, v7, v10
-
-    const-class v12, Lxma;
-
-    invoke-virtual {v11, v12}, Ljava/lang/reflect/Method;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
-
-    move-result-object v11
-
-    check-cast v11, Lxma;
-
-    if-eqz v11, :cond_8
-
-    invoke-virtual {v3, p0, v7}, Ld73;->a(Ljava/lang/Class;[Ljava/lang/reflect/Method;)Lb73;
-
-    move v3, v2
-
-    goto :goto_6
-
-    :cond_8
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_5
-
-    :cond_9
-    sget-object v3, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-virtual {v6, p0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move v3, v8
-
-    :goto_6
-    if-eqz v3, :cond_a
-
-    goto/16 :goto_b
-
-    :cond_a
-    invoke-virtual {p0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    const-class v6, Ljx7;
-
-    if-eqz v3, :cond_b
-
-    invoke-virtual {v6, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_b
-
-    move v7, v2
-
-    goto :goto_7
-
-    :cond_b
-    move v7, v8
-
-    :goto_7
-    if-eqz v7, :cond_d
-
-    invoke-static {v3}, Lrx7;->b(Ljava/lang/Class;)I
-
-    move-result v1
-
-    if-ne v1, v2, :cond_c
-
-    goto :goto_b
-
-    :cond_c
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-virtual {v5, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Collection;
-
-    invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    :cond_d
-    invoke-virtual {p0}, Ljava/lang/Class;->getInterfaces()[Ljava/lang/Class;
-
-    move-result-object v3
-
-    array-length v7, v3
-
-    move v9, v8
-
-    :goto_8
-    if-ge v9, v7, :cond_12
-
-    aget-object v10, v3, v9
-
-    if-eqz v10, :cond_e
-
-    invoke-virtual {v6, v10}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
-
-    move-result v11
-
-    if-eqz v11, :cond_e
-
-    move v11, v2
-
-    goto :goto_9
-
-    :cond_e
-    move v11, v8
-
-    :goto_9
-    if-nez v11, :cond_f
-
-    goto :goto_a
-
-    :cond_f
-    invoke-static {v10}, Lrx7;->b(Ljava/lang/Class;)I
-
-    move-result v11
-
-    if-ne v11, v2, :cond_10
-
-    goto :goto_b
-
-    :cond_10
-    if-nez v1, :cond_11
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    :cond_11
-    invoke-virtual {v5, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Ljava/util/Collection;
-
-    invoke-interface {v1, v10}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    :goto_a
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_8
-
-    :cond_12
-    if-eqz v1, :cond_13
-
-    invoke-virtual {v5, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto/16 :goto_4
-
-    :cond_13
-    :goto_b
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return v2
-
-    :catch_2
-    move-exception p0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "The observer class has some methods that use newer APIs which are not available in the current OS version. Lifecycles cannot access even other methods so you should make sure that your observer classes only access framework classes that are available in your min API level OR use lifecycle:compiler annotation processor."
-
-    invoke-direct {v0, v1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v0
+    return-object p1
 .end method

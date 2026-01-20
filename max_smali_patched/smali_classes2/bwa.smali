@@ -1,25 +1,27 @@
-.class public abstract Lbwa;
-.super Ljava/lang/Object;
+.class public final Lbwa;
+.super Lcwa;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
+# instance fields
+.field public final d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJZJ)V
+    .locals 7
 
-    sget v0, Lgrc;->oneme_folders_picker_snackbar_add_channel_title:I
+    move-object v0, p0
 
-    sput v0, Lbwa;->a:I
+    move-wide v1, p1
 
-    sget v0, Lgrc;->oneme_folders_picker_snackbar_add_chat_title:I
+    move-wide v3, p3
 
-    sput v0, Lbwa;->b:I
+    move-wide v5, p6
+
+    invoke-direct/range {v0 .. v6}, Lcwa;-><init>(JJJ)V
+
+    iput-boolean p5, v0, Lbwa;->d:Z
 
     return-void
 .end method

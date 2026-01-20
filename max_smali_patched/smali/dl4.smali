@@ -2,78 +2,49 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llec;
 
-# instance fields
-.field public a:Lm7d;
 
-.field public b:Lm7d;
+# static fields
+.field public static final a:Lay0;
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public e:I
+    new-instance v0, Lay0;
 
-.field public f:I
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lay0;-><init>(I)V
+
+    sput-object v0, Ldl4;->a:Lay0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Ldl4;->a:Lay0;
 
-    const-string v1, "ChangeInfo{oldHolder="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Ldl4;->a:Lm7d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", newHolder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ldl4;->b:Lm7d;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fromX="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldl4;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fromY="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldl4;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", toX="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldl4;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", toY="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ldl4;->f:I
-
-    const/16 v2, 0x7d
-
-    invoke-static {v0, v1, v2}, Lcd0;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Ljava/nio/ByteBuffer;
+
     return-object v0
+.end method
+
+.method public final bridge synthetic d(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p1, 0x1
+
+    return p1
 .end method

@@ -1,28 +1,67 @@
-.class public interface abstract Lwib;
+.class public abstract Lwib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract c()I
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract d()V
-.end method
+.field public static final b:I
 
-.method public abstract f()[B
-.end method
+.field public static final c:I
 
-.method public g()I
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+
+# direct methods
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x5
+    sget v0, Lgad;->oneme_picker_bottom_button:I
 
-    return v0
-.end method
+    sput v0, Lwib;->a:I
 
-.method public abstract getId()J
-.end method
+    sget v0, Lgad;->oneme_picker_confirm_cancel:I
 
-.method public abstract getType()Lxib;
+    sput v0, Lwib;->b:I
+
+    sget v0, Lgad;->oneme_picker_confirm_close:I
+
+    sput v0, Lwib;->c:I
+
+    sget v0, Lgad;->oneme_picker_input_view:I
+
+    sput v0, Lwib;->d:I
+
+    sget v0, Lgad;->oneme_picker_media_keyboard_container:I
+
+    sput v0, Lwib;->e:I
+
+    sget v0, Lgad;->oneme_picker_quote_view:I
+
+    sput v0, Lwib;->f:I
+
+    sget v0, Lgad;->oneme_picker_toolbar:I
+
+    sput v0, Lwib;->g:I
+
+    sget v0, Lgad;->oneme_picker_toolbar_action_cancel_selection:I
+
+    sput v0, Lwib;->h:I
+
+    sget v0, Lgad;->oneme_picker_toolbar_action_select:I
+
+    sput v0, Lwib;->i:I
+
+    return-void
 .end method

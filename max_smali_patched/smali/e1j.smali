@@ -1,151 +1,246 @@
-.class public final Le1j;
-.super Lt6i;
+.class public abstract Le1j;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lk9i;
 
 
 # static fields
-.field private static final zzb:Le1j;
-
-
-# instance fields
-.field private zzd:I
-
-.field private zze:Lp4i;
-
-.field private zzf:Lhei;
-
-.field private zzg:I
-
-.field private zzh:F
-
-.field private zzi:Z
+.field public static final a:Luag;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Le1j;
+    new-instance v0, Luag;
 
-    invoke-direct {v0}, Le1j;-><init>()V
+    const/4 v1, 0x1
 
-    sput-object v0, Le1j;->zzb:Le1j;
+    invoke-direct {v0, v1}, Luag;-><init>(I)V
 
-    const-class v1, Le1j;
-
-    invoke-static {v1, v0}, Lt6i;->h(Ljava/lang/Class;Lt6i;)V
+    sput-object v0, Le1j;->a:Luag;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
+.method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 0
 
-    invoke-direct {p0}, Lt6i;-><init>()V
+    if-nez p0, :cond_1
 
-    sget-object v0, Lp4i;->b:Ll4i;
+    if-nez p1, :cond_0
 
-    iput-object v0, p0, Le1j;->zze:Lp4i;
+    const/4 p0, 0x1
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Le1j;->zzg:I
-
-    const/high16 v1, 0x3f400000    # 0.75f
-
-    iput v1, p0, Le1j;->zzh:F
-
-    iput-boolean v0, p0, Le1j;->zzi:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final m(ILt6i;)Ljava/lang/Object;
-    .locals 6
-
-    add-int/lit8 p1, p1, -0x1
-
-    if-eqz p1, :cond_4
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_3
-
-    const/4 p2, 0x3
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x4
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x5
-
-    if-eq p1, p2, :cond_0
-
-    const/4 p1, 0x0
-
-    return-object p1
+    return p0
 
     :cond_0
-    sget-object p1, Le1j;->zzb:Le1j;
+    const/4 p0, 0x0
 
-    return-object p1
+    return p0
 
     :cond_1
-    new-instance p1, Lmii;
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    sget-object p2, Le1j;->zzb:Le1j;
+    move-result p0
 
-    invoke-direct {p1, p2}, Lj6i;-><init>(Lt6i;)V
+    return p0
+.end method
 
-    return-object p1
+.method public static b(II)I
+    .locals 0
 
-    :cond_2
-    new-instance p1, Le1j;
+    if-ge p0, p1, :cond_0
 
-    invoke-direct {p1}, Le1j;-><init>()V
+    const/4 p0, -0x1
 
-    return-object p1
+    return p0
 
-    :cond_3
-    const-string v4, "zzh"
+    :cond_0
+    if-ne p0, p1, :cond_1
 
-    const-string v5, "zzi"
+    const/4 p0, 0x0
 
-    const-string v0, "zzd"
+    return p0
 
-    const-string v1, "zze"
+    :cond_1
+    const/4 p0, 0x1
 
-    const-string v2, "zzf"
+    return p0
+.end method
 
-    const-string v3, "zzg"
+.method public static c(JJ)I
+    .locals 0
 
-    filled-new-array/range {v0 .. v5}, [Ljava/lang/Object;
+    cmp-long p0, p0, p2
 
-    move-result-object p1
+    if-gez p0, :cond_0
 
-    sget-object p2, Le1j;->zzb:Le1j;
+    const/4 p0, -0x1
 
-    new-instance v0, Lfai;
+    return p0
 
-    const-string v1, "\u0001\u0005\u0000\u0001\u0001\u0005\u0005\u0000\u0000\u0000\u0001\u100a\u0000\u0002\u1009\u0001\u0003\u1004\u0002\u0004\u1001\u0003\u0005\u1007\u0004"
+    :cond_0
+    if-nez p0, :cond_1
 
-    invoke-direct {v0, p2, v1, p1}, Lfai;-><init>(Le3i;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 p0, 0x0
 
+    return p0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static d(Lzq5;)Ljg5;
+    .locals 8
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    invoke-interface {p0}, Lzq5;->length()I
+
+    move-result v5
+
+    const/4 v4, 0x0
+
+    move v2, v4
+
+    move v6, v2
+
+    :goto_0
+    if-ge v2, v5, :cond_1
+
+    invoke-interface {p0, v2, v0, v1}, Lzq5;->s(IJ)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    add-int/lit8 v6, v6, 0x1
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Ljg5;
+
+    const/4 v7, 0x2
+
+    const/4 v3, 0x1
+
+    invoke-direct/range {v2 .. v7}, Ljg5;-><init>(IIIII)V
+
+    return-object v2
+.end method
+
+.method public static e(Lcom/google/android/material/appbar/MaterialToolbar;Ljava/lang/CharSequence;)Ljava/util/ArrayList;
+    .locals 4
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    if-ge v1, v2, :cond_1
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    instance-of v3, v2, Landroid/widget/TextView;
+
+    if-eqz v3, :cond_0
+
+    check-cast v2, Landroid/widget/TextView;
+
+    invoke-virtual {v2}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-static {v3, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
     return-object v0
+.end method
 
-    :cond_4
-    const/4 p1, 0x1
+.method public static f()V
+    .locals 2
 
-    invoke-static {p1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v1, "This function has a reified type parameter and thus can only be inlined at compilation time, not called directly."
+
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public static g(Ljava/lang/RuntimeException;Ljava/lang/String;)V
+    .locals 5
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
+
+    move-result-object v0
+
+    array-length v1, v0
+
+    const/4 v2, -0x1
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v1, :cond_1
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Ljava/lang/StackTraceElement;->getClassName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    move v2, v3
+
+    :cond_0
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    invoke-static {v0, v2, v1}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
 
     move-result-object p1
 
-    return-object p1
+    check-cast p1, [Ljava/lang/StackTraceElement;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->setStackTrace([Ljava/lang/StackTraceElement;)V
+
+    return-void
 .end method

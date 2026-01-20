@@ -1,48 +1,121 @@
-.class public final Lkmh;
-.super Ljava/lang/Object;
+.class public final enum Lkmh;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Limh;
 
 
 # static fields
-.field public static final d:Landroid/util/Size;
+.field public static final enum X:Lkmh;
 
+.field public static final synthetic Y:[Lkmh;
 
-# instance fields
-.field public final a:Landroid/util/Size;
+.field public static final enum a:Lkmh;
 
-.field public final b:Ljava/lang/String;
+.field public static final enum b:Lkmh;
 
-.field public final c:Z
+.field public static final enum c:Lkmh;
+
+.field public static final enum d:Lkmh;
+
+.field public static final enum o:Lkmh;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 8
 
-    new-instance v0, Landroid/util/Size;
+    new-instance v0, Lkmh;
 
-    const/16 v1, 0x28
+    const-string v1, "PREPARE"
 
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
+    const/4 v2, 0x0
 
-    sput-object v0, Lkmh;->d:Landroid/util/Size;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkmh;->a:Lkmh;
+
+    new-instance v1, Lkmh;
+
+    const-string v2, "PLAY"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lkmh;->b:Lkmh;
+
+    new-instance v2, Lkmh;
+
+    const-string v3, "IN_PROGRESS"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lkmh;->c:Lkmh;
+
+    new-instance v3, Lkmh;
+
+    const-string v4, "PAUSE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lkmh;->d:Lkmh;
+
+    new-instance v4, Lkmh;
+
+    const-string v5, "STOP"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lkmh;->o:Lkmh;
+
+    new-instance v5, Lkmh;
+
+    const-string v6, "END"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lkmh;->X:Lkmh;
+
+    filled-new-array/range {v0 .. v5}, [Lkmh;
+
+    move-result-object v0
+
+    sput-object v0, Lkmh;->Y:[Lkmh;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/util/Size;Ljava/lang/String;Z)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lkmh;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lkmh;
 
-    iput-object p1, p0, Lkmh;->a:Landroid/util/Size;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-object p2, p0, Lkmh;->b:Ljava/lang/String;
+    move-result-object p0
 
-    iput-boolean p3, p0, Lkmh;->c:Z
+    check-cast p0, Lkmh;
 
-    return-void
+    return-object p0
+.end method
+
+.method public static values()[Lkmh;
+    .locals 1
+
+    sget-object v0, Lkmh;->Y:[Lkmh;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkmh;
+
+    return-object v0
 .end method

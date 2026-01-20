@@ -1,23 +1,50 @@
-.class public interface abstract Lwg5;
+.class public abstract Lwg5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+
 
 # virtual methods
-.method public abstract a()Ljava/util/concurrent/ExecutorService;
+.method public onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract c()Ljava/util/concurrent/ExecutorService;
+.method public onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract e()Ljava/util/concurrent/ExecutorService;
+.method public onActivityPaused(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract f()Ljava/util/concurrent/ExecutorService;
+.method public onActivityResumed(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract j()Ljava/util/concurrent/ExecutorService;
+.method public onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract m()Ljava/util/concurrent/ExecutorService;
+.method public onActivityStarted(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onActivityStopped(Landroid/app/Activity;)V
+    .locals 0
+
+    return-void
 .end method

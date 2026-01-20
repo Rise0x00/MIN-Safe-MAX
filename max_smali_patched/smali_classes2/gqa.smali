@@ -1,213 +1,55 @@
 .class public final Lgqa;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lut0;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lru7;
+.field public final synthetic Y:Lhqa;
 
-.field public final c:Ltif;
+.field public Z:I
 
-.field public final d:Lscd;
+.field public d:J
+
+.field public o:Lxk9;
 
 
 # direct methods
-.method public constructor <init>(Lxl3;Landroid/content/Context;Lru7;)V
-    .locals 1
+.method public constructor <init>(Lhqa;Lo84;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lgqa;->Y:Lhqa;
 
-    iput-object p2, p0, Lgqa;->a:Landroid/content/Context;
-
-    iput-object p3, p0, Lgqa;->b:Lru7;
-
-    new-instance p2, Lfqa;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p0, p3}, Lfqa;-><init>(Lgqa;I)V
-
-    new-instance p3, Ltif;
-
-    invoke-direct {p3, p2}, Ltif;-><init>(Loi6;)V
-
-    iput-object p3, p0, Lgqa;->c:Ltif;
-
-    new-instance p2, Lfqa;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p2, p0, p3}, Lfqa;-><init>(Lgqa;I)V
-
-    new-instance p3, Lscd;
-
-    invoke-direct {p3, p2}, Lscd;-><init>(Loi6;)V
-
-    iput-object p3, p0, Lgqa;->d:Lscd;
-
-    sget p2, Lxl3;->c:I
-
-    sget p3, Lxl3;->d:I
-
-    or-int/2addr p2, p3
-
-    new-instance p3, Lcm7;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p3, v0, p0}, Lcm7;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p2, p3}, Lxl3;->a(ILwl3;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 2
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Lgqa;->a:Landroid/content/Context;
+    iput-object p1, p0, Lgqa;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    iget p1, p0, Lgqa;->Z:I
 
-    move-result-object v0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lgqa;->Z:I
 
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+    const-wide/16 v0, 0x0
 
-    const/4 v1, 0x1
+    const/4 p1, 0x0
 
-    if-ne v0, v1, :cond_0
+    iget-object v2, p0, Lgqa;->Y:Lhqa;
 
-    invoke-virtual {p0}, Lgqa;->b()I
+    invoke-static {v2, v0, v1, p1, p0}, Lhqa;->a(Lhqa;JLxk9;Lo84;)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object p1
 
-    return v0
-
-    :cond_0
-    invoke-virtual {p0}, Lgqa;->b()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b()I
-    .locals 4
-
-    iget-object v0, p0, Lgqa;->d:Lscd;
-
-    invoke-virtual {v0}, Lscd;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
-
-    move-result v0
-
-    const/16 v1, 0xa
-
-    int-to-float v1, v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v3, 0x2
-
-    invoke-static {v1, v2, v3, v0}, Lox1;->d(FFII)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final c()F
-    .locals 4
-
-    sget-object v0, Lsw2;->f:Lorf;
-
-    iget-object v1, p0, Lgqa;->b:Lru7;
-
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lwua;
-
-    iget-object v1, v1, Lwua;->a:Lj0d;
-
-    iget-object v1, v1, Lj0d;->a:Lt0f;
-
-    invoke-interface {v1}, Lt0f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lx45;
-
-    invoke-virtual {v0, v1}, Lorf;->e(Lx45;)J
-
-    move-result-wide v0
-
-    iget-object v2, p0, Lgqa;->a:Landroid/content/Context;
-
-    invoke-static {v0, v1, v2}, Lbu4;->b(JLandroid/content/Context;)F
-
-    move-result v0
-
-    iget-object v1, p0, Lgqa;->c:Ltif;
-
-    invoke-virtual {v1}, Ltif;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lnbg;
-
-    iget-object v1, v1, Lnbg;->a:La1f;
-
-    invoke-virtual {v1}, La1f;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
-
-    move-result v1
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    invoke-static {v3, v1, v2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
-
-    move-result v1
-
-    add-float/2addr v1, v0
-
-    return v1
+    return-object p1
 .end method

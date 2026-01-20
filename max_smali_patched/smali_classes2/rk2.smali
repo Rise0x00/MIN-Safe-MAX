@@ -1,82 +1,49 @@
 .class public final Lrk2;
-.super Logf;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lsk2;
+.field public X:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lxg2;
 
 
 # direct methods
-.method public constructor <init>(Lsk2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lxg2;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lrk2;->X:Lsk2;
+    iput-object p1, p0, Lrk2;->o:Lxg2;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lbtg;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lrk2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lrk2;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lrk2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    new-instance v0, Lrk2;
+    iput-object p1, p0, Lrk2;->d:Ljava/lang/Object;
 
-    iget-object v1, p0, Lrk2;->X:Lsk2;
+    iget p1, p0, Lrk2;->X:I
 
-    invoke-direct {v0, v1, p2}, Lrk2;-><init>(Lsk2;Lkotlin/coroutines/Continuation;)V
+    const/high16 v0, -0x80000000
 
-    iput-object p1, v0, Lrk2;->o:Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    return-object v0
-.end method
+    iput p1, p0, Lrk2;->X:I
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iget-object p1, p0, Lrk2;->o:Lxg2;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-wide/16 v0, 0x0
 
-    iget-object p1, p0, Lrk2;->o:Ljava/lang/Object;
+    invoke-static {p1, v0, v1, p0}, Lwk2;->k(Lxg2;JLo84;)Ljava/lang/Object;
 
-    check-cast p1, Lbtg;
-
-    sget v0, Lsk2;->M0:I
-
-    iget-object v0, p0, Lrk2;->X:Lsk2;
-
-    invoke-virtual {v0, p1}, Lsk2;->v(Lbtg;)V
-
-    sget-object p1, Lybg;->a:Lybg;
+    move-result-object p1
 
     return-object p1
 .end method

@@ -3,88 +3,70 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt02;
+.implements Lf0b;
 
 
 # instance fields
-.field public final synthetic b:Lz02;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz02;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Ly02;->a:I
 
-    iput-object p1, p0, Ly02;->b:Lz02;
+    iput-object p2, p0, Ly02;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Ljava/util/List;
-    .locals 3
+.method public final a(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object v0, p0, Ly02;->b:Lz02;
+    iget v0, p0, Ly02;->a:I
 
-    invoke-interface {v0}, Lz02;->d()Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Ly02;->b:Ljava/lang/Object;
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    check-cast v0, Lzl6;
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Ldf8;->k(Ljava/lang/Object;)V
 
-    :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    return-void
 
-    move-result v1
+    :pswitch_0
+    iget-object v0, p0, Ly02;->b:Ljava/lang/Object;
 
-    if-eqz v1, :cond_1
+    check-cast v0, Lfjc;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast v0, Lcjc;
 
-    move-result-object v1
+    invoke-virtual {v0, p1}, Lcjc;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast v1, Lz02;
+    return-void
 
-    instance-of v2, v1, Lz02;
+    :pswitch_1
+    iget-object v0, p0, Ly02;->b:Ljava/lang/Object;
 
-    invoke-static {v2}, Loui;->b(Z)V
+    check-cast v0, Lz02;
 
-    move-object v2, v1
+    invoke-virtual {v0, p1}, Ldf8;->k(Ljava/lang/Object;)V
 
-    check-cast v2, Lz02;
+    return-void
 
-    invoke-interface {v2}, Lz02;->d()Ljava/lang/String;
+    nop
 
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    return-object p1
-
-    :cond_1
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Unable to find camera with id "
-
-    const-string v2, " from list of available cameras."
-
-    invoke-static {v1, v0, v2}, Lok7;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

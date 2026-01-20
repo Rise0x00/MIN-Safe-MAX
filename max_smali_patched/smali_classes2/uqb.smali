@@ -1,40 +1,26 @@
 .class public final Luqb;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic X:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
 
-.field public final synthetic Y:Lt92;
-
-.field public final synthetic Z:J
-
-.field public final synthetic o:Lwqb;
-
-.field public final synthetic s0:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lwqb;ILt92;JJLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Luqb;->o:Lwqb;
+    iput-object p2, p0, Luqb;->X:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
 
-    iput p2, p0, Luqb;->X:I
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Luqb;->Y:Lt92;
-
-    iput-wide p4, p0, Luqb;->Z:J
-
-    iput-wide p6, p0, Luqb;->s0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p8}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -44,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lg54;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Luqb;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -54,7 +38,7 @@
 
     check-cast p1, Luqb;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Luqb;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -62,95 +46,35 @@
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 9
+    .locals 2
 
     new-instance v0, Luqb;
 
-    iget-wide v4, p0, Luqb;->Z:J
+    iget-object v1, p0, Luqb;->X:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
 
-    iget-wide v6, p0, Luqb;->s0:J
+    invoke-direct {v0, p2, v1}, Luqb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;)V
 
-    iget-object v1, p0, Luqb;->o:Lwqb;
-
-    iget v2, p0, Luqb;->X:I
-
-    iget-object v3, p0, Luqb;->Y:Lt92;
-
-    move-object v8, p2
-
-    invoke-direct/range {v0 .. v8}, Luqb;-><init>(Lwqb;ILt92;JJLkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Luqb;->o:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    .locals 1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object v0, p0, Luqb;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Luqb;->o:Lwqb;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object p1, p1, Lwqb;->e:Lru7;
+    check-cast v0, Ljava/util/List;
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    iget-object p1, p0, Luqb;->X:Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
 
-    move-result-object p1
+    iget-object p1, p1, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->c:Ll0f;
 
-    check-cast p1, Lc3b;
+    invoke-virtual {p1, v0}, Lnd8;->F(Ljava/util/List;)V
 
-    new-instance v0, Lk3b;
-
-    iget v1, p0, Luqb;->X:I
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v3, v3, v1, v2}, Lk3b;-><init>(IIII)V
-
-    invoke-virtual {p1, v0}, Lc3b;->c(Lk3b;)V
-
-    sget v0, Lmza;->d:I
-
-    new-instance v1, Lirf;
-
-    invoke-direct {v1, v0}, Lirf;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lc3b;->g(Lnrf;)V
-
-    sget-object v0, Lt3b;->a:Lt3b;
-
-    invoke-virtual {p1, v0}, Lc3b;->e(Lu3b;)V
-
-    new-instance v0, Lz3b;
-
-    sget v1, Lmkd;->q:I
-
-    new-instance v2, Lirf;
-
-    invoke-direct {v2, v1}, Lirf;-><init>(I)V
-
-    invoke-direct {v0, v2}, Lz3b;-><init>(Lnrf;)V
-
-    invoke-virtual {p1, v0}, Lc3b;->f(La4b;)V
-
-    new-instance v3, Lgc2;
-
-    iget-object v4, p0, Luqb;->o:Lwqb;
-
-    iget-object v5, p0, Luqb;->Y:Lt92;
-
-    iget-wide v6, p0, Luqb;->Z:J
-
-    iget-wide v8, p0, Luqb;->s0:J
-
-    invoke-direct/range {v3 .. v9}, Lgc2;-><init>(Lwqb;Lt92;JJ)V
-
-    invoke-virtual {p1, v3}, Lc3b;->d(Ld3b;)V
-
-    invoke-virtual {p1}, Lc3b;->i()Lb3b;
-
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

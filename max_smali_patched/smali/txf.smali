@@ -1,55 +1,23 @@
-.class public abstract Ltxf;
+.class public final Ltxf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+
 # direct methods
-.method public static a(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
+.method public constructor <init>(JJ)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/View;->findOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    iput-wide p1, p0, Ltxf;->a:J
 
-    return-object p0
-.end method
-
-.method public static b(Ljava/lang/Runnable;)Landroid/window/OnBackInvokedCallback;
-    .locals 2
-
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Lho;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p0}, Lho;-><init>(ILjava/lang/Object;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
-
-    const v0, 0xf4240
-
-    check-cast p1, Landroid/window/OnBackInvokedCallback;
-
-    invoke-interface {p0, v0, p1}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
-
-    return-void
-.end method
-
-.method public static d(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
-
-    check-cast p1, Landroid/window/OnBackInvokedCallback;
-
-    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
+    iput-wide p3, p0, Ltxf;->b:J
 
     return-void
 .end method

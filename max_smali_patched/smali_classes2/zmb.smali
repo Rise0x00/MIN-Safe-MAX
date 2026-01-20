@@ -3,127 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Lnq6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:F
 
-.field public final synthetic b:Lone/me/startconversation/channel/PickSubscribersScreen;
+.field public final synthetic b:Landroid/view/animation/Interpolator;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/startconversation/channel/PickSubscribersScreen;I)V
+.method public synthetic constructor <init>(FLandroid/view/animation/LinearInterpolator;)V
     .locals 0
 
-    iput p2, p0, Lzmb;->a:I
-
-    iput-object p1, p0, Lzmb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lzmb;->a:F
+
+    iput-object p2, p0, Lzmb;->b:Landroid/view/animation/Interpolator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    iget v0, p0, Lzmb;->a:I
+    check-cast p1, Landroid/view/View;
 
-    iget-object v1, p0, Lzmb;->b:Lone/me/startconversation/channel/PickSubscribersScreen;
+    sget-object v0, Landroid/view/View;->ALPHA:Landroid/util/Property;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p1}, Landroid/view/View;->getAlpha()F
 
-    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Les7;
+    move-result v1
 
-    sget v0, Lct7;->a:I
+    const/4 v2, 0x2
 
-    sget v0, Lct7;->c:I
+    new-array v2, v2, [F
 
-    invoke-static {v0}, Lct7;->b(I)Z
+    const/4 v3, 0x0
 
-    move-result v0
+    aput v1, v2, v3
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x1
 
-    invoke-static {v1}, Ldci;->b(Lc24;)V
+    iget v3, p0, Lzmb;->a:F
 
-    :cond_0
-    sget-object v0, Lybg;->a:Lybg;
+    aput v3, v2, v1
 
-    return-object v0
+    invoke-static {p1, v0, v2}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
-    :pswitch_0
-    sget-object v0, Lone/me/startconversation/channel/PickSubscribersScreen;->z0:[Les7;
+    move-result-object p1
 
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v0, p0, Lzmb;->b:Landroid/view/animation/Interpolator;
 
-    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p1, v0}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget v1, Lk4b;->l:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    sget-object v1, Lmqa;->c:Lmqa;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lmqa;)V
-
-    sget-object v1, Ljqa;->d:Ljqa;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Ljqa;)V
-
-    sget-object v1, Llqa;->a:Llqa;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Llqa;)V
-
-    sget v1, Lnsa;->N:I
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
-
-    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    const/16 v2, 0xc
-
-    int-to-float v2, v2
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Lkhi;->c(F)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2, v2, v2, v2}, Landroid/view/ViewGroup$MarginLayoutParams;->setMargins(IIII)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method

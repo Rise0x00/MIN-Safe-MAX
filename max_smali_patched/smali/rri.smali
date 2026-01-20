@@ -1,70 +1,80 @@
 .class public final Lrri;
-.super Ljava/lang/Object;
+.super Lcpi;
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Ldti;
 
 
 # static fields
-.field public static final a:Lrri;
+.field public static final synthetic e:I
+
+
+# instance fields
+.field public final synthetic d:Lpkg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lpkg;)V
+    .locals 1
 
-    new-instance v0, Lrri;
+    iput-object p1, p0, Lrri;->d:Lpkg;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const-string p1, "com.google.android.gms.maps.model.internal.ITileProviderDelegate"
 
-    sput-object v0, Lrri;->a:Lrri;
+    const/4 v0, 0x6
 
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0, p1, v0}, Lcpi;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final V(ILandroid/os/Parcel;Landroid/os/Parcel;)Z
+    .locals 4
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v2
+
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
+
+    move-result v3
+
+    invoke-static {p2}, Lvui;->b(Landroid/os/Parcel;)V
+
+    iget-object p2, p0, Lrri;->d:Lpkg;
+
+    invoke-interface {p2, p1, v2, v3}, Lpkg;->a(III)Lmkg;
 
     move-result-object p1
 
-    throw p1
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    return v1
+
+    :cond_0
+    invoke-virtual {p3, v1}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {p1, p3, v1}, Lmkg;->writeToParcel(Landroid/os/Parcel;I)V
+
+    return v1
+
+    :cond_1
+    return v0
 .end method

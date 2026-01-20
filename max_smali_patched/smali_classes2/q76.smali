@@ -1,65 +1,48 @@
 .class public final Lq76;
-.super Lxua;
-.source "SourceFile"
+.super Lo84;
+
+
+# instance fields
+.field public final synthetic X:Lr3;
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public o:I
+
+
+# direct methods
+.method public constructor <init>(Lr3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lq76;->X:Lr3;
+
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    iput-object p1, p0, Lq76;->d:Ljava/lang/Object;
 
-    move-result p2
+    iget p1, p0, Lq76;->o:I
 
-    const/16 v0, 0x8
+    const/high16 v0, -0x80000000
 
-    int-to-float v0, v0
+    or-int/2addr p1, v0
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    iput p1, p0, Lq76;->o:I
 
-    move-result-object v1
+    iget-object p1, p0, Lq76;->X:Lr3;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    invoke-virtual {p1, v0, p0}, Lr3;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    move-result-object p1
 
-    const/4 v2, 0x2
-
-    invoke-static {v0, v1, v2, p2}, Lox1;->d(FFII)I
-
-    move-result p2
-
-    const/16 v0, 0x80
-
-    int-to-float v0, v0
-
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lkhi;->c(F)I
-
-    move-result v0
-
-    sub-int/2addr p2, v0
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
-
-    return-void
+    return-object p1
 .end method

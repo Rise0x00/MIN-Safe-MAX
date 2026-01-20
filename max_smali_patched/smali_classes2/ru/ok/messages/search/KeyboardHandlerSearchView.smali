@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private listener:Lws7;
+.field private listener:Lt38;
 
 
 # direct methods
@@ -72,7 +72,7 @@
     return p1
 .end method
 
-.method public setListener(Lws7;)V
+.method public setListener(Lt38;)V
     .locals 0
 
     return-void

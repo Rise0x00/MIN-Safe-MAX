@@ -1,227 +1,347 @@
-.class public interface abstract Lotb;
+.class public final Lotb;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public f:Z
+
+.field public g:I
+
+.field public h:I
+
+.field public i:[F
+
+
+# direct methods
+.method public constructor <init>(II)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p1}, Landroid/graphics/Color;->red(I)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->a:I
+
+    invoke-static {p1}, Landroid/graphics/Color;->green(I)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->b:I
+
+    invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->c:I
+
+    iput p1, p0, Lotb;->d:I
+
+    iput p2, p0, Lotb;->e:I
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public A(Lz1g;)V
-    .locals 0
+.method public final a()V
+    .locals 8
 
+    iget-boolean v0, p0, Lotb;->f:Z
+
+    if-nez v0, :cond_4
+
+    const/4 v0, -0x1
+
+    const/high16 v1, 0x40900000    # 4.5f
+
+    iget v2, p0, Lotb;->d:I
+
+    invoke-static {v0, v1, v2}, Ljj3;->f(IFI)I
+
+    move-result v3
+
+    const/high16 v4, 0x40400000    # 3.0f
+
+    invoke-static {v0, v4, v2}, Ljj3;->f(IFI)I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    if-eq v3, v0, :cond_0
+
+    if-eq v5, v0, :cond_0
+
+    invoke-static {v0, v3}, Ljj3;->i(II)I
+
+    move-result v1
+
+    iput v1, p0, Lotb;->h:I
+
+    invoke-static {v0, v5}, Ljj3;->i(II)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->g:I
+
+    iput-boolean v6, p0, Lotb;->f:Z
+
+    return-void
+
+    :cond_0
+    const/high16 v7, -0x1000000
+
+    invoke-static {v7, v1, v2}, Ljj3;->f(IFI)I
+
+    move-result v1
+
+    invoke-static {v7, v4, v2}, Ljj3;->f(IFI)I
+
+    move-result v2
+
+    if-eq v1, v0, :cond_1
+
+    if-eq v2, v0, :cond_1
+
+    invoke-static {v7, v1}, Ljj3;->i(II)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->h:I
+
+    invoke-static {v7, v2}, Ljj3;->i(II)I
+
+    move-result v0
+
+    iput v0, p0, Lotb;->g:I
+
+    iput-boolean v6, p0, Lotb;->f:Z
+
+    return-void
+
+    :cond_1
+    if-eq v3, v0, :cond_2
+
+    invoke-static {v0, v3}, Ljj3;->i(II)I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {v7, v1}, Ljj3;->i(II)I
+
+    move-result v1
+
+    :goto_0
+    iput v1, p0, Lotb;->h:I
+
+    if-eq v5, v0, :cond_3
+
+    invoke-static {v0, v5}, Ljj3;->i(II)I
+
+    move-result v0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {v7, v2}, Ljj3;->i(II)I
+
+    move-result v0
+
+    :goto_1
+    iput v0, p0, Lotb;->g:I
+
+    iput-boolean v6, p0, Lotb;->f:Z
+
+    :cond_4
     return-void
 .end method
 
-.method public A0(Lzsb;)V
-    .locals 0
+.method public final b()[F
+    .locals 4
 
-    return-void
+    iget-object v0, p0, Lotb;->i:[F
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Lotb;->i:[F
+
+    :cond_0
+    iget v0, p0, Lotb;->c:I
+
+    iget-object v1, p0, Lotb;->i:[F
+
+    iget v2, p0, Lotb;->a:I
+
+    iget v3, p0, Lotb;->b:I
+
+    invoke-static {v2, v3, v0, v1}, Ljj3;->a(III[F)V
+
+    iget-object v0, p0, Lotb;->i:[F
+
+    return-object v0
 .end method
 
-.method public B0(Lltb;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-void
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    const-class v2, Lotb;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lotb;
+
+    iget v2, p0, Lotb;->e:I
+
+    iget v3, p1, Lotb;->e:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lotb;->d:I
+
+    iget p1, p1, Lotb;->d:I
+
+    if-ne v2, p1, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public C0(Landroidx/media3/common/PlaybackException;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    return-void
+    iget v0, p0, Lotb;->d:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lotb;->e:I
+
+    add-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method public D0(Lyq9;)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-void
-.end method
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.method public E0(Lws4;)V
-    .locals 0
+    const-class v1, Lotb;
 
-    return-void
-.end method
+    invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
-.method public F0(J)V
-    .locals 0
+    move-result-object v1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public G0(Lqs8;I)V
-    .locals 0
+    const-string v1, " [RGB: #"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public K(I)V
-    .locals 0
+    iget v1, p0, Lotb;->d:I
 
-    return-void
-.end method
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-.method public L0(Landroidx/media3/common/PlaybackException;)V
-    .locals 0
+    move-result-object v1
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public U(Z)V
-    .locals 0
+    const-string v1, "] [HSL: "
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public X(Ls84;)V
-    .locals 0
+    invoke-virtual {p0}, Lotb;->b()[F
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public c()V
-    .locals 0
+    invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public f(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "] [Population: "
 
-.method public f0(Lf2g;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    iget v1, p0, Lotb;->e:I
 
-.method public g(Lvwg;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "] [Title Text: #"
 
-.method public g0(Lrtb;Lmtb;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-virtual {p0}, Lotb;->a()V
 
-.method public h(Z)V
-    .locals 0
+    iget v1, p0, Lotb;->g:I
 
-    return-void
-.end method
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-.method public i(IZ)V
-    .locals 0
+    move-result-object v1
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public i0(J)V
-    .locals 0
+    const-string v1, "] [Body Text: #"
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public j(F)V
-    .locals 0
+    invoke-virtual {p0}, Lotb;->a()V
 
-    return-void
-.end method
+    iget v1, p0, Lotb;->h:I
 
-.method public j0(Ldu8;)V
-    .locals 0
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public k(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const/16 v1, 0x5d
 
-.method public k0(Ldu8;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.method public l(IZ)V
-    .locals 0
+    move-result-object v0
 
-    return-void
-.end method
-
-.method public l0(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public m(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n(Ljava/util/List;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n0(Lmvf;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o(IZ)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onRepeatModeChanged(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public p(II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public q(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r(Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public s(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public t(Lqtb;Lqtb;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public y(Ln20;)V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

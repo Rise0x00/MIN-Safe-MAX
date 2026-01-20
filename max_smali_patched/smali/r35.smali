@@ -3,66 +3,128 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lvb4;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
-# static fields
-.field public static final a:Lr35;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Landroid/view/View;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Landroid/view/View;I)V
+    .locals 0
 
-    new-instance v0, Lr35;
+    iput p2, p0, Lr35;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lr35;->b:Landroid/view/View;
 
-    sput-object v0, Lr35;->a:Lr35;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method private final a(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final R(Ldc4;)J
-    .locals 1
-
-    new-instance p1, Ljava/io/IOException;
-
-    const-string v0, "DummyDataSource cannot be opened"
-
-    invoke-direct {p1, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final S(Lt2g;)V
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
+
+    iget p1, p0, Lr35;->a:I
 
     return-void
 .end method
 
-.method public final close()V
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget p1, p0, Lr35;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p1, p0, Lr35;->b:Landroid/view/View;
+
+    const/16 v0, 0x8
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :pswitch_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
+
+    iget p1, p0, Lr35;->a:I
 
     return-void
 .end method
 
-.method public final getUri()Landroid/net/Uri;
+.method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 1
+
+    iget p1, p0, Lr35;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lr35;->b:Landroid/view/View;
 
     const/4 v0, 0x0
 
-    return-object v0
-.end method
+    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-.method public final read([BII)I
-    .locals 0
+    return-void
 
-    new-instance p1, Ljava/lang/UnsupportedOperationException;
+    nop
 
-    invoke-direct {p1}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

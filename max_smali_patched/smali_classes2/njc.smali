@@ -1,177 +1,504 @@
 .class public final Lnjc;
-.super Landroid/widget/FrameLayout;
+.super Lvm;
 .source "SourceFile"
+
+# interfaces
+.implements Ledg;
+.implements Lb0c;
 
 
 # instance fields
-.field public final a:I
+.field public final X:Ljava/lang/String;
 
-.field public final b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+.field public final Y:J
 
-.field public final c:Ljava/lang/Object;
+.field public final Z:Lz10;
 
-.field public final d:Ljava/lang/Object;
+.field public final d:Ljava/lang/String;
 
-.field public final o:Ljava/lang/Object;
+.field public final o:Ljava/lang/String;
 
-.field public final s0:Ljava/lang/Object;
+.field public final t0:Ljava/lang/String;
+
+.field public final u0:Ljava/lang/String;
+
+.field public final v0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLz10;Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1, p2}, Lvm;-><init>(J)V
 
-    const/16 v0, 0x28
+    iput-object p3, p0, Lnjc;->d:Ljava/lang/String;
 
-    iput v0, p0, Lnjc;->a:I
+    iput-object p4, p0, Lnjc;->o:Ljava/lang/String;
 
-    new-instance v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    iput-object p5, p0, Lnjc;->X:Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+    iput-wide p6, p0, Lnjc;->Y:J
 
-    new-instance v1, Lv44;
+    iput-object p8, p0, Lnjc;->Z:Lz10;
 
-    invoke-static {}, Leu4;->d()Landroid/content/res/Resources;
+    iput-object p9, p0, Lnjc;->t0:Ljava/lang/String;
 
-    move-result-object v2
+    iput-object p10, p0, Lnjc;->u0:Ljava/lang/String;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v3, 0x40800000    # 4.0f
-
-    mul-float/2addr v2, v3
-
-    invoke-direct {v1, v2}, Lv44;-><init>(F)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    iput-object v0, p0, Lnjc;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    new-instance v1, Ltra;
-
-    const/16 v2, 0x13
-
-    invoke-direct {v1, p1, v2}, Ltra;-><init>(Landroid/content/Context;I)V
-
-    const/4 v2, 0x3
-
-    invoke-static {v2, v1}, Llci;->i(ILoi6;)Lru7;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lnjc;->c:Ljava/lang/Object;
-
-    new-instance v1, Lb6b;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v1, p1, v3, p0}, Lb6b;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v2, v1}, Llci;->i(ILoi6;)Lru7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnjc;->d:Ljava/lang/Object;
-
-    new-instance p1, Lmjc;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, p0, v1}, Lmjc;-><init>(Lnjc;I)V
-
-    invoke-static {v2, p1}, Llci;->i(ILoi6;)Lru7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnjc;->o:Ljava/lang/Object;
-
-    new-instance p1, Lmjc;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, p0, v1}, Lmjc;-><init>(Lnjc;I)V
-
-    invoke-static {v2, p1}, Llci;->i(ILoi6;)Lru7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnjc;->s0:Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    iput p11, p0, Lnjc;->v0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final measureChildren(II)V
-    .locals 2
+.method public final c()I
+    .locals 1
 
-    iget-object v0, p0, Lnjc;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
+    return v0
+.end method
 
-    iget-object v0, p0, Lnjc;->d:Ljava/lang/Object;
+.method public final d()V
+    .locals 3
 
-    invoke-interface {v0}, Lru7;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lvm;->r()Lteg;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/View;
+    iget-wide v1, p0, Lvm;->a:J
 
-    invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
+    invoke-virtual {v0, v1, v2}, Lteg;->d(J)V
 
-    :cond_0
     return-void
 .end method
 
-.method public final setDrawOverlay(Z)V
-    .locals 1
+.method public final e()[B
+    .locals 4
 
-    iget-object v0, p0, Lnjc;->b:Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
 
-    if-eqz p1, :cond_0
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
 
-    invoke-virtual {v0}, Lt15;->getHierarchy()Lq15;
+    iget-wide v1, p0, Lvm;->a:J
 
-    move-result-object p1
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
 
-    check-cast p1, Lrn6;
+    iget-wide v1, p0, Lnjc;->Y:J
 
-    iget-object v0, p0, Lnjc;->o:Ljava/lang/Object;
+    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
 
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
+    iget-object v1, p0, Lnjc;->d:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
+
+    :cond_1
+    :goto_0
+    iget-object v1, p0, Lnjc;->o:Ljava/lang/String;
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
+
+    :cond_3
+    :goto_1
+    iget-object v1, p0, Lnjc;->X:Ljava/lang/String;
+
+    if-eqz v1, :cond_5
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
+
+    :cond_5
+    :goto_2
+    iget-object v1, p0, Lnjc;->t0:Ljava/lang/String;
+
+    if-eqz v1, :cond_7
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
+
+    :cond_7
+    :goto_3
+    iget-object v1, p0, Lnjc;->u0:Ljava/lang/String;
+
+    if-eqz v1, :cond_9
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
+
+    :cond_9
+    :goto_4
+    iget v1, p0, Lnjc;->v0:I
+
+    invoke-static {v1}, Lhc0;->b(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    goto :goto_5
+
+    :cond_a
+    invoke-static {v1}, Lhc0;->b(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
+
+    :goto_5
+    iget-object v1, p0, Lnjc;->Z:Lz10;
+
+    if-eqz v1, :cond_b
+
+    new-instance v2, Lru/ok/tamtam/nano/Tasks$Rect;
+
+    invoke-direct {v2}, Lru/ok/tamtam/nano/Tasks$Rect;-><init>()V
+
+    iget v3, v1, Lz10;->b:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
+
+    iget v3, v1, Lz10;->c:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
+
+    iget v3, v1, Lz10;->d:F
+
+    iput v3, v2, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
+
+    iget v1, v1, Lz10;->e:F
+
+    iput v1, v2, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
+
+    iput-object v2, v0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
+
+    :cond_b
+    invoke-static {v0}, Lbp9;->toByteArray(Lbp9;)[B
 
     move-result-object v0
 
-    check-cast v0, Landroid/graphics/drawable/Drawable;
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v0}, Lrn6;->k(Landroid/graphics/drawable/Drawable;)V
+.method public final g(Licg;)V
+    .locals 8
 
-    return-void
+    check-cast p1, Lrlc;
+
+    invoke-virtual {p0}, Lvm;->p()Llgc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Llgc;->a:Lqi8;
+
+    iget-object v1, v0, Lyfe;->v:Lnre;
+
+    sget-object v2, Lyfe;->f0:[Lz28;
+
+    const/16 v3, 0xb
+
+    aget-object v2, v2, v3
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v0, v2, v3}, Lnre;->O(Ljava/lang/Object;Lz28;Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lvm;->c:Lwm;
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Lt15;->getHierarchy()Lq15;
+    move-object v0, v3
+
+    :goto_0
+    iget-object v0, v0, Lwm;->V:Lo58;
+
+    invoke-interface {v0}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lavc;
+
+    iget-object v1, p1, Lrlc;->c:Ljjc;
+
+    invoke-virtual {v0, v1}, Lavc;->b(Ljjc;)V
+
+    invoke-virtual {p0}, Lvm;->j()Lcy0;
+
+    move-result-object v0
+
+    new-instance v1, Lbqc;
+
+    iget-object v2, p1, Lrlc;->c:Ljjc;
+
+    iget-object v2, v2, Ljjc;->a:Lc14;
+
+    iget-wide v4, p0, Lvm;->a:J
+
+    invoke-direct {v1, v4, v5, v2}, Lbqc;-><init>(JLc14;)V
+
+    invoke-virtual {v0, v1}, Lcy0;->c(Ljava/lang/Object;)V
+
+    iget-object p1, p1, Lrlc;->c:Ljjc;
+
+    iget-object p1, p1, Ljjc;->a:Lc14;
+
+    if-eqz p1, :cond_1
+
+    iget-wide v0, p1, Lc14;->X:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    :cond_1
+    iget-wide v0, p0, Lnjc;->Y:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long p1, v0, v6
+
+    if-eqz p1, :cond_2
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {p0}, Lvm;->j()Lcy0;
 
     move-result-object p1
 
-    check-cast p1, Lrn6;
+    new-instance v0, Lqjc;
 
-    const/4 v0, 0x0
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
 
-    invoke-virtual {p1, v0}, Lrn6;->k(Landroid/graphics/drawable/Drawable;)V
+    move-result-wide v1
+
+    invoke-direct {v0, v4, v5, v1, v2}, Lqjc;-><init>(JJ)V
+
+    invoke-virtual {p1, v0}, Lcy0;->c(Ljava/lang/Object;)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public final getId()J
+    .locals 2
+
+    iget-wide v0, p0, Lvm;->a:J
+
+    return-wide v0
+.end method
+
+.method public final getType()Lc0c;
+    .locals 1
+
+    sget-object v0, Lc0c;->d:Lc0c;
+
+    return-object v0
+.end method
+
+.method public final h()Lj2;
+    .locals 5
+
+    new-instance v0, Lk06;
+
+    const/4 v1, 0x0
+
+    const/16 v2, 0x15
+
+    invoke-direct {v0, v1, v2}, Lk06;-><init>(Lwob;I)V
+
+    iget-object v1, p0, Lnjc;->d:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    const-string v2, "firstName"
+
+    invoke-virtual {v0, v2, v1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v1, p0, Lnjc;->o:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    const-string v2, "lastName"
+
+    invoke-virtual {v0, v2, v1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    iget-object v1, p0, Lnjc;->X:Ljava/lang/String;
+
+    if-eqz v1, :cond_2
+
+    const-string v2, "photoToken"
+
+    invoke-virtual {v0, v2, v1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    const-wide/16 v1, 0x0
+
+    iget-wide v3, p0, Lnjc;->Y:J
+
+    cmp-long v1, v3, v1
+
+    if-eqz v1, :cond_3
+
+    const-string v1, "photoId"
+
+    invoke-virtual {v0, v3, v4, v1}, Lj2;->y(JLjava/lang/String;)V
+
+    :cond_3
+    iget-object v1, p0, Lnjc;->Z:Lz10;
+
+    if-eqz v1, :cond_4
+
+    const-string v2, "crop"
+
+    invoke-virtual {v1}, Lz10;->a()Ljava/util/HashMap;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v2, v1}, Lj2;->z(Ljava/lang/String;Ljava/util/Map;)V
+
+    :cond_4
+    iget-object v1, p0, Lnjc;->t0:Ljava/lang/String;
+
+    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    const-string v3, ""
+
+    const-string v4, "$REMOVE$"
+
+    if-nez v2, :cond_6
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    move-object v1, v3
+
+    :cond_5
+    const-string v2, "description"
+
+    invoke-virtual {v0, v2, v1}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_6
+    iget-object v1, p0, Lnjc;->u0:Ljava/lang/String;
+
+    invoke-static {v1}, Lzsi;->e(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    move-object v3, v1
+
+    :goto_0
+    const-string v1, "link"
+
+    invoke-virtual {v0, v1, v3}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_8
+    const-string v1, "avatarType"
+
+    iget v2, p0, Lnjc;->v0:I
+
+    invoke-static {v2}, Lhc0;->b(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lj2;->A(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+.end method
+
+.method public final k(Lnbg;)V
+    .locals 2
+
+    iget-object v0, p1, Lnbg;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Lwoj;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lnjc;->d()V
+
+    :cond_0
+    invoke-virtual {p0}, Lvm;->j()Lcy0;
+
+    move-result-object v0
+
+    new-instance v1, Lxpc;
+
+    invoke-direct {v1, p1}, Ljk0;-><init>(Lnbg;)V
+
+    invoke-virtual {v0, v1}, Lcy0;->c(Ljava/lang/Object;)V
 
     return-void
 .end method

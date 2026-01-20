@@ -1,55 +1,43 @@
-.class public final Lp9h;
-.super Lp14;
+.class public interface abstract Lp9h;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ld9h;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Ls9h;
-
-.field public d:Ls9h;
-
-.field public o:Lv9h;
-
-.field public s0:I
-
-
-# direct methods
-.method public constructor <init>(Ls9h;Lp14;)V
-    .locals 0
-
-    iput-object p1, p0, Lp9h;->Z:Ls9h;
-
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+# virtual methods
+.method public abstract a(Lq6h;)Lbo3;
 .end method
 
+.method public abstract b(J)Lbo3;
+.end method
 
-# virtual methods
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+.method public c()Ljava/util/List;
     .locals 1
 
-    iput-object p1, p0, Lp9h;->Y:Ljava/lang/Object;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iget p1, p0, Lp9h;->s0:I
+    return-object v0
+.end method
 
-    const/high16 v0, -0x80000000
+.method public abstract clear()V
+.end method
 
-    or-int/2addr p1, v0
+.method public abstract d(Lp7h;)Lbo3;
+.end method
 
-    iput p1, p0, Lp9h;->s0:I
+.method public abstract e(Lp7h;)Lev8;
+.end method
 
-    iget-object p1, p0, Lp9h;->Z:Ls9h;
+.method public abstract f(J)V
+.end method
 
-    const/4 v0, 0x0
+.method public abstract g(Ljava/lang/String;)Lbo3;
+.end method
 
-    invoke-virtual {p1, v0, p0}, Ls9h;->g(Ljava/lang/String;Lp14;)Ljava/lang/Object;
+.method public abstract h(Ljava/lang/String;)Lev8;
+.end method
 
-    move-result-object p1
+.method public abstract i()Lev8;
+.end method
 
-    return-object p1
+.method public abstract j(Ljava/lang/String;)V
 .end method

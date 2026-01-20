@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Ljava/util/Map;)Ljava/util/Map;
+.method public abstract a()V
 .end method

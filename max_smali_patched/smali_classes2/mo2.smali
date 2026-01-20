@@ -1,132 +1,88 @@
 .class public final Lmo2;
-.super Logf;
+.super Lie0;
 .source "SourceFile"
-
-# interfaces
-.implements Lej6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/profile/screens/members/ChatMembersScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p2, p0, Lmo2;->X:Lone/me/profile/screens/members/ChatMembersScreen;
+    const/4 v0, 0x4
 
-    const/4 p2, 0x2
+    invoke-direct {p0, v0}, Lie0;-><init>(I)V
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lmo2;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lmo2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Lmo2;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lmo2;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lmo2;
-
-    iget-object v1, p0, Lmo2;->X:Lone/me/profile/screens/members/ChatMembersScreen;
-
-    invoke-direct {v0, p2, v1}, Lmo2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/members/ChatMembersScreen;)V
-
-    iput-object p1, v0, Lmo2;->o:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmo2;->o:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    iget-object v0, p0, Lmo2;->X:Lone/me/profile/screens/members/ChatMembersScreen;
-
-    if-eqz p1, :cond_0
-
-    sget-object v1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
-
-    invoke-virtual {v0}, Lone/me/profile/screens/members/ChatMembersScreen;->A0()Lv6b;
-
-    move-result-object v1
-
-    invoke-interface {p1}, Ljava/util/Set;->size()I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ls6b;
-
-    sget v4, Lmkd;->C0:I
-
-    sget v5, Likd;->Q0:I
-
-    const/16 v6, 0x2775
-
-    invoke-direct {v3, v6, v4, v5}, Ls6b;-><init>(III)V
-
-    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v3
-
-    new-instance v4, Lpk2;
-
-    const/4 v5, 0x4
-
-    invoke-direct {v4, v5, v0}, Lpk2;-><init>(ILjava/lang/Object;)V
-
-    new-instance v5, Let1;
-
-    const/4 v6, 0x1
-
-    invoke-direct {v5, p1, v6, v0}, Let1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2, v3, v4, v5}, Lv6b;->c(Ljava/lang/String;Ljava/util/List;Loi6;Lqi6;)V
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object p1, Lone/me/profile/screens/members/ChatMembersScreen;->t0:[Les7;
+    instance-of v1, p1, Lmo2;
 
-    invoke-virtual {v0}, Lone/me/profile/screens/members/ChatMembersScreen;->A0()Lv6b;
+    const/4 v2, 0x0
 
-    move-result-object p1
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Lv6b;->a()V
+    return v2
 
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    :cond_1
+    check-cast p1, Lmo2;
 
-    return-object p1
+    iget-object v1, p0, Lmo2;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lmo2;->b:Ljava/lang/String;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lmo2;->b:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "ShareLink(link="
+
+    const-string v1, ")"
+
+    iget-object v2, p0, Lmo2;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v1}, Lj27;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

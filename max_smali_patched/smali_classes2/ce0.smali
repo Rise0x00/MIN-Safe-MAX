@@ -1,57 +1,22 @@
 .class public final Lce0;
-.super Ljava/lang/Object;
+.super Landroid/util/LruCache;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/text/TextPaint;
+# virtual methods
+.method public final entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-.field public final b:Lpj8;
+    check-cast p2, Ljava/lang/Long;
 
+    check-cast p3, Landroid/graphics/Bitmap;
 
-# direct methods
-.method public constructor <init>()V
-    .locals 3
+    check-cast p4, Landroid/graphics/Bitmap;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p3, :cond_0
 
-    new-instance v0, Landroid/text/TextPaint;
+    invoke-virtual {p3}, Landroid/graphics/Bitmap;->recycle()V
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
-
-    iput-object v0, p0, Lce0;->a:Landroid/text/TextPaint;
-
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    const-string v1, "sans-serif-medium"
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
-    sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    new-instance v0, Lpj8;
-
-    const/16 v1, 0x64
-
-    invoke-direct {v0, v1, v2}, Lpj8;-><init>(II)V
-
-    iput-object v0, p0, Lce0;->b:Lpj8;
-
+    :cond_0
     return-void
 .end method

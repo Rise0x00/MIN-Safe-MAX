@@ -3,40 +3,42 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp19;
+.implements Landroid/os/IBinder$DeathRecipient;
 
 
 # instance fields
-.field public final synthetic a:Lp47;
+.field public final synthetic a:Le29;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp47;)V
+.method public synthetic constructor <init>(Le29;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb29;->a:Lp47;
+    iput-object p1, p0, Lb29;->a:Le29;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbk0;Llvf;)V
-    .locals 0
+.method public final binderDied()V
+    .locals 3
 
-    iget-object p1, p0, Lb29;->a:Lp47;
+    iget-object v0, p0, Lb29;->a:Le29;
 
-    iget-object p1, p1, Lp47;->i:Ljava/lang/Object;
+    iget-object v0, v0, Le29;->a:Li19;
 
-    check-cast p1, Lmj5;
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p1, p1, Lmj5;->Z:Lgjf;
+    new-instance v1, Ldh6;
 
-    const/16 p2, 0x16
+    const/16 v2, 0xc
 
-    invoke-virtual {p1, p2}, Lgjf;->c(I)Z
+    invoke-direct {v1, v2, v0}, Ldh6;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Li19;->z(Ljava/lang/Runnable;)V
 
     return-void
 .end method

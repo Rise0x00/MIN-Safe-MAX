@@ -2,229 +2,299 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgz5;
-
 
 # instance fields
-.field public final synthetic X:Ly44;
+.field public final a:Lb26;
 
-.field public final synthetic a:Lt7d;
+.field public b:Ljava/io/File;
 
-.field public final synthetic b:J
+.field public c:Ljava/io/File;
 
-.field public final synthetic c:Lf0c;
+.field public d:Ljava/io/File;
 
-.field public final synthetic d:Lu7d;
+.field public e:Ljava/io/File;
 
-.field public final synthetic o:Lg54;
+.field public f:Ljava/io/File;
+
+.field public g:Ljava/io/File;
+
+.field public h:Ljava/io/File;
+
+.field public i:Ljava/io/File;
+
+.field public j:Ljava/io/File;
+
+.field public k:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lt7d;JLf0c;Lu7d;Lg54;Ly44;)V
+.method public constructor <init>(Lb26;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc06;->a:Lt7d;
-
-    iput-wide p2, p0, Lc06;->b:J
-
-    iput-object p4, p0, Lc06;->c:Lf0c;
-
-    iput-object p5, p0, Lc06;->d:Lu7d;
-
-    iput-object p6, p0, Lc06;->o:Lg54;
-
-    iput-object p7, p0, Lc06;->X:Ly44;
+    iput-object p1, p0, Lc06;->a:Lb26;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 20
+.method public final a(Lh01;)Ljava/io/File;
+    .locals 1
 
-    move-object/from16 v0, p0
+    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
-    move-object/from16 v1, p2
+    move-result p1
 
-    instance-of v2, v1, Lb06;
+    iget-object v0, p0, Lc06;->a:Lb26;
 
-    if-eqz v2, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    move-object v2, v1
+    const/4 p1, 0x0
 
-    check-cast v2, Lb06;
+    return-object p1
 
-    iget v3, v2, Lb06;->Y:I
+    :pswitch_0
+    iget-object p1, p0, Lc06;->j:Ljava/io/File;
 
-    const/high16 v4, -0x80000000
+    if-nez p1, :cond_0
 
-    and-int v5, v3, v4
+    check-cast v0, Lm36;
 
-    if-eqz v5, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sub-int/2addr v3, v4
+    iget-object p1, v0, Lm36;->c:Landroid/content/Context;
 
-    iput v3, v2, Lb06;->Y:I
+    invoke-static {p1}, Lm36;->b(Landroid/content/Context;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object p1
+
+    const-string v0, "ringtones"
+
+    invoke-static {p1, v0}, Lm36;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc06;->j:Ljava/io/File;
 
     :cond_0
-    new-instance v2, Lb06;
+    iget-object p1, p0, Lc06;->j:Ljava/io/File;
 
-    invoke-direct {v2, v0, v1}, Lb06;-><init>(Lc06;Lkotlin/coroutines/Continuation;)V
+    return-object p1
 
-    :goto_0
-    iget-object v1, v2, Lb06;->o:Ljava/lang/Object;
+    :pswitch_1
+    iget-object p1, p0, Lc06;->i:Ljava/io/File;
 
-    iget v3, v2, Lb06;->Y:I
+    if-nez p1, :cond_1
 
-    const/4 v4, 0x0
+    check-cast v0, Lm36;
 
-    const/4 v5, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v3, :cond_2
+    iget-object p1, v0, Lm36;->c:Landroid/content/Context;
 
-    if-ne v3, v5, :cond_1
+    invoke-static {p1}, Lm36;->b(Landroid/content/Context;)Ljava/lang/String;
 
-    iget-object v2, v2, Lb06;->d:Lc06;
+    move-result-object p1
 
-    invoke-static {v1}, Lgxi;->b(Ljava/lang/Object;)V
+    const-string v0, "videoCache"
 
-    goto :goto_1
+    invoke-static {p1, v0}, Lm36;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc06;->i:Ljava/io/File;
 
     :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
+    iget-object p1, p0, Lc06;->i:Ljava/io/File;
 
-    const-string v2, "call to \'resume\' before \'invoke\' with coroutine"
+    return-object p1
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_2
+    iget-object p1, p0, Lc06;->h:Ljava/io/File;
 
-    throw v1
+    if-nez p1, :cond_2
+
+    check-cast v0, Lm36;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p1, v0, Lm36;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Lm36;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "exo_files_cache"
+
+    invoke-static {p1, v0}, Lm36;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc06;->h:Ljava/io/File;
 
     :cond_2
-    invoke-static {v1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget-object p1, p0, Lc06;->h:Ljava/io/File;
 
-    sget v1, Lw35;->d:I
+    return-object p1
 
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
+    :pswitch_3
+    iget-object p1, p0, Lc06;->c:Ljava/io/File;
 
-    move-result-wide v6
+    if-nez p1, :cond_3
 
-    sget-object v1, Lb45;->b:Lb45;
+    check-cast v0, Lm36;
 
-    invoke-static {v6, v7, v1}, Lzyi;->e(JLb45;)J
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-wide v6
+    iget-object p1, v0, Lm36;->c:Landroid/content/Context;
 
-    invoke-static {v6, v7}, Lw35;->f(J)J
+    invoke-static {p1}, Lm36;->b(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-wide v10
+    move-result-object p1
 
-    iget-object v9, v0, Lc06;->a:Lt7d;
+    const-string v0, "upload"
 
-    iget-wide v12, v9, Lt7d;->a:J
+    invoke-static {p1, v0}, Lm36;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
-    cmp-long v1, v12, v10
+    move-result-object p1
 
-    if-gez v1, :cond_4
-
-    iget-wide v6, v0, Lc06;->b:J
-
-    add-long/2addr v10, v6
-
-    iput-wide v10, v9, Lt7d;->a:J
-
-    iput-object v0, v2, Lb06;->d:Lc06;
-
-    iput v5, v2, Lb06;->Y:I
-
-    iget-object v1, v0, Lc06;->c:Lf0c;
-
-    check-cast v1, Lc0c;
-
-    iget-object v1, v1, Lc0c;->a:Lfv0;
-
-    move-object/from16 v3, p1
-
-    invoke-interface {v1, v3, v2}, Lb2e;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v2, Lh54;->a:Lh54;
-
-    if-ne v1, v2, :cond_3
-
-    return-object v2
+    iput-object p1, p0, Lc06;->c:Ljava/io/File;
 
     :cond_3
-    move-object v2, v0
+    iget-object p1, p0, Lc06;->c:Ljava/io/File;
 
-    :goto_1
-    iget-object v1, v2, Lc06;->d:Lu7d;
+    return-object p1
 
-    iget-object v1, v1, Lu7d;->a:Ljava/lang/Object;
+    :pswitch_4
+    iget-object p1, p0, Lc06;->f:Ljava/io/File;
 
-    check-cast v1, Llp4;
+    if-nez p1, :cond_4
 
-    if-eqz v1, :cond_6
+    check-cast v0, Lm36;
 
-    check-cast v1, Lyo7;
+    invoke-virtual {v0}, Lm36;->n()Ljava/io/File;
 
-    invoke-virtual {v1, v4}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    move-result-object p1
 
-    goto :goto_2
+    iput-object p1, p0, Lc06;->f:Ljava/io/File;
 
     :cond_4
-    move-object/from16 v3, p1
+    iget-object p1, p0, Lc06;->f:Ljava/io/File;
 
-    iget-object v1, v0, Lc06;->d:Lu7d;
+    return-object p1
 
-    iget-object v2, v1, Lu7d;->a:Ljava/lang/Object;
+    :pswitch_5
+    iget-object p1, p0, Lc06;->g:Ljava/io/File;
 
-    check-cast v2, Llp4;
+    if-nez p1, :cond_5
 
-    if-eqz v2, :cond_5
+    check-cast v0, Lm36;
 
-    check-cast v2, Lyo7;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v2, v4}, Lyo7;->cancel(Ljava/util/concurrent/CancellationException;)V
+    iget-object p1, v0, Lm36;->c:Landroid/content/Context;
+
+    invoke-static {p1}, Lm36;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "gifCache"
+
+    invoke-static {p1, v0}, Lm36;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc06;->g:Ljava/io/File;
 
     :cond_5
-    new-instance v8, La06;
+    iget-object p1, p0, Lc06;->g:Ljava/io/File;
 
-    iget-object v2, v0, Lc06;->c:Lf0c;
+    return-object p1
 
-    const/16 v19, 0x0
+    :pswitch_6
+    iget-object p1, p0, Lc06;->e:Ljava/io/File;
 
-    iget-wide v14, v0, Lc06;->b:J
+    if-nez p1, :cond_6
 
-    iget-object v5, v0, Lc06;->X:Ly44;
+    check-cast v0, Lm36;
 
-    move-object/from16 v17, v2
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object/from16 v18, v3
+    iget-object p1, v0, Lm36;->c:Landroid/content/Context;
 
-    move-object/from16 v16, v5
+    invoke-static {p1}, Lm36;->b(Landroid/content/Context;)Ljava/lang/String;
 
-    invoke-direct/range {v8 .. v19}, La06;-><init>(Lt7d;JJJLy44;Lf0c;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    const/4 v2, 0x3
+    const-string v0, "audioCache"
 
-    iget-object v3, v0, Lc06;->o:Lg54;
+    invoke-static {p1, v0}, Lm36;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
-    invoke-static {v3, v4, v8, v2}, Lkki;->b(Lg54;La54;Lej6;I)Lmp4;
+    move-result-object p1
 
-    move-result-object v2
-
-    iput-object v2, v1, Lu7d;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lc06;->e:Ljava/io/File;
 
     :cond_6
-    :goto_2
-    sget-object v1, Lybg;->a:Lybg;
+    iget-object p1, p0, Lc06;->e:Ljava/io/File;
 
-    return-object v1
+    return-object p1
+
+    :pswitch_7
+    iget-object p1, p0, Lc06;->d:Ljava/io/File;
+
+    if-nez p1, :cond_7
+
+    check-cast v0, Lm36;
+
+    invoke-virtual {v0}, Lm36;->k()Ljava/io/File;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lc06;->d:Ljava/io/File;
+
+    :cond_7
+    iget-object p1, p0, Lc06;->d:Ljava/io/File;
+
+    return-object p1
+
+    :pswitch_8
+    iget-object p1, p0, Lc06;->b:Ljava/io/File;
+
+    if-nez p1, :cond_8
+
+    new-instance p1, Ljava/io/File;
+
+    check-cast v0, Lm36;
+
+    iget-object v0, v0, Lm36;->c:Landroid/content/Context;
+
+    invoke-static {v0}, Lm36;->b(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Lc06;->b:Ljava/io/File;
+
+    :cond_8
+    iget-object p1, p0, Lc06;->b:Ljava/io/File;
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

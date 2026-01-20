@@ -1,41 +1,41 @@
-.class public abstract Lqp;
-.super Ljava/lang/Object;
+.class public Lqp;
+.super Lkp8;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic d:Landroidx/appcompat/widget/AppCompatTextView;
+
+
 # direct methods
-.method public static a(Landroid/widget/TextView;)I
+.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getAutoSizeStepGranularity()I
+    iput-object p1, p0, Lqp;->d:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public static b(Landroid/widget/TextView;IIII)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithConfiguration(IIII)V
+    invoke-direct {p0, p1}, Lkp8;-><init>(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static c(Landroid/widget/TextView;[II)V
-    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/widget/TextView;->setAutoSizeTextTypeUniformWithPresetSizes([II)V
+# virtual methods
+.method public final e(I)V
+    .locals 1
+
+    iget-object v0, p0, Lqp;->d:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-static {v0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->g(Landroidx/appcompat/widget/AppCompatTextView;I)V
 
     return-void
 .end method
 
-.method public static d(Landroid/widget/TextView;Ljava/lang/String;)Z
-    .locals 0
+.method public final f(I)V
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setFontVariationSettings(Ljava/lang/String;)Z
+    iget-object v0, p0, Lqp;->d:Landroidx/appcompat/widget/AppCompatTextView;
 
-    move-result p0
+    invoke-static {v0, p1}, Landroidx/appcompat/widget/AppCompatTextView;->f(Landroidx/appcompat/widget/AppCompatTextView;I)V
 
-    return p0
+    return-void
 .end method

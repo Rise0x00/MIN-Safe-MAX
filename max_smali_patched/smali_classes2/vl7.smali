@@ -1,26 +1,24 @@
 .class public final Lvl7;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lam7;
-
-.field public o:I
+.field public final synthetic o:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lam7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lvl7;->X:Lam7;
+    iput-object p1, p0, Lvl7;->o:Ljava/util/ArrayList;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p2}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lg54;
+    check-cast p1, Lzb4;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,13 +38,11 @@
 
     check-cast p1, Lvl7;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lvl7;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p1
-
-    return-object p1
+    return-object p2
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -54,9 +50,9 @@
 
     new-instance p1, Lvl7;
 
-    iget-object v0, p0, Lvl7;->X:Lam7;
+    iget-object v0, p0, Lvl7;->o:Ljava/util/ArrayList;
 
-    invoke-direct {p1, v0, p2}, Lvl7;-><init>(Lam7;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p1, v0, p2}, Lvl7;-><init>(Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
@@ -64,51 +60,28 @@
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lvl7;->o:I
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lvl7;->o:Ljava/util/ArrayList;
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
 
     const/4 v1, 0x1
 
-    if-eqz v0, :cond_1
+    if-le v0, v1, :cond_0
 
-    if-ne v0, v1, :cond_0
+    new-instance v0, Lcx6;
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 v1, 0x5
 
-    goto :goto_0
+    invoke-direct {v0, v1}, Lcx6;-><init>(I)V
+
+    invoke-static {v0, p1}, Lui3;->p(Ljava/util/Comparator;Ljava/util/List;)V
 
     :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_1
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvl7;->X:Lam7;
-
-    iget-object p1, p1, Lam7;->x0:Lake;
-
-    iput v1, p0, Lvl7;->o:I
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lake;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lh54;->a:Lh54;
-
-    if-ne p1, v0, :cond_2
-
-    return-object v0
-
-    :cond_2
-    :goto_0
-    sget-object p1, Lybg;->a:Lybg;
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
 .end method

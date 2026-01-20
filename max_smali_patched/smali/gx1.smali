@@ -1,368 +1,106 @@
-.class public final synthetic Lgx1;
-.super Ljava/lang/Object;
+.class public final Lgx1;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lnx1;
 
-.field public final synthetic b:Lsx1;
-
-.field public final synthetic c:Ljava/util/ArrayList;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lsx1;Ljava/util/ArrayList;I)V
+.method public constructor <init>(Lnx1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p3, p0, Lgx1;->a:I
+    iput-object p1, p0, Lgx1;->X:Lnx1;
 
-    iput-object p1, p0, Lgx1;->b:Lsx1;
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lgx1;->c:Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lgx1;->a:I
+    check-cast p1, Lyk1;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lgx1;->b:Lsx1;
+    invoke-virtual {p0, p1, p2}, Lgx1;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lgx1;->c:Ljava/util/ArrayList;
+    move-result-object p1
 
-    iget-object v2, v0, Lsx1;->Y:Lfx1;
+    check-cast p1, Lgx1;
 
-    :try_start_0
-    invoke-virtual {v0, v1}, Lsx1;->H(Ljava/util/ArrayList;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    invoke-virtual {v2}, Lfx1;->q()V
+    invoke-virtual {p1, p2}, Lgx1;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    return-object p2
+.end method
 
-    :catchall_0
-    move-exception v0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    invoke-virtual {v2}, Lfx1;->q()V
+    new-instance v0, Lgx1;
 
-    throw v0
+    iget-object v1, p0, Lgx1;->X:Lnx1;
 
-    :pswitch_0
-    iget-object v0, p0, Lgx1;->b:Lsx1;
+    invoke-direct {v0, v1, p2}, Lgx1;-><init>(Lnx1;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v1, p0, Lgx1;->c:Ljava/util/ArrayList;
+    iput-object p1, v0, Lgx1;->o:Ljava/lang/Object;
 
-    new-instance v2, Ljava/util/ArrayList;
+    return-object v0
+.end method
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v0, p0, Lgx1;->o:Ljava/lang/Object;
+
+    check-cast v0, Lyk1;
+
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lgx1;->X:Lnx1;
+
+    invoke-virtual {p1}, Lnx1;->c()Lye4;
 
     move-result-object v1
 
-    const/4 v3, 0x0
+    iget-boolean v1, v1, Lye4;->i:Z
 
-    move v4, v3
+    if-eqz v1, :cond_0
 
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v1, 0x1
 
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-eqz v5, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lo90;
-
-    iget-object v7, v0, Lsx1;->a:Ljfc;
-
-    iget-object v8, v5, Lo90;->a:Ljava/lang/String;
-
-    invoke-virtual {v7, v8}, Ljfc;->L(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    iget-object v7, v0, Lsx1;->a:Ljfc;
-
-    iget-object v8, v5, Lo90;->a:Ljava/lang/String;
-
-    iget-object v7, v7, Ljfc;->c:Ljava/lang/Object;
-
-    check-cast v7, Ljava/util/LinkedHashMap;
-
-    invoke-interface {v7, v8}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v7, v5, Lo90;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v5, v5, Lo90;->b:Ljava/lang/Class;
-
-    const-class v7, Liyb;
-
-    if-ne v5, v7, :cond_0
-
-    move v4, v6
+    invoke-virtual {p1, v0, v1}, Lnx1;->j(Lyk1;Z)V
 
     goto :goto_0
 
-    :cond_1
-    invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
+    :cond_0
+    invoke-virtual {p1}, Lnx1;->d()Leub;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_2
+    iget-object v0, v0, Leub;->a:Lal1;
 
-    goto/16 :goto_2
+    invoke-interface {v0}, Lal1;->getId()Lyk1;
 
-    :cond_2
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v5, "Use cases ["
+    invoke-virtual {p1, v0}, Lnx1;->k(Lyk1;)V
 
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
-    const-string v5, ", "
-
-    invoke-static {v5, v2}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "] now DETACHED for camera"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lsx1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    if-eqz v4, :cond_3
-
-    iget-object v1, v0, Lsx1;->Y:Lfx1;
-
-    iget-object v1, v1, Lfx1;->h:Ll46;
-
-    iput-object v2, v1, Ll46;->e:Landroid/util/Rational;
-
-    :cond_3
-    invoke-virtual {v0}, Lsx1;->p()V
-
-    iget-object v1, v0, Lsx1;->a:Ljfc;
-
-    invoke-virtual {v1}, Ljfc;->H()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, v0, Lsx1;->Y:Lfx1;
-
-    iget-object v1, v1, Lfx1;->l:Lkrh;
-
-    iput-boolean v3, v1, Lkrh;->c:Z
-
-    goto :goto_1
-
-    :cond_4
-    invoke-virtual {v0}, Lsx1;->L()V
-
-    :goto_1
-    iget-object v1, v0, Lsx1;->a:Ljfc;
-
-    invoke-virtual {v1}, Ljfc;->G()Ljava/util/Collection;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    iget-object v1, v0, Lsx1;->Y:Lfx1;
-
-    invoke-virtual {v1}, Lfx1;->q()V
-
-    invoke-virtual {v0}, Lsx1;->D()V
-
-    iget-object v1, v0, Lsx1;->Y:Lfx1;
-
-    invoke-virtual {v1, v3}, Lfx1;->y(Z)V
-
-    invoke-virtual {v0}, Lsx1;->z()Ly32;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lsx1;->v0:Ly32;
-
-    const-string v1, "Closing camera."
-
-    invoke-virtual {v0, v1, v2}, Lsx1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget v1, v0, Lsx1;->R0:I
-
-    invoke-static {v1}, Lnx1;->v(I)I
-
-    move-result v1
-
-    const/4 v4, 0x5
-
-    packed-switch v1, :pswitch_data_1
-
-    :pswitch_1
-    iget v1, v0, Lsx1;->R0:I
-
-    invoke-static {v1}, Lcd0;->r(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v3, "close() ignored due to being in state: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, v2}, Lsx1;->t(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :pswitch_2
-    invoke-virtual {v0, v4}, Lsx1;->F(I)V
-
-    invoke-virtual {v0}, Lsx1;->q()V
-
-    goto :goto_2
-
-    :pswitch_3
-    iget-object v1, v0, Lsx1;->Z:Lrx1;
-
-    invoke-virtual {v1}, Lrx1;->a()Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    iget-object v1, v0, Lsx1;->Q0:Lch8;
-
-    iget-object v1, v1, Lch8;->b:Ljava/lang/Object;
-
-    check-cast v1, Lngd;
-
-    if-eqz v1, :cond_6
-
-    iget-object v1, v1, Lngd;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    :cond_5
-    move v3, v6
-
-    :cond_6
-    iget-object v1, v0, Lsx1;->Q0:Lch8;
-
-    invoke-virtual {v1}, Lch8;->j()V
-
-    invoke-virtual {v0, v4}, Lsx1;->F(I)V
-
-    if-eqz v3, :cond_9
-
-    iget-object v1, v0, Lsx1;->w0:Ljava/util/LinkedHashMap;
-
-    invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
-
-    move-result v1
-
-    invoke-static {v2, v1}, Loui;->f(Ljava/lang/String;Z)V
-
-    invoke-virtual {v0}, Lsx1;->r()V
-
-    goto :goto_2
-
-    :pswitch_4
-    iget-object v1, v0, Lsx1;->t0:Landroid/hardware/camera2/CameraDevice;
-
-    if-nez v1, :cond_7
-
-    move v3, v6
-
-    :cond_7
-    invoke-static {v2, v3}, Loui;->f(Ljava/lang/String;Z)V
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Lsx1;->F(I)V
-
-    goto :goto_2
-
-    :cond_8
-    invoke-virtual {v0}, Lsx1;->K()V
-
-    invoke-virtual {v0}, Lsx1;->D()V
-
-    iget v1, v0, Lsx1;->R0:I
-
-    const/16 v2, 0x9
-
-    if-ne v1, v2, :cond_9
-
-    invoke-virtual {v0}, Lsx1;->B()V
-
-    :cond_9
-    :goto_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0x3
-        :pswitch_4
-        :pswitch_1
-        :pswitch_3
-        :pswitch_3
-        :pswitch_3
-        :pswitch_2
-        :pswitch_2
-    .end packed-switch
+    return-object p1
 .end method

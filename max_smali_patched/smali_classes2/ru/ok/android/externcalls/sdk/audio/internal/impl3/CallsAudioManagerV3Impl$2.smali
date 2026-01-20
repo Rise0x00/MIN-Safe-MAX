@@ -1,14 +1,14 @@
 .class final synthetic Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$2;
-.super Ltj6;
+.super Lqr6;
 .source "SourceFile"
 
 # interfaces
-.implements Loi6;
+.implements Llq6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;-><init>(Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/ProximityTracker;ZLru/ok/android/externcalls/sdk/audio/VideoTracker;Lru/ok/android/externcalls/sdk/audio/AudioDeviceSelector;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$DisabledAudioDeviceUsagePolicy;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Lru/ok/android/externcalls/sdk/audio/Logger;)V
+    value = Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;-><init>(Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/ProximityTracker;ZLru/ok/android/externcalls/sdk/audio/VideoTracker;Lru/ok/android/externcalls/sdk/audio/AudioDeviceSelector;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$DisabledAudioDeviceUsagePolicy;Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$OnMuteListener;Lru/ok/android/externcalls/sdk/audio/Logger;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ltj6;",
-        "Loi6;"
+        "Lqr6;",
+        "Llq6;"
     }
 .end annotation
 
@@ -38,7 +38,7 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 7
 
-    const-string v6, "rememberUtilizedDeviceType()V"
+    const-string v6, "maybeRecoverUtilizedDeviceType()V"
 
     const/4 v2, 0x0
 
@@ -46,13 +46,13 @@
 
     const-class v3, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;
 
-    const-string v5, "rememberUtilizedDeviceType"
+    const-string v5, "maybeRecoverUtilizedDeviceType"
 
     move-object v0, p0
 
     move-object v4, p1
 
-    invoke-direct/range {v0 .. v6}, Lsj6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v6}, Lpr6;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$2;->invoke()V
 
-    sget-object v0, Lybg;->a:Lybg;
+    sget-object v0, Lb3h;->a:Lb3h;
 
     return-object v0
 .end method
@@ -74,11 +74,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lkt1;->receiver:Ljava/lang/Object;
+    iget-object v0, p0, Lkw1;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;
 
-    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;->access$rememberUtilizedDeviceType(Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;)V
+    invoke-static {v0}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;->access$maybeRecoverUtilizedDeviceType(Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl;)V
 
     return-void
 .end method

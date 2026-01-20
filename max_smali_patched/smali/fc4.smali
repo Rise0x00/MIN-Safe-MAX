@@ -1,17 +1,3 @@
-.class public interface abstract Lfc4;
-.super Ljava/lang/Object;
+.class public final Lfc4;
+.super Ljava/lang/Error;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract a(Lr0;)V
-.end method
-
-.method public abstract b(Lr0;)V
-.end method
-
-.method public abstract c(Lr0;)V
-.end method
-
-.method public abstract d()V
-.end method

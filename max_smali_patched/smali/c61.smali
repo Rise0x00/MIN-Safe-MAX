@@ -1,64 +1,86 @@
-.class public final Lc61;
+.class public final synthetic Lc61;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh61;
+.implements Llq6;
 
 
-# static fields
-.field public static final a:Lc61;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ld61;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ld61;I)V
+    .locals 0
 
-    new-instance v0, Lc61;
+    iput p2, p0, Lc61;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lc61;->b:Ld61;
 
-    sput-object v0, Lc61;->a:Lc61;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    const/4 v0, 0x1
+    iget v0, p0, Lc61;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lc61;->b:Ld61;
 
-    return v0
+    const-wide/16 v2, 0xfa
 
-    :cond_0
-    instance-of p1, p1, Lc61;
+    packed-switch v0, :pswitch_data_0
 
-    if-nez p1, :cond_1
+    sget v0, Ld61;->D0:I
 
-    const/4 p1, 0x0
+    new-instance v0, Lp81;
 
-    return p1
+    invoke-virtual {v1}, Ld61;->d()Z
 
-    :cond_1
-    return v0
-.end method
+    move-result v1
 
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x7c56e03f
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "Finished"
+    invoke-direct {v0, v2, v3, v1}, Lp81;-><init>(JZ)V
 
     return-object v0
+
+    :pswitch_0
+    sget v0, Ld61;->D0:I
+
+    new-instance v0, Lgs1;
+
+    invoke-virtual {v1}, Ld61;->d()Z
+
+    move-result v1
+
+    invoke-direct {v0, v2, v3, v1}, Lgs1;-><init>(JZ)V
+
+    return-object v0
+
+    :pswitch_1
+    sget v0, Ld61;->D0:I
+
+    new-instance v0, Lhn1;
+
+    invoke-virtual {v1}, Ld61;->d()Z
+
+    move-result v1
+
+    invoke-direct {v0, v2, v3, v1}, Lhn1;-><init>(JZ)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

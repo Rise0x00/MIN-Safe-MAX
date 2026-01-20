@@ -1,75 +1,84 @@
-.class public final enum Lg2h;
-.super Ljava/lang/Enum;
+.class public final Lg2h;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements La38;
 
 
 # static fields
-.field public static final synthetic a:[Lg2h;
+.field public static final a:Lg2h;
+
+.field public static final b:Lop7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 2
 
     new-instance v0, Lg2h;
 
-    const-string v1, "UNKNOWN"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x0
+    sput-object v0, Lg2h;->a:Lg2h;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v0, "kotlin.ULong"
 
-    new-instance v1, Lg2h;
+    sget-object v1, Ldo8;->a:Ldo8;
 
-    const-string v2, "VISIBLE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v2, Lg2h;
-
-    const-string v3, "INVISIBLE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0, v1, v2}, [Lg2h;
+    invoke-static {v1, v0}, Leui;->a(La38;Ljava/lang/String;)Lop7;
 
     move-result-object v0
 
-    sput-object v0, Lg2h;->a:[Lg2h;
-
-    invoke-static {}, Lg2h;->values()[Lg2h;
+    sput-object v0, Lg2h;->b:Lop7;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lg2h;
-    .locals 1
 
-    const-class v0, Lg2h;
+# virtual methods
+.method public final a(Lkotlinx/serialization/json/internal/b;Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p2, Lc2h;
 
-    move-result-object p0
+    iget-wide v0, p2, Lc2h;->a:J
 
-    check-cast p0, Lg2h;
+    sget-object p2, Lg2h;->b:Lop7;
 
-    return-object p0
+    invoke-virtual {p1, p2}, Lkotlinx/serialization/json/internal/b;->i(Lxpe;)Lkotlinx/serialization/json/internal/b;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v0, v1}, Lkotlinx/serialization/json/internal/b;->l(J)V
+
+    return-void
 .end method
 
-.method public static values()[Lg2h;
+.method public final b(Lkl4;)Ljava/lang/Object;
+    .locals 2
+
+    sget-object v0, Lg2h;->b:Lop7;
+
+    invoke-interface {p1, v0}, Lkl4;->o(Lxpe;)Lkl4;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lkl4;->t()J
+
+    move-result-wide v0
+
+    new-instance p1, Lc2h;
+
+    invoke-direct {p1, v0, v1}, Lc2h;-><init>(J)V
+
+    return-object p1
+.end method
+
+.method public final d()Lxpe;
     .locals 1
 
-    sget-object v0, Lg2h;->a:[Lg2h;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lg2h;
+    sget-object v0, Lg2h;->b:Lop7;
 
     return-object v0
 .end method

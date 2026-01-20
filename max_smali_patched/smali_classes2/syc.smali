@@ -1,92 +1,53 @@
 .class public final Lsyc;
-.super Ljava/lang/Object;
+.super Lo84;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final synthetic X:Ltyc;
 
-.field public final synthetic b:Ls45;
+.field public Y:I
 
-.field public final synthetic c:F
+.field public d:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Ls45;F)V
+.method public constructor <init>(Ltyc;Lo84;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsyc;->X:Ltyc;
 
-    iput-object p1, p0, Lsyc;->a:Landroid/view/View;
-
-    iput-object p2, p0, Lsyc;->b:Ls45;
-
-    iput p3, p0, Lsyc;->c:F
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    return-void
-.end method
+    iput-object p1, p0, Lsyc;->o:Ljava/lang/Object;
 
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
-    .locals 0
+    iget p1, p0, Lsyc;->Y:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
+    or-int/2addr p1, v0
 
-    return-void
-.end method
+    iput p1, p0, Lsyc;->Y:I
 
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 3
-
-    new-instance p1, Ltwe;
-
-    iget-object v0, p0, Lsyc;->a:Landroid/view/View;
-
-    iget-object v1, p0, Lsyc;->b:Ls45;
-
-    iget v2, p0, Lsyc;->c:F
-
-    invoke-direct {p1, v0, v1, v2}, Ltwe;-><init>(Ljava/lang/Object;Lm40;F)V
+    const/4 p1, 0x0
 
     const/4 v0, 0x0
 
-    iput v0, p1, Ltwe;->a:F
+    iget-object v1, p0, Lsyc;->X:Ltyc;
 
-    new-instance v0, Luwe;
+    invoke-virtual {v1, p1, v0, v0, p0}, Ltyc;->d(Landroid/graphics/drawable/Drawable;IZLo84;)Ljava/io/Serializable;
 
-    invoke-direct {v0, v2}, Luwe;-><init>(F)V
+    move-result-object p1
 
-    const/high16 v1, 0x43c80000    # 400.0f
-
-    invoke-virtual {v0, v1}, Luwe;->b(F)V
-
-    const v1, 0x3f2e147b    # 0.68f
-
-    invoke-virtual {v0, v1}, Luwe;->a(F)V
-
-    iput-object v0, p1, Ltwe;->m:Luwe;
-
-    invoke-virtual {p1}, Ltwe;->g()V
-
-    return-void
+    return-object p1
 .end method

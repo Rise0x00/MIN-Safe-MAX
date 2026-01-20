@@ -25,16 +25,16 @@
 
 
 # instance fields
-.field public final a:Lib5;
+.field public final a:Lei5;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lib5;)V
+.method public constructor <init>(Ljava/lang/String;Lei5;)V
     .locals 0
 
     invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Lcom/facebook/imagepipeline/decoder/DecodeException;->a:Lib5;
+    iput-object p2, p0, Lcom/facebook/imagepipeline/decoder/DecodeException;->a:Lei5;
 
     return-void
 .end method

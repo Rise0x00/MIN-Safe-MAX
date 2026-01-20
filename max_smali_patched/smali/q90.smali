@@ -2,134 +2,157 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
 
-# instance fields
-.field public final a:I
 
-.field public final b:Ljava/lang/Throwable;
+# static fields
+.field public static final a:Lq90;
+
+.field public static final b:Lfz5;
+
+.field public static final c:Lfz5;
+
+.field public static final d:Lfz5;
+
+.field public static final e:Lfz5;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/Throwable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lq90;
 
-    iput p1, p0, Lq90;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lq90;->b:Ljava/lang/Throwable;
+    sput-object v0, Lq90;->a:Lq90;
+
+    new-instance v0, Lxy;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lxy;-><init>(I)V
+
+    const-class v1, Lvyc;
+
+    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "window"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lq90;->b:Lfz5;
+
+    new-instance v0, Lxy;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lxy;-><init>(I)V
+
+    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "logSourceMetrics"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lq90;->c:Lfz5;
+
+    new-instance v0, Lxy;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, v2}, Lxy;-><init>(I)V
+
+    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v2, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v3, "globalMetrics"
+
+    invoke-direct {v2, v3, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v2, Lq90;->d:Lfz5;
+
+    new-instance v0, Lxy;
+
+    const/4 v2, 0x4
+
+    invoke-direct {v0, v2}, Lxy;-><init>(I)V
+
+    invoke-static {v1, v0}, Lt02;->m(Ljava/lang/Class;Lxy;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    new-instance v1, Lfz5;
+
+    invoke-static {v0}, Lt02;->n(Ljava/util/HashMap;)Ljava/util/Map;
+
+    move-result-object v0
+
+    const-string v2, "appNamespace"
+
+    invoke-direct {v1, v2, v0}, Lfz5;-><init>(Ljava/lang/String;Ljava/util/Map;)V
+
+    sput-object v1, Lq90;->e:Lfz5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lq90;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_2
-
-    check-cast p1, Lq90;
-
-    iget v1, p1, Lq90;->a:I
-
-    iget-object p1, p1, Lq90;->b:Ljava/lang/Throwable;
-
-    iget v3, p0, Lq90;->a:I
-
-    if-ne v3, v1, :cond_2
-
-    iget-object v1, p0, Lq90;->b:Ljava/lang/Throwable;
-
-    if-nez v1, :cond_1
-
-    if-nez p1, :cond_2
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    :goto_0
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lq90;->a:I
+    check-cast p1, Ldf3;
 
-    const v1, 0xf4243
+    check-cast p2, Lwwa;
 
-    xor-int/2addr v0, v1
+    sget-object v0, Lq90;->b:Lfz5;
 
-    mul-int/2addr v0, v1
+    iget-object v1, p1, Ldf3;->a:Lelg;
 
-    iget-object v1, p0, Lq90;->b:Ljava/lang/Throwable;
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    if-nez v1, :cond_0
+    sget-object v0, Lq90;->c:Lfz5;
 
-    const/4 v1, 0x0
+    iget-object v1, p1, Ldf3;->b:Ljava/util/List;
 
-    goto :goto_0
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    sget-object v0, Lq90;->d:Lfz5;
 
-    move-result v1
+    iget-object v1, p1, Ldf3;->c:Lsz6;
 
-    :goto_0
-    xor-int/2addr v0, v1
+    invoke-interface {p2, v0, v1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    return v0
-.end method
+    sget-object v0, Lq90;->e:Lfz5;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object p1, p1, Ldf3;->d:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-interface {p2, v0, p1}, Lwwa;->a(Lfz5;Ljava/lang/Object;)Lwwa;
 
-    const-string v1, "StateError{code="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lq90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", cause="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lq90;->b:Ljava/lang/Throwable;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method

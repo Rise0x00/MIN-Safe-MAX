@@ -1,93 +1,105 @@
 .class public final Lx1h;
-.super Lmd6;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final b:Ljava/lang/String;
-
-.field public c:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Lz02;)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    invoke-direct {p0, p1}, Lmd6;-><init>(Lz02;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "virtual-"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lz02;->d()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p1, "-"
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lx1h;->b:Ljava/lang/String;
+    iput p1, p0, Lx1h;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()I
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 2
+
+    check-cast p1, Lx1h;
+
+    iget p1, p1, Lx1h;->a:I
+
+    iget v0, p0, Lx1h;->a:I
+
+    const/high16 v1, -0x80000000
+
+    xor-int/2addr v0, v1
+
+    xor-int/2addr p1, v1
+
+    invoke-static {v0, p1}, Le1j;->b(II)I
+
+    move-result p1
+
+    return p1
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    instance-of v0, p1, Lx1h;
 
-    invoke-virtual {p0, v0}, Lx1h;->l(I)I
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Lx1h;
+
+    iget p1, p1, Lx1h;->a:I
+
+    iget v0, p0, Lx1h;->a:I
+
+    if-eq v0, p1, :cond_1
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget v0, p0, Lx1h;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    iget-object v0, p0, Lx1h;->b:Ljava/lang/String;
+    iget v0, p0, Lx1h;->a:I
+
+    int-to-long v0, v0
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
-.end method
-
-.method public final l(I)I
-    .locals 1
-
-    iget-object v0, p0, Lmd6;->a:Lz02;
-
-    invoke-interface {v0, p1}, Lz02;->l(I)I
-
-    move-result p1
-
-    iget v0, p0, Lx1h;->c:I
-
-    sub-int/2addr p1, v0
-
-    invoke-static {p1}, Lz2g;->h(I)I
-
-    move-result p1
-
-    return p1
 .end method

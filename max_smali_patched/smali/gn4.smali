@@ -3,22 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lqe8;
+.implements Lqb9;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:F
 
-.field public final synthetic b:Lqt1;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqt1;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;F)V
     .locals 0
 
-    iput p2, p0, Lgn4;->a:I
+    iput-object p1, p0, Lgn4;->b:Ljava/lang/Object;
 
-    iput-object p1, p0, Lgn4;->b:Lqt1;
+    iput p2, p0, Lgn4;->a:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,38 +28,36 @@
 
 
 # virtual methods
-.method public final run()V
+.method public b(Lla9;)V
+    .locals 1
+
+    iget-object p1, p0, Lgn4;->b:Ljava/lang/Object;
+
+    check-cast p1, Lrb9;
+
+    iget-object p1, p1, Lrb9;->g:Lgb9;
+
+    iget-object p1, p1, Lgb9;->t:Lxcc;
+
+    iget v0, p0, Lgn4;->a:F
+
+    invoke-virtual {p1, v0}, Lxcc;->i0(F)V
+
+    return-void
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lgn4;->a:I
+    iget-object v0, p0, Lgn4;->b:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v0, Lid;
 
-    iget-object v0, p0, Lgn4;->b:Lqt1;
+    iget v1, p0, Lgn4;->a:F
 
-    const/4 v1, 0x0
+    check-cast p1, Ljd;
 
-    invoke-virtual {v0, v1}, Lqt1;->b(Ljava/lang/Object;)Z
-
-    return-void
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/Exception;
-
-    const-string v1, "Failed to snapshot: OpenGLRenderer not ready."
-
-    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lgn4;->b:Lqt1;
-
-    invoke-virtual {v1, v0}, Lqt1;->d(Ljava/lang/Throwable;)Z
+    invoke-interface {p1, v0, v1}, Ljd;->w0(Lid;F)V
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

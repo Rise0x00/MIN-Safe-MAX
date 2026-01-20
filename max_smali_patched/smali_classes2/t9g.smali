@@ -1,26 +1,30 @@
 .class public final Lt9g;
-.super Logf;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lej6;
+.implements Lbr6;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+.field public final synthetic X:Lbag;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
+
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
+.method public constructor <init>(Lbag;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lt9g;->X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    iput-object p1, p0, Lt9g;->X:Lbag;
 
-    const/4 p2, 0x2
+    iput-object p2, p0, Lt9g;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,6 +34,8 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
+    check-cast p1, Lzb4;
+
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lt9g;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -38,100 +44,75 @@
 
     check-cast p1, Lt9g;
 
-    sget-object p2, Lybg;->a:Lybg;
+    sget-object p2, Lb3h;->a:Lb3h;
 
     invoke-virtual {p1, p2}, Lt9g;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p2
+    move-result-object p1
+
+    return-object p1
 .end method
 
 .method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Lt9g;
+    new-instance p1, Lt9g;
 
-    iget-object v1, p0, Lt9g;->X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    iget-object v0, p0, Lt9g;->X:Lbag;
 
-    invoke-direct {v0, p2, v1}, Lt9g;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;)V
+    iget-object v1, p0, Lt9g;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    iput-object p1, v0, Lt9g;->o:Ljava/lang/Object;
+    invoke-direct {p1, v0, v1, p2}, Lt9g;-><init>(Lbag;Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
 .end method
 
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+    .locals 2
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    iget v0, p0, Lt9g;->o:I
 
-    iget-object p1, p0, Lt9g;->o:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p1, Lz8g;
+    if-eqz v0, :cond_1
 
-    sget-object v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->s0:[Les7;
+    if-ne v0, v1, :cond_0
 
-    if-eqz p1, :cond_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lt9g;->X:Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+    goto :goto_0
 
-    invoke-virtual {v0}, Lc24;->getRouter()Lyid;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    move-result-object v1
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {v1}, Lyid;->C()Z
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->o:Ljava/lang/Object;
+    throw p1
 
-    invoke-interface {v1}, Lru7;->getValue()Ljava/lang/Object;
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    move-result-object v1
+    iput v1, p0, Lt9g;->o:I
 
-    check-cast v1, Lvj7;
+    iget-object p1, p0, Lt9g;->X:Lbag;
 
-    iget-object v6, p1, Lz8g;->b:Ljava/lang/String;
+    iget-object v0, p0, Lt9g;->Y:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
 
-    iget-object v0, v0, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;->b:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lru7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Luj7;
-
-    iget-object v7, p1, Lz8g;->c:Lxj7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    const-string v4, "CREATE_PASSWORD"
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->name()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v3, "RESTORE"
-
-    invoke-direct/range {v2 .. v7}, Lone/me/settings/twofa/creation/TwoFACreationScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lxj7;)V
-
-    const/4 p1, 0x0
-
-    invoke-static {v2, p1, p1}, Lmxi;->a(Lc24;Lnh;Lnh;)Lbjd;
+    invoke-virtual {p1, v0, p0}, Lbag;->f(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 
-    const-string v0, "CREATE_PASSWORD"
+    sget-object v0, Lac4;->a:Lac4;
 
-    invoke-virtual {v1, p1, v0}, Lvj7;->a(Lbjd;Ljava/lang/String;)V
+    if-ne p1, v0, :cond_2
 
-    sget-object p1, Lybg;->a:Lybg;
+    return-object v0
+
+    :cond_2
+    :goto_0
+    sget-object p1, Lb3h;->a:Lb3h;
 
     return-object p1
-
-    :cond_0
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
 .end method

@@ -3,115 +3,124 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final Companion:Lcgh;
-
-
 # instance fields
-.field public final a:Z
+.field public final a:Lmdb;
+
+.field public final b:Lfgh;
+
+.field public final c:Lb26;
+
+.field public final d:Ldd;
+
+.field public final e:Lube;
+
+.field public final f:Lpbe;
+
+.field public final g:Ltbe;
+
+.field public final h:Lgyh;
+
+.field public final i:Ljava/util/HashMap;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lmdb;Lfgh;Lb26;Ldd;Lube;Lpbe;Ltbe;)V
     .locals 1
-
-    new-instance v0, Lcgh;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ldgh;->Companion:Lcgh;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(IZ)V
-    .locals 2
-
-    and-int/lit8 v0, p1, 0x1
-
-    const/4 v1, 0x1
-
-    if-ne v1, v0, :cond_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Ldgh;->a:Z
+    new-instance v0, Lgyh;
+
+    invoke-direct {v0}, Lgyh;-><init>()V
+
+    iput-object v0, p0, Ldgh;->h:Lgyh;
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Ldgh;->i:Ljava/util/HashMap;
+
+    iput-object p1, p0, Ldgh;->a:Lmdb;
+
+    iput-object p2, p0, Ldgh;->b:Lfgh;
+
+    iput-object p3, p0, Ldgh;->c:Lb26;
+
+    iput-object p4, p0, Ldgh;->d:Ldd;
+
+    iput-object p5, p0, Ldgh;->e:Lube;
+
+    iput-object p6, p0, Ldgh;->f:Lpbe;
+
+    iput-object p7, p0, Ldgh;->g:Ltbe;
 
     return-void
-
-    :cond_0
-    sget-object p2, Lbgh;->a:Lbgh;
-
-    invoke-virtual {p2}, Lbgh;->d()Lo3e;
-
-    move-result-object p2
-
-    invoke-static {p1, v1, p2}, Lbi3;->b(IILo3e;)V
-
-    const/4 p1, 0x0
-
-    throw p1
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final declared-synchronized a(Lvfh;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    monitor-enter p0
 
-    if-ne p0, p1, :cond_0
+    :try_start_0
+    iget-object v0, p0, Ldgh;->i:Ljava/util/HashMap;
 
-    return v0
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Ldgh;
+    iget-object v0, p0, Ldgh;->b:Lfgh;
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ldgh;
-
-    iget-boolean v1, p0, Ldgh;->a:Z
-
-    iget-boolean p1, p1, Ldgh;->a:Z
-
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Ldgh;->a:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "WebAppSetupClosingBehaviorRequest(needConfirmation="
-
-    const-string v1, ")"
-
-    iget-boolean v2, p0, Ldgh;->a:Z
-
-    invoke-static {v0, v1, v2}, Lijf;->q(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0}, Lfgh;->a()Lsef;
 
     move-result-object v0
 
-    return-object v0
+    new-instance v1, Lagh;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p1, v2}, Lagh;-><init>(Lvfh;I)V
+
+    new-instance v2, Lco3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v0, v3, v1}, Lco3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v2}, Lbo3;->i()Ldxa;
+
+    move-result-object v0
+
+    sget-object v1, Lhbe;->d:Lkme;
+
+    new-instance v2, Lagh;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, p1, v3}, Lagh;-><init>(Lvfh;I)V
+
+    new-instance v3, Lbl0;
+
+    const/16 v4, 0xd
+
+    invoke-direct {v3, v4, p1}, Lbl0;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v0, v1, v2, v3}, Ljdj;->b(Ldxa;Lay3;Lay3;Li6;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

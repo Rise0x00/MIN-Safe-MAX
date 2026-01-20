@@ -1,25 +1,22 @@
 .class public final Lcv6;
-.super Lp14;
-.source "SourceFile"
+.super Lo84;
 
 
 # instance fields
-.field public final synthetic X:Lev6;
+.field public final synthetic X:Ld83;
 
-.field public Y:I
+.field public synthetic d:Ljava/lang/Object;
 
-.field public d:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public o:I
 
 
 # direct methods
-.method public constructor <init>(Lev6;Lp14;)V
+.method public constructor <init>(Ld83;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lcv6;->X:Lev6;
+    iput-object p1, p0, Lcv6;->X:Ld83;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -27,25 +24,23 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iput-object p1, p0, Lcv6;->o:Ljava/lang/Object;
+    iput-object p1, p0, Lcv6;->d:Ljava/lang/Object;
 
-    iget p1, p0, Lcv6;->Y:I
+    iget p1, p0, Lcv6;->o:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lcv6;->Y:I
+    iput p1, p0, Lcv6;->o:I
 
-    const/4 p1, 0x0
+    iget-object p1, p0, Lcv6;->X:Ld83;
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcv6;->X:Lev6;
-
-    invoke-virtual {v1, p1, v0, p0}, Lev6;->b(Ljava/util/List;ILp14;)Ljava/io/Serializable;
+    invoke-virtual {p1, v0, p0}, Ld83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p1
 

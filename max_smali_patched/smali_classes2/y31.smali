@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract onNewMessage(Lle7;)V
+.method public abstract onAsrDataPackage(Lyt;)V
 .end method

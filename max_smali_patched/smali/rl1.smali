@@ -1,94 +1,182 @@
 .class public final Lrl1;
-.super Lbm1;
+.super Lzcf;
 .source "SourceFile"
 
 
 # instance fields
-.field public final D:Ljava/lang/CharSequence;
+.field public final o:Lski;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;)V
+.method public constructor <init>(Lski;Ljava/util/concurrent/ExecutorService;)V
     .locals 0
 
-    invoke-direct {p0}, Lbm1;-><init>()V
+    invoke-direct {p0, p2}, Lzcf;-><init>(Ljava/util/concurrent/Executor;)V
 
-    iput-object p1, p0, Lrl1;->D:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lrl1;->o:Lski;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lrl1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lrl1;
-
-    iget-object v1, p0, Lrl1;->D:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lrl1;->D:Ljava/lang/CharSequence;
-
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final I(Ljef;I)V
     .locals 1
 
-    iget-object v0, p0, Lrl1;->D:Ljava/lang/CharSequence;
+    instance-of v0, p1, Lql1;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    if-eqz v0, :cond_0
 
-    move-result v0
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
 
-    return v0
+    move-result-object p1
+
+    check-cast p1, Lud8;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0, p2}, Lnd8;->D(I)Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lud8;
+
+    invoke-virtual {p1, p2}, Ljef;->y(Lud8;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final bridge synthetic s(Ltsd;I)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p1, Ljef;
 
-    const-string v1, "RecordStart(name="
+    invoke-virtual {p0, p1, p2}, Lrl1;->I(Ljef;I)V
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    iget-object v1, p0, Lrl1;->D:Ljava/lang/CharSequence;
+.method public final u(Landroid/view/ViewGroup;I)Ltsd;
+    .locals 4
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget v0, Ln6b;->w:I
 
-    const-string v1, ")"
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne p2, v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-instance p2, Lql1;
 
-    move-result-object v0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    return-object v0
+    move-result-object p1
+
+    new-instance v0, Lt0f;
+
+    invoke-direct {v0, p1, v1}, Lt0f;-><init>(Landroid/content/Context;I)V
+
+    invoke-direct {p2, v0}, Ltsd;-><init>(Landroid/view/View;)V
+
+    return-object p2
+
+    :cond_0
+    sget v0, Ln6b;->v:I
+
+    if-ne p2, v0, :cond_1
+
+    new-instance p2, Ld21;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    new-instance v0, Lwlb;
+
+    invoke-direct {v0, p1}, Lwlb;-><init>(Landroid/content/Context;)V
+
+    const/4 p1, 0x5
+
+    invoke-direct {p2, v0, p1}, Ld21;-><init>(Landroid/view/View;I)V
+
+    new-instance p1, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/16 v2, 0x34
+
+    int-to-float v2, v2
+
+    invoke-static {}, Lt05;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v2, v3
+
+    invoke-static {v2}, Lq7j;->c(F)I
+
+    move-result v2
+
+    const/4 v3, -0x1
+
+    invoke-direct {p1, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/16 p1, 0x64
+
+    invoke-virtual {v0, p1}, Lwlb;->setMaxLengthForLabel(I)V
+
+    new-instance v2, Landroid/text/InputFilter$LengthFilter;
+
+    invoke-direct {v2, p1}, Landroid/text/InputFilter$LengthFilter;-><init>(I)V
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [Landroid/text/InputFilter;
+
+    aput-object v2, p1, v1
+
+    invoke-virtual {v0, p1}, Lwlb;->setFilters([Landroid/text/InputFilter;)V
+
+    sget p1, Lugb;->P:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lwlb;->setBackgroundColorAttr(Ljava/lang/Integer;)V
+
+    new-instance p1, Li;
+
+    const/16 v1, 0x19
+
+    iget-object v2, p0, Lrl1;->o:Lski;
+
+    invoke-direct {p1, v1, v2}, Li;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p1}, Lwlb;->f(Lnq6;)V
+
+    sget-object p1, Lulb;->a:Lulb;
+
+    invoke-virtual {v0, p1}, Lwlb;->setTypingMode(Lulb;)V
+
+    return-object p2
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "unknown item viewType "
+
+    invoke-static {p2, v0}, Lmrf;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

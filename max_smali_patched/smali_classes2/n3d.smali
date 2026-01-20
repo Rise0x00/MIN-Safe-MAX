@@ -50,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0x4fb612c0
+    const v0, -0x38597cf0    # -85254.125f
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "ShowCloseConfirmationDialog"
+    const-string v0, "ModeVideo"
 
     return-object v0
 .end method

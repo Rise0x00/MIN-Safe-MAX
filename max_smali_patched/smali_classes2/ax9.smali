@@ -1,81 +1,110 @@
-.class public final Lax9;
-.super Lrj0;
+.class public final synthetic Lax9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public final b:J
+.field public final synthetic a:I
 
-.field public final c:[J
-
-.field public final d:Ljava/util/List;
-
-.field public final o:[J
+.field public final synthetic b:Lsz9;
 
 
 # direct methods
-.method public constructor <init>(JJ[JLjava/util/List;[J)V
+.method public synthetic constructor <init>(Lsz9;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lrj0;-><init>(J)V
+    iput p2, p0, Lax9;->a:I
 
-    iput-wide p3, p0, Lax9;->b:J
+    iput-object p1, p0, Lax9;->b:Lsz9;
 
-    iput-object p5, p0, Lax9;->c:[J
-
-    iput-object p6, p0, Lax9;->d:Ljava/util/List;
-
-    iput-object p7, p0, Lax9;->o:[J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 14
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lax9;->a:I
 
-    const-string v1, "MsgGetEvent{serverChatId="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v1, Lh3a;
 
-    iget-wide v1, p0, Lax9;->b:J
+    iget-object v4, p0, Lax9;->b:Lsz9;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v0, v4, Lsz9;->b:La1a;
 
-    const-string v1, ", serverMessageIds="
+    iget-object v10, v4, Lsz9;->F0:Lsb4;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v11, v4, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget-object v1, p0, Lax9;->c:[J
+    iget-object v12, v4, Lsz9;->D1:Lpld;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v13, v4, Lsz9;->F1:Lpld;
 
-    const-string v1, ", messages="
+    new-instance v2, Ldw9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v8, 0x0
 
-    iget-object v1, p0, Lax9;->d:Ljava/util/List;
+    const/4 v9, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const/4 v3, 0x2
 
-    const-string v1, ", requestedMessageIds="
+    const-class v5, Lsz9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v6, "processReactionEffect"
 
-    iget-object v1, p0, Lax9;->o:[J
+    const-string v7, "processReactionEffect(Ljava/util/Set;J)V"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct/range {v2 .. v9}, Ldw9;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    const-string v1, "}"
+    new-instance v8, Ly07;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v3, 0x14
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v8, v3, v4}, Ly07;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
+    move-object v7, v2
+
+    move-object v3, v10
+
+    move-object v4, v11
+
+    move-object v5, v12
+
+    move-object v6, v13
+
+    move-object v2, v0
+
+    invoke-direct/range {v1 .. v8}, Lh3a;-><init>(La1a;Lsb4;Lkotlinx/coroutines/internal/ContextScope;Lpld;Lpld;Ldw9;Ly07;)V
+
+    return-object v1
+
+    :pswitch_0
+    new-instance v0, Lp4h;
+
+    iget-object v1, p0, Lax9;->b:Lsz9;
+
+    iget-object v2, v1, Lsz9;->D1:Lpld;
+
+    iget-object v3, v1, Lsz9;->F1:Lpld;
+
+    iget-object v4, v1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, v1, Lsz9;->Y:Lmbg;
+
+    invoke-direct {v0, v2, v3, v4, v1}, Lp4h;-><init>(Lpld;Lpld;Lkotlinx/coroutines/internal/ContextScope;Lmbg;)V
 
     return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

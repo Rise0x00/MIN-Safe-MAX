@@ -1,105 +1,164 @@
-.class public final enum Ljx5;
-.super Ljava/lang/Enum;
+.class public final Ljx5;
+.super Lp6g;
 .source "SourceFile"
 
+# interfaces
+.implements Lbr6;
 
-# static fields
-.field public static final enum a:Ljx5;
 
-.field public static final enum b:Ljx5;
+# instance fields
+.field public final synthetic X:Lnx5;
 
-.field public static final enum c:Ljx5;
-
-.field public static final enum d:Ljx5;
-
-.field public static final synthetic o:[Ljx5;
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lnx5;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ljx5;
+    iput-object p1, p0, Ljx5;->X:Lnx5;
 
-    const-string v1, "FIRST_FRAME_DECODED"
+    const/4 p1, 0x2
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v1, Ljx5;
-
-    const-string v2, "FIRST_FRAME_RENDERED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ljx5;->a:Ljx5;
-
-    new-instance v2, Ljx5;
-
-    const-string v3, "PLAYING"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ljx5;->b:Ljx5;
-
-    new-instance v3, Ljx5;
-
-    const-string v4, "READY"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ljx5;->c:Ljx5;
-
-    new-instance v4, Ljx5;
-
-    const-string v5, "PLAY"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Ljx5;->d:Ljx5;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Ljx5;
-
-    move-result-object v0
-
-    sput-object v0, Ljx5;->o:[Ljx5;
+    invoke-direct {p0, p1, p2}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljx5;
-    .locals 1
 
-    const-class v0, Ljx5;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lzb4;
 
-    move-result-object p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    check-cast p0, Ljx5;
+    invoke-virtual {p0, p1, p2}, Ljx5;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    move-result-object p1
+
+    check-cast p1, Ljx5;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Ljx5;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method
 
-.method public static values()[Ljx5;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Ljx5;->o:[Ljx5;
+    new-instance p1, Ljx5;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Ljx5;->X:Lnx5;
 
-    move-result-object v0
+    invoke-direct {p1, v0, p2}, Ljx5;-><init>(Lnx5;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Ljx5;
+    return-object p1
+.end method
+
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    sget-object v0, Lac4;->a:Lac4;
+
+    iget v1, p0, Ljx5;->o:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v0, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ljx5;->X:Lnx5;
+
+    :try_start_1
+    iget-object p1, p1, Lnx5;->X:Lo58;
+
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpva;
+
+    iput v2, p0, Ljx5;->o:I
+
+    invoke-virtual {p1, p0}, Lpva;->b(Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-ne p1, v0, :cond_2
 
     return-object v0
+
+    :cond_2
+    return-object p1
+
+    :goto_0
+    sget-object v0, Lc5j;->a:Ledb;
+
+    if-nez v0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    sget-object v1, Lkk8;->Y:Lkk8;
+
+    invoke-virtual {v0, v1}, Ledb;->b(Lkk8;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    const-string v2, "failed to read fcm notifications"
+
+    const-string v3, "nx5"
+
+    invoke-virtual {v0, v1, v3, v2, p1}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_1
+    sget-object p1, Ldh5;->a:Ldh5;
+
+    return-object p1
+
+    :goto_2
+    throw p1
 .end method

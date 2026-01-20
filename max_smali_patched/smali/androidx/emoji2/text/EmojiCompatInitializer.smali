@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leg7;
+.implements Lnp7;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Leg7;"
+        "Lnp7;"
     }
 .end annotation
 
@@ -41,52 +41,36 @@
 .method public final b(Landroid/content/Context;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Lpa6;
+    new-instance v0, Lli6;
 
-    new-instance v1, Ll64;
+    new-instance v1, Lski;
 
-    const/4 v2, 0x2
+    invoke-direct {v1, p1}, Lski;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v1, p1, v2}, Ll64;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {v0, v1}, Lpa6;-><init>(Lz75;)V
+    invoke-direct {v0, v1}, Lre5;-><init>(Lue5;)V
 
     const/4 v1, 0x1
 
-    iput v1, v0, Lpa6;->e:I
+    iput v1, v0, Lre5;->a:I
 
-    invoke-static {v0}, La85;->c(Lpa6;)V
+    sget-object v1, Lve5;->k:Lve5;
 
-    invoke-static {p1}, Lw48;->y(Landroid/content/Context;)Lw48;
+    if-nez v1, :cond_1
 
-    move-result-object p1
-
-    const-class v0, Landroidx/lifecycle/ProcessLifecycleInitializer;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v1, Lw48;->s0:Ljava/lang/Object;
+    sget-object v1, Lve5;->j:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v2, p1, Lw48;->b:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/HashMap;
-
-    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
+    sget-object v2, Lve5;->k:Lve5;
 
     if-nez v2, :cond_0
 
-    new-instance v2, Ljava/util/HashSet;
+    new-instance v2, Lve5;
 
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+    invoke-direct {v2, v0}, Lve5;-><init>(Lli6;)V
 
-    invoke-virtual {p1, v0, v2}, Lw48;->x(Ljava/lang/Class;Ljava/util/HashSet;)Ljava/lang/Object;
-
-    move-result-object v2
+    sput-object v2, Lve5;->k:Lve5;
 
     goto :goto_0
 
@@ -98,30 +82,83 @@
     :cond_0
     :goto_0
     monitor-exit v1
+
+    goto :goto_2
+
+    :goto_1
+    monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast v2, Lnx7;
+    throw p1
 
-    invoke-interface {v2}, Lnx7;->p()Lpx7;
+    :cond_1
+    :goto_2
+    invoke-static {p1}, Lbg8;->r(Landroid/content/Context;)Lbg8;
 
     move-result-object p1
 
-    new-instance v0, Lc85;
+    const-class v0, Landroidx/lifecycle/ProcessLifecycleInitializer;
 
-    invoke-direct {v0, p0, p1}, Lc85;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Lpx7;)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v0}, Lpx7;->a(Ljx7;)V
+    sget-object v1, Lbg8;->Z:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_1
+    iget-object v2, p1, Lbg8;->a:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashMap;
+
+    invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Ljava/util/HashSet;
+
+    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+
+    invoke-virtual {p1, v0, v2}, Lbg8;->l(Ljava/lang/Class;Ljava/util/HashSet;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_4
+
+    :cond_2
+    :goto_3
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    check-cast v2, Lj88;
+
+    invoke-interface {v2}, Lj88;->p()Ll88;
+
+    move-result-object p1
+
+    new-instance v0, Lxe5;
+
+    invoke-direct {v0, p0, p1}, Lxe5;-><init>(Landroidx/emoji2/text/EmojiCompatInitializer;Ll88;)V
+
+    invoke-virtual {p1, v0}, Ll88;->a(Lg88;)V
 
     sget-object p1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     return-object p1
 
-    :goto_1
-    :try_start_1
+    :goto_4
+    :try_start_2
     monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     throw p1
 .end method

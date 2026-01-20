@@ -2,49 +2,79 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/animation/Interpolator;
+
 
 # instance fields
-.field public final a:J
+.field public final a:F
 
-.field public final b:I
-
-.field public final c:I
+.field public final synthetic b:La8f;
 
 
 # direct methods
-.method public constructor <init>(JIII)V
-    .locals 2
+.method public constructor <init>(JJLa8f;)V
+    .locals 0
 
-    and-int/lit8 v0, p5, 0x1
-
-    if-eqz v0, :cond_0
-
-    const-wide/16 p1, 0x0
-
-    :cond_0
-    and-int/lit8 v0, p5, 0x2
-
-    const/4 v1, -0x1
-
-    if-eqz v0, :cond_1
-
-    move p3, v1
-
-    :cond_1
-    and-int/lit8 p5, p5, 0x4
-
-    if-eqz p5, :cond_2
-
-    move p4, v1
-
-    :cond_2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lz7f;->a:J
+    iput-object p5, p0, Lz7f;->b:La8f;
 
-    iput p3, p0, Lz7f;->b:I
+    long-to-float p1, p1
 
-    iput p4, p0, Lz7f;->c:I
+    long-to-float p2, p3
+
+    div-float/2addr p1, p2
+
+    iput p1, p0, Lz7f;->a:F
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final getInterpolation(F)F
+    .locals 4
+
+    const/4 v0, 0x0
+
+    cmpg-float v1, p1, v0
+
+    if-gtz v1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-static {p1, v0, v1}, Lamj;->c(FFF)F
+
+    move-result p1
+
+    iget v0, p0, Lz7f;->a:F
+
+    cmpg-float v2, p1, v0
+
+    iget-object v3, p0, Lz7f;->b:La8f;
+
+    if-gez v2, :cond_1
+
+    div-float/2addr p1, v0
+
+    iget-object v0, v3, La8f;->p:Landroid/view/animation/Interpolator;
+
+    invoke-interface {v0, p1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
+
+    move-result p1
+
+    return p1
+
+    :cond_1
+    iget-object p1, v3, La8f;->p:Landroid/view/animation/Interpolator;
+
+    invoke-interface {p1, v1}, Landroid/animation/TimeInterpolator;->getInterpolation(F)F
+
+    move-result p1
+
+    return p1
 .end method

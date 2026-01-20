@@ -1,64 +1,59 @@
-.class public final Ll56;
+.class public abstract synthetic Ll56;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln56;
-
 
 # static fields
-.field public static final a:Ll56;
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Ll56;
+    invoke-static {}, Lg56;->values()[Lg56;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    sput-object v0, Ll56;->a:Ll56;
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :catch_0
+    const/4 v2, 0x2
+
+    :try_start_1
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    const/4 v1, 0x3
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    const/4 v2, 0x4
+
+    :try_start_3
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Ll56;->$EnumSwitchMapping$0:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p1, p1, Ll56;
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    const v0, -0x667a69eb
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "ConfirmDeletion"
-
-    return-object v0
 .end method

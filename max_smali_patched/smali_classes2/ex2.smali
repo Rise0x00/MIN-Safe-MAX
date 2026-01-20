@@ -1,108 +1,93 @@
 .class public final Lex2;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lake;
+.field public final synthetic X:Lone/me/chatscreen/ChatScreen;
 
-.field public final b:Lkotlinx/coroutines/internal/ContextScope;
+.field public synthetic o:Z
 
 
 # direct methods
-.method public constructor <init>(Liw0;Ltlf;)V
-    .locals 2
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lex2;->X:Lone/me/chatscreen/ChatScreen;
 
-    const/4 v0, 0x0
+    const/4 p2, 0x2
 
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lbke;->b(III)Lake;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lex2;->a:Lake;
-
-    check-cast p2, Lsta;
-
-    invoke-virtual {p2}, Lsta;->a()La54;
-
-    move-result-object p2
-
-    invoke-static {p2}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lex2;->b:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p1, p0}, Liw0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, p2, p1}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lea8;)V
-    .locals 3
-    .annotation runtime Lxbf;
-    .end annotation
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    .line 3
-    new-instance p1, Ldx2;
+    check-cast p1, Ljava/lang/Boolean;
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-direct {p1, p0, v0}, Ldx2;-><init>(Lex2;Lkotlin/coroutines/Continuation;)V
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v1, 0x3
+    invoke-virtual {p0, p1, p2}, Lex2;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v2, p0, Lex2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    move-result-object p1
 
-    invoke-static {v2, v0, v0, p1, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+    check-cast p1, Lex2;
 
-    return-void
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lex2;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public final onEvent(Lk43;)V
-    .locals 3
-    .annotation runtime Lxbf;
-    .end annotation
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    .line 1
-    new-instance p1, Ldx2;
+    new-instance v0, Lex2;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lex2;->X:Lone/me/chatscreen/ChatScreen;
 
-    invoke-direct {p1, p0, v0}, Ldx2;-><init>(Lex2;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, v1}, Lex2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
 
-    const/4 v1, 0x3
+    check-cast p1, Ljava/lang/Boolean;
 
-    iget-object v2, p0, Lex2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {v2, v0, v0, p1, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+    move-result p1
 
-    return-void
+    iput-boolean p1, v0, Lex2;->o:Z
+
+    return-object v0
 .end method
 
-.method public final onEvent(Lme7;)V
-    .locals 3
-    .annotation runtime Lxbf;
-    .end annotation
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 2
-    new-instance p1, Ldx2;
+    iget-boolean v0, p0, Lex2;->o:Z
 
-    const/4 v0, 0x0
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-direct {p1, p0, v0}, Ldx2;-><init>(Lex2;Lkotlin/coroutines/Continuation;)V
+    if-eqz v0, :cond_0
 
-    const/4 v1, 0x3
+    iget-object p1, p0, Lex2;->X:Lone/me/chatscreen/ChatScreen;
 
-    iget-object v2, p0, Lex2;->b:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {p1}, La94;->getRouter()Lw4e;
 
-    invoke-static {v2, v0, v0, p1, v1}, Lkki;->e(Lg54;Ly44;Lj54;Lej6;I)Lgye;
+    move-result-object v0
 
-    return-void
+    invoke-virtual {v0, p1}, Lw4e;->B(La94;)Z
+
+    :cond_0
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

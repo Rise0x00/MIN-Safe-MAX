@@ -1,39 +1,37 @@
-.class public final Lyt4;
+.class public abstract Lyt4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:I
+# direct methods
+.method public static a(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 0
 
-.field public b:I
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
-.field public c:I
+    move-result-object p0
 
-.field public d:I
+    return-object p0
+.end method
 
-.field public e:Z
+.method public static b(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 0
 
+    invoke-static {p0}, Landroid/os/Handler;->createAsync(Landroid/os/Looper;)Landroid/os/Handler;
 
-# virtual methods
-.method public final a()I
-    .locals 3
+    move-result-object p0
 
-    iget v0, p0, Lyt4;->c:I
+    return-object p0
+.end method
 
-    iget v1, p0, Lyt4;->a:I
+.method public static c(Landroid/os/Handler;Li52;J)Z
+    .locals 1
 
-    sub-int/2addr v0, v1
+    const-string v0, "retry_token"
 
-    iget v1, p0, Lyt4;->d:I
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;Ljava/lang/Object;J)Z
 
-    iget v2, p0, Lyt4;->b:I
+    move-result p0
 
-    sub-int/2addr v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    return v0
+    return p0
 .end method

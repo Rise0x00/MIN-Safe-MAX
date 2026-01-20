@@ -1,139 +1,156 @@
-.class public abstract Lq8c;
-.super Ly8c;
+.class public final Lq8c;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:I
+
+.field public final synthetic Y:Lnd2;
+
+.field public final synthetic Z:J
+
+.field public final synthetic o:Ls8c;
+
+.field public final synthetic t0:J
+
+
+# direct methods
+.method public constructor <init>(Ls8c;ILnd2;JJLkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lq8c;->o:Ls8c;
+
+    iput p2, p0, Lq8c;->X:I
+
+    iput-object p3, p0, Lq8c;->Y:Lnd2;
+
+    iput-wide p4, p0, Lq8c;->Z:J
+
+    iput-wide p6, p0, Lq8c;->t0:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p8}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final h(Li28;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object v0, Ln8c;->a:Ln8c;
+    check-cast p1, Lzb4;
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Lq8c;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eqz v0, :cond_0
+    move-result-object p1
 
-    instance-of p1, p1, Ln8c;
+    check-cast p1, Lq8c;
 
-    return p1
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    :cond_0
-    instance-of v0, p0, Lo8c;
+    invoke-virtual {p1, p2}, Lq8c;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
-
-    instance-of p1, p1, Lo8c;
-
-    return p1
-
-    :cond_1
-    instance-of v0, p0, Lp8c;
-
-    if-eqz v0, :cond_3
-
-    instance-of v0, p1, Lp8c;
-
-    if-eqz v0, :cond_2
-
-    move-object v0, p0
-
-    check-cast v0, Lp8c;
-
-    iget-object v0, v0, Lp8c;->a:Ls2c;
-
-    iget-wide v0, v0, Ls2c;->a:J
-
-    check-cast p1, Lp8c;
-
-    iget-object p1, p1, Lp8c;->a:Ls2c;
-
-    iget-wide v2, p1, Ls2c;->a:J
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_2
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_2
-    const/4 p1, 0x0
-
-    return p1
-
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p1
+    return-object p2
 .end method
 
-.method public final q(Li28;)Z
-    .locals 1
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 9
 
-    sget-object v0, Ln8c;->a:Ln8c;
+    new-instance v0, Lq8c;
 
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget-wide v4, p0, Lq8c;->Z:J
 
-    move-result v0
+    iget-wide v6, p0, Lq8c;->t0:J
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lq8c;->o:Ls8c;
 
-    instance-of p1, p1, Ln8c;
+    iget v2, p0, Lq8c;->X:I
 
-    return p1
+    iget-object v3, p0, Lq8c;->Y:Lnd2;
 
-    :cond_0
-    instance-of v0, p0, Lo8c;
+    move-object v8, p2
 
-    if-eqz v0, :cond_1
+    invoke-direct/range {v0 .. v8}, Lq8c;-><init>(Ls8c;ILnd2;JJLkotlin/coroutines/Continuation;)V
 
-    instance-of p1, p1, Lo8c;
+    return-object v0
+.end method
 
-    return p1
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    :cond_1
-    instance-of v0, p0, Lp8c;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_3
+    iget-object p1, p0, Lq8c;->o:Ls8c;
 
-    instance-of v0, p1, Lp8c;
+    iget-object p1, p1, Ls8c;->e:Lo58;
 
-    if-eqz v0, :cond_2
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
 
-    move-object v0, p0
+    move-result-object p1
 
-    check-cast v0, Lp8c;
+    check-cast p1, Ldjb;
 
-    check-cast p1, Lp8c;
+    new-instance v0, Lljb;
 
-    iget-object p1, p1, Lp8c;->a:Ls2c;
+    iget v1, p0, Lq8c;->X:I
 
-    iget-object v0, v0, Lp8c;->a:Ls2c;
+    const/4 v2, 0x3
 
-    invoke-virtual {v0, p1}, Ls2c;->equals(Ljava/lang/Object;)Z
+    const/4 v3, 0x0
 
-    move-result p1
+    invoke-direct {v0, v3, v3, v1, v2}, Lljb;-><init>(IIII)V
 
-    if-eqz p1, :cond_2
+    invoke-virtual {p1, v0}, Ldjb;->c(Lljb;)V
 
-    const/4 p1, 0x1
+    sget v0, Lhfb;->d:I
 
-    return p1
+    new-instance v1, Llhg;
 
-    :cond_2
-    const/4 p1, 0x0
+    invoke-direct {v1, v0}, Llhg;-><init>(I)V
 
-    return p1
+    invoke-virtual {p1, v1}, Ldjb;->g(Lqhg;)V
 
-    :cond_3
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    sget-object v0, Lujb;->a:Lujb;
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-virtual {p1, v0}, Ldjb;->e(Lvjb;)V
 
-    throw p1
+    new-instance v0, Lakb;
+
+    sget v1, Lj6e;->r:I
+
+    new-instance v2, Llhg;
+
+    invoke-direct {v2, v1}, Llhg;-><init>(I)V
+
+    invoke-direct {v0, v2}, Lakb;-><init>(Lqhg;)V
+
+    invoke-virtual {p1, v0}, Ldjb;->f(Lbkb;)V
+
+    new-instance v3, Lo8c;
+
+    iget-object v4, p0, Lq8c;->o:Ls8c;
+
+    iget-object v5, p0, Lq8c;->Y:Lnd2;
+
+    iget-wide v6, p0, Lq8c;->Z:J
+
+    iget-wide v8, p0, Lq8c;->t0:J
+
+    invoke-direct/range {v3 .. v9}, Lo8c;-><init>(Ls8c;Lnd2;JJ)V
+
+    invoke-virtual {p1, v3}, Ldjb;->d(Lejb;)V
+
+    invoke-virtual {p1}, Ldjb;->i()Lcjb;
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

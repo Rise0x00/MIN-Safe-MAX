@@ -1,125 +1,120 @@
 .class public final Lykg;
-.super Lzy;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxkg;
 
 
 # instance fields
-.field public final X:Ljava/lang/Long;
+.field public a:Ljava/lang/Long;
 
-.field public final Y:Ljava/lang/String;
-
-.field public final Z:Ljava/lang/Integer;
-
-.field public final d:Ljava/lang/Long;
-
-.field public final o:Ljava/lang/Integer;
-
-.field public final s0:Ljava/lang/Integer;
-
-.field public final t0:Z
-
-.field public final u0:Ljava/lang/String;
-
-.field public final v0:Ljava/lang/String;
-
-.field public final w0:[B
-
-.field public final x0:Ljava/lang/Long;
-
-.field public final y0:Ljava/lang/String;
-
-.field public final z0:Lcmg;
-
-
-# direct methods
-.method public constructor <init>(JILjava/lang/Long;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ZLjava/lang/String;Ljava/lang/String;[BLjava/lang/Long;ZLjava/lang/String;Lcmg;Z)V
-    .locals 3
-
-    sget-object v0, Lv00;->o:Lv00;
-
-    move/from16 v1, p13
-
-    move/from16 v2, p16
-
-    invoke-direct {p0, v0, v1, v2}, Lzy;-><init>(Lv00;ZZ)V
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lykg;->d:Ljava/lang/Long;
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lykg;->o:Ljava/lang/Integer;
-
-    iput-object p4, p0, Lykg;->X:Ljava/lang/Long;
-
-    iput-object p5, p0, Lykg;->Y:Ljava/lang/String;
-
-    iput-object p6, p0, Lykg;->Z:Ljava/lang/Integer;
-
-    iput-object p7, p0, Lykg;->s0:Ljava/lang/Integer;
-
-    iput-boolean p8, p0, Lykg;->t0:Z
-
-    iput-object p9, p0, Lykg;->u0:Ljava/lang/String;
-
-    iput-object p10, p0, Lykg;->v0:Ljava/lang/String;
-
-    iput-object p12, p0, Lykg;->x0:Ljava/lang/Long;
-
-    iput-object p11, p0, Lykg;->w0:[B
-
-    move-object/from16 p1, p14
-
-    iput-object p1, p0, Lykg;->y0:Ljava/lang/String;
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Lykg;->z0:Lcmg;
-
-    return-void
-.end method
+.field public b:Ljava/lang/Long;
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final getMsSinceBoot()J
+    .locals 2
 
-    invoke-super {p0}, Lzy;->a()Ljava/util/HashMap;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final getServerTimeMs()Ljava/lang/Long;
+    .locals 6
+
+    iget-object v0, p0, Lykg;->b:Ljava/lang/Long;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v4
+
+    sub-long/2addr v4, v2
+
+    iget-object v0, p0, Lykg;->a:Ljava/lang/Long;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, v4
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    iget-object v1, p0, Lykg;->y0:Ljava/lang/String;
-
-    invoke-static {v1}, Lxvc;->d(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const-string v2, "token"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
+    return-object v0
 
     :cond_0
-    const-string v1, "videoId"
+    return-object v1
+.end method
 
-    iget-object v2, p0, Lykg;->d:Ljava/lang/Long;
+.method public final localTimeMs()J
+    .locals 2
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    :goto_0
-    const-string v1, "videoType"
+    move-result-wide v0
 
-    iget-object v2, p0, Lykg;->o:Ljava/lang/Integer;
+    return-wide v0
+.end method
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final mapToLocalTimeMs(J)Ljava/lang/Long;
+    .locals 2
 
-    return-object v0
+    invoke-virtual {p0}, Lykg;->getServerTimeMs()Ljava/lang/Long;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v0
+
+    sub-long/2addr p1, v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr v0, p1
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    return-object p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return-object p1
+.end method
+
+.method public final utcTimeMs()J
+    .locals 2
+
+    invoke-static {}, Ljava/time/Clock;->systemUTC()Ljava/time/Clock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/time/Clock;->millis()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

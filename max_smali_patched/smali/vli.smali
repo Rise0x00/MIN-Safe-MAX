@@ -1,60 +1,80 @@
-.class public final Lvli;
+.class public final synthetic Lvli;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzha;
+.implements Lcom/my/tracker/core/utils/Consumer;
 
 
-# static fields
-.field public static final a:Lvli;
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/my/tracker/core/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lcom/my/tracker/core/a;I)V
+    .locals 0
 
-    new-instance v0, Lvli;
+    iput p2, p0, Lvli;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvli;->b:Lcom/my/tracker/core/a;
 
-    sput-object v0, Lvli;->a:Lvli;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    iget v0, p0, Lvli;->a:I
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    throw p1
+    iget-object v0, p0, Lvli;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p1}, Lcom/my/tracker/core/a;->b(Ljava/lang/Boolean;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lvli;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->h(Lcom/my/tracker/core/a;Ljava/lang/Boolean;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lvli;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Lcom/my/tracker/core/UserInfoState;
+
+    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->e(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;)V
+
+    return-void
+
+    :pswitch_2
+    iget-object v0, p0, Lvli;->b:Lcom/my/tracker/core/a;
+
+    check-cast p1, Lcom/my/tracker/core/UserInfoState;
+
+    invoke-static {v0, p1}, Lcom/my/tracker/core/a;->d(Lcom/my/tracker/core/a;Lcom/my/tracker/core/UserInfoState;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

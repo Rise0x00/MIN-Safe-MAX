@@ -1,90 +1,79 @@
 .class public final Lpqi;
-.super Ljava/lang/Object;
+.super Lcom/google/android/gms/common/internal/a;
 .source "SourceFile"
-
-# interfaces
-.implements Lzha;
-
-
-# static fields
-.field public static final a:Lpqi;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lpqi;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lpqi;->a:Lpqi;
-
-    new-instance v0, Lz7i;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lz7i;-><init>(I)V
-
-    const-class v1, Lu8i;
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x2
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x3
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x4
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    const/4 v2, 0x5
-
-    invoke-static {v0, v2}, Lo3h;->m(Ljava/util/HashMap;I)Lz7i;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lo3h;->j(Ljava/lang/Class;Lz7i;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lo3h;->q(Ljava/util/HashMap;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final g()I
+    .locals 1
 
-    invoke-static {p1}, Lnx1;->g(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+    const v0, 0x1110e58
 
-    move-result-object p1
+    return v0
+.end method
 
-    throw p1
+.method public final l(Landroid/os/IBinder;)Landroid/os/IInterface;
+    .locals 3
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_0
+    const-string v0, "com.google.android.gms.common.moduleinstall.internal.IModuleInstallService"
+
+    invoke-interface {p1, v0}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lxpi;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lxpi;
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Lxpi;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v0, v2}, Lwoi;-><init>(Landroid/os/IBinder;Ljava/lang/String;I)V
+
+    return-object v1
+.end method
+
+.method public final m()[Lvx5;
+    .locals 1
+
+    sget-object v0, Lk2j;->b:[Lvx5;
+
+    return-object v0
+.end method
+
+.method public final p()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.common.moduleinstall.internal.IModuleInstallService"
+
+    return-object v0
+.end method
+
+.method public final q()Ljava/lang/String;
+    .locals 1
+
+    const-string v0, "com.google.android.gms.chimera.container.moduleinstall.ModuleInstallService.START"
+
+    return-object v0
+.end method
+
+.method public final r()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

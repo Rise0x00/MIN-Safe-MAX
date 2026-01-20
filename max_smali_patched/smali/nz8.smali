@@ -1,141 +1,216 @@
-.class public Lnz8;
+.class public final Lnz8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Landroid/media/session/MediaSession;
+.field public final synthetic a:I
 
-.field public final b:Lmz8;
+.field public final synthetic b:Lpz8;
 
-.field public final c:Lsz8;
+.field public final synthetic c:Ljava/lang/String;
 
-.field public final d:Ljava/lang/Object;
+.field public final synthetic d:Landroid/support/v4/os/ResultReceiver;
 
-.field public final e:Landroid/os/Bundle;
-
-.field public final f:Landroid/os/RemoteCallbackList;
-
-.field public g:Lctb;
-
-.field public h:Ljava/util/List;
-
-.field public i:Leu8;
-
-.field public j:I
-
-.field public k:I
-
-.field public l:Llz8;
-
-.field public m:Lm09;
+.field public final synthetic o:Lski;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 2
+.method public constructor <init>(Lski;Lpz8;Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/os/ResultReceiver;)V
+    .locals 0
 
+    const/4 p4, 0x1
+
+    iput p4, p0, Lnz8;->a:I
+
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-object p1, p0, Lnz8;->o:Lski;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lnz8;->b:Lpz8;
 
-    iput-object v0, p0, Lnz8;->d:Ljava/lang/Object;
+    iput-object p3, p0, Lnz8;->c:Ljava/lang/String;
 
-    new-instance v0, Landroid/os/RemoteCallbackList;
+    iput-object p5, p0, Lnz8;->d:Landroid/support/v4/os/ResultReceiver;
 
-    invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lnz8;->f:Landroid/os/RemoteCallbackList;
+.method public constructor <init>(Lski;Lpz8;Ljava/lang/String;Landroid/support/v4/os/ResultReceiver;)V
+    .locals 1
 
-    invoke-virtual {p0, p1, p2, p3}, Lnz8;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    iput v0, p0, Lnz8;->a:I
 
-    iput-object p1, p0, Lnz8;->a:Landroid/media/session/MediaSession;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p2, Lmz8;
+    iput-object p1, p0, Lnz8;->o:Lski;
 
-    invoke-direct {p2, p0}, Lmz8;-><init>(Lnz8;)V
+    iput-object p2, p0, Lnz8;->b:Lpz8;
 
-    iput-object p2, p0, Lnz8;->b:Lmz8;
+    iput-object p3, p0, Lnz8;->c:Ljava/lang/String;
 
-    new-instance v0, Lsz8;
-
-    invoke-virtual {p1}, Landroid/media/session/MediaSession;->getSessionToken()Landroid/media/session/MediaSession$Token;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, p2}, Lsz8;-><init>(Landroid/media/session/MediaSession$Token;Lu67;)V
-
-    iput-object v0, p0, Lnz8;->c:Lsz8;
-
-    iput-object p3, p0, Lnz8;->e:Landroid/os/Bundle;
-
-    const/4 p2, 0x3
-
-    invoke-virtual {p1, p2}, Landroid/media/session/MediaSession;->setFlags(I)V
+    iput-object p4, p0, Lnz8;->d:Landroid/support/v4/os/ResultReceiver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/media/session/MediaSession;
-    .locals 0
+.method public final run()V
+    .locals 8
 
-    new-instance p3, Landroid/media/session/MediaSession;
+    iget v0, p0, Lnz8;->a:I
 
-    invoke-direct {p3, p1, p2}, Landroid/media/session/MediaSession;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    const/4 v1, -0x1
 
-    return-object p3
-.end method
+    iget-object v2, p0, Lnz8;->d:Landroid/support/v4/os/ResultReceiver;
 
-.method public b()Lm09;
-    .locals 2
+    const-string v3, "MBServiceCompat"
 
-    iget-object v0, p0, Lnz8;->d:Ljava/lang/Object;
+    iget-object v4, p0, Lnz8;->o:Lski;
 
-    monitor-enter v0
+    iget-object v5, p0, Lnz8;->b:Lpz8;
 
-    :try_start_0
-    iget-object v1, p0, Lnz8;->m:Lm09;
+    iget-object v6, p0, Lnz8;->c:Ljava/lang/String;
 
-    monitor-exit v0
+    const/4 v7, 0x0
 
-    return-object v1
+    packed-switch v0, :pswitch_data_0
 
-    :catchall_0
-    move-exception v1
+    iget-object v0, v5, Lpz8;->a:Landroid/os/Messenger;
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
-    throw v1
-.end method
+    move-result-object v0
 
-.method public c(Lm09;)V
-    .locals 1
+    iget-object v5, v4, Lski;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Lnz8;->d:Ljava/lang/Object;
+    check-cast v5, Lcc9;
 
-    monitor-enter v0
+    iget-object v5, v5, Lcc9;->o:Lys;
 
-    :try_start_0
-    iput-object p1, p0, Lnz8;->m:Lm09;
+    invoke-virtual {v5, v0}, Ladf;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    monitor-exit v0
+    move-result-object v0
 
+    check-cast v0, Liz8;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "search for callback that isn\'t registered query="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v3, v4, Lski;->b:Ljava/lang/Object;
+
+    check-cast v3, Lcc9;
+
+    iput-object v0, v3, Lcc9;->X:Liz8;
+
+    invoke-virtual {v2, v1, v7}, Landroid/support/v4/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
+
+    iput-object v7, v3, Lcc9;->X:Liz8;
+
+    :goto_0
     return-void
 
-    :catchall_0
-    move-exception p1
+    :pswitch_0
+    iget-object v0, v5, Lpz8;->a:Landroid/os/Messenger;
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0}, Landroid/os/Messenger;->getBinder()Landroid/os/IBinder;
 
-    throw p1
+    move-result-object v0
+
+    iget-object v5, v4, Lski;->b:Ljava/lang/Object;
+
+    check-cast v5, Lcc9;
+
+    iget-object v5, v5, Lcc9;->o:Lys;
+
+    invoke-virtual {v5, v0}, Ladf;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Liz8;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "getMediaItem for callback that isn\'t registered id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_2
+
+    :cond_1
+    iget-object v3, v4, Lski;->b:Ljava/lang/Object;
+
+    check-cast v3, Lcc9;
+
+    iput-object v0, v3, Lcc9;->X:Liz8;
+
+    const/4 v0, 0x2
+
+    and-int/2addr v0, v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v2, v1, v7}, Landroid/support/v4/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    sget v1, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->FLAG_BROWSABLE:I
+
+    const-string v1, "media_item"
+
+    invoke-virtual {v0, v1, v7}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v2, v1, v0}, Landroid/support/v4/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
+
+    :goto_1
+    iput-object v7, v3, Lcc9;->X:Liz8;
+
+    :goto_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

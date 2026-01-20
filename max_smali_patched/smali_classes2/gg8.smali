@@ -1,159 +1,156 @@
-.class public final Lgg8;
+.class public final synthetic Lgg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llq6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Lsh8;
+.field public final synthetic b:I
 
-.field public final c:Z
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JLsh8;Z)V
+.method public synthetic constructor <init>(Ljava/lang/Object;II)V
     .locals 0
 
+    iput p3, p0, Lgg8;->a:I
+
+    iput-object p1, p0, Lgg8;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lgg8;->b:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lgg8;->a:J
-
-    iput-object p3, p0, Lgg8;->b:Lsh8;
-
-    iput-boolean p4, p0, Lgg8;->c:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 10
 
-    const/4 v0, 0x1
+    iget v0, p0, Lgg8;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object v0, p0, Lgg8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+
+    iget v1, p0, Lgg8;->b:I
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/LinearLayoutManager;->s(I)Landroid/view/View;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    iget-object v3, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->E:Ljava/lang/String;
+
+    sget-object v4, Lc5j;->a:Ledb;
+
+    if-nez v4, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    const/4 v1, 0x0
+    sget-object v5, Lkk8;->d:Lkk8;
 
-    if-eqz p1, :cond_4
+    invoke-virtual {v4, v5}, Ledb;->b(Lkk8;)Z
 
-    const-class v2, Lgg8;
+    move-result v6
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz v6, :cond_2
 
-    move-result-object v3
+    iget-object v6, v0, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->G:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v7, 0x0
 
-    move-result v2
+    if-eqz v6, :cond_1
 
-    if-nez v2, :cond_1
+    invoke-virtual {v6}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lwrd;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_1
+
+    invoke-virtual {v6}, Lwrd;->j()I
+
+    move-result v6
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lgg8;
+    move-object v6, v7
 
-    iget-wide v2, p0, Lgg8;->a:J
+    :goto_0
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    iget-wide v4, p1, Lgg8;->a:J
+    const-string v9, "LM scroll to inflated view after redraw by pos:"
 
-    cmp-long v2, v2, v4
+    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v2, :cond_2
+    invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return v1
+    const-string v9, ", curSize:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v5, v3, v6, v7}, Ledb;->c(Lkk8;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
-    iget-boolean v2, p0, Lgg8;->c:Z
-
-    iget-boolean v3, p1, Lgg8;->c:Z
-
-    if-eq v2, v3, :cond_3
-
-    return v1
+    :goto_1
+    invoke-virtual {v0, v2, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->y1(Landroid/view/View;I)V
 
     :cond_3
-    iget-object v2, p0, Lgg8;->b:Lsh8;
-
-    iget-object p1, p1, Lgg8;->b:Lsh8;
-
-    if-ne v2, p1, :cond_4
-
-    return v0
-
-    :cond_4
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 5
-
-    const/16 v0, 0x20
-
-    iget-wide v1, p0, Lgg8;->a:J
-
-    ushr-long v3, v1, v0
-
-    xor-long v0, v1, v3
-
-    long-to-int v0, v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lgg8;->b:Lsh8;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-boolean v0, p0, Lgg8;->c:Z
-
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Key{contactId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lgg8;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", markerWeight="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lgg8;->b:Lsh8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", active="
-
-    const-string v2, "}"
-
-    iget-boolean v3, p0, Lgg8;->c:Z
-
-    invoke-static {v0, v1, v3, v2}, Lpa9;->g(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lgg8;->c:Ljava/lang/Object;
+
+    check-cast v0, Lhg8;
+
+    iget v1, p0, Lgg8;->b:I
+
+    iget-object v2, v0, Lhg8;->a:Landroid/content/Context;
+
+    invoke-virtual {v2, v1}, Landroid/content/Context;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
+
+    iget v0, v0, Lhg8;->b:I
+
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v2, v0, v3}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

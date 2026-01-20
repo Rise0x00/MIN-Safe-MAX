@@ -1,399 +1,257 @@
-.class public abstract Lyyd;
-.super Lhzd;
+.class public final Lyyd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final d:J
+.field public final X:Le57;
 
-.field public final e:J
+.field public final Y:Lazd;
 
-.field public final f:Ljava/util/List;
+.field public final Z:Lyyd;
 
-.field public final g:J
+.field public final a:Lz8b;
 
-.field public final h:J
+.field public final b:Lyyc;
 
-.field public final i:J
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
+
+.field public final o:Lb47;
+
+.field public final t0:Lyyd;
+
+.field public final u0:Lyyd;
+
+.field public final v0:J
+
+.field public final w0:J
+
+.field public final x0:Le9g;
 
 
 # direct methods
-.method public constructor <init>(Ltwc;JJJJLjava/util/List;JJJ)V
+.method public constructor <init>(Lz8b;Lyyc;Ljava/lang/String;ILb47;Le57;Lazd;Lyyd;Lyyd;Lyyd;JJLe9g;)V
     .locals 0
 
-    invoke-direct/range {p0 .. p5}, Lhzd;-><init>(Ljava/lang/Object;JJ)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p6, p0, Lyyd;->d:J
+    iput-object p1, p0, Lyyd;->a:Lz8b;
 
-    iput-wide p8, p0, Lyyd;->e:J
+    iput-object p2, p0, Lyyd;->b:Lyyc;
 
-    iput-object p10, p0, Lyyd;->f:Ljava/util/List;
+    iput-object p3, p0, Lyyd;->c:Ljava/lang/String;
 
-    iput-wide p11, p0, Lyyd;->i:J
+    iput p4, p0, Lyyd;->d:I
 
-    iput-wide p13, p0, Lyyd;->g:J
+    iput-object p5, p0, Lyyd;->o:Lb47;
 
-    move-wide p1, p15
+    iput-object p6, p0, Lyyd;->X:Le57;
 
-    iput-wide p1, p0, Lyyd;->h:J
+    iput-object p7, p0, Lyyd;->Y:Lazd;
+
+    iput-object p8, p0, Lyyd;->Z:Lyyd;
+
+    iput-object p9, p0, Lyyd;->t0:Lyyd;
+
+    iput-object p10, p0, Lyyd;->u0:Lyyd;
+
+    iput-wide p11, p0, Lyyd;->v0:J
+
+    iput-wide p13, p0, Lyyd;->w0:J
+
+    iput-object p15, p0, Lyyd;->x0:Le9g;
 
     return-void
 .end method
 
+.method public static d(Lyyd;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lyyd;->X:Le57;
+
+    invoke-virtual {p0, p1}, Le57;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final c(JJ)J
-    .locals 4
+.method public final E()Lxyd;
+    .locals 3
 
-    invoke-virtual {p0, p1, p2}, Lyyd;->e(J)J
+    new-instance v0, Lxyd;
 
-    move-result-wide v0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-wide/16 v2, -0x1
+    iget-object v1, p0, Lyyd;->a:Lz8b;
 
-    cmp-long v2, v0, v2
+    iput-object v1, v0, Lxyd;->a:Lz8b;
 
-    if-eqz v2, :cond_0
+    iget-object v1, p0, Lyyd;->b:Lyyc;
 
-    return-wide v0
+    iput-object v1, v0, Lxyd;->b:Lyyc;
 
-    :cond_0
-    iget-wide v0, p0, Lyyd;->h:J
+    iget v1, p0, Lyyd;->d:I
 
-    sub-long v0, p3, v0
+    iput v1, v0, Lxyd;->c:I
 
-    iget-wide v2, p0, Lyyd;->i:J
+    iget-object v1, p0, Lyyd;->c:Ljava/lang/String;
 
-    add-long/2addr v0, v2
+    iput-object v1, v0, Lxyd;->d:Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1, p1, p2}, Lyyd;->g(JJ)J
+    iget-object v1, p0, Lyyd;->o:Lb47;
 
-    move-result-wide v0
+    iput-object v1, v0, Lxyd;->e:Lb47;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lyyd;->d(JJ)J
+    iget-object v1, p0, Lyyd;->X:Le57;
 
-    move-result-wide p1
+    invoke-virtual {v1}, Le57;->c()Ld57;
 
-    sub-long/2addr v0, p1
+    move-result-object v1
 
-    long-to-int p1, v0
+    iput-object v1, v0, Lxyd;->f:Ld57;
 
-    int-to-long p1, p1
+    iget-object v1, p0, Lyyd;->Y:Lazd;
 
-    return-wide p1
+    iput-object v1, v0, Lxyd;->g:Lazd;
+
+    iget-object v1, p0, Lyyd;->Z:Lyyd;
+
+    iput-object v1, v0, Lxyd;->h:Lyyd;
+
+    iget-object v1, p0, Lyyd;->t0:Lyyd;
+
+    iput-object v1, v0, Lxyd;->i:Lyyd;
+
+    iget-object v1, p0, Lyyd;->u0:Lyyd;
+
+    iput-object v1, v0, Lxyd;->j:Lyyd;
+
+    iget-wide v1, p0, Lyyd;->v0:J
+
+    iput-wide v1, v0, Lxyd;->k:J
+
+    iget-wide v1, p0, Lyyd;->w0:J
+
+    iput-wide v1, v0, Lxyd;->l:J
+
+    iget-object v1, p0, Lyyd;->x0:Le9g;
+
+    iput-object v1, v0, Lxyd;->m:Le9g;
+
+    return-object v0
 .end method
 
-.method public final d(JJ)J
-    .locals 7
+.method public final close()V
+    .locals 2
 
-    invoke-virtual {p0, p1, p2}, Lyyd;->e(J)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, -0x1
-
-    cmp-long v0, v0, v2
-
-    iget-wide v1, p0, Lyyd;->d:J
-
-    if-nez v0, :cond_1
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    iget-wide v5, p0, Lyyd;->g:J
-
-    cmp-long v0, v5, v3
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-wide v3, p0, Lyyd;->h:J
-
-    sub-long/2addr p3, v3
-
-    sub-long/2addr p3, v5
-
-    invoke-virtual {p0, p3, p4, p1, p2}, Lyyd;->g(JJ)J
-
-    move-result-wide p1
-
-    invoke-static {v1, v2, p1, p2}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_1
-    :goto_0
-    return-wide v1
-.end method
-
-.method public abstract e(J)J
-.end method
-
-.method public final f(JJ)J
-    .locals 10
-
-    iget-wide v0, p0, Lhzd;->a:J
-
-    const-wide/32 v2, 0xf4240
-
-    iget-wide v4, p0, Lyyd;->d:J
-
-    iget-object v6, p0, Lyyd;->f:Ljava/util/List;
-
-    if-eqz v6, :cond_0
-
-    sub-long/2addr p1, v4
-
-    long-to-int p1, p1
-
-    invoke-interface {v6, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lezd;
-
-    iget-wide p1, p1, Lezd;->b:J
-
-    mul-long/2addr p1, v2
-
-    div-long/2addr p1, v0
-
-    return-wide p1
-
-    :cond_0
-    invoke-virtual {p0, p3, p4}, Lyyd;->e(J)J
-
-    move-result-wide v6
-
-    const-wide/16 v8, -0x1
-
-    cmp-long v8, v6, v8
-
-    if-eqz v8, :cond_1
-
-    add-long/2addr v4, v6
-
-    const-wide/16 v6, 0x1
-
-    sub-long/2addr v4, v6
-
-    cmp-long v4, p1, v4
-
-    if-nez v4, :cond_1
-
-    invoke-virtual {p0, p1, p2}, Lyyd;->h(J)J
-
-    move-result-wide p1
-
-    sub-long/2addr p3, p1
-
-    return-wide p3
-
-    :cond_1
-    iget-wide p1, p0, Lyyd;->e:J
-
-    mul-long/2addr p1, v2
-
-    div-long/2addr p1, v0
-
-    return-wide p1
-.end method
-
-.method public final g(JJ)J
-    .locals 11
-
-    invoke-virtual {p0, p3, p4}, Lyyd;->e(J)J
-
-    move-result-wide p3
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p3, v0
-
-    iget-wide v1, p0, Lyyd;->d:J
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lyyd;->f:Ljava/util/List;
-
-    const-wide/16 v3, 0x1
-
-    if-nez v0, :cond_3
-
-    iget-wide v5, p0, Lyyd;->e:J
-
-    const-wide/32 v7, 0xf4240
-
-    mul-long/2addr v5, v7
-
-    iget-wide v7, p0, Lhzd;->a:J
-
-    div-long/2addr v5, v7
-
-    div-long/2addr p1, v5
-
-    add-long/2addr p1, v1
-
-    cmp-long v0, p1, v1
-
-    if-gez v0, :cond_1
-
-    :goto_0
-    return-wide v1
-
-    :cond_1
-    const-wide/16 v5, -0x1
-
-    cmp-long v0, p3, v5
-
-    if-nez v0, :cond_2
-
-    return-wide p1
-
-    :cond_2
-    add-long/2addr v1, p3
-
-    sub-long/2addr v1, v3
-
-    invoke-static {p1, p2, v1, v2}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p1
-
-    return-wide p1
-
-    :cond_3
-    add-long/2addr p3, v1
-
-    sub-long/2addr p3, v3
-
-    move-wide v5, v1
-
-    :goto_1
-    cmp-long v0, v5, p3
-
-    if-gtz v0, :cond_6
-
-    sub-long v7, p3, v5
-
-    const-wide/16 v9, 0x2
-
-    div-long/2addr v7, v9
-
-    add-long/2addr v7, v5
-
-    invoke-virtual {p0, v7, v8}, Lyyd;->h(J)J
-
-    move-result-wide v9
-
-    cmp-long v0, v9, p1
-
-    if-gez v0, :cond_4
-
-    add-long v5, v7, v3
-
-    goto :goto_1
-
-    :cond_4
-    if-lez v0, :cond_5
-
-    sub-long/2addr v7, v3
-
-    move-wide p3, v7
-
-    goto :goto_1
-
-    :cond_5
-    return-wide v7
-
-    :cond_6
-    cmp-long p1, v5, v1
-
-    if-nez p1, :cond_7
-
-    return-wide v5
-
-    :cond_7
-    return-wide p3
-.end method
-
-.method public final h(J)J
-    .locals 7
-
-    iget-wide v0, p0, Lyyd;->d:J
-
-    iget-object v2, p0, Lyyd;->f:Ljava/util/List;
-
-    if-eqz v2, :cond_0
-
-    sub-long/2addr p1, v0
-
-    long-to-int p1, p1
-
-    invoke-interface {v2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lezd;
-
-    iget-wide p1, p1, Lezd;->a:J
-
-    iget-wide v0, p0, Lhzd;->b:J
-
-    sub-long/2addr p1, v0
-
-    :goto_0
-    move-wide v0, p1
-
-    goto :goto_1
-
-    :cond_0
-    sub-long/2addr p1, v0
-
-    iget-wide v0, p0, Lyyd;->e:J
-
-    mul-long/2addr p1, v0
-
-    goto :goto_0
-
-    :goto_1
-    sget-object p1, Llig;->a:Ljava/lang/String;
-
-    sget-object v6, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
-
-    const-wide/32 v2, 0xf4240
-
-    iget-wide v4, p0, Lhzd;->a:J
-
-    invoke-static/range {v0 .. v6}, Llig;->e0(JJJLjava/math/RoundingMode;)J
-
-    move-result-wide p1
-
-    return-wide p1
-.end method
-
-.method public abstract i(Lsbd;J)Ltwc;
-.end method
-
-.method public j()Z
-    .locals 1
-
-    iget-object v0, p0, Lyyd;->f:Ljava/util/List;
+    iget-object v0, p0, Lyyd;->Y:Lazd;
 
     if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lazd;->close()V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "response is not eligible for a body and must not be closed"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final l()Z
+    .locals 2
+
+    const/16 v0, 0xc8
+
+    iget v1, p0, Lyyd;->d:I
+
+    if-le v0, v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 v0, 0x12b
+
+    if-lt v0, v1, :cond_1
 
     const/4 v0, 0x1
 
     return v0
 
-    :cond_0
+    :cond_1
+    :goto_0
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Response{protocol="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lyyd;->b:Lyyc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", code="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lyyd;->d:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", message="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyyd;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lyyd;->a:Lz8b;
+
+    iget-object v1, v1, Lz8b;->d:Ljava/lang/Object;
+
+    check-cast v1, Lod7;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x7d
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

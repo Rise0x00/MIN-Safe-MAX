@@ -1,77 +1,98 @@
-.class public final Li2j;
-.super Lh4;
+.class public abstract Li2j;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Li2j;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:Lvx5;
 
-
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field public static final b:[Lvx5;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    new-instance v0, Lk2j;
+    new-instance v0, Lvx5;
 
-    const/16 v1, 0xa
+    const-string v1, "CLIENT_TELEMETRY"
 
-    invoke-direct {v0, v1}, Lk2j;-><init>(I)V
+    const-wide/16 v2, 0x1
 
-    sput-object v0, Li2j;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v0, v1, v2, v3}, Lvx5;-><init>(Ljava/lang/String;J)V
 
-    return-void
-.end method
+    sput-object v0, Li2j;->a:Lvx5;
 
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    filled-new-array {v0}, [Lvx5;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    iput-object p1, p0, Li2j;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Li2j;->b:Ljava/lang/String;
+    sput-object v0, Li2j;->b:[Lvx5;
 
     return-void
 .end method
 
+.method public static final a(I)I
+    .locals 1
 
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Luxi;->k(Landroid/os/Parcel;I)I
-
-    move-result p2
+    if-eqz p0, :cond_3
 
     const/4 v0, 0x1
 
-    iget-object v1, p0, Li2j;->a:Ljava/lang/String;
+    if-eq p0, v0, :cond_3
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    const/4 v0, 0x3
 
-    const/4 v0, 0x2
+    if-eq p0, v0, :cond_2
 
-    iget-object v1, p0, Li2j;->b:Ljava/lang/String;
+    const/4 v0, 0x6
 
-    invoke-static {p1, v0, v1}, Luxi;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+    if-eq p0, v0, :cond_1
 
-    invoke-static {p1, p2}, Luxi;->l(Landroid/os/Parcel;I)V
+    const/16 v0, 0x8
 
-    return-void
+    if-eq p0, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/16 p0, 0x10e
+
+    return p0
+
+    :cond_1
+    const/16 p0, 0x5a
+
+    return p0
+
+    :cond_2
+    const/16 p0, 0xb4
+
+    return p0
+
+    :cond_3
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static final b(Lfpe;Lnq6;Lnq6;)Lh66;
+    .locals 2
+
+    new-instance v0, Lk1e;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, p1, v1, p2}, Lk1e;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Lh66;
+
+    sget-object p2, Lupe;->a:Lupe;
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, p0, v0, p2, v1}, Lh66;-><init>(Ljava/lang/Object;Lnq6;Lnq6;I)V
+
+    return-object p1
 .end method

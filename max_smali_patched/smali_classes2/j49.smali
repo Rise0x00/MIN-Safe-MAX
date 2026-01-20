@@ -1,64 +1,61 @@
-.class public abstract Lj49;
-.super Ljava/lang/Object;
+.class public final Lj49;
+.super Lm49;
 .source "SourceFile"
 
-# interfaces
-.implements Li28;
+
+# static fields
+.field public static final a:Lj49;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lj49;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lj49;->a:Lj49;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final h(Li28;)Z
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    instance-of v0, p1, Lj49;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-virtual {p0}, Lj49;->j()J
-
-    move-result-wide v0
-
-    check-cast p1, Lj49;
-
-    invoke-virtual {p1}, Lj49;->j()J
-
-    move-result-wide v2
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Lj49;->i()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Lj49;->i()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
+    instance-of p1, p1, Lj49;
 
     if-nez p1, :cond_1
 
-    const/4 p1, 0x1
+    const/4 p1, 0x0
 
     return p1
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x0
-
-    return p1
+    return v0
 .end method
 
-.method public abstract i()J
+.method public final hashCode()I
+    .locals 1
+
+    const v0, -0x40e738ee
+
+    return v0
 .end method
 
-.method public abstract j()J
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
-.method public abstract l()Z
+    const-string v0, "SelectAllEmojis"
+
+    return-object v0
 .end method

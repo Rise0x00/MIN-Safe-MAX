@@ -1,217 +1,532 @@
-.class public final synthetic Lcya;
+.class public final Lcya;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lqi6;
+.implements Le0b;
+.implements Lo25;
 
 
 # instance fields
-.field public final synthetic X:Luve;
+.field public final synthetic a:I
 
-.field public final synthetic Y:I
+.field public b:Lo25;
 
-.field public final synthetic Z:I
+.field public c:J
 
-.field public final synthetic a:Lfya;
+.field public d:Z
 
-.field public final synthetic b:I
-
-.field public final synthetic c:J
-
-.field public final synthetic d:I
-
-.field public final synthetic o:Z
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfya;IJIZLuve;II)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    .line 1
+    iput p1, p0, Lcya;->a:I
+
+    iput-object p2, p0, Lcya;->o:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcya;->a:Lfya;
+    return-void
+.end method
 
-    iput p2, p0, Lcya;->b:I
+.method public constructor <init>(Le0b;J)V
+    .locals 1
 
-    iput-wide p3, p0, Lcya;->c:J
+    const/4 v0, 0x2
 
-    iput p5, p0, Lcya;->d:I
+    iput v0, p0, Lcya;->a:I
 
-    iput-boolean p6, p0, Lcya;->o:Z
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p7, p0, Lcya;->X:Luve;
+    .line 3
+    iput-object p1, p0, Lcya;->o:Ljava/lang/Object;
 
-    iput p8, p0, Lcya;->Y:I
-
-    iput p9, p0, Lcya;->Z:I
+    .line 4
+    iput-wide p2, p0, Lcya;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final b()V
+    .locals 2
 
-    iget-object v0, p0, Lcya;->X:Luve;
+    iget v0, p0, Lcya;->a:I
 
-    iget v1, p0, Lcya;->Y:I
+    packed-switch v0, :pswitch_data_0
 
-    iget v2, p0, Lcya;->Z:I
+    iget-boolean v0, p0, Lcya;->d:Z
 
-    check-cast p1, Ldya;
+    if-nez v0, :cond_0
 
-    iget-object p1, p0, Lcya;->a:Lfya;
+    const/4 v0, 0x1
 
-    iget-object v4, p1, Lfya;->a:Landroid/content/Context;
+    iput-boolean v0, p0, Lcya;->d:Z
 
-    iget-object v3, p1, Lfya;->b:Lru7;
+    iget-object v0, p0, Lcya;->b:Lo25;
 
-    invoke-interface {v3}, Lru7;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lo25;->dispose()V
 
-    move-result-object v3
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
 
-    check-cast v3, Lbk;
+    check-cast v0, Le0b;
 
-    iget-wide v5, p0, Lcya;->c:J
-
-    invoke-virtual {v3, v5, v6}, Lbk;->i(J)Lf1a;
-
-    move-result-object v3
-
-    new-instance v5, Lw01;
-
-    const/16 v6, 0x13
-
-    invoke-direct {v5, v6, v3}, Lw01;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v5}, Lqs0;->l(Lez5;)Lez5;
-
-    move-result-object v6
-
-    iget v3, p0, Lcya;->d:I
-
-    invoke-static {v3}, Lnx1;->v(I)I
-
-    move-result v5
-
-    sget-object v7, Lcj;->a:Lcj;
-
-    const/4 v8, 0x1
-
-    if-eqz v5, :cond_2
-
-    if-ne v5, v8, :cond_1
+    invoke-interface {v0}, Le0b;->b()V
 
     :cond_0
-    :goto_0
-    move v1, v8
+    return-void
 
-    goto :goto_2
+    :pswitch_0
+    iget-boolean v0, p0, Lcya;->d:Z
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcya;->d:Z
+
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast v0, Ldff;
+
+    new-instance v1, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v1}, Ljava/util/NoSuchElementException;-><init>()V
+
+    invoke-interface {v0, v1}, Ldff;->onError(Ljava/lang/Throwable;)V
 
     :cond_1
-    new-instance p1, Lkotlin/NoWhenBranchMatchedException;
+    return-void
 
-    invoke-direct {p1}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    :pswitch_1
+    iget-boolean v0, p0, Lcya;->d:Z
 
-    throw p1
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcya;->d:Z
+
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast v0, Lrv8;
+
+    invoke-interface {v0}, Lrv8;->b()V
 
     :cond_2
-    :try_start_0
-    iget-object v5, p1, Lfya;->d:Lru7;
+    return-void
 
-    invoke-interface {v5}, Lru7;->getValue()Ljava/lang/Object;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object v5
+.method public final c(Lo25;)V
+    .locals 5
 
-    check-cast v5, Lca5;
+    iget v0, p0, Lcya;->a:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/text/SpannableString;->subSequence(II)Ljava/lang/CharSequence;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    check-cast v0, Le0b;
 
-    move-result-object v0
+    iget-object v1, p0, Lcya;->b:Lo25;
 
-    invoke-virtual {v5, v0}, Lca5;->c(Ljava/lang/String;)Lvwe;
+    invoke-static {v1, p1}, Ls25;->h(Lo25;Lo25;)Z
 
-    move-result-object v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v1
 
-    goto :goto_1
+    if-eqz v1, :cond_1
 
-    :catchall_0
-    move-exception v0
+    iput-object p1, p0, Lcya;->b:Lo25;
 
-    new-instance v1, Lfed;
+    iget-wide v1, p0, Lcya;->c:J
 
-    invoke-direct {v1, v0}, Lfed;-><init>(Ljava/lang/Throwable;)V
+    const-wide/16 v3, 0x0
 
-    move-object v0, v1
+    cmp-long v1, v1, v3
 
-    :goto_1
-    nop
+    if-nez v1, :cond_0
 
-    instance-of v1, v0, Lfed;
+    const/4 v1, 0x1
 
-    if-eqz v1, :cond_3
+    iput-boolean v1, p0, Lcya;->d:Z
 
-    const/4 v0, 0x0
+    invoke-interface {p1}, Lo25;->dispose()V
 
-    :cond_3
-    check-cast v0, Landroid/graphics/drawable/Drawable;
-
-    if-eqz v0, :cond_0
-
-    new-instance v7, Lbj;
-
-    invoke-direct {v7, v0}, Lbj;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Lyg5;->a(Le0b;)V
 
     goto :goto_0
 
+    :cond_0
+    invoke-interface {v0, p0}, Le0b;->c(Lo25;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iput-object p1, p0, Lcya;->b:Lo25;
+
+    iget-object p1, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast p1, Ldff;
+
+    invoke-interface {p1, p0}, Ldff;->c(Lo25;)V
+
+    :cond_2
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-static {v0, p1}, Ls25;->h(Lo25;Lo25;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iput-object p1, p0, Lcya;->b:Lo25;
+
+    iget-object p1, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast p1, Lrv8;
+
+    invoke-interface {p1, p0}, Lrv8;->c(Lo25;)V
+
+    :cond_3
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final dispose()V
+    .locals 1
+
+    iget v0, p0, Lcya;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Z
+    .locals 1
+
+    iget v0, p0, Lcya;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->e()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_0
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->e()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_1
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->e()Z
+
+    move-result v0
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lcya;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lcya;->d:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcya;->d:Z
+
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast v0, Le0b;
+
+    invoke-interface {v0, p1}, Le0b;->onError(Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lcya;->d:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcya;->d:Z
+
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast v0, Ldff;
+
+    invoke-interface {v0, p1}, Ldff;->onError(Ljava/lang/Throwable;)V
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-boolean v0, p0, Lcya;->d:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcya;->d:Z
+
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast v0, Lrv8;
+
+    invoke-interface {v0, p1}, Lrv8;->onError(Ljava/lang/Throwable;)V
+
     :goto_2
-    iget-object v8, p1, Lfya;->h:Lui;
+    return-void
 
-    iget-boolean v0, p0, Lcya;->o:Z
+    nop
 
-    const/4 v2, 0x0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 6
+
+    iget v0, p0, Lcya;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-boolean v0, p0, Lcya;->d:Z
+
+    if-nez v0, :cond_1
+
+    iget-wide v0, p0, Lcya;->c:J
+
+    const-wide/16 v2, 0x1
+
+    sub-long v2, v0, v2
+
+    iput-wide v2, p0, Lcya;->c:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v0, v4
+
+    if-lez v0, :cond_1
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast v1, Le0b;
+
+    invoke-interface {v1, p1}, Le0b;->r(Ljava/lang/Object;)V
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lcya;->b()V
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    iget-boolean v0, p0, Lcya;->d:Z
+
+    if-eqz v0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-wide v0, p0, Lcya;->c:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_3
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcya;->d:Z
+
+    iget-object v0, p0, Lcya;->b:Lo25;
+
+    invoke-interface {v0}, Lo25;->dispose()V
+
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
+
+    check-cast v0, Ldff;
+
+    invoke-interface {v0, p1}, Ldff;->a(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_3
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcya;->c:J
+
+    :goto_1
+    return-void
+
+    :pswitch_1
+    iget-boolean v0, p0, Lcya;->d:Z
 
     if-eqz v0, :cond_4
 
-    if-ne v3, v1, :cond_4
-
-    move v9, v1
-
-    goto :goto_3
+    goto :goto_2
 
     :cond_4
-    move v9, v2
+    iget-wide v0, p0, Lcya;->c:J
 
-    :goto_3
-    iget-object p1, p1, Lfya;->c:Lru7;
+    const-wide/16 v2, 0x0
 
-    invoke-interface {p1}, Lru7;->getValue()Ljava/lang/Object;
+    cmp-long v2, v0, v2
 
-    move-result-object p1
+    if-nez v2, :cond_5
 
-    check-cast p1, Ltlf;
+    const/4 v0, 0x1
 
-    check-cast p1, Lsta;
+    iput-boolean v0, p0, Lcya;->d:Z
 
-    invoke-virtual {p1}, Lsta;->c()Lbe8;
+    iget-object v0, p0, Lcya;->b:Lo25;
 
-    move-result-object v10
+    invoke-interface {v0}, Lo25;->dispose()V
 
-    new-instance v3, Luk;
+    iget-object v0, p0, Lcya;->o:Ljava/lang/Object;
 
-    iget v5, p0, Lcya;->b:I
+    check-cast v0, Lrv8;
 
-    invoke-direct/range {v3 .. v10}, Luk;-><init>(Landroid/content/Context;ILez5;Ldj;Lui;ZLbe8;)V
+    invoke-interface {v0, p1}, Lrv8;->a(Ljava/lang/Object;)V
 
-    invoke-virtual {v3, v2, v2, v5, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    goto :goto_2
 
-    return-object v3
+    :cond_5
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcya;->c:J
+
+    :goto_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

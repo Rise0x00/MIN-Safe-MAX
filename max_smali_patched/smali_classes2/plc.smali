@@ -1,40 +1,244 @@
-.class public abstract Lplc;
-.super Ljava/lang/Object;
+.class public final Lplc;
+.super Lqlc;
+.source "SourceFile"
 
 
-# static fields
-.field public static file_fill_24:I = 0x7f0803e1
+# instance fields
+.field public final b:Lqhg;
 
-.field public static geolocation_fill_24:I = 0x7f0804e9
+.field public final c:Lqhg;
 
-.field public static ic_arrow_down_24:I = 0x7f080525
+.field public final d:Z
 
-.field public static ic_arrow_up_24:I = 0x7f08052e
+.field public final e:Ljava/lang/Integer;
 
-.field public static ic_camera_add_36:I = 0x7f080570
 
-.field public static ic_clear_24:I = 0x7f080592
+# direct methods
+.method public synthetic constructor <init>(Lqhg;Ljava/lang/Integer;I)V
+    .locals 1
 
-.field public static ic_contact_28:I = 0x7f0805a8
+    and-int/lit8 p3, p3, 0x8
 
-.field public static ic_cross_12:I = 0x7f0805b2
+    const/4 v0, 0x0
 
-.field public static ic_document_28:I = 0x7f0805c6
+    if-eqz p3, :cond_0
 
-.field public static ic_file_mode_24:I = 0x7f0805e3
+    move-object p2, v0
 
-.field public static ic_gallery_28:I = 0x7f0805f8
+    :cond_0
+    const/4 p3, 0x0
 
-.field public static ic_location_28:I = 0x7f080658
+    .line 6
+    invoke-direct {p0, p1, v0, p3, p2}, Lplc;-><init>(Lqhg;Llhg;ZLjava/lang/Integer;)V
 
-.field public static ic_media_mode_24:I = 0x7f08066d
+    return-void
+.end method
 
-.field public static ic_snack_file_24:I = 0x7f0807a3
+.method public constructor <init>(Lqhg;Llhg;ZLjava/lang/Integer;)V
+    .locals 0
 
-.field public static ic_snack_media_24:I = 0x7f0807a4
+    .line 1
+    invoke-direct {p0}, Lqlc;-><init>()V
 
-.field public static ic_videocam_20:I = 0x7f0807eb
+    .line 2
+    iput-object p1, p0, Lplc;->b:Lqhg;
 
-.field public static profile_fill_24:I = 0x7f08092a
+    .line 3
+    iput-object p2, p0, Lplc;->c:Lqhg;
 
-.field public static wallet_fill_24:I = 0x7f080990
+    .line 4
+    iput-boolean p3, p0, Lplc;->d:Z
+
+    .line 5
+    iput-object p4, p0, Lplc;->e:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lplc;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lplc;
+
+    iget-object v0, p0, Lplc;->b:Lqhg;
+
+    iget-object v1, p1, Lplc;->b:Lqhg;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lplc;->c:Lqhg;
+
+    iget-object v1, p1, Lplc;->c:Lqhg;
+
+    invoke-static {v0, v1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lplc;->d:Z
+
+    iget-boolean v1, p1, Lplc;->d:Z
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lplc;->e:Ljava/lang/Integer;
+
+    iget-object p1, p1, Lplc;->e:Ljava/lang/Integer;
+
+    invoke-static {v0, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_5
+
+    :goto_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_5
+    :goto_1
+    const/4 p1, 0x1
+
+    return p1
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lplc;->b:Lqhg;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    const/16 v2, 0x1f
+
+    mul-int/2addr v1, v2
+
+    iget-object v3, p0, Lplc;->c:Lqhg;
+
+    if-nez v3, :cond_1
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v1, v3
+
+    mul-int/2addr v1, v2
+
+    iget-boolean v3, p0, Lplc;->d:Z
+
+    invoke-static {v1, v2, v3}, Lcbh;->j(IIZ)I
+
+    move-result v1
+
+    iget-object v2, p0, Lplc;->e:Ljava/lang/Integer;
+
+    if-nez v2, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_2
+    add-int/2addr v1, v0
+
+    return v1
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowSnackbar(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lplc;->b:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lplc;->c:Lqhg;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", showOnTop="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lplc;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", icon="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lplc;->e:Ljava/lang/Integer;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method

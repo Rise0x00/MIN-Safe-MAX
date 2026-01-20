@@ -1,80 +1,41 @@
 .class public final Lytf;
-.super Logf;
+.super Llm4;
 .source "SourceFile"
 
-# interfaces
-.implements Lej6;
 
+# static fields
+.field public static final b:Lytf;
 
-# instance fields
-.field public final synthetic X:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:Lhm4;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;)V
-    .locals 0
-
-    iput-object p2, p0, Lytf;->X:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Logf;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lytf;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p1
-
-    check-cast p1, Lytf;
-
-    sget-object p2, Lybg;->a:Lybg;
-
-    invoke-virtual {p1, p2}, Lytf;->n(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p2
-.end method
-
-.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 5
 
     new-instance v0, Lytf;
 
-    iget-object v1, p0, Lytf;->X:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+    invoke-direct {v0}, Llm4;-><init>()V
 
-    invoke-direct {v0, p2, v1}, Lytf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;)V
+    sput-object v0, Lytf;->b:Lytf;
 
-    iput-object p1, v0, Lytf;->o:Ljava/lang/Object;
+    const-string v1, "sticker_id"
 
-    return-object v0
-.end method
+    filled-new-array {v1}, [Ljava/lang/String;
 
-.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    move-result-object v1
 
-    invoke-static {p1}, Lgxi;->b(Ljava/lang/Object;)V
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lytf;->o:Ljava/lang/Object;
+    const/16 v3, 0xe
 
-    check-cast p1, Ljava/util/List;
+    const-string v4, ":stickers/preview"
 
-    iget-object v0, p0, Lytf;->X:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+    invoke-static {v0, v4, v1, v2, v3}, Llm4;->c(Llm4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lhm4;
 
-    iget-object v0, v0, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->d:Lp76;
+    move-result-object v0
 
-    invoke-virtual {v0, p1}, Lb28;->E(Ljava/util/List;)V
+    sput-object v0, Lytf;->c:Lhm4;
 
-    sget-object p1, Lybg;->a:Lybg;
-
-    return-object p1
+    return-void
 .end method

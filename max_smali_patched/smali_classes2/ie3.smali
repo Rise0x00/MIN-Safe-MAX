@@ -1,84 +1,117 @@
-.class public final Lie3;
+.class public final synthetic Lie3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public synthetic constructor <init>(Lone/me/chats/search/views/ClearRecentSearchBottomSheet;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lie3;->a:I
 
-    iput p1, p0, Lie3;->a:I
+    iput-object p1, p0, Lie3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lie3;->a:I
 
-    goto :goto_1
+    packed-switch p1, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lie3;
+    iget-object p1, p0, Lie3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
-    if-nez v0, :cond_1
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lie3;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->F0(Z)V
+
+    invoke-virtual {p1}, La94;->getTargetController()La94;
+
+    move-result-object p1
+
+    instance-of v1, p1, Lhe3;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    check-cast p1, Lhe3;
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lie3;
-
-    iget v0, p0, Lie3;->a:I
-
-    iget p1, p1, Lie3;->a:I
-
-    if-eq v0, p1, :cond_2
+    :cond_0
+    move-object p1, v2
 
     :goto_0
-    const/4 p1, 0x0
+    if-eqz p1, :cond_2
 
-    return p1
+    check-cast p1, Lone/me/chats/search/ChatsListSearchScreen;
 
-    :cond_2
-    :goto_1
-    const/4 p1, 0x1
+    invoke-virtual {p1}, Lone/me/chats/search/ChatsListSearchScreen;->A0()Ln73;
 
-    return p1
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
+    iget-object v1, p1, Ln73;->X0:Lmmf;
 
-    iget v0, p0, Lie3;->a:I
+    if-eqz v1, :cond_1
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {v1}, Ll0;->isActive()Z
 
-    move-result v0
+    move-result v1
 
-    return v0
-.end method
+    if-ne v1, v0, :cond_1
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    goto :goto_1
 
-    const-string v0, "CommonStatesBackgroundActiveActionColors(themed="
+    :cond_1
+    iget-object v0, p1, Lnth;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v1, ")"
+    iget-object v1, p1, Ln73;->T0:Lsb4;
 
-    iget v2, p0, Lie3;->a:I
+    new-instance v3, Lk63;
 
-    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v3, p1, v2}, Lk63;-><init>(Ln73;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v4, 0x2
+
+    invoke-static {v0, v1, v2, v3, v4}, Ls9j;->g(Lzb4;Lqb4;Lcc4;Lbr6;I)Lmmf;
 
     move-result-object v0
 
-    return-object v0
+    iput-object v0, p1, Ln73;->X0:Lmmf;
+
+    :cond_2
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

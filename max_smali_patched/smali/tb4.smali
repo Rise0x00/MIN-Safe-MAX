@@ -2,7 +2,10 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lob4;
+
 
 # virtual methods
-.method public abstract a()Lvb4;
+.method public abstract E(Lqb4;Ljava/lang/Throwable;)V
 .end method

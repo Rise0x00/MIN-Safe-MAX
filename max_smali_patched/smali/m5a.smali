@@ -1,83 +1,118 @@
-.class public final Lm5a;
-.super Landroid/view/View$BaseSavedState;
+.class public final synthetic Lm5a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lm5a;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Llq6;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lo5a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lo5a;I)V
+    .locals 0
 
-    new-instance v0, Lui8;
+    iput p2, p0, Lm5a;->a:I
 
-    const/16 v1, 0xf
+    iput-object p1, p0, Lm5a;->b:Lo5a;
 
-    invoke-direct {v0, v1}, Lui8;-><init>(I)V
-
-    sput-object v0, Lm5a;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lm5a;->a:I
 
-    const-string v1, "HorizontalScrollView.SavedState{"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Landroid/graphics/Paint;
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    move-result v1
+    sget-object v1, Lpc3;->t0:Lkme;
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    iget-object v2, p0, Lm5a;->b:Lo5a;
+
+    iget-object v2, v2, Lo5a;->a:Landroid/content/Context;
+
+    invoke-virtual {v1, v2}, Lkme;->r(Landroid/content/Context;)Lzbb;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, v1, Lzbb;->c:Lzlb;
 
-    const-string v1, " scrollPosition="
+    invoke-interface {v1}, Lzlb;->getIcon()Lwe7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    iget v1, p0, Lm5a;->a:I
+    iget v1, v1, Lwe7;->e:I
 
-    const-string v2, "}"
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-static {v0, v1, v2}, Lok7;->j(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    new-instance v1, Landroid/graphics/PorterDuffXfermode;
+
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+
+    invoke-direct {v1, v2}, Landroid/graphics/PorterDuffXfermode;-><init>(Landroid/graphics/PorterDuff$Mode;)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL_AND_STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lm5a;->b:Lo5a;
+
+    iget-object v0, v0, Lo5a;->a:Landroid/content/Context;
+
+    sget v1, Lx6b;->T:I
+
+    invoke-static {v0, v1}, Lq74;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/graphics/PorterDuffColorFilter;
+
+    sget-object v3, Lpc3;->t0:Lkme;
+
+    invoke-virtual {v3, v0}, Lkme;->r(Landroid/content/Context;)Lzbb;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    iget-object v0, v0, Lzbb;->c:Lzlb;
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    const/4 v0, -0x1
 
-    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
+    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    iget p2, p0, Lm5a;->a:I
+    invoke-direct {v2, v0, v3}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    return-void
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

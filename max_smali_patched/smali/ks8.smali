@@ -3,39 +3,31 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+# instance fields
+.field public final a:I
 
-    if-ne p0, p1, :cond_0
+.field public final b:[I
 
-    const/4 p1, 0x1
+.field public final c:[Llrg;
 
-    return p1
+.field public final d:[[[I
 
-    :cond_0
-    instance-of v0, p1, Lks8;
 
-    if-nez v0, :cond_1
+# direct methods
+.method public constructor <init>([I[Llrg;[I[[[ILlrg;)V
+    .locals 0
 
-    const/4 p1, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p1
+    iput-object p1, p0, Lks8;->b:[I
 
-    :cond_1
-    check-cast p1, Lks8;
+    iput-object p2, p0, Lks8;->c:[Llrg;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p4, p0, Lks8;->d:[[[I
 
-    const/4 p1, 0x0
+    array-length p1, p1
 
-    throw p1
-.end method
+    iput p1, p0, Lks8;->a:I
 
-.method public final hashCode()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    throw v0
+    return-void
 .end method

@@ -3,52 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lir3;
+.implements Llq6;
 
 
 # instance fields
 .field public final synthetic a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-.field public final synthetic b:Ljr3;
+.field public final synthetic b:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljr3;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/ConversationImpl;Z)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/o;->b:Ljr3;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p2, p0, Lru/ok/android/externcalls/sdk/o;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lvz0;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
     iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
 
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/o;->b:Ljr3;
+    iget-boolean v1, p0, Lru/ok/android/externcalls/sdk/o;->b:Z
 
-    invoke-static {v0, v1, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->g(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljr3;Lvz0;)V
+    invoke-static {v0, v1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->e(Lru/ok/android/externcalls/sdk/ConversationImpl;Z)Ljava/lang/Boolean;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public accept(Ljava/lang/Object;)V
-    .locals 2
-
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/o;->b:Ljr3;
-
-    check-cast p1, Ljava/lang/Throwable;
-
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/o;->a:Lru/ok/android/externcalls/sdk/ConversationImpl;
-
-    invoke-static {v1, v0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->p(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljr3;Ljava/lang/Throwable;)V
-
-    return-void
+    return-object v0
 .end method

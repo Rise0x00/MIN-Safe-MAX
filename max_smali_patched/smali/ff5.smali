@@ -1,356 +1,194 @@
-.class public abstract Lff5;
-.super Ljava/lang/Object;
+.class public final Lff5;
+.super Landroid/view/inputmethod/InputConnectionWrapper;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-.implements Ljava/lang/Comparable;
-.implements Lcw4;
-.implements Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
 
 
 # instance fields
-.field private volatile _heap:Ljava/lang/Object;
+.field public final a:Landroid/widget/EditText;
 
-.field public a:J
-
-.field public b:I
+.field public final b:Lfca;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/EditText;Landroid/view/inputmethod/InputConnection;Landroid/view/inputmethod/EditorInfo;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfca;
 
-    iput-wide p1, p0, Lff5;->a:J
+    const/16 v1, 0x14
 
-    const/4 p1, -0x1
+    invoke-direct {v0, v1}, Lfca;-><init>(I)V
 
-    iput p1, p0, Lff5;->b:I
+    const/4 v1, 0x0
 
+    invoke-direct {p0, p2, v1}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
+
+    iput-object p1, p0, Lff5;->a:Landroid/widget/EditText;
+
+    iput-object v0, p0, Lff5;->b:Lfca;
+
+    sget-object p1, Lve5;->k:Lve5;
+
+    if-eqz p1, :cond_3
+
+    invoke-static {}, Lve5;->a()Lve5;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lve5;->b()I
+
+    move-result p2
+
+    const/4 v0, 0x1
+
+    if-ne p2, v0, :cond_3
+
+    if-nez p3, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    if-nez p2, :cond_1
+
+    new-instance p2, Landroid/os/Bundle;
+
+    invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
+
+    iput-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    :cond_1
+    iget-object p1, p1, Lve5;->e:Lqe5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p2, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    iget-object p1, p1, Lqe5;->c:Ljava/lang/Object;
+
+    check-cast p1, Lloe;
+
+    iget-object p1, p1, Lloe;->a:Ljava/lang/Object;
+
+    check-cast p1, La5a;
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p1, v0}, Lkr8;->a(I)I
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v2, p1, Lkr8;->d:Ljava/lang/Object;
+
+    check-cast v2, Ljava/nio/ByteBuffer;
+
+    iget p1, p1, Lkr8;->a:I
+
+    add-int/2addr v0, p1
+
+    invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->getInt(I)I
+
+    move-result p1
+
+    goto :goto_0
+
+    :cond_2
+    move p1, v1
+
+    :goto_0
+    const-string v0, "android.support.text.emoji.emojiCompat_metadataVersion"
+
+    invoke-virtual {p2, v0, p1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    iget-object p1, p3, Landroid/view/inputmethod/EditorInfo;->extras:Landroid/os/Bundle;
+
+    const-string p2, "android.support.text.emoji.emojiCompat_replaceAll"
+
+    invoke-virtual {p1, p2, v1}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
+
+    :cond_3
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(JLgf5;Lhf5;)I
-    .locals 8
+.method public final deleteSurroundingText(II)Z
+    .locals 2
 
-    monitor-enter p0
+    iget-object v0, p0, Lff5;->a:Landroid/widget/EditText;
 
-    :try_start_0
-    iget-object v0, p0, Lff5;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Ljf5;->a:Lkotlinx/coroutines/internal/Symbol;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-ne v0, v1, :cond_0
-
-    monitor-exit p0
-
-    const/4 p1, 0x2
-
-    return p1
-
-    :cond_0
-    :try_start_1
-    monitor-enter p3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    invoke-virtual {p3}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->firstImpl()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
 
     move-result-object v0
 
-    check-cast v0, Lff5;
+    iget-object v1, p0, Lff5;->b:Lfca;
 
-    sget-object v1, Lhf5;->Y:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
-
-    invoke-virtual {v1, p4}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
-
-    move-result p4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    invoke-static {p0, v0, p1, p2, v1}, Lfca;->u(Lff5;Landroid/text/Editable;IIZ)Z
 
-    if-eqz p4, :cond_1
+    move-result v0
 
-    move p4, v2
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingText(II)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    move p4, v1
-
-    :goto_0
-    if-eqz p4, :cond_2
-
-    :try_start_3
-    monitor-exit p3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    monitor-exit p0
-
-    return v2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_4
-
-    :cond_2
-    const-wide/16 v2, 0x0
-
-    if-nez v0, :cond_3
-
-    :try_start_4
-    iput-wide p1, p3, Lgf5;->b:J
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p1
-
-    goto :goto_3
-
-    :cond_3
-    iget-wide v4, v0, Lff5;->a:J
-
-    sub-long v6, v4, p1
-
-    cmp-long p4, v6, v2
-
-    if-ltz p4, :cond_4
-
-    goto :goto_1
-
-    :cond_4
-    move-wide p1, v4
-
-    :goto_1
-    iget-wide v4, p3, Lgf5;->b:J
-
-    sub-long v4, p1, v4
-
-    cmp-long p4, v4, v2
-
-    if-lez p4, :cond_5
-
-    iput-wide p1, p3, Lgf5;->b:J
-
-    :cond_5
-    :goto_2
-    iget-wide p1, p0, Lff5;->a:J
-
-    iget-wide v4, p3, Lgf5;->b:J
-
-    sub-long/2addr p1, v4
-
-    cmp-long p1, p1, v2
-
-    if-gez p1, :cond_6
-
-    iput-wide v4, p0, Lff5;->a:J
-
-    :cond_6
-    invoke-virtual {p3, p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->addImpl(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :try_start_5
-    monitor-exit p3
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    monitor-exit p0
-
+    :cond_0
     return v1
 
-    :goto_3
-    :try_start_6
-    monitor-exit p3
-
-    throw p1
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    :goto_4
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
-
-    check-cast p1, Lff5;
-
-    iget-wide v0, p0, Lff5;->a:J
-
-    iget-wide v2, p1, Lff5;->a:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_0
-
+    :cond_1
+    :goto_0
     const/4 p1, 0x1
 
     return p1
-
-    :cond_0
-    if-gez p1, :cond_1
-
-    const/4 p1, -0x1
-
-    return p1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    return p1
 .end method
 
-.method public final dispose()V
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lff5;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Ljf5;->a:Lkotlinx/coroutines/internal/Symbol;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-ne v0, v1, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    instance-of v2, v0, Lgf5;
-
-    if-eqz v2, :cond_1
-
-    check-cast v0, Lgf5;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->remove(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)Z
-
-    :cond_2
-    iput-object v1, p0, Lff5;->_heap:Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public final getHeap()Lkotlinx/coroutines/internal/ThreadSafeHeap;
+.method public final deleteSurroundingTextInCodePoints(II)Z
     .locals 2
 
-    iget-object v0, p0, Lff5;->_heap:Ljava/lang/Object;
+    iget-object v0, p0, Lff5;->a:Landroid/widget/EditText;
 
-    instance-of v1, v0, Lkotlinx/coroutines/internal/ThreadSafeHeap;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lkotlinx/coroutines/internal/ThreadSafeHeap;
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public final getIndex()I
-    .locals 1
-
-    iget v0, p0, Lff5;->b:I
-
-    return v0
-.end method
-
-.method public final setHeap(Lkotlinx/coroutines/internal/ThreadSafeHeap;)V
-    .locals 2
-
-    iget-object v0, p0, Lff5;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Ljf5;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object p1, p0, Lff5;->_heap:Ljava/lang/Object;
-
-    return-void
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Failed requirement."
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final setIndex(I)V
-    .locals 0
-
-    iput p1, p0, Lff5;->b:I
-
-    return-void
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Delayed[nanos="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lff5;->a:J
-
-    const/16 v3, 0x5d
-
-    invoke-static {v0, v1, v2, v3}, Lxjb;->l(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getEditableText()Landroid/text/Editable;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v1, p0, Lff5;->b:Lfca;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, p1, p2, v1}, Lfca;->u(Lff5;Landroid/text/Editable;IIZ)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-super {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;->deleteSurroundingTextInCodePoints(II)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
+    :goto_0
+    return v1
 .end method

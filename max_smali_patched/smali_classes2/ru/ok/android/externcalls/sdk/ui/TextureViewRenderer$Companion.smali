@@ -51,7 +51,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lfi4;)V
+.method public synthetic constructor <init>(Lso4;)V
     .locals 0
 
     .line 1

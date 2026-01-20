@@ -1,11 +1,20 @@
 .class public abstract Lmuh;
-.super Lmvh;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public abstract f(Ljuh;)Z
+.method public a(I)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract g(Ljuh;)[Ljq5;
+.method public b(IFI)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract c(I)V
 .end method

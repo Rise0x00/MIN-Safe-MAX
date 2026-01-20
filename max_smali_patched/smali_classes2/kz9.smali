@@ -1,44 +1,90 @@
-.class public interface abstract Lkz9;
-.super Ljava/lang/Object;
+.class public final Lkz9;
+.super Lp6g;
 .source "SourceFile"
+
+# interfaces
+.implements Lbr6;
+
+
+# instance fields
+.field public final synthetic X:Ljm9;
+
+.field public final synthetic o:Lsz9;
+
+
+# direct methods
+.method public constructor <init>(Lsz9;Ljm9;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lkz9;->o:Lsz9;
+
+    iput-object p2, p0, Lkz9;->X:Ljm9;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public c()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lzb4;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lkz9;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p1
+
+    check-cast p1, Lkz9;
+
+    sget-object p2, Lb3h;->a:Lb3h;
+
+    invoke-virtual {p1, p2}, Lkz9;->n(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p2
 .end method
 
-.method public j()V
-    .locals 0
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    return-void
+    new-instance p1, Lkz9;
+
+    iget-object v0, p0, Lkz9;->o:Lsz9;
+
+    iget-object v1, p0, Lkz9;->X:Ljm9;
+
+    invoke-direct {p1, v0, v1, p2}, Lkz9;-><init>(Lsz9;Ljm9;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public m()V
-    .locals 0
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    return-void
-.end method
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-.method public q()V
-    .locals 0
+    iget-object p1, p0, Lkz9;->X:Ljm9;
 
-    return-void
-.end method
+    iget-wide v1, p1, Lhk0;->a:J
 
-.method public abstract t(J)V
-.end method
+    sget-object p1, Lsz9;->W1:[Lz28;
 
-.method public x()V
-    .locals 0
+    const/4 v5, 0x0
 
-    return-void
-.end method
+    iget-object v0, p0, Lkz9;->o:Lsz9;
 
-.method public y()V
-    .locals 0
+    const/4 v3, 0x0
 
-    return-void
+    const/4 v4, 0x0
+
+    invoke-virtual/range {v0 .. v5}, Lsz9;->O(JZZZ)V
+
+    sget-object p1, Lb3h;->a:Lb3h;
+
+    return-object p1
 .end method

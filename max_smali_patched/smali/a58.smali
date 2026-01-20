@@ -1,70 +1,239 @@
 .class public final La58;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lhla;
+.implements Lxb6;
+.implements Lb1g;
+.implements Lo25;
 
 
 # instance fields
-.field public final a:Lot7;
+.field public final a:Lsq8;
 
-.field public b:Z
+.field public final b:Lrq8;
+
+.field public final c:Lsr6;
+
+.field public final d:Lgb6;
 
 
 # direct methods
-.method public constructor <init>(La4i;Lot7;)V
+.method public constructor <init>(Lsq8;Lrq8;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    const/4 p1, 0x0
+    iput-object p1, p0, La58;->a:Lsq8;
 
-    iput-boolean p1, p0, La58;->b:Z
+    iput-object p2, p0, La58;->b:Lrq8;
 
-    iput-object p2, p0, La58;->a:Lot7;
+    sget-object p1, Lhbe;->c:Lsr6;
+
+    iput-object p1, p0, La58;->c:Lsr6;
+
+    sget-object p1, Lgb6;->a:Lgb6;
+
+    iput-object p1, p0, La58;->d:Lgb6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
+.method public final b()V
     .locals 2
 
-    iget-object v0, p0, La58;->a:Lot7;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Le1g;->a:Le1g;
+
+    if-eq v0, v1, :cond_0
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, La58;->c:Lsr6;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    check-cast p1, Ljava/lang/Void;
+    return-void
 
-    iget-object p1, v0, Lot7;->b:Ljava/lang/Object;
+    :catchall_0
+    move-exception v0
 
-    check-cast p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
 
-    iget v0, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->L0:I
+    invoke-static {v0}, Lknj;->b(Ljava/lang/Throwable;)V
 
-    iget-object v1, p1, Lcom/google/android/gms/auth/api/signin/internal/SignInHubActivity;->M0:Landroid/content/Intent;
+    :cond_0
+    return-void
+.end method
 
-    invoke-virtual {p1, v0, v1}, Landroid/app/Activity;->setResult(ILandroid/content/Intent;)V
+.method public final cancel()V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/app/Activity;->finish()V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, La58;->b:Z
+    invoke-static {p0}, Le1g;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final d(Lb1g;)V
     .locals 1
 
-    iget-object v0, p0, La58;->a:Lot7;
+    invoke-static {p0, p1}, Le1g;->d(Ljava/util/concurrent/atomic/AtomicReference;Lb1g;)Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, La58;->d:Lgb6;
+
+    invoke-virtual {v0, p0}, Lgb6;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    invoke-interface {p1}, Lb1g;->cancel()V
+
+    invoke-virtual {p0, v0}, La58;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final dispose()V
+    .locals 0
+
+    invoke-static {p0}, Le1g;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
+
+    return-void
+.end method
+
+.method public final e()Z
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    sget-object v1, Le1g;->a:Le1g;
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final f(J)V
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb1g;
+
+    invoke-interface {v0, p1, p2}, Lb1g;->f(J)V
+
+    return-void
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Le1g;->a:Le1g;
+
+    if-eq v0, v1, :cond_0
+
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    :try_start_0
+    iget-object v0, p0, La58;->b:Lrq8;
+
+    invoke-virtual {v0, p1}, Lrq8;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    new-instance v1, Lio/reactivex/rxjava3/exceptions/CompositeException;
+
+    filled-new-array {p1, v0}, [Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    invoke-direct {v1, p1}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
+
+    invoke-static {v1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lknj;->b(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final r(Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0}, La58;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, La58;->a:Lsq8;
+
+    invoke-virtual {v0, p1}, Lsq8;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lzoj;->a(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lb1g;
+
+    invoke-interface {v0}, Lb1g;->cancel()V
+
+    invoke-virtual {p0, p1}, La58;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    return-void
 .end method

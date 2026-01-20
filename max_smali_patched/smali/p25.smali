@@ -1,13 +1,14 @@
-.class public abstract Lp25;
+.class public interface abstract Lp25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/view/View;FF)V
-    .locals 0
+# virtual methods
+.method public abstract a(Lo25;)Z
+.end method
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->drawableHotspotChanged(FF)V
+.method public abstract b(Lo25;)Z
+.end method
 
-    return-void
+.method public abstract c(Lo25;)Z
 .end method

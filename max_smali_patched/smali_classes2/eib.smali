@@ -1,129 +1,55 @@
-.class public final Leib;
+.class public abstract Leib;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lfib;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Leib;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:I
 
+.field public static final b:I
 
-# instance fields
-.field public final a:I
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lw3b;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1}, Lw3b;-><init>(I)V
-
-    sput-object v0, Leib;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Leib;->a:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
     .locals 1
 
-    const/4 v0, 0x0
+    sget v0, Lz9d;->settings_devices_allow_camera_permission_btn:I
 
-    return v0
-.end method
+    sput v0, Leib;->a:I
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    sget v0, Lz9d;->settings_devices_auth_hint_accept_button:I
 
-    const/4 v0, 0x1
+    sput v0, Leib;->b:I
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lz9d;->settings_devices_auth_hint_deny_button:I
 
-    return v0
+    sput v0, Leib;->c:I
 
-    :cond_0
-    instance-of v1, p1, Leib;
+    sget v0, Lz9d;->settings_devices_deny_camera_permission_btn:I
 
-    const/4 v2, 0x0
+    sput v0, Leib;->d:I
 
-    if-nez v1, :cond_1
+    sget v0, Lz9d;->settings_devices_recycler_header_viewtype:I
 
-    return v2
+    sput v0, Leib;->e:I
 
-    :cond_1
-    check-cast p1, Leib;
+    sget v0, Lz9d;->settings_devices_recycler_session_item_viewtype:I
 
-    iget v1, p0, Leib;->a:I
+    sput v0, Leib;->f:I
 
-    iget p1, p1, Leib;->a:I
+    sget v0, Lz9d;->settings_devices_recycler_view:I
 
-    if-eq v1, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Leib;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    const-string v0, "Lottie(rawResId="
-
-    const-string v1, ")"
-
-    iget v2, p0, Leib;->a:I
-
-    invoke-static {v2, v0, v1}, Lox1;->f(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget p2, p0, Leib;->a:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    sput v0, Leib;->g:I
 
     return-void
 .end method

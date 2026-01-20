@@ -3,24 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li28;
+.implements Lx27;
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/Boolean;
+.field public final b:Lqhg;
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Boolean;)V
+.method public constructor <init>(Ljava/lang/String;Lqhg;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lv27;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lv27;->b:Ljava/lang/Boolean;
+    iput-object p2, p0, Lv27;->b:Lqhg;
+
+    iput-object p3, p0, Lv27;->c:Ljava/util/List;
 
     return-void
 .end method
@@ -52,7 +56,7 @@
 
     iget-object v3, p1, Lv27;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -61,63 +65,37 @@
     return v2
 
     :cond_2
-    iget-object v1, p0, Lv27;->b:Ljava/lang/Boolean;
+    iget-object v1, p0, Lv27;->b:Lqhg;
 
-    iget-object p1, p1, Lv27;->b:Ljava/lang/Boolean;
+    iget-object v3, p1, Lv27;->b:Lqhg;
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p1
+    move-result v1
 
-    if-nez p1, :cond_3
+    if-nez v1, :cond_3
 
     return v2
 
     :cond_3
+    iget-object v1, p0, Lv27;->c:Ljava/util/List;
+
+    iget-object p1, p1, Lv27;->c:Ljava/util/List;
+
+    invoke-static {v1, p1}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    return v2
+
+    :cond_4
     return v0
 .end method
 
-.method public final getItemId()J
-    .locals 2
-
-    iget-object v0, p0, Lv27;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public final h(Li28;)Z
-    .locals 4
-
-    invoke-virtual {p0}, Lv27;->getItemId()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Li28;->getItemId()J
-
-    move-result-wide v2
-
-    cmp-long p1, v0, v2
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    return p1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    return p1
-.end method
-
 .method public final hashCode()I
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lv27;->a:Ljava/lang/String;
 
@@ -125,9 +103,17 @@
 
     move-result v0
 
-    mul-int/lit8 v0, v0, 0x1f
+    const/16 v1, 0x1f
 
-    iget-object v1, p0, Lv27;->b:Ljava/lang/Boolean;
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lv27;->b:Lqhg;
+
+    invoke-static {v0, v1, v2}, Lhc0;->d(IILqhg;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lv27;->c:Ljava/util/List;
 
     if-nez v1, :cond_0
 
@@ -146,63 +132,12 @@
     return v0
 .end method
 
-.method public final k(Li28;)Ljava/lang/Object;
-    .locals 2
-
-    instance-of v0, p1, Lv27;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lv27;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v1
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object p1, p1, Lv27;->b:Ljava/lang/Boolean;
-
-    iget-object v0, p0, Lv27;->b:Ljava/lang/Boolean;
-
-    invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lu27;
-
-    invoke-direct {v0, p1}, Lu27;-><init>(Ljava/lang/Boolean;)V
-
-    return-object v0
-
-    :cond_2
-    :goto_1
-    return-object v1
-.end method
-
-.method public final m()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "HostItem(host="
+    const-string v1, "Content(conversationId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -210,19 +145,23 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isSelected="
+    const-string v1, ", subtitle="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lv27;->b:Ljava/lang/Boolean;
+    iget-object v1, p0, Lv27;->b:Lqhg;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, ", avatarInfo="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, ")"
+
+    iget-object v2, p0, Lv27;->c:Ljava/util/List;
+
+    invoke-static {v0, v2, v1}, Lecj;->b(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

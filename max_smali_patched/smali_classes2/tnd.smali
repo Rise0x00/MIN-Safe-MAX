@@ -1,6 +1,9 @@
 .class public final Ltnd;
-.super Lwnd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lwnd;
 
 
 # static fields
@@ -47,7 +50,7 @@
 .method public final hashCode()I
     .locals 1
 
-    const v0, 0xa69088b
+    const v0, -0x500f739a
 
     return v0
 .end method
@@ -55,7 +58,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "NotSupported"
+    const-string v0, "CameraNotFound"
 
     return-object v0
 .end method

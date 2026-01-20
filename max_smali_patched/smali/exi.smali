@@ -1,36 +1,70 @@
-.class public abstract Lexi;
+.class public final Lexi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvwa;
+
+
+# static fields
+.field public static final a:Lexi;
+
 
 # direct methods
-.method public static a(Lvb4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-eqz p0, :cond_0
-
-    :try_start_0
-    invoke-interface {p0}, Lvb4;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :cond_0
-    return-void
-.end method
-
-.method public static final b(Loi6;)Ltcd;
-    .locals 1
-
-    new-instance v0, Ltcd;
+    new-instance v0, Lexi;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p0, v0, Ltcd;->a:Loi6;
+    sput-object v0, Lexi;->a:Lexi;
 
-    sget-object p0, Lu55;->X:Lu55;
+    new-instance v0, Lbri;
 
-    iput-object p0, v0, Ltcd;->b:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    return-object v0
+    invoke-direct {v0, v1}, Lbri;-><init>(I)V
+
+    const-class v1, Lpri;
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x2
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    const/4 v2, 0x3
+
+    invoke-static {v0, v2}, Lcbh;->p(Ljava/util/HashMap;I)Lbri;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcbh;->n(Ljava/lang/Class;Lbri;)Ljava/util/HashMap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcbh;->v(Ljava/util/HashMap;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-static {p1}, Lt02;->h(Ljava/lang/Object;)Ljava/lang/ClassCastException;
+
+    move-result-object p1
+
+    throw p1
 .end method

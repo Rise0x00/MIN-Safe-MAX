@@ -2,96 +2,100 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfz4;
+
 
 # instance fields
-.field public final a:Lru7;
+.field public final a:Lo58;
 
-.field public final b:Lru7;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:La1f;
-
-.field public final e:Lj0d;
-
-.field public final f:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public g:Lgye;
+.field public final b:Lpld;
 
 
 # direct methods
-.method public constructor <init>(Lru7;Lru7;La3f;Ltlf;)V
-    .locals 2
+.method public constructor <init>(Lo58;)V
+    .locals 8
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo6f;->a:Lru7;
+    iput-object p1, p0, Lo6f;->a:Lo58;
 
-    iput-object p2, p0, Lo6f;->b:Lru7;
+    sget-object p1, Lly4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    check-cast p4, Lsta;
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    invoke-virtual {p4}, Lsta;->b()La54;
+    move-result-wide v1
+
+    new-instance v0, Lxk4;
+
+    sget p1, Lkdd;->oneme_settings_send_logs:I
+
+    new-instance v3, Llhg;
+
+    invoke-direct {v3, p1}, Llhg;-><init>(I)V
+
+    sget v4, Lv5e;->d:I
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x18
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v0 .. v7}, Lxk4;-><init>(JLqhg;ILqhg;Llmj;I)V
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-static {p1}, Ljwi;->a(Ly44;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {p1}, Ltpf;->a(Ljava/lang/Object;)Lspf;
 
     move-result-object p1
 
-    iput-object p1, p0, Lo6f;->c:Lkotlinx/coroutines/internal/ContextScope;
+    new-instance v0, Lpld;
 
-    sget-object p2, Lna5;->a:Lna5;
+    invoke-direct {v0, p1}, Lpld;-><init>(Lmfa;)V
 
-    invoke-static {p2}, Lb1f;->a(Ljava/lang/Object;)La1f;
+    iput-object v0, p0, Lo6f;->b:Lpld;
 
-    move-result-object p2
+    return-void
+.end method
 
-    iput-object p2, p0, Lo6f;->d:La1f;
 
-    new-instance p4, Lj0d;
+# virtual methods
+.method public final a()Llpf;
+    .locals 1
 
-    invoke-direct {p4, p2}, Lj0d;-><init>(Lf1a;)V
+    iget-object v0, p0, Lo6f;->b:Lpld;
 
-    iput-object p4, p0, Lo6f;->e:Lj0d;
+    return-object v0
+.end method
 
-    new-instance p2, Ljava/util/concurrent/atomic/AtomicReference;
+.method public final d(Lxk4;)V
+    .locals 2
 
-    const-wide/16 v0, 0x0
+    sget-object p1, Lc5j;->a:Ledb;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v0, 0x0
 
-    move-result-object p4
+    if-eqz p1, :cond_0
 
-    invoke-direct {p2, p4}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    goto :goto_0
 
-    iput-object p2, p0, Lo6f;->f:Ljava/util/concurrent/atomic/AtomicReference;
+    :cond_0
+    move-object p1, v0
 
-    iget-object p2, p3, La3f;->l:Lmm0;
+    :goto_0
+    if-nez p1, :cond_1
 
-    invoke-static {p2}, Lqxi;->a(Lwka;)Lpt1;
+    return-void
 
-    move-result-object p2
+    :cond_1
+    new-instance v1, Ln6f;
 
-    new-instance p3, Lznb;
+    invoke-direct {v1, p1, p0, v0}, Ln6f;-><init>(Ledb;Lo6f;Lkotlin/coroutines/Continuation;)V
 
-    const/16 p4, 0x12
-
-    invoke-direct {p3, p2, p4, p0}, Lznb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p2, Lk6f;
-
-    const/4 p4, 0x0
-
-    invoke-direct {p2, p0, p4}, Lk6f;-><init>(Lo6f;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p4, Ln16;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p4, p3, p2, v0}, Ln16;-><init>(Lez5;Lej6;I)V
-
-    invoke-static {p4, p1}, Lqs0;->v(Lez5;Lg54;)Lgye;
+    invoke-static {v1}, Ls9j;->i(Lbr6;)Ljava/lang/Object;
 
     return-void
 .end method

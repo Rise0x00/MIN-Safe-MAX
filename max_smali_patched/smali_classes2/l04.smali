@@ -1,97 +1,104 @@
 .class public final Ll04;
-.super Ljava/lang/Object;
+.super Lp6g;
 .source "SourceFile"
 
 # interfaces
-.implements Lp04;
+.implements Lbr6;
 
 
 # instance fields
-.field public final a:Lnrf;
+.field public final synthetic X:Lbbh;
+
+.field public final synthetic o:Lp04;
 
 
 # direct methods
-.method public constructor <init>(Lnrf;)V
+.method public constructor <init>(Lp04;Lbbh;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll04;->o:Lp04;
 
-    iput-object p1, p0, Ll04;->a:Lnrf;
+    iput-object p2, p0, Ll04;->X:Lbbh;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lp6g;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lzb4;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
+    invoke-virtual {p0, p1, p2}, Ll04;->l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :cond_0
-    instance-of v1, p1, Ll04;
+    move-result-object p1
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
     check-cast p1, Ll04;
 
-    iget-object v1, p0, Ll04;->a:Lnrf;
+    sget-object p2, Lb3h;->a:Lb3h;
 
-    iget-object p1, p1, Ll04;->a:Lnrf;
+    invoke-virtual {p1, p2}, Ll04;->n(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1, p1}, Lp9i;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Ll04;->a:Lnrf;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final l(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p1, Ll04;
 
-    const-string v1, "Gallery(toolbarTitle="
+    iget-object v0, p0, Ll04;->o:Lp04;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Ll04;->X:Lbbh;
 
-    iget-object v1, p0, Ll04;->a:Lnrf;
+    invoke-direct {p1, v0, v1, p2}, Ll04;-><init>(Lp04;Lbbh;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-object p1
+.end method
 
-    const-string v1, ")"
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lpmj;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p0, Ll04;->o:Lp04;
 
-    move-result-object v0
+    iget-object p1, p1, Lp04;->z:Lo58;
 
-    return-object v0
+    invoke-interface {p1}, Lo58;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lt2b;
+
+    new-instance v0, Lzah;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v1, p0, Ll04;->X:Lbbh;
+
+    iput-object v1, v0, Lzah;->q:Lbbh;
+
+    new-instance v1, Ldbh;
+
+    invoke-direct {v1, v0}, Ldbh;-><init>(Lzah;)V
+
+    invoke-virtual {p1, v1}, Lt2b;->n(Ldbh;)J
+
+    move-result-wide v0
+
+    new-instance p1, Ljava/lang/Long;
+
+    invoke-direct {p1, v0, v1}, Ljava/lang/Long;-><init>(J)V
+
+    return-object p1
 .end method

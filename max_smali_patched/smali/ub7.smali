@@ -1,259 +1,204 @@
-.class public abstract Lub7;
+.class public final Lub7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lkgf;
+
 
 # instance fields
-.field public a:Z
+.field public final a:Lgm6;
 
-.field public b:I
+.field public b:Z
 
-.field public c:[Ljava/lang/Object;
+.field public final synthetic c:Lv8;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lv8;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "initialCapacity"
+    iput-object p1, p0, Lub7;->c:Lv8;
 
-    invoke-static {p1, v0}, Lvti;->a(ILjava/lang/String;)V
+    new-instance v0, Lgm6;
 
-    new-array p1, p1, [Ljava/lang/Object;
+    iget-object p1, p1, Lv8;->f:Ljava/lang/Object;
 
-    iput-object p1, p0, Lub7;->c:[Ljava/lang/Object;
+    check-cast p1, Lex0;
 
-    const/4 p1, 0x0
+    invoke-interface {p1}, Lkgf;->m()Ltlg;
 
-    iput p1, p0, Lub7;->b:I
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lgm6;-><init>(Ltlg;)V
+
+    iput-object v0, p0, Lub7;->a:Lgm6;
 
     return-void
-.end method
-
-.method public static e()Lis0;
-    .locals 3
-
-    new-instance v0, Lis0;
-
-    const/4 v1, 0x6
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lis0;-><init>(IB)V
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lis0;->c:Z
-
-    const/4 v1, 0x0
-
-    iput v1, v0, Lis0;->b:I
-
-    return-object v0
-.end method
-
-.method public static h(II)I
-    .locals 1
-
-    if-ltz p1, :cond_3
-
-    if-gt p1, p0, :cond_0
-
-    return p0
-
-    :cond_0
-    shr-int/lit8 v0, p0, 0x1
-
-    add-int/2addr p0, v0
-
-    add-int/lit8 p0, p0, 0x1
-
-    if-ge p0, p1, :cond_1
-
-    add-int/lit8 p1, p1, -0x1
-
-    invoke-static {p1}, Ljava/lang/Integer;->highestOneBit(I)I
-
-    move-result p0
-
-    shl-int/lit8 p0, p0, 0x1
-
-    :cond_1
-    if-gez p0, :cond_2
-
-    const p0, 0x7fffffff
-
-    :cond_2
-    return p0
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "cannot store more than MAX_VALUE elements"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)V
+.method public final Z(Lxv0;J)V
     .locals 3
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lub7;->c:Lv8;
 
+    iget-object v0, v0, Lv8;->f:Ljava/lang/Object;
+
+    check-cast v0, Lex0;
+
+    iget-boolean v1, p0, Lub7;->b:Z
+
+    if-nez v1, :cond_1
+
+    const-wide/16 v1, 0x0
+
+    cmp-long v1, p2, v1
+
+    if-nez v1, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-interface {v0, p2, p3}, Lex0;->c0(J)Lex0;
+
+    const-string v1, "\r\n"
+
+    invoke-interface {v0, v1}, Lex0;->V(Ljava/lang/String;)Lex0;
+
+    invoke-interface {v0, p1, p2, p3}, Lkgf;->Z(Lxv0;J)V
+
+    invoke-interface {v0, v1}, Lex0;->V(Ljava/lang/String;)Lex0;
+
+    return-void
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "closed"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final declared-synchronized close()V
+    .locals 3
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v0, p0, Lub7;->b:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v0, :cond_0
+
+    monitor-exit p0
+
+    return-void
+
+    :cond_0
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lub7;->g(I)V
+    :try_start_1
+    iput-boolean v0, p0, Lub7;->b:Z
 
-    iget-object v0, p0, Lub7;->c:[Ljava/lang/Object;
+    iget-object v0, p0, Lub7;->c:Lv8;
 
-    iget v1, p0, Lub7;->b:I
+    iget-object v0, v0, Lv8;->f:Ljava/lang/Object;
 
-    add-int/lit8 v2, v1, 0x1
+    check-cast v0, Lex0;
 
-    iput v2, p0, Lub7;->b:I
+    const-string v1, "0\r\n\r\n"
 
-    aput-object p1, v0, v1
+    invoke-interface {v0, v1}, Lex0;->V(Ljava/lang/String;)Lex0;
 
-    return-void
-.end method
+    iget-object v0, p0, Lub7;->a:Lgm6;
 
-.method public varargs b([Ljava/lang/Object;)V
-    .locals 4
+    iget-object v1, v0, Lgm6;->e:Ltlg;
 
-    array-length v0, p1
+    sget-object v2, Ltlg;->d:Lslg;
 
-    invoke-static {v0, p1}, Lsmi;->a(I[Ljava/lang/Object;)V
+    iput-object v2, v0, Lgm6;->e:Ltlg;
 
-    invoke-virtual {p0, v0}, Lub7;->g(I)V
+    invoke-virtual {v1}, Ltlg;->a()Ltlg;
 
-    iget-object v1, p0, Lub7;->c:[Ljava/lang/Object;
+    invoke-virtual {v1}, Ltlg;->b()Ltlg;
 
-    iget v2, p0, Lub7;->b:I
+    iget-object v0, p0, Lub7;->c:Lv8;
 
-    const/4 v3, 0x0
+    const/4 v1, 0x3
 
-    invoke-static {p1, v3, v1, v2, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    iput v1, v0, Lv8;->a:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget p1, p0, Lub7;->b:I
-
-    add-int/2addr p1, v0
-
-    iput p1, p0, Lub7;->b:I
+    monitor-exit p0
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
 .end method
 
-.method public abstract c(Ljava/lang/Object;)Lub7;
-.end method
+.method public final declared-synchronized flush()V
+    .locals 1
 
-.method public d(Ljava/lang/Iterable;)V
-    .locals 2
+    monitor-enter p0
 
-    instance-of v0, p1, Ljava/util/Collection;
+    :try_start_0
+    iget-boolean v0, p0, Lub7;->b:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_0
 
-    move-object v0, p1
-
-    check-cast v0, Ljava/util/Collection;
-
-    invoke-interface {v0}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Lub7;->g(I)V
-
-    instance-of v1, v0, Lvb7;
-
-    if-eqz v1, :cond_0
-
-    check-cast v0, Lvb7;
-
-    iget-object p1, p0, Lub7;->c:[Ljava/lang/Object;
-
-    iget v1, p0, Lub7;->b:I
-
-    invoke-virtual {v0, v1, p1}, Lvb7;->b(I[Ljava/lang/Object;)I
-
-    move-result p1
-
-    iput p1, p0, Lub7;->b:I
+    monitor-exit p0
 
     return-void
 
     :cond_0
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    :try_start_1
+    iget-object v0, p0, Lub7;->c:Lv8;
 
-    move-result-object p1
+    iget-object v0, v0, Lv8;->f:Ljava/lang/Object;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    check-cast v0, Lex0;
 
-    move-result v0
+    invoke-interface {v0}, Lex0;->flush()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-eqz v0, :cond_1
+    monitor-exit p0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lub7;->c(Ljava/lang/Object;)Lub7;
-
-    goto :goto_0
-
-    :cond_1
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    throw v0
 .end method
 
-.method public abstract f(Lll;Lsof;)V
-.end method
+.method public final m()Ltlg;
+    .locals 1
 
-.method public g(I)V
-    .locals 3
+    iget-object v0, p0, Lub7;->a:Lgm6;
 
-    iget-object v0, p0, Lub7;->c:[Ljava/lang/Object;
-
-    array-length v1, v0
-
-    iget v2, p0, Lub7;->b:I
-
-    add-int/2addr v2, p1
-
-    invoke-static {v1, v2}, Lub7;->h(II)I
-
-    move-result p1
-
-    array-length v0, v0
-
-    if-gt p1, v0, :cond_1
-
-    iget-boolean v0, p0, Lub7;->a:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    iget-object v0, p0, Lub7;->c:[Ljava/lang/Object;
-
-    invoke-static {v0, p1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lub7;->c:[Ljava/lang/Object;
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lub7;->a:Z
-
-    return-void
+    return-object v0
 .end method

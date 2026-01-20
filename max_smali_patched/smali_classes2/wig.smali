@@ -1,38 +1,35 @@
-.class public interface abstract Lwig;
+.class public final Lwig;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()I
-.end method
+# instance fields
+.field public final a:Lo58;
 
-.method public abstract b()Ljava/lang/String;
-.end method
+.field public final b:Lo58;
 
-.method public abstract e()Lmb7;
-.end method
 
-.method public abstract equals(Ljava/lang/Object;)Z
-.end method
+# direct methods
+.method public constructor <init>(Lr5;)V
+    .locals 1
 
-.method public abstract g()Lac7;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract h()Llc7;
-.end method
+    const/16 v0, 0x271
 
-.method public abstract m()Lwb7;
-.end method
+    invoke-virtual {p1, v0}, Lr5;->d(I)Ln8g;
 
-.method public abstract n()Lrc7;
-.end method
+    move-result-object v0
 
-.method public abstract o()Lyb7;
-.end method
+    iput-object v0, p0, Lwig;->a:Lo58;
 
-.method public abstract p()Lqb7;
-.end method
+    const/16 v0, 0x11
 
-.method public abstract r()Lsb7;
+    invoke-virtual {p1, v0}, Lr5;->d(I)Ln8g;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lwig;->b:Lo58;
+
+    return-void
 .end method

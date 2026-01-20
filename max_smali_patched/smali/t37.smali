@@ -1,101 +1,130 @@
-.class public final Lt37;
-.super Lp37;
+.class public abstract Lt37;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public d:Z
+# static fields
+.field private static volatile choreographer:Landroid/view/Choreographer;
 
 
-# virtual methods
-.method public final b(Lgu0;J)J
+# direct methods
+.method static constructor <clinit>()V
     .locals 3
 
-    const-wide/16 v0, 0x0
+    :try_start_0
+    new-instance v0, Ls37;
 
-    cmp-long v0, p2, v0
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    if-ltz v0, :cond_3
+    move-result-object v1
 
-    iget-boolean v0, p0, Lp37;->b:Z
+    invoke-static {v1}, Lt37;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
-    if-nez v0, :cond_2
+    move-result-object v1
 
-    iget-boolean v0, p0, Lt37;->d:Z
+    const/4 v2, 0x0
 
-    const-wide/16 v1, -0x1
+    invoke-direct {v0, v1, v2}, Ls37;-><init>(Landroid/os/Handler;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v0, :cond_0
+    goto :goto_0
 
-    return-wide v1
+    :catchall_0
+    move-exception v0
+
+    new-instance v1, Lszd;
+
+    invoke-direct {v1, v0}, Lszd;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_0
+    nop
+
+    instance-of v1, v0, Lszd;
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x0
 
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lp37;->b(Lgu0;J)J
+    check-cast v0, Ls37;
 
-    move-result-wide p1
-
-    cmp-long p3, p1, v1
-
-    if-nez p3, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lt37;->d:Z
-
-    invoke-virtual {p0}, Lp37;->l()V
-
-    return-wide v1
-
-    :cond_1
-    return-wide p1
-
-    :cond_2
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    const-string p2, "closed"
-
-    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_3
-    const-string p1, "byteCount < 0: "
-
-    invoke-static {p2, p3, p1}, Lpa9;->e(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    new-instance p2, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p2
+    return-void
 .end method
 
-.method public final close()V
-    .locals 1
+.method public static final a(Landroid/os/Looper;)Landroid/os/Handler;
+    .locals 5
 
-    iget-boolean v0, p0, Lp37;->b:Z
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0x1c
 
-    return-void
+    const/4 v2, 0x0
+
+    const-class v3, Landroid/os/Looper;
+
+    const-class v4, Landroid/os/Handler;
+
+    if-lt v0, v1, :cond_0
+
+    const-string v0, "createAsync"
+
+    filled-new-array {v3}, [Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-virtual {v0, v2, p0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Handler;
+
+    return-object p0
 
     :cond_0
-    iget-boolean v0, p0, Lt37;->d:Z
+    :try_start_0
+    const-class v0, Landroid/os/Handler$Callback;
 
-    if-nez v0, :cond_1
+    sget-object v1, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    invoke-virtual {p0}, Lp37;->l()V
+    filled-new-array {v3, v0, v1}, [Ljava/lang/Class;
 
-    :cond_1
-    const/4 v0, 0x1
+    move-result-object v0
 
-    iput-boolean v0, p0, Lp37;->b:Z
+    invoke-virtual {v4, v0}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
-    return-void
+    move-result-object v0
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    filled-new-array {p0, v2, v1}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/os/Handler;
+
+    return-object p0
+
+    :catch_0
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0, p0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    return-object v0
 .end method

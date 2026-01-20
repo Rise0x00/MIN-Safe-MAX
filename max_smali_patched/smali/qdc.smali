@@ -1,29 +1,47 @@
 .class public final Lqdc;
-.super Lie6;
+.super Lo84;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final f(ILhvf;Z)Lhvf;
+# instance fields
+.field public X:I
+
+.field public synthetic d:Ljava/lang/Object;
+
+.field public final synthetic o:Lvdc;
+
+
+# direct methods
+.method public constructor <init>(Lvdc;Lo84;)V
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Lie6;->f(ILhvf;Z)Lhvf;
+    iput-object p1, p0, Lqdc;->o:Lvdc;
 
-    const/4 p1, 0x1
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    iput-boolean p1, p2, Lhvf;->f:Z
-
-    return-object p2
+    return-void
 .end method
 
-.method public final m(ILkvf;J)Lkvf;
-    .locals 0
 
-    invoke-super {p0, p1, p2, p3, p4}, Lie6;->m(ILkvf;J)Lkvf;
+# virtual methods
+.method public final n(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 p1, 0x1
+    iput-object p1, p0, Lqdc;->d:Ljava/lang/Object;
 
-    iput-boolean p1, p2, Lkvf;->k:Z
+    iget p1, p0, Lqdc;->X:I
 
-    return-object p2
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lqdc;->X:I
+
+    iget-object p1, p0, Lqdc;->o:Lvdc;
+
+    invoke-virtual {p1, p0}, Lvdc;->a(Lo84;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    return-object p1
 .end method

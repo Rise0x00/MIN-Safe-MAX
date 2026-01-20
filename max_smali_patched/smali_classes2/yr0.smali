@@ -1,27 +1,31 @@
 .class public final Lyr0;
-.super Lp14;
+.super Lo84;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Ljava/nio/channels/AsynchronousFileChannel;
 
-.field public final synthetic Y:Lzr0;
+.field public Y:Lbr6;
 
-.field public Z:I
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public d:Lzr0;
+.field public d:Ldng;
 
-.field public o:Luy2;
+.field public o:Lr6h;
+
+.field public final synthetic t0:Lbs0;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Lzr0;Lp14;)V
+.method public constructor <init>(Lbs0;Lo84;)V
     .locals 0
 
-    iput-object p1, p0, Lyr0;->Y:Lzr0;
+    iput-object p1, p0, Lyr0;->t0:Lbs0;
 
-    invoke-direct {p0, p2}, Lp14;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Lo84;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -29,21 +33,31 @@
 
 # virtual methods
 .method public final n(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 6
 
-    iput-object p1, p0, Lyr0;->X:Ljava/lang/Object;
+    iput-object p1, p0, Lyr0;->Z:Ljava/lang/Object;
 
-    iget p1, p0, Lyr0;->Z:I
+    iget p1, p0, Lyr0;->u0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lyr0;->Z:I
+    iput p1, p0, Lyr0;->u0:I
 
-    iget-object p1, p0, Lyr0;->Y:Lzr0;
+    const/4 v3, 0x0
 
-    invoke-static {p1, p0}, Lzr0;->a(Lzr0;Lp14;)Ljava/lang/Object;
+    const/4 v4, 0x0
+
+    iget-object v0, p0, Lyr0;->t0:Lbs0;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    move-object v5, p0
+
+    invoke-static/range {v0 .. v5}, Lbs0;->b(Lbs0;Ldng;Lr6h;Ljava/nio/channels/AsynchronousFileChannel;Lqr0;Lo84;)Ljava/lang/Object;
 
     move-result-object p1
 

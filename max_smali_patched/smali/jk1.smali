@@ -1,261 +1,341 @@
-.class public final synthetic Ljk1;
+.class public final Ljk1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
+
+# static fields
+.field public static final g:Ljk1;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/List;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:Ljava/util/List;
+
+.field public final c:Ljava/util/List;
+
+.field public final d:Z
+
+.field public final e:Ljava/lang/CharSequence;
+
+.field public final f:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p1, p0, Ljk1;->a:I
+    new-instance v0, Ljk1;
 
-    iput-object p2, p0, Ljk1;->b:Ljava/lang/Object;
+    const-string v5, ""
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x0
+
+    sget-object v1, Ldh5;->a:Ldh5;
+
+    const/4 v4, 0x0
+
+    move-object v2, v1
+
+    move-object v3, v1
+
+    invoke-direct/range {v0 .. v6}, Ljk1;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;ZLjava/lang/CharSequence;Z)V
+
+    sput-object v0, Ljk1;->g:Ljk1;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;ZLjava/lang/CharSequence;Z)V
+    .locals 0
 
-# virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 8
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Ljk1;->a:I
+    iput-object p1, p0, Ljk1;->a:Ljava/util/List;
 
-    const/4 v1, 0x0
+    iput-object p2, p0, Ljk1;->b:Ljava/util/List;
 
-    const/4 v2, 0x1
+    iput-object p3, p0, Ljk1;->c:Ljava/util/List;
 
-    iget-object v3, p0, Ljk1;->b:Ljava/lang/Object;
+    iput-boolean p4, p0, Ljk1;->d:Z
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p5, p0, Ljk1;->e:Ljava/lang/CharSequence;
 
-    check-cast v3, Lqi6;
+    iput-boolean p6, p0, Ljk1;->f:Z
 
-    invoke-interface {v3, p2}, Lqi6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
+.end method
 
-    return v2
+.method public static a(Ljk1;Ljava/util/List;Lqd8;Ljava/util/List;ZLjava/lang/CharSequence;ZI)Ljk1;
+    .locals 7
 
-    :pswitch_0
-    check-cast v3, Lej6;
+    and-int/lit8 v0, p7, 0x1
 
-    invoke-interface {v3, p1, p2}, Lej6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    return p1
-
-    :pswitch_1
-    check-cast v3, Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->K0:[Les7;
-
-    invoke-virtual {v3}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Leh9;
-
-    move-result-object p1
-
-    iget-object p1, p1, Leh9;->S0:La1f;
-
-    new-instance v0, Lkg9;
-
-    sget-object v1, Lu2d;->a:Lu2d;
-
-    invoke-direct {v0, v1, p2}, Lkg9;-><init>(Lu2d;Landroid/view/MotionEvent;)V
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2, v0}, La1f;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    invoke-virtual {p1, p2}, La1f;->setValue(Ljava/lang/Object;)V
-
-    return v2
-
-    :pswitch_2
-    check-cast v3, Lh35;
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-ne p1, v2, :cond_2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p1
-
-    iget-wide v4, v3, Lh35;->o:J
-
-    sub-long/2addr p1, v4
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v0, p1, v4
-
-    if-ltz v0, :cond_0
-
-    const-wide/16 v4, 0x12c
-
-    cmp-long p1, p1, v4
-
-    if-lez p1, :cond_1
+    iget-object p1, p0, Ljk1;->a:Ljava/util/List;
 
     :cond_0
-    iput-boolean v1, v3, Lh35;->m:Z
+    move-object v1, p1
+
+    and-int/lit8 p1, p7, 0x2
+
+    if-eqz p1, :cond_1
+
+    iget-object p2, p0, Ljk1;->b:Ljava/util/List;
 
     :cond_1
-    invoke-virtual {v3}, Lh35;->u()V
+    move-object v2, p2
 
-    iput-boolean v2, v3, Lh35;->m:Z
+    and-int/lit8 p1, p7, 0x4
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    if-eqz p1, :cond_2
 
-    move-result-wide p1
-
-    iput-wide p1, v3, Lh35;->o:J
+    iget-object p3, p0, Ljk1;->c:Ljava/util/List;
 
     :cond_2
-    return v1
+    move-object v3, p3
 
-    :pswitch_3
-    check-cast v3, Lwy3;
+    and-int/lit8 p1, p7, 0x8
 
-    iget-object p1, v3, Lm7d;->a:Landroid/view/View;
+    if-eqz p1, :cond_3
 
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    iget-boolean p4, p0, Ljk1;->d:Z
+
+    :cond_3
+    move v4, p4
+
+    and-int/lit8 p1, p7, 0x10
+
+    if-eqz p1, :cond_4
+
+    iget-object p5, p0, Ljk1;->e:Ljava/lang/CharSequence;
+
+    :cond_4
+    move-object v5, p5
+
+    and-int/lit8 p1, p7, 0x20
+
+    if-eqz p1, :cond_5
+
+    iget-boolean p6, p0, Ljk1;->f:Z
+
+    :cond_5
+    move v6, p6
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljk1;
+
+    invoke-direct/range {v0 .. v6}, Ljk1;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;ZLjava/lang/CharSequence;Z)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ljk1;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Ljk1;
+
+    iget-object v1, p0, Ljk1;->a:Ljava/util/List;
+
+    iget-object v3, p1, Ljk1;->a:Ljava/util/List;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ljk1;->b:Ljava/util/List;
+
+    iget-object v3, p1, Ljk1;->b:Ljava/util/List;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object v1, p0, Ljk1;->c:Ljava/util/List;
+
+    iget-object v3, p1, Ljk1;->c:Ljava/util/List;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean v1, p0, Ljk1;->d:Z
+
+    iget-boolean v3, p1, Ljk1;->d:Z
+
+    if-eq v1, v3, :cond_5
+
+    return v2
+
+    :cond_5
+    iget-object v1, p0, Ljk1;->e:Ljava/lang/CharSequence;
+
+    iget-object v3, p1, Ljk1;->e:Ljava/lang/CharSequence;
+
+    invoke-static {v1, v3}, Le1j;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    return v2
+
+    :cond_6
+    iget-boolean v1, p0, Ljk1;->f:Z
+
+    iget-boolean p1, p1, Ljk1;->f:Z
+
+    if-eq v1, p1, :cond_7
+
+    return v2
+
+    :cond_7
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ljk1;->a:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    const/16 v1, 0x1f
 
-    const/4 v1, 0x2
+    mul-int/2addr v0, v1
 
-    if-eq v0, v1, :cond_3
+    iget-object v2, p0, Ljk1;->b:Ljava/util/List;
 
-    goto :goto_0
+    invoke-static {v2, v0, v1}, Lmrf;->e(Ljava/util/List;II)I
 
-    :cond_3
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    move-result v0
 
-    move-result-object v0
+    iget-object v2, p0, Ljk1;->c:Ljava/util/List;
 
-    if-eqz v0, :cond_4
+    invoke-static {v2, v0, v1}, Lmrf;->e(Ljava/util/List;II)I
 
-    invoke-interface {v0}, Landroid/view/ViewParent;->getParent()Landroid/view/ViewParent;
+    move-result v0
 
-    move-result-object v0
+    iget-boolean v2, p0, Ljk1;->d:Z
 
-    if-eqz v0, :cond_4
+    invoke-static {v0, v1, v2}, Lcbh;->j(IIZ)I
 
-    invoke-interface {v0, v2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    move-result v0
 
-    :cond_4
-    :goto_0
-    invoke-virtual {p1, p2}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    iget-object v2, p0, Ljk1;->e:Ljava/lang/CharSequence;
 
-    move-result p1
+    invoke-static {v2, v0, v1}, Lj27;->d(Ljava/lang/CharSequence;II)I
 
-    return p1
+    move-result v0
 
-    :pswitch_4
-    check-cast v3, Lone/me/calls/ui/ui/call/CallScreen;
+    iget-boolean v1, p0, Ljk1;->f:Z
 
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lyxi;
+    invoke-static {v1}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    if-nez p2, :cond_5
+    move-result v1
 
-    goto :goto_2
+    add-int/2addr v1, v0
 
-    :cond_5
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    :goto_1
-    move v1, v2
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-ne p1, v2, :cond_7
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getEventTime()J
-
-    move-result-wide v4
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getDownTime()J
-
-    move-result-wide v6
-
-    sub-long/2addr v4, v6
-
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result p1
-
-    if-ne p1, v2, :cond_7
-
-    invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
-
-    move-result p1
-
-    int-to-long p1, p1
-
-    cmp-long p1, v4, p1
-
-    if-gez p1, :cond_7
-
-    invoke-virtual {v3}, Lone/me/calls/ui/ui/call/CallScreen;->G0()Ltn1;
-
-    move-result-object p1
-
-    invoke-virtual {v3}, Lone/me/calls/ui/ui/call/CallScreen;->E0()Lf34;
-
-    move-result-object p2
-
-    iget-boolean p2, p2, Lf34;->g:Z
-
-    invoke-virtual {p1, p2}, Ltn1;->u(Z)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_7
-
-    invoke-static {v3}, Lone/me/calls/ui/ui/call/CallScreen;->y0(Lone/me/calls/ui/ui/call/CallScreen;)V
-
-    goto :goto_1
-
-    :cond_7
-    :goto_2
     return v1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallOpponentsState(opponents="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Ljk1;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljk1;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contextMenuButtons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljk1;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMoreButtonEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ljk1;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", title="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljk1;->e:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", canOpenSettings="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Ljk1;->f:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ")"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

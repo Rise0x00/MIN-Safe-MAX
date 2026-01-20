@@ -1,719 +1,364 @@
-.class public abstract Lxt7;
-.super Ljava/lang/Object;
+.class public final Lxt7;
+.super Llm0;
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile a:Lnet/jpountz/lz4/LZ4Factory;
+# instance fields
+.field public final a:Lzu3;
 
-.field public static final b:[Ljava/lang/String;
+.field public final b:Ladg;
+
+.field public final c:Ljcg;
+
+.field public final d:Lcy0;
+
+.field public final e:Lt2b;
+
+.field public final f:J
+
+.field public final g:J
+
+.field public final h:J
+
+.field public final i:Ljava/lang/String;
+
+.field public volatile j:J
+
+.field public final k:Ley;
+
+.field public final l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(Lzu3;Ladg;Ljcg;Lcy0;Lt2b;JJJLjava/lang/String;)V
+    .locals 0
 
-    const-string v9, "MSM8917"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v10, "SDM439"
+    iput-object p1, p0, Lxt7;->a:Lzu3;
 
-    const-string v0, "EXYNOS 850"
+    iput-object p2, p0, Lxt7;->b:Ladg;
 
-    const-string v1, "EXYNOS 7872"
+    iput-object p3, p0, Lxt7;->c:Ljcg;
 
-    const-string v2, "EXYNOS 7880"
+    iput-object p4, p0, Lxt7;->d:Lcy0;
 
-    const-string v3, "EXYNOS 7870"
+    iput-object p5, p0, Lxt7;->e:Lt2b;
 
-    const-string v4, "MSM8953"
+    iput-wide p6, p0, Lxt7;->f:J
 
-    const-string v5, "MSM8937"
+    iput-wide p8, p0, Lxt7;->g:J
 
-    const-string v6, "MSM8940"
+    iput-wide p10, p0, Lxt7;->h:J
 
-    const-string v7, "MSM8992"
+    iput-object p12, p0, Lxt7;->i:Ljava/lang/String;
 
-    const-string v8, "MSM8952"
+    new-instance p1, Ley;
 
-    filled-new-array/range {v0 .. v10}, [Ljava/lang/String;
+    invoke-direct {p1}, Ley;-><init>()V
 
-    move-result-object v0
+    iput-object p1, p0, Lxt7;->k:Ley;
 
-    sput-object v0, Lxt7;->b:[Ljava/lang/String;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    return-void
-.end method
+    const/4 p2, 0x0
 
-.method public static a(Lff6;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
-    .locals 1
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lwe0;
-
-    invoke-direct {v0, p0}, Lwe0;-><init>(Landroidx/fragment/app/c;)V
-
-    const/4 p0, 0x1
-
-    invoke-virtual {v0, p1, p2, p3, p0}, Lwe0;->f(ILandroidx/fragment/app/a;Ljava/lang/String;I)V
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Lwe0;->d(Z)I
+    iput-object p1, p0, Lxt7;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     return-void
 .end method
 
-.method public static b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-    .locals 2
 
-    const-string v0, "#FF"
+# virtual methods
+.method public final a()Lkef;
+    .locals 18
 
-    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    move-object/from16 v0, p0
 
-    move-result-object p0
+    iget-object v1, v0, Lxt7;->k:Ley;
 
-    if-nez p0, :cond_0
+    iget-object v2, v1, Ley;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :goto_0
-    return p2
-
-    :cond_1
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result p2
-
-    const/4 v1, 0x7
-
-    if-ne p2, v1, :cond_2
-
-    const-string p2, "#"
-
-    invoke-static {p0, p2}, Lxaf;->Q(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return p0
-
-    :goto_2
-    new-instance p2, Ljava/lang/RuntimeException;
-
-    const-string v0, "TamThemeFactory/color: error while parse color by key "
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p2
-.end method
-
-.method public static c(Ljava/lang/String;Ljava/lang/String;)Lvnf;
-    .locals 50
-
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
-
-    move-object/from16 v1, p0
-
-    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "version"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v6
-
-    const/4 v1, 0x1
-
-    if-gt v6, v1, :cond_2
-
-    const-string v1, "night"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    sget-object v1, La9a;->e0:La9a;
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v1, Lon4;->e0:Lon4;
-
-    :goto_0
-    const-string v2, "colors"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v2
 
-    const-string v3, "title"
+    sget-object v3, Ley;->o:[Ldy;
 
-    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    if-ne v2, v3, :cond_1
 
-    move-result-object v3
+    iget-object v1, v1, Ley;->c:Ljava/lang/Object;
 
-    new-instance v7, Lxb3;
+    if-eqz v1, :cond_1
 
-    const-string v4, "accent"
+    iget-object v1, v0, Lxt7;->k:Ley;
 
-    iget v8, v1, Lvnf;->k:I
+    iget-object v2, v1, Ley;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v2, v4, v8}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result v8
+    move-result-object v2
 
-    const-string v4, "accentText"
+    if-ne v2, v3, :cond_0
 
-    iget v9, v1, Lvnf;->l:I
+    iget-object v1, v1, Ley;->c:Ljava/lang/Object;
 
-    invoke-static {v2, v4, v9}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
+    goto :goto_0
 
-    move-result v9
+    :cond_0
+    const/4 v1, 0x0
 
-    const-string v4, "background"
+    :goto_0
+    invoke-static {v1}, Lkef;->g(Ljava/lang/Object;)Lrza;
 
-    iget v10, v1, Lvnf;->m:I
+    move-result-object v1
 
-    invoke-static {v2, v4, v10}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v10
-
-    const-string v4, "bubbleBorder"
-
-    iget v11, v1, Lvnf;->p:I
-
-    invoke-static {v2, v4, v11}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v11
-
-    const-string v4, "bubbleBorderHighLight"
-
-    iget v12, v1, Lvnf;->n:I
-
-    invoke-static {v2, v4, v12}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v12
-
-    const-string v4, "bubbleClickableBackground"
-
-    iget v13, v1, Lvnf;->o:I
-
-    invoke-static {v2, v4, v13}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v13
-
-    const-string v4, "bubbleControlBackground"
-
-    iget v14, v1, Lvnf;->q:I
-
-    invoke-static {v2, v4, v14}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v14
-
-    const-string v4, "bubbleControlsText"
-
-    iget v15, v1, Lvnf;->s:I
-
-    invoke-static {v2, v4, v15}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v15
-
-    const-string v4, "bubbleDecoratorBackground"
-
-    move/from16 p0, v5
-
-    iget v5, v1, Lvnf;->r:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v16
-
-    const-string v4, "bubbleDecoratorText"
-
-    iget v5, v1, Lvnf;->t:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v17
-
-    const-string v4, "bubbleOuterBorder"
-
-    iget v5, v1, Lvnf;->u:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v18
-
-    const-string v4, "bubbleSecondaryText"
-
-    iget v5, v1, Lvnf;->v:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v19
-
-    const-string v4, "buttonTint"
-
-    iget v5, v1, Lvnf;->w:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v20
-
-    const-string v4, "chatBackground"
-
-    iget v5, v1, Lvnf;->x:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v21
-
-    const-string v4, "destructive"
-
-    iget v5, v1, Lvnf;->y:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v22
-
-    const-string v4, "lightBadgeBackground"
-
-    iget v5, v1, Lvnf;->z:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v23
-
-    const-string v4, "highlightBackground"
-
-    iget v5, v1, Lvnf;->A:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v24
-
-    const-string v4, "incomingBubbleBackground"
-
-    iget v5, v1, Lvnf;->B:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v25
-
-    const-string v4, "incomingBubbleBackgroundHighlighted"
-
-    iget v5, v1, Lvnf;->C:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v26
-
-    const-string v4, "outgoingBubbleBackground"
-
-    iget v5, v1, Lvnf;->D:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v27
-
-    const-string v4, "outgoingBubbleBackgroundHighlighted"
-
-    iget v5, v1, Lvnf;->E:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v28
-
-    const-string v4, "primaryText"
-
-    iget v5, v1, Lvnf;->F:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v29
-
-    const-string v4, "profileBackground"
-
-    iget v5, v1, Lvnf;->G:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v30
-
-    const-string v4, "secondaryBackground"
-
-    iget v5, v1, Lvnf;->H:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v31
-
-    const-string v4, "secondaryButton"
-
-    iget v5, v1, Lvnf;->I:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v32
-
-    const-string v4, "secondaryText"
-
-    iget v5, v1, Lvnf;->J:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v33
-
-    const-string v4, "separatorBackground"
-
-    iget v5, v1, Lvnf;->K:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v34
-
-    const-string v4, "statusBarBackground"
-
-    iget v5, v1, Lvnf;->L:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v35
-
-    const-string v4, "tertiaryText"
-
-    iget v5, v1, Lvnf;->M:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v36
-
-    const-string v4, "toolBarBackground"
-
-    iget v5, v1, Lvnf;->N:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v37
-
-    const-string v4, "unreadBackground"
-
-    iget v5, v1, Lvnf;->O:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v38
-
-    const-string v4, "unreadBackgroundMuted"
-
-    iget v5, v1, Lvnf;->P:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v39
-
-    const-string v4, "unreadText"
-
-    iget v5, v1, Lvnf;->Q:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v40
-
-    const-string v4, "callAccent"
-
-    iget v5, v1, Lvnf;->R:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v41
-
-    const-string v4, "callBackground"
-
-    iget v5, v1, Lvnf;->S:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v42
-
-    const-string v4, "callControl"
-
-    iget v5, v1, Lvnf;->T:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v43
-
-    const-string v4, "groupCallBackground"
-
-    iget v5, v1, Lvnf;->U:I
-
-    invoke-static {v2, v4, v5}, Lxt7;->b(Lorg/json/JSONObject;Ljava/lang/String;I)I
-
-    move-result v44
-
-    const-string v4, "switchThumb"
-
-    iget-object v5, v1, Lvnf;->V:Ljava/lang/Integer;
-
-    invoke-static {v2, v4, v5}, Lxt7;->e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v45
-
-    const-string v4, "switchThumbChecked"
-
-    iget-object v5, v1, Lvnf;->W:Ljava/lang/Integer;
-
-    invoke-static {v2, v4, v5}, Lxt7;->e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v46
-
-    const-string v4, "switchTrack"
-
-    iget-object v5, v1, Lvnf;->X:Ljava/lang/Integer;
-
-    invoke-static {v2, v4, v5}, Lxt7;->e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v47
-
-    const-string v4, "switchTrackChecked"
-
-    iget-object v5, v1, Lvnf;->Y:Ljava/lang/Integer;
-
-    invoke-static {v2, v4, v5}, Lxt7;->e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v48
-
-    const-string v4, "switchTint"
-
-    iget-object v1, v1, Lvnf;->Z:Ljava/lang/Integer;
-
-    invoke-static {v2, v4, v1}, Lxt7;->e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
-
-    move-result-object v49
-
-    invoke-direct/range {v7 .. v49}, Lxb3;-><init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
-
-    new-instance v2, Lvnf;
-
-    const-string v1, "author"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    if-nez p1, :cond_1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ".ttstyle"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_1
+    return-object v1
 
     :cond_1
-    move-object/from16 v0, p1
+    iget-object v1, v0, Lxt7;->k:Ley;
 
-    :goto_1
-    sget-object v9, Lvh4;->o:Lot0;
+    new-instance v2, Lrz6;
 
-    sget-object v10, Lvh4;->d:Lot0;
+    const/16 v3, 0x15
 
-    move/from16 v5, p0
+    invoke-direct {v2, v3, v0}, Lrz6;-><init>(ILjava/lang/Object;)V
 
-    move-object v8, v7
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-object v7, v0
+    new-instance v3, Lrz6;
 
-    invoke-direct/range {v2 .. v10}, Lvnf;-><init>(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/String;Lxb3;Lot0;Lot0;)V
+    const/16 v4, 0x12
+
+    invoke-direct {v3, v4, v2}, Lrz6;-><init>(ILjava/lang/Object;)V
+
+    new-instance v4, Lig5;
+
+    const/16 v5, 0x11
+
+    invoke-direct {v4, v5, v2}, Lig5;-><init>(ILjava/lang/Object;)V
+
+    new-instance v5, Lvr6;
+
+    invoke-direct {v5, v2}, Lvr6;-><init>(Lrz6;)V
+
+    new-instance v2, Lzxa;
+
+    invoke-direct {v2, v1, v3, v4, v5}, Lzxa;-><init>(Ldxa;Lay3;Lay3;Li6;)V
+
+    iget-object v1, v0, Lxt7;->b:Ladg;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lzcg;
+
+    const/4 v4, 0x0
+
+    invoke-direct {v3, v1, v4}, Lzcg;-><init>(Ladg;I)V
+
+    new-instance v1, Lvxa;
+
+    const/4 v4, 0x6
+
+    invoke-direct {v1, v2, v3, v4}, Lvxa;-><init>(Ldxa;Lcr6;I)V
+
+    new-instance v2, Lrza;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v3, v1}, Lrza;-><init>(ILjava/lang/Object;)V
+
+    iget-object v1, v0, Lxt7;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     return-object v2
 
     :cond_2
-    new-instance v0, Lru/ok/tamtam/themes/IncorrectThemeVersionException;
+    iget-object v1, v0, Lxt7;->a:Lzu3;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw v0
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Lru/ok/tamtam/themes/ParseThemeJsonException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public static d()Lnet/jpountz/lz4/LZ4Factory;
-    .locals 2
-
-    sget-object v0, Lxt7;->a:Lnet/jpountz/lz4/LZ4Factory;
-
-    if-nez v0, :cond_1
-
-    const-class v0, Lxt7;
-
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v1, Lxt7;->a:Lnet/jpountz/lz4/LZ4Factory;
-
-    if-nez v1, :cond_0
-
-    invoke-static {}, Lnet/jpountz/lz4/LZ4Factory;->fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
-
-    move-result-object v1
-
-    sput-object v1, Lxt7;->a:Lnet/jpountz/lz4/LZ4Factory;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v1
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v0
-
-    goto :goto_2
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v1
-
-    :cond_1
-    :goto_2
-    sget-object v0, Lxt7;->a:Lnet/jpountz/lz4/LZ4Factory;
-
-    return-object v0
-.end method
-
-.method public static e(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/Integer;)Ljava/lang/Integer;
-    .locals 2
-
-    const-string v0, "#FF"
-
-    invoke-virtual {p0, p1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Lzu3;->e()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_3
 
-    :goto_0
-    return-object p2
+    new-instance v1, Lru/ok/messages/video/fetcher/FetcherException;
 
+    const/4 v2, 0x2
+
+    const-string v3, "No internet connection"
+
+    invoke-direct {v1, v2, v3}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
+
+    invoke-static {v1}, Lkef;->f(Ljava/lang/Exception;)Lrza;
+
+    move-result-object v1
+
+    return-object v1
+
+    :cond_3
+    iget-object v1, v0, Lxt7;->d:Lcy0;
+
+    invoke-virtual {v1, v0}, Lcy0;->d(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lxt7;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v1, v3, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    iget-object v5, v0, Lxt7;->e:Lt2b;
+
+    iget-wide v7, v0, Lxt7;->f:J
+
+    iget-wide v9, v0, Lxt7;->g:J
+
+    iget-wide v11, v0, Lxt7;->h:J
+
+    iget-object v1, v0, Lxt7;->i:Ljava/lang/String;
+
+    const/4 v6, 0x0
+
+    const-wide/16 v13, 0x0
+
+    const-string v15, ""
+
+    const/16 v16, 0x0
+
+    move-object/from16 v17, v1
+
+    invoke-virtual/range {v5 .. v17}, Lt2b;->G(ZJJJJLjava/lang/String;ZLjava/lang/String;)J
+
+    move-result-wide v3
+
+    iput-wide v3, v0, Lxt7;->j:J
+
+    return-object v2
+.end method
+
+.method public final onEvent(Ljk0;)V
+    .locals 4
+    .annotation runtime Lu0g;
+    .end annotation
+
+    .line 6
+    iget-wide v0, p1, Lkk0;->a:J
+
+    iget-wide v2, p0, Lxt7;->j:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    .line 7
+    :cond_0
+    iget-object v0, p0, Lxt7;->k:Ley;
+
+    .line 8
+    iget-object v1, v0, Ley;->a:Ljava/util/concurrent/atomic/AtomicReference;
+
+    .line 9
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    sget-object v2, Ley;->o:[Ldy;
+
+    if-ne v1, v2, :cond_1
+
+    iget-object v0, v0, Ley;->b:Ljava/lang/Throwable;
+
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 10
     :cond_1
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    iget-object v0, p0, Lxt7;->c:Ljcg;
 
-    move-result p2
+    check-cast v0, Lkcg;
 
-    const/4 v1, 0x7
+    invoke-virtual {v0}, Lkcg;->a()Lpbe;
 
-    if-ne p2, v1, :cond_2
+    move-result-object v0
 
-    const-string p2, "#"
+    new-instance v1, Lu36;
 
-    invoke-static {p0, p2}, Lxaf;->Q(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const/16 v2, 0xc
 
-    move-result-object p0
+    invoke-direct {v1, p1, v2, p0}, Lu36;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lpbe;->b(Ljava/lang/Runnable;)Lo25;
 
-    move-result-object p0
+    return-void
+.end method
 
-    goto :goto_1
+.method public final onEvent(Lmoh;)V
+    .locals 4
+    .annotation runtime Lu0g;
+    .end annotation
 
-    :catchall_0
-    move-exception p0
+    .line 1
+    iget-wide v0, p1, Lkk0;->a:J
 
-    goto :goto_2
+    iget-wide v2, p0, Lxt7;->j:J
 
-    :cond_2
-    :goto_1
-    invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    cmp-long v0, v0, v2
 
-    move-result p0
+    if-eqz v0, :cond_0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    return-void
 
-    move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 2
+    :cond_0
+    iget-object v0, p0, Lxt7;->k:Ley;
 
-    return-object p0
+    .line 3
+    iget-object v1, v0, Ley;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    :goto_2
-    new-instance p2, Ljava/lang/RuntimeException;
+    .line 4
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    const-string v0, "TamThemeFactory/optColor: error while parse color by key "
+    move-result-object v1
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    sget-object v2, Ley;->o:[Ldy;
 
-    move-result-object p1
+    if-ne v1, v2, :cond_1
 
-    invoke-direct {p2, p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object v0, v0, Ley;->b:Ljava/lang/Throwable;
 
-    throw p2
+    if-nez v0, :cond_1
+
+    return-void
+
+    .line 5
+    :cond_1
+    iget-object v0, p0, Lxt7;->c:Ljcg;
+
+    check-cast v0, Lkcg;
+
+    invoke-virtual {v0}, Lkcg;->a()Lpbe;
+
+    move-result-object v0
+
+    new-instance v1, Lu36;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, p1, v2, p0}, Lu36;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1}, Lpbe;->b(Ljava/lang/Runnable;)Lo25;
+
+    return-void
 .end method

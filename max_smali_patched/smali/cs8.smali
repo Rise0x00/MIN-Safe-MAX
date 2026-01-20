@@ -1,368 +1,182 @@
 .class public final Lcs8;
-.super Ljava/lang/Object;
+.super Lg4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final i:Ljava/lang/String;
-
-.field public static final j:Ljava/lang/String;
-
-.field public static final k:Ljava/lang/String;
-
-.field public static final l:Ljava/lang/String;
-
-.field public static final m:Ljava/lang/String;
-
-.field public static final n:Ljava/lang/String;
-
-.field public static final o:Ljava/lang/String;
-
-.field public static final p:Ljava/lang/String;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcs8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final a:Ljava/util/UUID;
-
-.field public final b:Landroid/net/Uri;
-
-.field public final c:Lic7;
-
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Lec7;
-
-.field public final h:[B
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    sget-object v0, Llig;->a:Ljava/lang/String;
+    new-instance v0, Leri;
 
-    const/4 v0, 0x0
+    const/16 v1, 0x1d
 
-    const/16 v1, 0x24
+    invoke-direct {v0, v1}, Leri;-><init>(I)V
 
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->i:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->j:Ljava/lang/String;
-
-    const/4 v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->k:Ljava/lang/String;
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->l:Ljava/lang/String;
-
-    const/4 v0, 0x4
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->m:Ljava/lang/String;
-
-    const/4 v0, 0x5
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->n:Ljava/lang/String;
-
-    const/4 v0, 0x6
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->o:Ljava/lang/String;
-
-    const/4 v0, 0x7
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcs8;->p:Ljava/lang/String;
+    sput-object v0, Lcs8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Lbs8;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-boolean v0, p1, Lbs8;->f:Z
+    const-string v0, "json must not be null"
 
-    if-eqz v0, :cond_1
+    invoke-static {p1, v0}, Ldkj;->h(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p1, Lbs8;->b:Landroid/net/Uri;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x1
-
-    :goto_1
-    invoke-static {v0}, Ligi;->h(Z)V
-
-    iget-object v0, p1, Lbs8;->a:Ljava/util/UUID;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object v0, p0, Lcs8;->a:Ljava/util/UUID;
-
-    iget-object v0, p1, Lbs8;->b:Landroid/net/Uri;
-
-    iput-object v0, p0, Lcs8;->b:Landroid/net/Uri;
-
-    iget-object v0, p1, Lbs8;->c:Lic7;
-
-    iput-object v0, p0, Lcs8;->c:Lic7;
-
-    iget-boolean v0, p1, Lbs8;->d:Z
-
-    iput-boolean v0, p0, Lcs8;->d:Z
-
-    iget-boolean v0, p1, Lbs8;->f:Z
-
-    iput-boolean v0, p0, Lcs8;->f:Z
-
-    iget-boolean v0, p1, Lbs8;->e:Z
-
-    iput-boolean v0, p0, Lcs8;->e:Z
-
-    iget-object v0, p1, Lbs8;->g:Lec7;
-
-    iput-object v0, p0, Lcs8;->g:Lec7;
-
-    iget-object p1, p1, Lbs8;->h:[B
-
-    if-eqz p1, :cond_2
-
-    array-length v0, p1
-
-    invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([BI)[B
-
-    move-result-object p1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    :goto_2
-    iput-object p1, p0, Lcs8;->h:[B
+    iput-object p1, p0, Lcs8;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static b(Landroid/content/Context;I)Lcs8;
+    .locals 6
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
-    return v0
+    move-result-object p0
 
-    :cond_0
-    instance-of v1, p1, Lcs8;
+    :try_start_0
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
 
-    const/4 v2, 0x0
+    invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    if-nez v1, :cond_1
+    const/16 v1, 0x400
 
-    return v2
+    new-array v2, v1, [B
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_1
-    check-cast p1, Lcs8;
+    :goto_0
+    const/4 v3, 0x0
 
-    iget-object v1, p0, Lcs8;->a:Ljava/util/UUID;
+    :try_start_1
+    invoke-virtual {p0, v2, v3, v1}, Ljava/io/InputStream;->read([BII)I
 
-    iget-object v3, p1, Lcs8;->a:Ljava/util/UUID;
+    move-result v4
 
-    invoke-virtual {v1, v3}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
+    const/4 v5, -0x1
 
-    move-result v1
+    if-eq v4, v5, :cond_0
 
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcs8;->b:Landroid/net/Uri;
-
-    iget-object v3, p1, Lcs8;->b:Landroid/net/Uri;
-
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcs8;->c:Lic7;
-
-    iget-object v3, p1, Lcs8;->c:Lic7;
-
-    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-boolean v1, p0, Lcs8;->d:Z
-
-    iget-boolean v3, p1, Lcs8;->d:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Lcs8;->f:Z
-
-    iget-boolean v3, p1, Lcs8;->f:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-boolean v1, p0, Lcs8;->e:Z
-
-    iget-boolean v3, p1, Lcs8;->e:Z
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lcs8;->g:Lec7;
-
-    iget-object v3, p1, Lcs8;->g:Lec7;
-
-    invoke-virtual {v1, v3}, Lec7;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcs8;->h:[B
-
-    iget-object p1, p1, Lcs8;->h:[B
-
-    invoke-static {v1, p1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lcs8;->a:Ljava/util/UUID;
-
-    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lcs8;->b:Landroid/net/Uri;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
-
-    move-result v1
+    invoke-virtual {v0, v2, v3, v4}, Ljava/io/OutputStream;->write([BII)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception v1
+
+    goto :goto_1
+
     :cond_0
-    const/4 v1, 0x0
+    :try_start_2
+    invoke-static {p0}, Lcti;->a(Ljava/io/Closeable;)V
 
-    :goto_0
-    add-int/2addr v0, v1
+    invoke-static {v0}, Lcti;->a(Ljava/io/Closeable;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    iget-object v1, p0, Lcs8;->c:Lic7;
+    move-result-object p0
 
-    invoke-virtual {v1}, Lic7;->hashCode()I
+    new-instance v0, Ljava/lang/String;
 
-    move-result v1
+    const-string v1, "UTF-8"
 
-    add-int/2addr v1, v0
+    invoke-direct {v0, p0, v1}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    mul-int/lit8 v1, v1, 0x1f
+    new-instance p0, Lcs8;
 
-    iget-boolean v0, p0, Lcs8;->d:Z
+    invoke-direct {p0, v0}, Lcs8;-><init>(Ljava/lang/String;)V
 
-    add-int/2addr v1, v0
+    return-object p0
 
-    mul-int/lit8 v1, v1, 0x1f
+    :catch_0
+    move-exception p0
 
-    iget-boolean v0, p0, Lcs8;->f:Z
+    goto :goto_2
 
-    add-int/2addr v1, v0
+    :goto_1
+    invoke-static {p0}, Lcti;->a(Ljava/io/Closeable;)V
 
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-static {v0}, Lcti;->a(Ljava/io/Closeable;)V
 
-    iget-boolean v0, p0, Lcs8;->e:Z
+    throw v1
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    add-int/2addr v1, v0
+    :goto_2
+    new-instance v0, Landroid/content/res/Resources$NotFoundException;
 
-    mul-int/lit8 v1, v1, 0x1f
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget-object v0, p0, Lcs8;->g:Lec7;
+    move-result-object p0
 
-    invoke-virtual {v0}, Lec7;->hashCode()I
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v2, "Failed to read resource "
 
-    add-int/2addr v0, v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcs8;->h:[B
+    const-string p1, ": "
 
-    invoke-static {v1}, Ljava/util/Arrays;->hashCode([B)I
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v1
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-int/2addr v1, v0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return v1
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Landroid/content/res/Resources$NotFoundException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Lsnj;->k(Landroid/os/Parcel;I)I
+
+    move-result p2
+
+    const/4 v0, 0x2
+
+    iget-object v1, p0, Lcs8;->a:Ljava/lang/String;
+
+    invoke-static {p1, v0, v1}, Lsnj;->g(Landroid/os/Parcel;ILjava/lang/String;)V
+
+    invoke-static {p1, p2}, Lsnj;->l(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

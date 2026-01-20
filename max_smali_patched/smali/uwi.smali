@@ -1,206 +1,297 @@
-.class public abstract Luwi;
+.class public final Luwi;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Leg8;
+
+.field public b:Z
+
+.field public c:Z
+
+.field public d:Z
+
+.field public e:Z
+
+.field public final f:Ljava/util/concurrent/Executor;
+
+.field public volatile g:Lfy;
+
+.field public volatile h:Lfy;
+
+.field public final i:Ljava/util/concurrent/Semaphore;
+
+.field public final j:Ljava/util/Set;
+
+
 # direct methods
-.method public static a(FFF)F
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Ljava/util/Set;)V
+    .locals 3
 
-    const/high16 v0, 0x40000000    # 2.0f
+    sget-object v0, Lfy;->Z:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    div-float/2addr p2, v0
-
-    div-float/2addr p0, p2
-
-    const/high16 p2, 0x3f800000    # 1.0f
-
-    cmpg-float p2, p0, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v1, 0x0
 
-    div-float/2addr p1, v0
+    iput-boolean v1, p0, Luwi;->b:Z
 
-    if-gez p2, :cond_0
+    iput-boolean v1, p0, Luwi;->c:Z
 
-    mul-float/2addr p1, p0
+    const/4 v2, 0x1
 
-    mul-float/2addr p1, p0
+    iput-boolean v2, p0, Luwi;->d:Z
 
-    mul-float/2addr p1, p0
+    iput-boolean v1, p0, Luwi;->e:Z
 
-    add-float/2addr p1, v1
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    return p1
+    iput-object v0, p0, Luwi;->f:Ljava/util/concurrent/Executor;
 
-    :cond_0
-    sub-float/2addr p0, v0
+    new-instance p1, Ljava/util/concurrent/Semaphore;
 
-    mul-float p2, p0, p0
+    invoke-direct {p1, v1}, Ljava/util/concurrent/Semaphore;-><init>(I)V
 
-    mul-float/2addr p2, p0
+    iput-object p1, p0, Luwi;->i:Ljava/util/concurrent/Semaphore;
 
-    add-float/2addr p2, v0
+    iput-object p2, p0, Luwi;->j:Ljava/util/Set;
 
-    mul-float/2addr p2, p1
-
-    add-float/2addr p2, v1
-
-    return p2
+    return-void
 .end method
 
-.method public static b(Landroid/graphics/RectF;)[F
-    .locals 5
 
-    iget v0, p0, Landroid/graphics/RectF;->left:F
+# virtual methods
+.method public final a()V
+    .locals 4
 
-    iget v1, p0, Landroid/graphics/RectF;->top:F
+    iget-object v0, p0, Luwi;->g:Lfy;
 
-    iget v2, p0, Landroid/graphics/RectF;->right:F
+    if-eqz v0, :cond_3
 
-    iget p0, p0, Landroid/graphics/RectF;->bottom:F
-
-    const/16 v3, 0x8
-
-    new-array v3, v3, [F
-
-    const/4 v4, 0x0
-
-    aput v0, v3, v4
-
-    const/4 v4, 0x1
-
-    aput v1, v3, v4
-
-    const/4 v4, 0x2
-
-    aput v2, v3, v4
-
-    const/4 v4, 0x3
-
-    aput v1, v3, v4
-
-    const/4 v1, 0x4
-
-    aput v2, v3, v1
-
-    const/4 v1, 0x5
-
-    aput p0, v3, v1
-
-    const/4 v1, 0x6
-
-    aput v0, v3, v1
-
-    const/4 v0, 0x7
-
-    aput p0, v3, v0
-
-    return-object v3
-.end method
-
-.method public static c([F)Landroid/graphics/RectF;
-    .locals 6
-
-    new-instance v0, Landroid/graphics/RectF;
-
-    const/high16 v1, 0x7f800000    # Float.POSITIVE_INFINITY
-
-    const/high16 v2, -0x800000    # Float.NEGATIVE_INFINITY
-
-    invoke-direct {v0, v1, v1, v2, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
+    iget-boolean v0, p0, Luwi;->b:Z
 
     const/4 v1, 0x1
 
-    :goto_0
-    array-length v2, p0
+    if-nez v0, :cond_0
 
-    if-ge v1, v2, :cond_4
-
-    add-int/lit8 v2, v1, -0x1
-
-    aget v2, p0, v2
-
-    const/high16 v3, 0x41200000    # 10.0f
-
-    mul-float/2addr v2, v3
-
-    invoke-static {v2}, Ljava/lang/Math;->round(F)I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr v2, v3
-
-    aget v4, p0, v1
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Ljava/lang/Math;->round(F)I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    div-float/2addr v4, v3
-
-    iget v3, v0, Landroid/graphics/RectF;->left:F
-
-    cmpg-float v5, v2, v3
-
-    if-gez v5, :cond_0
-
-    move v3, v2
+    iput-boolean v1, p0, Luwi;->e:Z
 
     :cond_0
-    iput v3, v0, Landroid/graphics/RectF;->left:F
+    iget-object v0, p0, Luwi;->h:Lfy;
 
-    iget v3, v0, Landroid/graphics/RectF;->top:F
+    const/4 v2, 0x0
 
-    cmpg-float v5, v4, v3
+    if-eqz v0, :cond_1
 
-    if-gez v5, :cond_1
+    iget-object v0, p0, Luwi;->g:Lfy;
 
-    move v3, v4
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object v2, p0, Luwi;->g:Lfy;
+
+    return-void
 
     :cond_1
-    iput v3, v0, Landroid/graphics/RectF;->top:F
+    iget-object v0, p0, Luwi;->g:Lfy;
 
-    iget v3, v0, Landroid/graphics/RectF;->right:F
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    cmpl-float v5, v2, v3
+    iget-object v0, p0, Luwi;->g:Lfy;
 
-    if-lez v5, :cond_2
+    iget-object v3, v0, Lfy;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    goto :goto_1
+    invoke-virtual {v3, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    iget-object v0, v0, Lfy;->b:Lx7a;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/FutureTask;->cancel(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Luwi;->g:Lfy;
+
+    iput-object v0, p0, Luwi;->h:Lfy;
 
     :cond_2
-    move v2, v3
-
-    :goto_1
-    iput v2, v0, Landroid/graphics/RectF;->right:F
-
-    iget v2, v0, Landroid/graphics/RectF;->bottom:F
-
-    cmpl-float v3, v4, v2
-
-    if-lez v3, :cond_3
-
-    goto :goto_2
+    iput-object v2, p0, Luwi;->g:Lfy;
 
     :cond_3
-    move v4, v2
+    return-void
+.end method
 
-    :goto_2
-    iput v4, v0, Landroid/graphics/RectF;->bottom:F
+.method public final b()V
+    .locals 5
 
-    add-int/lit8 v1, v1, 0x2
+    iget-object v0, p0, Luwi;->h:Lfy;
+
+    if-nez v0, :cond_3
+
+    iget-object v0, p0, Luwi;->g:Lfy;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Luwi;->g:Lfy;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Luwi;->g:Lfy;
+
+    iget-object v1, p0, Luwi;->f:Ljava/util/concurrent/Executor;
+
+    iget v2, v0, Lfy;->c:I
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-eq v2, v4, :cond_2
+
+    iget v0, v0, Lfy;->c:I
+
+    invoke-static {v0}, Lt02;->t(I)I
+
+    move-result v0
+
+    if-eq v0, v4, :cond_1
+
+    if-eq v0, v3, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "We should never reach this state"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Cannot execute task: the task has already been executed (a task can be executed only once)"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Cannot execute task: the task is already running."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    iput v3, v0, Lfy;->c:I
+
+    iget-object v2, v0, Lfy;->a:Lu37;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v0, Lfy;->b:Lx7a;
+
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :cond_3
+    return-void
+.end method
+
+.method public final c()V
+    .locals 5
+
+    iget-object v0, p0, Luwi;->j:Ljava/util/Set;
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Luwi;->i:Ljava/util/concurrent/Semaphore;
+
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x5
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Ljava/util/concurrent/Semaphore;->tryAcquire(IJLjava/util/concurrent/TimeUnit;)Z
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_4
-    invoke-virtual {v0}, Landroid/graphics/RectF;->sort()V
+    :catch_0
+    move-exception v0
+
+    const-string v1, "GACSignInLoader"
+
+    const-string v2, "Unexpected InterruptedException"
+
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lgpi;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x40
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-static {v0, p0}, Lmmj;->a(Ljava/lang/StringBuilder;Ljava/lang/Object;)V
+
+    const-string v1, " id="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "}"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
