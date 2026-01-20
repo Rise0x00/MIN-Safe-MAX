@@ -29,5 +29,4 @@ IF EXIST "ks.keystore" (
 )
 
 :END
-TITLE Build end!
 Pause
