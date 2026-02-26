@@ -27,3 +27,13 @@
 * CryptoBot (TON/USDT): http://t.me/send?start=IVLRgkFY0Mh0
 * xRocket (TON): https://t.me/xrocket?start=inv_g8Wa2F0g7nXwpES
 * xRocket (USDT): https://t.me/xrocket?start=inv_Kz4RtiUTxpQE15S
+
+## Star History
+
+<a href="https://www.star-history.com/#Rise0x00/MIN-Safe-MAX&type=date&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Rise0x00/MIN-Safe-MAX&type=date&theme=dark&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Rise0x00/MIN-Safe-MAX&type=date&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Rise0x00/MIN-Safe-MAX&type=date&legend=bottom-right" />
+ </picture>
+</a>
